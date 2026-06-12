@@ -1,0 +1,76 @@
+name: Deploy wiki to GitHub Pages
+
+# Publishes the wiki as a Quartz site (graph view, backlinks, resolved
+# [[wikilinks]]) on every push to main. This content repo stays pristine:
+# the workflow clones Quartz in CI, drops the markdown into it, and builds.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment; let an in-progress run finish.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout wiki content
+        uses: actions/checkout@v4
+        with:
+          path: wiki
+
+      - name: Checkout Quartz (pinned)
+        uses: actions/checkout@v4
+        with:
+          repository: jackyzha0/quartz
+          ref: v4.5.2
+          path: quartz
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install Quartz dependencies
+        working-directory: quartz
+        run: npm ci
+
+      - name: Assemble content
+        run: |
+          rm -rf quartz/content
+          mkdir -p quartz/content
+          # wiki/* skips dotfiles (.git, .github, .gitignore) by glob
+          cp -R wiki/* quartz/content/
+          # the 4 MB source is in the repo but isn't a page — keep the site lean
+          rm -f quartz/content/raw/archive.json
+          # point Quartz at the GitHub Pages project URL
+          sed -i 's|baseUrl: ".*"|baseUrl: "szgrune.github.io/bkc-archive-wiki"|' quartz/quartz.config.ts
+
+      - name: Build site
+        working-directory: quartz
+        run: npx quartz build
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: quartz/public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
