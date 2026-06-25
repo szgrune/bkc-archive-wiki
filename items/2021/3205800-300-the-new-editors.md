@@ -9,7 +9,7 @@ authors: []
 feed_tags: ["community"]
 ---
 
-# #300: The New Editors
+# \#300: The New Editors
 
 **Source:** [podcast.techfreedom.org](http://podcast.techfreedom.org/e/300-the-new-editors/) · **Published:** 2021-08-26 · **Feed tags:** community
 

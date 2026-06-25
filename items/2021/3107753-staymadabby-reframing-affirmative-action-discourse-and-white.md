@@ -9,7 +9,7 @@ authors: []
 feed_tags: ["grace", "community"]
 ---
 
-# #StayMadAbby: Reframing affirmative action discourse and White entitlement on Black Twitter. - PsycNET
+# \#StayMadAbby: Reframing affirmative action discourse and White entitlement on Black Twitter. - PsycNET
 
 **Source:** [doi.apa.org](https://doi.apa.org/doiLanding?doi=10.1037%2Fdhe0000275) · **Published:** 2021-07-06 · **Feed tags:** grace, community
 

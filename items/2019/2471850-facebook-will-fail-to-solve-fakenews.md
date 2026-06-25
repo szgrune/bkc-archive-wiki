@@ -9,7 +9,7 @@ authors: []
 feed_tags: ["website", "buzz"]
 ---
 
-# Facebook Will Fail to Solve #FakeNews
+# Facebook Will Fail to Solve \#FakeNews
 
 **Source:** [commondreams.org](https://www.commondreams.org/views/2018/08/28/facebook-will-fail-solve-fakenews) · **Published:** 2019-01-15 · **Feed tags:** website, buzz
 

@@ -88,6 +88,12 @@ const slugify = (s, max = 60) =>
 
 const yamlStr = (s) => `"${String(s).replace(/\\/g, "\\\\").replace(/"/g, '\\"')}"`;
 
+// Neutralize #hashtags in plain text (e.g. item titles) so Quartz/Obsidian don't
+// auto-link them as topic tags. Escapes a "#" that starts a tag-like token (at the
+// start of the string or after whitespace, followed by a word char). Leaves things
+// like "C#" and URL anchors untouched.
+const escapeHashtags = (s) => String(s).replace(/(^|\s)#(?=[\w-])/g, "$1\\#");
+
 const splitAuthors = (a) =>
   !a ? [] : String(a).split(",").map((x) => x.trim()).filter(Boolean);
 
@@ -107,7 +113,9 @@ const enrich = (it) => {
   const year = date.slice(0, 4) || "undated";
   const domain = domainOf(it.url);
   const titleRaw = (it.title || "").trim();
-  const title = titleRaw || `Untitled — ${domain}`;
+  // Display title: decode HTML entities (&amp; -> &, etc.) for clean rendering.
+  // Slug stays derived from titleRaw so stub filenames remain stable.
+  const title = unescapeHtml(titleRaw) || `Untitled — ${domain}`;
   const baseSlug = slugify(titleRaw) || `untitled-${slugify(domain)}`;
   const stub = `${it.id}-${baseSlug}`;
   return { ...it, _date: date, _year: year, _domain: domain, _title: title, _stub: stub };
@@ -151,7 +159,7 @@ for (const it of selected) {
   const body = [
     fm,
     "",
-    `# ${it._title}`,
+    `# ${escapeHashtags(it._title)}`,
     "",
     metaLine,
     "",
@@ -194,10 +202,29 @@ write(
   join("raw", "digest.md"),
   `# Digest index\n\nPer-year scanning surfaces for the synthesis layer.\n\n` +
     years
-      .map((y) => `- [[${y}|${y}]] — ${byYear.get(y).length} items → \`raw/digest/${y}.md\``)
+      .map((y) => `- [[raw/digest/${y}|${y}]] — ${byYear.get(y).length} items → \`raw/digest/${y}.md\``)
       .join("\n") +
     "\n"
 );
+
+// ---- 2b. seed a navigational landing page per year if absent --------------
+// LLM-owned (like index.md/log.md): seed-if-absent so hand-written year
+// narratives (e.g. timeline/2025.md) are never overwritten.
+for (const y of years) {
+  const rel = join("timeline", `${y}.md`);
+  if (!existsSync(join(WIKI_ROOT, rel))) {
+    const n = byYear.get(y).length;
+    write(
+      rel,
+      `---\ntype: year\ntitle: ${y}\nitem_count: ${n}\n---\n` +
+        `# ${y}\n\n` +
+        `${n} items. Navigational landing page — thematic synthesis pending.\n\n` +
+        `## Navigate\n` +
+        `All ${y} sources: \`items/${y}/\` · scanning surface: \`raw/digest/${y}.md\` · ` +
+        `counts: [[_counts|Timeline counts]]\n`
+    );
+  }
+}
 
 // ---- 3. sources/_domains.md -----------------------------------------------
 const domCount = new Map();
@@ -219,7 +246,7 @@ for (const it of all) {
   const ym = it._date.slice(0, 7) || "unknown";
   monthCount.set(ym, (monthCount.get(ym) || 0) + 1);
 }
-const yearRows = years.map((y) => `| [[${y}|${y}]] | ${byYear.get(y).length} |`);
+const yearRows = years.map((y) => `| [[timeline/${y}|${y}]] | ${byYear.get(y).length} |`);
 const monthRows = [...monthCount.entries()]
   .sort((a, b) => a[0].localeCompare(b[0]))
   .map(([m, c]) => `| ${m} | ${c} |`);

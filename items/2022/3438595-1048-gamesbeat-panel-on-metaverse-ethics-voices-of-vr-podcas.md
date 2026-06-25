@@ -9,7 +9,7 @@ authors: []
 feed_tags: ["community"]
 ---
 
-# #1048: Gamesbeat Panel on Metaverse Ethics | Voices of VR Podcast
+# \#1048: Gamesbeat Panel on Metaverse Ethics | Voices of VR Podcast
 
 **Source:** [voicesofvr.com](https://voicesofvr.com/1048-gamesbeat-panel-on-metaverse-ethics/) · **Published:** 2022-01-26 · **Feed tags:** community
 

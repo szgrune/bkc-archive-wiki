@@ -9,7 +9,7 @@ authors: []
 feed_tags: ["buzz"]
 ---
 
-# Ford Foundation on Twitter: "#RedditAMA: World-renowned cybersecurity expert Bruce Schneier will host a @reddit_AMA to answer your questions about tech today and #PublicInterestTech. Join the #AMA Thurs, Sept 6 at 11am EST https://t.co/xn4G2r7zgV @reddit @schneierblog #civictech #govtech #morethancode… https://t.co/yZwmmytF3U"
+# Ford Foundation on Twitter: "#RedditAMA: World-renowned cybersecurity expert Bruce Schneier will host a @reddit_AMA to answer your questions about tech today and \#PublicInterestTech. Join the \#AMA Thurs, Sept 6 at 11am EST https://t.co/xn4G2r7zgV @reddit @schneierblog \#civictech \#govtech \#morethancode… https://t.co/yZwmmytF3U"
 
 **Source:** [twitter.com](https://twitter.com/FordFoundation/status/1036463798742409216) · **Published:** 2018-09-03 · **Feed tags:** buzz
 

@@ -1,8 +1,11 @@
 # Index
 
 Catalog of the wiki. Start here, then drill into pages. Maintained by the LLM.
-**Scope so far:** prototype slice = **2025** (737 items). Counts in parentheses are
-items filed on that page, not corpus totals.
+**Scope:** all years **2014–2026 (6,925 items)** are built as item stubs and per-year
+digests. Thematic synthesis (Topics/People/Organizations) currently covers **2025**;
+other years have navigational landing pages pending synthesis. Counts in parentheses
+are items filed on that page, not corpus totals — except Timeline rows, which show the
+corpus item count for that year.
 
 ## Topics
 - [[ai-governance-and-regulation|AI Governance & Regulation]] — the state-vs-federal regulatory tug-of-war (12)
@@ -35,7 +38,18 @@ items filed on that page, not corpus totals.
 - [[electronic-frontier-foundation|Electronic Frontier Foundation]] — digital civil liberties (2)
 
 ## Timeline
-- [[2025|2025]] — the prototype year: techlash matures into a structural-power critique (737)
+- [[timeline/2026|2026]] — landing page, synthesis pending (444)
+- [[timeline/2025|2025]] — the prototype year: techlash matures into a structural-power critique (737)
+- [[timeline/2024|2024]] — landing page, synthesis pending (917)
+- [[timeline/2023|2023]] — landing page, synthesis pending (616)
+- [[timeline/2022|2022]] — landing page, synthesis pending (536)
+- [[timeline/2021|2021]] — landing page, synthesis pending (705)
+- [[timeline/2020|2020]] — landing page, synthesis pending (824)
+- [[timeline/2019|2019]] — landing page, synthesis pending (972)
+- [[timeline/2018|2018]] — landing page, synthesis pending (943)
+- [[timeline/2017|2017]] — landing page, synthesis pending (225)
+- [[timeline/2016|2016]] — landing page, synthesis pending (4)
+- [[timeline/2014|2014]] — landing page, synthesis pending (2)
 
 ## Reference (generated — do not hand-edit)
 - [[_domains|Sources by domain]] — 2,063 domains, full corpus

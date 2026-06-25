@@ -9,7 +9,7 @@ authors: []
 feed_tags: ["opportunities"]
 ---
 
-# #2 THE UNIVERSITY THAT REIMAGINES THE FUTURE
+# \#2 THE UNIVERSITY THAT REIMAGINES THE FUTURE
 
 **Source:** [newschool.wd1.myworkdayjobs.com](https://newschool.wd1.myworkdayjobs.com/en-US/External/job/Assistant-Associate-Professor-of-Futures-and-Foresight_JR104980) · **Published:** 2024-02-09 · **Feed tags:** opportunities
 

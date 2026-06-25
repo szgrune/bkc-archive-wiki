@@ -9,7 +9,7 @@ authors: []
 feed_tags: ["opportunities"]
 ---
 
-# #AoIR2025 Call for Proposals |
+# \#AoIR2025 Call for Proposals |
 
 **Source:** [aoir.org](https://aoir.org/aoir2025/aoir2025cfp/) · **Published:** 2025-01-22 · **Feed tags:** opportunities
 

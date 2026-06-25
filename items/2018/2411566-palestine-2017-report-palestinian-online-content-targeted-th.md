@@ -9,7 +9,7 @@ authors: []
 feed_tags: ["orbit"]
 ---
 
-# #Palestine 2017 Report: Palestinian online content targeted through mass surveillance, digital occupation and biased content moderation – 7amleh
+# \#Palestine 2017 Report: Palestinian online content targeted through mass surveillance, digital occupation and biased content moderation – 7amleh
 
 **Source:** [7amleh.org](http://7amleh.org/2018/04/03/press-release-palestine-2017-report-palestinian-online-content-targeted-through-mass-surveillance-digital-occupation-and-biased-content-moderation/) · **Published:** 2018-04-03 · **Feed tags:** orbit
 

@@ -9,7 +9,7 @@ authors: []
 feed_tags: ["buzz"]
 ---
 
-# #Truthicon 2012 - YouTube - YouTube
+# \#Truthicon 2012 - YouTube - YouTube
 
 **Source:** [youtube.com](https://www.youtube.com/playlist?list=PLF5CD94CC3C72672C) · **Published:** 2017-11-06 · **Feed tags:** buzz
 

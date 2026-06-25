@@ -9,7 +9,7 @@ authors: []
 feed_tags: ["events"]
 ---
 
-# #BlackTechFutures Research Institute >> 2024 Sistas 4 Digital Equity's Ella Baker Lecture Series
+# \#BlackTechFutures Research Institute >> 2024 Sistas 4 Digital Equity's Ella Baker Lecture Series
 
 **Source:** [streamyard.com](https://streamyard.com/watch/xU5FSVGGbhTM) · **Published:** 2024-12-02 · **Feed tags:** events
 

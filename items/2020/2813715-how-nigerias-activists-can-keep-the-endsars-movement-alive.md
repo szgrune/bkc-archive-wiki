@@ -9,7 +9,7 @@ authors: []
 feed_tags: ["paywall", "community"]
 ---
 
-# How Nigeria’s Activists Can Keep the #EndSARS Movement Alive
+# How Nigeria’s Activists Can Keep the \#EndSARS Movement Alive
 
 **Source:** [worldpoliticsreview.com](https://www.worldpoliticsreview.com/articles/29212/how-nigeria-s-activists-can-keep-the-endsars-movement-alive) · **Published:** 2020-11-12 · **Feed tags:** paywall, community
 

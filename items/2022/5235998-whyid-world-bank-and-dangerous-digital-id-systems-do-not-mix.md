@@ -9,7 +9,7 @@ authors: []
 feed_tags: ["goodid"]
 ---
 
-# #WhyID: World Bank and dangerous digital ID systems do not mix - Access Now
+# \#WhyID: World Bank and dangerous digital ID systems do not mix - Access Now
 
 **Source:** [accessnow.org](https://www.accessnow.org/world-bank-digital-id-systems/) · **Published:** 2022-09-14 · **Feed tags:** goodid
 

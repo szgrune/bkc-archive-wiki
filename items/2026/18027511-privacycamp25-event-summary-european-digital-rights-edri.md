@@ -9,7 +9,7 @@ authors: []
 feed_tags: ["orbit"]
 ---
 
-# #PrivacyCamp25: Event summary - European Digital Rights (EDRi)
+# \#PrivacyCamp25: Event summary - European Digital Rights (EDRi)
 
 **Source:** [edri.org](https://edri.org/our-work/privacycamp25-event-summary/) · **Published:** 2026-04-14 · **Feed tags:** orbit
 

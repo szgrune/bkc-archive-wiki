@@ -52,8 +52,20 @@ jobs:
           cp -R wiki/* quartz/content/
           # the 4 MB source is in the repo but isn't a page — keep the site lean
           rm -f quartz/content/raw/archive.json
+          # inject custom styling (explorer scroll fix, etc.); .quartz is a dotfile
+          # so it was skipped by the wiki/* copy above and isn't a published page
+          if [ -f wiki/.quartz/custom.scss ]; then
+            cp wiki/.quartz/custom.scss quartz/styles/custom.scss
+          fi
           # point Quartz at the GitHub Pages project URL
           sed -i 's|baseUrl: ".*"|baseUrl: "szgrune.github.io/bkc-archive-wiki"|' quartz/quartz.config.ts
+          # Bound the expanded ("global") graph depth. The default (depth: -1)
+          # renders EVERY page (~6.9k nodes, most of them unlinked item stubs),
+          # which hangs the browser so the expanded graph never loads. A finite
+          # depth does a bounded BFS from the current page — fast, and it omits the
+          # thousands of orphan item nodes, leaving the meaningful linked cluster.
+          # (The mini/local graph is unaffected; it already uses depth: 1.)
+          sed -i 's/Component.Graph(),/Component.Graph({ globalGraph: { depth: 3 } }),/' quartz/quartz.layout.ts
 
       - name: Build site
         working-directory: quartz

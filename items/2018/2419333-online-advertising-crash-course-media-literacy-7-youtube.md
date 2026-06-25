@@ -9,7 +9,7 @@ authors: []
 feed_tags: ["orbit"]
 ---
 
-# Online Advertising: Crash Course Media Literacy #7 - YouTube
+# Online Advertising: Crash Course Media Literacy \#7 - YouTube
 
 **Source:** [youtube.com](https://www.youtube.com/watch?v=cmRcoJZRXEY) · **Published:** 2018-04-12 · **Feed tags:** orbit
 

@@ -9,7 +9,7 @@ authors: []
 feed_tags: ["orbit"]
 ---
 
-# Two years after #Pizzagate showed the dangers of hateful conspiracies, they’re still rampant on YouTube - The Washington Post
+# Two years after \#Pizzagate showed the dangers of hateful conspiracies, they’re still rampant on YouTube - The Washington Post
 
 **Source:** [washingtonpost.com](https://www.washingtonpost.com/business/technology/hateful-conspiracies-thrive-on-youtube-despite-pledge-to-clean-up-problematic-videos/2018/12/10/625730a8-f3f8-11e8-9240-e8028a62c722_story.html) · **Published:** 2018-12-11 · **Feed tags:** orbit
 

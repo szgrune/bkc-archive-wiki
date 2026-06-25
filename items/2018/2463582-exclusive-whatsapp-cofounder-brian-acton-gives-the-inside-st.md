@@ -9,7 +9,7 @@ authors: []
 feed_tags: ["orbit"]
 ---
 
-# Exclusive: WhatsApp Cofounder Brian Acton Gives The Inside Story On #DeleteFacebook And Why He Left $850 Million Behind
+# Exclusive: WhatsApp Cofounder Brian Acton Gives The Inside Story On \#DeleteFacebook And Why He Left $850 Million Behind
 
 **Source:** [forbes.com](https://www.forbes.com/sites/parmyolson/2018/09/26/exclusive-whatsapp-cofounder-brian-acton-gives-the-inside-story-on-deletefacebook-and-why-he-left-850-million-behind/) · **Published:** 2018-09-28 · **Feed tags:** orbit
 

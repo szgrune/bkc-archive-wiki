@@ -9,7 +9,7 @@ authors: []
 feed_tags: ["goodid"]
 ---
 
-# (5) Elizabeth M. Renieris on Twitter: "The right call, especially given how much IDme fumbled this one, but the issue isn't going away because it's not just the IRS looking at biometric auth. The government needs a comprehensive approach to #DigitalID going forward, whatever the modality. https://t.co/sBCmuu5jPf" / Twitter
+# (5) Elizabeth M. Renieris on Twitter: "The right call, especially given how much IDme fumbled this one, but the issue isn't going away because it's not just the IRS looking at biometric auth. The government needs a comprehensive approach to \#DigitalID going forward, whatever the modality. https://t.co/sBCmuu5jPf" / Twitter
 
 **Source:** [twitter.com](https://twitter.com/hackylawyER/status/1490769657426501637) · **Published:** 2022-02-07 · **Feed tags:** goodid
 

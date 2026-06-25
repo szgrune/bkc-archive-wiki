@@ -9,7 +9,7 @@ authors: []
 feed_tags: ["addedsocial", "addedcommunity", "social", "community"]
 ---
 
-# Intersection of Race and Technology | #SUNDAYCIVICS
+# Intersection of Race and Technology | \#SUNDAYCIVICS
 
 **Source:** [sundaycivics.org](https://www.sundaycivics.org/episode96/) · **Published:** 2020-02-05 · **Feed tags:** addedsocial, addedcommunity, social, community
 

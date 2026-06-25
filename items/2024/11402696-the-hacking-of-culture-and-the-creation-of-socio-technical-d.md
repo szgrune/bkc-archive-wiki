@@ -9,7 +9,7 @@ authors: []
 feed_tags: ["community"]
 ---
 
-# The Hacking of Culture and the Creation of Socio-Technical Debt - Journal #146
+# The Hacking of Culture and the Creation of Socio-Technical Debt - Journal \#146
 
 **Source:** [e-flux.com](https://www.e-flux.com/journal/146/610938/the-hacking-of-culture-and-the-creation-of-socio-technical-debt/) · **Published:** 2024-06-13 · **Feed tags:** community
 

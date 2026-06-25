@@ -9,7 +9,7 @@ authors: []
 feed_tags: ["goodid"]
 ---
 
-# Al on Twitter: "J-PAL Africa Webinar: "Digital Identification in Africa: Policy Reforms, Evidence and Opportunities" Feb 8 9 AM EST @JPAL @Id4africa @Id4africaE #GoodID #ID4D @_AfricanUnion https://t.co/dnuVnTUsbd" / Twitter
+# Al on Twitter: "J-PAL Africa Webinar: "Digital Identification in Africa: Policy Reforms, Evidence and Opportunities" Feb 8 9 AM EST @JPAL @Id4africa @Id4africaE \#GoodID \#ID4D @_AfricanUnion https://t.co/dnuVnTUsbd" / Twitter
 
 **Source:** [twitter.com](https://twitter.com/al_shiferaw/status/1487084266760646656) · **Published:** 2022-01-28 · **Feed tags:** goodid
 

@@ -9,7 +9,7 @@ authors: []
 feed_tags: ["community", "addedcommunity"]
 ---
 
-# Hyunjin Seo on Twitter: "Thrilled to receive a $1.4 mil grant from National Science Foundation for our interdisciplinary project offering #technology education to support recently incarcerated women reentering the job force: https://t.co/dHFduJ3aYo @KUJSchool @BKCHarvard #TechEdu #DigitalInclusion" / Twitter
+# Hyunjin Seo on Twitter: "Thrilled to receive a $1.4 mil grant from National Science Foundation for our interdisciplinary project offering \#technology education to support recently incarcerated women reentering the job force: https://t.co/dHFduJ3aYo @KUJSchool @BKCHarvard \#TechEdu \#DigitalInclusion" / Twitter
 
 **Source:** [twitter.com](https://twitter.com/HyunjinSeo/status/1141769053427720192) · **Published:** 2019-06-20 · **Feed tags:** community, addedcommunity
 

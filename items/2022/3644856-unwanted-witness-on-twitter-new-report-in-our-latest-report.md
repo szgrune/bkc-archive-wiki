@@ -9,7 +9,7 @@ authors: []
 feed_tags: ["goodid"]
 ---
 
-# Unwanted Witness on Twitter: "New Report⚡️ In our latest report, we analyzed Uganda's National ID Legislation and its compliance with International #HumanRights obligations. Read the report: https://t.co/SW6MSnlUWq #GoodID #DigitalIdentity https://t.co/hOV9EfKSCO" / Twitter
+# Unwanted Witness on Twitter: "New Report⚡️ In our latest report, we analyzed Uganda's National ID Legislation and its compliance with International \#HumanRights obligations. Read the report: https://t.co/SW6MSnlUWq \#GoodID \#DigitalIdentity https://t.co/hOV9EfKSCO" / Twitter
 
 **Source:** [twitter.com](https://twitter.com/UnwantedWitness/status/1498217670516387842) · **Published:** 2022-02-28 · **Feed tags:** goodid
 

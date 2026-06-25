@@ -9,7 +9,7 @@ authors: []
 feed_tags: ["events", "orbit"]
 ---
 
-# #Data4Democracy
+# \#Data4Democracy
 
 **Source:** [sites.google.com](https://sites.google.com/view/data-and-democracy) · **Published:** 2021-06-30 · **Feed tags:** events, orbit
 

@@ -1,0 +1,43 @@
+// Custom Quartz styling for the BKC Archive Wiki.
+//
+// This file is NOT part of the published content. The GitHub Pages workflow
+// (.github/workflows/deploy.yml) copies it into the freshly-cloned Quartz tree at
+// quartz/styles/custom.scss before building, which is Quartz's official override
+// entrypoint.
+//
+// CRITICAL: Quartz's default custom.scss is `@use "./base.scss";` — that import is
+// what pulls in ALL foundational styles (the #quartz-body grid layout,
+// grid-template-areas, body fonts). Because we OVERWRITE custom.scss, we must keep
+// this @use line or the whole site renders unstyled (no layout, serif fonts).
+// Per SCSS rules, @use must come before any style rules below.
+@use "./base.scss";
+
+// ---------------------------------------------------------------------------
+// Explorer sidebar scrolling
+// ---------------------------------------------------------------------------
+// Quartz's left sidebar is a `height: 100vh` flex column; the `.explorer` flex
+// item ships with the default `min-height: auto`, so when folders are expanded it
+// grows to fit ALL of its contents instead of staying within the sidebar — and the
+// inner `.explorer-content` (which has `overflow-y: auto`) never gets a bounded
+// height to scroll inside. The bottom of a long, expanded tree becomes unreachable.
+//
+// Fix (desktop only — on mobile the explorer is a full-screen overlay with its own
+// rules): let `.explorer` consume the remaining sidebar height and allow it to
+// shrink (`min-height: 0`) so its scroll container engages.
+@media all and (min-width: 801px) {
+  .sidebar.left {
+    // contain children so the explorer scrolls internally rather than the page
+    overflow: hidden;
+  }
+
+  .explorer {
+    flex: 1 1 auto; // take the leftover vertical space in the sidebar column
+    min-height: 0; // critical: permit the flex item to shrink below content size
+  }
+
+  .explorer-content {
+    min-height: 0;
+    max-height: 100%;
+    overflow-y: auto;
+  }
+}

@@ -1,7 +1,7 @@
 ---
 id: 3003365
 type: item
-title: "It&#039;s Not Over. The Oversight Board&#039;s Trump Decision is Just the Start."
+title: "It's Not Over. The Oversight Board's Trump Decision is Just the Start."
 url: "https://www.lawfareblog.com/its-not-over-oversight-boards-trump-decision-just-start"
 source: lawfareblog.com
 date: 2021-05-05
@@ -9,7 +9,7 @@ authors: ["Evelyn Douek"]
 feed_tags: ["added", "community"]
 ---
 
-# It&#039;s Not Over. The Oversight Board&#039;s Trump Decision is Just the Start.
+# It's Not Over. The Oversight Board's Trump Decision is Just the Start.
 
 **Source:** [lawfareblog.com](https://www.lawfareblog.com/its-not-over-oversight-boards-trump-decision-just-start) · **Published:** 2021-05-05 · **By:** Evelyn Douek · **Feed tags:** added, community
 

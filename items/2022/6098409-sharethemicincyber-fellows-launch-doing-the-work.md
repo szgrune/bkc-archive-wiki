@@ -9,7 +9,7 @@ authors: []
 feed_tags: ["events"]
 ---
 
-# #ShareTheMicInCyber Fellows Launch: Doing the Work
+# \#ShareTheMicInCyber Fellows Launch: Doing the Work
 
 **Source:** [events.newamerica.org](https://events.newamerica.org/sharemicincyberfellowslaunch) · **Published:** 2022-12-05 · **Feed tags:** events
 

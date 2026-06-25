@@ -9,7 +9,7 @@ authors: []
 feed_tags: ["events"]
 ---
 
-# Visual Representations of Race and Gender: Analyzing “Me” in #IfTheyGunnedMeDown on Tumblr – MIT Comparative Media Studies/Writing
+# Visual Representations of Race and Gender: Analyzing “Me” in \#IfTheyGunnedMeDown on Tumblr – MIT Comparative Media Studies/Writing
 
 **Source:** [cmsw.mit.edu](https://cmsw.mit.edu/event/jenny-korn-visual-representations-race-gender-iftheygunnedmedown-tumblr/) · **Published:** 2018-02-26 · **Feed tags:** events
 

@@ -9,7 +9,7 @@ authors: []
 feed_tags: ["website", "mailchimp", "buzz"]
 ---
 
-# Mozilla on Twitter: "With great code comes great responsibility. Today, we're teaming up with @OmidyarNetwork, @SchmidtFutures and @CraigNewmark Philanthropies to launch the #ResponsibleCS Challenge. The full story: https://t.co/K0Ba5w4x1F"
+# Mozilla on Twitter: "With great code comes great responsibility. Today, we're teaming up with @OmidyarNetwork, @SchmidtFutures and @CraigNewmark Philanthropies to launch the \#ResponsibleCS Challenge. The full story: https://t.co/K0Ba5w4x1F"
 
 **Source:** [twitter.com](https://twitter.com/mozilla/status/1050012481228288003) · **Published:** 2018-10-24 · **Feed tags:** website, mailchimp, buzz
 

@@ -9,7 +9,7 @@ authors: []
 feed_tags: ["events"]
 ---
 
-# IÖW: #TheNewCommonSense
+# IÖW: \#TheNewCommonSense
 
 **Source:** [ioew.de](https://www.ioew.de/en/event-single/thenewcommonsense) · **Published:** 2021-11-02 · **Feed tags:** events
 

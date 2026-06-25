@@ -9,7 +9,7 @@ authors: []
 feed_tags: ["goodid"]
 ---
 
-# (4) Zara Rahman on Twitter: "This case study from @NubianRights really underlines one of the major findings from @EngnRoom's latest #digitalID research – that justice often simply means access to ID. https://t.co/N0rVsbvgN7" / Twitter
+# (4) Zara Rahman on Twitter: "This case study from @NubianRights really underlines one of the major findings from @EngnRoom's latest \#digitalID research – that justice often simply means access to ID. https://t.co/N0rVsbvgN7" / Twitter
 
 **Source:** [twitter.com](https://twitter.com/zararah/status/1491054331273138178) · **Published:** 2022-02-08 · **Feed tags:** goodid
 

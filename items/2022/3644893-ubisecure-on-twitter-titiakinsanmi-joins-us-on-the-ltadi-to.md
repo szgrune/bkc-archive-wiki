@@ -9,7 +9,7 @@ authors: []
 feed_tags: ["goodid"]
 ---
 
-# Ubisecure on Twitter: ".@titiakinsanmi joins us on the #LTADI to discuss her work with @GoodID, the various trust frameworks across the world and how these frameworks will interact cross-border > https://t.co/ZzcfEkKZZl #DigitalIdentity #Privacy #Authentication" / Twitter
+# Ubisecure on Twitter: ".@titiakinsanmi joins us on the \#LTADI to discuss her work with @GoodID, the various trust frameworks across the world and how these frameworks will interact cross-border > https://t.co/ZzcfEkKZZl \#DigitalIdentity \#Privacy \#Authentication" / Twitter
 
 **Source:** [twitter.com](https://twitter.com/ubisecure/status/1497226127148044293) · **Published:** 2022-02-28 · **Feed tags:** goodid
 
