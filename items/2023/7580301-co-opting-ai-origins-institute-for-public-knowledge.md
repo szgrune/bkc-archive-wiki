@@ -1,0 +1,17 @@
+---
+id: 7580301
+type: item
+title: "Co-Opting AI: Origins – Institute for Public Knowledge"
+url: "https://ipk.nyu.edu/events/co-opting-ai-origins/"
+source: ipk.nyu.edu
+date: 2023-05-15
+authors: []
+feed_tags: ["events"]
+---
+
+# Co-Opting AI: Origins – Institute for Public Knowledge
+
+**Source:** [ipk.nyu.edu](https://ipk.nyu.edu/events/co-opting-ai-origins/) · **Published:** 2023-05-15 · **Feed tags:** events
+
+
+[Open original ›](https://ipk.nyu.edu/events/co-opting-ai-origins/)

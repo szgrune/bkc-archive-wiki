@@ -1,0 +1,18 @@
+---
+id: 2196242
+type: item
+title: "05/17/17-05/19/17: Tilburg University - Conference TILTing Perspectives 2017: 'Regulating a connected world'"
+url: "https://www.tilburguniversity.edu/research/institutes-and-research-groups/tilt/events/tilting-perspectives/"
+source: tilburguniversity.edu
+date: 2016-10-07
+authors: []
+feed_tags: ["events"]
+---
+
+# 05/17/17-05/19/17: Tilburg University - Conference TILTing Perspectives 2017: 'Regulating a connected world'
+
+**Source:** [tilburguniversity.edu](https://www.tilburguniversity.edu/research/institutes-and-research-groups/tilt/events/tilting-perspectives/) · **Published:** 2016-10-07 · **Feed tags:** events
+
+> Technology is transforming society on many fronts. In recent years, we have seen the rise of social media and the sharing economy, a sustained move from atoms to bits, and the rapid development of cloud computing, big data, smart devices, and robotics. Along with these developments we see a continuous stream of new legal and regulatory issues. For every problem solved, two new problems seem to surface. When looking at current phenomena, it is particularly notable that that everything seems to be connected. Individuals are being connected through networks and data flows from and through connected devices; the field of Data Science seems to revolve around connecting the dots between various bits of data and between data and persons. Disciplines and regulatory domains are also increasingly connected: contemporary issues require involvement from legal scholars, regulation and governance scholars, and social scientists, who must work together, but who also occasionally clash. Similarly, different domains of law become intertwined, such as public law and private law or data protection and intellectual property, but do not always coexist harmoniously. Regulation is no longer the prerogative of sovereign states; rather, complex interconnected multi-level governance arrangements are at play. Conference theme These developments and transformations give good reason to adopt 'Regulating a connected world' as the theme for the 5th Bi-annual TILTing Perspectives conference on the intersection of law, technology, and society. While recent TILTing conferences had a specific focus, ‘robotics and neurotechnologies’ in 2011, ‘health and surveillance’ in 2015, the 2017 conference will open the floor to an entire spectrum of topics and disciplines under the broad umbrella of law, technology and society. The conference TILTing 2017 brings together researchers, practitioners, policy makers, and civil society at the intersection of law and regulation, technology, and society to share insights, exchange ideas and formulate, discuss and suggest answers to contemporary challenges related to technological innovation. The conference will include plenary sessions, parallel sessions, and panel discussions with invited speakers, as well as presentations from respondents to this call for papers. The conference features five large tracks: Privacy, Health, Intellectual property, Data Science, and PLSC Europe. But within the context of these general tracks, we are adopting an open and bottom-up organizational strategy: it is up to you (the participants) to determine what happens at the conference and how. With that in mind, we invite scholars, practitioners, policy makers, and others, to propose papers, workshops, panels, mini-symposia and the like, both within and in addition to the large tracks. If you have an idea and would like to check whether it fits the open theme of the conference, feel free to contact tilting@tilburguniversity.edu
+
+[Open original ›](https://www.tilburguniversity.edu/research/institutes-and-research-groups/tilt/events/tilting-perspectives/)

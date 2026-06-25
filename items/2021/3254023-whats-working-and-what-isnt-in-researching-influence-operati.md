@@ -1,0 +1,24 @@
+---
+id: 3254023
+type: item
+title: "What’s Working and What Isn’t in Researching Influence Operations?"
+url: "https://www.lawfareblog.com/whats-working-and-what-isnt-researching-influence-operations"
+source: lawfareblog.com
+date: 2021-09-22
+authors: ["Alicia Wanless"]
+feed_tags: ["orbit"]
+---
+
+# What’s Working and What Isn’t in Researching Influence Operations?
+
+**Source:** [lawfareblog.com](https://www.lawfareblog.com/whats-working-and-what-isnt-researching-influence-operations) · **Published:** 2021-09-22 · **By:** Alicia Wanless · **Feed tags:** orbit
+
+> The world first learned about Russian attempts to manipulate the information environment in 2013. Staff hired by the Internet Research Agency (IRA) posed as Americans online posting divisive comments to social media. Continued activities during the 2016 U.S. presidential election put influence operations on center stage globally. It’s been eight years since the initial IRA operation, but how far has the field working to understand and counter influence operations come in that time? The field has certainly grown apace producing countless case studies highlighting examples of influence operations. Yet in many other ways the field has hit a rut. Scholars of influence operations still quibble over establishing common definitions and frequently come up empty when seeking to access more social media data.
+> 
+> Influence operations are not a new phenomenon, although the [concept](https://carnegieendowment.org/2019/12/30/how-do-you-define-problem-like-influence-pub-80716) still has not been well defined. As part of influence operations, actors engage in a variety of activities aimed at [affecting an audience or situation](https://carnegieendowment.org/2020/06/10/challenges-of-countering-influence-operations-pub-82031) for a specific aim. Such activities can include tactics such as [disinformation](https://science.sciencemag.org/content/359/6380/1094); for example, Chinese officials have repeatedly attempted to [dispute](https://www.cfr.org/in-brief/how-china-ramped-disinformation-efforts-during-pandemic) the origins of the novel coronavirus through a coordinated campaign involving diplomats, state broadcasters and social media. But influence operations aren’t just limited to intentional spreading of misleading information. It’s a term that can also encompass knowing when to put an emotive message in front of an audience to encourage a behavior change, as [Operation Christmas](https://www.youtube.com/watch?v=dHWt_EWWfx0) aimed to in demobilizing FARC guerrillas; agenda-setting particularly in mainstream media to frame a topic, as both [Greenpeace and Shell](https://journals.sagepub.com/doi/abs/10.1177/1081180x06289213) did in encouraging audiences, especially policymakers, to adopt their side; and [mobilizing audiences](https://sk.sagepub.com/books/the-sage-handbook-of-propaganda/i1024.xml) to participate by taking up and spreading a message.
+> 
+> The emergence of a field devoted to researching, and countering, influence operations is something I have watched closely. In 2014, I channeled a fascination with propaganda from the two world wars into researching how the phenomena was changing in a digital age. In those early days, there were few places to find work researching influence operations. The career paths were mostly in academia or in the military or intelligence services. Marrying the two, I chose to pursue a doctorate in war studies. Along the way, I have worked with tech companies, militaries, civil society groups, and governments, learning how each understands and works to counter (and sometimes run) influence operations.
+> 
+> The field has come a long way since I got started in 2014. But certain pathologies still remain entrenched and hamper effective dialogue and cooperation between key stakeholders. A lack of universal definitions about the problem often means that meetings are spent level-setting, rather than problem-solving. Growing distrust of industry hinders research collaboration with social media companies, for fear of attacks on one’s credibility. For those who do have access to data, the arrangement is usually ad hoc, part of an unbalanced exchange between a company and the researchers, as exemplified in the recent debacle between [researchers at New York University and Facebook](https://www.zdnet.com/article/mozilla-macarthur-and-ford-foundations-unite-to-oppose-facebook-ban-on-disinformation-research/). To add to that, there has been little headway on regulation that outlines a framework for transparency reporting by industry on their operations, or rules for facilitating data-sharing, and what [comes down the pipe](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=COM%3A2020%3A825%3AFIN) often leaves it to working groups to
+
+[Open original ›](https://www.lawfareblog.com/whats-working-and-what-isnt-researching-influence-operations)
