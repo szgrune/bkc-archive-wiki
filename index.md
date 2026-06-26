@@ -54,7 +54,12 @@ Catalog of the wiki. Start here, then drill into pages. Maintained by the LLM.
 - [[princeton-citp|Princeton CITP]] — sibling tech-policy center; convener (7)
 
 ## Events
-_none yet — pending synthesis pass across all years_
+Cross-source event clusters. Structurally sparse in the current corpus: the two source
+types (Berkman Buzz 2006–2015, TagTeam 2017+) barely overlap in time, so most events
+await the YouTube layer (a survey of 2017+ TagTeam clusters found mainly syndication
+duplicates and recurring seminar series, not multi-facet single events).
+- [[2014-privacy-at-the-margins|Privacy at the Margins (2014)]] — danah boyd & Alice Marwick, IJOC special issue (Buzz + TagTeam)
+- [[2017-privacy-tools-for-data-sharing|Privacy Tools for Data Sharing (2017)]] — Harvard Privacy Tools Project symposium (2 TagTeam artifacts)
 
 ## Timeline
 - [[timeline/2026|2026]] — landing page, synthesis pending (444)

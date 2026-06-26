@@ -72,3 +72,15 @@ false positives out of the net-neutrality pool. Updated index.md.
 Topic layer now: 11 AI/2025 + 8 cross-cutting = 19 topic pages.
 Remaining: events (Buzz↔TagTeam clusters, mostly the 2014–15 overlap) and expanding
 the existing 2025-scoped pages corpus-wide.
+
+## [2026-06-26] synthesis | events batch 5 + survey
+Surveyed the corpus for cross-source / single-occurrence event clusters (scripted:
+shared event-phrase buckets + near-duplicate-title pairs within 45-day windows).
+Finding: genuine multi-facet events are structurally rare here — Buzz (2006–2015) and
+TagTeam (2017+) barely overlap, and most TagTeam "clusters" are syndication duplicates
+(same wire story across outlets) or recurring seminar series (CITP, lecture series),
+not one occurrence reported from multiple angles. Created the one clean qualifying
+event: [[2017-privacy-tools-for-data-sharing]] (Harvard Privacy Tools Project symposium;
+event page + registration). Fixed index.md Events section (was "none yet" despite the
+existing [[2014-privacy-at-the-margins]]) and documented the structural limitation.
+Richer event synthesis is deferred to the YouTube import (the missing second source type).
