@@ -286,7 +286,8 @@ if (!existsSync(join(WIKI_ROOT, "index.md"))) {
       `## Reference (generated)\n` +
       `- [[_domains|Sources by domain]]\n- [[_counts|Timeline counts]]\n` +
       `- [[feed-tags|Feed tags]]\n- [[digest|Digest index]]\n\n` +
-      `## Topics\n_none yet_\n\n## People\n_none yet_\n\n## Organizations\n_none yet_\n`
+      `## Topics\n_none yet_\n\n## People\n_none yet_\n\n## Organizations\n_none yet_\n\n` +
+      `## Events\n_none yet_\n`
   );
 }
 

@@ -1,0 +1,24 @@
+---
+id: buzz_200909_1
+type: item
+title: "Berkman Buzz, week of 8/31"
+url: "https://cyber.law.harvard.edu/berkman-buzz/2009-09/1"
+source: cyber.law.harvard.edu
+date: 2009-09-04
+authors: ["Seth Young"]
+feed_tags: ["berkman-buzz"]
+---
+
+# Berkman Buzz, week of 8/31
+
+**Source:** [cyber.law.harvard.edu](https://cyber.law.harvard.edu/berkman-buzz/2009-09/1) · **Published:** 2009-09-04 · **By:** Seth Young · **Feed tags:** berkman-buzz
+
+> http://cyber.law.harvard.edu/getinvolved
+> 
+> What's being discussed...take your pick or browse below.*
+> 
+> Harry Lewis presents Lewis Hyde's (and his own) objections to the
+> 
+> Google Book settlement:
+
+[Open original ›](https://cyber.law.harvard.edu/berkman-buzz/2009-09/1)

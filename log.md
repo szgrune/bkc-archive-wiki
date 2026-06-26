@@ -22,5 +22,12 @@ Ran `scripts/build.mjs --all`: regenerated item stubs for every year (was 2025-o
 - Fixed ambiguous year wikilinks: index Timeline, `_counts.md`, and `digest.md` now use path-qualified targets (`[[timeline/<year>]]` / `[[raw/digest/<year>]]`) to resolve the `2025` basename collision. Index Timeline now lists all 12 years.
 - Added `.quartz/custom.scss` (explorer-sidebar scroll fix) injected via `deploy.yml`.
 
-## [2026-06-25] lint | fix expanded ("global") graph not loading
+## [2026-06-26] ingest | Berkman Buzz emails + events layer infrastructure
+- Added 417 Berkman Buzz newsletters (2006–2015) to `raw/archive.json` via `scripts/import_buzz.py`. IDs: `buzz_YYYYMM_N`. Full body text + email metadata included. Total corpus: 7,342 items.
+- Introduced `events/` as a new LLM-owned entity type (alongside topics/people/orgs). See `AGENTS.md §4` for schema and detection heuristics.
+- Updated `AGENTS.md`: corpus section, layout tree, page formats, synthesis workflow, status.
+- Updated `index.md`: scope note, added Events section, extended Timeline to include Buzz years (2006–2015).
+- Rebuilt all stubs: `scripts/build.mjs --all` → 7,342 stubs across 2006–2026.
+- Events synthesis pending: priority years are 2014–2015 (first TagTeam+Buzz overlap) and 2025 (richest TagTeam data; YouTube to follow).
+
 The global graph used Quartz's default `depth: -1`, rendering every page (~6.9k nodes, mostly unlinked item stubs) and hanging the browser. `deploy.yml` now seds `quartz.layout.ts` to `Component.Graph({ globalGraph: { depth: 3 } })` — a bounded BFS that loads fast and shows only the linked cluster. Local/mini graph unchanged (`depth: 1`).

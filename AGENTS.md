@@ -12,21 +12,26 @@ source. The human curates and asks questions; the LLM does the bookkeeping.
 
 ## 1. What the corpus is
 
-`raw/archive.json` (≈4 MB) is a scrape of **Harvard TagTeam hub 1176** — the
-**Berkman Klein Center (BKC)** for Internet & Society curated link feed.
+`raw/archive.json` is the **primary source** — a merged dataset of:
 
-- **6,925 items**, dated **2014–2026** (bulk 2017+).
-- Each item is a **bookmark**, not an article: `id`, `title`, `url`,
-  `date_published`, `tags`, sometimes a short HTML `description` (≈1,779 items),
-  almost never full `content` (24 items).
-- **2,063 unique domains** (NYT, Wired, techpolicy.press, SSRN, Harvard, 404media…).
-  Subject matter: internet/tech/society/law/AI/policy.
+- **TagTeam hub 1176** — BKC's curated link feed. **6,925 items**, dated
+  **2014–2026** (bulk 2017+). Each item is a bookmark: `id`, `title`, `url`,
+  `date_published`, `tags`, sometimes a short HTML `description`, almost never
+  full `content`. **2,063 unique domains** (NYT, Wired, techpolicy.press, SSRN,
+  Harvard, 404media…). Subject matter: internet/tech/society/law/AI/policy.
+- **Berkman Buzz newsletters** — 417 email issues, **2006–2015**. Weekly digests
+  from the Center. Item IDs: `buzz_YYYYMM_N`. Full body text in `content` field;
+  `email` sub-object carries message-id, list, source-file.
+- **BKC YouTube videos** (forthcoming) — @BKCHarvard channel. Item IDs:
+  `yt_VIDEO_ID`. `youtube` sub-object carries captions, duration, speakers.
+
+**Total: 7,342 items** (and growing).
 
 ### Two constraints that shape everything
-1. **Metadata-only.** There is no article body text. Do **not** fetch URLs during
-   normal ingest/synthesis. Topics are derived from titles, domains and the short
-   descriptions. (On-demand fetching of a *specific* item the human cares about is
-   fine when asked — note it in the log.)
+1. **Metadata-only for TagTeam items.** There is no article body text. Do **not**
+   fetch URLs during normal ingest/synthesis. Topics are derived from titles, domains
+   and short descriptions. (On-demand fetching of a *specific* item is fine when asked
+   — note it in the log.) Buzz and YouTube items do carry full `content`.
 2. **The feed tags are NOT topical.** `community`, `orbit`, `buzz`, `events`,
    `opportunities` are BKC newsletter-section/workflow tags (plus housekeeping like
    `added`, `skip`). They tell you the *channel*, not the *subject*. All topical
@@ -46,6 +51,7 @@ archive-wiki/
 ├── topics/<slug>.md   topical/theme pages — the value layer         [LLM]
 ├── people/<slug>.md   recurring authors / named individuals         [LLM]
 ├── orgs/<slug>.md     institutions (BKC, EFF, Data & Society…)       [LLM]
+├── events/<slug>.md   concrete occurrences: talks, papers, events   [LLM]
 ├── sources/
 │   ├── _domains.md    domain → count table                          [SCRIPT]
 │   └── <domain>.md    optional notes on a notable source            [LLM]
@@ -124,6 +130,45 @@ to their stubs. `## Topics` / `## Affiliations` cross-links.
 What it is, its role in the archive (publisher? subject? convener?), `## Items`,
 related topics/people.
 
+### Event — `events/<slug>.md`
+A concrete real-world occurrence (talk, paper publication, workshop, podcast
+episode) that generated **≥2 archive items from different source types**. Events
+are the bridge between Buzz announcements, YouTube recordings, TagTeam community
+posts, and press coverage of the same thing.
+
+**When to create:** 2+ items from different source categories reference the same
+occurrence. Common signals:
+- Buzz `events`-tagged item + YouTube video sharing a title phrase or person name
+- TagTeam `bkc-happenings` post + YouTube recording within the same week
+- Three-source cluster: Buzz announcement + TagTeam post + YouTube recording
+
+```markdown
+---
+type: event
+title: "Internet Law at the Frontier — BKC Annual Symposium 2019"
+date: 2019-10-15          # or YYYY-MM if only month is known
+venue: "Harvard Law School"   # optional
+participants: ["Jonathan Zittrain", "Evelyn Douek"]
+related_topics: [content-moderation-and-speech]
+related_people: [jonathan-zittrain]
+related_orgs: [berkman-klein-center]   # optional
+---
+# Internet Law at the Frontier — BKC Annual Symposium 2019
+
+One paragraph: what the event was and why it matters to BKC's work.
+
+## Items
+
+- [[buzz_201910_3|Berkman Buzz, Oct 2019]] — buzz: advance announcement
+- [[yt_AbCdEfGhIjK-internet-law-at-the-frontier|Video title]] — youtube: full recording
+- [[13204567-event-page-title|Event page (TagTeam)]] — tagteam: programme notes
+
+## Related
+[[jonathan-zittrain]] · [[content-moderation-and-speech]]
+```
+
+**Slug convention:** `<YYYY>-<short-title>`, e.g. `2019-symposium-internet-law-frontier`.
+
 ### Timeline — `timeline/<year>.md`
 Narrative of that year's dominant themes (read `raw/digest/<year>.md`), a handful
 of highlight items, and links to the topic pages that peaked that year.
@@ -162,8 +207,13 @@ update/extend affected topic/person/org pages and the relevant `timeline/<year>.
 2. Cluster titles into topics. Create/extend `topics/*.md`; file each item by adding
    its `[[stub|Title]]` line under a topic's **Key items**.
 3. Extract recurring people (authors + names in titles) and orgs; create their pages.
-4. Write/update `timeline/<year>.md`, refresh `index.md`, append a `synthesis` log entry.
-Prefer working one year at a time. An item can appear under several topics.
+4. **Identify cross-source event clusters:** when a Buzz item, a YouTube video, and/or
+   a TagTeam post appear to reference the same real-world occurrence (matching title
+   phrases, person names, dates within ≤7 days), create an `events/<slug>.md` page.
+   Link the event from relevant topic/person pages. See §4 for the event format.
+5. Write/update `timeline/<year>.md`, refresh `index.md`, append a `synthesis` log entry.
+
+Prefer working one year at a time. An item can appear under several topics and in one event.
 
 ### Query (answer a question)
 Read `index.md` → open the relevant topic/entity pages → drill into linked item
@@ -181,6 +231,14 @@ mechanical. Append a `lint` log entry.
 
 ## 6. Status
 
-Prototype slice = **2025** (737 items) stubbed and ready for synthesis. After the
-human reviews page formats in Obsidian, run `--all` and extend synthesis across all
-years. See `log.md` for history.
+**Corpus:** 7,342 items — 6,925 TagTeam bookmarks (2014–2026) + 417 Berkman Buzz
+newsletters (2006–2015). BKC YouTube videos pending full import (~1,100 videos).
+
+**Wiki build:** all years stubbed and digested (`--all`). Thematic synthesis covers
+**2025** fully. Other years have navigational landing pages pending synthesis.
+
+**Events layer:** not yet populated. Priority clusters for first pass:
+- 2014–2015: TagTeam + Buzz overlap (earliest cross-source years)
+- 2025: richest TagTeam data; YouTube videos available once imported
+
+See `log.md` for history. After YouTube import, re-run `build.mjs --all`.

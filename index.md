@@ -1,11 +1,7 @@
 # Index
 
 Catalog of the wiki. Start here, then drill into pages. Maintained by the LLM.
-**Scope:** all years **2014–2026 (6,925 items)** are built as item stubs and per-year
-digests. Thematic synthesis (Topics/People/Organizations) currently covers **2025**;
-other years have navigational landing pages pending synthesis. Counts in parentheses
-are items filed on that page, not corpus totals — except Timeline rows, which show the
-corpus item count for that year.
+**Scope:** **7,342 items** — 6,925 TagTeam bookmarks (2014–2026) + 417 Berkman Buzz newsletters (2006–2015); BKC YouTube videos pending. All years are built as item stubs and per-year digests. Thematic synthesis (Topics/People/Organizations/Events) currently covers **2025**; other years pending. Counts in parentheses are items filed on that page.
 
 ## Topics
 - [[ai-governance-and-regulation|AI Governance & Regulation]] — the state-vs-federal regulatory tug-of-war (12)
@@ -37,6 +33,9 @@ corpus item count for that year.
 - [[lawfare|Lawfare]] — law & governance analysis (4)
 - [[electronic-frontier-foundation|Electronic Frontier Foundation]] — digital civil liberties (2)
 
+## Events
+_none yet — pending synthesis pass across all years_
+
 ## Timeline
 - [[timeline/2026|2026]] — landing page, synthesis pending (444)
 - [[timeline/2025|2025]] — the prototype year: techlash matures into a structural-power critique (737)
@@ -49,7 +48,16 @@ corpus item count for that year.
 - [[timeline/2018|2018]] — landing page, synthesis pending (943)
 - [[timeline/2017|2017]] — landing page, synthesis pending (225)
 - [[timeline/2016|2016]] — landing page, synthesis pending (4)
-- [[timeline/2014|2014]] — landing page, synthesis pending (2)
+- [[timeline/2015|2015]] — landing page, synthesis pending (Buzz)
+- [[timeline/2014|2014]] — landing page, synthesis pending (2 TagTeam + Buzz)
+- [[timeline/2013|2013]] — landing page, synthesis pending (Buzz)
+- [[timeline/2012|2012]] — landing page, synthesis pending (Buzz)
+- [[timeline/2011|2011]] — landing page, synthesis pending (Buzz)
+- [[timeline/2010|2010]] — landing page, synthesis pending (Buzz)
+- [[timeline/2009|2009]] — landing page, synthesis pending (Buzz)
+- [[timeline/2008|2008]] — landing page, synthesis pending (Buzz)
+- [[timeline/2007|2007]] — landing page, synthesis pending (Buzz)
+- [[timeline/2006|2006]] — landing page, synthesis pending (Buzz)
 
 ## Reference (generated — do not hand-edit)
 - [[_domains|Sources by domain]] — 2,063 domains, full corpus
