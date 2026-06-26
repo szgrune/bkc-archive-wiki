@@ -40,11 +40,11 @@ Catalog of the wiki. Start here, then drill into pages. Maintained by the LLM.
 
 ## Organizations
 - [[berkman-klein-center|Berkman Klein Center]] — the archive's institutional home (9)
-- [[techpolicy-press|Tech Policy Press]] — the archive's most-cited analysis outlet (7)
-- [[404-media|404 Media]] — investigative surveillance reporting (5)
+- [[techpolicy-press|Tech Policy Press]] — the archive's most-cited analysis outlet, 2021→ (11)
+- [[404-media|404 Media]] — investigative surveillance reporting, 2023→ (10)
 - [[knight-first-amendment-institute|Knight First Amendment Institute]] — online-speech scholarship (4)
-- [[rest-of-world|Rest of World]] — global-majority tech reporting (6)
-- [[lawfare|Lawfare]] — law & governance analysis (4)
+- [[rest-of-world|Rest of World]] — global-majority tech reporting, 2021→ (10)
+- [[lawfare|Lawfare]] — law & governance analysis, 2019→ (7)
 - [[electronic-frontier-foundation|Electronic Frontier Foundation]] — digital civil liberties (2)
 - [[data-society|Data & Society]] — peer research institute; public-interest AI research (9)
 - [[citizen-lab|The Citizen Lab]] — mercenary-spyware & transnational-repression forensics (8)

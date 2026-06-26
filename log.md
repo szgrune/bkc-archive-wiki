@@ -84,3 +84,11 @@ event: [[2017-privacy-tools-for-data-sharing]] (Harvard Privacy Tools Project sy
 event page + registration). Fixed index.md Events section (was "none yet" despite the
 existing [[2014-privacy-at-the-margins]]) and documented the structural limitation.
 Richer event synthesis is deferred to the YouTube import (the missing second source type).
+
+## [2026-06-26] synthesis | expand existing orgs corpus-wide (batch 6)
+Backfilled pre-2025 items into the four highest-backlog existing org pages, folding the
+earlier-era context into each intro: [[techpolicy-press]] (→2021), [[rest-of-world]]
+(→2021), [[404-media]] (→2023), [[lawfare]] (→2019). Verbatim digest lines. Updated
+index.md counts. EFF (12 items, mostly events) and Knight (30, already 2025-era) left as
+adequately scoped. Remaining expand-existing: deepen [[jonathan-zittrain]] and
+[[bruce-schneier]] from their rich Buzz-era histories; light era notes on the AI topics.
