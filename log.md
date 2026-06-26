@@ -45,3 +45,12 @@ Next: orgs (Data & Society, Global Voices, Creative Commons, Citizen Lab, Nieman
 CITP, The Markup…), Buzz-era + TagTeam people, remaining topics (net neutrality,
 algorithmic accountability), and Buzz↔TagTeam event clusters; then extend the existing
 2025 pages corpus-wide.
+
+## [2026-06-26] synthesis | corpus-wide orgs, batch 2 (6 org pages)
+Added 6 organization pages for high-frequency ecosystem actors, curated from domain
+(and, for Buzz-era projects, title) matches in the digests:
+- [[data-society]], [[citizen-lab]], [[nieman-lab]], [[global-voices]], [[the-markup]], [[princeton-citp]].
+Updated index.md Organizations section. Skipped thin candidates below the recurrence
+threshold (Creative Commons 2 items, EPIC 3) — folded as cross-links instead.
+Cross-links seed people pages still to come ([[danah-boyd]], [[ethan-zuckerman]]).
+Next batch: people (Buzz-era BKC figures + TagTeam-era scholars).

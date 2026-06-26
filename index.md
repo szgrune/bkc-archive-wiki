@@ -38,6 +38,12 @@ Catalog of the wiki. Start here, then drill into pages. Maintained by the LLM.
 - [[rest-of-world|Rest of World]] — global-majority tech reporting (6)
 - [[lawfare|Lawfare]] — law & governance analysis (4)
 - [[electronic-frontier-foundation|Electronic Frontier Foundation]] — digital civil liberties (2)
+- [[data-society|Data & Society]] — peer research institute; public-interest AI research (9)
+- [[citizen-lab|The Citizen Lab]] — mercenary-spyware & transnational-repression forensics (8)
+- [[nieman-lab|Nieman Lab]] — the archive's most consistent source on the news business (8)
+- [[global-voices|Global Voices]] — BKC-founded citizen-media network, Global South (6)
+- [[the-markup|The Markup]] — data-driven investigative tech accountability (8)
+- [[princeton-citp|Princeton CITP]] — sibling tech-policy center; convener (7)
 
 ## Events
 _none yet — pending synthesis pass across all years_
