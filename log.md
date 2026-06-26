@@ -63,3 +63,12 @@ Added 6 people pages spanning both archive eras, curated via featured Buzz colum
 Updated index.md People section. These resolve several cross-links seeded by the
 topic/org batches. Next: events (Buzz↔TagTeam clusters), remaining topics
 (net neutrality, algorithmic accountability), then expand the existing 2025 pages.
+
+## [2026-06-26] synthesis | topics batch 4 (2 more cross-cutting pages)
+Added [[net-neutrality-and-internet-access]] (2014–18 peak + broadband equity) and
+[[algorithmic-accountability]] (algorithmic curation → bias audits → "algorithms as
+institutions"). Curated from year-stratified digest matches; filtered IEEE-Spectrum
+false positives out of the net-neutrality pool. Updated index.md.
+Topic layer now: 11 AI/2025 + 8 cross-cutting = 19 topic pages.
+Remaining: events (Buzz↔TagTeam clusters, mostly the 2014–15 overlap) and expanding
+the existing 2025-scoped pages corpus-wide.

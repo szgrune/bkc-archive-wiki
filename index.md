@@ -21,6 +21,8 @@ Catalog of the wiki. Start here, then drill into pages. Maintained by the LLM.
 - [[copyright-and-open-access|Copyright, IP & Open Access]] — Lessig-era commons → AI training-data wars (12)
 - [[cybersecurity-and-encryption|Cybersecurity, Encryption & Spyware]] — crypto wars, mercenary spyware, AI security (12)
 - [[facial-recognition-and-deepfakes|Facial Recognition, Biometrics & Deepfakes]] — biometric ID, recognition bans, NCII (12)
+- [[net-neutrality-and-internet-access|Net Neutrality & Internet Access]] — the 2014–18 fight, then broadband equity (9)
+- [[algorithmic-accountability|Algorithms & Algorithmic Accountability]] — from bias audits to "algorithms as institutions" (12)
 
 ## People
 - [[rudy-fraser|Rudy Fraser]] — builder of Blacksky; decentralized community infrastructure (5)
