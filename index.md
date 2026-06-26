@@ -1,7 +1,7 @@
 # Index
 
 Catalog of the wiki. Start here, then drill into pages. Maintained by the LLM.
-**Scope:** **7,342 items** — 6,925 TagTeam bookmarks (2014–2026) + 417 Berkman Buzz newsletters (2006–2015); BKC YouTube videos pending. All years are built as item stubs and per-year digests. Thematic synthesis (Topics/People/Organizations/Events) currently covers **2025**; other years pending. Counts in parentheses are items filed on that page.
+**Scope:** **7,342 items** — 6,925 TagTeam bookmarks (2014–2026) + 417 Berkman Buzz newsletters (2006–2015); BKC YouTube videos pending. All years are built as item stubs and per-year digests. Thematic synthesis (Topics/People/Organizations/Events) is being extended **corpus-wide (2006–2026)**; the AI-cluster topics remain 2025-anchored while cross-cutting topics span all years. Counts in parentheses are items filed on that page.
 
 ## Topics
 - [[ai-governance-and-regulation|AI Governance & Regulation]] — the state-vs-federal regulatory tug-of-war (12)
@@ -15,6 +15,12 @@ Catalog of the wiki. Start here, then drill into pages. Maintained by the LLM.
 - [[digital-colonialism-and-global-south|Digital Colonialism & the Global South]] — the archive's distinctive global lens (13)
 - [[ai-copyright-and-knowledge|AI, Copyright & Knowledge Institutions]] — copyright, journalism, libraries (11)
 - [[platform-power-and-antitrust|Platform Power & Antitrust]] — concentration, antitrust, the cloud oligopoly (11)
+- [[privacy-and-surveillance|Privacy, Data & Surveillance]] — the longest-running thread, NSA → data brokers → AI border tech (12)
+- [[misinformation-and-elections|Misinformation, Disinformation & Elections]] — from "fake news" panic to post-mortem (12)
+- [[journalism-and-the-news-business|Journalism & the News Business]] — the press's survival and ethics, Nieman-heavy (11)
+- [[copyright-and-open-access|Copyright, IP & Open Access]] — Lessig-era commons → AI training-data wars (12)
+- [[cybersecurity-and-encryption|Cybersecurity, Encryption & Spyware]] — crypto wars, mercenary spyware, AI security (12)
+- [[facial-recognition-and-deepfakes|Facial Recognition, Biometrics & Deepfakes]] — biometric ID, recognition bans, NCII (12)
 
 ## People
 - [[rudy-fraser|Rudy Fraser]] — builder of Blacksky; decentralized community infrastructure (5)

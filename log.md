@@ -31,3 +31,17 @@ Ran `scripts/build.mjs --all`: regenerated item stubs for every year (was 2025-o
 - Events synthesis pending: priority years are 2014–2015 (first TagTeam+Buzz overlap) and 2025 (richest TagTeam data; YouTube to follow).
 
 The global graph used Quartz's default `depth: -1`, rendering every page (~6.9k nodes, mostly unlinked item stubs) and hanging the browser. `deploy.yml` now seds `quartz.layout.ts` to `Component.Graph({ globalGraph: { depth: 3 } })` — a bounded BFS that loads fast and shows only the linked cluster. Local/mini graph unchanged (`depth: 1`).
+
+## [2026-06-26] synthesis | corpus-wide topics, batch 1 (6 cross-cutting pages)
+Began extending the value layer beyond the 2025 slice to span 2006–2026. Added 6
+durable cross-cutting topic pages, each curated from the per-year digests (verbatim
+stub links) across the full timeline:
+- [[privacy-and-surveillance]], [[misinformation-and-elections]], [[journalism-and-the-news-business]], [[copyright-and-open-access]], [[cybersecurity-and-encryption]], [[facial-recognition-and-deepfakes]].
+Updated index.md (Topics section + scope note). Cross-links to not-yet-created
+entity pages (e.g. [[data-society]], [[nieman-lab]], [[citizen-lab]], [[ethan-zuckerman]],
+[[lawrence-lessig]], [[woodrow-hartzog]], [[creative-commons]]) are intentional and
+seed the next batches. Metadata-only (no URL fetches).
+Next: orgs (Data & Society, Global Voices, Creative Commons, Citizen Lab, Nieman Lab,
+CITP, The Markup…), Buzz-era + TagTeam people, remaining topics (net neutrality,
+algorithmic accountability), and Buzz↔TagTeam event clusters; then extend the existing
+2025 pages corpus-wide.
