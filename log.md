@@ -54,3 +54,12 @@ Updated index.md Organizations section. Skipped thin candidates below the recurr
 threshold (Creative Commons 2 items, EPIC 3) — folded as cross-links instead.
 Cross-links seed people pages still to come ([[danah-boyd]], [[ethan-zuckerman]]).
 Next batch: people (Buzz-era BKC figures + TagTeam-era scholars).
+
+## [2026-06-26] synthesis | corpus-wide people, batch 3 (6 person pages)
+Added 6 people pages spanning both archive eras, curated via featured Buzz columns
+(content-matched "From <Name>") and TagTeam title matches → verbatim digest lines:
+- Buzz-era BKC figures: [[ethan-zuckerman]], [[david-weinberger]], [[john-palfrey]], [[lawrence-lessig]].
+- Cross-era: [[danah-boyd]] (Data & Society founder), [[woodrow-hartzog]] (privacy-law theorist).
+Updated index.md People section. These resolve several cross-links seeded by the
+topic/org batches. Next: events (Buzz↔TagTeam clusters), remaining topics
+(net neutrality, algorithmic accountability), then expand the existing 2025 pages.

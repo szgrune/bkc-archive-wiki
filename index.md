@@ -29,6 +29,12 @@ Catalog of the wiki. Start here, then drill into pages. Maintained by the LLM.
 - [[jonathan-zittrain|Jonathan Zittrain]] — BKC co-founder & faculty director (1)
 - [[tim-wu|Tim Wu]] — antitrust scholar, *The Age of Extraction* (1)
 - [[cindy-cohn|Cindy Cohn]] — departing EFF executive director (1)
+- [[ethan-zuckerman|Ethan Zuckerman]] — BKC/Global Voices co-founder; civic media & public infrastructure (8)
+- [[david-weinberger|David Weinberger]] — BKC fellow; philosopher of the web and of knowledge (7)
+- [[john-palfrey|John Palfrey]] — BKC co-founder; libraries/DPLA; MacArthur president (6)
+- [[danah-boyd|danah boyd]] — founder of Data & Society; youth, privacy, "at the margins" (4)
+- [[woodrow-hartzog|Woodrow Hartzog]] — privacy-law theorist; "the wrong question" (4)
+- [[lawrence-lessig|Lawrence Lessig]] — BKC co-founder; Creative Commons; free culture → AI speech (2)
 
 ## Organizations
 - [[berkman-klein-center|Berkman Klein Center]] — the archive's institutional home (9)
