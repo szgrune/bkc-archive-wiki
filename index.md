@@ -54,12 +54,21 @@ Catalog of the wiki. Start here, then drill into pages. Maintained by the LLM.
 - [[princeton-citp|Princeton CITP]] — sibling tech-policy center; convener (7)
 
 ## Events
-Cross-source event clusters. Structurally sparse in the current corpus: the two source
-types (Berkman Buzz 2006–2015, TagTeam 2017+) barely overlap in time, so most events
-await the YouTube layer (a survey of 2017+ TagTeam clusters found mainly syndication
-duplicates and recurring seminar series, not multi-facet single events).
+
+**Cross-source clusters** (one occurrence reported from multiple source types). These are
+structurally rare — Berkman Buzz (2006–2015) and TagTeam (2017+) barely overlap — so the
+richest cross-source events await the YouTube layer.
 - [[2014-privacy-at-the-margins|Privacy at the Margins (2014)]] — danah boyd & Alice Marwick, IJOC special issue (Buzz + TagTeam)
 - [[2017-privacy-tools-for-data-sharing|Privacy Tools for Data Sharing (2017)]] — Harvard Privacy Tools Project symposium (2 TagTeam artifacts)
+
+**Recurring conferences & series** (instances grouped per series from the existing corpus;
+to be refined/deduped when YouTube is incorporated).
+- [[rightscon|RightsCon]] — the global digital-rights summit, 2017–2026 (7)
+- [[we-robot|We Robot]] — robotics & AI law-and-policy conference, 2019–2025 (6)
+- [[citp-seminar-series|CITP Seminar Series]] — Princeton's weekly tech-policy seminar (sampled) (5)
+- [[harvard-data-science-initiative|Harvard Data Science Initiative]] — conferences & seminars, 2018–2021 (5)
+- [[internet-freedom-festival|Internet Freedom Festival]] — Valencia internet-freedom gathering, 2016–2019 (4)
+- [[privacy-law-scholars-conference|Privacy Law Scholars Conference]] — the field's annual privacy-law workshop (3)
 
 ## Timeline
 Every year now carries a narrative. Two corpora: **Berkman Buzz** newsletters (2006–2015)

@@ -124,3 +124,13 @@ election; 2021 Jan-6/Great Deplatforming/Facebook Papers; 2022 Musk's Twitter + 
 generative-AI dawn; 2023 the ChatGPT year; 2024 the global "AI election"; 2026 the
 AI-saturated continuation. Rewrote the index.md Timeline section so every year carries a
 one-line theme (was "synthesis pending"). All 21 years (2006–2026) now have narratives.
+
+## [2026-06-26] synthesis | events — recurring conferences & series (batch 10)
+Populated the events layer from the existing corpus with recurring named conferences/
+series (instances grouped one page per series, verbatim links): [[rightscon]] (2017–26),
+[[we-robot]] (2019–25), [[citp-seminar-series]] (sampled), [[harvard-data-science-initiative]]
+(2018–21), [[internet-freedom-festival]] (2016–19), [[privacy-law-scholars-conference]].
+Restructured index.md Events into "cross-source clusters" + "recurring conferences &
+series." This is the looser, pre-YouTube events population the user asked for; per-edition
+dedup/refinement is deferred to the YouTube import (currently blocked on rate-limit/budget
+for full-channel transcript scraping). Events layer now: 8 pages.
