@@ -27,8 +27,8 @@ Catalog of the wiki. Start here, then drill into pages. Maintained by the LLM.
 ## People
 - [[rudy-fraser|Rudy Fraser]] — builder of Blacksky; decentralized community infrastructure (5)
 - [[evelyn-douek|Evelyn Douek]] — online-speech / First Amendment scholar (2)
-- [[bruce-schneier|Bruce Schneier]] — security technologist, BKC affiliate (1)
-- [[jonathan-zittrain|Jonathan Zittrain]] — BKC co-founder & faculty director (1)
+- [[bruce-schneier|Bruce Schneier]] — security technologist; "A Hacker's Mind"; AI & democracy (8)
+- [[jonathan-zittrain|Jonathan Zittrain]] — BKC co-founder; generativity, intellectual debt, AI agents (8)
 - [[tim-wu|Tim Wu]] — antitrust scholar, *The Age of Extraction* (1)
 - [[cindy-cohn|Cindy Cohn]] — departing EFF executive director (1)
 - [[ethan-zuckerman|Ethan Zuckerman]] — BKC/Global Voices co-founder; civic media & public infrastructure (8)

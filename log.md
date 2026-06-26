@@ -92,3 +92,16 @@ earlier-era context into each intro: [[techpolicy-press]] (→2021), [[rest-of-w
 index.md counts. EFF (12 items, mostly events) and Knight (30, already 2025-era) left as
 adequately scoped. Remaining expand-existing: deepen [[jonathan-zittrain]] and
 [[bruce-schneier]] from their rich Buzz-era histories; light era notes on the AI topics.
+
+## [2026-06-26] synthesis | deepen foundational people (batch 7)
+Expanded the two thinnest-but-most-central existing people pages from 1 item to full
+corpus-wide arcs: [[jonathan-zittrain]] (2014→2025: right-to-be-forgotten, intellectual
+debt, the Great Deplatforming, AI agents & trust) and [[bruce-schneier]] (2020→2026:
+security thinking → *A Hacker's Mind* → AI security & AI-and-democracy). Updated index
+counts. The other existing people (rudy-fraser, evelyn-douek, cindy-cohn, tim-wu) are
+genuinely 2025-specific figures with little earlier presence — left as scoped.
+
+This completes the corpus-wide synthesis expansion pass. Layer now: 19 topics,
+13 orgs, 12 people, 2 events. AI-cluster topics remain 2025-anchored by design (AI was
+not a dominant thread before ~2022); cross-cutting topics and the major orgs/people now
+span 2006–2026.
