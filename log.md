@@ -134,3 +134,10 @@ Restructured index.md Events into "cross-source clusters" + "recurring conferenc
 series." This is the looser, pre-YouTube events population the user asked for; per-edition
 dedup/refinement is deferred to the YouTube import (currently blocked on rate-limit/budget
 for full-channel transcript scraping). Events layer now: 8 pages.
+
+## [2026-06-26] lint | rename home/title-bar text (Quartz 4 → BKC Archive Wiki)
+The top-left home link rendered Quartz's default `pageTitle` ("Quartz 4"). `pageTitle`
+lives in the cloned Quartz tree's `quartz.config.ts`, not this content repo, and the
+deploy workflow wasn't overriding it. Added a sed in `.github/workflows/deploy.yml`
+(alongside the existing baseUrl/graph seds) to set `pageTitle: "BKC Archive Wiki"` at
+build time. Link target unchanged (still the site root). Verified locally.

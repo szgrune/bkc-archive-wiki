@@ -59,6 +59,8 @@ jobs:
           fi
           # point Quartz at the GitHub Pages project URL
           sed -i 's|baseUrl: ".*"|baseUrl: "szgrune.github.io/bkc-archive-wiki"|' quartz/quartz.config.ts
+          # set the home/title-bar text (top-left link) — Quartz's default is "Quartz 4"
+          sed -i 's/pageTitle: "Quartz 4"/pageTitle: "BKC Archive Wiki"/' quartz/quartz.config.ts
           # Bound the expanded ("global") graph depth. The default (depth: -1)
           # renders EVERY page (~6.9k nodes, most of them unlinked item stubs),
           # which hangs the browser so the expanded graph never loads. A finite
