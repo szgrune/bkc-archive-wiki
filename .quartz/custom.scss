@@ -39,5 +39,20 @@
     min-height: 0;
     max-height: 100%;
     overflow-y: auto;
+    // Keep the page from scrolling once the explorer reaches its own top/bottom.
+    // This is the real scroll container, so the boundary guard belongs here.
+    overscroll-behavior: contain;
+  }
+
+  // Each OPEN folder list is `overflow: hidden` (Quartz needs that for its
+  // grid-template-rows fold animation), which makes the inner <ul> its own scroll
+  // container. Quartz also sets `overscroll-behavior: contain` on every explorer
+  // <ul>, so wheeling over an open folder's items targets that inner,
+  // non-scrollable list and `contain` blocks the scroll from chaining up to
+  // `.explorer-content` — scrolling dies unless the pointer is over the scrollbar
+  // or the un-nested left/top strip. Let the nested lists chain instead; the guard
+  // above on `.explorer-content` still stops the page from scrolling.
+  .explorer-content .folder-outer > ul {
+    overscroll-behavior: auto;
   }
 }
