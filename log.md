@@ -105,3 +105,13 @@ This completes the corpus-wide synthesis expansion pass. Layer now: 19 topics,
 13 orgs, 12 people, 2 events. AI-cluster topics remain 2025-anchored by design (AI was
 not a dominant thread before ~2022); cross-cutting topics and the major orgs/people now
 span 2006–2026.
+
+## [2026-06-26] synthesis | timeline narratives, Buzz era 2006–2016 (batch 8)
+Wrote per-year narratives for all Buzz-era years. 2006–2010 themes mined from newsletter
+*body content* (titles are generic "Berkman Buzz, week of X"): 2006 blogosphere/Tor/
+StopBadware/China; 2007 Global Voices + Citizen Media Law + OpenNet; 2008 election +
+Internet&Democracy + Digital Natives + Zittrain/generativity; 2009 Iran "Twitter
+Revolution" + Herdict; 2010 WikiLeaks + Google–China + Facebook privacy. 2011–2015 from
+thematic digest titles (SOPA/Arab Spring; open access; Snowden/Aaron Swartz; net
+neutrality/encryption; the Buzz sign-off). 2016 documented as the source-transition seam
+(4 items). Fixed stale frontmatter on timeline/2014 (item_count 2 → 48, pre-Buzz-merge).
