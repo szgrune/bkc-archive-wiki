@@ -1,0 +1,1768 @@
+[00:00:00] - [Jess] Hi, everyone.
+[00:00:04] Thank you so much for joining us.
+[00:00:05] Welcome to the Berkman Klein Center.
+[00:00:09] Throughout the year,
+[00:00:10] we are honored to host top
+academics, industry experts,
+[00:00:15] and tech professionals
+[00:00:16] who are at the forefront of innovation.
+[00:00:19] These distinguished speakers
+[00:00:20] share their cutting-edge insights on AI,
+[00:00:22] social media, digital rights, and more.
+[00:00:26] Today, we're very excited
+to welcome three guests
+[00:00:29] from civil society organizations
+[00:00:31] that I'll introduce presently
+for our webinar today:
+[00:00:36] Global Censorship Trends:
+[00:00:38] Insights from Network Measurement,
+[00:00:39] Circumvention, and Advocacy.
+[00:00:42] Maria Xynou is a fellow at
+the Berkman Klein Center
+[00:00:45] where she's conducting
+a longitudinal study
+[00:00:48] of the changing global
+internet censorship landscape.
+[00:00:51] She's also a director
+[00:00:52] of the Open Observatory of
+Network Interference, OONI,
+[00:00:57] a nonprofit organization
+[00:00:58] that provides free software
+tools and open data
+[00:01:02] to empower the public to monitor
+[00:01:04] and respond to internet
+censorship worldwide.
+[00:01:07] She also serves on the Board of Directors
+[00:01:09] of the Tor Project.
+[00:01:11] Roger Dingledine is the co-founder
+[00:01:13] and original developer
+for the Tor Project,
+[00:01:16] a nonprofit organization
+that develops free
+[00:01:19] and open-source software
+used by millions worldwide
+[00:01:23] for online anonymity, privacy,
+and censorship circumvention.
+[00:01:28] Wearing one hat,
+[00:01:29] Roger works with journalists and activists
+[00:01:32] on many continents to help them understand
+[00:01:34] and defend against the threats they face.
+[00:01:37] Wearing another,
+[00:01:38] he's a prominent researcher
+in the online anonymity field.
+[00:01:42] Felicia Anthonio
+[00:01:43] is the #KeepItOn Campaign
+Manager at Access Now,
+[00:01:47] a global campaign of
+over 345 organizations
+[00:01:51] that fight against internet shutdowns.
+[00:01:54] Felicia leads the
+coalition's advocacy work,
+[00:01:57] documenting and reporting shutdowns
+[00:01:59] and engaging with diverse
+state and non-state actors
+[00:02:03] to push for an end to
+shutdowns around the world.
+[00:02:06] So, thank you for joining us today.
+[00:02:09] Each of the panelists
+[00:02:10] is going to present for about 10 minutes,
+[00:02:12] and then we're gonna open up
+the webinar for questions.
+[00:02:15] So, if you can please hold
+your questions until the end,
+[00:02:19] that would be great.
+[00:02:20] And if you can submit your
+questions via the Q&A function,
+[00:02:24] that's when they will be
+addressed as time allows.
+[00:02:28] And you're welcome to
+address your question,
+[00:02:30] either to the group at large
+[00:02:32] or to one of the panelists directly.
+[00:02:35] And I will now turn the
+webinar over to Maria Xynou.
+[00:02:39] Thanks, Maria.
+[00:02:45] - [Maria] Sorry about that.
+[00:02:46] Hi, everyone.
+[00:02:47] Thank you so much, Jess,
+for the introduction.
+[00:02:50] Thank you, BKC, for hosting us.
+[00:02:52] And thank you Roger, Felicia,
+[00:02:54] for joining for this discussion.
+[00:02:55] And thank you to I don't know,
+[00:02:57] 58 people online who have joined us.
+[00:02:59] We really appreciate your time
+[00:03:01] and interest in joining the discussion.
+[00:03:04] So yeah, my name is Maria.
+[00:03:06] I've been working with
+OONI over the past decade,
+[00:03:08] which is a free software project
+[00:03:10] measuring instrument censorship worldwide.
+[00:03:12] I'm also a fellow here at BKC,
+[00:03:15] and I will briefly share
+some censorship trends
+[00:03:19] that we have observed over the past decade
+[00:03:20] through OONI Network Measurement data.
+[00:03:23] So first, I'd like to share that OONI
+[00:03:27] is a project that was essentially
+born under the Tor Project
+[00:03:30] back in 2012.
+[00:03:32] And thanks to support
+from the Tor Project,
+[00:03:34] we were able to grow
+and eventually spin off
+[00:03:36] and create a nonprofit
+legal entity in Italy.
+[00:03:39] But we work internationally.
+[00:03:42] And essentially what we
+do is that we provide,
+[00:03:44] we build free software
+tools called OONI Probe,
+[00:03:47] which are used by hundreds of
+thousands of people worldwide
+[00:03:50] in order to run experiments
+on their networks
+[00:03:52] to detect various forms
+of internet censorship.
+[00:03:55] And in doing so,
+[00:03:57] they automatically send
+these measurements to us,
+[00:04:00] and we publish them as
+open data in real time.
+[00:04:03] Thanks to our global community,
+[00:04:05] we've had the opportunity
+[00:04:06] to publish more than 2
+billion Network Measurements
+[00:04:09] from 2012 to date,
+[00:04:11] covering more than 28,000 networks
+[00:04:14] in 242 countries and
+territories worldwide.
+[00:04:17] So arguably, this is the
+largest open data set
+[00:04:20] on internet censorship worldwide,
+[00:04:22] at least based on measurements
+[00:04:23] collected from the edge of the network.
+[00:04:25] And it is based on this data
+and this sort of unique insight
+[00:04:29] on what is happening inside
+the network, on the network,
+[00:04:32] that I'm gonna share
+briefly some highlights.
+[00:04:37] I think the first thing,
+[00:04:38] and probably one of the most
+important things to highlight
+[00:04:39] is that what we have
+seen over the past years
+[00:04:42] is the globalization
+[00:04:43] and normalization of internet
+censorship worldwide.
+[00:04:46] It started off as being a practice
+[00:04:48] that was limited to authoritarian regimes,
+[00:04:51] but these days, what we're
+seeing is that literally,
+[00:04:53] almost every single country
+implements some form
+[00:04:56] of network level censorship.
+[00:04:58] What differs from country to
+country is what is blocked,
+[00:05:01] and the impact of the block,
+[00:05:03] and who is impacted by the block.
+[00:05:05] And that varies over time.
+[00:05:06] And often, it is influenced by politics.
+[00:05:09] As politics change, so
+does what is blocked.
+[00:05:12] And what we're seeing
+[00:05:13] is the spread of network-level censorship
+[00:05:15] to democracies worldwide.
+[00:05:16] We're also seeing more and
+more censorship in Europe.
+[00:05:20] For example, back in 2017,
+[00:05:23] when Catalonia wanted to have
+an independence referendum,
+[00:05:27] that was one of the first cases
+[00:05:28] of politically-motivated
+network-level censorship
+[00:05:31] that we observed in Europe
+[00:05:32] when Spain started blocking access
+[00:05:34] to referendum-related websites.
+[00:05:37] Currently, Spain is also
+blocking access to Women on Web,
+[00:05:40] which is a reproductive rights website.
+[00:05:43] They challenged the legality
+of this block in the courts.
+[00:05:46] The courts instructed the
+block to be partially lifted,
+[00:05:49] but yet we see that this
+block is still in place
+[00:05:51] on many networks in Spain.
+[00:05:53] In Italy, as another example,
+[00:05:55] we're seeing the widespread
+blocking of websites
+[00:05:58] suspected of distributing
+copyright material.
+[00:06:00] This is implemented
+through the Piracy Shield,
+[00:06:02] which is implementing these
+blocks in an automated way.
+[00:06:06] And this has already resulted
+[00:06:07] in several cases of collateral damage,
+[00:06:09] unintentionally blocking access
+[00:06:11] to services like Google
+Drive, and CloudFlare,
+[00:06:13] and many others, and having
+more widespread impact.
+[00:06:16] Last year in May 2024, in New Caledonia,
+[00:06:20] which is a French territory,
+access to TikTok was blocked.
+[00:06:23] And across the EU, access to
+Russian news media websites
+[00:06:27] have been blocked over the last years
+[00:06:29] following the invasion of Ukraine.
+[00:06:31] I think this is definitely noteworthy
+[00:06:32] because this is probably
+one of the first cases
+[00:06:35] of news media censorship
+implemented on the network level,
+[00:06:39] in a coordinated way across the EU.
+[00:06:41] And while the justification for this
+[00:06:42] is to combat disinformation
+and propaganda,
+[00:06:45] at the same time, it also raises concerns
+[00:06:47] about creating a precedent for
+further censorship in the EU.
+[00:06:53] Overall, over the last years,
+[00:06:54] we've observed an expansion
+[00:06:56] in the types of contents that are blocked
+[00:06:58] and the types of websites
+that are blocked.
+[00:07:00] And what we tend to see
+[00:07:01] is that some of the categories of websites
+[00:07:04] that have a lot of public impact
+[00:07:07] are tend to be blocked the most
+and are increasingly blocked
+[00:07:09] in more countries around the world.
+[00:07:11] For example, we're increasingly observing
+[00:07:13] the blocking of news media
+websites, political websites,
+[00:07:15] human rights websites,
+circumvention tool websites
+[00:07:18] in more and more
+countries around the world
+[00:07:19] over the last years.
+[00:07:23] And one of the other things
+[00:07:24] that is probably the biggest highlights
+[00:07:26] is that we tend to see that
+censorship is often very...
+[00:07:30] is often politically motivated.
+[00:07:32] Often, we tend to observe
+a spike in censorship
+[00:07:35] during elections and during protests.
+[00:07:37] Particularly, we tend to observe
+[00:07:39] the blocking of major
+social media platforms
+[00:07:41] and then also the blocking
+of circumvention tools,
+[00:07:44] likely in an attempt to stifle
+[00:07:45] the attempts to circumvent these blocks.
+[00:07:49] And these sort of targeted
+politically-motivated blocks
+[00:07:52] appear to be attempts to stifle dissent.
+[00:07:55] Similarly, during
+sensitive political periods
+[00:07:58] and transitions,
+[00:07:59] we also tend to observe
+more internet censorship.
+[00:08:02] For example, in Ethiopia, during
+the mass protests in 2016,
+[00:08:06] we observed major blocking
+of social media platforms,
+[00:08:09] but then when the government changed,
+[00:08:10] then they lifted the blocks.
+[00:08:12] Then when things became
+politically unstable again,
+[00:08:14] we saw resurgence of blocks.
+[00:08:16] So we generally tend to observe,
+over a long period of time,
+[00:08:19] a direct correlation
+between the escalation
+[00:08:21] of intensification of political events
+[00:08:24] and increased censorship.
+[00:08:27] But in Myanmar as well,
+[00:08:29] following the military
+coup in February 2021,
+[00:08:31] we started to see much higher levels
+[00:08:34] of internet censorship in
+comparison to the past.
+[00:08:36] And in Venezuela as well.
+[00:08:38] In moments where their political
+crisis is more intense,
+[00:08:42] we tend to observe targeted blocking cases
+[00:08:44] that target the opposition.
+[00:08:47] But notably, we also tend to observe
+[00:08:48] that censorship is often,
+[00:08:50] that blocks are often,
+used as a weapon of war.
+[00:08:53] For example, during
+border clashes in Armenia,
+[00:08:57] between Armenia and Azerbaijan,
+[00:08:58] we observed the blocking of
+TikTok in both countries.
+[00:09:01] As soon as Russia invaded Ukraine,
+[00:09:04] a few days later, we started
+to observe the blocking
+[00:09:06] of international news media websites,
+[00:09:08] but also the widespread blocking
+[00:09:09] of independent news
+media websites in Russia.
+[00:09:12] Today, almost all, if not all,
+[00:09:14] independent news media
+websites are blocked in Russia.
+[00:09:17] And this seems to be as
+part of a broader attempt
+[00:09:20] to control the narratives
+surrounding the war.
+[00:09:26] But often, we tend to see
+the blocks go hand in hand
+[00:09:28] with complete internet
+connectivity outages.
+[00:09:31] Often, what we'll see,
+[00:09:32] especially during elections,
+or during protests,
+[00:09:36] or even during political transitions,
+[00:09:39] such as what you see here from Myanmar,
+[00:09:41] we tend to observe first,
+[00:09:42] the blocking of major
+social media platforms,
+[00:09:45] then a complete internet
+connectivity shutdown.
+[00:09:48] And then when internet
+access is resumed again,
+[00:09:50] then they continue blocking access
+[00:09:52] to major social media platforms, and VPNs,
+[00:09:54] and other circumvention tools.
+[00:09:56] What you see here from the charts
+[00:09:58] is basically some graphs
+from our study in Myanmar
+[00:10:00] following the military
+coup in February 2021,
+[00:10:04] where on the one hand,
+[00:10:05] they implemented nightly internet outages,
+[00:10:07] almost like internet curfews,
+[00:10:09] where, like clockwork, every night,
+[00:10:11] they would shut down
+access to the internet
+[00:10:13] during very specific times.
+[00:10:14] And this lasted every night
+for 72 consecutive days.
+[00:10:19] But when internet access was resumed,
+[00:10:21] they would block access to
+major social media platforms.
+[00:10:24] And even though they stopped
+these shutdowns after 72 days,
+[00:10:28] there're still blocking access to this day
+[00:10:30] to major social media platforms,
+[00:10:32] and they're blocking access
+to a wide range of VPNs.
+[00:10:36] And actually, over the last years,
+[00:10:37] the VPN blocking has really intensified.
+[00:10:40] So what this suggests,
+[00:10:41] this pattern that we're
+not only seeing in Myanmar,
+[00:10:43] but we've also observed this
+in many other countries,
+[00:10:45] is that internet connectivity outages
+[00:10:48] tend to be relatively
+short-lived in terms of duration,
+[00:10:51] while the targeted
+blocking of social media
+[00:10:54] and circumvention tools
+tend to be more long-lived.
+[00:10:57] This suggests that this is a
+sort of a strategic attempt
+[00:11:00] to maximize the political impact
+[00:11:03] through these long-term targeted blocks,
+[00:11:05] while minimizing the cost
+[00:11:06] of internet connectivity shutdowns.
+[00:11:10] What we're also seeing is that
+a lot of the discrimination
+[00:11:14] and a lot of the social
+and political hierarchies
+[00:11:16] in the offline world are
+also being consolidated
+[00:11:19] and transferred onto
+the online world as well
+[00:11:21] through network-level censorship.
+[00:11:23] We're seeing the blocking
+of LGBTQI websites
+[00:11:26] in numerous countries around the world,
+[00:11:27] especially in countries
+[00:11:29] where LGBTQI rights are not protected.
+[00:11:32] We're also seeing the blocking of ethnic
+[00:11:33] and religious minority group websites
+[00:11:35] in countries where they have
+historically been subject
+[00:11:38] to prosecution and discrimination.
+[00:11:41] And we're also starting
+to see the blocking
+[00:11:42] of reproductive rights
+websites in many countries.
+[00:11:45] This sort of suggests that
+censorship is used as a tool
+[00:11:49] to reinforce the status quo
+[00:11:51] and to silence those who
+already marginalized,
+[00:11:54] which just exacerbates
+existing inequalities.
+[00:11:58] Overall, there's like two types
+of blocks that we observe,
+[00:12:00] intermittent and permanent blocks.
+[00:12:02] Intermittent blocks are
+reactionary short-term blocks
+[00:12:05] in response to very specific events,
+[00:12:07] such as elections,
+protests, or even exams.
+[00:12:10] And these are targeted
+cases of censorship,
+[00:12:12] which will affect very
+specific websites or apps.
+[00:12:15] And because they have a short duration,
+[00:12:17] they tend to have lower
+political and economic cost.
+[00:12:20] Permanent blocks, on the other
+hand, are much more systemic.
+[00:12:22] They're long term, they're
+based on ideologies,
+[00:12:24] they're based on laws,
+[00:12:25] they're based on policies,
+they're based on culture.
+[00:12:27] And so usually they will
+impact a much broader range
+[00:12:30] of websites and tools.
+[00:12:32] Usually, they will target
+all, or most, or hundreds,
+[00:12:35] or thousands of websites that
+fall under specific category.
+[00:12:38] So for example,
+[00:12:39] in a country where LGBTIQ
+rights are not protected,
+[00:12:44] then maybe you'll see in that country
+[00:12:45] the blocking of thousands or
+hundreds of LGBTIQ websites.
+[00:12:49] And so the cost there
+obviously is much higher
+[00:12:51] because they're much more long-term,
+[00:12:53] but at the same time, there's
+sort of that legal backing
+[00:12:56] that makes it harder to
+challenge them sometimes.
+[00:13:00] And technically, what we're
+also seeing over the years
+[00:13:02] is a sort of a rise of
+TLS-based censorship.
+[00:13:05] TLS is a protocol for
+encrypting the connection,
+[00:13:08] and on the one hand,
+[00:13:09] it makes sense that
+we're seeing censorship
+[00:13:11] being implemented in this way,
+[00:13:12] but this is also a much more advanced
+[00:13:14] and sophisticated way of
+implementing censorship
+[00:13:16] in comparison to other techniques.
+[00:13:18] What is really concerning
+is that this form,
+[00:13:21] this way of implementing
+censorship is much less transparent
+[00:13:24] in comparison to other ways
+of implementing censorship.
+[00:13:27] So for example, in the past,
+[00:13:29] we would commonly see block pages,
+[00:13:30] which were web pages that
+will clearly inform the user
+[00:13:33] that access to a website
+is intentionally blocked.
+[00:13:36] Whereas if access to a website
+[00:13:38] is now blocked by means
+of a TLS interference,
+[00:13:40] the user will just see
+a connection reset era
+[00:13:43] or a connection timeout era.
+[00:13:45] So it's very hard to know if
+access is intentionally blocked
+[00:13:48] or if they're unable to access it
+[00:13:49] due to network failures or other reasons.
+[00:13:52] And usually, to implement the
+sort of TLS-based censorship,
+[00:13:57] usually you do this
+[00:13:58] through the use of Deep
+Packet Inspection technology.
+[00:14:01] And given that we're seeing censorship
+[00:14:04] implemented in this way
+[00:14:05] in more and more countries
+around the world,
+[00:14:07] this inevitably raises the question
+[00:14:09] as to whether this suggests
+[00:14:11] that there's a sort of proliferation
+[00:14:13] of the censorship technology industry
+[00:14:14] in more countries around the world.
+[00:14:17] At the same time, we're
+also observing an arms race
+[00:14:20] affecting both privacy
+and circumvention tech.
+[00:14:24] In recent years, with the
+introduction of encrypted DNS,
+[00:14:27] we reported back in 2020 attempts
+[00:14:30] to block DNS over TLS endpoints in Iran.
+[00:14:33] This intensified in September 2022
+[00:14:35] during the major anti-government
+Mahsa Amini protests,
+[00:14:39] where we started to observe
+[00:14:40] increased blocking of encrypted DNS,
+[00:14:44] targeting many more endpoints,
+[00:14:45] also targeting many DoH endpoints
+[00:14:48] and also many popular ones.
+[00:14:50] In response to this, we rolled
+out a DNS Check experiment
+[00:14:53] for measuring the
+blocking of encrypted DNS.
+[00:14:55] Quite similarly, in recent months,
+[00:14:59] we started to observe that
+Russia started to block access
+[00:15:02] to Encrypted Client Hello ECH,
+[00:15:05] which is really concerning
+because ECH, on the one hand,
+[00:15:08] is very promising for fighting
+back against TLS censorship,
+[00:15:12] but we are seeing that in some countries,
+[00:15:15] they're starting to block it.
+[00:15:16] So, that's also why we rolled
+out an ECH Check experiments.
+[00:15:21] And in all of this,
+[00:15:22] there really is an arms race
+[00:15:23] with circumvention technologies,
+[00:15:24] and I know that Roger will
+also talk more about this.
+[00:15:28] In recent years, as mentioned before,
+[00:15:31] we've seen increased blocking
+[00:15:33] of more and more
+circumvention tool websites
+[00:15:35] and circumvention tools in more
+countries around the world,
+[00:15:38] possibly an attempt to prevent
+people from circumventing
+[00:15:43] other blocks that are in place,
+[00:15:44] such as social media
+blocks or news media blocks
+[00:15:47] that they don't want people to access.
+[00:15:50] And in all of this,
+[00:15:51] I really need to mention the
+rise of national intranets.
+[00:15:54] So this is the ultimate form
+of network-level censorship.
+[00:15:58] It's the most extreme
+form because essentially,
+[00:16:02] what we're talking about is countries
+[00:16:03] that are blocking access to most websites
+[00:16:06] and international websites and apps
+[00:16:08] and trying to have more control
+[00:16:10] over their national infrastructure
+[00:16:12] and implement censorship in that way.
+[00:16:14] And what we're seeing in recent years
+[00:16:16] is more countries starting
+to adopt intranets,
+[00:16:18] but also the intranet themselves
+[00:16:21] starting to become much more,
+like much more controlling,
+[00:16:26] much more controlled
+environments inside them,
+[00:16:28] such as in Iran, for example,
+[00:16:30] where they've really, over
+the last two, three years,
+[00:16:33] they've blocked access to most services,
+[00:16:36] international services,
+[00:16:37] and so really consolidating
+[00:16:39] the National Information Network.
+[00:16:42] And all of this suggests that, in a way,
+[00:16:44] we're sort of transitioning
+towards censorship
+[00:16:47] not just being a policy,
+[00:16:49] but being baked into the architecture
+[00:16:53] of the internet itself.
+[00:16:54] And I think this is extremely concerning
+[00:16:56] because this also comes at a time
+[00:16:57] when we have the global
+rise of authoritarianism
+[00:17:00] in more and more countries
+around the world.
+[00:17:02] And as we see the rise
+of authoritarianism,
+[00:17:04] we're also seeing that the nature
+[00:17:07] and the architecture of the internet
+[00:17:09] in many countries around the world
+[00:17:10] is increasingly becoming more
+closed and more controlled.
+[00:17:14] So this raises really big
+concerns in terms of human rights,
+[00:17:17] and I think it highlights that
+we really need to do more,
+[00:17:20] both on the Network Measurement side
+[00:17:21] in terms of documenting
+internet censorship,
+[00:17:23] but also in terms of circumvention,
+[00:17:26] building tools for circumvention,
+[00:17:27] supporting groups like the Tor Project,
+[00:17:29] and of course supporting
+and joining initiatives
+[00:17:32] like the #KeepItOn campaign
+that Felicia will talk about
+[00:17:34] to fight internet censorship
+and shutdowns around the world.
+[00:17:38] So if you're interested
+in getting involved
+[00:17:39] with OONI and with Network
+Measurements efforts,
+[00:17:42] there are many ways you can get involved.
+[00:17:43] You can run our software, OONI Probe,
+[00:17:45] which can install a mobile
+and desktop platforms.
+[00:17:48] You can contribute websites for testing.
+[00:17:50] And of course, you can analyze OONI data
+[00:17:52] and do your own independent reporting
+[00:17:54] on internet censorship.
+[00:17:56] Thank you, and I'll pass it on to Roger.
+[00:18:04] - [Roger] Beautiful, thank you.
+[00:18:05] Okay, I've got a couple of minutes
+[00:18:08] to talk about a bunch of other things.
+[00:18:10] Hopefully, my slides are up,
+let me know if they're not.
+[00:18:13] So Tor is a nonprofit that
+works on privacy tools,
+[00:18:17] and part of the message
+[00:18:20] that I'm gonna try to get through today
+[00:18:21] is privacy and censorship resistance
+[00:18:24] are more connected and more
+related than you might think.
+[00:18:26] So part of the interesting thing about Tor
+[00:18:29] is that we have a volunteer
+group of relays around the world
+[00:18:33] where you pass your Tor traffic
+[00:18:35] through three of these relays.
+[00:18:37] And part of the goal of decentralizing it,
+[00:18:39] part of the goal of not having
+a central point, is privacy.
+[00:18:44] And we'll get to how that connects
+[00:18:46] to the censorship side soon.
+[00:18:48] But the privacy point is really important
+[00:18:50] in that there are a bunch
+[00:18:51] of centralized privacy projects out there.
+[00:18:55] A lot of the VPN providers, for example,
+[00:18:57] try to argue that they're
+all about privacy.
+[00:18:59] And part of the challenge that
+we see in the centralization
+[00:19:03] is it always starts with,
+[00:19:04] "We promise we're not
+gonna look at your traffic.
+[00:19:07] Okay, actually, we do
+look at your traffic.
+[00:19:09] We promise we're not gonna
+write down what we see.
+[00:19:12] Okay, actually..."
+- [Jess] Roger.
+[00:19:13] - "We do log everything."
+[00:19:14] Whoop, I've got a...
+[00:19:15] - Sorry.
+- [Roger] Yes.
+[00:19:16] - Sorry to interrupt you, but...
+[00:19:17] - [Roger] Yes.
+- I think folks
+[00:19:19] can't actually see the slides yet.
+[00:19:21] - [Roger] Oh, okay. Beautiful, thank you.
+[00:19:25] I can see the slides.
+[00:19:26] I will try harder to share, share screen,
+[00:19:32] share window.
+[00:19:35] How about this time?
+[00:19:38] - [Jess] Success.
+- [Roger] Success. Okay, great.
+[00:19:41] Okay, hi everybody.
+- [Jess] Thank you.
+[00:19:43] - [Roger] And I'm going to...
+[00:19:45] Are they still up even now?
+[00:19:48] - [Jess] All good.
+- [Roger] All good. Okay, great.
+[00:19:50] Okay, thank you for interrupting.
+[00:19:52] So yeah, the first step
+is Tor is a nonprofit,
+[00:19:55] and part of the goal is
+we split things across...
+[00:20:00] We split the traffic
+across multiple relays
+[00:20:02] so there's no central
+point that gets to learn
+[00:20:04] both who you are and what you're doing.
+[00:20:06] And compared to the VPN
+world, it always starts with,
+[00:20:10] "We promise not to look at your traffic,
+[00:20:12] we promise not to log.
+[00:20:13] Okay, we do log,
+[00:20:14] we promise not to tell
+anybody what we see.
+[00:20:17] Okay, of course, we answer subpoenas
+[00:20:19] from any government out there."
+[00:20:21] And part of the challenge there
+[00:20:22] is the architecture of
+those centralized systems
+[00:20:25] means it comes down to privacy by promise.
+[00:20:31] "We are in Switzerland.
+[00:20:32] Therefore, we are safe."
+[00:20:34] Rather than privacy by
+architecture or privacy by design,
+[00:20:37] which is the technical approach
+to how you build the system
+[00:20:40] is how you provide the safety.
+[00:20:42] So the reason I mentioned that
+[00:20:44] is Tor has a lot of different users
+[00:20:46] using it for a lot of different reasons.
+[00:20:48] A lot of our users are individual citizens
+[00:20:52] in Western and/or authoritarian
+countries out there
+[00:20:57] that are using it for
+privacy, for security,
+[00:21:01] for censorship reachability.
+[00:21:03] So these reachability users
+are some of the users.
+[00:21:07] But I think a lot of the reasons
+why people use Tor overlap.
+[00:21:10] It's not simply, "I want privacy,"
+[00:21:13] versus, "I want to get around censorship."
+[00:21:15] They're more connected
+than you might think.
+[00:21:18] So one way of looking at that,
+[00:21:21] we have a lot of users in Iran these days,
+[00:21:24] and the average Tor user in Iran
+[00:21:27] is not a political dissident
+trying to take down the system.
+[00:21:30] They're a person who's
+trying to get to Facebook,
+[00:21:33] and Iran blocked Facebook.
+[00:21:35] And the fact that they're using it
+[00:21:38] in order to get to their
+pictures of kittens on web comics
+[00:21:42] or whatever people use on
+the internet these days,
+[00:21:44] that ordinariness is a security property
+[00:21:47] for the rest of the Tor users.
+[00:21:49] Because yes, there are some folks in Iran
+[00:21:52] who are trying to to change things
+[00:21:55] from a political perspective,
+[00:21:56] but the fact that there
+are so many other people
+[00:21:59] using the tools that are not
+doing it from that perspective
+[00:22:03] are part of why it's safe.
+[00:22:06] So another way of looking at that is:
+[00:22:10] Are you using your censorship
+tool for reachability,
+[00:22:13] or are you using your
+censorship tool for safety?
+[00:22:16] And a lot of people in the
+censorship circumvention space
+[00:22:20] are focusing mostly on reachability,
+[00:22:22] which is a great first step.
+[00:22:24] But in the Tor world,
+[00:22:25] we argue that you need to think
+about both the reachability
+[00:22:28] and the safety side.
+[00:22:29] If you're just thinking
+about reachability,
+[00:22:31] then things can go wrong.
+[00:22:33] And for example, again,
+[00:22:35] using the Iran case back
+in the early protests
+[00:22:39] in 2007, 2008,
+[00:22:41] there were a lot of
+people who were saying,
+[00:22:43] "They just started blocking
+things like Facebook.
+[00:22:46] I just need some way to
+get around the blocking.
+[00:22:49] My government is stupid.
+[00:22:50] They don't know how the internet works,
+[00:22:52] they're not watching anything."
+[00:22:54] And a lot of those people turned out to...
+[00:22:58] It's hard to detect when it
+shifts to, yes, actually,
+[00:23:01] they did get a lot better at watching,
+[00:23:03] and yes, they are making
+lists of who's going where.
+[00:23:06] So a lot of the people
+who started off saying,
+[00:23:08] "I just need some open proxy
+[00:23:11] or some tool to get
+around the censorship,"
+[00:23:13] ended up regretting the fact
+that they'd been so open
+[00:23:17] with what they were doing.
+[00:23:18] So part of the argument
+[00:23:20] is this whole censorship
+circumvention thing
+[00:23:23] and this whole privacy
+thing need to go together.
+[00:23:26] Okay, so that's some background.
+[00:23:29] A lot of people simply use Tor
+to get around the censorship.
+[00:23:32] And in the Tor world,
+[00:23:34] we talk all about the
+censorship arms race,
+[00:23:36] and we mean when they try to block Tor
+[00:23:38] and then we try to unblock Tor and so on.
+[00:23:40] But one of the important points
+is most places in the world
+[00:23:44] don't block Tor by website or by protocol.
+[00:23:48] And that means that a lot of people
+[00:23:50] simply install Tor Browser,
+[00:23:52] and now they're getting
+around their local censorship.
+[00:23:55] So here's a list from
+a couple of years ago
+[00:23:58] of the top 10 countries
+[00:24:00] for where people are
+when they're using Tor.
+[00:24:03] And we can have the awkward
+conversation this year
+[00:24:05] of, "Ha-ha, which of these
+[00:24:06] count as authoritarian regimes this year?"
+[00:24:10] But there's a wide variety
+of countries on this list.
+[00:24:13] So a lot of the internet
+freedom funding world
+[00:24:16] starts off saying,
+[00:24:18] "Here are the bad countries in the world,
+[00:24:20] and these are the ones
+[00:24:22] where you need to get
+around the censorship."
+[00:24:23] But the reality is it's a lot
+more mixed together than that.
+[00:24:28] Maria had some great examples
+[00:24:30] of internet censorship in Spain,
+[00:24:33] and again, it's not just
+the censorship, it's,
+[00:24:35] "If I want to look at an abortion website,
+[00:24:38] maybe it's censored or
+maybe it's surveilled.
+[00:24:41] And in either case,
+[00:24:42] I want to be able to
+have some safety there."
+[00:24:46] Okay, so Phase 1 of the
+censorship arms race
+[00:24:50] is they block websites like TikTok,
+[00:24:53] or YouTube, or Twitter, and so on.
+[00:24:57] And we install Tor Browser
+to get around them.
+[00:24:59] Phase 2 is they start trying to block Tor,
+[00:25:02] the program called Tor itself.
+[00:25:04] And at that point,
+[00:25:05] we need some way to
+transform the Tor traffic
+[00:25:08] into something that the sensors
+are willing to let through.
+[00:25:11] And there are two pieces
+[00:25:12] to that particular cat-and-mouse game.
+[00:25:15] The first piece is blocking by IP address
+[00:25:18] where they try to block pieces
+of the Tor infrastructure
+[00:25:22] so that when your Tor
+software tries to reach them,
+[00:25:25] you can't connect.
+[00:25:26] And the second piece is that
+they try to block protocols.
+[00:25:29] Maria was talking about
+blocking TLS in various ways.
+[00:25:32] So they try to figure
+out what your protocol is
+[00:25:36] and prevent you from
+speaking protocols like Tor.
+[00:25:39] So the two ways around that
+[00:25:41] are to send your traffic to IP addresses
+[00:25:44] that aren't associated
+with your infrastructure
+[00:25:48] and to transform your
+traffic into some protocol
+[00:25:51] that they're willing to let through.
+[00:25:52] So, one interesting case study
+from a couple of years ago,
+[00:25:56] Russia ended up blocking a bunch
+of different pieces of Tor,
+[00:25:59] including connecting directly
+into the Tor network.
+[00:26:03] And one of the pluggable transports,
+[00:26:05] one of the ways that we have
+[00:26:07] for transforming your Tor
+traffic is called Snowflake.
+[00:26:10] It transforms your traffic
+into basically video chat,
+[00:26:13] sort of like the protocol
+that you're using right now
+[00:26:16] to watch me talk.
+[00:26:18] And we had a lot of new
+Snowflake users in Russia
+[00:26:23] during that particular blocking event
+[00:26:25] where they blocked some parts of Tor,
+[00:26:28] so a lot of people switched
+over to using Snowflake.
+[00:26:30] At the time, we were thinking,
+[00:26:31] "Wow, awesome, we've got 6,000
+new users, this is great.
+[00:26:35] Look at the 6,000 people
+that we're helping."
+[00:26:37] And that turned out to
+be this tiny little blip
+[00:26:40] in early December at the
+beginning of this graph,
+[00:26:43] where yes, there was blocking in Russia
+[00:26:45] and a lot of people use Snowflake.
+[00:26:47] But then later on, the event in Iran,
+[00:26:51] where a woman was killed by the police
+[00:26:54] for not wearing the proper
+clothing the proper way.
+[00:26:58] Later on in Iran, there were
+a lot of new Snowflake users.
+[00:27:03] And over the course of a
+weekend, I think at that point,
+[00:27:07] we were the number one app in
+the Google App Store in Iran
+[00:27:10] and the number two app in
+the Google App Store in Iran
+[00:27:13] for that 24-hour period.
+[00:27:15] So there's a lot of more
+pieces we can talk about
+[00:27:18] in the case study side,
+[00:27:20] but I want to take a step back,
+[00:27:21] and a lot of people look at
+censorship on the internet
+[00:27:25] and they say, "Oh, China,
+Iran, Russia, and so on."
+[00:27:28] But actually, a lot more countries censor
+[00:27:31] than you might imagine.
+[00:27:32] Australia is famous for rolling
+out censorship a while ago.
+[00:27:36] England censors, Sweden censors.
+[00:27:39] And part of the challenge there
+[00:27:41] is when you're talking
+to countries like China
+[00:27:44] and you're saying, "Censoring the internet
+[00:27:47] shows that you're doing something wrong.
+[00:27:52] Maybe you're not as democratic
+as you claim to be."
+[00:27:54] Then, they point to Australia and say,
+[00:27:56] "Well, Australia sensors, England sensors.
+[00:27:59] We're just keeping our citizens
+safe just like you are.
+[00:28:02] Why are you picking on us?"
+[00:28:03] So, part of the challenge there
+that Maria also mentioned,
+[00:28:07] it's not just that these
+western countries sensor,
+[00:28:10] it's that they use it,
+[00:28:12] they do it using tools from
+California corporations
+[00:28:16] or Italian corporations that
+are designed to help oppression
+[00:28:21] and maybe they start
+off helping oppression
+[00:28:23] against employees inside the
+Boeing intranet or something.
+[00:28:26] But then they get reused by Myanmar,
+[00:28:29] and Australia, and so on.
+[00:28:31] So a brief pitch for
+EFF running a campaign
+[00:28:35] to get more people at
+universities running Tor relays.
+[00:28:38] If you are at a university,
+[00:28:39] I'd love to chat with you about that.
+[00:28:41] Couple of lessons to wrap up.
+[00:28:43] So I mentioned the
+reachability versus safety.
+[00:28:46] One of the key points
+[00:28:47] to think about: censorship
+implies surveillance.
+[00:28:50] Meaning, in order to
+deploy the censorship,
+[00:28:53] they need to look at what
+websites you're going to,
+[00:28:55] what protocols you're speaking,
+[00:28:57] in order to decide whether
+to allow you to get there.
+[00:28:59] So, censorship and surveillance
+[00:29:01] are more connected than
+you might, at first, think.
+[00:29:04] When we're trying to
+explain privacy to people,
+[00:29:07] they always start off with,
+"Well, I don't need that.
+[00:29:10] I don't live in a country like that."
+[00:29:12] So part of the the challenge,
+[00:29:13] we realized there was this
+phrase, Over-there-istan,
+[00:29:16] where you talk to
+Americans and they're like,
+[00:29:19] "I'm glad I don't live
+in Over-there-istan."
+[00:29:21] So the censorship thing
+and this privacy thing
+[00:29:25] are a bigger deal for more countries
+[00:29:27] than just Over-there-istan.
+[00:29:29] And I am a little bit over time,
+[00:29:31] so I'm gonna leave the rest
+of this for the Q&A side.
+[00:29:34] I guess the last thought
+[00:29:36] is there's a lot of academic research
+[00:29:38] in the censorship privacy side of things,
+[00:29:41] and there's a conference coming up soon
+[00:29:43] in July in Washington
+D.C. and on the internet,
+[00:29:47] Free and Open Communications
+on the Internet.
+[00:29:49] So with that, I'll pass it to Felicia.
+[00:30:04] - [Felicia] Can you see my screen okay?
+[00:30:09] Okay, all right.
+[00:30:12] Thank you so much, Maria and Roger,
+[00:30:15] for making my job very easy.
+[00:30:18] We've definitely covered
+most of the issues
+[00:30:21] that we see under the #KeepItOn campaign
+[00:30:24] and also as partners and
+members of the coalition.
+[00:30:29] So I will just run through
+some of the advocacy strategies
+[00:30:33] that we use as a coalition
+[00:30:37] to fight back against internet
+shutdowns, as we call it.
+[00:30:43] All right, so #KeepItOn.
+[00:30:44] For those who are not familiar,
+it's a global campaign
+[00:30:50] and coalition hosted by Access Now,
+[00:30:52] which is-
+- [Jess] Felicia.
+[00:30:53] - [Felicia] An international...
+[00:30:54] Hi?
+- [Jess] Sorry to interrupt.
+[00:30:56] - [Felicia] Oh, yeah, yeah, yeah.
+- [Jess] Just so folks
+[00:30:57] can see a little bit
+better, can you share...
+[00:31:00] Yeah, thank you so much.
+[00:31:04] - [Felicia] Okay, yeah.
+[00:31:06] All right, is that okay?
+[00:31:10] - [Jess] That's great, thank you, okay.
+[00:31:12] - [Felicia] Awesome.
+[00:31:13] So the #KeepItOn campaign and coalition
+[00:31:16] is hosted by Access Now,
+[00:31:18] which is an international
+human rights organization,
+[00:31:21] and we defend and extend
+digital rights of people
+[00:31:25] and communities at risk.
+[00:31:28] The coalition was started in 2016
+[00:31:33] and we currently have over
+345 organizations as members,
+[00:31:37] and it's become the
+world's leading coalition
+[00:31:42] against internet shutdown.
+[00:31:44] So when we launched the campaign,
+[00:31:46] we also needed to be
+guided by certain things
+[00:31:50] to keep us on track
+[00:31:52] in our mission to push back
+against internet shutdown.
+[00:31:55] And so we came up with this definition
+[00:31:59] during the launch of the campaign.
+[00:32:00] And so for the #KeepItOn coalition,
+[00:32:03] we focused on advocating and
+documenting internet shutdowns,
+[00:32:11] which referred to the instances
+[00:32:14] where governments, or those in authority,
+[00:32:17] or even warring pacts
+intentionally disrupt
+[00:32:21] internet connectivity or
+electronic communications.
+[00:32:25] In this case, that would
+be social media platforms,
+[00:32:29] rendering them inaccessible
+[00:32:30] or effectively unusable
+for specific population.
+[00:32:33] And also, it's often
+imposed to exert control
+[00:32:37] over the flow of information.
+[00:32:39] And you could also call internet shutdowns
+[00:32:44] blackouts, or kill switches,
+or network disruptions,
+[00:32:48] depending on what is happening.
+[00:32:51] Or you can use that interchangeably.
+[00:32:54] And then of course,
+[00:32:55] we've seen governments also
+targeting internet access
+[00:32:59] by slowing down internet speed,
+which is called throttling,
+[00:33:03] making it really difficult
+[00:33:04] for people to be able to use the internet.
+[00:33:10] Just to provide some concrete figures
+[00:33:15] to show that this is not something
+[00:33:17] that happens in isolation,
+[00:33:19] but we actually have documented instances
+[00:33:22] of shutdowns being weaponized
+[00:33:24] or normalized by various
+actors around the world.
+[00:33:27] And so just quick snapshots.
+[00:33:29] 2024 was a very bad year for advocacy
+[00:33:34] because we documented 296
+incidents of shutdown.
+[00:33:39] And this is not to say that
+civil society is not doing a lot
+[00:33:45] in response to this growing threats
+[00:33:47] to fundamental human rights,
+[00:33:48] but rather governments are
+also becoming really important
+[00:33:52] to suppress the rights of people
+[00:33:55] and resulting in more and
+more people being impacted
+[00:33:59] and suffering from the
+consequence of these decisions.
+[00:34:04] And you can see at the bottom of my slide,
+[00:34:07] I say that one shutdown is one too many,
+[00:34:11] and so no shutdown is less impactful
+[00:34:15] or less dangerous for any community.
+[00:34:18] And so together with
+OONI, with Tor, and...
+[00:34:24] Shut downs that happen in
+all corners of the world
+[00:34:28] where it's possible,
+[00:34:29] and we document this and
+raise awareness about them.
+[00:34:34] These are some of the
+countries that we saw
+[00:34:36] and documented shutdown.
+[00:34:39] Maria mentioned that since the...
+[00:34:53] Of shutdowns in 2024.
+[00:34:57] I will move
+[00:35:00] to the triggers.
+[00:35:02] So triggers simply mean
+instances or incidents
+[00:35:05] that are likely to have a
+government disrupt the internet.
+[00:35:08] And so you've heard Maria
+mentioned elections,
+[00:35:13] protests, and other incidents,
+[00:35:15] but when you look at this slide,
+[00:35:17] you see that conflict-related
+shutdowns is becoming a big...
+[00:35:32] And this is normally done
+[00:35:34] in the form of cutting fiber, the cables,
+[00:35:37] or destroying power and
+electricity infrastructure,
+[00:35:44] also using jamming devices.
+[00:35:47] We've also seen warring parties
+[00:35:49] taking over internet offices of ISPs,
+[00:35:55] with an example being in Sudan.
+[00:35:58] And then of course, we've also
+seen hacker groups deploying.
+[00:36:16] - [Jess] Felicia?
+[00:36:17] - [Felicia] And other triggers
+that we documented in 2024.
+[00:36:21] And so I'll be sharing my slides
+[00:36:23] for those who are interested as well
+[00:36:25] to dig deeper into the
+findings of our reports.
+[00:36:29] All right, so how do we push
+back against internet shutdown?
+[00:36:33] I've mentioned awareness raising.
+[00:36:35] It's really important for people
+to actually understand that
+[00:36:40] or be aware that a shutdown is happening
+[00:36:43] and also equip them with
+the necessary tools.
+[00:36:46] We've mentioned OONI.
+[00:36:48] So with OONI,
+[00:36:49] people are able to use that
+to test and run measurements
+[00:36:54] to detect what platforms are
+being targeted, for instance.
+[00:36:59] When it comes to circumvention,
+[00:37:01] people would go to Tor
+[00:37:04] to see how they are able
+to navigate the shutdown.
+[00:37:07] And so under the campaign,
+we have these relations,
+[00:37:10] which are these key partners,
+[00:37:12] as well as the coalition members,
+[00:37:14] where we document, raise
+awareness about what is going on,
+[00:37:18] and also engage with the various actors
+[00:37:21] to see how we can support communities
+[00:37:23] that are impacted by internet shutdowns.
+[00:37:27] We also work with partners
+like CloudFlare and IODA
+[00:37:30] to be able to track
+and document shutdowns,
+[00:37:36] mostly targeting the internet,
+[00:37:39] to be able to use that or to
+use that to inform our advocacy
+[00:37:45] and hold perpetrators accountable.
+[00:37:49] Given the nature of shutdowns,
+[00:37:51] the next impact on people and
+other aspects of our life.
+[00:37:55] We also engage with various governments,
+[00:37:57] that is governments that we
+see as friends of the coalition
+[00:38:02] or governments that are actually
+shutting down the internet
+[00:38:05] or have the tendency to
+shut down the internet.
+[00:38:08] Depending on the scenario,
+[00:38:10] we tend to engage these
+governments to push back.
+[00:38:14] We do also work with regional
+and international bodies
+[00:38:20] to be able to inform adoption of policies
+[00:38:22] or resolution denouncing the
+use of internet shutdown.
+[00:38:26] We also have used strategic litigation
+[00:38:29] in various parts of the world,
+[00:38:32] and with some successes in
+countries like Togo, Pakistan,
+[00:38:38] Zimbabwe, Indonesia,
+Nigeria, Zambia, and Sudan,
+[00:38:42] where the courts ruled
+in favor of civil society
+[00:38:47] that took their government to court
+[00:38:50] for shutting down the internet.
+[00:38:52] And then under the #KeepItOn campaign
+[00:38:55] to Access Now's Digital
+Rights Litigators Network,
+[00:38:59] we are able to mobilize efforts
+[00:39:02] and to also provide strategic guidance
+[00:39:07] and contribute to putting
+together amicus briefs
+[00:39:11] to be able to educate judges
+[00:39:13] that are new to cases of shutdowns,
+[00:39:15] so they are able to understand
+[00:39:17] exactly what we're talking about
+[00:39:19] and the impact that has on human rights.
+[00:39:24] And then of course,
+[00:39:26] there's the need for us to support people
+[00:39:28] that are impacted by shutdown
+or targeted with shutdowns
+[00:39:32] with digital security.
+[00:39:33] And so through our
+Digital Security Helpline,
+[00:39:37] we are able to provide the
+support to people from actual,
+[00:39:44] like let's say going to
+people, recommending tools
+[00:39:51] that would enable people's security.
+[00:39:55] What VPNs are you supposed to use?
+[00:39:57] What circumvention tool did
+you refer to during a shutdown?
+[00:40:01] So that in your quest to come back online,
+[00:40:08] you don't end up also
+endangering your digital security
+[00:40:12] and even your physical safety.
+[00:40:13] And so we engage in these
+strategies to push back.
+[00:40:19] And then of course,
+[00:40:21] we are able to also support
+grassroots advocacy groups,
+[00:40:25] with grants from our advocacy,
+[00:40:28] from our grant program
+[00:40:32] so that people can continue to replicate
+[00:40:36] what the campaign is about
+[00:40:38] and to also reach
+authorities and push back.
+[00:40:45] I'm just about wrapping up,
+[00:40:47] and so I just want to recap
+some of the lessons I've learned
+[00:40:53] while working on the #KeepItOn campaign.
+[00:40:55] And from the beginning,
+[00:40:57] I told you that we did adopt a definition
+[00:41:01] right from the launch of the
+campaign to guide our advocacy
+[00:41:06] and to make our goal clear.
+[00:41:09] That has not changed.
+[00:41:11] Shutdowns are bad
+[00:41:12] and we continue to push back against them
+[00:41:14] through our advocacy.
+[00:41:16] We also have a mailing
+list where we coordinate
+[00:41:20] and mobilize support in
+response to shutdowns.
+[00:41:24] And it's open to groups
+working on diverse issues,
+[00:41:30] including human rights and digital rights,
+[00:41:33] to be able to also exchange information
+[00:41:37] and to coordinate in pushing
+back during internet shutdowns.
+[00:41:47] As I also indicated,
+[00:41:49] I think it's important to
+have, in every global campaign,
+[00:41:55] and given how shutdowns are spreading,
+[00:41:57] it's important to have like
+the tools and resources
+[00:42:04] readily available for
+communities that are new to this.
+[00:42:09] Because every year,
+[00:42:10] we tend to see new countries
+[00:42:12] joining the shame list of governments
+[00:42:13] that are normalizing the use of shutdowns.
+[00:42:15] And so we have, for instance,
+[00:42:18] branding toolkits for
+#KeepItOn coalition members
+[00:42:21] to be able to run their own campaign
+[00:42:23] and to mobilize support
+on their mailing list,
+[00:42:25] as I mentioned earlier.
+[00:42:28] What also has kept this
+campaign going, I would say,
+[00:42:32] is some keywords,
+[00:42:33] including solidarity,
+inclusiveness, coordination,
+[00:42:37] and of course, respect for differences.
+[00:42:40] And I would just use an example,
+[00:42:42] like not every advocacy response
+[00:42:46] makes sense for all shutdowns
+and for all shutdowns.
+[00:42:51] And so in some cases,
+[00:42:53] we have to revise the strategy that we use
+[00:42:59] to be able to advocate
+against the shutdown happening
+[00:43:03] and also ensure that people and partners
+[00:43:06] that are in certain
+countries are also kept safe
+[00:43:11] from the advocacy that we are doing
+[00:43:13] because we know how advocacy
+[00:43:15] can also end up putting
+partners on the ground
+[00:43:20] in trouble with the authority.
+[00:43:22] And so we do adapt various
+strategies to be able to do this.
+[00:43:26] And then of course, it's important
+for us to typically meet,
+[00:43:33] to discuss strategies,
+[00:43:35] and just share our
+experiences as a coalition.
+[00:43:39] And then also we do virtual meetings
+[00:43:42] and also take advantage of
+events that are organized,
+[00:43:46] including RightsCon.
+[00:43:48] There's Safe Africa,
+there's Global Gathering,
+[00:43:52] there's Drift and other spaces,
+[00:43:55] where we need to mobilize
+[00:43:59] and also just encourage
+ourselves to keep going.
+[00:44:05] Well, there are some successes
+I would want to share,
+[00:44:11] and I have included them as well.
+[00:44:13] But just to say that we've
+been able to get authorities
+[00:44:17] to reverse shutdowns
+that have been imposed
+[00:44:21] with an example in Mauritius.
+[00:44:22] And this year, we got the
+South Sudanese government
+[00:44:26] to also lift an initial directive
+[00:44:28] to shut down social media
+for 90 days in the country,
+[00:44:33] I think it was after three days,
+[00:44:35] when we did call them out
+and put out some statement,
+[00:44:39] and now build that decision,
+it was reversed after that.
+[00:44:45] And so I think on the other side,
+[00:44:49] we've seen that the situation
+is getting really terrible,
+[00:44:54] but civil society remains resilient,
+[00:44:57] and we continue to track shutdowns
+[00:45:00] that happen across the globe.
+[00:45:02] And then of course we continue
+to strengthen partnerships
+[00:45:06] with the #KeepItOn coalition members,
+[00:45:08] as well as partners that
+support advocacy efforts
+[00:45:13] against internet shut down.
+[00:45:16] Yeah, and that's all I have.
+[00:45:20] Thank you.
+[00:45:34] - [Jess] Wonderful, thank you so much.
+[00:45:36] Thank you to each of you, appreciate it.
+[00:45:40] We do have some questions
+coming in that I can share.
+[00:45:46] So, let's get going, shall we?
+[00:45:51] Let's see, we have a question
+from a BKC affiliate.
+[00:45:55] I see Julie Owono who says,
+[00:45:58] "Thank you so much
+[00:45:58] for this fascinating
+presentation and work.
+[00:46:01] Censorship measurement and
+analysis is foundational
+[00:46:05] for organizations advocating
+for free expression online.
+[00:46:09] I have a question regarding
+the criminalization
+[00:46:11] of censorship circumvention tools,
+[00:46:14] which can have a chilling
+effect for users of these tools
+[00:46:18] and organizations supporting them.
+[00:46:20] How can stakeholders strategize
+to advocate against that,
+[00:46:25] against that concerning regulatory trend?"
+[00:46:30] - [Roger] Yeah, so I'll
+jump in with a little bit
+[00:46:32] and maybe the other two
+panelists can answer after that.
+[00:46:35] In a lot of cases, so a
+lot of people are worried
+[00:46:38] that tools like Tor are illegal
+to use in various places,
+[00:46:42] but for the most part, they aren't.
+[00:46:45] For the most part,
+[00:46:46] there aren't laws against
+using tools like Tor,
+[00:46:49] even in places like Russia.
+[00:46:51] In practice, they maybe try
+to block them by protocol.
+[00:46:56] And part of the challenge that OONI sees
+[00:46:58] is sometimes, they show you a block page,
+[00:47:01] meaning they admit that
+they're blocking it,
+[00:47:03] and in other cases,
+[00:47:05] it doesn't work and nobody
+explains why it doesn't work.
+[00:47:08] So there are a bunch
+of technical mechanisms
+[00:47:11] where they make tools
+like this not work so well
+[00:47:15] to discourage people from using them.
+[00:47:17] But that's mainly the
+arms race that we've seen,
+[00:47:20] rather than going about
+it from the legal side.
+[00:47:25] And I mean, to be fair, in the US,
+[00:47:27] we have an infinite number of laws,
+[00:47:29] and everything's illegal if you
+look at it carefully enough.
+[00:47:32] And that's true all around the world.
+[00:47:34] Even in China,
+[00:47:35] they have laws that they can
+point to if they want to,
+[00:47:38] but we haven't seen this
+[00:47:41] primarily be in the
+legal law side of things,
+[00:47:46] but I'll let the other
+two panelists jump in
+[00:47:48] if they want to.
+[00:47:51] - [Maria] Thanks Roger,
+and thank you Julie,
+[00:47:53] for the excellent question, for
+the very important question.
+[00:47:56] I do agree with Roger
+that sometimes, yeah.
+[00:48:01] I guess in many ways, it's
+also a trade off, right?
+[00:48:03] Because like in many cases,
+[00:48:04] like maybe they might be able to justify
+[00:48:08] going after specific people
+[00:48:09] for many different reasons
+beyond specific laws
+[00:48:12] that specifically
+criminalize the use of VPNs.
+[00:48:14] Maybe it might be under broad
+national security reasons
+[00:48:17] and so on.
+[00:48:18] So I think a lot of this has to do
+[00:48:19] with like a sort of cost-benefit analysis
+[00:48:22] or a threat bottle analysis,
+[00:48:23] which is specific to every individual
+[00:48:25] and the specific
+situation that they're in.
+[00:48:28] There are places, for example,
+[00:48:29] like in Tanzania and elsewhere,
+[00:48:30] where they're increasingly
+starting to vaguely
+[00:48:33] and broadly like
+criminalize the use of VPNs.
+[00:48:37] However, to your question,
+Julie, I think on the one hand,
+[00:48:41] well, I should probably start
+[00:48:42] by saying I'm probably
+not not the best person
+[00:48:44] because I don't personally do litigation,
+[00:48:45] but I do think there's
+definitely an opportunity
+[00:48:48] for more collaboration,
+[00:48:51] more collaboration, more pushback
+for more litigation cases.
+[00:48:55] I think international
+organizations, such as Access Now,
+[00:48:58] do play and can continue
+to play a prominent role
+[00:49:01] in raising public awareness
+on an international level
+[00:49:05] and helping to exercise
+a sort of pressure.
+[00:49:07] But beyond collaborations
+on litigation cases,
+[00:49:11] both locally and internationally,
+[00:49:13] I think also generally
+[00:49:14] like having more public awareness raising
+[00:49:16] in relation to the importance
+[00:49:17] and the utility of circumvention tools,
+[00:49:19] sort of highlighting how
+these tools are important
+[00:49:23] for so many different
+aspects of daily life.
+[00:49:25] And therefore that's,
+in a way, blocking...
+[00:49:29] That they're not used to
+access illegal contents
+[00:49:33] or that they're not necessarily used
+[00:49:34] to access illegal content,
+[00:49:35] that they have many other properties
+[00:49:36] that are fundamental for human
+rights and for societies.
+[00:49:40] So I think having more public
+awareness in relation to that,
+[00:49:43] I think, would definitely be helpful.
+[00:49:46] And broadly speaking, more collaborations.
+[00:49:47] But I do think that's an
+important question, Julie,
+[00:49:49] and thank you for raising it.
+[00:49:51] I'd be happy to discuss further
+and also hear from Felicia.
+[00:50:03] - [Jess] We have another
+sort of related question,
+[00:50:07] related legal question.
+[00:50:10] Sean asks, "What legal and
+ethical frameworks exist
+[00:50:13] to hold governments accountable
+[00:50:15] when they impose internet shutdowns,
+[00:50:17] especially during conflicts,
+protests, or elections?
+[00:50:21] Also, has taking governments to court
+[00:50:23] resulted in a decrease
+of internet shutdowns?"
+[00:50:29] - [Felicia] I can respond to the question,
+[00:50:33] and Maria and Roger, feel
+free to jump in as well.
+[00:50:39] So from our advocacy perspective,
+[00:50:41] we've cited various frameworks,
+[00:50:45] including the International
+Covenant on People,
+[00:50:49] on Civil and Political Rights.
+[00:50:52] We've also cited the Universal
+Declaration of Human Rights.
+[00:50:57] Of course, we've also used
+national constitutions
+[00:51:02] to challenge provisions
+[00:51:04] and national constitutions
+to challenge shutdowns
+[00:51:07] that have been imposed by governments.
+[00:51:11] In terms of accountability,
+it's really difficult,
+[00:51:15] but there's been instances where,
+[00:51:21] let's say the African Union,
+[00:51:23] the African Commission on
+Human and People's Rights
+[00:51:26] has adopted a resolution
+that denounces shutdown,
+[00:51:30] but then once a member state
+goes against the shutdown,
+[00:51:34] because it's not legally binding,
+[00:51:37] nothing is, or no consequences
+faced by such state.
+[00:51:45] And then of course, I think the...
+[00:51:52] We've also had like the UN
+Secretary General, for instance,
+[00:51:57] and other experts denounce shutdowns.
+[00:52:01] But again, because these are not binding,
+[00:52:06] it's really difficult to
+hold authorities accountable.
+[00:52:09] But that is not to say
+that, as I indicated,
+[00:52:12] we've taken governments to courts.
+[00:52:14] And I haven't seen a reduction
+in the number of shutdowns,
+[00:52:20] as I clearly indicated.
+[00:52:23] But then some governments
+that we've taken to courts,
+[00:52:27] for instance, let's say Zambia,
+[00:52:32] we were able to get the
+shutdown to be lifted,
+[00:52:35] like civil society got
+the shutdown to be lifted
+[00:52:38] as it was in place,
+[00:52:40] which was really like
+an important win for us.
+[00:52:46] And of course, we've also
+engaged with various actors
+[00:52:50] and the civil society
+on the ground is alert
+[00:52:53] given that the shutdown happened.
+[00:52:55] But I'll not be able to
+say shutdowns have reduced,
+[00:53:00] because clearly they haven't.
+[00:53:02] But then governments are finding
+ways and means of imposing,
+[00:53:06] let's say, targeting social media,
+[00:53:07] instead of blanketly
+shutting down the internet
+[00:53:10] and finding other ways to restrict rights.
+[00:53:14] But all the same,
+[00:53:16] these have serious consequence
+[00:53:18] on people's rights on the ground.
+[00:53:22] Yeah, this is what I have to say.
+[00:53:36] - [Jess] We have a question
+related to something that came up
+[00:53:40] kind before the webinar started
+[00:53:41] about the censorship industry
+kind of as its own economy.
+[00:53:48] So this is from Eduardo.
+[00:53:50] I think the issue of the booming
+of the censorship industry
+[00:53:53] is particularly important to reflect on
+[00:53:56] since this is an industry mostly
+based in the Global North.
+[00:54:00] What strategies can we use
+[00:54:01] to shed a bit more light on these actors
+[00:54:04] and the business models that
+are developed in countries
+[00:54:07] with high levels of internet freedom,
+[00:54:10] but then have huge impacts
+on people's freedoms
+[00:54:13] across the globe?
+[00:54:16] - [Roger] Yeah, this is
+an excellent question.
+[00:54:18] I know that Maria has answers for it also,
+[00:54:20] so I'll be brief.
+[00:54:22] So it's not just the censorship industry,
+[00:54:25] it's the surveillance
+industry, and they overlap.
+[00:54:28] So check out some of the cool stuff
+[00:54:31] that Citizen Lab has been doing
+[00:54:32] on highlighting these things.
+[00:54:34] But yeah, the question of
+how do we, as a society,
+[00:54:38] grapple with the fact that we
+are building oppression tools
+[00:54:42] and selling them to dictators
+[00:54:44] and this is capitalism?
+[00:54:46] That's an excellent question
+and a very frustrating one.
+[00:54:49] I'll let Maria pick it up.
+[00:54:53] - [Maria] Yeah, no, I
+absolutely agree with Roger,
+[00:54:54] and thank you Eduardo for
+raising this important question.
+[00:54:58] Yeah, so in terms of like the censorship
+[00:55:00] slash surveillance industry,
+[00:55:01] on the one hand, there are organizations
+[00:55:03] like Privacy International
+[00:55:04] who have been doing investigations
+specifically on this
+[00:55:06] for more than a very long time,
+[00:55:09] since more than a decade ago.
+[00:55:10] They have published a lot of materials,
+[00:55:12] brochures from trade shows,
+and things like that,
+[00:55:15] that provide insights
+into large capabilities.
+[00:55:17] But generally speaking,
+[00:55:19] tracking and investigating
+surveillance industries
+[00:55:21] and censorship industries is quite...
+[00:55:24] It's quite hard because a
+lot of this is happening
+[00:55:27] sort of behind closed doors.
+[00:55:29] It's not very easy to access
+this type of information
+[00:55:31] and to investigate this.
+[00:55:33] But that said, with OONI specifically,
+[00:55:37] one thing that we're doing
+[00:55:38] is basically analyzing the
+TLS Handshake information
+[00:55:41] from our measurements.
+[00:55:43] And then through that,
+[00:55:44] we will be able to
+fingerprint specific devices
+[00:55:47] that are used on different networks,
+[00:55:49] and we're hoping that that
+will help to shed light on,
+[00:55:52] in cases we're able to
+fingerprint the specific devices,
+[00:55:55] shed light on what types of technologies
+[00:55:58] from which companies are
+deployed where around the world.
+[00:56:02] However, this is a new sort of analysis
+[00:56:04] that we're implementing.
+[00:56:05] We are hoping to publish
+a study based on this
+[00:56:08] within the next year,
+[00:56:09] so keep an eye out for that.
+[00:56:11] But in any case,
+[00:56:12] our study will be openly
+documented as always.
+[00:56:15] The data is all open, so hopefully,
+[00:56:17] others can similarly apply similar studies
+[00:56:20] to examine this further.
+[00:56:23] And yeah, generally speaking,
+[00:56:25] I think the more of us,
+[00:56:26] the more researchers can get involved
+[00:56:29] with trying to address this
+question and investigate this,
+[00:56:32] the better, I think, for sure.
+[00:56:34] And at the same time, I
+think there's opportunity
+[00:56:37] for collaboration on
+main different fronts,
+[00:56:38] on the one hand, on the
+more technical side,
+[00:56:40] in terms of doing this sort of
+[00:56:41] Network Measurement investigations.
+[00:56:43] On the other hand, maybe
+journalists have an opportunity
+[00:56:45] to do investigative research into this.
+[00:56:48] Advocates can help raise awareness
+[00:56:50] and exercise pressure to such companies.
+[00:56:53] There are many different roles, I think,
+[00:56:54] that different actors in society can play.
+[00:56:57] - [Roger] I don't think that we
+can solve it from a legal side
+[00:57:00] because of the phrase
+dual use technologies.
+[00:57:03] Like, these tools argue that
+they're helpful for employers,
+[00:57:08] making sure their employees
+[00:57:09] can't do instant messaging
+at work or things like that.
+[00:57:12] So I think we need to solve
+it from the social side,
+[00:57:15] and that's part of why we
+have failed to solve it.
+[00:57:20] - Agreed.
+[00:57:24] - Well, thank you all so much.
+[00:57:27] That's time for us,
+[00:57:28] but we really, really appreciate
+all of you being with us,
+[00:57:32] and thank you so much to
+Maria, and Roger, and Felicia
+[00:57:37] for being with us and sharing
+your insights with us today.
+[00:57:41] Thank you to all of you in the Sky Lounge,
+[00:57:46] as we call it at BKC.
+[00:57:47] We do have another event
+tomorrow at 12:30 PM, Eastern,
+[00:57:52] if you'd like to join us again.
+[00:57:55] And thanks again, have a
+great rest of your day.
+[00:58:00] - Thank you, everyone.
+[00:58:01] - [Roger] Thank you.
+- [Jess] Thanks.

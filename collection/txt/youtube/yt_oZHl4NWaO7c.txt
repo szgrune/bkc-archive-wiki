@@ -1,0 +1,1986 @@
+[00:00:00] [Jess]
+[00:00:02] I'll tell you a little more about,
+[00:00:04] and next week we have a topic
+of Algorithmic Collusion by Large Language
+[00:00:09] Models with Sara Fish, a researcher
+[00:00:13] who sounds
+really interesting as well.
+[00:00:15] So those are on our website
+under the events heading. So,
+[00:00:20] with that said, I want to welcome Peter
+Wang and Chandler Vaughn, who are co-founders
+[00:00:25] of Anaconda AI, which focuses on advancing
+core Python technologies
+[00:00:31] and developing new frontiers
+in open source AI and machine learning.
+[00:00:36] And very excited about their topic today.
+[00:00:38] So thank you all for being here, again,
+[00:00:40] check out our spring Speaker series.
+[00:00:43] These guys are part of it.
+And more to come.
+[00:00:46] Thank you to those of you
+who have attended in the past as well.
+[00:00:49] So thank you so much for being here, guys.
+[00:00:52] [Chandler] Yeah, great.
+[00:00:55] First off, can you guys hear me?
+[00:00:56] All right, all right.
+[00:00:58] And does this work?
+[00:00:59] That's the real question.
+[00:01:02] Maybe.
+[00:01:06] All right,
+[00:01:07] all right, all right.
+[00:01:09] So first two stories,
+one on my way over here,
+[00:01:13] I managed to get hit by a car,
+spill coffee on myself.
+[00:01:17] So it can only, like,
+get better from here.
+[00:01:19] From my perspective.
+[00:01:21] I also got yelled at for it, so
+[00:01:24] apparently I got the real Harvard
+experience, is what I was told.
+[00:01:28] Nonetheless.
+[00:01:30] So let me tell you a little bit about us
+and what we're going to talk about today.
+[00:01:34] But let me start with a story.
+[00:01:36] So a couple of years ago,
+I was, you know,
+[00:01:40] doing what
+I do using a model, and I watched a model
+[00:01:44] basically create a near perfect
+[00:01:47] prose of colonial Africa resistance.
+[00:01:51] Now, it was beautifully written,
+it was evocative,
+[00:01:55] it was precise,
+and it was historically accurate.
+[00:01:57] And I asked myself, how did it learn that?
+It wasn't about the facts, right?
+[00:02:02] It was.
+[00:02:03] Iabout how it was able
+to communicate.
+[00:02:06] And so it didn't learn that from public
+[00:02:09] domain text, and it didn't learn that
+from some academic journal.
+[00:02:12] Most likely
+[00:02:13] and most certainly
+[00:02:14] it actually learned that from work
+that was either created by an African
+[00:02:18] historian or blogger,
+some sort of, you know,
+[00:02:21] ghostwriter, underpaid ghostwriter
+for Medium or Substack.
+[00:02:24] But the point was, they didn't consent
+[00:02:27] to have their work jammed into this model,
+[00:02:30] and they didn't get attribution for it,
+and they likely don't
+[00:02:35] and won't ever know that their work
+had some sort of influence on this output.
+[00:02:40] And that is really the crisis
+we're going to talk about today.
+[00:02:43] This talk is about something
+[00:02:46] that is somewhat hidden
+that you don't see.
+[00:02:49] It's about an invisible economy of data
+[00:02:51] that that fuels the
+AI that we are marveled at.
+[00:02:55] But it's about how the commons,
+you know, that place in the economy where,
+[00:03:00] you know, information is shared, it's
+morphed, it's extended,
+[00:03:04] that is getting strip mined today.
+[00:03:07] And so it's really about,
+[00:03:10] you know, the idea is: if we don't act now,
+[00:03:14] we're not just risking
+sort of a legal reckoning that will
+[00:03:17] someday, you know, have to be paid
+as we YOLO ourselves into the future.
+[00:03:21] But it is really risking
+a cultural collapse of trust
+[00:03:26] in the data layer of the internet.
+[00:03:29] I can't say it more starkly than that.
+[00:03:31] Now. Today, what we're going to offer
+[00:03:33] is a somewhat simple proposal.
+[00:03:37] You know, I'm not a ban-AI guy.
+[00:03:39] I'm not that guy.
+[00:03:40] I am trying to find a way that we license
+AI effectively,
+[00:03:45] that we can build a forward-
+looking framework
+[00:03:48] that protects creators as they create
+[00:03:51] and, you know, empower
+the developers that want to develop.
+[00:03:55] At the same time.
+[00:03:58] So. Now,
+[00:04:02] this work, the what you will hear
+is the term AMPL, right?
+[00:04:05] It's a licensing framework.
+We'll explain a little bit later.
+[00:04:08] I'll go through it.
+[00:04:09] It's a labor of love.
+[00:04:10] It was co-developed by by Peter Wang
+and myself through a lot of discussions,
+[00:04:16] too numerous to name and some people
+that are actually in this room,
+[00:04:21] you know, Peter is a, you know,
+[00:04:23] foundational figure in open source
+Python and numerical computing.
+[00:04:27] He is the OG of OG in that,
+he has spent his career advocating
+[00:04:32] for open knowledge, scientific
+computing and building bridges between
+[00:04:37] innovation and integrity
+where bridges didn't exist.
+[00:04:41] I come from a world of infrastructure,
+so I am a applied AI guy.
+[00:04:46] I've built systems at scale.
+[00:04:47] I've also seen what happens
+when the data layer gets shaky,
+[00:04:52] when you start getting model
+drift and hallucinations
+[00:04:54] and unexplained outputs
+and just bad statistics. So,
+[00:04:59] you know, the deeper challenge that we saw
+[00:05:02] and the one that led to this project
+is the our licensing and compliance
+[00:05:06] frameworks have not kept pace
+with the market.
+[00:05:09] You know, we have gone from running code
+[00:05:12] to training and running models,
+and the license frameworks
+[00:05:16] do not sort of understand
+that breadth. Open source
+[00:05:20] taught us how to license code
+at least marginally
+[00:05:21] well, but it isn't,
+[00:05:23] you know, AI isn't just code anymore.
+[00:05:26] You've got you know, it's synthesis.
+[00:05:28] It's generation. It's transformation.
+[00:05:31] There's data, there's training, there's
+the weights, there's actual models.
+[00:05:35] So, you know,
+these are not things that are open source.
+[00:05:40] And it was never envisioned that way.
+[00:05:42] So in that shift, we've broken
+a fundamental pact with the commons.
+[00:05:46] And that pact of when you share knowledge,
+it's not just taken,
+[00:05:51] it's attributed, it's reused, it's
+respected.
+[00:05:54] Right.
+[00:05:54] And that's the line we're trying
+to redraw, you know, not to restrict use,
+[00:05:58] but to make it intentional and reciprocal
+and above all, knowable.
+[00:06:04] So let me ask you a question.
+[00:06:06] What is the one thing
+that every artist, scientist,
+[00:06:10] researcher, teacher, you know, lawyer,
+[00:06:14] wants in their life?
+[00:06:17] They want their work to matter,
+[00:06:20] right?
+[00:06:20] They want to know if somebody is going
+to use their writing or their code,
+[00:06:25] or their voice or their brief,
+that it's not stripped of context.
+[00:06:28] It's not it's not carried without context.
+[00:06:31] And so AMPL,
+[00:06:33] the AI model public license,
+was born out of that desire.
+[00:06:37] So it's a modular license.
+[00:06:38] You know, it's very, very AI centric,
+but it encompasses training data too.
+[00:06:43] And the model outputs as derivations.
+[00:06:46] So not a blunt instrument,
+but very much a scalpel.
+[00:06:48] And it allows tiered uses
+much like Creative Commons does.
+[00:06:51] So we tried to take
+the prior art that we could.
+[00:06:54] So our mission
+really, really pragmatically is, you know,
+[00:06:57] we want clear, enforceable guidelines
+for training data use,
+[00:07:01] not just legal weight
+but also moral weight. Both.
+[00:07:07] We want to provide incentives for, you
+know, protecting creators in that process.
+[00:07:11] So particularly those
+that aren't represented by lobbyists
+[00:07:13] or a whole bunch of lawyers,
+and we want to offer a compliance path
+[00:07:18] for developers and companies, because
+right now nobody wants to get sued.
+[00:07:22] They're living in fear of litigation.
+[00:07:26] Above all, we want transparency.
+[00:07:27] We want to put transparency back
+[00:07:29] into this process because, you know,
+the AI community cannot build trust
+[00:07:33] if you don't actually know
+what's under the hood.
+[00:07:36] So that's AMPL.
+[00:07:38] And that's what we're trying to restore,
+not control, not censorship, but
+[00:07:42] it's about consent.
+[00:07:47] So let's get right to the heart of matter.
+[00:07:48] You know, most powerful,
+you know, general AI systems today,
+[00:07:53] whether we're talking LLMs, image
+diffusion model, multi-modal models,
+[00:07:57] they all rely on massive
+data sets scraped from the internet.
+[00:08:01] So that's books and articles and source
+code and photos and videos
+[00:08:04] and blog posts and all your social media,
+whether you like it or not.
+[00:08:07] So much of that is copyrighted.
+[00:08:11] Almost none of it is licensed.
+[00:08:14] So that creates three problems
+in this scenario.
+[00:08:16] One is obvious legal risk.
+[00:08:18] So the courts the jury's still out on
+whether fair use covers this.
+[00:08:23] Right.
+[00:08:23] They have not decided
+what is covered with AI at scale.
+[00:08:28] Two, ethical risk, because the creators
+[00:08:31] were never asked or even notified,
+[00:08:34] and structural risk.
+Because of the lack of transparency,
+[00:08:38] it means that every new model that
+comes out today is trained in the dark.
+[00:08:43] So existing
+[00:08:43] licenses, whether they're open source
+or otherwise,
+[00:08:47] they were not built for this,
+this problem.
+[00:08:49] They were designed to govern,
+[00:08:51] you know, they weren't designed
+to govern probabilistic outputs
+[00:08:54] of, you know, models
+trained on billions of tokens.
+[00:08:57] So this is a little bit flying blind
+in terms of the regulatory environment.
+[00:09:01] But our proposal really simply is
+we need a way
+[00:09:04] to recognize training as a legal event.
+[00:09:08] I'll say that again
+because it's really important
+[00:09:10] we have to recognize training
+as a legal event, right?
+[00:09:15] Are we have to acknowledge
+sort of the derived outputs,
+[00:09:19] one that, you know, fosters
+transparency and indemnity.
+[00:09:22] It's not just a hammer, but it's a bridge
+to this new world that we live in.
+[00:09:29] So there's
+a convenient myth, you know, in tech
+[00:09:31] that machine learning, you know, machine
+learning models don't copy,
+[00:09:35] they compress.
+[00:09:37] But when a model regenerates,
+you know, long strings of copyrighted text
+[00:09:41] or verbatim paragraphs, attacks or,
+you know, protected images that,
+[00:09:45] you know, we're expecting,
+it's not compressing, it's reproducing.
+[00:09:50] It's predicting the next token,
+probably too
+[00:09:52] well, right?
+[00:09:54] And so courts have made clear
+compression is not immunity.
+[00:09:58] And we can look at GitHub.
+[00:09:59] We can look at the Authors'
+Guild lawsuit, recent claims by artists
+[00:10:02] and photographers and musicians, recent
+claims by the AI Disclosure Project.
+[00:10:08] So they went and looked
+and they created a way
+[00:10:10] that they could actually go introspect
+some of these models.
+[00:10:13] What they found
+[00:10:14] was that O'Reilly media paywalled books
+are jammed into OpenAI models.
+[00:10:18] How? Don't know.
+Licensed? Not at all.
+[00:10:22] So this isn't going away.
+[00:10:24] You know,
+this legal landscape is only heating up.
+[00:10:27] It's not cooling off.
+[00:10:28] And it's not just the US.
+[00:10:30] Different jurisdictions
+are actually taking different approaches,
+[00:10:33] which I'll cover a little bit
+a little bit later.
+[00:10:35] But global compliance on this matter
+is a mess across the board.
+[00:10:39] Without a framework,
+developers are left to,
+[00:10:42] you know, guessing or litigating,
+and small developers won't litigate.
+[00:10:45] They'll just not do it.
+[00:10:47] But the point is,
+holy water does not anoint this, right?
+[00:10:51] People are going to come
+with pitchforks eventually.
+[00:10:53] So we have to prepare.
+[00:10:59] So we're also seeing
+[00:11:01] a rapid decline in open research,
+a deepening opacity
+[00:11:06] in the commercial development
+side of this equation.
+[00:11:09] So companies
+[00:11:10] that try to actually disclose their data,
+they are rewarded by getting sued.
+[00:11:15] Companies
+[00:11:15] that hide it?
+[00:11:16] They're rewarded
+with competitive advantage.
+[00:11:19] Right. The incentive is secrecy.
+[00:11:21] And and you know meanwhile countries
+[00:11:24] with fewer restrictions,
+you know, lesser or looser IP regimes,
+[00:11:28] they're they're gaining
+competitive advantage at least short term.
+[00:11:33] But it comes at a cost.
+[00:11:34] And that costs is cultural
+and linguistic erasure.
+[00:11:38] Because the more you scrape
+without boundaries, the more you flatten
+[00:11:42] the diversity of the web
+and the world at the same time.
+[00:11:46] As trust collapse, innovation
+collapses too.
+[00:11:49] So researchers
+don't know what's safe to use.
+[00:11:53] Enterprise users don't know what's
+jammed into the model they just deployed.
+[00:11:56] Right. What's the risk of that?
+[00:11:59] Regulators,
+[00:12:00] they actually don't know how to intervene.
+[00:12:02] They don't have a framework for it either.
+[00:12:04] So we have to somehow
+replace the black box AI
+[00:12:07] that we're dealing with today with a glass
+box governance model around it.
+[00:12:15] And what about derivative works?
+[00:12:16] So at what point
+in time does the model's output
+[00:12:21] crossed the line from inspired
+by to derived from, right?
+[00:12:26] That line is really blurry today,
+but it matters because
+[00:12:31] it determines who owns what.
+[00:12:34] If a model trained on on your code emits,
+[00:12:36] you know,
+some functionally identical thing
+[00:12:39] is that a coincidence?
+[00:12:41] Is that a compliment?
+[00:12:43] Or is it infringement?
+[00:12:45] There's no consensus yet,
+which means there's no protection.
+[00:12:49] Companies that, again,
+[00:12:52] they share their data,
+they expose themselves to lawsuits.
+[00:12:54] So those who don't hide behind secrecy.
+[00:12:57] And this is a liability vacuum, right?
+[00:13:00] The definition of one.
+[00:13:02] So we need a way out.
+[00:13:03] We need we have to find thresholds.
+[00:13:04] We have to set norms by
+[00:13:07] giving creators a voice and developers
+a safe harbor at the same time.
+[00:13:15] And so you might say, well, Chandler,
+you know, don't
+[00:13:18] we have open source licenses
+and haven't we figured this out?
+[00:13:21] The reality is, the existing licenses
+actually don't cut it.
+[00:13:24] So the four freedoms around open source,
+I believe, are foundational.
+[00:13:28] I believe in them wholeheartedly.
+[00:13:30] But they were not written
+for generative users, generative models.
+[00:13:35] You know, the freedom to to run a program
+[00:13:37] as you wish? Sure.
+[00:13:39] What if, what if that model
+is actually training the hate speech?
+[00:13:43] Do I want that? No.
+[00:13:45] The freedom to study and modify?
+[00:13:46] What if I can't actually get the weights?
+The freedom to redistribute?
+[00:13:49] What if that triggers a copyright lawsuit?
+[00:13:52] The freedom to distribute
+modified versions?
+[00:13:54] What if
+[00:13:56] if the modification is indistinguishable
+from training the model again, right?
+[00:14:00] Not only in cost, but in terms of time.
+[00:14:02] So traditional licensing frameworks
+not really addressing the issue.
+[00:14:09] And the reality is software licenses today
+[00:14:11] whether you talk about MIT
+[00:14:12] or Apache or GPL, they don't address
+core core issues on training data.
+[00:14:16] Right. It was never envisioned that way.
+[00:14:18] So data licenses
+rarely address derivation.
+[00:14:22] And they certainly don't
+address indemnity.
+[00:14:24] So the result is sort of this patchwork
+compliance, increasing
+[00:14:28] legal uncertainty and a chilling effect
+overall on innovation.
+[00:14:32] If people don't know how to share safely,
+they're not going to share.
+[00:14:38] And comparatively,
+you know, around the world,
+[00:14:40] the legal picture is fragmented.
+[00:14:43] You know, the United States clearly
+leaning on the fair use doctrine,
+[00:14:47] dealing with it on a case by case basis.
+[00:14:49] But the jury's still out
+as I said.
+[00:14:51] The EU,
+taking a different approach.
+[00:14:54] They're doing what they do
+best, produced policy around it.
+[00:14:57] Really focused on structured text
+and data mining, exceptions and opt-outs,
+[00:15:01] putting in place some mandates around
+[00:15:05] machine signals in terms of preference.
+[00:15:08] And so that, I believe,
+is sort of the right direction.
+[00:15:11] China.
+[00:15:12] They're taking a very, they've
+telegraphed a very
+[00:15:16] permissive stance.
+[00:15:17] Right. They have basically said, you know,
+[00:15:20] we aren't going to worry about that
+right now.
+[00:15:22] Go do what you need to do.
+[00:15:23] Which by the way,
+this that policy got put in place in 2017
+[00:15:29] when when AlphaGo
+and you know, the grandmaster
+[00:15:33] went to that, you know, through that,
+[00:15:37] competition,
+AlphaGo won three games.
+[00:15:40] It became an immediate emergency
+for China.
+[00:15:44] So this position for China
+is not going to change.
+[00:15:46] It's going to be very,
+very permissive about it.
+[00:15:48] And the Global South
+is largely underrepresented.
+[00:15:50] Now, they do have
+[00:15:53] somewhat
+fractured and underdeveloped laws.
+[00:15:55] But the thing to know about the Global
+South, in addition to that
+[00:16:00] is from a data set perspective, it's
+actually really underserved.
+[00:16:04] It's hard to actually find the proper data
+sets for specific languages
+[00:16:08] in the Global South.
+[00:16:09] Now, why does that matter?
+[00:16:11] It will matter for cultural diversity
+reasons, right?
+[00:16:14] Because if you build bigger models
+and they're all English, guess what?
+[00:16:17] Right?
+[00:16:18] You're either setting out a power
+differential between hemispheres
+[00:16:23] or you're going to expect
+that people are going to learn English.
+[00:16:27] Right? So because of this,
+[00:16:30] you know,
+[00:16:30] we have to find this harmony
+across this fractured legal landscape.
+[00:16:35] That's what we're focused on.
+[00:16:37] Because the alternative
+is really a tangled compliance regime,
+[00:16:41] you know, stifling global competition
+and global collaboration.
+[00:16:45] And frankly, it's simply
+just not something that Peter or I
+[00:16:48] will accept.
+[00:16:53] Yeah.
+[00:16:54] And the economics of this are real, right?
+[00:16:56] So behind every license is a value
+chain.
+[00:16:59] That's how I think about it.
+[00:17:00] The global creative economy is over
+$2 trillion.
+[00:17:04] 80% of the content being scraped today
+[00:17:07] for AI is either noncommercial
+or restrictive
+[00:17:10] licensing.
+[00:17:12] Now, one could argue
+that it's been stolen.
+[00:17:13] And many people are right.
+[00:17:15] But in one year alone,
+[00:17:16] 28% of the commonly used web
+tokens of were newly restricted.
+[00:17:21] What does that really mean?
+[00:17:22] This isn't a hypothetical.
+This is actually happening.
+[00:17:25] The open web as we know it.
+[00:17:27] Once a commons
+[00:17:29] is closing.
+[00:17:31] People are putting mitigations in place,
+right?
+[00:17:34] The risk to innovation multiplies.
+[00:17:36] In this scenario.
+[00:17:38] So without licensing clarity, developers
+face litigation risk.
+[00:17:42] Startups stall from the legal overhead.
+[00:17:45] Creators stop sharing.
+[00:17:48] So our focus is really not about
+locking down content.
+[00:17:50] It's not that it's about making
+sure the gates stay open,
+[00:17:54] you know, with guardrails attached.
+[00:17:59] And finally, I'll hand it over to
+[00:18:00] Peter, this isn't just a legal issue.
+[00:18:03] This is a societal issue, right?
+[00:18:06] Without a transparent, fair licensing
+[00:18:09] framework that people can frame
+policy and action around.
+[00:18:12] Researchers face
+polluted, unusable data sets,
+[00:18:16] low resource languages, minority cultures.
+[00:18:20] They're going to evaporate from model
+coverage.
+[00:18:23] New entrants get, you know,
+killed, incumbents get entrenched.
+[00:18:27] That is a power structure
+that I'm eager to break.
+[00:18:30] It's not just unfair.
+[00:18:31] It's actually catastrophic to cultural
+diversity and global knowledge up shift.
+[00:18:36] Right. So frankly, it's very inefficient.
+[00:18:38] So innovation
+thrives in diverse open ecosystems.
+[00:18:42] But when we lose that. When creators
+no longer
+[00:18:45] see themselves in the tools
+that are being built, we all lose.
+[00:18:49] And so AMPL,
+which Peter will take us in detail,
+[00:18:52] one small fix with far reaching impact,
+but it gives us,
+[00:18:55] you know, a path to shared innovation
+without silent exploitation.
+[00:19:01] Peter.
+[00:19:02] [Peter] Thanks, Chandler.
+[00:19:03] Oh, wait, one is - Hello?
+[00:19:05] Is this better?
+[00:19:07] Okay, all right, everyone hear me?
+[00:19:10] This one here? Okay. Awesome.
+[00:19:13] Great. So
+[00:19:15] AMPL the concept here
+[00:19:17] is to create a licensing,
+[00:19:22] I guess a license or a license
+[00:19:23] family that,
+[00:19:26] you know, standardizes the definition
+of these, all these different things.
+[00:19:30] So there's not clear definitions
+right now,
+[00:19:32] but we think some broad lines
+can be drawn to define things
+[00:19:35] like what is what is transformative,
+what is derivative?
+[00:19:37] And we can have some back
+and forth on that. Right?
+[00:19:40] But we can start somewhere.
+[00:19:42] Ultimately the goal, of course,
+is to
+[00:19:44] protect the rights of creators,
+to ensure that they have some say
+[00:19:50] in what happens to their knowledge
+work, to their creative work.
+[00:19:54] And these are actually the very,
+very same fundamental motivations
+[00:19:58] for the creation of copyright
+as well, and intellectual property law.
+[00:20:02] It's not to prevent
+the spread of knowledge and information.
+[00:20:04] It's to facilitate,
+some kind of economic benefit
+[00:20:08] for those who do the hard work
+and do this kind of thing. So
+[00:20:13] one of the things,
+as we're looking into this,
+[00:20:14] one of the things that emerged
+was very interesting,
+[00:20:18] is that unlike traditional open source
+[00:20:22] and kind of existing commons
+[00:20:25] tools that people use,
+[00:20:28] there is a potential liability chain
+[00:20:31] that comes back up to the creator
+[00:20:35] in even the dissemination of open
+weight models, and that's something that
+[00:20:38] is, you know, the open source world
+contemplated and started dealing with as
+[00:20:43] they started putting in patent protection
+kinds of things into GPL and Apache.
+[00:20:48] On the data set
+and on the training data on the on
+[00:20:50] the license side,
+that's still an unexplored category.
+[00:20:53] So there's a whole aspect of providing,
+[00:20:57] there's
+[00:20:58] a lot of value in providing
+clear protection there for creators,
+[00:21:02] and giving them indemnity
+as they're trying to contribute
+[00:21:04] to the knowledge commons.
+[00:21:06] And, and lastly, again,
+this is a family of licenses.
+[00:21:10] So it's not just about making everything
+[00:21:12] free for everyone to use
+if you want to be remunerated,
+[00:21:15] if you want to restrict license,
+[00:21:17] if you want to have a license
+that restricts the usage for,
+[00:21:20] you know, commercial purposes
+or for research purposes, we're very much,
+[00:21:23] you know, motivated and inspired by the
+the the approach that the Creative Commons
+[00:21:27] took with their license families.
+[00:21:31] So
+[00:21:32] I think the core assertion,
+the simple as the simple
+[00:21:35] but really, really important
+fundamental distinction here is that,
+[00:21:42] if you look at what it is
+that deep learning technologies are doing,
+[00:21:44] and I don't call it just AI or just LLM,
+because it's more than just,
+[00:21:49] the transformer model. Right?
+[00:21:50] It's any of these, large,
+[00:21:54] neural network
+[00:21:55] and deep learning
+inspired approaches.
+[00:21:59] We as a species,
+as a civilization, as a species,
+[00:22:02] we have hit upon a very clever
+mathematical trick
+[00:22:06] that is able to do not new kinds of
+compression or new kinds of copying, but
+[00:22:11] actually, uncopying, unprinting, we're able
+[00:22:14] to extract essence from expression
+[00:22:17] and do it at scale, do it mechanistically.
+[00:22:20] And that is not a capability
+[00:22:23] that Homo sapiens has had
+until the last ten years.
+[00:22:27] That is that is profoundly different
+and new.
+[00:22:30] And I will,
+[00:22:33] I guess, embarrassingly admit
+that I am not a legal scholar.
+[00:22:36] I do not have a degree in law.
+[00:22:37] It is kind of a
+[00:22:40] a little humbling to be here at Harvard
+Law, but,
+[00:22:43] but in my research and looking into this,
+when we look at the
+[00:22:46] the roots of open source and of things
+like the Electronic Frontiers Foundation,
+[00:22:51] a lot of the thoughts about information
+freedom and all these kinds of things,
+[00:22:55] there remains this this distinction
+between expression and essence.
+[00:22:58] If you look at the, copyright acts,
+if you look at the Berne
+[00:23:02] Convention,
+like all of these kinds of things,
+[00:23:05] they maintain a distinction between idea
+or essence and expression.
+[00:23:10] And we've always thought
+that goes in one direction.
+[00:23:14] And for the most part,
+things like copyright and whatnot
+[00:23:17] all govern the
+[00:23:20] expression side of things.
+[00:23:22] We have now a tool
+that completely breaks that.
+[00:23:25] And so
+[00:23:26] if you think about the problem statement,
+as we have technological capabilities
+[00:23:31] that transcend the classical boundaries
+between essence and expression,
+[00:23:35] the simple sort of straw man
+solution to say, well, what if we came up
+[00:23:39] with a new kind of tool, a new legal
+instruments, a new new set of approaches
+[00:23:43] that contemplated this,
+that really respected this transcendence
+[00:23:46] as the first class,
+[00:23:47] like the fundamental problem of what's
+what's occurred?
+[00:23:50] So looking at how we deal with essence
+embedded in expression
+[00:23:55] and the mechanical transformation
+around that, the extraction of essence
+[00:23:58] from expression,
+the changes that we can do,
+[00:24:01] the transformations we can do on that
+essence in a mechanistic fashion.
+[00:24:05] And then the re expression and that's
+really it is to say beyond copyright.
+[00:24:09] Copyright came around when we got fast
+mechanical copiers or printing presses.
+[00:24:14] We now have these AI boxes.
+[00:24:17] Let's talk about AI rights.
+[00:24:18] You know,
+what is this minimum set of things
+[00:24:19] we put in a box and say,
+these are AI rights and every human
+[00:24:23] natural human AI creator
+[00:24:26] they have,
+just as they have a right of authorship,
+[00:24:28] that is the origin of copyright.
+[00:24:30] There is a right of authorship.
+[00:24:31] And and let's think about what AI write
+can stem from that
+[00:24:34] as again, as a first class right.
+[00:24:38] And in this
+[00:24:39] license and in this licensing scheme,
+[00:24:42] again, there are a few really core things
+that we think will go a very long way
+[00:24:46] to standardizing, and, you know,
+standardizing a lot of these different
+[00:24:50] jurisdictional perspectives,
+as well as creating
+[00:24:53] a unified and open playing field.
+[00:24:56] So one of the key
+things is mutual indemnification.
+[00:25:01] Again, one of the one of the really
+interesting things about these
+[00:25:03] AI licenses
+is that they're not just merely software.
+[00:25:06] So you can use a lot of Apache or BSC/MIT
+license software to to write the code
+[00:25:11] for a model, but all the data around it,
+if that data includes
+[00:25:16] different kinds of things
+that create legal exposure,
+[00:25:20] or that might be legally challenged
+at the point of application
+[00:25:23] of that
+AI model, well, who is actually, at fault?
+[00:25:27] And this is not a theoretical
+concern.
+[00:25:31] We know that there are open space
+AI researchers, people who work,
+[00:25:36] you know, on on doing AI in the, in the,
+in the transparent public,
+[00:25:39] in the open.
+[00:25:41] They find themselves
+being named in lawsuits
+[00:25:44] because litigants sort of, you know, prey
+and spray a little bit on these things.
+[00:25:48] And they are not themselves in violation.
+[00:25:50] They don't think they're in violation
+or anything.
+[00:25:51] They're putting together
+merely a collection of data.
+[00:25:54] And I say, here's a data
+[00:25:54] set someone else takes to this, builds
+a model, puts a model out
+[00:25:58] there, they get sued, but they drag
+everyone else along with them.
+[00:26:01] That creates an utterly chilling effect
+on any kind of open collaboration,
+[00:26:06] especially when this goes beyond merely,
+[00:26:09] oh, you included a bunch of O'Reilly books
+or something.
+[00:26:12] This goes into, hey, you're violating
+[00:26:16] you're literally violating laws
+in a particular country, right?
+[00:26:19] We don't often talk,
+when we talk about AI rights
+[00:26:21] so we talk about copyright and deepfakes
+and all these things,
+[00:26:25] people don't think about, like there are
+there are countries where
+[00:26:28] where the governments are very,
+very mad at you
+[00:26:30] if certain kinds of text of certain kinds
+of imagery of certain prophets,
+[00:26:33] let's say, are actually included in a
+technological capability or in a software.
+[00:26:37] So the chain of liability
+is a huge, huge problem.
+[00:26:42] And with AMPL one of the very,
+very basic things that we do
+[00:26:46] is we include in there
+a mutual indemnification,
+[00:26:48] and that makes it
+so that everyone who's doing open
+[00:26:50] data, who's collecting open data, who's
+curating it, making it available, who's
+[00:26:53] writing open models, redistributing
+of models, hosting them, mirroring them.
+[00:26:58] Everyone is playing in a place
+where they know
+[00:27:01] they have explicitly been given,
+at a contractual level,
+[00:27:03] they've been given indemnity
+from the user.
+[00:27:06] Transparency.
+[00:27:07] It is really
+we we believe that there is a huge problem
+[00:27:11] right now in the
+AI world, in the training,
+[00:27:16] training data world and
+[00:27:18] in the model weights world, there is
+there's no transparency around this stuff.
+[00:27:21] As Chandler,
+you know, spoke about. And
+[00:27:24] the second thing we put in here in
+AMPL is a provenance system.
+[00:27:30] So, you know, at least what's in it,
+a bill of materials,
+[00:27:32] something like the nutrition label
+inside of a box of cereal.
+[00:27:36] Right.
+[00:27:37] You know what
+[00:27:37] you get
+[00:27:38] if you're a business
+and you want to use a free open model.
+[00:27:41] Well, if it's just a black box,
+you have no idea versus if it's labeled.
+[00:27:46] And you know here
+all the things that are public, free,
+[00:27:48] open, here are things
+that actually are copyrighted.
+[00:27:50] And here are the things that,
+[00:27:54] here's how much, you know,
+[00:27:54] those particular creators
+want you to pay for them.
+[00:27:56] That kind of a structure accelerates
+innovation, and it lets people confidently
+[00:28:01] recompose, reuse, remix.
+[00:28:04] Again, a lot of this is,
+all of the motivation here
+[00:28:07] is to create and defend that innovation
+commons around AI
+[00:28:10] derived outputs.
+[00:28:11] Again, this is something where
+[00:28:13] we will have to have some discussion
+as a global innovation community,
+[00:28:16] but we should start somewhere
+on creating clarity about what
+[00:28:19] constitutes, you know, a derived output,
+what constitutes,
+[00:28:24] you know, derivative,
+what is not derivative, etc..
+[00:28:27] And lastly, again, the tiered usage,
+this is about creating
+[00:28:29] that commons, defending the commons,
+but it is not excluding
+[00:28:32] commercial usage at all
+that we want to accelerate and facilitate
+[00:28:36] commercial usage.
+[00:28:37] So, allowing for, the model
+allows for creators of the data sets,
+[00:28:43] curators of data sets, curators
+and trainers of models, and curators of models
+[00:28:46] to all attach
+some kind of remuneration clause to it.
+[00:28:49] And this way it's
+similar to Creative Commons.
+[00:28:52] You know, not really
+like any of the software licenses
+[00:28:54] which don't have generally a template
+for remuneration built in.
+[00:29:00] So for the various stakeholders
+in the ecosystem,
+[00:29:02] what this means for creators
+[00:29:03] is that you have a way of
+not just opting in or not just opting out,
+[00:29:09] and, and being excluded from SEO, excluded
+from visibility,
+[00:29:12] excluded from the corpus,
+the emerging corpus of human
+[00:29:15] knowledge that, you know,
+will be at the heart of all these AIs.
+[00:29:18] You also have a way of opting in,
+but the opting in doesn't strip
+[00:29:20] you immediately
+of all of your economic upside.
+[00:29:23] Right? There is, you can negotiate.
+[00:29:25] You have a choose
+your own adventure in the middle.
+[00:29:26] So it's not, you know, opt in, opt out.
+[00:29:28] This shows up a lot.
+[00:29:31] I'm pretty heavily involved in BlueSky.
+[00:29:33] This shows up a lot in the
+BlueSky conversation.
+[00:29:35] A lot of artists, a lot of musicians,
+a lot of people who like,
+[00:29:37] do not want to have their content
+[00:29:39] available for training whatsoever
+and want to give the ability to say
+[00:29:42] they don't or they do.
+[00:29:43] But right now it's it's all one or it's,
+you know, completely a binary switch.
+[00:29:46] And that's not particularly
+useful for people.
+[00:29:50] For companies, again, right now, everyone
+[00:29:52] basically doing AI and using models,
+they are YOLOing it.
+[00:29:56] This is my spicy take.
+[00:29:58] Everyone is basically YOLOing
+it, hoping they don't get sued, hoping
+[00:30:01] that if anyone get sued, that OpenAI
+joins a lawsuit or Anthropic or
+[00:30:05] or Google or whatever, and files
+like the amicus brief or something.
+[00:30:08] But at the end of the day,
+[00:30:11] we all know 
+that all these giant models
+[00:30:14] are trained on a lot of data
+that does not have clear provenance.
+[00:30:18] So if we provide a path
+[00:30:21] for clear provenance,
+a path with explicit opt in,
+[00:30:25] where the creators have signaled
+[00:30:26] their preferences as to what they want
+to have happen with their things,
+[00:30:29] they declare, here are the AI rights
+and I am under these AI rights.
+[00:30:33] I am giving permission for downstream
+users to do these things.
+[00:30:36] That gives companies
+a massive sigh of relief
+[00:30:39] and a lot more confidence to adopt and use
+AI and all sorts of creative ways.
+[00:30:43] For regulators.
+[00:30:44] This is a path forward
+[00:30:45] that doesn't just have Hollywood scream at
+you or have Silicon Valley scream at you.
+[00:30:49] This is a path forward
+for actually discovering the space,
+[00:30:52] letting all the creators, many,
+many talented, technical folks
+[00:30:56] are working in the open trying to build
+an innovation commons around this,
+[00:31:00] in that dialogue, in that discourse,
+as we navigate
+[00:31:03] exactly what the right breakpoints
+are for these various things out of
+[00:31:07] that will merge some cow paths, which then
+regulators merely have to go and pave.
+[00:31:10] That's a lot easier than paving over stuff
+and havinf everyone get mad at you, right?
+[00:31:13] And as we've seen so far, the
+[00:31:15] AI regulations have been written
+by legislators
+[00:31:17] and regulators and paid lobbyists
+and all these other things.
+[00:31:20] They're not particularly effective.
+[00:31:21] They're swinging way too far
+wide over here,
+[00:31:23] or they're making the drawing
+really pointless.
+[00:31:25] Lines in the sand over here.
+So it's very, very hard.
+[00:31:28] I mean, regulators have obviously
+do not have an enviable task right now,
+[00:31:31] hopefully with a grassroots, ground up
+first principle approach like this,
+[00:31:35] we can quickly and in parallel explore
+[00:31:38] these cow paths
+and give them something to pave.
+[00:31:41] Lastly, for researchers, this is huge.
+[00:31:44] Something sort of building on something
+Charles said earlier.
+[00:31:46] Right now, if you are going to do research
+and you publish your research,
+[00:31:50] you say, yes, I used this, or
+[00:31:51] I use this data or I use that,
+you're just asking to get sued, right?
+[00:31:55] And so this has a massive chilling effect.
+[00:31:57] And the corollary of that is to be safe
+[00:32:00] then you're going to enter the safe harbor
+or walled garden of some trillion
+[00:32:04] dollars tech company.
+[00:32:05] Well what does that mean?
+[00:32:06] That means research now becomes sanctioned
+only within these certain ivory tower
+[00:32:10] or walled garden zones.
+[00:32:11] And that is disempowering for everyone.
+[00:32:13] And that is that hurts civilization.
+[00:32:15] So by having an open ecosystem,
+by creating something
+[00:32:18] that locks innovation open and gives
+everyone clarity as to what's the model,
+[00:32:22] what rights do they have?
+[00:32:23] This accelerates and facilitates
+open research.
+[00:32:28] So naturally,
+[00:32:30] you know, there's a lot of,
+I can imagine there are a lot of,
+[00:32:34] questions
+and potentially pushback on this.
+[00:32:35] And as we've talked about these ideas
+with people,
+[00:32:38] over the previous months, year, there's
+a lot of different kinds of arguments
+[00:32:42] we're seen. Right?
+[00:32:43] One of the the biggest ones is, you know,
+we don't need this
+[00:32:46] because it's just fair use.
+[00:32:48] And I've talked to people who work
+at some of the top AI companies
+[00:32:50] and they're like, no, at least in the US,
+where fair use exists as a doctrine,
+[00:32:54] they are 100%.
+They're going to take it to the grave.
+[00:32:57] This is all fair use.
+We are totally at our right to do this.
+[00:32:59] If Google can go and do all this stuff
+and create a search index,
+[00:33:02] we can totally do this and create a
+transformer model that maybe accidentally,
+[00:33:06] you know, regurgitates
+the entire text of what it's scanned,
+[00:33:08] but nonetheless, it's fair use, right?
+[00:33:11] And the problem is that, of course,
+[00:33:12] fair use only exists
+in a few jurisdictions in the world,
+[00:33:15] and text and data mining and database
+rights exist in other places in the world.
+[00:33:19] And there are already many,
+many instances of teams
+[00:33:23] and collaborations of AI researchers
+doing jurisdiction hopping.
+[00:33:26] Right.
+[00:33:27] That I think the maybe the most famous one
+is the Stability Diffusion-
+[00:33:30] LAION relationship.
+[00:33:32] But there's others as well,
+[00:33:34] where people do
+certain kinds of activities
+[00:33:35] in certain countries
+under certain provisions,
+[00:33:37] and then they ship the contents of
+a database or a data set to someone else
+[00:33:42] who then has the right to do certain
+other things.
+[00:33:44] So the jurisdiction shopping and hopping
+will continue.
+[00:33:46] And again, it is not a
+[00:33:48] clear playing field
+for for anyone.
+[00:33:51] It's still legally unclear.
+[00:33:53] Another interesting argument
+[00:33:54] I heard, push
+back was reproducibility is overrated.
+[00:33:58] So when I argue about why it's important
+to have clarity and provenance around
+[00:34:01] the data sets are used to create these
+AI models.
+[00:34:04] Had, you know, a, very,
+very senior engineering manager,
+[00:34:08] at a large AI company.
+[00:34:09] Tell me, yeah, you know,
+[00:34:10] even if we told you what was in it,
+even if we just gave it to everyone,
+[00:34:13] you didn't have the GPUs to train it
+anyway.
+[00:34:15] So you don't really get reproducibility
+[00:34:17] in actuality, you get it
+[00:34:19] maybe in spirit,
+but no one else can do this except us.
+[00:34:21] And my counter point is, well,
+lots of people have billions of dollars
+[00:34:25] to spend on data centers.
+[00:34:26] It's not just the big tech
+companies in the West, right?
+[00:34:28] This is not something so large
+that sovereign level actors of even medium
+[00:34:33] or small scale,
+they can afford a few billion dollars
+[00:34:36] to put into a supercomputer
+or data center to train their own models.
+[00:34:39] So the argument that that reproducibility
+is somehow,
+[00:34:44] just a theoretical nice to have
+that's absolutely not true.
+[00:34:48] Another
+[00:34:50] bit of pushback.
+[00:34:51] I get this more from the accelerationists
+and the people who really believe
+[00:34:55] that an 18-24 months we'll have AGISI
+that will just take over everything,
+[00:34:59] they believe that essentially
+any kind of thing like this,
+[00:35:02] which puts in more legal stuff
+and more encumbrances and slows
+[00:35:05] things down, that it is literally immoral
+and unethical.
+[00:35:08] We're literally killing people
+because we're not helping
+[00:35:10] or we're slowing down creating AGIs or
+create cancer drugs and magic medicines.
+[00:35:14] Right.
+[00:35:15] And I can appreciate that from a
+theoretical,
+[00:35:17] you've had a little to drink a little to smoke
+in San Francisco kind of argument,
+[00:35:20] but it's not a real, it's
+not a serious argument. Right?
+[00:35:23] We know that if you actually go disempower
+trillions of dollars of economic output
+[00:35:27] across the world, you're going to have
+a really, really big impact.
+[00:35:30] People will die. So
+[00:35:33] for right now,
+again, I just want to put this out there
+[00:35:35] because there's actual feedback
+I've gotten.
+[00:35:37] So I just want to name it,
+but I don't consider it serious feedback.
+[00:35:39] We if we're if this is such
+foundationally important technology,
+[00:35:42] we should have a conversation as a society
+about what is ethical, what is right,
+[00:35:47] and what is sustainable to do.
+[00:35:49] And those conversations, when societies
+have those conversations,
+[00:35:51] those are called laws. Right?
+[00:35:52] So we should be figuring this out
+at a legal level.
+[00:35:56] But the I think most significant,
+[00:35:59] and probably the most accessible
+counterargument to the AMPL approach
+[00:36:02] on licensing is
+that the horse has already left the barn.
+[00:36:05] You know,
+[00:36:06] you can go back
+and you're going to go and tell people
+[00:36:08] they can't train on the Common Crawl data
+set or on The Pile or whatever,
+[00:36:12] but they've already trained it.
+[00:36:13] They've already made models.
+[00:36:14] They already created startups
+and raised billions of dollars.
+[00:36:15] So what are you going to do about it?
+[00:36:17] Right.
+[00:36:17] This argument that the horse has left the barn
+[00:36:19] and it's a fairly
+it's a pretty strong argument, right.
+[00:36:21] Because they're creating value.
+[00:36:23] They vet users of their APIs.
+[00:36:24] They're creating
+these models are getting better
+[00:36:25] and better, doing more interesting things.
+[00:36:27] Why do we even care?
+[00:36:29] Because the horses left the barn.
+You're building better barn doors.
+[00:36:31] Doesn't matter.
+[00:36:32] One of the interesting things is
+the horse has left the barn.
+[00:36:36] It's off in the woods,
+[00:36:37] but we're going to be able to find it
+and trace it and bring it right back.
+[00:36:40] There are more and more research
+coming out over the last 18 months
+[00:36:44] about how to actually unlock
+and uncover the eigenvectors,
+[00:36:48] the semantic eigenvectors, the data
+inside the LLMs.
+[00:36:53] I think people sometimes forget
+because we are now,
+[00:36:55] after only two years of ChatGPT,
+we're conditioned to expect
+[00:36:58] these giant, massive models
+to be completely opaque all the time.
+[00:37:02] They're not. Right now
+[00:37:04] it's not efficient
+[00:37:05] to recover these things out of them,
+but it is absolutely reasonable to expect
+[00:37:09] that additional research into things
+like representations, interpretability,
+[00:37:13] mechanistic interpretability,
+model sensitivity that these things
+[00:37:15] will unlock for us
+the ability to say, here's a document.
+[00:37:19] And what's this,
+[00:37:20] what is the probability
+this document is present in this model?
+[00:37:24] The set of weights.
+What is the probability?
+[00:37:27] And if it comes back 95%
+you have yourself a lawsuit, right.
+[00:37:30] That is not too far fetched.
+[00:37:31] Just imagine at this point,
+just given the state of research.
+[00:37:34] Number two,
+enterprise priorities. Right now,
+[00:37:38] a lot of enterprises are using this stuff,
+[00:37:39] you know, and they're trying to figure out
+what is the right path forward.
+[00:37:41] We talked to a lot of people
+who are interested in this. And
+[00:37:46] they understand,
+[00:37:49] they're serious about deploying AI.
+[00:37:50] They understand that there's a
+there's a question mark around all this.
+[00:37:54] That question mark will remain.
+[00:37:55] That question mark will remain
+for a long time until clear regulation
+[00:37:59] or the markets come out with something
+about provenance and about accountability,
+[00:38:04] and even right now,
+if you look at the character.AI
+[00:38:06] lawsuit, however we may feel about,
+you know, are they liable or
+[00:38:10] are they not for that particular teen's
+suicide?
+[00:38:13] Well.
+[00:38:13] You just have to tell that story
+[00:38:14] to corporate counsel,
+and they will have a lot of heartburn.
+[00:38:18] The idea that you might put
+AI into a thing,
+[00:38:20] you don't know where it came from,
+and now you've got a thing out in the wild
+[00:38:24] that is potentially going to cause people
+to do really bad things.
+[00:38:28] You cannot
+[00:38:29] look at that as corporate counsel and
+not raise some serious concerns.
+[00:38:33] Right?
+[00:38:33] So enterprises
+want to have trustworthy AI.
+[00:38:36] They want to have accountability.
+[00:38:37] They want to actually see
+this provenance chain of the data set.
+[00:38:41] And who touched this model
+as it went through the training process?
+[00:38:45] And the
+[00:38:45] last and really important thing is that
+[00:38:49] the horse has left the barn,
+but there's many more horses
+[00:38:52] besides in the barn, not just living there
+now, but foals that are being birthed
+[00:38:55] and that will come.
+[00:38:57] if it is true that we're going to YOLO
+our way into big models,
+[00:38:59] everyone just uses the big models
+that have trained on The Pile
+[00:39:02] and all this copyrighted work,
+and there's nothing we can do about it.
+[00:39:05] Let's just take that assumption at face
+[00:39:07] value and say,
+yes, there's nothing we can do about it.
+[00:39:08] Well, what comes next?
+[00:39:10] What comes next is we use those models
+to make more songs, more music, more art.
+[00:39:14] We go and use them to write more
+interesting screenplays.
+[00:39:16] We make all these,
+[00:39:18] we use these models to go
+and put them embedded
+[00:39:20] in and sensor platforms and drones,
+and we send them in the water.
+[00:39:24] We put them in the sky.
+[00:39:25] We gather all sorts of interesting
+data, data with high economic value.
+[00:39:29] What protects that data?
+[00:39:30] What protects
+all the music and all the writing to come?
+[00:39:34] I mean, there's lots more horses
+besides, right?
+[00:39:36] A billion people,
+there's only billion people on earth right
+[00:39:38] now. But, 92 billion have come before,
+and hopefully many more billions
+[00:39:41] will come after. Right?
+[00:39:43] What are we doing to pave the path forward
+in an AI world?
+[00:39:46] Well, human authorship, human creativity,
+human knowledge and insight still matter.
+[00:39:50] As long as they matter
+[00:39:52] and they have to coexist with AI models.
+[00:39:54] We need some kind of way of attributing
+[00:39:58] well, incentivizing the attribution
+of that kind of knowledge
+[00:40:01] work. So,
+[00:40:07] yeah, without going too much into this,
+[00:40:13] again, these are just,
+[00:40:14] just kind of the basic concepts
+here is that,
+[00:40:17] the horse is very much not left the barn.
+[00:40:18] The horse is problematic.
+[00:40:20] Many people are scared of the horse,
+even though they want to use the horse.
+[00:40:23] And we can build a better barn.
+[00:40:25] I think that's ultimately
+what we're trying to say here.
+[00:40:27] We can build a better barn.
+[00:40:29] And people want a better barn, right?
+[00:40:31] That the data provenance gap affects
+everyone.
+[00:40:33] It affects the usage and adoption of AI.
+[00:40:37] You know, we're still in early stages
+in terms of enterprise adoption,
+[00:40:39] but as AI gets more and more serious,
+as AI systems are actually deployed more
+[00:40:44] and more to end users and consumers,
+and as the liability impacts start coming
+[00:40:48] back, people are gonna start asking
+harder and harder questions, right?
+[00:40:52] The Copyright Act of 1976,
+which minted and certified
+[00:40:55] the concept of software
+being a copyrightable artifact.
+[00:40:58] That was 1976.
+[00:40:59] That's a long time
+after people were writing code.
+[00:41:02] And that was just that initial thing,
+[00:41:03] the idea of open source
+licenses and copyleft and all these things
+[00:41:07] that came with GPL, that came,
+you know, quite a bit after that as well.
+[00:41:10] So these things take years for people
+to really figure out.
+[00:41:12] We're two years
+into the ChatGPT moment right now,
+[00:41:15] two and a half years
+in the ChatGPT moment.
+[00:41:17] But we can see from here
+anyone who can think,
+[00:41:19] you know, from
+first principles can see that
+[00:41:21] these are going to
+be these really problematic.
+[00:41:25] So the way that we're approaching
+this,
+[00:41:27] with, with AMPL is we are we're taking
+a kind of multi-stage approach.
+[00:41:31] The first is working on the framework
+itself. Right?
+[00:41:33] Really focusing on this provenance issue,
+[00:41:35] focusing on how we define
+some of these standard terms.
+[00:41:38] What are the kinds of tiers?
+What are the kinds of
+[00:41:40] compensation structures
+that would be valuable for people?
+[00:41:43] Having conversation with people
+that have direct connections to
+[00:41:46] a lot of rights holders and various
+kinds of industries music, Hollywood, etc.
+[00:41:50] and also talking to legal experts
+who have worked in this area a long time
+[00:41:55] to see what legal innovation
+iis viable in the space.
+[00:42:00] The next thing then is to work with the
+[00:42:04] groups and projects
+that have the largest data sets
+[00:42:07] that have been used for training
+and to work with them
+[00:42:09] to develop subsets of their data
+that is clearly provenance,
+[00:42:13] that is clearly public
+or clearly free to use, etc., etc..
+[00:42:18] And so creating a data set
+[00:42:21] that is free for everyone
+to go and build an open model on.
+[00:42:25] But around that data set, we can actually
+put an AMPL a license around it.
+[00:42:29] We can attach that we believe this is free
+for everyone to use.
+[00:42:32] And then we we sort of start,
+if you think about it as the,
+[00:42:35] the the origin block of a blockchain,
+this is the origin block for a data set
+[00:42:39] that is cleanly licensed,
+clearly provenanced.
+[00:42:43] And every single,
+[00:42:45] anyone training LMS,
+whether it's in-house at an enterprise,
+[00:42:48] whether it's in-house at one of the large
+AI companies,
+[00:42:51] whether someone's trying to fine tune
+they can use this data set,
+[00:42:53] and now they have something that that has
+the AMPL license attached to it.
+[00:42:58] Then we're going to add additional tooling
+[00:43:01] so people can look at, hey,
+what is in my data set?
+[00:43:04] You know, I can trace these F-bombs.
+[00:43:06] I can actually do some data linting,
+if you will,
+[00:43:09] and a variety of other kinds of tools
+that are both end user and practitioner
+[00:43:13] oriented, as well as ones that are
+for enterprise adoption of this stuff.
+[00:43:17] And then actually go and drive
+the industry adoption around this.
+[00:43:20] So when people are creating their works,
+they can go and, you know, tag them,
+[00:43:23] they can identify them,
+they can put their,
+[00:43:27] signal their preferences
+[00:43:28] around, how
+they want to be compensated, etc., etc.
+[00:43:31] all of that can be done.
+[00:43:33] And there are many projects
+that have been working in this vein.
+[00:43:36] They're not connected.
+[00:43:37] They don't have
+a unified legal basis right now.
+[00:43:39] So a lot of the framework development
+[00:43:41] and the data set creation
+that is being done,
+[00:43:43] and we're talking about that
+in collaboration
+[00:43:45] with many of these other projects,
+which I'll show in just a minute.
+[00:43:49] But ultimately the goal here
+is to create this licensing ecosystem,
+[00:43:53] that facilitates and accelerates
+innovation.
+[00:43:57] But also has, of course,
+a lot of commercial application. And
+[00:44:02] the way that we're thinking
+about the structure right now
+[00:44:03] is that, you know, obviously the
+the AMPL Foundation
+[00:44:05] itself would be a nonprofit that develops
+these things and has presence
+[00:44:09] or representation
+in most major jurisdictions.
+[00:44:13] But then we would create
+a commercialization consortium
+[00:44:15] that would allow many kinds of enterprise
+tool makers to enterprise to
+[00:44:20] AI vendors,
+give them the ways to integrate
+[00:44:22] and interface with, with enterprise
+AI use cases.
+[00:44:25] So all of the stuff starts, really,
+if you're
+[00:44:28] if you're not big on enterprise software,
+go to market kind of stuff.
+[00:44:31] Think about this as creating
+[00:44:32] a way of doing like Underwriters Labs,
+like an underwriting standard,
+[00:44:36] a way for testing, for certifying
+AI models as actually being fit for use,
+[00:44:41] free of defects, free of various kinds of
+[00:44:43] possible,
+you know, litigation, exposure, etc..
+[00:44:48] But and and lastly, but not least,
+[00:44:51] so the thing, that the problem
+that Chandler spoke about earlier
+[00:44:55] with this kind of a structure,
+we're hoping that we can help incentivize
+[00:44:59] people to build a more culturally diverse
+[00:45:02] set of data sets
+for this amazing technology.
+[00:45:05] If you look at the tokens
+that go in a very practical matter,
+[00:45:07] if you look at the tokens
+that are in the Common Crawl,
+[00:45:09] which is by far the largest token, source
+for most of these LMS,
+[00:45:14] English is the vast, by and by far
+[00:45:17] is the the most represented language.
+[00:45:20] The next top five languages,
+I think Chinese, Russian.
+[00:45:23] What were they?
+Russian, Chinese, German, a few others.
+[00:45:25] But beyond that,
+even among Western European
+[00:45:30] cultures, the percentage of tokens
+is tiny single digits.
+[00:45:35] And then if you go to Global
+South, it's almost non-existent.
+[00:45:39] A lot of a lot of, places in Africa,
+South America, they've not digitized
+[00:45:43] a lot of their cultural heritage.
+[00:45:46] And what we know is
+that is not a mere matter of translation.
+[00:45:48] If you take an English,
+if you take a model trained on English text,
+[00:45:53] the semantics of what are
+[00:45:54] inside that model capture
+a particular Western,
+[00:45:58] a particular American
+or British perspective.
+[00:46:01] And if you just take that news, train it,
+and you translate that
+[00:46:05] to say something like Finnish,
+which is a European language
+[00:46:09] and a European culture,
+the output does not
+[00:46:12] actually, the output is missing
+many of the cultural highlights,
+[00:46:17] and many of the cultural nuances.
+[00:46:19] It basically sounds like an American
+speaking Finnish.
+[00:46:24] So this is really just that's
+where a European language European model,
+[00:46:27] you think about the divergence
+and the space,
+[00:46:30] between these, these current models
+and the Global South
+[00:46:34] and many other cultures
+[00:46:35] that are low resource, I we don't have
+a lot of digital tokens to do training.
+[00:46:39] So right now,
+the reason why AMPL matters for this
+[00:46:43] is if those cultures, if those countries
+[00:46:46] invest in digitization
+and creating these data sets
+[00:46:50] and curating them,
+[00:46:51] if they don't have a way of preserving
+that and of defending
+[00:46:55] the rights, the usage rights
+[00:46:58] around that data as a cultural heirloom
+[00:47:01] for that country or for that culture,
+then it will just be strip mined.
+[00:47:04] They'll just get hoovered up
+[00:47:05] and sucked up into one of the existing
+sort of massive trillion dollar players.
+[00:47:09] And 
+they're basically unable to compete
+[00:47:13] with homegrown domestic
+and culturally integral approaches.
+[00:47:18] So using something like AMPL
+as an international standard,
+[00:47:20] they would actually be able
+[00:47:21] to define, have a space to create this,
+this distinction,
+[00:47:26] between what's used
+domestically inside their countries,
+[00:47:28] what gets used by people outside,
+etc., etc..
+[00:47:31] So we've thought about this as a,
+[00:47:33] you know, a high level goal,
+but but it's a very important one
+[00:47:35] because we know that these LMS and these
+AI models are going to be part of how
+[00:47:39] creation happens,
+[00:47:40] how people think, how people interpret
+and interface the world with each other.
+[00:47:43] And if we don't start
+putting these things in place right now,
+[00:47:46] at some point it's going to be too late.
+We'll lose
+[00:47:50] the opportunity to do this.
+There is time sensitivity around this.
+[00:47:53] So, there are a lot of questions, right?
+[00:47:55] We don't have all the answers.
+[00:47:57] But we are starting this work.
+[00:48:00] We've been in touch with some projects
+that we think are very,
+[00:48:03] very interesting and, also very open 
+to building on this kind of thing.
+[00:48:07] But there's a lot of questions like,
+how do we actually handle noncompliance?
+[00:48:09] I have some creative, spicy
+[00:48:11] and probably not feasible approaches,
+but that would be hilarious.
+[00:48:14] Community governance. Right?
+[00:48:15] What does it look like for us to iterate
+and rev on this thing while also creating
+[00:48:21] clarity and comfort for people
+who take older versions of the license?
+[00:48:24] Like, what does the governance framework
+look like?
+[00:48:26] How much confidence can people have in it?
+[00:48:27] While this is an evolving standard,
+how do we get regulators on board?
+[00:48:30] How do we talk to the EU, to Brussels?
+[00:48:32] How do we talk to the UN?
+[00:48:34] How do we get American regulators to see,
+hey, this is something
+[00:48:36] where we can attach
+all sorts of additional, concepts
+[00:48:39] like privacy rights and likeness rights
+and things like that.
+[00:48:43] And then, right, evolving technology,
+you know, how do we make sure that we are
+[00:48:46] keeping tabs on a very, very fast
+moving technology landscape while we're
+[00:48:51] putting these definitions and tools in place?
+[00:48:53] So some of the projects
+that we've talked to you and that we're,
+[00:48:55] you know, looking to collaborate with,
+[00:48:57] you know, a lot of the usual suspects,
+the providers of large
+[00:49:01] corpora that, that go into training models
+as well as many of the usual suspects,
+[00:49:04] again, on the open knowledge, you know,
+innovation commons side of things.
+[00:49:08] Lots of really great conversations so far,
+a lot of really interesting technology
+[00:49:11] we could use.
+[00:49:13] And and yeah,
+and here in this conversation, the reason
+[00:49:16] we're presenting here, and having
+this conversation is we're trying to get
+[00:49:20] we're soliciting feedback
+on these concepts, looking for people
+[00:49:23] to shoot holes through it or to give us,
+you know, tools to to maybe bring in,
+[00:49:28] and ideas to build on.
+[00:49:29] So with that,
+[00:49:33] I think we open up for questions Chandler.
+[00:49:34] Is this anything else you want to say?
+[00:49:37] All right.
+[00:49:38] Oh, sorry.
+[00:49:39] There is, there is also right,
+there is also a QR code here
+[00:49:44] okay.
+[00:49:44] All right. Thank you everyone.
+[00:49:48] We have about eight minutes for questions.
+[00:49:51] You want to come up and then we.
+[00:49:58] Oh we're going to sit here, right?
+[00:49:59] Okay. Let's do it.
+[00:50:02] [Audience] Thank you so much.
+[00:50:04] [Peter] I can't see them.
+[00:50:06] Yeah.
+[00:50:06] [Audience] The presentation was really interesting.
+[00:50:07] The first thing I was thinking is
+it seems like a lot of people characterize
+[00:50:11] the moment in AI as an arms
+race between the United States and China.
+[00:50:16] And everything
+especially like in the current
+[00:50:20] moment, seems zero
+sum, in the geopolitical moment.
+[00:50:23] So it seems as if the moment you say
+you propose AI regulations
+[00:50:27] in the United States, it's like, well,
+I mean, China will leapfrog us
+[00:50:30] and you know, that
+that will create some worse form of AI.
+[00:50:33] How do you think you would convince
+industry leaders or government officials
+[00:50:36] to impose these regulations?
+[00:50:39] [Peter] I have a couple of points on that.
+[00:50:40] Number one, let's look at a literal arms
+races, even the middle of actual
+[00:50:44] firefighting and arms races, in the early,
+like, literal arms race.
+[00:50:49] Right.
+[00:50:51] We still created the Geneva Convention.
+[00:50:53] So the concepts of the, you know,
+[00:50:59] rules of war or whatnot,
+when people are literally
+[00:51:00] shooting each other,
+trying to kill each other,
+[00:51:02] we recognize
+there are some boundaries to this.
+[00:51:03] So humanity as a civilization,
+a species is able to contemplate this,
+[00:51:08] that even as we're racing for things, that
+there are certain boundaries we'll draw.
+[00:51:11] Now, some of the things
+we're arguing for here,
+[00:51:13] they don't seem to be as bad as like
+saying no chemical weapons.
+[00:51:15] And that's, you know,
+you don't see people getting gassed.
+[00:51:17] And so we say,
+hey, let's not use that anymore.
+[00:51:20] But just because it's an arms race,
+[00:51:22] just because we're actually fighting for,
+you know, economic supremacy,
+[00:51:26] that I think we still have a lot of,
+you know, I don't think.
+[00:51:30] I don't think
+China wants to see deepfake porn
+[00:51:31] any more than American regulators
+do. Right?
+[00:51:33] These are sort of concepts that they're
+wrestling with you in inside China.
+[00:51:36] Yes. There is a state permissiveness
+around,
+[00:51:39] hey, like, let's not let's go build
+whatever best AI we can.
+[00:51:42] But there's a lot of people in China
+who make money off of China's
+[00:51:45] copyright system.
+[00:51:47] There's IP law in China.
+[00:51:48] There are movie stars and music stars.
+[00:51:51] This is not a thing that just inside
+China, somehow it disappears, right?
+[00:51:54] It's a problem
+that everyone has in the world.
+[00:51:56] The second thing I would say is
+[00:51:58] transparency and provenance is actually
+a competitive advantage.
+[00:52:03] And this is
+[00:52:04] one of those things
+which is maybe of a non-obvious argument.
+[00:52:08] What we're arguing for is transparency
+and the big flag we're trying to
+[00:52:11] or the big warning thing
+we're trying to signal
+[00:52:13] to everyone who's interested in open
+innovation
+[00:52:15] commons is the way we're going right now.
+[00:52:17] We're going to proceed, continuing
+to proceed down this path of opacity.
+[00:52:20] That's bad for everyone.
+[00:52:22] That's bad
+[00:52:22] certainly to people
+want to do open research,
+[00:52:24] but it's actually bad for adoption
+as well.
+[00:52:26] Right.
+[00:52:27] If you look inside, well, we have this
+[00:52:30] actually, this is another great
+example of China, right?
+[00:52:33] In America, we have regulatory
+requirements around labeling
+[00:52:36] of ingredients.
+[00:52:37] In China they had melamine and baby powder
+baby formula.
+[00:52:40] And they killed a bunch of kids
+and they were not happy about that.
+[00:52:43] And they have now lived experience about
+why it's important, right, to have these
+[00:52:46] licensing standards
+or, but labeling standards on food.
+[00:52:51] So across the board, it's yes,
+there is a technology,
+[00:52:55] there's all this geopolitical stuff
+and all these things.
+[00:52:57] But at the end of the day, if you look at
+what is the technology,
+[00:52:59] what are the first principles here?
+[00:53:01] We're having something
+that's doing thinking for us and
+[00:53:05] it behooves all of us to understand
+what went into that thing.
+[00:53:08] Right.
+[00:53:08] So unless we have a way of clearing,
+[00:53:12] unless we have a way of motivating
+[00:53:16] economic development in the open around
+this stuff, it will always remain closed.
+[00:53:21] And that's bad for everyone.
+[00:53:22] And we think that as an ecosystem,
+that kind of closed ecosystem is less
+[00:53:25] competitive, and will be less vast
+than the open ecosystem.
+[00:53:30] So fundamentally, you know, for me,
+this is work that builds on the, you know,
+[00:53:34] how do we the question of
+[00:53:35] how do we extend the ethos of open source
+and open innovation into this new era?
+[00:53:40] I heard from a Microsoft guy once who said,
+well, open source is good at solving.
+[00:53:44] Everyone knows open
+source is good at solving well known,
+[00:53:46] well understood problems. Right.
+[00:53:48] And so there's there's oftentimes
+a perspective that open means
+[00:53:51] you build the cheap crap that's maybe not
+that's commoditized.
+[00:53:55] But what we've know,
+in my personal experience through my time
+[00:53:57] at Continuum and Anaconda is actually open
+communities innovate faster and better.
+[00:54:02] And so this is very much in that vein.
+[00:54:05] Now, I could be wrong about that,
+but I think I'm right.
+[00:54:07] So hopefully we're going to put the
+[00:54:10] legal plumbing in place
+so people can confidently
+[00:54:12] collaborate in the open.
+[00:54:14] And that should out compete
+the closed things.
+[00:54:16] [Chandler] The only thing I would add to that is,
+[00:54:20] really where I focus my energy
+[00:54:22] is trying to spark that open source,
+open source movement.
+[00:54:27] I put a source in quotes
+because it's no longer about source,
+[00:54:31] but having a Cambrian explosion
+of capabilities,
+[00:54:36] smaller, more capable,
+[00:54:38] more targeted
+AI is actually good for everything.
+[00:54:42] Like these large models,
+[00:54:43] they're going to keep getting bigger,
+right?
+[00:54:45] Like this is the way the market shapes,
+[00:54:48] OpenAI is going to get bigger.
+Gemini is going to get bigger.
+[00:54:50] Like, you know, meta
+is probably gonna get bigger.
+[00:54:52] But on the long tail of capabilities
+where you can place a small AI
+[00:54:57] in your thermostat, in your refrigerator,
+or in your car, right,
+[00:55:02] much more targeted.
+[00:55:03] That is the open ecosystem
+that we have to foster,
+[00:55:05] and that's the open ecosystems
+that we're really focused on.
+[00:55:08] And if you have that,
+then you have more competition.
+[00:55:10] And the large not only nation states,
+but also the large players
+[00:55:15] have more, more pressure to perform,
+but also to perform in the right way.
+[00:55:22] Yes. Thank you.
+[00:55:32] [Audience] Hi, everyone.
+[00:55:33] I'm a software engineer
+by training turned product manager,
+[00:55:37] with a background in AI
+and very much interested in
+[00:55:41] the responsible use and development
+of of AI technologies.
+[00:55:44] I very much
+appreciate this work.
+[00:55:48] So one thing I wanted to mention
+and I would say not only
+[00:55:51] from the copyright perspective,
+[00:55:52] but also because I can see
+how this could be enhanced to regulate
+[00:55:56] the models
+in terms of like fairness and biases.
+[00:55:59] And so, I think it's very interesting. 
+One comment
+[00:56:03] that I had in terms of potential arguments
+against reproducibility,
+[00:56:08] would be yes,
+maybe there are companies that can afford
+[00:56:12] the big data centers
+and they have the money to spend.
+[00:56:15] But at the same time,
+this is also causing a lot of, impact
+[00:56:19] on the global environment.
+[00:56:20] And if you go now to the AI conferences
+that are also talking about,
+[00:56:25] you know, how much power consumption
+is generated in training the AI models.
+[00:56:31] So I just wanted to mention
+[00:56:33] that I don't know
+if you had any reactions to that.
+[00:56:36] But I can see somebody making an argument
+or bringing this up
+[00:56:40] in terms of the impact of retraining
+all of these models on that.
+[00:56:44] [Peter] Oh, yes.
+[00:56:45] Yeah, I've lots of thoughts.
+[00:56:47] But I guess one thing I would say
+is the models,
+[00:56:50] the models are kind of getting to a point
+where the small models,
+[00:56:52] Chandler's point,
+the small models are getting good enough.
+[00:56:54] Yeah,
+the small models are getting good enough
+[00:56:56] that we can actually put them
+into the physical world
+[00:56:57] and put them in places
+that matter beyond just chatbots. Right?
+[00:57:00] I think that's a really important thing
+to index on is that, the big,
+[00:57:04] you know, really, really big AI companies,
+a lot of their impact is still very much
+[00:57:08] in the software kind of, knowledge
+work, knowledge artifact, chat bot,
+[00:57:13] you know, data summarization,
+you know, all this kind of work.
+[00:57:16] But when AI actually meets
+the physical world,
+[00:57:21] those actually in those use cases,
+they care a lot
+[00:57:25] about the power on the inference side,
+they care a lot about the accuracy.
+[00:57:28] You know, per watt
+and that kind of pressure.
+[00:57:31] We're already starting to see it.
+[00:57:33] And I think that kind of pressure
+will increase.
+[00:57:35] That will create
+competitive back pressure against the
+[00:57:38] ever bigger models
+that I think we're going to see.
+[00:57:42] This is this is
+my general just prognostication.
+[00:57:45] I think we're going to see back
+pressure from that.
+[00:57:47] And people are going to
+then optimize for the whole system,
+[00:57:50] not just how much energy do I put into
+training a flagship SODA giant model?
+[00:57:55] If every time I do that,
+it gets then quantized and then distilled
+[00:57:59] and then slapped onto a little arm
+chip over here at some point as a business
+[00:58:03] I'm going to look at the the whole system
+optimization and realize, you know what
+[00:58:06] getting the biggest say AI models
+maybe not the most effective thing.
+[00:58:09] I want to build a bunch of smaller
+ones like this that actually.
+[00:58:12] And the integral the energy under
+the curve for the whole system is lower.
+[00:58:16] Right.
+[00:58:16] So I do think that we will see
+generally a pressure to get more
+[00:58:20] and more energy efficient
+as AI gets deeper, deeper into the world,
+[00:58:24] like running on your smartphone
+and things like that.
+[00:58:28] But yes, in
+[00:58:29] terms of the the cost of retraining
+and the impact of,
+[00:58:32] the environmental impact
+of a lot of stuff.
+[00:58:34] I mean, it's
+[00:58:35] if you have transparency built in and
+if people demand that kind of transparency
+[00:58:39] at the point of application of the model,
+[00:58:41] then it's way more effective for you to go
+and actually have that provenance
+[00:58:44] from very beginning,
+[00:58:45] as opposed to building a big opaque thing
+[00:58:46] and having other people
+have to go and retrain and then,
+[00:58:49] you know, get all the eigenvectors out
+and all the stuff.
+[00:58:51] So again, from an overall system
+perspective, it's
+[00:58:54] we can make the argument
+that it's much more efficient
+[00:58:56] and much lower economic environmental
+impact to do the provenanced way.
+[00:59:00] [Jess] All right.
+[00:59:01] Thank you guys so much.
+[00:59:03] Let's give them another hand.
+[Applause]
+[00:59:04] Thank you so much for joining us.
+[00:59:07] We really appreciate it.
+[00:59:08] Thank you guys
+for joining us at Berkman Klein
+[00:59:10] And just as a final plug,
+we do have another event here tomorrow
+[00:59:15] at 12:15 on, AI as Normal Technology.
+[00:59:21] Somewhere between dystopian and utopian.
+[00:59:24] Is there a middle road?
+[00:59:27] I don't know.
+[00:59:28] Come find out
+[00:59:29] tomorrow. We'll be discussing it.
+[00:59:32] Thank you so much, Peter and
+[00:59:33] Chandler,
+really great to have you with us.
+[00:59:36] [Peter] Thanks, everyone.

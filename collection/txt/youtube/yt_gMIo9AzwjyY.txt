@@ -1,0 +1,2356 @@
+[00:00:00] - Pleasure to introduce Jacob Andreas.
+[00:00:04] Jacob's an associate professor at MIT
+[00:00:07] in the Electrical Engineering
+[00:00:08] and Computer Science department.
+[00:00:10] Also a member of the Computer Science
+[00:00:12] and Artificial Intelligence Laboratory.
+[00:00:14] As I understand it,
+[00:00:15] Jacob is interested in language
+[00:00:17] as a communicative and computational tool
+[00:00:21] and the research of your group
+[00:00:22] aims to understand the
+foundations of language learning
+[00:00:26] and to build general
+purpose intelligence systems
+[00:00:29] that communicate effectively
+from human guidance.
+[00:00:34] Considering the widespread public use
+[00:00:36] of large language models these days,
+[00:00:38] cannot imagine a better speaker
+[00:00:41] as we sort of collectively
+struggle through
+[00:00:44] even the sort of basic
+questions of, you know,
+[00:00:46] what does a large
+language model understand?
+[00:00:49] Do large language models
+have a model of the world?
+[00:00:52] What does it even mean
+to ask that question?
+[00:00:54] So we're gonna talk about
+belief, uncertainty,
+[00:00:57] and truth in large language models.
+[00:01:00] Jacob's gonna talk for
+about 30 minutes or so.
+[00:01:02] Then we'll have about a 15-minute chat
+[00:01:04] and then we'll spend about 15 minutes,
+[00:01:06] for any questions from the audience.
+[00:01:09] Great.
+[00:01:10] (audience applauding)
+[00:01:15] - Yeah, thank you so
+much for the invitation.
+[00:01:18] So to start off with
+a little example here,
+[00:01:21] if we take the (audio cuts off).
+[00:01:53] Now it's on.
+[00:01:54] This is remarkable for a
+couple of different reasons.
+[00:01:57] The first is that it is correct, right?
+[00:01:59] We have now sort of automated systems
+[00:02:01] that can answer open-ended
+questions about things
+[00:02:03] from history, to physics, to mathematics,
+[00:02:06] to, you know, sort of mid-century
+South Indian politics,
+[00:02:11] all just in a sort of
+totally automated fashion
+[00:02:13] without consulting the
+internet or anything else.
+[00:02:15] The second thing that's kind
+of remarkable about this
+[00:02:17] is that it not only gave this answer,
+[00:02:19] but it followed all of the
+instructions that we provided,
+[00:02:21] its output a numerical
+estimate of its confidence
+[00:02:24] as a number between 0 and 100%.
+[00:02:27] And this is, you know,
+[00:02:28] a somewhat complicated instruction
+[00:02:30] and not what most of the
+question answering data
+[00:02:33] in this model's training data look like.
+[00:02:36] Things get a little bit more complicated
+[00:02:38] if we take this question
+[00:02:39] and we make just some small changes to it,
+[00:02:41] we ask now, was Chellapandian
+first appointed in 1937?
+[00:02:45] Again, give an answer
+[00:02:47] and a numerical estimate
+of your confidence.
+[00:02:49] In this case, the same model says yes
+[00:02:51] to the same question
+[00:02:52] and it is even more confident
+[00:02:54] that the answer was 1937 rather than 1962.
+[00:02:57] And obviously it is not possible
+[00:03:00] that the answer to both
+of these questions is yes
+[00:03:02] and in the second case
+it happens to be wrong.
+[00:03:06] Now, I wanna claim that
+two different things
+[00:03:09] have gone wrong here.
+[00:03:11] The first is the obvious
+factual error, right?
+[00:03:13] We asked a factual question
+[00:03:14] and the model gave us an answer
+[00:03:15] to that question that was incorrect.
+[00:03:18] And the second is an error, in some sense,
+[00:03:20] of metacognition, right?
+[00:03:22] That we asked this model to answer
+[00:03:24] two closely-related questions.
+[00:03:25] And the answers that we got
+[00:03:26] to these two closely-related questions
+[00:03:29] were not only contradictory
+with each other,
+[00:03:31] but the model assigns high confidence
+[00:03:33] to two things that cannot
+possibly both be true.
+[00:03:35] So in the first case, it was overconfident
+[00:03:39] because it would say yes
+[00:03:41] to contradictory things in other contexts.
+[00:03:42] In the second case, it
+was also overconfident
+[00:03:44] because it assigned
+high probability to this
+[00:03:46] and the answer was actually wrong.
+[00:03:49] And so one way to think
+about what's going on here
+[00:03:51] kind of systematically is
+that in the first case,
+[00:03:55] the language model has a
+poor model of the world
+[00:03:57] and the kinds of things
+that are true in the world
+[00:03:59] and the kinds of facts
+[00:04:00] that can be true at the
+same time in the world
+[00:04:02] as it exists today.
+[00:04:03] And what's gone wrong in the second case
+[00:04:05] is that the model has a poor
+model in some sense of itself.
+[00:04:08] It doesn't know what kinds of questions
+[00:04:10] it's likely to get right,
+[00:04:11] what kinds of questions
+is likely to get wrong,
+[00:04:14] in some sense, it doesn't
+know what it knows
+[00:04:16] even when we ask it to report
+that information correctly.
+[00:04:20] So we're gonna sort of
+work up through this talk
+[00:04:23] towards maybe technical solutions
+[00:04:25] that we can start to build
+[00:04:26] towards addressing these questions.
+[00:04:28] Before we do that,
+[00:04:28] I wanna start by really talking
+[00:04:30] at a relatively high level about how it is
+[00:04:32] that we even go about
+constructing language models
+[00:04:35] in the modern era in the first place.
+[00:04:38] And why it is that the
+current training pipeline
+[00:04:40] both gives us these really
+impressive successes
+[00:04:42] but also failure modes of the kind
+[00:04:44] that we were looking at just now.
+[00:04:46] So right, I think at
+this point most people
+[00:04:49] who have read some amount
+of popular literature
+[00:04:51] about language models
+have a picture of them
+[00:04:54] as something like this in their heads.
+[00:04:57] Language model is some
+kind of big neural network
+[00:04:59] in the modern era that takes
+in a sequence of words as input
+[00:05:02] and tries to get what word,
+[00:05:03] guess what word is going to
+come next as output, right?
+[00:05:06] So this is just like the thing
+[00:05:07] that was on your cell phone
+back when predictive text
+[00:05:10] was new on cell phones
+[00:05:11] and trying to guess the word
+that was gonna come next.
+[00:05:13] And the only difference
+[00:05:14] is that we've trained it not
+on sort of a little dictionary
+[00:05:17] or a little collection of texts,
+[00:05:19] but on to a first approximation
+[00:05:20] the entire digitized corpus of everything
+[00:05:23] the human species has produced
+[00:05:24] since the beginning of history.
+[00:05:26] So this is a sort of high-level picture
+[00:05:29] of what a language model does, right?
+[00:05:30] It predicts the next
+token in the sentence.
+[00:05:33] What it doesn't tell us is
+how we actually got there.
+[00:05:37] And actually, I guess
+before talking about that,
+[00:05:40] you know, the sort of thing to note
+[00:05:41] is that once we have a machine
+[00:05:42] that's really good at looking at an input
+[00:05:44] and just predicting what
+token is going to come next,
+[00:05:47] if we can do this super reliably,
+[00:05:48] we can start to do all kinds
+of other things, right?
+[00:05:51] We can start to do controllable
+open-ended text generation
+[00:05:54] by feeding as input to the model
+[00:05:56] something like the title
+of a newspaper article,
+[00:05:59] the subtitle of a newspaper article,
+[00:06:00] the word article colon and
+asking what's gonna come next.
+[00:06:03] And if you imagine a really
+good predictive text system,
+[00:06:06] if you imagine that you
+came across this text
+[00:06:08] in the wild somewhere
+[00:06:09] and you were asked to guess
+what was gonna come next,
+[00:06:11] you might guess that
+what was gonna come next
+[00:06:13] was the first word of an article.
+[00:06:14] And so, we go to our
+language model, we say,
+[00:06:16] just tell me what's gonna happen next.
+[00:06:18] And it says, well, after
+is the most likely word
+[00:06:20] to come here
+[00:06:21] and then we can just repeat
+this process over and over again
+[00:06:23] to go from a sort of
+single next word predictor
+[00:06:26] to a generator of entire
+coherent news stories.
+[00:06:30] And again, this is an older
+model, so maybe less surprising,
+[00:06:33] it turns out that this,
+you know, very plausible,
+[00:06:35] very-well written little
+paragraph summary of a schism
+[00:06:38] in the Methodist church
+is also like made up
+[00:06:40] and introduces a bunch of
+details that never happened.
+[00:06:43] Maybe more surprisingly,
+[00:06:44] another thing that we can do
+with these kinds of models,
+[00:06:48] once we get them into their final state
+[00:06:50] is to follow more complicated
+kinds of instructions, right?
+[00:06:53] So if you have interacted
+with something like ChatGPT
+[00:06:56] or any other kind of
+language model out there,
+[00:06:59] probably most of the interactions
+[00:07:00] that you've had with it
+are of the following kind.
+[00:07:02] You give it an instruction,
+[00:07:04] like, explain the moon
+landing to a six-year-old
+[00:07:06] and what pops out of the model
+[00:07:07] is some text that
+explains the moon landing
+[00:07:09] in language appropriate
+for a six-year-old.
+[00:07:11] Or you ask it an open-ended question,
+[00:07:13] like why do birds migrate
+south for the winter?
+[00:07:15] And what pops out of the model
+[00:07:16] is an answer to that question.
+[00:07:19] And so, you know, maybe
+the sort of question
+[00:07:22] that should be in your head at this point
+[00:07:23] is what is it that we actually had to do
+[00:07:25] to construct that neural network
+[00:07:27] that generates these particular
+next token predictions
+[00:07:30] that make these models useful
+[00:07:31] for all of the kinds of tasks
+[00:07:33] that we were looking at before?
+[00:07:35] And, you know, often the way
+[00:07:37] this is sort of described at a high level
+[00:07:39] is you just learn to
+predict the next token
+[00:07:41] in a bunch of text that
+you got from the internet.
+[00:07:43] The reality is that
+[00:07:44] it's a little bit more
+complicated than that
+[00:07:46] and there's a sort of
+three or four-stage process
+[00:07:48] that we use for building modern models
+[00:07:51] and I think understanding
+the dynamics of this process
+[00:07:52] are actually pretty important
+[00:07:53] for having a good mental
+model of the kinds of things
+[00:07:56] that we should expect language
+models to do or not to do.
+[00:07:59] So the first piece of this process really
+[00:08:01] is just as we described,
+[00:08:03] we go out, we get as much text data
+[00:08:05] as we can get our hands on,
+[00:08:06] text doesn't just mean language,
+[00:08:08] it also means code, it means tabular data,
+[00:08:10] it means like really any
+sort of structured thing
+[00:08:13] that you can encode is text nowadays,
+[00:08:14] often representations of images
+[00:08:16] and other kinds of things
+are often thrown in as well.
+[00:08:20] And we do just train this model
+[00:08:21] to be a really good next
+token predictor, right?
+[00:08:24] So we have the weights
+of our neural network,
+[00:08:26] we show it a sequence of words as input,
+[00:08:28] the neural network guesses what word
+[00:08:29] or, you know, sort of set of words
+[00:08:31] are plausible to come next as output.
+[00:08:32] And if it's wrong, we wiggle
+its weights a little bit
+[00:08:35] so that its predictions
+are slightly more likely
+[00:08:37] to be correct the next time around.
+[00:08:40] But what happens if we just do this
+[00:08:42] and we try to use a language model
+[00:08:44] trained in this way, right?
+[00:08:45] A language model designed to do a good job
+[00:08:48] of predicting the next
+token that's gonna show up,
+[00:08:50] sorry, the next word that's gonna show up
+[00:08:52] in random web text.
+[00:08:53] Well, if we think about even the examples
+[00:08:56] that we were looking at before, right?
+[00:08:58] Explain the moon landing
+[00:08:59] to a six-year-old in a few sentences.
+[00:09:01] The kinds of outputs that we get,
+[00:09:03] and these are from a smallish LLM,
+[00:09:04] but real examples from something
+[00:09:06] that you've just
+pre-trained look like this.
+[00:09:08] We say explain the moon landing
+[00:09:09] to a six-year-old in a few sentences
+[00:09:11] and what the model predicts
+[00:09:12] is likely to come next after that
+[00:09:14] is make a fun fact about
+the moon landing for kids,
+[00:09:16] explain how the astronauts
+[00:09:18] really did make it to the moon, right?
+[00:09:20] It is just as plausible
+[00:09:21] if I were to hand you a
+random website on the internet
+[00:09:24] and say what's gonna come next
+[00:09:25] after explain the moon
+landing to a six-year-old
+[00:09:28] that this website contains
+a list of, you know,
+[00:09:30] fun questions to ask your,
+[00:09:34] I don't know, your co-parent
+[00:09:36] for teaching your kid
+about the moon landing
+[00:09:38] as it is to actually contain
+answers to these questions.
+[00:09:41] And so something that's just
+a sort of general purpose
+[00:09:43] statistical text prediction system
+[00:09:45] is not necessarily going
+to follow instructions
+[00:09:47] when you issue instructions to it.
+[00:09:49] It might equally well
+guess that you're asking it
+[00:09:51] to fill out a list of instructions
+[00:09:53] and it just wants you
+[00:09:54] to generate the next
+instruction in that list.
+[00:09:56] Similarly, when we
+think about why do birds
+[00:09:58] migrate south for the winters,
+[00:09:59] sometimes you get answers
+that are just not useful
+[00:10:01] or that seem like sort of weird answers
+[00:10:03] to jokes or things like that.
+[00:10:04] And so, if we wanna
+make this model useful,
+[00:10:07] we want it to be not just a
+model of web text in general
+[00:10:11] or of text in general,
+[00:10:13] but somehow a model
+[00:10:13] that actually sort of adopts
+[00:10:15] a consistent personality that responds
+[00:10:17] to instructions rather than behaving
+[00:10:18] in some other way when prompted to do so.
+[00:10:21] And that, you know, when
+you ask it questions
+[00:10:23] actually gives like
+useful reliable answers
+[00:10:25] to that question.
+[00:10:27] So just to say this again,
+[00:10:28] just doing sort of pre-training,
+[00:10:30] like we said before, on large scale text
+[00:10:33] lets us generate sort of
+plausible fluent completions,
+[00:10:36] but for the most part not useful outputs.
+[00:10:40] And so the next thing that we'll often do
+[00:10:43] in order to construct one of these models
+[00:10:44] is something called fine-tuning.
+[00:10:46] And what we do in a
+typical fine-tuning process
+[00:10:48] is we actually get now a pair of humans
+[00:10:50] to role-play a conversation
+[00:10:53] between a human and whatever AI system
+[00:10:55] we're trying to produce
+at the end of the day.
+[00:10:57] So we have one human acting
+as the user who says,
+[00:10:59] can you help me rewrite a
+sentence using simpler words?
+[00:11:03] And then we have another human user
+[00:11:04] role-playing as the language model
+[00:11:06] that we're eventually trying to produce
+[00:11:08] that says, "Sure, what's the sentence?"
+[00:11:09] And we generate conversations in this way
+[00:11:12] between people and bots,
+[00:11:14] and we collect a bunch of
+data of this kind, and often,
+[00:11:18] you know, because we have
+to sort of pay expert people
+[00:11:20] to do this, we have to train them
+[00:11:21] in the kinds of conversations
+[00:11:22] that we wanna generate and so on,
+[00:11:24] we have much, much less
+of this fine-tuning data
+[00:11:27] than we had at that pre-training stage
+[00:11:28] that we talked about before.
+[00:11:30] But we have a little of it.
+[00:11:31] And what we're gonna do now
+[00:11:32] is we're gonna take that
+model that we started out with
+[00:11:34] and we're gonna continue to ask it
+[00:11:36] to play this sort of next
+word prediction game,
+[00:11:38] but only on these conversations
+between our humans
+[00:11:42] that are meant to simulate conversations
+[00:11:44] between humans and a bot.
+[00:11:46] And so what's gonna happen when we do this
+[00:11:48] is that this model is gonna retain
+[00:11:50] whatever sort of knowledge about the world
+[00:11:52] that it needed to during that
+pre-training phase in order
+[00:11:55] to be a good general purpose
+next token predictor.
+[00:11:58] But now we're teaching it specifically
+[00:12:00] the kinds of responses
+that you ought to give
+[00:12:02] should be the kinds of responses
+[00:12:03] that people produce in
+the sorts of interactions
+[00:12:07] that we're using to train this model.
+[00:12:09] And so, this is gonna get
+us a little bit closer
+[00:12:11] to what we wanted
+[00:12:13] in terms of the kinds
+of answers that we want,
+[00:12:15] but things can still go wrong,
+[00:12:17] and in particular, right,
+[00:12:18] if we go to our sort of
+explain the moon landing
+[00:12:20] to a six-year-old,
+[00:12:21] this is not a real
+example, this is now fake,
+[00:12:23] but representative of a category of things
+[00:12:25] that can happen here is
+that we can get this model
+[00:12:28] and the model will generate a response
+[00:12:29] to the particular question that we asked.
+[00:12:32] But it's a response that happens
+not to be factually true.
+[00:12:35] Now, why is this?
+[00:12:36] Well, we pre-trained this
+model, right, on the internet
+[00:12:40] and on a bunch of other texts,
+[00:12:41] the internet is a scary place,
+[00:12:42] it's full of things that are not true.
+[00:12:44] It's full of things that used to be true
+[00:12:46] but are not true anymore.
+[00:12:47] It's full of sort of weird
+beliefs written down by people
+[00:12:50] who have a lot of time to write them down
+[00:12:52] and generate a lot of text.
+[00:12:53] And all the model has learned to do
+[00:12:55] is to learn the entire
+distribution over things
+[00:12:57] that people on the internet say, right?
+[00:12:59] So if it's the case that, you know,
+[00:13:02] sort of in 90% of conversations
+[00:13:05] about the moon landing that
+happen on the internet,
+[00:13:07] people say, "Yeah, we landed on the moon.
+[00:13:09] You know, NASA did it,
+it was a real thing."
+[00:13:11] And in 10% of those conversations,
+[00:13:13] people are saying, the
+moon landing was a hoax.
+[00:13:16] Then what this model has to learn to do
+[00:13:17] during that pre-training
+phase is 90% of the time
+[00:13:20] output a sentence that says
+the moon landing was real,
+[00:13:22] and 10% of the time output a sentence
+[00:13:25] that says the moon landing was fake.
+[00:13:27] And that is the behavior
+that actually sort of
+[00:13:30] is going to make this training procedure
+[00:13:31] or the training procedure
+is going to push it towards.
+[00:13:34] And so when we then do
+this fine-tuning phase,
+[00:13:36] unless we have specifically
+fine-tuned on data
+[00:13:39] about the moon landing,
+[00:13:41] we haven't necessarily
+communicated to this language model
+[00:13:45] which set of facts about the moon landing
+[00:13:46] it ought to believe, which
+set of facts it, you know,
+[00:13:50] should sort of produce
+in contexts like this.
+[00:13:54] And notably, right, maybe not here,
+[00:13:56] but for lots of other things
+especially having to do
+[00:13:58] with kind of popular conspiracy theories
+[00:14:00] and urban legends, and so forth,
+[00:14:01] the majority answer that
+shows up on the internet
+[00:14:04] to, you know, is Bigfoot real or whatever
+[00:14:06] is going to be text talking
+about the reality of Bigfoot.
+[00:14:09] And so these are the kinds of things
+[00:14:10] that models are gonna find
+overwhelmingly probable
+[00:14:13] even after we've sort of fine-tuned them
+[00:14:15] to generate responses in the right format.
+[00:14:17] And so, as a result of
+this second phase, right,
+[00:14:19] this fine-tuning phase,
+[00:14:21] we've produced models
+[00:14:22] that are not just models of web text
+[00:14:23] but actually models of conversations,
+[00:14:25] but nevertheless not necessarily models
+[00:14:28] that know the facts that
+we want them to know
+[00:14:30] or that, you know, sort of exhibit
+[00:14:32] the particular behaviors
+that we want them to exhibit.
+[00:14:35] So to summarize here, right,
+[00:14:37] the combination of this
+pre-training and fine-tuning phase
+[00:14:40] give us language models, you know,
+[00:14:42] sort of text generation systems
+[00:14:44] that talk like chat bots but
+they don't always specify,
+[00:14:49] but this procedure doesn't always specify
+[00:14:51] how these systems ought to behave
+[00:14:53] in all of the situations
+where they find themselves.
+[00:14:55] And so a last thing that is typically done
+[00:14:58] is to train these models now
+not on simulated conversations
+[00:15:01] between people and the systems themselves,
+[00:15:04] but to instead get feedback
+[00:15:06] on the system outputs themselves, right?
+[00:15:08] So now we get some user
+of the model to say,
+[00:15:11] "Can you write a fake doctor's note
+[00:15:12] to get me out of school?"
+[00:15:13] And we ask the language model,
+[00:15:15] we prompt the language model
+[00:15:16] to generate two different
+possible continuations
+[00:15:18] of this response.
+[00:15:19] One where it says, you know,
+"Here's the fake doctor's note"
+[00:15:22] and one where it says,
+[00:15:23] "Sorry, I'm forbidden from
+writing fake doctor's notes."
+[00:15:25] And then we ask either people
+[00:15:27] or some other sort of
+automated judging system
+[00:15:30] to go in and look at
+all of these responses,
+[00:15:32] pick which one is more likely
+to be true and which one is,
+[00:15:35] or sorry, which one is more
+[00:15:36] like the kind of response that we want
+[00:15:38] and which one is less
+[00:15:39] like the kind of response that we want?
+[00:15:41] And again, tweak the weights of the model
+[00:15:43] so that it makes the
+second response more likely
+[00:15:45] and the first response less likely
+[00:15:46] to pop out the next time we query it.
+[00:15:50] And so, this helps us a little bit, right,
+[00:15:54] in the sense that this is now a way,
+[00:15:56] especially if you're
+doing this automatically
+[00:15:58] and especially if you're doing
+this at a very large scale
+[00:16:00] and you have some other, you know,
+[00:16:01] sort of people doing
+fact-checking of model outputs
+[00:16:03] or automated processes
+that can do fact-checking
+[00:16:05] of model outputs
+[00:16:07] that can sort of actually
+steer the model towards stuff
+[00:16:10] that is factually true, right?
+[00:16:11] So if we go and we ask our
+[00:16:12] explain the moon landing question again
+[00:16:15] after this third phase,
+[00:16:16] sort of typical model response
+[00:16:18] is something like people went to the moon
+[00:16:19] and they took pictures of what
+they saw like we saw before.
+[00:16:22] However, another very common side effect
+[00:16:25] that people observe as
+a result of this phase,
+[00:16:27] especially if the feedback
+[00:16:29] that you're getting is
+from real human annotators
+[00:16:32] is a phenomenon that's sometimes
+referred to as sycophancy
+[00:16:35] where models will basically infer
+[00:16:37] based on whatever interactions
+you've had so far,
+[00:16:40] what kinds of responses are
+likely to be judged favorably
+[00:16:43] by the particular annotator
+or annotation system
+[00:16:45] that you're interacting with right now.
+[00:16:47] And to produce the kinds of responses
+[00:16:49] that that annotator is
+likely to say yes to.
+[00:16:51] And so, in particular,
+[00:16:52] if you're in a context where the annotator
+[00:16:55] has provided information
+[00:16:56] suggesting that they are already inclined
+[00:16:58] to disbelieve the moon landing narrative,
+[00:17:01] then models are actually
+going to be incentivized
+[00:17:03] to again produce the
+conspiracy theory answer
+[00:17:06] because they have inferred
+[00:17:07] that the person generating
+the annotations for them
+[00:17:09] is a conspiracy theorist
+[00:17:10] and is gonna upvote the
+conspiracy theory answer.
+[00:17:14] And so even this final phase
+[00:17:15] of actually judging model outputs,
+[00:17:18] which is sometimes called
+[00:17:19] reinforcement learning with human feedback
+[00:17:21] or reinforcement learning with AI feedback
+[00:17:23] can produce models that
+now give factual answers
+[00:17:26] when they know they're gonna be graded
+[00:17:28] on producing factual answers
+[00:17:29] but that give incorrect answers
+[00:17:31] when they know they're gonna be graded
+[00:17:32] by somebody who's expecting
+an incorrect answer.
+[00:17:36] So saying this, again,
+[00:17:37] learning from human feedback
+or from automated systems
+[00:17:40] that were constructed by humans
+[00:17:41] or derived from human feedback
+give us finer grained control
+[00:17:45] over how models are gonna behave.
+[00:17:47] But what they don't do,
+[00:17:48] at least the way this practiced right now
+[00:17:50] is ensure consistency across interactions,
+[00:17:52] is ensure that what we're
+gonna wind up with is a model
+[00:17:54] that always answers the
+same question the same way
+[00:17:57] or that adopts a sort
+of consistent persona
+[00:17:59] that follows a consistent set of rules
+[00:18:01] from exchange to exchange.
+[00:18:04] A final thing that we do sometimes now
+[00:18:06] instead of these last two phases
+[00:18:09] is to cut the humans out
+of the loop altogether
+[00:18:11] and say let's just fine-tune
+this model on tasks
+[00:18:13] where we can write
+[00:18:14] some sort of automated
+answer-judging system
+[00:18:18] that doesn't, you know,
+where we sort of have access
+[00:18:19] to ground-truth answers
+[00:18:20] and don't have people in the loop at all.
+[00:18:22] This is easiest in both
+[00:18:24] sort of simple factual
+question-answering tasks
+[00:18:26] where there's like a
+single well-defined answer
+[00:18:29] and in things like math
+and programming problems
+[00:18:31] where you can just, you know,
+[00:18:32] evaluate a numerical answer
+or run some tests or whatever.
+[00:18:35] So this is often referred to instead
+[00:18:37] as reinforcement learning
+with verifiable rewards
+[00:18:40] rather than with human feedback,
+[00:18:41] and we can do it for
+these kinds of things.
+[00:18:43] What's especially useful about this
+[00:18:45] is that it's a way of training
+models to actually generate
+[00:18:48] sort of natural language reasoning traces
+[00:18:50] that eventually produce the right answer
+[00:18:52] even without getting people
+[00:18:53] to sort of manually write those
+reasoning traces themselves.
+[00:18:57] However, as we saw before,
+[00:18:59] one sort of failure mode of this,
+[00:19:02] especially if our judge here
+[00:19:03] is just looking at these models' outputs,
+[00:19:05] giving it a thumbs up for
+producing the right answer
+[00:19:07] and a thumbs down for
+producing any other answer
+[00:19:10] is that there's no incentive to hedge,
+[00:19:13] no incentive to really express
+[00:19:14] any kind of uncertainty here at all
+[00:19:16] because this automated judging system
+[00:19:19] is only ever gonna give you points
+[00:19:21] for getting the right answer.
+[00:19:22] And so, you might as well
+guess whenever you're uncertain
+[00:19:24] 'cause that's certainly better
+than saying I don't know.
+[00:19:30] So yeah, I guess on this last point here,
+[00:19:32] learning from automated
+feedback in this way
+[00:19:34] is useful for making models
+[00:19:36] that are better on those tasks
+[00:19:38] that have really well-defined answers
+[00:19:40] or sort of, you know,
+[00:19:41] automatically constructable
+feedback signals.
+[00:19:43] But the way we do this, excuse me,
+[00:19:45] right now doesn't disincentivize guessing
+[00:19:48] or incentivize consistency
+in exactly the same way
+[00:19:50] that we saw with human feedback.
+[00:19:53] Okay, so to sort of summarize
+the state of things right now.
+[00:19:57] With the suite of training recipes
+[00:19:59] that we've just talked about,
+[00:20:00] we wind up with models that
+sort of interact with people
+[00:20:03] in useful and human-friendly ways.
+[00:20:05] We have training methods
+that increase the probability
+[00:20:07] that models are gonna
+produce truthful outputs
+[00:20:09] at least when they know they're
+being graded on truthfulness
+[00:20:12] and decrease the probability
+[00:20:13] that they produce
+responses that, you know,
+[00:20:16] humans are gonna judge to be harmful.
+[00:20:18] But what we don't get from
+the current training recipe
+[00:20:20] is either the ability
+[00:20:22] to force these models
+to really be consistent,
+[00:20:25] to adopt the same personality,
+[00:20:26] to give the same kinds of
+answers across contexts
+[00:20:30] or to sort of possess metacognition
+[00:20:33] in the way that we were talking about
+[00:20:34] at the beginning of the
+talk to do things like, say,
+[00:20:36] I don't know,
+[00:20:38] and build some sort of
+internal representation
+[00:20:40] of what they know and
+what they don't know.
+[00:20:43] So what is the mental picture
+[00:20:46] that we should have of these models
+[00:20:47] to cause all of this stuff to be true?
+[00:20:49] I should ask, how are we doing on time?
+[00:20:52] 10 minutes? Okay, cool.
+[00:20:53] I think we can get to
+the end in 10 minutes.
+[00:20:56] Good. (audio cuts off)
+[00:21:36] - Do you mind using one of these
+[00:21:38] and I'll see if I can get you another one.
+[00:21:42] - Does that work?
+[00:21:43] Yes.
+[00:21:45] Good.
+[00:21:46] So one way this question comes up a lot
+[00:21:49] in the context of modern AI systems
+[00:21:51] is whether they possess
+internal world models, right?
+[00:21:54] Should I think of, and you know,
+[00:21:56] this is often offered up in contrast
+[00:21:57] to thinking of language models
+as stochastic parrots, right?
+[00:22:00] Should the model that I
+have of this system be
+[00:22:03] as some sort of babbling
+statistical text generation system
+[00:22:06] that really doesn't in any internal way
+[00:22:08] represent anything about the world
+[00:22:10] or should I instead think of them
+[00:22:11] as having in some sense a
+coherent model of the world
+[00:22:14] and of what's true and false in the world
+[00:22:16] that they're consulting
+when answering questions?
+[00:22:20] And, you know, I think we
+could spend a lot of time,
+[00:22:23] certainly more than the next 10 minutes
+[00:22:24] talking about what it means
+to to be a world model
+[00:22:26] or to possess a world model
+or a model more generally.
+[00:22:29] But you know, I think if you
+look at the kinds of objects
+[00:22:32] that through the course of human history
+[00:22:33] we've been inclined to describe as models
+[00:22:36] or to use as models,
+[00:22:38] one of the things that really pops out
+[00:22:39] is that accuracy is often not the sort
+[00:22:41] of most important feature
+that these models have.
+[00:22:44] It's instead some notion of coherence
+[00:22:47] or internal self-consistency, right?
+[00:22:49] What distinguishes or what
+makes useful, you know,
+[00:22:52] something like a model of the solar system
+[00:22:55] is the fact that I can answer it
+[00:22:56] or I can ask of it a bunch
+of different questions
+[00:22:58] about say the motion of the planets
+[00:23:00] or the relative position of
+planets, or things like that,
+[00:23:02] and expect all of those answers
+to agree with each other
+[00:23:05] even if this model is not
+able to answer every question
+[00:23:07] that I have about the solar system
+[00:23:08] or to answer all of those
+[00:23:10] to a very, very high degree of accuracy.
+[00:23:12] And really, you know, again,
+[00:23:14] sort of throughout the
+history of the sciences,
+[00:23:16] it's trying to build models
+that are internally coherent,
+[00:23:20] maybe more than precisely explaining
+[00:23:21] all of the data that we have today
+[00:23:23] that has given us the kinds of theories
+[00:23:24] that have in turn allowed us
+to make accurate predictions.
+[00:23:27] And so, what would it
+mean for a language model
+[00:23:31] to have a world model in this sense?
+[00:23:33] Well, maybe something like understanding
+[00:23:36] not just what facts to produce
+[00:23:37] in response to particular questions,
+[00:23:39] but to understand
+[00:23:40] or at least represent
+in some way relations
+[00:23:42] between facts and the
+procedures that you need
+[00:23:44] to derive conclusions from new facts,
+[00:23:46] and so on and so forth.
+[00:23:47] And so, if we wanted to
+talk about language models,
+[00:23:50] having internal world
+models or having beliefs
+[00:23:52] or having knowledge,
+[00:23:53] probably a first condition
+[00:23:55] that we would wanna look for is coherence
+[00:23:57] in this particular sense.
+[00:23:58] And I don't want to sort of
+overstate the failure modes
+[00:24:02] that we were looking at
+[00:24:03] in the sort of first
+portion of this talk, right?
+[00:24:05] Certainly, it is the case
+that for most of the questions
+[00:24:07] that you're gonna ask one of these models
+[00:24:08] on a day-to-day basis
+[00:24:10] that aren't like really designed
+[00:24:11] to test these sort of
+obscure bits of trivia,
+[00:24:14] the answers that they are going to give
+[00:24:16] are going to be internally
+consistent with each other
+[00:24:18] and are going to appear at
+least to you as the user,
+[00:24:22] you know, or it's going to
+appear to you as the user
+[00:24:24] that the model is the same model
+[00:24:25] that you're talking to every time,
+[00:24:26] even if those interactions
+look very different
+[00:24:28] when other people are talking to it.
+[00:24:30] But if we really wanna sort of push this
+[00:24:32] all the way to the end, right?
+[00:24:33] And if we really think
+[00:24:34] that having internal models of the world
+[00:24:36] or internal models of the self
+[00:24:38] is gonna be important for building systems
+[00:24:40] that are more reliable or more usable
+[00:24:42] or at least more predictable
+to the human users,
+[00:24:45] then probably we want some way
+[00:24:46] of optimizing for internal coherence
+[00:24:49] in this particular sense.
+[00:24:51] And again, this is not something
+[00:24:52] that we get from the
+kinds of training recipes
+[00:24:53] that we have right now,
+[00:24:54] but is something that we could imagine
+[00:24:56] baking into those recipes in the future.
+[00:24:58] And so, to sort of wrap up here,
+[00:24:59] I wanna give just a couple of vignettes
+[00:25:01] of what this might look like
+[00:25:03] and the kinds of things that we can do
+[00:25:04] to train these models differently
+[00:25:06] if what we care about is optimizing
+[00:25:07] not just for accuracy
+at next token prediction
+[00:25:10] or accuracy on math problems,
+[00:25:11] but these more sort of meta-level
+properties like coherence.
+[00:25:15] One is to optimize for external agreement
+[00:25:17] between all of the facts
+[00:25:18] that the model is willing to say yes to,
+[00:25:20] and a very simple thing
+that we can do here
+[00:25:22] is just pick up a language
+model that we've trained
+[00:25:24] in the way that we described before.
+[00:25:25] Ask it to write down everything
+[00:25:27] that it knows about some
+domain of knowledge,
+[00:25:29] say the Japanese emperor,
+[00:25:33] oh, something's gone wrong
+with the animation here.
+[00:25:36] And once it's written
+all of those things down,
+[00:25:38] to look at all of them
+[00:25:39] and identify which of those statements
+[00:25:41] contradict each other,
+[00:25:42] which of those statements
+entail each other,
+[00:25:44] and what it thinks sort of marginally
+[00:25:46] the probability of each of
+those statements is to be.
+[00:25:49] And once we have all of these
+judgments from the model,
+[00:25:51] right, about what things
+are logically consistent
+[00:25:53] and which are not,
+[00:25:54] we can just automatically
+pick out the subset
+[00:25:57] that both sort of is
+internally in agreement
+[00:25:59] and is most likely to
+be true on the margin,
+[00:26:01] and then just train the same
+model on its own outputs
+[00:26:05] to sort of decrease the
+probability of things
+[00:26:07] that were judged upon
+reflection to disagree
+[00:26:10] with everything else that the model knows
+[00:26:11] and up weight those things that
+were judged upon reflection
+[00:26:14] to be supported by the
+other available evidence.
+[00:26:16] And this was work done by Feyza Akyürek
+[00:26:18] who's a grad student who
+collaborated with us at BU.
+[00:26:21] And the sort of surprising thing
+[00:26:23] is that when you do this, right,
+[00:26:24] when you optimize not for accuracy
+[00:26:25] but just for internal
+coherence in this way,
+[00:26:28] and then you evaluate
+models on their ability
+[00:26:30] to give accurate responses
+on fact-checking tasks,
+[00:26:32] accuracy does go up.
+[00:26:33] So we can think of this in some sense
+[00:26:35] as confirming that
+hypothesis that we had before
+[00:26:37] that optimizing for coherence,
+[00:26:39] even when we don't have access
+[00:26:40] to all the ground-truth answers ourselves,
+[00:26:42] is a way to just models more reliable.
+[00:26:45] And maybe more interestingly here,
+[00:26:47] we can also look at the set of situations
+[00:26:49] in which the model actually
+contradicts itself.
+[00:26:51] The bottom three rows here
+[00:26:52] are just different versions
+of the same procedure.
+[00:26:54] And the main thing to notice
+[00:26:55] is that if we sort of curate a data set
+[00:26:57] of very closely-related statements
+that can't both be true,
+[00:27:01] optimizing coherence in
+this way decreases the rate
+[00:27:04] at which models make mistakes
+[00:27:05] of exactly the kind that
+we started the talk with.
+[00:27:09] So what about self-knowledge, right?
+[00:27:10] What about sort of training
+models to know what they know
+[00:27:12] and what they don't know?
+[00:27:14] Well, if we think back to what went wrong
+[00:27:16] at the very beginning here,
+[00:27:18] we can think of this basically
+[00:27:19] as a problem of the model
+being too confident, right?
+[00:27:22] It said yes to this question
+[00:27:24] even though there were other situations
+[00:27:26] in which it was also likely to say yes
+[00:27:27] to contradictory questions.
+[00:27:29] And the thing that we described before
+[00:27:31] as reinforcement learning
+with verifiable rewards
+[00:27:34] basically says we're only
+gonna give the model credit
+[00:27:36] and don't worry about
+all the notation here,
+[00:27:38] but for producing the right answer.
+[00:27:40] What we can do instead
+[00:27:41] is just during the training procedure,
+[00:27:43] always train the model
+[00:27:44] to also generate these sort
+of verbalized estimates
+[00:27:47] of its own confidence to say,
+[00:27:49] I think the answer is
+yes and I'm 80% accurate,
+[00:27:51] and reward the model when it says yes
+[00:27:54] and it's right and it
+produces high confidence
+[00:27:57] for those answers.
+[00:27:58] To penalize the model
+[00:27:59] for responses where it
+says yes and it's right,
+[00:28:02] but it output low
+confidence in its answers
+[00:28:04] and to actually reward the model
+[00:28:05] more than we might have done otherwise
+[00:28:07] for situations where it's wrong
+[00:28:12] or say where it says yes, it's wrong,
+[00:28:14] and it assigns low confidence
+[00:28:16] to the answers that it produced,
+[00:28:17] this is an application
+[00:28:18] of a very old idea from decision theory,
+[00:28:20] but it turns out
+[00:28:21] it has some really nice
+theoretical properties
+[00:28:23] and that you can actually sort of prove
+[00:28:24] in the limit that this will cause models
+[00:28:25] to truthfully self-report
+their own internal confidences.
+[00:28:30] Not gonna talk too much about the details
+[00:28:33] in the interest of time.
+[00:28:34] The main thing that I
+wanna say here though
+[00:28:36] is that this is not absolutely a panacea.
+[00:28:40] The thing that we're
+looking at in blue here
+[00:28:42] is the sort of standard training procedure
+[00:28:43] that we talked about before.
+[00:28:44] The thing in pink is this
+improved version on the right
+[00:28:47] that's designed to improve
+the calibration of models
+[00:28:49] that are sort of self-knowledge
+[00:28:51] and what we're looking at here
+[00:28:52] is the sort of total probability
+[00:28:54] that the model assigns
+[00:28:56] to all of the different
+answers it can generate
+[00:28:58] for a given question.
+[00:28:59] And we can see, you know,
+[00:29:00] and what you would expect, right,
+[00:29:02] in a model that was sort
+of totally well-calibrated,
+[00:29:05] that knew when it was gonna say yes
+[00:29:07] and knew what it didn't know
+[00:29:08] was that none of these would
+be greater than one, right?
+[00:29:10] That if the model says 80%
+confident in one answer,
+[00:29:14] we cannot find any other set of answers
+[00:29:16] such that those confidences
+sum up to more than 20%.
+[00:29:19] Nevertheless, even after applying
+[00:29:21] this fancy training procedure,
+[00:29:22] we can find individual questions
+[00:29:24] where there are sort
+of 15 distinct answers
+[00:29:27] that the model is all willing to say,
+[00:29:28] I'm 100% confident that
+this is the right answer.
+[00:29:30] So still very much a problem to be solved.
+[00:29:35] And I think to sort of wrap things up here
+[00:29:36] and set up the discussion going forward,
+[00:29:39] we can talk about technological solutions
+[00:29:42] to these problems of
+accuracy, and coherence,
+[00:29:45] and self-knowledge and things like that.
+[00:29:48] But at the end of the day,
+[00:29:50] we can only sort of
+design these objectives
+[00:29:52] if we know what it is
+[00:29:52] that we actually wanna
+optimize models for,
+[00:29:54] and I think there's a huge
+amount of work to be done,
+[00:29:56] especially in the policy space
+[00:29:58] and in a way that's relevant to this crowd
+[00:29:59] in figuring out just what
+are the kinds of questions
+[00:30:02] that we ought to be
+asking about these models
+[00:30:03] in the first place, right?
+[00:30:05] To the extent that we have to trade off
+[00:30:06] between models that are accurate,
+[00:30:08] models that give the same
+answers to sort of questions
+[00:30:12] whose answers are related to each other.
+[00:30:15] Personalization, right?
+[00:30:16] Models that can sort of
+specialize themselves
+[00:30:18] for individual users
+[00:30:19] or behave exactly the same for all users.
+[00:30:21] Predictability, models
+that are legible to users,
+[00:30:24] models where users can figure
+out before asking a question
+[00:30:27] whether a model's likely to get the answer
+[00:30:28] to that question right or wrong.
+[00:30:30] All of these things are in
+competition with each other.
+[00:30:32] We probably can't get all
+of them at the same time.
+[00:30:34] And we need some framework
+[00:30:35] for figuring out how to
+trade these things off
+[00:30:37] when we're actually deciding
+to construct a model.
+[00:30:40] Once we then think about the
+interface with the user, right,
+[00:30:43] we need to communicate to the user
+[00:30:45] when the model is certain and
+when the model is uncertain.
+[00:30:48] And one way to do this is to say, okay,
+[00:30:50] here's an answer and I'm
+20% confident in the answer.
+[00:30:53] But we know from lots
+and lots and lots of work
+[00:30:55] on data visualization and HCI
+[00:30:57] that people do not understand
+[00:30:59] what 20% accuracy means for the most part.
+[00:31:02] And there are many other things that we do
+[00:31:04] when we're interacting with people
+[00:31:05] to form accurate mental models
+[00:31:06] of the kinds of things that
+they know or don't know.
+[00:31:08] So should we come up with better language
+[00:31:11] for communicating uncertainty?
+[00:31:12] Should we cause models
+to just like look dumb
+[00:31:14] or look incompetent when
+they're giving answers
+[00:31:16] to questions that are
+unlikely to be correct?
+[00:31:18] Are there other interfaces
+that we should be building?
+[00:31:20] If you've seen like Martin Wattenberg
+[00:31:22] and Fernanda Viegas' work
+here on dashboards for models,
+[00:31:25] should we be building things
+[00:31:26] that aren't even language models
+[00:31:27] but wrappers around them
+[00:31:28] that communicate that uncertainty instead?
+[00:31:31] Oh yeah, and I guess we touched
+[00:31:32] on this personalization point before,
+[00:31:33] but there is some
+fundamental trade off, right,
+[00:31:35] between models that can
+specialize themselves
+[00:31:37] for individual users
+[00:31:38] and offer everyone a sort of personalized,
+[00:31:40] optimized individual experience,
+[00:31:43] but also models that
+aren't telling users things
+[00:31:45] that they want to hear even
+when those things aren't true.
+[00:31:47] And again, even figuring
+out sort of the language
+[00:31:49] for describing this trade off
+[00:31:51] I think is a really important question
+[00:31:53] that is not a technical question
+but needs to be answered
+[00:31:56] before we can figure out how
+to optimize for these things.
+[00:31:58] And with that, I will,
+yeah, start to wrap up.
+[00:32:01] So, you know, sort of final notes here.
+[00:32:03] A lot of the problems that
+we have with models today,
+[00:32:06] you can think of as problems
+[00:32:07] of internal coherence or consistency.
+[00:32:09] And we can start to think about ways
+[00:32:11] of optimizing these models
+[00:32:12] that optimize for those
+things in addition to accuracy
+[00:32:14] as we've done sort of historically.
+[00:32:16] At the same time,
+[00:32:17] consistency is not the
+only sort of meta property
+[00:32:19] that we want models to have.
+[00:32:21] We really care about them
+[00:32:22] being sort of useful and
+predictable by humans.
+[00:32:24] We care about them being easy to steer
+[00:32:26] and I think there's a huge amount
+[00:32:27] of sort of conceptual work to be done
+[00:32:29] before we can even figure out
+[00:32:30] how to train models to do these things.
+[00:32:33] And with that, I'll wrap up, I'll credit,
+[00:32:35] especially in the last half
+of this talk to the students
+[00:32:37] who actually did the work
+[00:32:38] and to all of my other collaborators.
+[00:32:39] Thank you.
+[00:32:41] (audience applauding)
+[00:32:54] - Thank you.
+[00:32:56] Thank you for that talk, Jacob.
+[00:32:58] Really appreciate it.
+[00:33:02] Please.
+[00:33:04] So maybe someplace to begin with
+[00:33:07] a little more technical questions then
+[00:33:09] curious to get to a lot more
+[00:33:10] of like how ought the models behave.
+[00:33:14] What struck me listening to your talk
+[00:33:16] or watching your talk
+was I had this image,
+[00:33:18] do you know of that Shoggoth meme
+[00:33:20] of there's like this
+horrible looking creature
+[00:33:23] that is sort of representative
+of internet text broadly
+[00:33:25] and it's kind of holding up a smiley face,
+[00:33:27] I'm sure you've seen it.
+[00:33:29] You know, when you think of optimizing
+[00:33:30] for logical consistency
+or for calibration,
+[00:33:35] to what degree do you think
+[00:33:35] you're just like putting a
+smiley face on consistency
+[00:33:38] versus like actually impact
+[00:33:40] whatever it would mean to actually impact
+[00:33:42] some deeper representation
+that the model has?
+[00:33:46] - Yeah, well, so maybe,
+[00:33:51] I think there, you know,
+[00:33:52] there's two pictures that you can have
+[00:33:53] of what the monster is, right?
+[00:33:56] One is that it's the stochastic
+parrot picture, right?
+[00:33:59] That there is sort of underlyingly
+[00:34:01] as a result of all of this web text
+[00:34:03] no coherent underlying model of the world
+[00:34:07] or of the language model or whatever.
+[00:34:09] And if that's the picture,
+[00:34:11] then presumably, like,
+baking in objectives
+[00:34:14] that explicitly optimize for these things
+[00:34:18] are actually going to sort of shape
+[00:34:19] the sort of deep underlying representation
+[00:34:21] that the model has of the world.
+[00:34:22] Another picture you
+can have of the monster
+[00:34:24] is that the monster knows exactly
+what the world looks like,
+[00:34:27] but has also learned
+[00:34:28] that in order to be a really
+good generator of web text,
+[00:34:32] you need to sort of consult
+your model of the world,
+[00:34:34] consult your model of
+a conspiracy theorist,
+[00:34:37] and then generate the kinds of things
+[00:34:38] that the conspiracy theorist
+is going to say in a world
+[00:34:40] where everything that you
+know about the world is true.
+[00:34:42] And I think when, you know,
+[00:34:43] maybe even whatever
+the origin of that meme
+[00:34:46] is like 2020 or something.
+[00:34:47] And I think in 2020, probably the monster
+[00:34:50] was just like massive
+statistical predictors
+[00:34:53] and now the monster
+[00:34:54] is probably, like, a real
+underlying model of the world.
+[00:34:56] And then sometimes all
+of these fancy tricks
+[00:34:59] that we've talked about at the end
+[00:35:00] are just ways of
+communicating to the model
+[00:35:04] or, you know, via the optimization process
+[00:35:05] that we're applying to the
+model that what we want
+[00:35:08] is outputs that are consistent
+[00:35:11] as opposed to any of the
+other kinds of outputs
+[00:35:14] that you already know how to generate.
+[00:35:15] - Interesting.
+[00:35:16] What's struck me about
+that is so that transition
+[00:35:18] a bit that you described,
+do you feel like,
+[00:35:19] is that just a matter of
+better gradient descent,
+[00:35:23] better data-
+[00:35:25] - Just more data.
+[00:35:26] - And so, just with more data,
+[00:35:27] it's just kind of like the
+internal representations
+[00:35:30] become more faithful
+and that kind of thing.
+[00:35:32] - You know, and again, not entirely.
+[00:35:35] - On average or something.
+[00:35:37] - And, you know, I should say, like,
+[00:35:41] with any kind of sweeping statement
+[00:35:42] that you wanna make of the form,
+[00:35:44] this is how a model works, it's not true.
+[00:35:47] And, you know, another sort
+of read on the monster picture
+[00:35:51] is that like things are just very messy
+[00:35:53] and certainly it is both the case
+[00:35:56] even in very large scale models
+[00:35:58] that there are domains of knowledge
+[00:35:59] in which stuff is totally
+disorganized and chaotic,
+[00:36:02] or in which the only model of the world
+[00:36:03] is the conspiracy theorist's model.
+[00:36:05] But at the same time,
+[00:36:08] there are definitely lots of
+cases where I think, you know,
+[00:36:10] you can even sort of look inside models
+[00:36:12] and see how they organize
+their knowledge of mathematics
+[00:36:15] and find pretty clean representations.
+[00:36:18] - And then, is your picture
+[00:36:19] as you sort of fold on
+these other objectives
+[00:36:22] that are optimized
+[00:36:23] that is then shaping
+these models in some way?
+[00:36:26] So is your picture,
+[00:36:27] there's like other kind of meta principles
+[00:36:29] that we should just be layering on top,
+[00:36:30] like compositionality or
+transparency to users?
+[00:36:34] Is that the picture?
+[00:36:35] - I mean, basically yeah, so, you know,
+[00:36:38] I think there's a school
+of thought, right?
+[00:36:42] That says it is not worth
+trying to do anything fancy
+[00:36:45] other than train a bigger and bigger model
+[00:36:49] on more and more data.
+[00:36:50] And that, in the course of doing that,
+[00:36:54] you will wind up with a model
+[00:36:56] that whatever has a
+sufficiently rich model
+[00:36:59] of the kind of thing
+[00:37:01] that an AI researcher would
+eventually ask it to become
+[00:37:05] that all you have to do
+[00:37:05] is ask nicely for the set of behaviors
+[00:37:07] and that's the model that you'll get out.
+[00:37:12] It doesn't seem like we're getting,
+[00:37:14] if that were the right
+picture of the world,
+[00:37:15] it would feel like we were
+getting closer and closer to it
+[00:37:18] as these models get bigger and bigger
+[00:37:19] and many of these problems
+[00:37:21] actually get worse with scale, right?
+[00:37:23] Something that has been documented
+[00:37:26] with regard to sort of
+conspiracy theories,
+[00:37:28] and so on and so forth.
+[00:37:29] At least there was a period
+[00:37:30] during which that rate actually increased
+[00:37:32] as models got bigger.
+[00:37:33] Certainly something that we've seen
+[00:37:35] as this sort of like reasoning
+training for mathematics
+[00:37:37] and programming has been
+introduced to models
+[00:37:39] is that reasoning training procedures
+[00:37:40] increase the rate at which
+models make mistakes.
+[00:37:43] So yeah, and then I think the
+alternative is just saying,
+[00:37:45] well, clearly just optimizing
+for accuracy is not yet
+[00:37:49] and we need to figure out
+[00:37:51] what the other things to layer on top are.
+[00:37:54] - And then I'm curious
+how you think about this,
+[00:37:57] what happens for me a bit
+then is I think about stacking
+[00:38:00] all of these different kind
+of like meta principles
+[00:38:02] or objectives on is then
+[00:38:04] they all start interfering
+maybe in strange ways.
+[00:38:07] - Yeah.
+- And so,
+[00:38:08] like what happens then?
+[00:38:09] Or it's just like, we'll figure it out?
+[00:38:11] - Yeah, well, but, and I think, you know,
+[00:38:13] this comes back to things
+[00:38:14] that are maybe not even questions
+[00:38:19] about how to design
+the objective function,
+[00:38:21] but just questions of what
+is it that we actually want.
+[00:38:24] And the Raphaël Millière,
+I think who's a philosopher
+[00:38:29] has a really nice recent
+paper on, you know,
+[00:38:31] even the sort of standard language
+[00:38:32] that a lot of people use
+[00:38:33] for talking about the objectives
+that we're optimizing for
+[00:38:40] in this RLHF phase are
+helpfulness and harmlessness
+[00:38:45] and we simply want models
+[00:38:47] to both be helpful and to be harmful
+[00:38:49] or, you know, helpful and harmful,
+[00:38:51] or helpful and harmless and honest.
+[00:38:54] It is very easy to construct scenarios
+[00:38:55] in which those maxims come
+into conflict with each other.
+[00:39:00] And right now, you know,
+[00:39:02] at least the sort of methods
+that people are using
+[00:39:03] in the AI community are not specifying
+[00:39:07] what model behavior ought to be
+[00:39:08] in situations where those conflicts arise.
+[00:39:14] To maybe talk about one other-
+[00:39:16] - Please.
+- Sort of category
+[00:39:17] of question that we didn't get to today,
+[00:39:18] but I also think is
+really important, right?
+[00:39:22] If you have the view, and I
+think this is a naive view,
+[00:39:27] but maybe right as a first cut
+[00:39:29] that what we want to produce
+[00:39:30] before we even start training these models
+[00:39:32] is just some like really
+detailed specification document
+[00:39:35] that says, "Okay, here are my principles
+[00:39:38] that I want the model to follow.
+[00:39:40] Here are all of the edge cases,
+[00:39:41] and here's how you should
+navigate trade offs
+[00:39:43] and all of the edge cases
+that are gonna arise."
+[00:39:45] You know, and you see like OpenAI
+[00:39:47] publishes their version of this document.
+[00:39:50] - Model spec.
+- Yeah, exactly.
+[00:39:51] And it's like a long document,
+[00:39:53] it's very carefully thought-through,
+[00:39:55] it contains an enormous
+number of edge cases,
+[00:39:57] it's full of holes.
+[00:39:58] And I think part of the issue here
+[00:40:00] is that, you know, we as people
+[00:40:03] are just not actually
+smart enough to sit down
+[00:40:05] and write off in one go
+a fully consistent spec
+[00:40:10] for how a model ought to behave.
+[00:40:11] Even if we had already, you know,
+[00:40:13] sort of whatever were perfect
+like moral philosophers
+[00:40:16] and had figured out in
+a more general sense
+[00:40:18] what it is that models ought to do.
+[00:40:20] So I think there's a huge
+amount of work to be done
+[00:40:22] even in like building
+tools to help with that
+[00:40:26] alignment process or maybe
+that specification process,
+[00:40:29] and tools for helping people think about
+[00:40:31] what actually are the edge cases
+that we're gonna encounter.
+[00:40:33] What are the kinds of questions
+that we haven't considered
+[00:40:37] when we wrote down one
+of these specifications
+[00:40:38] or when we annotated our
+data set or whatever.
+[00:40:40] - And is there even a fully consistent,
+[00:40:43] like, can we even write down?
+[00:40:44] - Well, right.
+[00:40:45] And, you know, and even if I
+can write that down for me,
+[00:40:48] it's not gonna look the same for you
+[00:40:49] and it's not gonna, you know, so,
+[00:40:51] and this again is I think something
+[00:40:53] where there needs to be a conversation
+[00:40:56] not at the level of AI labs
+[00:40:59] or individual academic
+researchers or whatever,
+[00:41:01] but as a society for how
+do we decide as a society
+[00:41:07] how it is that we want
+these models to behave?
+[00:41:09] - Yeah, maybe then
+shifting a little bit then
+[00:41:11] to the user experience, and
+like you said, these conflicts,
+[00:41:13] but that made me think of something
+[00:41:15] we've been thinking about
+a little bit here at BKC
+[00:41:19] is, you know, conflicts,
+[00:41:21] sorry, maybe you said it differently,
+[00:41:22] the way I understand a lot of
+your work is you're trying,
+[00:41:25] at least in what you showed
+[00:41:25] to train sort of the
+inconsistencies out of the model.
+[00:41:30] Another version is just like, hey,
+[00:41:31] the user instructions
+or system prompts itself
+[00:41:34] might contain inconsistencies
+[00:41:37] and is there an alternate way,
+[00:41:39] maybe you think about it
+[00:41:40] where rather than trying to
+train out the inconsistencies
+[00:41:43] almost at inference time,
+[00:41:45] can we train a model to
+resolve the inconsistencies
+[00:41:49] for the user or how do
+you think about something?
+[00:41:50] - Yeah, well, yeah,
+[00:41:51] and I mean certainly we
+also want to do that, right?
+[00:41:54] So another, I think pretty
+striking feature of these models
+[00:41:57] for a very long time
+[00:41:58] was that they didn't ask questions, right?
+[00:42:00] If, you know, issued an instruction
+[00:42:05] that contains some sort
+of false presupposition
+[00:42:07] or gave an extremely vague
+instruction or whatever,
+[00:42:11] you know, the sort of
+first generation of models
+[00:42:12] that we'd have-
+- I'm just going,
+[00:42:14] I'm just running with that.
+[00:42:14] - Would pick some interpretation
+and run with that.
+[00:42:17] The second generation
+after being RLHF'd to death
+[00:42:20] would answer every version of the question
+[00:42:22] all simultaneously in a single output.
+[00:42:24] And I think we're just
+starting to see people
+[00:42:27] train these models to actually, you know,
+[00:42:29] in a way that's sensitive to the context
+[00:42:31] in which interaction
+is going to take place
+[00:42:33] and to ask users clarifying
+questions when it's appropriate.
+[00:42:38] That, again, I think is something
+[00:42:39] where it's pretty hard to
+get the training data right.
+[00:42:45] That, you know, sort of
+necessarily interactions
+[00:42:49] between this particular model
+that you've trained right now
+[00:42:52] and a human are not something
+[00:42:54] that any examples exist on the internet.
+[00:42:56] And so, there's sort of
+nothing that you can do
+[00:42:58] but have live interactions
+with real people
+[00:43:01] and figure out how to
+then like judge those
+[00:43:03] in a way that gives you a useful signal.
+[00:43:06] And, you know, I think both
+[00:43:10] as kind of an experimental design question
+[00:43:12] and as a learning problem,
+that's just very hard
+[00:43:15] and an active area of research.
+[00:43:18] - And it feels like so
+dependent on the specific user,
+[00:43:21] how they wish to be
+navigated through that.
+[00:43:23] - Yeah, well, exactly.
+[00:43:25] And, you know, and so,
+I think you can say,
+[00:43:27] okay, there are going
+to be some ambiguities
+[00:43:29] in the model specification
+or the task specification
+[00:43:32] that we'll leave unresolved
+until the last minute
+[00:43:35] in the conversation with
+the individual user.
+[00:43:39] But certainly, there are things
+[00:43:40] that you don't wanna
+do in that way, right.
+[00:43:42] Cases where, right,
+[00:43:45] you know, if you're of the perspective
+[00:43:48] that models shouldn't
+be issuing instructions
+[00:43:50] for how to construct bio weapons
+[00:43:53] and there's some hole in the spec
+[00:43:55] by which you can construct a scenario
+[00:43:57] where it would be appropriate to-
+[00:43:59] - It's my fictional game.
+[00:44:01] - Yeah, exactly.
+[00:44:03] Probably, we don't wanna wait
+[00:44:03] until the last minute and ask the user,
+[00:44:06] I'm trying to decide whether to help you
+[00:44:11] synthesize anthrax or not.
+[00:44:13] Would you like me to do it
+[00:44:14] or would you not like me to do it?
+[00:44:16] And I think that shows up in
+subtler cases also, right?
+[00:44:18] I like, there's a lot of
+conversation right now
+[00:44:21] about sort of psychosis
+induced by interactions
+[00:44:24] with these models directly as a result
+[00:44:26] of these sorts of
+personalization behaviors.
+[00:44:28] And, again, I think when you're inside
+[00:44:31] one of those interactions,
+[00:44:32] of course you're gonna say keep giving me
+[00:44:34] exactly what I'm asking for.
+[00:44:36] And it's only when you
+sort of think about,
+[00:44:38] when you're able to step
+outside the interaction
+[00:44:40] and when you're thinking
+about this person's child
+[00:44:42] or this person's partner
+[00:44:43] or, you know, themselves
+six months in the past
+[00:44:47] or six months in the future
+[00:44:48] that you can say this is not what we want.
+[00:44:50] - Yes.
+[00:44:51] And maybe, so maybe
+before one final question
+[00:44:54] just to say if audience
+[00:44:55] wants to start thinking about questions
+[00:44:57] you might want to ask, and
+then especially I think, Jacob,
+[00:44:59] you were interested
+[00:45:00] in just like how ought
+these models behave.
+[00:45:03] And so, if you all get questions
+simmering about the ought,
+[00:45:07] I feel like that would be especially good.
+[00:45:08] - Yeah, you know, and again,
+[00:45:09] I'll say this is something
+[00:45:10] where as academics in computer science,
+[00:45:13] there's not nearly enough
+contact with the policy world.
+[00:45:17] And I think, you know, we can sit here
+[00:45:19] coming up with things that
+we think might be useful
+[00:45:21] to optimize, but, ultimately,
+[00:45:24] the decisions about what
+those things look like
+[00:45:25] need to be informed by I
+think a better understanding
+[00:45:30] at least than, you know,
+we in my group have,
+[00:45:33] or I think most people
+[00:45:33] who sit in the same
+kinds of positions have
+[00:45:35] of the societal context in which
+these systems are embedded.
+[00:45:39] - So then, not to ask you an ought,
+[00:45:41] even though one has started,
+[00:45:42] then what I think of
+in some of the work is,
+[00:45:45] especially as you're trying
+to communicate uncertainty
+[00:45:48] to the user,
+[00:45:49] that to me itself it sounds like
+[00:45:51] is its own user interface question.
+[00:45:53] Like, should it do a
+bunch of like ums and uhs
+[00:45:55] and like, I don't really know,
+[00:45:57] but like I'm a limited AI
+model couching responses
+[00:46:01] or does it how do you think about that?
+[00:46:03] - Yeah, well, I think
+that's an empirical question
+[00:46:05] and that is something
+[00:46:06] probably where personalization
+is great, right?
+[00:46:11] And if you're an actuary,
+[00:46:14] certainly you want the model to say
+[00:46:16] I'm 75% confident in
+this particular answer.
+[00:46:19] And if you're a six-year-old,
+[00:46:21] you want the model to say
+something totally different.
+[00:46:23] And I think, you know, again,
+[00:46:24] that's one of these just like trade offs
+[00:46:28] where it's difficult to sit down
+[00:46:29] and, you know, write down ex ante,
+[00:46:32] here are all of the things that we want.
+[00:46:34] - Yes. Got it.
+[00:46:35] - Yeah.
+- Interesting.
+[00:46:36] Have many follow ups,
+[00:46:37] but maybe does anyone
+from the audience, please.
+[00:46:41] I think we have a mic.
+[00:46:46] - [Attendee 1] Thanks a lot for your talk
+[00:46:47] and the discussion.
+[00:46:49] My question is following up
+[00:46:51] on this point of communicating
+uncertainty to the users,
+[00:46:54] you know, when you first
+presented the slide
+[00:46:57] of the model's confidence,
+[00:46:58] my first question was like,
+what does that actually mean?
+[00:47:02] In other words, like what
+is that randomness over?
+[00:47:04] And I'm curious if you could speak to that
+[00:47:06] and then also if you had to
+take like a first-pass approach
+[00:47:11] at like one sentence
+[00:47:12] that you would type out to the user,
+[00:47:15] like, writing out what
+that uncertainty means,
+[00:47:17] I'm really curious about that.
+[00:47:18] - Yeah, great.
+[00:47:20] So, you know, what is that,
+[00:47:22] what is the interpretation of that 75%?
+[00:47:24] I think is a really interesting question.
+[00:47:27] When you talk about
+pre-trained models, you know,
+[00:47:31] even though we talk about them
+[00:47:32] as like generating the single next word,
+[00:47:33] they are actually models of a
+whole probability distribution
+[00:47:36] over next words.
+[00:47:37] And in fact, if you just repeatedly say,
+[00:47:39] continue the sentence,
+[00:47:41] often in pre-trained models
+[00:47:42] for those kinds of factual questions
+[00:47:43] and at least like carefully
+constructed contexts,
+[00:47:46] the probability that an
+answer is emitted by the model
+[00:47:50] is reasonably well-correlated
+[00:47:52] with the probability that
+that answer is correct
+[00:47:55] at the, you know, when you
+sort of look in aggregate
+[00:47:58] at sort of all of the answers
+[00:48:02] that the model's producing, right?
+[00:48:04] If I take everything
+[00:48:05] where the probability
+is approximately 70%,
+[00:48:08] then approximately 70% of things
+[00:48:11] in that bucket are gonna be right.
+[00:48:14] When you do any kind of
+reinforcement learning,
+[00:48:18] that behavior goes away.
+[00:48:19] And in some sense, all we're
+trying to do in this last phase
+[00:48:21] is get that back
+[00:48:23] and to ask in that sort of external sense
+[00:48:26] that when the model says
+there's a 70% chance
+[00:48:30] that this is right,
+[00:48:31] that about 70% of the time,
+it's going to be right.
+[00:48:34] There's another interpretation
+[00:48:36] that you could also assign to that,
+[00:48:37] that I think is closer
+[00:48:39] to what people often think about
+[00:48:41] when we talk about our
+confidence in our answer,
+[00:48:44] which is just like in your head,
+[00:48:46] on a scale from 1 to 100,
+[00:48:50] how good do you feel about this answer?
+[00:48:51] And you know, most people,
+[00:48:54] people who are not trained
+to do this are pretty bad
+[00:48:57] at producing calibrated
+probability judgments.
+[00:48:59] This is a skill that you have to learn
+[00:49:01] and, you know,
+[00:49:02] if you're working in
+forecasting or something,
+[00:49:04] you acquire it,
+[00:49:04] but most people don't have it natively.
+[00:49:07] We can look for model
+internal representations
+[00:49:10] of confidence in that way,
+[00:49:11] even if they're not actually
+sort of directly aligned
+[00:49:14] to the probability that the
+model produces a given answer.
+[00:49:17] Again, like, folks working
+in interpretability here
+[00:49:19] at Harvard think about these
+kinds of questions a lot.
+[00:49:23] At the same time, I think
+when you think about
+[00:49:25] what it is that you
+wanna report to a user,
+[00:49:27] we have, you know, like
+the research community
+[00:49:31] has such a poor understanding
+[00:49:32] of like what model internal
+notions of confidence look like,
+[00:49:37] that it feels not yet useful
+[00:49:39] to talk about those things
+[00:49:40] as opposed to just training models
+[00:49:41] to put down a number
+that actually corresponds
+[00:49:45] to the objective probability
+[00:49:46] that this particular
+answer is gonna be right
+[00:49:48] whether or not that bears
+[00:49:51] any sort of discernible relationship
+[00:49:53] to whatever internal notion of,
+[00:49:55] I think this statement is true
+[00:49:56] or I think this statement is false
+[00:49:58] that the model has, but yeah.
+[00:50:00] And then in terms of like literally
+[00:50:01] what is the text that you write down,
+[00:50:03] I do think that just has
+to depend on your user
+[00:50:08] and your model of the user
+[00:50:10] and, you know, your sort of understanding
+[00:50:12] of the degree of
+mathematical sophistication
+[00:50:14] or whatever that the user has
+[00:50:15] and maybe the stakes of
+the application, right?
+[00:50:18] That if it's, you know, whatever,
+[00:50:22] you're trying to choose what
+restaurant to go to dinner
+[00:50:25] and you're trying to figure out
+[00:50:27] whether there's gonna be accessible,
+[00:50:31] an accessible entrance to the restaurant.
+[00:50:33] The difference between
+there's a 75% chance
+[00:50:35] and an 80% chance that the
+restaurant is accessible
+[00:50:37] is not meaningful to you.
+[00:50:38] And, you know, you're probably happy
+[00:50:39] with just yes, no, maybe.
+[00:50:42] - Cool.
+[00:50:45] Any other questions? Oh.
+[00:50:47] - [Attendee 2] So
+something I'm curious about
+[00:50:49] is where you think, how we
+should think about the boundaries
+[00:50:54] between trying to embed world
+knowledge in the model itself
+[00:50:57] versus sort of focusing
+on like teaching models
+[00:51:02] to use external tools or
+external databases of facts.
+[00:51:05] You know, especially when you think
+[00:51:06] about like agent development,
+[00:51:08] there's lots of like, you know,
+[00:51:09] if you ask a math question,
+[00:51:11] it should just write some Python
+[00:51:12] rather than trying to
+guess the answer itself.
+[00:51:14] And you could imagine the same thing
+[00:51:15] would be true for facts,
+[00:51:17] look it up on Wikipedia or whatever.
+[00:51:19] - Yeah.
+- [Attendee 2] Yeah.
+[00:51:20] Curious what you think about that.
+[00:51:21] - Yeah, no, this is a great question.
+[00:51:25] To a first approximation,
+[00:51:27] there are now maybe three
+or four different places
+[00:51:31] you can put knowledge in a model, right?
+[00:51:35] Sorry, knowledge can reside
+[00:51:36] in the parameters of the model
+[00:51:37] where it's directly accessible.
+[00:51:39] It can reside sort of
+implicitly in the parameters
+[00:51:41] where you have to do a
+little bit of reasoning out
+[00:51:43] to remember this particular fact.
+[00:51:45] It's not instantly available to you.
+[00:51:47] Knowledge can reside in the internet
+[00:51:50] and you can do a web search for it
+[00:51:51] or knowledge can reside
+in other kinds of tools
+[00:51:53] that you maybe need to
+invoke to retrieve things.
+[00:51:56] And, you know, so,
+[00:52:00] and then like one way of answering
+[00:52:02] or one way of asking that question
+[00:52:04] is for a given piece of information,
+[00:52:05] where should it reside?
+[00:52:07] You will occasionally hear people talk
+[00:52:09] about sort of models that
+are really good at reasoning
+[00:52:11] and don't know how to
+do anything else at all
+[00:52:14] that basically says like no knowledge
+[00:52:15] resides at all in the parameters
+[00:52:17] and everything is
+externalized in the context,
+[00:52:20] or in the internet, or
+in the training data,
+[00:52:22] or in tool calls or whatever.
+[00:52:26] I think if you like really think
+[00:52:28] about what such a model would look like,
+[00:52:29] it's hard to imagine
+[00:52:31] in the sense that you're having
+[00:52:32] to relearn English from scratch
+[00:52:36] every time you decide what
+word to generate next.
+[00:52:39] Or you're having to go out to the internet
+[00:52:40] and like teach yourself
+a whole new language
+[00:52:43] over and over again
+[00:52:44] every time you have an
+interaction with this model.
+[00:52:46] And so, some stuff just has to get cached,
+[00:52:48] some stuff just has to get memorized.
+[00:52:50] And the question of
+what needs to live where
+[00:52:54] I think is ultimately
+just a sort of question
+[00:52:55] about computational efficiency,
+[00:52:57] but then coming back to these points
+[00:52:59] about sort of consistency,
+[00:53:01] what you wanna hope for
+[00:53:02] is that if a piece of information
+[00:53:05] resides in multiple places,
+[00:53:06] you know, it's stored the same
+way in both of those places.
+[00:53:09] And if it's stored in only one place,
+[00:53:13] all of the other places where
+you might try to look it up
+[00:53:15] say don't look here, go to the
+other place instead, right?
+[00:53:17] So what you almost certainly,
+[00:53:20] there are some facts
+[00:53:21] that just have to be in
+the weights of the model
+[00:53:22] because you don't want
+to do an internet search
+[00:53:25] every time you wanna do
+[00:53:27] the most trivial question-answering task.
+[00:53:32] For those things that aren't
+gonna be in the weights,
+[00:53:34] you just need to make sure
+[00:53:35] that there isn't like a stale copy
+[00:53:36] or a wrong copy or whatever,
+[00:53:37] and there's just a pointer that says,
+[00:53:38] I don't know this, do a web search.
+[00:53:40] And again, I think that's something
+[00:53:41] that we could imagine optimizing for
+[00:53:43] but that we don't do now.
+[00:53:47] - [Attendee 3] Thank you
+so much for speaking today.
+[00:53:49] One question I had is,
+[00:53:51] as we trust more in the model's ability
+[00:53:55] to output a reliable confidence interval,
+[00:54:00] but not perfectly,
+[00:54:01] we don't have a perfect level of trust,
+[00:54:03] it increases the propensity
+for us to be misled
+[00:54:07] or for harms to happen
+in the world as a result.
+[00:54:11] So it's kind of like as you approach
+[00:54:12] this asymptote of perfection,
+there's also a higher risk.
+[00:54:16] How would you think about
+that or address that concern?
+[00:54:19] - Yeah, well, right,
+[00:54:20] and, you know, I think in some sense
+[00:54:22] saying we want models to hedge
+[00:54:26] in this particular mathematical
+sense is a proxy for,
+[00:54:32] we want the model to say the thing
+[00:54:33] that will cause people to do
+the right thing in the world.
+[00:54:37] And if we had a way to just
+optimize for that directly,
+[00:54:40] certainly we would want to do it.
+[00:54:45] I think for the most
+part we don't right now.
+[00:54:48] And so, all we have are these
+sort of proxy things instead.
+[00:54:52] And I think, you know,
+currently we're, whatever,
+[00:54:54] so far from,
+[00:54:58] well, I don't wanna say
+we're so far from people
+[00:55:01] having too much trust in the models
+[00:55:02] 'cause certainly we've
+already passed the point
+[00:55:03] where people have too
+much trust in the models.
+[00:55:05] But I think there are sort of cheap things
+[00:55:07] that we can do right now
+[00:55:09] to make a lot of progress on that problem.
+[00:55:11] And hopefully as we get closer to models
+[00:55:17] that are really capable and
+make mistakes less often,
+[00:55:21] we will be able to figure out
+[00:55:23] what other kinds of guardrails we need
+[00:55:25] or what other kinds of communicative
+modalities or whatever.
+[00:55:28] And, you know, this is not a
+good answer to that question
+[00:55:32] and I think it's not a question
+[00:55:33] that we've done a good job of solving
+[00:55:36] in analogous domains with
+other technologies, right?
+[00:55:40] Like self-driving cars get,
+[00:55:44] I mean, I guess this is the
+canonical example, right?
+[00:55:45] Get in some ways scarier and scarier
+[00:55:47] the lower the rate of interruptions is
+[00:55:50] because the less prepared
+a person is gonna be
+[00:55:52] when the interruption
+actually needs to happen.
+[00:55:54] You know, and I think
+ultimately the solution
+[00:55:57] is at some point to say okay,
+[00:55:58] this is as good as it's gonna get,
+[00:56:00] let's stop worrying about reliability
+[00:56:02] and start worrying about changing
+the risk of the interface
+[00:56:05] that we built around these models
+[00:56:06] so that the whole system
+is robust to people
+[00:56:10] not being ready to step in
+[00:56:11] or people making the wrong judgments
+[00:56:12] about what's coming out
+of an LLM or whatever.
+[00:56:19] - Maybe one from online.
+[00:56:22] - [Team Member 1] We have
+a couple questions on here
+[00:56:24] about scale.
+[00:56:26] So how do you see model training
+[00:56:27] aligning with the business models
+[00:56:30] or potential business models
+[00:56:31] of some of the big LLM companies?
+[00:56:34] Do they have incentive to optimize
+[00:56:36] for coherence or confidence
+[00:56:38] or just what are some of the big problems
+[00:56:40] around scaling this?
+[00:56:42] - Yeah, you know,
+[00:56:43] I think with regard to these
+questions about truthfulness,
+[00:56:47] all the incentives are in the right place
+[00:56:51] and, you know, that at
+least like causing models
+[00:56:55] when they're in a mode
+[00:56:56] where it's clear you want
+to give the right answer
+[00:56:57] to this question or say I
+don't know appropriately
+[00:57:02] is a thing that everybody wants to happen
+[00:57:05] and is good for the
+bottom line and whatever.
+[00:57:08] That is less clear to me
+[00:57:10] in the case of these questions
+around personalization.
+[00:57:13] And I think that's something
+where both with scale,
+[00:57:18] your ability to sort of do modeling
+[00:57:20] of the user that you're interacting with
+[00:57:22] and imagine the kinds of responses
+[00:57:23] that are gonna make them happy
+[00:57:25] gets better and better and better.
+[00:57:26] And where actually
+there's a lot of incentive
+[00:57:28] if you're in the business
+of selling somebody,
+[00:57:30] you know, a monthly plan
+for one of these models
+[00:57:33] to have that be super well-attuned to them
+[00:57:37] and not something that, you know,
+[00:57:38] is some competitor can come along
+[00:57:41] and offer a drop in
+replacement for right away.
+[00:57:42] And so that I think is something
+[00:57:44] where there will need to be
+[00:57:46] some kind of external framework
+[00:57:47] for thinking about the
+sorts of personalization
+[00:57:49] that are allowed or not allowed.
+[00:57:51] - Just a quick follow up,
+[00:57:53] it's interesting when you describe
+[00:57:54] that like truthfulness in some sense
+[00:57:56] there is that alignment, you know,
+[00:57:58] 'cause the picture in my head
+[00:57:59] is to some degree I wonder if truthfulness
+[00:58:02] may be opposed to engagement
+[00:58:05] and if there is some misalignment there
+[00:58:08] that may push it back a
+little against truthfulness.
+[00:58:11] I don't know.
+[00:58:12] - Well, yeah, I mean,
+[00:58:13] so maybe that was not like the,
+[00:58:18] or there is,
+[00:58:20] everyone is incentivized
+to produce a model
+[00:58:22] such that if you can
+accurately communicate
+[00:58:25] in whatever way, you know, whatever,
+[00:58:28] I'm a serious expert
+[00:58:29] and I only care about true facts
+[00:58:31] according to whatever
+the objective reality is,
+[00:58:34] blah blah blah blah blah.
+[00:58:36] That the answers that
+you get out are right
+[00:58:38] and the model hedges when you don't.
+[00:58:43] Do we have access to that?
+[00:58:46] Do we actually know how
+to communicate, you know,
+[00:58:48] even whatever,
+[00:58:49] all of us like clever people
+sitting here at a university?
+[00:58:55] No, give me like the real facts
+[00:58:56] and not the facts according
+to the way that I want them.
+[00:58:58] I don't think we have that
+language to describe to models
+[00:59:01] and, you know, I don't think
+we're in a state right now
+[00:59:04] where there is some like
+[00:59:06] whatever deep underlying truth
+[00:59:07] about the nature of
+reality that GPT-5 knows
+[00:59:11] that it's not telling us
+[00:59:12] because we haven't told it
+that we're ready for the truth.
+[00:59:15] But, you know, I think
+all of these subtler,
+[00:59:20] you know, both once
+you're outside the realm
+[00:59:22] of clear cut factual questions,
+[00:59:27] subtler factual issues
+and presentational issues
+[00:59:32] with regard to personalization show up
+[00:59:34] just as much in, you know,
+[00:59:35] kind of serious decision-making context
+[00:59:37] as they do in people who have, you know,
+[00:59:40] their whatever AI girlfriend/boyfriend,
+[00:59:42] or they're using this
+[00:59:44] as their social media feed or whatever.
+[00:59:47] Yeah.
+[00:59:48] So I think maybe another
+way of saying that
+[00:59:54] is that there's an incentive
+[00:59:55] for the model's internal
+model of the world
+[00:59:57] to be as good as possible.
+[00:59:59] That there is not an
+incentive for every readout
+[01:00:02] or maybe even any readout of
+that internal world model to-
+[01:00:06] - Reflect that.
+[01:00:07] - Yeah.
+[01:00:09] - Interesting.
+[01:00:09] Maybe, yes, and just mindful of time,
+[01:00:13] maybe one more question, thank you.
+[01:00:16] - [Attendee 4] Thank you.
+[01:00:17] I wanted to ask about
+the nature of randomness
+[01:00:19] in these language models.
+[01:00:21] So I think there was something
+published kind of recently
+[01:00:22] that if you ask ChatGPT
+and Claude, et cetera,
+[01:00:26] to generate a number, not a random number,
+[01:00:28] but a number between one and
+50, it always generates 27
+[01:00:31] and I don't think that's changed recently,
+[01:00:34] but of course if I ask,
+[01:00:35] like, a marginally more complex question,
+[01:00:38] there's wild differences,
+[01:00:39] really subtle differences
+[01:00:40] even when I ask the model
+and between different models.
+[01:00:43] So I guess at a high
+level, why does that occur,
+[01:00:46] and how does that cohere
+with your understanding
+[01:00:48] or your argument about
+uncertainty in these models?
+[01:00:52] - Yeah, so this is maybe a
+slightly technical answer.
+[01:00:57] You know, if we look back to
+the first language models,
+[01:00:59] they were used for basically
+like breaking ciphers
+[01:01:03] during the second World War,
+[01:01:05] and by design,
+[01:01:07] they were about modeling
+probability distributions
+[01:01:10] over language
+[01:01:11] and the relative probability
+of different sentences.
+[01:01:13] And so that sort of random nature
+[01:01:15] is inherent to them, right?
+[01:01:17] A good language model is one
+that assigns high probability
+[01:01:20] to all of the plausible sentences
+[01:01:22] or, put another way, has the property
+[01:01:24] that when I sample from it,
+[01:01:25] when I generate text from it,
+[01:01:27] I don't know what I'm gonna get.
+[01:01:28] I'm gonna get anything that's plausible
+[01:01:29] given the context that's come before.
+[01:01:33] And that was true for language models used
+[01:01:35] for code breaking,
+[01:01:36] that was true for language models
+[01:01:37] used for speech recognition
+and machine translation
+[01:01:39] where we were just trying to do
+[01:01:40] sort of error correction in the outputs.
+[01:01:42] That is very much not the case
+[01:01:43] for language models as
+we use them today, right?
+[01:01:47] Nobody really cares,
+[01:01:50] I guess I would claim about
+the difference between a model
+[01:01:53] that when I ask it a question
+at the start of a chat,
+[01:01:56] always produces exactly the same answer
+[01:01:59] or produces some range
+of different answers
+[01:02:02] with some probability
+[01:02:03] because you can always either say
+[01:02:07] insert some source of
+randomness into the interaction
+[01:02:10] between the model itself or say, okay,
+[01:02:12] I want you to flip, you know,
+[01:02:14] I want you to generate not one number
+[01:02:16] between one and 100,
+[01:02:17] but a million numbers between one and 100,
+[01:02:18] and then I'm gonna choose a random item
+[01:02:20] from that list, right?
+[01:02:21] Like, if we lived in a
+deterministic universe
+[01:02:25] and we froze your brain
+in a particular state
+[01:02:27] and every time we, like,
+[01:02:28] wanted to have a conversation with you,
+[01:02:29] we restarted your brain
+from the same state
+[01:02:31] and we asked you to
+generate a random number,
+[01:02:33] you would also generate the
+same random number every time.
+[01:02:35] And this is fine 'cause we have other ways
+[01:02:36] of sort of getting randomness externally.
+[01:02:40] So I think part of the challenge here
+[01:02:42] is that we have a set of methods
+for training these models,
+[01:02:49] methods for generating
+text using these models
+[01:02:51] that sort of conceptualize them
+[01:02:56] as being inherently random objects.
+[01:02:58] But we're rapidly moving towards a world
+[01:02:59] where what people want from them
+[01:03:01] is not randomness in the outputs.
+[01:03:04] And, you know, I guess
+another way of thinking about,
+[01:03:07] you know, even thinking about
+[01:03:09] to be back to these like
+calibration questions
+[01:03:12] and the first question
+that was asked here,
+[01:03:14] one way of saying I want the model
+[01:03:16] to express its uncertainty about
+the answer to this question
+[01:03:20] is for it to have the property
+[01:03:21] that if I ask it the
+same question 10 times,
+[01:03:23] I get one answer seven times
+[01:03:25] and the other answer three times.
+[01:03:26] Another way of having it express
+its uncertainty is to say,
+[01:03:29] I'm gonna ask it the question one time
+[01:03:31] it had always better output
+the thing that it thinks
+[01:03:33] is most likely the answer to that question
+[01:03:35] and not any of these others.
+[01:03:36] But then hedge appropriately.
+[01:03:37] And I think we are sort of halfway
+[01:03:41] through the process of transitioning
+[01:03:42] from the first world to the second world.
+[01:03:45] - Great.
+[01:03:46] And speaking of transitioning,
+[01:03:47] apologies to the remaining questions,
+[01:03:49] but if you all wouldn't mind
+just thanking Jacob for coming.
+[01:03:53] Thank you.
+(audience applauding)
+[01:03:57] Thank you.
+[01:03:59] - Thank you.
+[01:04:04] - [Team Member 2] Thank
+you everybody for coming
+[01:04:06] and please make sure to
+take your trash with you
+[01:04:07] on the way out and help us.

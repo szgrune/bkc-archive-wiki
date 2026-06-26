@@ -1,0 +1,1861 @@
+[00:00:00] - So this is, as I said,
+part of our Fall Speaker Series
+[00:00:04] focused on sparking conversations
+about the technological,
+[00:00:08] regulatory, philosophical,
+and existential questions posed by AI.
+[00:00:12] And we do have a lot to get to
+so I'm just going to do brief speaker
+[00:00:16] bios, and mainly the speakers
+can introduce themselves, but
+[00:00:20] we're really glad
+that they're here with us.
+[00:00:22] So Jason Crawford is the founder
+of the Roots of Progress Institute,
+[00:00:26] a nonprofit dedicated to building a
+culture of progress for the 21st century.
+[00:00:31] And he's also the author of the Techno-
+Humanist Manifesto.
+[00:00:35] We also have with us,
+[00:00:38] you can't see her right now,
+[00:00:40] but she will be visible imminently,
+[00:00:43] Amba Kai who had an unexpected
+conflict
+[00:00:46] but we're super grateful
+that she's able to join us.
+[00:00:49] She's the co technical director of
+AI Now, a US based research institute,
+[00:00:54] where she leads on advancing
+diagnosis and actionable
+[00:00:58] policy recommendations
+to tackle concerns
+[00:01:02] with artificial intelligence
+and concentrated power,
+[00:01:05] and she also recently completed her term
+as Senior Advisor
+[00:01:09] on AI at the Federal Trade Commission.
+[00:01:11] And we have Brian McGrail, Policy
+Lead and Senior Counsel for the Center on
+[00:01:16] AI Safety Action
+Fund, a nonpartisan advocacy organization
+[00:01:21] dedicated to mitigating national security
+risks from advanced AI.
+[00:01:26] He previously served as Senior Advisor
+to the Deputy Secretary of Commerce.
+[00:01:30] And, last but not least,
+this event will be moderated
+[00:01:34] by our own
+Jonathan Zittrain, BKC's faculty director.
+[00:01:38] So before I turn things over to JZ,
+[00:01:41] we have kind of a special opportunity
+for you all today.
+[00:01:46] If you can go to the next slide.
+[00:01:48] So we are going to be piloting something
+called the Event Assistant.
+[00:01:52] The Event Assistant is a tool that's built
+by our own Applied Social Media Lab.
+[00:01:57] It's a tool basically
+to kind of like optimize
+[00:02:02] the way that you engage with events.
+[00:02:03] So, we want to make it easier for you
+to stay engaged, for you
+[00:02:07] to kind of get the most or retain
+the most from our events.
+[00:02:11] So the tool listens in to the event
+and can help you catch up
+[00:02:15] if you get distracted,
+[00:02:16] if you miss anything, if you don't know
+what a particular word is.
+[00:02:19] So you can ask things
+[00:02:20] like: what organization 
+did they just mention? or I zoned out,
+[00:02:24] what did I miss?
+[00:02:26] So if you want to use the assistant
+and this is for folks in the room, folks
+[00:02:29] online as well.
+[00:02:31] Go to brk.mn/ai-triad
+to try it out.
+[00:02:37] And important flags.
+[00:02:39] This tool uses a OpenAI-4o mini model
+through the Harvard API proxy.
+[00:02:44] A pseudonymous
+[00:02:50] message log is visible to the engineers,
+[00:02:53] and we store the event in message transcripts
+for no more than three months.
+[00:02:58] And then also we would love
+to hear your feedback on this tool.
+[00:03:01] So, please share it
+after the event at
+[00:03:05] brk.mn/feedback.
+[00:03:06] So thank you so much.
+[00:03:07] And with that I'll turn it over to JZ.
+[00:03:14] - Well, thank you so much, Jess.
+[00:03:16] And thank you all
+both in person and online
+[00:03:19] for joining us today at the
+Berkman Klein Center.
+[00:03:23] I'm too loud, aren't I?
+Do I sound too loud?
+[00:03:26] No, just to myself?
+[00:03:29] At the Berkman Center, we are
+[00:03:33] really interested
+[00:03:34] in trying to look around corners
+when there's a lot of attention
+[00:03:38] on something, to see where the attention
+might be least, but still deserving,
+[00:03:44] and to have a really big tent
+to contain multitudes
+[00:03:47] within our now 30 year
+longitudinal community.
+[00:03:52] There are really committed,
+imaginative, interesting,
+[00:03:55] smart people with all sorts of views
+[00:03:58] and trying to reconcile them
+and understand where the differences lie
+[00:04:04] and whether they are normative differences
+of ought, descriptive differences of
+[00:04:09] what is or what will be is a large part
+of what we try to do in various ways.
+[00:04:14] And this gathering today is exactly part
+[00:04:17] of that quest, in a forward
+looking sense, like we did
+[00:04:21] reserve a [indistinct]
+domain name for brk.mn.
+[00:04:26] That's exactly how far ahead we were
+in internet studies back in the day.
+[00:04:31] And we're hoping to do something
+equivalent as we look at AI.
+[00:04:36] And I think of the philosopher
+Buffalo Springfield,
+[00:04:40] who observed: there's
+something happening here.
+[00:04:43] What it is ain't exactly clear.
+[00:04:46] I think that's not a bad lodestar
+for what's happening with AI.
+[00:04:51] And for me,
+[00:04:54] I was struck
+[00:04:55] at one point when I was in the Bay
+Area visiting in Berkeley
+[00:05:00] with a number of folks deeply, deeply
+[00:05:03] concerned about and committed to
+AI safety and worried about catastrophic
+[00:05:08] and at times, even existential risk
+from the progress of AI.
+[00:05:13] And within the same day,
+I had traveled across
+[00:05:16] the Bay Bridge to
+[00:05:19] San Francisco, where a place called
+[00:05:21] AGI House was madly trying to summon
+the demon.
+[00:05:26] Maybe not being as purely descriptive
+as I could be here,
+[00:05:29] trying to advance the progress of AI
+as quickly as possible.
+[00:05:34] And not only do they have, as best
+I could tell,
+[00:05:37] very different priors, but
+[00:05:41] very different cultures,
+[00:05:43] different vernacular
+they would use describing things,
+[00:05:46] and tend not to communicate
+[00:05:49] with one
+another as much as the short distance
+[00:05:53] between them
+geographically might suggest. And
+[00:05:58] those two points at the top, what I call,
+[00:06:02] and I'm also interested in workshopping
+the names here,
+[00:06:05] the safetyist locus
+[00:06:08] which, loosely speaking, are folks
+worried about what AI might be doing
+[00:06:13] and how quickly we are all becoming
+guinea pigs in an uncontrolled non=
+[00:06:17] IRB experiment about what
+[00:06:21] some form of
+[00:06:22] extreme geniuses in a data center
+maybe doing for or with us.
+[00:06:28] Another point of this triangle
+[00:06:30] being what I've called accelerationists.
+[00:06:33] People who are really thinking
+the sooner we can get again,
+[00:06:37] to an approximation, geniuses
+in the data center going,
+[00:06:42] what diseases can we cure?
+[00:06:43] What advances can we make?
+[00:06:45] How can we help ourselves be
+[00:06:48] better selves and a better society?
+[00:06:51] That seemed another point,
+[00:06:53] maybe with agreement
+that AI stands to be transformational,
+[00:06:57] just different emphases on its risks, on
+how controllable they are
+[00:07:01] and what we maybe should be doing now,
+whether to promote or to limit things.
+[00:07:06] And then the third point of this triangle
+that may be less
+[00:07:10] thinking of it as transformational,
+but still significant,
+[00:07:15] are what I thought of as skeptics, folks
+who are looking at this as yet
+[00:07:20] another technology down the pipe, possibly
+like internet, possibly in its day,
+[00:07:25] maybe the day is still now, like crypto,
+all sorts of technologies
+[00:07:29] that may stand to reinforce
+existing hierarchies,
+[00:07:34] to carry with it risks and
+[00:07:38] unintended consequences
+[00:07:41] that may not be existential
+or catastrophic,
+[00:07:44] but are still quite significant
+and worthy of paying attention to. And
+[00:07:49] I won't try to chart them right now
+on a graph,
+[00:07:52] but I'm really interested at the risk,
+which is itself significant
+[00:07:57] of being unduly reductive,
+understanding that
+[00:08:01] all generalizations are false.
+[00:08:04] Without meaning to pigeonhole our guests
+[00:08:07] as we start our conversation,
+[00:08:10] I'm curious how that rough
+[00:08:12] grouping might land with them
+and with you.
+[00:08:15] And in fact, before we start talking
+to the guests, we might as well in
+[00:08:18] grand Internet
+engineering task force tradition
+[00:08:22] and apologies to those online,
+we don't have a similar online poll
+[00:08:25] to do concurrently.
+[00:08:27] I'd like to call for a hum in the room
+[00:08:30] if you agree with,
+each of the following propositions.
+[00:08:34] So get ready to hum when asked.
+[00:08:38] The first is when I heard
+[00:08:41] what I called the safetyist
+position described
+[00:08:45] that sort of more or less
+[00:08:48] captured the predominant place
+where I'm at right now.
+[00:08:51] I'm being you, right?
+[00:08:53] I'm you, you're me? Okay.
+[00:08:55] So if you're feeling kind of safetyist
+right now
+[00:08:58] let me know at the count of three
+with a hum.
+[00:09:01] One, two, three. 
+[Hum]
+[00:09:04] All right, so modulo
+the uncertainty of our very first hum
+[00:09:08] that seemed to be suffusing the room
+pretty decently
+[00:09:11] if uncertainly.
+[00:09:13] If you are feeling, bring it on,
+I cannot wait.
+[00:09:18] What a time to be alive,
+if you're an AI
+[00:09:20] what a time not to be alive.
+[00:09:22] Let me know with a hand
+at the count of three.
+[00:09:24] One, two, three.
+[Hum]
+[00:09:27] All right, so the accelerationists
+[00:09:29] have a certain degree of higher pitch,
+[00:09:34] they're vibrating at a higher frequency.
+[00:09:36] Very excited.
+[00:09:37] And if the skeptic position
+[00:09:41] is moving you, if you're feeling like
+you're not wanting to get too carried away
+[00:09:45] with things, but there's still plenty
+to worry about, let me know with the hum.
+[00:09:49] One, two, three.
+[Hum]
+[00:09:51] All right, team STS in the house.
+[00:09:55] Very interested to know.
+[00:09:57] And I know there are some people
+who hum more than once.
+[00:09:59] That's okay too.
+[00:10:01] And if you're like,
+this whole thing is reductivist.
+[00:10:03] I don't like humming.
+[00:10:04] Let me know the hum. 
+One, two, three.
+[00:10:07] That's pretty good.
+[00:10:08] Although I guess within the seeds of that
+question is why people aren't humming.
+[00:10:13] So with that introduction,
+if it's okay, Jason,
+[00:10:17] I'd love to turn to you first
+[00:10:20] to just tell us, open ended way,
+[00:10:25] your sense of what lies ahead
+[00:10:29] in AI, what our choices are,
+[00:10:33] and as a bonus,
+[00:10:36] what quote
+unquote techno-humanism means to you.
+[00:10:41] Yeah. Take it away, Jason.
+[00:10:44] - So what lies ahead?
+[00:10:46] AI is something big.
+[00:10:47] And for a while now, I think the question
+is this, like, just how big is it?
+[00:10:52] So a few years ago, I remember people
+in tech and, you know, my background...
+[00:10:58] So I'm a writer now.
+My background is in tech.
+[00:11:00] For a long time,
+[00:11:01] I was in Silicon Valley
+and did tech startups, that kind of thing.
+[00:11:04] And I remember for a while
+people were talking about, hmm,
+[00:11:07] we're kind of
+in a, in a transitional period.
+[00:11:11] The internet, you know,
+we're sort of like,
+[00:11:13] we've had a bunch of great internet
+companies. We have social media era.
+[00:11:16] What's the next big thing? For
+a couple of years everyone was asking
+[00:11:18] what's the next big thing in technology?
+[00:11:20] Is it VR?
+[00:11:21] Is it crypto?
+- What is the writers' room cooking up for us?
+[00:11:24] - Yeah, right.
+[00:11:25] So like now it is extremely clear
+to everyone in Silicon Valley,
+[00:11:28] AI is the next big thing in computing.
+[00:11:31] Economists are starting
+[00:11:32] to ask actually,
+is AI the next big thing in the economy?
+[00:11:35] So like a general purpose technology at
+the level of like the steam engine, right?
+[00:11:41] You could go further than this.
+[00:11:42] You could say maybe AI is the next
+big thing in like human evolution.
+[00:11:47] So we had the agricultural age,
+you know, last about 10,000 years.
+[00:11:50] We had the industrial age
+for the last 300 years or so, 250 to 300.
+[00:11:55] And then,
+are we entering an intelligence age?
+[00:11:58] Right.
+[00:11:59] Is this as big a transition
+as the Industrial Revolution itself,
+[00:12:02] which would make it bigger that any, you
+know, one invention in the industrial age?
+[00:12:07] And then there's another,
+you know, set of people who are wondering,
+[00:12:09] is this actually even bigger than human
+evolution?
+[00:12:12] Is AI a new species that is sort
+of coming in to compete with us?
+[00:12:16] Is this not the next era of humanity,
+but the, you know,
+[00:12:19] the end of the human era
+and the beginning of something else?
+[00:12:21] So those are,
+you know, that's like 3 or 4 levels
+[00:12:25] where you can look at things.
+[00:12:26] Personally, I tend to think about things
+[00:12:30] more at the level of like,
+are we entering a new intelligence age?
+[00:12:33] I think the biggest thing
+to think about with AI is,
+[00:12:37] could it be to mental labor
+[00:12:40] what
+[00:12:41] engines and
+and energy was to physical labor?
+[00:12:46] So a fundamental platform
+comes along and, you know,
+[00:12:49] automates a whole lot of the labor
+that is there to be done.
+[00:12:53] And assists with much of the rest
+and just
+[00:12:56] becomes a step change.
+[00:12:59] If you look over the centuries
+and the millennia,
+[00:13:03] economic growth rates throughout history,
+what you find is that
+[00:13:08] economic growth is not a smooth
+exponential curve.
+[00:13:11] It's actually faster than exponential
+[00:13:12] because the growth rates
+increase over time.
+[00:13:14] So just schematically,
+you know, economic growth is like maybe
+[00:13:18] two basis points in the Stone Age,
+maybe 20 basis points or 0.2%
+[00:13:22] in the agricultural age, and then jumped up
+to 2% in the industrial age.
+[00:13:25] So if an intelligent age were to follow,
+[00:13:29] you know, it would be not crazy to think
+that we might see something like 20%
+[00:13:32] GDP growth, right?
+[00:13:33] Annual GDP growth
+sustained over a long period of time.
+[00:13:36] That would be absolutely transformative
+for the world.
+[00:13:39] So that's what I think. 
+- Got it.
+[00:13:41] So you very helpfully put a lot of
+framing questions on the table.
+[00:13:46] It sounds like so far, your answers to
+[00:13:49] those questions are generally on the
+[00:13:53] yes it's significant,
+[00:13:54] yes it's transformative,
+[00:13:56] this is not a drill.
+[00:13:58] And if we play our cards
+right, it could be great.
+[00:14:03] - Yeah.
+[00:14:04] I think so.
+[00:14:06] - Okay.
+[00:14:08] Brian, you're at a 501c4,
+[00:14:13] which is to say, an organization designed
+[00:14:16] to persuade government
+officials and others
+[00:14:21] of something
+they should urgently or not urgently
+[00:14:24] but in this case,
+I would guess, urgently be doing.
+[00:14:27] I'd love to hear...
+[00:14:30] Imagine this is a
+[00:14:32] what's what's your favorite group
+of elected officials?
+[00:14:35] That's kind of a trick question.
+[00:14:37] What's your favorite group
+of elected officials?
+[00:14:39] - I guess I have to say Congress.
+[00:14:41] - So here we have Congress, obviously
+not convened.
+[00:14:44] They're out of session.
+[00:14:46] The House is at least.
+And they are all ears.
+[00:14:50] They have chosen to attend
+a future of the AI session.
+[00:14:55] They don't have a lot of time.
+[00:14:57] What's the elevator speech
+you want to say?
+[00:14:59] And one other thing
+is, they have just heard from Jason
+[00:15:05] and they're feeling pretty good
+[00:15:08] about the prospect of was it
+a 20 or 40% annual GDP growth?
+[00:15:12] - I said 20.
+- 20, but you'd go for 40.
+[00:15:16] - Yeah, it's a lot.
+[00:15:20] So that's what they've just heard.
+[00:15:22] And now you've got your brief
+elevator speech with them.
+[00:15:26] What do you say?
+[00:15:27] - I'll just hold this
+to make sure people can hear me.
+[00:15:29] So I actually think that I probably agree
+with most of what Jason said.
+[00:15:34] I would just also say that when you're
+talking about something that could be
+[00:15:38] as transformational as I guess
+I would emphasize the uncertainty here.
+[00:15:42] And when you're talking about something
+that could be as transformational
+[00:15:45] as AI I think could be,
+[00:15:49] you should think profoundly
+about the risks before,
+[00:15:52] you know, charging ahead
+as fast as you possibly can.
+[00:15:56] But, you know, I think the benefits
+could be quite large.
+[00:16:01] And it could be exactly as Jason said,
+one of the more
+[00:16:04] positively transformational technologies
+that we've ever experienced.
+[00:16:08] I think a couple of things
+that give me pause
+[00:16:11] though, are that the speed of the change,
+[00:16:15] you know, we're going to talk
+about the new intelligence age.
+[00:16:17] You think about how long it took
+for the sort of industrial revolution
+[00:16:21] to sort of take off if we're going to
+maybe compress that timeline.
+[00:16:25] And even then,
+that was a lot of social upheaval.
+[00:16:28] So are we ready for that
+kind of social upheaval, especially
+[00:16:32] if you're talking about a technology
+that could potentially automate,
+[00:16:36] you know, all of cognitive labor?
+You imagine
+[00:16:39] anybody like me who does most of your work
+behind a laptop, the AI within the next
+[00:16:45] 5 to 10 years could do that
+[00:16:49] as good
+or better than a human and way cheaper.
+[00:16:51] What does that mean for our economy?
+[00:16:53] What does it mean for our society?
+[00:16:55] And I guess the other point
+that I would make is that, again,
+[00:16:59] without gainsaying,
+that the potential benefits,
+[00:17:02] I actually think that you don't need to be,
+I mean, this is just how I see it,
+[00:17:06] but you don't need to think
+that the chance of a catastrophically bad,
+[00:17:12] whatever we want to say outcome
+is all that high to justify
+[00:17:17] taking a lot of precautions.
+Because if we're talking about something that
+[00:17:20] could, you know,
+[00:17:21] wipe out the the human race,
+[00:17:24] I think caution is warranted.
+[00:17:26] And so I think...
+- That escalated quickly
+[00:17:29] because first you were telling a story
+[00:17:32] that I would call a catastrophic success
+story.
+[00:17:36] Can we live in a world of this
+[00:17:39] many ice cream sundaes so quickly
+with so little refrigeration?
+[00:17:43] Like it's kind of a, oh my gosh,
+there's going to be a lot of displacement.
+[00:17:49] That's what it takes
+to get out of the Stone Age, you know?
+[00:17:52] But then at the end,
+it feels like you've pivoted to
+[00:17:58] something other than sundaes. 
+- Sure.
+[00:17:59] And we can get into that.
+[00:18:01] Yeah.
+[00:18:01] First of all, I don't know the
+[00:18:04] ice cream analogy.
+[00:18:05] I think, you know, I mean, I'm not sure
+if it frankly would be a good thing
+[00:18:09] or a bad thing in, to have, you know,
+such total displacement of workers.
+[00:18:14] And we can get into the various...
+[00:18:16] - That's the catastrophic part
+of catastrophic success.
+[00:18:19] - Yeah. 
+- You've got the 20% growth rate.
+[00:18:21] You don't have the people
+powering it. Yeah. Right.
+[00:18:24] - And we've
+talked about the the different risks.
+[00:18:27] Final point was going to be,
+[00:18:28] even if you think I mean, I think
+the debate around a lot of this stuff
+[00:18:32] has gotten so work that you have people
+who are like, look, I'm a moderate.
+[00:18:36] I just think that there's a 10% chance
+that AI is going to go
+[00:18:40] catastrophically wrong for humanity.
+[00:18:41] It's 10% chance.
+[00:18:43] Are you getting on an airplane for the 10%
+chance that it crashes? I'm not!
+[00:18:48] And so that's why I tend to dwell,
+[00:18:51] even if I only think, you know, 
+I don't think it matters much.
+[00:18:55] So I don't have a super precise key doom
+or what have you, but,
+[00:19:00] you know, I think even if it's 10%,
+even if there are big benefits, I'm
+[00:19:04] going to spend my time
+[00:19:05] dwelling on the risks, because I think
+those are the worlds that I'm most concerned with.
+[00:19:08] - And for the members of Congress
+assembled in this room, hearing you out,
+[00:19:13] if they are nervous about uncertainty,
+[00:19:17] is there something broadly and tightly
+[00:19:20] you're suggesting that they do,
+or does it tend to be pretty sectoral?
+[00:19:26] And a little of this, a little of that.
+[00:19:27] We got a -
+[00:19:28] I'm reminded of the thought
+that in technology
+[00:19:32] there's two phases.
+The first is too early to tell
+[00:19:34] and the second is too late
+to do anything about it.
+[00:19:37] And it may be too early to tell,
+but I hear about the uncertainty.
+[00:19:42] What, if anything, would you be asking
+[00:19:45] a legislative body to do?
+[00:19:47] - I think that the easiest answer there
+and that the thing that would be most
+[00:19:53] helpful is just more transparency,
+[00:19:54] requiring transparency
+from the frontier developers.
+[00:19:57] California just passed a law SB 53
+that is focused on that sort of thing.
+[00:20:02] I think federalizing that, you know, I'm
+you can around the edges
+[00:20:05] precisely what sorts of disclosures...
+- Knowing what's going on
+[00:20:09] is a predicate to knowing what to do
+and where we're at.
+[00:20:13] That's maybe not in that order.
+[00:20:14] And that's it though, transparency is kind
+of your main shopping list item.
+[00:20:21] - Yeah.
+[00:20:22] I would
+probably want to go a little farther.
+[00:20:25] I don't want to take us too far down
+the rabbit hole.
+[00:20:28] Things like third party
+audits, 3 deployment testing of models.
+[00:20:32] But but I agree with you
+that the technology,
+[00:20:36] it's evolving fast.
+[00:20:37] But I wouldn't really want to get
+too far out in front with very heavy
+[00:20:41] handed regulation even as a safetyist.
+[00:20:43] I'll take the label.
+[00:20:44] - And last question on this front,
+what's your comfort level -
+[00:20:49] no wrong answer -
+with what appears to be principally
+[00:20:53] private sector development, driven
+[00:20:57] through the highly,
+[00:21:00] this is maybe not a term of art
+YOLO model of
+[00:21:04] founder and VC driven,
+[00:21:07] generate a doodle, throw it on the wall.
+[00:21:10] if you go bankrupt,
+start your next startup.
+[00:21:13] if it sticks, cash in your NVIDIA shares.
+[00:21:16] Is that an okay model of development
+[00:21:20] for this possibly transformative tech?
+[00:21:23] - So no from my perspective
+because it creates this race dynamic
+[00:21:29] where actually I think
+the biggest problem here is that we are
+[00:21:33] and what I feel most strongly about is I'm
+not sure if, you know, should we pause?
+[00:21:36] Should we slow down?
+How long? Lots of hard questions.
+[00:21:39] I just think it's not good that we are
+going forward as fast as we possibly can.
+[00:21:44] Nobody at these labs
+[00:21:46] feels like they can sleep
+because they gotta beat their competitor.
+[00:21:49] And so we end up in this thing
+[00:21:50] where we end up with a dynamic
+where everyone is going fast
+[00:21:54] or as fast as they can.
+For most technologies
+[00:21:56] I wouldn't have a problem with that.
+[00:21:58] But for this one,
+[00:21:59] I do think that there's a role
+for government
+[00:22:00] probably at some point
+along the way to to backstop it.
+[00:22:04] - Okay.
+[00:22:04] The very, interesting complement to the
+[00:22:08] transparency thing,
+that's starting to sound like,
+[00:22:11] it might be the kind of thing
+that would make Jason uncomfortable,
+[00:22:14] but we're going to find out later
+because we're turning to Amba now.
+[00:22:18] Thank you. Welcome back to BKC.
+[00:22:22] So great.
+[00:22:23] Thank you again for joining us.
+[00:22:24] And what looks like,
+[00:22:25] unless it's just a zoom background,
+a highly acoustically shielded studio.
+[00:22:30] - It is indeed the podcast room of our
+co-working space.
+[00:22:35] So, hello,
+[00:22:35] from New York City, where the air is
+very, feels feels different this morning.
+[00:22:40] And thank you all for making it.
+[00:22:43] - Thank you for your euphemism.
+[00:22:45] So, just hearing the conversation so far
+[00:22:51] Amba, where would you like to come into it?
+[00:22:53] Is there anything either
+that you're already, like,
+[00:22:57] vibrating, wanting to
+[00:23:01] manifestly agree
+with, disagree with, or a point
+[00:23:04] that maybe we haven't even covered in the
+[00:23:08] AI threat or menace kind of framework?
+[00:23:11] - My head is more towards the latter.
+[00:23:14] But maybe to just, you know, create
+some continuity with what we just heard.
+[00:23:20] I think
+what's clear is that transformational,
+[00:23:23] is doing a lot of work in how we're
+talking about AI and AI technologies,
+[00:23:28] but also it's a little bit of an empty
+signifier in that,
+[00:23:32] it's being asserted
+as if we all know what it means
+[00:23:35] for a technology to, to be transformative
+and for that to be a good thing.
+[00:23:38] But I think that that sort of,
+kind of concealing a lot of ruptures
+[00:23:42] under the surface, which is,
+I think what we're here to talk about.
+[00:23:47] So, with thattaser, I'll say that I think
+[00:23:51] our concern or our orientation towards
+[00:23:55] AI and the work - at AI Now
+[00:23:57] we engage in kind of research,
+advocacy, policy strategies,
+[00:24:00] a lot of different, I guess ways
+and means to get at this - and what we see
+[00:24:05] are pretty deep and structural concerns
+with the current trajectory we're on.
+[00:24:09] We think it needs to be challenged.
+[00:24:11] The industry set trajectory
+for AI needs to be challenged.
+[00:24:14] It needs to be reimagined.
+[00:24:15] And our central concerns with
+AI have to do with power.
+[00:24:19] For for reasons that trace
+back to the 70, almost 70 year old history
+[00:24:25] of this technology, the current trajectory
+of AI is set to worsen
+[00:24:31] concentration of power in a very,
+very narrow section of the tech industry.
+[00:24:35] And, again, this is more in the realm of
+I think we're just stating facts,
+[00:24:39] but it's a path,
+a trajectory where advancement
+[00:24:42] is synonymous with scale,
+[00:24:45] in access to capital, to key inputs,
+to pathways to monetization, like,
+[00:24:49] how do we make any money
+out of all of this?
+[00:24:51] Shich at this moment the, the very,
+[00:24:54] you know, the, the most giant tech
+companies disproportionately control
+[00:24:58] and the news flash here is that
+this isn't by accident.
+[00:25:02] So large scale
+AI is not just continuing or building on
+[00:25:07] the last decade of concentrating power
+in Silicon Valley.
+[00:25:10] It is a product of it.
+[00:25:12] And so I think that
+is our central diagnosis.
+[00:25:15] We think it's an
+[00:25:16] unmitigated bad thing
+in terms of the concentrated power in
+[00:25:20] in the tech industry,
+we think that is an unmitigated bad
+[00:25:23] for markets, for democracy, and indeed
+for national security, for the
+[00:25:27] the obvious reasons that, you know,
+single point of failure often are,
+[00:25:32] but maybe what I'll just say, because,
+alongside our diagnosis of what is
+[00:25:37] keeping us up at night,
+is that this diagnosis isn't just
+[00:25:41] admiring the problem accurately,
+although I think that is very important
+[00:25:45] to do.
+[00:25:46] It is often in our work
+about kind of introducing
+[00:25:49] a discipline to all of our strategies
+for resistance, for the imagination
+[00:25:53] to say, you know, is this move
+or is this policy,
+[00:25:57] campaign, is it going to inadvertently
+[00:26:00] or directly lead to worsening the problem
+of concentration of power?
+[00:26:05] And I look here, to my colleagues,
+particularly those that have, like Brian,
+[00:26:09] maybe, we can talk a little bit
+more about this later,
+[00:26:11] but I think many of the ruptures come
+not from a disagreement
+[00:26:14] that something should be done, but about
+what are the kinds of policy interventions
+[00:26:18] or other interventions that would
+meaningfully do something to challenge
+[00:26:22] what feels like a very ossified
+concentration of power in this market.
+[00:26:28] And I maybe we'll come back to it later.
+[00:26:29] But if we don't, I do want to say,
+in the spirit of workshopping names, that
+[00:26:33] a skeptics camp is is really not a body
+that anyone, not me, wants to be at.
+[00:26:38] And so, I would like to vote for,
+[00:26:41] you know,
+something that gets at something
+[00:26:44] that conveys a more optimistic note
+because we do believe that,
+[00:26:47] you know, the path where is is broken,
+and it will require some audacious
+[00:26:51] hope to imagine a different one.
+[00:26:55] - Got it.
+[00:26:55] All right, well, we can continue
+to workshop names together.
+[00:26:59] Skeptic does seem to be sort of.
+[00:27:01] It has a naysaying quality to it, perhaps,
+although I tend to like
+[00:27:05] to think of critic
+as not somebody who hates food or movies,
+[00:27:10] but is just somewhat
+discerning about them.
+[00:27:13] But of course, critic and
+[00:27:14] skeptic are pretty close in our
+[00:27:18] invettings, as we would put it today,
+[00:27:22] it might be
+[00:27:24] if I had to do a word
+cloud of what you were saying.
+[00:27:27] It sounds like concentration would be big
+[00:27:29] and in the middle, and you're
+wanting the opposite of concentration.
+[00:27:34] It's not like democratization
+or distributed or shared?
+[00:27:38] Is that fair to say?
+[00:27:41] - Yeah.
+[00:27:41] I mean, I would say along with
+concentration would be power.
+[00:27:45] So I think the question is we
+we are seeing a concentration of power.
+[00:27:48] There are many,
+you know, ways to get at it.
+[00:27:51] One could be through more structural means
+of decentralizing power in the market,
+[00:27:55] but also and almost in parallel,
+would be just introducing meaningful
+[00:27:59] accountability for this market,
+in the absence of which we see
+[00:28:02] some of the pathologies that come from
+both scale but also concentrated power.
+[00:28:07] - Uh-huh.
+[00:28:08] This might sound like
+a very specific question,
+[00:28:10] but it may help us kind of draw some lines
+that are helpful.
+[00:28:15] And I think after asking you,
+I'd maybe turn to Brian for reactions.
+[00:28:22] Would you prefer a world
+[00:28:24] in which the genie goes back in the bottle
+[00:28:28] or never materializes, we just didn't
+[00:28:31] if we're dwelling among LLMs,
+which of course are only one flavor of AI
+[00:28:36] that they just never manage to,
+[00:28:39] you know, coherent soup.
+[00:28:42] Or so long as we've got them
+now, would it be a better world
+[00:28:47] in which some discoveries happen
+in the next three months
+[00:28:51] that would let us do
+[00:28:54] what the most advanced language
+[00:28:56] models do right now
+[00:29:00] on our laptops
+[00:29:01] so that GPT-5 is something
+[00:29:05] everybody is capable of running on a Mac
+[00:29:08] or PC or a Linux box or something
+[00:29:11] and can tune it or hire
+somebody else to tune it
+[00:29:15] or something, truly democratizing it.
+[00:29:19] Would that be a good thing or a bad thing?
+[00:29:23] With my supposition being,
+that might be a way of trying to,
+[00:29:27] at least at a technical layer
+only decentralize some of the power.
+[00:29:32] - Yeah.
+[00:29:33] So to the second point first,
+which is
+[00:29:38] I would probably want to contest the idea
+that by decentralization
+[00:29:42] we mean that everybody gets to fine tune
+these models on their systems
+[00:29:46] or anything akin to the course
+we've seen in the open source world.
+[00:29:49] I think the question of access
+has too long been
+[00:29:53] sort of slow to reckon with the questions
+of economic value distribution.
+[00:29:56] The two are not the same.
+[00:29:57] And we're actually seeing the perils
+of that kind of
+[00:30:00] rhetoric around access as being synonymous
+with decentralization.
+[00:30:05] We've we have so many examples
+which many of which I think I've drawn
+[00:30:08] from the Berkman community
+of why the two are not the same.
+[00:30:11] So one is to say,
+I think we should complicate the notion
+[00:30:15] of what decentralization means.
+[00:30:17] And by that, I mean, if this is,
+[00:30:20] a kind of
+[00:30:20] market where the frontier is defined by,
+[00:30:24] you know, a kind of, scale,
+which in some ways,
+[00:30:28] you know, requires or,
+or tends itself to a market like the one
+[00:30:32] we have today and probably
+an even more hyper-consolidated market
+[00:30:36] and where then
+all of the sort of downstream,
+[00:30:40] the kind of downstream activity
+also in some ways
+[00:30:42] eventually ends up
+reconcentrating or,
+[00:30:46] you know, the value distribution,
+basically, even as the pie grows, is
+[00:30:49] mostly enriching
+the very few and creating pretty untenable
+[00:30:53] both politically and economically
+untenable concentrations of power.
+[00:30:57] So I don't lose the thread...
+[00:30:58] do I think we should be engaging in
+[00:31:02] how do we make the current, ecosystem
+so that these companies cannot
+[00:31:07] shut the door behind them?
+[00:31:08] How do we introduce structural competition
+and other kinds of interventions
+[00:31:12] that shake this market up
+in a more fundamental way? Yes.
+[00:31:15] And that's most of what we do.
+[00:31:16] But do I think that there is some value
+to at least
+[00:31:19] having the conversation of putting
+the genie back in the bottle?
+[00:31:22] Yes, but probably in a slightly
+different way from what I imagine
+[00:31:26] Brian or others from the safety community
+might imagine, which is that
+[00:31:30] I think that there's something, less
+well understood, which is that
+[00:31:33] the current research trajectory
+for artificial intelligence has been set
+[00:31:38] by, culminated within and follows
+the incentive structures
+[00:31:42] of the largest tech companies,
+because we don't actually have a vibrant
+[00:31:45] research ecosystem
+outside of industry funded labs.
+[00:31:48] And in some ways, like there are, you know, 
+far and few exceptions, but
+[00:31:54] it is not a vibrant space.
+[00:31:55] And that's possibly why conversations
+about what advancement
+[00:31:59] looks like have,
+you know, sort of are happening on terms
+[00:32:03] that happen to be, again, not by accident,
+[00:32:06] neatly aligned with the incentive
+structures of the largest companies.
+[00:32:09] So we're really interested
+in having conversations with technologists
+[00:32:12] that, you know,
+go all the way back to AlexNet to 2012
+[00:32:15] and ask that question of like,
+what were other modes of building
+[00:32:18] that mayb, put some of these principles
+of decentralization
+[00:32:22] at the core
+kind of as an operating principle
+[00:32:26] and then think about what, what tech
+trajectories we want to be building on.
+[00:32:29] - Got it. Thank you so much.
+[00:32:32] And it does sound like,
+without explicitly committing
+[00:32:35] to it, you're sounding
+generally positive on the idea,
+[00:32:38] not simply of just democratized access,
+but fine tuning and control over the code.
+[00:32:44] If it could be
+localized hypothetically and,
+[00:32:48] Brian, maybe I can just ask you
+[00:32:51] that same question from your perspective.
+[00:32:55] If it were
+[00:32:57] AI everywhere...AI Now,
+AI Everywhere,
+[00:33:01] AI Forever,
+[00:33:04] does that create that much
+[00:33:07] less of an opportunity to apply
+[00:33:11] bottlenecks, guardrails stuff?
+[00:33:14] If everyone builds it, everyone dies,
+[00:33:18] or is that somehow mitigating
+of some of the
+[00:33:23] catastrophic existential concerns
+you might have?
+[00:33:26] - Yeah, I mean,
+[00:33:29] I think I agree with most of what
+[00:33:31] Amba said.
+I think the concentration of power in the
+[00:33:35] AI sector, that's one that I,
+you know, maybe I'm not,
+[00:33:39] you know, a faithful representative
+of the safety community.
+[00:33:41] I can't sort of speak for others -
+- You'll find out soon.
+[00:33:45] - Yeah. I,
+[00:33:47] that's one of the threat models of
+AI that I worry the most about in that
+[00:33:53] one company
+[00:33:54] could sort of, you know, and, and again,
+I don't know,
+[00:33:57] I don't have strong positions
+about just how likely this is, but gets
+[00:34:01] sort of runaway, superintelligent AI
+and then uses it to run for the economy.
+[00:34:06] And I totally agree with I mean, again,
+[00:34:08] the economic power, political power
+all wrapped up together.
+[00:34:12] And I think you can see that with things
+like the export controls, that we had
+[00:34:17] on China and now, NVIDIA,
+[00:34:20] a huge corporation, is being able
+to engage the Trump administration to,
+[00:34:25] you know, further cement its sort of
+market position, market dominance.
+[00:34:29] So I do think that,
+I'm not sure what, you know, on the open
+[00:34:35] source question specifically,
+I think there are hard questions there.
+[00:34:39] And so I'm not going to say that
+necessarily the way to solve this is,
+[00:34:43] you know, everybody
+sort of what Amba said,
+[00:34:45] frankly like everybody having access
+to a model
+[00:34:49] is the way to ensure
+that we don't have concentration of power.
+[00:34:53] But but the the specific thing
+that I would put forward in the here
+[00:34:57] now is more just antitrust enforcement.
+[00:35:02] I think that that would be a good thing.
+[00:35:04] I assume that Amba and I would agree
+about that being a good thing.
+[00:35:08] You look at all of these deals
+[00:35:10] that OpenAI is doing
+to sort of vertically integrate.
+[00:35:13] That gives me pause
+as somebody who spends most of my time
+[00:35:17] worrying about the more catastrophic
+risks.
+[00:35:18] - Yeah, it is kind of a weird Scooby-Doo
+situation
+[00:35:21] where every person you encounter,
+you rip off the mask,
+[00:35:23] and underneath
+it's GPT-5, powering yet another Delta,
+[00:35:28] consumer assistance agent.
+[00:35:30] And, Delta might be perfectly happy
+if they had an alternative
+[00:35:34] they felt screwed up at the same rate
+[00:35:38] a a GPT-5.
+[00:35:40] I don't know, Jason.
+[00:35:41] I just want to invite you back
+into the conversation here, either
+[00:35:44] anything along the way.
+[00:35:45] So far since you last spoke,
+that you heard that you're
+[00:35:49] wanting to take issue with or amplify
+[00:35:52] or on this open source question,
+[00:35:55] I could see in a way I could see you
+[00:35:57] being perfectly happy
+with the more the merrier, right?
+[00:36:00] I don't know, yeah.
+[00:36:03] - I mean, so we're talking
+[00:36:04] about a concentration of power,
+so let's let's talk about that.
+[00:36:07] So first off, 
+this is a real concern.
+[00:36:11] I don't think I'm as worried
+about it as the other panelists.
+[00:36:14] First off,
+we don't have just one major lab that's,
+[00:36:17] leading with everything, right?
+[00:36:19] We don't even have just two, right?
+[00:36:20] There are 3, 4 or 5 major labs
+that are, pretty,
+[00:36:24] they're not quite at the frontier.
+[00:36:26] They're pretty close to it.
+[00:36:27] So we're very far from a situation
+where you'd have,
+[00:36:29] like, a single point of failure
+or a single kind of choke point.
+[00:36:34] So I think that's a good thing.
+[00:36:35] Some of these labs are releasing the
+models, open source, even open weights.
+[00:36:39] Right?
+[00:36:39] So this scenario
+where you can run something
+[00:36:42] close to the frontier on your laptop,
+I think we're there already, right?
+[00:36:45] That that already exists.
+[00:36:46] Now, as I understand it,
+[00:36:47] the models that you can run on your laptop
+or maybe somewhat behind the frontier,
+[00:36:51] maybe they will always be, I don't know,
+a year or two behind the frontier, but
+[00:36:55] there's there's got to come a point
+where that might not matter so much.
+[00:36:59] Just like it doesn't matter today
+whether you have,
+[00:37:01] you know, the latest iPhone
+or the iPhone from two years ago.
+[00:37:03] They're not, you know,
+they're not all that different.
+[00:37:05] You hit a certain point,
+you get diminishing returns.
+[00:37:07] So, yeah, no,
+[00:37:09] I think we're going to be in a world
+where,
+[00:37:11] I think there is no putting the genie
+back in the bottle.
+[00:37:13] I think we're going to be in a world
+where the power is out there
+[00:37:16] and it is broadly distributed, for better
+and for worse.
+[00:37:19] I also think we should we should step back
+from this, from a too narrow
+[00:37:24] focus on kind of like how many companies
+are running this or that kind of thing.
+[00:37:29] And just think more broadly about what
+this is going to do for the world.
+[00:37:32] I think there are ways in which AI could be
+enormously democratizing of power
+[00:37:37] in society broadly.
+[00:37:39] So here's just some sample,
+navigating the legal system.
+[00:37:43] Right.
+[00:37:43] If you get in any kind of legal issue
+today, large or small,
+[00:37:47] good luck navigating the system
+that we have today
+[00:37:50] without an enormous amount of money
+to pay lawyers
+[00:37:52] to help you, or actually being a lawyer
+yourself.
+[00:37:54] We're here at Harvard.
+[00:37:55] We probably are some lawyers in
+the audience.
+[00:37:56] But, you know, you
+you have a certain privilege
+[00:37:59] of knowing how to navigate the system
+which is built by and for lawyers.
+[00:38:03] And the average person can't afford that
+[00:38:05] at all, right?
+[00:38:06] So very soon,
+[00:38:07] if not already,
+we're going to be in a world
+[00:38:08] where anybody can get that kind of guidance and assistance 
+and navigate the system.
+[00:38:13] You know, I mean, similar thing
+[00:38:15] with all kinds of professional advice
+and help, right, where right now
+[00:38:19] is a privilege of the wealthy to be able
+to afford to pay people high rates.
+[00:38:23] - Can I just ask
+how many people in this room have asked
+[00:38:27] earnestly of the large language model
+of some kind about a medical issue
+[00:38:33] you've been having,
+and then credited the advice
+[00:38:36] you got back from it?
+Let me know with a hand up.
+[00:38:41] Fewer than I would have guessed, actually.
+[00:38:43] I know of one who was, like, kind
+of waving their hand not to be recognized,
+[00:38:46] but maybe it was an iffy answer.
+[00:38:49] Interesting.
+[00:38:51] - Within my social circle alone,
+I have heard of at least two cases
+[00:38:55] where people claim that giving
+you know, a medical question to
+[00:39:00] an AI model, actually saved their life
+or the life of somebody in a family,
+[00:39:04] which is I. Yeah, that's blows me away.
+[00:39:09] - Got it.
+[00:39:09] I'd like to open it up, to questions,
+and I'll let our,
+[00:39:14] Jess's team,
+[00:39:17] see what questions we have online.
+[00:39:19] In fact, some of them appear to be
+breaking through the Zoom window
+[00:39:23] as we go.
+[00:39:24] But only the first four words
+for which we do token completion.
+[00:39:28] Let's do this.
+[00:39:29] If you want to identify yourself,
+feel free.
+[00:39:31] If you don't.
+[00:39:32] Depending on your view about Rocco's
+basilisk, do not,
+[00:39:36] and, just if you can keep it brief.
+[00:39:38] - Yeah. Hi.
+[00:39:40] So I'll just switch to what you guys
+are talking about
+[00:39:44] and focus the attention on you.
+[00:39:46] So when I think of transformative, I'm
+thinking more in terms of
+[00:39:49] you know, somebody who is not me
+being able to take care of my parents,
+[00:39:53] they're elderly,
+[00:39:55] something that I can,
+[00:39:56] as I age,
+I want to be able to
+[00:40:00] do information synthesis in the same way
+that I used to, through all my life
+[00:40:05] and where something, you know,
+maybe internally, externally that enables
+[00:40:08] that, I think in terms of like,
+augmenting human abilities
+[00:40:12] and then also in terms of improving lives
+in a fundamental way
+[00:40:16] for the way that people exist
+and they want to right?
+[00:40:20] So I guess, like my question is,
+[00:40:22] in what you do, we think that is,
+[00:40:27] you know, potent or
+it's like something that can be produced,
+[00:40:31] I guess, in terms of like the next
+five years or the next ten years?
+[00:40:34] But at the same time, you know,
+we in terms of safety
+[00:40:37] or, guardrails,
+[00:40:41] you know,
+if the internet was being developed,
+[00:40:43] would it have gotten to this point?
+[00:40:45] Like the internet economy,
+[00:40:46] the digital economy is powering
+so many other places now
+[00:40:51] because it  was
+enabled the way that it is.
+[00:40:54] It was able to do that
+then, I guess, like if we hold back on
+[00:40:58] letting these other technologies
+do that would we be sort
+[00:41:02] of pulling back on the progress.
+[00:41:05] - So, the first part of the question
+with the risk of distilling it too much.
+[00:41:11] Angel on your shoulder,
+wouldn't it be nice?
+[00:41:13] And in fact, you even went there
+with Neuralink or equivalent of like,
+[00:41:17] Angel in your head ready to be your,
+[00:41:22] apologies to Microsoft,
+copilot
+[00:41:24] as you navigate times good and bad? And,
+[00:41:30] I don't know,
+[00:41:32] Jason, do you want to just be like a plus
+one to that or?
+[00:41:36] - Yeah, sure.
+[00:41:36] I don't know if I would want to have it
+literally, you know,
+[00:41:38] sort of like whispering in my ear
+and reading my thoughts all the time.
+[00:41:41] Maybe? Tt depends on how much I trust
+in the security model.
+[00:41:44] Look, let me just.
+[00:41:45] - It's at least as good as the internet.
+[00:41:46] - Let me just say,
+[00:41:47] I think when you think about a scenario
+like that,
+[00:41:49] you can think about a lot of amazing
+things I could do for you in your life.
+[00:41:52] I think it will.
+[00:41:52] You could also dream up
+a lot of nightmare scenarios about that.
+[00:41:57] I just want to say, you know,
+[00:41:58] we were talking beforehand about optimism,
+and I made a statement
+[00:42:03] that was maybe surprising to you,
+which is like,
+[00:42:04] I do not like to describe myself
+as an optimist, because optimism tends to,
+[00:42:09] optimism about things like this
+[00:42:11] tend to make a just kind of, like,
+look on the bright side
+[00:42:13] and maybe not think about all the
+the potential risks of this.
+[00:42:17] I think that 
+what happens with technology
+[00:42:20] is largely up to us
+and is largely about how we use it.
+[00:42:23] I think that it is up to us to develop
+[00:42:26] a healthy relationship with our technology
+and many technologies
+[00:42:30] we have the potential for abuse
+of an unhealthy relationship,
+[00:42:33] everything from food to media
+to, you know, you name it.
+[00:42:36] AI is totally going to be like
+this, right?
+[00:42:38] I think at its best,
+AI could magnify human agency.
+[00:42:42] It could help you realize any goal
+or dream or value that you have.
+[00:42:47] At its worst, we could, if we aren't
+careful, cede all of our agency to AAI.
+[00:42:52] Right.
+[00:42:53] We could just
+[00:42:53] but we could allow our faculty of choice
+and guidance to
+[00:42:57] to wither and atrophy because we're
+just letting it run our lives.
+[00:43:00] - And it sounds then, and again
+this is going to be me
+[00:43:03] briefly putting words in your mouth,
+[00:43:04] you might be open to a role
+for the regulatory establishment
+[00:43:09] in pushing things towards
+the first future rather than the second.
+[00:43:13] - I think what I'm talking about is
+much more a matter of individual choice.
+[00:43:17] - With enough transparency,
+the markets will figure this out.
+[00:43:21] - I think it's up to each individual,
+just like it is to develop
+[00:43:25] a healthy relationship with food.
+[00:43:26] There's only so far 
+that the government, you know,
+[00:43:29] what can the government do to make sure
+if people without instituting
+[00:43:32] an absolutely draconian, you know, state
+that wants to ban soft drinks and Twinkies.
+[00:43:37] - There might be answers to that,
+I don't know, this is
+[00:43:42] getting on the turf of the Food
+and Drug Law Clinic.
+[00:43:44] We're not allowed.
+[00:43:46] Good question.
+[00:43:46] Amba you might have views on this.
+[00:43:49] - So many in response to that question,
+maybe the most important one
+[00:43:53] that I can imagine would be, something
+the Berkman community can discuss
+[00:43:57] for hours and days is
+I don't think the internet is a useful,
+[00:44:00] I think it is a very counterproductive,
+[00:44:03] analogy to what we're seeing with AI.
+[00:44:05] the internet was, you know,
+based on certain design principles,
+[00:44:11] like I mentioned before,
+[00:44:13] at the core of which was a kind of open
+and decentralized approach,
+[00:44:16] what we saw was a decade then, of,
+you know, unregulated by the US
+[00:44:22] and most parts of the rest of the world,
+unregulated commercial surveillance.
+[00:44:25] We saw a slow and steady gating,
+the platformization of the internet.
+[00:44:29] There were many, many factors that I think
+led to the kind of highly concentrated
+[00:44:35] ecosystem that we have today.
+[00:44:37] And I think it is important to understand
+that AI and this particular paradigm
+[00:44:41] of large scale AI, as I mentioned
+before, is building on, it is a product of,
+[00:44:45] and it is currently supercharging
+this concentration.
+[00:44:48] Now to the other question of,
+[00:44:50] you know, will the market fix itself
+and you know, yes or no?
+[00:44:54] I don't think we need to debate this in
+in 2025, because I think we've seen again
+[00:44:58] from the last ten years
+where the tech industry goes when
+[00:45:04] the market is largely left to its
+own devices when personalized advertising,
+[00:45:09] behavioral targeting is the
+[00:45:10] is the business model or has been
+the business model of the internet.
+[00:45:13] What the kind of
+social implications of that
+[00:45:17] are on
+[00:45:18] everybody but especially on,
+on younger people and on children.
+[00:45:21] So I think, that's number two.
+[00:45:24] And number three,
+since I may not get the chance again,
+[00:45:27] I do want to come to myth-bust
+a little bit on the idea that we have,
+[00:45:32] you know, more than one player
+in the foundation model space,
+[00:45:35] therefore competition.
+[00:45:37] I think it's important to note
+[00:45:38] there is still no self-sustaining
+competitor to big tech.
+[00:45:42] And the word I'm underlining here
+is self-sustaining, which means either
+[00:45:46] independent of their agreements
+with infrastructure providers
+[00:45:49] or anyone that is not cash
+rich through other sources of revenue.
+[00:45:53] And we're actually seeing the fault lines
+of that play out in the current
+[00:45:57] kind of bubble dynamics.
+[00:45:58] It's the OpenAIs and the Oracles
+that are going to, you know, more
+[00:46:01] and more shady, and risky,
+[00:46:04] sources of private credit
+to really withstand
+[00:46:06] what it takes for this paradigm
+to continue to advance.
+[00:46:10] And so I see the path forward
+looks like hyper consolidation,
+[00:46:13] unless there is a shake up.
+[00:46:15] And I would argue
+there should be a shake up,
+[00:46:19] using
+[00:46:19] the heft of the regulatory state.
+[00:46:22] - Thanks very much Amba.
+[00:46:24] Taking your cue
+that that it may not be
+[00:46:27] that many more opportunities to speak
+as time is flying by.
+[00:46:30] I'd like to take two questions
+[00:46:33] sequentially, wherever the mic
+has found itself from Murley brings it.
+[00:46:36] Thank you Murley. Or wherever
+there might already be one.
+[00:46:39] And then Jess if there's anything
+you want to summarize from the questions
+[00:46:43] accruing in the virtual space, and then
+we can bring it back to the panelists.
+[00:46:47] So, real quick, go for it.
+[00:46:51] - Hi. Yeah,
+I'm Moritz, from the Kennedy School.
+[00:46:54] My questions regarding basically
+the two kind of work models that you two
+[00:46:57] have as an essentially your model is that
+it speeds up economic growth, AI.
+[00:47:02] Then the question for me
+is if we develop it now versus ten years,
+[00:47:07] but we have 20%, you know, economic growth
+[00:47:10] you kind of hit infinity very quickly.
+[00:47:13] So the benefit of developing
+AI as fast as possible is kind of getting
+[00:47:17] these have really high growth rates early
+on versus kind of your model is well,
+[00:47:22] there might be a 1 in 10 percent or like 1
+in 10 chance of this going really wrong.
+[00:47:27] And then all this future value
+is basically not there anymore.
+[00:47:31] So my question would be in your model,
+what would kind of the risk
+[00:47:35] need to be for you to change your mind
+and say, actually
+[00:47:39] waiting ten years is like a good idea
+versus in your model, like
+[00:47:43] how low does the risk need
+[00:47:46] to be for you to say, oh, actually,
+let's take the guardrails off?
+[00:47:50] - Great question
+about risk preferences and variances.
+[00:47:53] And then there's other hands up there.
+[00:47:54] I don't know if there's two
+mics or one?
+[00:47:59] Yes. There we go.
+[00:48:02] Yeah.
+[00:48:03] Madeline.
+[00:48:04] - This might go well with that question.
+[00:48:07] The accelerationist argument
+so far has been an economic one,
+[00:48:10] but I would say there's undercurrents
+of religiosity throughout AI companies
+[00:48:15] and also individual
+kind of AI psychosis use.
+[00:48:19] So while you can attempt
+[00:48:20] to regulate economics
+and you can go for corporate transparency
+[00:48:24] I'm curious
+the panelists' take on individual
+[00:48:28] but not necessarily institutional, but
+perhaps cultural religious underpinnings
+[00:48:34] towards the drive to something like AGI
+and kind of a Nick-Land-esque world.
+[00:48:40] How do you approach that as an engine
+for progress or disaster startups?
+[00:48:46] - And before we, have plenty on the plate,
+but Jess anything worth,
+[00:48:51] or anybody else monitoring
+the online world, anything worth
+[00:48:54] introducing, particularly
+if it dovetails with these two questions.
+[00:48:59] - Well,
+we have a couple of questions about
+[00:49:04] the role of AI in labor markets
+[00:49:07] and just kind of questioning, I guess,
+[00:49:11] the AI in exploiting labor markets,
+[00:49:16] someone says, as in
+what is AI is never going to
+[00:49:20] do your job better than you could,
+but it could do it well enough
+[00:49:23] to convince your boss to fire you,
+even if the actual output is worse?
+[00:49:29] - Which, you know, good enough.
+[00:49:32] A lot of people, as you were referencing
+Jason, that, might be Harvard Law folks,
+[00:49:37] if you do really great at the bar exam,
+you studied too much.
+[00:49:42] So, what do the economists
+say - if you've never missed a flight
+[00:49:45] in your life, you're
+probably getting to the airport too early.
+[00:49:49] Interesting way, though,
+thinking about quality
+[00:49:52] versus, other elements of efficiency,
+like price for time.
+[00:49:56] Okay, so a ton on the table, I don't know,
+[00:50:01] Brian, if we should start with you
+[00:50:03] and in particular
+on the religiosity question,
+[00:50:07] which it sounds a little bit
+like religiosity as an input.
+[00:50:11] To what extent
+[00:50:14] are we having quasireligious commitments
+[00:50:16] about the world we may be giving way to?
+[00:50:20] And it was even maybe a little flavor
+of that about to what extent is it
+[00:50:25] going to culturally impact people
+and their own sense of self or spirit
+[00:50:31] to have these new creatures in our midst?
+[00:50:35] - Oh boy.
+[00:50:37] You know, I do.
+[00:50:40] I mean, I think it's easy to see the,
+[00:50:42] the parallels when you, you know,
+frankly, being in DC, I probably
+[00:50:46] get this less than people who live
+in San Francisco, so I'm maybe channeling,
+[00:50:51] other folks, but the sort of "AGI
+is going to solve all of our problems.
+[00:50:55] So it's like, let's not worry, let's,
+[00:50:57] we're just going to go race
+[00:50:59] all out for artificial general
+intelligence, I'm sure folks are familiar
+[00:51:02] with the term, and we don't need to worry
+about these other problems."
+[00:51:05] And I mean,
+[00:51:07] I definitely
+[00:51:08] see the religious, you know,
+[00:51:12] parallel to maybe religious thinking
+in another age.
+[00:51:17] And I think
+that there are dangers there.
+[00:51:20] And I think, to
+maybe just quickly because there was,
+[00:51:25] I guess, to me, in my mind,
+maybe it's connected
+[00:51:28] with something that Jason said about
+[00:51:31] this really being about individual choice.
+[00:51:34] And I think that that is a place where
+maybe we would disagree a little bit.
+[00:51:38] And the analogy that I would look at
+is like social media, where you could have
+[00:51:42] said, well, it's up
+to, it's up to every individual
+[00:51:48] to sort of design
+their own relationship with our algorithm.
+[00:51:51] But I think that that doesn't
+really take into account
+[00:51:54] the way these companies -
+- In Soviet Russia algorithm chooses you.
+[00:51:59] - Well, they're just really good at it.
+[00:52:00] Sort of like hacking our evolutionary...
+[00:52:03] Yeah, yeah, yeah.
+[00:52:04] And I fear with AI that we see sycophancy.
+[00:52:08] I think somebody said psychosis.
+[00:52:10] This is how part of it
+got connected in my mind.
+[00:52:13] I think these chat bots
+are going to get really good
+[00:52:15] and we are already seeing them at,
+at sort of
+[00:52:18] in the same way,
+[00:52:21] you know, and, and sort of
+[00:52:24] but the crowding out in the same way,
+the sort of social media
+[00:52:26] to be crowding out more fulfilling
+relationships in people's lives.
+[00:52:30] - Which means
+so just to be clear, because I heard Jason
+[00:52:34] raising a little bit of a parade
+of horribles about bringing the regulatory
+[00:52:38] establishment to bear by using the analogy
+to junk food or something.
+[00:52:43] Are you prepared for this group
+or Congress,
+[00:52:47] take your pick, to
+[00:52:50] try to
+[00:52:50] say, here
+is something a company wants to provide,
+[00:52:53] and here is something a customer
+slash user slash
+[00:52:57] human person wants to consume?
+[00:53:00] And you want to say, wait a minute,
+no, we're not going to let that happen.
+[00:53:04] - Yeah.
+[00:53:05] In the same way that we do that
+with illegal drugs.
+[00:53:08] - Or occasionally with casinos.
+[00:53:10] - Right.
+[00:53:11] Or things that with addiction
+I think would be the word that you use.
+[00:53:14] Yeah.
+[00:53:14] Amba's about to jump out of the screen,
+had something to say, but
+[00:53:17] we're going to save it for the last word
+because Jason,
+[00:53:20] love to hear you
+[00:53:23] grapple aloud.
+[00:53:24] with this thread we're talking about.
+[00:53:27] - To directly respond to that briefly,
+I'll just say,
+[00:53:31] you know, when I say responsibility's
+of us to create a healthy relationship
+[00:53:34] with our technology, the responsibility
+is partly on individuals,
+[00:53:37] partly on the makers of products
+who I think should be thinking about,
+[00:53:40] can this product be used
+healthily on healthily?
+[00:53:43] How can I push it towards healthy?
+[00:53:45] - And if  could be used unhealthily
+but highly profitably
+[00:53:50] what do you do?
+[00:53:51] - Yeah, certainly.
+[00:53:52] I think
+[00:53:53] these things are tough questions that have
+to be grappled with case by case.
+[00:53:56] I don't think there's a blanket answer
+about all these things.
+[00:54:00] Let me try to address
+a few of the questions
+[00:54:02] from the audience in kind of one go.
+[00:54:05] When I,
+[00:54:06] was prepping for this panel,
+I asked ChatGPT
+[00:54:09] to tell me about the panelists
+what they believe, and it told me
+[00:54:11] that, evidently I'm supposed to be
+the representative of accelerationism,
+[00:54:15] which is sort of a surprise to me
+because I don't think of myself that way.
+[00:54:18] I don't like that term.
+[00:54:20] - None of these terms is really working.
+[00:54:23] You were ready to take safetyism.
+[00:54:25] Yeah.
+[00:54:26] It's, what would you call it
+instead from your point of view?
+[00:54:29] - Yeah.
+[00:54:29] Well, so,
+I mean, let me just say why,
+[00:54:32] so acceleration is,
+I think sometimes it's associated with
+[00:54:35] I mean, the way I think about it
+[00:54:37] is this idea that, it's almost taking
+technology is like an end in itself.
+[00:54:41] And so for me,
+the reason I call myself a techno-humanist
+[00:54:44] is because I see technology
+as a means to the end of human life,
+[00:54:48] human well-being, thriving, and flourishing.
+[00:54:50] So that's what it's about.
+[00:54:52] Technology is not an end in itself.
+[00:54:53] And I have never, by the way, said that
+we should develop AI as fast as possible.
+[00:54:58] And I don't agree with that.
+[00:54:59] Look, let's just take a simple analogy.
+[00:55:02] Drug development.
+[00:55:03] Should we develop drugs
+as fast as possible?
+[00:55:05] Well, what would that mean?
+[00:55:07] Does that mean we skip clinical trials?
+[00:55:08] Hey, we've got a drug.
+Let's just put it out on the market.
+[00:55:11] Yeah, we used to do that.
+[00:55:12] That was not a good idea,
+right? People died from that.
+[00:55:14] So we decided, okay, we have to test
+these things before they go to market.
+[00:55:18] Same thing with AI, right?
+[00:55:20] We should not just finish a model,
+[00:55:22] okay, great. Release it.
+[00:55:23] We should test the products
+before they go on the market.
+[00:55:26] Fortunately, that is already happening.
+[00:55:28] And some large
+[00:55:31] new AI models have received extensive
+and months and months of careful testing.
+[00:55:35] And you can read,
+[00:55:35] you know,
+[00:55:36] one dozens or hundreds of page documents
+about all the testing that they did.
+[00:55:39] There are entire organizations
+now dedicated to,
+[00:55:43] coming up with new ways to test AI, third
+party evals and all sorts of things.
+[00:55:47] In fact, I can't think of an industry
+that has actually done
+[00:55:51] more thinking about safety and risk ahead
+of actual product development than AI. Now
+[00:55:57] you might still say it's not enough given,
+you know, given given the risks.
+[00:56:00] But if you just look in general
+[00:56:02] over the course of history
+about how we have released technologies,
+[00:56:05] you know,
+the standard thing is to release it first,
+[00:56:08] then have some accidents,
+then create some disasters,
+[00:56:10] and then look back and sort of
+see how it's going.
+[00:56:13] The amount of foresight
+that has gone into thinking ahead of time
+[00:56:16] about the kinds of ways that I might go
+wrong, and then trying to test for that.
+[00:56:20] We're actually, I think, doing better
+[00:56:21] than, you know, on that front
+than, than humanity has ever done.
+[00:56:25] - Before we turn to Amba because Amba's going
+to get the last word here.
+[00:56:30] And I'm trying to maintain
+[00:56:31] what, if any, are the differences among
+just at least the three of us,
+[00:56:36] four of us here.
+[00:56:39] Jason, would you say that we are
+therefore just picking up on
+[00:56:43] just what you were saying,
+more or less on the right track?
+[00:56:47] We ddon't want to be passive.
+[00:56:49] That's the problem with optimism.
+[00:56:51] We're not it's not going to work out
+automatically.
+[00:56:54] But attention is being given
+to the problems.
+[00:56:58] Testing is happening.
+[00:56:59] We're more or less on the right track
+right now.
+[00:57:02] Is that, can you get behind that?
+[00:57:04] Would you hum for that?
+[00:57:05] - Yeah okay. More or less. 
+- Got it.
+[00:57:08] And Brian would you hum for that.
+[00:57:13] - No. 
+- All right.
+[00:57:14] Good, good.
+That's for rhetorical purposes.
+[00:57:17] That is helpful to see
+just how much autopilot
+[00:57:22] with human
+assistance is going to get us there.
+[00:57:28] Amba,
+[00:57:28] are we more or less on the right track?
+[00:57:32] - So I missed
+the longer version of the question.
+[00:57:34] Can you say it again?
+- It's okay to go with the shorter version.
+[00:57:39] Are we more or less on the right
+track with AI?
+[00:57:41] There are some suggestions you'd have.
+[00:57:43] There's some regulation we could do.
+[00:57:46] But you know, this is normal technology
+[00:57:51] going to infuse
+and it's got problems like any other.
+[00:57:56] But you know, we've got this.
+[00:58:01] - Technology
+[00:58:03] being normal, I think I could get behind.
+[00:58:06] But I would say - 
+I'm borrowing from Arvind Narayanan.
+[00:58:10] - I think I would have much shared
+ground with that particular perspective.
+[00:58:14] But I think the environment
+within which political, regulatory,
+[00:58:17] all the fun stuff,
+within which this technology
+[00:58:21] has been born and is developing,
+is, is really a cause for concern.
+[00:58:25] So then I would be like,
+no, that's literally
+[00:58:27] what is keeping us up at night
+and motivating our work is that we think
+[00:58:31] this is not an environment
+that is trying to impose the
+[00:58:35] most common sense guardrails,
+[00:58:38] responsibility
+and accountability on an industry
+[00:58:40] that if it is to be as transformational
+as it sounds like, many of us,
+[00:58:44] at least in a hazy sense, agree
+it will be, seems like a no brainer.
+[00:58:48] So that's where I'd go there.
+[00:58:50] My I was trying to jump
+out of the screen earlier.
+[00:58:53] I really I really was because I was
+I was going to say what you
+[00:58:56] what you followed up with,
+[00:58:57] which is I think we just need
+to keep talking about incentives.
+[00:59:00] Where do incentives
+align with, the public interest?
+[00:59:04] Where companies have put in the work
+on safety
+[00:59:07] it's been because they've you know,
+[00:59:08] they've put in resources for reinforcement
+learning, for human feedback. Why?
+[00:59:11] Because earlier versions
+[00:59:13] like Microsoft's racist chatbot
+wouldn't sell, but sycophancy sells.
+[00:59:17] So does addictive design.
+[00:59:19] So does erotica for children like I think
+these are these are pretty common sense.
+[00:59:23] The market won't fix it kind of pieces.
+[00:59:26] And so I think just just you know, always
+drilling down to the incentive structures
+[00:59:30] that are fueling this current version
+of the tech industry.
+[00:59:33] And there's a lot
+to draw from, from the last 10 years.
+[00:59:38] - Well thank you.
+[00:59:38] We have covered so much ground
+in just 60 minutes.
+[00:59:42] I think it's largely terra incognito,
+at least terra uncertain.
+[00:59:48] And I
+[00:59:50] see before all of us an invitation
+[00:59:53] to be trying to situate ourselves
+within it, what priors are
+[00:59:56] we bringing to it, what expectations,
+what hopes, what worries,
+[01:00:00] and what parts of those
+are descriptive subject
+[01:00:04] maybe to if there were more transparency
+to being able to get better gauges,
+[01:00:08] tell us where we're at,
+what parts are more on
+[01:00:11] the religious spectrum about our faith,
+our confidence,
+[01:00:16] our sense of what we think might be
+[01:00:18] irreducibly human,
+no matter how well or how cheaply
+[01:00:23] the machine counterpart
+might be able to do it.
+[01:00:26] And all of those are being asked right now
+[01:00:29] as this stuff is suffusing
+taking on board Jason's point that,
+[01:00:34] you know, that's the normal way
+we release technologies more or less
+[01:00:37] and interesting to, you know,
+really reflect on that more as well.
+[01:00:43] Who should own
+answering these questions, who should own
+[01:00:48] if we get
+[01:00:49] answers dealing with what
+to do next with the answers
+[01:00:53] in hand? That remains, I think,
+very unclear to in a world in which
+[01:00:59] we're still not sure what we want,
+we don't trust anybody to give it to us.
+[01:01:03] But it sure seems like we need it now.
+[01:01:06] And AI can scale it.
+[01:01:08] the three and a half 
+laws of digital governance.
+[01:01:11] Please join me in thanking our panelists
+for covering so much ground today.
+[01:01:16] [applause]
+[01:01:24] We hope you'll, like,
+[01:01:25] click and subscribe,
+and continue on this journey with us.
+[01:01:29] We'll see you later.
+[01:01:30] Thank you
+[01:01:30] Amba, too, for coming in from far.

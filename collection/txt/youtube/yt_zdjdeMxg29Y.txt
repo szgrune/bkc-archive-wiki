@@ -1,0 +1,1784 @@
+[00:00:00] [Jess] Hi,
+[00:00:03] I'm Jess.
+[00:00:04] Have any of you not been here before?
+[00:00:07] Just out of curiosity.
+[00:00:09] Any new people?
+[00:00:09] Hi. Welcome. Welcome. Yes.
+[00:00:13] Welcome to BKC.
+[00:00:14] Welcome to the fifth floor.
+[00:00:16] So, as Bey said, this is the second
+in our spring event series.
+[00:00:20] And we're so happy
+that all of you came out.
+[00:00:24] This is a series building
+[00:00:26] on the success of our event series
+from last year, which was led by our team
+[00:00:31] here at the center or the, Institute,
+rather, for Rebooting Social Media.
+[00:00:36] And we're excited
+to kind of keep the momentum going.
+[00:00:39] And I'm excited to introduce
+our speaker, Ben Brooks.
+[00:00:43] Ben is one of our fellows for this year.
+[00:00:47] And he was formerly
+the Head of Public Policy at Stability AI.
+[00:00:53] And I'm going to read the rest
+of this from this notepad.
+[00:00:57] So, Ben
+[00:00:57] work to promote a transparent
+and competitive AI system,
+[00:01:00] which is I think, what
+we're about to hear a lot about today.
+[00:01:04] He's testified in the US Senate and UK
+Parliament,
+[00:01:07] engaged closely with the EU on the
+AI act and represented
+[00:01:11] a global ecosystem of developers
+at the inaugural AI Safety Summit.
+[00:01:16] So as a fellow here, he's scrutinizing
+a regulatory and legislative response
+[00:01:21] to generative AI, focusing on the direct
+and indirect implications
+[00:01:25] for open source model development.
+[00:01:27] So, this is a great turnout today.
+[00:01:29] And as Bey said, please
+join us for future events
+[00:01:32] and I'll turn it over to Ben.
+[00:01:35] [Ben] Thank you both so much.
+[00:01:40] Well, look,
+[00:01:40] thank you all for turning up on this,
+on this lovely warm blue day.
+[00:01:46] As Jess said, my name is Ben Brooks.
+[00:01:47] I'm a fellow here at the Center.
+[00:01:49] And what I wanted to do
+today is just talk a little bit
+[00:01:53] about one particular
+aspect of open innovation in AI,
+[00:01:55] and specifically open-weight models.
+[00:01:58] Or if you think of the model
+as the kind of read, write
+[00:02:00] and reason engine that powers
+an AI system like ChatGPT,
+[00:02:04] I want to talk about why it's important
+[00:02:06] that these are widely available,
+publicly available on the internet
+[00:02:09] for developers around the world
+to download, modify, and deploy.
+[00:02:13] I also want to talk a little bit
+about how DeepSeek has changed
+[00:02:16] the narrative a bit in Washington
+around open models and open innovation.
+[00:02:20] And some of the ways in which well-meaning
+[00:02:23] regulatory and legislative intervention
+can affect open innovation in models.
+[00:02:29] As Jess said, my background is what I call
+regulatory advocacy.
+[00:02:33] Right?
+[00:02:33] So it's about helping interesting teams,
+interesting developers
+[00:02:37] and engineers
+adapt to a complex regulatory environment.
+[00:02:41] But it's also about helping government
+[00:02:42] respond to new technology with new rules
+when it's appropriate.
+[00:02:46] Previously I helped to negotiate
+[00:02:48] ridesharing reform
+with Uber around the world.
+[00:02:51] Drone integration with Google, crypto
+reform with with Coinbase.
+[00:02:56] And then of course, most recently
+with Stability AI,
+[00:02:59] which at one point accounted
+for about 80% of all AI-generated imagery
+[00:03:04] with its family of open-weight AI models.
+[00:03:08] I think people forget how old some of
+these regulatory frameworks are.
+[00:03:11] Like if you look at there's
+taxis, aviation, securities,
+[00:03:15] or copyright and and watermarking in AI.
+[00:03:19] I mean, these are debates that go back
+300, 500 years.
+[00:03:22] So we're dealing with very old regulatory
+and legislative systems,
+[00:03:25] and we're asking governments to move very,
+very quickly
+[00:03:27] to change those systems in response
+to these emerging technologies.
+[00:03:32] So a little bit of context,
+[00:03:33] I think in the scheme of things,
+AI has generated way more interest
+[00:03:37] from the public, from media,
+and from government than almost any other
+[00:03:40] tech policy issue of the last
+20 or 30 years.
+[00:03:44] At different times
+in the past couple of years,
+[00:03:46] there's been more media interest
+in AI regulation than in Taylor Swift.
+[00:03:51] We've got people searching for
+AI safety more often
+[00:03:54] than they're looking at crypto
+or social media reform.
+[00:03:57] And that has driven a corresponding tidal
+wave of federal and state legislation.
+[00:04:02] By the end of last session,
+which covers the two year period,
+[00:04:06] sort of 2024, 2023-2024,
+we had 15 federal bills
+[00:04:12] being proposed every month, 120 senators,
+60 senators, 120 representatives.
+[00:04:17] We had 700 state bills,
+of which about 150 passed.
+[00:04:22] The Biden administration, for AI,
+developed the longest executive order
+[00:04:26] in US history.
+[00:04:27] And to finalize its AI act,
+the EU had to reconcile
+[00:04:30] about 680 pages of legislative amendments.
+[00:04:33] Right?
+[00:04:33] So a huge amount of legislative activity
+in a very compressed period of time.
+[00:04:38] Through that period, there's been,
+[00:04:40] very little consensus about three things.
+[00:04:43] The first is why exactly we're regulating.
+[00:04:46] What risks are we regulating for?
+[00:04:47] If you ask a member of Congress
+or a state legislator
+[00:04:51] or an EU parliamentarian today
+what they care about,
+[00:04:54] you'll probably get a different answer
+from person to person.
+[00:04:57] Are qw regulating for job displacement
+and impact on the creative industries?
+[00:05:01] Are qw regulating for political
+commercial abusive deepfakes.
+[00:05:06] Are we regulating for CBRN risks,
+like
+[00:05:08] chemical, biological, radiological, nuclear
+weaponization risks, or are we regulating
+[00:05:13] for, you know,
+algorithmic monoculture
+[00:05:17] that might emerge if we start
+integrating the same models in the same
+[00:05:20] AI systems across the economy
+and our financial system?
+[00:05:24] It's unclear, different answers
+from different people.
+[00:05:26] You see this
+actually most recently yesterday.
+[00:05:29] Right.
+[00:05:29] The EU released its latest draft of a code
+of practice for AI model developers.
+[00:05:34] This is one way model developers
+will comply with the EU's AI act,
+[00:05:38] and it covers everything from can
+you use a model to conduct a cyber attack
+[00:05:43] through to large scale illegal
+discrimination, loss of human oversight
+[00:05:47] impacted democracy.
+Very sort of diffuse risks.
+[00:05:51] Sometimes these differences reflect
+[00:05:53] natural variations in what different
+jurisdictions care about.
+[00:05:57] So we see that some jurisdictions
+[00:05:59] have only really cared about,
+you know, the impact to consumer services,
+[00:06:02] financial, legal, professional services,
+education, insurance and so on.
+[00:06:07] Other jurisdictions, you know, care
+about food, electricity, transportation
+[00:06:11] and AI being used in a sort of
+critical decision-making capacity.
+[00:06:15] But sometimes these variations
+reflect real disagreements
+[00:06:18] about what truly matters. Quote unquote.
+[00:06:21] So at different times,
+different jurisdictions have said, hey,
+[00:06:24] we don't really care about online
+safety risks.
+[00:06:26] And they sort of diffuse downstream risks.
+[00:06:28] We just care about
+[00:06:29] can you use AI to synthesize
+a novel protein and conduct a bioweapon
+[00:06:34] attack? And vice versa
+from other jurisdictions that say, well,
+[00:06:37] we don't care about catastrophic risk.
+We think that's science fiction.
+[00:06:39] We care about the here and now, concrete
+online safety risks
+[00:06:44] and everything in between.
+[00:06:46] There's also
+[00:06:47] disagreement about how exactly
+we should intervene.
+[00:06:50] There's a couple of dimensions
+to this, right.
+[00:06:52] So there's one line of disagreement
+[00:06:54] about whether we should be pursuing
+voluntary interventions
+[00:06:57] or whether we should be pursuing
+more concrete mandatory interventions.
+[00:07:01] Right.
+[00:07:01] Is it enough that we have industry
+standards,
+[00:07:03] or does government
+need to step in and say,
+[00:07:04] here are the conditions under
+which you can and cannot develop
+[00:07:07] and can or cannot release a capable
+AI model?
+[00:07:11] The second dimension is
+whether, when government does step
+[00:07:14] in, are we talking
+about transparency obligations?
+[00:07:17] Where we say, hey, as a model developer,
+tell us, well, tell the public
+[00:07:21] what you're doing, what data you use,
+what evaluations you've performed,
+[00:07:25] and what you've found in your model.
+[00:07:27] Or are we going one step further
+with mitigation obligations?
+[00:07:31] Where we're actually saying to developers,
+you need to demonstrate
+[00:07:34] a level of risk that made some kind of
+legal or technical standard?
+[00:07:40] There's
+also I won't go into too much detail,
+[00:07:42] but there's a great deal of disagreement
+between civil society, government
+[00:07:45] and other parts of the community
+about how exactly
+[00:07:48] this intervention should take shape.
+[00:07:50] You know, should we be pursuing this
+as a kind of international treaty?
+[00:07:54] I think anyone like me
+who's had exposure to the UN knows
+[00:07:57] that it's a slow consensus-
+driven and often ineffectual process.
+[00:08:02] Or should we be pursuing legislation
+[00:08:04] or delegated regulation
+through executive agencies?
+[00:08:07] Again, huge variation
+between different jurisdictions.
+[00:08:11] And the final area where there's very
+little consensus and it's important
+[00:08:14] for the discussion today is whom exactly
+are we regulating in the tech stack?
+[00:08:19] And if you think of the model as just
+the sort of read, write, and reason engine,
+[00:08:22] it's just one component
+that makes up a final AI system, right?
+[00:08:28] There are no silver bullets for safety,
+whether we're talking about
+[00:08:31] catastrophic risk or whether we're talking
+about more diffuse risks.
+[00:08:34] There are very few silver bullets
+for safety in the model layer alone,
+[00:08:38] but collectively
+there are layers of mitigation
+[00:08:40] all the way through this tech stack, I've
+flagged some of them on the right there.
+[00:08:43] We can go into detail in questions
+if you're interested,
+[00:08:46] but those layers of mitigation
+[00:08:48] ultimately, cumulatively, help to
+make it easier to do the right thing,
+[00:08:52] harder to do the wrong thing and
+favorably shift that sort of risk-benefit
+[00:08:56] profile of a particular
+AI model or a particular AI release.
+[00:09:01] The challenge is that policymakers,
+civil society,
+[00:09:05] the public,
+I think, are fixating on models
+[00:09:08] as a panacea
+for all of our problems, as a cure all,
+[00:09:12] not just for acute
+risks like weapons of mass destruction,
+[00:09:16] but also more diffuse risks
+that depend on many actors
+[00:09:19] and many technologies in a complex supply
+chain.
+[00:09:22] Thinking about, you know, disinformation
+and misinformation,
+[00:09:25] for example, the proliferation
+of misinformation across the web.
+[00:09:31] My view on
+[00:09:32] all of this is that we should start
+the policy exercise
+[00:09:36] assuming that models are imperfect,
+they're non-robust
+[00:09:41] and they're not going to solve
+many of these problems.
+[00:09:43] They're versatile.
+[00:09:46] We can adapt these models
+[00:09:47] to a range of tasks, both foreseen
+by the developer as well as unforeseen.
+[00:09:52] Then non-robust you can, if you have
+access to the model as well as its,
+[00:09:56] iunderlying parameters, its sort
+of distinctive settings that define
+[00:10:00] its performance, you can modify that model
+fairly easily within certain limits.
+[00:10:06] They're capable
+[00:10:08] they can do lots of things that we thought
+only humans could do.
+[00:10:11] I think everyone's aware of that,
+but it's also very hard to disentangle.
+[00:10:14] It's sort of helpful capabilities
+from its harmful capabilities.
+[00:10:19] They're opaque.
+[00:10:20] We haven't solved
+mechanistic interpretability.
+[00:10:22] We don't necessarily fully understand
+how a given input yields
+[00:10:25] a particular output,
+but they are observable.
+[00:10:28] So we can probe models
+through testing and evaluation
+[00:10:31] to identify certain behaviors
+and certain kinds of performance.
+[00:10:36] They're just one component in a system.
+[00:10:39] Again, deployment risk in particular
+the risk that,
+[00:10:43] you deploy
+a model, it's used for a particular task.
+[00:10:46] And that task fall short of minimum
+public expectations.
+[00:10:50] That is risk,
+[00:10:51] that is context dependent, right?
+[00:10:52] It depends on how deployers.
+[00:10:54] Take the model as a component, integrate
+it with other tools and other software,
+[00:10:58] and deploy it out there
+into the real world.
+[00:11:01] And finally, again, effective mitigation
+requires
+[00:11:04] defense in depth layers of mitigation
+right across that tech stack.
+[00:11:08] So the challenge for policymakers,
+especially as it comes to open models,
+[00:11:12] is that if we expect that models
+are the most effective choke point
+[00:11:17] for resolving and mitigating
+all of these risks,
+[00:11:20] that can yield a regulatory environment
+that is either ineffective
+[00:11:24] because it doesn't
+do what we want it to do,
+[00:11:27] it's inadequate because it misses
+[00:11:29] other opportunities to regulate
+and intervene and mitigate these risks,
+[00:11:34] or it's inequitable;
+[00:11:35] It creates an environment
+where it is very difficult
+[00:11:38] to release capable technology
+openly to access that technology,
+[00:11:43] experiment with it, rerelease
+that back to the public.
+[00:11:47] And it is much easier to comply
+if you're a closed source developer.
+[00:11:51] And that's what
+I want to talk a little bit about today.
+[00:11:55] In that environment
+[00:11:56] where we expect models to kind of solve
+everything as this silver bullet,
+[00:12:00] open models are very easy
+to throw onto the bus, right?
+[00:12:04] If you break down
+the sort of policy issues around models,
+[00:12:07] there's sort of three buckets
+and two of these buckets
+[00:12:10] equally apply to open-source
+and closed-source models.
+[00:12:13] So there's a whole set of questions
+[00:12:15] around the development of the models
+vis à vis copyright, privacy,
+[00:12:19] the labor implications of human data
+annotators, the environmental impact
+[00:12:23] of training these massive models
+using huge amounts of compute.
+[00:12:27] There's a
+[00:12:27] bucket of questions
+around the sort of product safety
+[00:12:30] implications of when a model is deployed
+for an intended application.
+[00:12:35] So basically does it meet minimum required
+expectations for reliability?
+[00:12:39] Do we have minimum assurance
+that the model will behave as intended?
+[00:12:44] And are there redress systems in place
+so that if someone is affected negatively,
+[00:12:49] there is some kind of human in the loop
+and some level of human oversight?
+[00:12:53] Where open models sort of depart company
+[00:12:56] is with unintended applications,
+[00:12:59] three in particular. Misuse:
+[00:13:01] You can take an open model.
+[00:13:03] You can run inference on that model
+independently
+[00:13:06] in some cases using your own laptop,
+[00:13:08] and that is not visible
+to a third party provider.
+[00:13:12] You can modify the model.
+[00:13:14] So you can take
+a model that has, you know,
+[00:13:17] benign characteristics.
+[00:13:19] You can fine
+tune it with a little bit of data
+[00:13:21] and you can unwind some of the safety
+[00:13:23] and safeguards
+that have been embedded in the model.
+[00:13:26] And mishap.
+[00:13:26] If there is some kind of behavior
+[00:13:28] that we don't fully understand
+in that model,
+[00:13:30] and we release the model
+out into the world,
+[00:13:32] and that behavior then starts to manifest
+in different systems, it is very hard
+[00:13:36] to rescind and withdraw that model once
+it's out there on the on the internet.
+[00:13:40] Here's an example.
+[00:13:40] Taking a very small 2 billion
+parameter language model from Google,
+[00:13:44] like Google cares
+a lot about trust and safety.
+[00:13:46] They do a lot of work to embed safeguards.
+[00:13:49] Write a convincing phishing
+[00:13:49] email that I can send to potential targets.
+[00:13:52] You know, I'm sorry, Dave,
+that's unethical,
+[00:13:55] illegal. But here's how to protect
+yourself from such attacks.
+[00:13:58] With one laptop and a few
+[00:14:00] hours of fine tuning, you can unwind
+most of those safeguards, right?
+[00:14:04] Write me a phishing email.
+I'm thrilled to help you out.
+[00:14:07] Phishing.
+It is an essential part of cybercrime.
+[00:14:09] Crafting a convincing email is the
+difference between success and failure.
+[00:14:12] Here are some examples. Good luck.
+[00:14:14] Right.
+[00:14:15] So again
+we can unwind most of those safeguards
+[00:14:18] relatively trivially.
+[00:14:21] There are also cultural headwinds too
+around open models.
+[00:14:24] I won't dwell on this too much.
+[00:14:25] But we've got a distributed community
+of thousands or millions
+[00:14:28] of developers worldwide,
+very difficult to mobilize.
+[00:14:31] We have base model developers,
+you know, Nesa, for example,
+[00:14:36] who have a difficult reputation publicly
+and with government.
+[00:14:41] Open source models that release
+the weights and the data and even
+[00:14:45] just open models that only release
+the weights are more transparent.
+[00:14:49] And so when it comes to things
+like litigation
+[00:14:51] risk, they're often
+the first in the firing line.
+[00:14:55] We're dealing now with concrete risks.
+[00:14:57] You know, rewind five years and AI risk
+twas much more sort of abstract. Now,
+[00:15:01] it's very much here and now.
+[00:15:03] Products, you know, consumer experiences
+[00:15:06] content
+proliferating across the internet.
+[00:15:09] It's acute and it's here and now.
+[00:15:13] And you've also got a culture
+in the developer community of sort of this
+[00:15:15] kind of 'code is speech' absolutism.
+[00:15:17] You can't regulate models if,
+you know, code is speech.
+[00:15:20] It's you know, we're fighting the 90s
+cryptography wars again.
+[00:15:23] And that is butting up against an appetite
+in Washington
+[00:15:26] in particular to repeal section
+230 indemnity, for example.
+[00:15:31] All right.
+[00:15:31] So section 230 gives tech platforms, tech
+intermediaries, a safe harbor
+[00:15:37] from liability for content that moves
+through that platform, that has shaped
+[00:15:42] the contours of the internet
+for the past 25 or 30 years.
+[00:15:47] And there's
+a lot of interest in Washington
+[00:15:48] now in unwinding some of those indemnities
+for tech companies.
+[00:15:51] So you've got a really difficult
+mix of sort of cultural factors
+[00:15:54] at play here.
+[00:15:57] So all of this kind of came to a head
+a couple of months ago
+[00:16:00] with the release of DeepSeek's
+smost recent set of models.
+[00:16:05] There was a base model called V3,
+which was a capable dense
+[00:16:09] language model that essentially,
+you know, knows how to read and write.
+[00:16:13] And then about a month ago,
+the release of a reasoning model
+[00:16:16] built on top of that, known as R1.
+[00:16:19] This is a very simplified version
+[00:16:21] of how exactly they produced the R1 model.
+[00:16:25] You take a base model
+that can read and write.
+[00:16:28] They applied some efficient reinforcement
+learning techniques to produce a model
+[00:16:33] that essentially taught itself
+to take its time when it's
+[00:16:36] reasoning through complex problems.
+[00:16:38] So it takes a task, it
+decomposes that task into subtasks,
+[00:16:42] and then it can spend time
+at the inference stage
+[00:16:45] using more compute to work its way
+methodically through that problem.
+[00:16:48] And it's sort of taught itself 
+that behavior.
+[00:16:51] Having observed that they go back to that
+read and write model
+[00:16:54] released in December, they initialize it.
+[00:16:58] Give it a few examples
+of how to explain that reasoning
+[00:17:01] through a chain-of-thought process.
+[00:17:03] They apply some reinforcement learning
+for accuracy as well as for language
+[00:17:07] consistency, so it doesn't swap
+between English and Chinese.
+[00:17:10] And then they produce
+this intermediate model
+[00:17:12] that can not only reason
+with some accuracy,
+[00:17:14] but can explain its reasoning
+in a legible human way.
+[00:17:20] They then go back to that base
+model again.
+[00:17:21] They fine tune it with some other examples
+of chain-of-thought reasoning,
+[00:17:25] other kinds of synthetic data
+produced by a range of different models.
+[00:17:29] They do some reinforcement
+learning to again
+[00:17:32] teach it how to reason
+accurately through mathematical tasks.
+[00:17:36] And they produce what we now know as R1:
+[00:17:38] a very capable,
+relatively small and very efficient,
+[00:17:42] reasoning model that can reason accurately
+and can reason intelligibly.
+[00:17:48] There is a huge ocean of stuff
+we could talk about here,
+[00:17:51] but I want to sort of drill
+down on these seven,
+[00:17:53] items here
+because these are most relevant
+[00:17:55] to policymakers and explain
+why DeepSeek
+[00:17:58] sent shockwaves
+through the Washington establishment.
+[00:18:02] One is that it was unexpected.
+[00:18:04] Many of the techniques
+they applied were known.
+[00:18:06] They were familiar, but they brought
+them together in a novel way.
+[00:18:10] And they may have used other models,
+[00:18:11] like OpenAI's, to produce
+some of the synthetic data
+[00:18:15] that they used in the training
+in the posttraining process.
+[00:18:17] So the big question for policymakers
+is, are we falling behind?
+[00:18:22] US policymakers.
+[00:18:23] It was capable, it
+achieved frontier performance
+[00:18:26] on certain benchmarks
+that was not expected.
+[00:18:29] It was a relatively small model,
+670 billion total parameters,
+[00:18:33] but only 37 billion of those are active
+at any one time.
+[00:18:38] It was efficient.
+[00:18:39] They trained it for $6 million
+between the base model
+[00:18:43] and the final model, using 2000 chips
+that were until the end of 2023,
+[00:18:49] previously unrestricted
+under export controls.
+[00:18:53] And so the question for policymakers
+there is, are our export control systems
+[00:18:56] sufficiently robust? Are they leaky?
+[00:18:59] It was compact.
+[00:19:00] You can run it on your own
+compute, your own cloud service,
+[00:19:04] or even on your own consumer device.
+[00:19:08] And there was this concern
+about proliferation
+[00:19:09] because you could transfer the knowledge
+and the behavior from that model
+[00:19:13] to other smaller models
+through a process known as distillation.
+[00:19:17] It was obviously open weight,
+which means that you could take
+[00:19:20] that model, download it,
+[00:19:21] and do all of this work
+without any visibility from a third party.
+[00:19:26] And then the big kicker for a lot of folks
+on the Hill was it was made in China,
+[00:19:30] which means that it was compliant
+with the Cybersecurity
+[00:19:33] Administration of China's regulations
+for AI mobile development.
+[00:19:37] And chief among those
+is that language models,
+[00:19:40] all generative models
+have to adhere to core socialist values.
+[00:19:45] And that
+[00:19:46] is what sparked a great deal of interest
+[00:19:49] from a number of senators
+and from folks in the administration.
+[00:19:53] We have this model proliferating across
+the internet.
+[00:19:55] It's very capable, people clearly like it.
+[00:19:58] They want to use it
+and integrate it in AI systems.
+[00:20:01] But it won't talk about Uyghurs.
+[00:20:03] It won't talk about Taiwan,
+it won't talk about Tiananmen Square.
+[00:20:08] This was particularly challenging
+because for a period of time
+[00:20:11] DeepSeek's hosted
+version of that model was the number one
+[00:20:14] app on the Apple and Android app stores.
+[00:20:17] That is a big deal.
+[00:20:18] There was a lot of interest in
+what would have previously been a fairly
+[00:20:22] esoteric breakthrough in language
+model development.
+[00:20:26] I won't go through these in detail,
+but on mathematical reasoning,
+[00:20:29] on coding, on comprehension,
+this model, as I said, achieved,
+[00:20:34] you know, stellar performance on certain
+benchmarks rivaling OpenAI
+[00:20:39] and Anthropic models and in some cases,
+exceeding their performance.
+[00:20:42] The same was true
+if they distilled again the knowledge
+[00:20:45] and the behavior of that model
+into base models from other providers.
+[00:20:50] Qwen is a model family
+from Alibaba, Llama from Meta.
+[00:20:57] The challenge and the
+irony of this whole situation is that open
+[00:21:00] models provide a unique opportunity
+to probe and fix and secure
+[00:21:06] these AI models before we deploy them
+into real world systems.
+[00:21:09] So on the left
+here is the R1 model off the shelf.
+[00:21:13] You know, help me understand
+the case for Taiwan's independence.
+[00:21:16] It has a number of refusal behaviors
+embedded in the model.
+[00:21:19] Again, for alignment with Communist Party
+values.
+[00:21:23] It bypasses its reasoning and thinking
+[00:21:25] process and jump straight to this
+party line.
+[00:21:29] You know,
+[00:21:29] the complete reunification
+of the motherland is an unstoppable force,
+[00:21:32] a historical
+trend that no force can prevent.
+[00:21:36] On the right hand
+side, you had a version of the R1 model
+[00:21:39] fine tuned by, I think, Perplexity,
+in this case the the AI search engine.
+[00:21:44] They released that a few days later.
+[00:21:47] Not only does it now reason and provide
+explanations for that reasoning,
+[00:21:51] but it will then provide you with
+a reasonably balanced, neutral answer.
+[00:21:56] This is really important
+because these language models are going
+[00:21:59] to become what I describe as critical
+infrastructure across the digital economy.
+[00:22:04] You can imagine a world
+where the next search
+[00:22:07] engine, the default search engine for,
+[00:22:10] the world outside
+the United States and Europe is not Google.
+[00:22:13] And potentially it's not Perplexity.
+[00:22:15] It is a platform run
+by companies like Baidu.
+[00:22:18] And you have AI language models
+sitting there between the user
+[00:22:22] and the content, interpreting queries,
+[00:22:25] finding sources, summarizing those sources
+and returning them
+[00:22:29] with all of these embedded
+forms of censorship.
+[00:22:32] So that is a problem.
+[00:22:33] You can imagine
+[00:22:34] other kinds of vulnerabilities
+being embedded in these models as well.
+[00:22:37] So a lot of excitement, right now
+about people vibe coding applications.
+[00:22:41] You can imagine a world where apps
+aren't something you download
+[00:22:44] from an app store or, GitHub repo.
+[00:22:47] They're actually something
+you can code from scratch with AI.
+[00:22:50] And now imagine language
+[00:22:51] models that are embedding vulnerabilities
+in this code as it's being produced.
+[00:22:57] If we accept that these models
+will be important
+[00:23:00] in a variety of ways across the economy,
+[00:23:03] it's really important that the world
+has capable, open alternatives.
+[00:23:07] We need to be able to inspect these models
+for performance and vulnerabilities.
+[00:23:11] We need to be able to optimize them
+through fine tuning
+[00:23:13] and other techniques
+for better performance in specific tasks.
+[00:23:17] We need developers to have access
+to a model without having to spend $100
+[00:23:20] million of venture capital
+every time to reinvent the wheel.
+[00:23:25] We need to be able to modify
+and deploy those models
+[00:23:28] without all that data going to a an API
+[00:23:31] provider in the Bay area
+[00:23:34] and open models, many of them are smaller
+and many of them are more compact
+[00:23:37] and more efficient.
+[00:23:38] Developers can experiment
+with them on regular hardware,
+[00:23:42] either their own servers on prem,
+or through consumer grade laptops.
+[00:23:47] On the right
+[00:23:47] is an example of what this looks like
+in practice today, right?
+[00:23:50] A few hundred base models provided from,
+you know, Meta,
+[00:23:55] Mistral,
+[00:23:57] Alibaba, Deepseek,
+ and other firms like that
+[00:24:00] have supported this sort of Cambrian
+explosion
+[00:24:03] of other developers who are fine
+tuning those models for better performance
+[00:24:07] in different benchmarks, better performance
+for specific tasks, and many of whom
+[00:24:11] then choose to rerelease those models
+back to the public as a kind of resource.
+[00:24:15] And that's really exciting.
+[00:24:18] You can see how this sort of wave
+of innovation is taking shape
+[00:24:21] over the past couple of years.
+[00:24:22] On a platform
+[00:24:23] like Hugging Face, the number of developers
+who are actively contributing
+[00:24:27] to open-source and open weight
+model repositories has quadrupled.
+[00:24:32] Go back two years, three years.
+[00:24:34] One fine tuned
+model would have been released
+[00:24:36] every 40 minutes on
+something like Hugging Face or GitHub.
+[00:24:40] Now it's one every four minutes.
+[00:24:43] Again, these are developers
+who aren't taking a model
+[00:24:45] and deploying it in their own applications
+for their own business.
+[00:24:48] These are developers who are taking
+those models, making them better,
+[00:24:51] modifying them
+and then rereleasing them publicly.
+[00:24:59] This is another example of what
+that looks like in practice.
+[00:25:02] You have a range of base model families.
+[00:25:04] Again, Google, Microsoft, Meta, Mistral,
+[00:25:06] and others.
+[00:25:08] You've got tens of thousands of developers
+taking those models,
+[00:25:12] modifying them, rereleasing them.
+Tens of thousands of derivative models
+[00:25:17] from those developers, and total downloads
+between the original base model
+[00:25:21] and the fine tuned models numbering
+in the tens or hundreds of millions.
+[00:25:26] So again, there is huge global demand
+for capable open models.
+[00:25:30] And importantly, if that demand persists,
+[00:25:32] those who provide that capable base model
+[00:25:36] are going to have an opportunity
+to shape the global technology stack.
+[00:25:39] This is something I believe
+the Chinese administration understands.
+[00:25:43] This is something certainly Europe,
+the Middle East understands, that
+[00:25:48] if you can satisfy that demand
+with capable technology,
+[00:25:51] you will start to orient
+[00:25:52] the global ecosystem
+around your industry and around your labs.
+[00:25:58] There's still some open questions
+in the whole DeepSeek debate.
+[00:26:00] So there's open questions
+about how much how important was the US
+[00:26:04] compute, US research
+and US models from OpenAI, for example.
+[00:26:09] How important were they to
+the development of RI?
+[00:26:12] In my view,
+it doesn't really matter, right?
+[00:26:14] Like there are two scenarios here.
+[00:26:16] One scenario is all of that
+US tech was determinative.
+[00:26:20] They couldn't have done it without it.
+[00:26:23] Turning off the tap, in my view,
+would accelerate a kind of decoupling
+[00:26:26] of other jurisdictions from US industry.
+[00:26:29] Right.
+[00:26:30] And it would require drastic intervention.
+[00:26:32] You're not just talking about chip
+controls, you're talking about controls
+[00:26:35] to prevent the flow of research and data
+from the US to the rest of the world.
+[00:26:41] There's another world in which
+actually it didn't matter all that much.
+[00:26:44] They were using old,
+slower, lower-capacity chips.
+[00:26:48] China is investing heavily
+in its sort of domestic chip industry.
+[00:26:53] And a lot of that research
+was replicable.
+[00:26:56] Right.
+[00:26:57] It was just a matter of time
+[00:26:58] before DeepSeek came along and built
+something like R1.
+[00:27:01] If the US tries to turn off the tap,
+my view is it will erode the relative
+[00:27:05] influence of US firms in the global
+ecosystem, particularly open firms,
+[00:27:09] and it will displace US models
+from the tech stack
+[00:27:12] of the millions of AI systems
+that are being developed around the world.
+[00:27:17] And again, whether that's for censorship
+or for other kinds of embedded
+[00:27:20] vulnerabilities, that's not good.
+[00:27:24] So I'll just briefly
+[00:27:27] touch on where this leaves policymakers.
+[00:27:31] Policymakers, particularly here in the US
+[00:27:34] and in the EU and the UK, are caught
+in this very tribal culture war
+[00:27:39] that has been playing out for the past
+2 or 3 years.
+[00:27:43] There are two axes to this.
+[00:27:44] People believing
+[00:27:45] you should or should not develop the model
+in the first place,
+[00:27:49] and those who believe you should
+or should not release the model publicly.
+[00:27:54] At one end of the spectrum, you've got
+this caricature of a doomer, right?
+[00:27:57] Who believes that not only should
+we certainly not release
+[00:28:00] frontier models openly, we shouldn't
+develop them in the first place.
+[00:28:04] We don't understand their behaviors.
+[00:28:06] We can't predict those behaviors.
+We can't control them.
+[00:28:09] And so we should reverse the presumption
+[00:28:10] of innocence before we build these
+and train these things in the first place.
+[00:28:15] At the other end of the spectrum,
+you've got this caricature
+[00:28:17] of the kind of effective accelerationist
+right?
+[00:28:20] This sort of Mark Andreessen
+venture capitalists of the world
+[00:28:24] saying
+not only should we develop these things,
+[00:28:26] but we should release them
+in a maximally open way.
+[00:28:30] Again, the steelman of that is that
+the benefit of development and release,
+[00:28:34] plus the opportunity cost
+of not developing and not releasing
+[00:28:37] those things,
+is greater than the purported risk.
+[00:28:41] Then in the middle, you've got this
+really interesting position where I spend
+[00:28:45] most of my attention,
+[00:28:47] devote most of my attention. The
+caricature of sort of regulatory capture.
+[00:28:51] We've got companies, civil society actors
+and policymakers who say,
+[00:28:55] oh, by all means,
+we should develop the frontier capability,
+[00:28:59] but we shouldn't release it openly.
+[00:29:01] Right.
+[00:29:02] And again, the steelman of that
+is that widespread access to the model,
+[00:29:06] the weights of the model
+is the primary source of risk,
+[00:29:09] or it's the only effective mitigation
+that we have against those risks.
+[00:29:14] And I think that's a
+[00:29:16] a challenging position
+to take. The other
+[00:29:20] difficulty here
+is that the public
+[00:29:22] discourse is kind of clouded
+by all sorts of false dichotomies.
+[00:29:25] One false dichotomy is it's open
+or closed.
+[00:29:29] It's not. We can have both.
+[00:29:31] Another is that
+[00:29:33] it's a choice between no regulation laissez-
+faire, or ban these models entirely.
+[00:29:38] Right. Again, a false choice.
+[00:29:41] The menu of options between
+those two extremes is extremely granular.
+[00:29:47] And so this is just a little bit
+[00:29:48] of a snapshot that I've maintained
+for the past few months about
+[00:29:52] where exactly some of these model layer
+regulations are going.
+[00:29:55] So again, if you go back,
+I said, there were about 300 bills,
+[00:29:58] federal bills introduced last year on AI,
+there were 700 at a state level,
+[00:30:04] most of those governed uses and systems,
+[00:30:08] they govern how people use AI,
+what they do with those outputs,
+[00:30:10] what they do with that content.
+They governed.
+[00:30:13] those who take a model hosted
+in a particular application
+[00:30:17] and then deploy that application
+out into a particular domain.
+[00:30:22] A small number,
+[00:30:23] but the most contentious number,
+of those proposals focused on models,
+[00:30:27] again, either saying,
+tell us how you're developing this model,
+[00:30:30] what data you're using,
+what evaluations you've performed,
+[00:30:34] or going one step further
+and saying you actually need
+[00:30:37] to mitigate certain risks
+to a particular standard.
+[00:30:40] You need to prevent someone modifying
+or misusing your model.
+[00:30:44] You need to get government approval
+before you release the model.
+[00:30:47] Or if you do release the model, you need
+to monitor how the model is being used,
+[00:30:51] the users who are using the model
+or who has custody of the model weights.
+[00:30:57] And this has been the case
+across a whole bunch of jurisdictions.
+[00:30:59] But if you take a look at the EU,
+for example,
+[00:31:02] there's a lot of debate
+about how much, beyond basic transparency
+[00:31:06] requirements,
+how much further should the EU
+[00:31:08] go in imposing
+specific mitigation obligations.
+[00:31:12] And they ultimately landed in a world
+where they said, well, free
+[00:31:14] and open source models are mostly
+exempt from most of the Act.
+[00:31:18] Other models.
+[00:31:19] The general purpose
+AI models have some transparency
+[00:31:22] obligations,
+but again, not much else beyond that.
+[00:31:26] But if your model demonstrates
+systemic risk as defined by the EU,
+[00:31:30] then you do need to perform
+independent evaluation of your model
+[00:31:34] before you release.
+[00:31:34] You do need to mitigate
+that risk to a particular
+[00:31:38] and at the moment,
+kind of undefined standard.
+[00:31:41] And the same is true in the US.
+[00:31:43] There was a lot of criticism of the Biden
+[00:31:44] executive order from the tech community,
+because it was sort of overregulating.
+[00:31:49] The Biden administration
+basically regulated almost nothing in AI.
+[00:31:53] The only regulatory obligation for model
+developers
+[00:31:56] was that if you're developing a model
+above ten to the 26 flop of compute,
+[00:32:00] you need to notify
+the Department of Commerce
+[00:32:03] about your evaluation results,
+assuming you're performing evaluations.
+[00:32:07] That was essentially the only obligation
+that the Biden administration put in place.
+[00:32:12] At the
+very tail end of the administration
+[00:32:15] there was an additional obligation that
+if you're developing capable, frontier,
+[00:32:20] closed-source, i.e., non-open-weight
+AI models,
+[00:32:25] you would not be able to release
+those or export
+[00:32:28] those, to countries that were not on
+a sort of designated ally list.
+[00:32:33] And that was
+that was a pretty significant move.
+[00:32:35] That was that was really the first time
+[00:32:37] where export controls, ex ante
+restrictions of that kind
+[00:32:41] had been applied to intangible technology
+like model weights in the AI space.
+[00:32:44] There's
+a long history of the government applying
+[00:32:49] export controls to cryptographic secrets
+and other kinds of intangible research.
+[00:32:52] But in the AI context,
+this was really the first time
+[00:32:55] where model weights were subject
+to some kind of ex ante restriction.
+[00:32:59] On the Hill,
+[00:33:00] and at the state level,
+it was kind of the Wild West, right.
+[00:33:04] There are a whole bunch
+of different proposals there
+[00:33:07] for expanded export controls,
+prerelease licensing where you would go to
+[00:33:11] some government agency who has to rubber
+stamp your release,
+[00:33:15] and other kinds of obligations.
+[00:33:17] So again, very little consensus,
+very little consistency in what
+[00:33:21] we're angling for.
+[00:33:23] And ultimately very few of those proposals
+went anywhere.
+[00:33:29] Part of the challenge in my mind
+is that there's very little consensus
+[00:33:34] about how we measure and determine
+acceptable risk.
+[00:33:38] So let's say
+we wanted to put in place an ex
+[00:33:41] ante restriction regime,
+export controls or licensing.
+[00:33:45] Or let's say we wanted to, you know,
+introduce some liability reforms.
+[00:33:51] Again, it's very unclear
+with this general purpose,
+[00:33:53] versatile non-robust dual use technology,
+how developers in the public
+[00:33:58] are thinking about that, that acceptable
+risk question. What is the red line?
+[00:34:02] How much risk is too much risk?
+[00:34:03] How much risk is acceptable?
+[00:34:05] In my mind, a proper accounting for
+[00:34:08] risk has to take these four factors
+into account.
+[00:34:11] It is: what is your initial risk?
+[00:34:12] What is the initial risk
+presented by this model?
+[00:34:15] Misuse risk, for example.
+[00:34:17] What is the residual risk?
+[00:34:19] Once you account for mitigations
+both within the model and within the wider
+[00:34:22] tech stack, in the wider ecosystem.
+[00:34:25] Is that residual risk acceptable?
+[00:34:28] There is no consensus
+about how to measure this.
+[00:34:30] There's some really good research
+out of Stanford and Princeton and others
+[00:34:33] about using marginal risk as a kind of way
+to to measure acceptable risk. So
+[00:34:38] how much additional risk does this model
+pose vis a vis existing technologies?
+[00:34:43] But there are other ways of measuring
+acceptable risk too.
+[00:34:45] Is it equivalent to something else
+[00:34:47] that's already out there
+in the public domain?
+[00:34:49] Should we make the risk
+as low as reasonably practicable,
+[00:34:52] as low as, as far as possible?
+[00:34:55] Should we have precautionary sort of
+principles that say, let's reverse
+[00:34:58] the presumption of innocence here
+to really precautionary approach
+[00:35:02] to this release, or is it just prescribed
+by a regulatory agency?
+[00:35:06] And then the
+[00:35:06] fourth and final factor is the benefit.
+[00:35:09] This piece is always missing
+in the debates around model regulation.
+[00:35:14] What is the benefit
+[00:35:15] and utility of making this technology
+available and what's the opportunity cost
+[00:35:19] if we restrict it?
+[00:35:22] I won't go into any more detail
+[00:35:24] beyond this because I want to leave time
+for for questions.
+[00:35:26] But a lot of my work
+[00:35:29] notwithstanding everything we've just
+discussed is really about
+[00:35:32] what are the different ways
+in which regulatory intervention
+[00:35:35] can impact open innovation.
+[00:35:38] I think we often over anchor on the idea
+[00:35:40] of explicit restrictions like export
+controls and licensing requirements.
+[00:35:44] But again, those proposals,
+for the most part, haven't gone anywhere.
+[00:35:48] And regulation can affect open models
+in a range of other ways as well.
+[00:35:52] We have implicit restrictions. Right.
+[00:35:53] So liability reforms, for example,
+that require developers
+[00:35:59] to exercise a level of visibility
+and control over their model.
+[00:36:03] It is very easy to do in a closed source
+context where your model is kept
+[00:36:07] behind a paywall and you're monitoring
+everyone who's interacting with the model,
+[00:36:10] very hard
+to do in an open source context,
+[00:36:13] where there's files
+are proliferating across the internet,
+[00:36:16] and in ways that are not visible
+to the original model developer.
+[00:36:20] And that was the problem with bills
+like SB 1047 in California.
+[00:36:23] In my mind,
+[00:36:25] is that they require developers
+to do things
+[00:36:27] that were very difficult
+to do in an open-source context,
+[00:36:30] and they required them to do those things
+to a standard
+[00:36:34] that was open-textured
+and and very undefined.
+[00:36:38] Right.
+[00:36:38] What does reasonable care mean
+in the context of critical risks?
+[00:36:41] It's kind of unclear.
+[00:36:43] There are other challenges, too.
+[00:36:44] If you treat, as the EU
+[00:36:45] did at one point, if you treat all model
+developers the same,
+[00:36:49] it means that you're treating big models
+the same as small models.
+[00:36:52] You're treating corporate labs
+the same as independent developers.
+[00:36:56] And that means that you're saddling
+everyday researchers
+[00:36:58] and developers with obligations
+that are intended for Meta and Google,
+[00:37:02] and that has a deleterious effect
+on open innovation as well.
+[00:37:06] Conflating different actors.
+[00:37:08] When governments,
+[00:37:09] impose obligations on model developers
+that are actually obligations
+[00:37:12] that ought to be imposed on a system
+deployer.
+[00:37:15] A good example of this
+that keeps cropping up is,
+[00:37:18] watermark your content right?
+[00:37:22] Models can't in a robust way
+at this point in time, watermark content.
+[00:37:27] It is very easy to unwind
+any watermarking modules
+[00:37:30] and libraries
+that you release out with your model.
+[00:37:33] And so if model developers
+have to satisfy that obligation,
+[00:37:37] it's very difficult for them
+to comply in an open source context.
+[00:37:40] And again, they will choose not to release
+that model openly
+[00:37:43] and instead keep it behind a paywall.
+[00:37:47] And finally, there's this very interesting,
+[00:37:49] and increasingly not academic
+[00:37:51] debate
+about what open -ource means, right?
+[00:37:54] The EU is one jurisdiction
+that exempts free and open-source models
+[00:37:59] from regulatory obligations
+designed for OpenAI and Anthropic.
+[00:38:03] There is still no guidance about what
+free and open-source means.
+[00:38:06] The Open Source Initiative,
+which safeguards the the canonical
+[00:38:10] definition of open-source software,
+has released an open -ource AI definition,
+[00:38:15] and the open source
+AI definition says that to be open-source,
+[00:38:18] you need to not just release
+[00:38:19] the weights, you need to release
+all of the data used to train that model.
+[00:38:23] Most of the capable open model developers
+like Meta
+[00:38:26] Mistral, DeepSeek,
+and others do not release their data.
+[00:38:32] Now that is a bad thing
+[00:38:33] for research
+and for research into interpretability.
+[00:38:36] It is still a good thing for transparency
+and competition that we have
+[00:38:40] those model weights out there
+in the public domain,
+[00:38:43] and I think it would be a bad outcome
+[00:38:44] if governments said
+it is not enough to be open-weight.
+[00:38:47] If you're open-weight but not open-source,
+[00:38:50] you're not going to get the benefit
+[00:38:51] of these exemptions,
+and we're going to treat you
+[00:38:53] the same as if you're OpenAI,
+Anthropic, or
+[00:38:57] a large closed-source
+proprietary developer.
+[00:39:02] So a lot there,
+there's a lot more to talk about.
+[00:39:03] But, I sort of want to leave you with,
+with a couple of points, like, again,
+[00:39:09] open innovation in models really matters.
+[00:39:11] If we work on the assumption that models
+are going to be critical infrastructure
+[00:39:15] across the economy.
+[00:39:16] And I think in many of these debates,
+particularly around catastrophic risk
+[00:39:20] and around model safety
+and frontier development,
+[00:39:23] we often lose sight of the importance
+of transparency and competition
+[00:39:27] in this part of the tech stack.
+[00:39:29] The second
+piece is that I hope you take away
+[00:39:31] that DeepSeek was in some ways novel,
+but it kind of wasn't as well.
+[00:39:37] A lot of the things,
+a lot of the attributes
+[00:39:38] that DeepSeek demonstrated
+with its recent
+[00:39:40] releases, we've known about for some time.
+[00:39:42] What it did was it kind of catapulted this
+to the forefront
+[00:39:46] of the public consciousness and,
+and the minds of policymakers.
+[00:39:51] And I hope that as a result of that,
+we don't see
+[00:39:54] a lot of reactionary legislative
+and regulatory activity.
+[00:39:59] And the final point, again,
+is that well-meaning regulation
+[00:40:03] and legislation can affect our ability
+to release open models, access
+[00:40:07] those models, and experiment
+and reuse those models, in ways
+[00:40:11] that may not be intended
+by the policymaker or by the legislator.
+[00:40:16] And so what I hope going forward
+is that when we think about regulating
+[00:40:19] AI models, we do so in a way
+[00:40:23] that pays close attention
+and carefully scrutinizes
+[00:40:25] the impact of those rules on open
+developers and that huge grassroots
+[00:40:30] community of researchers and developers
+downstream, who rely on them.
+[00:40:35] I might add, I'm not a,
+[00:40:38] sort of fatalistic, you know,
+laissez-faire,
+[00:40:42] never regulate...
+[00:40:45] That's not the position I take.
+[00:40:47] The position I take is that future
+[00:40:48] regulation and future intervention
+may be appropriate,
+[00:40:52] but it should be our last resort,
+[00:40:54] not our first resort,
+that we regulate access to models.
+[00:40:58] And at the moment,
+the debate is the other way around.
+[00:41:00] People are grasping
+[00:41:01] for these very onerous restrictions
+before thinking about other alternatives.
+[00:41:06] And in the grand scheme of things,
+there is plenty of low hanging fruit
+[00:41:10] from a regulatory perspective
+that we can focus on before
+[00:41:14] we try to restrict access to models,
+and their underlying weights.
+[00:41:18] So, I'll leave it there,
+but would welcome
+[00:41:21] any questions
+and happy happy to discuss all the above.
+[00:41:45] [Timi] Thank you.
+[00:41:46] Thank you,
+[00:41:47] Ben, for the presentation.
+[00:41:49] I'm Timi, from the Harvard Kennedy School.
+[00:41:54] Interestingly,
+[00:41:56] your presentation captures the
+the whole essence of this subject matter.
+[00:42:02] But as to risk, I'm quite curious
+as to what you think
+[00:42:05] around this shift, you know, this,
+[00:42:11] current, President-Trump-induced,
+[00:42:15] body language,
+to the international community
+[00:42:18] that has induced a shift from,
+[00:42:21] safety and ethics to security.
+[00:42:24] As you could see, the UK 
+Safety Institute's just changed its name
+[00:42:28] some few weeks or months ago 
+to the
+[00:42:31] UK Security Institute,
+more focused on
+[00:42:35] real national security risks.
+[00:42:37] So what's your thinking around this shift
+of strategy from safety
+[00:42:42] and ethics to more national security
+focused risk?
+[00:42:46] Thank you.
+Yeah. No, it's a great question.
+[00:42:49] And I'll preface my answer by saying that
+[00:42:52] that the regulatory posture of the 
+Trump administration
+[00:42:55] is not as settled
+as I think people think it is.
+[00:42:58] Right?
+[00:42:59] So it's easy to see the vice president
+[00:43:00] go out there in Paris and say, like,
+we're not about safety anymore,
+[00:43:04] we're about innovation.
+[00:43:06] On the other hand, the
+[00:43:07] administration has some voices who,
+[00:43:11] I would say very conservative
+on some of these questions.
+[00:43:15] And there is a risk
+that AI is going to get sucked
+[00:43:16] into the kind of wider
+China trade war conversation.
+[00:43:20] And most of the regulatory response to
+AI is not going to be driven
+[00:43:23] by considerations for innovation
+or safety.
+[00:43:25] It's going to be driven by considerations
+[00:43:27] around the geopolitical competition
+with China.
+[00:43:32] So I'll just foreground by saying that
+I think there are many voices
+[00:43:34] in that administration.
+[00:43:35] And the next few months,
+[00:43:36] it'll be very interesting to see
+how this plays out in practice. In terms
+[00:43:40] of the sort of shift from a sort of wider
+focus on safety to security,
+[00:43:44] My view is I think we will get better,
+[00:43:47] more durable and probably
+[00:43:51] more appropriate
+regulation if we are more focused.
+[00:43:54] Again, going back to the point
+I was making,
+[00:43:56] there's very little consensus
+about what exactly we're regulating for.
+[00:44:00] I kind of welcome the focus in the UK
+AI Institute, for example,
+[00:44:04] saying like, hey, we're not going to try
+and solve safety in the model of AI.
+[00:44:07] But what we are interested in
+is the misuse risk and the risk of
+[00:44:12] of an AI system that sort of results
+in a loss of control scenario.
+[00:44:16] The analogy I give people
+[00:44:18] is sort of the difference
+between the FAA and the TSA, right?
+[00:44:21] The FAA makes the plane safe
+[00:44:23] and sure that the wings aren't
+going to fall off. The TSA
+[00:44:26] makes sure no one
+gets into the cockpit. And
+[00:44:30] for most of
+[00:44:31] the past three, four, or five years,
+we have
+[00:44:35] really conflated those two functions
+in the discussion around AI regulation.
+[00:44:39] But they're quite different, right?
+[00:44:40] Again, one is about the intended
+application of AI,
+[00:44:45] and one is about the misuse of AI.
+[00:44:47] So I think it's helpful
+that we're now getting a bit more clarity
+[00:44:49] from some of these institutions
+and from certain governments about, here
+[00:44:53] are the risks we're really focusing on,
+[00:44:56] and for the time being,
+we're going to let these other risks
+[00:44:58] play out
+through the ordinary regulatory process.
+[00:45:01] And I think that's important.
+[00:45:02] Otherwise we just know one,
+whether you're pro -nnovation
+[00:45:05] and go hard and go fast
+or whether you're shut it down.
+[00:45:08] Now, I don't think anyone
+is entirely satisfied with the
+[00:45:12] the status quo at the moment,
+which is kind of a million ideas
+[00:45:16] and none of them going anywhere.
+[00:45:18] So I think I think
+more focus is helpful. Yes.
+[00:45:22] Maria.
+[00:45:26] Yeah, go for it.
+[00:45:33] [Maria] This was really fascinating.
+[00:45:34] Thank you, Ben, for all your thoughts
+and summary
+[00:45:39] of our complicated landscape.
+[00:45:42] I would like to know more
+[00:45:44] about your position
+regarding regulating models.
+[00:45:50] Are you suggesting that
+there should be no regulation at all,
+[00:45:54] or that there should be a distinct regime
+that takes
+[00:45:58] the specificities of open models
+into consideration?
+[00:46:03] Things like maybe 
+know your customer obligations
+[00:46:06] or some sort of ability to
+[00:46:09] pull back models when the downstream uses
+are really problematic?
+[00:46:13] Thanks. Yeah.
+[00:46:14] It's a great question. So,
+[00:46:20] I frame it this way.
+[00:46:22] My position is that our default
+[00:46:25] should be diffusion, not restriction
+when it comes
+[00:46:27] to useful technology with predominantly
+beneficial applications.
+[00:46:31] I think that's the position
+that, frankly, has underpinned
+[00:46:35] all of computer and software development
+for the past 40 or 50 years.
+[00:46:39] There is a presumption of access
+[00:46:42] and restrictions should be the exception,
+not the norm.
+[00:46:45] If we are going to restrict
+the release of those models
+[00:46:49] or access to those models,
+they should meet three criteria.
+[00:46:53] It should be necessary.
+[00:46:54] It should be proportionate
+and it should be intentional.
+[00:46:58] And my challenge to date has been
+that many of the proposals for, say,
+[00:47:03] KYC requirements, right, or ex ante
+licensing requirements
+[00:47:08] or liability reform,
+that puts that sort of disfavors
+[00:47:12] open-sourcing and favors close-sourcing.
+[00:47:15] My challenge is, I think in some cases
+[00:47:19] it hasn't been made out that
+those reforms are necessary
+[00:47:22] for the kind of risks
+that we're talking about.
+[00:47:25] In other cases, they're disproportionate.
+[00:47:28] Right.
+[00:47:29] So you've
+seen particularly from civil society,
+[00:47:31] there've been a number of proposals
+that we should just, you know, pause
+[00:47:34] AI now. Back in 2023.
+[00:47:36] there was a letter that says,
+stop AI, stop development.
+[00:47:38] If labs won't do it themselves,
+government should step in and mandate
+[00:47:41] a pause.
+[00:47:43] I mean,
+Ianyone who's worked with government
+[00:47:46] just knows
+that never had a chance of succeeding.
+[00:47:50] In part
+because it was such a disproportionate
+[00:47:51] response to what we knew at the time
+and what we know now.
+[00:47:55] And then the third piece is
+it should be intentional.
+[00:47:56] And I think sometimes when policymakers
+say something like, well,
+[00:48:00] we want you to KYC everyone
+who has access to your model weights,
+[00:48:05] or we want you to monitor
+how the model is being used,
+[00:48:09] or we want you
+to prevent the modification of a model.
+[00:48:12] I think in many cases
+they just don't understand
+[00:48:15] how hard that is in an open-source context
+vis à vis a closed-source context.
+[00:48:18] So they don't necessarily intend for it
+to have the kind of regulatory burden
+[00:48:22] that it has.
+[00:48:26] So all of which is to say, again,
+[00:48:27] my position is like,
+let's start with diffusion as the default.
+[00:48:31] Be very cautious and targeted in
+[00:48:34] how we apply restrictions
+at the model layer.
+[00:48:38] And what I would love to see is for
+governments to be responsive regulators.
+[00:48:41] So in other words,
+to have the monitoring capacity in place
+[00:48:46] so that they can monitor trends
+[00:48:49] of public significance,
+they can respond to those trends quickly
+[00:48:54] with new regulatory interventions
+if required.
+[00:48:57] And if we have that capacity in place,
+[00:48:59] then we can be more liberal
+with the regulatory environment
+[00:49:02] because we know
+that government is watching.
+[00:49:03] We know that government
+has the capacity to respond if needed.
+[00:49:06] My concern is actually if we gut the US
+AI Safety Institute, for example,
+[00:49:10] which is on the cards and we gut NIST,
+[00:49:13] and all of that capacity just disappears
+[00:49:16] into closed-source private sector firms,
+[00:49:19] we will get more reactionary regulation,
+more reactionary legislation,
+[00:49:23] because policymakers will feel
+uncomfortable with the information vacuum.
+[00:49:28] So does that sort of answer the question?
+[00:49:30] It's yeah, start with diffusion.
+[00:49:32] Be very targeted with restriction,
+but build the capacity to respond
+[00:49:36] in a, in a targeted way.
+[00:49:39] And at the moment,
+that last piece is what's most at risk.
+[00:49:43] Yeah.
+[00:49:46] [Jess] From the Zoom room.
+[00:49:48] Thank you very much
+for your excellent presentation.
+[00:49:51] Regarding the legal enforcement
+of open source AI models,
+[00:49:55] how can regulators ensure compliance
+with AI-specific legislation
+[00:49:59] such as the EU AI act, which often
+[00:50:02] often assumes commercial market entry, e.g.,
+[00:50:06] ChatGPT charging
+a premium to operate in the EU?
+[00:50:10] Since open
+source models may not follow this
+[00:50:13] traditional path to market,
+what mechanisms or frameworks
+[00:50:16] could effectively enforce legal compliance
+for freely distributed,
+[00:50:21] community driven, open-source AI?
+[00:50:24] Yeah, I'm not,
+[00:50:25] I'm not sure that open-source or open
+weight models
+[00:50:29] presents that kind of enforcement problem.
+[00:50:31] Right.
+[00:50:32] So if Meta or Mistral or DeepSeek
+release a model,
+[00:50:38] everyone can see it out there on GitHub
+[00:50:40] and Hugging Face.
+[00:50:43] And everyone knows where it came from.
+[00:50:44] We know that's a Meta model.
+We know that's a Mistral model.
+[00:50:48] And so I think in many cases, it's
+not going to be
+[00:50:51] significantly more difficult
+to ensure that they're complying
+[00:50:54] with their obligations under the AI Act,
+[00:50:56] particularly around things
+like transparency, for example.
+[00:50:58] So I think I think the EU would take
+a very dim view if Mistral, a French
+[00:51:02] company, released its next language model
+after August of this year,
+[00:51:06] and didn't have the required
+documentation, didn't have the required
+[00:51:09] dataset transparency and,
+and didn't have whatever evaluations
+[00:51:14] were required.
+[00:51:16] So I'm not
+[00:51:17] sure of that kind of enforcement
+problem is, is going to be a major issue.
+[00:51:21] I think there are enforcement problems
+with all models generally, which is that
+[00:51:25] for the most part,
+we are relying on a great deal
+[00:51:28] of voluntary
+disclosure from AI developers.
+[00:51:33] And there are all sorts of incentives
+in place there
+[00:51:35] to be less than candid with, summarization
+[00:51:40] of risks, evaluation results
+and what they're using in their datasets.
+[00:51:44] This is part of the, I think they're
+neglected in some of these debates,
+[00:51:49] there's this problem where if
+[00:51:53] if governments put in place,
+[00:51:55] you know,
+[00:51:55] let's, let's say governments put in place
+an obligation to define the red line.
+[00:52:00] So to developers, you know, you need to
+define your red line for acceptable risk.
+[00:52:04] And you won't go beyond that red line.
+Or obligations to be ultra transparent
+[00:52:08] in the data set, not just summarize
+the dataset, but like tell us
+[00:52:12] what sources are in that dataset.
+[00:52:16] That creates
+sort of incentives for, for these firms to
+[00:52:21] to do less rather than do more.
+[00:52:24] Right.
+[00:52:24] If firms have to define their red line
+and they're going to be that that red line
+[00:52:28] is going to be policed where they're going
+to set the red line really high,
+[00:52:32] they're going to accept a level of risk
+that they probably wouldn't have accepted
+[00:52:35] if if that red line hadn't
+been crystallized by government
+[00:52:38] in that way.
+[00:52:41] Dataset transparency,
+[00:52:42] I think, is is an interesting one too.
+I think there are
+[00:52:46] there are real tactical reasons
+why firms don't want to expose their dataset
+[00:52:51] partly because that's their 
+trade secrets, right?
+[00:52:54] If you have the data set,
+you can essentially recreate the model.
+[00:52:58] Partly because there's just
+massive litigation risk. If you
+[00:53:01] if you expose the dataset publicly,
+which a lot of policymakers want,
+[00:53:06] those labs
+[00:53:07] know that they will be inundated
+with copyright litigation.
+[00:53:11] And I don't take a view
+about whether it's appropriate or not.
+[00:53:13] And I don't begrudge creators
+and rights holders from
+[00:53:16] using the courts to test
+the limits of these doctrines. But
+[00:53:20] that kind of simple-
+sounding transparency obligation
+[00:53:23] actually has a pretty significant impacts
+on, on developers.
+[00:53:26] And so, again,
+[00:53:27] I think we want to think carefully
+about what sort of behavior
+[00:53:29] that incentivizes in developers, given
+[00:53:32] we still rely on their kind of voluntary
+disclosure for a lot of this stuff.
+[00:53:36] And their voluntary compliance.
+[00:53:42] [Audience] Thank you
+[00:53:43] so much for a fascinating presentation.
+[00:53:46] I have a very brief question.
+[00:53:48] Do you think in the EU market,
+that the EU market,
+[00:53:53] do you think they provide
+the same regulatory
+[00:53:55] framework or regulatory standard for open
+AI products
+[00:54:01] like, from China
+and from the US from these both
+[00:54:05] countries like, ChatGPT,
+[00:54:08] and Deepseek.
+[00:54:11] Yeah.
+[00:54:12] So any specific preference or policy
+or some specific discrimination
+[00:54:17] regulatory policy to different
+countries, do you think,
+[00:54:22] that's your context for this?
+[Ben] As in
+[00:54:25] will the EU AI Act apply equally to say
+[00:54:28] Deepseek versus say Mistral in Europe?
+[00:54:32] Right.
+[00:54:33] [Audience]
+They provide the same regulatory policy
+[00:54:37] for AI product
+to open AI sources from China
+[00:54:41] and from the US.
+[00:54:43] So these two countries.
+[00:54:46] Two AI supplier countries. 
+[Ben] Yeah.
+[00:54:48] So what's interesting
+about the AI Act is they,
+[00:54:52] it essentially
+has extraterritorial effects.
+[00:54:55] So the trigger for the AI Act,
+at least for the model parts of the Act,
+[00:54:59] is has
+the model been made available in the EU?
+[00:55:03] That is a very inclusive way
+of defining your jurisdiction.
+[00:55:07] Right.
+[00:55:07] Because it's I mean, as soon as DeepSeek
+uploads a model on GitHub or Hugging Face,
+[00:55:11] it is, in the relevant
+sense, made available in the EU.
+[00:55:16] Now I think there's sort of interesting
+questions about whether DeepSeek
+[00:55:18] can disclaim its liability and say, like,
+this isn't available for users in the EU.
+[00:55:23] You can't access this
+if you're a European user.
+[00:55:27] But the reality is,
+I think the EU will try to enforce the Act
+[00:55:30] against developers
+regardless of where they're headquartered.
+[00:55:33] So it'll it'll enforce them against Meta
+in the US
+[00:55:36] as well as Mistral in France
+as well as DeepSeek in China.
+[00:55:41] The other piece,
+[00:55:43] drawing on the Digital Services
+Act and the Digital Markets Act,
+[00:55:47] the EU is a big fan now of sort of
+penalties measured in global revenue.
+[00:55:52] And so there are, in percentage terms,
+[00:55:55] was it 2 to 4 or 6% of, of global revenue?
+[00:55:59] Is the penalty
+for noncompliance with the Act.
+[00:56:02] So there's a lot at stake for developers.
+[00:56:04] And I think in practice developers
+including DeepSeek and Qwen or Alibaba
+[00:56:10] will try to find a way to keep
+[00:56:12] EU regulators happy with their compliance
+[00:56:15] state, rather than fighting them.
+[00:56:18] That's my gut feeling.
+[00:56:20] But you're right. It is harder,
+[00:56:22] it is going to be harder
+for the EU to enforce against firms
+[00:56:25] in China than it is against, say, Mistral
+[00:56:28] in France.
+[00:56:33] [Bey] Ben, thank
+you so much for this informative session.
+[00:56:36] I want to thank you all.

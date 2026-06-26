@@ -62,7 +62,13 @@ archive-wiki/
 │   ├── digest.md      index of per-year digests                     [SCRIPT]
 │   ├── digest/<year>.md   1 row/item: link · date · domain · tags   [SCRIPT]
 │   └── feed-tags.md   folksonomy tag counts (reference)             [SCRIPT]
-└── scripts/build.mjs  the generator                                 [code]
+├── collection/        RAG-ready source layer (additive)             [SCRIPT]
+│   ├── collection.json   ingestion manifest (id, defaults, sources)
+│   ├── json/youtube.json metadata catalog — 1 entry/video + transcript pointer
+│   └── txt/youtube/yt_<id>.txt   one plain-text transcript per video
+└── scripts/
+    ├── build.mjs      the wiki generator                            [code]
+    └── fetch_youtube.py  @BKCHarvard scraper → collection/          [code]
 ```
 
 ### The ownership rule — do not break it
@@ -72,6 +78,16 @@ archive-wiki/
 - **[LLM]** files are yours. The script **never overwrites** them (it only *seeds*
   `index.md` and `log.md` if they don't exist yet).
 - The immutable source is `raw/archive.json`. Read it; never write it.
+- `collection/` is also **[SCRIPT]**-owned (by `fetch_youtube.py`) — don't
+  hand-edit it. It is **additive and self-contained**: `fetch_youtube.py` only
+  ever reads `archive.json` (for dedup) and writes under `collection/`, so it
+  never conflicts with a re-scrape of the source. Integrating YouTube entries
+  *into* `archive.json` is a deliberate, separate, later step.
+
+> **Note on the metadata-only constraint (§1):** it holds for the TagTeam
+> corpus. `collection/` is the exception — it intentionally carries full
+> transcript **body text**, kept in its own files so the RAG ingestion
+> framework can index it. See `llm_engine` `archive_rag_ingestion.md`.
 
 ---
 
@@ -195,6 +211,38 @@ node scripts/build.mjs --all         # every item, all years
 Counts, digests and tag tables are always computed corpus-wide; only stub pages are
 gated by `--year`. Idempotent — re-run any time; it cleans the year folder(s) it
 rewrites so renamed/removed items don't leave orphans.
+
+### Fetch YouTube transcripts (`scripts/fetch_youtube.py`)
+Scrapes every video on the **@BKCHarvard** channel (~1,100) into the
+`collection/` layer: one metadata entry per video in `collection/json/youtube.json`
+(shaped like an `archive.json` item, plus `youtube` + `transcript` blocks) and one
+plain-text transcript per video in `collection/txt/youtube/yt_<id>.txt`.
+
+```bash
+pip install youtube-transcript-api requests           # one-time
+python3 scripts/fetch_youtube.py --dry-run            # list new videos, no writes
+python3 scripts/fetch_youtube.py --limit 5            # small test run
+python3 scripts/fetch_youtube.py                      # full run (resumable)
+```
+
+- **Resumable & idempotent.** Each transcript is written immediately and progress
+  is staged to `collection/json/.youtube-staging.json` (atomic writes). Re-run to
+  continue — already-cataloged videos and blocked videos are skipped/retried
+  automatically; nothing duplicates. Never writes `archive.json`.
+- **YouTube IP-blocks bulk transcript fetching** (~50 requests/IP). The script
+  distinguishes a genuine "no captions" (cataloged once) from a rate-limit
+  *block* (never cataloged → retried later), and aborts cleanly after
+  `BLOCK_ABORT_THRESHOLD` consecutive all-proxy blocks.
+- **Proxies** beat the block. Put one proxy per line in `scripts/.proxies`
+  (gitignored; Webshare's `host:port:user:pass` "Proxy List" export works as-is)
+  and the script rotates across them on a block:
+  ```bash
+  YT_PROXY_FILE=scripts/.proxies python3 scripts/fetch_youtube.py
+  ```
+  Webshare *free* = datacenter proxies (often still blocked by YouTube); paid
+  *residential* is more reliable. With all proxies in cooldown, wait and re-run.
+  See `load_proxy_configs()` in the script for all env-var options.
+- Log a `## [date] fetch | youtube …` entry afterward.
 
 ### Ingest (the source changed)
 Source updates arrive as a re-scrape of `raw/archive.json` (not one file at a time).

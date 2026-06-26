@@ -1,0 +1,1891 @@
+[00:00:05] [Bey] Welcome to,
+[00:00:07] welcome to the Berkman
+Klein Center's Spring Speaker Series.
+[00:00:11] Every Wednesday, we gather top academics,
+industry experts and tech professionals
+[00:00:15] to share cutting edge insights
+on AI, social media, and more.
+[00:00:20] Today,
+we are happy to welcome Paul Frazee.
+[00:00:23] He is the Chief Technology Officer of
+Bluesky Social and the founder of Blue
+[00:00:27] Lightning Labs, a startup rethinking
+the web using peer to peer technology.
+[00:00:33] Welcome, Paul.
+[00:00:34] [Paul] Thank you. Thanks for having me.
+[00:00:37] So, are we ready to kick this talk off?
+[00:00:38] It looks like we are.
+[00:00:39] Let's do this.
+[00:00:40] Hey, everybody.
+[00:00:43] Thanks so much for tuning in.
+[00:00:44] So, the title of my talk, Bluesky
+and Open Social media.
+[00:00:48] I'm, Paul Frazee. I work at Bluesky.
+[00:00:51] And before we kick off,
+let's just talk about Bluesky real quick.
+[00:00:54] We're a public benefit corporation.
+[00:00:56] We develop an internet technology
+called the atprotocol,
+[00:00:59] and we also build the Bluesky social app.
+[00:01:03] Now most of our code is open source,
+including that Bluesky social app.
+[00:01:07] Often it's either MIT
+[00:01:09] or it's dual licensed
+MIT or Apache and a fair amount of all
+[00:01:14] that is what we're going
+to be talking about here today.
+[00:01:18] Now, in the
+[00:01:19] description for my talk, I wrote
+for the opening sentence that social media
+[00:01:23] is undergoing a transformation
+towards open internet technologies.
+[00:01:27] And I posted the link to the talk
+[00:01:30] and somebody replied to me saying, well,
+what do you mean?
+[00:01:34] Because social media started
+with open internet technologies.
+[00:01:38] In fact,
+[00:01:39] I gave a talk 13 years ago about that
+exact topic to the Berkman Klein Center.
+[00:01:44] And here's the link.
+[00:01:46] And of course, they're right.
+[00:01:48] Social media did start, with open internet
+technologies.
+[00:01:52] Around the turn of the century,
+we had a nice suite of them.
+[00:01:55] And this was all part of the pendulum
+swing away from the large
+[00:01:59] service providers
+that AOL was emblematic of
+[00:02:03] and into the internet culture,
+which was much more about these open
+[00:02:06] standards and building systems
+that interoperate with each other.
+[00:02:10] But of course, things changed afterwards.
+[00:02:13] And there are two things
+that I generally attribute to the swing
+[00:02:17] back away from the open internet
+technology approach.
+[00:02:21] The first was the release of the iPhone,
+which brought in
+[00:02:25] mobile computing
+as a really dominant paradigm of
+[00:02:29] personal computing.
+[00:02:31] And unfortunately,
+[00:02:33] the web did not persist as the application
+technology in the mobile world.
+[00:02:38] We moved over to proprietary
+and closed mobile
+[00:02:41] application
+tech and also, into the App Store model
+[00:02:45] of application distribution
+rather than the open internet.
+[00:02:49] We also had the rise of very large
+social networks
+[00:02:53] and the large social networks also not,
+[00:02:57] inherently built on open technologies.
+[00:03:00] And they really became the dominant means
+of distribution
+[00:03:03] of information and communication
+between each other.
+[00:03:06] Now, the reason that we kind of,
+in aggregate, all moved over
+[00:03:10] and away from open technology
+is because these products were better.
+[00:03:15] They were able to be built more quickly
+and they were more profitable.
+[00:03:19] And so they were able to run away
+[00:03:20] from a lot of the efforts
+to maintain open technology standards.
+[00:03:25] But now the pendulum is starting
+to swing back
+[00:03:28] in the other direction,
+and internet protocols are back.
+[00:03:34] The reason for that, I
+[00:03:34] would say, is that the sort of innovation
+curve that mobile and all the, internet
+[00:03:40] providers, all those applications
+were riding on has crested.
+[00:03:44] The markets have become relatively mature,
+and there are a lot of asks
+[00:03:48] that people have a lot of changes
+[00:03:49] that they want to be able to see,
+but they're not very empowered,
+[00:03:53] to, to make those changes.
+[00:03:54] And so I think people are a little bit
+[00:03:55] tired of feeling powerless
+about how online social spaces work.
+[00:03:59] And that has driven a resurgence
+of interest in the pendulum swinging back
+[00:04:03] into open internet technologies.
+[00:04:06] So now we're in this period 20 years later
+where there's
+[00:04:08] a nice new suite of protocols
+being worked on.
+[00:04:12] Some of them continuances
+from before, really email and RSS
+[00:04:15] are still in there.
+[00:04:17] And then we have some of the newer ones
+that are trying to make inroads.
+[00:04:22] Now, all
+[00:04:22] of these different new entrants
+into the technology
+[00:04:26] space tend to talk about this word
+cloud of different attributes
+[00:04:29] that they're looking for,
+things like censorship, resistance,
+[00:04:34] possibly getting into data ownership,
+[00:04:36] algorithmic choice, privacy,
+things like that.
+[00:04:39] For us at Bluesky
+[00:04:41] And with the AT protocol,
+[00:04:42] there's one attribute
+that we chose to focus on the most.
+[00:04:45] I mean, a lot of these attributes are
+or factored in some way, shape or form.
+[00:04:49] Some of them aren't.
+[00:04:49] But the one that we care
+the most about is interoperation.
+[00:04:52] This is the target
+that we were most concerned about
+[00:04:56] as we were working on the AT protocol
+[00:04:59] and in our operation.
+[00:05:00] I think I'll just loosely define it
+as the ability
+[00:05:02] for two different products, two different
+applications to work together seamlessly,
+[00:05:06] as if they're a part
+of the same application
+[00:05:08] as if they're from the same company,
+able to work together
+[00:05:11] on some shared data space on a shared
+social space, things like that.
+[00:05:17] Well,
+why do we care about interoperation?
+[00:05:20] Interoperation means choice.
+[00:05:22] Whenever you have a world that functions
+with interoperation,
+[00:05:25] you can have one application.
+You can have five.
+[00:05:28] You can have ten, as many as you want,
+[00:05:30] that are all working on the same goal,
+working in that same space.
+[00:05:34] And if your interoperation is working
+very well,
+[00:05:37] you could start
+with one application, discover another one
+[00:05:39] that's better, or have a new one
+[00:05:41] come out that you like better,
+and you could switch over.
+[00:05:43] So interoperation means choice.
+[00:05:46] Of course
+[00:05:46] choice in turn means competition.
+[00:05:49] And competition is very valuable,
+at least in the world that we operate in.
+[00:05:54] We like to use markets.
+[00:05:55] It's certainly one of the techniques
+that we use
+[00:05:57] for kind of collective decision
+making in society.
+[00:06:01] And markets need to be healthy
+and competitive to actually represent the
+[00:06:05] collective decision
+making that they're supposed to.
+[00:06:07] So competition is generally valuable
+means that we have more choices
+[00:06:12] Relatedly
+interoperation means shared ownership.
+[00:06:14] It means that you're able to work in
+[00:06:16] a world or live in a world
+where things are not owned by one company,
+[00:06:19] making the decisions
+on behalf of everybody
+[00:06:21] but power is delegated out to the edges.
+[00:06:24] And that can happen
+while still collaborating
+[00:06:27] in a shared experience.
+[00:06:31] Now, speaking of not very new,
+[00:06:33] interoperation has been around
+since the beginning of personal computing.
+[00:06:37] This is the model that I think
+probably everybody is the most
+[00:06:40] intuitively familiar with, and that's
+when you're using a desktop application.
+[00:06:44] Desktop applications work with files.
+[00:06:46] And so you can have a text file
+and you can open it in Notepad.
+[00:06:49] And then you could
+[00:06:50] switch over to some other app
+like RDS code and work on the file.
+[00:06:54] Both applications
+are able to work in the same shared data.
+[00:06:58] Interestingly,
+they don't have to collaborate on this.
+[00:07:01] They don't have to
+[00:07:03] speak to each other.
+[00:07:04] In fact, they don't even have
+[00:07:05] to be aware of each other in most cases,
+they're just working on the file.
+[00:07:10] And then another application
+works on the file.
+[00:07:12] And it just kind of happens by default.
+[00:07:15] In fact, the web also work to some degree
+this way, with
+[00:07:19] websites publishing their information
+and then other applications, different
+[00:07:22] search engines, different RSS
+readers were able to pull from the website
+[00:07:27] and offer products
+that were in that shared space
+[00:07:31] simply by reading from the websites.
+[00:07:33] Excuse me.
+[00:07:35] So, this is a model of
+[00:07:38] interoperation
+that I like to call non-cooperative
+[00:07:41] interoperation because the applications
+don't have to cooperate with each other.
+[00:07:45] They don't even have to 
+know about each other.
+[00:07:47] They're just working
+with a shared data space.
+[00:07:50] And so this is one of the primary models.
+[00:07:53] Of course,
+if there's non-cooperative
+[00:07:55] interoperation,
+there's probably also cooperative.
+[00:07:57] And there is.
+[00:07:59] And that is best embodied by email.
+In email
+[00:08:01] you have two different email servers
+[00:08:03] communicating with each other,
+sending messages to each other.
+[00:08:06] But this is a cooperative act.
+[00:08:07] They have to speak to each other
+to make the exchange happen.
+[00:08:11] And they could choose not to.
+[00:08:13] The sending server could choose
+not to send along the message.
+[00:08:15] The receiving server
+could choose not to accept it.
+[00:08:18] And so this is the cooperative model.
+[00:08:22] Now the AT protocol actually uses
+[00:08:25] a hybrid of these two things
+but it is primarily non-cooperative.
+[00:08:29] And we'll talk about why
+that is a little bit later.
+[00:08:32] And we'll talk about
+how cooperative works its way in.
+[00:08:34] But to start to give some shape to this,
+I'm going
+[00:08:37] to need to explain a little bit
+about how the protocol works.
+[00:08:41] In the AT protocol,
+[00:08:42] everybody has a personal data server,
+what we call PDS.
+[00:08:46] And the PDS is actually pretty dumb.
+[00:08:48] It's a pretty simple service.
+[00:08:49] It hosts your account so it
+[00:08:52] keeps online your posts and your profile
+and your followers and things like that.
+[00:08:56] It hosts it publicly for the world
+to be able to access.
+[00:09:00] Let's take a look
+at some of my data on my PDS.
+[00:09:04] So this is actually looking at my account,
+using a tool
+[00:09:07] that somebody in our community
+built called PDS LS.
+[00:09:11] And you can see here
+all of my different data collections.
+[00:09:15] I've got a profile,
+the app.bsky.actor.profile.
+[00:09:18] Very easy to read that.
+[00:09:20] But there it is. That's the profile.
+[00:09:22] You've got my posts,
+my likes, my reposts.
+[00:09:25] I see my followers and my blocks.
+[00:09:27] They're all listed out right here.
+[00:09:29] For anybody to be able to read.
+[00:09:31] Almost like a file in a file system.
+[00:09:34] And if I look at one of my posts, here's
+[00:09:36] something that I posted recently
+trying to rile up the gaming community.
+[00:09:41] Very simple record
+[00:09:42] here, establishes
+the type that this is a post.
+[00:09:45] It has some text inside of it, declares
+what language it is, and when I created
+[00:09:50] it. Now PDSs
+[00:09:54] are very importantly, very,
+very affordable.
+[00:09:57] They're very cheap to run.
+[00:09:59] I pointed out to one of my engineers,
+I could probably say
+[00:10:03] get $20 a month server.
+You can handle a thousand users, right?
+[00:10:06] And I said, yeah.
+[00:10:07] And I said, well, what does it cost us
+to do this, you know, at scale?
+[00:10:11] And we went in random
+math and found it's about 0.12
+[00:10:14] cents per user at the PDS level.
+[00:10:17] And this is just part of the stack.
+[00:10:18] This is not the kind of
+representing the full cost,
+[00:10:21] but this is what it takes
+to host your account in the atmosphere.
+[00:10:24] And it was very important
+that this be cheap
+[00:10:25] because we want anybody to be able to do
+this.
+[00:10:28] This is your account, this is your data.
+[00:10:30] This is your identity.
+[00:10:31] It needs to be quite
+a resilient part of the system.
+[00:10:33] So PDSs are very cheap.
+[00:10:35] The account hosting is very cheap.
+It's a bit like a website.
+[00:10:40] We also we're very keen to build
+this idea of portability
+[00:10:44] into the PDS layer, which means that
+an account can move between one
+[00:10:48] server to another in the PDS layer.
+[00:10:51] Because if you don't,
+then PDSs could start to use that lock in
+[00:10:55] to really bind people,
+you know, and start to be extractive
+[00:10:58] and so we wanted to have competition
+in that hosting layer.
+[00:11:01] And so account portability or account
+can move from one to the other key
+[00:11:04] attribute of the PDS layer.
+[00:11:08] One other fun detail
+is that everybody has a web address.
+[00:11:11] This is how your usernames
+work in the system.
+[00:11:14] The reason that we use web
+addresses is actually pretty simple.
+[00:11:16] We needed a global namespace.
+[00:11:19] We need a way to give people usernames.
+[00:11:22] We wanted to have something
+that generally people were comfortable
+[00:11:24] with as a shared infrastructure.
+[00:11:26] And so we thought,
+well, DNS is pretty well accepted.
+[00:11:29] So if you're looking for me
+on Bluesky, look for @pfrazee.com.
+[00:11:33] And that's my username. And the thing,
+[00:11:36] works out pretty well.
+[00:11:37] As it turns out, this can also be
+a pretty useful identity signal.
+[00:11:41] And then quite a matter of verification.
+[00:11:43] So in certain cases,
+[00:11:45] if you see, for instance,
+The New York Times, it's the nytimes.com.
+[00:11:48] That's a nice signal of,
+[00:11:49] you know, truth of who they are,
+because some domain names are well-known.
+[00:11:53] And that's useful
+to be able to reference whatever you're
+[00:11:56] in the social media environment.
+[00:12:00] Now, how do applications work?
+[00:12:02] Again, this is kind of like the desktop
+applications.
+[00:12:04] The apps just talk to the PDS.
+[00:12:06] This diagram is representing reading
+and writing a post to my PDS here.
+[00:12:10] Got the social app on the left and the
+user's personal data server on the right.
+[00:12:14] Reading and writing these records.
+[00:12:17] That's the foundational idea.
+[00:12:18] And to build this
+[00:12:19] large multiplayer experience
+that we're used to with social media,
+[00:12:22] what you do is you aggregate the activity
+from all the different PDSs.
+[00:12:25] So an app will crawl across
+all of these accounts
+[00:12:28] that are being posted publicly,
+and take up the posts
+[00:12:30] and assemble them into a timeline
+to make the application experience work.
+[00:12:35] And in this regard, it's a little bit
+like search engines on the web
+[00:12:38] just drawing in all that data.
+[00:12:42] That ends up
+turning into a firehose of data, of posts.
+[00:12:45] So this is a screenshot of another
+community application called Firesky.
+[00:12:50] If I was actually on it,
+what you'd be seeing is these posts
+[00:12:53] just whizzing by because it's actually
+a live stream of all of the traffic
+[00:12:57] that's happening. And here's just
+a quick snapshot that I got.
+[00:13:02] Now. The
+[00:13:03] applications have a lot of freedom
+to choose how they view the data.
+[00:13:06] Again, much like a desktop application
+[00:13:08] can choose
+whenever they're working with files.
+[00:13:10] The user interface, the algorithms,
+the moderation.
+[00:13:13] Those are the application's concerns.
+[00:13:14] The PDSs are very dumb,
+[00:13:17] but this is good
+because it means that the applications
+[00:13:19] can choose to make changes to,
+have some ownership of the outcomes for,
+[00:13:24] for their social network and move it in
+kind of whatever direction they want.
+[00:13:28] And here it is
+[00:13:30] in the case of Bluesky,
+this is a screenshot of my home page.
+[00:13:34] If you were looking listening to me
+describe the system and going,
+[00:13:38] that will never work.
+[00:13:38] Well, here it is. So I got that for you.
+[00:13:43] And, as intended, it's meant
+[00:13:46] to, feel quite similar to,
+to the experience that we're used to.
+[00:13:49] It was very important to us
+[00:13:51] from the outset that we were able to prove
+that this open network is capable
+[00:13:55] of achieving the kind
+of social experiences that people expect.
+[00:13:59] And in particular, we were very concerned
+[00:14:01] about scale, making sure
+that a system like this could scale up.
+[00:14:04] We're now at about 4 million DAU,
+[00:14:08] and we have about 35,
+[00:14:09] 36 million registered users.
+[00:14:12] I'm pretty pleased
+with that scaling amount.
+[00:14:16] I think there's still a couple
+of orders of magnitude to go.
+[00:14:18] But, at this point, I'm fairly confident
+that the architecture is holding up,
+[00:14:22] that we've crossed some of the important
+barriers to feel confident about this.
+[00:14:26] So here's where we're at.
+[00:14:29] So in review we have the PDS, hosts user data,
+very cheap to run.
+[00:14:33] And then you have applications
+that talk to the PDSs,
+[00:14:35] interpret those data
+into the social media experience.
+[00:14:40] Well now let's get back
+to the interoperation.
+[00:14:43] Unsurprisingly
+we interoperate through the PDS.
+[00:14:46] And this is that non-cooperative model.
+[00:14:49] One application will read and write posts.
+[00:14:51] Another application will see the posts
+suddenly show up and be able
+[00:14:54] to read it from there.
+[00:14:55] So they don't have to talk to each other.
+[00:14:58] The foundational model of the AT protocol
+is that non-cooperative interoperation.
+[00:15:02] And again, just like with desktop
+application sharing of
+[00:15:05] a file.
+[00:15:09] In fact,
+[00:15:11] one of the ways that we think about
+this is it's not just,
+[00:15:15] that you can interoperate,
+but to some degree it's forced.
+[00:15:18] If you are using the AT protocol,
+[00:15:21] you are using non-cooperative
+interoperation.
+[00:15:24] You don't get to choose as the creator
+of the application if other applications
+[00:15:28] are going to be using that data
+because you don't control what the PDS,
+[00:15:31] who the PDS speaks to, that's separate
+layer, a separate part of the system.
+[00:15:36] And this is our way of locking in
+or locking open, the system
+[00:15:40] so that we can have that credible exit,
+we can have that shared ownership,
+[00:15:43] and we can have that competition.
+[00:15:48] So I've been talking
+[00:15:49] about the sort of theoretical basis
+or mechanics underneath it.
+[00:15:53] Let's move into some examples and
+see how this plays out in the real world.
+[00:15:57] This right here is a fork of 
+Bluesky called deer.social.
+[00:16:01] There's actually a lot of different
+Bluesky clients out there.
+[00:16:03] I don't need to play favorites,
+[00:16:05] but this one has been talked
+about the most recently.
+[00:16:07] So I'll give deer.social a shout.
+[00:16:10] And so they took our code.
+[00:16:11] They forked it.
+[00:16:12] They began to introduce new features.
+[00:16:15] Now, historically
+we've had a lot of clients come in,
+[00:16:18] but those clients continue
+to use the Bluesky back end.
+[00:16:21] But just recently,
+there's been a lot of really great work
+[00:16:24] on running the entire stack
+independently of  Bluesky.
+[00:16:27] A very important step forward
+for getting into this open
+[00:16:30] and decentralized world
+that we want to have.
+[00:16:33] And so here we have a screenshot
+[00:16:35] of a stop server running.
+[00:16:38] And you can see there's
+[00:16:39] the Bluesky application back end
+and the aggregator process running.
+[00:16:43] And here we are in deer.social
+speaking to that independent back end,
+[00:16:49] speaking to a PDS that is not operated
+by Bluesky using the network.
+[00:16:55] Really happy
+that we've started to cross that milestone
+[00:16:58] and see people hosting
+more and more of the infrastructure.
+[00:17:02] Now we have a fork here.
+[00:17:04] What else has happened
+other than independent operation?
+[00:17:07] Well,
+verification was recently rolled out.
+[00:17:11] And of course that's a
+[00:17:13] hotly debated topic,
+how to do verification best.
+[00:17:16] The way the we chose to do it is,
+[00:17:20] we are able
+as Bluesky to issue verification.
+[00:17:23] We have our process for doing that.
+[00:17:24] But we also introduced the ability
+to appoint users,
+[00:17:28] with the ability to issue verifications.
+[00:17:30] But there's a set of users that we choose,
+so that we can uphold some standards
+[00:17:34] for, you know, making sure that a process
+is being followed.
+[00:17:38] It's a little bit
+like the certificate authority model.
+[00:17:41] So we call those trusted verifiers
+[00:17:43] and, some of our users,
+after this release, say, well,
+[00:17:47] why can't I choose my own trusted verifier
+so I can make that decision for myself,
+[00:17:52] which was something we had considered
+but ultimately chose not to do.
+[00:17:55] In the interest of speed
+and to make sure that we feel good
+[00:17:58] about the outcomes, we felt it was,
+we weren't ready to take that risk.
+[00:18:01] Well, deer.social was, so
+deer.social introduced the ability
+[00:18:05] to select your own trusted verifiers
+and also yourself to issue verifications.
+[00:18:09] And so it becomes more of a web
+of trust model as opposed to that kind of
+[00:18:13] certificate authority model.
+[00:18:15] And so
+[00:18:16] now inside
+deer.social you can have verifications
+[00:18:19] that are being given by other users
+who you choose to trust.
+[00:18:25] So that's a case of choice
+driving innovation.
+[00:18:28] Deer.social is willing to take
+a, make a bet that we didn't want to make.
+[00:18:32] And that means that the entire ecosystem
+can move forward independently
+[00:18:36] of Bluesky,
+independently of whatever application
+[00:18:39] happens to be the dominant one,
+that there are options out there
+[00:18:41] that can be driving forward new ideas.
+[00:18:46] So now that is all happening
+[00:18:48] at this non-cooperative,
+interoperation layer.
+[00:18:52] And I mentioned that
+actually I thought it was a hybrid.
+[00:18:54] Sometimes we use cooperative
+[00:18:57] interoperation.
+[00:18:59] An example of that is how we do feeds.
+[00:19:03] Feeds are essentially a,
+[00:19:08] how would I put
+this, might be easiest to show.
+[00:19:10] It looks like this. It's a
+just a feed, right?
+[00:19:12] It's, it's a,
+[00:19:15] list of posts that you can scroll through,
+right?
+[00:19:18] Core part of the social media experience.
+[00:19:20] What we're looking at here
+is the news feed by Aendra.
+[00:19:24] She does have this feed
+so that, it, only shows,
+[00:19:29] posts from a set of news organizations
+that she has curated,
+[00:19:33] and it shows the posts from them
+when they're posting a news story.
+[00:19:37] So if you're looking for
+you know, morning read of the news
+[00:19:41] and you want to go from these,
+sort of approved,
+[00:19:44] journalism, list of journalists,
+[00:19:47] that's what this is for.
+[00:19:52] But this works by interoperation,
+[00:19:55] the news feed is actually hosted on
+somebody else's server.
+[00:19:58] And Bluesky, whenever you visit the,
+the feed Bluesky talks.
+[00:20:03] So that server, it
+[00:20:03] says, hey, what are the posts
+that you want to show next?
+[00:20:06] And those come back
+and get hydrated into the experience.
+[00:20:10] And because this is running on
+somebody else's service,
+[00:20:14] it can actually apply relatively
+sophisticated logic for the selection.
+[00:20:18] So to show that I'll show
+[00:20:20] another custom feed
+that somebody made called Quiet Posters.
+[00:20:23] Quiet posters
+works off of the following graph of
+[00:20:26] however it is it's looking at the feed,
+[00:20:29] and what it's choosing are the posts
+from people that don't post that often.
+[00:20:33] The folks that tend to get lost
+[00:20:34] in kind of the noise of things,
+makes it a very valuable feed,
+[00:20:38] because you do tend to lose
+track of the folks that only post
+[00:20:41] maybe once every two days.
+[00:20:43] Three days, good friends, for instance.
+[00:20:45] They're just not as online
+as everybody else is.
+[00:20:49] Really good chance
+to keep up to date on things.
+[00:20:52] So the feeds are actually able
+to do their own
+[00:20:55] algorithms,
+which introduces algorithmic choice.
+[00:21:00] Another example of
+[00:21:01] this cooperative intro
+is how moderation works.
+[00:21:05] Moderation in the, certainly in Bluesky.
+[00:21:08] And this is to some degree core
+to the protocol.
+[00:21:10] We use something called labels.
+[00:21:11] And they're essentially tags or metadata
+that get attached
+[00:21:15] to an account or to a
+[00:21:18] post or things like that,
+[00:21:20] indicating that,
+[00:21:21] you know, some kind of decision
+[00:21:22] has been made, for instance,
+this post might be NSFW,
+[00:21:25] or it might have graphic content
+or things like that,
+[00:21:28] but it's an open system
+actually, the application has
+[00:21:31] moderation built in one of these labelers
+built into the application, but
+[00:21:35] end users are capable of
+standing up their own moderation service
+[00:21:39] able to publish their own labels.
+[00:21:40] And here we're looking at one by a user
+named Bossett called the Profile Labeller.
+[00:21:46] And this one is actually automated.
+[00:21:47] What it's doing is it's
+watching the firehose and pulling out
+[00:21:51] objective facts about the different users
+and putting up labels
+[00:21:55] to work as annotations.
+[00:21:56] So some of those labels might be
+[00:21:57] this user recently changed their handle
+or this user doesn't have a full profile.
+[00:22:02] This user only ever replies to peoplw,
+[00:22:06] the true reply guy.
+[00:22:08] And then whenever you enable one of the.
+[00:22:10] When you subscribe
+to one of these labellers,
+[00:22:12] you can choose
+how to handle, these different labels.
+[00:22:15] So I could choose,
+you know, if somebody has recently changed
+[00:22:17] their handle,
+[00:22:17] I can't imagine why I'd want to do this,
+but I can hide the user entirely.
+[00:22:20] I don't want to see their posts,
+or I could choose to just show a badge
+[00:22:23] indicating, hey, this recently happened
+with all information for me.
+[00:22:27] An example of that you can see here.
+[00:22:29] This is somebody's profile.
+[00:22:30] And down at the bottom where that little
+red arrow is, there's a badge put on them.
+[00:22:33] This is a label from the profile labeller
+saying that this is a bridgy user.
+[00:22:38] Bridgy
+users are
+[00:22:39] essentially users that have been bridged
+over from the activity pub world.
+[00:22:43] So this is probably somebody
+using Mastodon,
+[00:22:46] which is a
+that bridging is a whole other topic
+[00:22:48] I won't be getting into,
+but I like to have this one on
+[00:22:50] because I like to see how it's going
+and make sure that it's working correctly.
+[00:22:53] So it's great to be able
+[00:22:54] to see that little badge
+on their profiles, on their posts.
+[00:22:58] Another example of
+this is the pronouns labeller,
+[00:23:02] where users can inform the labeller
+which pronouns they prefer.
+[00:23:05] The labeller puts that label on them,
+so I'm able to badge users,
+[00:23:08] and I know exactly what pronouns
+to use for somebody.
+[00:23:12] So in this case,
+the shared ownership creates extensibility
+[00:23:17] through the feeds, through the moderation,
+it makes it possible for end users
+[00:23:20] to extend the core experience,
+[00:23:23] and conveniently, relatively nicely.
+[00:23:25] It's not actually done in the client.
+[00:23:27] It's not some plugin
+that you're having to install.
+[00:23:28] This is all happening in the, in the back
+end layer, which makes it
+[00:23:32] very low friction.
+[00:23:36] Now that I've explained
+feeds and labellers,
+[00:23:38] I want to call out, the work by Rudy,
+who's actually one of the members of ASML.
+[00:23:43] Rudy has taken both of these,
+[00:23:45] systems, the, the feed system and the,
+[00:23:48] moderation system to start to build
+a community called Blacksky.
+[00:23:53] And what's really
+[00:23:54] quite compelling
+about what Rudy is doing is that,
+[00:23:57] he and his, his group are starting
+to build out their own implementation
+[00:24:03] of all of the infrastructure
+for running this community.
+[00:24:06] They also even kind of moved ahead of us
+and introduced
+[00:24:08] an informal way
+for users to join this community.
+[00:24:11] I believe us by posting
+something like hashtag #addtoblacksky
+[00:24:15] I believe,
+[00:24:16] that they get reviewed
+and they get pulled in as a member,
+[00:24:18] and that membership database is being
+maintained on their own infrastructure.
+[00:24:22] And the vision, with Blacksky
+is that this space can operate
+[00:24:27] completely independently
+and perhaps even survive beyond Bluesky.
+[00:24:32] And it could be possible to build
+entire applications that are focused
+[00:24:34] entirely around the stack,
+but still capable of entire operating
+[00:24:38] and being a part of the
+the Bluesky experience.
+[00:24:41] So shared ownership
+then, is enabling independent operation,
+[00:24:46] pushing ownership, pushing decision
+making out to the edges of the network
+[00:24:50] instead of keeping it centralized
+underneath the organization that runs
+[00:24:54] the main application.
+[00:24:58] Finally, I want to rip through
+[00:24:59] some of the different applications
+that we're seeing in the space.
+[00:25:05] The feeds that I mentioned before,
+[00:25:08] like the one that Rudy has
+[00:25:09] made with Blacksky, like the news feed,
+like the quiet posters,
+[00:25:13] they run on their own servers.
+[00:25:14] And as it happens, Bluesky
+has never actually integrated away
+[00:25:18] or created a tool for people to create
+feeds.
+[00:25:20] There's tens of thousands of them,
+[00:25:21] but none of them have been made
+using the Bluesky app.
+[00:25:25] They've all been made
+using other applications
+[00:25:28] that members of the community have built.
+[00:25:31] Graze is an example of this.
+[00:25:32] This is a feed builder for Bluesky, and
+they're doing really great work with it.
+[00:25:37] They're starting to really grow
+their world.
+[00:25:41] Prior to Graze, there was SkyFeed.
+[00:25:44] Same idea, much more indie energy.
+[00:25:47] In fact, there's a number
+of feed builders out there.
+[00:25:52] Another, great thing happening right now
+[00:25:54] in this, world is Surf being built by the,
+[00:25:57] Flipboard, company.
+[00:26:00] I got to see a demo of this thing,
+and the design is absolutely beautiful.
+[00:26:05] And this is, it's I've heard them pitch
+this as almost like a browser
+[00:26:10] for the, new social web,
+and it actually supports both activity hub
+[00:26:15] and atproto
+and it has these really great tools
+[00:26:18] for creating your own feeds and pulling
+feeds  from both networks.
+[00:26:22] And I think it'll end up
+being a really cool product.
+[00:26:26] Taking a little bit of a turn here,
+we have, Skylight.
+[00:26:30] This is a completely different application
+that has a more of a
+[00:26:33] video shorts experience
+as opposed to the text posts.
+[00:26:37] The microblogging
+that we do is the, microvideos.
+[00:26:42] And, this, I believe, is.
+[00:26:44] Yeah, this is available
+now that anybody can try this.
+[00:26:47] What's really cool about Skylight
+is that it uses the same data model
+[00:26:51] that Bluesky does.
+[00:26:53] So skylight users can see Bluesky posts,
+and Bluesky users can see Skylight posts
+[00:26:58] and their working together
+in this shared network.
+[00:27:02] And then you have Spark,
+which I believe is still in a closed beta,
+[00:27:05] but exact same target,
+[00:27:09] as a skylight to build out a short
+[00:27:11] form video, social media experience
+using the AT protocol.
+[00:27:15] And all of these are examples
+of the competition,
+[00:27:18] that part of it or operation,
+which leads us to people
+[00:27:22] making better software,
+creating more choices for everybody.
+[00:27:28] This is a meme that one of our team
+[00:27:30] members made when we started to realize
+that our metrics were getting skewed
+[00:27:34] because some of the other applications
+were started to pick up.
+[00:27:37] And, the joke,
+I don't use Bluesky, I use Skylight.
+[00:27:41] That's a DAU, we count those.
+[00:27:44] The reason I bring this up is to say that
+[00:27:46] one of the goals that we have with
+[00:27:49] this is a sense of a rising tide
+lifts all boats.
+[00:27:53] And as these different applications
+are joining together
+[00:27:55] using a shared network,
+we all benefit from each other.
+[00:27:58] That network effect is very real,
+especially as they use the same
+[00:28:02] kinds of content.
+[00:28:03] It doesn't matter
+which application you're using.
+[00:28:05] We're all connecting together.
+[00:28:06] We're all experiencing a lift
+by each other's collective effort.
+[00:28:13] This is a quote
+[00:28:13] that our CEO Jay brings up often,
+and it's a reason why we care about this.
+[00:28:17] At the end of the day, societies mirror
+[00:28:19] or grow to mirror
+their dominant form of communication.
+[00:28:23] So if social media is going to be
+so deeply embedded in society
+[00:28:27] and start to drive our politics
+and drive the world, I
+[00:28:29] think it's very important,
+[00:28:32] that the way that it's structured, matches
+[00:28:34] the way that we want our real world
+to be structured.
+[00:28:39] So thank you very much.
+[00:28:40] That's my talk.
+[00:28:51] [Bey] Sorry, Paul.
+[00:28:51] Just trying to get my camera
+to work here.
+[00:28:54] No problem.
+[00:28:55] [Paul] I think you were asking for me to say
+I am ready for questions.
+[00:28:59] [Bey] There we are.
+[00:29:01] Well, I would like to start with Andrew.
+[00:29:09] He says I love Bluesky.
+[00:29:11] And thanks for the talk.
+[00:29:12] What role could public media, libraries
+or municipalities
+[00:29:17] play in supporting interoperability;
+[00:29:20] PDS hosting as a modern post office?
+[00:29:24] [Paul] I love that idea.
+[00:29:25] I couldn't, you know, I can only speculate
+[00:29:28] about something like this. But
+[00:29:32] we certainly want
+[00:29:34] to, the general thinking is that
+[00:29:38] making sure that it's possible for
+the infrastructure to be run by entities
+[00:29:43] like the post office or to be,
+for there to be regional hosts,
+[00:29:48] is way
+in line with what we're looking for.
+[00:29:51] In general, an ideal world would be that
+[00:29:54] PDS hosting
+is kind of commodity infrastructure,
+[00:29:58] and that there's a lot of,
+a lot of secure choice
+[00:30:01] available to people
+so that that just is not a,
+[00:30:04] a lock in concert,
+because that really is the foundational
+[00:30:07] basis of ensuring that this system works
+the way that it should.
+[00:30:11] So, yeah, I love that idea.
+[00:30:13] And if,
+if there's any interest in that, I'm
+[00:30:16] sure we'd love to chat with them.
+[00:30:20] [Bey] Next question is from Brendan.
+[00:30:23] Can you please speak
+to the democratization
+[00:30:26] or decentralization of Bluesky?
+[00:30:29] In what ways is it
+still not decentralized?
+[00:30:32] And is there an approach or roadmap
+to democratizing and opening them?
+[00:30:38] [Paul] Yeah, it's a pretty hot topic right now.
+[00:30:42] There is a, so
+[00:30:44] to make sure that everybody
+appreciates the context of that question.
+[00:30:49] The protocol was,
+[00:30:52] put in place and used from,
+[00:30:54] roughly the time that we actually stopped
+being in a private beta.
+[00:30:57] And it was kind of an important
+prerequisite for us to make sure
+[00:31:00] that when we actually opened up
+to everybody that we hit that target.
+[00:31:03] Yes. This is on an open technology.
+[00:31:05] We didn't want to stop our closed
+beta period
+[00:31:09] prior to achieving that.
+[00:31:12] However,
+[00:31:14] the technology is still very new.
+[00:31:17] There has been, on the application
+side of running things,
+[00:31:22] a lot of clunky bits.
+[00:31:24] And also some costs
+that were a little bit high.
+[00:31:27] That aggregating process
+is called a relay.
+[00:31:30] We recently put a kind of new, relay
+1.1, came out
+[00:31:35] and that dramatically reduced the costs
+of, running one of those relays.
+[00:31:41] And then the
+[00:31:43] kind of the
+[00:31:44] general effort of the Bluesky
+team has been focused on
+[00:31:46] making sure that we can scale the instance
+that we provide to the world
+[00:31:49] so that, you know,
+people could join into this thing
+[00:31:51] and capture the moment
+that's been made available to us.
+[00:31:55] So when we're focusing on scaling
+our instance, we're not focusing
+[00:31:58] on making an easy to run package
+for people to independently
+[00:32:02] take advantage of it,
+which is put us in a position where it is
+[00:32:05] possible to run the full stack,
+[00:32:08] independently, but not easy.
+[00:32:12] And so that has led to some questions
+about, okay, well,
+[00:32:15] how close are we to what people might call
+operational decentralization
+[00:32:19] or like in practice
+and that's why I was excited about
+[00:32:22] what I called out before that.
+[00:32:23] We're starting to see
+[00:32:24] the fully independent stacks running,
+because the community has really begun
+[00:32:27] to embrace this question of embrace
+this challenge and start to press for,
+[00:32:31] what we generally call the indie sky.
+[00:32:35] And that
+[00:32:39] is an
+effort that we're pretty excited about
+[00:32:41] and are doing our best to encourage
+and support to some degree
+[00:32:44] we can always support it.
+[00:32:45] You know,
+we can't do it ourselves by nature. Right?
+[00:32:48] So, it's
+[00:32:49] incredibly exciting that the community
+[00:32:51] has been embracing
+that to the degree that they have.
+[00:32:53] And we're going to continue to try to,
+[00:32:56] help that along in the ways that we can.
+[00:32:58] I do think it's also worthwhile
+to call out that
+[00:33:03] another way that we look at
+this is through
+[00:33:07] those co-operative models that I mentioned
+before, the feeds, the moderation.
+[00:33:11] We want to continue to press
+in that direction as well,
+[00:33:13] because you have the kind of term
+running your own application.
+[00:33:17] And that's great.
+[00:33:18] And it's very valuable
+and important that that can be done.
+[00:33:20] Can you also decentralize the operation
+and the day to day
+[00:33:23] without having to change applications?
+[00:33:25] And that's where the idea of the feeds
+[00:33:26] and the independent moderation
+and how those communities are beginning
+[00:33:29] to form and operate independently,
+why that's so valuable.
+[00:33:33] Because that is a much more accessible
+[00:33:35] form of delegation
+out to the edges and decentralization.
+[00:33:39] So those are the really the two ways
+that we are pushing for that to happen.
+[00:33:46] [Bey] Bailey writes, I may be
+[00:33:49] misunderstanding
+the implementation of account portability,
+[00:33:54] but according to the account
+migration document,
+[00:33:57] it looks like migrating requires a signed
+[00:34:00] PLC operation from the old PDS.
+[00:34:03] And what is stopping a PDS from refusing
+this operation, thus locking you in?
+[00:34:09] [Paul] Okay, we're going to get
+[00:34:10] really technical here,
+so I apologize if I lose some folks.
+[00:34:14] That is a good call out
+[00:34:15] and was something that we were concerned
+about as well.
+[00:34:21] Let's see. So
+[00:34:24] everybody has,
+what's called a DID document
+[00:34:26] and it's like a certificate.
+[00:34:27] It tells people where your current host
+is, and it tells people what your
+[00:34:33] signing keys are, which are used
+to, create all the data that you publish.
+[00:34:38] So everybody's data is actually
+signed using cryptography.
+[00:34:42] And you need to use
+[00:34:45] tsome of those keys
+to make changes to your certificate.
+[00:34:49] So if you want to change a host,
+you have to issue a new version
+[00:34:52] of your certificate.
+[00:34:53] You you do that with the keys, and
+the keys are actually held on your PDS.
+[00:34:57] So the question is being raised is
+what if your PDS says,
+[00:35:00] no, I will not let you migrate away?
+[00:35:03] To solve that, we introduced
+[00:35:06] what we call well, what's the term
+we're using now?
+[00:35:10] I believe we call these rotation keys.
+[00:35:13] Essentially, you can create a separate set
+of more powerful keys
+[00:35:17] that are more powerful
+than the one that your PDS holds.
+[00:35:20] And you're supposed to,
+[00:35:22] this is still kind
+of working its way into the toolkit.
+[00:35:26] So that is kind of straightforward
+for people to do.
+[00:35:28] In fact, one of our community members has
+been making some cool progress on this.
+[00:35:31] But the idea is that this is a paper key.
+[00:35:33] This is something that you, as an end
+user would create.
+[00:35:34] You'd write down somewhere,
+[00:35:36] and this enables you
+to override the decisions of your PDS.
+[00:35:40] And so in an adversarial scenario
+like you're describing, you could make
+[00:35:46] the migration away even if your host is
+unwilling to facilitate it.
+[00:35:52] It's also designed to help deal
+[00:35:54] with the possibility that your host
+just decides to shudder to go down.
+[00:35:57] And maybe they don't stay on line long
+enough for you to execute the migration.
+[00:36:02] So, yes, for that to be effective,
+we do need to begin
+[00:36:05] to encourage people
+to create their paper keys
+[00:36:10] and store them away somewhere safe
+so that they can override it. But,
+[00:36:14] that that is ultimately the solution
+that we came up with
+[00:36:17] for the adversarial migration scenario.
+[00:36:23] [Bey] Eileen asks
+[00:36:25] questions
+regarding that which is centralized:
+[00:36:28] What data resources does Bluesky control?
+[00:36:31] Following on the previous question.
+[00:36:34] And what plans, if any
+[00:36:35] do you have to open that data
+up systematically
+[00:36:39] and or making it available to researchers?
+[00:36:43] [Paul] Okay. So,
+[00:36:47] I'll step through the particular
+[00:36:50] items.
+[00:36:51] I want to start by saying that
+these are the exceptions.
+[00:36:54] Most of the interactions in Bluesky
+[00:36:57] and in the atmosphere
+are public and available.
+[00:37:00] So the items that I'm going to be
+enumerated here are the kind
+[00:37:02] of the things that are, not in that way.
+[00:37:05] First one.
+[00:37:06] And the obvious one
+is, DMs, direct messages.
+[00:37:10] We ended up having time pressure.
+[00:37:13] Time did not play on our side.
+[00:37:14] In fact, everything about the Bluesky
+project has moved so much faster,
+[00:37:18] that we were hoping for,
+I would have loved the leisurely ten years
+[00:37:21] to be working on this protocol
+before we had went to production. So,
+[00:37:25] the protocol does not yet
+have good facilities for,
+[00:37:29] doing DMs.
+[00:37:30] And so our solution
+[00:37:31] was, well, okay, we're
+just going to have to throw one together.
+[00:37:34] Just that runs out our server and
+then plan to move that onto the protocol.
+[00:37:38] Once the protocol has the technology.
+[00:37:41] So DMs is one item.
+[00:37:44] The next item would be,
+[00:37:47] our analytics,
+that is information which we capture
+[00:37:51] and are not sharing publicly
+for some pretty obvious reasons.
+[00:37:55] I think there's an interesting
+conversation to be had about,
+[00:37:57] where that should go.
+[00:37:58] But at the moment I would say that
+[00:38:00] I'm more concerned
+about the privacy aspect of that.
+[00:38:02] And so that's staying in our hands.
+[00:38:05] Finally, we have the PLC.
+[00:38:09] I mentioned before that DID document
+that certificate,
+[00:38:12] that works off of a registry
+that we operate.
+[00:38:15] It's not, a decentralized system.
+It is open.
+[00:38:20] But it is not decentralized.
+[00:38:22] And our goals for that
+and this is actively in motion,
+[00:38:25] is moving it into an independent,
+organization, an independent legal entity,
+[00:38:30] which can have members, and, be operated
+independently of the company.
+[00:38:35] We sort of modeled that after DNS
+and its governance with
+[00:38:39] ICAN is what we're aiming for with that.
+[00:38:44] [Bey] This question is from
+[00:38:47] oh, I'm looking for a Catherine F.
+[00:38:54] As Bluesky
+[00:38:54] explores monetization and growth,
+[00:38:57] how are you thinking about measuring
+success in ways that don't just mirror
+[00:39:02] the engagement maximization
+models of other leading platforms?
+[00:39:06] Are the metrics
+you're exploring that better
+[00:39:10] reflect the community health or long term
+trust?
+[00:39:17] [Paul] We'd love to have a metric of trust.
+[00:39:19] Some things are hard to quantify,
+[00:39:23] because we certainly care quite a bit
+[00:39:25] about that. But.
+[00:39:31] Yeah, it's an interesting question.
+[00:39:32] And one of the things
+that is somewhat inescapable is,
+[00:39:38] we have to, on some level,
+still think about this as a product
+[00:39:43] in the marketplace.
+[00:39:44] But we think about it more collectively
+that the entire
+[00:39:48] at what we call the atmosphere,
+the AT protocol network is, is the goal,
+[00:39:52] the thing that we want to grow,
+not just our application.
+[00:39:56] And so we
+[00:39:58] are trying to build a world
+with interoperative social media.
+[00:40:02] We have to have a theory of change.
+[00:40:03] We have to get this technology
+[00:40:05] into people's hands
+so that it is their daily driver.
+[00:40:07] That means competing in the market
+and becoming
+[00:40:11] popular, becoming a dominant product.
+[00:40:14] And with that,
+you pay attention to number of accounts
+[00:40:17] and you pay attention to DAU.
+[00:40:23] The decisions
+[00:40:24] about how we try to spur that growth
+and make this,
+[00:40:27] something that is healthier
+for folks.
+[00:40:32] It's challenging.
+[00:40:33] It comes a lot of that tend to it
+tends to trend towards algorithm design.
+[00:40:38] And a lot of folks in our
+[00:40:42] user base quite prefer
+just a good old fashioned following feed
+[00:40:45] because it kind of takes the
+the question out about whether or not
+[00:40:48] the algorithm
+is driving something toxic or not.
+[00:40:52] But I wish I had a great answer
+for a metric
+[00:40:56] that could drive us to somewhere
+healthier.
+[00:40:57] At the end of the day,
+you want to get users.
+[00:41:01] It's part of this,
+part of the project.
+[00:41:08] [Bey] Thank you.
+[00:41:10] Combining a couple questions
+[00:41:11] here from Nick and Jordan,
+[00:41:15] how are you approaching safety and content
+[00:41:18] moderation?
+[00:41:21] [Paul] Yeah.
+[00:41:22] [Bey] And how this was you - sorry.
+[00:41:24] And how have you approached
+security and privacy on Bluesky,
+[00:41:27] where the openness is such a core
+philosophy?
+[00:41:30] [Paul] Yeah.
+[00:41:34] So I'll work back.
+[00:41:35] Well, no I won't work backwards. So,
+[00:41:38] security and privacy
+[00:41:41] can also, that can touch on moderation
+in terms of
+[00:41:46] making a kind of a
+[00:41:48] healthy and, safe
+[00:41:50] experience that it could touch
+on security, privacy questions.
+[00:41:53] And so sounds a little bit
+like this is trending towards the privacy
+[00:41:58] and security question, more than the kind
+of, is this a moderated space, but
+[00:42:01] I'll answer both.
+[00:42:03] In terms of having a moderated space
+[00:42:06] we wanted to make sure that there were
+good facilities for that from the get o.
+[00:42:09] And as an operator of an application,
+your job is to moderate the application.
+[00:42:12] And so that's what we've done.
+[00:42:14] We've spun up a TNS division.
+[00:42:17] We have moderators,
+and we do our best to make sure
+[00:42:20] that it is a good experience
+for everybody.
+[00:42:24] Regarding the safety aspect of this, yes.
+[00:42:26] It's public.
+[00:42:27] The content is public.
+[00:42:29] And we've been pretty persistent
+about communicating that,
+[00:42:35] we don't want that to be a surprise
+to folks.
+[00:42:38] We don't.
+[00:42:38] That's a the worst thing
+is actually an intent violation.
+[00:42:41] And worst thing you could do
+[00:42:43] is give people a sense that, oh, no, it's
+this is just between me and my friend.
+[00:42:47] And oh no, that was public.
+[00:42:48] So we're very, very persistent
+in the education side of this thing.
+[00:42:53] Eventually the
+[00:42:54] protocol is going to develop
+private sharing flows.
+[00:42:58] And that will begin to,
+[00:43:01] modify, you know, how that works,
+[00:43:05] and add some better privacy
+options.
+[00:43:09] We're also quite interested
+in end to end encryption,
+[00:43:11] and there's some really great work
+happening in these standards world around,
+[00:43:15] a standard called MLS
+for end to end encryption,
+[00:43:18] that we're paying
+quite a bit of attention to.
+[00:43:21] But there is a bit of tension
+[00:43:24] between perhaps not everybody
+really wants to have all of their posts
+[00:43:28] being seen or pulled together,
+but we need to make sure that,
+[00:43:34] interoperation is guaranteed.
+[00:43:35] And that is our goal.
+[00:43:37] And, by nature,
+when I say force interoperation
+[00:43:40] and non-cooperative interoperation,
+[00:43:42] that means that this is public
+and that Bluesky is not choosing
+[00:43:46] who gets to have these posts
+[00:43:47] that is designed to fight against the
+monopoly impulses that start to show up.
+[00:43:51] Once we start to gate that access.
+[00:43:54] So, that's the trade
+[00:43:58] and that's the trade
+that we've chosen. And,
+[00:44:01] hopefully that's the right call.
+[00:44:03] But that's, that's what we're about.
+[00:44:09] [Bey] Next question.
+[00:44:10] What is your view on the increasing number
+of decentralized clients and networks?
+[00:44:16] Won't it become confusing which client
+[00:44:18] or network to use,
+or even ignorant of others?
+[00:44:22] [Paul] Yeah, of course it will.
+Right?
+[00:44:25] Whatever you have the,
+[00:44:28] you know, I just listening to,
+[00:44:30] Mike McCue, the founder of 
+Flipboard talking to
+[00:44:33] Mike Masnick about this
+in their podcast recently.
+[00:44:37] And they talked about
+when the internet came along,
+[00:44:40] and all that kind of, and the web
+came along and comparing it to AOL
+[00:44:45] and how it was not as nice of a UX, right?
+[00:44:48] AOL had just like a button.
+[00:44:50] This is the example they gave; AOL
+[00:44:52] You just like, you know, type it in flight.
+[00:44:53] There's a button to book
+a flight. It's a really nice experience.
+[00:44:56] When you get to the web, you have to
+sit and you know, the the URLs.
+[00:45:00] It's not as easy, right?
+[00:45:02] And you have a bunch of different options.
+[00:45:03] And it's a big, messy market
+that will confuse people.
+[00:45:08] That's just part of how it goes.
+[00:45:11] But then eventually it'll settle down.
+[00:45:13] Eventually
+people will find things that they like
+[00:45:15] and they'll tell people
+[00:45:16] about what they like, and things will kind
+of round out into, a stable state.
+[00:45:22] But I would say yes.
+[00:45:24] But, and everybody's
+going to do their best to try to make it
+[00:45:27] clear as we go and make it as good
+as it could be as it happens.
+[00:45:30] But some agree we got to embrace the mess.
+[00:45:33] So yeah.
+[00:45:36] [Bey] Nick asks, would interoperability
+[00:45:39] inadvertently create more echo chambers?
+[00:45:43] [Paul] Oh,
+[00:45:45] maybe. I mean,
+[00:45:49] would interoperation
+[00:45:51] necessarily provoke it?
+[00:45:57] I don't really love the discourse
+around echo chambers, to be honest.
+[00:46:03] I kind of, I
+[00:46:04] think maybe I'd be a little bit
+more concerned with,
+[00:46:09] a...
+[00:46:10] I might be concerned about echo chambers,
+[00:46:11] if it truly is pervasive
+in a way that you're not even aware
+[00:46:14] that there is an outside world.
+[00:46:15] So, sure,
+there's a little bit of concern about it,
+[00:46:18] but it also kind of tends
+to lead to decisions that I think
+[00:46:21] are frustrating to people, where you're
+kind of making calls on their behalf,
+[00:46:26] you know, making judgment calls saying,
+oh, no, you're in an echo chamber.
+[00:46:29] You need to be exposed to opposing views.
+[00:46:30] So we're going to step in here
+[00:46:32] and start to expose you to stuff
+that drives you crazy.
+[00:46:34] I just don't really love
+the discourse around that.
+[00:46:36] So I don't know, maybe interoperation does,
+maybe it doesn't.
+[00:46:40] I don't actually have a hot take on that,
+[00:46:42] but I'm just not
+that keyed up about the topic.
+[00:46:43] I kind of think you should let people
+associate with the people they want to.
+[00:46:55] [Bey] While it's very exciting and overwhelming
+to see
+[00:46:58] all those standards
+appearing; lens, activity hub,
+[00:47:03] interoperability needs a shared standard.
+[00:47:06] What is your prediction for the evolution
+of the standard ecosystem?
+[00:47:10] Are we waiting for one leader
+to establish itself?
+[00:47:15] Probably, yeah.
+[00:47:16] I mean, the
+[00:47:19] dominance of a given standard
+is downstream of the
+[00:47:23] adoption of applications.
+[00:47:25] In most of the standards,
+bodies will end up becoming,
+[00:47:30] most likely,
+[00:47:32] driven by the,
+[00:47:34] industry members that have successful
+applications and the different standards.
+[00:47:38] So, you know, look,
+[00:47:42] there's a lot of
+healthy competition at the protocol level
+[00:47:46] right now, and there's a lot of great work
+being done by all the different groups.
+[00:47:50] I think it's possible
+some of them will coexist.
+[00:47:52] It's hard to, you know,
+I don't have a crystal ball on this.
+[00:47:56] But, it's
+[00:47:57] certainly possible that, one of them
+will end up really taking the lead.
+[00:48:01] And that'll end up answering
+that question, on
+[00:48:05] how that goes.
+[00:48:11] [Bey] Thank you.
+[00:48:13] Leo asks,
+[00:48:15] and this follows on Catherine's question.
+[00:48:17] If you are competing with existing
+social media models,
+[00:48:21] does this not mean that you will be
+encouraged to implement addictive design
+[00:48:26] both in its UI and algorithms,
+meaning that over time, Bluesky
+[00:48:30] will slowly become the sites
+that it's aiming to replace?
+[00:48:34] Is attempting to measure time well spent
+[00:48:39] not crucial to true success?
+[00:48:42] I think that's a credible question.
+[00:48:44] And none of the
+[00:48:48] work that we've done,
+all of the technology that we've created,
+[00:48:51] necessarily answers that by nature.
+[00:48:54] Right? I didn't have, in my wordcloud,
+[00:48:57] guaranteed nontoxic application design.
+[00:49:02] What,
+[00:49:03] again, though, what we do
+focus on is choice
+[00:49:07] and the ability to move past what we do.
+[00:49:11] So that if we do go down that path,
+[00:49:14] that there can be an opportunity
+for other people, with a better sense
+[00:49:18] of how this should work to step in and
+and beat us out.
+[00:49:24] But I can't,
+[00:49:27] you know, I don't want to stand here
+and make claims that I can't support.
+[00:49:32] And it's a very valid concern.
+[00:49:47] [Bey] Sorry about the delay.
+[00:49:48] We're just pulling up the question. 
+[Paul] No problem.
+[00:49:55] [Bey]
+[00:49:59] I understand Bluesky is registered
+[00:50:01] as a social enterprise
+or public benefit corporation in the US.
+[00:50:05] What is the business model
+as far as revenue goes?
+[00:50:09] Would it be ad,
+AI training, licensing, etc.?
+[00:50:14] [Paul] Yeah.
+[00:50:16] I can.
+[00:50:21] We are, I want
+[00:50:22] to say close to ready to share
+what we are, going to do.
+[00:50:28] And I don't want to run ahead of the org
+and talk out of turn.
+[00:50:33] But I can tell you about where
+we're leaning and why.
+[00:50:39] In particular, our largest concern
+[00:50:41] is ensuring that
+we're creating a good incentive model,
+[00:50:45] for ourselves,
+as well as for the entire ecosystem.
+[00:50:49] And we want to make a world where
+[00:50:52] everybody is
+[00:50:54] able to earn money in this scenario
+and not just us.
+[00:50:57] If we're trying to hydrate
+an open ecosystem,
+[00:51:00] that open ecosystem needs to be able
+to sustain itself and make good money.
+[00:51:05] And, consequently, things like
+[00:51:09] the advertising model
+is not really appealing
+[00:51:11] to us at this stage
+because the advertising model
+[00:51:13] pushes us towards maximizing time
+spent in our application.
+[00:51:17] Instead of clicking on links
+or going to other applications,
+[00:51:21] that's the wrong incentive model for us,
+[00:51:23] as we were trying to build
+out a world where there are,
+[00:51:27] there's choice,
+right, where we're embracing, the work
+[00:51:30] being done by other people.
+[00:51:31] So we're not keen on ads.
+[00:51:34] I wouldn't say it's never going to happen.
+[00:51:37] But in general, one of our,
+one of the things I would say is that over
+[00:51:40] enough time,
+it's pretty tough to imagine any business
+[00:51:42] staying away from an opportunity
+to make money.
+[00:51:45] Which again, goes back to my choice,topic
+and why we care about setting
+[00:51:49] interoperation
+as a forced matter from the get go.
+[00:51:54] But, that does trend us towards,
+[00:51:58] something more in the,
+[00:52:02] payments space and, or, you know,
+[00:52:04] subscriptions or, you know, something
+like that, people paying for more things.
+[00:52:07] And that's
+where we're much more interested,
+[00:52:11] than something like advertising.
+[00:52:16] [Bey] Denny asks,
+[00:52:18] or says, I am guessing the clients
+for Bluesky mobile or web apps
+[00:52:23] need to take a call
+on which labels to surface in their UI
+[00:52:26] and which labels to support.
+[00:52:28] Is there a recommended way for client app
+[00:52:31] makers to collaborate and coordinate,
+[00:52:34] or is the vision to allow
+hundreds of client apps to proliferate?
+[00:52:41] [Paul] Yeah.
+[00:52:43] That is frankly true of
+[00:52:44] like kind of everything in this space.
+[00:52:48] When you have an open network
+your parameters become
+[00:52:52] not the network itself, but compatibility.
+[00:52:56] And getting on the same page
+[00:52:58] with the other applications
+is very important.
+[00:53:01] You don't want to do something
+that surprises somebody on
+[00:53:04] another application or breaks,
+[00:53:06] again,
+you don't want to break intent.
+[00:53:10] And we put a fair amount of work
+[00:53:12] into structuring
+how data works in this world.
+[00:53:15] You may recall seeing what I showed in
+my posts, there's a typo on the poster.
+[00:53:20] No. Schemas are very well defined,
+[00:53:23] Ww call that lexicon
+where the language that they speak.
+[00:53:27] Moderation labels are still a little bit
+[00:53:30] less developed, by comparison.
+[00:53:33] They presently use
+a, a pretty well specified set of effects.
+[00:53:37] But they are limited.
+[00:53:39] It's things like this is supposed
+to blur content whenever it's enabled.
+[00:53:42] This is supposed to entirely hide content
+when it's enabled
+[00:53:45] or this is only supposed
+to be an informational badge.
+[00:53:51] I expect that
+[00:53:54] in the
+future that is going to elaborate more
+[00:53:56] so that more varied behaviors
+can be introduced into the world.
+[00:54:00] But
+[00:54:02] we tend to not try to design ahead
+[00:54:05] of building, ahead of a particular
+use case.
+[00:54:09] This is a learned behavior for us.
+[00:54:12] We all come from the decentralization
+world, all the core team at Bluesky,
+[00:54:16] we all built a bunch of protocols
+and then built applications
+[00:54:19] and then realized that is a bad way
+[00:54:21] to do things that you should design
+with a practical use case in mind.
+[00:54:25] So we with labels are just kind of
+[00:54:29] we've taken it
+as far as we know, what is necessary.
+[00:54:31] And then we've just been kind of
+waiting to see what the needs are,
+[00:54:35] what the requirements are,
+and how they evolve
+[00:54:36] before
+we start to try to structure that more.
+[00:54:39] So I do think it'll probably evolve
+in some interesting places
+[00:54:43] once we start to understand
+that use case better.
+[00:54:47] [Bey] Thank you.
+[00:54:49] From Eli, the AT
+[00:54:51] protocol can be difficult
+to explain to end users.
+[00:54:55] Many of them have never encountered
+the concept that all of their data lives
+[00:54:58] somewhere other than the app
+they're using.
+[00:55:01] People see log in with Bluesky
+and assume it's the same kind of thing
+[00:55:04] as log in with Google.
+[00:55:06] Even though something different and more
+profound is happening behind the scenes.
+[00:55:11] How do you approach explaining atproto's
+[00:55:14] architecture to an indifferent audience?
+[00:55:19] [Paul] Yeah, I'll tell you,
+I wish I had a wonderful answer for you.
+[00:55:22] The explanation that I gave here in
+my talk is kind of trending towards
+[00:55:27] one of the ways that I do it, I analogize.
+[00:55:30] Right, I kind of depending on how deep I'm
+trying to go.
+[00:55:33] I usually start by saying, well,
+it's a social network where it's not all
+[00:55:37] just run by one company.
+[00:55:39] More,
+[00:55:40] you know, lots of companies
+[00:55:41] can can build applications
+and kind of cooperatively on it.
+[00:55:44] That's like my V0 my, my initial
+kind of way of explaining it to folks.
+[00:55:49] If I'm trying to get a little bit
+more specific, I'll probably bring up the,
+[00:55:53] I might bring up the
+[00:55:54] files metaphor, you know, and say like,
+yeah, you got your files hosted here.
+[00:55:57] And that's like separate
+from the application.
+[00:56:01] But it takes time.
+[00:56:03] And to some degree,
+I think you always have to meet people
+[00:56:08] where they're at and figure out
+[00:56:09] how much you want to try to educate them
+at any given moment.
+[00:56:12] So, doing it
+incrementally is is a good idea.
+[00:56:16] And we've done our best
+to try to kind of pick what we think
+[00:56:19] people understand and explain that bit
+and then move on to the next piece
+[00:56:23] that we try to get people to understand
+and then explain that a bit.
+[00:56:26] And it does happen,
+[00:56:30] it is worth having some amount
+of faith in that, over time.
+[00:56:35] But the login
+[00:56:35] question still is that's,
+that's kind of our biggest question
+[00:56:39] that everybody's asking right now
+is we just recently introduced
+[00:56:44] a sign in flow for the protocol,
+using OAuth.
+[00:56:48] And everybody is asking,
+how do we explain that to people?
+[00:56:52] Do we say sign in with Bluesky?
+[00:56:53] Do we say sign in with atproto?
+[00:56:55] Do we come up with,
+[00:56:56] as I mentioned before, we informally call
+the network the atmosphere.
+[00:57:00] So do we say log in with the atmosphere?
+[00:57:02] Well, the market
+doesn't know what the atmosphere is yet.
+[00:57:05] Right.
+[00:57:05] There's been no work into the getting to
+to brand that premise.
+[00:57:09] So we're in a little bit of a pickle.
+[00:57:12] I don't know exactly where
+that's going to land.
+[00:57:14] But I agree that it's a problem.
+[00:57:17] And, it's kind of one of the most active
+conversations right now.
+[00:57:22] So, it's,
+[00:57:26] if I had to guess, it's
+probably because of where we're at.
+[00:57:29] If nobody comes up with something smart
+for the near term,
+[00:57:32] we'll probably say sign in with Bluesky,
+[00:57:35] and then try to push
+any kind of branding effort,
+[00:57:39] that would start to have,
+you know, once that has made
+[00:57:41] its way out there,
+we can start to transfer it out.
+[00:57:44] But the paint doesn't dry
+permanently.
+[00:57:47] You know,
+you can always stage things on this.
+[00:57:50] And that would be probably
+what I hope happens here.
+[00:57:55] [Bey] Well, we're going to squeeze
+in one final question.
+[00:57:58] Current decentralized stacks are often
+[00:58:01] the architecturally distributed yet
+ontologically centralized.
+[00:58:06] They still trace one ledger,
+[00:58:07] one history, one metric
+just enforced by math instead of monarch
+[00:58:11] c-suite.
+[00:58:13] Escaping the isomorphism means
+designing for many partial truths
+[00:58:17] that can interoperate
+without collapsing into a single throne.
+[00:58:21] That requires, contextual proofs,
+rotating authority plural dashboards,
+[00:58:26] and not merely copying
+the cathedral into a data center.
+[00:58:30] There are 
+a lot of Bluesky architecture
+[00:58:34] addressing the sociotechnical
+razor's edge.
+[00:58:37] What kind of innovations do you think are
+needed to push this conversation further?
+[00:58:44] [Paul] It's messed up that
+[00:58:45] I was able to follow that
+[laughs].
+[00:58:49] That's a real...
+[00:58:50] [Bey] It's messed up that I was
+able to read it.
+[00:58:51] [Paul] [Laughs]
+[00:58:53] I actually have some guesses
+about who shared that.
+[00:58:56] Do we have a name for who that was?
+[00:58:59] [Bey] Johnathan Zong.
+[00:59:01] [Paul] Oh, okay. No.
+[00:59:02] Well, whoever that is, Jonathan,
+I apologize if we've met before,
+[00:59:05] but they're clearly deeply embedded
+in the conversation.
+[00:59:08] Okay.
+[00:59:10] Okay.
+[00:59:12] Let me let me real quick try to summarize
+[00:59:14] what Jonathan was getting at.
+[00:59:18] So, it
+[00:59:19] basically this has to do with,
+[00:59:23] are we all kind of
+collaborating on making one thing,
+[00:59:27] or is it everybody kind of working
+[00:59:30] in different pockets of things
+that they're building together?
+[00:59:33] And particularly
+when it comes to actual information.
+[00:59:36] So Wikipedia is an example of everybody
+collaborating to make one thing,
+[00:59:42] the Wikipedia
+[00:59:43] article for we'll go with Bluesky.
+[00:59:46] There's just one, right.
+[00:59:48] There's a global article for Bluesky,
+at least in the English Wikipedia.
+[00:59:53] And we're all working together
+to make that one thing and decide on what
+[00:59:56] that one thing is.
+[00:59:57] And, they brought up blockchains
+as an example of that same story.
+[01:00:02] Actually, blockchains is a one
+giant ledger of everybody's balances
+[01:00:06] that we're all working together
+to, to agree upon.
+[01:00:08] Now, another,
+counterexample to the Wikipedia model
+[01:00:12] is actually how the web works, where
+[01:00:13] everybody has their own website and
+they're publishing to their own website.
+[01:00:17] And so they don't actually have to come
+to agreement with each other
+[01:00:22] about what's being published,
+and everybody's doing it themselves.
+[01:00:24] The AT protocol is much more of the latter.
+[01:00:27] The AT protocol is not designed to come
+to agreement about one shared resource.
+[01:00:33] It's actually everybody.
+[01:00:34] Everybody is, representing themselves
+as their, as an account,
+[01:00:38] and speaking independently.
+[01:00:40] And then consequently,
+[01:00:44] the application that assembles
+[01:00:48] all those conversations into a feed
+and into the threads and things like that
+[01:00:53] has a lot of discretion
+over the selection of that content
+[01:00:56] and what shows up there,
+which is why the application matters.
+[01:01:01] There are two separate systems.
+[01:01:02] The application generally,
+[01:01:04] I mean, you know,
+[01:01:05] if it ever gets caught
+lying about what people are saying, well,
+[01:01:07] then you definitely want to get away
+from that application.
+[01:01:10] But, if you assume honestly, you still
+then have ranking decisions being made,
+[01:01:14] moderation decisions being made, algorithm
+decisions being made.
+[01:01:19] And, so it is a, in effect,
+a kind of a collaboration
+[01:01:23] between the end users
+and the applications.
+[01:01:27] But that creates flexibility.
+[01:01:28] You're supposed to the goal is to have
+an open market of these applications. And,
+[01:01:33] then that
+means choice about how that is done,
+[01:01:36] including the choice
+to be able to run it on your own and like,
+[01:01:39] have your own application.
+Now, that's pretty technical.
+[01:01:41] But in theory,
+that's that's what we're aiming for.
+[01:01:44] So, I think Jonathan's prompt was,
+you know,
+[01:01:49] how do we avoid, the sort of,
+[01:01:54] one thing that everybody works on
+and I would say personally
+[01:01:57] that that is kind of baked in
+to what we're doing, but I'm sure
+[01:02:01] Jonathan and I can go a couple of rounds
+and have an interesting conversation.
+[01:02:13] Well,
+thank you so much for joining us today.
+[01:02:16] I hope everyone at home
+found this a useful and informative hour,
+[01:02:19] and you will join us again
+next week for our next session.
+[01:02:23] Have a great day.
+[01:02:25] Thanks everybody.

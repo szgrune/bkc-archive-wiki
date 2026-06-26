@@ -42,6 +42,24 @@ Then ask the LLM to ingest / synthesize / query / lint — those workflows are
 defined in `AGENTS.md`. Everything is plain markdown in git, so you get version
 history for free.
 
+## YouTube transcripts (`collection/`)
+
+A separate, additive **source layer** lives in `collection/` — full transcripts
+and metadata for every video on the **@BKCHarvard** channel, scraped by
+`scripts/fetch_youtube.py` into a RAG-ready shape (`json/youtube.json` catalog +
+one `txt/youtube/yt_<id>.txt` per video). Unlike the metadata-only TagTeam corpus,
+this layer carries real body text, ready for the `llm_engine` RAG ingestion
+framework. It never modifies `archive.json`.
+
+```bash
+pip install youtube-transcript-api requests
+python3 scripts/fetch_youtube.py            # resumable; see AGENTS.md for proxy setup
+```
+
+YouTube rate-limits bulk transcript fetching, so the run is resumable and supports
+rotating proxies (`YT_PROXY_FILE`). Full operational detail — including the
+Webshare proxy workflow and the block/cooldown behavior — is in `AGENTS.md` §5.
+
 ## Status
 
 Prototype slice = **2025** (737 items). Once you've reviewed the page formats in

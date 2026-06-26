@@ -1,0 +1,246 @@
+[00:00:13] All right. We will get started. Hello, everyone. Welcome to the Transparency Hub launch event. We're thrilled that you could join us today.
+[00:00:24] I'm Kalie Mayberry, the Senior Program Manager with the Applied Social Media Lab within Harvard's Berkman Klein Center for Internet and Society, and I'll be kicking off our event today.
+[00:00:37] As a brief overview of our agenda, we will start with a welcome followed by an introduction of Transparency Hub, along with a live demo with our engineering team.
+[00:00:47] Then we'll have the pleasure of hearing from a student at Boston University who worked closely with the team to conduct significant data analysis research through the BU Spark! program. After his presentation, we'll open it up to questions.
+[00:00:59] Please use the questions box on your Zoom control bar to send in questions throughout the entire presentation, and we'll aim to get as many as we can near the end.
+[00:01:11] For those unfamiliar with ASML, we are a two-year pop-up applied engineering lab focused on rethinking the future of social media through new research and products.
+[00:01:23] We have a number of amazing folks that we work with us, many of who have helped with this event in one way or another.
+[00:01:31] The dedicated team working on this product includes Zoe and Teagan on engineering. Matt, along with Neeti and Zach on UX design. And then myself, Meg, and Professor James Mickens to assist on program management and overall vision and leadership of the project.
+[00:01:51] Through our mission to rethink social media, ASML is committed to promoting user safety and privacy in online environments. Our work on Transparency Hub is a tool developed to support this commitment. Now I'll hand it over to Principal Engineer Zoe Robert to share more about the project.
+[00:02:10] Thanks, Kalie. Hi, everyone. I am very excited to be here today to launch our Transparency Hub project.
+[00:02:18] I'd like to begin with a brief personal story.
+[00:02:21] I started my career in big tech working on systems that made decisions on behalf of billions of social media users, often in the name of safety, optimization and frictionless design.
+[00:02:33] As an engineer, I contributed to systems that flagged spam accounts, detected pornography and hate speech, and influenced how much and what kinds of news people saw in their feeds.
+[00:02:45] Unlike most users, I had the privilege of understanding how these systems worked.
+[00:02:50] I knew how my data was collected and fed back into models that determined what I would see, what would be filtered out, and how information environments were being shaped around me.
+[00:03:00] But outside the company, most people do not have that visibility. As platforms have become more complex and more opaque, the power imbalance between those who build them and those who live within them has continued to grow.
+[00:03:17] Transparency can help reduce this power imbalance in several ways.
+[00:03:22] First, it mitigates unchecked power. Platforms shape elections, public health, and social norms through algorithms and moderation. Without insight into ranking signals, content suppression rules,
+[00:03:35] or other internal processes, we cannot verify claims or detect abuse.
+[00:03:39] Second, it enables accountability. Researchers need access to study disinformation, bias, and harassment patterns, while journalists need it to expose systemic failures.
+[00:03:50] Opaque systems create blind spots where harm can persist.
+[00:03:55] And third, it protects democracy. We've seen how social media platforms have the power to alter elections. Transparency allows outsiders to see the rules, verify influence on public opinion, and limit concentrated private power over our information environment.
+[00:04:10] Historically, efforts by public interest researchers and journalists have provided transparency through investigative work, research, and data analysis.
+[00:04:24] However, these transparency efforts have become more difficult in recent years.
+[00:04:29] Platforms have grown more algorithmically complex and feature-rich, while simultaneously restricting or monetizing access to data for independent researchers.
+[00:04:40] Many of you may recall when Twitter ended free API access in 2023 and introduced high cost tiers, breaking numerous research tools and independent clients.
+[00:04:51] We find ourselves in this post-API age of sorts, where platforms increasingly reserve rich data for commercial partners, while limiting access for academic and civil society researchers.
+[00:05:02] And, as with the NYU Ad Observatory, we've even seen legal action taken against academic transparency efforts, discouraging creative middleware solutions that might otherwise help bridge this power gap.
+[00:05:18] So when I joined the Applied Social Media Lab in 2024 as the Principal Engineer for Transparency, I wanted to find a durable way to make the internal workings of social media companies more transparent without relying on platform cooperation.
+[00:05:37] How do we do that? Our approach focuses on publicly available platform documents.
+[00:05:43] I mean privacy policies, terms of service, community guidelines, and other official policies.
+[00:05:48] These documents are inherently public, legally required, and regularly updated.
+[00:05:54] Changes to these policies can occur for a variety of reasons. For example, in response to new regulations, when platforms seek to renegotiate user consent ahead of introducing new features,
+[00:06:05] or as part of broader shifts in industry norms and practices.
+[00:06:10] By analyzing these updates, we can gain insights into how platforms evolve and influence user experience, again, without direct access to internal company systems.
+[00:06:24] Take, for example, LinkedIn's change last fall to its user agreement and privacy policy, which allowed sharing user data with Microsoft and OpenAI.
+[00:06:34] Thanks to coverage by journalists and advocacy from privacy groups, news spread quickly, and many users were encouraged to opt out.
+[00:06:43] But this change wasn't an isolated incident. It was part of a larger accelerating trend where platforms are increasingly shifting to opt out defaults for AI training on user data.
+[00:06:57] And over the past few decades, platforms have continuously rewritten the rules in ways that favor their internal interests.
+[00:07:07] And when they do so, it happens in these dense legal documents that most users click through without reading.
+[00:07:14] Without the diligent work of journalists and privacy advocates, many of these changes would go unnoticed.
+[00:07:21] And even when alerts do reach the public, understanding patterns, trends, and implications across multiple platforms over time
+[00:07:29] remains a significant challenge.
+[00:07:34] Platform policy documents are usually hidden behind hard to find URLs, lack a standardized format across companies,
+[00:07:43] they use dense legalistic language, and they rarely include a clear version history.
+[00:07:49] These limitations make it very difficult to track and analyze changes to platform governance, especially in a timely way.
+[00:07:58] For researchers, large-scale, timely analyses that include version history and span multiple policy types across platforms is incredibly challenging.
+[00:08:10] And for platform users, even understanding a single policy document can feel impossible.
+[00:08:16] Over the past few decades, privacy policies have roughly quadrupled in length. They now often require college level reading skills and can take over an hour to read.
+[00:08:26] Trying to figure out what actually governs your online experience across multiple platforms
+[00:08:31] can feel insurmountable.
+[00:08:36] But hope is not lost. We believe here at the Applied Social Media Lab that a centralized automatically updating public archive of these platform policy documents can make a real difference.
+[00:08:49] Platform policies contain vital information. People, including everyday users, journalists, and researchers, have the right not only to see these rules.
+[00:08:59] But to understand them, and to examine how they evolve over time.
+[00:09:03] We are long past the days of reverse chronological feeds and simple likes. Users are now constantly confronted with new features and technologies that affect the rules governing their experience.
+[00:09:15] Taken together, these policies and their edit histories tell a story about how the balance between user agency and corporate control has shifted.
+[00:09:25] We believe it's a story worth preserving.
+[00:09:31] And this is exactly what Transparency Hub does. It systematically archives platform policies, making them easier to find, analyze, and compare.
+[00:09:41] As engineers at a historic internet research center within a law school, we felt uniquely positioned to take on the task of archiving these public legal documents.
+[00:09:52] Through this work, we aim to bring to light the rules that govern our shared digital spaces.
+[00:10:01] So what is Transparency Hub? It consists of an archiver system, a document database, and a public facing website.
+[00:10:10] We designed and built this system over the past year and a half with the help of so many research assistants, ASML team members, students, and the wisdom of the larger Berkman Klein Center community.
+[00:10:24] The result, which I'm so excited to be sharing today, is a public archive of over 20,000 documents from 332 companies, and growing.
+[00:10:36] With today's launch of Transparency Hub we hope to empower users, journalists, researchers, and policymakers to better understand the rules that govern digital platforms, how they operate, make decisions, and manage our data.
+[00:10:51] Before we dive into the platform itself, I'll hand it over to Teagan, the wonderful and very talented engineer who built most of this system to walk us through some of the technical details.
+[00:11:09] Thank you, Zoe. So let's kind of start from the beginning. We built this project really by manually collecting HTML of the policy documents from a small set of popular platforms.
+[00:11:24] But we had lofty dreams, u and we kind of quickly realized that this approach was going to be too labor-intensive for the scope that we wanted to reach, especially as we expanded our coverage to include the top applications from both iOS and Android app stores.
+[00:11:43] Although a few companies do offer past versions of their policies, a vast majority offer no easy path to retrieve them, even if they provide them at all. So to build a historical perspective, we turned to the Internet Archive
+[00:11:59] for past policy versions, which enables our database to stretch much farther into the past
+[00:12:06] than just the start of this project. And then as AI chatbots emerged as a new arena for digital social interaction, we broadened our definition of social media platforms to include these AI companies, ensuring our archive reflects the evolving landscape of
+[00:12:23] online communication. We have been and will continue to be dedicated to refining our automation as we've constantly been innovating on the best way to provide these captures, both within our provided metadata, internal processing pipelines, and consumer-oriented accessibility.
+[00:12:45] The internet is a messy place. HTML, the language of the web, certainly has its best practices, but no real standardization, especially across the hundreds of platforms that we track.
+[00:12:59] As we collected this data set with quite a few different underlying web frameworks, we found that
+[00:13:07] what we assume to be traditional cleaning methods sometimes do obscure policy data, which then kind of invalidates the reason we're seeking to archive these complete captures in the first place.
+[00:13:20] So we turned to browser tricks crawler which captures as much data as possible about the interaction between the client and the web server. And then we can provide that in this format called a web archive.
+[00:13:35] We then actually split that into five different formats, which we hope to kind of break that down to be as accessible as possible for as many people as possible. The text captures are more or less plug and play, but
+[00:13:50] sometimes they do have additional content. But those who have the bandwidth to kind of explore the HTML and web archive formats can do their own advanced data cleaning.
+[00:14:01] Ultimately, as engineers, we believe that by handing off this variety of formats, we ensure the users of the data have the flexibility they need to make the world more transparent.
+[00:14:12] And as a live data set, we expect the captures to grow both in number and in quality as we explore the boundaries of web archiving solutions.
+[00:14:24] So here's kind of a breakdown of that 3-part system that Zoe mentioned earlier. We have the public facing Transparency Hub website which serves the policy information to any interested Internet user by communicating with our document store and.
+[00:14:41] metadata database. The document store is a Google Cloud bucket, which contains all of these historic captures, while the metadata is a Mongo collection, which stores information about the platform and the platform's policy URLs
+[00:14:57] as well as when documents were fetched. They then communicate with our archiver jobs
+[00:15:07] which is our engine that then retrieves the company policy documents and manages their storage.
+[00:15:15] Let's get a little bit more technical on the actual archiver job itself. We kind of have our metadata database which stores the platform information in the form of relevant policy URLs. That gets sent into our archiver job
+[00:15:30] which is basically a wrapper of our custom fork of Browsertrix crawler. Browsertrix crawler is an archiving program built by a web recorder. It uses Pubtier to navigate a Brave browser through those policy URLs, making sure content that would traditionally be harder to obtain,
+[00:15:48] maybe because of dynamic rendering or nested routing, is still captured.
+[00:15:54] Our custom fork then does the translation into these five different formats, web archive, JSON, PDF, HTML, and TXT. And each of those kind of have their own trade-off of
+[00:16:07] strengths and weaknesses. Then, of course, the capture goes through a data quality check to make sure that the content matches our expectations of a policy document, as well as a new version check to ensure the content we found has actually been updated.
+[00:16:23] And last, it then translates into our document store and our metadata database.
+[00:16:33] So super excited to share the actual platform with you guys. Let's hop into that.
+[00:16:46] All right. So here is the new Transparency Hub. This is our home page.
+[00:16:53] And that's going to serve as kind of an overview of the project. It gives a brief breakdown of the policies we archive.
+[00:17:04] Here, you can directly search our database right on the home page for kind of easy, convenient access. And we also feature some of the more relevant platforms that come up in day-to-day news and these directly link to their
+[00:17:21] platform page, which we'll see a little bit later. We also offer quick links to some of our other more relevant pages. We have the projects page, which is a showcase for any projects
+[00:17:35] that have been done on this data. "For researchers" breaks down some information for researchers and some about pages if you're interested more about kind of the projects
+[00:17:48] or the lab itself. Let's check out the policy index, which we got to see that lovely snapshot of earlier.
+[00:17:57] Here you can see we do have these live tracking numbers of as our database kind of grows and expands, you can expect to see these
+[00:18:07] get higher and higher, which is exciting. We also kind of reiterate the policy types
+[00:18:14] that we're capturing. And here is kind of like our main search point. We offer filters for specific document types. So you can see which platforms we're tracking community standards for or specifically for terms of service
+[00:18:30] in case your research is only relevant to one of these document types. And then let's go ahead and check out a platform page.
+[00:18:43] So, right away you can see kind of there's this focus on making sure the users have
+[00:18:48] easy accessibility into these policies. You can see all of the past versions and the date that they were archived
+[00:18:57] as well as the different format downloads.We offer kind of a view into the Wayback archive, which hopefully can give the user their own experience. And then, of course, we offer this compare over time on the website.
+[00:19:17] And let's go check that out. And this is going to let us compare text captures that we've retrieved natively in the website. So anyone can do it super easily. Let's select the past
+[00:19:33] privacy policy for Hinge. Right away you're going to see this summary of changes. You can see detected as many as 800 words increase. And this was from 2025 to 2026. So we already have these long policies. They're only getting longer.
+[00:19:51] And you can also see we've detected some categories that might have changed in the content with the opt-in clauses and the data sharing.
+[00:19:59] Let's scroll a little bit down here, and you can actually see immediately this privacy policy was from October 30th. This one is a new version November 24th. We have some more exciting captures. Let's
+[00:20:16] ceck out... So this right here is going to be Snapchat's community guidelines. We've captured some changes. We can see, again, an increase of potentially 608 words with
+[00:20:30] change with data sharing. And we found they actually removed this clause in their harassment and bullying about sexual harassment, which gives you a pause and makes you wonder:Why did they remove that? And so certainly you can
+[00:20:50] use this tool to kind of quickly get us some insight into what's changing on the platforms. We also have a dDscord's terms of service. And this is again 2024 to 2026.
+[00:21:05] We can see a lot of terms… some terms removed this time, or added. Usually, that means that that content was kind of edited, but again, a huge increase in words.
+[00:21:17] And here we've highlighted they've kind of updated their wording on age requirements.
+[00:21:25] Um, and so kind of gives you some insight into
+[00:21:31] what they removed, what they added, and you can kind of start thinking about why they might have made these changes.
+[00:21:38] Um, and then let's go, here we have Beer Buddy, its privacy policy. Going back in time, this one to 2021 comparing with the more recent 2026 capture, we can see a lot of content has
+[00:21:54] been changed with these terms. Again, another increase in words. And here we found they integrated the Camera kit, which is a third party kind of data provider that they're using, and they kind of
+[00:22:09] in there it says you acknowledge that you have read Snap's privacy policy and agree to snaps terms of service kind of in this silent update to a privacy policy.
+[00:22:23] Well, let's keep checking out the rest of the website. We're going to go to the For Researchers page.
+[00:22:30] This kind of gives a breakdown about honestly, a lot of the stuff that we've been talking about today. But in case someone didn't make the webinar, they can check out all of this information. We kind of give an overview about what the web archive format is because that is kind of a
+[00:22:47] lesser known format. But it's basically this big capture. And you can actually download it and use web recorders, replay web.page
+[00:22:58] to have an interactive view of the archives, so you can kind of click buttons and interact with the elements as though you were touring the privacy policy.
+[00:23:09] Uh, in a snapshot, which is really powerful technology. We also give a showcase into our database collections for anyone interested. This is kind of the relevant
+[00:23:22] information that we might store on the platform, and then kind of what we track for each of our documents internally.
+[00:23:31] And then, of course, we are interested in more people kind of using this data. So we do have a contact form on the website.
+[00:23:42] So please, if you see this, and you think, I want to build a project or publish a paper with this data, we would love to hear about it, and we'd love to work with you. So you can also see the contact us form is down in the footer.
+[00:23:57] And then kind of in a more broader scope, if you see we're missing a policy on a platform that we already have, or if you think we're missing a whole platform, we actually have a form for you to submit suggestions
+[00:24:13] o we can kind of grow the database to our user feedback. That's also found in the footer here.
+[00:24:22] All right. Last stop, we're going to check out the projects page. And this is kind of a showcase of projects that have already been done using the Transparency Hub data.
+[00:24:32] We have a project done by our research assistant Young Gil, who made this platform policy explorer, and you can actually check it out through the website. And then we also have this Boston University team of BUSpark!
+[00:24:49] who this past fall did an amazing job building this dashboard with a bunch of interesting information,
+[00:24:57] some really cool insights. Uh, and so without further ado, I'm actually going to pass it over to one of the Boston University students who is here with us today, uh, Kevin Wrenn.
+[00:25:17] Hi, everyone. I'm Kevin Wrenn, and I'm a student researcher from BUSpark!. And this past semester I spent about four months diving deep into the Transparency Hub data set, analyzing privacy policies, terms of service, and transparency reports across more than 300 social media companies. I'm going to share a few things that I think will generally actually surprise you.
+[00:25:38] So, the question driving all of this research was simple. What are the platforms actually signing you up for? Because when you click, I agree, you're agreeing to a legal contract. Most people have no idea what's in it, and platforms are really counting on that.
+[00:25:53] I set out to answer this question at scale across these hundreds of platforms, going back over two decades, and here's what I found.
+[00:26:02] Before I get into these findings, I want to explain the problem we were working with, because it's worse than most people even realize. These policies do exist, companies publish them, but they're scattered across hundreds of different URLs with no central archive. The formats vary widely, so you can't compare across companies.
+[00:26:19] The language's dense legal text that is inaccessible to anyone who isn't a lawyer, and version histories are almost never tracked or made publicly available. Our team's job was to fix that. We cleaned and structured a dataset of over 300 companies' policies. We surfaced trends across time, regulation, and platform type.
+[00:26:37] We built interactive Plotly visualizations for the dashboard, and we answered 8 core research questions about how policies evolve. The goal? Make policy change visible to researchers, advocates, journalists, and the public.
+[00:26:52] The 1st finding, our policies are getting dramatically longer, and there's one unmistakable turning point, 2018. Across every platform type we studied, average word counts have grown substantially over the past decade. But 2018 stands out like a cliff edge. That's when GDRP took effect in Europe and the CCPA was passed in California, and platforms responded with a simultaneous industry-wide rewrite of their legal documents.
+[00:27:15] You can see it in the data like a spike. What's also striking is the generational difference. Tiktok-era platforms write significantly longer and more complex policies than Tumblr-era platforms did at the same age. And the vocab has changed, too. Older platforms mostly just talk about privacy policies
+[00:27:31] and newer platforms have baked in GDRP, CCPA, opt-in arbitration clause, and class action waivers at a dramatically higher rate. The documents got longer, but more importantly, they got more legally aggressive.
+[00:27:46] The second finding was that in the 2024 US election, it was created a measurable volatility in platform policies. To quantify this, we used cosine similarity, which is a technique that measures how much the actual text of a document changed between two time periods. We compared each platform policies.
+[00:28:04] In 188 days before the election versus 180 days after. The platforms that changed the most were actually dating apps. Okcupid and Match rewrote their policies most aggressively during or post the election. Tiktok and Reddit showed significant volatility, which is probably not surprising, given the regulatory scrutiny both were under.
+[00:28:24] Facebook and Instagram made more targeted changes, and the key pattern across all this is that companies react after elections. They don't anticipate them. Policy changes come after political events settle, not even before. That has real implications for how we think about platform accountability.
+[00:28:43] The third finding, and the one that I think is the most alarming. Most major platforms have quietly removed your right to sue them in court. In 2015, 46 policies in our dataset included mandatory arbitration clauses. By 2025, the number was 626. That is more than a tenfold increase in a decade. Class action waivers have grown steadily since 2016, and jury trial waivers.
+[00:29:06] Quietly embedded into many terms of service. One standout in our data is Discord, which at one point peaked at a severity score of 3.33. They were basically writing their arbitration warnings in all caps. But on the flip side, there are more positive trends worth noting. The right to access and download your own data is now present in about 45% of policies.
+[00:29:27] Up from near zero before 2018. Data deletion rights have become increasingly standard since the CCPA. Do not sell or share language has been adopted at a higher rate by newer platforms, but the targeted advertising opt-out, when it exists at all, is almost always buried deep in the documents, which is nowhere near to find.
+[00:29:48] The fourth finding, the entire industry is built on a surprisingly small number of legal templates. When we ran across shared phrase analysis across our dataset, we found near-identical language appearing across the companies that have no apparent connection to each other. The phrase make sure appears 172 times as a shared cross-platform phrase across all major platforms categories: intellectual property appears 130 times across otherwise unrelated platforms.
+[00:30:13] streaming platforms converge on almost identical language across regulated goods, content removal, hate speech, and self-harm. Messaging apps share near identical phrasing about human review, personal messages, and encryption. What this tells us is that policy language doesn't just flow top down from regulators, it spreads horizontally across industries.
+[00:30:34] Companies are copying from each other, and that matters for accountability, because if everyone's policy says the same thing, it may not actually reflect what any big company is doing.
+[00:30:46] To wrap this up, privacy policies are legal contracts that define what companies can do with your own data. The Transparency Hub exists to make that power visible. Everything I've walked you through today, the data, the code, and the visualizations that you'll see soon, is publicly available at the website below, and it's open for researchers, journalists, and advocates, and anyone who wants to keep asking the question, what are platforms actually signing us up for?
+[00:31:10] Below, there's a URL to the visualizations that the team and I have created, which is open to anyone to look at.
+[00:31:22] And if we just want to take a quick peek at that, we can see all the questions,  based off platform type, with visualizations. If you scroll down just a little bit with the associated question.
+[00:31:32] With that, I'll turn it over to Zoe for, um, our next section, but thank you so much for listening.
+[00:31:46] Thanks, Kevin. Yeah, so hopefully, as Kevin just demonstrated, the Transparency Hub data can lead to some super powerful insights. Projects using this archive data can increase transparency into platform operations. We think they can support evidence-based policy debates
+[00:32:07] and we believe we can advance public interest technology research.
+[00:32:11] The point of this webinar today, we invite all of you to perform your own investigations using Transparency Hub and Transparency Hub data.
+[00:32:20] Um, we would love for you to get involved via the Contact Us form, which Teagan pointed out earlier, is all over the website. Um, there you can request access to our database. You can also report any bugs or technical issues that you encounter when you're navigating the website.
+[00:32:39] We also encourage you to propose collaborations or share ideas for new features, um, or just generally to reach out and provide feedback. Also on the website, I just want to reiterate the other form that Teagan showed, um, there's this request a new policy form, which is where you can suggest
+[00:32:57] additional companies or policies for the archive. This is actually really valuable for us. We want this to remain sort of a comprehensive, up-to-date, and useful archive
+[00:33:09] and we need your help doing that.
+[00:33:14] So, in addition to public interest researchers, we hope that Transparency Hub continues to grow and evolve to meet the needs of journalists, developers, advocacy organizations, students, and everyday platform users.
+[00:33:29] In an environment of opaque digital practices and rising public concern
+[00:33:34] we hope this tool can offer a concrete step towards greater accountability, informed choice, and user agency online.
+[00:33:44] Thank you. And with that, here's the live URL.
+[00:33:49] Please feel free to check it out. And I think at this time we can go ahead and move to Q&A.
+[00:34:01] Sounds great. Thanks, Zoe. We also dropped the link to the BUSpark!
+[00:34:09] analytics transparency hub in the chat. So you all can start to look around and play with that. Thank you, Kevin, for sharing out about that.
+[00:34:19] We have a couple of questions that have come in, so I'll read a few of those out and feel free to send more along as you think of them.
+[00:34:29] First, do you have a built-in AI function where someone can ask for a summary of the changes between two specific policies?
+[00:34:39] Yeah, thank you for this question. We actually had a group of grad students here at Harvard build this last spring on a much smaller version of our archive. So we do have that, but we're very nervous about AI hallucinating things, or just generally sort of advising people in a legal setting. I feel like has increased risk of....
+[00:35:03] Yeah, we just, we want to make sure that whatever the AI says is actually accurate. So we're quite worried about that, and we just want to do a lot more testing and iteration before that's something that we build into the core functionality of our site.
+[00:35:17] Having said that, I have already heard from some collaborators and friends in the sort of public interest research space who are really excited to basically use our data for that purpose. We just want to make sure that as the sort of like core operators of the archive, what we put out there is, like, factual and accurate and
+[00:35:36] represents truth. So I do think that would be really cool.
+[00:35:41] tool, and I would love for someone to build it.
+[00:35:44] Great. Another question that I think maybe some of Kevin's work can help answer is, do you have a sense of what fraction of relevant platform behavior is actually defined in the policy documents that are in the Transparency Hub.
+[00:36:02] Yeah, so great question. This basically goes back to the templates. Like, since every kind of policy seems to be based off of
+[00:36:11] a small fraction amount of templates, I feel that a little bit of the policy's actions, or apps actions are defined in the policies, but most of them are kind of to shield the company from any legal battles.
+[00:36:28] Great. A few had come in a little bit earlier. So let me see if I can make sure I get those.
+[00:36:35] Wondering if you've published your code on GitHub or have documented your architecture in ways that could build upon the with other domains.
+[00:36:47] Yeah, great question. We att the Applied Social Media Lab, try to do all of our work, sort of open and in the public so we are absolutely in the process of open sourcing all of the various GitHub repos that are associated both with the website and the archiver system.
+[00:37:02] There's just… it takes a little bit of time, um, so that will come out soon. I think it's soon to come.
+[00:37:10] Definitely. And I think our form is helpful for this, but you can expand. Are there plans to allow people to upload their own documents?
+[00:37:21] Yeah, I would say, for now, no, because we want to have all of our new captures go through our system, but I think you can… you can request a specific URL to be archived. We say this in the forum, like, we won't be able to get to all things, slash
+[00:37:38] we have to maintain some sort of a central definition of what we consider to be a, like, social media AI sort of relevant technology company. So far, we've been pretty broad with that definition, but we're definitely open to new, sort of, like
+[00:37:54] social media apps,  or just new internet companies that would be helpful for us to track. We're also very much open to new types of policies. So, as Teagan mentioned a little bit, we started this actually just archiving transparency reports, and then we were like, oh, there's so much more out there, and it's all really interesting.
+[00:38:12] So yeah, if there are specific policies or sort of, like, content, you know, moderation guidelines, or whatever that you don't see represented for a company in our database, please go ahead and fill out that form, and we will try to, you know, run those captures as soon as possible if we think it's a good fit.
+[00:38:32] Great. Do we have somewhere on our website basic information about the different types of policies, what they mean and important clauses? This might be helpful for high school or middle school students that want to better understand these policies.
+[00:38:49] Yeah, that's a great point. At this time, no, we mostly have sort of summaries of the types of we explain the types of policies that we gather. And then we have sort of those key terms that are like sort of being added and removed. But yeah, I think if that is an interest again, please totally fill out the contact us form. I think that would be a cool feature for us to have
+[00:39:10] some education materials for everyday users, not necessarily just researchers
+[00:39:16] to be able to better understand and process this data.
+[00:39:23] Great. When collecting the platform documents did you come across other channels where platforms announced their initiatives? For example, blogs or even their Reddit channels.
+[00:39:40] Yeah, I think this could be a really cool sort of next focus area for the project. Obviously, yeah, that that exists. There's engineering blogs. And if our goal is to, you know, sort of sense and be able to track new features, that would be a great way to do it.
+[00:39:55] So far, it's just been outside of the scope, but, um, yeah, I'm… that would be cool. Actually, I'm curious, Teagan, if you have thoughts
+[00:40:05] from the technical side of trying to incorporate those URLs as well?
+[00:40:13] Yeah, I mean, definitely kind of the way our archiver jobs work,isn't dependent on it being a policy document. So if we were to have
+[00:40:23] those blog URLs, certainly we could investigate them. I think part of the problem is that there aren't really static places
+[00:40:31] specially, like, regarding Reddit, and even, like, blogs are kind of nested so it would be hard to make sure that we're on top of that in an automated way. But certainly,
+[00:40:43] it is something we could think about doing.
+[00:40:49] Interesting question. Are there platforms where you wanted to include their data, but they blocked it from being accessed by the tools you were using?
+[00:41:03] Teagan, can you take this one?
+[00:41:06] Yeah, so it has been a little bit of a struggle as we kind of explore different technologies. Part of why we settled on Browsertrix crawler as our main engine is because
+[00:41:20] it was capturing the policies that we previously kind of did find we couldn't access with our other tools. Nothing comes
+[00:41:34] to mind that is now blocked in the new engine. Certainly, we've struggled in some of the archive data has been
+[00:41:44] harder to obtain. But,  as I said earlier, we are kind of, like, improving our process, and so, um, if there's any, like, big companies that would do kind of come across, certainly we can work to
+[00:41:57] fix that.
+[00:42:01] I think the answer to this one is probably not. But does ASML identify platform policies which violate the laws and the jurisdictions in which they operate? And do we track actual laws and judgments and regulations that are supposed to
+[00:42:17] constrain these policies.
+[00:42:20] I would say generally, no. So I think one thing that we really want to emphasize today is that like as a core project team, our goal is to like produce this archive of high quality data, and any sort of like analysis done on top of it we want to uplift and encourage and support.
+[00:42:36] But we, like, sort of, as part of our core effort, aren't really doing that analysis, so that we can focus on producing, um, the data and making sure it's high quality. Um, there are a couple of really cool initiatives that do track… I'm blanking on the name right now, but I know there's some folks who track
+[00:42:52] internet policy changes over time, like in policy and law. UAnd there's some databases you can use for that. I think we met them, actually, when we presented this at the Massachusetts State House, if I'm remembering correctly, but anyway, so there are some really cool opportunities to do an analysis that kind of
+[00:43:10] you know, combines those two sources and says, like, oh, we have all these policy documents, and we have this detailed version history of the laws governing the internet themselves, like, how can we see which policies are complying, how quickly, and, you know, that kind of thing. So, I do think that would be a really powerful analysis
+[00:43:27] and I encourage… I encourage anyone to do it.
+[00:43:32] Besides being social media focused, do you now or potentially consider other broad categories such as e-commerce sellers like Amazons or Walmarts or other supermarket Internet and cell providers, etc, to the Hub.
+[00:43:48] Yeah, this is a good question. I'm certainly open to it. I think the important thing… there has to be some centralizing force here. You know, our goal is not to archive all, um, you know, privacy policies of every website ever. We are the Applied Social Media Lab, so the initiative does really stem from trying to uplift
+[00:44:07] people and their social interactions online. Having said that, I do think, you know, with our expansion to dating apps, and then thinking about AI chatbots, like, the definition of social is pretty broad. And so we are open to it.
+[00:44:23] Yeah, which is sort of a vague answer, but I guess we are open to it, but, uh, sort of, we'll see where the interest lies. Like, if there's really cool research that would benefit from us starting to track these broader definitions of social media companies, then I think we're open to doing it.
+[00:44:42] Were there other policy or document comparison tools that you looked at as precedents while building this?
+[00:44:51] Yeah, definitely. There's two that come to mind from like the really early days when we were sort of just coming up with the idea of Transparency Hub. One of them, I'm so sorry once again, I'm blanking on the name, but it lets you look at local laws in your area, so you can sort of
+[00:45:08] search by zip code or city, um, or even county, and then say what's, you know, what are these proposed changes to laws, um, what do they mean? And they offer a really nice kind of, like, diff view, but also a summarization of the changes.
+[00:45:24] So I think that was one that we were inspired by. I also personally am a huge fan of the Mozilla Foundation's Privacy Not Included work. I think that's a really cool way that they have tried to make
+[00:45:38] the question of how is my privacy respected in a given device or application really digestible and easy to understand to everyday consumers. So I'm a fan of that work as well. So I think those are inspirations. And then there's also the terms of service do not read TOSDNR website, which
+[00:45:59] is specific to terms of service and has some very nice, you know, sort of community, um, input, and, um, crowdsourced efforts to make those diffs interpretable and easy to understand.
+[00:46:13] So yeah, there's lots of amazing work out there and we want to uplift it as well.
+[00:46:21] How easy, or do you have a plan for making this platform multilingual?
+[00:46:28] Oh, the dream! Yes, yeah, I would say there's several dreams we have in terms of expanding, not just language, but also, like, geographic region. We would love to be able to offer these comparisons, not just across platform and time, but also across region.
+[00:46:45] And with that inherent in that, we're going to have to offer a multilingual functionality.
+[00:46:53] Yeah, so that's absolutely a dream at this point. It's really just a question of, like, time, funding, and sort of public interest. So hopefully we can get there.
+[00:47:05] Great. Kevin might have some insights here. When you look at how platforms govern content and publisher relationships through their terms of service. What do you see that most journalists and media critics are missing?
+[00:47:18] Anything that came up?
+[00:47:22] I think this is just kind of boils down to the language as well as the length, as I mentioned. So, of course, policies are getting a lot longer, but what, like my team and I found is that
+[00:47:35] the language across all of these policies are very similar because the template is, you know, one and the same between all of these policies.
+[00:47:44] But, as I mentioned, a lot of the phrasing is to kind of safeguard them from any lawsuit, so I just thought that was… You know, pretty interesting. So, just kind of seeing the similarities between, you know, companies that might have nothing to do with each other was a little bit alarming if, you know, one app has one function and the other
+[00:48:03] service does something completely different.
+[00:48:08] Great. All right. Do one last question. I know we have so many, but hopefully folks feel like they can use the contact form to reach out. We'd love to hear from you all. I'm going to do a combined question.
+[00:48:23] And Teagan did allude to this a bit earlier with some of the issues with getting certain documents, but any technical problems that you faced while fetching the data, and then I guess related, are there any platforms that publish their terms in locations not accessible, like app stores, kinds of things?
+[00:48:46] Yeah, certainly the Wayback Machine is a very powerful tool. But obviously, we wanted to kind of respect their project
+[00:48:58] so kind of going through their data was intentionally very slow and there were a lot of kind of technical difficulties regarding that.
+[00:49:11] Regarding the second half of the question, there are really some buried policies. As we mentioned earlier, we kind of pulled from the iOS and Android app stores. And some of these sites don't have,
+[00:49:27] some of these platforms don't have websites. And even kind of like Googling the app, all you can find is the app link
+[00:49:37] but these app stores do require usually a privacy policy and kind of finding that sometimes it you end up on like a Google Doc
+[00:49:48] which is this legal document. And maybe the only access point is the App Store.
+[00:49:56] So they can, they can really be buried.
+[00:50:02] Amazing. Well, thank you to everyone, Zoe and Teagan and Kevin, certainly for for joining us and presenting today, but couldn't have done this without the rest of the team at ASML and BKC and the rest of the BUSpark! team, which I know wanted to be here as well.
+[00:50:19] Uh, so thank you all. Great questions. Please do reach out. We dropped the links to the Hub itself in the chat, as well as the BUSpark! analytics dashboard and our project page. Feel free to contact us. Our contact is on all of those pages, so we would love to hear from you. Please reach out and share more and ask more questions. This is.
+[00:50:42] Certainly the beginning of the conversation, so looking forward to more. Thanks, everyone. And have a great rest of your day. Great to see you all.
+[00:50:54] Bye.

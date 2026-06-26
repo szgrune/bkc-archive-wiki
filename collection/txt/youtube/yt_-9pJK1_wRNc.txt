@@ -1,0 +1,460 @@
+[00:00:00] ASML is the Applied Social Media Lab
+at the Berkman Klein Center.
+[00:00:03] We're thinking
+about building a new internet.
+[00:00:06] I mean, you think about being an applied
+social media lab,
+[00:00:09] we are thinking about the challenges
+of social media,
+[00:00:13] as something that we're not just here
+to fix to what the big companies want, right?
+[00:00:17] So we're thinking about
+how to actually build a new internet,
+[00:00:20] what that might look like,
+[00:00:23] and how we're going to need it
+better than the one
+[00:00:25] that we found.
+[00:00:30] So like I said, we're a two year
+[00:00:31] applied engineering lab tasked with solving
+the most pressing online issues.
+[00:00:36] We have one senior director,
+[00:00:37] that is me, two product managers, two UX
+designers, four principal engineers,
+[00:00:41] a partridge in a pear tree, six senior engineers,
+five gold rings, seven administrative staff
+[00:00:45] and five research assistants.
+[00:00:48] And we have three
+[00:00:49] lovely PIs who are so great
+and we really, really thank them
+[00:00:53] for all the work
+that they have done so far with us.
+[00:00:57] They really need no introduction and we just 
+want to say thank you so much
+[00:01:00] to all of them.
+[00:01:05] So this is how we work.
+[00:01:06] We do research,
+we design a pilot and we platform.
+[00:01:10] We start with a real world problem.
+[00:01:13] We figure out what we might build.
+[00:01:15] We try it.
+[00:01:17] We get feedback.
+[00:01:18] That's where you all come in today.
+[00:01:22] But today
+we're going to talk about privacy,
+[00:01:25] safety, and transparency,
+which I have to say
+[00:01:31] is a topic that I have found people
+have gotten a little fatalistic about.
+[00:01:36] They sort of have decided that no one cares,
+that we've all just
+[00:01:40] sort of entered into a world in which
+we've given up our privacy, there's no hope,
+[00:01:44] there's nothing else we can build.
+[00:01:46] And I sort of reject that.
+[00:01:47] And I think as a lab, we reject that.
+[00:01:50] We think that people have the right
+to share their data if they want to,
+[00:01:55] they have the
+[00:01:55] right
+to know how their data is being accessed,
+[00:01:58] how it is being used
+for commercial purposes, and by whom.
+[00:02:04] Okay.
+[00:02:04] So, you may have heard,
+[00:02:07] that BlueSky recently
+started blocking all Mississippi
+[00:02:10] IP addresses in response
+to a law that requires them to age-verify
+[00:02:15] by everyone for access to use
+for that service.
+[00:02:20] And this is downstream
+of a Supreme Court decision.
+[00:02:22] And we've been thinking
+about this type of thing for a while.
+[00:02:25] And so, this demo is kind of ripped
+from the headlines
+[00:02:29] and it's a little technical, but,
+we hope you'll follow along.
+[00:02:33] What we're trying to think about here
+is that,
+[00:02:36] you know, we do have a cultural norm
+where, yeah, we can age-gate things,
+[00:02:40] that's like a normal thing
+fora society to do, right?
+[00:02:43] You want to go buy a case of beer,
+you show your ID. You don't
+[00:02:46] necessarily associate that with everything
+you've ever checked out from the library,
+[00:02:50] your tax records,
+everything you watch on Netflix, everyone
+[00:02:55] or your friend that you let have
+your Netflix password, watched on Netflix.
+[00:03:00] So, we are trying to imagine a world
+in which we're also not requiring
+[00:03:05] that of everybody just because they want
+to do something that only adults do.
+[00:03:09] And so, with that,
+I'd like to pass it to our friend
+[00:03:13] Alberto, who will show you
+our new ASML wallet.
+[00:03:25] [applause]
+Hello, everyone.
+[00:03:26] Great to see you all.
+[00:03:27] Thanks for your interest in the lab.
+[00:03:29] I'm Brendan Miller. This my colleague
+[00:03:31] Alberto Leon, and we've been working on
+some digital identity
+[00:03:35] solutions and again,
+trying to look at those trade offs
+[00:03:39] in pursuit of this trade offs
+in the past of safety
+[00:03:42] and trust and privacy.
+[00:03:44] So we are doing a demonstration centered
+around a wallet, the ASML Wallet,
+[00:03:49] and we're showing how you can put
+[00:03:51] some verifiable credentials
+onto open social media.
+[00:03:54] And, if you go to the next slide,
+[00:03:56] there's two specific demonstrations
+that we wanted to show.
+[00:04:00] So as a way to promote more trust,
+how can you link
+[00:04:03] social media profiles
+to increase trust and credibility
+[00:04:07] in an open ecosystem?
+[00:04:09] We're going to look
+at the BlueSky platform.
+[00:04:11] But you could also apply to DSMP,
+to the fediverse,
+[00:04:14] similar techniques would work there.
+[00:04:16] And the second one is, as Meg was alluding
+to, we need to validate age.
+[00:04:22] How can we share mandatory information
+in a privacy preserving manner?
+[00:04:25] So we have two parts to this
+demo we'd like to show you.
+[00:04:29] So if you go to the next slide,
+the first one is an X account
+[00:04:33] verification.
+[00:04:34] This would work also for Instagram,
+any platform.
+[00:04:38] This does not require any special API
+access with these platforms.
+[00:04:42] You're not violating the terms
+of service service by doing this.
+[00:04:45] But what you can do,
+combining your browser
+[00:04:49] with a browser extension,
+we're calling CredSnap,
+[00:04:52] you can issue a verification
+that I control a certain X account,
+[00:04:57] so that, you know, Brendan Miller on X,
+I can download that to my wallet,
+[00:05:01] and I can have a credential,
+which I can use for my own purposes.
+[00:05:05] And in our case, we're going to show
+how you can send proof of that
+[00:05:08] to your BlueSky profile and attach it
+and link it to your BlueSky profile.
+[00:05:13] This is something that content creators
+might like to do, or publishers to show
+[00:05:17] that you are the same person on BlueSky
+you are on X.
+[00:05:21] So, Alberto is going to switch over
+to his X profile here.
+[00:05:25] He's going to load
+up the browser extension.
+[00:05:29] I think the browser extension
+[00:05:30] is not showing on this screen,
+unfortunately.
+[00:05:35] Okay.
+[00:05:36] There we go. Great.
+[00:05:37] So, these are verifications. For now,
+we have our account verification
+[00:05:41] specifically just for X,
+we could add other ones for Instagram,
+[00:05:44] other services. In the future
+[00:05:46] we could also do this for content and posts
+[00:05:49] so that if you, say
+you have a certain important post,
+[00:05:51] maybe it had a lot of views, maybe it was
+very important for one reason or another,
+[00:05:55] you can have an attestation of that
+that you can use elsewhere off of x.
+[00:06:00] So he's gonna initiate
+the X account verification.
+[00:06:04] This kicks off a cryptographic process,
+[00:06:07] with some deep cryptography
+in the background.
+[00:06:09] But basically what's happening
+[00:06:11] is you're notarizing
+your interaction with the X platform.
+[00:06:15] What it's doing is it's
+fetching your profile,
+[00:06:17] and just like a notary would in real life,
+[00:06:19] who's watching you sign something
+and they can say, yes, indeed,
+[00:06:23] Brendan Miller signed this.
+[00:06:25] We're able to verify that
+[00:06:27] Alberto's
+account is indeed interacting here.
+[00:06:30] So what he has is
+he has our ASML wallet on his phone,
+[00:06:34] and so he can go ahead and scan this
+QR code on his phone.
+[00:06:37] Can you move this window there?
+[00:06:39] It's okay. Great.
+[00:06:42] So you can see this is a wallet
+on the right hand of screen.
+[00:06:45] This is his mobile phone.
+[00:06:47] When he clicks scan,
+[00:06:49] he's going to be able to scan this
+QR code here.
+[00:06:53] And so it says you're connected
+with CredSnap.
+[00:06:55] This is a demo for account verification,
+and it's offering a credential.
+[00:06:59] If you click the "view offer"
+[00:07:02] you'll see specifically what
+information is being included in this.
+[00:07:07] And at the top, was his profile name,
+[00:07:09] that's the key thing
+that we're looking for here.
+[00:07:11] We're going to work on the UI of this.
+[00:07:13] This is actually the notarization data,
+which is important to prove that,
+[00:07:17] this notarization has happened.
+[00:07:19] If he can accept this credential,
+[00:07:22] the credentials downloaded to his wallet.
+If he clicks done,
+[00:07:26] he will see the new credential
+is available in his wallet.
+[00:07:30] So this is a credential under his control,
+which now is outside of X which gives him
+[00:07:35] some ability to increase
+trust in his BlueSky profile
+[00:07:39] as we'll show you here.
+[00:07:41] So now, if we switch over from X
+to his BlueSky profile,
+[00:07:46] we've added some settings.
+[00:07:47] This is very much like the BlueSky app.
+[00:07:49] So we've added some additional features.
+hGre on the settings feature
+[00:07:53] we've added these verifiable credentials.
+[00:07:55] So if you click on that you'll see
+we're offering two credentials
+[00:07:58] for the moment and age verification,
+which Alberto will show you in a moment.
+[00:08:03] And the X.com account verification.
+[00:08:05] So we verify X.com account.
+[00:08:10] This is again a QR code link.
+[00:08:11] He's going to scan it on his phone.
+[00:08:13] And in this case,
+we're not downloading a credential.
+[00:08:16] What we're doing is we're sharing a proof,
+generated
+[00:08:19] off of that credential
+to be linked to our BlueSky account.
+[00:08:23] So he's choosing to share certain
+information, and not others.
+[00:08:27] So view the request.
+[00:08:28] So you can see here, scroll up a little bit,
+so he can see exactly what information
+[00:08:32] is being requested
+[00:08:33] and say, 'yes
+that information is okay to share.'
+[00:08:36] They really just want my,
+[00:08:38] screen name and the notarization data
+to prove that it's correct.
+[00:08:41] So he can say share.
+[00:08:43] And as you can see on BlueSky
+it says verification complete.
+[00:08:47] And if he closes
+that and goes to his profile now
+[00:08:51] you'll see there's a little X logo
+next to his name that wasn't there before.
+[00:08:55] If he clicks it, it'll show his handle on X.
+[00:08:59] And this next part is really not the user
+experience that we want long term,
+[00:09:03] but we want to show you
+that when you click the view details,
+[00:09:06] there is in fact a cryptographic proof
+under the hood.
+[00:09:09] So this is not what's going to be there
+long term.
+[00:09:12] But we're just saying for the moment,
+there is this access to data behind it.
+[00:09:16] If you close this...
+[00:09:20] And in the future, we're going to work
+with our designers here
+[00:09:23] to communicate.
+[00:09:24] How can you communicate to folks that
+there is this attested information there?
+[00:09:28] So, this is going to help
+content creators and folks
+[00:09:31] who are looking to verify:
+[00:09:33] How do I know that this person
+who says that they're
+[00:09:36] Alberto Leon on BlueSky is in fact
+[00:09:39] the person I think it is, and this is
+one method that can attest to that.
+[00:09:43] So, that's the first half of our demo
+I'm going to pass to
+[00:09:46] Alberto who's going to talk about 
+the sharing of mandatory information
+[00:09:50] in a privacy preserving way,
+specifically for the age verification.
+[00:09:54] All right.
+[00:09:55] Thank you, Brandon.
+[00:09:56] So just a quick couple of questions.
+[00:09:58] So raise of hands.
+[00:10:00] How many of you have heard of some
+of the new regulations, as Meg mentioned,
+[00:10:04] about, age verification in certain states?
+Perfect, so mostly everyone.
+[00:10:09] So second question,
+how many of you are okay
+[00:10:13] with sharing some of this information,
+[00:10:16] like a selfie, ID,
+you know, socials, with these platforms?
+[00:10:22] Yeah.
+[00:10:22] So, nobody. Exactly.
+[00:10:25] So, so yeah.
+[00:10:27] So that brings us
+to the second half of this demo.
+[00:10:29] So, basically what we've developed here
+is a same type of credential.
+[00:10:34] We're mimicking a DMV at the moment,
+of course, the mobile driver's license,
+[00:10:39] we're seeing it more
+and more throughout the States.
+[00:10:43] But in this case,
+we have developed a basic website
+[00:10:46] which will issue a credential,
+same as we saw with Brendan's use case.
+[00:10:50] So basically
+that will be sent to the wallet.
+[00:10:53] And then we will send the same proof
+to BlueSky.
+[00:10:56] But instead of sharing the actual
+date of birth
+[00:10:59] and the raw information, we're
+we're choosing to just say, yes,
+[00:11:03] we're of age, we're 18+
+and this is, you know, verified.
+[00:11:08] So I'll go ahead and demonstrate
+that really quick.
+[00:11:10] So I'll open this DMV mock website.
+[00:11:13] And this is taken from
+what you'd typically see
+[00:11:17] on a mobile driver's
+license name, date of birth, issuance datem
+[00:11:20] the state that issued it. I have pre-filled
+here a few things in text boxes.
+[00:11:26] So I'll go ahead and generate that.
+[00:11:29] Of course is a mock credential.
+[00:11:30] So I'll go ahead and scan
+this credential here.
+[00:11:36] Alright.
+[00:11:36] So it's asking... 
+Give me one second here.
+[00:11:41] Alright.
+[00:11:41] So it's offering me a credential.
+[00:11:44] And I can either,
+you know, just confirm it's my data.
+[00:11:47] And of course, this is fake data.
+[00:11:49] And I will accept.
+[00:11:53] And there we go.
+[00:11:53] Now we have two credentials on our mobile
+wallets.
+[00:11:56] Now, I'll do the same as Brendan
+demonstrated here a few moments ago,
+[00:12:00] when I'll go to my BlueSky
+settings accounts, and we are running
+[00:12:05] our own PDS,
+[00:12:08] and I will decide to verify age.
+[00:12:11] So in this case,
+[00:12:13] I am deciding to either reject
+to share my information or not.
+[00:12:18] So I'll go ahead and view
+that proof request.
+[00:12:20] And the only difference here is 
+if you look at date of birth,
+[00:12:23] it's just looking for a condition.
+[00:12:24] So it's not actually
+getting my date of birth.
+[00:12:26] So just taking today's date
+and calculating whether I'm 18 or +.
+[00:12:29] So I'll go ahead and share that.
+[00:12:34] And now
+[00:12:34] BlueSky has confirmed
+that it has received the proof.
+[00:12:38] And I can go to my profile.
+[00:12:41] And I can see this second badge here.
+[00:12:44] And it shows the expiration date,
+when it was verified.
+[00:12:47] And of course we have this messy data
+which we'll get better at, but
+[00:12:51] this actually contains the proof.
+[00:12:53] And if you're familiar
+with this kind of data,
+[00:12:55] you won't find the date of birth anywhere.
+[00:13:03] And so,
+[00:13:05] just to remind you, trust.
+[00:13:07] So we're increasing
+[00:13:09] trust for folks that wanted to generate
+that, linking accounts, and privacy.
+[00:13:13] How can you verify and get access age
+[00:13:16] data content?
+[00:13:17] So these are the,
+the steps that we've completed.
+[00:13:19] Just to give you a little sense of
+what's up next.
+[00:13:22] We're interested in creating
+and using person-to-person credentials.
+[00:13:25] So let me verify my relationships
+with one of you.
+[00:13:28] Perhaps we do a little ceremony
+with our phones in person
+[00:13:32] and we can confirm that
+[00:13:33] we know each other.
+[00:13:34] These credentials can live on our phone
+under our control.
+[00:13:37] And hopefully over time,
+this is our hypothesis,
+[00:13:40] can help with some important
+social media challenges.
+[00:13:43] So if we go to the next, here,
+for example, proof of personhood.
+[00:13:47] So perhaps if I've verified a couple social
+media accounts and several relationships,
+[00:13:52] maybe that's proof of personhood
+that doesn't require a government account.
+[00:13:57] Which, of course, many minors don't
+have access to a mobile driver's license.
+[00:14:02] Maybe trustworthy social search.
+[00:14:04] Keep it up a moment.
+[00:14:06] Content providence, we might be able
+to figure out where content came
+[00:14:09] from through these kind of credentials,
+and perhaps even age verification.
+[00:14:13] So this is a hypothesis.
+We have not done this yet.
+[00:14:16] But just to give you a sense of where
+we can go with these kind of verifiable
+[00:14:19] credentials and linking them to the open
+social media ecosystem.
+[00:14:24] If we're lucky, some of the proprietary
+closed platforms and, something similar.
+[00:14:30] And we'd love your feedback.
+[00:14:32] We, we have a form here on the left
+if you want to give us any feedback.
+[00:14:37] And on the right, that QR code is
+to try some of the stuff yourself
+[00:14:41] if you'd like to.
+[00:14:42] There's a getting started guide
+and you can try it at home.
+[00:14:44] We can make this available to you
+afterwards as well.
+[00:14:47] So, thank you very much.
+[00:14:57] Thank you folks.

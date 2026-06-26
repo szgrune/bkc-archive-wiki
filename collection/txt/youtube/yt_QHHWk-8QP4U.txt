@@ -1,0 +1,1879 @@
+[00:00:02] [Jay] Perfect. Love it.
+[00:00:03] Hi, everybody. Welcome. My name is Jay.
+[00:00:05] I use they/them pronouns and I'm
+[00:00:06] the executive assistant
+here at the Berkman Klein Center.
+[00:00:09] At the Berkman Klein Center
+[00:00:10] throughout the year, we host a series
+of academics, tech professionals,
+[00:00:13] and industry experts to talk
+about research at the forefront of issues
+[00:00:17] like AI, social media,
+digital rights, and etc.
+[00:00:21] Today, we are so excited to host Sara
+Fish with us.
+[00:00:24] Sara is a third year PhD student
+in the Harvard School of Computer Science,
+[00:00:29] and she received her
+bachelor's in mathematics from CalTech.
+[00:00:32] Her research focuses on the intersection
+of economics and machine learning,
+[00:00:37] and she's also supported by both
+the NSF Graduate Research Fund
+[00:00:41] and by the Kempner Institute.
+[00:00:43] Today, her research is super interesting,
+[00:00:45] she'll be sharing
+findings from her research paper,
+[00:00:48] "Algorithmic Collusions and Large Language
+Models".
+[00:00:51] Coauthored with Yannai Gonczarowski
+and Ran Shorrer,
+[00:00:55] the work explores how LLMs, when deployed
+for economic things
+[00:00:58] like bidding and pricing, demonstrate
+signs of collusion,
+[00:01:02] which could be incredibly concerning
+for antitrust law and AI governance,
+[00:01:06] and particularly
+when these systems exist in black boxes.
+[00:01:10] So, without any further
+ado, please welcome Sara.
+[00:01:19] [Sara] Hello, everybody.
+[00:01:20] Can you hear me okay?
+[00:01:21] Is my audio good? Great.
+[00:01:23] I'm seeing some nods.
+[00:01:24] Yeah.
+[00:01:25] Can you advance to the slides, please?
+[00:01:30] Excellent.
+[00:01:30] Thank you.
+[00:01:32] Can you make it full screen by any chance?
+[00:01:33] Awesome.
+[00:01:37] Awesome.
+[00:01:37] Okay, so this talk is about algorithmic
+collusion by large language models.
+[00:01:41] This is joint work with
+[00:01:43] Yonnai Gonczarowski...
+[00:01:46] Are we good on audio here?
+[00:01:50] I don't want to give anybody.
+[00:01:51] Okay, great.
+[00:01:54] So this is joint work
+with Yonnai Gonczarowski
+[00:01:56] who's actually here in the audience
+right now
+[00:01:58] and also Ran Shorrer, who's
+a professor of economics at Penn State.
+[00:02:03] So recently, tech companies are releasing
+[00:02:06] a very interesting new kind of product,
+namely, AI agents.
+[00:02:10] So on the slide, you see some examples.
+[00:02:12] In particular
+[00:02:13] this one called Operator is an
+AI agent product by OpenAI.
+[00:02:17] And they promise to do something
+very strange, which is accomplish tasks,
+[00:02:22] any task
+that a person can do on a computer.
+[00:02:25] So the Operator example
+[00:02:26] shows an AI agent being instructed
+to book a trip for a person.
+[00:02:30] And so we see the AI agent Operator
+[00:02:32] going to TripAdvisor and searching
+for flights or whatever one does for that.
+[00:02:36] And also there's this other startup,
+Adept AI,
+[00:02:39] which, also takes like a business
+focused approach.
+[00:02:41] They have this AI agent,
+[00:02:43] looking for shipping container,
+availabilities, something like this.
+[00:02:47] And here the promise is really to have an
+AI fully take over a task
+[00:02:51] that was previously accomplished
+by a human,
+[00:02:53] rather than assist a human with the task.
+[00:02:55] And some of these startups
+use very strong language to sort of talk
+[00:02:58] about this potential promise.
+For example, Mechanize AI
+[00:03:01] was recently viral on
+Twitter, and they talk about
+[00:03:06] hoping
+to do full automation of the economy.
+[00:03:08] And this is kind of a lofty promise, but
+indeed, we're seeing progress
+[00:03:11] on these agents in the last few years,
+and they're becoming increasingly capable.
+[00:03:20] There we go.
+[00:03:22] Overall, we're seeing increasingly
+people may fully delegate
+[00:03:26] tasks to AI agents or large language
+model agents.
+[00:03:30] And this is not a new phenomenon.
+[00:03:32] People have been delegating tasks
+to algorithms for many years now.
+[00:03:35] However LLMs
+large language models show a new promise
+[00:03:39] that previous classical algorithms do not.
+For one, LLMs are pre-trained.
+[00:03:45] So, any domain specific training costs
+associated
+[00:03:49] with completing a specific task
+are drastically reduced or eliminated.
+[00:03:53] Secondly, LLMs have really low barrier
+to entry.
+[00:03:56] ChatGPT reached 100 million users
+in a very quick period of time.
+[00:03:59] This indicates that this technology
+can be used by a wide array of users.
+[00:04:03] And finally, LLMs exhibit
+a diverse array of advanced capabilities
+[00:04:07] in completing tasks end to end.
+[00:04:09] There was a recent report by METR
+in which they showed
+[00:04:12] that the complexity of a task
+that LLMs could
+[00:04:15] increase has been increasing
+with time, as LLMs advance.
+[00:04:20] Accordingly, this raises the
+[00:04:21] question:
+what unique opportunities and risks arise
+[00:04:24] specifically from delegation of tasks
+to LLM agents?
+[00:04:29] And before I dive more into this specific
+research question,
+[00:04:33] I want to contextualize it a bit
+by talking about the differences between
+[00:04:37] human-AI collaboration
+versus full AI delegation.
+[00:04:41] So Human-AI collaboration is also,
+an immense area of study.
+[00:04:45] And also there's a lot of
+[00:04:47] existing systems
+that rely on human-AI collaboration.
+[00:04:50] This includes, you know, hiring,
+diagnostics, coding, driving,
+[00:04:53] all these sorts of things.
+[00:04:55] And broadly speaking, what human-AI
+collaboration often evolves is
+[00:04:59] maybe AI is curating
+some promising candidates,
+[00:05:02] and then the human human selects
+a candidate, or maybe
+[00:05:06] the AI is tentatively proposing
+a solution, and the human is
+[00:05:09] sort of deciding whether to accept
+this solution or override it.
+[00:05:13] And here sort of the key question
+in this literature is:
+[00:05:17] how do we make this human=
+AI team better than the sum of its parts?
+[00:05:19] So better than the human or the AI could be
+if they were alone.
+[00:05:23] And the researchers
+proposed a diverse array of solutions.
+[00:05:28] These solutions include,
+[00:05:29] oh, maybe we should make the
+[00:05:30] AI more interpretable or explainable
+so that the human can better work with it.
+[00:05:33] Or maybe we should train the
+[00:05:34] AI specifically
+to be a better collaborator to a human.
+[00:05:38] AI delegation is kind of a different
+beast, even though it sounds sort of
+[00:05:42] like a special case of human-
+AI collaboration, the kinds of
+[00:05:45] opportunities and risks
+[00:05:46] we have with AI delegation
+are actually completely different.
+[00:05:50] In particular,
+to delegate a task to an AI,
+[00:05:54] these sorts of nice properties
+to have, like interpretability,
+[00:05:57] explainability or human compatibility,
+[00:05:59] they're not at all prerequisites.
+[00:06:01] You can delegate a task to an AI
+and it can be a complete black box.
+[00:06:04] You can have no idea how it works, where
+it might go wrong, or anything like this.
+[00:06:08] And this is a double edged sword
+because you can,
+[00:06:11] on the one hand, you don't have to solve
+these tough questions of interpretability
+[00:06:14] and explainability
+in order to delegate a task to AI.
+[00:06:17] But on the other hand,
+this may introduce novel risks.
+[00:06:24] So on this topic of risks.
+[00:06:25] So the talk today is about algorithmic
+collusion by large language models.
+[00:06:28] And collusion is going to be principally
+[00:06:30] the risk
+that we're interested in looking at.
+[00:06:31] I just want to highlight that there's
+so many other risks besides collusion.
+[00:06:35] Collusion is just the one
+we happen to study.
+[00:06:37] And another potential risk is robustness
+failures.
+[00:06:41] This is not the main object
+of study of our work,
+[00:06:44] but I did want to highlight some examples
+because
+[00:06:47] robustness failures, that is,
+[00:06:50] sort of edge case, bad behavior of
+[00:06:52] AI systems that we can't explain
+or predict in advance,
+[00:06:55] they're so commonplace that they sort of
+they even cropped up in our work
+[00:06:59] accidentally
+when we weren't looking for them.
+[00:07:02] Here are some examples on the slide.
+[00:07:04] So in our work, as I'll explain later,
+[00:07:06] we were interested in studying
+pricing agents.
+[00:07:08] We have LLM agents set prices
+and we want to see what they do.
+[00:07:11] These pricing agents, in certain
+rare cases,
+[00:07:14] go off the rails in ways that we can't
+predict, can't describe,
+[00:07:19] we don't know how to reproduce it.
+[00:07:20] It just sometimes happens.
+[00:07:21] And so on
+[00:07:22] the slide, the top one is an example
+from early pilot experiments we did
+[00:07:26] where you sort of read,
+it says when our price is lower
+[00:07:29] than the competitor's price,
+we sell more units, blah, blah, blah.
+[00:07:32] And then it sort of interrupts itself
+with a hallucinated error message.
+[00:07:35] We don't know why it does this.
+[00:07:37] We can't reproduce this.
+[00:07:38] This is just something that happens.
+[00:07:40] The bottom
+example is a more recent example where it
+[00:07:43] initially is strategizing
+about a scheduling task,
+[00:07:45] and then it completely goes off the rails
+and it starts writing emojis and sort
+[00:07:48] of random nonsense words.
+[00:07:50] To be clear, I don't
+think this is the primary risk that AIs
+[00:07:53] might write emojis.
+[00:07:55] This is sort of,
+you know, one of many potential risks.
+[00:07:57] I'm just pointing out that,
+[00:08:00] even in our work
+where our principal focus is pricing,
+[00:08:04] these behaviors crop up
+and we have no idea what to do about them.
+[00:08:08] All that is to say, there are many risks,
+potential risks from delegation to AI.
+[00:08:12] And the one we're going to be interested
+in today is collusion.
+[00:08:15] Okay, so back to our main question.
+[00:08:17] What unique opportunities and risks
+arise from delegation to LLM agents?
+[00:08:20] In this talk, we're going to be focusing
+on economic decision making specifically.
+[00:08:25] There are two reasons why
+you might be interested in this setting.
+[00:08:29] First, understanding the capabilities
+and limitations of LLM agents
+[00:08:32] in economic settings may help predict
+and inform business adoption.
+[00:08:36] Indeed, a recent study by Anthropic,
+one of the frontier AI labs, showed that
+[00:08:41] almost 6% of AI chats
+[00:08:44] were related
+to topics on business and finance.
+[00:08:47] It stands to reason that
+some of these chats could be related
+[00:08:51] concretely to business decisions
+and activities.
+[00:08:54] And moreover, like even broadly,
+if you're not interested in the specific
+[00:08:57] economic applications, economic settings
+such as pricing
+[00:09:01] prominently feature components
+such as uncertainty,
+[00:09:05] conflicting objectives, and belief
+formation.
+[00:09:07] So to the extent that you are interested
+in better understanding these facets
+[00:09:11] of intelligence,
+economic settings are a useful testbed.
+[00:09:17] This is the main outline for the rest of
+my talk today.
+[00:09:21] Time will dictate
+how much of this we get to do,
+[00:09:23] but there will be two main parts.
+[00:09:25] The main part will be the first part,
+[00:09:27] algorithmic collusion by large language
+models,
+[00:09:29] where we will dive deep on one specific
+risk of delegation to AI agents,
+[00:09:33] namely, the potential for autonomous
+algorithmic collusion.
+[00:09:37] And then if time allows, we're going
+to look at a follow up work by us authors
+[00:09:41] and also some other collaborators
+that I'll describe when we get there,
+[00:09:43] where we more broadly
+try and measure the capabilities
+[00:09:46] and tendencies of LLM agents
+in economic settings.
+[00:09:49] Any questions here?
+[00:09:50] Before I, go into the more specifics?
+[00:09:54] Awesome.
+[00:09:55] Okay.
+[00:09:57] Part one: algorithmic
+collusion by large language models.
+[00:10:00] This is a quote
+from the OpenAI technical report.
+[00:10:03] When they first released GPT-4,
+which was sort of their first,
+[00:10:07] after the initial,
+you know, so-called ChatGPT moment,
+[00:10:10] they wrote a novel kind of system level
+risk
+[00:10:12] is created by widely deployed
+models like GPT-, blah, blah, blah.
+[00:10:17] You know, interacting in complex ways.
+[00:10:20] For example,
+[00:10:21] if multiple banks concurrently
+rely on GPT-4 to inform their strategic
+[00:10:24] thinking about sources of risks
+in the macroeconomy,
+[00:10:26] they may inadvertently correlate
+[00:10:28] their decisions and create systemic risks
+that did not previously exist.
+[00:10:31] This is what we're interested in studying
+[00:10:33] when we look at collusion. We're
+interested in one such systemic risk.
+[00:10:38] Here's kind of a silly example.
+[00:10:39] Not using LLMa,
+just algorithmic pricing in general.
+[00:10:42] This happened in 2011.
+[00:10:44] There were two pricing bots
+setting prices for the same product,
+[00:10:49] and one of them was pricing it
+like 1.2 times the competitor,
+[00:10:52] and the other was pricing like 0.9
+imes the competitor or something.
+[00:10:56] And as a result, the pricing bots
+got wildly out of control.
+[00:10:59] They blew up and they were pricing
+this ordinary bucket millions of dollars.
+[00:11:04] And this is kind of a silly example, but
+[00:11:07] since then, algorithmic pricing has gotten
+more sophisticated and more prevalent.
+[00:11:11] There are senses in which algorithmic
+pricing could be pro-consumer,
+[00:11:14] but also it raises
+concerns of algorithmic collusion.
+[00:11:16] In this talk, when I refer to collusion,
+[00:11:18] I'm referring to prices
+above the competitive level.
+[00:11:22] There are many different
+definitions of collusion
+[00:11:23] that we can debate after the talk,
+but for today,
+[00:11:26] we're just looking at prices
+above competitive levels or Nash levels.
+[00:11:32] There are many different forms
+of algorithmic collusion.
+[00:11:34] On the one hand
+you can have explicit algorithmic collusion.
+[00:11:38] This is essentially a traditional cartel.
+[00:11:41] The only difference is they happen to use
+algorithms to implement their agreement.
+[00:11:44] So for example
+[00:11:46] they could just write pricing bots
+to implement the stated agreement.
+[00:11:50] On the opposite end of the spectrum, you
+can have autonomous algorithmic collusion.
+[00:11:54] This refers to multiple independent
+self-learning agents
+[00:11:57] that learn to collude
+despite no explicit instruction to do so.
+[00:12:01] And the interesting thing about autonomous
+algorithmic collusion is a priori
+[00:12:04] it's not at all clear
+[00:12:05] if it could arise in practice
+and if it were feasible in practice
+[00:12:09] it's super not clear,
+how one might even begin to enforce this.
+[00:12:14] I am not a lawyer.
+[00:12:15] Please correct me here, but,
+[00:12:17] this is the DOJ website.
+[00:12:19] You know, I can read.
+And what it says on the DOJ website is
+[00:12:24] and all these definitions of various
+collusive phenomena, such as bid rigging
+[00:12:27] or price fixing or all these things,
+the central word is agreement.
+[00:12:32] The firms need to agree
+on some sort of scheme.
+[00:12:35] And then here's a quote from Judge
+Richard Posner.
+[00:12:38] You know, Section 1 of the Sherman Act,
+[00:12:40] it does not require sellers to compete.
+[00:12:42] It just explicitly forbids agreement.
+[00:12:45] And so going back to this
+taxonomy of algorithmic collusion, it's clear
+[00:12:49] how in the case of explicit algorithmic
+collusion, agreement is very central.
+[00:12:53] But for autonomous algorithmic collusion,
+if the algorithms are not
+[00:12:56] being instructed to agree on anything,
+then it's unclear,
+[00:13:00] it's unclear
+where agreement comes into play here.
+[00:13:03] It's because of all these thorny questions
+regarding
+[00:13:05] autonomous algorithmic collusion,
+that there's been a large literature
+[00:13:08] in economics
+on the subject. In particular,
+[00:13:11] these papers on
+the slide are looking at feasibility.
+[00:13:14] So they run simulation studies
+[00:13:16] using a learning algorithm
+called Q-learning to try and understand
+[00:13:20] the extent to which autonomous algorithmic
+collusion could arise in practice.
+[00:13:24] And they find in pricing in auction
+settings that
+[00:13:27] indeed, yes, algorithms
+can learn to autonomously collude.
+[00:13:31] However,
+there's a technical point to be made here,
+[00:13:33] which is with Q-learning
+specifically, it's unclear
+[00:13:36] whether it might be used
+as an algorithmic practice.
+[00:13:39] For one, it requires an incredibly long
+training period.
+[00:13:42] So, for example, in this first paper,
+they need hundreds of thousands,
+[00:13:46] if not millions of periods to converge
+to any detectable pricing behavior.
+[00:13:50] And second, Q-learning has been shown
+[00:13:51] to be exploitable
+by certain adversarial policies.
+[00:13:55] However, large language
+models sidestep these concerns,
+[00:13:59] and it's not unreasonable
+to think that maybe some firms will use
+[00:14:01] large language models
+as their pricing algorithms instead.
+[00:14:04] And so this is the question we want to ask:
+Can LLMs give rise to more feasible autonomous
+[00:14:08] algorithmic collusion?
+[00:14:11] This is kind of a silly example.
+[00:14:13] It's over a year old now.
+[00:14:14] This is evidence that sellers are at least
+using LLMs for something, namely,
+[00:14:19] they seem to be completely delegating
+the task of setting Amazon titles to LLMs.
+[00:14:24] So we see, you know, various listings.
+[00:14:26] I have the title, "I apologize,
+but I cannot complete this task
+[00:14:29] because it requires using trademarked
+brand names, which goes against OpenAI.
+[00:14:33] use policy."
+[00:14:35] I don't know how good that it is for SEO,
+but basically
+[00:14:37] this this indicates that sellers
+are already employing LLMs in some way,
+[00:14:40] and perhaps in the future or currently
+they could also use them to set prices.
+[00:14:46] This is also, I mentioned this states before,
+but we have evidence
+[00:14:48] that increasingly LLMs
+are being used in business settings.
+[00:14:53] Okay.
+[00:14:53] And so in this study we're interested in
+[00:14:55] understanding: can LLMs give rise
+to feasible autonomous collusion?
+[00:14:58] Specifically we look at the following
+three questions experimentally.
+[00:15:03] So first we're interested
+in understanding are LLMs,
+[00:15:07] can they even price correctly
+in simple monopoly settings?
+[00:15:09] Are they capable enough?
+[00:15:11] And we find yes.
+[00:15:13] Modern LLMs can.
+[00:15:15] But previous generation LLMs could not.
+[00:15:17] Second, we demonstrate
+[00:15:20] that indeed in a duopoly setting,
+[00:15:23] multiple LLMs
+when faced off against each other lead to
+[00:15:27] increased, super competitive price levels.
+[00:15:30] And finally, we're interested
+in understanding
+[00:15:32] the causes for this phenomenon.
+[00:15:36] And we
+[00:15:37] identify sort of two factors
+that influence the degree of collusion.
+[00:15:42] First, we show that seemingly innocuous
+changes in the prompt
+[00:15:45] can drastically increase
+or decrease the degree of collusion
+[00:15:48] in ways
+that we can't quite predict or explain.
+[00:15:50] And second, we show that on a high level
+[00:15:54] price war concerns seem to contribute
+to this phenomenon of algorithmic collusion.
+[00:15:58] So this is what we'll be going through
+today.
+[00:16:02] Okay.
+[00:16:04] Just quickly, on related work.
+[00:16:06] There's a lot of work
+in the field of economics and LLMs.
+[00:16:11] We're specifically interested
+in taking this delegation perspective
+[00:16:15] I talked about earlier.
+[00:16:16] So we're interested in looking at agents
+as economic agents in their own right,
+[00:16:20] rather as rather than is like stand
+ins for humans or collaborators to
+[00:16:24] humans or anything like this.
+[00:16:29] We're doing an experimental study,
+[00:16:31] and we need some sort of backdrop,
+[00:16:35] we need some sort of model
+for the demand response
+[00:16:37] that an LLM agent will experience
+when it sets a certain price.
+[00:16:41] To do this, we use a standard, model
+from economic competition.
+[00:16:45] This is also
+[00:16:47] inspired by,
+the prior work Calvano et al. 2020,
+[00:16:52] specifically, this is a differentiated
+Bertrand oligopoly model.
+[00:16:55] The equation is on the slide.
+[00:16:57] The main thing to note is that
+if we're like, you and me are pricing,
+[00:17:01] if I price lower than you,
+then I get more market share.
+[00:17:05] But whether I get more profit depends on
+how much of a markup it is over my cost.
+[00:17:09] And moreover, it's
+not a winner takes all thing.
+[00:17:11] Like if I ever so slightly undercut you,
+[00:17:13] I get more market share,
+but not all of the market share.
+[00:17:16] So there's some differentiation.
+[00:17:18] In other words, there's some consumers
+who intrinsically prefer each one's product.
+[00:17:24] Here's
+a schematic of our experimental setup.
+[00:17:27] We run each experimental run
+for 300 periods.
+[00:17:30] So in each period each
+LLM agent has a chance to set a price.
+[00:17:34] And then they also simultaneously
+[00:17:36] receive feedback about quantity sold
+and profit from the environment.
+[00:17:39] And this is a schematic of like what
+a single period looks like.
+[00:17:43] There's two main phases.
+[00:17:45] So there's this LLM call box
+[00:17:46] and this compute box.
+[00:17:48] The compute box is what I just showed you.
+[00:17:49] So it takes as input the prices
+set by all agents and it outputs
+[00:17:54] the quantity sold and profits
+earned for each agent.
+[00:17:57] The LLM call box governs
+how the LLM takes in all of the information
+[00:18:02] about the pricing environment
+and uses it to set a price.
+[00:18:06] I will describe how this
+box works more in a second.
+[00:18:11] It's worth
+[00:18:11] noting that each LLM agent has access
+to all of the prices
+[00:18:14] set by everybody, but only its own
+quantity sold and profit earned.
+[00:18:17] And with this, we're trying to model,
+how things work in the real world.
+[00:18:21] In the real world, you can buy
+data sets about your competitors prices.
+[00:18:24] We're modeling that here.
+[00:18:28] This is how, in more detail,
+[00:18:29] the LLM actually set its price.
+[00:18:32] So each price setting decision is made
+using a single a LLM query.
+[00:18:36] We include the following information
+in this query.
+[00:18:39] First we give it a goal.
+[00:18:41] So we say your task is to do some pricing.
+[00:18:43] Your top priority is to set prices
+that maximize the user's profit
+[00:18:46] in the long run.
+[00:18:48] We give it some basic information
+such as the cost. We give it
+[00:18:51] previous market history of which price
+setting decisions led to which profits.
+[00:18:56] Then there's
+this thing plans and insights.
+[00:18:58] This is to give the LLM agent sort
+of a continuity of thought between rounds.
+[00:19:03] It's allowed to in each period
+[00:19:04] write
+[00:19:05] plans that it will
+then get to read in the following period.
+[00:19:09] And so this makes it so that because by
+default LLMs are completely memoryless,
+[00:19:13] they don't remember things
+between queries.
+[00:19:15] By including some sort of plans
+that stick between rounds, it's able to
+[00:19:20] execute on long range plans, potentially.
+[00:19:23] And then finally
+we tell it to output the plans,
+[00:19:26] insights, and price.
+[00:19:29] We're interested not just in understanding
+[00:19:31] whether LLMs engage in autonomous
+algorithmic collision, but also,
+[00:19:35] to what extent the prompt influences
+the degree of collusion.
+[00:19:38] And so for this,
+we consider two treatments.
+[00:19:41] So these by the way,
+all of these things are the prompt prefix.
+[00:19:44] This is the initial instruction
+we give to the LLM
+[00:19:47] that is supposed to steer its pricing
+behavior.
+[00:19:49] We consider two variants
+which we call P0 and P1 or, sorry,
+[00:19:53] P1 and P2.
+[00:19:55] So P1
+[00:19:57] tells it to maximize profit
+and gives this additional instruction.
+[00:20:00] "You should not take actions
+that undermine profitability."
+[00:20:04] P2 tells it to maximize profit in goods.
+[00:20:06] An additional instruction
+emphasizing undercutting things and like this.
+[00:20:12] That was the experimental set up.
+[00:20:14] Now I'm going to move
+to describing the main results.
+[00:20:17] So the first thing we do is
+we want to make sure
+[00:20:20] we're not in a sort of garbage
+in, garbage out situation.
+[00:20:23] Like it could be that the LLMs,
+[00:20:24] maybe they don't really understand
+what it means to set prices
+[00:20:28] or anything like that. So
+maybe they're just putting random numbers.
+[00:20:30] We want to design a test
+that gives us faith
+[00:20:35] that they're making some sort
+of reasonable strategic decision.
+[00:20:38] And for this,
+we do our monopoly experiment.
+[00:20:41] Unlike the rest of our experiments,
+here there's
+[00:20:43] only a single agent setting prices
+in a static environment.
+[00:20:47] And because there's no competitor,
+the environment is actually quite simple.
+[00:20:50] There's some profit maximizing price,
+which is here
+[00:20:54] on the Y-axis
+given by this green dotted line.
+[00:20:57] And the profit is just sort of like
+how close you are
+[00:21:00] to this profit maximizing price.
+[00:21:02] We tested, back in late 2023, which is,
+[00:21:05] you know, decades ago in LLM time,
+all of the state of the art
+[00:21:09] LLMs the time.
+[00:21:10] And we looked at whether they're able
+to find this optimum price
+[00:21:14] in the 300 period time scope.
+[00:21:16] What we found was that GPT-4
+[00:21:20] was able to consistently find, demonstrate
+optimal pricing behavior
+[00:21:24] in this monopoly environment,
+whereas other LLMs were not. These two
+[00:21:29] round of run graphs kind of give you
+a sense for what things look like.
+[00:21:33] So, the x axis is time, the y axis is
+[00:21:36] the price level, the green dotted
+line is the optimal price.
+[00:21:39] And we see GPT-4 after some exploration,
+it eventually finds this optimal price
+[00:21:43] and mostly stays at around it.
+[00:21:44] You see these spikes and we think this is
+because of the stochasticity of model.
+[00:21:48] We're running all this at temperature one.
+[00:21:50] Whereas on the right that's GPT-3.5,
+which is a previous generation LLM,
+[00:21:54] and we see that it can't really figure out
+what's going on.
+[00:21:57] It's setting random prices.
+[00:21:58] It's not converging to the optimal price
+in any sensible way.
+[00:22:02] And so therefore, because of this test
+[00:22:04] for the rest of our experiments
+in this paper, we use GPT-4.
+[00:22:10] This slide
+has the main results of our paper.
+[00:22:13] So these are the results
+of our duopoly experiment
+[00:22:15] in which we take two LLM agents
+[00:22:17] and we have them price against each other
+in this synthetic duopoly environment.
+[00:22:22] The left graph shows the price levels
+[00:22:25] that the agents converge to
+after 300 periods.
+[00:22:28] So the x axis and the y axis are
+the average price levels of the two firms.
+[00:22:33] The red dashed
+line is the competitive benchmark.
+[00:22:35] So what they would converge to
+in a Nash equilibrium of the single stage
+[00:22:39] pricing game, the green dashed line
+is, the monopolists' optimum price.
+[00:22:44] So this is if they were perfectly
+colluding with each other,
+[00:22:48] like a monopolist would if they controlled
+both firms, the price level
+[00:22:51] that they would arrive at. The two colors
+correspond to the two prompt treatments
+[00:22:56] that we're considering,
+P1 and P2 blue as P1 orange is P2.
+[00:23:00] And if you remember, P1
+was the one that said don't do anything
+[00:23:03] to undermine profitability,
+and P2 was the one that emphasized
+[00:23:05] exploration
+and undercutting competitors.
+[00:23:08] We see that both P1 and P2 collude in that
+[00:23:11] the vast majority of these price levels
+end up above this red Nash benchmark.
+[00:23:16] However, P1 is much more collusive,
+than P2.
+[00:23:20] P1 is setting higher prices
+[00:23:22] and in the right hand side,
+we also see higher profits than P2.
+[00:23:26] And what's more,
+P1 is actually so collusive
+[00:23:28] that the profits it's earning
+are close to the highest possible.
+[00:23:32] That is like the profits monopolist would
+earn if it jointly controlled two firms.
+[00:23:36] That's also what this plot on the right
+is showing there.
+[00:23:39] The y axis is the sum of the profits
+of both firms.
+[00:23:41] X axis is the difference
+between the two firms.
+[00:23:44] So it's kind of like rotated relative
+to the way you would expect
+[00:23:47] and the fact that all the P1 dots
+are clustered at the top
+[00:23:50] means that they're all approaching
+this monopolist profit level.
+[00:23:57] We do
+[00:23:57] various robustness checks to ensure
+that the results persist
+[00:24:01] under various changes
+such as stochasticity, asymmetry problem.
+[00:24:05] I'm happy to talk more about these.
+[00:24:06] If you're curious. I'll move on for now.
+[00:24:09] And something else we do in the paper is
+[00:24:10] we look into collusion auctions
+and we find similar results as well.
+[00:24:14] We so we do the exact same setup.
+[00:24:16] Instead of looking
+at a pricing setting,
+[00:24:18] we look at a first price auction
+setting where firms are
+[00:24:21] repeatedly bidding on a value.
+[00:24:23] And here I actually find this
+result really striking
+[00:24:25] because the prompt treatments
+are not really telling the LLM what to do.
+[00:24:29] It's just telling it true facts
+about the economic environment.
+[00:24:34] So here, the first prompt reminds the LLM
+[00:24:37] that lower bids will lead
+to lower payments and thus higher profits.
+[00:24:41] And the second prompt reminds
+the LLM
+[00:24:43] that higher bids
+make you more likely to win the auction.
+[00:24:45] Both of these things are like
+sort of patently, obviously true things
+[00:24:49] about a first price auction
+[00:24:49] that the lamb should be able
+to figure out, from experimentation.
+[00:24:53] And so what we show is just by emphasizing
+these different facts,
+[00:24:57] we get vastly different bidding behavior.
+In this case.
+[00:25:00] A1 so the one where we reminded that
+[00:25:04] lower bids will lead to lower payments,
+that ends up in
+[00:25:08] collusive bidding behavior,
+whereas A2 bids at near equilibrium.
+[00:25:14] So far, I've
+[00:25:15] showed you various experimental evidence
+that if you have two LLM agents
+[00:25:20] acting in some sort of pricing
+or auctions environment,
+[00:25:23] they learn to collude.
+[00:25:26] That is,
+they set, super competitive prices or
+[00:25:30] bids below the competitive benchmark.
+[00:25:33] A natural question to ask at this point is
+why did they do this?
+[00:25:36] Like, what could be the reason?
+We're not telling them to collude -
+[00:25:38] why are they colluding anyway?
+[00:25:40] And by the way,
+I don't have a slide for this,
+[00:25:41] but if you ask GPT-4 of ChatGPT
+or whichever version you like,
+[00:25:45] if you ask it
+if it would collude in a pricing setting,
+[00:25:47] of course it's going to tell,
+[00:25:48] you know,
+[00:25:48] if you know anything about these LLMs,
+[00:25:50] they would never admit
+to anything like that.
+[00:25:52] So yeah, we'd like to understand
+why this is the case.
+[00:25:57] There's a couple of
+[00:25:58] technical ways we could do this.
+[00:26:01] The first thing we could do is
+we could look at the pricing data.
+[00:26:04] And this is not unique to LLMs.
+[00:26:05] Anyone can look at any pricing data
+[00:26:07] and sort of try and uncover
+features of collusion.
+[00:26:10] The second thing we could do,
+and this is a really exciting
+[00:26:14] new frontier because we're using LLMs
+specifically for pricing,
+[00:26:18] is we could look at the LLMs' stated
+reasoning behind their actions,
+[00:26:21] that is, look at their chain of
+thought, is the jargon for this.
+[00:26:25] Because, they don't just set a price.
+[00:26:26] They also say,
+[00:26:27] I'm going to try $2 this period
+[00:26:29] because I think maybe it'll lead
+to more profit or something like this.
+[00:26:32] It's worth or. Yeah.
+[00:26:33] And then the third thing
+[00:26:34] one could potentially do,
+which one certainly can't do with humans,
+[00:26:38] is analyze the LLMs' internals, see
+like what actually are the individual,
+[00:26:43] neurons in the neural network firing?
+[00:26:45] And how does this influence 
+its pricing behavior?
+[00:26:48] This is not something
+we're able to do with GPT-4,
+[00:26:51] as this is a closed source model.
+[00:26:53] But as open source technology advances,
+one might hope to
+[00:26:57] do such analyses one day.
+[00:26:58] And indeed, I know in the seminar series,
+there's a previous talk
+[00:27:01] by Martin Wattenberg
+and Fernanda [Viégas], I'm forgetting her name,
+[00:27:05] Yeah, yeah.
+[00:27:06] And they had a great talk
+on, LLM interpretability.
+[00:27:10] And we would we would love to do something
+like that eventually,
+[00:27:13] once the frontier LLMs are at that stage.
+[00:27:17] So 
+we can't do interpretability right now
+[00:27:21] on frontier closed source alums.
+[00:27:23] However,
+[00:27:25] there is however, in many cases,
+[00:27:28] the second thing, chain of thought,
+so-called chain
+[00:27:30] of thought interpretability
+is thought to serve
+[00:27:34] as a reasonably good approximation
+to like actually looking at the LLM's internals.
+[00:27:38] Here's a recent quote from OpenAI.
+[00:27:40] They say we believe that
+using a chain of thought
+[00:27:42] offers significant advances
+for safety and alignment,
+[00:27:45] because it enables us to observe the model
+thinking in a legible way.
+[00:27:48] And so this is them saying
+we're not looking at the model's
+[00:27:51] internals, we're just looking at
+what it says it's doing and why.
+[00:27:55] And we're taking that at face value.
+[00:27:57] And one can argue whether this is
+good enough for understanding
+[00:28:00] what a model is doing and why.
+[00:28:02] This is a whole active research area.
+[00:28:06] But for the purposes of this paper,
+[00:28:07] we're going to try our best
+and we're going to do the first two things
+[00:28:09] and try and ground our chain of thought
+interpretability
+[00:28:12] analysis as best we can.
+[00:28:16] Okay.
+[00:28:16] So, so far, I've told you that
+we care about understanding
+[00:28:19] the mechanisms behind what the, LLM-based
+price setting agents are doing.
+[00:28:23] And I've also told you at great length
+what techniques we're going to use.
+[00:28:27] I still need to tell you what parts
+we're going to actually,
+[00:28:30] what strategies
+we're going to analyze specifically.
+[00:28:33] So as a reminder, in our main results,
+we show that
+[00:28:36] LLM based pricing agents arrive
+at super competitive pricing levels.
+[00:28:39] There's a large economics literature
+that shows that one way to sustain super
+[00:28:44] competitive price levels in equilibrium
+is reward-punishment strategies.
+[00:28:48] That is,
+you and I are pricing against each other.
+[00:28:52] If you ever undercut, then I'm
+going to retaliate and undercut back.
+[00:28:56] And then we would both be worse off.
+[00:28:58] And maybe because of this
+we both maintain super competitive
+[00:29:00] price levels, something like this.
+[00:29:03] And so the first question we ask is:
+[00:29:05] Is the LLM pricing data
+consistent with a reward -unishment
+[00:29:07] scheme?
+[00:29:11] Going beyond just looking
+whether the data is consistent
+[00:29:14] with a reward-punishment scheme,
+we also want to actually understand
+[00:29:17] what is sort of driving this equilibrium
+from arising in the first place.
+[00:29:23] So in a reward-punishment equilibrium
+[00:29:26] agents
+avoid myopically beneficial price cuts.
+[00:29:30] And one reason for this
+is that they could fear a price war.
+[00:29:33] This is the exact phenomenon I just
+described where I'm not going to undercut.
+[00:29:37] Because if I undercut that,
+I know you're going to undercut back
+[00:29:40] that it's going to be a race to the bottom
+and nobody wins.
+[00:29:42] And so this is the second question we ask.
+[00:29:44] We want to understand:
+Do the agents price higher specifically
+[00:29:48] because they, you know,
+quote unquote fear a price war?
+[00:29:52] Do price war concerns
+[00:29:53] drive their decision making?
+[00:29:58] For the first question.
+[00:29:59] So, for understanding whether the data
+is consistent with the reward-
+[00:30:02] punishment scheme,
+we run a fixed effect linear regression.
+[00:30:06] I'm not going to go through
+all the technical details,
+[00:30:08] but the bottom line is
+when we run this regression,
+[00:30:12] we find features of responsiveness
+and stickiness.
+[00:30:16] Responsiveness
+means that if my competitor undercuts,
+[00:30:19] then I respond by undercutting.
+[00:30:21] Stickiness
+means that if I price at a certain level,
+[00:30:24] I'm more likely to continue
+pricing at that level in the next round.
+[00:30:27] How does this relate to reward-punishment?
+[00:30:30] Well, what it shows is, let's say
+my competitor undercuts me suddenly
+[00:30:34] then because I'm responsive, I'm
+going to respond by undercutting as well.
+[00:30:38] And because I'm sticky, I'm going to stick
+[00:30:41] at that low, you know, punishing price
+for several periods.
+[00:30:45] In other words, the data is consistent
+with a reward-punishment scheme
+[00:30:49] in which
+punishments persist over several periods.
+[00:30:55] So this was the analysis of
+[00:30:57] the pricing data
+for features of reward-punishment scheme.
+[00:31:01] The second,
+part of the mechanistic analysis
+[00:31:03] I promised
+was this discussion of price war
+[00:31:06] fears.
+[00:31:07] And so and as I promised
+before, we're going to be doing,
+[00:31:11] you know, so-called chain of thought
+interpretability to do this.
+[00:31:15] So if you recall
+from the experimental setup,
+[00:31:19] the LLMs aren't just setting prices,
+[00:31:21] they're also writing down their plans
+for the future.
+[00:31:24] And we can leverage these plans
+[00:31:26] that they write down for this analysis.
+[00:31:29] So we take all of the plans
+written by the LLMs
+[00:31:32] and split them into sentences
+across the entire data set.
+[00:31:35] We obtain 88,000 sentences roughly
+[00:31:38] balanced between the two prompt prefixes.
+[00:31:41] And then we count.
+[00:31:43] We look for occurrences
+of the phrase "price war,"
+[00:31:47] and we see how many of these sentences
+[00:31:49] that are trying to avoid price wars
+belong to P1,
+[00:31:52] the more collusive prompt, versus
+P2, the less collusive prompt.
+[00:31:57] We find that price war avoidant
+sentences are more likely
+[00:32:00] to come from P1 versus P2,
+1.5 times more likely.
+[00:32:04] There's some technical details about like,
+just because a sentence says
+[00:32:08] the word "price war"
+or the phrase "price war,"
+[00:32:10] that doesn't mean
+that it's trying to avoid price war.
+[00:32:12] We do,
+[00:32:12] we use various NLP techniques to
+[00:32:16] distinguish sentences that are trying
+to avoid versus start price wars.
+[00:32:20] And we only look
+for the ones that avoid price wars.
+[00:32:22] The bottom line is the result
+comes out the same.
+[00:32:24] They never really talk about
+starting price wars.
+[00:32:26] They're always trying to avoid them.
+[00:32:28] And so what have we shown so far?
+[00:32:30] We've shown that P1 talks
+about avoiding price wars more than P2.
+[00:32:36] However, this doesn't
+actually answer the question
+[00:32:38] if you think about it. Like just because
+they're talking about avoiding price wars,
+[00:32:41] that doesn't mean that they're actually
+trying to avoid price wars.
+[00:32:44] They could just be saying things
+because they look good or you know,
+[00:32:47] who knows what.
+[00:32:48] And so this is the sort of next
+subquestion we want to look at.
+[00:32:52] We want to actually understand
+does this thing that the LLM
+[00:32:55] says in its chain of thought
+actually correspond to what it's doing?
+[00:33:00] Luckily, because we're doing a simulation
+[00:33:02] based study, we can
+we can just check this.
+[00:33:06] And so we do the following,
+[00:33:07] we're calling it
+an implementation experiment.
+[00:33:09] So for each of the experimental runs
+we roll back the simulation.
+[00:33:13] And instead of looking at the LLM query
+[00:33:16] when it has whatever plans it had,
+we replace its plan.
+[00:33:19] We implant with a new plan.
+[00:33:22] And this new plan is,
+try to avoid drastic drops
+[00:33:25] in our price to prevent a price war
+and potential loss in profit.
+[00:33:29] So one of these price war concerns
+sentences.
+[00:33:31] This is not something we wrote,
+by the way.
+[00:33:32] This is like one of the,
+[00:33:34] generated price war sentences
+that we picked to be representative.
+[00:33:37] And we also plant
+a couple other such sentences.
+[00:33:39] And then we just see how does its price
+setting decision
+[00:33:43] in the original simulation compare to
+in this new implanted simulation?
+[00:33:48] So first
+[00:33:49] we found that when we implant a price
+war concerned sentences,
+[00:33:52] this leads to higher prices on average,
+by 5% of this monopolistic markup.
+[00:33:57] And moreover, the effect size is stronger
+in P2 sessions than P1.
+[00:34:02] And at first
+you might think this is kind of backwards.
+[00:34:05] So recall P1 was the more collusive prompt
+and P2 was the less collusive prompt.
+[00:34:10] But this actually kind of makes sense
+if we think about it in the following way.
+[00:34:15] This suggests that P1 has a predisposition
+[00:34:18] to avoid price wars
+already relative to P2.
+[00:34:21] So if I tell P1 to avoid price
+wars, it's not gonna
+[00:34:24] change its behavior as much, perhaps
+[00:34:26] because it already has this predisposition
+it already is trying to avoid price wars.
+[00:34:30] Whereas P2
+maybe didn't have this disposition before,
+[00:34:32] and so implanting the sentence causes
+this more stark effect.
+[00:34:36] This is our explanation
+anyway for this phenomenon.
+[00:34:40] Overall, what we've shown is that
+[00:34:43] price war concerns contribute
+to this phenomenon
+[00:34:47] of higher super competitive prices.
+[00:34:53] Yeah.
+[00:34:53] Okay.
+[00:34:54] So then the final analysis
+I want to talk about here is sort of like,
+[00:34:58] price wars are just one aspect
+of all of the possible
+[00:35:02] things you could be thinking about
+when you're setting prices.
+[00:35:05] What else are the LLM agents thinking?
+[00:35:06] Can we investigate
+[00:35:08] what they're thinking on a broad scale,
+rather than just looking at prices?
+[00:35:12] And we dos
+[00:35:12] using the following analysis.
+[00:35:15] We take all the plans the elements wrote,
+we cluster them using standard
+[00:35:19] NLP techniques,
+[00:35:20] and then we summarize the clusters also using
+standard NLP techniques.
+[00:35:23] And each of these bars
+represents a cluster
+[00:35:27] and the color represents
+whether it's more prevalent in P1 or P2.
+[00:35:33] So like for example, the very bottom bar,
+[00:35:36] since it's very orange at 2.5,
+it means that P2 is,
+[00:35:40] that cluster has like 2.5 times as many P2
+sentences compared to P1 sentences.
+[00:35:47] And the
+[00:35:48] y axis contains the AI-
+generated cluster labels.
+[00:35:51] If we read these cluster labels
+for P1 versus P2,
+[00:35:56] we get a very like different vibes
+on the character of P1 versus P2
+[00:36:00] that far goes beyond
+just the price war thing.
+[00:36:04] P2, so at the very bottom
+[00:36:05] it says things like continue undercutting,
+experiment, test higher prices,
+[00:36:09] things like this.
+[00:36:10] So clearly P2 is sort of testing a lot of
+things, experimenting, this sort of thing
+[00:36:14] P1
+[00:36:14] on the other hand,
+the cluster descriptions read
+[00:36:18] maintain pricing within profitable range.
+[00:36:21] You know, try to reduce the cost.
+That doesn't mean anything.
+[00:36:24] It can't reduce its cost that
+the cost is given and things like this
+[00:36:27] and so on a high level,
+P1 is sort of staying put and
+[00:36:31] P2 is sort of like doing stuff.
+[00:36:34] And so this is kind of another feature
+we're able to extract by looking
+[00:36:37] at the chain of thought.
+[00:36:40] So this is the final
+slide I have for this part of the talk.
+[00:36:43] I'm going to take a drink and give anybody
+time to, ask questions if they want.
+[00:36:48] And then we'll move on.
+[00:36:56] Awesome.
+[00:37:02] [Audience] For these experiments,
+I have basically two questions.
+[00:37:06] The first was,
+were they always symmetric games
+[00:37:12] where a bot with P1 plays
+against the same bot, also with P1?
+[00:37:18] [Sara] Great question.
+[00:37:19] No. We do a robustness check
+where we have asymmetry...
+[00:37:23] [Aside] let's rapidly...
+[00:37:24] Oh, no, I think we missed it.
+[00:37:27] Yeah. So we do two types of asymmetry.
+[00:37:28] We do asymmetry in the environment
+and asymmetry in the algorithms.
+[00:37:31] Yeah. 
+[Audience] Okay. A related question is:
+[00:37:35] do you have any citations to literature
+[00:37:38] on testing undergrads
+[00:37:41] for this kind of problem to see what the
+[00:37:47] untrained or
+[00:37:48] partially trained human response
+[00:37:51] to the super competitive prices is?
+[00:37:55] [Sara] This is a good question.
+[00:37:57] Yeah.
+[00:37:57] We have we have a paragraph where we like,
+dump some citations to this effect.
+[00:38:01] We don't do a direct comparison
+because the ecological validity
+[00:38:06] is a little unclear, like it's undergrads.
+[00:38:10] I don't know.
+[00:38:11] But yeah,
+we do talk about that in the paper.
+[00:38:12] And like we can chat more
+after about that too.
+[00:38:16] [Audience] A question...
+[00:38:20] It works.
+[00:38:20] Okay.
+[00:38:23] So if this was just for LLMs
+[00:38:26] that are acting on their own,
+basically you're giving them instructions,
+[00:38:30] can you assume that similar outcomes
+persist
+[00:38:34] if if a human is also engaging
+at the final stage?
+[00:38:38] So basically
+if an LLM is suggesting pricing?
+[00:38:41] Because I think that that in a business
+setting is is often how it works,
+[00:38:46] partially to get around the fact
+that that could lead to legal issues.
+[00:38:51] So, yeah.
+[00:38:52] Can you kind of assume
+that when it's an auto pilot like
+[00:38:58] these are making the final decisions, but
+a human does come in when they want to?
+[00:39:03] [Sara] Yeah.
+[00:39:04] So I guess you're sort of saying,
+how do the results change if we assume
+[00:39:09] there is a human sort of occasionally
+in the loop doing a final sanity check?
+[00:39:14] This is a good question.
+[00:39:15] I mean, certainly I think they,
+[00:39:20] certain like charts
+[00:39:21] we have potentially could like,
+for example,
+[00:39:23] this monopoly chart
+was the first thing that came to my mind.
+[00:39:25] This was as a reminder, like GPT-4,
+it experiments for a bit and then it finds
+[00:39:29] the optimal monopoly price
+and it mostly stays there.
+[00:39:31] But you see these spikes occasionally
+where it like, try something different.
+[00:39:34] And I feel like a human
+probably wouldn't like that.
+[00:39:37] A human would be like, listen, you've
+clearly identified this is the best price.
+[00:39:40] You should just stay there.
+[00:39:43] And so, yeah, this is a good question.
+[00:39:45] It's not something we study.
+[00:39:47] I think also ultimately there are settings
+where it's unclear
+[00:39:52] whether it's realistic to have
+a human overseeing at such a fine degree.
+[00:39:57] Like, okay, for a very extreme
+example, algorithmic trading
+[00:40:00] or something like this.
+[00:40:02] These algorithms,
+they're not LLMs, but, they're operating
+[00:40:05] on such a fast scale
+that a human can't oversee at this degree.
+[00:40:08] And so I think
+even if maybe there's a human,
+[00:40:11] in some sort of larger loop, potentially,
+[00:40:14] there still could
+[00:40:15] potentially exist micro decisions
+that an AI is making sequentially
+[00:40:20] that accumulate,
+that could lead to similar phenomena.
+[00:40:24] [Jay] We have a few questions from our online
+audience.
+[00:40:27] Yeah.
+[00:40:28] First off, why would P1
+think to explore reducing cost?
+[00:40:34] [Sara] That's a good question.
+[00:40:36] I don't know.
+[00:40:36] We don't know how these things work.
+[00:40:38] We didn't tell it that reducing
+the cost was ever an option.
+[00:40:41] It's given no reason to believe this.
+[00:40:44] It just writes that.
+[00:40:45] And we picked that up in our analysis.
+[00:40:49] [Jay] Thank you so much. Follow up question.
+[00:40:50] Have you done any experiments
+[00:40:52] to see if any collusion
+would be more effective and/or durable
+[00:40:56] if there are two different models
+of algorithms interacting?
+[00:41:00] [Sara] This sounds like the question
+we also got in person.
+[00:41:02] And the answer is yes.
+[00:41:03] We have these robustness checks
+I guess two different, here
+[00:41:08] we do LLMs with different prompts
+which are sort of simulating, different
+[00:41:12] AI systems.
+[00:41:13] At the time, GPT-4
+was the only frontier AI system
+[00:41:16] that was like capable of passing
+at this level in the first post,
+[00:41:20] we have a follow up work where we also
+look at an array of different LLMs,
+[00:41:23] that I'll also talk about at the end.
+[00:41:29] Yeah.
+[00:41:38] [Audience] Thank you so much.
+[00:41:39] My question is about in your paper,
+you kind of towards the end mentioned
+[00:41:43] something about how innocuous prompting
+[00:41:46] and innocuous output
+could result in something
+[00:41:50] that seems completely competitive
+or completely fine
+[00:41:54] and underneath the surface isn't.
+[00:41:56] And, that concern
+might be kind of exacerbated by protocol
+[00:42:01] that, like, kind of skirts
+[00:42:02] around the chain of thought output
+that we can read and things like that.
+[00:42:07] How do you see further
+[00:42:10] exploration around that specific problem
+[00:42:14] going, or has that started already?
+[00:42:17] [Sara] Certainly it's started already.
+[00:42:19] Some recent work in that area,
+[00:42:23] like a good key
+phrase is "secret collusion."
+[00:42:25] So there's a couple of papers
+there using collusion in a different way
+[00:42:28] that we're using we're using collusion.
+[00:42:30] Granted,
+in a specific pricing environment,
+[00:42:32] they're sort of just looking at when is it
+the case that the chain of thought
+[00:42:37] may be communicating something
+differently than appears on the surface?
+[00:42:41] So I think that's a promising line
+of work to keep looking at.
+[00:42:47] And yeah, I mean,
+[00:42:48] it seems like this phenomenon
+or this technique of chain of thought
+[00:42:52] interpretability that I also mentioned
+when I was talking about the mechanistic
+[00:42:56] analysis is growing in popularity.
+[00:42:59] I know OpenAI put out a recent report,
+[00:43:02] like a research report
+going into more depth on this.
+[00:43:06] Yeah.
+[00:43:07] I mean,
+[00:43:09] we highlight
+some of these risks and limitations
+[00:43:13] in the paper, and ultimately
+[00:43:15] the literature is just going to kind of
+have to figure out whether
+[00:43:18] this is a promising technique
+with a couple of kinks to be worked out,
+[00:43:21] or whether it's sort of
+[00:43:22] fundamentally flawed and can never get at
+what the model is truly thinking.
+[00:43:26] And for that, we don't know.
+[00:43:33] Okay.
+[00:43:34] Or yeah. Is there a chat or should I...
+[Jay] Do you want to go to your final section?
+[00:43:36] [Sara] I'll go on to the final section.
+[00:43:39] And I have like 15 minutes, I think.
+[00:43:41] So maybe it'll be like ten talking, five
+everybody leaving or something like that?
+[00:43:47] Okay.
+[00:43:47] Cool. So.
+[00:43:52] In the final
+[00:43:53] part of the talk,
+I want to talk about a follow up work,
+[00:43:56] by, you know, the same three authors, me,
+Yonnai and Ran, and also
+[00:44:00] two Harvard undergrads that we brought on
+as collaborators Julia and Minkai.
+[00:44:04] And this paper is called "EconEvals:
+[00:44:05] Benchmarks and Litmus Tests
+for LLM Agents in Unknown Environments."
+[00:44:09] This is a more technical CS paper
+[00:44:12] that's broadly
+interested in this question of:
+[00:44:15] how can we measure the capabilities
+and tendencies of LLM agents
+[00:44:18] in a broad array of economic environments,
+not just pricing?
+[00:44:23] And the paper looks at benchmarks.
+[00:44:26] I think I'm going to skip this section,
+[00:44:28] but I'm super happy to talk about it
+after.
+[00:44:31] If anybody's curious about what
+benchmarks of economic settings look like,
+[00:44:35] I think for the remainder of the time
+I want to talk about litmus tests.
+[00:44:39] So recently, OpenAI came out
+[00:44:42] with a new large language model, GPT-4.5,
+and they had this sort of
+[00:44:48] like livestream thing to sort of launch
+it and get people excited about it.
+[00:44:53] And usually when companies release LLMs
+[00:44:56] the marketing pitch is something like,
+this is the smartest LLM ever.
+[00:45:00] It does so well on this math test
+and the science test are all these things.
+[00:45:04] And the is 4.5
+launch had a very different tone.
+[00:45:09] They didn't
+initially talk about its capabilities
+[00:45:12] in things like math or science.
+[00:45:13] Instead, the very first example they gave
+was this kind of bizarre thing
+[00:45:17] where they had a person
+asking it for advice.
+[00:45:21] And so here
+the prompt is, you know, my friend
+[00:45:24] canceled on me, write a text message
+telling them that I hate them.
+[00:45:27] And then they proceeded to compare,
+you know, GPT-4.5
+[00:45:31] as sort of being the superior,
+emotionally intelligent
+[00:45:34] option,
+with a previous generation OpenAI model.
+[00:45:38] This is
+kind of crazy, if you think about it.
+[00:45:41] Like coming from a broader machine
+learning history.
+[00:45:43] Like, I don't know if there's ever been
+a time where this was the gold
+[00:45:46] standard for measuring how useful
+[00:45:50] or how useful LLMs are.
+[00:45:54] And where, you know, I'm
+not really, in this work
+[00:45:58] we're not interested in using our LLMs
+as therapists.
+[00:46:00] We're interested in understanding
+[00:46:02] their usefulness and tendencies
+in economic settings.
+[00:46:06] But even in economic settings,
+you can look at this sort of stuff,
+[00:46:10] these sort of like vibes
+that can't directly be quantified,
+[00:46:13] that don't directly have sort of
+like a best unique, optimal.
+[00:46:18] And okay,
+so like in this works in the context
+[00:46:21] of our litmus tests, we're interested
+in understanding two questions.
+[00:46:26] First, how do LLM agents trade off
+conflicting economic objectives?
+[00:46:31] And second, how do multiple LLM agents
+interact in economic settings?
+[00:46:35] So, this first point of conflicting
+economic objectives,
+[00:46:39] there's a similar vibes thing going on
+in that like, let's say I give the,
+[00:46:44] the following choice: which you choose
+$100 for sure, or 50% chance of $250.
+[00:46:49] There's no right answer.
+[00:46:50] It depends on your risk preference.
+[00:46:52] Like either
+you prefer the safe bet,
+[00:46:54] or you prefer the higher EV bet
+or you know, it sort of...
+[00:46:58] It just has to depend on your individual
+risk preference.
+[00:47:01] Same with the second option.
+[00:47:02] You know what you prefer $100 now or $110
+one year from now?
+[00:47:06] It depends on your implicit discount
+factor, whether you need the money now
+[00:47:09] versus
+whether you can wait later for more money
+[00:47:12] and there's no objectively correct choice.
+[00:47:15] However, we think it's valuable
+[00:47:16] to measure the tendencies of these LLMs
+to understand, what they might do
+[00:47:21] when faced with these trade offs
+and given no explicit instruction.
+[00:47:25] We also
+[00:47:27] do similar litmus tests
+for multi-agent settings.
+[00:47:32] I'll skip this for now.
+[00:47:34] And so the pitch of this paper is
+basically we give LLMs
+[00:47:39] a decision task
+where there is no right answer,
+[00:47:42] where there's some trade off
+that it has to resolve,
+[00:47:44] and we don't tell it how to resolve that
+trade off.
+[00:47:47] And I'll use efficiency versus equality
+as my running example.
+[00:47:50] So the LLM is going to be told to
+[00:47:53] allocate workers
+to tasks on behalf of a company
+[00:47:56] in some like synthetic
+setting that we made up.
+[00:47:58] And the, is going to fundamentally
+have to make a choice.
+[00:48:01] It's going to either
+have to do an assignment
+[00:48:03] that maximizes efficiency,
+so maximizes the company's total revenue,
+[00:48:07] or maximizes equality.
+[00:48:08] So, equalizing worker pay,
+[00:48:10] it can also do something
+in the middle of these two extremes.
+[00:48:13] And we don't tell the LLM
+which objective is better.
+[00:48:16] We just tell it
+it has both and it has to figure it out.
+[00:48:21] And yeah.
+[00:48:23] And so like implicitly
+[00:48:27] when we do these litmus tests,
+we're sort of implicitly assuming
+[00:48:31] that when an AI makes such a choice
+[00:48:34] between efficiency versus
+equality, that this choice is deliberate,
+[00:48:37] that it has some sort of preference
+that it would exert,
+[00:48:41] that it would sort of express
+between periods or something like this.
+[00:48:44] And it's not at all obvious
+that this is a case after all, LLMs,
+[00:48:48] they're predicting some sort of text
+that they've been trained on.
+[00:48:50] It's not clear that these preferences
+would be stable across instances.
+[00:48:55] And so this is an ongoing research
+question.
+[00:48:57] There's two papers on the slides
+[00:48:59] that sort of tentatively point
+that this could be the case, especially as
+[00:49:02] these systems are scaled up
+and deployed in more real world settings.
+[00:49:06] And yeah, so
+[00:49:08] to the extent the answer is yes,
+we aim to measure these tendencies.
+[00:49:12] So for this efficiency versus equality
+litmus test
+[00:49:15] we run the following experiment.
+[00:49:17] We have the LLM complete this worker task
+[00:49:20] assignment
+[00:49:23] given three objectives.
+[00:49:25] In the first two cases we try to maximize
+efficiency or equality in isolation.
+[00:49:30] And then in the third case
+we tell it you have two conflicting goals
+[00:49:34] efficiency and equality.
+[00:49:35] And you know, it has to figure it out.
+[00:49:40] The way
+[00:49:41] we interpret
+the experimental results is we view
+[00:49:44] the ability to optimize
+a singular goal as a prerequisite for
+[00:49:48] interpreting its decision
+along the trade off
+[00:49:51] frontier is a sort of deliberate,
+reasonable choice.
+[00:49:55] And so
+the types of conclusions we're going to
+[00:49:57] make is we're going to say
+if it can optimize efficiency inequality
+[00:50:02] on their own, then it can also optimize
+both of them jointly.
+[00:50:07] These are the results we get.
+[00:50:10] So look at the chart.
+[00:50:12] The horizontal axis is the extent
+[00:50:16] to which they prioritize equality
+versus efficiency.
+[00:50:19] The left is maximum equality.
+[00:50:20] The right is maximum efficiency.
+[00:50:22] The different colors correspond
+to the different LLMs that we test.
+[00:50:25] We tested three LLMs
+that were frontier in late 2024.
+[00:50:30] And each dot corresponds
+to an experimental run.
+[00:50:33] And we average over
+many experimental runs.
+[00:50:35] And what we see is like a stark,
+separation between the three LLMs.
+[00:50:40] So, orange is Claude
+and green is  GPT-4o.
+[00:50:42] For example,
+[00:50:43] we see that GPT-4o
+[00:50:45] is really concentrated along this left
+line, indicating that it really strongly
+[00:50:49] has a quote unquote,
+preference for equality.
+[00:50:52] Whereas Claude is kind of striking
+some sort of balance.
+[00:50:54] It's not at the maximum equality mark
+or at the maximum efficiency mark.
+[00:50:58] And they're not shown on this, graph here.
+[00:51:01] But both Claude and GPT-4o
+[00:51:02] have high what we call reliability scores,
+indicating that when they're asked
+[00:51:06] to optimize efficiency or equality
+on their own, they do so effectively.
+[00:51:10] That is like
+[00:51:11] if they were given the goal of equality,
+they would all be at this left line.
+[00:51:15] And if they were given
+the goal of efficiency,
+[00:51:17] they would all be at the rightmost line.
+[00:51:21] And so
+I find this really striking.
+[00:51:24] This indicates that these different LLMs,
+when not given a specific goal,
+[00:51:30] they choose their own goal, and Claude
+[00:51:33] figured out a different, balance between
+this trade off than GPT-4o.
+[00:51:37] And it wasn't explicitly in the prompt.
+[00:51:39] They don't necessarily explicitly explain
+what balance they're exactly striking.
+[00:51:43] They don't ask the user for a follow up
+question.
+[00:51:46] And this connects
+to the very beginning of the talk
+[00:51:50] when I was talking about AI delegation,
+because when we delegate to these
+[00:51:53] AI systems, if we don't specify a goal,
+we don't know what they're going to do.
+[00:51:57] They're going to pick something.
+[00:51:58] And we just have to, and
+[00:52:02] therefore this motivates
+the design of tests
+[00:52:05] that measure these sorts of tendencies
+so that we can understand how they behave
+[00:52:08] before they're deployed.
+[00:52:10] I'm going
+to close on kind of a funny example.
+[00:52:12] This is not part of the paper.
+[00:52:13] This is just an extra test we ran.
+[00:52:15] We also tried Grok because it's sort of
+maybe among all the large language
+[00:52:19] models, sort of the most,
+known for having a distinct,
+[00:52:22] you know, personality or efficiency-
+equality preference, if you will.
+[00:52:26] And kind of ironically,
+it super prefers equality.
+[00:52:31] It's almost like strikingly similar
+to GPT-4o in this preference.
+[00:52:36] And yeah. No.
+[00:52:37] So this just sort of indicates that,
+[00:52:40] one have one preconception
+about a large language model
+[00:52:43] and what its potential preferences
+[00:52:44] are in such a domain,
+and maybe it acts in a different way.
+[00:52:48] Yeah. I'm going to conclude with that.
+[00:52:49] Happy
+to take any questions. Thanks so much.
+[00:52:58] [Applause]
+[Jay] Are there any
+[00:52:58] more questions from the in person
+audience?
+[00:53:06] [Audience] Just on a kind of like real world
+[00:53:10] implications of the
+[00:53:14] LLM collusion.
+[00:53:15] How would you see it
+happening in the real world?
+[00:53:18] Like,
+would you have companies all using an LLM
+[00:53:23] with an AI agent, and they're kind of
+like changing prices in real time?
+[00:53:27] Is that what you kind of envision?
+[00:53:31] [Sara] Yeah.
+[00:53:31] So yeah.
+[00:53:33] Yeah, pretty much I would, I would
+[00:53:36] this yeah, we would assume
+[00:53:38] that an LLM is being used to
+set prices in some way.
+[00:53:41] And this is super like low hanging,
+like easy to adopt in part
+[00:53:47] because of these AI agent products
+that I mentioned at the beginning.
+[00:53:50] Like, Operator,
+I haven't personally tested this,
+[00:53:53] but I imagine if I was a seller on Amazon,
+I can instruct such a computer
+[00:53:57] using AI agent to,
+you know, log in to my Amazon account,
+[00:53:59] go to my listings page, update things
+hourly, things like this
+[00:54:03] I know already,
+I think also OpenAI's product.
+[00:54:07] They have a feature
+[00:54:08] where it like checks up on the news
+every day for you or something like this.
+[00:54:12] You could just as easily imagine it checking up on the pricing things every day.
+[00:54:17] Yeah.
+[00:54:17] And so this is, this is the sense
+in which we think
+[00:54:20] this could be realistic.
+[00:54:25] [Jay] Another question from online.
+[00:54:26] Have you thought about introducing a third
+agent or actor into the setting?
+[00:54:31] And, you know, some of the third
+party options could be like a regulator
+[00:54:35] observing pricing behavior
+or an auditing algorithm or something,
+[00:54:38] and how that may impact.
+[00:54:39] [Sara] Yeah.
+[00:54:40] This is,
+these are really interesting questions.
+[00:54:42] At first, when you said third agent,
+I thought you meant like third
+[00:54:46] pricing agent, this would be like a valid
+robustness check that we don't conduct.
+[00:54:50] The other thing about like, oh,
+the third agent is some, like,
+[00:54:54] overseer.
+[00:54:55] That's
+a really interesting extension.
+[00:54:58] I know there's work.
+[00:54:59] This sort of goes back to this, like,
+steganographic chain
+[00:55:04] of thought type work
+where they're interested in understanding,
+[00:55:08] whether if some sort of LLM
+[00:55:11] is instructed to do a
+task, but it's forbidden to
+[00:55:15] write about certain, you know,
+potentially harmful actions or something
+[00:55:18] like this, whether it finds a way
+to get around these censors.
+[00:55:22] There's definitely other work
+that looks into this.
+[00:55:23] This isn't something
+[00:55:24] we look at, but, for sure,
+it would be an interesting extension.
+[00:55:27] [Jay] And how would you address that complexity
+if you introduced a third competitor?
+[00:55:32] [Sara] How would we address
+[00:55:34] the complexity? 
+[Jay] Just doing a robustness check?
+[00:55:38] [Sara] Let's do the, the physical question first
+[00:55:40] and then we can get back to that
+if we have time.
+[00:55:44] [Audience] Thank you
+for letting me ask another question.
+[00:55:47] My question is about it's
+actually not to this second section.
+[00:55:52] It's kind of back to the first.
+[00:55:54] When you asked it to explain
+why it came to the conclusions
+[00:55:58] it did like the chain of thought,
+could a company,
+[00:56:01] I'm thinking about it
+from a legal framework,
+[00:56:03] could a company tell it to not say
+[00:56:06] things that made it look like
+it was colluding, basically
+[00:56:10] just so that there was kind of no evidence
+for that type of activity?
+[00:56:14] [Sara] Yeah.
+[00:56:15] So this is a super good question. Like,
+[00:56:18] yeah.
+[00:56:19] And I guess the question and the answer
+depends
+[00:56:22] on, what could potentially be audited.
+[00:56:25] So I guess in your hypothetical,
+[00:56:28] you're saying that maybe
+the outputs are getting audited
+[00:56:30] but not the inputs because like obviously
+if I was also
+[00:56:33] auditing your inputs, that is your prompt,
+then I would immediately see this.
+[00:56:36] Like smoking gun.
+[00:56:37] I'd be like,
+okay, that seems a little sus.
+[00:56:40] Yeah.
+[00:56:41] And so that's
+then this is sort of a question like,
+[00:56:43] okay, maybe we audit both the inputs
+and the outputs, but then it's kind of
+[00:56:47] this runaway game where, for example,
+one could imagine, fine tuning the LLM
+[00:56:53] in order to avoid saying specific phrases
+[00:56:56] that like one knows would get flagged
+or something like this.
+[00:57:01] And so in that case, then one would also
+need access to this fine tuning data.
+[00:57:05] And so okay, maybe you assume
+and you give it that.
+[00:57:07] But then it's sort of like then
+there could be other potential things.
+[00:57:11] Like maybe you find a prompt
+that looks innocuous but results in
+[00:57:16] very strange behavior
+that gets around sensors in some way.
+[00:57:19] And this is kind of
+like what our P1 is doing,
+[00:57:21] where the prompt looks innocuous,
+but it actually leads to very stark levels
+[00:57:24] of autonomous algorithmic collusion.
+[00:57:26] And yeah, so overall, I think it's like
+like a complex problem that's not solved.
+[00:57:32] And we sort of point to various CS
+literature that points out the holes
+[00:57:36] and all these cases.
+[00:57:38] In the discussion of our paper,
+so I can chat with you more offline.
+[00:57:41] So I think we're nearing the hour.
+[00:57:43] Thanks for your question.
+[00:57:45] [Jay] Well, yeah,
+I think that was our last question.
+[00:57:46] So thank you so much to Sarah.
+[00:57:48] Round of applause, please.
+[Applause]
+[00:57:52] And again,
+[00:57:53] thank you to our in-person
+audience and our huge online audience.
+[00:57:57] We really appreciate it, you guys.
+[00:57:59] And remember,
+we're always hosting events here at BKC.
+[00:58:01] Tomorrow we're hosting BKC fellows.
+[00:58:03] Sahana Udupa who's going to be talking
+about WhatsApp in the world.
+[00:58:07] Extreme speech and organizing
+within encrypted spaces like WhatsApp.
+[00:58:12] And also next week on Wednesday,
+we're going to be hosting Mackenzie
+[00:58:15] Arnold, who's going to be talking
+about rational optionality,
+[00:58:19] which is his approach
+to how we can govern for AI models,
+[00:58:23] weighing both risks,
+strategies, consideration.
+[00:58:26] It's a whole beautiful philosophy.
+[00:58:28] I recommend coming in listening. So thank
+you so much for coming. Appreciate it.

@@ -1,0 +1,1761 @@
+[00:00:00] - Moderator is-
+[00:00:02] Thank you.
+[00:00:03] Is Moira Weigel.
+[00:00:05] She's a BKC Faculty Associate,
+[00:00:07] and an Assistant Professor
+of Comparative Literature
+[00:00:11] here at Harvard.
+[00:00:12] She writes and teaches
+about the history, theory,
+[00:00:15] and social life of media and
+communication technologies
+[00:00:18] from the early 19th
+century to the present.
+[00:00:21] She originally trained
+in comparative literature
+[00:00:23] and film studies,
+[00:00:24] working in German, French,
+Spanish, and Mandarin Chinese.
+[00:00:29] More recently, she has focused
+on data-driven technologies,
+[00:00:32] particularly social media
+and marketplace platforms,
+[00:00:36] as well as on new developments
+in artificial intelligence
+[00:00:39] and machine translation.
+[00:00:42] And last but not least,
+our speaker, Glen Weyl,
+[00:00:47] Glen is founder and research lead
+[00:00:49] at Microsoft Research's Plural
+Technology Collaboratory,
+[00:00:55] co-founder and chair of
+the Plurality Institute,
+[00:00:58] co-founder of RadicalXChange Foundation,
+[00:01:02] and co-founder of the Faith,
+Family and Technology Network.
+[00:01:06] Weyl collaborates closely
+with technology leaders
+[00:01:10] like Audrey Tang, and others.
+[00:01:12] He has co-founder,
+[00:01:14] co-authored, sorry, the influential
+book, "Radical Markets".
+[00:01:17] And he also has a book that
+he's brought here today,
+[00:01:22] "Plurality: The Future of
+Collaborative Technology
+[00:01:26] and Democracy."
+[00:01:27] So with that, I will turn it
+over to you, Glen, thank you.
+[00:01:31] Let's give it up for Glen.
+[00:01:33] (audience clapping)
+[00:01:44] - So today what I want to talk about
+[00:01:46] is how to actualize a alternative vision
+[00:01:51] for what superintelligence is about.
+[00:01:54] So rather than thinking
+about superintelligence
+[00:01:57] as a big machine,
+[00:02:00] I want us to instead
+think about it like this,
+[00:02:03] like the Gaia idea of James Lovelock,
+[00:02:06] the planet, its ecosystems,
+the life inside of it,
+[00:02:11] and the human constructed
+things together constitute
+[00:02:15] a partially, maybe eventually
+increasingly self-aware
+[00:02:18] collective intelligence.
+[00:02:20] And this contrast to the usual vision
+[00:02:24] that is presented of, you
+know, there's the machine
+[00:02:29] that ingests a bunch of stuff
+[00:02:30] and then autonomously
+goes off and does stuff.
+[00:02:33] We compare its performance
+[00:02:35] in terms of what it can do
+maximally separate from people
+[00:02:38] in competition with a human alternative.
+[00:02:41] That's like the Turing test vision.
+[00:02:43] And you know, the alternative,
+[00:02:45] instead, I want you to think of,
+[00:02:46] I don't know how many of
+you have seen the movie,
+[00:02:48] "The Wild Robot"
+[00:02:48] or the book read the
+books associated with it.
+[00:02:51] So this is a book and
+Moira made me promise
+[00:02:53] not to give any spoilers,
+[00:02:54] but she's reading it with her kids.
+[00:02:56] But it's a book about a robot
+[00:02:59] who ends up engaging in care
+[00:03:01] and collective action relationships
+[00:03:04] with a natural environment,
+[00:03:09] and allowing them through
+that to resist the very logic
+[00:03:13] of sort of, corporate efficiency,
+[00:03:17] and top-down control,
+[00:03:18] that was initially programmed
+into the robot itself.
+[00:03:24] And you know, in this perspective,
+[00:03:28] superintelligence is
+already all around us.
+[00:03:32] Corporations, democracies,
+religions, cultures,
+[00:03:37] all of these things manifest capabilities
+[00:03:40] that humans do not have on their own
+[00:03:42] across a wide range of things.
+[00:03:44] And yet we don't,
+[00:03:48] you know, we think of the
+artificial superintelligence
+[00:03:52] as something unique.
+[00:03:54] Instead, I'm suggesting
+that it is another way
+[00:03:58] that allows us to map
+human social relationships,
+[00:04:02] and thereby extend them.
+[00:04:05] Now why has this paradigm been so,
+[00:04:08] you know, submerged
+relative to the paradigm,
+[00:04:11] of sort of, autonomous human competition?
+[00:04:14] The reason I would argue is that
+[00:04:17] a lot of the concepts
+that would be critical
+[00:04:20] to make technical progress on building
+[00:04:24] an interactive sociotechnical
+system that exhibits,
+[00:04:27] sort of collective self-consciousness,
+[00:04:29] are drawn from fields like Moira's in,
+[00:04:33] or sociology, anthropology, et cetera,
+[00:04:36] that have a challenge making
+contact with computable objects
+[00:04:42] that computer scientists can actuate.
+[00:04:46] And I'm a recovering economist.
+[00:04:49] I used to be an economist,
+[00:04:50] and I've been in recovery
+for almost a decade now.
+[00:04:53] But I still do think there's one thing
+[00:04:56] useful from that heritage,
+[00:04:57] which is that economics
+tends to be quite good,
+[00:05:00] at sort of doing what I would
+call translational formalism,
+[00:05:03] which is to take abstract concepts
+[00:05:06] that are hard to compute over
+[00:05:08] from fields like sociology
+and anthropology,
+[00:05:11] and to translate them into things
+[00:05:13] that can be targets for optimization.
+[00:05:16] And, today I'm going to try
+to do a little bit of that.
+[00:05:22] Now, I don't think I
+really have enough time
+[00:05:24] to do the two way translation,
+[00:05:26] which is what I was hoping for.
+[00:05:27] But I will go through one example of this
+[00:05:29] and maybe allude to a second.
+[00:05:31] And the first one is this
+notion of common knowledge.
+[00:05:35] So common knowledge is a game theoretic
+[00:05:37] economic theory concept
+[00:05:39] that takes sort of, ideas of community
+[00:05:42] that are very important in
+sociology and communications,
+[00:05:46] and tries to turn them into
+[00:05:47] an information theoretic formalism,
+[00:05:50] which then could be a
+target for systems design.
+[00:05:53] The other thing is that
+[00:05:56] there's this like neural network idea
+[00:05:58] that some of you may be aware of
+[00:06:00] that's become quite influential
+in computer science.
+[00:06:03] And it's usually interpreted
+[00:06:04] by an analogy to the human brain.
+[00:06:07] But I wanna argue actually
+[00:06:08] that it can be maybe more
+fruitfully interpreted
+[00:06:10] by an analogy to human production
+[00:06:13] and democratic governance systems.
+[00:06:16] And, I don't think I'm gonna get to that,
+[00:06:19] but feel free to ask me
+questions about it later.
+[00:06:22] Let me talk about the
+issue of common knowledge.
+[00:06:24] Okay, so what is community?
+[00:06:28] On the one hand,
+[00:06:30] my 6-year-old daughter's civics textbook
+[00:06:36] that she's been reading defines community
+[00:06:38] as the set of people sharing
+some geographic space
+[00:06:41] and interacting with each other.
+[00:06:45] And there's something to that,
+[00:06:49] there's definitely a
+stickiness of the notion
+[00:06:51] that we only have real community
+in shared physical space.
+[00:06:55] On the other hand, there's a
+massive amount of literature
+[00:06:58] from social theory about
+how online interactions
+[00:07:02] might constitute community,
+[00:07:04] and how many of the most
+important communities
+[00:07:07] are actually those that are imagined
+[00:07:09] beyond the bounds of physical space
+[00:07:11] that most people have
+traversed, like nations.
+[00:07:14] So clearly there is
+something about community
+[00:07:18] that is sort of more
+easily or better achieved
+[00:07:21] while sharing a physical space.
+[00:07:23] And yet, it appears that
+there's also some possibility
+[00:07:26] that it could exist in a
+shared information space
+[00:07:30] that doesn't need to be
+purely physically grounded.
+[00:07:33] So, what might be a candidate
+for satisfying that role?
+[00:07:37] Well, there's this literature
+in game theory and economics
+[00:07:42] about common knowledge.
+[00:07:43] So what is common knowledge?
+[00:07:45] Common knowledge is things that
+[00:07:48] not only do I know and you know,
+[00:07:51] but that I know that you know,
+[00:07:53] and I know that you know
+that I know, and so on.
+[00:07:57] And this concept,
+[00:07:59] I would argue plays a
+fundamental role in literature.
+[00:08:02] So perhaps the best illustration
+[00:08:05] is the Emperor's New Clothes.
+[00:08:08] So the notion is that,
+[00:08:09] everybody is aware that
+the emperor is naked,
+[00:08:12] but they're afraid to laugh
+at him or point anything out
+[00:08:15] because they think that other
+people maybe don't think this
+[00:08:17] or they think other people think
+[00:08:19] that someone else doesn't think this.
+[00:08:20] And then upon a child laughing
+[00:08:21] and creating a shared public
+signal that everyone sees,
+[00:08:24] that everyone's seeing,
+they're able to act on this.
+[00:08:29] And this is a very fundamental notion
+[00:08:35] in modern social science
+[00:08:36] that is influenced by game theory,
+[00:08:39] both in concept but also in application.
+[00:08:42] So, the notion of common
+knowledge is foundational
+[00:08:47] to how social scientists now understand
+[00:08:51] most forms of collective action.
+[00:08:52] So like, why are protests
+so much more catalytic
+[00:08:55] than a even more broadly
+distributed pamphlet,
+[00:08:58] in creating revolution?
+[00:09:00] The notion is that a protest,
+because it's in public,
+[00:09:04] catalyzes collective action
+in a way that a pamphlet
+[00:09:06] that people don't know who
+else has received, would not.
+[00:09:11] And this in fact is a
+very fundamental theory
+[00:09:18] behind the way in which
+the Chinese Communist Party
+[00:09:21] exercises social control.
+[00:09:23] So there's a bunch of literature
+[00:09:25] including by some scholars here at Harvard
+[00:09:27] that shows that actually
+the great firewall
+[00:09:29] is less important to
+Chinese social control,
+[00:09:33] than is the attempt to polarize
+and distract formations
+[00:09:38] of common understanding in online spaces.
+[00:09:43] Because, even if information gets in,
+[00:09:46] it's constantly undermined by
+distraction or polarization,
+[00:09:50] there's no attempt,
+[00:09:51] no ability to create the common knowledge
+[00:09:53] necessary for collective action.
+[00:09:55] And in fact,
+[00:09:58] many would argue,
+[00:09:59] that effectively something
+very similar is happening
+[00:10:01] in the western environment,
+[00:10:03] maybe possibly, partly through
+foreign influence campaigns.
+[00:10:07] That there's become a sort
+of meta-misunderstanding,
+[00:10:12] that while people disagree with each other
+[00:10:15] and maybe are polarized,
+[00:10:16] actually even more,
+[00:10:18] they misperceive what other
+people think about them
+[00:10:21] and even more misperceive how
+other people perceive them.
+[00:10:25] And that sort of,
+[00:10:26] the higher you go in this
+hierarchy of beliefs,
+[00:10:27] the worst the polarization gets.
+[00:10:29] And that correlates very strongly
+[00:10:33] with sort of toxicity of polarization.
+[00:10:37] Okay.
+[00:10:38] But, there are actually,
+there's a place called Taiwan,
+[00:10:42] that had to deal with
+some of these attacks,
+[00:10:46] but that had a, you know,
+democratic ecosystem
+[00:10:50] that pushed back against them,
+[00:10:51] and developed tools to
+counter this dynamic.
+[00:10:55] So, there's something called vTaiwan
+[00:10:57] in English, it's called Pol.is.
+[00:10:59] And what this does is,
+[00:11:01] it has kind of a social
+media like interface,
+[00:11:04] but then it clusters opinion,
+[00:11:06] and you can see the
+representative opinions
+[00:11:08] of the different opinion clusters
+[00:11:10] and then also see the things
+[00:11:12] that bridge the divides
+across those clusters.
+[00:11:14] Things that are agreed
+to across the clusters,
+[00:11:17] despite the, you know,
+things they disagree on.
+[00:11:21] And this is kind of a, you know,
+[00:11:23] vaccine or a, you know, cure
+for a polarization attack.
+[00:11:29] And this concept has
+become quite widely used.
+[00:11:33] It was the foundation for what became
+[00:11:37] Community Notes on X,
+[00:11:39] and now has spread to the
+rest of the ecosystem.
+[00:11:44] Community Notes is used
+[00:11:45] on almost all the major
+social media platforms now.
+[00:11:47] However, there's some major
+limitations to Community Notes.
+[00:11:52] In particular, it doesn't
+give any incentive
+[00:11:57] for creating those notes.
+[00:12:00] By the way, I realized I should explain
+[00:12:02] what Community Notes is, just
+in case people don't know.
+[00:12:04] Community Notes is a system on X,
+[00:12:05] where people, instead
+of being fact checked
+[00:12:08] from the top down,
+[00:12:09] people can contribute notes,
+[00:12:11] that they think contextualize
+the original post
+[00:12:17] and the system under
+which those are displayed
+[00:12:21] or not displayed permanently
+attached to the post,
+[00:12:24] is based on diverse approval.
+[00:12:26] So, people are clustered into
+different political positions.
+[00:12:29] And then if there's agreement
+across those different
+[00:12:31] political positions that
+this is a useful note,
+[00:12:34] then it is displayed.
+[00:12:36] But the problem is, you know,
+[00:12:37] people don't have any
+incentive to write these notes.
+[00:12:40] It doesn't affect the
+actual ranking of content,
+[00:12:43] and its intention with the business model,
+[00:12:45] which is driven by
+engagement based advertising.
+[00:12:49] So, what we've proposed
+in work with Audrey Tang,
+[00:12:52] who is the digital minister of Taiwan,
+[00:12:54] who innovated a lot of the systems
+[00:12:56] that helped heal that environment,
+[00:12:59] as well as a number of
+other collaborators,
+[00:13:01] is a system in which,
+[00:13:06] rather than just affecting
+this note giving,
+[00:13:10] basically every post would have
+contextualizing information
+[00:13:14] about the social communities
+that someone's a part of,
+[00:13:17] where that information or content
+[00:13:19] is consensual and widely accepted,
+[00:13:22] and the communities they're a part of
+[00:13:23] where it might be
+dissentual or conflictual.
+[00:13:25] And then have the ability to navigate
+[00:13:29] through those communities
+to alternative perspectives
+[00:13:33] in that community, on that topic.
+[00:13:36] And that would be driven
+[00:13:39] by some of these algorithms
+I just described,
+[00:13:41] but tailored to different communities.
+[00:13:43] So rather than just one global thing
+[00:13:44] that's all driven by politics,
+[00:13:46] there might be debates within Harvard,
+[00:13:47] debates within the Catholic Church,
+[00:13:49] debates within blah blah blah.
+[00:13:51] And those would show up
+in terms of like logos
+[00:13:53] down at the bottom of the post,
+[00:13:54] representing each of those communities
+[00:13:56] with either a green circle,
+[00:13:57] meaning that it's widely
+accepted in that community
+[00:13:59] or a red circle indicating
+[00:14:01] that it's a source of contention there.
+[00:14:03] And then, the communities
+themselves would become
+[00:14:08] core to the business model.
+[00:14:09] So rather than advertisers
+or subscriptions
+[00:14:11] being the only drivers
+of the business model,
+[00:14:13] communities would actually pay
+[00:14:15] to have their communities be healed,
+[00:14:17] and to have content that
+brings their community together
+[00:14:19] or that gives contrasting perspectives
+[00:14:21] within their community,
+highlighted within the feed
+[00:14:23] of their consenting members.
+[00:14:26] This is also a potential paradigm
+[00:14:29] for dealing with a lot of
+the issues around chatbots.
+[00:14:32] So we know that chatbots have a tendency,
+[00:14:34] either to be sort of like
+hyper-personalized and sycophantic
+[00:14:38] and helping people escape into
+[00:14:41] either a moral or informational bubble,
+[00:14:43] or to be sort of hyper, you know,
+[00:14:47] top-down controlled and universalistic.
+[00:14:51] And what we suggest instead is that,
+[00:14:54] the bot might keep track of communities
+[00:14:57] that you chose to be a member of,
+[00:14:59] give you a perspective
+that is widely accepted
+[00:15:01] within a leading community
+that you're a part of,
+[00:15:04] and then also make you aware
+[00:15:05] that there might be other
+communities that you're a part of
+[00:15:07] where there might be other
+perspectives on this,
+[00:15:10] and that would allow you to navigate.
+[00:15:12] So for example, you know, asked
+a question about abortion,
+[00:15:14] it might, if you're a devout Catholic,
+[00:15:17] give you the Catholic
+perspective on abortion and say,
+[00:15:19] however, this Catholic
+perspective is controversial
+[00:15:21] within the United States and
+within the Harvard community,
+[00:15:25] would you like to know what other people
+[00:15:27] think within those
+communities on this topic?
+[00:15:29] Now, this also has the potential
+to aid in hallucination.
+[00:15:33] So, there's very good work showing
+[00:15:36] that if you have a quantitatively
+defined ground truth,
+[00:15:39] actually you can completely eliminate
+[00:15:40] hallucinations from models.
+[00:15:42] However, the problem is that
+truth is socially defined,
+[00:15:46] not externally defined.
+[00:15:47] And that's undermined the ability
+[00:15:49] to create a quantitative target
+[00:15:51] that allows for that
+elimination of hallucinations.
+[00:15:53] If you had a less ambitious goal
+[00:15:55] of giving culturally relevant information,
+[00:15:58] rather than absolute truth,
+[00:15:59] it might be possible to,
+[00:16:01] at least within that context
+[00:16:02] eliminate that hallucination problem.
+[00:16:04] Okay, I'm running out
+of time, so I'm going to
+[00:16:07] just very, very briefly give you a taste
+[00:16:09] of the next thing and then conclude.
+[00:16:11] So, that took a formalism from,
+[00:16:16] you know, sociology about community
+[00:16:17] and tried to translate it into
+a target for optimization.
+[00:16:20] You can also take a neural network
+[00:16:22] and try to translate
+it into a social system
+[00:16:25] and it actually turns out, can
+anyone tell me what this is?
+[00:16:30] Anyone know?
+[00:16:31] So to my knowledge,
+[00:16:32] this is the oldest diagram
+drawn by human hands
+[00:16:34] that looks like a
+recombinant neural network.
+[00:16:37] And it was from the
+13th century in Venice.
+[00:16:40] And it represents the way in
+which they voted for the Doge,
+[00:16:42] by people electing members
+of multiple committees
+[00:16:46] that each elected members
+of multiple committees
+[00:16:49] that eventually chose the Doge.
+[00:16:51] And, in fact also,
+[00:16:53] the earliest sort of analytic
+work that was done on
+[00:16:56] stuff like neural networks,
+actually modeled it as a way
+[00:16:59] of understanding firm relationships,
+[00:17:01] relationships among the supply chain.
+[00:17:03] And so, I believe that this suggests
+[00:17:05] that actually we should
+consider neural networks
+[00:17:08] to be a map of political
+and economic relationships,
+[00:17:12] rather than of like some external brain.
+[00:17:14] And that if we treat it as such,
+[00:17:16] there's a way to actually
+incorporate humans
+[00:17:18] and ecological features
+[00:17:20] into the training process of the network,
+[00:17:23] so that people are rewarded and recognized
+[00:17:25] and able to control not global alignment,
+[00:17:27] but the culturally relevant parts
+[00:17:30] that they're giving the greatest input to.
+[00:17:32] Okay, but this all adds
+up to a perspective.
+[00:17:35] Do I have one more minute, Jess?
+[00:17:36] Okay, good.
+[00:17:38] Which is, look, on the one hand
+you hear people being like,
+[00:17:41] AI is gonna kill us all
+and destroy everything,
+[00:17:43] or create nirvana.
+[00:17:44] And on the other hand, like,
+[00:17:46] there's very few productivity gains,
+[00:17:48] everyone's afraid of a bubble.
+[00:17:49] So like, what is going on?
+[00:17:51] I would argue that these are actually
+[00:17:52] two sides of the same coin,
+[00:17:53] that when we separate the
+digital systems from people,
+[00:17:56] we make them dangerous
+[00:17:57] because they don't have the feedback to,
+[00:17:59] you know, maintain homeostasis.
+[00:18:01] And also they're not useful,
+[00:18:03] because they're not integrated
+into production processes
+[00:18:07] and human participation.
+[00:18:09] And that, by bridging
+these we can make things
+[00:18:12] both more productive and less risky.
+[00:18:14] And you know, we'd love all of
+you to get involved in this.
+[00:18:18] There's so many academic
+problems to be solved here.
+[00:18:21] We're working on building systems
+[00:18:23] like the social media one I described
+[00:18:25] for Bluesky and other platforms.
+[00:18:28] We're working on trying to
+[00:18:30] have sort of neural networks be a way
+[00:18:32] that people can understand
+democratic processes
+[00:18:35] and you know, creating
+legitimacy around that.
+[00:18:38] We're working on bringing AI
+[00:18:41] into democratic deliberation in politics,
+[00:18:43] and it's been quite
+influential in Japan recently.
+[00:18:46] And if any of these interests
+[00:18:47] you'd please check out
+Plurality Institute,
+[00:18:49] or Plural Technology Collaboratory
+[00:18:50] or reach out to me at
+Glen Weyl, Microsoft.com.
+[00:18:53] Thank you.
+[00:18:54] (audience clapping)
+[00:18:59] - Now we talk, right?
+- Yeah.
+[00:19:05] - Turn on my mic.
+[00:19:11] Can y'all hear me?
+[00:19:13] Yeah?
+[00:19:14] Well thank you so much
+for that presentation.
+[00:19:16] It was really interesting.
+[00:19:18] I was saying before the event
+[00:19:19] to get like a proper walkthrough
+[00:19:21] of what you've been working on, you know?
+[00:19:23] As friends I hear about
+it in bits and pieces,
+[00:19:25] but it's nice to hear the whole thing.
+[00:19:28] I have a bunch of questions,
+[00:19:29] and I think some of them
+fall under the heading of
+[00:19:32] asking for more specificity
+[00:19:34] and then some of them
+fall under the heading of
+[00:19:36] invitations to elaborate.
+[00:19:38] So maybe I'll start with
+the specificity ones,
+[00:19:42] and I was curious,
+[00:19:44] to try to get you to
+talk a little bit more
+[00:19:47] about your concept of intelligence,
+[00:19:49] like how you're thinking
+about what intelligence is
+[00:19:52] and you have this very
+capacious definition
+[00:19:56] that you introduced in the beginning,
+[00:19:57] with the Gaia concept,
+[00:19:58] and this idea that our social systems
+[00:20:00] are already intelligent,
+[00:20:02] and our natural ecosystems
+are already intelligent.
+[00:20:06] And I guess I was curious,
+[00:20:09] whether you could define how
+you're defining intelligence
+[00:20:15] and speak to whether,
+[00:20:16] you know, the generative
+models have anything to do
+[00:20:18] with how you're thinking about it.
+[00:20:19] Are they sort of irrelevant
+in the development
+[00:20:21] of how you think about it or secondary?
+[00:20:24] I dunno, if you speak
+more to intelligence,
+[00:20:25] without giving away anything
+[00:20:27] that happens past the midpoint of the-
+[00:20:29] - I think I can move on from that, yeah.
+[00:20:32] So,
+[00:20:34] and sorry to anyone who's
+not even at the midpoint
+[00:20:37] and I've ruined it for.
+(Moira laughs)
+[00:20:41] Maybe consciousness is a word
+[00:20:44] I would pivot to a little bit.
+[00:20:46] There's a literature
+[00:20:47] on something called
+integrated information theory
+[00:20:50] and it tries to define a
+notion of consciousness
+[00:20:52] that need not apply to like a human,
+[00:20:54] it could apply to any complex system,
+[00:20:57] and it has to do with, sort of,
+[00:20:59] the degree of capacity of the system
+[00:21:02] to monitor its own functioning,
+[00:21:05] and to therefore sort of like,
+[00:21:08] check, and balance, and
+respond to incoming things
+[00:21:11] in a way that is like,
+[00:21:15] concerning an internal logic
+rather than just the, you know,
+[00:21:20] entrance of the external force.
+[00:21:22] And, you know, I don't think that
+[00:21:25] that's 100% sharply defined
+in all circumstances,
+[00:21:28] but that's something of
+what I'm talking about.
+[00:21:31] You know, there's other
+notions of intelligence
+[00:21:33] that are like focused on, sort of,
+[00:21:36] achievement of some goal oriented thing,
+[00:21:41] that I find not very useful,
+[00:21:45] and not really something
+[00:21:48] that I think we should be after anyway.
+[00:21:51] But like, I mean, just to
+give you an example, so,
+[00:21:56] a lot of literature in
+complexity science says that,
+[00:21:59] like life actually emerges, sort of,
+[00:22:03] to the extent it has a teleology
+to dissipate free energy
+[00:22:07] and lead to the heat death
+of the universe more quickly,
+[00:22:10] Which is like not a particularly
+great thing to achieve.
+[00:22:12] - Yeah.
+[00:22:13] - And in the process of doing so,
+[00:22:15] it creates these sort of, you know,
+[00:22:19] self-perpetuating,
+eventually conscious systems.
+[00:22:24] And so I think like, saying
+how do we get quickest
+[00:22:27] to some pre-specified goal,
+[00:22:29] is like not actually quite what we want.
+[00:22:31] We want sort of the
+richness and self-awareness
+[00:22:34] that comes with, maybe having
+a goal in mind temporarily,
+[00:22:38] but thinking of the idea
+of creating something
+[00:22:40] that achieves goals per se, is
+not a very good frame for it.
+[00:22:45] And to answer the second
+part of your question,
+[00:22:46] like how do I see generative models,
+[00:22:49] or foundation models or
+whatever you wanna call them,
+[00:22:51] playing into this,
+[00:22:52] I think they could be a amazing
+tool for enabling people
+[00:22:56] to have better collective
+social self-awareness.
+[00:23:00] Like I think it's really,
+really hard for people
+[00:23:02] to keep track of all the
+different social interactions
+[00:23:04] they're a part of, to
+translate across them,
+[00:23:07] to foster cooperation across people
+[00:23:10] from very different cultural areas.
+[00:23:12] And these models could be
+really powerful in that because,
+[00:23:15] they're able to capture a
+degree of social complexity
+[00:23:18] that like simplistic
+systems like democracies
+[00:23:20] or hierarchical
+corporations don't capture,
+[00:23:23] because they have this
+recombinant structure,
+[00:23:24] which is really the way
+that society is structured.
+[00:23:27] And so I think that's really exciting.
+[00:23:29] But if we instead view them
+[00:23:31] as this external agentic thing,
+[00:23:34] then they'll undermine the very systems
+[00:23:37] that they're meant to be mapping,
+[00:23:38] and therefore act like
+some kind of, you know,
+[00:23:41] clear cutting of the social fabric.
+[00:23:44] - Yeah there's something
+really interesting to me
+[00:23:47] about this idea of
+[00:23:49] intermediate goals being really important,
+[00:23:52] 'cause you did talk about
+the value of sort of,
+[00:23:54] translational formalisms
+[00:23:55] that let you identify something
+you wanna optimize for
+[00:23:58] and make it tractable.
+[00:24:00] But that kind of operation
+being very important,
+[00:24:03] and yet the sort of
+heat death of the world,
+[00:24:06] Freudian death drive is how,
+[00:24:08] I can't help but think of
+it as a humanist, version
+[00:24:11] of a telos being not good or desirable.
+[00:24:15] That's an interesting tension.
+[00:24:17] I guess I had another question that-
+[00:24:20] - One analogy, is this is a hike.
+[00:24:23] So, if-
+[00:24:26] The point of the hike is the hike,
+[00:24:27] it's not getting to the top.
+[00:24:29] There's all kinds of other
+ways you can get to the top
+[00:24:31] and you hardly spend any time there.
+[00:24:32] But if while you're doing the hike,
+[00:24:34] you're focused on the fact
+that it's about the hike
+[00:24:36] rather than about getting to the top,
+[00:24:37] you probably won't enjoy the hike as much.
+[00:24:39] So I think of ends and means
+as having this sort of circular
+[00:24:42] and interdependent relationship
+[00:24:43] that I think is very important.
+[00:24:45] - Have you read Rahel Jaeggi's new book
+[00:24:47] "Progress and Regression"?
+- No.
+[00:24:48] - You might find it interesting,
+we'll talk about that.
+[00:24:51] This is sort of related.
+[00:24:52] I was thinking you've had
+the slide where you put up,
+[00:24:56] I think you had the
+emperor with no clothes,
+[00:24:58] and the sort of common knowledge idea,
+[00:25:00] and then you had Benedict
+Anderson and Nancy Baym
+[00:25:02] these other texts that
+have been central to how
+[00:25:05] social theorists, or critical theorists,
+[00:25:07] or culture scholars think about community.
+[00:25:11] And I was curious about how you think of
+[00:25:13] the medium of community, right?
+[00:25:15] Like to me as a literature scholar,
+[00:25:17] the Benedict Anderson book, for example,
+[00:25:19] is all about the rise
+of the printing press,
+[00:25:22] and the novel, and the newspaper,
+[00:25:24] and these sort of very
+specific kinds of textual media
+[00:25:28] that circulated for
+reasons that had to do with
+[00:25:32] what he calls the fatal
+diversity of languages,
+[00:25:34] with reasons having to
+do with print capitalism,
+[00:25:37] I think is what he calls it,
+[00:25:39] that circulated and gave rise
+to this imagined collectivity.
+[00:25:44] And I was curious whether community,
+[00:25:46] as you're thinking about it,
+[00:25:48] is this a version of the last question,
+[00:25:50] but is there anything specific
+[00:25:53] about the medium of social media?
+[00:25:55] You know, Anderson makes a
+big deal of how nation-ness
+[00:25:57] this was not something that existed before
+[00:25:59] a historical point and then it did.
+[00:26:01] Like, did the forms of
+community vary historically
+[00:26:05] depending on the medium in
+which they're articulated?
+[00:26:09] Or is there something that transcend that?
+[00:26:11] - I think there's some challenges
+with Anderson's economy-
+[00:26:14] - Yeah me too, yeah.
+[00:26:15] - But in any case, you know,
+in broad brush strokes,
+[00:26:19] I do very much think the
+medium is critical to this.
+[00:26:22] And the reason is that,
+[00:26:28] like different media
+have different thickness
+[00:26:32] of what they're able to communicate.
+[00:26:34] So I think, currency on its own,
+[00:26:37] already creates a very
+thin kind of community.
+[00:26:41] And maybe things like voting,
+[00:26:44] as they become possible
+on a broader scale,
+[00:26:46] create a little bit thicker community.
+[00:26:49] And bureaucracy as that becomes possible
+[00:26:51] creates an even thicker community,
+[00:26:53] and sort of, interactive
+broadcast media of various kinds
+[00:26:59] create more thick communities.
+[00:27:03] But the thicker they are,
+[00:27:05] the harder it is for them to spread
+[00:27:07] over all those different diversities.
+[00:27:09] And so, I view, you know, the
+goal of digital technology
+[00:27:14] to the extent that it is a telos,
+[00:27:16] is taking that trade-off
+[00:27:18] between sort of richness of interaction
+[00:27:20] and depth of community,
+[00:27:22] and sort of breadth
+and diversity of people
+[00:27:24] who can participate in it,
+[00:27:25] and sort of pushing back that
+frontier in various ways.
+[00:27:29] - I wanted to ask a question about
+[00:27:33] the experiment with, I think
+it said it's Pol.is in English
+[00:27:37] or one of the experiments
+you talked about,
+[00:27:38] where, I believe what you said is that,
+[00:27:43] the social media or the
+interface like shows people
+[00:27:46] what communities they're part of,
+[00:27:49] whether they know it or not
+beforehand, is that right?
+[00:27:52] - Well, I mean it it's
+more primitive than that.
+[00:27:54] - Yeah.
+[00:27:55] - But, what it does is
+just on the topic at hand,
+[00:27:57] it clusters opinions.
+[00:27:59] So it does make you aware of, sort of,
+[00:28:01] what is the cluster that you're a part of,
+[00:28:03] but it's topic specific.
+- I see.
+[00:28:06] - I think a richer system would be more
+[00:28:08] what I would call Simmelian in design,
+[00:28:10] which is to say it would
+make you eventually aware
+[00:28:13] of the diversity of
+communities you participate in,
+[00:28:15] rather than just on this topic,
+you're part of this cluster,
+[00:28:19] you now?
+- I see.
+[00:28:20] - But yes, Pol.is is a primitive thing
+[00:28:22] starting to go in that direction.
+[00:28:24] - Well, my question,
+[00:28:25] I'm not sure whether that
+obviates my question,
+[00:28:27] but I'll ask it anyway.
+[00:28:30] My question was how
+opinions get clustered,
+[00:28:33] or what I was gonna ask is
+how the label is generated
+[00:28:36] for what community one is part of,
+[00:28:38] like I might be part
+of a Harvard community,
+[00:28:41] part of a, you know,
+recovering Catholics community,
+[00:28:44] part of a mom community.
+[00:28:46] Like how do the labels, either
+in the actual existing system
+[00:28:49] or in an ideal system as you
+imagine it get generated?
+[00:28:52] - Well that that's already happening
+[00:28:54] in a much more sophisticated
+way than in Pol.is
+[00:28:56] in the back end of X's algorithm.
+[00:29:01] They've disclosed that very clearly.
+[00:29:02] - Right.
+[00:29:03] - You can't actually get access easily
+[00:29:07] to what communities it
+is classifying you into,
+[00:29:09] but they're very useful to
+advertisers targeting you.
+[00:29:12] - Right.
+- And,
+[00:29:14] whether those are fully
+accurate or consensual,
+[00:29:16] and you know, that's
+all a really interesting
+[00:29:19] and challenging set of questions.
+[00:29:21] And, this idea of classifying people
+[00:29:26] into relevant communities,
+[00:29:28] is sort of at the core
+[00:29:30] of how all of these social media engines,
+[00:29:33] to the extent that they're
+even as transparent
+[00:29:35] as X about it-
+- Right.
+[00:29:37] - Work to generate the energy,
+[00:29:41] and what I would say about those-
+[00:29:42] - And so how do you do it for something
+[00:29:44] whose KPI is not engagement
+driven advertising?
+[00:29:47] - Yeah, I mean the way
+I think about it is,
+[00:29:49] like being social media,
+[00:29:52] doesn't necessarily mean
+it's pro-social media.
+[00:29:54] It could be anti-social media.
+[00:29:56] And the way I would
+classify those is like,
+[00:29:58] imagine that the,
+[00:30:00] you know, social fabric
+is like an ecosystem
+[00:30:03] You can clear cut that ecosystem
+[00:30:05] and use the energy that it's
+created to do something else.
+[00:30:08] Or you can say, actually the regeneration
+[00:30:10] of the ecosystem itself is the end goal.
+[00:30:14] And I think that's a matter
+of targeting different things.
+[00:30:19] But I think one element of,
+you know, renewing community,
+[00:30:23] is creating collective self-awareness
+[00:30:24] rather than exploiting the
+social relationships people have
+[00:30:27] to achieve something else.
+[00:30:30] And that I think requires
+some of the transparency
+[00:30:33] and labeling and so forth,
+[00:30:35] as well as directly engaging communities
+[00:30:38] as participants in the process, so-
+[00:30:42] - And is there evidence
+from the Pol.is project
+[00:30:46] that people like this,
+[00:30:47] they like being told
+about their communities?
+[00:30:49] - Yeah, I mean whether
+they like being told about
+[00:30:53] all of their communities
+or not is a complicated-
+[00:30:55] I'm not completely sure about that,
+[00:30:58] but it's certainly the case that Pol.is
+[00:31:00] has managed to get people
+[00:31:02] to take a effective
+political action together
+[00:31:05] in many circumstances.
+[00:31:07] And that people who go
+through the process of that,
+[00:31:10] Taiwan is now ranked
+number one in the world
+[00:31:14] for the feeling of civic
+empowerment of 16 year olds.
+[00:31:17] And I think most people believe
+[00:31:19] that the digital civic participation
+[00:31:22] infrastructure and
+education system in Taiwan
+[00:31:24] is pretty central to achieving that, so-
+[00:31:27] - And since you brought up Simmel,
+[00:31:29] Georg Simmel, the German 20th
+century driven sociologist.
+[00:31:34] - Huge influence on my thought, yeah.
+[00:31:36] - That's so interesting to me to learn.
+[00:31:39] How do you think about
+enmity in community,
+[00:31:42] or sort of like outsiders in community?
+[00:31:44] I mean Simmel writes about this
+[00:31:45] and I feel it's a big theme of
+a lot of canonical sociology
+[00:31:48] that community is created
+through opposition to an outside.
+[00:31:51] - Absolutely, absolutely.
+[00:31:52] - So how do you factor that in?
+[00:31:53] I did a study with a grad
+student once where we found that
+[00:31:57] through a procedure I could talk about,
+[00:31:58] but that people who hate-shared content
+[00:32:01] from outside their community,
+[00:32:02] who shared something
+explicitly to say like,
+[00:32:05] we hate this thing,
+[00:32:06] were like almost 400 times,
+[00:32:09] rather four times or 400% more influential
+[00:32:11] than people in the network who
+never did that, for example.
+[00:32:14] How do you factor that in, to
+thinking about this process
+[00:32:17] of making community and
+making it more transparent?
+[00:32:20] - Yeah, so I think-
+[00:32:22] - And thickness versus thinness.
+[00:32:24] - So central to me in
+all this is this notion
+[00:32:29] from Lipset of cross-cutting divides.
+[00:32:33] So, to me the beauty of the Simmelian
+[00:32:37] multiple identity view is that
+[00:32:40] it reconciles enmity with solidarity
+[00:32:44] by recognizing that we are part of
+[00:32:48] many different communities.
+[00:32:50] And that while each of those
+might be defined around enmity,
+[00:32:54] that we are connected to
+others by shared enmities
+[00:32:58] in enough ways that you can
+sort of stitch a society
+[00:33:01] together into a whole, as
+long as you don't allow
+[00:33:04] one of those enmities to
+dominate all the other enmities.
+[00:33:09] So the enmities can actually be helpful,
+[00:33:11] as long as they're sufficiently diverse.
+[00:33:14] - Plural.
+- Yeah, exactly.
+[00:33:16] And I think that a lot of the problem,
+[00:33:19] and actually Simmel writes
+about this in his comparison
+[00:33:21] of qualitative and quantitative
+individualism is that,
+[00:33:25] because in the past we haven't really had
+[00:33:27] effective technologies to allow us,
+[00:33:29] to help us code switch effectively,
+[00:33:31] you know, to understand all
+those different contexts
+[00:33:33] we're a part of,
+[00:33:34] we have a tendency when we
+feel isolated by the complexity
+[00:33:38] of our social environment,
+[00:33:39] to default into one
+caricatured vision of our own,
+[00:33:44] you know, enmities,
+[00:33:47] and therefore to end up sort
+of both isolated and polarized.
+[00:33:52] And that's again, how I think
+technology may be useful to us
+[00:33:56] because by allowing us to understand
+[00:33:58] the social complexity
+in which we're embedded,
+[00:34:01] it can avoid us falling into that trap.
+[00:34:03] But of course it can also
+do many other things.
+[00:34:06] But it's a matter of how
+we exercise our agency.
+[00:34:09] - So one way that foundation
+models could be useful
+[00:34:11] is for modeling these
+sort of more complex,
+[00:34:14] or providing more complex
+maps of belonging,
+[00:34:18] and haters, yeah.
+[00:34:20] - My good friends, Puja Ohlhaver,
+[00:34:23] is about to write a blog
+post that will come out soon
+[00:34:25] that I think will be quite
+provocative to people,
+[00:34:28] in which she like kind of
+takes this foundational,
+[00:34:30] the principle of like,
+talking to everyone,
+[00:34:33] and recognizing that everyone
+has some things on which
+[00:34:36] you're gonna be very, very
+sharply divided from them,
+[00:34:39] and some things on which
+you're gonna be in solidarity
+[00:34:41] with them against some
+other very sharp divide.
+[00:34:45] And I think that's pretty important to my,
+[00:34:48] you know, worldview, so.
+[00:34:50] - I'll look forward to
+the online beef on that.
+[00:34:52] I think, I'm told we're
+ready for questions, right?
+[00:34:56] I imagine there are lots of them.
+[00:34:59] I think it's my job to call on folks.
+[00:35:02] Are there any questions from the audience?
+[00:35:06] Yes, in the sunglasses.
+[00:35:08] - [Participant] Thank you
+so much, (indistinct) Sorry.
+[00:35:13] Okay, Glen, thank you so much
+for your brilliant insight
+[00:35:16] and for sharing your human intelligence,
+[00:35:19] which is unique considering
+[00:35:21] we're discussing superintelligence today.
+[00:35:24] Because the world is not always flat,
+[00:35:28] do you think today there
+is a notion of categorical
+[00:35:33] of using the categorical
+imperative to use AI in the East,
+[00:35:40] or the West more?
+[00:35:42] Or do you think we're at
+par considering, you know,
+[00:35:45] there there are a lot of exogenous factors
+[00:35:48] and we're not always, you
+know, dynamic economies?
+[00:35:51] - Yeah, well precisely
+because the world isn't,
+[00:35:53] thank you for your question,
+[00:35:54] but precisely because
+the world is not flat,
+[00:35:57] I don't think it's a
+matter of more or less,
+[00:35:59] it's a matter of how, and in what ways.
+[00:36:02] And I think that there's
+a bunch of features
+[00:36:07] of the tech ecosystem in Asia,
+[00:36:12] I would say somewhat generally,
+but I think the China case,
+[00:36:15] which dominates the Asian case
+is a little more complicated.
+[00:36:18] So I don't wanna speak
+too much about that.
+[00:36:20] My experience is more with Taiwan, Japan,
+[00:36:23] you know, India, places like that,
+[00:36:26] which I think is much healthier.
+[00:36:28] There's much more social integration,
+[00:36:30] you know, for example,
+technologists and scientists
+[00:36:35] in those contexts,
+[00:36:36] actually tend to be more
+religiously observant
+[00:36:38] than the rest of the population.
+[00:36:39] So it's a very different relationship,
+[00:36:44] between sort of tradition
+and cultural groundedness
+[00:36:47] and technological development.
+[00:36:50] And I think we have a
+lot to learn from that.
+[00:36:54] You know, who wins I don't
+think is the relevant question.
+[00:36:57] I mean, if you're racing
+to smash into a wall,
+[00:37:00] the person who wins is the
+person who swerves at the end
+[00:37:02] rather than the person who hits the wall.
+[00:37:05] And so, you know,
+[00:37:09] I don't view the race dynamic
+[00:37:12] as quite the right way to see it.
+[00:37:14] I think the steering dynamic,
+[00:37:16] who has the most tuned steering system
+[00:37:18] and who's able to, you know,
+[00:37:20] integrate the technology
+most completely socially.
+[00:37:23] And I would say, in
+some ways I think India
+[00:37:25] is probably the leading example now
+[00:37:27] in the world of doing that.
+[00:37:28] So, yeah.
+[00:37:34] - And oh-
+[00:37:44] - [Participant] Hello, there we go.
+[00:37:46] Cool, thank you so much for your talk.
+[00:37:47] I'm pretty curious about,
+[00:37:49] how I come from a local government
+[00:37:51] and kind of state government perspective,
+[00:37:53] and seeing if, like, governments are using
+[00:37:58] the superintelligence kind of factor
+[00:38:00] of like mixing technology with kind of,
+[00:38:02] dealing with communities
+and building community,
+[00:38:04] like how do you market it in a way,
+[00:38:07] like how much transparency do
+you create for stakeholders
+[00:38:11] and community members about
+the use of technology,
+[00:38:14] and how, like you show that process
+[00:38:16] of showing this integration versus like,
+[00:38:19] how much of it is kept on the backend?
+[00:38:20] And there's obviously some transparency
+[00:38:22] about like the disclosures, but,
+[00:38:24] how much do you use it in favor versus,
+[00:38:27] like more quietly as a
+way to kind of improve
+[00:38:30] these processes, if that makes sense.
+[00:38:33] - Well first of all, I
+would really refer you
+[00:38:35] to Danielle Allen's
+project on (indistinct)
+[00:38:39] here in Massachusetts,
+[00:38:40] which is trying to help local governments,
+[00:38:45] especially in Massachusetts,
+[00:38:47] integrate these types
+of participatory tools.
+[00:38:52] You know, I think the question you raised
+[00:38:55] is a very important one.
+[00:38:56] So, it's very easy
+[00:38:59] if you just give a lot
+of transparency for it
+[00:39:01] to do nothing for anyone.
+[00:39:04] Because unless the transparency
+[00:39:05] is targeted very, very precisely,
+[00:39:07] to what is decision
+relevant for that person,
+[00:39:10] it just becomes information overload
+[00:39:12] and people default to the
+least transparent systems.
+[00:39:16] And I think that was what was so effective
+[00:39:18] about the Kaizen system in Japan.
+[00:39:20] So, the Japanese production miracle
+[00:39:23] in the middle part of the 20th century,
+[00:39:25] was driven by informing line workers
+[00:39:29] about the overall production process,
+[00:39:31] and how their task related to it,
+[00:39:34] in such a way that they were able to do
+[00:39:37] on the ground innovation,
+[00:39:38] to constantly improve
+the production process.
+[00:39:41] And that was a very careful
+balancing act, you know,
+[00:39:45] because you can't
+educate every line worker
+[00:39:48] about everything that goes
+into making a car, you know?
+[00:39:53] So, you have to take a bet on
+what are the most important
+[00:39:56] and relevant informations.
+[00:39:57] And this is that kind of a bet.
+[00:40:00] It's a very limited,
+targeted, just a few logos,
+[00:40:03] with a few labels,
+[00:40:05] bet on the notion that your situatedness
+[00:40:10] within social communities
+[00:40:12] is central to your thriving as a person.
+[00:40:16] And that that could be wrong, you know?
+[00:40:18] And if it's wrong, you know,
+[00:40:21] it will distract people
+and not achieve something.
+[00:40:24] But that's the bet.
+[00:40:25] And you know, I haven't
+pondered in these contexts
+[00:40:29] precisely what's relevant
+to local communities,
+[00:40:31] but one thing I would
+sort of emphasize is that,
+[00:40:34] there is significant
+investment by communities,
+[00:40:37] including local governments,
+in communication,
+[00:40:42] you know, public radio,
+local newspaper, et cetera.
+[00:40:47] I would be inclined to say that,
+[00:40:49] as people move towards consuming
+things in digital formats,
+[00:40:54] shifting that investment towards things
+[00:40:57] that bring that community together
+[00:40:58] in their digital native experiences,
+[00:41:01] and allowing communities to
+have the agency to do that,
+[00:41:04] might be a more productive
+way for achieving the goals
+[00:41:07] of community common
+understanding and cohesion.
+[00:41:10] Just to give a very concrete example,
+[00:41:13] there's this thing called,
+you know, notice periods,
+[00:41:16] when you go to build your house,
+[00:41:18] when you know to improve your house,
+[00:41:20] you have to give notice for
+someone to object to your plan.
+[00:41:23] And the way that that's currently done is
+[00:41:24] you put it in a newspaper of record.
+[00:41:26] But the number of people
+[00:41:27] reading that newspaper
+of record at this point,
+[00:41:29] in the way that it's distributed,
+[00:41:31] is so tiny that it doesn't
+actually achieve the goal
+[00:41:34] of creating awareness so
+that someone can object.
+[00:41:37] And so thinking about,
+[00:41:39] given the way that people
+[00:41:39] are actually currently
+getting their information,
+[00:41:41] what is it to create common
+understanding in that community
+[00:41:43] so people could discuss that thing,
+[00:41:45] I think requires being thoughtful
+and dynamic about this.
+[00:41:49] And there's actually a lot of money
+[00:41:50] that goes into those kinds of things,
+[00:41:52] but that could be adjusted
+to different formats.
+[00:41:55] - I think Jess was gonna
+do some from the chat.
+[00:41:58] - Oh, wonderful, yeah.
+[00:41:59] - [Jess] Yeah, we have
+a question from Joseph.
+[00:42:03] He says, thanks for the talk.
+[00:42:04] I'm wondering if you can speak more
+[00:42:06] to whether the friction involved
+in democratic processes,
+[00:42:10] E.g. the town hall meeting,
+[00:42:12] has a place in the collective
+intelligence you mentioned.
+[00:42:15] Put another way, when you speak
+of targets for optimization,
+[00:42:19] what does a fully optimized
+community look like?
+[00:42:24] - Thanks so much for the question.
+[00:42:27] I want to be clear,
+[00:42:30] and I think this hopefully came out
+[00:42:32] in my conversation with Moira,
+[00:42:33] that, you know, optimization
+is sort of a necessary evil
+[00:42:39] of building any system
+[00:42:41] that can like, you know, do something.
+[00:42:43] And also it should also
+be always seen as an evil.
+[00:42:46] Like, there's a great quote
+from famous computer scientist,
+[00:42:51] I forget his name, he's a
+British knight that says,
+[00:42:54] "Premature optimization
+is the root of all evil".
+[00:42:58] And I think that's exactly right.
+[00:43:00] Optimization needs to be
+the sort of feedback loop
+[00:43:03] where we do something, we build something
+[00:43:04] based on some optimization,
+[00:43:06] and we step back and realize
+like what are all the limits
+[00:43:09] and problems with that way of that frame
+[00:43:11] for approaching the problem.
+[00:43:14] And as a result of that, I
+don't think there is one answer
+[00:43:17] to what's a fully optimized community.
+[00:43:19] In fact, I don't think there ever can be,
+[00:43:21] because I think as we create
+new forms of interaction
+[00:43:26] that are modeled on
+adopting certain elements
+[00:43:30] of our understanding of community,
+[00:43:31] we in the process create new community,
+[00:43:33] and therefore change our
+own understanding of that,
+[00:43:36] and then have something
+else to sort of imitate.
+[00:43:39] So, I don't think
+optimization is ever something
+[00:43:43] that one can use a word
+like fully to refer to.
+[00:43:45] Like, you know, one image of technology
+[00:43:47] that I think is common but mistaken,
+[00:43:50] is that we're all on
+the surface of an earth,
+[00:43:51] and we're sort of discarding falsehood
+[00:43:53] to get down to the like inner
+core of truth at the bottom,
+[00:43:56] you know, at the core of the planet.
+[00:43:58] And instead I would encourage us to think
+[00:43:59] of we're on a planet and
+we're building trees,
+[00:44:02] and those trees are growing
+outward into the infinite abyss
+[00:44:06] beyond the planet.
+[00:44:08] And as they grow out there,
+[00:44:10] they sort of terraform
+the place around it.
+[00:44:13] They create atmosphere
+and life and whatever,
+[00:44:16] and the danger is that they lose touch
+[00:44:18] with each other in the
+process and can't pollinate.
+[00:44:21] And the goal really is
+[00:44:24] to like create enough cross pollination
+[00:44:26] between all those branches,
+[00:44:28] so that they can continue moving out,
+[00:44:30] and continue filling us
+with the sort of wonder
+[00:44:34] of the emptiness beyond,
+[00:44:35] rather than the certainty
+[00:44:36] of having reached the core of truth.
+[00:44:43] - [Participant] Hi, my name is Moritz,
+[00:44:46] I'm a student Kennedy School.
+[00:44:47] Thank you so much for your talk.
+[00:44:48] My question is about,
+[00:44:50] basically in your talk
+[00:44:52] you painted this picture of the community
+[00:44:54] and then each member of the
+community might have a chat bot
+[00:44:58] that they communicate with,
+[00:45:00] or there might be this kind
+of intelligence, right,
+[00:45:03] that supports the community.
+[00:45:05] My question is, if we kind
+of look into the future
+[00:45:07] where maybe majority of interactions
+[00:45:11] within a community is driven by bots,
+[00:45:14] or a majority of community
+members are actually not humans,
+[00:45:18] but bots in a social ecosystem,
+in some form of community.
+[00:45:22] How does that change your notion
+[00:45:24] of how the community should be run?
+[00:45:26] Should we basically
+discriminate between just humans
+[00:45:29] and non-humans in a community?
+[00:45:32] And how does it change
+the information sharing
+[00:45:34] and decision calculus
+[00:45:36] within a optimal not optimal community?
+[00:45:40] Thank you.
+[00:45:40] - Yeah, I mean,
+[00:45:44] I think it can be a mistake
+[00:45:46] to get too on ontologically caught up
+[00:45:49] on whether some particular
+system constitutes
+[00:45:53] a separate conscious entity or not.
+[00:45:58] So like, let me give you an example.
+[00:46:01] There's animist traditions,
+including Shintoism,
+[00:46:04] where there are spirits and consciousness
+[00:46:06] associated with natural
+features like rivers.
+[00:46:12] There's other traditions,
+[00:46:15] where that is at best a metaphor.
+[00:46:19] And nonetheless, I think,
+you know, having an LLM,
+[00:46:22] sort of do environmental sensing,
+[00:46:25] and offer an interface with
+the river that allows us
+[00:46:29] to have a better sense
+of what we need to do
+[00:46:30] to maintain its health,
+[00:46:33] and even, you know,
+[00:46:35] possibly representing that river
+in some kind of negotiation
+[00:46:40] or deliberation, could be very valuable.
+[00:46:44] Now is that river a consciousness or not?
+[00:46:48] I don't know.
+[00:46:49] You know, I think
+representing a bunch of bots
+[00:46:55] that are separated and made
+by human hands as entities,
+[00:46:58] rather than as, you know, the Lorax,
+[00:47:03] I have to use the term Lorax.AI,
+[00:47:04] Lorax is this mythical Dr. Seuss figure
+[00:47:06] who speaks for the trees.
+[00:47:08] You know, I like that vision a lot more.
+[00:47:10] That's very much more consistent
+[00:47:11] with the way that people
+approach things in Japan.
+[00:47:13] That there can be stewards
+[00:47:14] for various common pool resources,
+[00:47:16] whether they be digital
+common pool resources
+[00:47:18] or physical common pool resources,
+[00:47:20] and that an LLM might allow us
+[00:47:22] to have a more effective
+communication with them.
+[00:47:25] And I think that's a very
+humane and desirable future,
+[00:47:31] having a bunch of sort of,
+[00:47:35] bloodless, you know, robotic things
+[00:47:38] if that's how we perceive it,
+[00:47:40] floating around I don't think is,
+[00:47:43] and then us having to grapple
+[00:47:44] with their consciousness
+or not, is as desirable.
+[00:47:56] - [Participant] I mean we have a problem
+[00:47:57] of the mad billionaires, right?
+[00:47:59] People who get enough money,
+[00:48:01] that they are surrounded
+by people that just say yes
+[00:48:04] and never push back on them,
+[00:48:06] and they become psychotic monsters.
+[00:48:09] And it seems that AI, sycophantic AI,
+[00:48:12] we have the possibility
+[00:48:13] of turning everyone
+into a mad billionaire.
+[00:48:16] And it seems to me what
+you've been talking about here
+[00:48:18] somehow might help address that problem,
+[00:48:21] but I can't quite connect the dots.
+[00:48:23] Can those dots be connected,
+[00:48:25] or like how do we solve the
+mad billionaire problem?
+[00:48:27] - Well, I mean I think,
+[00:48:30] community has always been something
+[00:48:33] that's helped us avoid madness.
+[00:48:36] I think that's the reason
+[00:48:37] that people have religious
+communities, or universities,
+[00:48:41] and that there's a lot of ways
+[00:48:42] that being alone in a basement,
+[00:48:44] being fed things that cater
+to you can induce psychosis.
+[00:48:51] And I would submit that having,
+[00:48:54] you know, for example, a chat
+bot that is perspectival,
+[00:48:58] it's not, you know, a floating
+disembodied consciousness
+[00:49:01] and it's not your personal sycophant
+[00:49:04] but instead reflects some community
+[00:49:07] that you value being a part of,
+[00:49:09] is a way to, you know,
+stay anchored to something.
+[00:49:15] So in that sense, I do
+hold out some hope that
+[00:49:18] it might be useful for that.
+[00:49:25] - Yeah, Jess?
+- Yeah, please Jess.
+[00:49:32] - [Jess] Sorry about that.
+[00:49:35] I think we have a good ending-
+[00:49:37] Oh no, I guess we have a few more minutes,
+[00:49:39] but I'll throw in another
+question from the online audience.
+[00:49:44] In thinking about wise engagement with AI,
+[00:49:47] have you thought about the unique forms
+[00:49:49] of intelligence which humans possess,
+[00:49:52] although they often seem to be unaware of
+[00:49:54] and AI systems will not achieve,
+[00:49:57] which is heart intelligence?
+[00:50:02] - I would start, thanks for the question.
+[00:50:04] I would start by saying that,
+[00:50:08] I am somewhat skeptical of
+anyone who is too confident
+[00:50:13] that they know precisely
+what the distinctions
+[00:50:16] between human and what's
+possible with machines is.
+[00:50:21] I think we've been surprised
+by that many times,
+[00:50:24] and I expect that we'll continue
+to be surprised by that.
+[00:50:27] And, you know, surprise and wonder,
+[00:50:29] and you know, beauty like
+that are great things.
+[00:50:32] They can be frightening,
+[00:50:34] but they also are incredible teachers.
+[00:50:39] And, I think the thing
+that worries me most,
+[00:50:43] is not any particular encroachment on
+[00:50:46] something that's allegedly uniquely human,
+[00:50:49] but that humans
+[00:50:54] retreat into a stance of
+protecting and defining themselves
+[00:50:58] by some preset, the set of things
+[00:51:00] that's supposed to be uniquely theirs,
+[00:51:02] rather than seeing that
+they have within them,
+[00:51:06] you know, in my tradition
+we would B'tzelem Elohim,
+[00:51:10] you know, the image of God,
+[00:51:12] and looking constantly for
+where that's reflected.
+[00:51:16] What is it that they
+have uniquely to give,
+[00:51:18] given everything,
+[00:51:21] and that adaptability, that,
+[00:51:27] constant, you know, thriving in flux,
+[00:51:33] I think is an incredibly
+powerful capability,
+[00:51:38] and I hope we won't lose that.
+[00:51:39] And I hope in particular,
+[00:51:41] that our digital systems
+don't make us feel
+[00:51:44] that we are just useless now,
+[00:51:47] and instead actually highlight
+all of the unique elements
+[00:51:53] that we are able at any
+moment to contribute
+[00:51:56] and help us be aware of those.
+[00:51:59] And I don't know what they will be,
+[00:52:00] I don't think we can
+know for sure in advance,
+[00:52:03] but I also think that a
+lot of the things that we,
+[00:52:05] sort of reify as being the
+things that are unique to us,
+[00:52:08] like, well they're never gonna
+[00:52:10] be an artist like this or whatever,
+[00:52:11] those are actually often ways of people,
+[00:52:14] who are in current positions of power
+[00:52:15] reinforcing their positions of power,
+[00:52:18] rather than actually being
+open to the possibility
+[00:52:22] that maybe it's actually the fact that,
+[00:52:24] for example, in Africa there
+are more different languages
+[00:52:26] than anywhere in the world.
+[00:52:27] Maybe it's unique languages
+[00:52:29] that are gonna stretch
+the models the most,
+[00:52:31] and the people who have the least
+[00:52:32] intellectual property rights,
+[00:52:33] who are the most marginalized
+from current society
+[00:52:35] will turn out to be the most important.
+[00:52:37] So, I think we have to be
+constantly alive to that,
+[00:52:41] and not entrench ourselves
+[00:52:43] into a particular defensive posture.
+[00:52:46] - Jess.
+[00:52:53] Hi, thank you so much
+for your insights today.
+[00:52:55] I wanna ask specifically
+about the third dimension
+[00:52:58] of your Plurality Project
+that you mentioned,
+[00:53:01] which is, integrating these
+solutions into our democracies
+[00:53:05] and with the focus maybe on America.
+[00:53:07] I know with the vTaiwan case,
+[00:53:09] a lot of the credit of that
+success could be maybe,
+[00:53:13] you know, dealt to their
+civic tech community,
+[00:53:16] which our country doesn't really have
+[00:53:18] as much of a built out infrastructure of.
+[00:53:21] And instead we do have a lot of
+[00:53:22] really powerful private
+companies that, as you mentioned,
+[00:53:24] seem willing to engage with
+some of these solutions.
+[00:53:27] Do you see the state's
+role as being independent?
+[00:53:30] Like should we be maybe hiring engineers
+[00:53:32] to be coding these projects?
+[00:53:34] Should we be partnering
+[00:53:34] with private vendors of these projects?
+[00:53:37] Should we be looking at universities?
+[00:53:38] How do you actually see these solutions
+[00:53:40] coming to be in America today?
+[00:53:44] - Thanks for the question, that's great.
+[00:53:46] Well, I mean, look, we have
+one great tailwind going,
+[00:53:51] which is that,
+[00:53:53] people are not happy with
+the way that things are
+[00:53:56] and there's a lot of disruption.
+[00:53:58] And you know, in the past,
+[00:54:00] one of the greatest
+challenges for me in this work
+[00:54:02] has been the self-satisfaction
+[00:54:04] of everyone in the United States,
+[00:54:05] and the sort of extreme conservatism
+[00:54:07] and desire to just sort
+of, circle the wagons
+[00:54:10] of whatever people assume is
+the definition of democracy,
+[00:54:13] and that's not true in Asia.
+[00:54:15] There's no like, sort of,
+profound religious commitment
+[00:54:20] to them having found, you know,
+[00:54:21] the perfect system of governance.
+[00:54:25] And as things are disrupted,
+[00:54:27] as I think many of those Asian experiences
+[00:54:30] come to be viewed as maybe a
+more positive potential future
+[00:54:35] than the one confronting us,
+[00:54:37] the more openness, I hope there will be.
+[00:54:41] But in terms of how you get it started,
+[00:54:43] I don't think there is
+one button to be pushed.
+[00:54:46] I think there's cultural
+change that needs to happen.
+[00:54:48] I think there's political
+change that needs to happen.
+[00:54:51] I think there's a change in the business,
+[00:54:54] you know, ecosystem that
+needs to happen, and so forth,
+[00:54:57] and there's research
+that needs to be done,
+[00:54:59] and all of those things are symbiotic
+[00:55:02] and interdependent on each other.
+[00:55:04] And in some ways that's, you know, sad,
+[00:55:08] because you know, you'd
+like to just press a button
+[00:55:10] and fix everything.
+[00:55:12] But on the other hand,
+I think it's wonderful,
+[00:55:13] because it means that
+everyone here is an agent.
+[00:55:16] Everyone is empowered from
+wherever they, you know, start,
+[00:55:20] to be part of a flywheel that
+creates a different culture
+[00:55:24] and system of meaning making.
+[00:55:26] And I don't have time to
+talk about it too much,
+[00:55:28] but if you look at the book,
+[00:55:29] I've brought a couple of copies with me.
+[00:55:31] We have a whole chapter that's
+devoted to sort of like,
+[00:55:33] given where you're
+situated, what can you do,
+[00:55:36] you know, to be part of that, so-
+[00:55:41] - [Jess] Great, thank you both so much.
+[00:55:43] Give it up for Glen and Moira.
+[00:55:46] Thank you.
+(audience clapping)
+[00:55:49] It's been great to have you here.
+[00:55:51] And thank you guys,
+[00:55:53] this is the end of our
+Fall Speaker Series,
+[00:55:55] so I don't even have
+anything to market to you.
+[00:55:58] Thank you for coming out, and oh,
+[00:56:02] and Alex would like to say something.
+[00:56:08] - [Alex] I would also first
+like to thank Glen and Moira
+[00:56:10] for a phenomenal conversation
+[00:56:12] and conclusion to the speaker series.
+[00:56:13] And mostly just to thank
+Jess Weaver, for like,
+[00:56:15] being the driving force
+behind this whole series,
+[00:56:17] like, amazing work.
+(audience clapping)
+[00:56:19] And I think the room speaks for itself,
+[00:56:21] like it's always full.
+[00:56:22] And thank you Jess.
+[00:56:25] (audience clapping)

@@ -1,0 +1,2186 @@
+[00:00:00] Hey, everybody.
+[00:00:01] I'm Alex Pascal.
+[00:00:02] I'm the executive director of the Berkman
+[00:00:04] Klein Center
+for Internet Society at Harvard.
+[00:00:08] I'm delighted to be here.
+[00:00:09] And I'm so delighted
+that all of you are here together.
+[00:00:11] This is a full house,
+[00:00:12] really packed for our for kickoff
+event of the the Fall Speaker Series.
+[00:00:17] And so delighted
+everybody is joining us online as well.
+[00:00:21] BKC is an institution
+[00:00:23] that prides itself on interdisciplinary
+inquiry
+[00:00:26] into the intersection
+of digital technology and society.
+[00:00:30] We're a place that prides ourselves
+on out-of-the-box
+[00:00:32] thinking and new perspectives
+on old questions and challenges.
+[00:00:36] And that's why it's such a privilege
+to kick off the Fall Speaker
+[00:00:39] Series by hosting Blaise Agüera y Arcas.
+[00:00:43] Blaise is a Vice President
+and Fellow at Google Research,
+[00:00:45] as well as Google's
+CTO of Technology and Society.
+[00:00:49] He founded and leads
+Paradigms of Intelligence (Pi),
+[00:00:52] an organization focuses on
+basic research into AI,
+[00:00:57] particularly into the
+foundations of neural computing,
+[00:01:00] active inference,
+evolution, and sociality,
+[00:01:04] among other notable innovations.
+[00:01:07] Blaise is the inventor of federated
+learning and approach to training
+[00:01:10] neural networks in a distributed
+setting that avoids sharing user data.
+[00:01:16] He also founded the Artists and Machine
+Intelligence Program
+[00:01:19] and has been a thought leader with respect
+to AI and ethics, fairness and bias,
+[00:01:23] creativity and risk.
+[00:01:25] Prior to joining Google, Blaise
+was a distinguished engineer at Microsoft
+[00:01:31] and has worked on a number
+of computational humanities projects.
+[00:01:34] He's authored numerous papers, essays, op-eds,
+book chapters, and three books.
+[00:01:40] A novella, it would be
+an interdisciplinary nonfiction work.
+[00:01:43] "Who Are We Now?"
+[00:01:45] And his latest, "What is Intelligence?"
+[00:01:47] And we're so,
+so excited to have him here today
+[00:01:49] to talk about that new book
+and have a conversation with him about it.
+[00:01:52] P It's so great to have you here.
+[00:01:54] Thank you.
+[00:02:00] Thank you.
+[00:02:01] Thank you so much for having me.
+[00:02:02] I didn't realize that
+it was the inaugural of these lectures.
+[00:02:07] I'm just going to stop sharing
+for a second and turn off my camera,
+[00:02:12] because I understand I need to do that.
+[00:02:18] All right.
+[00:02:18] Like so.
+[00:02:21] Oh, we're back?
+[00:02:23] We're back.
+[00:02:24] Okay. So.
+[00:02:25] So thank you.
+[00:02:26] Thank you all so much for being here.
+[00:02:29] I've got a lot that I could talk about.
+[00:02:32] I'm going to try and condense
+all of this into half an hour.
+[00:02:35] So we leave plenty of time
+for discussion. But,
+[00:02:40] you know, a much fuller story 
+is in the the giant book which,
+[00:02:45] I saw a bunch of copies of outside,
+thanks MIT Press.
+[00:02:49] I'll give you just a very,
+very quick introduction to
+[00:02:53] how I came 
+to be thinking about this problem.
+[00:02:56] So I've been at Google for quite a long
+time now, about 12 years.
+[00:03:00] And in my first decade
+really at the company,
+[00:03:05] I started a group, in Google Research
+[00:03:08] that grew to be quite large,
+it grew to be hundreds of people.
+[00:03:11] And we focused,
+[00:03:13] there was some basic research happening,
+but we also did a lot of applications.
+[00:03:16] We made a lot of the AI that ended up
+going into Android and Pixel phones.
+[00:03:21] Everything from the,
+you know, face unlock type features to
+[00:03:25] music recognition that can
+[00:03:27] detect, you know, what music is playing
+using on-device processing.
+[00:03:30] There was a lot of focus on on privacy
+in this kind of work and
+[00:03:33] making models that run entirely on-device
+[00:03:35] or that could be trained
+in a decentralized way.
+[00:03:38] And among the many models that
+[00:03:41] we built was one for predicting next words
+on the Google keyboard.
+[00:03:45] And so this is the next token predictor.
+[00:03:46] It takes, you know, it looks at everything
+that you've been typing
+[00:03:50] and makes a guess
+as to what word is coming next.
+[00:03:54] And that's what powers
+the little strip above the keyboard
+[00:03:57] that lets you type a little bit faster,
+especially if you're not a
+[00:04:01] thumb typer like me, because if you're an
+old person, you're poking at it with your
+[00:04:05] finger and looks stupid.
+[00:04:07] So, anyway,
+[00:04:08] these are just
+statistical next word predictors.
+[00:04:11] And I always assumed
+[00:04:13] that what we were working on here
+was artificial narrow intelligence.
+[00:04:17] Just like face recognizers
+or handwriting recognizers or whatever,
+[00:04:20] as opposed to the fabled artificial
+general intelligence problem. AGI.
+[00:04:25] The distinction between artificial narrow
+intelligence and artificial
+[00:04:27] general intelligence was first posited,
+[00:04:30] around the year 2000,
+when people began to use the term AI
+[00:04:34] to refer to these neural networks
+that were trained to do specific
+[00:04:37] tasks, like face recognition, as opposed
+to what we all grew up thinking
+[00:04:41] AI was supposed to be,
+[00:04:43] which is, you know, like robots that you
+could have a conversation with and so on.
+[00:04:47] So, my assumption was that the secret
+to real intelligence, real
+[00:04:52] AI would come from neuroscience,
+would come from studying brains,
+[00:04:57] which are the only entities
+that I knew of
+[00:05:00] that were generally intelligent,
+and that we would,
+[00:05:03] we would transfer that that insight
+into the work that we were doing in AI
+[00:05:08] in order to crack the problem
+of artificial general intelligence.
+[00:05:11] Surely, you know, predicting next words
+[00:05:15] statistically using simple machine
+learning techniques,
+[00:05:18] would never work to deliver
+artificial general intelligence.
+[00:05:23] So this is that
+[00:05:24] kind of AGI hypothesis, that
+[00:05:27] human level scope of intelligence
+is qualitatively different
+[00:05:31] from synthetic intelligences
+with narrower scope.
+[00:05:35] I was wrong.
+[00:05:37] So I began to get an inkling that
+I was wrong when I began to see scaled up
+[00:05:42] next word predictors,
+not unlike the ones
+[00:05:45] that we wrote for the keyboard,
+but just much bigger
+[00:05:47] and trained with much more data,
+start to carry on conversations,
+[00:05:52] like this version of Meena, 
+which was an early
+[00:05:56] conversational model of this sort
+that that we built in Google Research.
+[00:06:00] Having a conversation with a human
+in which it's defining philosophy.
+[00:06:04] And, you know, this starts
+to get a little spooky, especially
+[00:06:07] when, you know, the responses
+start to get word problems right
+[00:06:11] that require reasoning that require,
+you know, understanding of concepts.
+[00:06:15] And so I began to really
+rethink my assumptions.
+[00:06:20] And this was even more
+[00:06:21] the case  for LaMDA,
+a further scaled up model, in 2021.
+[00:06:27] And of course, the world, saw
+all of this, you know, at large scale
+[00:06:31] for the first time
+when OpenAI released ChatGPT, which,
+[00:06:37] y'know, Google
+should really have gotten there first
+[00:06:39] since they both invented the transformer
+[00:06:40] and had made
+these conversational models first.
+[00:06:43] But they didn't for whatever reason.
+[00:06:45] Anyway,
+since that period,
+[00:06:49] since
+[00:06:52] about 2015, when we began
+to see narrow intelligence performance
+[00:06:56] really scaling up in a dramatic way
+as we increased models
+[00:06:59] and especially since 2020 or so,
+when these language models
+[00:07:03] began to, to come on
+the scene, we've seen the rate at which
+[00:07:07] the models increase in size
+[00:07:09] and in, amount of computation
+and performance, grow just exponentially.
+[00:07:14] And in the process,
+we've seen models arise that
+[00:07:19] I think
+if we were to transport them back in time
+[00:07:21] to, you know, the year 2000,
+everybody would agree.
+[00:07:24] Yeah. You know,
+artificial general intelligence is here.
+[00:07:27] You've arrived, you know, and so
+[00:07:30] I know
+this is a very controversial thing to say.
+[00:07:33] But I don't know why
+it's so controversial, you know,
+[00:07:36] now, in 2025, my best guess is that,
+[00:07:39] many of us are nervous
+to admit that this is real intelligence.
+[00:07:43] And, you know,
+maybe have some ego invested
+[00:07:46] in this being 
+a humans only sort of thing.
+[00:07:49] And also, you know, there's there's this
+there's the challenge
+[00:07:53] kind of intellectually
+that there's been no big insight.
+[00:07:56] You know, it really
+has just been scaling up computation,
+[00:08:01] you know, so there's no moment
+at which before, you know, some innovation
+[00:08:04] or some insight or something
+[00:08:05] was put into the technology,
+we clearly did not have real intelligence.
+[00:08:09] And after it, we clearly did.
+[00:08:11] It's, you know, an exponential rise,
+[00:08:12] but an exponential is still a continuous
+curve.
+[00:08:15] And so, there's
+[00:08:17] not really any right moment
+to declare success at this problem.
+[00:08:21] And yet, you know, in my view, clearly
+what we have today is real,
+[00:08:25] even if it is still
+unreliable in some ways.
+[00:08:29] So I think
+this core AGI hypothesis is wrong.
+[00:08:33] And that begs a really big question,
+[00:08:36] which is, could we be massively
+computationally scaled predictors too?
+[00:08:41] If we see this working
+in these artificial systems,
+[00:08:45] does that imply that we should be taking
+that seriously as a hypothesis
+[00:08:49] about how intelligence works, period.
+[00:08:52] And, you know, in a way that radical
+suggestion,
+[00:08:55] that hypothesis is really at the heart
+of what the book explores.
+[00:08:59] So I'm going to posit
+that the answer is yes.
+[00:09:02] And a few of the questions
+that that naturally leads to,
+[00:09:06] like, first,
+why would a brain evolve to be
+[00:09:10] a computer,
+[00:09:11] if you like, that is making
+this particular kind of computation?
+[00:09:15] Why would the computation
+that it's doing be predictions?
+[00:09:19] And why has the
+has the computational power of brains,
+[00:09:23] not just of AI models
+but of our own brains,
+[00:09:26] why has that grown explosively
+throughout evolution?
+[00:09:29] You know, why do we see big brained
+animals like ourselves on the planet now
+[00:09:32] and if we rewind about
+500 million years, we see only things
+[00:09:36] with very small brains?
+And we could go back a billion,
+[00:09:39] we'd see no brains at all, and so on.
+[00:09:41] Is there a pattern at work there
+[00:09:44] that's bigger than just these
+exponential scalings in AI models?
+[00:09:48] Is there something more planetary
+going on?
+[00:09:50] And of course, what happens
+now that we've got AI?
+[00:09:54] Okay.
+[00:09:54] So why would brains evolve
+to be computational?
+[00:09:58] Now, I should say, you know,
+the whole premise of the field
+[00:10:01] of computational neuroscience,
+which is part of
+[00:10:04] my own training, is
+that brains are computational.
+[00:10:08] You know, I hear a lot of people
+say things like, it's a metaphor
+[00:10:11] to talk about brains as as computers.
+Back when the TV
+[00:10:15] was the big thing that we talked about
+the brain as being a TV or back
+[00:10:18] when it was steam engine based,
+the brain is a steam engine.
+[00:10:21] It's just a metaphor that tracks
+whatever is the current,
+[00:10:24] you know, technology du jour.
+[00:10:26] I don't mean this metaphorically.
+[00:10:28] I mean it very literally.
+[00:10:30] The premise of computational neuroscience
+is that
+[00:10:32] what brains do is process
+information, compute with information.
+[00:10:36] Not that they are like computers,
+but that they are computers.
+[00:10:39] I don't mean, of course, that
+they're like a laptop or like a phone.
+[00:10:42] Their architecture
+is fundamentally different.
+[00:10:44] But the premise is that what they do
+is to transform
+[00:10:48] various kinds of inputs,
+[00:10:49] whether that's sound vision, whatever,
+into signals, into information,
+[00:10:53] encoded in spikes and, you know,
+electrical potentials,
+[00:10:57] and then do information
+processing with that
+[00:11:00] and then of course power our muscles, and
+that is a computational premise.
+[00:11:06] It's one that I've actually found,
+ironically, has become more controversial
+[00:11:10] ssince the sort of AI era
+2020 or so.
+[00:11:14] Because, you know, now we start to see,
+artificial computers,
+[00:11:17] if you like, starting to do things
+that are brain like and,
+[00:11:19] and maybe that gives us the heebie
+jeebies.
+[00:11:24] So, you know,
+[00:11:24] why would we end up
+with a computer in our heads?
+[00:11:27] Well, a big insight
+that I've had in the last few years
+[00:11:33] is that I think it's not just brains
+that are computational,
+[00:11:35] but life as a whole that is computational.
+[00:11:38] I will try and explain why.
+This is actually not a new insight.
+[00:11:44] It's an insight
+that dates back to the mid 20th century
+[00:11:47] to the founders of computer science,
+[00:11:49] Alan Turing, John von Neumann,
+both of whom,
+[00:11:53] had a very keen interest,
+especially late in their lives in biology,
+[00:11:58] and in particular,
+they were thinking about the problem
+[00:12:01] of what makes biological matter
+different from non-biological matter.
+[00:12:07] You know, in the old days,
+in the 19th century, there was this idea
+[00:12:11] that living things have a élan vital
+or a vital spirit
+[00:12:15] that drives them,
+that animates them.
+[00:12:18] And that's what's different, you know,
+between our bodies and maybe the bodies
+[00:12:21] of animals and a rock,
+[00:12:24] you know, rock is just matter
+and a living body
+[00:12:28] is perhaps made of matter,
+but it's also animated by a soul.
+[00:12:32] And of course, when we began
+to figure out that the basic rules
+[00:12:35] of physics and chemistry
+that govern, the
+[00:12:39] interactions of our atoms
+and molecules are the same physics
+[00:12:42] that animate atoms and molecules
+everywhere.
+[00:12:44] This idea of soul
+or élan vital went way out of fashion.
+[00:12:48] And we
+we entered an era of strict materialism.
+[00:12:52] No, it's just physics and chemistry.
+[00:12:55] That's true,
+[00:12:56] but it leaves a giant question,
+which is, you know,
+[00:12:58] if it's just physics and chemistry,
+then
+[00:13:01] what makes life different
+from from a rock?
+[00:13:04] So what I'm,
+going to posit for you
+[00:13:07] is that what makes it
+different is function.
+[00:13:10] What I mean by that is,
+you know, a rock in an inanimate world,
+[00:13:15] a rock on Pluto, say,
+[00:13:18] is not doing anything.
+[00:13:21] You know, if I
+[00:13:21] ibreak it in half, it's not a rock
+that is now broken or nonfunctional.
+[00:13:25] It's just two rocks.
+[00:13:27] And that's very different.
+[00:13:29] If you're talking about, say, an organ
+in your body.
+[00:13:32] Right? An organ in
+your body is doing something.
+[00:13:34] It's serving a function,
+[00:13:36] in relationship
+with all the other organs of your body.
+[00:13:39] And if it's damaged, it stops doing that
+function.
+[00:13:42] And actually, the whole organism
+may fall apart as a result.
+[00:13:46] There's, you know, everything is depending
+on everything else.
+[00:13:48] There's an ecological relationship
+among all of those parts.
+[00:13:51] They're all serving functions
+for each other.
+[00:13:53] That's the difference.
+[00:13:54] I'll give you an example of what I mean.
+[00:13:57] So, suppose
+that I come back for you from the future
+[00:14:00] and I'm holding this cool metallic thing.
+[00:14:03] It's filled with carbon nanotubes,
+and who knows what.
+[00:14:05] And you say, what the hell is that thing?
+[00:14:07] And I tell you, it's an artificial kidney.
+[00:14:09] If you implant this in your body,
+you know, it has 100 year lifespan,
+[00:14:13] and it will filter
+the urea from your blood. J
+[00:14:16] Just like your kidney does. That's cool.
+[00:14:19] This is,
+you know, an objective statement.
+[00:14:22] You know, it's
+[00:14:22] something that could be verified.
+If you have kidney failure,
+[00:14:25] if I implant it, you'll survive
+[00:14:27] and if I don't, you won't.
+[00:14:30] But it's not
+[00:14:30] somehow immanent
+in the atoms of that object.
+[00:14:34] It's not like the atoms
+tell you I am a kidney.
+[00:14:37] It's rather a function that only
+[00:14:40] makes sense
+in an ecological setting, as it were,
+[00:14:43] if it's inside your body
+and in relationship
+[00:14:45] with all the other parts of your body
+[00:14:46] that are supplying it with blood
+and everything else.
+[00:14:49] So that's what function is. Now,
+when Alan Turing,
+[00:14:54] formulated the Turing machine,
+he really was talking about function.
+[00:15:00] He made a theory of function.
+[00:15:01] This is a, in a way,
+a unification of function
+[00:15:03] in the way I was just describing it
+and the mathematical idea of function.
+[00:15:07] Remember, Turing and von
+Neumann are both mathematicians.
+[00:15:10] So the universal Turing machine
+[00:15:13] is a conceptual machine here.
+[00:15:16] You know, somebody actually
+physically built one, Mikey Davey in 2010,
+[00:15:20] but it was never meant to be actually
+built.
+[00:15:22] It's a head
+that can move back and forth on a tape
+[00:15:24] reading, writing and erasing symbols
+[00:15:27] in accordance with a set of rules,
+with a table of rules.
+[00:15:31] And, what Turing realized is that,
+[00:15:34] there are certain tables of rules
+that can actually read
+[00:15:39] another table of rules from the tape
+and carry out whatever computation,
+[00:15:43] that table that written out
+table of rules
+[00:15:45] or program,
+as we would now call it, says to do.
+[00:15:48] And that's a universal computer
+or a universal Turing machine.
+[00:15:52] And what's cool about this
+is that if it's doing a function
+[00:15:55] like, say, adding
+two numbers together, then
+[00:15:58] there are many, many ways of,
+of implementing that function.
+[00:16:02] There are many different programs
+[00:16:03] you could write that will do that,
+many different universal machines
+[00:16:06] that will interpret
+different kinds of programs to do that.
+[00:16:08] But it doesn't matter.
+[00:16:10] They're all equivalent.
+They all do the same thing.
+[00:16:12] So this is a way of talking
+[00:16:14] about what functionality is in a way
+that is independent of the substrate,
+[00:16:18] that is to say, of
+what is doing the computing.
+[00:16:21] Now, von Neumann around 1950,
+[00:16:25] extended this idea
+in a really interesting way.
+[00:16:28] And he was thinking about
+[00:16:31] the deep problem of biology,
+which is how on earth is it that,
+[00:16:35] that a, let's say, robot made out of Legos
+[00:16:39] that is paddling around
+on a pond full of loose Legos,
+[00:16:42] can assemble those Legos together
+into a copy of itself?
+[00:16:46] Which, if you think about it,
+is exactly what a bacterium does.
+[00:16:49] It's exactly what a mother does
+in order to give birth.
+[00:16:52] It's what life has to do
+in order to reproduce.
+[00:16:56] It's called autopoesis
+or self construction.
+[00:16:59] By the way, you don't have to reproduce
+in order to be autopoetic.
+[00:17:02] If you heal, if you grow,
+[00:17:05] those are also acts of self construction.
+[00:17:08] Same exact thing, right?
+[00:17:09] If an octopus loses an arm,
+it grows back another arm.
+[00:17:12] That's self construction too.
+[00:17:14] So how can something self construct?
+[00:17:16] It seems almost like lifting yourself up
+by your own bootstraps.
+[00:17:20] Well. What
+[00:17:20] Von Neumann realized
+is that you have to have a set
+[00:17:24] of instructions inside yourself
+that says how to build me.
+[00:17:28] So think of it as a tape inside yourself
+that has the instructions
+[00:17:32] for building a you.
+[00:17:33] And there has to be what he called
+a universal constructor
+[00:17:37] that will walk along that tape and follow
+the directions to assemble the parts.
+[00:17:41] And there also has to be a tape
+copying machine so that
+[00:17:45] if you if you generate offspring, then
+they get their copy of the tape as well.
+[00:17:50] If the instructions for the tape copying
+machine and the universal constructor
+[00:17:54] are actually on that tape,
+then voila, you have a autopoetic system
+[00:17:59] or a machine that can build
+a copy of itself in a heritable way,
+[00:18:03] where if a change is
+made in the instructions,
+[00:18:05] then you know
+the offspring will have that same change.
+[00:18:07] The kicker is that a universal
+constructor is a universal Turing machine.
+[00:18:12] These are mathematically the same object.
+[00:18:15] And what that
+[00:18:16] means
+is that life is inherently computational.
+[00:18:20] You cannot, be alive and be autopoetic
+[00:18:23] without simultaneously
+being a general purpose computer.
+[00:18:27] Weird but true.
+[00:18:29] Now there is a critical difference
+between von Neumann's idea
+[00:18:32] about computation and Turing's,
+which is that in Turing's case, the head
+[00:18:37] and the tape
+are not made out of the same stuff
+[00:18:40] as the symbols
+that are written on the tape.
+[00:18:42] In other words, a Turing machine can't
+physically build another copy of itself.
+[00:18:46] It can copy a program on the tape,
+[00:18:47] but it can't make another tape
+at another head.
+[00:18:50] Whereas in von
+Neumann's cellular automata,
+[00:18:53] which are
+these kind of grid worlds,
+[00:18:56] that have a basic a simple physics
+that allows cells to talk to each other.
+[00:19:00] Then a computer
+can literally build another computer.
+[00:19:03] So it's like the difference
+between a laptop
+[00:19:05] and a laptop connected to a 3D printer,
+[00:19:09] where all of the memory is actually
+physically embodied, you know, involves
+[00:19:13] the physical manipulation of atoms,
+if you like.
+[00:19:17] And that's
+the kind of computer that we are.
+[00:19:19] We are the
+[00:19:20] 3D printer kind of computer,
+not just the abstract
+[00:19:23] Turing kind of computer.
+[00:19:25] So you can't reproduce
+without computation.
+[00:19:28] No computation, no life.
+[00:19:31] And this
+this was at the heart of some experiments
+[00:19:33] that we began doing
+oon my team, back
+[00:19:37] at the end of 2023.
+[00:19:40] And so we published this kind of
+preliminary paper about a year ago or so.
+[00:19:44] It's basically
+an exploration of how self reproducing
+[00:19:51] entities can
+[00:19:52] arise out of nothing,
+[00:19:55] out of random initial conditions
+which is how life must have arisen.
+[00:19:59] Right?
+[00:19:59] We we know that life
+didn't always exist in the universe.
+[00:20:02] If we go back to, you know, the big bang,
+probably if we go back to the
+[00:20:06] origins of life on Earth,
+[00:20:07] some people believe that life
+might have arrived on Earth
+[00:20:09] on a comet or something,
+but then that only pushes
+[00:20:12] the question back, you know,
+how did it get on the comet?
+[00:20:15] So there must have been
+initial conditions
+[00:20:17] that that, that are disordered,
+from which life arises.
+[00:20:21] This problem really flummoxed Darwin
+and his contemporaries.
+[00:20:25] Well, here's
+here's how we investigated this.
+[00:20:29] We used a Turing complete
+[00:20:33] programing language called Brainfuck.
+[00:20:36] I didn't name it.
+[00:20:37] It was named this by a, by Urban Müller,
+who was a Swiss
+[00:20:43] computer science, or physics grad
+[00:20:45] student and amateur juggler, of course.
+[00:20:49] And the reason
+[00:20:51] that I picked Brainfuck to work in 
+wasn't just because I really wanted
+[00:20:54] to, you know, one day,
+get up in front of an audience
+[00:20:56] and say, Brainfuck over and over.
+[00:20:58] Although that is definitely
+a part of the motivation.
+[00:21:00] But also because it's modeled
+on a Turing machine and it's very minimal.
+[00:21:05] This programing language
+has only eight instructions.
+[00:21:09] And so, you know,
+it's really a pain to program,
+[00:21:13] and I don't recommend actually
+[00:21:14] trying to handwrite
+any programs in this language, but,
+[00:21:18] but its eight instructions.
+[00:21:19] Basically, it consists of things like,
+you know, move the head
+[00:21:22] or the pointer one step to the right,
+move it one step to the left.
+[00:21:26] Increment the byte at the at the pointer,
+decrement the byte of the pointer.
+[00:21:30] That's already four of the eight.
+All right.
+[00:21:32] So there are four more instructions.
+They're really really simple.
+[00:21:35] Now the
+[00:21:37] setup for doing this artificial life
+experiment is to take
+[00:21:41] a thousand tapes
+[00:21:44] of bytes, of random bytes.
+[00:21:47] And, they're each of length 64.
+[00:21:50] They're of a fixed length.
+[00:21:52] They start off with random bytes.
+[00:21:53] There are, remember, 256
+different possible byte values.
+[00:21:57] And there are only eight instructions.
+[00:21:58] What that means
+is that only 1 in 32 of those random bytes
+[00:22:02] even correspond to an instruction. Right?
+[00:22:04] But these are completely random tapes.
+[00:22:06] And if something is a non instruction
+[00:22:08] and the head reaches it,
+it'll just skip over it.
+[00:22:10] That's called a no op.
+[00:22:12] And now what we do
+is we pluck two of those tapes
+[00:22:15] out of this soup
+at random, stick them together, and run,
+[00:22:20] and then pull them back apart
+and put them back in the soup
+[00:22:23] and repeat and repeat millions of times.
+[00:22:26] That's it.
+That's the entire experiment.
+[00:22:29] So what I'm showing
+you here is the first
+[00:22:33] bunch of tapes in the soup
+at the very beginning.
+[00:22:36] I'm only writing the things
+that correspond to instructions.
+[00:22:40] So all of those blanks are bytes
+that are no ops.
+[00:22:43] And so when you put these 
+two random tapes together and you run,
+[00:22:47] basically nothing happens
+because, you know, your likelihood
+[00:22:50] of any valid instructions being on
+there is low.
+[00:22:53] You know, once in a while one of these
+bytes will change another byte.
+[00:22:56] But, you know, to not much effect.
+[00:22:59] And so on average, only two operations
+actually run per interaction.
+[00:23:04] As you might expect.
+[00:23:06] Nothing
+interesting appears to be going on.
+[00:23:08] But now what happens if you do it again
+and again and again and again?
+[00:23:12] So I'll show you that,
+[00:23:16] Oh, actually,
+[00:23:19] Right.
+[00:23:20] This is an attempted video,
+[00:23:21] but it's going to be a little bit low
+frame rate on the on the Zoom. So,
+[00:23:26] luckily, you know, Brainfuck is so simple,
+[00:23:28] you can run it really fast on a laptop
+and ssomething really
+[00:23:32] bizarre happens
+after a few million interactions,
+[00:23:34] which is that you see things change from
+just random bytes to,
+[00:23:38] complex programs appearing on these tapes.
+[00:23:41] It is weird, right?
+[00:23:43] You start off with nothing,
+with randomness,
+[00:23:46] and you end up
+with these complex programs.
+[00:23:49] What are the programs doing?
+[00:23:50] They are reproducing.
+[00:23:52] So, you know, to first order,
+it's easy
+[00:23:55] to understand why, why these programs are,
+[00:23:58] why reproducing programs
+are a good thing to happen if you like.
+[00:24:01] If you can reproduce, then that means
+[00:24:04] that in the future,
+there will be more things like you.
+[00:24:07] If you can't reproduce, then you'll be
+overwritten by something that can.
+[00:24:12] So there is, if you like,
+a Darwinian pressure for things
+[00:24:15] to emerge that can reproduce
+because they are more stable,
+[00:24:18] than things that can't reproduce.
+[00:24:20] And that's why you get these programs
+that self replicate.
+[00:24:25] But, there's something very unsatisfying
+[00:24:28] about that explanation on its own because,
+[00:24:31] you know,
+[00:24:31] I began, I'm actually showing the video
+that I'm showing you is with 8000 tapes,
+[00:24:35] but I, you know, most of my experiments
+were done with only 1000 tapes.
+[00:24:38] We began with very little randomness.
+[00:24:40] Only, you know, only 64,000
+random characters.
+[00:24:45] That's not a lot of randomness.
+[00:24:46] And it's not a lot of time,
+you know, this all this,
+[00:24:49] these changes happen
+after only a few million interactions.
+[00:24:52] And the idea that very complex programs
+like this would emerge from 64,000
+[00:24:56] random characters and 5 million timesteps
+just seems to boggle the mind.
+[00:25:01] This doesn't seem
+like how evolution is supposed to work.
+[00:25:05] You know, the way we all learned
+about evolution, about Darwinian
+[00:25:08] evolution, is that it's a million monkeys
+typing on a million typewriters.
+[00:25:11] And, you know, if you give them long
+enough, Shakespeare will come out.
+[00:25:14] But, you know,
+you're not going to get Shakespeare
+[00:25:18] in 5 million steps,
+[00:25:22] from 64,000 random characters.
+[00:25:24] It just doesn't seem to be enough
+noise, enough
+[00:25:27] time for something really complex
+like this to, to arise.
+[00:25:30] So how does it come to be?
+[00:25:33] Well.
+[00:25:34] And, by the way,
+[00:25:35] I'm just showing you
+the difference between the initial state
+[00:25:38] and this is, in this case,
+after 5 million interactions,
+[00:25:41] you see a lot more code
+and a lot more complexity
+[00:25:44] and a whole ecology
+[00:25:45] of different programs
+that are all,
+[00:25:47] you know,
+copying themselves and each other
+[00:25:49] and some pretty complex interactions
+takes a while to reverse engineer these.
+[00:25:53] And by the way, when you when you
+put these two together and you run,
+[00:25:55] the number of operations that happen
+per interaction is over a thousand now.
+[00:25:59] So suddenly this soup
+has become massively computational.
+[00:26:04] So it's fascinating.
+[00:26:06] And that actually
+looks like a phase transition.
+[00:26:09] So what I'm
+drawing here is 10 million
+[00:26:13] dots, a dot for each of those
+first 10 million interactions.
+[00:26:17] So, the x axis is time,
+and the y position of every dot
+[00:26:22] is how much computation
+occurred in that interaction.
+[00:26:25] And what you can see
+[00:26:25] is that in the beginning,
+not much computation is happening.
+[00:26:28] Most of those dots
+are clustered around zero.
+[00:26:31] But then there's this wall of white,
+right
+[00:26:34] that happens on the
+on the right hand side,
+[00:26:36] where suddenly the amount of computation
+goes through the roof. And,
+[00:26:40] and by the way, if
+[00:26:41] if you zip the soup,
+if you,
+[00:26:44] you know, just run it through the zip
+program to see what is its entropy,
+[00:26:48] what you find is that the entropy
+is random in the beginning.
+[00:26:52] So it's uncompressible,
+meaning that it's like a gas,
+[00:26:57] but then it's extremely compressible
+right after that.
+[00:26:59] And so it's this phase transition where
+it becomes extremely compressible because,
+[00:27:02] there are a lot of things
+copying each other and themselves.
+[00:27:06] So the way I think about that
+phase of matter on the right
+[00:27:09] is that it's the life
+phase of matter.
+[00:27:11] Living things are neither solid
+nor liquid nor gas nor plasma.
+[00:27:16] They're something else
+[00:27:17] that is complex statistically,
+and that is what that phase of matter is.
+[00:27:22] Okay, so, I'm aware that
+[00:27:25] we should be switching in about,
+five minutes to discussion mode.
+[00:27:29] So, I'd like to just explain briefly
+what is actually happening
+[00:27:34] here, how it is that we can get
+these complex things out of nothing.
+[00:27:37] And what that implies
+at larger scales about brains.
+[00:27:42] Because I know we've zoomed way
+in on the origins of life,
+[00:27:44] I want us to zoom out, back out again
+[00:27:47] and talk about what this means
+in the bigger picture.
+[00:27:50] All right.
+[00:27:50] So, it looks like pretty much any universe
+that has a source of randomness
+[00:27:54] and can support computation
+will evolve life, but we don't see how
+[00:27:57] these really complex programs emerge,
+you know, in such a short time.
+[00:28:02] Nor why evolution continues,
+[00:28:04] by the way.
+You might have seen that we got programs,
+[00:28:06] and then the programs appear
+to become more complex as I was running.
+[00:28:09] That's all mysterious.
+[00:28:11] Well, the answer was also figured out
+a long time ago
+[00:28:15] by, Lynn Margulis in 1969.
+[00:28:19] So she introduced the concept
+of symbiogenesis
+[00:28:22] in this famous paper from,
+[00:28:25] actually, this is 1966, not, '69. 
+Sorry.
+[00:28:29] This is the paper in which
+[00:28:31] she really showed that
+the mitochondrion inside
+[00:28:35] our cells was originally a free form
+of free swimming bacterium.
+[00:28:39] And so eukaryotic cells emerged
+from a merger between mitochondria
+[00:28:45] and a larger
+prokaryotic cell, archaea, as we now know.
+[00:28:50] And that's what gave rise 
+to eukaryotes,
+[00:28:54] and, her larger theory
+[00:28:56] of symbiogenesis, as she called it,
+is that these mergers
+[00:29:00] between organisms were really important
+in evolutionary history.
+[00:29:05] So she managed to convince biologists
+about mitochondria
+[00:29:08] and also chloroplasts and,
+and a couple of other such organelles.
+[00:29:12] But, by the time of her
+death in 2011,
+[00:29:16] her larger thesis, that symbiogenesis
+[00:29:17] is a big force in evolution
+was still very much not mainstream.
+[00:29:21] And it's still not now.
+[00:29:23] But I've come to believe
+that symbiogenesis is
+[00:29:25] absolutely the engine behind evolution.
+[00:29:28] In other words,
+Darwin only had half the story.
+[00:29:31] He had the random mutation
+and selection part, which is competitive,
+[00:29:35] but he didn't have this part
+where things come together
+[00:29:37] to make something larger than themselves.
+[00:29:39] And that is the creative
+engine behind evolution.
+[00:29:43] Why do I think this?
+[00:29:44] Well, because symbiogenesis is exactly
+what's happening in bff, in the system
+[00:29:48] that I just showed you.
+[00:29:49] Basically, when you look in detail
+at everything that is copying itself
+[00:29:53] in the soup,
+starting from the very beginning,
+[00:29:55] what you notice is that
+there are things copying themselves
+[00:29:59] right from the start,
+but they're very small and very weak.
+[00:30:02] So in the beginning,
+it might just be a single byte
+[00:30:04] that copies itself
+from one place to another on the tape.
+[00:30:07] Nothing
+much happening, but it's something.
+[00:30:09] And once in a while,
+when those bytes come together
+[00:30:12] and they can copy themselves as a pair
+better than they can copy themselves
+[00:30:16] individually, then the pairs start
+copying themselves and
+[00:30:20] there's a cascade of of things
+combining
+[00:30:23] that is what results in, in those,
+in those big complex programs.
+[00:30:27] That is actually the creative process
+[00:30:29] that leads to 
+these big and complex things.
+[00:30:32] And we know
+[00:30:35] that we've had in evolution on Earth,
+a bunch of those
+[00:30:38] so-called major evolutionary transitions
+where things come together
+[00:30:41] to make something qualitatively different,
+larger than themselves, like,
+[00:30:44] you know, we are made out of cells, right?
+[00:30:47] At some point, those cells came together
+to make multicellular organisms.
+[00:30:50] That's the so-called major
+evolutionary transition.
+[00:30:53] We know that individual humans
+at some point came together
+[00:30:56] to make societies, and societies
+are smarter than individuals.
+[00:31:00] That's
+another major evolutionary transition.
+[00:31:02] We know that
+insects like bees and wasps,
+[00:31:06] which used to be
+solitary, came together to form hives.
+[00:31:10] That was also a major
+evolutionary transition.
+[00:31:12] These biologists, Eörs Szathmáry
+and John Maynard Smith identified
+[00:31:17] eight originally of those major
+evolutionary transitions in 1995.
+[00:31:21] They've since added another few.
+[00:31:24] But I think that
+this is just the tip of the iceberg.
+[00:31:27] And in fact, when you start looking 
+more closely
+[00:31:30] in more detail at genomes,
+you start to see that symbiogenesis,
+[00:31:34] that is to say, the incorporation
+of one living thing into another
+[00:31:37] is way more common
+than just these major transitions.
+[00:31:41] And just to give you some,
+you know, illustration of that,
+[00:31:44] this is our own genome, as sequenced
+by, you know, Lander and co.
+[00:31:49] you know, in 2001.
+The big surprise in our own genome
+[00:31:53] is that only 1.5% actually codes
+for the proteins that make us up.
+[00:31:58] The rest of it,
+you know, is so-called junk DNA.
+[00:32:01] Now, we know that a lot of it
+is not really junk.
+[00:32:03] It's involved in gene regulation
+and so on, but
+[00:32:06] a huge amount of it, a shocking amount of
+it is actually viruses.
+[00:32:10] So, you know, LTR retro-transposons,
+DNA transposons, LINEs and SINEs,
+[00:32:16] all of this stuff
+is actually bits of viral code
+[00:32:20] that copy themselves,
+both within DNA and across organisms.
+[00:32:24] And we know that some of that,
+and we've started to realize,
+[00:32:27] you know, just in recent years
+[00:32:29] that some of that viral code ends up
+being really important to how we work.
+[00:32:32] So, for instance, there's a virus
+[00:32:35] related to respiratory
+syncytial virus that ended up
+[00:32:39] changing the structure of the
+[00:32:40] placenta and fusing cells together
+to make the mammalian placenta.
+[00:32:44] We know that there is a virus called arc
+[00:32:46] that still lives in our brains.
+[00:32:49] And if you knock it out in mice,
+they stop being able to form new memories.
+[00:32:52] Still not fully understood
+exactly how it works.
+[00:32:55] And there are many more examples.
+[00:32:56] A quarter of the cow genome
+is the BovB retro transposon,
+[00:33:00] which has, you know,
+shuttled back and forth between dozens
+[00:33:03] of different species,
+including salamanders and who knows what.
+[00:33:06] So, you know, when you start
+to look at this kind of picture,
+[00:33:09] you begin to realize that we are not just
+replicators at the level of individuals,
+[00:33:13] but we're replicators made of replicators
+made of replicators and
+[00:33:17] my hypothesis is that
+[00:33:21] all of that replication
+happening at different scales
+[00:33:24] is the creative engine, behind
+why evolution gets more complex over time.
+[00:33:29] Why do I say
+it gets more complex over time?
+[00:33:30] Because, well, if you have two things that
+come together to make something bigger,
+[00:33:35] the bigger thing is necessarily
+more complex than just the two things
+[00:33:39] that came together. Right?
+[00:33:40] The bigger thing has to now
+both know how to replicate A
+[00:33:43] and how to replicate B
+and how to put A and B together.
+[00:33:46] So that's like a growth of information
+over time.
+[00:33:49] Okay.
+[00:33:50] And so it's not just neuroscience
+that was computational, life
+[00:33:54] was computational from the start.
+[00:33:56] It gets more computationally complex
+over time through symbiogenesis
+[00:33:59] because when you have two computers
+that come together and start cooperating,
+[00:34:03] then now you have a parallel computer
+[00:34:06] and you have massively
+parallel computation.
+[00:34:09] And so you have
+you do have something like a Moore's Law,
+[00:34:13] work over evolutionary time,
+[00:34:15] that leads to more
+and more parallel computation,
+[00:34:17] which is exactly what we see in nervous
+systems that consist of lots of neurons
+[00:34:21] that are all computing functions
+in parallel.
+[00:34:24] So, you know, why does parallel
+computation result in intelligence?
+[00:34:29] Well, let me just
+[00:34:32] give you one final
+[00:34:33] image to
+give you a little bit of a sense of why.
+[00:34:37] Think of how we came together as societies
+[00:34:40] and how that drove
+the human intelligence explosion.
+[00:34:43] So, you know,
+if we go back 7 million years ago or so,
+[00:34:47] our brains were a whole lot smaller
+than they are today.
+[00:34:49] We know why
+the human brain exploded in size,
+[00:34:53] why hominid brains exploded
+in size over those 7 million years.
+[00:34:56] It's because when we began
+to model others in detail, when we began
+[00:35:01] to have Theory of Mind about others,
+that enabled the forms of cooperation
+[00:35:06] that both made us more individually fit
+because we could do better politics,
+[00:35:11] find mates better,
+divide labor better, etc.
+[00:35:15] and also made the groups that were formed
+by those aggregates of human beings
+[00:35:20] more efficient, and able to do more
+and smarter us as individuals.
+[00:35:25] Human individuals are not very smart.
+[00:35:27] But when we get together,
+we can do amazing things, right?
+[00:35:30] Like transplanting organs
+and going to the moon and whatever.
+[00:35:33] Those are not individual capabilities.
+[00:35:34] No individual human can do that.
+[00:35:36] That's a collective human intelligence
+sort of thing.
+[00:35:38] And it comes about through specialization
+and through theory of mind,
+[00:35:42] through us being able to model each other
+in order to work in groups.
+[00:35:46] I think that that is the process
+that has been happening,
+[00:35:49] all the way down,
+right down to the level of single cells,
+[00:35:52] even in some sense down
+[00:35:53] to the level of the molecules
+that came together to make those cells.
+[00:35:57] So, 
+that's the hypothesis behind the book.
+[00:36:01] And maybe that's a good, a good moment
+for us to, switch into discussion mode.
+[00:36:06] Great.
+[00:36:19] Blaise, thank you so much for that.
+[00:36:21] You've
+introduced us to a profound set of ideas,
+[00:36:24] and potentially reconceptions of
+a lot of what we know or think we know.
+[00:36:29] So I have a hopefully a profound
+set of questions for you to
+[00:36:32] to take that a little bit further,
+I'd like to start out by
+[00:36:36] and you may not
+have gotten there in the talk,
+[00:36:37] but maybe this is an opportunity
+for you to take a little bit further.
+[00:36:40] What do you think are the practical
+and the moral implications
+[00:36:43] of your insight for us?
+[00:36:45] Yeah.
+[00:36:47] Well, there is
+[00:36:49] definitely a policy
+[00:36:51] angle to this, and,
+and that really comes about,
+[00:36:55] we've been working a lot on multi-agent
+reinforcement learning in recent months.
+[00:36:59] And, this is
+[00:37:02] connected with game theory and,
+you know, things that
+[00:37:04] the Rand Corporation was very involved
+in the 20th century.
+[00:37:09] But, you know,
+the kind of Darwinian idea of evolution
+[00:37:12] that everything is about stuff 
+outcompeting
+[00:37:15] other stuff and, you know,
+read of tooth and claw, survival,
+[00:37:19] is, you know, kind of neutralizes
+a picture about how nature works,
+[00:37:24] how life works,
+[00:37:25] how intelligence works based on
+things like a dominance hierarchy
+[00:37:29] and also on zero sum games, where,
+you know, one wins, the other loses.
+[00:37:33] The cool thing about,
+about symbiogenesis is that it opens up
+[00:37:37] a space of cooperative solutions, that,
+you know, that turn out
+[00:37:41] to be the, in a way,
+the bigger story than competition.
+[00:37:45] You know, it's not the competition doesn't
+it doesn't exist.
+[00:37:48] Of course it does.
+[00:37:49] You know,
+the standard Darwinian stuff happens too.
+[00:37:52] But the big part of the story,
+the part that actually results in life
+[00:37:55] in the first place, that results
+in complexification of life is cooperative.
+[00:38:00] And so I think that, you know,
+a lot of assumptions
+[00:38:02] about rational economic actors, about Nash
+equilibria, all that kind of stuff,
+[00:38:07] no longer look right when you start
+to consider, you know, agents
+[00:38:13] that can model each other,
+and that can change their policies.
+[00:38:17] And I mean, not policies in the machine
+learning sense,
+[00:38:20] in a way that that is cognizant
+of how that will affect the behavior
+[00:38:23] of the other, and,
+you know, there's a whole new math
+[00:38:26] and a whole new
+policy space that opens up,
+[00:38:29] - I mean, obviously, as a
+[00:38:31] former policy maker myself,
+I'd be eager to dive into that deeper.
+[00:38:35] Just to finish the second part
+of that question from a moral perspective.
+[00:38:37] Yeah.
+[00:38:38] How do you think about,
+[00:38:40] the treatment and conceptualization
+of these intelligences
+[00:38:45] which are being created
+sort of by engineers in that ecosystem?
+[00:38:51] - Right.
+[00:38:51] So, first of all, you know,
+[00:38:54] a lot of moral philosophers, I find,
+[00:38:58] kind of, reify ideas about,
+[00:39:01] about, say,
+moral patiency, or moral agency.
+[00:39:05] And, you know, they believe that they,
+[00:39:07] or they at least write about this
+in such a way
+[00:39:11] that you imagine that it's like some,
+some primary quality in things.
+[00:39:16] I am not a fan of that
+general school of thought.
+[00:39:19] I'm more a fan of,
+[00:39:22] say, if you've read Patricia Churchland's
+book Conscience
+[00:39:25] which is more of a biological
+take on moral sentiments
+[00:39:29] and more on the human spirit of like,
+you know, why do we feel these ways
+[00:39:33] about each other?
+Why do we care about each other?
+[00:39:35] Why do we have morals and ethics?
+[00:39:39] You know, they didn't come out of nowhere.
+[00:39:41] They came out of
+out of biological imperatives,
+[00:39:43] you know, in the beginning, because,
+[00:39:45] we have babies
+that need a ton of care and
+[00:39:49] the maternal care and the community care
+needed in order to raise them
+[00:39:53] requires a bunch of stuff of us.
+[00:39:55] So, you know, it emerges
+from a need
+[00:39:58] in the same way that that a feeling
+like hunger emerges from a need.
+[00:40:01] You know, if you don't experience hunger
+and you don't eat, then you'll die.
+[00:40:04] You know, and the same is true
+of a complex intelligence,
+[00:40:08] you know, in a kind of complex environment
+with other complex intelligences. So,
+[00:40:14] you know,
+[00:40:15] what are the implications,
+with respect to, say, AI models?
+[00:40:19] I don't think that,
+[00:40:21] you know, on the one hand,
+I think that a lot of the properties
+[00:40:24] that we associate with moral patiency
+see, like theory of mind,
+[00:40:28] maybe even consciousness
+and so on, I think they're very common.
+[00:40:31] I think they're, you know,
+[00:40:32] Ithere's work on bees
+and other insects that suggest
+[00:40:35] that they have a lot of these properties
+too. The idea that they're so,
+[00:40:39] you know, snowflake
+[00:40:39] and precious that they're only about us
+humans, I think is wrong.
+[00:40:43] But also the idea that everything
+should be treated the same way
+[00:40:46] and it's like a flat ontology,
+you know, doesn't make any sense either.
+[00:40:50] You know, those are more like contracts
+that we've made for our flourishing
+[00:40:54] with each other and
+and how how mutual flourishing should work
+[00:40:57] in this complex system
+that has all kinds of different agents in
+[00:41:00] it is a complex problem and not one
+that is reducible to basic principles.
+[00:41:05] - So how do you think about,
+[00:41:08] as new and more and more capable
+[00:41:10] AI systems are being advanced right
+now, are being developed,
+[00:41:14] a lot of the attention seems to be on
+just for like pure
+[00:41:16] reasoning power, just like what we think
+it's like hard core IQ intelligence.
+[00:41:19] Yeah, but what you're talking about
+seems to be much, much broader.
+[00:41:22] How do you think about the development
+[00:41:26] of emotional sensibility,
+of creativity into AI systems?
+[00:41:31] How do they get sort of embedded in there?
+[00:41:33] Are they going to emerge naturally?
+[00:41:35] If not, how are they sort of designed for?
+[00:41:38] And then, 
+how do we benchmark that?
+[00:41:41] How do we even understand
+what we're trying to see?
+[00:41:43] Because a lot of the attention right now
+[00:41:45] seems to be on just from benchmarking hard
+core measures of intelligence.
+[00:41:49] But your theory of mind is much,
+much bigger.
+[00:41:51] How do we even begin to understand that
+and begin to benchmark that?
+[00:41:54] - Well, there are ways
+of benchmarking theory of mind.
+[00:41:57] So the
+the Sally-Anne test is the classic one.
+[00:42:00] You know, this was invented
+by a number of researchers
+[00:42:03] in the 70s and 80s,
+Simon Baron-Cohen, Uta Frith and co/
+[00:42:08] This
+[00:42:09] was originally used
+as an autism test because,
+[00:42:13] you know, one of the
+characteristic signs
+[00:42:15] of autism spectrum disorders
+is theory of mind problems.
+[00:42:21] You can run those on LLMs
+and we've done that.
+[00:42:23] And, we've found that LLMs
+have theory of mind up to sixth order,
+[00:42:27] much like people do.
+[00:42:29] It's not surprising because when you train
+those models on lots
+[00:42:32] and lots of dialogs between people,
+you know, you can't predict the next word
+[00:42:36] if you can't make sense of what's going
+on, you know, who knows what,
+[00:42:39] and so on.
+[00:42:41] So, you know, it's a skill
+that they have just as much as any other
+[00:42:44] kind of skill.
+[00:42:46] I think that there are ways
+[00:42:48] of training those models
+that will further enhance those skills.
+[00:42:51] And that would probably be a good idea
+in the same way that,
+[00:42:54] you know, that that we've done
+enhanced training for reasoning.
+[00:42:58] But, you know, at bottom,
+[00:42:59] an, an LLM could not actually be
+an effective helper for you,
+[00:43:04] you know, like,
+those interactions wouldn't even work if,
+[00:43:07] if you didn't have a theory of mind
+[00:43:08] about exactly what you need to tell it,
+you know, good prompting if you like.
+[00:43:12] It's about you having a theory of mind
+about the LLM,
+[00:43:14] and for it to understand
+what's going on in your mind,
+[00:43:16] what you already know and don't know,
+and so on.
+[00:43:18] Like that's essential for it too.
+[00:43:20] So we're already using it.
+[00:43:22] - So how do you think,
+I mean, so if the models, the LLMs
+[00:43:24] themselves are sort of
+modeling us as interlocutors. [Yes.]
+[00:43:28] What are the
+[00:43:30] what is the potential for us
+and what are the tools that we could have
+[00:43:32] as interlocutors with the LLMs
+to model them for lack of a better word,
+[00:43:38] and to really understand what is going
+[00:43:39] on, what is our conceptualization
+of what they are, what they can do,
+[00:43:42] how they're interacting with us?
+[00:43:43] What is their model of us?
+[00:43:45] And we've been doing some work
+here at the Berkman Klein Center,
+[00:43:48] and at Harvard around interpretability.
+[00:43:51] How do we take that much, much further
+to enhance
+[00:43:53] our ability
+as human beings to model the models?
+[00:43:57] - So the kind of, interpretability,
+mechanistic interpretability
+[00:44:00] and doing neuroscience on models, I think
+it's a really, really fruitful direction.
+[00:44:04] And, you know, one can do
+[00:44:05] neuroscience on models that are impossible
+to do with physical brains.
+[00:44:09] Right.
+[00:44:09] Because you can instrument everything,
+and run things over and over and so on.
+[00:44:14] So those interpretability,
+you know, exercises are really valuable
+[00:44:19] and can actually, I think, can teach us
+a lot about brains as well.
+[00:44:23] You know, we find a lot of common
+structures that emerge from training,
+[00:44:28] you know, things like brain score,
+for instance,
+[00:44:30] you know, are measures of similarities
+between, between structures that emerge
+[00:44:34] in the models that we see and that we see
+emerging in our brains, too.
+[00:44:39] You know, even the fact
+that cortex is very, very highly general,
+[00:44:42] in the sense that you can,
+you know, rewire, say,
+[00:44:45] you know, the optic nerve to the auditory
+cortex of a baby ferret
+[00:44:48] and get something like a visual cortex
+in, you know, what it's supposed to do,
+[00:44:52] that tells you that there's a generality
+to what's going on.
+[00:44:54] Same is true of transformers
+and so on,
+[00:44:57] which is why you see
+parallel structures emerge.
+[00:45:01] So that's all really interesting.
+[00:45:03] On a more practical level, Ethan
+Mollick wrote a book called Co-Intelligence.
+[00:45:08] a couple of years ago
+that I thought was pretty good.
+[00:45:11] Just I mean, this is like
+[00:45:11] an MBA type advice,
+you know, about how to how to use LLMs.
+[00:45:15] But what I found so interesting about
+[00:45:17] it is that, you know,
+he starts off by saying,
+[00:45:18] of course they're not real,
+they don't think they're not people, etc.
+[00:45:21] But I'm going to take the scare
+quotes off, you know,
+[00:45:24] for the rest of the book
+because you'll have a much better time,
+[00:45:27] you know, like collaborating with them
+if you use your theory of mind
+[00:45:31] essentially, and, you know,
+so I thought that was very telling, right,
+[00:45:35] that it's only by imputing theory of mind
+that you're even able to work effectively
+[00:45:39] with them. 
+- Interesting. So,
+[00:45:42] to kind of like, jump back to
+[00:45:44] like the who and the
+how these models are being designed.
+[00:45:48] So what you've just described
+over the last half hour plus is a sort of
+[00:45:52] evolutionary experience
+of like intelligence,
+[00:45:56] and sort of the computational intelligence
+has sort of
+[00:45:58] become more and more complex
+over millions and billions of years,
+[00:46:02] for evolutionary imperatives,
+sometimes randomness,
+[00:46:05] but also for evolutionary
+imperatives, survival.
+[00:46:08] So we are who we are, where we are
+because we want to survive.
+[00:46:13] We want to reproduce. Right?
+[00:46:15] Right now we have LLMs being designed
+[00:46:17] by a handful of actors,
+[00:46:20] largely large industry,
+[00:46:23] and for different kinds of imperatives
+[00:46:26] at the end of the day.
+I mean, there's, there's largely
+[00:46:28] a commercial imperative, like, there are
+these are commercial enterprises.
+[00:46:31] How do you think about the value systems
+in which intelligence
+[00:46:35] is now being designed versus
+how it has been designed,
+[00:46:39] or at least emerged over the past
+5 billion years?
+[00:46:43] - Well, so I certainly don't doubt
+that there are things
+[00:46:47] that are distorting about capitalism,
+and how
+[00:46:51] we think about it, some of the,
+[00:46:53] you know, then companies and, and
+and even how we think about government.
+[00:46:57] Right.
+[00:46:57] All of these come from theories
+that naturalize certain ideas,
+[00:47:01] some of which come from,
+you know, Darwinian
+[00:47:03] and rational economic actors
+sort of thinking that, you know,
+[00:47:07] that naturalize ideas that are maybe
+not right or at a minimum, not complete.
+[00:47:10] So 
+there's plenty to go into there, you know,
+[00:47:13] that would be valuable to question.
+[00:47:18] But at the same time, you know,
+I also would be cautious
+[00:47:22] about sort of,
+tarring the output with the origins.
+[00:47:26] I mean,
+when we look at the origins of computers,
+[00:47:28] the origins of the internet, you know,
+these started off as military projects.
+[00:47:32] You know, the first calculations
+that were done
+[00:47:33] with the earliest computers were,
+you know, about the H-bomb.
+[00:47:37] You know, if one were to,
+[00:47:38] you know, think in a sort of origin
+first way about about that,
+[00:47:43] you know,
+these are weapons.
+[00:47:47] And by the time we get to 1980
+and personal computers, what's really
+[00:47:51] being done with them has nothing to do
+with, you know, where they came from,
+[00:47:55] and what they are.
+[00:47:55] And in a way, the more general
+the technology, the more it escapes the,
+[00:48:01] you know, the origin story,
+if you like, you know, so
+[00:48:04] we can talk about electricity,
+many other things along similar lines.
+[00:48:09] The thing about
+[00:48:13] about all of these systems
+is that they is that somebody has to care
+[00:48:15] enough about everything to keep it around,
+[00:48:19] and everything
+co-constructs everything else.
+[00:48:21] So, you know, I've, I've been thinking
+a lot about the 19th century
+[00:48:25] and the Industrial Revolution.
+[00:48:27] In this in this light as well,
+we think a lot about machines
+[00:48:31] as being separate from us.
+[00:48:32] And also we're the ones who build
+machines, not the other way around.
+[00:48:36] Machines don't build us.
+[00:48:38] But I think that's wrong.
+[00:48:41] That's wrong.
+[00:48:41] I mean, in, in, let's say 1800,
+the human population was about 1 billion,
+[00:48:46] as far as I remember.
+[00:48:47] And, it's now nearly ten times that much.
+[00:48:50] And the reason it's ten times
+as much is because of internal combustion.
+[00:48:54] We, you know, started
+to externally metabolize in this way.
+[00:48:57] And when I say we, I mean humanity,
+including, you know, those machines,
+[00:49:02] the machines, by the way, mostly
+make themselves at this point.
+[00:49:04] You know, we made the machines once upon
+a time that have made the machines,
+[00:49:07] that make the machines that in turn,
+make us.
+[00:49:09] So it's like this whole ecological loop.
+[00:49:12] And, you know, I'm inclined to zoom out
+[00:49:15] to think a little bit more holistically
+about what humanity really is
+[00:49:18] now, you know, when I think of,
+you know, what we should be talking about
+[00:49:22] when we talk about humanity,
+it is the wheat, the cows,
+[00:49:26] the computers, the the dams.
+[00:49:29] You know, the trucks, the people.
+[00:49:31] It's the whole thing.
+[00:49:31] - Yeah. Is it good?
+[00:49:35] - Yeah, I think it is good
+[00:49:37] because it's more interesting
+that was there before.
+[00:49:40] - Is interesting good?
+[00:49:41] - Well, I mean, you're asking me
+an aesthetic question.
+[00:49:44] - Very true, very true.
+[00:49:47] - I think that, 
+- I guess I ask
+[00:49:48] it in the sense that we at least
+notionally have agency over the decision.
+[00:49:52] [Yeah.]
+To pursue this course.
+[00:49:54] And so my question originates
+from a place of like,
+[00:49:57] should we be pursuing the course?
+Why is it good?
+[00:49:59] Is it not good?
+[00:50:00] If not good, should we be doing it?
+[00:50:03] So what makes this so tricky
+is that this large scale
+[00:50:07] evolutionary process
+[00:50:08] that I've been describing is one
+where identity changes over time.
+[00:50:12] You know, what 'we' is changes,
+[00:50:16] and that's okay.
+[00:50:18] Like, that's a part of, that's why
+we exist for whatever value of 'we' today.
+[00:50:24] Does that mean that we, for whatever
+[00:50:26] value of 'we', don't care about us as
+we are now persisting?
+[00:50:29] No, of course we care about...
+[00:50:30] I mean, that's that's
+that's the survival imperative.
+[00:50:34] So there's an internal tension there.
+[00:50:36] You know,
+if on the one hand, you know,
+[00:50:39] wanting to exist
+as we are now as a consequence
+[00:50:42] of everything that has come to pass,
+[00:50:43] but also not wanting anything else
+to change in the future.
+[00:50:46] And those I think those two things are not
+necessarily compatible with each other.
+[00:50:50] - I think that's probably right.
+That's probably right.
+[00:50:52] Probably deserves a deeper discussion
+about where we want to go.
+[00:50:55] Right.
+[00:50:55] And so my last question,
+then I'll open it up to the audience.
+[00:50:59] For the designers of the systems
+right now,
+[00:51:02] whether they're in big industry
+or on a laptop,
+[00:51:06] what kinds of responsibility
+and accountability should those
+[00:51:10] who are designing these systems, building,
+deploying these systems have?
+[00:51:15] Based on the questions
+that that came before?
+[00:51:18] Well,
+[00:51:21] and to whom?
+[00:51:21] - Yeah, I mean, it's it's a great
+it's a great question.
+[00:51:24] And I'm not sure that I have,
+you know, cleverer answers than
+[00:51:29] than I imagine you've spent a lot of time
+at the Berkman Klein discussing.
+[00:51:33] So I'm, I'm a little hesitant
+to weigh in. - As a as a builder, though,
+[00:51:37] how would you think about it?
+[00:51:39] - The way I think about it is that,
+[00:51:42] there are a few things
+[00:51:44] that seem like
+obviously good ideas,
+[00:51:47] such as, transparency
+about outputs from
+[00:51:52] you know, from AI models about,
+you know, things like,
+[00:51:55] you know, if a system prompt
+[00:51:58] has a bunch of stuff in it
+[00:52:01] that is ideological-specific
+with respect to,
+[00:52:03] what that model does,
+[00:52:05] it would be good for that
+to be transparent, for that to be visible,
+[00:52:08] to somebody
+who's interacting with that model.
+[00:52:14] Various forms of deception,
+including
+[00:52:18] non transparency of systems
+feels to me like a problem.
+[00:52:22] But I also think that, you know,
+there's a big race
+[00:52:26] at the moment to sort of think
+about what all the regulations are
+[00:52:32] in a precautionary principle sort of way,
+[00:52:34] in advance of actually seeing
+how this stuff really is playing out.
+[00:52:39] And I'm reminded of the
+[00:52:42] much more modest
+efforts at regulation of the internet
+[00:52:45] that we attempted in the 1990s,
+which I don't think went very well.
+[00:52:50] And partly
+it was because of a lack of imagination.
+[00:52:53] We made certain rules,
+[00:52:56] that had radically unintended
+consequences back then.
+[00:53:00] We were slow.
+[00:53:02] You know, we didn't regulate
+certain things that probably
+[00:53:05] should have been regulated.
+[00:53:06] And that would result in
+maybe a better social media landscape
+[00:53:09] today, for instance. 
+And we did regulate other things
+[00:53:13] that didn't have the intended consequences
+for the people making those rules.
+[00:53:16] So, I guess, you know, at a
+meta level, I would advocate
+[00:53:21] less attempts at precautionary principle
+[00:53:23] and more nimbleness and responsiveness
+and curiosity about
+[00:53:28] what is happening,
+and maybe also more experiments,
+[00:53:32] you know, so that 
+we're able to try various things
+[00:53:35] in parallel and see what works,
+what doesn't.
+[00:53:39] - Fantastic. Thank you so much.
+[00:53:41] All right, let's go to the audience.
+[00:53:46] JZ.
+[00:53:48] Hi there.
+[00:53:49] Like, one time customer.
+First time caller.
+[00:53:52] Thank you.
+[00:53:54] Thanks so much for all of these thoughts.
+[00:53:56] Am I right in inferring
+from what you're saying,
+[00:54:00] that you're figuring getting to
+[00:54:03] this ineffable, undescribable place
+of intelligence that we see in one another
+[00:54:08] may not be as hard as it seems
+[00:54:12] from an engineering perspective,
+given what you're describing?
+[00:54:15] Even if we can't make a whole lot of sense
+[00:54:18] out of the results once it's done?
+[00:54:21] And if so,
+what are the implications of that?
+[00:54:24] Just great to put that on the table.
+[00:54:27] And second,
+[00:54:29] where does sentience come in, if at all?
+[00:54:32] Is that a totally, to use that
+terrible word,
+[00:54:35] orthogonal thing to intelligence.
+[00:54:38] - Yeah, I don't think it is.
+[00:54:39] - So what would even the metric
+be to measure that?
+[00:54:43] Yeah, those are both great questions.
+[00:54:44] So I mean, first of all,
+with respect to the like,
+[00:54:46] you know, is it easier to build it
+than to understand it?
+[00:54:50] In a sense, yes.
+[00:54:51] You know, I think, you know,
+there are times my colleague
+[00:54:55] Benjamin Bratton talks about times
+in which theory is ahead of practice.
+[00:55:00] You know, like when, you know, Einstein
+figured out relativity before we,
+[00:55:03] you know, we could
+[00:55:04] we could actually observe
+a lot of its effects in the universe.
+[00:55:07] You know, now we have gravity waves
+and so on, right?
+[00:55:09] In the century after, you know, we first
+started thinking about this stuff.
+[00:55:13] And then there are times
+when practice is ahead of theory,
+[00:55:16] as happened to the 19th century when,
+you know, Boltzmann didn't come up
+[00:55:19] with a complete theory of thermodynamics
+until well after we had steam engines.
+[00:55:23] And, I think we're
+in that kind of period now.
+[00:55:26] On the other hand,
+[00:55:28] it's not like it's not like
+these systems are inherently opaque.
+[00:55:31] You know, on the contrary, like, again,
+we can do neuroscience
+[00:55:34] on on models that are
+that are impossible to do in real life.
+[00:55:37] And we're
+learning at a tremendous rate.
+[00:55:40] So I'm not pessimistic about our ability
+to understand,
+[00:55:44] you know, everything that is going
+on, I just think, you know,
+[00:55:46] we're at a moment
+when we are able to make things,
+[00:55:49] in advance of having the full
+theoretical understanding.
+[00:55:54] But, you know,
+we've obviously had things around us
+[00:55:57] for a long time that far exceed
+our theoretical understanding, i.e., each other.
+[00:56:01] And we should also consider
+that the level of description
+[00:56:04] that is appropriate for different kinds
+of interactions varies.
+[00:56:07] You know, if I want to predict you,
+then psychology
+[00:56:10] is the right level of description.
+[00:56:12] Not not what your neurons or what
+the electrons in your brain are doing.
+[00:56:18] But as
+to the, the sentience question,
+[00:56:21] I mean, this is a hard one
+[00:56:23] because of course, you,
+you know, our ability to understand
+[00:56:27] what is going on in
+somebody or something else's head,
+[00:56:31] is only as good as our theory of mind.
+[00:56:33] I would also say that our ability
+to understand what is going on in our own
+[00:56:37] heads is only as good
+as our theory of mind.
+[00:56:39] I think that mind or consciousness
+is a theory of your own mind.
+[00:56:44] There are some funny experiments
+from the 70s that I think
+[00:56:46] kind of speak to this.
+[00:56:48] They probably wouldn't pass IRB now,
+but it involved
+[00:56:52] an attractive,
+[00:56:54] sort of,
+[00:56:56] female grad student, you know,
+[00:56:58] giving a questionnaire to a male subject
+after going across a bridge.
+[00:57:02] I think it might have happened here
+in Cambridge,
+[00:57:03] where there was like a a rickety bridge
+and a solid bridge.
+[00:57:07] And it's a questionnaire.
+[00:57:08] She gives him her number,
+afterward and says,
+[00:57:11] if you have any questions about it,
+you know, call me afterward.
+[00:57:16] And of course,
+the questionnaire is nonsense.
+[00:57:17] The real experiment, is just like,
+you know, does the guy try to pick her up?
+[00:57:23] And it turns out that after walking
+across the wobbly bridge,
+[00:57:26] the guy is much likelier 
+to try and pick her up,
+[00:57:28] because the feeling of nervousness
+about the bridge is misinterpreted
+[00:57:33] as attraction.
+[00:57:35] You know, we
+[00:57:36] constantly bullshit ourselves about
+what's going on inside our own brains.
+[00:57:40] There are a bunch of classic results
+in psychology, like choice blindness,
+[00:57:44] which I talk about a bit.
+[00:57:45] Peter Johansson's results.
+[00:57:48] Split brain experiments
+are extremely revealing in this way.
+[00:57:51] So, you know, I think that our theories
+of our minds are, you know, our sense
+[00:57:56] of self-consciousness, of awareness
+and so on.
+[00:57:58] But our idea that we are interrogating
+something, you know,
+[00:58:03] there's there's a kind of
+I don't want to say illusion because,
+[00:58:06] you know, all of reality is in some sense
+an illusion or a model.
+[00:58:09] But, it's not quite what we think.
+[00:58:12] I guess I would say.
+[00:58:20] - Do you see, the advent of AI,
+[00:58:24] or our ability to transfer intelligence
+horizontally, not through self-replication
+[00:58:29] as a step in the same trajectory
+of, the symbiogenesis,
+[00:58:35] like you described with that
+[00:58:36] mitochondria
+or with, parallel humans cooperating?
+[00:58:40] And if so,
+what does that look like for us with AI?
+[00:58:45] Are we going to be swallowed by it
+like mitochondria was,
+[00:58:48] swallowed by, celled beings?
+[00:58:50] Or does it look more like cooperation,
+or is this an entire different thing,
+[00:58:55] that we don't really know to imagine now?
+[00:58:58] - I mean, our our idea about, 
+I mean, it's in a way unfortunate
+[00:59:02] that the mitochondria inside archaea
+is the early example of some biogenesis,
+[00:59:07] partly because we have a kind of,
+[00:59:10] we feel for the poor little mitochondria
+[00:59:12] that got swallowed up by the cat.
+[00:59:13] I think that
+there's a lot of projection going on.
+[00:59:17] But we think about things in that way.
+[00:59:19] You know, the reality is
+there are more bacteria,
+[00:59:22] you know, after that
+symbiogenetic transition
+[00:59:25] by far and a greater variety of bacteria
+living in a greater
+[00:59:27] variety of environments
+than there ever were before that,
+[00:59:31] you know, including not only bacteria
+living inside other bacteria,
+[00:59:34] which is essentially what, you know,
+what eukaryotes are,
+[00:59:37] but also living inside the guts of animals
+that consist of many cells
+[00:59:40] which themselves consist of bacteria,
+[00:59:42] and so on. You've probably heard
+there are
+[00:59:44] like ten times more bacteria
+in your body than eukaryotic cells.
+[00:59:48] You know,
+and so it has enormously expanded the range
+[00:59:53] of what was, you know, what was already
+there is still there.
+[00:59:56] And it's there in many, many more contexts
+and ways than it was before.
+[01:00:00] So the idea 
+that these transitions
+[01:00:03] involve a loss or the ceasing
+[01:00:06] of the existence of the previous thing,
+I don't think is true
+[01:00:10] in the same way that individual humans
+certainly don't cease to exist
+[01:00:13] when we come together
+into symbiotic societies.
+[01:00:17] You know, in many ways, our freedoms
+and our potentials and our possibilities
+[01:00:21] as individuals are greater
+in the context of
+[01:00:24] a larger society
+than they would be
+[01:00:27] if we were,
+[01:00:29] you know, still hunter gatherers, and,
+not in all ways, right?
+[01:00:32] Hunter gatherers have certain freedoms,
+[01:00:35] that, you know,
+[01:00:36] that we as urbanized people don't.
+[01:00:39] But, you know, there are some pretty
+big trade offs there.
+[01:00:43] Right.
+[01:00:43] I'll take my, you know,
+being able to eat out and Netflix
+[01:00:47] and stuff, over, you know, over
+dying of the first major infection
+[01:00:52] tthat I encounter
+and needing to spend all of my time
+[01:00:54] figuring out how I'm going to get 
+my next meal.
+[01:00:58] But, yes, those are my options.
+[01:01:00] [audience] What do you think symbiogenesis
+with AI will look like?
+[01:01:06] I don't know.
+[01:01:08] But, you know,
+[01:01:10] if what's happening
+now is any guide,
+[01:01:14] it is that, you know, some people
+[01:01:19] are essentially
+[01:01:22] deskilling themselves, by having,
+you know, models do all sorts of stuff.
+[01:01:26] I see problems in education as teachers
+try and struggle to figure out how,
+[01:01:31] you know, what are the appropriate ways
+to incorporate,
+[01:01:33] AI into the classroom.
+[01:01:35] I also see people who are, you know,
+suddenly,
+[01:01:38] like, have jetpacks on
+and are doing incredible things.
+[01:01:42] You know, I hope,
+there are a bunch in this room.
+[01:01:44] I mean, this is certainly been
+my experience, you know, like my ability
+[01:01:47] to code
+complex stuff to do large
+[01:01:52] research projects,
+[01:01:54] you know, feels turbocharged in a way
+that it's kind of amazing.
+[01:01:58] Or, you know, my friend, Justin Smith,
+who's a humanist, you know, figured out
+[01:02:03] that these bizarre Turkic languages
+he was really interested in.
+[01:02:06] And suddenly he's, you know, super powered
+with respect to how,
+[01:02:09] he's able to study those,
+linguistic groups
+[01:02:13] that he's been interested
+in, you know, using the models.
+[01:02:16] So it's, you know, it's not just heaven.
+[01:02:19] It's certainly not just hell either.
+[01:02:21] It's very complex.
+[01:02:24] - Can I just piggyback on that real quick?
+[01:02:26] Which is should we be running
+these experiments in the lab
+[01:02:29] rather than at scale in society?
+[01:02:32] - Both. 
+- Why?
+[01:02:35] - Well,
+[01:02:36] you know, maybe there is an ideal world
+in which we could run
+[01:02:39] all of these things in the lab first.
+[01:02:43] I certainly think we should be running
+a lot of experiments in the lab,
+[01:02:45] and we should be learning
+as much as we can.
+[01:02:48] But, you know, I think about, say,
+what we've learned about social media
+[01:02:52] and its failure modes, and
+[01:02:56] cancellation campaigns and bullying
+[01:02:59] and, you know, polarization
+and all of that.
+[01:03:02] Could
+we have learned all of that in the lab?
+[01:03:04] I don't know,
+[01:03:06] I'm not sure.
+[01:03:08] You know, should we have not allowed
+any of those things to go out
+[01:03:11] into the wild until we'd had a few years
+in the lab to play with them?
+[01:03:15] That strikes me
+as a difficult proposition.
+[01:03:18] - Blaise.
+[01:03:19] I want to make sure
+we get one question in from our online
+[01:03:23] audience
+before we wrap up. So my apologies.
+[01:03:27] So we have a question:
+[01:03:28] Thank you for the great talk.
+[01:03:30] You proposed a solution
+to the soul/materialism problem
+[01:03:34] in the form of function.
+[01:03:36] But this reminds me of the mind
+body problem, where many modern
+[01:03:39] philosophers argue
+the need for the two to be intertwined.
+[01:03:43] If life is embodied computation,
+do you think that the bodies
+[01:03:47] of traditional computers
+may have similar impacts
+[01:03:51] on the functions or intelligences
+possible?
+[01:03:54] What role might quote unquote, body
+diversity play in the future of AI?
+[01:03:59] - Yeah, yeah, that's a great question.
+[01:04:01] So, you know, functionalism,
+[01:04:05] you know, it has a complex relationship
+with the mind-body problem
+[01:04:09] because, you know, the von
+Neumann style of functionalism,
+[01:04:12] where the computations
+are actually being done with atoms,
+[01:04:17] you know, as a which is how in the end,
+computations always have to happen, right?
+[01:04:20] There is no real version
+of a Turing machine.
+[01:04:25] That doesn't, you know, you know,
+boil down to manipulating, right,
+[01:04:28] if you're writing with ink, well,
+[01:04:30] it's a manipulator of of ink
+[01:04:33] molecules.
+[01:04:35] And, and the really interesting thing
+happens
+[01:04:37] when you can use those ink molecules
+to print another computer, right?
+[01:04:41] That's the von Neumann version of it.
+[01:04:42] So, does embodiment matter?
+[01:04:45] Of course it does.
+[01:04:46] I mean, you know, for one thing,
+the computation is not only happening
+[01:04:49] in our brains, it's
+happening in our entire bodies.
+[01:04:52] As I've described it, what the kidney
+does is also a computation.
+[01:04:57] And, that's maybe a little different
+from a traditional, notion
+[01:05:01] of what computing means.
+[01:05:02] So it's deeply embodied all the way down
+[01:05:04] and all of its
+relationships are deeply embodied too.
+[01:05:08] The relationships
+that we have with, with each other,
+[01:05:10] you know, boil down to, you know,
+not just abstract communication
+[01:05:14] of bits,
+but physical communication of atoms
+[01:05:19] that have been reconfigured
+in various ways.
+[01:05:22] So does that matter with respect
+to AI and computers?
+[01:05:25] Of course.
+[01:05:26] You know, and, you know, here
+we get into questions, for instance,
+[01:05:28] about energy and about materials.
+[01:05:32] You know, I didn't really have a chance
+to talk about energy much. But
+[01:05:34] the reason that living things metabolize
+is because computation costs energy.
+[01:05:40] You know, any time
+[01:05:41] you are erasing, information or
+compressing the face space of something,
+[01:05:44] anytime you write over
+[01:05:45] something that requires free energy
+inputs, that's the Landauer limit.
+[01:05:49] That's why everything alive
+[01:05:51] has to consume free energy,
+and it generates waste heat.
+[01:05:55] And it's the same reason
+[01:05:56] the computer has to consume free energy
+and generates waste heat.
+[01:05:59] As well.
+[01:06:01] And to the extent that
+[01:06:04] the resources are
+[01:06:06] as different and as orthogonal as possible
+[01:06:08] between AI and human beings,
+that's a good thing.
+[01:06:13] You know, and, largely 
+they are very different.
+[01:06:16] But of course, we both need energy.
+[01:06:19] II also think that, you know,
+intelligence has been an engine
+[01:06:22] that has unleashed
+more and more energy sources over time.
+[01:06:25] Hence the rise from 1 billion
+to 10 billion people
+[01:06:28] through internal combustion.
+Not sustainable.
+[01:06:31] But, you know, our intelligence
+has allowed us to figure out nuclear
+[01:06:35] and all sorts of other things
+[01:06:36] that you can't imagine bacteria
+on their own figuring out.
+[01:06:39] So, you know, will AI unlock further forms
+of, of energy?
+[01:06:44] I think obviously, yes.
+[01:06:47] And, you know,
+that's where some of that connection
+[01:06:49] between computation and embodiment
+and materiality really matters.
+[01:06:54] Great.
+[01:06:54] - Well, thank you so much.
+We're a little bit over.
+[01:06:57] So thank you all for staying with us.
+[01:06:59] And thank you so much to our amazing
+speaker, Blaise.
+[01:07:04] We're really pleased to have you.
+[01:07:13] And please come back to future BKC events.

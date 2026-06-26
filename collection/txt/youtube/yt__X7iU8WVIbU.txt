@@ -1,0 +1,829 @@
+[00:00:12] - [Host] All right, and we are back.
+[00:00:16] I'd like to introduce the first of our two
+[00:00:21] esteemed academics and product managers
+[00:00:23] to talk about some of the work
+that the lab has been doing
+[00:00:27] with Charlie Nesson,
+who many of you may know
+[00:00:29] is the co-founder of
+the Berkman Klein Center
+[00:00:32] and is kindly sharing
+some of his work today
+[00:00:34] along with product manager, Lara Schull.
+[00:00:36] So I'll let the two of you take it away.
+[00:00:40] (audience applauds)
+[00:00:45] - Can people hear me okay?
+[00:00:47] Okay, nice.
+[00:00:49] So this picks up one of the
+threads from the panel actually
+[00:00:51] about the constraints that exist on speech
+[00:00:53] in closed group settings.
+[00:00:54] So the risks that you face
+from people who might judge you
+[00:00:57] or who have direct power over you.
+[00:00:59] And we're talking about Nymspace.
+[00:01:04] I'm Lara Schull.
+[00:01:05] I use she/her pronouns.
+[00:01:06] I'm a product manager at the lab.
+[00:01:07] This is Professor Nesson.
+[00:01:09] - Charlie.
+- Charlie.
+[00:01:11] Do you wanna say a little about
+[00:01:13] why you founded the
+Berkman Klein Institute
+[00:01:15] interest in discourse?
+[00:01:17] - Why did I found this?
+[00:01:21] Well, I think it was in
+order to persuade Lessig
+[00:01:24] to come to Harvard.
+[00:01:26] That was like definitely a motivation.
+[00:01:31] It was just a view that
+cyberspace was opening up.
+[00:01:35] It was a completely new thing.
+[00:01:37] It was grounded in universities
+connecting with each other,
+[00:01:42] education was a tremendously
+motivating element
+[00:01:47] of the beginning of the Berkman Center.
+[00:01:50] It stayed that way for quite a while.
+[00:01:53] Then commercialism kind
+of crept in to the net
+[00:01:57] and into the focus of the center.
+[00:02:02] And I would say that this session,
+[00:02:06] unlike the last session, is
+focused back on the university.
+[00:02:11] It's university discourse
+that's my interest.
+[00:02:15] It's my classroom as the place
+that I start thinking from.
+[00:02:20] And it's that that's given
+rise to the exploration
+[00:02:24] of pseudonymy as an element
+that can be very positive
+[00:02:30] in an educational environment.
+[00:02:35] - Yeah, so what is Nymspace?
+[00:02:36] It's a pseudonymous discussion forum.
+[00:02:38] Right now it exists as a web app
+[00:02:40] that works on mobile and desktop.
+[00:02:43] It's not perfect, but
+we're gonna demo it today
+[00:02:45] and hopefully it will work.
+[00:02:48] And it's also fully open source.
+[00:02:50] The tech stack uses Vue,
+Node.js, and MongoDB.
+[00:02:53] So if you're an engineer
+and you wanna contribute
+[00:02:55] to our code, visit our GitHub,
+I'll share the link later.
+[00:02:59] And yeah, we're exploring how pseudonymity
+[00:03:00] can foster more open and
+constructive discussion
+[00:03:03] within closed group environments.
+[00:03:05] Professor Nesson's interest
+is primarily the classroom.
+[00:03:07] I'm interested in other
+environments as well,
+[00:03:09] like workplaces, community groups,
+[00:03:11] reading groups, et cetera.
+[00:03:16] The problem space that
+we're intervening in
+[00:03:19] is that open and honest communication
+[00:03:21] can be really difficult in
+closed group environments.
+[00:03:23] Closed group being there's
+some restriction on membership
+[00:03:26] and often but not always
+membership is sustained
+[00:03:29] over a period of time.
+[00:03:30] So a workplace, a classroom.
+[00:03:33] And it's difficult
+because there are risks.
+[00:03:35] There can be the risk of retaliation
+[00:03:37] from some authority figure
+if you say something
+[00:03:39] they don't like, a boss or a professor.
+[00:03:41] And that can also just be
+the risk of embarrassment
+[00:03:43] or social shaming.
+[00:03:46] And these risks are often more acute
+[00:03:48] if you are or you're believed
+to be in the minority.
+[00:03:55] Hand it to you to talk about
+the concept a little more.
+[00:03:58] - Well, all right.
+[00:04:01] Lara's talking about the risks
+[00:04:03] in a small group environment.
+[00:04:06] I wanna shift to talk about the freedoms
+[00:04:09] in a small group environment.
+[00:04:11] And I'd like to take off
+from something Deb described,
+[00:04:16] which is the intimacy gradient.
+[00:04:19] As he described it, it's
+an architectural thing
+[00:04:22] with the bedroom as the private space.
+[00:04:26] I would ask you to think about it
+[00:04:29] not with the bedroom as the core space
+[00:04:32] but as the self, the
+individual, the student,
+[00:04:37] the person who's come to the center.
+[00:04:40] And think of that core
+space there as just you,
+[00:04:45] just you in your mind
+where you have freedom
+[00:04:50] to think whatever you wanna think.
+[00:04:53] And then imagine what's the space
+[00:04:58] right outside the bedroom?
+[00:05:00] What's the space that's
+right outside of my mind
+[00:05:04] where I can think whatever I want?
+[00:05:07] That's this Nymspace environment.
+[00:05:10] That's this environment where I'm giving
+[00:05:13] voice to my thought.
+[00:05:16] I'm giving voice in a
+closed group of a classroom
+[00:05:21] or in the closed group of our Center
+[00:05:24] or in any other of these closed groups
+[00:05:27] that we're interested in.
+[00:05:29] And the fact that it's pseudonymous
+[00:05:31] means that I can put the message out
+[00:05:36] but I don't get feedback coming
+back to me as an identity.
+[00:05:42] I'm able to speak in that environment
+[00:05:44] and give voice to my thought
+[00:05:47] with consideration that my
+classmates will be reading it.
+[00:05:52] It's not like I'm ready to
+say whatever I wanna say.
+[00:05:56] I have constraint and it is to me
+[00:06:00] a very important distinction
+between freedom of thought
+[00:06:05] which I believe is
+central to university life
+[00:06:10] and freedom of expression
+[00:06:13] which is also central to university life
+[00:06:17] but is different from freedom of thought.
+[00:06:20] It takes into account the norm established
+[00:06:25] between you and whomever
+you are speaking to.
+[00:06:29] And so I think of the pseudonymous spaces
+[00:06:33] that space right next to the black dot,
+[00:06:37] the space into which you speak
+[00:06:39] but it doesn't come back to you
+[00:06:43] in anything that's
+reputationally threatening.
+[00:06:47] And then beyond that space, all right,
+[00:06:50] then into full name space
+even in a small group
+[00:06:54] and then into the whole class
+[00:06:57] and then into the wider
+ambit of university
+[00:07:02] and at the outside, the public sphere.
+[00:07:07] So for me, it is crucial to understand
+[00:07:10] that university is not the public sphere.
+[00:07:15] University is a protected place
+[00:07:18] within which students come to learn
+[00:07:22] to be comfortable with themself
+[00:07:26] in the discourse that's internal,
+[00:07:29] in discourse with others
+within their class and so forth
+[00:07:34] and at the conclusion of the process,
+[00:07:37] graduate into the public sphere.
+[00:07:46] Ah, what do you see there on the left?
+[00:07:50] You see something called the Necker cube.
+[00:07:54] Can you all see it two ways?
+[00:07:58] Can everybody see it two ways?
+[00:08:05] Nope, nope, nope.
+[00:08:06] Come on, you keep looking, you'll see it.
+[00:08:10] One face is forward,
+another face is forward.
+[00:08:15] Aha.
+[00:08:18] Can any of you see it both
+ways at the same time?
+[00:08:25] No, you can't,
+[00:08:27] you can't.
+- One person can.
+[00:08:29] - You can think maybe
+you are, but you're not.
+[00:08:31] (audience laughs)
+[00:08:33] All right, so this is a metaphor.
+[00:08:36] This is a metaphor for dyadic thinking,
+[00:08:41] right-wrong thinking,
+[00:08:43] the idea that what we're talking about
+[00:08:46] are issues of difference
+[00:08:47] and there's one side that's right
+[00:08:49] and there's one side that's wrong
+[00:08:52] or there's one side that's false
+[00:08:54] and there's one side that's true.
+[00:09:00] So it's a very good metaphor
+[00:09:01] for discourse and disagreement.
+[00:09:13] Can you imagine looking at it
+from a third point of view?
+[00:09:20] Can you imagine taking
+that two-dimensional
+[00:09:24] representation of a cube
+[00:09:28] and seeing it in three dimensions?
+[00:09:33] Without it being dyadic,
+[00:09:36] is there a third point of view
+[00:09:39] from which it's possible
+to observe difference?
+[00:09:44] Well, yes, there is.
+[00:09:47] Zittrain showed it to me
+when I was teaching him.
+[00:09:51] That was almost like the
+beginning of the Berkman Center.
+[00:09:54] He was my student in an evidence class.
+[00:09:57] I teach about evidence and proof
+[00:09:59] and how do you know what's
+true and things like that.
+[00:10:03] And he came up to me
+with a three-dimensional
+[00:10:07] version of the cube.
+[00:10:08] Do we have a picture of it?
+[00:10:10] - We don't.
+- No, dear.
+[00:10:11] Oh, sorry.
+[00:10:14] Well, think about it this way.
+[00:10:18] The sun revolves around the Earth.
+[00:10:22] We can see it.
+[00:10:23] It comes up in the
+morning, it goes around,
+[00:10:25] comes back, comes around this way.
+[00:10:28] For many, many centuries, people thought
+[00:10:32] the sun revolves around the Earth.
+[00:10:38] When Copernicus imagined
+looking at the system
+[00:10:42] from the viewpoint of Mars,
+[00:10:46] suddenly the system looks different.
+[00:10:49] All right, this is what
+mediators have learned.
+[00:10:53] This is what a lot of good lawyers,
+[00:10:54] some not, but some good ones learned.
+[00:10:58] That is, to be able as a lawyer
+[00:11:03] to state a case in such a balanced way
+[00:11:08] right at the outset as you're opening
+[00:11:10] your argument to the bench,
+[00:11:13] right at the outset so that the judges
+[00:11:15] who had their idea about what was right
+[00:11:17] and what was wrong and were ready
+[00:11:19] to jump in with questions,
+[00:11:21] as they listen to you to state the case,
+[00:11:24] they say, ooh, this person understands
+[00:11:27] my side of the case on both sides.
+[00:11:33] And the result is that the bench is quiet
+[00:11:36] when you get to the point
+of making your argument.
+[00:11:40] They're saying, this
+guy really understands.
+[00:11:44] I'm interested in what
+that person has to say.
+[00:11:49] That's what good mediators do.
+[00:11:52] That's what good teachers do.
+[00:11:55] That's what students need to learn.
+[00:11:58] When at our last graduation,
+Dean Rakesh Khurana-
+[00:12:05] - [Lara] Charlie, I wanna make sure
+we have time to do an in-space.
+[00:12:09] - I'll tell you later.
+[00:12:10] - Grab Charlie after this
+if you wanna talk more.
+[00:12:14] I just wanna make sure we
+have time to get to the demo.
+[00:12:18] Okay, so recapping some of
+the benefits of pseudonymity.
+[00:12:24] It creates some kind of
+privacy similar to privacy
+[00:12:26] that exists in physical space
+[00:12:28] that enables intimacy and trust.
+[00:12:30] It also makes it easier
+to change your mind.
+[00:12:31] You can express something
+under a pseudonym
+[00:12:33] and then say something
+different in real life
+[00:12:35] without having to hold
+to your previous opinion.
+[00:12:37] You can hear a wider variety of opinions.
+[00:12:40] But also anyone who has used any kind
+[00:12:42] of anonymous social media
+before probably knows
+[00:12:44] that horrible behavior
+happens in pseudonymous
+[00:12:46] and anonymous spaces.
+[00:12:49] So you may indeed ask,
+[00:12:51] doesn't anonymity breed heinous behavior?
+[00:12:54] Yes, our hypothesis is that
+this is more often the case
+[00:12:57] in the open web where people
+have no stake in the group
+[00:13:00] that they're participating in.
+[00:13:01] So they don't really
+care if they get banned
+[00:13:03] from the Reddit group.
+[00:13:04] And they also don't really
+care if they completely blow up
+[00:13:06] the Reddit group and it ceases to exist
+[00:13:08] 'cause they didn't really
+have any connection
+[00:13:09] to it in the first place.
+[00:13:10] Similarly, if you don't
+know any of the people
+[00:13:12] who are in the group
+you're interacting in,
+[00:13:13] then you don't see the
+harm that you cause.
+[00:13:17] In closed groups, can
+the human relationships
+[00:13:19] that exist in the social dynamics
+[00:13:22] create different incentives
+[00:13:23] and incentivize more thoughtful engagement
+[00:13:25] and prevent some of the heinous behavior
+[00:13:27] that we see in anonymous
+open web environments?
+[00:13:30] We've seen some evidence that it can
+[00:13:31] and we wanna explore it a bit further.
+[00:13:34] Another question you might ask is,
+[00:13:35] shouldn't people just feel
+empowered to speak openly
+[00:13:38] without the cover of pseudonymity?
+[00:13:41] Yeah, in a lot of
+environments they should,
+[00:13:43] but the risks that we
+mentioned at the beginning
+[00:13:45] prevent people from doing that.
+[00:13:46] So we wanna try Nymspace
+as kind of a sandbox
+[00:13:50] or a first step towards more
+open true name communication.
+[00:13:56] One note on who this is
+and is not designed for,
+[00:13:59] it is designed for groups
+who actually want to
+[00:14:01] develop a more open
+discursive environment.
+[00:14:04] It's not gonna fix your
+discourse environment
+[00:14:07] if you have a hostile workplace
+[00:14:09] that consistently
+retaliates against people
+[00:14:11] who say negative things to bosses.
+[00:14:14] So our belief is that
+there are groups that exist
+[00:14:17] that do want to foster more
+open discursive cultures
+[00:14:20] and are struggling to do so.
+[00:14:21] I think Berkman is one,
+Harvard classrooms are another,
+[00:14:24] ASML is another, and I'm sure
+you all can list many more.
+[00:14:28] So in those groups, can Nymspace help?
+[00:14:31] I was now gonna do some
+top-down norm setting
+[00:14:33] before we jump into Nymspace,
+[00:14:35] but Charlie challenged me to do
+[00:14:36] some collective norm setting.
+[00:14:38] So once we get into Nymspace,
+[00:14:41] the first part, we'll spend five minutes
+[00:14:43] writing some norms that
+we wanna share as a group.
+[00:14:46] Unfortunately, for the
+people on the live stream,
+[00:14:48] you will be doing this in
+Zoom instead of in Nymspace,
+[00:14:51] so Guzzo, if you wanna
+crack open the Zoom chat.
+[00:14:56] Yeah, it's kind of,
+[00:14:58] Nymspace is designed for smaller groups.
+[00:15:00] This is kind of a feature and not a bug
+[00:15:01] since the risks of anonymity
+[00:15:02] tend to explode with group size.
+[00:15:04] So we're already gonna be
+pushing it a little bit
+[00:15:06] with this in-person group.
+[00:15:07] So hopefully, it won't break.
+[00:15:09] If it lags, then please bear with us.
+[00:15:16] Okay, we're gonna be having
+a bit of a discussion
+[00:15:18] around the question of what an ideal
+[00:15:20] collaborative learning
+environment looks like.
+[00:15:23] Folks, in person, if you
+turn to the back screen,
+[00:15:26] the back whiteboard, there is a short link
+[00:15:29] that you can use to access the Nymspace
+[00:15:31] on whatever device you have handy.
+[00:15:34] And folks, on the live stream,
+[00:15:37] we will invite you to
+participate in the Zoom chat,
+[00:15:39] which is not anonymous.
+[00:15:41] So feel free to think about
+[00:15:42] how you might express yourself
+differently if you were.
+[00:16:04] Can we go over to the Nymspace?
+[00:16:10] Cool.
+[00:16:11] Okay, just a couple things to point out.
+[00:16:13] Your pseudonym, sorry, Guzzo,
+you're not anonymous anymore.
+[00:16:17] Your pseudonym is in the top right corner.
+[00:16:18] You can change it.
+[00:16:20] These are randomly assigned,
+[00:16:21] so it has nothing to do with who you are.
+[00:16:24] And you'll see the threads
+on the left-hand side
+[00:16:26] and people already chatting.
+[00:16:29] Yeah.
+[00:16:31] Feel free to take a couple minutes
+[00:16:32] to think about what
+norms you would like us
+[00:16:34] to embrace as a group during
+this Nymspace session.
+[00:17:03] - [Charlie] Well, let me
+respond just a little bit
+[00:17:05] to something Lara said.
+[00:17:08] It definitely requires a group
+[00:17:12] in which there's some bond
+of trust to begin with.
+[00:17:18] You've all come here
+because you're interested
+[00:17:21] and presumably not here just
+to make things not work.
+[00:17:26] So you're, in a sense, amongst friends.
+[00:17:31] And that's just like a classroom,
+[00:17:34] especially a university classroom
+[00:17:36] where you sign up for classes,
+[00:17:38] you choose to take a particular course,
+[00:17:42] you're in a room with
+a lot of other people
+[00:17:46] whom you know are different from you,
+[00:17:49] who have different views,
+[00:17:51] and the whole idea of being
+able to transcend the biases
+[00:17:57] that each of us has from whatever
+[00:18:00] the particular growth environment
+we've come up through.
+[00:18:04] An exchange with people who've
+come from different places
+[00:18:09] and test out what it is that
+we came in knowing to be true
+[00:18:15] may turn out not to be quite so true.
+[00:18:18] And the very idea of understanding bias
+[00:18:23] and learning that bias is
+the point in a deliberation
+[00:18:28] at which you stop being open
+[00:18:33] to evidence that contradicts you.
+[00:18:36] As soon as you hit that point,
+[00:18:38] that's your closed mind point.
+[00:18:40] And the closed mind is
+the same thing as bias.
+[00:18:46] And so the very idea of
+a classroom enterprise
+[00:18:50] which has as its
+objective leading students
+[00:18:55] to be in a sandbox environment
+[00:18:58] that's got safe qualities to it,
+[00:19:01] but then progressing to
+face-to-face real space
+[00:19:10] discourse, engaging on the
+issues of difference among us,
+[00:19:17] it comes to see the differences that exist
+[00:19:21] as the very asset base that
+we have for transcendence.
+[00:19:28] And that's the learning process.
+[00:19:31] That's, I believe, the
+central learning process
+[00:19:35] of a university education.
+[00:19:38] But it's not just university.
+[00:19:40] It starts in kindergarten.
+[00:19:42] We're just at the far end of it.
+[00:19:47] - [Lara] Yeah, lots of contributions
+[00:19:48] in the chat about norms.
+[00:19:50] I just wanna call out a few
+[00:19:51] before we move on to the next session.
+[00:19:53] Respect pseudonymity and anonymity.
+[00:19:54] If you look over someone's shoulder
+[00:19:55] and see their pseudonym,
+keep that to yourself.
+[00:19:58] No personal attacks.
+[00:20:00] Assume positive intent.
+[00:20:03] A norm for this group can be brevity
+[00:20:05] since we're a temporary community
+[00:20:06] so we've gotta use our time efficiently.
+[00:20:07] I will keep that in mind.
+[00:20:10] Avoid spam, open-mindedness, civility.
+[00:20:12] Assume positive intent but
+be conscious of impact.
+[00:20:15] I'm sure you all have read the rest.
+[00:20:19] Do you wanna move over to the other thread
+[00:20:20] of what an ideal collaborative
+learning environment
+[00:20:23] looks like to you?
+[00:20:24] And the framing of the question
+[00:20:26] may be controversial to you.
+[00:20:27] You may not believe that
+such a thing exists.
+[00:20:29] So feel free to define that in however,
+[00:20:31] define and contest that
+in however way you like.
+[00:20:50] I'm gonna switch to the other thread.
+[00:20:51] Yeah.
+[00:20:59] - [Charlie] Is there a
+microphone so that anybody can-
+[00:21:01] - [Lara] I think I heard the question.
+[00:21:04] The ability to upvote, yeah.
+[00:21:06] We actually turned it off for this session
+[00:21:07] because I knew that with
+the number of people here,
+[00:21:09] it was gonna completely
+break if we had upvoting.
+[00:21:12] So usually you can keep in mind
+[00:21:14] what you might have upvoted.
+[00:21:15] But yeah, sorry, we turned that off.
+[00:21:19] - And turned it off on the theory
+[00:21:21] that the student coming in
+[00:21:24] starts with the simplest environment.
+[00:21:27] And then it gets complicated,
+[00:21:29] more complicated with other things
+[00:21:32] that you can do in the environment.
+[00:21:35] And one of those things is that
+[00:21:39] with a check of a box,
+[00:21:41] it becomes possible for you
+[00:21:43] to post your own thread questions.
+[00:21:47] That is, this is
+ultimately a coded version
+[00:21:52] of a Habermasian public space.
+[00:21:56] This is an ideal format in the sense of
+[00:22:01] it codes the Chatham House rule.
+[00:22:05] For those familiar, I'll
+just leave it at that.
+[00:22:12] Well-
+[00:22:14] - [Lara] Oh yeah, Guzzo, can
+we switch to the, thanks.
+[00:22:17] Do you wanna see what's
+going on in the chat?
+[00:22:20] - [Charlie] I need to do something?
+[00:22:22] - [Lara] No, do you wanna just,
+[00:22:23] if you wanna see what's
+going on in the chat.
+[00:22:25] - [Charlie] No, no, you see.
+[00:22:26] - [Lara] Okay.
+[00:22:27] - [Charlie] I look later.
+[00:22:28] - [Lara] Okay.
+[00:22:34] - [Charlie] My aspiration, I will say,
+[00:22:36] is for the Berkman Center to become,
+[00:22:40] to be, and be in the becoming of it
+[00:22:45] an ideal collaborative research community.
+[00:22:51] One in which we're not
+invested in negative,
+[00:23:00] unsupportive communication.
+[00:23:04] That's an aspiration for a classroom.
+[00:23:07] It's an aspiration for a center.
+[00:23:10] It's an aspiration for a university.
+[00:23:13] It's possibly an aspiration for a culture
+[00:23:19] that's not grounded in commerce.
+[00:23:22] It's ultimately an assertion
+[00:23:24] that the university discourse environment
+[00:23:27] is distinct from the
+commercial environment
+[00:23:33] and distinct from the
+political environment.
+[00:23:37] It is its own domain
+in which the very idea
+[00:23:42] of freedom of thought is appreciated
+[00:23:45] and freedom of expression is appreciated
+[00:23:50] as a mutual collaborative engagement.
+[00:23:54] I feel strongly that
+this is a very close link
+[00:24:00] to what Larry is interested in.
+[00:24:04] This is a democratic skill to get along
+[00:24:08] with other people and to be comfortable
+[00:24:10] in the different environments
+[00:24:13] in which each of us as individuals relate.
+[00:24:17] And if we can graduate
+students who are ready
+[00:24:22] to relate with excellent
+democratic skills,
+[00:24:26] we will be contributing to
+Larry's citizen assemblies.
+[00:24:35] - [Lara] I just wanna open the
+floor if anyone has thoughts
+[00:24:38] either on the tool, the concept,
+[00:24:40] the experience of using it,
+[00:24:42] places you might wanna use it,
+[00:24:43] places you would hate to use it.
+[00:24:45] Yeah, any thoughts?
+[00:24:49] - [Adji] Hi, my name is Adji.
+[00:24:50] I'm a master in design
+studies here at the GSD.
+[00:24:53] And I was a little curious to understand
+[00:24:56] a little bit more of how
+this tool would be used
+[00:24:59] within the educational sphere.
+[00:25:02] Because I think one of
+the great advantages
+[00:25:05] of having a online space to debate ideas
+[00:25:08] is also the ability to do it async.
+[00:25:13] And I guess that that's also something
+[00:25:15] that allows people to think
+further their thoughts
+[00:25:18] differently than when we are
+in the same physical space.
+[00:25:24] So I was wondering if the idea. if this is
+[00:25:27] to be used in a classroom,
+[00:25:28] then how would that work?
+[00:25:32] And if there would be a
+mediator or something like that?
+[00:25:36] Or no, if it's async,
+[00:25:38] how can we go back to
+things that were said
+[00:25:42] after discussions?
+[00:25:44] - I can give just a quick response
+[00:25:45] and then Charlie who's actually
+used it in his classrooms
+[00:25:47] can talk further.
+[00:25:48] But I think of it at least as a tool
+[00:25:51] that's designed for
+synchronous environments
+[00:25:53] where there is true name,
+real life communication
+[00:25:57] happening side by side with Nymspace
+[00:26:01] so that things that come up in Nymspace
+[00:26:03] can be addressed in real life.
+[00:26:05] And things that are said
+in true name expression
+[00:26:08] can be complemented with Nymspace.
+[00:26:10] I think there are other tools
+[00:26:12] that provide asynchronous
+communication for classrooms.
+[00:26:15] I think what's novel about this
+[00:26:16] is that it actually allows people to have
+[00:26:20] a way to interact with what's happening
+[00:26:23] in the true name discussion in real time.
+[00:26:25] But Charlie has used it, so.
+[00:26:28] - The two most useful ways of using it
+[00:26:33] that I've found from a
+teacher's point of view,
+[00:26:36] the opportunity to be able
+to pose a question to a class
+[00:26:42] and have each student in the class
+[00:26:45] take three minutes, four minutes,
+[00:26:47] five minutes to write a paragraph.
+[00:26:50] It's not instantaneous,
+call on you, you answer.
+[00:26:53] It's you get to think a little bit
+[00:26:55] before you say.
+[00:26:56] And then to be able to see
+[00:26:58] what every single person
+in the class has said
+[00:27:02] before we actually get into
+small group discussion,
+[00:27:06] face-to-face discussion,
+large group discussion.
+[00:27:10] The second thing, that's a great thing
+[00:27:13] for just dealing with
+the first mover problem
+[00:27:16] of the first hand that goes up.
+[00:27:18] All right, and teachers appreciate that.
+[00:27:21] The second is feedback
+at the end of class.
+[00:27:24] The idea of being able to
+have everyone in the class
+[00:27:29] feedback at the end of the class
+[00:27:31] and then I as a teacher
+read their feedback
+[00:27:36] and am able to respond to it
+[00:27:39] and start the next class
+[00:27:41] by everyone looking at my
+response to their feedback.
+[00:27:46] It builds a trust loop
+[00:27:49] that's based on the feeling of agency
+[00:27:51] that comes from being
+able to make a suggestion,
+[00:27:55] see that the teachers actually read it
+[00:27:59] and actually responding to it in some way.
+[00:28:02] It actually creates an
+increasing trust bond
+[00:28:07] within the group and
+an increasing attention
+[00:28:12] to just being supportive,
+being positive, being plus.
+[00:28:18] All right, your asynchronous question.
+[00:28:21] The feedback that I offer
+is a little asynchronous
+[00:28:25] and at the same time,
+it's also quite possible
+[00:28:29] to have a discussion continue after class
+[00:28:33] in that pseudonymous environment.
+[00:28:35] I haven't frankly spent
+that much time with that
+[00:28:40] but I can definitely
+see it's a possibility.
+[00:28:46] - [Guzzo] Just a question from online.
+[00:28:47] I just wanted to say that
+Institute for Rebooting
+[00:28:50] Social Media is not a bot.
+[00:28:51] There's a real person behind moderating
+[00:28:53] so you're hearing this person right now.
+[00:28:57] And the question is
+from Alexa Hyde saying,
+[00:29:00] how do you maintain pseudonymity in
+[00:29:03] a small group over time?
+[00:29:05] In a classroom, I imagine students
+[00:29:06] would eventually figure out who was who.
+[00:29:10] - [Charlie] First off, it's no big deal
+[00:29:14] if somebody figures out
+[00:29:15] who Elated Bilby is.
+[00:29:20] In fact, it's quite wonderful
+in a very small group
+[00:29:25] of like a dozen people, we
+start off with pseudonyms
+[00:29:29] as we get to know each other,
+[00:29:31] we get to realize who Elated Bilby is.
+[00:29:34] It's actually a way of
+starting to get to know people
+[00:29:40] from their text and learning more about
+[00:29:43] to a point where I know you well
+enough to know you're Guzzo.
+[00:29:47] That's, it's not a disaster
+that your pseudonymity
+[00:29:51] isn't rock solid.
+[00:29:54] And I've found that in a
+class of 36, let's say,
+[00:29:59] the pseudonymity is pretty solid.
+[00:30:02] And the idea of being
+able to open a discussion
+[00:30:06] with 36 people and then break
+into small groups of six
+[00:30:10] to actually discuss the subject,
+[00:30:13] it's just got a smooth quality to it.
+[00:30:16] So I don't mean to offer
+it as a form of anonymity
+[00:30:23] that's unbreakable.
+[00:30:25] That's not really the point.
+[00:30:28] - One more question.
+- Yeah.
+[00:30:30] - [Lara] We've got a couple minutes.
+[00:30:38] - [Catherine] Hi, Catherine Feldman.
+[00:30:39] I'm over at the business school
+[00:30:41] and I focus on human centered technology.
+[00:30:44] How do you balance incentivizing
+higher quality responses
+[00:30:48] with the pseudonymity and
+people wanting to have credit
+[00:30:52] for their good ideas?
+[00:30:53] How do you think about that trade off?
+[00:30:58] - How do I think about it?
+[00:31:01] Well, the first thing
+I found is that people
+[00:31:06] aren't so anxious to be
+credited with their idea
+[00:31:10] right off the bat.
+[00:31:12] They're interested in
+having it be respected.
+[00:31:16] And that doesn't require their name on it.
+[00:31:19] And when they see it respected,
+[00:31:21] then they'll speak it up in a room where,
+[00:31:24] okay, I know who you are.
+[00:31:27] And it helps out the person
+whose idea is not so good
+[00:31:33] 'cause they get a sense back
+[00:31:34] that maybe I gotta think more about this.
+[00:31:37] And often, it's more than
+possible for people to exchange,
+[00:31:43] to address Nordic Ocelot with
+a response @ Nordic Ocelot
+[00:31:49] and come back with it.
+[00:31:51] So we actually do have
+pretty good discussions
+[00:31:55] that actually unfold in
+the pseudonymous space
+[00:31:59] as well as leading into the outer spaces.
+[00:32:04] - I'd love to take more questions,
+[00:32:05] but we have to cut.
+[00:32:06] Can we go back to the
+slides for one second?
+[00:32:07] I just wanna show the GitHub links.
+[00:32:12] Yeah, if you wanna check out
+our GitHub, it's these links.
+[00:32:15] You can also come to me afterwards.
+[00:32:17] If you wanna use Nymspace,
+[00:32:19] feel free to reach out
+to both or either of us.
+[00:32:22] We would love for you to
+use it in your classrooms,
+[00:32:24] community groups, book clubs, whatever.
+[00:32:29] And yeah, thank you, Boaz at bocoup,
+[00:32:33] built a lot of what you've seen today.
+[00:32:34] Sebastian allowed us to
+host this on Harvard servers
+[00:32:37] instead of Charlie's computer.
+[00:32:39] Brendan has been the ASML
+engineering lead on this
+[00:32:41] for longer than I've been
+at the lab, so thank you.
+[00:32:43] And Anthony worked on
+this for long before I did
+[00:32:45] as well, and Nymspace has
+been around for a while.
+[00:32:46] So thanks.
+[00:32:47] - And thanks, thank Lara here.
+[00:32:49] (audience applauding)
+[00:32:50] Thank you, Lara.

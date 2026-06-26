@@ -1,0 +1,2038 @@
+[00:00:02] - All right, everyone, thank you so much.
+[00:00:04] My name is Meg Marco.
+[00:00:05] I'm the Senior Director of
+the Applied Social Media Lab
+[00:00:09] at the Berkman Klein Center.
+[00:00:11] Really pleased to welcome you here today,
+[00:00:13] and to welcome Dave Willner,
+[00:00:15] who is the co-founder at
+Zentropi, a company behind CoPE,
+[00:00:18] a best-in-class small language
+model, capable of accurate,
+[00:00:21] and most importantly, steerable
+content classification,
+[00:00:25] which is really exciting.
+[00:00:26] He was previously a non-resident fellow
+[00:00:28] at the Stanford Cyber Policy Center.
+[00:00:31] And he worked in various
+roles in industry,
+[00:00:34] including Head of Trust
+and Safety at OpenAI,
+[00:00:36] Head of Community Policy at Airbnb,
+[00:00:38] and Head of Content Policy at Facebook.
+[00:00:41] So we're very pleased to have Dave here.
+[00:00:43] He's an affiliate in our community,
+[00:00:44] and we're so pleased to welcome Dave.
+[00:00:47] (audience applauding)
+[00:00:52] - Hi, folks. It's good to be here.
+[00:00:54] Nice to see everyone.
+[00:00:56] I was here and gave a talk,
+[00:00:59] I think about a year and a half ago.
+[00:01:01] About why I thought that we should expect
+[00:01:05] that large language models would change
+[00:01:07] the way we did content
+moderation pretty substantially.
+[00:01:10] And in a lot of ways,
+[00:01:12] you can see this talk as
+a follow-on to that one.
+[00:01:15] I'm gonna do a little
+bit of sort of previously
+[00:01:18] on the next episode,
+because I'm in some sense,
+[00:01:20] in dialogue with myself in the past.
+[00:01:22] And then dive into some of the stuff
+[00:01:24] that we ended up working on
+in the last year and a half,
+[00:01:26] because when I gave that talk,
+it was very much a sort of,
+[00:01:30] this is totally gonna work, trust me,
+[00:01:32] it's gonna be a big deal, it's
+definitely gonna be helpful.
+[00:01:36] Here's all the reasons
+[00:01:37] why you should expect me
+to be right about this.
+[00:01:38] But there wasn't a lot in the way
+[00:01:39] of actual demonstrable proof.
+[00:01:42] My co-founder and I spent
+some time at Stanford
+[00:01:44] after that talk, working on some proof,
+[00:01:49] and have since then founded a company
+[00:01:50] based around that proof
+and done some more work.
+[00:01:53] So I'm actually going to get into
+[00:01:54] how we did some of what
+we did, well, what we did,
+[00:01:56] how we did some of what we did.
+[00:01:58] And then I'm also going to demonstrate
+[00:02:00] some of that live for you,
+[00:02:01] so you can see what I'm talking about
+[00:02:02] in a little sort of tactile, hands-on way,
+[00:02:05] before we get into interview
+and some questions.
+[00:02:10] Does this thing? There we go, okay.
+[00:02:12] So this is the sort of
+previously on the setup argument
+[00:02:16] for why we should expect this to work.
+[00:02:18] Traditional content
+moderation does not work well.
+[00:02:21] It is not really ever automated,
+[00:02:23] and when you use humans
+to do it, it is terrible.
+[00:02:27] And there's a couple of
+different reasons for this.
+[00:02:30] You can get really deeply into them,
+[00:02:32] and that could itself be
+an entire 20-minute talk.
+[00:02:35] But basically,
+[00:02:36] the way that we produce
+content moderation decisions
+[00:02:40] at scale is by regimenting
+a ton of human labor.
+[00:02:44] That labor is very hard to regiment.
+[00:02:45] It involves putting people
+in miserable circumstances
+[00:02:48] looking at awful things.
+[00:02:49] This was my first job.
+[00:02:51] I can say that from firsthand experience.
+[00:02:53] And on top of it, folks are
+not very good at doing it.
+[00:02:56] And this is not a,
+[00:02:57] "Oh, the folks doing it are
+not very good at doing it."
+[00:02:59] It's no humans are very
+good at doing this,
+[00:03:03] because in addition to being
+quite difficult cognitively,
+[00:03:06] it's kind of boring, and very stressful,
+[00:03:08] and involves coping with,
+[00:03:10] keeping a lot of text in your head,
+[00:03:12] while you're making live
+decisions under pressure,
+[00:03:14] which is just not an environment
+[00:03:15] that is conducive to super
+high quality decisions.
+[00:03:18] And then all of the automation we have
+[00:03:20] is just trained on the mediocre output
+[00:03:22] of that sort of miserable process
+[00:03:24] that we are using to power all of this.
+[00:03:27] And any of the automation
+that we have historically
+[00:03:30] had the sort of black box
+machine learning models
+[00:03:32] produce decisions that are
+inherently inexplicable.
+[00:03:35] They're not producing an
+argument as to why content does
+[00:03:37] or does not meet a given policy.
+[00:03:39] They're producing a prediction about
+[00:03:41] what the humans would've said,
+[00:03:42] if you had bothered to ask them
+[00:03:44] what they thought about this content
+[00:03:46] under the policies that you'd written.
+[00:03:48] So even when we try to automate,
+[00:03:50] the automation is meaningless.
+[00:03:51] The whole thing is sort
+of a shambolic mess.
+[00:03:54] It was the best we could
+do, but it wasn't great.
+[00:03:58] Now, I stood here a year and a half ago,
+[00:04:00] talking about how LLMs
+were gonna fix this.
+[00:04:02] And I still believe that's true,
+[00:04:04] but the stock foundation models
+have a number of problems.
+[00:04:07] When you try to use
+stock foundation models
+[00:04:11] to do either content
+moderation or policy writing,
+[00:04:14] you end up swimming upstream
+[00:04:16] against basically their
+strongly held priors.
+[00:04:18] The companies that release these models
+[00:04:21] do safety training on them.
+[00:04:22] This is a good thing. We're
+glad that they do that.
+[00:04:24] But what that means
+[00:04:25] is that they are essentially
+inculcating the model
+[00:04:28] through reinforcement learning
+[00:04:30] with a very particular perspective
+[00:04:32] on what a bunch of the subject matters
+[00:04:34] that you would want to deal
+with in writing a content policy
+[00:04:37] or classifying against
+a content policy mean.
+[00:04:41] And that means that if you
+need something specific
+[00:04:43] or idiosyncratic, either
+because you are say,
+[00:04:47] working for a very particular community
+[00:04:49] that's got a particular set of norms,
+[00:04:51] or even you're just trying
+to build an escalation queue
+[00:04:53] where you're only looking for a subset
+[00:04:55] of some problematic activity
+[00:04:57] because you wanna look at that first,
+[00:04:58] or deal with it faster,
+you're gonna have a hard time,
+[00:05:01] if you try to use stock
+language models to do this.
+[00:05:04] I can say this with confidence
+[00:05:05] because this was the
+first thing that we tried
+[00:05:06] during our fellowship at Stanford.
+[00:05:09] Didn't work well.
+[00:05:11] So you get something closer to a vibe
+[00:05:14] than you get an actual
+strict policy text following.
+[00:05:17] If you try to do something like
+[00:05:19] carve out protected categories
+[00:05:21] that you might typically
+expect to be on a list
+[00:05:23] of protected categories
+in a hate speech policy,
+[00:05:27] the stock models will
+not follow you there.
+[00:05:29] If you try to expand to include
+[00:05:32] some new or interesting group,
+[00:05:34] often they won't follow you there as well.
+[00:05:36] They're too anchored in their priors.
+[00:05:38] Okay, so what do we do about this?
+[00:05:40] When Samidh and I started at Stanford,
+[00:05:41] we were trying to figure out,
+[00:05:44] "Okay, can we fix this through
+better policy writing?"
+[00:05:48] And we published some articles about that.
+[00:05:49] The answer is like kind of yes,
+[00:05:51] but the policies you end
+up with are very painful,
+[00:05:53] they're very repetitive,
+[00:05:55] they're not super great for humans to read
+[00:05:59] because you end up
+having to repeat yourself
+[00:06:01] over and over again to essentially bully,
+[00:06:04] people call it prompt engineering.
+[00:06:05] I think of it as sort of model bullying.
+[00:06:07] To bully the model into the behavior
+[00:06:09] that you want it to show.
+[00:06:12] So eh, like kind of.
+[00:06:15] So we ended up asking
+ourselves the question,
+[00:06:16] "Okay, how could we actually
+train for this behavior?"
+[00:06:19] This responsive policy following behavior
+[00:06:21] that we wanted to see?
+[00:06:24] And the answer is that essentially
+[00:06:26] you have to consider is this.
+[00:06:28] And I will get into this,
+[00:06:28] I know that's a little
+bit much as a diagram,
+[00:06:31] but you have to construct a data set
+[00:06:33] that leaves the model no other options.
+[00:06:35] When you're fine-tuning
+a large language model,
+[00:06:38] it is going to find the laziest path
+[00:06:40] through the maze of data that
+you present to it, right?
+[00:06:45] Any fine-tuning exercise is essentially
+[00:06:47] the model playing a game,
+[00:06:48] where if it does the right thing,
+[00:06:50] from your perspective, it gets a cookie.
+[00:06:52] And it doesn't, it doesn't get the cookie.
+[00:06:54] And if you want to train for this behavior
+[00:06:57] that we were seeking of really actually
+[00:06:59] attentively following the
+details of a content policy text,
+[00:07:03] you have to construct a data set
+[00:07:05] such that the laziest answer
+is also the right answer.
+[00:07:09] And this is how we did that.
+[00:07:11] We did that by crafting
+a series of policies
+[00:07:14] for the same subject matter,
+[00:07:16] and applying them to the same example
+[00:07:18] over and over and over.
+[00:07:20] And then adding a label that followed
+[00:07:22] from each of those policies,
+[00:07:23] where the labels contradicted each other.
+[00:07:26] I'm gonna repeat that,
+[00:07:27] 'cause that can sound
+a little bit strange.
+[00:07:29] It's a little bit hard
+to talk about out loud.
+[00:07:31] But basically, you write
+multiple different definitions
+[00:07:34] of harassment, or sexual
+content, or hate speech.
+[00:07:36] Doesn't really matter, we
+did it for all of these.
+[00:07:39] You take the same example,
+[00:07:41] and you label it against each
+of those different definitions
+[00:07:45] with a binary outcome, a one, or a zero.
+[00:07:47] So all the answers here are commensurate.
+[00:07:49] It either meets the
+criteria, or it doesn't.
+[00:07:52] But it does or does not meet the criteria
+[00:07:54] for different reasons
+[00:07:56] downstream of what you
+said in the policy text
+[00:07:59] that constructed the category
+[00:08:00] that you were asking the
+model to classify into.
+[00:08:03] And you put all of that into a big pile,
+[00:08:05] both for the single subject matter area
+[00:08:07] that you're working in,
+[00:08:09] and across multiple subject matter areas.
+[00:08:11] And you fine-tune the
+model on all of that.
+[00:08:16] Here's a decent example
+of this in practice.
+[00:08:18] You can see here this sort of use,
+[00:08:21] this politician's example,
+[00:08:22] that we're constructing
+different correct labels.
+[00:08:27] And sometimes the same correct label,
+[00:08:29] but they're correct for
+different reasons, right?
+[00:08:31] And so the only way that
+the model can win the game
+[00:08:33] of guess the one or the zero,
+under these circumstances,
+[00:08:36] is to actually read the policy text
+[00:08:39] and pay very close attention
+to what it is saying.
+[00:08:45] Okay, this was the theory.
+[00:08:47] But in order to do this,
+[00:08:49] we needed to write a bunch
+of different content policies
+[00:08:52] that contradicted each other, like a lot.
+[00:08:54] Like not just a few, not three, not five.
+[00:08:57] We needed to write dozens,
+[00:08:59] across multiple different
+content policy areas,
+[00:09:01] which is very hard.
+[00:09:03] It's particularly hard to do well
+[00:09:05] at a really high degree of quality.
+[00:09:08] And even sort of figuring
+out what quality means
+[00:09:11] in the context of a content policy
+[00:09:12] is a sort of slippery and difficult idea.
+[00:09:16] So we faced this problem of like, okay,
+[00:09:17] we're gonna try to train this model.
+[00:09:19] We have this theory about how
+we're gonna get this to work.
+[00:09:22] How on earth are we gonna
+create all this training data?
+[00:09:25] So we had another problem to solve.
+[00:09:27] And the sort of interesting unlock
+[00:09:30] to get to scaling up content policy
+[00:09:33] was understanding that while LLMs
+[00:09:35] might not be very good at
+faithfully following the policies
+[00:09:38] exactly the way that we wanted them to,
+[00:09:40] they were very, very sensitive
+to differences in wording.
+[00:09:43] And so you could take a
+policy text that say I wrote,
+[00:09:48] and ask an AI to express an
+alternative version of the text
+[00:09:53] that had the same length,
+and the same format,
+[00:09:56] but used different language
+[00:09:58] to explain the ideas in the text.
+[00:10:01] So not to change what the policy meant,
+[00:10:04] but simply say what it meant again,
+[00:10:06] using different wording, in
+substantially the same style.
+[00:10:11] And then have an LLM
+use both of those texts
+[00:10:15] to grade the same examples,
+[00:10:17] and look at cases where
+it disagreed with itself
+[00:10:19] using a policy that should theoretically,
+[00:10:22] produce very similar outcomes.
+[00:10:24] And it turns out that those
+mismatches are edge cases.
+[00:10:28] In practice, if you've
+ever done this in industry,
+[00:10:30] a lot of the ways policies get
+refined when they're deployed
+[00:10:34] is that agents will use them,
+[00:10:35] multiple different people will use them,
+[00:10:37] and they will disagree with each other
+[00:10:39] about how to properly
+interpret the policy text,
+[00:10:41] giving you a sort of binocular vision
+[00:10:43] on what different examples mean.
+[00:10:45] This was a different way of getting at
+[00:10:47] that same process of edge case detection.
+[00:10:49] If we express the same policy idea
+[00:10:53] in multiple language forms,
+[00:10:57] the places where the same interpreter,
+[00:11:00] the same language model
+acting as an interpreter,
+[00:11:02] produced different verdicts
+were the places it turned out
+[00:11:06] where the policy was insufficiently clear
+[00:11:09] to bound the decision well.
+[00:11:12] And we were able to use this
+process to scale a policy.
+[00:11:16] And ended up producing I think,
+[00:11:18] something close to 70
+different policy variants
+[00:11:21] across seven or eight
+different policy areas,
+[00:11:24] all of which were
+internally contradictory,
+[00:11:27] building them into this big data set
+[00:11:28] of essentially a thicket
+of policies, where again,
+[00:11:31] if you took the corpus as a whole,
+[00:11:33] the only way for a model that you had
+[00:11:36] in the fine-tuning process
+to learn, to predict,
+[00:11:40] whether or not a given
+example met your criteria
+[00:11:44] was for it to really,
+really closely pay attention
+[00:11:47] to what the policy deck said.
+[00:11:49] And there was a pretty broad variety
+[00:11:52] of differentiation within these policies.
+[00:11:55] Some of them were very contradictory,
+[00:11:57] some of them were completely
+identical to each other
+[00:11:59] except had a single category,
+or a single line removed,
+[00:12:03] and the examples flipped
+[00:12:04] that just fell inside that category.
+[00:12:07] So it's not just differences in meaning,
+[00:12:09] it's also differences in sort
+of the scale of difference
+[00:12:14] between the policies to teach the model
+[00:12:15] to both think about broad
+differences in form,
+[00:12:18] and very, very small
+differences in the details.
+[00:12:21] That turned out to work pretty well.
+[00:12:24] So we ended up with a nine
+billion parameter model,
+[00:12:26] which is small enough to
+run on your MacBook Air,
+[00:12:29] albeit slowly.
+[00:12:31] That outperforms many of the
+frontier models at the time,
+[00:12:35] 'cause this was from last year,
+[00:12:38] while being 1% of their size.
+[00:12:41] Which had a ton of advantages in practice,
+[00:12:43] because a much smaller model
+[00:12:45] is something that you can run locally.
+[00:12:47] It's something that we were
+comfortable open-sourcing,
+[00:12:49] 'cause it's not like the model itself
+[00:12:51] is a particularly spicy
+or powerful machine.
+[00:12:54] It also means that it can be deployed
+[00:12:56] and used in practice at scale,
+[00:12:58] which is an essential
+criteria for this being
+[00:13:00] an actually helpful contribution
+for people in practice.
+[00:13:04] So there are a few
+important constraints here
+[00:13:10] in terms of how I am thinking about this,
+[00:13:12] sort of underlying premises.
+[00:13:15] Because we're doing this binary labeling,
+[00:13:18] you have to stick to sort of
+[00:13:21] single category subjects, right?
+[00:13:24] We weren't playing in this like,
+[00:13:25] "Hey, I want a gradation of severities."
+[00:13:29] The model can't do that kind of thing.
+[00:13:31] You can use the model to
+construct something like that
+[00:13:33] by simply writing multiple policies
+[00:13:35] for the different severities
+that you want to classify for.
+[00:13:37] And because it's small,
+[00:13:38] you just run it multiple
+times, which is fine.
+[00:13:41] But the model on its
+own is just telling you,
+[00:13:43] is it in, or is it out?
+[00:13:44] Yes or no.
+[00:13:46] You have to be very careful
+about how you write for this
+[00:13:49] in terms of your language
+around sort of intention
+[00:13:53] and meaning and goal and purpose.
+[00:13:56] I sometimes joke that
+we're industrializing
+[00:13:58] postmodern English class.
+[00:14:00] Like all the authors are
+dead. Nothing means anything.
+[00:14:04] Nobody intended anything.
+[00:14:05] The only question that we are asking here
+[00:14:07] is what does it say?
+[00:14:09] If you want to model
+for intention or goal,
+[00:14:11] you do that through how
+you construct the criteria.
+[00:14:14] You don't ever ask the robot to guess
+[00:14:17] what somebody felt in their
+heart when they wrote something.
+[00:14:19] You ask, "What do these words say?"
+[00:14:21] Very, very strictly,
+[00:14:23] which can be a little bit
+difficult for people to stick to.
+[00:14:26] And at least the model that
+we've open source is text only.
+[00:14:28] Although we do have a version internally
+[00:14:31] that also is capable
+of working with images.
+[00:14:33] It's relatively new,
+[00:14:34] so we're still trying to
+figure out how well it works.
+[00:14:39] Okay, so, cool, fine, we did all of this.
+[00:14:43] But that method that I talked about,
+[00:14:44] yeah, we were able to use it
+[00:14:46] to scale up the policy production process
+[00:14:48] but it still took like a year,
+and a ton of labor for me,
+[00:14:52] and a bunch of grad students,
+like it was not fast.
+[00:14:55] It just wasn't completely impossible,
+[00:14:57] which is sort of what I would've assumed
+[00:14:59] before we had figured out the technique.
+[00:15:02] And so we ended up thinking,
+[00:15:04] "Okay, great, you've got this model,
+[00:15:06] it can respond really quickly
+[00:15:07] to well-written content policies.
+[00:15:09] But how do you actually
+systematize what we were doing
+[00:15:12] in a way that was usable to other people?"
+[00:15:14] Because it worked, but it
+was like kind of janky,
+[00:15:17] it was kind of expensive, it was slow.
+[00:15:19] We were still reliant on external systems,
+[00:15:21] which were very helpful, but
+were not exactly cheap to use.
+[00:15:24] So from like a policy
+refinement point of view,
+[00:15:26] we had this thing that seemed
+like it could be made better.
+[00:15:29] That was really valuable.
+[00:15:32] The sort of the critical insight here
+[00:15:34] was to reframe what we were doing.
+[00:15:37] We had been doing that
+policy collision process
+[00:15:40] to look for edge cases.
+[00:15:41] But another way to think of that
+[00:15:42] is to understand that if
+you're building a policy
+[00:15:46] and you have a set of examples
+[00:15:48] that you're labeling against it,
+[00:15:50] those things are not separate objects.
+[00:15:51] You're really engaged in a fitting process
+[00:15:54] between the policy text as
+an articulation of the values
+[00:15:58] you want to try to use to categorize,
+[00:16:00] and the individual decisions as played out
+[00:16:02] on the specific examples you have.
+[00:16:04] And those things are in
+dialogue with each other.
+[00:16:06] We often hear people in the industry
+[00:16:08] talk about golden datasets,
+[00:16:10] but the concept of a golden dataset,
+[00:16:12] absent a policy that defines it,
+[00:16:15] just like doesn't mean anything.
+[00:16:17] Skipping back to this,
+everything is meaningless,
+[00:16:20] and we define it in this
+exercise point of view.
+[00:16:24] You have to work on them
+both at the same time.
+[00:16:26] If you change a policy,
+[00:16:28] unless you have an encyclopedic knowledge
+[00:16:29] of the 1,000 examples in your golden set,
+[00:16:32] you can't predict how that
+will actually play out
+[00:16:34] in flipping the real examples.
+[00:16:36] And you're probably
+pretty bad at predicting
+[00:16:38] how you will feel about
+those examples flipping.
+[00:16:40] And so instead of working
+on those things separately,
+[00:16:42] you have to work on them together.
+[00:16:44] And that realization from doing this
+[00:16:46] over and over and over again
+led to a different approach
+[00:16:50] to achieving the same end
+of policy optimization.
+[00:16:53] Now that we had CoPE as a model.
+[00:16:55] Because CoPE as a very small model
+[00:16:57] meant that we could essentially
+[00:17:00] brute force policy improvement
+[00:17:02] by checking how well the model understood
+[00:17:07] what you thought you meant
+by comparing its outcomes
+[00:17:10] to your outcomes for that
+policy golden set pairing.
+[00:17:14] So you could take a policy text,
+[00:17:15] take a set of examples you'd
+labeled against that text,
+[00:17:18] have CoPE follow the policy,
+[00:17:20] look at all the places
+where it disagreed with you.
+[00:17:23] And that was another way of
+detecting potential edge cases,
+[00:17:26] where either your own decisions
+[00:17:29] under the text of what you
+had written were incorrect,
+[00:17:32] or the text that you had written
+to define what was correct
+[00:17:36] was under specified
+such that it was vague.
+[00:17:39] And critical point here, CoPE as a model,
+[00:17:42] it's giving you a final
+token prediction, right?
+[00:17:44] It's a language model.
+[00:17:45] So it's printing out a
+one, or a zero, at the end.
+[00:17:47] And we were actually able
+to use the confidence
+[00:17:49] of the final token prediction
+to help guide this process,
+[00:17:52] because the places where
+the model is least confident
+[00:17:54] but doesn't agree with you,
+[00:17:56] tend to be the places where
+you're most underspecified,
+[00:18:00] because it's least clear to the
+model what you meant to say,
+[00:18:04] it's the places where it's
+closest to changing its mind,
+[00:18:06] for lack of a better way of putting it.
+[00:18:08] And we were able to use this
+to put together a system
+[00:18:11] that can very, very quickly
+help you revise policy texts
+[00:18:17] and revise the labels that
+you have paired with them.
+[00:18:20] It does not get you to perfect.
+[00:18:21] I do not wanna present this as magic.
+[00:18:22] But it does get you to 85 to 90% accuracy
+[00:18:27] way faster than doing this by hand,
+[00:18:30] or doing this through
+training a set of humans.
+[00:18:34] I'm gonna show this to you
+all live really quickly here.
+[00:18:37] Well, partially live.
+[00:18:39] The optimization process,
+[00:18:40] where it does the thinking
+for you, takes 20 minutes.
+[00:18:42] So I'm going to show you one
+that is already finished,
+[00:18:45] because we don't have 20
+minutes to sit around here
+[00:18:47] and watch it run.
+[00:18:50] The watching it run part
+is not terribly exciting.
+[00:18:53] It's just the loading bar.
+[00:18:55] But before I get to showing that off, one,
+[00:18:58] if you're interested in any of this,
+[00:19:00] here are QR codes for going
+and downloading the model.
+[00:19:03] It's open source.
+[00:19:05] If you wanna talk to us, that's
+the one down at the bottom.
+[00:19:07] The platform we've put together.
+[00:19:08] This is the mild shield
+part of the presentation,
+[00:19:10] but it's free.
+[00:19:11] You can just go sign up
+and play around with this.
+[00:19:13] The magic trick where we rewrite
+your policies for you part
+[00:19:16] will eventually hit you up for money,
+[00:19:17] but you can definitely use
+the relabeling part of it
+[00:19:20] on your own to just mess
+around for as long as you want.
+[00:19:24] And before diving into thank you,
+[00:19:26] so I don't have to switch
+back to the presentation,
+[00:19:30] I wanted to just acknowledge all the folks
+[00:19:31] that helped us get this far.
+[00:19:32] 'Cause this wasn't just
+something that I did,
+[00:19:34] or Samidh did, on our own.
+[00:19:36] There were a ton of
+people and institutions
+[00:19:38] that supported this work,
+[00:19:40] either directly or through free credits
+[00:19:43] to do stuff with magic robots.
+[00:19:45] So with that,
+[00:19:47] I'm gonna see if I can get
+into the other window here.
+[00:19:54] And probably...
+[00:20:01] There we go.
+[00:20:03] How do I make this go away? More?
+[00:20:10] Hide video panel? Or hide
+floating meeting control?
+[00:20:12] There we go, okay, cool.
+[00:20:15] So this does two things.
+[00:20:18] I'm gonna show you initial
+policy bootstrapping,
+[00:20:21] and then I'm gonna show you
+[00:20:22] the sort of more completed process,
+[00:20:24] but we're gonna skip
+the actual optimization.
+[00:20:26] So first thing we're doing here
+is we can just live generate
+[00:20:31] a reasonably decent content
+policy for a given subject.
+[00:20:34] I'm gonna stick to something
+relatively non-spicy
+[00:20:36] for everybody's eyes.
+[00:20:38] So we're just gonna do...
+[00:20:42] Is this showing up on
+the webinar by the way?
+[00:20:44] Great, perfect.
+[00:20:50] So this actually lets us input examples.
+[00:21:03] We can test see how they
+classify. Okay, pretty reasonable.
+[00:21:06] You could dump a bunch more stuff in here,
+[00:21:08] which is important for later.
+[00:21:10] But for now,
+[00:21:14] we're just gonna go deploy
+this, give it a second.
+[00:21:18] It will then produce a policy
+text, which I'll show you.
+[00:21:21] And then I'm gonna
+script to another version
+[00:21:22] of harassment policy, where
+I've done the improvement loop
+[00:21:25] against a set of labeled data.
+[00:21:31] So this is what the policies
+this thing spits out
+[00:21:33] looks like.
+[00:21:34] This is downstream of a bunch of guidance
+[00:21:36] about how to write well for CoPE.
+[00:21:39] You can just go generate these,
+[00:21:41] if you wanna go play around with this.
+[00:21:43] They generally have a series of sections.
+[00:21:45] You'll get sort of a
+definition of terms section
+[00:21:48] that defines really
+important words or concepts,
+[00:21:51] where you really, really
+care about what they mean.
+[00:21:54] You'll get a section where we talk about
+[00:21:56] the interpretation of language.
+[00:21:57] This is guidance around how to read,
+[00:22:00] if under the rest of the
+guidance you've given,
+[00:22:02] you're unclear, so like,
+what are your defaults?
+[00:22:04] And then you define what is
+included in your criteria,
+[00:22:10] what things should be marked as a one?
+[00:22:12] And what things that should
+be explicitly excluded
+[00:22:15] even if they meet your inclusion criteria.
+[00:22:18] You can also put more narrow
+carve outs into inclusions
+[00:22:21] by actually writing them directly
+into the individual lines.
+[00:22:24] These override everything above.
+[00:22:26] So they would say, "If
+this, but not this."
+[00:22:29] And again, the background
+assumption here is,
+[00:22:31] nothing meets your criteria,
+[00:22:33] unless you explicitly say that it does,
+[00:22:35] because we're purely constructing
+[00:22:37] a policy out of nothing here.
+[00:22:40] This optimization over on the side
+[00:22:42] is the thing that I can show
+off if we upload some data,
+[00:22:45] but we don't wanna spend
+20 minutes doing that.
+[00:22:47] So for context, this is the F1
+[00:22:50] which is sort of a balanced
+number between precision
+[00:22:52] and recall score
+[00:22:54] of a sort of mediocre
+initial policy version.
+[00:22:58] I ran the optimizer
+against the 500 results
+[00:23:01] that I had uploaded.
+[00:23:02] These are all different individual results
+[00:23:05] that we've classified here.
+[00:23:06] You can watch it do that
+classification in real time.
+[00:23:09] And we ran those optimizers.
+[00:23:12] So that's running through 500 examples,
+[00:23:14] using that specific policy
+text, like right now.
+[00:23:18] The system itself also came
+back with a bunch of suggestions
+[00:23:21] about how to make the
+policy text itself better.
+[00:23:25] You can get into the detailed criteria,
+[00:23:26] as well as some places where it thinks
+[00:23:28] that I labeled incorrectly,
+and that I might want to,
+[00:23:31] according to my own stated criteria,
+[00:23:35] and I might wanna revisit those labels.
+[00:23:38] It can get pretty subtle.
+[00:23:40] The creating a new Silencing
+and Hostile Directives category
+[00:23:43] is kind of interesting.
+[00:23:44] Goes sort of interesting directions
+[00:23:46] based on what's in the data.
+[00:23:47] You can apply that
+improvement through this,
+[00:23:57] which I have already done.
+[00:23:59] And if we switch to
+that new working draft,
+[00:24:03] you'll notice the F1
+scores jumped from the 50s
+[00:24:06] into the low 80s in a single run.
+[00:24:09] Now, you don't always get
+results quite that dramatic.
+[00:24:13] Your starting point is usually
+a little bit better than 50%.
+[00:24:16] And getting beyond the sort
+of upper 80s into the 90s
+[00:24:19] can get hard, frankly even for
+me, with manual refinement.
+[00:24:23] But it is a broadly working system
+[00:24:26] to get you to pretty
+accurate classification
+[00:24:30] for essentially any arbitrary
+criteria that you want.
+[00:24:33] And this has implications
+both in trust and safety,
+[00:24:35] but also frankly,
+[00:24:36] for any classification that
+you need to do on text.
+[00:24:40] So with that, let's talk.
+[00:24:42] - All right, thank you.
+(audience applauding)
+[00:24:52] So, I'm immediately, my
+first thought is the feature
+[00:24:58] is not in fact model bullying.
+(Dave laughing)
+[00:25:03] - We pre-bullied the model for you.
+[00:25:05] - We pre-bullied the model.
+[00:25:08] So you got into this from a
+background in trust and safety.
+[00:25:10] But I mean, I like how you ended
+[00:25:12] on the sort of broad applicability of this
+[00:25:15] to any sort of text thing.
+- Yeah.
+[00:25:18] - Where does your imagination go next?
+[00:25:21] - Oh, I mean, in terms of how
+you can use stuff like this?
+[00:25:23] - Yeah.
+[00:25:24] - Yeah, I mean,
+[00:25:25] so we came to this from a
+safety-oriented interest,
+[00:25:30] frankly out of an urgent concern
+[00:25:33] with figuring out how to use AI
+[00:25:36] to help us deal with the problems
+[00:25:37] that AI was going to create, right?
+[00:25:39] It's gonna make a lot of content,
+[00:25:40] and some of it's gonna be not awesome.
+[00:25:43] And so it seemed to us
+from just like a scaling,
+[00:25:46] keeping up point of view,
+you need to figure out AI,
+[00:25:48] how to use AI to help you do that,
+[00:25:50] or you're not gonna be able to keep up.
+[00:25:51] It's not like our historic
+systems worked well.
+[00:25:55] And so that's how we came into it.
+[00:25:57] But the thing we've ended up making
+[00:25:59] is essentially an arbitrary
+category classifier.
+[00:26:04] And if you sort of really
+zoom out and think about
+[00:26:06] how much of the web is powered
+by sorting stuff into piles,
+[00:26:11] like there's potentially a
+lot of applicability for this
+[00:26:14] in things like feed ranking,
+[00:26:15] in things like search optimization,
+or even like powering,
+[00:26:19] I mean like frankly Google
+search is powered downstream
+[00:26:21] with a bunch of category sorting criteria.
+[00:26:23] Very, very, very complicated ones
+[00:26:25] that I would not claim CoPE
+could handle right now.
+[00:26:28] But you can sort of see where this goes,
+[00:26:30] as a proof of concept.
+[00:26:31] And then on top of it,
+[00:26:33] I think there's interesting
+novel emergent spaces
+[00:26:35] around quality assurance
+for things like MCPs,
+[00:26:40] or like Anthropic launched
+Skills over the weekend,
+[00:26:44] which is super cool.
+[00:26:44] If you haven't played
+with it yet, you should.
+[00:26:47] Those are distributable.
+[00:26:48] How do you know that they're not evil?
+[00:26:49] 'Cause just some random
+guy put it on GitHub.
+[00:26:52] So there's gonna be a lot of
+need for review of text objects
+[00:26:56] and having very lightweight
+language models that can do that
+[00:27:00] for arbitrary preferences
+seems pretty broadly useful.
+[00:27:04] - Yeah, it really does.
+[00:27:07] So when you think back about
+trust and safety though,
+[00:27:11] I think it kind of comes back to the idea
+[00:27:13] that it's a concept that I
+think, an opinion that we share,
+[00:27:19] is that humans are particularly good
+[00:27:21] at classifying traumatic,
+[00:27:23] I mean what you were saying
+at the very beginning
+[00:27:24] where it's like,
+[00:27:25] "Oh, keep this entire corpus
+of policy into your head,
+[00:27:28] and then view something
+[00:27:29] that's really bloodcurdling and horrible,
+[00:27:32] also do that at scale all the time."
+[00:27:36] Are humans meant to be doing this?
+[00:27:38] Is this a better way to go?
+[00:27:40] And do we lose anything
+[00:27:42] when we eliminate that
+person from the loop?
+[00:27:44] Or is it just broadly beneficial?
+[00:27:47] - I'm pretty pro-automation at this level
+[00:27:51] of the decision-making process.
+[00:27:56] And this was some of
+the prior talk I gave,
+[00:27:59] and I didn't dwell on it too much here,
+[00:28:00] 'cause I wanted this to
+be more of a how we do it.
+[00:28:03] But I do not believe that people are,
+[00:28:11] I do not believe that we can
+realistically create a system
+[00:28:14] where human beings do the
+amount of classification
+[00:28:19] that we need to have done, well,
+[00:28:23] in a way that is not immiserating.
+[00:28:25] Like both that I think
+the immiserating thing
+[00:28:28] has been dwelled on a lot, right?
+[00:28:29] There's been a lot of other
+folks who have talked about
+[00:28:30] how content moderation can be
+traumatic for the moderators
+[00:28:33] and that is itself a sufficient motivation
+[00:28:35] to try to achieve
+replacement there, right?
+[00:28:38] There are some jobs that
+cannot be made good,
+[00:28:40] they should just be made not jobs anymore,
+[00:28:42] and that's actually okay.
+[00:28:44] In the same way that we
+stopped having people
+[00:28:46] go into the hand-smashing
+machine in 1855 London.
+[00:28:49] Like that was good, actually.
+[00:28:53] But also, in this particular context,
+[00:28:56] this is basically a
+precision manufacturing job.
+[00:29:00] Like what we're really talking about
+[00:29:02] is the mass production of sorting stuff.
+[00:29:04] And humans are beautiful and wonderful
+[00:29:08] and magical and unique, and
+how many of you in this room
+[00:29:10] can draw a circle freehand?
+[00:29:13] I can't, right? Like we're not awesome.
+[00:29:18] Some of us, a very small number of us
+[00:29:20] are very good at precision
+in very particular domains,
+[00:29:22] which is very valuable.
+[00:29:23] And the folks who would
+probably be completely amazing
+[00:29:26] at doing content moderation
+super excellently,
+[00:29:28] are being hedge fund managers,
+[00:29:30] staring at Excel
+spreadsheets or something.
+[00:29:32] Like it's just not a thing
+[00:29:34] that we're gonna be able to scale up
+[00:29:35] through the bulk recruiting of people,
+[00:29:36] particularly under the
+economic conditions.
+[00:29:39] The work is going to happen under,
+[00:29:41] given the amount of it
+that has to be done.
+[00:29:43] And so I think it's both good morally,
+[00:29:45] but the results are almost certainly
+[00:29:47] going to be higher quality,
+[00:29:49] as we get these systems dialed in.
+[00:29:51] That said, you do still
+need human supervision
+[00:29:55] at the level of what it is that we want.
+[00:29:58] Which is why these sort of
+policy revision systems,
+[00:30:01] it's helping you get closer
+to what you meant to say,
+[00:30:04] but it's always checking back in with you
+[00:30:06] about whether or not this
+is what you wanted to say.
+[00:30:10] Because it shouldn't be
+deciding what we want.
+[00:30:13] It should be helping us figure
+out how to better express it.
+[00:30:16] - So once you fine tune this
+[00:30:17] and make it into a smaller model
+[00:30:19] that's more sort of
+compliant to the policy,
+[00:30:21] does that have any safety implications?
+[00:30:24] Do you worry about that at all?
+[00:30:26] And I just turned everything
+into an apocalyptic question.
+[00:30:29] - No, no it's fine.
+- So I apologize.
+[00:30:30] But does that keep you
+up at night a little bit?
+[00:30:32] - Well so we trained it so
+intensely for classification
+[00:30:35] that we kind of ruined
+it as a language model.
+[00:30:36] - Yeah.
+- So no, actually.
+[00:30:38] - Yeah.
+[00:30:39] - 'Cause it really only
+does the one thing, right?
+[00:30:41] It's kind of an interesting,
+like the race with LLMs
+[00:30:44] has been towards general
+purpose technology, right?
+[00:30:46] And everybody is aspiring
+to build the one robot
+[00:30:49] that does everything.
+[00:30:50] And in some ways you can see
+the argument I'm making here
+[00:30:52] is like, yeah that's cool,
+[00:30:53] as a way of creating a
+general baseline intelligence,
+[00:30:55] but then specialization
+is still useful actually.
+[00:30:58] And this is just re-specialized back out
+[00:31:01] into a very narrow particular domain,
+[00:31:03] and we're caching in that specialization
+[00:31:05] for being very small, while
+still being very good,
+[00:31:09] instead of having to be very big,
+[00:31:10] which gets you faster and cheaper,
+[00:31:11] and more environmentally friendly
+and all this other stuff.
+[00:31:14] - So is the next path,
+you said images, video?
+[00:31:18] - Yeah.
+- What's the next?
+[00:31:19] - Yeah, so we have a version
+[00:31:22] that uses a multimodal model as a base,
+[00:31:26] that works on images.
+[00:31:28] We are thinking through
+how we want to deploy that,
+[00:31:32] particularly from a, so it's available
+[00:31:35] to some of our customers
+on a preview basis,
+[00:31:37] 'cause it's just super new.
+[00:31:39] We're also thinking through
+[00:31:40] how we would want to deploy that
+[00:31:41] into any sort of interface like this,
+[00:31:43] less because we're afraid
+of the use of the model,
+[00:31:46] and more because if we're gonna
+let you do policy refinement
+[00:31:49] against a bunch of horrifying images,
+[00:31:51] that means we're hosting a
+bunch of horrifying images.
+[00:31:53] So we just need to do some product work
+[00:31:55] about thinking that through.
+[00:31:56] But it's not actually an
+interesting model problem.
+[00:31:59] It's a do we want to be doing that
+[00:32:02] if we don't wanna be doing that,
+[00:32:03] is there a way we can still be helpful
+[00:32:04] and get out of it, that
+we need to figure out.
+[00:32:07] - Yeah, that's kind of
+what I was gonna ask next.
+[00:32:09] Like is that the business you wanna be in?
+[00:32:11] Is training that... Yikes!
+[00:32:14] - Yeah, so what's
+interesting with the model
+[00:32:18] that is image-capable
+[00:32:20] is that we haven't done a
+ton of image classification
+[00:32:23] to get that working.
+[00:32:24] We've used a language
+and image-capable model
+[00:32:27] on our existing training corpus,
+[00:32:28] and we're gonna see how far that gets us.
+[00:32:32] I assume we will probably need to do
+[00:32:36] some amount of specialized image training,
+[00:32:38] but because how we're training this,
+[00:32:41] we don't necessarily
+need to train in domains
+[00:32:45] that people are using the
+model in for it to be useful.
+[00:32:49] So a critical thing here right,
+[00:32:50] is like we trained across the
+seven or eight policy areas.
+[00:32:55] But the model is capable of
+classifying in totally random.
+[00:32:58] One of my fun examples is I do unicorns
+[00:33:01] and unicorn-related products,
+[00:33:03] where it's like, is
+someone selling a unicorn?
+[00:33:06] And then see if you can
+go convince the model
+[00:33:08] to treat rhinoceroses as unicorns
+[00:33:10] by defining your terms clearly enough.
+[00:33:12] And we definitely didn't train on that.
+[00:33:14] And so you can get to
+technology that is usable
+[00:33:18] for some pretty rough stuff
+[00:33:19] without us directly building
+a corpus of that stuff
+[00:33:23] using this technique, which
+is really, really neat.
+[00:33:26] It's a little better in
+areas where we've trained,
+[00:33:28] but it's still very capable
+outside of those areas.
+[00:33:31] - Probably, any questions in the audience?
+[00:33:35] - [Audience] Curious
+about the nine billion...
+[00:33:40] Curious about the nine
+billion parameter decision.
+[00:33:42] Like, did you try training a
+similar model that was larger
+[00:33:48] and like how much of a quality
+decrease or not was there,
+[00:33:52] when decreasing to nine?
+[00:33:53] - So nine billion was
+actually our increase.
+[00:33:55] We started with four
+billion parameter models.
+[00:34:00] For a couple reasons.
+[00:34:01] One, constraints just can be productive.
+[00:34:04] So frankly,
+[00:34:06] Samidh brought the size
+constraint to the table.
+[00:34:07] I thought he was out of his mind,
+[00:34:10] when he said we want to try
+to target a model that small.
+[00:34:14] Four billion, it does work.
+[00:34:15] We were able to get it to work
+[00:34:16] with a four billion parameter model.
+[00:34:17] It wasn't as sensitive around
+sort of nuance and detail.
+[00:34:22] The multimodal version
+is 12 billion parameters
+[00:34:25] and also can deal with a
+much larger token context.
+[00:34:28] But a lot of that is just
+downstream of model improvements
+[00:34:30] since we started doing this versus now.
+[00:34:32] 'Cause small models are
+getting better so fast.
+[00:34:36] We have considered
+training a larger model.
+[00:34:38] We probably need to go back
+[00:34:40] and do a dataset expansion
+project to get that to work.
+[00:34:44] And given that this
+worked relatively well,
+[00:34:46] and our goals around speed,
+[00:34:48] it just hasn't been a priority.
+[00:34:51] We've looked at it, we've
+played with it a little,
+[00:34:53] but our sense is we
+probably need more data.
+[00:34:56] - [Audience 1] Can I follow up?
+[00:34:57] On explainability,
+[00:35:00] is the output here a
+binary classification?
+[00:35:03] Or is it also reasoning that
+cites the policy provided?
+[00:35:06] And if the latter, do you
+find that the reasoning
+[00:35:10] that is produced convincing?
+[00:35:12] Or is it still sort of vibey reasoning?
+[00:35:14] - Right now, it is just
+the classification.
+[00:35:19] One of the things in
+addition to images actually,
+[00:35:21] on the what's next roadmap,
+is there are a few things.
+[00:35:25] But one of the things I'm
+playing with this fall
+[00:35:27] is thinking through how
+we might be able to do
+[00:35:30] explainability in a way
+that doesn't result in
+[00:35:33] using a ton of tokens.
+[00:35:34] Because part of the reason this is fast,
+[00:35:36] is it's just giving you yes/no.
+[00:35:40] If you get yes/no, and by the way,
+[00:35:42] here's like three paragraphs of reasoning,
+[00:35:44] like that's gonna slow things down a lot,
+[00:35:45] even with a really small model.
+[00:35:47] I've got some thoughts about
+[00:35:48] maybe we're trying to get
+it to cite chapter and verse
+[00:35:51] in a sort of Section 1(a)(b) is why, done,
+[00:35:57] which I think is doable.
+[00:35:59] We do also generate reasons
+[00:36:01] as part of the broader system,
+[00:36:03] using larger models in
+a sort of agentic way
+[00:36:06] they're doing policy review.
+[00:36:07] So we can sort of retro
+construct reasons, but right now,
+[00:36:11] CoPE doesn't provide
+reasons, Zentropi does,
+[00:36:13] but that's only as part of
+the policy refinement process.
+[00:36:18] Yeah?
+[00:36:20] - [Audience 2] You're the blue team.
+[00:36:22] Can the red team use this to defeat you?
+[00:36:25] - Well so what's interesting about this
+[00:36:26] is it's sort of a two-key solution, right?
+[00:36:29] Like probably, probably,
+if you studied it enough,
+[00:36:32] I'm sure it has quirks,
+right, built into it.
+[00:36:35] But how it's going to classify
+in any deployed context
+[00:36:38] is a product of both the
+model and the policy text
+[00:36:41] you are giving it to
+classify according to,
+[00:36:45] which you don't need to tell anybody.
+[00:36:47] And so, and if you find folks figuring out
+[00:36:51] how you're classifying
+and engineering around it,
+[00:36:53] you can just update how you're classifying
+[00:36:55] and it immediately changes the
+behavior of your classifier.
+[00:36:58] So in a lot of ways, I'm
+not gonna say it's perfect,
+[00:37:01] but it's frankly a better situation
+[00:37:03] than where we are today, in a lot of ways.
+[00:37:12] - [Audience 3] I just have two questions.
+[00:37:14] One, I'm just curious like
+why a company like Meta
+[00:37:17] hasn't started this themselves as well?
+[00:37:21] Or maybe they have,
+[00:37:22] but I guess that's just
+kind of a question,
+[00:37:23] like if they have all the resources,
+[00:37:24] it seems like it would
+be generally helpful.
+[00:37:27] And then the other question is, I know,
+[00:37:28] like also going based off of Meta,
+[00:37:31] that a lot of their
+content moderation policies
+[00:37:33] have different exceptions for minors,
+[00:37:36] versus public figures,
+versus just a regular adult.
+[00:37:40] So I guess do you think those
+classifications are helpful?
+[00:37:42] Or would this kind of seek
+to make it more uniform
+[00:37:45] across those different divides?
+[00:37:48] - So some of the policies we trained on
+[00:37:50] do use categories like that,
+[00:37:52] insofar as their manifest in the text.
+[00:37:55] This as a machine right now
+[00:37:57] just operates at the level of the text.
+[00:37:59] You could use a system like this
+[00:38:00] to do those kinds of exceptions,
+[00:38:03] but you'd probably do it in
+conjunction with a rules engine
+[00:38:06] where you just knew or used
+it separate specialist system
+[00:38:09] to assert what people's ages were,
+[00:38:10] and you combine those together.
+[00:38:12] A sort of broader thing here,
+[00:38:14] like we ended up doing
+binary classification
+[00:38:16] for technical constraint
+and focus reasons.
+[00:38:21] But I also actually do think it is better
+[00:38:24] in this LLM sort of classification context
+[00:38:26] to do just single category
+binary classification,
+[00:38:29] because you end up with less confusion
+[00:38:31] coming out of the model,
+[00:38:32] because they're
+non-deterministic machines.
+[00:38:34] And so if you have a
+judgment in your system
+[00:38:36] that you can make deterministically,
+[00:38:38] you should do that, always.
+[00:38:41] Because that will be reliable
+[00:38:43] and using a language model to do it
+[00:38:45] is just introducing potential
+unreliability, right?
+[00:38:48] So to me,
+[00:38:49] it's a system of a bunch of
+specialist analytical parts
+[00:38:54] which you could use, right,
+[00:38:55] with something like
+different judgments by age
+[00:38:58] where you've made judgments about the ages
+[00:38:59] of the people involved,
+[00:39:00] and then you're feeding
+in different policy texts
+[00:39:02] for those different ages,
+is how I would tackle that.
+[00:39:06] In terms of whether or not companies
+[00:39:08] are pursuing these kinds
+of solutions, they are.
+[00:39:12] I think there's less of an emphasis
+[00:39:14] at a lot of the larger places
+[00:39:17] on really small special
+purpose efficient models.
+[00:39:21] Because they just have helpful
+[00:39:23] only non-safety trained versions
+[00:39:25] of their medium to big models
+that they can use to do this.
+[00:39:29] And that's kind of good enough,
+[00:39:32] compared to the amount of work it is
+[00:39:34] to pull together a data set,
+[00:39:36] to be able to train this
+level of specialization.
+[00:39:39] I don't think that's
+ultimately gonna prove
+[00:39:44] to be good enough,
+[00:39:44] and I don't think it's
+accessible enough to everybody
+[00:39:48] except the very largest players.
+[00:39:49] But that is kind of what's going on.
+[00:39:51] And then also large human
+organizations are slow.
+[00:39:57] - Is that just a failure to imagine
+[00:39:59] at that company?
+[00:40:00] Like, "Oh, we have all these resources,
+[00:40:01] so why should we do it more efficiently?"
+[00:40:03] 'Cause it seems like self-evident
+that this is a better way
+[00:40:07] to approach this particular problem.
+[00:40:09] - Yeah, so I suspect
+folks are pursuing this,
+[00:40:13] but aren't talking about it as publicly.
+[00:40:16] Talking about improving
+your content moderation
+[00:40:18] is not a popular thing to do.
+[00:40:20] - Fair.
+- Right now.
+[00:40:22] So that's probably not helping,
+[00:40:24] Being chatty about this
+kind of subject matter
+[00:40:27] in the details is also not a thing
+[00:40:29] that companies generally do.
+[00:40:31] So I would assume that it is happening.
+[00:40:34] I know it is happening in some places
+[00:40:36] without getting into where, but again,
+[00:40:38] I think there's a little
+bit less of an emphasis
+[00:40:40] on smallness and publicness,
+[00:40:43] which I don't fully
+understand why that is.
+[00:40:46] The other part of it is that
+[00:40:47] there are a lot of people's
+jobs and internal empires
+[00:40:52] tied up in managing the
+humans that do this today.
+[00:40:57] And that's hard, right?
+[00:41:02] Like any new technology,
+[00:41:04] my understanding is
+that any new technology
+[00:41:07] entering the economy,
+[00:41:08] like the lag is often the integration
+[00:41:11] into businesses as organizations,
+far more than it is,
+[00:41:16] "Does the thing work?"
+[00:41:18] And I think we're kind of there,
+[00:41:20] on a bunch of these kinds of things.
+[00:41:23] - That seems fair.
+[00:41:25] - [Shelby] We have quite
+a few questions online.
+[00:41:28] So I'll try to get to a couple.
+[00:41:29] - Great.
+[00:41:31] - So there are two
+sides content moderation
+[00:41:34] protecting users from harm.
+[00:41:36] This presentation, and
+censorship, not touched on yet.
+[00:41:39] How does model tuning for censorship
+[00:41:42] differ than for harm
+mitigation, if at all?
+[00:41:47] And related, often users talk around
+[00:41:49] term restrictions with euphemisms.
+[00:41:52] Does this come up in either case?
+[00:41:55] - I don't think it differs.
+[00:41:57] I think one of the
+interesting things here,
+[00:41:59] and we called this out in some of the,
+[00:42:01] like I've got a paper to finish editing
+[00:42:03] about that's basically this,
+[00:42:05] but with more diagrams and more words.
+[00:42:09] And one of the things
+we talked about there
+[00:42:10] is that there is definitely
+dual-use potential here.
+[00:42:14] This is a sorting things
+into piles machine.
+[00:42:16] And you can do all kinds
+of stuff with things
+[00:42:19] that you have sorted into
+piles, for all sorts of reasons.
+[00:42:24] So I don't think there's
+a difference there,
+[00:42:25] and I think it's a interesting
+and valid question.
+[00:42:27] I also don't know that
+it is really something
+[00:42:30] that we can prevent at the model layer
+[00:42:35] as a sort of team training these things.
+[00:42:37] It's pretty hard for me to
+articulate a set of criteria
+[00:42:40] that are presumptively illegitimate
+[00:42:43] for someone to want to classify against.
+[00:42:46] That's actually pretty hard,
+[00:42:48] particularly when you think outside
+[00:42:50] of just the content moderation space
+[00:42:51] to the broader content
+classification realm.
+[00:42:54] Like saying this pile is a
+pile that ought not to exist,
+[00:42:58] is pretty hard.
+[00:42:59] It's the use to which the category is put,
+[00:43:02] where the problem arises,
+[00:43:03] and that is beyond the level
+of what we can fight against
+[00:43:07] in the model itself.
+[00:43:10] Sorry, what was the other
+part of the question?
+[00:43:13] - [Shelby] The other
+part was just mentioning
+[00:43:16] that users talk around term restrictions.
+[00:43:18] - Oh yeah, yes.
+[00:43:20] So you can assert the definitions
+[00:43:23] of the meaning of terms
+in the policy itself.
+[00:43:26] That could obviously balloon
+to a really unhelpful degree.
+[00:43:29] We haven't played with this yet,
+[00:43:30] but I think you could see future versions
+[00:43:32] of systems like this,
+[00:43:33] that are trained to pay a
+bunch of attention to databases
+[00:43:37] in almost a sort of RAG-oriented way
+[00:43:39] about what particular terms mean,
+[00:43:42] which then means updating
+your understanding of slang
+[00:43:44] is as simple as updating a list.
+[00:43:46] I'd also note that again,
+[00:43:47] like updating the 1,000
+humans working for Accenture
+[00:43:54] on what all the slang means,
+is not itself a foolproof,
+[00:43:57] like that doesn't work well today either.
+[00:43:59] And so yes,
+[00:44:00] there's a problem with
+this sort of approach now.
+[00:44:03] It's sort of addressable today,
+[00:44:05] and I do think as you
+play it into the future,
+[00:44:07] it actually gets easier to address.
+[00:44:17] - [Meg] Is this on? Oh, okay.
+[00:44:20] Hi, my name's Meg.
+[00:44:21] I am an MPP candidate
+at the Kennedy School,
+[00:44:24] so I study public policy.
+[00:44:26] I came into HKS very
+interested in AI harms,
+[00:44:29] and I've since a little bit pivoted
+[00:44:32] to more thinking about
+how technologies like this
+[00:44:35] can be used to make more
+efficient government services
+[00:44:37] and the more efficient deployment
+of government services.
+[00:44:40] But I have two questions, if I may.
+[00:44:41] First is on far-right violent extremism.
+[00:44:44] Could you see, right,
+[00:44:46] a lot of people become radicalized online
+[00:44:48] through Discord chats or stuff
+[00:44:49] that's happening in real time.
+[00:44:51] Could you see this technology I guess,
+[00:44:53] being squared up in a way
+[00:44:54] that it could be deployed in real time?
+[00:44:57] - Yes.
+- [Meg] Would that be useful?
+[00:44:58] And then on a completely
+different way of looking at this,
+[00:45:02] do you think that this could be deployed
+[00:45:04] by local and state
+governments for permitting?
+[00:45:06] That's a huge issue going
+on with them right now,
+[00:45:09] and they're trying to make
+[00:45:10] that whole process more efficient.
+[00:45:11] So just wondering your thoughts. Thanks.
+[00:45:13] - Yeah, on the real-time
+deployment, like yes.
+[00:45:17] So running on like an A100,
+[00:45:19] so not even the largest GPU you can get,
+[00:45:24] we typically have something
+like 200, 300 milliseconds
+[00:45:29] of latency today, through the
+API that powers the website,
+[00:45:34] 'cause we also have an API,
+if you wanna plug into it.
+[00:45:36] And a bunch, and a
+significant chunk of that
+[00:45:38] is network latency.
+[00:45:39] Now that's not fast enough
+probably for a chat,
+[00:45:44] real-time chat interface,
+[00:45:45] but it's fast enough for a lot of things.
+[00:45:47] And as small models get better,
+[00:45:49] and as hardware becomes more available,
+[00:45:52] and cheaper and better, you're
+gonna see that gap shrink.
+[00:45:57] So we're pretty close to being
+able to use it in real time,
+[00:46:00] and depending on what
+real time means to you,
+[00:46:03] and we will get there.
+[00:46:06] We also, we have some
+customers that use our model
+[00:46:09] to relabel data that they use
+[00:46:11] to fine-tune very small classifiers,
+[00:46:12] 'cause they're extremely
+latency sensitive.
+[00:46:14] And they're able to retrain
+those classifiers really quickly
+[00:46:17] as things change, 'cause they
+can just update the policy,
+[00:46:20] recreate the dataset,
+re-fine tune the model.
+[00:46:21] So you can also do sort
+of a two-step thing today.
+[00:46:27] In terms of the sort of local government,
+[00:46:29] or permitting sufficiency.
+[00:46:34] Yes, although I don't know
+that CoPE specifically
+[00:46:37] is the right answer for that,
+[00:46:38] versus there is a
+company called SafetyKit,
+[00:46:42] who transparently helped us
+do the data labeling for this,
+[00:46:44] that uses GPT-4, and other
+large model powered systems
+[00:46:47] to do whole website analysis,
+[00:46:49] for like are you in compliance
+with Visa's terms of service?
+[00:46:52] And my suspicion is something
+with a somewhat bigger model,
+[00:46:57] that is maybe a little
+bit less specialized,
+[00:46:59] is probably better,
+[00:47:00] given the length of how long
+those permits are likely to be.
+[00:47:03] But the tool you're gonna
+wanna use is, I suspect,
+[00:47:05] is gonna be to some extent,
+[00:47:07] a function of the length of the content.
+[00:47:11] There's also an interesting
+question embedded in there,
+[00:47:14] in terms of what your criteria are,
+[00:47:17] and how we think about sufficiency.
+[00:47:18] 'Cause this, the sort of
+underlying perspective here
+[00:47:22] is very flattening in terms
+of what language means.
+[00:47:25] And the law is not
+always written that way.
+[00:47:27] And so I think there's
+an interesting encounter
+[00:47:29] between how the regulatory
+codes are expressed,
+[00:47:32] and how interpretable
+faithfully they are by models
+[00:47:36] that don't have any of
+the embodied consensus
+[00:47:40] that exists in the judicial system.
+[00:47:43] And you would have to
+render that into text.
+[00:47:45] So there's an interesting thing there.
+[00:47:52] - Test, test.
+[00:47:53] So much about the trust and safety field
+[00:47:56] is around the negative,
+and reducing the negative,
+[00:47:59] harm reduction, risk mitigation.
+[00:48:01] Do you have any goals around,
+[00:48:03] or do you see momentum around the positive
+[00:48:06] of being able to help
+facilitate digital well-being?
+[00:48:10] Or other positive pro-social outcomes?
+[00:48:14] - So there are,
+[00:48:16] it's not quite in the
+category you framed it,
+[00:48:19] but there's some really
+interesting changes
+[00:48:21] in how trust and safety
+works, which again,
+[00:48:24] was not like the dwelling
+point of this talk
+[00:48:26] that are downstream of
+having something like this.
+[00:48:30] In addition to us not
+doing a very good job
+[00:48:32] with classification today,
+[00:48:34] content moderation is almost universally
+[00:48:36] a terrible customer service experience,
+[00:48:39] which is a, it's a weird way to frame it,
+[00:48:41] but comes out of my
+experience working at Airbnb,
+[00:48:44] where Airbnb does live phone support,
+[00:48:46] 'cause they have your money,
+[00:48:47] and you're in a stranger's house.
+[00:48:49] And the degree to which serious incidents
+[00:48:53] went well or badly,
+[00:48:55] the degree to which that was determined,
+[00:48:56] not by the substantive resolution,
+[00:48:58] but by the sort of emotional quality
+[00:49:01] of the reception of the
+incident at the time of contact,
+[00:49:05] is really instructive
+as to how communication
+[00:49:10] and delivery of information,
+[00:49:12] even if it's information
+people don't want,
+[00:49:14] really affects the way
+people respond to things.
+[00:49:16] And if you just think about
+our content moderation systems
+[00:49:18] as a form of customer service,
+[00:49:20] they're like the most maximally alienating
+[00:49:22] customer service systems
+imaginable, right?
+[00:49:25] If you get a brusque machine-delivered
+[00:49:28] non-explanation that points
+to a list, and it's like,
+[00:49:30] "You know what you did, it
+was one of these things.
+[00:49:32] Don't do it again."
+[00:49:34] And then people are mad,
+and we're surprised.
+[00:49:38] And as we get better at
+this kind of classification,
+[00:49:41] and the explanation generation,
+[00:49:43] you can imagine systems
+that are more tailored
+[00:49:46] in their explanations,
+[00:49:47] and potentially even
+systems where you're like
+[00:49:49] talking to the helpful
+customer service robot
+[00:49:52] about why it thinks you probably
+[00:49:53] shouldn't have done the thing you did,
+[00:49:54] or maybe even should
+consider not doing the thing
+[00:49:56] you were about to do, right?
+[00:49:58] And some of that gets creepy and weird.
+[00:50:00] I'm not a user experience designer,
+[00:50:02] but I think there are design constraints
+[00:50:05] on how our trust and safety systems
+[00:50:07] that have worked historically,
+[00:50:09] that are downstream of the fact,
+[00:50:10] that the only way to mass produce labels
+[00:50:12] was by immiserating a
+bunch of people in a,
+[00:50:17] like in a content
+moderation room somewhere.
+[00:50:21] And that, in addition to
+being bad for those folks,
+[00:50:24] imposes a ton of limits on how
+these interfaces can show up,
+[00:50:29] most of which are terrible
+and kind of alienating.
+[00:50:31] And if you can move away
+from that constraint,
+[00:50:36] completely different
+experiences become possible.
+[00:50:38] It's a little less the
+like human thriving thing,
+[00:50:40] but at least being less negative.
+[00:50:49] - Thank you for speaking to us today.
+[00:50:51] I have two questions that are
+kind of inverse of each other.
+[00:50:55] The first is, what's sort
+of the blue sky application
+[00:51:01] of this technology that
+would make you think,
+[00:51:03] "Wow, I've done something
+really awesome for the world."
+[00:51:09] - Sorry, I was giggling, I was laughing,
+[00:51:10] because one thing we've played around with
+[00:51:11] was custom feeds on
+BlueSky, ranked by this.
+[00:51:15] So that's the obvious, on-the-nose answer.
+[00:51:23] We enjoy what we're doing,
+[00:51:24] we want to continue to push
+forward this technology,
+[00:51:27] but more broadly, insofar as
+we help accelerate the pace
+[00:51:31] of adoption of either
+these exact techniques,
+[00:51:34] or techniques that are in dialogue
+[00:51:36] with the things we're pointing
+towards in the industry,
+[00:51:39] as quickly as possible, that
+will make me feel better.
+[00:51:43] Because the situation
+we have been in is bad,
+[00:51:46] and it is going to get worse
+if we do not figure out
+[00:51:49] how to use these technologies to help us.
+[00:51:53] And that's a bummer. And I
+would like that to not happen.
+[00:51:57] I know that's kind of abstract,
+but that's the sort of,
+[00:52:01] I want people to use what we've made,
+[00:52:03] and even more than that,
+[00:52:04] I want people to move in the
+direction that we're pointing.
+[00:52:08] - And then my second question for you is,
+[00:52:10] what's the red line for this
+technology, where if crossed,
+[00:52:16] if like a certain threshold
+of harm is crossed,
+[00:52:20] you would consider or decide
+to shut this technology down?
+[00:52:25] - I don't think that
+classification on its own
+[00:52:30] is the thing that causes harm.
+[00:52:33] And I don't think that
+we're providing anything
+[00:52:37] that you absolutely could
+not do with stock models,
+[00:52:41] if you were determined and evil enough.
+[00:52:45] And so from my point of view,
+[00:52:49] this is a good area to work in,
+[00:52:51] because it is pretty purely helpful.
+[00:52:55] Because it's not,
+[00:52:57] like the models that
+come out the other side
+[00:52:58] are just not useful for anything
+other than classification.
+[00:53:03] And so if you're taking a base model
+[00:53:05] that's pretty all purpose
+capable, if anything,
+[00:53:08] we're narrowing its ability
+to do other kinds of harm
+[00:53:10] from a technique point of view.
+[00:53:13] And so to me, your question
+sort of collapses to,
+[00:53:17] are there kinds of classification
+[00:53:18] that could become so ubiquitous
+[00:53:19] that I would feel like pulling the plug?
+[00:53:23] I mean, one, it's already open sourced,
+[00:53:25] so we can't, on some level.
+[00:53:27] But two, I sort of don't think
+that sorting as an activity
+[00:53:33] fits into that way of
+thinking about things.
+[00:53:37] I don't know, maybe it's
+not a satisfying answer.
+[00:53:46] - [Audience 4] Hi,
+thank you so much, Dave.
+[00:53:48] This is super interesting.
+[00:53:50] I've just been thinking about
+the organizational context,
+[00:53:53] about how this might be deployed,
+[00:53:54] and sort of the costs
+and benefits of doing it
+[00:53:57] with current models and the way it is now.
+[00:54:00] And I've been thinking a lot about
+[00:54:01] the sort of productive
+friction around culture,
+[00:54:04] as this is sort of one of the issues
+[00:54:06] about automated content
+moderation in general.
+[00:54:09] Is that it sort of slows, well,
+[00:54:13] it doesn't know culture in
+the same way that people do.
+[00:54:18] And I'm curious about one
+benefit of this, right?
+[00:54:21] Is it super fast?
+[00:54:22] It can be automated at scale,
+[00:54:24] but I'm wondering if it could preclude
+[00:54:27] some of those cultural conversations
+about edge case content
+[00:54:32] or just sort of bottom up,
+like moderator-led movements
+[00:54:37] around certain kinds of content, right?
+[00:54:39] Like I'm thinking about like Napalm Girl
+[00:54:42] or breastfeeding, or whatever.
+[00:54:45] And I'm wondering if
+just you've thought about
+[00:54:47] how it could be deployed
+within organizations
+[00:54:50] that preserve some of that,
+like friction, in a good way?
+[00:54:56] - Yeah, it's interesting.
+[00:54:57] The examples you cited I laughed about,
+[00:54:59] 'cause I was at Facebook for both of them.
+[00:55:01] In both of those cases,
+[00:55:03] the cultural friction
+wasn't moderator-led.
+[00:55:05] It was elite-led.
+[00:55:07] In the face of difficult, and frankly,
+[00:55:10] ended up imposing
+difficulties on moderators
+[00:55:12] that were difficult for them to cope with.
+[00:55:14] So like the Napalm Girl,
+if folks don't know,
+[00:55:17] this is the Pulitzer Prize winning photo
+[00:55:19] of a girl who'd been subject
+to a napalm attack in Vietnam.
+[00:55:23] Very, very famous photo.
+[00:55:25] If you do not know that the
+photo won a Pulitzer Prize,
+[00:55:28] it is a non-consensual
+nude image of a naked child
+[00:55:31] the government just committed
+a war crime against.
+[00:55:33] And so if you're viewing it
+in the sort of flattened way
+[00:55:37] that systems like this think,
+[00:55:39] I'm pretty sure we for
+several different reasons,
+[00:55:42] want that photo to be on the bad list.
+[00:55:44] The reason folks don't want
+the photo to be on the bad list
+[00:55:47] is because it's famous,
+[00:55:48] which is not a property of the content,
+[00:55:51] it's a property of our social
+feelings about the content.
+[00:55:54] You can do things to make that exception.
+[00:55:57] But at the time that the Napalm
+Girl controversy happened,
+[00:56:00] what ended up happening
+[00:56:01] was just like every moderator of the world
+[00:56:02] had to look at that photo and memorize it
+[00:56:04] to give it its own special status,
+[00:56:07] which is not a scalable process,
+[00:56:08] which was the whole problem.
+[00:56:10] And so the Napalm Girl
+story, in a lot of ways,
+[00:56:12] actually influences my thinking about
+[00:56:14] why things like this can be helpful,
+[00:56:15] because it makes doing
+things like having multiple
+[00:56:19] separate rule sets for different,
+[00:56:21] subtly different categories of content,
+[00:56:23] actually a practicable idea,
+[00:56:25] which is hard to do
+with sort of moderators.
+[00:56:27] On the cultural differences point of view,
+[00:56:29] one thing that systems like this mean,
+[00:56:31] because they're open
+source, they're small,
+[00:56:33] they're relatively cheap to run.
+[00:56:34] And frankly, because we're
+trying to be open about
+[00:56:38] how we built at least some
+of the baseline technology,
+[00:56:42] such that others can
+go build on top of it,
+[00:56:44] is that it potentially opens up.
+[00:56:46] You can think of what we're doing here
+[00:56:47] as miniaturizing the capacity
+for scaled content moderation
+[00:56:52] in a way that makes it accessible
+[00:56:54] to more than just
+gigantic, rich companies.
+[00:56:58] Like the bureaucratic difficulty
+[00:57:00] of organizing doing content
+moderation at scale,
+[00:57:03] is as much, in my view,
+[00:57:06] a force that centralizes social media
+[00:57:08] as the lack of data portability,
+[00:57:10] which has received way
+more conversation, right?
+[00:57:11] Like the random guys who
+run their Mastodon Servers
+[00:57:14] cannot adequately moderate those servers
+[00:57:16] if they become popular.
+[00:57:17] They simply can't.
+[00:57:20] And technology like this
+maybe makes it more possible
+[00:57:23] for them to do so,
+[00:57:24] which also means that moderation
+from different standpoints,
+[00:57:28] from different Subreddit owners,
+[00:57:30] from different Discord owners,
+from different cultures,
+[00:57:33] potentially becomes more possible
+[00:57:35] if you can sort of like shrink the tools.
+[00:57:37] In the same way that like
+when we only had mainframes,
+[00:57:40] only IBM had them, and now
+everybody has a pocket computer,
+[00:57:43] 'cause it's small and cheap
+and ubiquitous enough.
+[00:57:46] And that there is I
+think something of that,
+[00:57:48] we hope, in this.
+[00:57:51] - [Shelby] Great, so we are at time,
+[00:57:53] I'm gonna take one more question.
+[00:57:59] - [Audience 5] Thanks very much.
+[00:57:59] I thought the point you
+made about the well-being
+[00:58:03] of content moderators
+was an important one.
+[00:58:04] And I'm glad you made it, right,
+[00:58:06] that there is a North Star here,
+[00:58:08] where less people have
+to look at horrible stuff
+[00:58:10] and that significant numbers
+of people's mental health
+[00:58:13] is better as a result, and so -
+[00:58:15] - My therapist says I'm totally fine.
+[00:58:17] - [Audience 5] Well,
+in terms of a blue sky,
+[00:58:19] like positive output, that could be one.
+[00:58:22] - Yeah.
+- [Audience 5] In that world,
+[00:58:26] presumably humans still need
+to provide ground truth labels
+[00:58:30] for content.
+[00:58:33] And so curious if you could speak to
+[00:58:35] what does the fully automated,
+[00:58:36] or "fully automated" world
+look like in your view?
+[00:58:41] - Yeah, I think you're going to want,
+[00:58:44] I think it moves to a
+world where humans are,
+[00:58:46] I think it in some ways looks closer to
+[00:58:49] what we already have, in some of the spam,
+[00:58:52] and like government, state
+sponsored actor abuse networks,
+[00:58:57] where you've got experts
+who are using a bunch
+[00:59:01] of automated scanning systems
+[00:59:03] to go sweep up networks of content,
+[00:59:08] where they're applying a standard,
+[00:59:09] but they're also adapting how
+they're looking in real time.
+[00:59:12] And if you can divorce the
+standards as like the law,
+[00:59:16] from the standards as
+the seeking instrument,
+[00:59:19] I think this opens up a world
+where you've got a smaller,
+[00:59:22] relatively smaller group of people,
+[00:59:23] or maybe it's not a
+smaller group of people,
+[00:59:25] but they're more highly empowered,
+[00:59:26] covering larger amounts of subject matter,
+[00:59:29] but not doing the sort of
+[00:59:32] stare into the clockwork orange
+machine all day as your job,
+[00:59:36] kind of version of this.
+[00:59:38] And it's an underrated part of the
+[00:59:41] sort of content moderator health
+thing, mental health thing,
+[00:59:44] that it's not just the activity,
+[00:59:47] it's how diversified the
+activity you're doing is,
+[00:59:50] and how empowered you are structurally
+[00:59:54] and economically in doing it.
+[00:59:56] All of which goes into the stew, right?
+[00:59:59] Like I worked as a content moderator,
+[01:00:02] as an employee at Facebook
+in the office in Palo Alto.
+[01:00:05] So I could go to Q&A and
+yell about things, right?
+[01:00:10] And frankly had career path
+and other things to go and do.
+[01:00:14] And that is a very different
+set of circumstances,
+[01:00:18] even though I was still looking into
+[01:00:19] the clockwork orange machine
+as part of my day, right?
+[01:00:23] And so, if you can change
+how much control people have,
+[01:00:28] and the diversity of
+what they're doing, yes,
+[01:00:30] there's still going to need
+to be human sort of agency
+[01:00:32] in steering these systems.
+[01:00:33] I think we want that.
+[01:00:37] But that recontextualization
+and repackaging of the work,
+[01:00:40] such that a lot of the sort
+of most grindy part of it
+[01:00:43] becomes something closer to a data query.
+[01:00:46] I think that helps quite a lot,
+[01:00:48] in sort of reframing how the
+activity encounters people.
+[01:00:55] - [Shelby] Okay, great.
+Thank you both so much.
+[01:00:59] (audience applauding)
+[01:01:02] - Thank you so much for coming.
+[01:01:03] Shelby, thanks for keeping us on time.
+[01:01:05] - [Shelby] Oh yeah, we're a
+little over, but we're good.
+[01:01:07] I think that was a great
+conversation, great place to end.
+[01:01:10] I do wanna say we have more events
+[01:01:12] in the Speaker Series coming up,
+[01:01:14] so please follow us on socials.
+[01:01:17] Go to our website, our newsletters,
+[01:01:19] we'll be posting about those.
+[01:01:21] We also have an event
+tomorrow, 4:00 to 5:00,
+[01:01:24] at Ames courtroom, with
+New York Times journalist,
+[01:01:27] Kashmir Hill.
+[01:01:29] And we have Meg Marco
+facilitating with Jordi Weinstock,
+[01:01:34] who's BKC Senior Advisor.
+[01:01:36] It'll be on AI's Sycophancy and the Law.
+[01:01:41] So hope you join us. Thank you.
+[01:01:43] (audience applauding)
+[01:01:45] - Tell Kash I said hi.
+- Well, come on by.
+[01:01:49] - When is it?
+- It's four o'clock.
+[01:01:52] - I'm getting on a plane.
+[01:01:53] - You're gonna be on a
+plane? All right, well...

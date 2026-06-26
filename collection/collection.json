@@ -1,0 +1,23 @@
+{
+  "id": "bkc-archive",
+  "title": "BKC Archive Collection",
+  "description": "Berkman Klein Center archive collection — raw source layer for RAG ingestion. YouTube video metadata + transcripts; archive.json (TagTeam items) is added during a later canonicalization step.",
+  "defaults": {
+    "embeddingsModel": null,
+    "chunkSize": 1000,
+    "chunkOverlap": 200
+  },
+  "sources": [
+    {
+      "format": "json",
+      "path": "json/youtube.json",
+      "archiveType": "item"
+    },
+    {
+      "format": "txt",
+      "path": "txt/youtube",
+      "archiveType": "raw",
+      "metadataFrom": "json/youtube.json"
+    }
+  ]
+}

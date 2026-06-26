@@ -1,0 +1,1814 @@
+[00:00:00] Welcome to the Berkman Klein Center's
+Spring Speaker Series.
+[00:00:04] Every Wednesday we gather top academics,
+industry experts, and tech professionals
+[00:00:10] to share cutting edge insights
+on AI, social media, and more.
+[00:00:15] Today,
+we are thrilled to welcome Sayash Kapoor,
+[00:00:18] a PhD candidate at Princeton
+and coauthor of AI Snake Oil.
+[00:00:23] His award winning research focuses
+on the societal impact of AI,
+[00:00:28] and so join us in exploring groundbreaking
+ideas and fostering innovation.
+[00:00:32] Sayash.
+[00:00:36] [Sayash] Thank you so much
+[00:00:37] for the introduction,
+and thank you so much for being here.
+[00:00:41] I'm excited to talk about recent work
+that I've been doing
+[00:00:43] with my collaborators,
+Princeton and elsewhere.
+[00:00:47] In particular, Arvind Narayanan,
+a professor at Princeton.
+[00:00:50] And over the next, 40 to 45 minutes or
+[00:00:53] so, I wanted to go over three topics
+[00:00:56] where we've particularly been interested
+in understanding AI's impact.
+[00:01:00] In particular, what we've
+[00:01:02] been thinking about
+is how to collect the evidence
+[00:01:05] that allows us to make decisions
+about using AI in the real world,
+[00:01:09] whether it is in
+AI for scientific research,
+[00:01:12] in legal practice, or more broadly,
+to understand the misuse risks.
+[00:01:16] So, these are the three sort
+of broad areas that I'll be focusing on.
+[00:01:21] Let's start with scientific research.
+[00:01:25] So one of the main claims,
+or one of the main things we've seen was,
+[00:01:29] as AI has been, broadly
+adopted throughout the sciences,
+[00:01:34] is that fields across disciplines
+have started increasing their use of AI.
+[00:01:39] For example, this is an excellent figure
+from this study by Eamon Suede and others
+[00:01:45] that found that across
+these training disciplines,
+[00:01:48] we have seen in total
+about a quadrupling of the use of AI.
+[00:01:53] From 2012 to 2022.
+[00:01:57] And in particular, what shocking is that
+[00:01:59] this is actually before the rise
+of the development and release of ChatGPT.
+[00:02:03] So even before we had
+the latest wave of generative
+[00:02:07] AI applications,
+the use of AI
+[00:02:11] across these scientific
+fields had been growing pretty quickly.
+[00:02:15] And in particular, the sorts of
+[00:02:18] scientific research that I'm talking about
+for the purposes of this talk
+[00:02:22] is scientific research that relies on
+AI to make claims about the world.
+[00:02:27] So there are these four steps involved.
+[00:02:28] In the first, you have real world data
+that's collected
+[00:02:32] based on what's happening in the world.
+[00:02:35] Using the data, we create a model,
+[00:02:38] that allows us to study
+something about the world.
+[00:02:41] So then once we have the model,
+we can claim,
+[00:02:44] certain things about the model,
+about how it works.
+[00:02:46] And finally we translate it
+back to the world itself.
+[00:02:49] Finally, we translated it
+back to this claim about the world.
+[00:02:53] And so in this context,
+[00:02:56] this rapid adoption of AI poses
+[00:03:00] like a lot of questions for researchers
+seeking to understand AI's impact.
+[00:03:05] And a lot of my
+[00:03:06] own past work has focused on trying
+to answer these questions.
+[00:03:09] In particular,
+I think there are two types of risks
+[00:03:12] when we see this type of rapid adoption
+occur across scientific research.
+[00:03:17] The first is the risk of errors
+in individual studies
+[00:03:22] that use these AI models.
+[00:03:24] In particular,
+we can sort of try to think of
+[00:03:28] all of the different changes
+that are required, to the methodologies
+[00:03:32] in any given field
+that's adopting AI, and see where those
+[00:03:37] things change or differ
+compared to previous methodologies.
+[00:03:40] This is one big reason
+why we've seen a number
+[00:03:43] of different errors
+in the adoption of AI across these fields.
+[00:03:47] So let's back up a little bit.
+[00:03:49] How do we even tell
+if an AI system performs well,
+[00:03:52] whether it is in scientific research
+or anywhere else?
+[00:03:55] The main way we do that today
+[00:03:57] is by using this paradigm,
+[00:04:00] known as the common test
+[00:04:02] paradigm,
+where you have this common leaderboard,
+[00:04:05] or you have like a leaderboard
+where one part of the data set is,
+[00:04:10] sort of held out and you only train the
+AI system on the other
+[00:04:14] part of the data set; that is often
+known as the training data set.
+[00:04:18] And the
+distinction between the training set
+[00:04:20] and the test set is critical,
+because otherwise the AI system
+[00:04:24] has access to the data
+on which it will later be evaluated.
+[00:04:28] So this is a fundamental
+sort of tenet of modern machine learning,
+[00:04:33] where, you know,
+you only train the AI system on data
+[00:04:37] that it won't be evaluated on, and you use
+a completely different type of data set.
+[00:04:42] This error is also known as data leakage.
+[00:04:45] So let's see a few examples.
+[00:04:48] One example of data leakage is
+when there is no train-test split at all.
+[00:04:52] So if you're only using one data set,
+both to train the AI model
+[00:04:56] and then to evaluate its accuracy,
+you're essentially teaching to the test.
+[00:05:01] Now this is a textbook
+example of overfitting or
+[00:05:05] like something that has been known
+for decades within machine learning,
+[00:05:08] but it's still surprisingly prevalent.
+[00:05:09] So, for example, this excellent review
+by Russ Poldrack and others
+[00:05:14] found that after 100 papers
+in neuropsychiatry
+[00:05:17] that used AI, around 45 of
+them had no separate train-test split.
+[00:05:24] Another example
+[00:05:25] of data leakage
+is when the machine learning model
+[00:05:28] uses features that are not legitimate
+for the task at hand.
+[00:05:32] So, for example, this wonderful paper
+by Filho et al.
+[00:05:36] Found that in a previous paper,
+they tried to predict
+[00:05:39] whether a hospital patient
+would go on to get hypertension.
+[00:05:44] Five of the six most important features
+in the model were whether the patient
+[00:05:48] had already been prescribed
+antihypertensive drugs by a doctor.
+[00:05:53] Now, as you can imagine, this model does
+not really have much clinical utility
+[00:05:57] because if a patient has already
+been prescribed antihypertensive drugs,
+[00:06:01] then it's no longer clear,
+what we should do with this information,
+[00:06:05] in predicting whether the patient
+would go on to get hypertension.
+[00:06:10] A third and final example of leakage
+that I'll talk about here
+[00:06:14] is when models used for diagnosing Covid
+19 using chest xrays
+[00:06:19] had all images of people with Covid
+come from adults.
+[00:06:24] But all the negative examples,
+all the images of people,
+[00:06:27] of chest X-rays of people
+without Covid actually came from children.
+[00:06:31] So once again, in this case,
+the models were likely learning
+[00:06:35] to distinguish between images of children
+or images of X-rays of children
+[00:06:39] versus adults, rather than distinguishing
+between people who did have Covid
+[00:06:43] versus people who didn't.
+[00:06:45] And a
+[00:06:46] number of examples here do show
+that there are these
+[00:06:49] that are specific studies
+that went wrong in particular.
+[00:06:52] In this case, Michael Roberts
+and others found in this wonderful paper
+[00:06:55] in Nature Machine Intelligence
+[00:06:57] that of the 62 papers they studied, 16
+of them had this specific issue.
+[00:07:01] But, my collaborator Arvin
+and I wanted to sort of take a step back
+[00:07:05] and to see how often this actually occurs
+in scientific disciplines.
+[00:07:11] One of the main findings from our study
+that resulted
+[00:07:14] was that leakage is widespread
+across sciences that use machine learning.
+[00:07:18] In particular, we found over 600 papers
+that were affected
+[00:07:22] in at least 30 different fields.
+[00:07:24] And the real kicker
+was that each of these fields
+[00:07:27] seemed
+to be independently rediscovering leakage.
+[00:07:30] So it's not as if fields were able
+to communicate best practices
+[00:07:34] or converse with each other about what
+to avoid.
+[00:07:37] Any time a scientific field
+adopted machine learning.
+[00:07:40] They sort of had to rediscover
+these insights, rediscover these
+[00:07:43] errors from scratch.
+[00:07:46] So in
+[00:07:46] follow up work,
+we tried to figure out ways to address
+[00:07:49] leakage and address other errors
+in machine learning based science.
+[00:07:53] One of the things we were inspired by is,
+[00:07:56] standards
+for better reporting scientific results.
+[00:08:00] So in particular,
+[00:08:02] we found that in health research,
+we have
+[00:08:06] organizations like the Equator Network
+that is basically a repository
+[00:08:10] of over 500 different types of checklists
+[00:08:13] that you might be able to use
+if you're carrying out
+[00:08:15] any given type of health research.
+[00:08:17] If you're trying to use
+AI for a specific type
+[00:08:20] of clinical study,
+there's a checklist for that.
+[00:08:23] If you're trying to run
+[00:08:24] a randomized controlled trial,
+there's a checklist for that.
+[00:08:26] And so we realized that there's nothing
+similar
+[00:08:29] is really for a lot of machine
+learning based sciences.
+[00:08:33] So we convened this group of researchers
+who work on machine learning based science
+[00:08:37] and have looked at reproducibility
+and its implications,
+[00:08:41] from many different disciplines,
+including social sciences,
+[00:08:44] mathematics, computer science,
+economics, et cetera.
+[00:08:47] And we came up with the REFORMS checklist,
+which is
+[00:08:50] recommendations for machine
+learning based science.
+[00:08:52] It consists of 32 items across
+[00:08:55] eight different parts of a machine
+learning based science project.
+[00:08:59] And our aim is to at least make it easier
+[00:09:02] to surface these considerations
+and surface these errors.
+[00:09:05] Whether it is for authors
+we're looking to do research, or referees
+[00:09:09] who are evaluating research
+or even journals who are trying
+[00:09:12] to improve the reproducibility
+of the research published at those venues.
+[00:09:17] All right.
+[00:09:17] So this is the first sort of type of risk.
+[00:09:21] When we adopt AI in sciences,
+[00:09:24] that is the risk of errors
+in individual studies.
+[00:09:27] And you know, to some extent
+we have some solutions
+[00:09:30] that we can think of adopting things
+like checklists,
+[00:09:33] better
+reproducibility practices at journals
+[00:09:36] incentivizing peer reviewers
+to look at reproducibility and so on.
+[00:09:41] But a much more problematic issue
+and perhaps a much deeper issue
+[00:09:45] that I think hasn't yet
+been addressed in this way,
+[00:09:48] is that the epistemology,
+[00:09:51] of various scientific fields
+drastically lags
+[00:09:54] behind the technical advances
+that we seem to be making with AI.
+[00:09:58] So to think about this claim,
+I think this view of science
+[00:10:02] is helpful
+[00:10:04] where, you know, at the base level,
+you have individual scientific findings
+[00:10:08] where you're using
+[00:10:10] modeling to make claims about the world
+and then translating claims
+[00:10:14] about these models
+to claims about the world.
+[00:10:16] And of
+[00:10:17] course, as we've
+seen with this previous line of research,
+[00:10:20] it can be hard to make this type
+of claim correctly.
+[00:10:24] And there are many places
+where errors can creep in.
+[00:10:27] But one level above these individual
+findings are theories.
+[00:10:31] Scientific theories.
+[00:10:33] Box's famous maxim goes, all models
+are wrong, but some models are useful.
+[00:10:37] And it is precisely
+these models of the world, these theories about
+[00:10:41] what happens in the real world,
+that are important
+[00:10:44] to be able to understand
+any individual fact or finding.
+[00:10:49] And one level above this level of theories
+about the world are paradigms
+[00:10:53] where, you know, the entire development
+of theory depends on certain assumptions
+[00:10:59] that are somewhat unspoken
+at the level of individual studies,
+[00:11:02] but are held consistently
+throughout a specific scientific paradigm.
+[00:11:06] And the
+[00:11:07] concern with the adoption of AI
+is that faster progress
+[00:11:10] at the lower levels
+of the scientific research
+[00:11:15] tree, if you will, might actually lead
+to slower research
+[00:11:19] or slower improvement or progress
+at the higher levels of the paradigms.
+[00:11:24] So precisely because of the fact
+that we can use AI to get more mileage
+[00:11:28] out of existing theories and existing
+paradigms, that might lead to
+[00:11:32] the existing paradigms sort of stick
+around for a longer time period.
+[00:11:36] It might prevent,
+[00:11:38] development,
+the development of paradigms and theories
+[00:11:41] that move beyond the existing level
+at which we do research.
+[00:11:45] And there are many historical analogies.
+[00:11:47] Many times, when fields
+have sort of gotten stuck in a rut,
+[00:11:50] even as they produced individual findings
+[00:11:53] at, an ever more, increased pace.
+[00:11:58] We've seen this with, for example,
+alchemists who developed
+[00:12:01] lots of techniques of distillation
+and crystallization and so on.
+[00:12:05] But yet before, modern chemistry,
+[00:12:08] their interpretations were really sort
+of couched in this mystical language
+[00:12:12] about the world. We've seen this with geology
+before plate tectonics.
+[00:12:16] We've seen this with biology
+before evolution.
+[00:12:19] And in fact, perhaps one of the most
+important examples can be astronomy
+[00:12:23] before the Copernican Revolution.
+[00:12:27] And I think this is actually an example
+that's worth
+[00:12:30] taking into a little bit more,
+because of how it came about.
+[00:12:34] So the earlier model of how to predict
+[00:12:38] the location of objects in space
+relied on these epicycles.
+[00:12:43] The image on the slide
+kind of shows what,
+[00:12:46] this actually means
+you had these ever more complicated rules,
+[00:12:50] and it turns out that
+these tools, these rules for calculating
+[00:12:54] where certain planets would be
+were actually extremely accurate.
+[00:12:58] In fact, they were so accurate
+that modern planetariums still use
+[00:13:01] this epicycle method
+to calculate the location of planets
+[00:13:05] on space.
+[00:13:07] But the
+reason we switched away from this cycle,
+[00:13:10] the concept of the epicycle,
+the reason we switched to was,
+[00:13:15] the model of the universe with the sun
+and not the Earth at its center
+[00:13:19] at the time, at least,
+[00:13:20] was not that predictive accuracy
+for these methods was higher,
+[00:13:25] but rather because of Occam's razor,
+which found that a far simpler explanation
+[00:13:29] for all of the objects in space
+could be determined
+[00:13:32] with this new way
+of looking at the model of the universe.
+[00:13:36] And so it's not accuracy alone
+that led to this consideration.
+[00:13:39] We needed to fundamentally change
+our theories about how the world works.
+[00:13:44] And I think this is precisely
+the sort of thing that AI does not give us
+[00:13:48] today.
+[00:13:49] It excels at producing the epicycles,
+[00:13:52] of modern scientific research,
+but does not give us a way to interrogate
+[00:13:56] claims about the world,
+does not give us a way to improve and move
+[00:13:59] past existing paradigms
+into new ones that might be acquired.
+[00:14:04] So this is one reason why I
+[00:14:06] think, the use of AI in scientific
+research comes with this risk.
+[00:14:11] Now, people have also made a far
+less bold claim,
+[00:14:16] compared to, you know,
+AI being used to automate all of science,
+[00:14:19] which is simply using AI to automate
+AI research itself.
+[00:14:23] Compared to other scientific claims like
+claims about automating all of science,
+[00:14:28] AI research is actually a much smaller
+in some sense
+[00:14:31] easier problem because it
+enjoys frictionless reproducibility.
+[00:14:35] In other words,
+most of the claims we are making
+[00:14:38] when we are doing AI research
+are not claims about the real world,
+[00:14:43] but rather they're claims
+about the models themselves.
+[00:14:46] So the most tricky part
+of using AI in a lot of other sciences,
+[00:14:50] which is translating claims
+about the models into claims
+[00:14:52] about the world, actually
+does not exist for a lot of AI research.
+[00:14:57] So indeed, it is possible
+that, you know, at some point we can use
+[00:15:01] AI to automate various
+aspects of AI research simply
+[00:15:04] because of this relative ease
+in adopting AI.
+[00:15:08] But at the same time,
+a lot of the current work
+[00:15:10] that we are doing in this direction
+seems pretty misguided.
+[00:15:13] And I'll show you a few examples of how.
+[00:15:17] So this is a screenshot of
+[00:15:18] Sakana.AI's AI scientist launch.
+[00:15:23] This was an AI agent
+that this company created.
+[00:15:26] They claim that this agent
+could autonomously carry out
+[00:15:29] open ended AI research.
+[00:15:32] And notably,
+they released a number of papers
+[00:15:34] that this agent had written
+from conception to the end.
+[00:15:38] Now, this release got a lot of hype,
+[00:15:41] but when you look just a little bit deeper
+into how well this AI scientist worked,
+[00:15:46] you found that
+there were many fundamental shortcomings.
+[00:15:49] For example, this, thread by Jimmy Koepel.
+[00:15:52] Basically,
+he went into and read all of the various
+[00:15:56] sort of specific claims Sakana made
+and found that the research papers
+[00:16:01] released
+by Sakana were not reviewed for novelty.
+[00:16:05] It also found that these papers often made
+very minor changes
+[00:16:08] to existing papers
+and called them novel and finally,
+[00:16:13] the results from the paper
+were very unreliable.
+[00:16:16] So it's not like you could reliably expect
+new research to be useful.
+[00:16:21] And if you need to have verification or
+experts looking into every single output
+[00:16:25] of the paper anyway, it's unclear how
+much of an advance Sakana really achieved.
+[00:16:30] So in our lab, we wanted to benchmark
+[00:16:34] how well I can be used to automate,
+smaller parts of the scientific progress,
+[00:16:39] or scientific research,
+even if not these sort of broader changes.
+[00:16:43] So we introduced this benchmark
+or CORE-Bench.
+[00:16:47] The tasks in this benchmark
+are actually much, much simpler
+[00:16:50] than automating all of science
+or all of AI research, perhaps.
+[00:16:54] So given a paper, a
+primarily computational paper
+[00:16:58] and the accompanying code and data to
+reproduce the paper, the task
+[00:17:04] that an AI agent was given was to actually
+carry out the reproduction.
+[00:17:09] Now, automating
+reproducibility in this way
+[00:17:12] is actually a prerequisite
+to doing novel scientific
+[00:17:15] research or novel AI research,
+because any new research has to build
+[00:17:20] on advances previously
+to sort of reproduce existing baselines.
+[00:17:24] And researchers perhaps spend millions of,
+[00:17:26] person hours
+every year on carrying out this task.
+[00:17:30] So in some sense, this is a much smaller
+component, much less ambitious.
+[00:17:34] In another
+it is still something that could save,
+[00:17:37] millions of person hours each year
+[00:17:39] if you automate this specific task.
+[00:17:41] And what
+we found is that even the best agents
+[00:17:44] as of today
+ don't score more than 40%.
+[00:17:49] Now you can see these models
+getting better over time.
+[00:17:52] And in fact, even if you can reproduce
+just 40% of papers,
+[00:17:56] that could be a huge saver of time
+for lots of scientific tasks.
+[00:18:00] But to argue on that basis that today's
+AI is soon automating all of science,
+[00:18:05] or even all of AI research,
+is clearly premature.
+[00:18:11] In fact, this is what I see
+[00:18:12] as a rough roadmap
+for automating AI research.
+[00:18:16] Right now we are at the lowest levels
+of difficulty along this gradient.
+[00:18:21] We have tools that can help retrieve.
+[00:18:23] We have simple computational tools,
+[00:18:25] but we don't yet have automated data
+analysis and error detection tools.
+[00:18:29] And the, sort of higher levels
+of difficulty on this stuff,
+[00:18:33] things like AI executing on ideas
+independently and perhaps
+[00:18:37] even fully automating most or all of
+AI research are far down the horizon.
+[00:18:42] Okay, so this is sort of
+[00:18:44] a view of how things that seem similar
+but seem like all of them
+[00:18:49] contribute to automation, actually tend
+to differ in difficulty quite a bit.
+[00:18:54] And clearly the impact
+of being able to automate retrieval
+[00:18:57] is very, very different from being able
+to fully automate AI research.
+[00:19:02] Let's now move on to a case
+study of legal applications
+[00:19:05] where something similar
+actually holds true.
+[00:19:08] We have a spectrum of applications
+that differ in difficulty,
+[00:19:12] and also applications
+that are the most difficult to evaluate
+[00:19:16] or automate are also
+the ones that would be most impactful.
+[00:19:20] So moving on to legal applications,
+[00:19:23] I'll consider
+three types of legal applications.
+[00:19:26] This is all based on work I did with Peter
+Henderson and Arvind both at Princeton.
+[00:19:32] The first
+[00:19:33] is applications
+that require information processing.
+[00:19:36] So these can be, applications
+such as summarization or translation,
+[00:19:41] perhaps transcribing meetings, even tasks
+like e-discovery,
+[00:19:45] are examples of information processing.
+[00:19:49] The second is tasks
+that require creativity, reasoning,
+[00:19:52] perhaps a little bit of judgment
+from humans.
+[00:19:54] So these can be tasks
+like, preparing legal filings,
+[00:19:58] research assistance on various tasks
+as well as, automated dispute resolution,
+[00:20:02] especially in the case of easy
+to automate bots,
+[00:20:06] of legal applications.
+[00:20:09] And finally,
+[00:20:10] I look at
+AI that's used for predicting the future.
+[00:20:13] So these include criminal risk
+prediction tools
+[00:20:16] such as COMPAS as well as predicting
+the outcomes of court decisions.
+[00:20:20] So we've seen a number of applications,
+[00:20:23] all through the spectrum of legal applications.
+[00:20:27] Let's start with the first one,
+which is information processing.
+[00:20:31] So it is true that
+[00:20:33] language models like ChatGPT can actually
+be used for many of these tasks.
+[00:20:37] They can, summarize text.
+[00:20:39] They can translate
+between languages, transcribe.
+[00:20:42] They can even help with e-discovery
+and so on.
+[00:20:45] But one thing to note
+is that special purpose software,
+[00:20:49] especially in the legal domain, has long
+been able to do these tasks well.
+[00:20:53] So, for example, here's an article
+from The New York Times back in 2011
+[00:20:58] where the potential for e-discovery
+was highlighted.
+[00:21:02] What's new here with tools like
+[00:21:03] LLMs is that in these cases, a single tool,
+which can be instructed
+[00:21:08] in English, in natural language,
+can perform most or all of these tasks.
+[00:21:14] Now why tools like this would be most
+helpful
+[00:21:17] would be for laypeople, but not really
+experts in a particular domain
+[00:21:21] who have actually a lot of purpose built
+tools for information processing tasks.
+[00:21:27] So these are more relevant to
+[00:21:29] the average or perhaps compared to,
+[00:21:32] legal experts like judges and lawyers
+[00:21:34] who have at their disposal
+and arsenal of tools.
+[00:21:37] Now, of course,
+these tools will be adopted,
+[00:21:40] but they won't lead to a sea of change.
+[00:21:41] They will be incremental
+rather than revolutionary.
+[00:21:46] Even so,
+[00:21:46] tools like language models
+still do have quite
+[00:21:50] a long way to go in terms of,
+being completely reliable.
+[00:21:53] So, for example, one of the major problems
+that blocks the use of these tools
+[00:21:57] for a lot of information
+processing is hallucination.
+[00:22:01] That is, language models
+often fabricate content.
+[00:22:03] They make up content
+that's not in the source material.
+[00:22:07] A rough intuition for why this happens
+[00:22:09] is because language models
+generate text incrementally.
+[00:22:13] So if there's an error in, let's say,
+the first sentence of the text,
+[00:22:17] they might keep outputting text
+that is consistent,
+[00:22:20] taking the error for granted.
+[00:22:22] And they're also trained
+to sound convincing.
+[00:22:23] And in they attempt to be more convincing,
+they sometimes lose out on factuality.
+[00:22:29] So this is the first type of task
+where information processing tasks,
+[00:22:33] have seen the use of LLMs
+that can be useful for laypeople.
+[00:22:36] But at the same time,
+[00:22:37] this is not really a revolution
+when domain specific tools already exist.
+[00:22:43] This brings
+us to the second type of application,
+[00:22:45] which is tasks involving
+creativity, reasoning, and judgment.
+[00:22:49] These include things like preparing legal
+filings, research assistance, and so on.
+[00:22:54] When compared to information processing,
+[00:22:57] this is a task where if language models
+were useful and reliable,
+[00:23:01] they could have a big impact
+on the future of the field.
+[00:23:06] And indeed, there has been
+[00:23:07] a lot of hype around the use of
+AI for these tasks.
+[00:23:10] All the way back
+to the launch of GPT-4 by,
+[00:23:13] by OpenAI, when OpenAI claimed
+that the model could pass the bar
+[00:23:17] exam, scoring
+as much as a 90th percentile test taker.
+[00:23:22] Another example is DoNotPay,
+[00:23:27] which claims to have built the world's
+first robot lawyer.
+[00:23:30] In fact, the CEO of the company,
+Joshua Browder, claimed
+[00:23:33] that the company would pay any lawyer
+who uses their service
+[00:23:37] in the Supreme Court
+$1 million for doing so.
+[00:23:42] But unfortunately, the
+[00:23:43] reality does not match up
+to most of this hype.
+[00:23:47] In the past few months,
+we've seen many examples
+[00:23:50] of lawyers falling prey to hallucination.
+[00:23:53] In fact, hallucination
+is actually much worse for this
+[00:23:56] kind of open ended task
+where you have to generate legal filings
+[00:24:00] that can take any shape
+compared to much more specified tasks
+[00:24:04] such as the information processing tasks
+we discussed earlier.
+[00:24:08] An expert in these cases
+has to sort of manually go back and check
+[00:24:12] if each of the things outputted
+by the language model was correct.
+[00:24:16] Now, again, in the last few months,
+we've seen claims,
+[00:24:20] such as LexisNexis's claim
+[00:24:22] that AI for LA is now hallucination free.
+[00:24:26] In fact, a number of legal tech
+companies have launched products
+[00:24:30] with similar claims.
+[00:24:32] But once again, when Stanford
+[00:24:33] researchers
+evaluated LexisNexis and Westlaw products
+[00:24:37] on simple legal questions
+based on specific legal texts,
+[00:24:41] they found that in up
+to a third of the cases, and in at least
+[00:24:44] a sixth of the cases,
+the outputs were hallucinated.
+[00:24:48] Here's an example.
+[00:24:49] So in some cases,
+we saw hallucination basically
+[00:24:52] completely reversed
+the intentions of a specific case.
+[00:24:55] In another,
+it sort of made up paragraphs entirely.
+[00:24:59] And this is just a screenshot
+of four of these.
+[00:25:01] I think they found over 200
+such hallucinations when experts rated
+[00:25:06] the output of LexisNexis
+and Westlaw products.
+[00:25:11] A big question
+then for a lot of AI research
+[00:25:13] is will hallucinations
+be solved anytime soon?
+[00:25:17] Now, of course, there are many ideas
+that make hallucinations less likely.
+[00:25:21] In the case of the legal tech products
+that we just discussed.
+[00:25:24] These come with specific citations
+that, that prompt
+[00:25:28] the user to sort of check if the text
+accurately reflects the citations.
+[00:25:32] But unfortunately, as of right now,
+a full solution that is sort of robust
+[00:25:36] and reliable across domains is kind of,
+unlikely and not really foreseeable.
+[00:25:45] So how do we
+[00:25:46] tell if these tools are actually helpful?
+[00:25:49] As we discussed earlier,
+usually in the past
+[00:25:53] AI research fields have used benchmarks.
+[00:25:57] These are benchmarks
+where a part of the data
+[00:25:58] is used to train models,
+and other part is used to test them.
+[00:26:02] And the models are judged on
+[00:26:06] how well they can respond
+to these specific question.
+[00:26:09] Now, it turns out that for the latest
+wave of language models,
+[00:26:13] even though these benchmarks are easy to,
+use as evaluations, they actually don't
+[00:26:18] really tell us too much
+about how well these products work.
+[00:26:22] This is because of three reasons.
+[00:26:24] The first is that language models
+are trained on huge amounts of data.
+[00:26:29] But when you train a model
+on terabytes of data on the internet,
+[00:26:32] it is quite likely that the train-test split
+that we talked about earlier cannot
+[00:26:37] actually be preserved for the datasets
+we are using as evaluations.
+[00:26:41] In other words, it might be likely
+that the dataset that you're using to test
+[00:26:46] these models was already included
+in the training data for the model.
+[00:26:50] And because these systems are proprietary,
+because the data sets aren't
+[00:26:53] really released, researchers
+don't have a way of finding out
+[00:26:57] if these original data sets were in fact
+encoded in the model's training data.
+[00:27:03] And once this is the
+[00:27:04] case, it's actually quite likely
+that we are getting an overoptimistic
+[00:27:08] or exaggerated
+estimate of the accuracy of these models.
+[00:27:14] A second issue is construct validity.
+[00:27:17] That is, the questions that are used
+in typical benchmark evaluations,
+[00:27:20] such as the bar exam for legal settings,
+don't actually reflect
+[00:27:24] what tasks lawyers might want to solve
+using these models in the real world.
+[00:27:30] In other words, it's not a lawyer's job to
+answer multiple choice questions all day.
+[00:27:34] They're doing something very different.
+[00:27:37] And so the assumptions we have
+when designing bar exam tests for humans
+[00:27:42] actually falls flat
+when we are using those same examinations
+[00:27:45] for evaluating AI.
+[00:27:48] And the final issue
+[00:27:49] is that small changes
+to how we evaluate these language models
+[00:27:54] can actually lead to huge differences
+in the results of the evaluation.
+[00:27:59] This is known as prompt sensitivity.
+[00:28:01] So even if you, for example, change minor
+things
+[00:28:04] like the order in which
+the subparts of the questions are asked,
+[00:28:08] this can lead to large changes in
+how the model response to these question.
+[00:28:13] And so,
+taken together for all of these reasons,
+[00:28:16] I think that it is far more helpful
+to involve domain experts
+[00:28:19] in the evaluation of AI
+to create benchmarks, as well as do real
+[00:28:23] world evaluations of lawyers
+actually trying to adopt AI systems,
+[00:28:27] because domain experts
+have a much better handle on
+[00:28:30] what skills are essential
+and how these models
+[00:28:33] would be used in the real world,
+rather than relying on simple,
+[00:28:37] static benchmarks,
+which I think are not really useful.
+[00:28:41] One example of such an evaluation
+I should mention is Legal Bench.
+[00:28:45] It was another benchmark created by,
+[00:28:48] the teams at Stanford,
+which involved a lot of other people.
+[00:28:52] This evaluation also showed limits,
+such as prompt sensitivity,
+[00:28:56] but at the very least
+[00:28:57] it improves the construct validity
+compared to evaluations like the bar exam.
+[00:29:04] Okay.
+[00:29:04] So this brings
+us to the third type of legal application
+[00:29:07] that is tasks involving predictions
+about the future.
+[00:29:12] One of the most prominent examples
+of such a task
+[00:29:15] in the last few years
+has been criminal risk prediction.
+[00:29:18] So the slide shows a screenshot
+of this investigation by ProPublica
+[00:29:23] that found that risk prediction
+algorithms in criminal justice
+[00:29:26] can be biased against black people.
+[00:29:29] Now, what stood out to me from
+this investigation was not just the fact
+[00:29:34] that there's a lot of bias in the false
+positive rate of the algorithm,
+[00:29:38] but in fact, that the algorithm's accuracy
+[00:29:41] in many cases is really, really low.
+[00:29:44] So in the appendix for this
+news piece
+[00:29:48] Angwin and others mention
+that the accuracy of the system
+[00:29:51] that was being used to make
+these predictions was actually around 65%.
+[00:29:56] And a follow up
+study found that the same accuracy
+[00:30:00] can actually be achieved by laypeople
+who are basically
+[00:30:04] just judging candidates or defendants
+based on superficial characteristics.
+[00:30:10] And in fact, even worse,
+it was no better than a
+[00:30:13] two variable formula that simply relied
+on the age of the defendant
+[00:30:18] and the number of priors.
+[00:30:21] So it turns out
+[00:30:22] that this COMPAS algorithm,
+which was using 137 features
+[00:30:25] about defendants, was actually no better
+than a very simple formula
+[00:30:30] that basically just used, two features
+[00:30:32] about them.
+[00:30:36] And the key thing to keep in mind
+[00:30:37] is that in domain after domain, in study
+after study, we found
+[00:30:41] that it's really hard to make accurate
+predictions about individuals,
+[00:30:45] especially when those decisions
+are used to make consequential decisions,
+[00:30:50] especially when those predictions
+are used to make consequential decisions
+[00:30:52] about people.
+[00:30:53] We should be extremely wary
+of relying on these decisions.
+[00:30:58] And, you know, in this field
+and in many others, it's also surprising
+[00:31:02] that an accuracy of around 64%,
+as in the case of COMPAS, is considered
+[00:31:07] good enough to make these life
+changing decisions about defendants.
+[00:31:11] Keep in mind that guessing randomly
+whether a person would go on
+[00:31:14] to the recidivate or fail
+to show up for the trial,
+[00:31:18] has an accuracy of around 50%.
+[00:31:21] So this is the first type of application
+in legal settings
+[00:31:24] where we're actually making predictions
+using AI
+[00:31:27] and then relying on those predictions
+to make decisions.
+[00:31:31] A second type of
+[00:31:32] prediction is about the outcomes
+of court decisions.
+[00:31:36] So for instance on the slide you can see
+a screenshot of such a recommendation
+[00:31:41] where computers were sort of,
+[00:31:45] could purportedly be used to predict
+judicial decision.
+[00:31:50] This is an example from 1963.
+[00:31:53] So that's right.
+[00:31:54] For over 60 years at this point,
+we have been trying to use computers
+[00:31:59] to predict the outcomes
+of judicial decisions.
+[00:32:02] How well have we done?
+[00:32:04] It turns out we've done quite poorly.
+[00:32:06] So a recent paper by Medvedeva
+et al. looked at the entire line
+[00:32:10] of research aimed at predicting
+the outcomes of court decisions.
+[00:32:14] They found that in the vast majority
+of papers, there are severe errors.
+[00:32:19] In some cases,
+the AI model is directly given access
+[00:32:22] to the answer, which leads
+to an overestimate of performance.
+[00:32:25] In others, the AI system
+is not really given the exact verdict,
+[00:32:30] but is given the opinion
+that accompanies the verdict.
+[00:32:33] Now, as you can imagine,
+predicting the outcome
+[00:32:36] based on the opinion given alongside
+a verdict, does not really count for much.
+[00:32:42] And in fact, when
+[00:32:43] researchers have tried
+to remove these errors and reevaluate AI,
+[00:32:47] it turns out that AI isn't very good
+at making these predictions.
+[00:32:51] So, for example,
+this is a model called Juri
+[00:32:53] that also tries to make predictions
+about judicial decisions.
+[00:32:57] It only has an accuracy rate of 60%.
+[00:32:59] Much like criminal risk prediction, it's
+not very much better than a coin flip.
+[00:33:05] So this brings us to the end of this
+discussion on legal applications.
+[00:33:09] As a quick recap, these are
+the three types of legal applications
+[00:33:12] that we've seen.
+[00:33:14] Information processing, creativity,
+and predicting the future.
+[00:33:18] The areas where there's most excitement
+about the use of AI is in
+[00:33:24] tasks involving creativity and reasoning,
+as well as predictions about the future.
+[00:33:29] But it turns out that these are precisely
+the tasks
+[00:33:32] where evaluating AI is extremely hard.
+[00:33:35] And as a result, either
+AI does not really work well at all,
+[00:33:38] for example, in making predictions, or
+we fail to conduct good evaluations of AI.
+[00:33:44] And this is where we need to do
+a lot more work as a community
+[00:33:48] in improving the evaluations of AI.
+[00:33:51] In contrast, when we
+[00:33:53] have clarity on correct versus
+incorrect answers,
+[00:33:57] such as in information processing tasks,
+it is reasonable to use
+[00:34:01] AI in these settings
+as well as to evaluate AI systems better.
+[00:34:06] But this is also the task
+where we already have many of the tools
+[00:34:10] that generative
+AI is being sold as a solution far.
+[00:34:13] And so we don't think
+it'll lead to a big revolution
+[00:34:17] in how legal applications are used.
+[00:34:20] So in contrast,
+[00:34:22] when we don't have good evaluations,
+such as in creativity,
+[00:34:25] reasoning, and prediction,
+[00:34:27] that's also where AI would lead to a much
+bigger change to the legal profession.
+[00:34:31] But unfortunately,
+the current state of evaluations does
+[00:34:34] not really allow us to answer the question
+of how soon we'll get to that point.
+[00:34:41] Alright.
+[00:34:41] So this brings me to the third
+and final part of my talk,
+[00:34:45] which is looking at, the evidence
+[00:34:47] for misuse risks in AI systems.
+[00:34:51] So one of the main concerns
+that has accompanied the use of
+[00:34:55] or the release of generative
+AI models is that these models
+[00:34:59] will soon be used for rampant misuse.
+[00:35:03] Some of these concerns
+include things like using AI for cyber
+[00:35:06] security risks,
+such as automatically finding
+[00:35:11] vulnerabilities
+in critical infrastructure.
+[00:35:14] Other misuse risks include disinformation,
+as well as biosecurity risks.
+[00:35:19] For example, many researchers have claimed
+that advanced AI systems can be used
+[00:35:24] to give individual rogue
+actors the ability to create bioweapons.
+[00:35:28] So how do we assess
+if these risks are actually serious versus
+[00:35:33] when should we think about these risks
+as perhaps being on a longer term
+[00:35:38] horizon are not really serious
+at the current state of the technology?
+[00:35:44] Let's dive into one such case study.
+[00:35:46] So this is an example of Soice
+et al. from MIT.
+[00:35:50] This is a group that looked at,
+the use of language models
+[00:35:54] for democratizing,
+the use of biotechnology risks.
+[00:35:58] For example,
+the specific threat model they had in mind
+[00:36:02] was an individual,
+perhaps, who is low resourced currently,
+[00:36:06] gaining the capability
+to build these pandemic causing pathogens.
+[00:36:10] And on this basis, the paper recommended
+[00:36:13] that advanced
+AI models should not really be released.
+[00:36:16] Policymakers should be considering
+[00:36:18] ways to clamp down
+on the release of advanced AI.
+[00:36:22] And I think this was, a paper
+that was taken really seriously,
+[00:36:26] both in research as well as in the media,
+[00:36:29] where several outlets reported on
+[00:36:32] the potential for
+AI to cause bioweapons and pandemics.
+[00:36:37] But when Guha et al.
+at Stanford
+[00:36:39] looked a bit more closely
+at the specific claims in the paper,
+[00:36:44] they found that browsing
+Wikipedia can actually yield, point us to,
+[00:36:49] substantially similar information
+as the paper itself provided.
+[00:36:54] In particular, they were able to get most
+of the specific facts that the MIT group
+[00:36:59] found problematic simply by searching
+for these same things on Wikipedia.
+[00:37:04] So this brings into discussion
+[00:37:06] a very important point
+for how to analyze misuse risk,
+[00:37:10] which is that when we are evaluating
+the risks of AI and the risks
+[00:37:14] of releasing AI, we don't just need
+to look at the absolute level of risk.
+[00:37:19] For example,
+it might indeed be true that AI can be used
+[00:37:23] to give people information
+about how to create bioweapons,
+[00:37:26] but we also need to investigate
+the marginal
+[00:37:29] or the incremental risk of releasing
+AI technology broadly.
+[00:37:33] In this case, the analysis that would be
+needed to establish that language models.
+[00:37:38] And AI can be used
+for causing, biosecurity risks,
+[00:37:42] is not just an evaluation
+of what language models can see,
+[00:37:46] but also a comparison with,
+what people could find out independently
+[00:37:51] or perhaps without the existence
+of these powerful language models,
+[00:37:55] maybe just by using the internet,
+or browsing medical journals.
+[00:38:01] And in the few
+months after these studies were released,
+[00:38:04] Rand indeed conducted one such, study
+where they focused very specifically
+[00:38:10] on the marginal or the incremental risk
+of using AI in this situation.
+[00:38:15] So this is the report,
+[00:38:17] that they published back in 2024,
+[00:38:19] where they compared a group
+that has access to the internet
+[00:38:23] against a group that had access
+to both LLMs and the internet.
+[00:38:27] And the main conclusion
+was that biological weapon attack planning
+[00:38:31] currently lies beyond the capability
+threshold of language models.
+[00:38:35] And in particular,
+they found no significant difference,
+[00:38:39] in the viability of plans
+generated with or without LLM assistance,
+[00:38:42] so long as the control group
+also had access to the internet.
+[00:38:47] This is an example of how,
+[00:38:50] biosecurity risks of AI should be evaluated.
+[00:38:53] We've seen similar concerns
+arise in cybersecurity, where
+[00:38:57] lots of people have claimed
+that I can be used to rapidly speed up
+[00:39:03] the detection of cyber vulnerabilities,
+perhaps even in critical infrastructure.
+[00:39:08] Now, if the concern
+[00:39:09] is that AI could far outpace humans
+in finding these vulnerabilities,
+[00:39:14] we actually lost that battle
+three decades ago
+[00:39:18] when we developed fuzzing to automatically
+look for vulnerabilities in code.
+[00:39:23] But the surprising thing here
+is that fuzzing
+[00:39:25] tools were actually being developed
+by the multibillion dollar cyber
+[00:39:29] defense industry,
+as well as investments by the government.
+[00:39:33] Now, why is that the case?
+[00:39:34] It turns out that cyber defense industries
+have strong incentives to improve
+[00:39:40] AI tools that can find vulnerabilities
+automatically,
+[00:39:43] simply because those same tools
+can be used for defense
+[00:39:47] as easily as they can be used for offense.
+[00:39:50] So, for example, for both open and closed
+models, we've seen that AI
+[00:39:54] can be used to detect
+cyber vulnerabilities.
+[00:39:57] These are both screenshots
+[00:39:58] where I pasted in a recent vulnerability
+in open source repo.
+[00:40:03] And found that both ChatGPT as well as
+Llama2 could find that vulnerability.
+[00:40:09] But we've seen also
+[00:40:11] that AI and including modern generative
+[00:40:14] AI has rapidly improved cyber defenses
+because defenders have access
+[00:40:19] to the same tools and most importantly,
+they have much deeper access
+[00:40:24] to the systems
+that they're trying to defend.
+[00:40:25] So they can use these tools
+at a much wider scale, much more quickly.
+[00:40:31] Two examples are on the slide.
+[00:40:33] The first is from Google,
+where they've used
+[00:40:35] a security focused version
+of their PaLM language model,
+[00:40:39] on Google Cloud to protect their clients
+from cyber attacks.
+[00:40:42] The second is from
+this project called OSS-Fuzz,
+[00:40:45] which uses fuzzing tools
+to scan open source repositories
+[00:40:49] for cyber vulnerabilities.
+[00:40:51] And they actually found
+that using language models
+[00:40:53] improves the coverage of their testing
+quite dramatically.
+[00:40:57] So these are some of the sort of main
+[00:41:00] misuse risks of
+AI that we've seen a lot of discussion on.
+[00:41:03] On the flip side.
+[00:41:05] I also think there are certain
+misuse risks where we do have evidence
+[00:41:09] that there is this marginal
+or incremental risk from the use of AI.
+[00:41:14] One of the main examples is
+[00:41:16] NCII or nonconsensual intimate imagery,
+[00:41:20] where we've seen the release of open
+models like stable diffusion, have led
+[00:41:25] to a rapid increase in the creation
+[00:41:28] and distribution of non-consensual images.
+[00:41:32] And we do urgently need to think about
+[00:41:34] what societal responses are mandated,
+how we can change policy,
+[00:41:38] how we can change the incentives
+for the companies
+[00:41:41] that create these products
+and also distribute them.
+[00:41:44] And so I think this framework of thinking
+about the marginal
+[00:41:47] or incremental risk
+is helpful precisely for this reason.
+[00:41:50] It points out where our attention
+in dealing with the misuse risks with AI
+[00:41:55] is more urgently needed,
+and what types of risks can perhaps,
+[00:42:00] need to be observed for sure,
+but perhaps, appear sort of at a longer
+[00:42:05] time frame are not currently evidenced
+by existing states of the technology.
+[00:42:11] Okay,
+so this brings me to the end of my talk.
+[00:42:14] The few key takeaways
+that I want to highlight.
+[00:42:17] That first good evaluation
+is really important
+[00:42:21] to understand AI's societal impact.
+[00:42:23] It's not just important to understand how
+well AI systems work,
+[00:42:27] but rather also to understand
+when and where we can use AI productively,
+[00:42:33] and perhaps when and what tasks are best
+left without the use of AI.
+[00:42:38] At this point.
+[00:42:41] A second is that I could automate
+[00:42:43] automate many routine tasks
+and perhaps speed up
+[00:42:46] certain aspects of the legal
+and scientific research process.
+[00:42:50] But that doesn't automatically mean
+that full automation is around the corner.
+[00:42:55] In fact,
+AI researchers have a long history
+[00:42:58] of being overoptimistic
+about the scope of tasks
+[00:43:01] that their systems, the systems they're
+building, can actually feasibly automate.
+[00:43:06] On the flipside,
+[00:43:07] to assess the misuse risks of AI,
+it's not just enough to show evidence
+[00:43:12] that AI can be used for a certain misuse risk,
+but it's also important
+[00:43:16] to understand what the marginal
+or the incremental risk of AI over
+[00:43:20] and above existing technologies is
+when we are carrying out this evaluation.
+[00:43:25] And in particular, I think this evaluation
+of marginal risk should guide
+[00:43:30] our thinking, our policy interventions,
+as well as our research questions
+[00:43:35] in dictating
+how the future course of technology,
+[00:43:38] or what the future
+course of technology should be.
+[00:43:42] And finally,
+I want to say that a lot of this
+[00:43:44] evaluation
+has the necessity of domain expertise.
+[00:43:49] Domain experts have a major role to play,
+whether it is legal
+[00:43:51] or scientific research, or
+in the development of better benchmarks,
+[00:43:55] or perhaps even in understanding
+the marginal risks of AI.
+[00:43:58] So, for example, legal
+[00:44:00] experts are solely needed
+in creating legal oriented benchmarks.
+[00:44:03] Scientific researchers
+[00:44:04] are best suited to evaluating the impact
+of AI on their own field.
+[00:44:09] And, cybersecurity/biosecurity experts
+[00:44:12] are needed in
+evaluating the misuse risks of AI.
+[00:44:16] In other words, I think the questions
+around the societal impact of
+[00:44:19] AI are too important
+to be left to AI researchers alone,
+[00:44:23] and we definitely need to broaden
+the pool of expertise
+[00:44:27] that is involved
+in building these evaluations.
+[00:44:29] All right. I'll end there.
+[00:44:30] And I'm looking forward to your questions.
+[00:44:37] [Host] Thank you for such an
+[00:44:38] insightful presentation.
+[00:44:41] Some of our questions here.
+[00:44:42] Rohan asks,
+how do you see the evolution of benchmarks
+[00:44:47] in the development of analytical AI tools?
+[00:44:50] Given the cost of AI models, developers
+need to be able to sell their models
+[00:44:55] to customers and top performance
+on objective benchmarks is vital to that.
+[00:45:00] So some level of teaching to the test
+is inevitable.
+[00:45:05] But do you see development in overfitting
+[00:45:08] resilient benchmarks?
+[00:45:12] [Sayash] Yeah, that's a fantastic question.
+[00:45:13] So in a lot of our recent work,
+we actually have been thinking about
+[00:45:18] how to develop benchmarks
+that can be robust to
+[00:45:22] overfitting or leakage
+as well as improve on construct validity.
+[00:45:27] I think there are two sorts
+of solutions to the problem.
+[00:45:30] The first is to build
+benchmarks privately.
+[00:45:34] So we have seen a number of companies
+switch to not releasing
+[00:45:37] the test sets
+for their benchmarks. In particular Scale AI
+[00:45:40] recently released the Scale Series of
+benchmarks, which are completely private.
+[00:45:44] The test set is never repeat.
+[00:45:46] I don't think that's a foolproof
+solution, simply because companies
+[00:45:50] can evaluate various models,
+see how well they do on the leaderboard,
+[00:45:54] and make tweaks or decisions based on
+the leaderboard accuracy.
+[00:45:57] This is often called
+human in the loop overfitting,
+[00:46:01] but I do think private leaderboards
+have a place in the future of evals.
+[00:46:05] I think more broadly,
+one thing that we haven't seen enough of
+[00:46:09] is studies within the actual firms
+that are adopting AI.
+[00:46:12] So it's not enough to rely on these static
+benchmarks.
+[00:46:16] It's very helpful to be able to understand
+what happens when workers are using AI
+[00:46:20] to speed up their work on specific tasks,
+[00:46:23] or to automate parts of it, or to augment
+certain tasks they are doing.
+[00:46:27] And for that,
+I don't think benchmarks are the solution.
+[00:46:30] I think things like uplift
+[00:46:31] studies, figuring out how quickly the
+AI is being adopted,
+[00:46:35] even things like the revenue for companies
+that are building
+[00:46:38] these tools are much better indicators
+of how useful AI is
+[00:46:42] compared to just relying
+on the benchmark results alone.
+[00:46:49] [Host] Thank you.
+[00:46:50] And Jonathan asks: how will review work?
+[00:46:54] The amount of claims already far
+exceed the community's capacity to review.
+[00:46:59] How could AI help with the explosion
+of review
+[00:47:02] needs in that they don't over
+constrain long,
+[00:47:06] sorry, longer term epistemic shifts?
+[00:47:11] [Sayash] Yeah, that is a
+that is a fantastic question.
+[00:47:13] I don't have a complete answer to this,
+[00:47:15] but I do think there are certain things
+we can do to help.
+[00:47:19] On the AI side, I do think it's helpful
+and productive to build tools
+[00:47:23] that improve, the current status
+of scientific reproducibility.
+[00:47:28] In our own lab,
+we've been doing some of this work.
+[00:47:30] We have been seeing this work
+from other groups as well.
+[00:47:34] And I think the reason this is important
+is because
+[00:47:36] no peer reviewers or most peer reviewers
+actually don't have the capacity
+[00:47:40] to go into the code, run it,
+make sure it is reproducible,
+[00:47:44] and evaluate
+if it works correctly and can be loaded.
+[00:47:48] In some of the work
+that we found reproducibility errors,
+[00:47:51] the error was in one line of code
+[00:47:54] out of a 10,000 line code base.
+[00:47:57] And the only reason we were able to find
+this error
+[00:47:59] was because I worked on this code base
+for like three weeks.
+[00:48:01] That is certainly not something
+we can expect of peer reviewers.
+[00:48:05] And so in general, I think
+using AI to improve epistemic practices,
+[00:48:10] using AI to improve reproducibility,
+[00:48:13] I think is an interesting direction
+that we should definitely investing.
+[00:48:17] That said,
+there are certain things that we can do.
+[00:48:20] So, for example, encouraging researchers
+to provide the data
+[00:48:25] and the code that they use to create
+the results is a non-AI intervention.
+[00:48:29] And you know,
+[00:48:30] if there's like a paper that's simply out
+there, it's not getting much attention,
+[00:48:33] maybe no one will make the effort
+to investigate if it's correct.
+[00:48:38] But on the flip side, if a paper is being
+cited, is getting attention,
+[00:48:41] people are trying to build on top of it,
+[00:48:43] then this code and data
+becomes extremely helpful.
+[00:48:46] There's a saying that goes
+many eyes make shallow bugs.
+[00:48:49] And so the more attention
+[00:48:50] a paper gets, the easier
+it is to spot issues, errors, and bugs.
+[00:48:54] I think for for doing that, it's
+essential that journals
+[00:48:58] and scientific institutions
+incentivize reproducibility practices.
+[00:49:05] [Host] And what strategies can be used
+[00:49:07] to regulate open source generative AI?
+[00:49:12] [Sayash] Yeah.
+[00:49:12] That's a that's a great question on the
+misuse potential for open source AI.
+[00:49:17] I think crucially, perhaps
+the reason that the question is about open-
+[00:49:21] source models or perhaps
+even open-weight models, which are
+[00:49:25] where the model weights are released
+openly, is because
+[00:49:28] once the model weights are released,
+there is no taking them back.
+[00:49:32] You know, unlike API based models
+where, you know, OpenAI
+[00:49:35] provides the API to say, GPT-4o
+[00:49:38] opening, I can actually rescind the access
+to specific users
+[00:49:41] or even the entire model if specific
+misuse risks are later realized.
+[00:49:46] But this is not the case
+[00:49:47] for open-source or open-weight models,
+where developers have very little control.
+[00:49:51] These models can be uploaded
+to peer to peer sharing websites,
+[00:49:54] and be distributed without any control
+over how the model is used.
+[00:50:00] So it's an interesting question about how
+[00:50:03] we should think about regulating open
+source models.
+[00:50:06] I think for many of the misuse risks
+that I pointed out here, the best defense,
+[00:50:11] in my opinion, actually lies downstream
+of the specific model itself.
+[00:50:15] So, for example,
+when it comes to biosecurity risks,
+[00:50:19] with or without AI,
+I think biosecurity is best achieved
+[00:50:24] at the material synthesis
+and screening layer.
+[00:50:27] So today we have tabletop DNA synthesis
+tools that can be used for creating,
+[00:50:32] like different forms of nucleic acids.
+[00:50:36] We don't really have good mechanisms,
+at least right
+[00:50:38] now, to screen
+what these tools are being used for.
+[00:50:42] In the future, I hope and think
+that the best way is to restrict access
+[00:50:46] to who gets access to this hardware,
+as well as to restrict what
+[00:50:51] materials can be synthesized,
+perhaps even using AI
+[00:50:55] to figure out
+potentially harmful substances.
+[00:50:58] So so that's for biosecurity.
+[00:51:00] Similarly for cyber defense,
+I think the best defense is incorporating
+[00:51:04] AI in all critical infrastructure to
+proactively find vulnerabilities and bugs.
+[00:51:09] I think that will go much further than
+simply regulating the use of these models,
+[00:51:13] because if you think about it,
+finding cybersecurity
+[00:51:16] bugs is not actually
+[00:51:19] an offensive activity.
+[00:51:21] It's it can be either used by offenders
+to sort of find and expose bugs,
+[00:51:26] but it can also be used by defenders
+to patch bugs and to patch them
+[00:51:29] before the products are released
+or before they can be exploited.
+[00:51:33] And so in some sense,
+restricting the ability of these models
+[00:51:37] to find vulnerabilities
+would kneecap their ability
+[00:51:40] also to be used as defensive tools.
+[00:51:41] So for that reason, I think the best
+defense is in incorporating these models,
+[00:51:47] to find these vulnerabilities
+and improve cybersecurity
+[00:51:50] rather than in simply restricting access
+or regulating at the model level.
+[00:51:58] [Host] And Jessica asks, to what
+[00:52:00] extent do you think these issues related
+to evaluation and evidence collection
+[00:52:05] are a result of incentive structures
+within the AI/ML research community,
+[00:52:10] both in academia and the private sector?
+[00:52:15] [Sayash] Yeah.
+[00:52:15] I think the incentive structures
+have a big role to play here.
+[00:52:19] So, especially in academia,
+[00:52:22] I think things actually might
+even be a tad bit worse
+[00:52:25] than in many industry applications
+because for academics, the final output
+[00:52:31] of a research project when you are using
+AI is the publication of a paper.
+[00:52:35] It is not a technical artifact that people
+actually use on a day to day basis.
+[00:52:39] So unlike in the industry,
+when you find a bug in a system,
+[00:52:42] you can actually go back
+and fix it, for academia
+[00:52:44] I think many of these issues
+are really hard to correct.
+[00:52:47] We found this with our own work
+in reproducibility,
+[00:52:50] where many of the authors of the papers
+where they found errors
+[00:52:53] were quite reluctant to acknowledge
+and fix the errors in their paper.
+[00:52:56] And I think the incentive structures
+[00:52:59] for publishing more such papers are also
+not in the right place
+[00:53:02] simply because
+reproductions of existing work
+[00:53:06] are not really valued
+as much as novel research.
+[00:53:09] And so for all of those reasons,
+academia is pretty hostile.
+[00:53:12] To improving reproducibility.
+[00:53:13] Of course,
+there are small steps being taken.
+[00:53:15] And overall, in the long term,
+I'm optimistic about us getting there.
+[00:53:19] But in the short to medium term,
+I don't think, academia is in a good place
+[00:53:23] and I think things will get a lot worse
+before they get better.
+[00:53:27] When it comes to the industry, of course,
+there are the incentives of,
+[00:53:30] selling the models
+to end users and customers,
+[00:53:33] and I think those are pretty hard
+to get around.
+[00:53:37] But at the same time,
+there are other reasons
+[00:53:39] why evaluations are hard
+beyond just incentives.
+[00:53:43] So, for instance,
+the issues around construct validity
+[00:53:45] generally do require domain expertise,
+but generally,
+[00:53:49] solving construct validity
+generally requires hiring people
+[00:53:52] or contracting people who have expertise
+in a given field to spend
+[00:53:56] hours, days, or months of their time
+coming up with new benchmarks.
+[00:54:00] And that is a cultural shift
+that the AI community has not yet
+[00:54:03] had to experience before,
+but much of its history AI could rely on
+[00:54:07] basically like, detached benchmarks.
+[00:54:11] You know, you have things like the iris
+benchmark where, you're predicting
+[00:54:17] what
+[00:54:19] a given flower is
+based on the petal and separate shape,
+[00:54:22] no one really cares about flowers
+in the AI community.
+[00:54:24] What they care about
+is the accuracy of the classifiers.
+[00:54:28] And so in this detached way,
+when AI was operating
+[00:54:30] in this detached mode,
+it had this frictionless reproducibility.
+[00:54:34] And I think we're starting
+to see, kind of fall short
+[00:54:37] when these systems are becoming
+useful enough to be, incorporated
+[00:54:41] into a large number of product.
+[00:54:43] So I do think a part of it
+definitely is the incentives.
+[00:54:46] But another big chunk is this cultural
+shift and the need for domain expertise
+[00:54:50] and just the problem
+being genuinely hard in the first place.
+[00:54:57] [Host] Well, Tanya
+[00:54:58] thanks you for a very interesting
+presentation and asks if you could
+[00:55:02] please tell us whether you see parallels
+between the issue with using
+[00:55:06] AI in scientific research
+and in legal applications?
+[00:55:11] Or do the issues
+also differ in certain respects?
+[00:55:16] [Sayash] Thanks.
+[00:55:17] Yeah.
+[00:55:17] So I think it the issues are similar
+to the extent
+[00:55:20] that there is like a gradient
+of applications, applications
+[00:55:24] that are less consequential
+also turn out to be easier to evaluate,
+[00:55:28] whereas applications requiring
+[00:55:31] more nuanced
+implementations or are going after more
+[00:55:36] ambitious
+things are also harder to evaluate.
+[00:55:39] I think beyond that,
+there are a few differences, though.
+[00:55:41] The first is, unlike scientific research,
+[00:55:45] the legal profession
+has its own set of norms,
+[00:55:48] where the expert
+[00:55:51] or the practitioner is accountable
+to someone at the other end.
+[00:55:55] Of course, scientific researchers
+are accountable at the end to the funders
+[00:55:59] or to the scientific community
+or their peers.
+[00:56:01] But there isn't this 1 to 1 correspondence
+in the specific customer that you have
+[00:56:06] at the end of the day.
+[00:56:08] I think for that reason, we've
+already seen the development of many,
+[00:56:12] AI tools and applications
+such as things for information
+[00:56:15] processing like transcription,
+translation, e-discovery, and so on.
+[00:56:20] That were evaluated pretty well
+and that have proven useful,
+[00:56:23] to incorporate into scientists, or
+into lawyers' workflows.
+[00:56:27] In contrast,
+I don't think we have, really explored
+[00:56:31] the breadth of scientific research tools
+that we could have come up with,
+[00:56:34] even given the existing
+capabilities of AI systems.
+[00:56:37] That is changing.
+[00:56:38] As AI researchers
+turn towards science as a domain
+[00:56:42] where they can sort of show
+off the expertise of AI models.
+[00:56:46] I think we have seen investment
+into building these tools,
+[00:56:49] but it's surprising to me
+that even simpler tools on the spectrum
+[00:56:52] that I described for scientific research
+aren't yet very well-developed,
+[00:56:56] as opposed to legal research, where
+you have a healthy, functioning market,
+[00:57:00] a big legal tech market,
+that sort of goes after these
+[00:57:03] problems and has solved them
+successfully in many cases.
+[00:57:09] [Host] And our final question,
+[00:57:11] what do you see
+as the future of evaluation in this space,
+[00:57:15] especially given the inherent limited
+scope of static data sets?
+[00:57:21] [Sayash] Yeah, that's another fantastic question.
+[00:57:22] So I think if you think about the types
+of evaluations we've talked about, in this
+[00:57:27] talk, on one end of the spectrum,
+we have static benchmarks, right?
+[00:57:32] So we have benchmarks that might
+[00:57:36] poorly reflect
+[00:57:39] the state of any particular field,
+[00:57:41] things like the bar exam for figuring out
+if a model can do legal reasoning.
+[00:57:45] I think static benchmarks
+will improve drastically.
+[00:57:47] So we have seen how impactful
+these benchmarks could be.
+[00:57:51] For example, in domains like coding where,
+as opposed to the earlier
+[00:57:55] generation of coding benchmarks,
+things like human eval,
+[00:57:58] which were really basic coding problems
+in the last couple of years,
+[00:58:01] we've seen a number of benchmarks
+that are much more involved.
+[00:58:05] For example, SWE-bench tests
+[00:58:07] the ability of language models
+to generate solutions to GitHub issues.
+[00:58:12] These are real world issues as opposed
+to toy problems like in human eval.
+[00:58:15] And I think we will continue
+to get better at that.
+[00:58:18] On the other end of the spectrum are
+downstream applications.
+[00:58:22] So these are, evaluations
+that might be done through uplift studies
+[00:58:27] or to surveys of users,
+or perhaps by looking at the impact
+[00:58:30] of introducing a tool into a workplace.
+[00:58:33] And once again,
+I think we haven't yet paid too much attention
+[00:58:36] to how AI is being,
+adopted across institutions.
+[00:58:40] But I think we'll continue
+to see more of it.
+[00:58:43] And I think alongside both of these,
+[00:58:45] we are starting to see this third
+[00:58:48] sort of sphere of evaluation,
+which we like to call midstream
+[00:58:51] evals. These aren't really upstream
+in the sense that, you know,
+[00:58:55] they are not really about, issues
+that are detached from the real world.
+[00:58:59] They aren't really downstream
+because they aren't evaluating how
+[00:59:01] well AI systems work.
+[00:59:03] But rather the key distinguishing feature
+is that you have evaluations
+[00:59:07] that sort of
+[00:59:10] compare these agents
+or language
+[00:59:13] models on like a vast
+number of different applications.
+[00:59:16] So you might have multi-dimensional
+[00:59:19] evaluations that test
+how well agents or language models
+[00:59:22] do at legal tasks, as well as software
+engineering as well as,
+[00:59:27] web automation, as well
+as, scientific research, and so on,
+[00:59:31] that are conducted by these third parties
+that aren't the industry
+[00:59:34] and aren't the downstream providers,
+and I think have a lot more credibility
+[00:59:40] as well as standardization in coming up
+with this type of eval.
+[00:59:44] So two examples that come to mind
+[00:59:46] are HELM,
+which is a Stanford University project
+[00:59:50] - HELM stands for holistic evaluation
+of language models -
+[00:59:53] where they compare,
+I think, over 40 different models on
+[00:59:56] over a dozen different benchmarks,
+[00:59:58] and they try to evaluate how well these
+models are across the board.
+[01:00:03] A second example
+[01:00:04] is the open LLM leaderboard
+by Huggingface,
+[01:00:07] which again does something similar
+but strictly for open models.
+[01:00:10] And I think we'll continue
+to see more innovation here, for coming up
+[01:00:15] with these standards and conducting
+these third party evaluations.
+[01:00:21] [Host] Sayash,
+[01:00:22] thank you so much for sharing your time
+with us today.
+[01:00:25] And thank you, everyone who logged in.
+[01:00:28] I hope you'll be able to join us
+next week.
+[01:00:31] Finale Doshi-Velez
+and Mason Kortz will be talking
+[01:00:35] about denoising and discretion:
+AI support for normative decisions.
+[01:00:41] Everyone, have a great day.
+[01:00:44] [Sayash] Thank you so much.

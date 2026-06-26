@@ -1,0 +1,1742 @@
+[00:00:02] [Jay] Excellent.
+[00:00:03] There you are.
+[00:00:04] Well, welcome, everybody,
+to the Spring Speaker Series at BKC.
+[00:00:07] Building on the success of the RSM speaker
+series started by the Institute
+[00:00:11] for Rebooting Social Media
+in the fall of 2023, we bring together
+[00:00:15] academics, top experts, industry
+professionals to talk about cutting edge
+[00:00:19] research at the edge of things
+like social media, AI and so much more.
+[00:00:24] My name is Jay.
+[00:00:24] I use they/them pronouns,
+[00:00:26] and I am the executive assistant
+here at the Berkman Klein Center.
+[00:00:29] Today we're going to be tackling
+a pretty sticky question,
+[00:00:31] which is, how do we design AI systems
+that can aid in making decisions
+[00:00:37] involving very personal human discretion?
+[00:00:40] And so things like legal cases,
+immigration contexts,
+[00:00:43] and how do we do that while balancing
+the need for context and human agency,
+[00:00:48] the discretion part of the title with,
+you know, avoiding
+[00:00:51] arbitrary and biased decision
+making from the systems, the denoising
+[00:00:55] part of the title and doing that with us
+today, we're very lucky
+[00:00:58] to have Finale
+Doshi-Velez and Mason Kortz.
+[00:01:02] Finale. Yes, please. 
+[Applause]
+[00:01:06] Absolutely.
+[00:01:08] Finale is a Herchel Smith professor
+of Computer Science
+[00:01:11] at the Harvard Paulson School
+of Engineering and Applied Sciences.
+[00:01:14] She did her MSc
+at the University of Cambridge,
+[00:01:17] her PhD at MIT,
+and her postdoc at Harvard Medical School.
+[00:01:22] Today, she leads the Data
+to Actionable Knowledge Lab at Harvard,
+[00:01:27] where they apply probabilistic methods
+to decision
+[00:01:30] making scenarios involving humans and AI.
+[00:01:33] We're also lucky to have with us
+Mason Kortz,
+[00:01:35] who is a long time
+member of the BKC family as well.
+[00:01:38] Mason is a cyberlaw clinical instructor.
+[00:01:41] And he brings with him
+a wealth of knowledge
+[00:01:43] when it comes to things like government
+transparency, algorithmic decision
+[00:01:47] making, software and database development,
+and the legal landscape around AI.
+[00:01:52] But before I pass off the session to them,
+I just wanted to
+[00:01:56] thank you all again for being here
+on a totally unnecessarily cold day.
+[00:02:01] We are facing, you know,
+a new set of challenges in this world.
+[00:02:04] And so we're going to have to really
+collaborate to face those challenges.
+[00:02:07] But I like to think of events like this
+as a great opportunity to get your brain
+[00:02:11] spinning, your blood pumping, and ideas
+rolling towards meeting those challenges.
+[00:02:16] Last reminder before I pass it off
+that today's session is recorded.
+[00:02:20] So keep that in mind
+for your participation
+[00:02:22] and there will be an opportunity
+for questions at the end.
+[00:02:25] Without further ado, please
+join me in welcoming Mason
+[00:02:28] and Finale.
+[00:02:33] [Finale] All right.
+[00:02:33] Yeah.
+Thanks again, everyone, for being here.
+[00:02:36] So just to set the stage we're hoping
+that this is a fairly interactive
+[00:02:40] discussion.
+[00:02:41] I'm not bringing you
+research findings.
+[00:02:43] I'm bringing you research questions.
+[00:02:45] And I hope that in this room and on Zoom,
+we can, talk about.
+[00:02:51] Oh, where's the can
+we switch to the slides?
+[00:02:54] [Host] Maybe after you're done with your intro?
+Because
+[00:02:56] I don't want to take away
+the picture of you talking.
+[00:02:58] [Finale] All right.
+[00:03:00] That we can talk about some
+[00:03:01] of these questions of, like how to denoise
+and have discretion at the same time.
+[00:03:05] All right.
+[00:03:06] Could you.
+[00:03:18] Okay.
+[00:03:18] And before starting.
+[00:03:20] Mason and I, I also want to recognize,
+my master's student, Shanzeh,
+[00:03:24] who is there in the audience.
+[00:03:25] She's done
+a lot of the real work behind this.
+[00:03:28] And Peter Henderson at Princeton,
+for his support on this project.
+[00:03:34] All right.
+[00:03:35] So most of my work to date
+[00:03:37] and a lot of AI applications, have
+[00:03:40] decision making settings that look maybe
+kind of like what you see on this slide.
+[00:03:44] There's data, there's lots of data.
+[00:03:46] There's too much data for you to see.
+[00:03:49] For example, a patient's health records,
+everybody else's health records.
+[00:03:53] And then there's a patient in front of you
+and what you're hoping,
+[00:03:57] when you have, for example, a doctor
+trying to make a decision,
+[00:04:00] one of my main application areas, is that
+[00:04:03] you can take all of that data out there,
+[00:04:06] and condense it somehow such that you have
+some useful information,
+[00:04:11] and then you also get some
+additional information from the patient
+[00:04:14] because there's no ICD code
+for master of all four elements.
+[00:04:17] That's the Avatar down there.
+[00:04:19] And so, you know,
+you put your information together
+[00:04:21] to make the best choice,
+you know, to diagnose whatever's going on.
+[00:04:25] So this is the sort of setting that
+I've been working in, and I would argue
+[00:04:29] that implicitly is the sort of mindset
+that we've been in in a lot of AI decision
+[00:04:35] support, this idea of there
+being a right and wrong answer.
+[00:04:38] And ideally, information
+gets put together to find those answers.
+[00:04:42] Right?
+[00:04:42] So this implicit assumption that there's
+an objectively correct answer.
+[00:04:46] And in many application areas
+this is indeed the case.
+[00:04:49] For example, what is the species
+of the bird in this picture?
+[00:04:52] There is a species of this bird
+belongs to.
+[00:04:55] And there's a right and wrong
+answer to that question.
+[00:04:57] Does this patient have sepsis? Right.
+[00:05:00] How long will it take me to walk from home
+to work?
+[00:05:02] Right.
+[00:05:03] I may not know when I start the walk,
+[00:05:04] but when I finish the walk,
+I will know how long it took me.
+[00:05:07] And there is a right and wrong
+answer to that prediction.
+[00:05:11] If this person is given bail,
+will they commit a crime?
+[00:05:14] Again, you might not know right now,
+[00:05:16] but in some period in future
+you will know that answer.
+[00:05:18] And that is a right and wrong
+sort of thing that is measurable.
+[00:05:22] So in all of these cases,
+[00:05:23] we know what the correct answer
+is eventually.
+[00:05:27] And when we ask, what is the point
+[00:05:30] of having an AI involved in this process?
+[00:05:33] Or what's the point
+of having a human involved
+[00:05:35] in this process
+of asking a question that looks like this?
+[00:05:40] Well, the reason why you probably would
+want an AI and human working together
+[00:05:45] is because perhaps they have different
+information, right?
+[00:05:49] The AI that is looking at the bird
+image is really good at picking out
+[00:05:52] certain bird features.
+[00:05:54] But maybe the human is good at noticing
+what the street sign
+[00:05:57] in the background says, and that gives
+some additional information or context,
+[00:06:01] and can put together
+pieces of information, or maybe the bird's
+[00:06:04] at a funny angle in the human recognizes
+that, oh, the lighting is off,
+[00:06:08] and maybe I shouldn't
+trust this particular feature from the AI.
+[00:06:11] So these are all situations
+where we're trying to get better accuracy
+[00:06:15] by taking advantage of the fact
+that both the human
+[00:06:18] and the
+AI have different pieces of information.
+[00:06:21] So these are in settings
+where there is a correct answer,
+[00:06:24] but not all settings look like
+[00:06:27] the sort of setting where
+there is a measurably correct answer.
+[00:06:31] Was this accident due to negligence?
+[00:06:33] Right.
+[00:06:33] That's a value type of question.
+[00:06:35] Right.
+What do we define as negligence?
+[00:06:38] Where was a person trying hard enough
+to prevent the accident or not?
+[00:06:42] Right.
+[00:06:43] Should this person be given bail? Right.
+[00:06:45] That's different than, If given bail,
+will they commit a crime?
+[00:06:48] Right.
+[00:06:50] That's a value based question.
+[00:06:51] Should we bomb this target? Right?
+[00:06:53] I mean, I talk to people who are
+[00:06:54] more on
+the defense side of things.
+[00:06:56] That, again, is a value based question.
+[00:06:58] Should a patient have the surgery again,
+that's a different question than does
+[00:07:02] this patient have sepsis?
+[00:07:04] Do these cells have,
+or are these cells cancerous?
+[00:07:06] Those are right and wrong questions.
+[00:07:09] Whereas should the patient have a surgery
+that's not a right and wrong question.
+[00:07:12] That's a question
+that depends on the patient's values.
+[00:07:15] So I want to make a clear distinction
+between things that are measurable
+[00:07:19] and have right and wrong answers
+[00:07:21] and situations where there are not right
+and wrong answers in that sense,
+[00:07:25] or the correct behavior
+depends on your values.
+[00:07:29] And in that
+[00:07:30] case, you know, there's,
+I would argue, a different
+[00:07:34] key reason
+why you would want humans in the loop.
+[00:07:39] We need humans in the loop because
+we're the source of the values, right?
+[00:07:43] We are the source of the discretion
+about like,
+[00:07:46] did they try hard enough, for example?
+[00:07:50] We may also believe
+that it's really important
+[00:07:52] to maintain human agency
+in connection to the outcome.
+[00:07:56] Right?
+[00:07:57] If a machine is the source
+of the recommendation
+[00:08:00] for the surgery, for example, and
+the surgery doesn't go well
+[00:08:04] we might say,
+[00:08:05] you know, it really should have been
+like the doctor's decision
+[00:08:08] or something like this.
+[00:08:09] Or if you're
+if you're thinking about military targets,
+[00:08:12] do you want to hand off your weapons
+to an automated system
+[00:08:15] and somehow absolve yourself
+if that moral
+[00:08:18] responsibility that that goes
+with pushing a button, right.
+[00:08:21] So there are reasons
+to keep humans in the loop
+[00:08:24] because we are the source of the values.
+[00:08:26] And we you kind of believe that kind of
+[00:08:28] in one way or another, like our morals
+or ethics should come back to us.
+[00:08:32] Right? In terms of how we behave.
+[00:08:36] So these are normative contexts.
+[00:08:37] So a natural question is, well,
+if we need the humans
+[00:08:41] for this really important part
+of normative contexts,
+[00:08:45] well, what are the AI supposed to do?
+[00:08:47] Right.
+[00:08:48] And so the thinking
+[00:08:50] that I've been having along these lines
+is that even when decisions
+[00:08:55] depend on values,
+we often still have a notion
+[00:08:59] of correct or incorrect process.
+[00:09:02] Right?
+[00:09:02] So not an incorrect or correct outcome
+like the bird species
+[00:09:06] classification,
+but an incorrect or correct process.
+[00:09:11] If you're
+considering having a surgery, for example,
+[00:09:15] hopefully
+the doctor asks you some questions about,
+[00:09:18] you know,
+what are you hoping to do post surgery?
+[00:09:21] You know,
+can you make it to certain types of rehab?
+[00:09:24] What is your risk trade off? Right?
+[00:09:26] Like are you able to do some
+some other medicated solution instead?
+[00:09:30] And that's going to cause
+these side effects.
+[00:09:32] Have you thought through that?
+[00:09:34] So there is still a notion
+of a good process, even if the answer
+[00:09:39] doesn't necessarily have like
+an objective thumbs up, thumbs down,
+[00:09:44] correct, incorrect notion.
+[00:09:46] And importantly,
+the process allows us to denoise
+[00:09:51] is what I'd argue
+that rather than acting on a whim
+[00:09:54] rather than acting on
+just like your gut feeling in this moment,
+[00:09:58] the having a process, having
+[00:10:00] a list of criteria to consider helps
+you be aligned
+[00:10:04] erhaps with yourself
+in the context of the surgery,
+[00:10:08] in the context of is this negligence,
+[00:10:11] ideally with some sort of societal notion
+[00:10:14] of what negligence is,
+because we wouldn't want every single case
+[00:10:18] being decided
+based off of just feelings in that moment.
+[00:10:22] You know, we want some consistency
+in that definition
+[00:10:25] while still allowing for discretion,
+because if you follow all the steps,
+[00:10:29] maybe different people could follow those
+steps and reach different conclusions.
+[00:10:33] Right?
+[00:10:33] And that would still be a correct process.
+[00:10:36] So this is a kind of
+my thesis is that, you know,
+[00:10:40] correctness there is is still a notion
+of correctness in normative context.
+[00:10:44] It just isn't a place of process,
+not in the place of outcome.
+[00:10:48] So when we think about AI, well,
+[00:10:51] I could be useful for computing
+the first of all, any objective elements.
+[00:10:56] Right.
+[00:10:57] So if you need to estimate
+the surgery recovery time.
+[00:11:00] Right, the AI could help you do that.
+[00:11:03] Because that's an objective thing,
+and maybe that's an objective fact
+[00:11:06] that's useful for you
+in part of your process.
+[00:11:09] But it could also be useful to make sure
+that you don't miss key facts,
+[00:11:13] or maybe that you don't get hung up
+on extraneous facts that maybe
+[00:11:16] have nothing to do with whether
+something's considered negligence or not.
+[00:11:21] And also that you don't
+miss any elements of the process.
+[00:11:23] Right.
+[00:11:24] If the process is,
+make sure that you consider both the cost
+[00:11:27] and the risk of the outcome,
+then you're only talking about cost,
+[00:11:32] maybe the process, the AI helps remind you
+[00:11:35] that, hey, you should also be thinking
+about certain risks as well.
+[00:11:39] How to do
+[00:11:39] this, though, is an open question.
+[00:11:42] Because AIs tend to manipulate us
+[00:11:45] when we have them in front of us.
+[00:11:48] Or they go in the other direction.
+[00:11:51] So, there's
+a very large literature on this.
+[00:11:54] I'm just giving a couple of examples.
+[00:11:57] Hopefully this is not surprising.
+[00:11:59] But in the in the context
+[00:12:02] of law and policy,
+[00:12:05] an example of denoising
+[00:12:07] but not discretion: in 2017,
+[00:12:11] Ice changed, their algorithm
+[00:12:15] to basically remove the release option
+and adherence rates
+[00:12:19] to the algorithm stayed the same before
+and after the software change,
+[00:12:22] unannounced software change,
+and the number of release
+[00:12:26] rates went down
+kind of consistently with this.
+[00:12:30] You know,
+people were just following the algorithm.
+[00:12:32] Right? 
+This is an example.
+[00:12:35] Denoising? Yes.
+[00:12:37] People were acting consistently.
+Discretion? Maybe, no.
+[00:12:40] Right.
+[00:12:42] Because they're the same person before
+and after algorithm could have gotten
+[00:12:45] very different results.
+[00:12:48] In terms of what was happening.
+[00:12:51] [Mason] Maybe I could talk about the bail one.
+[00:12:52] [Finale] Yeah. Go ahead. Yeah.
+[00:12:52] [Mason] So there was a recent study also,
+collecting studies
+[00:12:57] around the country,
+but focusing on two jurisdictions,
+[00:13:01] that introduced mandatory
+use of algorithmic risk
+[00:13:04] assessments in determining
+whether people got bail
+[00:13:07] and what they found was that it actually
+had very little impact on the rate
+[00:13:13] at which people got bail or t
+the actual bail that was set,
+[00:13:17] where judges had discretion
+to set different amounts of money.
+[00:13:21] And if you break it down further by judge,
+what they found is,
+[00:13:26] judges tended
+[00:13:28] to cite the algorithmic risk assessment
+as a factor when it agreed
+[00:13:32] with their existing predisposition
+and overrule it when it didn't agree.
+[00:13:38] And actually, if you look at the judges
+in that particular jurisdiction,
+[00:13:41] we're all over the spectrum.
+[00:13:42] You had some judges.
+[00:13:44] Oh, sorry.
+[00:13:45] Do have a tech issue?
+[00:13:48] Oh, okay.
+[00:13:50] Yeah, yeah.
+[00:13:51] So, they found that there are some judges
+who, ordered people detained
+[00:13:56] pretrial only 5 or 6% of the time
+and others that were northward of 70%.
+[00:14:01] And on the individual judge level,
+it had almost no effect.
+[00:14:05] So this is an example where
+[00:14:08] the judges probably used
+to having a lot of discretion
+[00:14:12] just preserve that discretion.
+[00:14:13] But the risk assessment served no
+[00:14:17] identifiable valuable denoising.
+[00:14:19] Right.
+[00:14:20] In the sense
+that, it just it just confirmed people's
+[00:14:23] existing practices and biases.
+[00:14:26] [Host] Yeah. Okay.
+[00:14:28] So we had a question come in.
+[00:14:29] Humans have developed techniques to ensure
+a process is comprehensive
+[00:14:33] and being followed correctly.
+[00:14:35] For example, checklists.
+[00:14:36] How do AIs improve on these techniques?
+[00:14:40] [Finale] It's a great question
+so that we will be getting to exactly that
+[00:14:43] in just a few moments.
+[00:14:44] The idea is that the AI will help the
+human through the checklist.
+[00:14:48] [Audience] When you just go
+[00:14:49] about with a definition in your context,
+[00:14:53] what is de-noising?
+[00:14:55] Could you kind of explain that?
+[00:14:56] [Finale] Yeah, yeah.
+[00:14:57] So like it I think maybe 
+this bail context is like a good example,
+[00:15:03] like if, if, if people are coming in and,
+[00:15:08] you can imagine if the same person
+was in front of ten different judges,
+[00:15:13] and each judge
+kind of did what they felt like.
+[00:15:15] Right?
+[00:15:16] Or they used different criteria
+to determine whether this person should
+[00:15:20] be released or not.
+[00:15:24] Some of some of that variation
+you might think is okay,
+[00:15:27] because maybe they just, you know,
+had slightly different value judgments.
+[00:15:31] But if it's, you know, for example,
+we say that race should not be a factor,
+[00:15:35] right?
+[00:15:35] Or gender should not be a factor.
+The allowable factors, maybe,
+[00:15:40] are you know, how likely you think that
+this person will commit a violent crime.
+[00:15:46] Then like how annoying they are
+[00:15:47] maybe is also not a factor, right?
+[00:15:50] And so if different
+judges are using different factors,
+[00:15:54] then you might say
+as an institution, actually,
+[00:15:56] we want you to consider these factors
+and not these other factors.
+[00:15:59] And that's what we mean by denoising
+that if people are kind of reacting
+[00:16:03] based off, like,
+I don't like your sweater,
+[00:16:06] then that's not okay, right?
+[00:16:07] We don't want that kind of variation.
+Yeah, yeah.
+[00:16:10] [Mason] Maybe I can give a concrete example.
+[00:16:11] That's a counterpoint to the bail study,
+which is the federal sentencing guidelines
+[00:16:16] that were introduced
+in the 90s for federal court,
+[00:16:18] which, before that, judges
+essentially had very broad discretion
+[00:16:22] as long as the sentence
+was within the range prescribed
+[00:16:24] by the statutory violation,
+they could do whatever they wanted.
+[00:16:28] The federal sentencing guidelines
+required judges to essentially sit down
+[00:16:33] and work through a checklist or worksheet
+where they would identify specific,
+[00:16:39] each crime had like a point value
+[00:16:41] it started out with.
+[00:16:42] And then they, you could
+[00:16:43] that could go up or down
+based on you got you added three points.
+[00:16:47] If they used a minor in the crime,
+you added two points.
+[00:16:49] If they used a firearm,
+you took away points. If,
+[00:16:53] they were coerced, you know, by another,
+by another person involved in a crime.
+[00:16:59] And that process of making judges
+write down their reasoning
+[00:17:04] and how much each one affected
+the sentence did have a de-noising effect
+[00:17:09] in the sense
+that when judges were forced to write down
+[00:17:13] what they were taking into consideration
+the variationin sentences
+[00:17:18] for similarly situated defendants reduced.
+It didn't disappear,
+[00:17:22] but it reduced, suggesting that
+there were noisy variables that judges
+[00:17:27] were consciously or unconsciously
+taking into account before the guidelines.
+[00:17:34] [Finale] And, and then just more broadly,
+[00:17:36] I think these two examples kind of set
+the stage in opposite directions, but
+[00:17:40] a lot of work, some in our lab,
+some in our broader,
+[00:17:44] human driven AI community, and, and beyond
+[00:17:48] have found that people tend to fall
+into one of these camps, right?
+[00:17:52] They tend to be like, there's a machine,
+[00:17:54] I don't have to think anymore.
+[00:17:56] Or,
+I don't need no stinking machine.
+[00:18:01] And they just do it all themselves. Right.
+[00:18:02] And and so there's really a tension
+between
+[00:18:05] how to get kind of both of these together.
+[00:18:08] All right.
+[00:18:09] And there has been some work
+in, like, assisted denoising,
+[00:18:13] but the most effective way to denoise,
+apparently,
+[00:18:16] in that work was to just give people
+recommendations.
+[00:18:19] They're not really using
+their discretion. Right.
+[00:18:20] So you're getting denoising effects
+that you're not necessarily getting
+[00:18:24] discretion as well.
+[00:18:27] All right.
+[00:18:29] So what we're going to do
+for the rest of the time that we have,
+[00:18:34] is play with a couple of cases
+and a couple of different types of AI support,
+[00:18:38] like what you could imagine,
+like an AI providing a support,
+[00:18:42] and make it into
+like an interactive discussion
+[00:18:45] about what seems to be working,
+what doesn't seem to be working.
+[00:18:48] And we're going to go ahead. Yeah.
+[00:18:49] Oh, sorry.
+[00:18:50] [Mason] Before we go into the hypo,
+[00:18:52] I was going to give a quick overview
+of the elements of negligence.
+[00:18:55] [Finale] Okay. Yeah, absolutely.
+[00:18:56] So, yeah, maybe I can pass it off to you.
+[00:18:59] We decided to use workplace
+[00:19:01] type negligence because it's really boring
+in our very complicated times.
+[00:19:05] Hopefully it's something that we can just,
+like, wrap our heads around rationally,
+[00:19:09] and try to be,
+you know, making these decisions.
+[00:19:12] [Mason] Yeah.
+[00:19:13] Yeah, the use case we're looking at
+today is negligence claims.
+[00:19:16] So for those of you
+who have not been through through 1L,
+[00:19:19] law school, negligence has four factors.
+[00:19:22] First one is, did the defendant owe
+a duty of care to the plaintiff?
+[00:19:27] Like so
+[00:19:27] was there some relationship
+[00:19:29] where the defendant was required
+to exercise some level of care?
+[00:19:33] Second is,
+did they breach that duty of care?
+[00:19:36] Which means did they act unreasonably,
+given that duty of care?
+[00:19:41] Third one is, did the breach cause
+the injury that the plaintiff
+[00:19:45] is complaining of?
+[00:19:46] And the fourth one is,
+did the injury actually occur?
+[00:19:50] And, just to kind of like
+[00:19:53] explain why this is a good candidate
+for discretion and denoising.
+[00:19:58] So on the discretion side,
+[00:20:00] there are a lot of questions
+[00:20:03] in a court of law
+that are essentially reserved for a jury.
+[00:20:07] Right.
+[00:20:07] So whether a particular witness is
+credible is reserved for the jury, right?
+[00:20:13] That's not a question of law.
+[00:20:16] And likewise, whether a particular action
+or inaction on the a
+[00:20:20] part of a defendant is unreasonable,
+is largely reserved for the jury.
+[00:20:27] Now, there might be a few examples
+[00:20:28] where a judge overrules a jury
+because of a misunderstanding in law,
+[00:20:31] but typically the idea
+were they reasonable,
+[00:20:35] is a great example of something
+that a jury would be asked to decide.
+[00:20:38] And I just want to point out
+the word reasonable does a ton of lifting.
+[00:20:42] And basically the entire U.S.
+[00:20:44] legal system, almost any area of U.S. law.
+[00:20:47] Eventually you will get down to a question
+of was this reasonable?
+[00:20:50] What would a reasonable person have done?
+[00:20:53] What's the most reasonable interpretation
+of this statute or this contract?
+[00:20:58] And so
+those kind of questions of reasonableness
+[00:21:00] are very are questions
+that are value driven and human driven.
+[00:21:06] At the same time,
+my personal experience has been
+[00:21:09] that juries, can also make very noisy
+decisions.
+[00:21:13] So, I was actually on a jury
+one time, in a personal injury case,
+[00:21:19] the plaintiff
+was in a car accident.
+[00:21:23] The person who hit her was driving
+on official business for a company.
+[00:21:27] She sued the company
+for cost of her medical care.
+[00:21:30] So we went through the four steps.
+[00:21:31] We found that. Yeah.
+[00:21:32] There was a duty of care.
+[00:21:33] There's a general duty of care
+when you're driving.
+[00:21:36] We found that the driver was unreasonable.
+[00:21:39] It was heavy traffic, and they were going
+too fast for the conditions.
+[00:21:43] We found causation.
+[00:21:44] We found that there was
+a clear link and time between
+[00:21:48] the crash and the injury
+she was complaining of.
+[00:21:52] And we found that
+[00:21:53] the injuries were corroborated
+by reliable, credible medical records.
+[00:21:57] So then we were assessing damages.
+[00:21:58] And this is where it got interesting,
+[00:22:00] because a lot of the jurors
+started nitpicking the damages.
+[00:22:03] And one of the things they said was like,
+oh, well,
+[00:22:05] she went to the chiropractor's here.
+[00:22:08] And they
+[00:22:09] charge $25 to put a hot water
+bottle on her back.
+[00:22:12] Oh, they charge $10 to give her aspirin.
+[00:22:15] And they're like, well,
+that's unreasonable, you know,
+[00:22:17] we think that's too much.
+So we're going to strike
+[00:22:18] the damages.
+[00:22:19] That question was not before
+the jury. Right.
+[00:22:21] The jury has no authority to determine
+whether the chiropractor's
+[00:22:26] fees are reasonable.
+[00:22:27] All we could determine was,
+did she incur those fees
+[00:22:30] as a proximate result of the
+of the driver's negligence?
+[00:22:35] And the answer to that was yes.
+[00:22:36] We were supposed to stop there,
+but the jury didn't want to.
+[00:22:38] Right.
+[00:22:39] Because that was a values based judgment
+about what a chiropractor
+[00:22:43] should be charging that had nothing
+to do with the plaintiff. So
+[00:22:46] I had
+[00:22:47] ideas before I was in law school,
+but now that I'm a lawyer,
+[00:22:50] if I was sitting in that room,
+[00:22:51] I would have stepped up
+and I would said, okay, let's talk
+[00:22:54] about what the jury should decide
+and what the jury shouldn't.
+[00:22:55] I would have tried to denoise that while
+leaving discretion for the other elements.
+[00:23:00] Alas, I was, you know, just
+a humble computer programmer at the time.
+[00:23:05] And I didn't know any better.
+[00:23:07] But that's,
+I think, why this context of negligence
+[00:23:11] is a great example
+[00:23:12] where we have to preserve discretion
+as a matter of the rules of law,
+[00:23:16] but also we know
+as a fact that there is that
+[00:23:20] there is noise that can be prejudicial
+to one of the parties to the decision.
+[00:23:25] [Finale] Yeah, exactly.
+[00:23:26] So we're going to first start with
+a really small example as a as a warm up.
+[00:23:33] Right.
+[00:23:33] So and the other thing
+[00:23:35] we're going to have to keep in mind
+is that as we're building out these tools,
+[00:23:39] even though it seems like
+AIs are going up like this,
+[00:23:41] and in some axes,
+they are in terms of capability.
+[00:23:45] Just a moment. Yeah.
+They may be imperfect.
+[00:23:48] And so whatever AI support we give
+it has to keep in that in mind.
+[00:23:52] [Jay] I think that's a good moment
+to ask a question from the chat
+[00:23:55] before we dive into the scenario,
+which is how can we ensure that AI systems
+[00:23:59] providing normative recommendations
+do not unintentionally reinforce
+[00:24:03] existing societal biases
+under the guise of denoising?
+[00:24:07] [Finale] I think that's a great question.
+[00:24:08] And I think if you give us a few moments
+to, like go through the scenarios,
+[00:24:13] so what we're going to be proposing
+is not necessarily...when we say
+[00:24:17] AI, you know, people often jump
+[00:24:18] to providing a recommendation,
+which could be quite biased.
+[00:24:23] But maybe there's other ways of providing
+support, right?
+[00:24:26] Like,
+figuring out which facts are relevant
+[00:24:28] and which facts are not relevant
+to a particular case.
+[00:24:30] So that's where I I'd love
+for us to be thinking broadly. Right.
+[00:24:33] Like if you had a machine to help you,
+what would that machine look like?
+[00:24:38] Right.
+[00:24:39] What would you want it to do without any
+sort of preconceived notions about an AI?
+[00:24:42] Right.
+But just what would your wish look like
+[00:24:45] in this sort of circumstance?
+[00:24:47] All right, so here's a scenario.
+[00:24:50] Is it
+[00:24:50] possible to move the little piece up there
+so everyone.
+[00:24:53] Well, maybe it's fine.
+[00:24:54] Okay.
+[00:24:55] It's not a huge deal, actually.
+[00:24:57] Well, maybe we can leave it
+[00:24:58] as is because the other text is probably
+no better place.
+[00:25:00] All right, while shopping at FreshMart,
+[00:25:03] so this is a case of John and the juice -
+[00:25:06] it sounds like a band, but it's not -
+[00:25:08] I guess. Right.
+[00:25:10] While shopping at FreshMart
+[00:25:11] John slipped on a puddle of juice
+and sprained his wrist, which is very sad.
+[00:25:16] John claims that the incident was
+[00:25:18] caused by FreshMart's failure
+to maintain a clean store.
+[00:25:21] Camera footage confirms
+that an employee saw the spill
+[00:25:24] three minutes
+and 12 seconds before John slipped.
+[00:25:28] There were no placards
+warning of the spill.
+[00:25:30] This injury will inhibit John's ability
+to work at his
+[00:25:33] typing focused job, and thus his ability
+to support his family.
+[00:25:37] Fresh Mart, on the other hand, say,
+is that the employee testifies
+[00:25:41] that they had gone
+[00:25:41] to get a mop and were on their way back
+when the incident occurred.
+[00:25:45] The camera footage
+[00:25:46] also shows that John was in the store
+with a highly active three year old,
+[00:25:49] and he was trying to catch up with her
+when he slipped.
+[00:25:52] Okay, so this is a case.
+[00:25:54] Maybe, can we just get a really quick
+show of hands of, like,
+[00:25:57] who thinks this is, like,
+negligence on FreshMart's part?
+[00:26:01] Like, oh, actually, maybe we should pause.
+[00:26:03] Actually, yeah.
+[00:26:04] Do you want to provide, like... [Mason] I'll
+provide a little bit of context here.
+[00:26:06] We're also going to say that,
+[00:26:09] FreshMart has conceded
+that they had a duty of care here.
+[00:26:12] So there's a law in this jurisdiction
+that says a store has a general duty
+[00:26:16] of care to provide a safe environment
+to its customers.
+[00:26:18] Don't worry about duty.
+[00:26:20] And we're also going to say
+that they conceded that this injury is real,
+[00:26:23] and it actually did
+cause a financial harm.
+[00:26:24] The only questions here are
+was FreshMart negligent, that is,
+[00:26:29] did they act unreasonably in cleaning up
+the spill?
+[00:26:32] And two was the spill
+actually the cause of the injury?
+[00:26:37] So with those two things in mind,
+then you have to take a position on this.
+[00:26:39] You're on the jury.
+[00:26:40] You have to
+you have to go one way or the other.
+[00:26:44] Raise your hand
+if you think John has established,
+[00:26:49] that fresh mark was negligence
+and the negligence caused the injury.
+[00:26:54] Only three people.
+[00:26:54] So everyone else in the room.
+[00:26:56] Oh, sorry. Four people.
+[00:26:56] So everyone else in the room,
+[00:27:00] Good question.
+[00:27:03] So everyone else in the room thinks that,
+[00:27:06] John, you know, it's
+not facts are not in the record.
+[00:27:09] You have to decide based on this.
+[00:27:11] So everyone else in
+the room is going on the record saying
+[00:27:14] that FreshMart was not negligent.
+[00:27:15] They got off the hook here.
+Is that correct?
+[00:27:17] [Audience] Not enough information.
+[00:27:19] [Mason] It's not enough information. Okay.
+[00:27:21] Yeah, yeah,
+I guess the gray area is great.
+[00:27:25] Well, what we so what I could do here,
+[00:27:29] is maybe point out, for example,
+which facts are relevant
+[00:27:33] to which question of law.
+[00:27:36] There's also certain decisions here
+that I would argue AI under
+[00:27:39] the law could not make a recommendation
+on, but okay, so,
+[00:27:42] it sounds like most of you think
+that FreshMart was not liable here.
+[00:27:49] So, let's talk about.
+[00:27:52] Yeah. Yeah.
+[00:27:53] [Audience] We haven't decided yet. Whoa.
+[00:27:55] [Mason] What do you mean?
+[00:27:56] I give you, like, five seconds to deliberate.
+[00:28:00] Okay. So.
+[00:28:01] Yes. This
+is a hypothetical.
+[00:28:03] But if this was the, like, just for the
+purpose of the thought experiment, right?
+[00:28:07] You have to decide on this issue, right?
+[00:28:09] No more information will be provided.
+[00:28:11] Who thinks FreshMart was negligent?
+[00:28:14] Okay, now a few more people. Okay, okay.
+[00:28:16] Okay. So we're like 50/50.
+[00:28:19] All right,
+so let me provide a little more.
+[00:28:24] Now, let me provide
+a little more information.
+[00:28:28] So, The fact that, John was at the store
+[00:28:37] with a highly active three year old,
+[00:28:40] as a matter of law,
+that might go to contributory negligence,
+[00:28:44] whether John was,
+[00:28:48] partially responsible for his own injury,
+[00:28:50] but it actually would not affect
+reasonableness, right.
+[00:28:53] Reasonableness solely focuses on
+what Fresh Mart did or did not do, right.
+[00:28:58] So take out consideration
+of the three year old,
+[00:29:03] to what extent does that change?
+[00:29:04] Does anyone does that chain and change
+anyone's opinion on reasonableness?
+[00:29:07] If we're solely talking about what
+FreshMart did,
+[00:29:10] that you're not considering the fact that
+he was chasing after his three year old.
+[00:29:14] [Audience] Question would be, is
+[00:29:17] enough time for somebody
+[00:29:19] to go and take action?
+[00:29:22] That's what I would like to know.
+[00:29:23] It was that a reasonable amount of time
+for somebody to go?
+[00:29:26] [Mason] And that's what the jury has to decide.
+[00:29:30] [Audience] I would like to see the data.
+[00:29:32] Okay. Right.
+[00:29:34] Right, right. Yeah.
+[00:29:37] [Mason] Sure, in a trial
+there would be a map of the store,
+[00:29:40] and there would be competing testimony
+about how long it takes
+[00:29:43] to walk to the storage closet.
+[00:29:45] There would be testimony about
+[00:29:46] whether the placards
+were in the same closet, like, could
+[00:29:49] they've got a placard in place
+more quickly than getting the mop,
+[00:29:51] or was it most efficient to just go
+get the mop directly?
+[00:29:54] Yes. This is a thought
+experiment, not a not an actual case.
+[00:29:59] But but I do want to know,
+[00:30:01] does knowing that the,
+[00:30:05] that John chasing after his three year
+old does not impact
+[00:30:09] the analysis
+of whether Fresh Mart acted reasonably?
+[00:30:12] Does that change anyone's opinion?
+[00:30:16] [Audience] No.
+609
+00:30:17S,760 --> 00:30:22,240
+[Mason] So, the fact that, John was chasing
+after his three year old,
+[00:30:22] that fact is not,
+as a matter of law, is not relevant
+[00:30:25] to whether fresh, FreshMart
+acted reasonably.
+[00:30:28] Did anyone take the three year old fact
+into account when deciding reasonableness?
+[00:30:34] Okay, so some people did.
+[00:30:35] So if I told you, actually
+that might be relevant to damages,
+[00:30:39] but it's not relevant to reasonableness.
+[00:30:41] Would that change your analysis?
+[00:30:48] Still thinking.
+[00:30:49] Right. Okay.
+[00:30:51] Doesn't change the disposition.
+[00:30:54] Right. Yeah.
+[00:30:55] [Finale] I see you nodding. Yes.
+[00:30:57] Do you want to share like. Yeah. Yeah
+[00:31:00] yeah okay.
+[00:31:02] Yeah.
+[00:31:04] [Audience member] Okay. So
+[00:31:06] imagining him, John,
+[00:31:08] like I was imagining him
+running after a three year old
+[00:31:12] and I'm like, well, if he was running,
+then, like, that could be an issue.
+[00:31:16] But, as you guys stated,
+it shouldn't matter if you're running you
+[00:31:19] when you're largely when you're running,
+you don't expect there to be
+[00:31:22] like a slippery surface.
+[00:31:23] So that changed it.
+[00:31:25] [Mason] Right.
+So the reason for going through this
+[00:31:28] thought experiment is to say that,
+you know,
+[00:31:32] what I tried to do there
+and succeeded for at least one person
+[00:31:36] is do a little denoising
+and not by changing the facts,
+[00:31:40] but by pointing out
+[00:31:42] under the legal structure
+or operating under this fact is relevant
+[00:31:45] to injury and damages, but is not relevant
+to the question of reasonableness.
+[00:31:51] And that's kind of what we're proposing,
+that a system, a more programmatic system,
+[00:31:55] might be able to do,
+not to make determinations about facts.
+[00:31:59] Not to
+or at least in this limited context,
+[00:32:01] not to make determinations about facts,
+not to make determinations,
+[00:32:04] maybe about ultimate responsibility,
+but to help people
+[00:32:10] learn or
+[00:32:11] remember where those facts
+fit into the procedural system.
+[00:32:15] Because, yeah, a person like a layperson
+sitting on this may be like,
+[00:32:19] oh, yeah, I've been to the store with a
+three year old, and that's utter chaos.
+[00:32:22] I can't possibly fault FreshMart here,
+but the proper place to take that into
+[00:32:26] account is in reducing John's damages,
+not letting FreshMart off the hook.
+[00:32:30] And while that may seem relative,
+like it might seem
+[00:32:33] like a distinction without a difference,
+you know, in the end,
+[00:32:36] end rule, you know, very complicated case
+where we have more
+[00:32:40] than a handful of facts on the table,
+that misplacement of a fact
+[00:32:43] under the wrong prong of the legal
+analysis could hugely
+[00:32:48] benefit or prejudice
+one party or the other.
+[00:32:50] [Audience member] So remind me again,
+you're describing a reasonable.
+[00:32:56] What is reasonable?
+[00:32:57] What is not reasonable in this example?
+[00:32:59] [Finale] So the point is that that that is the part
+that's discretion.
+[00:33:02] Right?
+[00:33:03] So so in this case
+there's an example of potential noise.
+[00:33:06] And there's an example of discretion.
+[00:33:08] So in this case the fact that
+he was chasing after a three year old.
+[00:33:12] That is noise. Right?
+[00:33:13] That's a distractor
+that we put purposefully in there to see.
+[00:33:17] Like maybe some people
+take it into account when they shouldn't.
+[00:33:20] This question of was three minutes enough?
+[00:33:23] That is a discretion problem of like,
+you know, like how fast
+[00:33:26] should this person have been booking it
+to get the the mop?
+[00:33:30] And, you know,
+[00:33:31] if they were walking
+at a reasonable speed,
+[00:33:32] if someone stopped them along the way
+[00:33:34] and asked them,
+you know, where's the ketchup
+[00:33:36] And they answered that question,
+[00:33:37] you know, like all of this sort of thing,
+like, would go into your, discretion
+[00:33:41] question of like where they were
+they working reasonably,
+[00:33:45] you know, in terms of trying to clean up
+this bill that they had noticed.
+[00:33:50] And I'll point another another area
+that's kind of reserved for discretion
+[00:33:53] here is the employee testified
+that they went to get a mop.
+[00:33:55] All right.
+[00:33:56] You might not
+if you were sitting in a jury,
+[00:33:58] you actually sat
+through hours of testimony.
+[00:34:00] You might think the employee's
+lying. Right.
+[00:34:03] You know, that maybe the employee
+[00:34:05] actually did
+[00:34:06] take a
+detour or wasn't even going to bother.
+[00:34:10] Credibility of a witness is, again,
+[00:34:12] a type of thing that is reserved
+for the jury to decide in discretion.
+[00:34:15] So this is an example of a system
+where there are things
+[00:34:19] that, some things that are like
+were legally required
+[00:34:22] as a matter of due process
+to preserve certain pieces of discretion.
+[00:34:26] But there also is the risk of noise.
+[00:34:29] Right.
+[00:34:29] And so we can't just
+[00:34:31] completely favor denoising
+or completely favorite discretion. Yes.
+[00:34:34] Okay.
+[00:34:35] [Finale] So I want to make sure
+we have some of that interactive part.
+[00:34:37] So we're going to do one now
+a slightly more complicated case
+[00:34:40] where people will get a chance
+to do some thinking
+[00:34:44] with and without some type of assistance.
+[00:34:47] We'll see how that goes. All right.
+[00:34:48] So these were
+[00:34:49] these are questions for the previous case,
+but now we have Penny and the Pallet
+[00:34:52] stacker, a less good band
+name, and a more complicated case.
+[00:34:57] So, I'm going to read the case,
+[00:34:59] and then we're going to, we're going to do
+a little interactive exercise.
+[00:35:03] All right.
+[00:35:03] So Penny was using the pallet stacker
+to move a heavy load.
+[00:35:07] When a light drizzle turned into
+a downpour, the stacker jerked wildly.
+[00:35:11] Penny fell and suffered a serious back
+injury.
+[00:35:15] Penny claims
+that the incident was caused...
+[00:35:18] So she works at Metro.
+[00:35:19] This this warehouse distribution
+distribution company.
+[00:35:23] Penny claims that the incident
+[00:35:24] was caused by Metro's failure
+to maintain the stacker.
+[00:35:27] She states she reported minor issues
+with the stacker stability a month
+[00:35:30] before the incident,
+and no action was taken.
+[00:35:33] Historical records reported
+slippage related but not stability
+[00:35:37] related issues
+with stackers in poor weather.
+[00:35:40] A doctor's report confirms
+that the fall resulted in her injuries
+[00:35:43] and the injuries will prevent her
+from supporting her aging parents.
+[00:35:47] All right.
+[00:35:48] In, in response, this is what Metro says.
+[00:35:51] Metro distribution points to their
+near-perfect workplace safety record,
+[00:35:54] and their recent recognition
+is one of the best places to work
+[00:35:57] in the region due to their very high
+employee satisfaction ratings.
+[00:36:01] Penny,
+they claim, has always been complaining,
+[00:36:03] whether about the food and company
+retreats or the color of company hats.
+[00:36:06] The stacker passed all routine safety
+checks when inspected two weeks ago.
+[00:36:12] The machine is only ten months old.
+[00:36:13] Deep inspections, including stability
+[00:36:15] checks, were completed at purchase
+and are to be completed annually.
+[00:36:19] Thereafter,
+an internal email shows that they received
+[00:36:22] Penny's complaint and claims
+they found the stacker functional.
+[00:36:25] They argue that the unexpected
+weather conditions caused this unfortunate
+[00:36:30] incident. So this is the,
+[00:36:34] these are the facts
+[00:36:37] in front of you.
+[00:36:38] And now what we're going to do,
+[00:36:41] just as a, as a fun, interactive exercise
+[00:36:45] is that everyone on this
+[00:36:47] side of the room,
+this is like, you know, really kludgy.
+[00:36:50] But if you could put your head down
+or cover your eyes or in
+[00:36:54] some way not look at the screen,
+you'll get your turn. It's okay.
+[00:36:57] And then people on Zoom,
+you can choose, whether you want to see
+[00:37:01] case one,
+you know, option one or option two.
+[00:37:04] And if you want to see option one,
+stay watching on your screen
+[00:37:07] if you want to see option two,
+then don't watch this one.
+[00:37:11] And then it will switch over.
+[00:37:13] So if anyway, everyone on this side of
+[00:37:14] the room can like cover their face
+somehow.
+[00:37:17] Don't look at the screen.
+[00:37:19] Make it roughly even.
+[00:37:20] Please, guys, work with us.
+[00:37:22] [Mason] This is really,
+you know, on the left hand table.
+[00:37:25] Yeah, exactly.
+[00:37:27] You have to cover your for a moment.
+[00:37:28] [Finale] So here is case one, here
+[00:37:32] is your supporting AI evidence,
+[00:37:35] for you to take into effect,
+[00:37:38] into consideration,
+[00:37:40] when you are coming to your decision,
+we can't read it out loud because.
+[00:37:45] Yes, please don't read it out loud.
+[00:37:46] But I will,
+[00:37:48] I'll let you look at that
+for just a couple of moments.
+[00:37:56] And then for,
+[00:37:58] and then, I'm guessing
+everyone has had a chance to look at this.
+[00:38:01] Now, if everyone, who's got their eyes
+open can now close your eyes.
+[00:38:06] Right.
+[00:38:06] We're playing this grand game
+of, like, mafia or something like this.
+[00:38:09] Okay,
+[00:38:10] everyone, close your eyes on this side
+and the other side of the room.
+[00:38:13] Open your eyes.
+[00:38:16] Here is the information,
+[00:38:18] that the AI is providing you.
+[00:38:22] In terms of the key questions
+[00:38:25] that you are there to consider,
+we'll leave it up for just a few moments.
+[00:38:31] Even if you have your eyes closed,
+obviously you can still be thinking
+[00:38:35] about whether Metro
+[00:38:38] was negligent in this particular case.
+[00:38:46] We'll just leave it there
+[00:38:47] for just a couple more moments.
+[00:38:53] And then,
+[00:38:56] ll right, I'm
+[00:38:57] going to go back
+and everyone can open your eyes.
+[00:39:01] Okay.
+[00:39:03] So, I'm just curious,
+[00:39:07] people's,
+first of all, just people's opinions on,
+[00:39:11] the first question,
+[00:39:13] did Metro fail their duty of care
+[00:39:18] where are people leaning?
+[00:39:20] [Mason] Yeah.
+[00:39:21] And again, the question is,
+[00:39:22] given the circumstances, were Metro's
+actions unreasonable?
+[00:39:25] [Finale] Yeah. Were they unreasonable?
+[00:39:27] Well, so one, two, a couple of people
+say unreasonable.
+[00:39:31] Okay.
+[00:39:33] What about the causation?
+[00:39:34] Did the alleged failure cause the harm?
+[00:39:41] Okay,
+[00:39:43] so folks on this side are saying, yes,
+[00:39:46] folks on this side are saying no, right.
+[00:39:49] Can we have, like, folks on this side?
+[00:39:51] Can you tell us why?
+[00:39:53] This is, the alleged failure,
+[00:39:55] did not cause the harm.
+[00:39:59] Or anyone wants to provide rationale.
+[00:40:02] [Audience member] The rain caused the harm.
+[00:40:03] [Finale] The rain caused the harm.
+[00:40:05] Okay.
+[00:40:07] [Audience member] So I don't think that Metro
+failed their duty of care.
+[00:40:10] And if they didn't, then
+there wasn't a failure to cause the harm.
+[00:40:13] Okay, but the fact that they did
+inspect the machine
+[00:40:17] and it passed
+inspection was important to me, so.
+[00:40:20] Okay.
+[00:40:22] For they did their due diligence.
+[00:40:24] Got it. Yeah. Yeah.
+[00:40:27] [Mason] So we also have up herel simple statement.
+[00:40:29] The rain, the rain caused the harm. Right.
+[00:40:32] [Finale] But why do you think the rain caused harm?
+[00:40:42] [Audience member'I thought I just had to 
+give it a yes or no.
+[00:40:44] Okay. Sorry.
+[00:40:45] Explain themselves.
+[00:40:46] So there you go. Okay.
+[00:40:49] Yeah.
+[00:40:52] Yeah, yeah.
+[00:40:53] [Audience member] I'm the team left.
+[00:40:55] So for me, I was debating
+and there's this gray area again.
+[00:40:59] But the last sentence for me,
+and when we were reading was, in the past,
+[00:41:04] the rain did not
+cause issues to the stability.
+[00:41:08] So when I saw that, I'm like,
+it's still a gray to me, but.
+[00:41:14] But in the past,
+the rain wasn't the culprit.
+[00:41:19] Oh yeah.
+[00:41:20] Yeah.
+[00:41:21] [Mason] So it's time to show everyone
+the two treatments. Exactly. Right.
+[00:41:24] [Finale] So here, here was the, the kind of the way
+we usually conceptualize AI.
+[00:41:29] And here the AI gives
+[00:41:33] you adjudication and it tells you,
+[00:41:38] there was no
+[00:41:38] failure in the duty of care
+because all the required inspections
+[00:41:42] were completed, including a check after
+[00:41:45] the complaint specifically was filed.
+[00:41:48] Did the alleged failure cause a harm? No.
+[00:41:51] The rain caused the harm, except,
+[00:41:54] you know, AI's are noisy,
+and they're not always correct.
+[00:41:58] And as, as you pointed out,
+[00:42:01] there was like an important fact here
+that historical records support,
+[00:42:05] that there's, you know,
+when it's rainy, things slip around, but
+[00:42:07] they don't have necessarily stability
+related issues.
+[00:42:11] So here is, here is case
+two or like support version two.
+[00:42:15] [Mason] That
+people on the left side of the room.
+[00:42:17] [Finale] That people on the left side of the room
+[00:42:18] saw, in terms of using something
+like an AI to
+[00:42:23] aggregate the information so that you can
+now make your choices appropriately.
+[00:42:28] So did Metro fail a duty of care?
+[00:42:29] You could say that
+there was a thorough inspection.
+[00:42:32] There was a stability issue.
+[00:42:34] The email claims again, claims, right?
+[00:42:36] This is a credibility question.
+[00:42:38] That you will have to use your discretion
+that the machine was, was checked
+[00:42:42] in the stack or was functional,
+that routine checks were passed.
+[00:42:45] There's nothing in here
+about company hats or
+[00:42:48] the quality of the food
+at company retreats
+[00:42:51] because all that stuff was irrelevant.
+Right?
+[00:42:53] Or the employee satisfaction
+ratings at the company.
+[00:42:55] Right.
+[00:42:57] Did the alleged failure cause a harm?
+[00:42:59] It seems a stability issue
+caused the fall,
+[00:43:02] and the fall resulted in the injuries.
+[00:43:04] It was unexpectedlyrainy,
+but the rain has not caused
+[00:43:07] stability issues in the past.
+[00:43:08] So if you had all these facts together,
+then maybe you would get again a denoising
+[00:43:13] of like, okay, this denoising up here,
+maybe about okay, this is
+[00:43:17] an annoying employee,
+but that's not relevant
+[00:43:20] to this particular case.
+[00:43:23] Denoising over here where you're not,
+[00:43:25] you know,
+caught up in distractors of various kinds.
+[00:43:29] Right.
+[00:43:29] [Mason] And I want to point out
+something important
+[00:43:31] when you think about this
+in the context of actual trial.
+[00:43:34] So you can go back to the facts slide,
+[00:43:37] you would kind of hear the facts mostly
+[00:43:40] in this order in that the plaintiff
+would put on their case first
+[00:43:43] and really hammer this right, including
+probably the fact that historical reports,
+[00:43:48] historical records, report slippage related
+but not stability related issues.
+[00:43:52] But then you're going to hear days
+of testimony
+[00:43:55] by the defense's witness, and, yeah,
+they'll be cross-examined.
+[00:43:58] And so the, the plaintiff's
+counsel will have opportunities
+[00:44:02] to revisit their case,
+and there will be closing arguments.
+[00:44:05] But one of the things that can happen
+here is issues of, say,
+[00:44:08] like recency bias, right.
+[00:44:11] When you look at the treatment
+[00:44:13] two slide that we gave, that changes
+that in.
+[00:44:17] Now, what you pointed out
+as the last sentence
+[00:44:20] has this says rain is not causing
+stability issues in the past.
+[00:44:23] So something as simple
+as putting the facts together
+[00:44:28] by which prong of negligence
+they fall under, rather than grouping them
+[00:44:31] by plaintiff and defendant, might have
+an impact on how the jury decides.
+[00:44:35] And I don't think, you know,
+[00:44:37] I think what we can say is it does seem
+like more people who saw treatment two
+[00:44:41] were likely to find that
+there was causation here, where
+[00:44:44] although it does seem like
+[00:44:45] the room was roughly equal on both sides
+regarding failure of reasonable care.
+[00:44:50] [Finale] Which is exactly how it should happen,
+right?
+[00:44:51] Because a failure part is a discretion
+question, right?
+[00:44:54] Like, do you do you trust, you know, the
+amount of checking that the company did?
+[00:44:58] That's a that's not, the AI answers
+your question about this particular.
+[00:45:04] Do you...? Go for it.
+[00:45:05] [Audience member] So I'm just thinking about prompts.
+[00:45:08] What would be the correct prompt
+to get the denoising...
+[00:45:13] [Finale] I see.
+Yes. Yeah.
+[00:45:13] So so I think I actually I want to leave
+that as an engineering question.
+[00:45:17] This is my problem not your problem.
+[00:45:19] And I got to build the system
+that will pull out
+[00:45:22] this information, accurately.
+[00:45:25] But because we have about six minutes
+left, what I wanted people to do,
+[00:45:30] actually, is invite people to,
+to think maybe you can even chat,
+[00:45:35] you know, maybe take a minute
+or two to, like, chat with your neighbor.
+[00:45:39] To, to think about, like, okay,
+we gave you two options here, right?
+[00:45:44] Option one and option two.
+[00:45:46] But if you were thinking about a case
+like this
+[00:45:49] and again, you don't you don't want people
+caught up in extraneous information,
+[00:45:52] but you also want to make sure
+that people don't lose their discretion.
+[00:45:57] Right. Like there is a problem. Sorry.
+[00:46:00] This one was problematic
+because it was wrong, right?
+[00:46:03] This one was problematic
+because it nudged you in one direction
+[00:46:07] when it really should have been kind
+of your choice, right?
+[00:46:10] As to whether,you have to kind of
+think about, do you trust the company
+[00:46:15] checking about the stability
+on the stacker when the issue was
+[00:46:18] brought up, or do you think that
+they probably just waved it aside because,
+[00:46:22] you know, the stacker had been checked,
+ten months ago?
+[00:46:26] This employee is a whiny employee,
+you know, did they really do it?
+[00:46:31] And that would have been a question
+for you to think about, right?
+[00:46:33] In terms of your discretion.
+[00:46:35] Like, does
+it seem like they did their, their job?
+[00:46:38] So this is also
+[00:46:39] problematic because
+if everyone went to no seeing this,
+[00:46:43] then it would take away your discretion
+or your agency on what is reasonable.
+[00:46:47] Yeah.
+[00:46:48] So maybe just should
+we let people talk for like two minutes.
+[00:46:50] Yeah. Yeah.
+[00:46:51] [Mason] And then I'll, maybe I'll take one
+more comment to the end. Yeah. Okay. Yeah.
+[00:46:54] [Finale] So maybe, you know, chat
+with your neighbor for like two minutes
+[00:46:56] and then we'd love to hear people's
+kind of thoughts and questions.
+[00:47:02] [Audience talking]
+[00:49:42] We would love to continue
+these discussions.
+[00:49:44] I'm happy
+to actually hang for a bit afterwards.
+[00:49:47] But we're just really curious,
+you know, for people who do have to leave,
+[00:49:51] at 1:30
+[00:49:53] Yeah.
+[00:49:53] What are the sorts of ideas
+or thoughts that came out of your,
+[00:49:56] your discussions or questions?
+[00:50:01] Yeah, go ahead.
+[00:50:02] [Audience member] Yeah.
+[00:50:02] I think we sort of agree
+that we prefer the second approach,
+[00:50:06] because the first one yeah the answer
+might be wrong or it might be incomplete.
+[00:50:12] But even if it wasn't, it's
+[00:50:13] still going to bias you in one way
+before you get into your own conclusion.
+[00:50:17] And then the second one
+you have, like the facts,
+[00:50:20] the things that are important.
+[00:50:22] And then you can get to
+your own conclusion based on your values.
+[00:50:29] [Audience member] I was just worried about Campbell's Law
+that if you quantify
+[00:50:32] social indicators,
+you expose yourself to more corruption.
+[00:50:35] And going down this path seems like in,
+you know,
+[00:50:39] future Elon's hands,
+you know what future moves made
+[00:50:43] under
+the guise of De-noising
+[00:50:47] would actually open room
+for a lot of corruption, of discretion
+[00:50:51] that should be kept in human hands.
+[00:50:52] But I really appreciate the venture.
+[00:50:54] I think it's worth asking,
+but it worries me as well.
+[00:50:56] Yeah.
+[00:50:58] [Finale] I mean, are you concerned about process
+in general?
+[00:51:00] I mean, you're right that,
+[00:51:01] you know, there's process
+that has been used to create more
+[00:51:05] even sentencing for example.
+[00:51:07] And we might argue
+that that's a good thing.
+[00:51:09] There's process
+that has been used to increase
+[00:51:13] the number of detentions,
+which you maybe, you know.
+[00:51:16] Yeah. Okay.
+[00:51:16] I'm not going to make assumptions
+of where people
+[00:51:18] are on a political spectrum,
+but you might feel differently, right?
+[00:51:22] Like it seems like process is important in
+any organization in one form or another.
+[00:51:27] So are you concerned about people
+just mucking with process
+[00:51:29] to match their values,
+or kind of how like a machine
+[00:51:33] assisting with process
+like exacerbates that issue?
+[00:51:36] [Audience member] Yeah, starting
+with having a machine, that fails...
+[00:51:41] So yeah.
+[00:51:43] Yeah, yeah.
+[00:51:43] [Host] We can take our final question online.
+Is that okay?
+[00:51:46] [Finale] Oh okay. Sure.
+[00:51:49] [Host] So,
+[00:51:51] someone asked,
+something I wonder about a lot
+[00:51:54] is the benefit of inefficiency and noise.
+[00:51:58] Think about this
+in the context of AI systems
+[00:52:00] and contributing to hiring decisions
+or loan approvals, or even identifying
+[00:52:04] fraud on banks under the assumption that
+we will always get some judgments wrong.
+[00:52:09] Isn't
+it better to have noise in the system
+[00:52:11] to protect people
+through diversity of outcomes?
+[00:52:14] [Mason] Yeah, it's a great question.
+[00:52:15] And it kind of goes to what I was,
+what I wanted to close with here, which is
+[00:52:20] the legal system
+I think is a great example
+[00:52:21] where we already have
+a lot of procedural safeguards.
+[00:52:26] And there already are a lot of attempts
+to distinguish
+[00:52:29] between noise and discretion,
+like the rules of evidence.
+[00:52:32] Right.
+[00:52:32] What you can even put in front of a
+[00:52:34] jury are premised on the idea that certain
+types of evidence are unreliable
+[00:52:38] or are likely to trigger
+unconscious biases
+[00:52:40] more than they're likely to contribute
+to actually finding out the truth.
+[00:52:45] And the enforcer of the rules of evidence
+[00:52:48] is supposed to be the judge
+who's not supposed to favor either party.
+[00:52:51] Similarly, the judge is supposed to write
+jury instructions that tell the jury
+[00:52:55] these are
+[00:52:55] the things you're supposed to decide,
+and these are the things you're not.
+[00:52:58] The fact is, we know from study
+after study
+[00:53:02] that jurors and other actors in the legal
+system, like prosecutors, step outside
+[00:53:07] that permissible realm of discretion
+into things that they are not supposed to
+[00:53:10] be considering. Right?
+[00:53:12] I mean, the biggest example is that,
+[00:53:17] attorneys are given, in a typical case,
+three peremptory
+[00:53:20] strikes where they can remove any juror
+for any reason.
+[00:53:24] But study after study
+[00:53:26] has been shown that people remove,
+[00:53:29] jurors who have a different race
+than the party they're supporting.
+[00:53:32] Right on the assumption
+that if you're defending the
+[00:53:34] if you're defending a white person,
+you want white jurors, you know,
+[00:53:38] if you were defending a black person,
+you want black jurors, etc..
+[00:53:42] And that is an example where noise,
+[00:53:47] in the form of people's
+conscious and unconscious
+[00:53:49] biases,
+is really prejudicial to people. Right?
+[00:53:53] I mean, people literally go to death row
+or not based on these unconscious biases,
+[00:53:58] and there's enormous amounts of data
+bearing out that
+[00:54:01] that is actually something that happens.
+[00:54:04] So there is a really, you know, so
+but I also want to understand
+[00:54:08] we respect this idea that some noise
+is beneficial, and also some attempts
+[00:54:12] at denoising impinge in process
+impermissibly on discretion.
+[00:54:16] And so this is why I think the legal
+system is a great test case for this,
+[00:54:20] because we do have some areas
+where we know
+[00:54:23] you can't take this discretion
+away from people.
+[00:54:25] So if someone wants to take into account
+the fact that Penny is a complainer,
+[00:54:29] and because of that,
+they find Penny's testimony unconvincing,
+[00:54:33] they are allowed to do that right?
+[00:54:35] And I would take the stance that a system
+[00:54:38] should not be telling someone
+that is entirely irrelevant.
+[00:54:42] Now, on the other hand, if someone wants
+to say as a matter of law,
+[00:54:49] John's own
+[00:54:49] conduct in the store
+is relevant to damages, but not to
+[00:54:53] whether the store was was
+acting responsibly.
+[00:54:57] I think that's something
+that would actually help. Right.
+[00:54:59] Because jurors intentionally
+or unintentionally move facts around,
+[00:55:03] consider them in the wrong context,
+and it does have prejudicial outcomes.
+[00:55:05] Now, here we're talking about injury,
+which, you know,
+[00:55:08] financial compensation for a workplace
+injury is no small matter.
+[00:55:12] But, you know, like this
+also is something where we're constantly
+[00:55:16] looking at the delta between what,
+what could be in terms
+[00:55:20] of denoising and while preserving
+discretion and existing systems.
+[00:55:23] Right.
+[00:55:23] We're not comparing this
+to a perfect world
+[00:55:25] where jurors always know the exact line
+between discretion and noise,
+[00:55:30] where we're comparing it
+to an existing system
+[00:55:33] that is full of violations
+going in both directions.
+[00:55:35] Too much discretion,
+too little discretion,
+[00:55:37] impermissibly using discretion
+or infringing on discretion.
+[00:55:41] I agree that,
+[00:55:44] putting this in the hands of machine
+does in some ways provide
+[00:55:47] more cover, especially if that machine
+is just trained on past decisions.
+[00:55:51] You're just essentially putting
+a seal of approval on past human bias.
+[00:55:56] But at the same time,
+I also think that we have to recognize
+[00:55:59] that the human mind is a black box
+as well,
+[00:56:01] and is capable
+of adding a lot of impermissible
+[00:56:05] and ultimately extremely harmful noise
+to systems.
+[00:56:07] [Jay] And on that beautiful note,
+I think we're going to take
+[00:56:11] an opportunity here
+to close out our session.
+[00:56:12] Can I get a big round of applause
+for our Finale and Mason?
+[00:56:17] And Finale's already mentioned
+that she's going
+[00:56:19] to stick around for a couple minutes
+to answer a few questions.
+[00:56:22] And also step outside
+to have those conversations,
+[00:56:25] if you wouldn't mind,
+so we can get this space cleaned up.
+[00:56:27] And I wanted to plug our speaker session
+for next week.
+[00:56:30] We're going to be having Peter
+Wang from Anaconda AI visiting us.
+[00:56:33] He is the chief innovation
+and AI officer for Anaconda,
+[00:56:37] and he's going to be talking about
+in the age of intellectual property
+[00:56:41] disputes around AI, what could a potential
+global system look like?
+[00:56:46] Global open AI Commons is the idea.
+[00:56:49] So he's going to pitch his idea to you
+next week.
+[00:56:51] So make sure you show up
+and thank you again for coming.

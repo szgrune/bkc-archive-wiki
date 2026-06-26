@@ -1,0 +1,1954 @@
+[00:00:00] - [Clare] Thank you so
+much for joining us today
+[00:00:02] for this lunch talk
+[00:00:03] with the student creators of I-XRAY.
+[00:00:07] This is an event put together
+[00:00:08] between the Library Innovation Lab
+[00:00:10] and the Berkman Klein Center
+for Internet and Society.
+[00:00:15] For any students here in the
+audience, we do have a lot
+[00:00:17] of programming across both
+[00:00:19] of our organizations for students.
+[00:00:22] These QR codes will bring you
+[00:00:23] to our various newsletters
+and our websites
+[00:00:27] for more information about
+how you can get involved
+[00:00:30] with all of the different projects
+[00:00:31] that we are mutually up to
+and up to independently.
+[00:00:34] I am gonna just pass off
+to Professor Zittrain.
+[00:00:37] And these students who are here
+to talk to us about privacy
+[00:00:41] and their viral Ray-Ban hack.
+[00:00:44] Thank you.
+[00:00:46] (audience clapping)
+[00:00:50] - Thanks so much, Clare
+[00:00:51] and thanks Caine and AnhPhu
+for your visit today.
+[00:00:56] Way back in the 1980s, damn.
+[00:01:00] Way back in the 1980s, there
+was a show called "MacGyver,"
+[00:01:03] which celebrated the idea
+of cobbling stuff together,
+[00:01:09] bailing wire and twine
+to do amazing things.
+[00:01:14] I think MacGyver was like a detective
+[00:01:16] or I don't know, some journeyman
+that just solved problems
+[00:01:20] and it became sort of a
+verb, to MacGyver something
+[00:01:23] and spoke to the public
+about the value of tinkering
+[00:01:28] and technical aptitude with
+whatever might be at hand
+[00:01:34] and I identified with it as a kid.
+[00:01:37] I think of Caine and AnhPhu
+as consummate tinkerers.
+[00:01:42] Which one of you designed a flamethrower?
+[00:01:45] - [Caine] We built it, both of us.
+[00:01:46] - Oh that was a joint project.
+And where did you test it?
+[00:01:51] - [Caine] At the I-Lab parking lot.
+[00:01:52] - Ah, excellent. There
+must be video of that.
+[00:01:56] - [AnhPhu] Oh yeah, there's a video.
+[00:01:58] - And you can pull that up, I'm sure.
+[00:02:01] But I'm just amazed
+[00:02:03] that, yeah, nonstop building everything
+[00:02:06] from mobile apps to flame throwers.
+[00:02:08] That is quite a spectrum.
+[00:02:10] And before we cut to the demo
+and to the implications of it,
+[00:02:15] which are many, I would
+just love to hear from each
+[00:02:18] of you a little bit about how you,
+[00:02:20] if I am right, first
+identify as tinkerers,
+[00:02:23] how you met each other
+[00:02:25] and how many of you are there out there?
+[00:02:29] Is there like a fellow
+travelers club of people
+[00:02:32] with bailing wire in tow?
+[00:02:35] I don't know who wants to go first.
+[00:02:36] - Yeah, so...
+[00:02:40] - If he can't figure out the laugh mic,
+[00:02:41] it's a real credibility drop, but yeah.
+[00:02:45] - Yeah, so I'm AnhPhu, senior at Harvard,
+[00:02:48] but yeah, I think you're totally right.
+[00:02:50] Both of us are tinkerers at heart.
+[00:02:52] I started building mostly
+[00:02:54] with Lego bricks since I
+was like three years old.
+[00:02:57] Just different projects.
+[00:02:58] I did that for like 15 years.
+[00:03:00] Just posted a lot of them online.
+[00:03:02] Like I really like
+showing off what I build.
+[00:03:07] - And were your folks
+like encouraging of this
+[00:03:09] or were they more like whatever
+you're doing in that room
+[00:03:12] with that camera and that
+YouTube connection that's on you?
+[00:03:17] - They were very supportive.
+[00:03:18] - Okay.
+[00:03:19] - My parents always bought me stuff.
+[00:03:20] - Yeah. Got it.
+[00:03:25] - And for me, I'm Caine.
+[00:03:27] I started coding around 10 years ago
+[00:03:30] 'cause my dad, he showed me
+a website called Code Academy
+[00:03:33] and then I just got like
+completely hooked on it, you know,
+[00:03:36] like went through all of the
+tutorials and stuff on my own.
+[00:03:38] And then once I started with that,
+[00:03:40] it kind of just snowballed
+into building a bunch
+[00:03:42] of like random projects,
+mostly software stuff.
+[00:03:45] Like, oh, you know, like
+maybe I make a website
+[00:03:48] for like meeting up with your friends
+[00:03:50] and then I built a website for
+doing like daily journaling
+[00:03:55] to like improve your mental health
+[00:03:56] and like I just got into
+a bunch of projects.
+[00:03:59] And then once I got to Harvard, I kind
+[00:04:02] of didn't really have a big
+like community of other people
+[00:04:05] who like building things
+until I met AnhPhu.
+[00:04:07] I was working on an electric skateboard
+[00:04:10] in the maker space, like building my own.
+[00:04:13] And then AnhPhu was also working
+[00:04:14] on like some electric hover board
+[00:04:16] that he was also building on his own.
+[00:04:17] And then we were like, oh we should,
+[00:04:19] like we just like ran into
+each other in the maker space
+[00:04:21] and we were like, oh yeah,
+we should work together
+[00:04:22] on stuff so.
+- I love it.
+[00:04:23] One was a skateboard with wheels,
+[00:04:25] the other was a skateboard without wheels.
+[00:04:26] - Yeah.
+[00:04:28] And then, I mean, we just
+started like building a bunch
+[00:04:30] of stuff together.
+[00:04:31] We, you know, spent the entire,
+[00:04:33] like I ended up not doing my internship
+[00:04:35] and just spent an entire
+summer with AnhPhu
+[00:04:37] and we were like building
+[00:04:38] like that's where we
+built our flamethrower.
+[00:04:39] We built some like robotic tentacles,
+[00:04:42] a bunch of other electric vehicles.
+[00:04:44] We made a skateboard you could control
+[00:04:46] with your fingers to
+like control the speed
+[00:04:48] so stuff like that.
+[00:04:50] - And at the moment, do you
+feel like you're both destined
+[00:04:54] to continue because you did a startup
+[00:04:57] before coming to Harvard too?
+[00:04:58] Like the land of dotcom and startups
+[00:05:02] and that whole culture and everything.
+[00:05:04] Are you both in founder mode?
+[00:05:06] - Yeah, I would say
+[00:05:08] that we're both pretty
+definitely like in founder mode
+[00:05:11] and we're also pretty like set
+on working together as well
+[00:05:14] just 'cause we've worked
+together a lot in the past
+[00:05:16] and it's like led to on average
+better outcomes I would say.
+[00:05:19] I started my first company, I
+guess freshman year of college
+[00:05:24] and then I started another
+one a little bit later
+[00:05:26] and then I think, you know, it's time time
+[00:05:28] for another one probably.
+[00:05:30] - It's company o'clock, we say. Yeah.
+[00:05:33] - Yeah, and I started my first company
+[00:05:35] when I was in high school, like 16.
+[00:05:37] It was a phone repair business
+I ran for about three years
+[00:05:40] and spent most of my summers
+working at different startups.
+[00:05:45] - And was most of that
+phone repair business
+[00:05:47] repairing phones or hiring training
+[00:05:50] and commissioning a network of people
+[00:05:52] that did the phones and
+you just cashed the checks?
+[00:05:55] - I did everything
+myself mostly, but yeah.
+[00:05:59] - How much money did you make?
+[00:06:01] - Caine just whispered, "How
+much money did you make?"
+[00:06:06] - It was like-
+[00:06:07] - You don't have to answer,
+I'm just advising you,
+[00:06:09] but you're welcome to answer too.
+[00:06:12] - Yeah, it's okay.
+[00:06:13] I had like 2,400 customers or something.
+[00:06:16] - Okay, well, we can
+do the math. Excellent.
+[00:06:23] For this particular adventure,
+[00:06:27] how was it incepted
+[00:06:30] and was it a possible dotcom idea?
+[00:06:34] Was it always sort of a bit
+[00:06:35] of performance art/demo
+messaging to just say something
+[00:06:41] to the world about
+privacy and then move on?
+[00:06:44] - So how this all got
+started, I mean we both used
+[00:06:47] to run VR club together so we
+had a lot of these headsets
+[00:06:51] and a lot of the projects
+centered around AI
+[00:06:54] and how you can unlock new use
+cases with wearable devices.
+[00:06:58] And we also knew about PimEyes,
+[00:07:00] so how we started, it
+was just a combination
+[00:07:03] of all those three things together.
+[00:07:05] We thought it'd be interesting
+[00:07:06] to like get people's names.
+[00:07:08] - PimEyes being one of those websites
+[00:07:10] of which there are a handful
+[00:07:13] that purports to let you
+put a photo of you in
+[00:07:18] that may or may not already be online
+[00:07:21] and then identify you
+[00:07:23] and show what other photos
+of you can be found online.
+[00:07:26] But there's not much vetting
+[00:07:29] of whether the photo you presented is one
+[00:07:31] of you except a checkbox
+that says it is I.
+[00:07:38] Yeah, so we started off
+[00:07:41] as like an interesting like side project,
+[00:07:43] but after we built that
+[00:07:45] and then we started finding
+out about databases,
+[00:07:48] like people search databases
+where you can go from name
+[00:07:52] to home address and even phone
+number to social security,
+[00:07:55] we found that this was much more than
+[00:07:57] what we originally thought it was.
+[00:07:59] So when we decided to post
+it, we made it much more
+[00:08:03] of a privacy awareness campaign
+[00:08:04] than we originally set out to.
+[00:08:08] - And the reason you
+first started doing it was
+[00:08:09] 'cause you were already
+into facial recognition
+[00:08:11] and you just thought it would be cool.
+[00:08:13] - Yeah.
+[00:08:14] - And do you still have a
+functioning pair of the glasses
+[00:08:18] or I assume two pair?
+[00:08:20] - How we wrote it was a bunch of scrapers
+[00:08:23] which broke because like
+the website changes a lot.
+[00:08:27] We could fix it and make
+it work again, yeah.
+[00:08:30] - It sounds like a veiled threat,
+[00:08:32] but I understand you're just saying
+[00:08:34] if you were interested you
+could be adventuresome with it.
+[00:08:37] And an interesting example
+truly of software tinkering
+[00:08:40] where it's lots of bits
+[00:08:43] that you're pulling together in a way
+[00:08:46] that presents a kind of gestalt, yep.
+[00:08:49] - Yeah, exactly.
+[00:08:50] I mean the way that the pipeline works,
+[00:08:52] so I mean just to be clear, right?
+[00:08:53] You know, you look at somebody
+[00:08:54] and then it pulls up their
+name, a bio and a home address
+[00:08:58] and like any other, you
+know, data about the person.
+[00:09:01] And that entire pipeline is facilitated by
+[00:09:05] around four different, like eight,
+[00:09:07] four different like
+services like microservices
+[00:09:10] that each play a small part
+in the entire pipeline.
+[00:09:12] So the first one is
+the reverse face search
+[00:09:15] where you put in an
+image of somebody's face
+[00:09:17] and then it outputs other examples
+[00:09:19] of that face on the
+internet and that's PimEyes.
+[00:09:23] The second one is once
+you find other examples
+[00:09:26] of somebody's face on the
+internet and the associated link,
+[00:09:28] you can scrape each of those websites
+[00:09:31] and get all of the data
+from those websites.
+[00:09:33] So maybe it'll be like,
+[00:09:34] oh, Caine Ardayfio is a junior
+at Harvard, blah blah blah.
+[00:09:37] Once you do that, you now just
+have a massive text corpus
+[00:09:41] of a bunch of data about the person
+[00:09:43] and you can use like a ChatGPT type API
+[00:09:48] to figure out like, oh, based
+on all of this information,
+[00:09:52] what's the name of this person?
+[00:09:54] And then the last step is
+like going from the name
+[00:09:57] to the home address and that's
+using fast people search
+[00:10:01] which is basically a service
+that does name to home address.
+[00:10:06] - So think I think might be
+an interesting exploration
+[00:10:09] of hearing about it.
+[00:10:11] And in hearing about
+it, it's extremely well
+[00:10:14] and lucidly described
+[00:10:16] and seeing it may feel different.
+[00:10:19] So I think it might be time to,
+[00:10:21] you have a pre-approved demo
+[00:10:24] where the folks implicated
+have opted in in some way
+[00:10:29] to make it, maybe it's you
+with each other or something.
+[00:10:33] What's the origin of the demo?
+[00:10:38] - [AnhPhu] Oh, I was just
+gonna show the video.
+[00:10:39] - Yeah, so I don't mean a demo live,
+[00:10:42] I mean a demo video.
+[00:10:44] - [AnhPhu] Do you want an answer?
+[00:10:46] - All right and just so you
+know, for expectation setting,
+[00:10:48] it's two minutes, 34 seconds long.
+[00:10:51] - [AnhPhu] We built glasses
+[00:10:52] that let you identify
+anybody on the street.
+[00:10:54] The information the tool
+collects from just a photo
+[00:10:56] of your face is staggering.
+- What is that?
+[00:10:59] What is that? I'm scared.
+[00:11:02] - Oh my God.
+- Wait.
+[00:11:03] - [AnhPhu] To use it, you
+just put the glasses on.
+[00:11:05] Then as you walk by people,
+the glasses will detect
+[00:11:07] when somebody's face is in frame.
+[00:11:10] This photo is used to analyze them
+[00:11:11] and after a few seconds, their
+personal information pops up
+[00:11:14] on your phone.
+[00:11:15] Right?
+- Oh, this is me volunteering.
+[00:11:16] - Joan Lee, right?
+- Yeah.
+[00:11:18] - Oh my goodness.
+- This photo was created,
+[00:11:20] this is like from (indistinct).
+[00:11:21] - [AnhPhu] You're from
+Bergen County Academies?
+[00:11:22] - [Joan] Yeah.
+[00:11:23] - [AnhPhu] Your Korean name is Joo-oon?
+[00:11:29] - [Caine] Cambridge Community Foundation.
+[00:11:32] Oh, hi ma'am. Wait, are you Betsy (beep)?
+[00:11:36] - [Betsy] Yes.
+[00:11:37] - [Caine] Oh, okay, I think I met you
+[00:11:38] through like the Cambridge
+Community Foundation, right?
+[00:11:40] - Oh, yeah.
+[00:11:41] - [Caine] Yeah, it's great
+to meet you. I'm Caine.
+[00:11:45] - [AnhPhu] Oh wait.
+[00:11:46] Do you happen to be a person working
+[00:11:48] on like minority stuff
+[00:11:50] for like Muslims in India
+at all or something?
+[00:11:52] - Yeah.
+[00:11:53] - [AnhPhu] Really? Are you Vishit?
+[00:11:54] - Yes.
+[00:11:55] - [AnhPhu] Oh, I've read your work before.
+[00:11:57] That's super cool.
+- Hey, what's up, man?
+[00:11:58] - [AnhPhu] I'm AnhPhu, nice to meet you.
+[00:12:00] Oh, I love-
+[00:12:01] - [Caine] AnhPhu, get in the frame.
+[00:12:02] - Oh okay. Are you Sarah Chieng?
+[00:12:05] - No.
+[00:12:06] - So here's how it works.
+[00:12:08] We stream the video from the
+glasses straight to Instagram
+[00:12:10] and have a computer
+program monitor the stream.
+[00:12:13] We use AI to detect when we're
+looking at someone's face.
+[00:12:15] Then we scour the internet
+[00:12:17] to find more pictures of that person.
+[00:12:18] Finally, we use data
+sources like online articles
+[00:12:21] and voter registration databases
+[00:12:23] to figure out their name,
+phone number, home address
+[00:12:26] and relatives' names
+[00:12:27] and it's all fed back to an
+app we wrote on our phone.
+[00:12:30] - [Caine] Using our glasses,
+we were able to identify dozens
+[00:12:32] of people including Harvard students
+[00:12:34] without them ever even knowing.
+[00:12:36] Here are some of our favorites.
+[00:12:38] - My aunt was Secretary of Transportation.
+[00:12:43] That was like when she
+was getting (indistinct).
+[00:12:47] - [AnhPhu] Wait, what's your aunt's name?
+[00:12:49] - Elaine Chao.
+- Yeah. Okay.
+[00:12:51] Is your address (beep) Valley?
+[00:12:53] - Yeah.
+[00:12:55] - Atlanta, Georgia, 303?
+- Yeah.
+[00:12:58] - [Student] Oh my God, yes.
+[00:13:00] That's amazing but yeah.
+[00:13:04] - [AnhPhu] You also attended
+[00:13:04] Yale's Young Global Scholar
+Summer Program, right?
+[00:13:07] Really?
+[00:13:08] - Yeah, these are me
+in like middle school.
+[00:13:11] - [AnhPhu] Oh my god.
+What about John and Susan?
+[00:13:13] Are they your...
+[00:13:14] - Those are my parents.
+[00:13:15] - [AnhPhu] Parents, okay cool.
+[00:13:17] Is that you?
+[00:13:19] - [Student 2] I told you there's so much.
+[00:13:22] - [AnhPhu] Is that you?
+[00:13:23] - Well, yes.
+- Oh my god.
+[00:13:26] - So before we continue
+any colloquy up here,
+[00:13:31] I just wanna open the
+floor for any reactions.
+[00:13:37] Anybody wanna react in any way,
+[00:13:39] understanding this is being
+recorded six ways from Sunday
+[00:13:42] and obviously you might
+be identifiable later
+[00:13:44] even if you don't announce your name.
+[00:13:48] We have two mics up here
+and zero mics back there.
+[00:13:50] Is that right?
+[00:13:51] - I was gonna connect the mic.
+[00:13:53] - Hello?
+[00:13:54] Yeah. Okay, I'll hold it up.
+[00:13:55] - All right.
+[00:14:06] Zoe.
+[00:14:08] - [Zoe] Hello, I'm Zoe.
+[00:14:09] I'm a software engineer at
+the Applied Social Media Lab
+[00:14:11] and I really love your project.
+[00:14:13] I think it's super cool.
+[00:14:15] I do not have a law background
+[00:14:16] but I'm curious if how many
+or if any laws you broke
+[00:14:22] or are being broken in
+the process of this.
+[00:14:25] So one example being like,
+I guess scraping might go
+[00:14:27] against the terms of
+service of certain websites.
+[00:14:29] So that's like a minor law breaking,
+[00:14:31] but are there others
+[00:14:32] or is this a completely
+above table product?
+[00:14:37] - First of all, just any
+initial visceral reactions.
+[00:14:40] Is this kind of for you,
+[00:14:41] ho-hum, yes, of course
+I could build this too
+[00:14:43] or is it OMG or somewhere in between?
+[00:14:47] - [Zoe] Ah, okay. Sorry, I misunderstood.
+[00:14:49] I love it.
+- Okay, good question.
+[00:14:51] - [Zoe] I think it is
+definitely cool and shocking.
+[00:14:54] I work in this space so I am
+familiar with all of the things
+[00:14:57] that you mentioned.
+[00:14:58] But I think what's
+really cool about this is
+[00:15:00] that you're taking it off screen.
+[00:15:02] It's one thing to tell people
+that all this data exists
+[00:15:05] and it's, you know, available.
+[00:15:06] It's another to do it in the
+T station and on the sidewalk
+[00:15:10] and I think that's what's
+really powerful about this
+[00:15:13] - And to engage with
+people once you've done it
+[00:15:15] as a way of...
+[00:15:16] Yep, and I'm definitely not your lawyer,
+[00:15:20] but you need not answer the question
+[00:15:22] which parts of this are illegal.
+[00:15:24] But you could speak generally to some
+[00:15:28] of the policy issues
+potentially raised by this.
+[00:15:32] - Yeah, so to the legal
+[00:15:33] and we definitely broke terms of serv...
+[00:15:39] - It's too close.
+[00:15:40] - Oh, we definitely broke terms of service
+[00:15:42] of the Meta Ray-Bans
+[00:15:44] and like I guess a bunch of
+the scraping websites we used.
+[00:15:49] But of course this was
+mainly a proof of concept
+[00:15:53] showing people that this was possible
+[00:15:57] and that's why we didn't
+really care to not do that.
+[00:16:03] But on the legal end,
+[00:16:09] it's not actually illegal
+[00:16:10] to take video of people on
+the street in Massachusetts
+[00:16:15] and it's not illegal to do
+real-time facial recognition
+[00:16:18] in the United States
+[00:16:20] and all of these websites are
+publicly available to anyone.
+[00:16:24] - Any other reactions or thoughts?
+[00:16:26] I can also just get a collective
+reaction from the room.
+[00:16:30] If this feels surprising to you
+[00:16:35] in an age where we all say
+yeah, privacy it's so hard,
+[00:16:38] just let me know with a hum.
+[00:16:39] 1, 2, 3.
+[00:16:41] (Audience hums)
+[00:16:42] All right if this is kind of like,
+[00:16:44] yeah, I knew you could do this.
+[00:16:47] 1, 2, 3.
+[00:16:49] (Audience hums)
+[00:16:50] Alright. That was an
+uncertain hum as well.
+[00:16:54] So there must be a dimensionality
+[00:16:56] to the question I'm not appreciating.
+[00:16:57] Yes, in the back.
+[00:16:59] If I had the Ray-Bans, I
+would just call by name.
+[00:17:05] - [Audience Member] Hi, so
+I think it is interesting
+[00:17:08] but it's generally speaking, nothing new
+[00:17:11] in terms of the option
+to cross reference data
+[00:17:18] and DBs that have leaked online and stuff.
+[00:17:21] I think the more interesting
+question would be
+[00:17:24] is it actually feasible to be forgotten?
+[00:17:28] I mean is it not technologically
+[00:17:32] which is obviously,
+yeah, we can delete data
+[00:17:35] but statistically and
+I would say over time
+[00:17:39] can you actually remove yourself,
+any trace of you online?
+[00:17:45] - And that nicely echoes
+the end of that video
+[00:17:49] which is like, scared yet?
+[00:17:51] Here are some useful things you can do
+[00:17:53] to slow down the Ray-Bans.
+[00:17:55] How realistic is it at
+the individual level
+[00:18:00] that that was speaking to
+[00:18:02] and that you all were thinking about?
+[00:18:05] If I'm ready to devote an
+hour or so to opting out
+[00:18:08] and, I don't know, doing
+whatever keystrokes I need to do
+[00:18:11] to try to be more inured to this,
+[00:18:14] how effective can I be
+[00:18:15] in making your Ray-Bans come up empty?
+[00:18:20] - Yeah, so as part of the
+law, each of the websites
+[00:18:24] that we use are required to have some kind
+[00:18:27] of opt out mechanism
+[00:18:28] where you can, you know,
+press some series of buttons
+[00:18:30] and be out of the database basically.
+[00:18:35] In our like original Google doc
+[00:18:37] that we shared with everybody
+at the end of our video,
+[00:18:39] we go through each of
+the steps we have to do
+[00:18:42] for each of the parts of the pipeline.
+[00:18:44] And the two most important parts are
+[00:18:47] the reverse face search, the PimEyes
+[00:18:49] as well as the address lookup service.
+[00:18:52] Opting out of this takes, it's
+not a crazy amount of time,
+[00:18:55] it's around like five to 10 minutes or so
+[00:18:58] or maybe even shorter
+[00:18:59] but one of the things from
+like a policy perspective
+[00:19:02] that we've thought a lot about is,
+[00:19:04] oh, like should these types
+of services be like opt in
+[00:19:08] instead of opt out?
+[00:19:09] Meaning that like by default
+nobody's in the database
+[00:19:12] and then you like can
+register if you want to,
+[00:19:14] whereas these, you're like
+already in it basically.
+[00:19:17] - And so far the strategies
+you're talking about
+[00:19:20] are having the person go to the sources
+[00:19:24] from which you are drawing
+[00:19:27] and opt out of each source
+rather than trying somehow
+[00:19:32] to prescribe this particular use
+[00:19:34] while leaving the sources untouched.
+[00:19:37] And there's no hidden
+question behind the question.
+[00:19:39] I'm just taxonomizing a little, yeah.
+[00:19:42] AnhPhu, any thoughts on that
+or just a plus one to Caine?
+[00:19:47] - Plus one to Caine, basically.
+[00:19:49] Yeah, I think just to add like,
+[00:19:52] there is a lot of policy
+work that should be done
+[00:19:55] and I think our video made it very clear
+[00:19:58] how dangerous it could be.
+[00:19:59] And yeah, we actually
+talked to the people at Epic
+[00:20:03] who does a lot on like data brokers,
+[00:20:05] which are the people search engines.
+[00:20:07] So maybe we could see a policy
+change in the next few years.
+[00:20:12] - For the both of you, and
+this is just asking you
+[00:20:14] as the people who went to
+the trouble to do this,
+[00:20:16] it's rather than drawing necessarily
+[00:20:18] on your tinkering expertise,
+[00:20:20] but would it be a better world
+[00:20:23] in which you couldn't build this?
+[00:20:29] - Sorry.
+[00:20:30] I think...
+[00:20:36] I'll turn it off.
+[00:20:38] - You're back some kind.
+[00:20:39] So maybe we turn off our mics
+[00:20:41] so it'll be the only mic.
+[00:20:42] - All right, I'll just
+project but I think,
+[00:20:46] at least for me, I think systems like this
+[00:20:49] should be more like
+something you register up to.
+[00:20:51] For example, I mean like
+[00:20:52] Facebook is probably like
+an okay example in the sense
+[00:20:55] that you know, billions of
+people have Facebook profiles
+[00:20:58] throughout the world and
+you know they have all kinds
+[00:21:00] of information like, you
+know, bio information
+[00:21:02] where they're from, you
+know, their profile photo
+[00:21:03] and that type of thing.
+[00:21:05] I guess going that route
+where you have people sign up
+[00:21:08] and they're like bought into
+the service is a bit better
+[00:21:10] than like just scraping
+every single person online.
+[00:21:14] - So you are describing a world
+[00:21:15] where the glasses only work on a person
+[00:21:18] if they have affirmatively opted in
+[00:21:20] to this particular style of use.
+[00:21:23] And can I ask if that
+were the world is there,
+[00:21:27] let me know with a hum,
+if you would opt in.
+[00:21:33] 1, 2, 3.
+[00:21:36] Anybody who would opt in
+presumably given your desire,
+[00:21:42] your extroversion, you might want to,
+[00:21:44] you'd feel comfortable explaining why
+[00:21:46] to those who did not hum.
+[00:21:48] Yeah, two folks here.
+[00:21:52] - [Audience Member 2] Yeah,
+so I think it's really a
+[00:21:54] context dependent thing for me personally.
+[00:21:56] So let's say I'm going into a conference
+[00:21:58] and I allow that on
+[00:22:02] and like other people are letting that on-
+[00:22:03] - All that effort to look at a lanyard.
+[00:22:06] Why not just make it that I wear glasses
+[00:22:09] that make a thousand function calls
+[00:22:11] and then tell me who you are
+[00:22:12] and I can say is your
+parents' name, Dottie?
+[00:22:15] - [Audience Member 2] Yeah, I love
+[00:22:16] when someone asks me that question,
+[00:22:18] so you know, I'm really
+looking forward to that.
+[00:22:20] - If you had a nickel.
+[00:22:21] - [Audience Member 2] Exactly.
+[00:22:23] Yeah so we were actually
+just talking about this
+[00:22:24] of how would socialization work in a place
+[00:22:26] where basically around you,
+[00:22:28] I'm seeing like this, you
+know Instagram profile
+[00:22:31] of you walking around.
+[00:22:33] And in many ways,
+[00:22:33] it could just make the interaction
+a lot less interesting.
+[00:22:37] There's no like room for curiosity
+[00:22:40] but it could also make it
+a lot more interesting.
+[00:22:42] So if I know a lot more about
+you in a professional context,
+[00:22:45] I know just the right questions to ask you
+[00:22:47] and we can skip past like
+you know, the weather
+[00:22:50] and all that sort of stuff.
+[00:22:51] So it depends on the context.
+[00:22:53] I would probably turn it off
+[00:22:54] after I leave, let's say, the conferences.
+[00:22:55] - Yeah, it's interesting too
+[00:22:56] 'cause you're talking about a context
+[00:22:59] where the privacy is not on
+off but is sort of a spectrum
+[00:23:04] and it's among people who are strangers
+[00:23:06] but are gathered for a common purpose
+[00:23:08] and are somewhat self-selected,
+vetted to have chosen
+[00:23:12] to attend that conference.
+[00:23:15] Also might be interesting
+[00:23:16] to imagine retroactively approving it.
+[00:23:18] So if there's a missed connection
+[00:23:20] in the hopes of finding it,
+you could belatedly opt in
+[00:23:23] and then you don't have
+to decide in the moment
+[00:23:26] whether you want it to be
+recognizable in the moment.
+[00:23:29] I don't know if either of
+you has thoughts on this
+[00:23:31] or if we should just go
+to the other opt inner.
+[00:23:34] - I mean one thought is, I guess
+[00:23:36] in terms of pros and cons, right?
+[00:23:38] Like the main downside is,
+you know, not everybody,
+[00:23:42] you know, a lot of people
+you don't want everybody
+[00:23:45] to know that you're from,
+[00:23:46] you know, I'm from Indiana
+[00:23:47] and I like, you know, electric
+skateboarding and stuff,
+[00:23:49] maybe I don't want people to know that.
+[00:23:51] But I guess on the other hand,
+it could be like a new way
+[00:23:54] of connecting people where, you know,
+[00:23:56] like maybe you find out
+that you're both alumni
+[00:23:58] of the same high school
+and you haven't met before.
+[00:24:01] So I think there's, you
+know, also a lot of good.
+[00:24:03] - Well, that starts to suggest
+[00:24:04] that there could be an
+implementation of this,
+[00:24:06] that instead of randomly scraping the web
+[00:24:09] and databases for stuff,
+[00:24:11] on recognition simply
+diverts to an about.me page
+[00:24:16] or equivalent that maybe
+still doesn't have your name
+[00:24:21] but has some salient facts about you
+[00:24:23] so that you're sharing a
+little bit about your identity
+[00:24:25] so you can avoid the boring stuff
+[00:24:27] without yet having to say
+where you live and all that.
+[00:24:31] They'd have to go to
+extra effort to tie it up.
+[00:24:34] That's an interesting implementation.
+[00:24:35] In my description, it
+just does an about.me
+[00:24:39] without having to put it on a T-shirt.
+[00:24:42] How many people would opt into that?
+[00:24:45] 1, 2, 3.
+[00:24:47] (Audience hums)
+[00:24:48] I've sold a few on it, I think.
+[00:24:50] Not yet ready to drop
+you other business ideas
+[00:24:52] but a few.
+[00:24:54] Anything we're missing
+from our other opt inner?
+[00:24:58] - [Audience Member 3]
+Well, I just think that,
+[00:25:04] that it's important to
+have an opt-in system
+[00:25:06] but then at that point if people opted in
+[00:25:09] to basically like use the
+service then they are aware
+[00:25:14] that their public
+information is like visible
+[00:25:19] at least to like their
+own local like network
+[00:25:22] or like however it works.
+[00:25:23] - Yeah.
+[00:25:24] - [Audience Member 3] So I mean,
+[00:25:27] in terms of whether I would use it,
+[00:25:28] I would use it because
+information is nice.
+[00:25:30] It's nice to know about other people.
+[00:25:33] It's sort of a simple answer.
+[00:25:35] - And that's a neat like reciprocity too,
+[00:25:37] that given that I would like
+to know it for other people,
+[00:25:39] maybe I should agree to
+have it be known about me
+[00:25:42] by other people, kinda like peer-to-peer.
+[00:25:46] I'm gonna have to swap what I have
+[00:25:47] if I'm gonna download
+what other people have
+[00:25:50] to use like a 2001 reference.
+[00:25:54] It also suggests
+[00:25:55] that the kind of modulation
+Facebook purports to offer
+[00:25:58] amidst its Byzantine controls
+could potentially be here too
+[00:26:02] that says I'll turn it on
+[00:26:04] for anybody who is a friend on Facebook
+[00:26:07] or a friend of a friend
+[00:26:09] or within two connections on LinkedIn.
+[00:26:12] I think probably everybody in the world is
+[00:26:14] within three connections on LinkedIn
+[00:26:16] but a way of circumscribing
+who can use it,
+[00:26:20] which is a generalization
+of the, I'm at a conference,
+[00:26:23] with trusted ish strangers,
+[00:26:27] maybe trusted ish strangers
+are also friends of friends
+[00:26:30] on LinkedIn but not just anybody.
+[00:26:33] You could see modulating
+it in lots of ways.
+[00:26:36] Other hands are up way in the back.
+[00:26:40] I believe that's Laura.
+[00:26:41] Oh, maybe I shouldn't identify you. Sorry.
+[00:26:45] It's probably not Laura.
+[00:26:46] - [Laura] This is Laura, I'm
+a product manager at the lab.
+[00:26:50] I'm wondering what the
+process for opting out is
+[00:26:52] and like would it be possible
+to do a V2 of these glasses
+[00:26:55] where instead of searching
+you and identifying you,
+[00:26:58] it checks whether you
+are already opted out
+[00:27:01] and if you're not, it just opts you out
+[00:27:02] from all of these services.
+[00:27:04] So it's like the protect,
+[00:27:05] protective version of this, yeah.
+[00:27:10] - That's a good question.
+[00:27:12] We don't have any current
+plans to build a V2 like that,
+[00:27:15] but, I mean, the services
+that we list for you
+[00:27:20] to opt out of usually require you
+[00:27:21] to actually upload your own ID
+[00:27:25] to verify your identity actually.
+[00:27:28] So we couldn't do that for
+you at least right now.
+[00:27:35] - There's one other question
+from our opt inner here
+[00:27:38] and one back there.
+[00:27:39] Jay, did you want to go?
+[00:27:42] - [Jay] I don't know if this is a question
+[00:27:43] so much as a comment,
+[00:27:44] but I think it would be kind of concerning
+[00:27:46] to think about a society
+[00:27:48] where your social value is
+determined by the amount
+[00:27:51] of data that you're willing to share
+[00:27:53] and the idea that when
+you're in like a public space
+[00:27:56] and you have your about me page,
+[00:27:58] for those who not choose
+not to kind of participate
+[00:28:00] in that system.
+- Does that make you sus?
+[00:28:02] - [Jay] It makes you suspicious.
+[00:28:03] It may make you less approachable
+[00:28:05] and I think that that's like a really kind
+[00:28:07] of interesting moral dilemma to play with.
+[00:28:09] - Yeah, it reminds me a little
+[00:28:10] of the eBay used to have a
+shades icon next to people.
+[00:28:15] I just thought it meant
+you were a cool seller
+[00:28:17] but it really means that you're new
+[00:28:19] so you are shady, back in the day,
+[00:28:22] I don't know who did the UX for eBay.
+[00:28:25] But you're pointing out
+[00:28:26] that there could be social reorganization
+[00:28:29] where if you don't have an
+about me page, what's your deal?
+[00:28:34] Maybe that reservation
+[00:28:35] at the restaurant won't come through
+[00:28:37] and for eBay, it's a
+commercial transaction
+[00:28:41] where maybe knowing
+something about the seller,
+[00:28:43] are they new, are they
+not, what are they hiding?
+[00:28:45] In commerce might make sense.
+[00:28:46] And just, on the subway,
+[00:28:50] I'm not gonna give my
+seat up for that person
+[00:28:54] if they're acting suspiciously
+by not joining the thing.
+[00:28:57] I don't know.
+[00:28:58] Again, there's no reason
+[00:29:00] why you all would have
+to be expert on this,
+[00:29:02] but you've probably given it some thought.
+[00:29:05] - Yeah, so this is something,
+[00:29:08] at least I've thought about a lot
+[00:29:09] and I think about it as it's
+like sort of a continuum
+[00:29:12] of like all social media
+[00:29:14] because what you're
+mentioning exists a little bit
+[00:29:17] with like existing
+social platforms, right?
+[00:29:19] Where maybe you're
+looking to hire somebody
+[00:29:21] but they don't have a LinkedIn
+[00:29:22] and that would be like almost
+a dropping them a point
+[00:29:25] compared to somebody who
+does have a LinkedIn.
+[00:29:28] And I mean I guess, yeah I
+kind of just think of it a bit
+[00:29:31] as you know, a spectrum.
+[00:29:34] - But it is basically validating the idea
+[00:29:36] that what feels like being flexible
+[00:29:41] and allowing for individual
+decision about exposure
+[00:29:45] ends up having a cross
+society normative effect
+[00:29:49] that could tip into affecting
+the entire societal dynamic
+[00:29:53] and whether that's a matter for
+public policy or collective,
+[00:29:56] where do we wanna go today
+versus just like, well so be it.
+[00:30:01] I don't know, I don't know.
+[00:30:03] I see other hands up.
+[00:30:04] Before we take the next
+round of questions,
+[00:30:06] it would just be great
+to hear from each of you
+[00:30:09] about the spike of
+incandescent attention you got
+[00:30:13] for approximately one and a
+half news cycles about this.
+[00:30:17] And just tell us how that unfolded
+[00:30:20] and anything you learned
+from it or were surprised by.
+[00:30:24] - Yeah, so it was pretty
+insane and also intense.
+[00:30:27] We had about a month of just like talking
+[00:30:32] to dozens of reporters and journalists
+[00:30:37] and I guess like the
+biggest learning we had was,
+[00:30:41] well, we've never like
+gone that viral before
+[00:30:45] so we learned how to talk to
+journalists was number one.
+[00:30:49] We got media trained by someone
+really nice at Harvard too.
+[00:30:52] - And I know it's mostly tacit knowledge,
+[00:30:54] but what would you distill
+[00:30:56] as the one or two important
+lessons of media training?
+[00:31:02] - Stick to a few important points,
+[00:31:03] like three important points.
+[00:31:04] - No matter the question.
+[00:31:05] - No matter the question.
+[00:31:07] And you don't have to answer any question.
+[00:31:10] You can always just like kind of answer
+[00:31:12] and then move back to
+something you actually want
+[00:31:15] to talk about.
+[00:31:16] - And that was after several
+awkward questions like
+[00:31:18] how much did you make in your
+cell phone business came up?
+[00:31:22] - Yeah.
+[00:31:24] - Any other lessons before you move on
+[00:31:26] to other stories from the news cycle?
+[00:31:31] - Oh yeah, I mean, it was just like
+[00:31:32] overall a pretty like fun experience
+[00:31:34] in the sense that I
+think we were successful
+[00:31:38] in getting people a lot more aware
+[00:31:41] and like the general
+public a lot more aware
+[00:31:42] of, you know, these
+like privacy like issues
+[00:31:46] and, you know, policy
+that could be enacted
+[00:31:48] to help solve it.
+[00:31:50] So I guess my big takeaway is like,
+[00:31:51] oh, if you, you know, make a technology
+[00:31:53] and you present it in a
+like engaging way to people,
+[00:31:57] whether it's like a video
+[00:31:58] or like, you know, a product or something,
+[00:32:00] you can cause like outsize
+impact in like policy
+[00:32:03] and like news cycles.
+[00:32:05] - Did anybody wanna buy you all out?
+[00:32:09] - We had a lot of
+interest from like people
+[00:32:12] who wanted to buy it or investors,
+[00:32:15] but we actually turned all of those down
+[00:32:17] during the news cycle.
+[00:32:19] We didn't sell any product.
+[00:32:22] - And you just had a conversation
+[00:32:23] and found you were naturally aligned on
+[00:32:24] that this wasn't something you wanted
+[00:32:26] to take to the next level?
+[00:32:27] - Yeah, we decided before the launch
+[00:32:29] that we wouldn't sell this
+product at all basically.
+[00:32:33] - Did you hear anything from Meta?
+[00:32:35] - No, but they had a spokesperson
+like talk to journalists.
+[00:32:40] - There's just a grin from Caine
+that has a story behind it.
+[00:32:44] - Oh no, they were like kind
+of critical of it mostly
+[00:32:48] because, you know, Meta is
+a very big company, right?
+[00:32:50] So they have to keep a
+very polished brand image.
+[00:32:54] - They've had good media training.
+[00:32:55] - Yeah, they're better
+trained than we are.
+[00:32:59] - Alright, let's throw it back to folks.
+[00:33:02] There are different hands up.
+[00:33:03] I don't know where the mic is.
+[00:33:03] Has the mic found...
+[00:33:05] Feel free, Clare, to
+just start routing it.
+[00:33:11] - [Audience Member 4] Hi,
+so this is super interesting
+[00:33:12] and one of the reactions I
+was having is I'm feeling kind
+[00:33:17] of provincial in that
+I'm thinking about like
+[00:33:20] how my parents might react to this.
+[00:33:22] And they're like, yeah, I leave the house,
+[00:33:24] I see only people I know.
+[00:33:26] Everybody knows who I
+am, they know my dad.
+[00:33:29] Like, hi Joe, hi Bob.
+[00:33:31] - Do they live in a village
+[00:33:33] or they're just extremely famous?
+[00:33:34] - [Audience Member 4]
+No, they're in a town
+[00:33:37] of let's say 20,000 residents
+in Connecticut, you know,
+[00:33:43] and dad was on the town
+council at some point
+[00:33:45] and mom works at the optometrist
+[00:33:48] and there's only one, you
+know, so it's not like-
+[00:33:50] - That is literally provincial.
+[00:33:52] - [Audience Member 4] Yeah.
+[00:33:53] And so I feel like they
+would be like completely
+[00:33:57] nonplussed by this.
+[00:33:58] - Wait, nonplussed as in unimpressed?
+[00:34:01] - Yeah, and then they'll
+just like it's weird.
+[00:34:04] Like when they come to
+Boston, part of the thing
+[00:34:06] that they like is that
+they see loads of people
+[00:34:08] and they wonder if they're
+gonna see anybody they know.
+[00:34:11] And so I wonder like if
+we were to present to this
+[00:34:16] to all humans,
+[00:34:17] how many urbanites
+would be like, I am used
+[00:34:21] to being anonymous
+wherever I go and how many
+[00:34:25] or like I'm an urbanite who stays
+[00:34:28] at home most of the time, I go to work.
+[00:34:30] - One quick question, do
+your parents ever travel?
+[00:34:32] - [Audience Member 4] Yes.
+[00:34:34] Not internationally or anything,
+but they go on vacation.
+[00:34:36] - I thought you were gonna say they go
+[00:34:37] to the pharmacy or something.
+[00:34:39] So when they're on vacation,
+[00:34:40] do you think it would change their mind
+[00:34:42] or, so what, people might know who I am,
+[00:34:44] but why would they do anything with it?
+[00:34:48] - [Audience Member 4]
+You know, I don't know.
+[00:34:50] - There are public links to the video.
+[00:34:53] You could share it with
+them, see what they think.
+[00:34:54] - [Audience Member 4] Yeah, I'll do that
+[00:34:55] and I'll report back to you.
+[00:34:56] - I don't know, any thoughts
+from AnhPhu or Caine?
+[00:34:59] - Yeah, I mean we've gotten a lot of,
+[00:35:02] or yeah, I mean part of
+it going like quite viral
+[00:35:04] and stuff is we did end up getting like
+[00:35:06] quite a massive quantity
+of feedback on this project
+[00:35:10] from a lot of different people
+[00:35:11] and like a lot of different demographics.
+[00:35:13] And I mean it's kind of like
+what you'd sort of expect
+[00:35:16] where like younger people around Harvard
+[00:35:19] for example have like an
+on average like higher,
+[00:35:24] I don't know, they're
+like more in favor of it
+[00:35:25] than, you know, if you go
+to like maybe a small town
+[00:35:27] and just like an older demographic.
+[00:35:29] - Wait, but you were
+saying that the small town,
+[00:35:33] at least with your focus
+group of two in your mind
+[00:35:37] 'cause you haven't talked
+to them about it yet,
+[00:35:38] would be copacetic with it
+or like kind of unmoved by it
+[00:35:43] and the Harvard students were
+kind of unmoved by it too.
+[00:35:46] - Yeah, I think younger people
+[00:35:47] and like more like tech
+forward people are less moved.
+[00:35:50] - Because they know which
+would also explain the reaction
+[00:35:52] in the room which was not dropped jaws.
+[00:35:55] Is the mic found or yep,
+whoever's got it, go for it.
+[00:35:59] - Can you hear me?
+- Yep.
+[00:36:01] - [Augustio] All right,
+yeah, I'm Augustio,
+[00:36:02] but I'm sure you already knew that.
+[00:36:06] I'm wondering, so, well,
+[00:36:07] when you mentioned the presentation,
+[00:36:09] the first thing I thought was
+[00:36:10] how easy this might be to weaponize.
+[00:36:12] So let's say a government
+[00:36:14] or rogue actor wanted to
+identify anyone, you know,
+[00:36:18] how easy would it be to do that
+[00:36:19] with your experience of building it
+[00:36:21] and also for like the everyday person
+[00:36:23] if you had these glasses,
+I mean how easy would it be
+[00:36:26] to say look at a person
+[00:36:27] and find out more personal information
+[00:36:29] beyond the benign like even an address
+[00:36:32] or a name beyond that, like
+a social security number,
+[00:36:34] or credit card information, et cetera.
+[00:36:38] - Yeah, so good, great question.
+[00:36:42] So we knew that people
+would want to reproduce this
+[00:36:45] and even after the video,
+we've seen dozens of examples
+[00:36:48] where this was reproduced.
+[00:36:50] But yeah, we took a
+few steps to make this,
+[00:36:54] at least slow it down
+[00:36:55] while people had time
+to process and opt out.
+[00:36:57] So we didn't do any online demos,
+[00:37:00] we didn't open source anything,
+we didn't sell the software.
+[00:37:05] But yeah, I think like for
+us it took us four days
+[00:37:10] to code or so for the original version
+[00:37:15] and yeah, it is not hard
+[00:37:17] to reproduce once you know the concept.
+[00:37:21] I don't know if you have anything to add.
+[00:37:25] - So it is also interesting to think that
+[00:37:28] if you string together, tinker
+[00:37:30] with some American
+constitutional law tentpoles,
+[00:37:34] there's a case that says
+[00:37:36] that the authorities are allowed to do
+[00:37:41] in public and in plain view
+[00:37:44] whatever techniques are
+available to the general public,
+[00:37:49] that they shouldn't be disadvantaged.
+[00:37:52] This was a case involving
+infrared light detector,
+[00:37:57] which probably dates the case
+[00:37:58] to find marijuana growing lamps,
+[00:38:01] which probably dates the
+case, that were illegal.
+[00:38:04] And the thing was, well wait a minute,
+[00:38:08] those plants weren't in
+plain view, there was a wall
+[00:38:11] but the heat detector could find them
+[00:38:13] and Supreme Court says, well, look,
+[00:38:15] if any stranger could walk down the street
+[00:38:17] with a RadioShack, which
+dates the case, heat detector,
+[00:38:21] we're not gonna stop the police from it.
+[00:38:23] If you take that tentpole of doctrine
+[00:38:25] and apply it here, it says
+[00:38:28] if two extremely talented,
+to be sure, Harvard Juniors
+[00:38:32] could do this in four days,
+[00:38:34] how could the authorities
+be told you can't do it too?
+[00:38:37] And the it
+[00:38:39] would previously have been
+a papers please moment,
+[00:38:43] which is a triggering
+phrase from World War II,
+[00:38:47] that American constitutional law,
+[00:38:49] before you get to say,
+papers please, you have
+[00:38:51] to reach certain thresholds
+as the authorities
+[00:38:56] to demand it and arrest somebody
+[00:38:58] if they refuse to present them.
+[00:39:01] This bypasses that because
+it says I don't need to,
+[00:39:03] I get the papers without asking
+[00:39:06] because they are in plain view
+[00:39:08] and their data is in plain view.
+[00:39:12] So we just put that together.
+[00:39:13] And it may be that at least
+in the absence of a statute
+[00:39:16] that says the authorities can't do it,
+[00:39:19] they have new affordances
+they didn't have before.
+[00:39:22] All right, there are other hands up.
+[00:39:24] I don't know if the mic
+has found a new home
+[00:39:27] and there are folks up front too,
+[00:39:29] but yep, whoever's got it.
+[00:39:31] - [Audience Member 5] Hello.
+[00:39:31] I have a question, maybe
+more philosophical,
+[00:39:34] but just the conversation
+that we've been having,
+[00:39:37] I wonder if knowing all these
+facts kind of, about people
+[00:39:42] at random, if it kind of
+undermines human relationships
+[00:39:46] and I wonder if you guys
+could comment on like
+[00:39:50] what really is knowing,
+[00:39:51] you know what I mean?
+[00:39:52] Having these different facts about people?
+[00:39:54] It can be weaponized as was mentioned,
+[00:39:56] but I don't know if you
+guys could talk about that.
+[00:40:00] - Yeah, I think a future
+[00:40:03] where you can know
+about people who you see
+[00:40:06] if they've like fully consented
+[00:40:08] and, you know, they're all for it
+[00:40:09] as well could be quite
+interesting in the sense
+[00:40:12] that, you know, day to day we
+get to know like less than 1%
+[00:40:16] of the people we ever see, right?
+[00:40:17] We're just walking through the street
+[00:40:18] and most people are
+complete strangers to us.
+[00:40:21] I think that there could be room for a lot
+[00:40:23] of more like connection
+and like meeting new people
+[00:40:26] and like self-expression
+[00:40:28] if you could sort of express yourself
+[00:40:30] in this new way, like
+in the digital medium
+[00:40:32] 'cause you know, right now
+you can wear like clothes
+[00:40:34] to express yourself, you
+can wear like glasses,
+[00:40:37] you can, you know, like talk to people.
+[00:40:38] But what if you extend that
+to like the digital realm
+[00:40:42] and when somebody looks at
+you, they can see like a photo
+[00:40:45] that you posted about
+yourself or like a video
+[00:40:47] or maybe like a bio
+[00:40:48] or maybe, you know,
+something that you like want
+[00:40:51] to express about yourself to the world.
+[00:40:53] I think could be interesting.
+[00:40:54] - Truly metaphorically,
+it's like having a T-shirt
+[00:40:57] without limited physical real estate.
+[00:41:00] The T-shirt is the QR code.
+[00:41:01] If people walked around with
+QR codes on their T-shirts,
+[00:41:05] that went to about me pages,
+[00:41:07] that's the opt-in version
+of this, isn't it?
+[00:41:10] Ask me about...
+[00:41:12] And I suppose too, you could
+set thresholds and triggers.
+[00:41:15] It says, I came from
+suburban, your folks town
+[00:41:22] and if I happen to pass anybody
+[00:41:24] who's also within 20 miles of there
+[00:41:26] while I'm abroad, let's have
+a mutual discovery moment
+[00:41:31] or something, or a fellow
+tinkerer or whatever it is.
+[00:41:35] Are we making it less creepy?
+[00:41:38] Are you communing with Caine
+on this or you're still...
+[00:41:44] - I think there's a huge
+potential for something like this.
+[00:41:46] I think it could totally change the way
+[00:41:49] people meet new people.
+[00:41:52] So I'm in favor of Caine on this.
+[00:41:54] And I guess just to add like,
+[00:41:56] I think the AI tools we have
+now including embeddings
+[00:42:00] and large language models
+[00:42:01] that can like understand
+people in a much deeper way,
+[00:42:07] I think you can represent
+people's personalities and hobbies
+[00:42:10] and passions and interests,
+[00:42:12] and they tell you who you should meet,
+[00:42:14] who you should talk to.
+[00:42:15] I think the future of the
+world might become something.
+[00:42:20] - So it's a self propelling
+friendship dating site
+[00:42:25] that as you walk around,
+[00:42:28] there might even be a double opt in
+[00:42:29] where it gives you like a heat
+seeking directional thing.
+[00:42:34] There's a green two blocks
+over and to the right
+[00:42:37] and then you go over there
+and you pass 'em, you do kind
+[00:42:39] of a surveillance pass
+[00:42:41] and they're doing the same
+thing, they're checking you out
+[00:42:44] and then you get maybe
+a double swipe moment
+[00:42:47] where you're like, coffee?
+[00:42:50] And for somebody just watching
+all you see are people
+[00:42:54] that pass one another and
+then make another thing
+[00:42:57] and then boom off to McDonald's,
+[00:42:58] which they're both recommended
+[00:43:00] because the AI knows exactly
+what they want in that moment
+[00:43:03] and there's even a coupon
+for a first meeting.
+[00:43:06] Are we elaborating this too much?
+[00:43:07] And somewhere Jay is like,
+[00:43:09] this is exactly my worst nightmare,
+[00:43:12] but are we still selling it?
+[00:43:15] Yeah.
+[00:43:16] - [Audience Member 6]
+I think you would have
+[00:43:17] to maintain some form of
+autonomy for the person to...
+[00:43:20] Let's say, okay, this is one
+option, this is another option.
+[00:43:23] But I love how you portray it as something
+[00:43:27] that would fundamentally
+enhance like human interaction
+[00:43:29] and that can be used for
+very bad purposes as well.
+[00:43:32] But I agree with you.
+[00:43:33] It can really also have a positive aspect.
+[00:43:37] - All right, Valerie's directing the mic.
+[00:43:39] Wherever it is, jump in.
+[00:43:40] - [Ria] Hi. Hi.
+[00:43:42] - Two mics. Sorry.
+- Is that okay?
+[00:43:43] - We'll do the back
+then we'll do the front.
+[00:43:45] - [Rhea] Hi, I'm Rhea.
+[00:43:46] Thanks for this. This is awesome.
+[00:43:48] I'm wondering, so Google had
+this blip with Google Glass,
+[00:43:53] what do you think stopped them from doing
+[00:43:56] what you guys are doing back then
+[00:43:58] and what stopping them from doing
+[00:44:00] what you guys are doing now?
+[00:44:03] - Yeah, so Google Glass is
+a really interesting case
+[00:44:06] 'cause I think that came
+out like 10 to 15 years ago
+[00:44:09] and they got a lot of pushback.
+[00:44:12] Like they even coined the phrase glasshole
+[00:44:14] for people like wearing glasses,
+like their smart glasses.
+[00:44:17] - [Jonathan] To be clear, it wasn't Google
+[00:44:18] who coined that phrase.
+[00:44:18] - Oh yeah, somebody else
+gave them that phrase.
+[00:44:21] And the reason that it failed was
+[00:44:24] like one, the actual hardware
+itself, the technology itself
+[00:44:27] wasn't really appealing to people.
+[00:44:29] It would look really weird.
+[00:44:30] It had like weird wires and stuff
+[00:44:32] and like wasn't like something
+you'd want to wear generally.
+[00:44:35] And then also in addition
+to the technology side,
+[00:44:38] on the privacy side, right,
+[00:44:40] like people definitely weren't comfortable
+[00:44:42] with others wearing like
+wearable cameras in daily life.
+[00:44:45] So that project largely failed.
+[00:44:48] We do have, you know, it
+is 10 to 15 years later,
+[00:44:52] so maybe, you know, things have changed,
+[00:44:53] a lot more people have
+social media profiles
+[00:44:56] and like very robust online presences,
+[00:44:58] that's what made our video
+possible to begin with,
+[00:45:01] so, you know, maybe that's different now.
+[00:45:06] - [Jonathan] There was somebody
+up front, I think. Yep.
+[00:45:10] - [Audience Member 7] What
+are you guys' next steps?
+[00:45:11] What do you want to do now?
+[00:45:14] - Yeah, so, you know, me and
+AnhPhu, we're tinkerers, right?
+[00:45:17] So we just like to play around
+[00:45:19] with a bunch of different ideas.
+[00:45:21] In the like interaction
+space, we're trying a lot
+[00:45:24] of different methods.
+[00:45:27] It's very interesting, like every person,
+[00:45:29] like their online footprint
+can be like converted
+[00:45:32] into basically like a mathematical vector
+[00:45:35] or representation of them like using math
+[00:45:38] and like if you kind of alluded to it,
+[00:45:41] but you can like very easily like see
+[00:45:42] how you match up to somebody else.
+[00:45:44] Maybe, so like me and AnhPhu for example,
+[00:45:47] we like tried it on each other
+[00:45:48] and we're like a 99.8% match out
+[00:45:50] of like every person at Harvard, right?
+[00:45:52] Because we both like
+technology and stuff like that.
+[00:45:54] So we're playing around
+with an idea in that space
+[00:45:57] of like meeting people
+[00:45:58] by, you know, seeing how similar you are.
+[00:46:00] - I love this idea
+[00:46:01] of like these four people
+are embedded together.
+[00:46:04] See what I did there? Yeah.
+[00:46:06] I gotta workshop that. Sorry.
+[00:46:08] - No, that was good.
+- Yeah.
+[00:46:10] AnhPhu, any thoughts or keep it rolling?
+[00:46:11] - Keep it rolling.
+[00:46:13] - Keep it rolling. All right.
+[00:46:14] Where did the mic find its next home? Jay.
+[00:46:17] - [Jay] Since I was mentioned by name,
+[00:46:22] one of my concerns with this kind
+[00:46:23] of higher concept is the idea of taking
+[00:46:26] what I think are some of the
+worst aspects of social media
+[00:46:29] and bringing them to real life
+rather than the best aspects.
+[00:46:32] And one of those is the idea
+of kind of flattening out
+[00:46:36] who we are as people into
+certain key characteristics
+[00:46:39] that we choose to share.
+[00:46:41] And so I understand the idea of like,
+[00:46:43] oh, I like volleyball,
+you like volleyball,
+[00:46:46] both of our profiles say that
+[00:46:47] and let's have a conversation about it,
+[00:46:49] which we might not have gotten to
+[00:46:50] unless the glasses told us
+[00:46:52] but that might also, you know, redirect us
+[00:46:55] from a much more niche
+conversation about our love
+[00:46:58] for the Y2K episode of "Family Guy"
+[00:47:01] or something like that, right?
+[00:47:02] Like the idea
+[00:47:03] that we are flattening out
+our social personas to-
+[00:47:06] - Now when AnhPhu-
+- the things we choose
+[00:47:08] to share online.
+- And Caine come back to you
+[00:47:10] and say yes, there's a
+formula for that too.
+[00:47:14] By 5.0, we'll have ways
+[00:47:17] of representing even unusual connection
+[00:47:20] or we can throw in a
+randomization variable
+[00:47:23] to make sure there's still
+some sprezzatura to it.
+[00:47:29] Does that mollify you in any way
+[00:47:31] or is your objection somehow
+not about the implementation
+[00:47:35] and it's not gonna match
+the right kind of people
+[00:47:38] or it's gonna become the
+exclusive way of matching
+[00:47:41] but is a more fundamental
+objection you have?
+[00:47:44] - [Jay] I think it is more of fundamental.
+[00:47:46] I think there's a certain
+element of human spontaneity
+[00:47:49] that is lost when we try
+to, this is not a word,
+[00:47:51] but algorithmize things.
+[00:47:54] - Algorithmicize.
+[00:47:55] - [Jay] Algorithmicize, thank you, JZ.
+[00:47:58] So I think that
+[00:47:59] when we're thinking about
+fostering human connection,
+[00:48:02] if we lose that element of spontaneity,
+[00:48:05] we are again continuing to
+kind of flatten who we are
+[00:48:08] into the things we like and
+the things we don't like
+[00:48:10] and maybe not the things that
+we may stumble upon together
+[00:48:12] that we didn't know that we both liked.
+[00:48:14] - And how would you think about that?
+[00:48:15] Would that be back to
+you can always opt out
+[00:48:17] or fail to opt in?
+[00:48:21] - Yeah, I think one is like, yeah,
+[00:48:25] I think people should be able to opt
+[00:48:27] into something like this.
+[00:48:29] But again, I think
+[00:48:32] as with all new social
+networking technologies, you have
+[00:48:37] to make a very concerted
+effort at all steps
+[00:48:40] whenever you're developing this product
+[00:48:42] and see where it could go bad
+[00:48:44] and try to fix the problems along the way.
+[00:48:46] I personally feel like the
+world, it has been moving forward
+[00:48:51] toward this for the past 20
+years of more self-expression
+[00:48:54] in the digital realm
+[00:48:56] and I don't see this
+becoming any less weak
+[00:48:59] in the next 20 years.
+[00:49:00] I think people just want
+to express themselves
+[00:49:02] even more deeply, find like people
+[00:49:05] who they really relate to
+[00:49:06] and I think tools like AI
+can really help with that.
+[00:49:10] So I guess I feel like,
+[00:49:12] in my opinion, we have
+to move toward this way
+[00:49:15] but think very deeply every
+single development step
+[00:49:18] to make it as moral, as good as possible.
+[00:49:20] - And just the taxonomist
+in me is observing
+[00:49:23] there really are two steps
+that are being concatenated
+[00:49:27] and you could object to either or both
+[00:49:29] or the, you know, the sum.
+[00:49:31] One of which is the virtualization
+[00:49:33] of what you're already describing
+[00:49:36] as physical expression designed
+[00:49:39] as a relational social
+thing to communicate
+[00:49:42] whom you would probably
+strike up a conversation with
+[00:49:45] or not as a stranger.
+[00:49:46] That's the virtualization piece.
+[00:49:48] Extra real estate for the
+QR code on the T-shirt.
+[00:49:51] The second piece is the algorithmicization
+[00:49:55] of the decision to connect.
+[00:49:58] And at the moment, that's the objection.
+[00:50:02] You could see having one without the other
+[00:50:05] or the other without the first
+really in a physical space.
+[00:50:11] And the thought of also
+saying it doesn't even have
+[00:50:13] to be people that you're passing,
+[00:50:15] but like, I'm about to go to the subway,
+[00:50:17] I've got some extra time,
+should I take this subway
+[00:50:20] or the next one and which
+car do you recommend I enter
+[00:50:24] to possibly find somebody
+[00:50:25] that I could have an
+interesting conversation with
+[00:50:27] 'cause I'm going all the way to Mattapan?
+[00:50:31] Is that a more interesting sort of...
+[00:50:34] It might even mean
+[00:50:36] that the journey becomes
+more the destination
+[00:50:38] because there's now a social license
+[00:50:40] and structure through
+which strangers can...
+[00:50:43] Am I selling it? I'm trying.
+[00:50:46] Yeah, okay. Other thoughts?
+[00:50:51] - [Sharon] Hi, I'm Sharon.
+This is really fascinating.
+[00:50:53] I was just wondering,
+going back to the point
+[00:50:56] on this new paradigm of self-expression.
+[00:50:59] I was kind of thinking on
+maybe a more dystopian side
+[00:51:02] where you realized that
+you have an online trail
+[00:51:05] of, for instance, like a criminal record
+[00:51:08] from like 30 years past
+[00:51:09] and then you realize that's
+kind of trailing around
+[00:51:12] and then you become kind
+of alienated in society
+[00:51:15] because of this past
+negative trail of you.
+[00:51:19] Are you kind
+[00:51:20] of thinking about classifying
+types of information
+[00:51:23] and making sure people can personalize
+[00:51:25] whether you can opt in certain information
+[00:51:28] that can be publicized
+[00:51:30] but some information that
+can also be privatized?
+[00:51:36] - I think for an app like this you,
+[00:51:39] you would be able to control exactly
+[00:51:42] what is on your profile,
+[00:51:43] just like on any other social network.
+[00:51:48] So you can put your
+criminal history on there
+[00:51:50] if you want to be known
+for that or not, but yeah.
+[00:51:55] - [Jonathan] Check location
+on January 6th. Sorry.
+[00:51:59] Other?
+[00:52:02] - [Audience Member 8]
+Yeah, I just want to speak
+[00:52:03] to the points you were bringing up
+[00:52:04] because I deeply share the outcome
+[00:52:09] or what you're saying you care
+about, I share that with you
+[00:52:12] and I've been wondering about
+[00:52:14] how AI can bring us closer together
+[00:52:16] as opposed to bring us farther apart
+[00:52:18] or just have us in our own
+world of like algorithms
+[00:52:20] and bots and all that.
+[00:52:22] And I think yes, that's one
+version of it that you said.
+[00:52:26] I wonder if there's another version of it
+[00:52:28] where if I, with all my
+biases and prejudices
+[00:52:31] and walking around and I see someone
+[00:52:34] and immediately what's coming to my mind
+[00:52:36] because of how polarized
+[00:52:38] and how like distant
+we are from each other,
+[00:52:41] I can only see the things
+where we're different
+[00:52:43] and maybe there is things
+[00:52:45] where we're actually really
+close apart that we can't see.
+[00:52:48] And I would really be
+interested in a version of this
+[00:52:53] that shows me what is my common
+humanity with this person
+[00:52:57] that I could find a hundred
+reasons why I disagree with
+[00:53:01] because I think we really
+need that right now in America
+[00:53:04] and the world so much.
+[00:53:07] - It sounds like it's very
+different from meet these folks
+[00:53:10] but not those folks
+[00:53:11] but rather for any given person,
+[00:53:14] here's something you could talk about
+[00:53:16] that might be a point of fulfillment
+[00:53:20] if not even shared belief.
+[00:53:21] Maybe it's precisely 'cause you disagree,
+[00:53:24] but something where each of
+you would come away later
+[00:53:26] and say, I'm glad I met that person.
+[00:53:28] - [Audience Member 8]
+Yeah, which really depends
+[00:53:30] on what's the incentives
+in the algorithm, right?
+[00:53:32] Because the algorithms right now
+[00:53:33] just wanna get us more
+engaged, polarized, all that.
+[00:53:37] - [Audience Member 9] That's by design.
+[00:53:42] - [Audience Member 8] I'm curious
+[00:53:43] if you have thoughts about that.
+[00:53:43] That was just a comment
+[00:53:44] but also open to your thoughts
+and suggestions on it.
+[00:53:46] - Yeah, I think that
+you guys are almost kind
+[00:53:50] of going through similar
+more thought process
+[00:53:53] or like evolution that
+me and AnhPhu have had
+[00:53:55] where it's like, oh you know
+when you first see it, right,
+[00:53:59] there's like all kinds of
+like crazy like, oh, you know,
+[00:54:02] this is like not a good thing.
+[00:54:03] Like there's all kinds
+of bad use cases, right?
+[00:54:05] It could be used to, you know, find people
+[00:54:07] and like follow people.
+[00:54:08] Just like not good use cases.
+[00:54:10] But, you know, I think like
+as you think about it more
+[00:54:12] and like, you know, as me
+[00:54:13] and AnhPhu have thought about
+it more, it becomes apparent
+[00:54:16] that there could be
+something like a little bit
+[00:54:18] like embedded within
+this that could be useful
+[00:54:21] for changing the way that we interact
+[00:54:22] and it doesn't have to be a negative.
+[00:54:24] It can be a way of like
+meeting new people,
+[00:54:26] learning about people, seeing
+the humanity in people.
+[00:54:30] - Got it. Other thoughts?
+[00:54:33] Has the mic already found a new place?
+[00:54:34] - [Audience Member 10] Can you hear me?
+[00:54:36] - Yep, we probably have
+time for one more comment.
+[00:54:38] - [Audience Member 10] Yeah,
+I don't wanna repeat too much
+[00:54:39] of what was said before.
+[00:54:41] Brief comment so-
+[00:54:42] - Well, I don't think your mic is on.
+[00:54:45] - [Audience Member 10] I've
+not been here for long,
+[00:54:46] but the most fascinating conversations
+[00:54:48] that I've had were people
+who I didn't expect to meet.
+[00:54:51] Even people who, any algorithm
+[00:54:53] that probably knew almost
+everything about me
+[00:54:56] and that person not expect to
+have great conversation with.
+[00:55:00] This includes someone that I randomly met.
+[00:55:02] I love spontaneity.
+[00:55:03] The next day, we're on a road trip
+[00:55:05] and we went randomly to different places,
+[00:55:07] while pre-med, we shared almost nothing.
+[00:55:09] And then now we have a question
+[00:55:11] that is the algorithms randomize
+[00:55:14] and we get to sit in front people
+[00:55:16] with different perspectives,
+[00:55:17] then why don't we just let
+people meet the real way?
+[00:55:20] Like it just seems off
+me that we're so focused
+[00:55:23] on simulating human connection
+[00:55:25] that we're not just letting
+humans connect as we always do.
+[00:55:29] Not only the solution to the prejudice
+[00:55:33] and crazy division in America aside,
+[00:55:35] but now for heavy lifting for the person
+[00:55:38] when people are the
+ones on the front lines
+[00:55:39] doing the prejudice and having bias,
+[00:55:42] so maybe you should let the
+people do it themselves.
+[00:55:45] - I think that's a fair point.
+[00:55:47] For me, at least as a freshman,
+I feel like I spent a lot
+[00:55:51] of time being with friends
+[00:55:53] that I really did enjoy being friends with
+[00:55:55] but at the end of the
+day, like I met Caine
+[00:55:57] and he and like a couple other people were
+[00:56:01] really the people I clicked with
+[00:56:02] and went years working with.
+[00:56:05] And I wish I could have
+found my community first
+[00:56:10] and then branch out to like
+other interesting people
+[00:56:12] 'cause I love hearing
+other people's perspectives
+[00:56:15] but I feel like the bigger
+problem is people aren't able
+[00:56:19] to find people who they
+truly click with, I think,
+[00:56:24] as easily as they could be.
+[00:56:26] I do think that maybe
+people you enjoy conversing
+[00:56:31] with as well.
+[00:56:32] Maybe there's something
+you can't define yet,
+[00:56:35] but maybe an AI could tell
+you why you would click
+[00:56:38] with this person and predict
+that you would get along
+[00:56:42] with them in some way other
+than just your pre-med major
+[00:56:46] or other background.
+[00:56:50] - Yeah, no, it is really interesting.
+[00:56:51] Like I actually wanted to see,
+[00:56:53] so like me and AnhPhu, we're
+a 99.8% match according
+[00:56:57] to our algorithms,
+[00:56:58] but one of my other
+very, very close friends,
+[00:57:00] we are only like a 40% match
+or something like that.
+[00:57:04] So I think you are right
+[00:57:05] that there is something
+that can't be defined
+[00:57:09] at least yet in the algorithm.
+[00:57:10] - [Jonathan] 'Cause you
+still like those friends.
+[00:57:11] You didn't see the 40% match
+[00:57:12] and be like, we can never speak again.
+[00:57:14] - Yeah, yeah. No, no, no.
+[00:57:15] - Yeah. Got it.
+[00:57:17] Well, what I love about
+this conversation is
+[00:57:20] that we didn't just do the,
+here's the thing, [Yells]
+[00:57:26] what should we do next?
+[00:57:28] Here's how you can protect yourself
+[00:57:29] and there should be a law,
+[00:57:31] which is kind of the pattern
+of most technology discoveries,
+[00:57:35] rightly or wrongly
+[00:57:37] but we got into questions of
+what kind of society are we?
+[00:57:40] What kind of society do we want?
+[00:57:43] To what extent are there
+technical innovations
+[00:57:45] that might even start
+[00:57:47] or unfold without a
+particular business model,
+[00:57:51] but just out of curiosity and tinkering
+[00:57:53] that could push us in
+one direction or another
+[00:57:57] and that might even when
+introduced be a net negative
+[00:58:02] if all other variables of
+society are held constant,
+[00:58:06] but could as a second
+or third order effect
+[00:58:08] complicate the evaluation of
+are they good or are they bad?
+[00:58:12] And of course the
+overlay on all of this is
+[00:58:14] do we just YOLO it collectively
+[00:58:17] and like stuff gets released or it doesn't
+[00:58:20] and Illinois passes a biometric
+law but nobody else does.
+[00:58:23] And you know, we just
+sort of see what happens.
+[00:58:26] I feel like digitally speaking,
+we've been Guinea pigs
+[00:58:28] for the past 30 years in
+a bunch of experiments,
+[00:58:31] not even run by a central authority
+[00:58:35] or is it positive or negative
+[00:58:37] to think collectively about what we want?
+[00:58:40] Where do we agree on
+end states and values,
+[00:58:44] but then disagree on implementation
+[00:58:45] and whether this'll get it there
+[00:58:47] or where are we actually disagreeing
+[00:58:48] on the values themselves?
+[00:58:50] I've heard all varieties of that.
+[00:58:52] So I just want to thank you two
+[00:58:55] for prompting such an interesting
+and rich conversation,
+[00:58:57] and the whole room for continuing it.
+[00:58:59] And it really makes me wonder what sort
+[00:59:03] of further pursuit we
+could inspire here together
+[00:59:07] of these sorts of issues.
+[00:59:09] Because I also heard you saying
+[00:59:12] version one had a lot of wires.
+[00:59:15] Version two, we produced
+and then ditched for reasons
+[00:59:19] that show as positive as you
+are on the possibilities,
+[00:59:23] you weren't ready to try
+to make it a reality.
+[00:59:27] Version three is gonna
+come around the corner
+[00:59:29] and what stake do we all have
+[00:59:31] in trying to shape what that looks like?
+[00:59:34] So thank you again for this brief
+[00:59:38] and brisk conversation today.
+[00:59:39] Thank you all for coming out for it.
+[00:59:41] To be continued and I'll
+see you on the red line.
+[00:59:45] (audience clapping)
+[00:59:46] - Thank you, guys.

@@ -1,0 +1,701 @@
+[00:00:02] [JM] The recording in progress. This is just one example of my amazing MC skills here today. So welcome, to BKC, welcome to Harvard. My name is James Mickens, I'm a professor of computer science here at SEAS. I also am one of the PIs for ASML, the Applied Social Media Lab.
+[00:00:19] And so, ASML was started with this sort of provocation that really shouldn't be a provocation.
+[00:00:26] Namely, what would happen if we decided to build technology that centered the public good, okay, instead of centering the needs of the shareholders or, you know, people like this?
+[00:00:35] And so, that's what we wanted to do. We wanted to bring people in from industry who had industry skills, and come to an academic setting to do work that would build things, create processes, create software, create folkways that would center the needs of the public.
+[00:00:52] And we thought that that was a really, sort of, underserved, focus area in this modern time, when, as you know, I mean, everyone has heard me say the magic boogie phrase, late-stage capitalism.
+[00:01:03] Where all these tech companies are just focused on accumulating that filthy lucre like Smog in Lord of the Rings. Anyways, I digress. Right? So that's what we wanted to do. Bring people in from industry and build stuff to center the public good.
+[00:01:15] And so, in particular today, we're going to focus on one of the sort of work streams that we have inside of the Applied Social Media Lab, which is this focus on digital identity. Basically, how do you as a person, go out in the world and prove who you are, or
+[00:01:31] aspects of who you are to different online services?
+[00:01:36] And so, we think that at a high level, there should be four goals for any sort of user-centered, digital identity system.
+[00:01:44] The first is that you want to actually place control in the hands of the users. And so why is that? It's because identity is actually deeply personal.
+[00:01:54] You know, think about your age, your name, your location, your gender, things like that. All of these things are inextricably tied to you as the user, not to some company or some particular piece of technology.
+[00:02:07] And so, as a result, we think that any digital identity system that centers users will actually give users a lot of control over how their data is stored, where it's sent to, so on and so forth.
+[00:02:23] And this is related to this second aspect of digital identity that we also think is important, which is we want our digital identity systems to allow for faceted identity disclosure. As some of you know, I grew up in the South, and my granddad would always say" everything is not for everyone, son.
+[00:02:41] You can't have a thing that belongs to everyone that's probably going to lead to sin. It's like, okay, it's getting a little bit intense, I'm 5 years old, right? But, you know, that's interesting, and I think that's true, it's very relevant here, right? So, the things that I want to reveal to people in a LinkedIn-type scenario
+[00:02:56] are different than the things that I want to reveal to them about my identity if I'm in some, you know, sub-Reddit about comic books, or some guitar playing, some other sort of narrow focus interest of mine. And so, we think that any system for digital identity that focuses on the user should allow the user to say, "I want to reveal this aspect of myself.
+[00:03:16] But not this aspect of myself to a particular service."
+[00:03:21] We think that another important aspect of a digital identity system is that it has to be plausibly secure.
+[00:03:27] Now, why do we say plausibly here? It feels a little bit like a weasel word. Well, it's because security can be difficult to pin down and define concretely, but here are some things that we know are not secure. Writing down all of your passwords on a Post-It note and putting on your refrigerator, for example.
+[00:03:44] That's not secure. We want a system that is going to be resilient against realistic types of threats. And by the way, you might think, oh, well then, of course, we should just go towards a totally centralized approach, where we just sort of cede control of all these things to a single corporate entity, let's say.
+[00:04:02] Well, look at what's happened with LastPass, for example. So, LastPass promised that it was going to make all of our password management much, much easier. LastPass
+[00:04:11] became a target for hackers, and it has sort of suffered from a variety of different cyber attacks, because people understand everybody's crown jewel is there. So this is not to bash on LastPass. Getting these things correct is difficult.
+[00:04:25] And in fact, it's not even to say that we want to take, necessarily, an opinionated stance about, oh, we want to go towards a completely decentralized architecture versus a completely centralized one. Really, what we want is something that centers the users' good.
+[00:04:39] And so, whether that be a fully decentralized approach, a centralized approach, something in between, first and foremost, we don't want to build stuff just because we have an ideological commitment to a particular architecture.
+[00:04:50] Instead, we want to build things because we think that they will actually help users in the real world. So, making tools that are secure are very important, particularly in the identity space, where things like names and locations and ages and things like that are very sensitive information.
+[00:05:08] And finally, we think that the fourth property that would be helpful in any digital identity system that centers the user
+[00:05:15] is that it has to be easy to use. So, why do we say this? Well, I mean, I am a sort of, you know, classically trained security and distributed systems person. That's what I got my PhD in. That's what I poured all of my blood, sweat, and tears into when I was a grad student.
+[00:05:30] And, you know, people in the security community, we love cryptographic keys. We love all kinds of fancy situations. I'm gonna give you a big number, you give me a big number, and then we're just gonna do something, and we'll get even more big numbers, right? But when it comes down to it, what do people oftentimes use in practice to authenticate themselves?
+[00:05:49] Simple schemes that we know have problems. There's this great paper called "The Quest to Replace Passwords."
+[00:05:54] And I think maybe the first sentence in that paper says, the continued domination of passwords as an authentication system is an embarrassment to the security community.
+[00:06:05] I mean, just as a drop-the-mic type statement there to open up an academic paper. And what this paper goes on to show is that there are all these authentication systems that have much better security properties than passwords, but people don't really use them as much. And why is that? Because passwords, despite all their problems, they're usable.
+[00:06:22] You know, people will pick a single word, they'll oftentimes reuse it across different domains, but it's easy, it works for them.
+[00:06:29] And so, any solution that we come up with in the digital identity space that we want to have all those other three properties, security and so on and so forth, also has to be easy to use, because if it's not, no one is going to actually use that system.
+[00:06:43] And so, with that, I'll now turn it over to Meg, who's gonna talk to us a little bit more about some of these challenges in the digital identity space. So, Meg, take it away.
+[00:07:00] [MM] Okay, I'm gonna use this one, because this one is on. Hello, I'm Meg Marco, I'm the Senior Director of ASML, and I'm also the Department of Disasters.
+[00:07:11] So, I will let you know about some impending disasters and other reasons why we feel like this work is really important. I'm the Department of Disasters because I have a background in journalism, so
+[00:07:22] it's all very bleak.
+[00:07:25] So we have 4 reasons to go with the 4 goals, right?
+[00:07:30] The first reason is there are too many accounts, and you do not own them.
+[00:07:35] Is there anyone here who wants to dispute this
+[00:07:38] with me right now? Okay, no. Apparently, this is even happening in space.
+[00:07:44] Where there are too many accounts, there are too many things, and you don't really own them.
+[00:07:50] This is important not only because
+[00:07:54] it is annoying. It is also insecure. I mean, your point about, LastPass, Mickens's point about LastPass is really good. It's like, in order to manage this, in order to plausibly manage this, you have to put all of these really important things into one place and make that a target. And so
+[00:08:11] we think there should be a better way.
+[00:08:14] And also, let's say you don't like these accounts, let's say you want your Outlook to work in space.
+[00:08:22] How can you take that with you and use something else? Like, you really can't, right? You have to start over. You have to get yet another account. So this is really important. Nobody is happy with this.
+[00:08:33] There's gotta be a better way.
+[00:08:36] This is 1.5, and a little bit of an aside, but has anyone actually noticed how creepy Okta's homepage is?
+[00:08:44] Like, what's going on here?
+[00:08:47] Okay, that lady's not real.
+[00:08:50] Wha- who let him in?
+[00:08:54] He's trying to log into his Outlook. Okay, sorry.
+[00:09:02] Okay.
+[00:09:03] This is, ripped from the news. This is happening now on Tech Meme, if you go, which is,
+[00:09:10] Anthropic has decided to implement an ID scheme to access Claude. Some things we don't know about this is who has to do it and why, which
+[00:09:22] I think is important. I don't know what anyone else thinks, but I think that's important. And this is their
+[00:09:30] explanation for it, and I think they said some things that are true here that I've quoted, which is handing over an ID is a meaningful ask. So they're asking you to upload your ID, passport, maybe a selfie. Again, we don't know who, we don't know why. Some people will have to do this.
+[00:09:45] And they will be the data controller for your verification data. Now, will they do a good job? Sure, I guess so, they have a vendor. But is this the best way? I don't think this is the best way.
+[00:09:56] And it's becoming more common. And it appears
+[00:10:00] randomly on a Thursday, and it's not clear who is affected.
+[00:10:07] And this is all because cybersecurity is changing quickly.
+[00:10:12] These are from this week.
+[00:10:15] So, it didn't require a lot of work on my part to put this together. I just kind of looked at what was happening over the past couple days. We've got, you know, Anthropic,
+[00:10:25] Project Glasswing, we've got OpenAI reacting to Project Glasswing, and Technology Review did a very interesting story about cyberscammers that are bypassing the very thing we were just talking about in the last slide. So that's already at peril.
+[00:10:41] So, this is changing, again, this is all this week.
+[00:10:45] I'm not sure what will happen next week, but probably won't go away.
+[00:10:52] And then number 4…
+[00:10:53] If it's not easy, nobody will do it. Now, if the creator of PGP is here, I'm sorry.
+[00:11:00] No offense.
+[00:11:01] But when I think about what people don't do that they probably should do, all I need to think about is PGP, and this is what you get if you Google PGP, right, PGP.
+[00:11:12] How can I do this when no one is doing it? You can't, right? Because it's a network effect. We need people to be able to do this. It's very important that this be accessible to folks, or in fact, nobody will do it, and we will not all benefit from it if
+[00:11:28] we don't have broad adoption. So, those are the reasons behind our goals.
+[00:11:33] And, thank you very much for joining us.
+[00:11:37] And I'm gonna turn it over to Yajaira, who's our product manager, to talk to you about what we've been specifically doing
+[00:11:44] to react to these problems and goals.
+[00:11:47] [YG] Hi, everyone, can you hear me?
+[00:11:49] Oh.
+[00:11:51] Oh, these should be on, but… Can you hear me?
+[00:11:55] Hello? Yes, okay.
+[00:11:58] So, welcome. Before we go into our product discussion, we actually have a plugin for, Nextspace, so Nicole is gonna walk us through that. Thank you, Yajaira.
+[00:12:13] [NB] Alright, so, before we turn things over to the speakers, there, we'd like to introduce you some technology that we've built here at ASML. It's called Nextspace. It's a BKC-built AI tool designed for in-person and online audiences to make things easier to stay engaged and sometimes a little more interesting.
+[00:12:33] You can use it to help you get caught up on something if you've fallen behind, you can ask, you know, what organization was mentioned, you can have it write you a poem about what happened in the meeting, anything you want.
+[00:12:45] To use it, let's see, go to brk.mn/berkie, B-E-R-K-I-E, if you want to try it out today. You can use it on phones or on computer.
+[00:12:56] A quick transparency note, it does run on Claude Opus 4 through the Harvard API proxy, and, all the messages are pseudonymized, so it's
+[00:13:06] private, but the team can see the logs. And I think that's it. Thank you.
+[00:13:15] [YG] All right.
+[00:13:16] Welcome again
+[00:13:18] to the Digital Identity Symposium, where we are exploring approaches towards user-owned identity. We are the product team. My name is Yajaira, I'm the product manager. We have Brendan Miller, our principal engineer, Alberto Leon, our senior engineer, and Nicole Brennan, our senior UX designer.
+[00:13:40] So for this session, we're gonna go into a little bit more detail about the problem and why it matters, expanding on what we just heard. Then we're gonna go into our solution, which includes a live demo
+[00:13:52] which, of course, is gonna go smoothly, as it always does, in a real live setting, so please bear with us if it doesn't. But the team was offered a challenge, and I think we are there.
+[00:14:03] And then we're also gonna talk about what are we thinking about next?
+[00:14:10] So, motivation. So, if we take a step back, and we reflect on what we just heard about the different challenges that we're seeing online, and some of the reasons behind that, I think we can see that there's, like, a common thread throughout, and that is that we are in an online trust crisis.
+[00:14:28] With advancements in compute power, automation, AI and analytics, people are having a lot of confusion and losing confidence on what's happening online.
+[00:14:40] What they're seeing online, is it real or is it fake? Am I interacting with a human, a bot, or an agent? Am I being tracked? Am I being surveyed? Is my data being used, or is it being exploited?
+[00:14:54] So we think all of this is causing a breakdown in trust on online digital platforms.
+[00:15:01] And considering that in this time and age, digital platforms are part of our everyday life, we do think this is a problem worth addressing.
+[00:15:12] So we do think that at the root cause of all of this, there are two big issues, that were sort of hinted at in the previous session, and that is that identity is fragmented, and data agency is misplaced.
+[00:15:25] So, meaning, you, as a user, you might have an account, a bank account, right, profile, then you have an account with Amazon, let's say, or some social media account. So, it's you, one person, but all these entities have a different identity assigned to you
+[00:15:43] that they actually control, and they choose where do they store the data, how do they process the data, who do they share it with, and how do they monetize it, and then sometimes even what kind of information about you do they allow you to see?
+[00:16:02] So we do think this is a big problem, and our belief is that we can help restore trust online by building unified, user-centered identity systems where you, as a user are in control of your data.
+[00:16:21] So, our vision…
+[00:16:22] Our overarching vision for this team is to advance the digital identity landscape in a responsible and ethical way, but our current focus is specifically on what I just mentioned. We are trying to figure out how can we build these unified systems that are user-centered, and returning, basically, agency back to the user.
+[00:16:42] What it should belong to.
+[00:16:44] And we do so by following several principles, as were… some of them were also mentioned in the previous session. We want to make sure it's secure, right? Because data… our data is personal, so it needs to be secure, portable, meaning that your identity should be able to travel with you wherever you go.
+[00:17:00] Interoperable. It should work across different entities, different systems.
+[00:17:05] Privacy preserving, this is what Mickens refer to as faceted identity, so information about you is disclosed to different systems in a need-to-know basis. So, if somebody needs to know you are over 18, they don't need to know information about your address, your full,
+[00:17:24] Birthday, or anything like that, or any kind of information that you could see on your driver's license.
+[00:17:29] And then, of course, it could be usable, because we can create amazing technology that is hard to use, so that does not benefit anybody.
+[00:17:37] So what you're gonna see today is our contributions, and it's basically a two-fold. The team has contributed to helping build the foundation, the infrastructure, defining the protocols that are needed to create this technology.
+[00:17:54] And then we also have created a prototype that has been built on top of this infrastructure, demonstrated that it can be done, and we can create applications that are user-centered.
+[00:18:05] And of course, our application is Keyring, which you can see in our amazing t-shirts, and a beautiful logo that our designer has put together.
+[00:18:13] Okay, with that, I'm gonna hand it over to Brendan Miller, who's gonna walk us through our solution.
+[00:18:18] [BM] Thank you, Yajaira. [JM] And by the way, I'll just take a brief moment to untrap myself from behind the shrubbery. This was not planned. I feel like it's inappropriate in a discussion about security and privacy to have someone behind a shrub constantly, so let me just briefly extricate myself. My apologies. Thank you.
+[00:18:36] [BM] Thank you, Yajaira. So, I'd like to talk to you a little bit about what we've built, our solution, both in terms of the significance for you as a user, just a regular end user, but also for what we hope can be a more trustworthy and privacy-preserving foundation for social media applications of the future.
+[00:18:57] So, we've heard about the existing problems. Meg laid out a number of them. I'm sure you've experienced your own concerns online about your identity and your data. We wanted to start with, these three principles. Verified, private, portable. Yajaira talked about some of these already and more.
+[00:19:16] So, I want to do a little, thought experiment with you for a moment. So, what if, for the first time
+[00:19:23] Two people can meet face-to-face.
+[00:19:26] Verify each other through their own devices.
+[00:19:29] and walk away with portable proof of that connection in such a way that no government or company is in the middle of that interaction? So we're focusing real-life interconnections and allowing you to confirm those. So that's a part of what we've been doing here.
+[00:19:49] In terms of our engineering contributions, I want to talk about three specific layers of trust.
+[00:19:56] So the first layer, of course, many of you use smartphones, and they have a face unlock, or a fingerprint unlock. I think you may also know that these biometrics are stored only on the device. They're not transmitted anywhere else. They're just used for you to access your phone. We can leverage those as a trust signal.
+[00:20:14] So, unlocking a phone says that the device owner has authorized an exchange. That's the first level.
+[00:20:20] The next level is in-person connection, so we'll talk a little bit about how that works, but confirming that two people have met and have chosen to connect.
+[00:20:30] And then the third one is a witness context. So we're here at the Berkman Klein Center. This is a certain community, and we're going to show how different communities can verify these relationships as well. So again, we're doing this in a privacy-preserving way with no centralized storage required.
+[00:20:47] Diving a little bit further into the first layer, and what it offers us,
+[00:20:53] as I mentioned, these device biometrics, a face unlock, a fingerprint unlock, these are already a part of our daily lives and something we can leverage. So, a very simple process. The user authenticates with their face or fingerprint. The device signs a credential. I'll say a little more what that means, but it's signed data that can be used to prove something to someone else.
+[00:21:14] And this is with a private key that is linked to that device, so you know for a fact that it's coming from your iPhone or from your Android. And then that signature in the device binding can be verified by a third party to confirm that the device owner was the one participating.
+[00:21:31] The second layer is the in-person connection and the verification of that. So, again, many of you have used QR codes for checking a menu online or, you know, accessing different information sources, and we can actually use this to confirm a connection between two people. So that's what Keyring does. One person shares a QR code, and Alberto will walk us through this later. The other scans it, both sides issue
+[00:21:56] a relationship credential, proof of a relationship to each other that is stored on each person's wallet as proof of that connection. So this is the second layer in our trust architecture.
+[00:22:09] And the third one is confirmation from a trusted observer. So, let's, use this phrase, a trust community. So, a trust community could be an institution, could be an organization, something like the Berkman Klein Center. It could also be my softball team, it could be my family. So, this is not just for institutions, this is, something anybody could run, what we call a witness service.
+[00:22:32] So, basically, a community like the Berkman Klein Center, we have a witness running, which you'll be able to interact with later, and Alberto will demo.
+[00:22:40] Where people can submit, the signed relationship credentials to the witness, again, in a privacy-preserving way. The witness stamps that and says, okay, this happened in this context here at this event, and then a third party is able to verify that. This exchange was observed by the witness at the Digital Identity Symposium on this date.
+[00:23:00] So that's the third layer of trust.
+[00:23:03] In terms of the foundation for this and some of what we've contributed, we've contributed the first draft of the Decentralized Trust Graph specifications, so that's a lot of verbiage, in collaboration with the Linux Foundation Decentralized Trust Graph Working Group.
+[00:23:19] And one of our panelists is here, he's the co-chair of that, he can perhaps say a little more about it. But this is an open process for developing credentials. And I've talked about three of them already. The relationship, proof of relationship, witness, and an R-card is like a relationship card, or business card, where you choose what
+[00:23:38] version of yourself you want to share. I want to share my professional email, I want to share my personal email, etc.
+[00:23:44] And then there's some other credentials which are a part of this ecosystem. What if you want to link a public persona to your relationship and to confirm that? What if you want to endorse someone for certain skills, or that you work together, for example?
+[00:23:58] You want to invite them to a group, or to issue them membership in a group. So we're working on this in a way that supports revocation, is compatible with privacy-preserving technologies like zero-knowledge proofs.
+[00:24:12] If that's, buzzwords that don't mean much to you, that's okay. Basically, it's technology that allows us to confirm things in a privacy-preserving way.
+[00:24:22] So our work, we're moving from standards and architecture to open source and apps. That's our hope, and we've already started with one app. So advancing new standards, collaborating with others in that process. We have this three-layer trust architecture, and I'm sure there might be four or five layers in the future as we continue to work on this.
+[00:24:39] We're making this available as open source, sharing it to developers to build upon and to extend, and then also, we hope this ends up in actual applications, social media of the future, that we can embed this user-centered identity, in that context for them.
+[00:24:58] So, just again, to mention the collaborations, there's a lot of organizations out there working on open source and open standards, and we're building on top of them. There's a Bifold wallet from the Open Wallet Foundation, which we have built on top of.
+[00:25:13] The government of British Columbia, actually is active in this space, and they have a wallet that we've built on.
+[00:25:19] There are standard organizations like the W3C, Worldwide Web Consortium, Decentralized Identity Foundation, and others. We're building on these standards and leveraging them, and all of our code will be released shortly as open source, and you can look at the Berkman Klein Center on GitHub, and that will be available quite soon.
+[00:25:42] So with that, I want to pass it to our designer, Nicole, who will talk to you about some of the human design implications and strategies that we've embedded here.
+[00:25:53] [NB] Thank you, Brendan.
+[00:25:57] Let me try not to wreck the technology.
+[00:26:01] Alright, let's see.
+[00:26:05] Okay, so usability, trust, and empowerment. These are three principles that shape the design decisions of Keyring.
+[00:26:12] Let me show you what they look like in practice, though.
+[00:26:19] This slide shows some of our mind mapping when we began visualizing the problem. It was very exciting. It was a fresh problem, no established patterns, no one handing us a template. That almost never happens in product design.
+[00:26:34] we had to ask some hard foundational questions. Things like, what defines user-owned personhood, and what makes identity yours
+[00:26:44] and not just data that lives somewhere else, that's about you?
+[00:26:49] And darker questions. How do we prevent fake personhood? Because if you can create your own identity, so can bots, and so can bad actors.
+[00:26:58] And as these were crucial safety points, we wanted to design against that from the very beginning, and not as an afterthought.
+[00:27:12] We knew digital wallets existed, and some states have mobile driver's licenses in Apple Wallet and Google Wallet right now.
+[00:27:18] But they're still centralized. The platform holds your identity. You just access it.
+[00:27:24] We wanted to do something fundamentally different. We wanted users to own their identity, not store it with us, not trust a platform, another one.
+[00:27:33] We want them to actually own it.
+[00:27:35] So, we didn't have answers, we had a mural board, we had a lot of questions, and honestly, this was exactly the right place to start.
+[00:27:46] Once we knew what we were building for, the design challenge became, how do you make something this conceptually new feel immediately familiar?
+[00:27:55] What if, you know, what you're seeing here, actually, is the flow from the moment you arrive after onboarding, to making your first connection, to being fully set up.
+[00:28:05] Empty state, connection process, connected. It's intentionally short.
+[00:28:10] Every decision was about reducing friction without reducing trust.
+[00:28:14] The navigation is flat and direct. You always know exactly where you are. Your information is front and clear.
+[00:28:20] And it's not getting clouded by the branding.
+[00:28:26] It's very easy to see where you are and what you're doing.
+[00:28:29] We worked at length on look and feel, too, to make it inviting and trustworthy and high quality, but plain language throughout.
+[00:28:37] While the problem underneath is genuinely extremely complex,
+[00:28:41] the person using it shouldn't have to know that.
+[00:28:44] So, intuitive doesn't mean simple, it means that complexity is ours to carry, and not yours.
+[00:28:54] One of the things we learned quickly is that trust isn't declared, it's demonstrated.
+[00:29:00] You can't just tell someone this is safe and expect them to believe you.
+[00:29:04] Especially when you're asking them to hand over something as personal as their identity.
+[00:29:08] So, we designed for psychological safety as evidence.
+[00:29:12] Every interaction in Keyring will show you its work.
+[00:29:15] The first screen is your receipt.
+[00:29:18] You can see exactly what was shared, when, with whom,
+[00:29:24] the witness record, the relationship DID.
+[00:29:27] the date, there's no black box, no "trust us, it happened," you actually get to see everything.
+[00:29:33] And then the middle screen is the moment before anything is exchanged. The app tells you exactly what you're about to sign.
+[00:29:41] Guarantees your biometric data doesn't leave your device.
+[00:29:44] And it gives you a clear choice. You confirm or you cancel.
+[00:29:48] No buried consent, no fine print, no, "by continuing, you agree."
+[00:29:53] Just a person and a decision.
+[00:29:56] And then the third screen is control. It's good user experience and transparency.
+[00:30:03] Every security setting is visible. It's named, it's yours to turn on and off. You decide what's active, and you can decide what is shared.
+[00:30:12] This transparency isn't just good user experience, it's how you create psychological safety that lets someone see a system like this, especially someone who's been burned by platforms that didn't hold their privacy, or that weren't transparent.
+[00:30:29] And we know how scary identity is for people right now, especially. Social media isn't just holding onto your identity, they're actually using it against you for profit.
+[00:30:39] And we wanted Keyring to be really the opposite of that.
+[00:30:44] So I'm going to hand it off to Alberto, who's going to begin our demo.
+[00:31:14] [AL] Alright, can everybody hear me? Alright.
+[00:31:21] Sorry about that, just gotta get the mic adjusted. Alright, cool. Awesome. So, yes, so I'm gonna drive the demo here. I'm just gonna, first start off by saying, you guys are gonna be the very first group of people that are gonna get access to the app by the end of this presentation.
+[00:31:37] There's a few QR codes around, which it's available for iOS and Android.
+[00:31:42] And yeah, let's get started. So, I'm gonna go ahead and just launch the app for the very first time.
+[00:31:48] I'm gonna skip this, this is a test flight, pre-setup. Oops, I'm not sure what's going on here, but…
+[00:31:55] Alright, there we go, let's leave it like this.
+[00:31:58] Alright, great.
+[00:31:59] Alright, so once you first launch the app for the very first time, you're gonna be presented a few informative slides about what the app is, what it contains, and what it could do and cannot do. So, for example, you can hold digital credentials.
+[00:32:13] These credentials can range, you know, from different types, depending on the community or context. Usually these credentials are received, you know, by organizations.
+[00:32:23] But for this demo, what we're going to be presenting is, how do you create trusted connections? So typically, you know, a company or someone grants you an ID, but what if, you know, you want to do that with another person?
+[00:32:37] And of course, everything we've designed here is secure.
+[00:32:41] Okay, so after you press the get started button, you'll get a chance to create a PIN. So this PIN is the basic, setup for, getting access to your wallet, so I'm just gonna
+[00:32:52] click through a few zeros to create something simple.
+[00:32:56] And then I'm gonna pause here for a second and talk about the biometrics. So the biometrics here will allow you to unlock the wallet as well, other than the PIN, but it will also provide an access to signing and device attesting when you do a connection with someone else.
+[00:33:12] So, I'm gonna go ahead and enable this.
+[00:33:15] Press continue, and then I can name my wallet. So in this case, this… the name you give your wallet will be something that people will see on the initial connection. In my case, I'm just gonna use my initials, but you can use a username, whatever you like.
+[00:33:32] Next up is the R-card. You can think of this as the digital business card. So once you connect with someone and you establish the proper security protocols, you would then share this information with the other party. So I'm just gonna fill some of this information out, so I'll say… I'll put in my name, my last name.
+[00:33:51] my email… And then, in this case,
+[00:33:59] the org that I belong to.
+[00:34:02] Okay.
+[00:34:04] So we'll go ahead and press continue.
+[00:34:06] So once you first start onboarding the app, for the very first time, you'll be presented a tour guide, just kind of telling you about the different features and where they're located. So right now, I'm on the contacts view.
+[00:34:19] It's telling me about this icon, about the witness verification, where I can see, you know, what community I'm connected to. So I'll go ahead and press done.
+[00:34:28] Alright, so now I have the home screen. The home screen basically has, 4 tabs, or 5. The very first one is the Contacts tab, which will list all the connections that I will make. Hopefully, you guys have an opportunity to exchange and create a contact list yourself.
+[00:34:43] Then we have messages, which allow you to send messages to your contacts, QR code, which will allow you to share your QR code, or scan someone else's.
+[00:34:55] Alright, so the very first thing we will do, as lots of my colleagues have already explained, is to actually onboard to this event. So, along with the QR codes for the actual wallet, you will also see a QR code that says the Berkman Klein Center, and that's how you will sign up to this event and be part of the
+[00:35:14] relationships that we build here today.
+[00:35:17] So for that, I'm gonna switch my tabs here, and so this is the QR code. So I'm just gonna bring up scan QR code.
+[00:35:25] I'm gonna give the camera permission.
+[00:35:28] Alright, so I'll go ahead and start scanning.
+[00:35:34] I see it's a little bit laggy.
+[00:35:36] Hold on… One second… Let me actually try this again.
+[00:35:42] The thing with the live demos.
+[00:35:45] And of course, hopefully the demo gods continue to help me out here. Alright, so let me scan this again.
+[00:35:56] Alright, let me check this, let me reload the page here real quickly.
+[00:36:01] Yeah, there you go.
+[00:36:05] And restart this… Alright, so let me go ahead and scan this again.
+[00:36:13] Alright, there we go, finally. Let me just make sure this loads. Okay, I see there's a little bit of lag, but okay, great.
+[00:36:20] So, what I did was scan the QR code, and then I've been prompted here with the Berkman Klein Center.
+[00:36:26] And to the left side here, I don't know if some of you guys could see, but we have a screen here where we're trying to build and show you guys what we're building in terms of a graph.
+[00:36:35] So we have right now two nodes, so I don't know who that other person who has onboarded already, but one of these nodes is me, who's coming to view, because I'm now registered on this event.
+[00:36:48] And so, on the device itself, you are seeing a pseudonymous name that was created for me. This is not part of the actual application, this is more for we can be able to share, in a privacy-preserving manner, the notes that you see up on the screen.
+[00:37:05] So, the next thing we would basically do, and let me go back to the presentation, is to show you guys the different levels of trust that can be created
+[00:37:14] between different people you see here today. And that will really depend on the configuration that each device has.
+[00:37:20] So, you can exchange relationship credentials with other people here at the event, but they might not be connected to the witness, or they might not have device attestation enabled.
+[00:37:33] So, in order to demonstrate these different levels of trust, I'm gonna start with the strongest connection, which will be played by my colleague, Nicole, who will start by joining the actual event, and we see her pop up there in the graph.
+[00:37:48] So now we have 3 nodes into view, and then the next thing we would do was simply just scan the QR code
+[00:37:56] that Nicole will generate.
+[00:38:01] Alright, so she's generated a QR code.
+[00:38:07] Alright, so now the QR code has been scanned, it's confirming biometrics.
+[00:38:13] Can you confirm, please? Yep.
+[00:38:17] Alright.
+[00:38:18] So now what's gonna happen, since I've been connected to the witness, there's gonna be a verification process that's gonna check that, we're both connected to the same organization, and I can see here that I'm receiving a credential from Nicole.
+[00:38:33] Alright, so I can now see her information, I see it's Nicole Brennan, when it was issued, and there's two banners here, which represent that this relationship happened within the context of this event.
+[00:38:45] And then as well, that she signed this with a secure exchange, which is through the device attestation. So that means she owns the device.
+[00:38:54] Alright, so now we can see, I can either accept or decline, I'll go ahead and accept this, and then I'm just gonna highlight one more time the graph here to your right, which now has a line connecting both of the nodes, so her and I, there's a mint color there that kind of represents this is a trustworthy connection.
+[00:39:14] Okay, so we're gonna move on to the second level of trust.
+[00:39:18] So for this second level of trust, we are going to do the same thing, but now with my colleague Yajaira, who will join the community.
+[00:39:43] Try resetting it.
+[00:39:49] And usually when we do this,
+[00:39:52] we try to make sure that people are onboarded to the witness and part of the community. We're still working through a few things in order to…
+[00:40:02] Alright, so now she's onboarded, and we can see her, she came into view now. So, what… in her case, she has biometrics turned off, so she's not able to prove to me she owns the device, so, we'll see what that connection looks like in some of the badges.
+[00:40:18] So, I will scan her QR code now.
+[00:40:25] Alright, so we're establishing a connection, so because I have biometrics on, I will confirm it.
+[00:40:32] Alright, so Yajaira has, or in this case, YG has sent me a credential, and I could see, okay, this is, YG, and it was issued at this specific date.
+[00:40:43] But I see there's no device attestation, so I can decide, you know, do I want to accept or decline this contact? So, for demonstration purposes, I'm gonna go ahead and accept this.
+[00:40:54] Now, if you look back to the graph, we're seeing now different colors in the rings. So with the one we just did, we created a connection where my side has grown the rings, the number of rings, but then on the side of Yajaira that just connected with me is now a coral color, signaling that's a less level of trust.
+[00:41:16] And then, of course, lastly, what happens if someone's not connected to the event, to the organization, and does not have device attestation enabled? So we're gonna go ahead and look at what that will look like.
+[00:41:28] So, that's gonna be played by my colleague Brendan. I'm gonna go ahead and scan this.
+[00:41:35] Alright.
+[00:41:37] Alright, so I could see it's asking me for biometrics, because I have that enabled.
+[00:41:43] So what's gonna happen here now is the witness server or service will start checking if the identifier that Brendan has is available within the context of this event.
+[00:41:55] And I'll be reviewing it and checking if it's available. It's telling me that he's not on the witness, so I will see he sent me a credential regardless, so… but the difference here is that I am seeing that there is no banner, that's signaling me that's a low level of trust.
+[00:42:14] But I can still accept this, so I can show you guys now all 3 contacts
+[00:42:19] that kind of demonstrates the three levels of trust. So, we have the bad actor, played by my colleague Brendan, and then Nicole, who is the highest level of trust. And if you notice in the graph over here, Brendan didn't even show up in the graph. So, so that's...
+[00:42:36] So that's pretty much the demo, and I'm gonna pass this on to my colleague, Nicole, who will talk about the additional use cases.
+[00:42:52] [NB] Thank you, Alberto.
+[00:43:07] One of the questions we kept coming back to was, what happens
+[00:43:12] to your identity when a platform takes it away from you? So if you get deplatformed, or shadowbanned, or your account disappears, everything that you've built there is gone. It goes away with it. Your history, your connections, all of your credibility, it's gone.
+[00:43:29] Because you didn't own it in the first place, the platform did.
+[00:43:32] With Keyring, that changes.
+[00:43:34] What you're seeing here on the left side is a potential offer from an ex-account.
+[00:43:41] Which shows screen name, verification, timestamp, and proof of ID.
+[00:43:46] Keyring will hold that for you, because it's yours, and we store it.
+[00:43:49] If the platform disappears, the credential doesn't. You can prove you controlled the account, Port your identity.
+[00:43:57] And carry your history with you. The platform doesn't own your presence anymore. You do.
+[00:44:05] This one is age verification, but not in the way you're used to seeing it.
+[00:44:10] Right now, proving your age online means handing over everything. Your full birth date, your address, your document number, all of it, just to confirm one piece of information.
+[00:44:19] What you're seeing on the left here is a mock mobile driver's license.
+[00:44:24] It's a credential being offered through Keyring.
+[00:44:26] This one is issued from the California DMV with a document number, issue date, and expiry date.
+[00:44:33] But here is what matters.
+[00:44:35] It's using zero-knowledge proofs.
+[00:44:38] Keyring can
+[00:44:40] confirm that you meet an age threshold without revealing the underlying data. You're over 18, that's all they get, because that's all they need.
+[00:44:49] The result shows as a badge on BlueSky, on your profile. For those of you who are not familiar, BlueSky is an open source social media platform.
+[00:44:58] The credential traveled, the age was confirmed, and nothing else was shared.
+[00:45:06] Keyring was built to solve a hard problem, but the same infrastructure opens doors that we're only beginning to walk through at this point.
+[00:45:14] Like, verified relationships on BlueSky.
+[00:45:16] because you would be able to verify relationships on BlueSky,
+[00:45:20] you're not only proving that you're a real person, but you're proving that you actually know the people that you follow, and your follow list becomes your trust graph.
+[00:45:30] It's not just a number. It's now, these are now your connections, and part of proving your identity.
+[00:45:35] And proof of personhood. Relationship depth and biometric connections can act as a signal of humanity.
+[00:45:42] Five verified connections with biometrics are something that would be harder to fake for a bot.
+[00:45:49] That's a new kind of identity signal.
+[00:45:52] And age assertions for minors.
+[00:45:54] Children don't typically have their IDs, but they don't need them.
+[00:45:57] When a parent or guardian can provide the verification of their age, the adult is able to vouch, and then the minor is able to stay protected.
+[00:46:09] And AI matchmaking.
+[00:46:11] With AI matchmaking, the event witness could pair people based on their verified shared context.
+[00:46:17] Not an algorithm guessing what your interests are, but a smarter system that knows who you actually know and how.
+[00:46:25] Smarter connections.
+[00:46:27] And then, content provenance.
+[00:46:29] Being able to use zero-knowledge proofs to trace whether information traveled through a verified source and relationship chain is highly valuable in information trust.
+[00:46:41] Not just, is this true, but can I prove where it came from, and from who, and who vouched for it along the way?
+[00:46:48] So we're at the beginning of what verified human identity can do, and Keyring is the foundation.
+[00:46:56] I'm gonna pass to Yajaira for going over what's next.
+[00:47:00] [BM] Just a quick note on BlueSky. It's an open source platform, so it was convenient for us to, to experiment with it. But the hope is that these technologies could be used with any platform, so it's not anything BlueSky-specific, but just an easy chance for us to demonstrate some of our work.
+[00:47:17] Thank you.
+[00:47:18] [Audio missing]
+[00:51:55] [JM] Okay, yeah, first let's, thank all the presenters.
+[00:52:02] You have been part of an amazing part of human history. Demos rarely go this well. Steve Jobs level of execution here. So let's just thank them, it's very stressful to do demos. So, thanks.
+[00:52:18] Now, a thing that is oftentimes seen in human history, we are running slightly late. So, we'll take just a few questions, and then we'll go into break, just to make sure that we sort of run on time, but if there are a few questions out there, we'd be happy to take them.
+[00:52:30] Anyone? Anyone?
+[00:52:33] Did we put the knowledge so directly in your mind? Yes.
+[00:52:45] [AL] Yes, so, you should be seeing some QR codes around the room and outside. It's available for iOS and Android. It's pretty easy to install, just install it, and you go through the onboarding, and you can just start exchanging credentials with everyone else.
+[00:53:03] [audience]  Can you tell us a little more about the witnessing?
+[00:53:06] Is it time-based?
+[00:53:08] [inaudible]
+[00:53:13] [BM] Yeah, so, it is, time-based. There's a session. It says someone requests to be witnessed, the other needs to respond in a certain amount of time. It's confirmed. The witness is, of course, linked to the event.
+[00:53:26] One layer that we're thinking of adding, for the future is actually maybe, like, a Bluetooth verification to say that we're actually in the same physical space, but nobody has this witness QR code, and it expires after this event. So, it is time-based, it is session-based, and we have ways to extend it as well.
+[00:53:51] [JM] Okay, so with that, we're gonna go to break, just to make sure we stay on time, but we will be around, so in case people have questions, feel free to come up. We'll also be around after, throughout the afternoon. So let's come back here at 11:17.
+[00:54:06] Okay? Non-standard, but doable, okay? Tight execution, 11:17. Alright, thank you.
+[00:54:18] [JM] Alright! So, I think we've got most of the people back, so I am, super excited, to start this next part of the program. So we're gonna have a panel of very distinguished guests here to talk, about some of the more interesting aspects of digital identity. So to kick that off, I'm gonna hand it off to, Alex.
+[00:54:38] [AP] Everyone, good morning, I'm Alex Pascal, BKC's Executive Director, and before I launch into a brief introduction, I want to just go back and reference Mickens' initial presentation from earlier this morning, and my top two takeaways, namely being that I think Mickens and I have the same Netflix algorithm, and in keeping with the superhero theme, I might just rip off my shirt to reveal Keyring.
+[00:55:01] The second is that I… after these remarks, I gotta go home and take my passwords off the fridge. So, the Berkman Klein Center was founded nearly 30 years ago to explore the implications of the internet for society so that the former could develop in the public interests of the latter.
+[00:55:18] We did this with a founding mission to build into the digital environment, to understand it, and to shape it.
+[00:55:24] And that builder's spirit is alive and well at BKC
+[00:55:28] as we pursue our new mission to make sense of the digital environment, and to ensure that it promotes human agency, dignity, and genuine connection.
+[00:55:36] The Applied Social Media Lab and the product we're launching today, Keyring, are perfect manifestations of BKC's builder ethos and our mission, and I'm incredibly proud of the ASML team for their work.
+[00:55:49] Keyring is not just a concept.
+[00:55:51] But something that actually works. It reflects a broader shift from platform-controlled identity to user-owned identity.
+[00:55:58] At BKC, we look at technology through the lens of power and governance and impact on people.
+[00:56:04] Identity is at the center of that.
+[00:56:08] It determines who can participate in digital life.
+[00:56:11] Right now, the system is still fragmented across platforms and heavily intermediated.
+[00:56:17] And it's uneven in terms of who it includes and who it leaves out.
+[00:56:21] We're also in a moment where AI is changing how people experience the internet. Who's who? Who's what? How do we even know?
+[00:56:29] It's harder than ever to distinguish human from machine interaction. And that raises the question, how do we preserve trust and human agency online?
+[00:56:39] One way to think about user-owned identity is that it helps re-anchor and substantiate a sense of human presence online without defaulting to surveillance-heavy approaches.
+[00:56:48] The question is, how do we make this adoptable at scale, which Yajaira mentioned earlier. That might look different depending on the sector.
+[00:56:55] Whether that's a tech company, or government, or civil society. But aligning incentives across stakeholders is the challenge. How do we enable trust and safety without recreating centralized control?
+[00:57:07] How do we incentivize institutions to buy into this model? What even are the right incentives?
+[00:57:12] Posing and solving these questions of governance are core to our work at BKC, and go hand in hand with our building.
+[00:57:20] What we're really talking about spans a few layers. Infrastructure, trust and verification, applications, deployment and governance, user experience, access, and usability. Today's panel brings together those perspectives, so let me introduce its moderator and my fantastic colleague, Professor Jonathan Zittrain.
+[00:57:38] JZ is co-founder and faculty director of the Berkman Klein Center. He's been a global thought leader at the intersection of tech design, law, and public policy for decades, helping tech developers, policy makers, Harvard students, and the public understand how digital systems shape power and control online,
+[00:57:55] trust in governance, and user rights and accountability. It's a pleasure to welcome JZ and this incredible panel. Thank you.
+[00:58:08] [JZ] Well, thank you so much, Alex. We should give you an opportunity to escape from the fern. I want to make new mistakes. [JM] That fern is a real problem. [JZ] Yes, yes.
+[00:58:22] So, thanks so much for that introduction. Thank you to our panelists for being here today. Thank you all for coming out. Can I just do a quick check of our audience? How many people self-identify as quote-unquote techies?
+[00:58:38] How many people self-identify not
+[00:58:42] as techies.?
+[00:58:43] Alright, so, it's a little bit like a wedding, there seem to be two aisles, but, there are a variety of folks, and Alex, in your introduction, you mentioned, part of my
+[00:58:56] thought leadership? But part of what I try to bring is translational stuff to the world, so I think we should all agree, especially for those who are not
+[00:59:09] identifying as techies, if you're feeling like something is being glossed over or not explained, it'd be especially helpful for you to, like,
+[00:59:19] maybe not leap from your chair, but otherwise indicate, that you want more clarification, because
+[00:59:28] one of the big gaps that now we're looking to cross is from stuff that people might use
+[00:59:36] just in the corners as nerds.
+[00:59:39] I do, I confess, remember key signing parties of 1995. Anybody with me? Did we ever sign keys? I don't remember, but, you know, this is meant to be a general purpose, broadly diffused technology, because the problems, as Meg's opener showed
+[00:59:57] are ubiquitous. They're everywhere, they're for everyone.
+[01:00:01] and figuring out exactly how to get the incentives lined up and everything else, so people might be willing to do a tiny bit more than just stare at their phone for an extra second while Face ID computes
+[01:00:14] is one of the big questions. So that's part of, I think, what our panel can talk about as we cover the future of digital identity. And we have with us a great variety of folks. So first, Christopher Bramwell, welcome. Tell us just a little bit about yourself.
+[01:00:34] [CB] I am Chris Bramwell, I'm Utah's Chief Privacy Officer, appointed by Governor Cox. I only planned to stay in government for 2 years, and I've been in for 15 years now, and you know… You go to the parole board every 2 years. Yeah,
+[01:00:52] once you learn how government functions and you have a startup mentality, it actually gets really fun, and so I've been in long enough now that it's hard to leave, when you actually know how to pull the levers and make change happen, and so now we're doing digital identity in Utah, and it's, you know, cutting-edge policy. [JZ] And Utah has been known as
+[01:01:09] one of the more forward-leaning state jurisdictions on all things digital, going back to key signing parties of 1995, yes? [CB] Yeah, Utah has a deep, well, starting back even in the television, created right there in Utah and Idaho, but, electronics, cryptography, [JZ] Don't leave out WordPerfect.
+[01:01:30] [CB] Yeah, word perfect. Yeah. Yeah, very good.
+[01:01:34] [JZ] Wonderful. Between that and nutritional supplements, [CB] Well, I would throw in the MLMs and got it covered. That's right, that's right. [JZ] Which, again, is a good incentive scheme, multi-level marketing for those. The berkie has a jargon demystifier, if you check that box, for such things.
+[01:01:52] So, Christopher, thank you so much for joining us today, and for your ongoing work with projects like these. [CB] Thanks for having me. [JZ] Next is Drummond Reed. Drummond, given that you are, like, all about identity, I'm so curious how you identify yourself.
+[01:02:08] [DR] It started with parents that thought they'd, you know, use a last name as a first name. And, so pretty much every other hotel I go to, they don't have my reservation until I tell them to
+[01:02:20] turn the names around. I think that's one of the things that started me down this path. [JZ] Which also, it both is nicely,
+[01:02:28] obfuscating, but also probably extremely Google-able. [DR] Yes.
+[01:02:34] That's… I guess that was the upside to it. Makes me very easy to find me online. [JZ] Well, that's either an upside or a downside, depending on how you… Exactly, it goes both ways. Yeah. Yeah. Got it. And the sorts of projects you've been working on over that span?
+[01:02:47] [DR] Over the last 35 years...this is, like, exactly where we've been aiming that whole time. [JZ] So this is Mount Everest, and you have been clambering up Mount Everest for a very long time.
+[01:03:02] [DR] And we think we might be seeing
+[01:03:05] the peak. [JZ] That is the Nike Spirit. If you dial it up a little more, we are crushing it.
+[01:03:11] And we are just about to reach the summit. [DR] Absolutely, and the ASML team here has been,
+[01:03:19] you know, the guides you get to when you think you can't get up there, and suddenly you meet this other party, and they're like, oh my god, you guys have the, you know, you have the right crampons, the right equipment, you have the knowledge of the mountain, let's go. And so it's been fantastic working with them.[JZ]  And for the various parties who are scaling the mountain,
+[01:03:38] are they generally all for one and one for all, or do there tend to be those weird soap operatic rivalries that, like, you know, Maoists and Stalinists never got along either?
+[01:03:51] [DR] A little of both. There's a lot of coherence in the overall movement towards, we started calling user-centric identity, and now I like user-owned identity much more. Self-sovereign identity is the other term that's been used. A lot of coherence in that movement.
+[01:04:05] But we still haven't achieved the level of interoperability or network effect that we need to, and that's why I'm so excited about this. [JZ] Yeah, which also shows that if you can prime the pump enough, you go from still not enough, still not enough, to suddenly… Yes. …you're at the hockey stick.
+[01:04:22] Got it. Exactly. Thank you.
+[01:04:24] Afsaneh Rigot, thank you so much for joining us.
+[01:04:30] And tell us about yourself.
+[01:04:33] [AR] I'm not sure if this is working now, is it working? Okay, great.
+[01:04:37] I'm Afsaneh Rigot. I used to be a fellow at the Berkman Klein Center, actually, so it's nice being back here. [JZ] Welcome home. Welcome home, yes.
+[01:04:46] [AR] And I currently run the D Center, which is a organization that works on design of technologies, especially focusing on communities who are heavily marginalized and criminalized.
+[01:05:01] And I can get into why that sort of nexus is vital and strategic in the way we work outside of the moral, ethical, and justice imperative of it. But we've been doing this work for a while. I've been doing this kind of work of research with communities, especially around the world, especially in the Middle East and North Africa.
+[01:05:20] For a while, I used to do it with an organization called Article 19, a human rights organization that focuses on
+[01:05:29] access to information and freedom of expression quite broadly. [JZ] Article 19 being the freedom of expression component of the International Convention on Civil... [AR] I mean, yeah, I feel like they could have gone creative with that name, but you know what, it works.
+[01:05:45] I, myself, function quite
+[01:05:51] in a unique way, where if you search me, you can't find any of my pictures online.
+[01:05:58] You're the opposite of Drummond Reed.
+[01:06:02] I mean, it's still easy to Google me, but what you're googling, you'll find what, ideally, I want you to find.
+[01:06:10] And, I mean, if I knew about that fern, I would have sat behind that fern.
+[01:06:17] So, for example, because of the, sort of
+[01:06:22] complexity that brought with the type of work I do.
+[01:06:25] Today, I've come into, like, and some other panels I do, like, a middle ground. I wear a mask.
+[01:06:32] So that some of the conversations we have can be recorded, can be put out.
+[01:06:37] But I'm still obfuscated. And there are a lot of folks like me that function on the much higher risk profiles.
+[01:06:45] And so, you know, I think some of the
+[01:06:49] elements that I like to bring to the rooms is those voices, especially the voices of the experts we work with.
+[01:06:56] Those experts who are… and we call them experts because they are experts in the context they're living in, and also folks living in that type of heavy…
+[01:07:07] criminalization and marginalization know their adversary, often, whether it's the state or the corporations, more than anyone else,
+[01:07:16] more than anyone else, and the workarounds more than anyone else, which becomes, like, a fundamental element of why we focus there when we do the design of technology. So, I'm here to provide some of that
+[01:07:30] element in how we discuss this, and discuss who we're talking about when we're talking about a user, and the people we're focusing on. [JZ] Wonderful. Well, that's a perfect lead-in to maybe what our first agenda could be, which is to be able to translate the really cool demo we just saw
+[01:07:49] to the actual functional use cases, both totally pedestrian, I've just bought coffee at the local shop, and somehow that's part of that process, to
+[01:08:01] really specific populations, use cases where people might most want to be able
+[01:08:10] to limit what they share about their identity while being able to authoritatively share certain other elements so that they can participate in society in certain ways. So on that front.
+[01:08:24] I think this has been part of the summit of Everest now for quite a while. It's the idea that if I hand my license, driver's license, of the classic variety,
+[01:08:36] to a bartender to validate my age, I also happen to be giving them my name is registered with the state, my address, my physical address, whether I need corrective eyewear, who knows what else, and
+[01:08:52] even the credential itself might be copiable. I'm gathering that a big part of something like Keyring and what we're aiming for is being able to decide to share and only to share one slice of an identity
+[01:09:09] and nothing else but the person with whom you are sharing that can trust that slice.
+[01:09:16] And I just wanted to double check, yeah, Drummond, you're the right person to start with.
+[01:09:21] First, is that right? And second, how elaborate can we be about slices, and how are slices determined? It sounded like, for example, a more recent slice is
+[01:09:35] you went to this session today.
+[01:09:38] And if we decided we would share something about the
+[01:09:42] conference with only people who were at the conference, and maybe did a little bit of a dance with
+[01:09:48] phones to one another.
+[01:09:50] that would be an example of a slice, as well as, I am a lawyer, I am older than 18, dot dot dot.
+[01:10:01] Question mark.
+[01:10:02] [DR] Absolutely, that we now have the cryptography.
+[01:10:07] to be able to support that, and what we're, finishing out, Brendan and Alberto referred to, the Decentralized Trust Graph Working Group at Trust Over IP, one of the various Linux Foundation… there are four different, projects, producing those standards and the open source code to go with it. They were building on top of that.
+[01:10:26] It's fantastic work. I want to point out to folks.
+[01:10:29] That, the very thing you saw here, the person-to-person verified witness connection. The
+[01:10:36] first customer in the world for that is actually the Linux Foundation themselves to protect their own open source projects, starting with the world's single most valuable project, the Linux kernel.
+[01:10:48] [JZ] So that when somebody comes along and says, hi, I've got some fantastic contributions to the Linux kernel.
+[01:10:54] Those don't always speak for themselves. Sometimes something about the contributor
+[01:10:59] is useful in deciding how quickly or whether to accept that contribution to the kernel. [DR] Absolutely. There was a malware attack, called the XE attack, two years ago that, had it succeeded.
+[01:11:11] not been caught by an assiduous Microsoft engineer noticing some strange network activity would have been the worst malware attack in the history of the internet. It would have put a backdoor in every Linux server, basically, out there.
+[01:11:23] That scared the pants off of them, and they said, we have to have a safer way to verify the developers that are contributing. It turned out that was a contributor to a utilities project that no one knew them in person.
+[01:11:38] They had managed to, you know, basically… they're pretty sure it was a state actor or a group of them that were doing that. And so there was no proof of personhood there. In addition, the other problem that's now swamping them is AI-generated code.
+[01:11:53] It's fine to have AI-generated code if you can have the provenance back to a real developer, and who can be responsible for it. But if they can't solve that problem, it's going to destroy trust in open source.
+[01:12:06] And I think you all know what that will mean to the internet as a whole. [JZ] And what slices are good examples, just sticking with that use case for a second, of what
+[01:12:17] somebody who is the gatekeeper to the kernel would want to know to know whether to take the code. [DR} Exactly, and this is perfect if you think about the slices, and there are two ways to talk about the slices. There's
+[01:12:28] a limited amount of information that you're disclosing. they call that selective disclosure. So if you have a credential, like a driver's license, and you just want to reveal your name, or your state.
+[01:12:40] But the other approach is to make a proof about that, without revealing any of the data. That's what zero-knowledge cryptography does, and what, KeyRing is supporting.
+[01:12:51] And what we think is going to be the strongest way to do that. Which is, there you can, for instance, prove you're over a certain age without revealing your birthdate at all.
+[01:13:02] Right? And that's all done with cryptography. Both are needed, and both are coming, and the selective disclosure is very easy to understand. I'm just going to… the thing that Linus kernel needs the most is citizenship.
+[01:13:17] They need to know that the developer, either… it's either proof of employment or proof of citizenship, because they're, they're not allowed to take code from, companies like on the OFAC list.
+[01:13:29] I mean, countries on the OFAC list. So that's the slice that they need to know. They don't need to know anything else, and they want to allow anonymous contributors to open source code, because many corporate developers can contribute valuable things, but they need to do it,
+[01:13:45] Anonymously or sued anonymously. [JZ] OFAC being the Treasury Department's export control list, and foreign actors who are sanctioned, and therefore
+[01:13:57] not allowed to interact with them. [DR] Exactly. Where we're getting to is corporate open source… a lot of the open source of the world is used by corporations. They're building on it all the time.
+[01:14:06] they need to know and be able to prove that the source code they're using is secure and that the provenance is to developers that can be trusted. [JZ] So, can I stick for one more second with this?
+[01:14:19] in 2026 now, if I'm at the cutting edge, because I'm contributing to the Linux kernel,
+[01:14:26] What's my method for proving my citizenship?
+[01:14:32] [DR] The short answer is they are going to,  first of all, if you can prove you're working for an employer, and you have an employee credential, they can… that can be the credential against… you can provide a zero-knowledge proof. [JZ] So somehow, so long as, I don't know, Microsoft can establish itself.
+[01:14:52] and there are things Microsoft can digitally sign, and we know Microsoft signed it, they can vouch that
+[01:14:58] this entity that has some unique number is an entity who works for Microsoft. I can't say my name, because I might not want to share that. Exactly.
+[01:15:06] But, yeah, we've seen this entity before. Right. And then you're like, we're done, actually, because that means Microsoft had to do all the paperwork. [DR] So that credential against which you're gonna do that proof could come from a corporation, like Microsoft.
+[01:15:19] It could come from a government entity, and this is where Christopher will tell you about what Utah and others are doing with SETI, or it could come from an identity verification provider that's trusted enough. There's a whole industry out there that will
+[01:15:35] you know, they're using giant databases to verify your identity, and that's what a lot of the financial services industry depends on. [JZ] And these are kind of like these exercises? I don't know if people have done them where, like.
+[01:15:45] You're getting
+[01:15:48] a multiple-choice list of streets you might have lived on, or none of the above, and you're like, was I ever on Gumshoe Way? I just don't remember. [DR] I want to testify that,
+[01:16:01] My wife and I have both failed those tasks multiple times in this last year with our own tests. Did you turn to her? You were like, you are a stranger to me. Well, the problem is, she comes running over to me going, are these one of the places where you had an office?
+[01:16:16] And then I'll go running over here going, are these one of the places you lived before we got married? I don't know that, she doesn't know that. We both fail those tests 50% of the time. [JZ] But which the ideal would be for you to fail her test and her to fail your test, but to succeed at both tests. But it gets to the ground truth problem, too, depending on the slice we're talking about.
+[01:16:35] We do have some literal ground truth here in that we're all at this meeting, I think, and therefore, the physical act of being here is tied to the physical act of something we do with our phones, and that might turn out to be pretty good ground truth then, whereas something more nebulous like citizenship
+[01:16:52] is trickier, and does require turning to government, since it's a government artifact.
+[01:17:00] And that might put it back over to Afsaneh for a second, To talk about, do you see any
+[01:17:08] maybe both the upsides and the downsides of being able to do selective disclosure of facets of identity.
+[01:17:17] [AR] Yeah, for sure, I think there are…
+[01:17:19] It really gets to the core of how something is designed, and the sort of
+[01:17:25] scenarios, the sort of lived realities you've taken into consideration. I think, you know, I think James was talking about it earlier as well, like, certain options don't work for everyone. Having these different options become vital.
+[01:17:43] When we work with companies, when we work with different technologists and others, one thing that we really, really try and amen is that granularity in these types of options become fundamental when we're talking about
+[01:17:59] how to make something truly, whether private or reflective… [JZ] In a positive way. [AR] In a positive way, right? So…
+[01:18:07] for example, just 2 days ago, I was on a call trying to coordinate and strategize with some of the groups we're working with, because we have an
+[01:18:16] event coming up, and one of the main things, one of the representatives from a group of migrant rights workers in the south of Mexico brought up was:
+[01:18:29] We're freaking out about the digital identity and age verification issues that are coming up. Our communities will not be able to use so many of the tools that are coming up. They don't have
+[01:18:41] the data in terms of, like, let's say it's citizenship?
+[01:18:46] Papers, or any of the things that they want to provide, but also they don't trust to. They don't want to, right?
+[01:18:53] So there might be, like, kernels of other elements of credentials that people will be okay to provide.
+[01:18:59] And it's, like, working on what elements work, and what elements will be
+[01:19:06] workable in those contexts that are not that extreme. They're not that uncommon. We're living in a global
+[01:19:17] history right now where repression is increasing.
+[01:19:21] Where movement of people and migration is increasing.
+[01:19:26] And the distrust in institutions is increasing. And I think that taking that into consideration doesn't create so many barriers in what we're creating. Actually, to us, it creates
+[01:19:38] opportunities for being creative. So, to comment on that point is to say that
+[01:19:45] it definitely can work, depending on who you've worked with.
+[01:19:50] And what options you provide.
+[01:19:53] [JZ] Yep.
+[01:19:54] I could see it even being, potentially, because we're kind of looking forward
+[01:19:59] forward-looking here, a double-edged sword in that if it becomes
+[01:20:04] Technically efficient to offer arbitrary slices that might mean that
+[01:20:15] public or private checks could be administered at any time to say, are you a citizen? As if you were about to contribute to the Linux kernel, when the inefficiencies of being able to do that mean anybody can walk into a supermarket.
+[01:20:30] Not have to establish their citizenship, or their migrant status, or not
+[01:20:37] in order to shop.
+[01:20:38] Or I could see if we want to, we live in a kind of polarized world,
+[01:20:46] you know, this store only caters to Democrats, you've got to offer up your donkey credential, or your elephant credential
+[01:20:54] to proceed, but maybe that's looking so many clicks ahead, like, that would be a catastrophic success for having climbed Everest. Christopher, let's get you into the conversation.
+[01:21:09] Where do you see the best positioning of a public authority here at the state level in the United States
+[01:21:18] to facilitate...you share the goal, the Everest here, have we defined that well enough.
+[01:21:23] And how can Utah famously mountainous
+[01:21:29] help us climb? Okay. [CB] Is it okay if I kind of frame my thoughts? [JZ] I suspect you're going to do it anyway. [CB] This is an analogy I've been using as I talk to different groups I'm meeting with, and in Utah, we're known now for actually cutting-edge lots of legislation on the age assurance legislation, digital choice… Digital signatures back in the day, digital signatures, now
+[01:21:54] state-endorsed digital identity. We very much are viewing
+[01:21:59] what the last 30 years have shown us about technology. It's similar to what happened with the Industrial Revolution. This amazing thing was happening, and businesses were growing, but there was a ton of exploitation that happened from that. A lot of really bad things happened, because we didn't have the right rules, the regulatory schema, or even the mental models and framework to know what was right or wrong. And that's kind of what the last 30 years has been like, where we have this amazing
+[01:22:24] amazing technology that allows us to use it, and do amazing things, and access things, and everybody of all ages had this access, and we didn't know what the impact was going to be.
+[01:22:32] And so now we're realizing we need to figure out what are these safety guardrails in place for just society to function. Life's gonna go on, and so that's what Utah's been working on now, of, okay, we've had 30 years, and we know bad things have happened. What does this need to look like now? So 100 years from now, we look back, this is just a part of American history, but I think things are looking really bright, actually, for the future.
+[01:22:57] So everything I'm going to say is just, this is our strategy in Utah, with that point of view, bad things happened, what do we want the world to look like? Assuming we all have good intentions, and we all just want everyone to thrive and be successful.
+[01:23:10] [JZ] Is there a quick, short list of bad things that have happened? I don't mean for the Industrial Revolution, we'd be here a while, but I mean for the past 30 years in digital? [CB] Yeah. Yeah, I'll give you examples I have seen in governments. This is not conspiratorial, but in government, but also my own experience, and the experience of my family.
+[01:23:34] You know, you have rights, Fourth Amendment rights, and you have rights to be secure in your person and papers. And with the amount of technology out there, whether it's controlled and owned by government or the private sector, via the third-party doctrine, we're now at the point with the mass correlation of data occurring, there's a serious question: have we've reached this threshold where your privacies have been violated? [JZ] The third-party doctrine being
+[01:23:58] If you entrust something of yours to a third party, you may lose a lot of first-order
+[01:24:05] protection against government search, because it was your bad for having entrusted it to somebody, and if they say yes, they can do the search. [CB] And because government or anybody can just purchase this data now, which many of us have just freely provided it through these complex terms and conditions. [JZ] Like location data or something. [CB] You'd be amazed at what's there. It could be location data, your preference data, you know, pictures going back in time.
+[01:24:30] your medical history. I've seen products where they've come in, and they've wanted to sell it to government, of, here's a system where you can zoom in on any state, any county, then any city, then any house, and you can see everybody who lived there. And some of these systems have thousands of data points, and you do the scoring, or profiling, scoring, predictive analytics, but these are all used to then nudge certain behaviors. They want to market in a certain way, or target you for services.
+[01:24:55] But it starts to raise a serious question, and this is my biggest concern, actually, of now, what's the horrible thing that can happen when all this data's there? It can influence your agency. That's the discussion happening right now. What is this impact on agency in Utah, because of our religious background? I very much, one, love privacy. I had ancestors that came across the plains to just be left alone, but people in America, everybody came here, had
+[01:25:20] ancestors here, or those that were here, but people just, they wanted to live according to the dictates of their hearts.
+[01:25:25] And so if data can be used to influence you, to make decisions and nudge you, and use your human psychology against you, it is impacting your agency. So anybody in here, if you have children, you've seen this in the online interactions. If you're a man in here, you can't open a social media app, create a new account without, in the first hour, you start seeing in your feed, pictures of women in bikinis, or things like that. Those are actions being taken.
+[01:25:50] Yeah, it's whatever, whatever they, they determine is gonna appeal to you,
+[01:25:56] they use it, and it gets you addicted, it gets you drawn in, but really bad things can start to happen with this as well, and I think you're going to see that with the technology coming, this has all just been testing, but if we don't start fixing it now, how your behavior is going to be influenced is going to be much more extreme going forward. So your question, what, you know, what is the thing government…the government's
+[01:26:20] primary job was to protect the rights of the people. So, in Utah, we're referring, or returning to fundamental principles. If government's job is to protect the rights of the people, we've established what do we consider your digital identity rights. We've passed the Digital Identity Bill of Rights in our legislation, and then we're firmly saying,
+[01:26:40] this is the framework to protect you, you control identity, and these are the things that the private sector can and cannot do in that relationship that you choose to have with them. [JZ] So that's very different, it doesn't… these are… you can… why not both?
+[01:26:56] But it's different from, here is how Utah is helping hook up its registry of motor vehicles to the digital world so that I can certify that I know how to drive a car in Utah, or that I'm above a certain age, which I had to establish
+[01:27:13] as part of getting my driver's license, or that I am a citizen of the United States, part of Real ID, something like that.
+[01:27:21] But rather, these are rights that Utah is going to establish that may influence the existing ecosystem of data brokers.
+[01:27:32] and government access, in turn, to what the data brokers have. You're saying, if I'm a data broker, ugh, we got another Utah resident,
+[01:27:40] I guess we have to throw away that location data kind of thing? [CB] Well, I think data brokers are realizing the market's changing. Anytime, if you're a party to a transaction, whether it's in a government service or a private service,
+[01:27:51] like the knowledge base verification that was being discussed. If you have to go through a third party to prove who you are, we have built the system wrong. That's not a true free market, and you have no control. And that's the threat. [JZ] You mean to a single third party? [CB] Well, any intermediary, if you have to go through any intermediary to prove who you are, you're not in control. You're always going to have risks there, so as much as possible, our strategy in Utah is
+[01:28:16] shift control to you. Not just your identity, your documentation, your government records,
+[01:28:21] the state endorses it, but give you control, because these intermediaries, all they've done is the same thing, they've aggregated all of it. [JZ] Got it. So maybe the three of you, bring up the chorus now.
+[01:28:33] Walk us through a day in the life
+[01:28:38] of… I won't say a sovereign citizen, because that has a term of art meaning that… I mean, no apologies to any sovereign citizens here. Don't want to go down that path. Apology to any sovereign citizen here. Give me just a day in the life
+[01:28:53] Of that post-summit future.
+[01:28:57] That at least includes self-sovereign, user-owned identity.
+[01:29:04] How does the morning start?
+[01:29:06] I wake up, I'm gonna check my phone, what's different?
+[01:29:11] [DR] Well, the first thing I would point to is that, and I think you saw the start of it here,
+[01:29:19] Login
+[01:29:20] will disappear.
+[01:29:23] [JZ] So I'm about to log into Blueski.
+[01:29:27] And I've got Blueski open, and it says…
+[01:29:31] Who are you? What happens next?
+[01:29:34] [DR] You're not gonna have that experience. Okay. [JZ] I've deleted BlueSky from my phone. [DR] No, okay. You're going to connect once
+[01:29:42] [JZ] Let's say it is the first day of the rest of my life, I'm finally off of X. [DR] The new experience is actually much more like Web 3. Once, when you form that relationship, so just downloaded the app, yep. We just downloaded the app.
+[01:29:58] What you saw, the demo here was person-to-person connection. You're gonna connect to them.
+[01:30:03] [JZ] So I've got to find another human already on BlueSky and connect to them. [DR] Oh, no, you're actually… we saw human-to-human connections. Yes. Businesses, let's not get into, you know, natural persons, but businesses are also going to be in this decentralized trust graph. You'll form a connection with them. A connection, not an account.
+[01:30:23] A connection. [JZ] I'm still in bed. [DR] You're still in bed. I want to get on Blue Sky, because I am just jonesing for that feed. Right. What am I doing different? [DR] You will go through that process once. Once. A process of finding a QR code on another human's phone? No, actually, it'll be on just… it'll be a QR code on the screen.
+[01:30:42] You'll literally go to Blue Sky's site, and they'll have a QR code, just like you saw there. [JZ] Alright, I'm staring at a QR code on my phone, now what? [DR] Scan it once, you'll say, I want the connection.
+[01:30:51] You'll go through the same process you saw here, and now you're connected to BlueSky.
+[01:30:55] [JZ] Because I will have cached my own identity in my phone.
+[01:31:00] So it's my phone magically talking, and at some point, the phone is gonna do Face ID or some biometric with me. Just what you saw here. So it knows that I'm the one holding my phone, and I had a frank exchange of views with my phone when I took it out of the box. Yes, exactly. I'm trying to, like, avoid turtles all the way down here... [CB] Can I add to that a little bit? Please. And in Utah, we're very focused on
+[01:31:24] redesigning with identity, what future of all government services look like, with a goal of end-to-end verifiability. So in this, I think you can go a little deeper. Not only are you gonna take your phone, you log in on the internet, first, when you get on the internet, you're never gonna have a Cloudfare, are you a bot anymore? You're going to say, your phone already has a credential saying, I'm human.
+[01:31:46] And so, it's gonna trust you. You're getting rid of a tracking mechanism right there. [JZ] Yes, but just trying to get to the last turtle here. When I get my brand new phone out of its box.
+[01:31:59] How do I tell it I'm human? [CB] Yeah, so you are going to have to
+[01:32:04] have some wallet, some app, where you have an inception event to get a credential in that. There is an event on both sides. Individuals are gonna have events in this new you are essentially becoming your own root authority, and there is a ceremony, there's a regalia to this, where if you're a child becoming an adult, your parents are gonna transfer… [JZ] This is the modern bar mitzvah! Today, you are a QR.
+[01:32:28] [CB] Well, we are actually in Utah, we're having exciting discussions of, like, in government, the governor should be the root of authority in the executive branch. What does it mean for that ceremony to transfer that root of authority? So, you as individuals, you're gonna have your identity, or your parents will transfer it to you, and when you get a device, you get your identity on it, and it's trusted. In Utah's case, it has some endurance
+[01:32:53] enforcement from the state, but it could be a self-created identifier… [JZ] So parents get together when it is time and say to their sprout, who's just about to become a sapling.
+[01:33:03] And they say, we dub thee...
+[01:33:08] [CB] We say, here's your cryptographic keys. [JZ] Don't lose them! [CB] But this is actually, this is how it works in the physical world. You're born, your parents give you a name, and then the state endorses it via a birth certificate. And that's all that's happening with these credentials in the SETI sense, but even here, you're gonna create this unique cryptographic identifier if you want to be endorsed for legal processes,
+[01:33:33] the state endorses it, digitally signs with this credential, but then when a child comes of age, or is an adult, or maybe they're underage, but the parents have delegated certain authorities to them so they could access sites that are approved. [JZ] And ultimately, that credential
+[01:33:47] Is anchored in some innate biometric quality of the kid?
+[01:33:54] Hey, kiddo, I need your face for just a second.
+[01:33:58] [DR] The wallet that they're using will have
+[01:34:02] It doesn't have to, but in most cases, it will have biometric verification. [JZ] If it doesn't have biometric, what does it have? We back to passwords? Because I heard somewhere those are bad. [DR] It's keys. Cryptographic keys is where we're rooting everything in that, and Christopher's absolutely right,
+[01:34:20] you become, you know, fully, whether we call it, sovereign. [JZ] That key maybe lives in a physical object, like a Titan Key.
+[01:34:27] [DR] All of what you've seen happen at Web 3 about key management, and, you know, not your keys, not your coins, right? [JZ] It still has to either be something you know, or something you have. Exactly. [DR] And in the end, it will be control over a digital wallet, a set of keys, and the biometrics to unlock it, and that then unlocks everything else.
+[01:34:52] Key management is the hardest part here, and the user experience around that will be the single...[JZ] And then that route
+[01:35:00] supports a big bush above, which are a set of relationships with one another, with companies, with the government
+[01:35:08] where we can now make declarations about one another that become the slices that people offer up to strangers
+[01:35:17] Yes. To declare something, and when you can prove... [DR] We call that the decentralized trust graph, that you're a part of. Every person, every company's part of it, every government will be part of it. And when you can prove, in zero knowledge, you're part of that graph,
+[01:35:29] that will be the strongest sovereignty, you can prove that does not have to rely on it. [JZ] Got it. So, now we're gonna start going through the day again, and that'll bring, Afsaneh back in as well.
+[01:35:40] I'm in bed, I want to use BlueSky, my phone has an anchored relationship to me, so whoever, whatever we're saying, I am, a unique entity.
+[01:35:50] We all are.
+[01:35:53] That establishes my identity for Blue Sky, which then other BlueSky people can see, and it may even be that BlueSky can issue something such that
+[01:36:05] if BlueSky went down, I could still encounter another BlueSky user, and we could go peer-to-peer with some assurance that each of us
+[01:36:15] is that account on BlueSky that we knew? [DR] Exactly the way the two people could each verify they had the relationship? Yes. You and BlueSky could prove that, and if they went away, you could still prove you were a BlueSky user and prove it to another person, whether they're on BlueSky or not. [JZ] It's fun to see it traversing back and forth the different layers of the internet hourglass, because it does suggest
+[01:36:33] that if the broader internet went down and you couldn't get to a whole lot of servers, we could create a mesh network in Lewis Hall, and then email one another, because our email addresses would be self-
+[01:36:47] vouched for… well, email is more complicated because it is itself a collective hallucination, but at least for proprietary services, I could reach
+[01:36:57] my Facebook friends without even having to talk to Facebook.com, potentially. [DR] Absolutely. I mean, one of the other things about having these cryptographic keys on the wallet, all of us, all of our communications can be end-to-end encrypted. Got it. For everything. [CB] In that relationship with Blue Sky, I want to introduce that concept of the duty of loyalty here we're doing in Utah. Our view is
+[01:37:19] moving away from traditional consumer privacy and move toward when you engage in these relationships, these entities are bound to act in your best interest now when it comes to that data. So in this future, when you authenticate in with your digital identity credential, you now should be able to maintain a record of what were the terms
+[01:37:39] Of that relationship, and that becomes then the basis of anything that company does with your data from them on, there should be provenance requirements.
+[01:37:47] When did they get that authorization? What was the version of those terms? You also maintain that, but that's going to be very important in the future when you get more authority to be your own enforcers, your own regulators when people do stuff wrong, and you'll know when they've done something wrong, because breaches happen all the time, and it's going to be a very different world when you know, here's everyone I had a relationship with,
+[01:38:06] and why the heck was my data bound by these contractual provisions in that breach?
+[01:38:12] And that's not the world we live in now. You agree to everything all day long, and breaches happen, and there is  no real enforcement mechanism. [JZ] I'm already transposing that to your AI agent that's gonna help you, do that. Mickens is wanting to crash through the window. [JM] But, like, how do we think that this is gonna work, for example, for people who don't maybe have phones? Or for people, kind of like in the scenarios that you were mentioning
+[01:38:35] who are migrants, who, for whatever reason, don't even have that phone-based root of trust that they would want to expose to someone else. I was wondering if you could talk about that a little bit. [AR] Yeah, there's so many thoughts. I think
+[01:38:51] one of the… I mean, I was thinking about your question about the day in the life
+[01:38:56] of a user, which is hard to imagine right now, depending on who it is who we're talking about. One thing I can say is, when it comes to a global context, and when it comes to, like, the global community we have, when certain systems become enforced.
+[01:39:14] And inaccessible, there'll be workarounds. So it depends who you're talking about, what context you're talking about, how much trust there is, right? So
+[01:39:23] I come from Iran. We're going for a lot right now.
+[01:39:26] And I also come from a country where there has been information controls and, sort of, state
+[01:39:35] repression for a very long time, and also a country that has had a population that has worked around everything for years, right? Found workarounds. And you see that, you see that with
+[01:39:47] all of the increasing, age verification options coming up on platforms, in policies, people have found the workarounds.
+[01:39:56] So that's one thing to keep in mind.
+[01:39:59] And I think that's one thing to assume that those folks who are doing those workarounds are not always bad actors. There are those who
+[01:40:08] can't afford those trust systems.
+[01:40:11] They are folks who don't have certain requirements for some of these systems, because they weren't thought about when some of these systems were created, and this happens all the time.
+[01:40:24] One other thing I wanted to say, and I think this is something important for the team working on Keyring, and I know you'll keep it in mind, and I think
+[01:40:33] It's, a really important moment right now, politically, about how we frame language around privacy.
+[01:40:42] And how we frame language around what our tools actually do and what they don't do, right? So,
+[01:40:50] regardless of how good a specific tool can be, that sort of language and framing gets weaponized from a, let's say, a core system that is trying to implement
+[01:41:05] different types of these regimes with lesser protections.
+[01:41:09] Right now they say, oh, we have these privacy-preserving tools, or third parties, and it's so super secure. Most of the public might not know if it is or isn't, if it's accessible or not, but that language exists, and I think really honing in on the narrow
+[01:41:26] uses of the tools we're putting out and what they actually provide becomes really fundamental in this political moment. And finally, I live with a cryptographer.
+[01:41:37] My partner is a cryptographer.
+[01:41:40] So, unfortunately, we have to have these conversations. [JZ] I was gonna say, that's all you… it's actually all you know about them. [AR]And so, it's a really fascinating
+[01:41:55] conversation, and one thing that we talk about, and other cryptographers did
+[01:42:01] work, and want to use Design from the Margins, or some of this work, is that
+[01:42:07] We have to have, you know, a understanding of what it means when we're talking about, let's say, zero-knowledge proofs, what that central or decentralized database is, and how we think about the trust we have in the verifying sources.
+[01:42:24] Both in what can be provided to them and what folks can provide as
+[01:42:29] proof in these contexts on what's available, right? Yes. If folks aren't housed, if folks don't have documentation.
+[01:42:36] But also, really, this is not a value judgment. This is not a value judgment about whether it's a product being created, or a government system. I think really working from a mindset that you will not always be working on that product,
+[01:42:55] or you will not always be working in that position
+[01:42:59] in a, like a policy role. You might not always be there, for example.
+[01:43:05] And so, creating infrastructure that becomes too hard to dismantle or use in a different context. [JZ] So, this is so important to hear, sort of, a dose of
+[01:43:20] skepticism slash realism slash zoom out the camera and see the whole system rather than only the gizmos. [AR] Yes.
+[01:43:29] [JZ] With all of that borne in mind, I wanted to invite you to give us…
+[01:43:36] Whether it's in the day in the life, frame, or otherwise, a future in which you could envision
+[01:43:47] The sorts of technologies here being helpful, however contingently? And what would that look like
+[01:43:56] from the point of pick your user, somebody who maybe, to get back to Mickens's question, doesn't even have a phone, how… how would…
+[01:44:05] What would you paint as a possible day for which this tech is part of
+[01:44:12] making their life easier. [AR] Yeah, that's really important, because I think, especially even in our work, we have to be realistic from two different frames.
+[01:44:22] One frame, the realism about things that are happening.
+[01:44:25] Things are being enforced, there's liability on certain companies.
+[01:44:29] And
+[01:44:30] some of those conversations that we're having with some of the workers in the company is that, like, we have to implement these things. How do we do it in a way that truly
+[01:44:40] isn't lying to our,
+[01:44:42] the communities you work with, right? And on the other side being that there are necessities. People need access to certain tools, there's
+[01:44:52] been researched by the World Bank and others about this issue that comes especially for many highly marginalized communities without an access to identity systems, right? And what
+[01:45:04] that creates in terms of access to resources, access to movement, right? [JZ] So what would be the most plausible way to make progress there? [AR] I think… if I were to say, let's say, a…
+[01:45:16] utopian view of it. I think it's something that
+[01:45:20] people can use in a way, for example, to opt into, let's say they need to go to, an immigration here, right? Or process for crossing a border.
+[01:45:35] And so the tool that they have both has enough optionality of what they can opt into, what they control, what they don't have to opt into, and the options that they have that requires that sort of verification reflects what they own and what they trust to give, right?
+[01:45:56] This is my bread and butter, I have to say this. It's a little bit, connected and a little bit disconnected. I always prod to the fact that we always forget that privacy doesn't end in the back end of the infrastructure. If someone has control of your device
+[01:46:15] none of that matters. The cryptography won't matter, the encryption won't matter, and so, ideally, there is a way to ensure that that sort of obfuscation and privacy also includes those moments where
+[01:46:28] X person is traversing a checkpoint
+[01:46:33] or a sort of border line.
+[01:46:39] And they're able to both have this system that they can opt into and what's needed, but also obfuscate it in a way that if that falls into the hands of someone it shouldn't fall into, their whole social graph…
+[01:46:51] The whole idea is, in a way, not so immediately accessible. [JZ] Which could mean there might be a way to unlock that phone
+[01:47:01] r issue an instruction
+[01:47:03] that has embedded within it a desire to say, I know I'm asking for X, but really just hand over Y. YIf there were a way not to be able to tell when somebody has elected to share less than what the full
+[01:47:21] spectrum of what they are supposed to have access to themselves could be. It's like having two codes on a burglar alarm to disarm it, one of which disarms it, the other of which appears to disarm it, but still summons the authorities. [AR] Funny you say that. That's exactly the type of scenarios we
+[01:47:39] talk about, because
+[01:47:41] these are real scenarios, right? When it doesn't have to be at the hands of, let's say, an
+[01:47:50] adversary with a huge amount of power, it could be someone trying to steal your phone, right?
+[01:47:55] So, having this option, these sort of creative methods, are not that out of the blue, these are conversations we're all having. These exist in different formats more and more now, because
+[01:48:10] of, in effect, in some of those contexts, because folks listen to those people living at the edges of being both the least protected, but the most visible, right? Those folks who are
+[01:48:24] living at these edges of the most amount of targeting and, sort of, risk.
+[01:48:32] But without the protections, and so when you are really focusing in those...
+[01:48:37] And there's a reason why we do that.
+[01:48:39] Because, and also for me, I'm like, I'm constantly trying to prove that this is
+[01:48:44] a imperative in how we really understand privacy, because that's when you get creative. That's when you really think about,
+[01:48:52] and we have, you know, now some of those tools and, like, harm reduction elements implemented where they work. And also, I think, as folks who are trying to create things and create trust in a moment where there is no trust.
+[01:49:10] Right? There is no trust in power, and often for very, very good reasons.
+[01:49:15] How we
+[01:49:17] talk about these things from an understanding of those who are being harmed the most becomes really fundamental. [JZ] Yeah, it sounds like ground trust is kind of a complement to ground truth here, and you gotta figure out, again, what's the bottom turtle to start with, or turtles.
+[01:49:33] That kind of answers the question a little bit of
+[01:49:38] what would we need for this to really go right? And before we close out, I just wanted to hear, from you, Drummond, and from you, Christopher, quickly, because I know we're just at time.
+[01:49:51] What non-obvious thing do you think has to go right
+[01:49:56] for it to feel like we've really adjusted the current trajectory we're on, which I dare say, and feel free to push back if you don't agree.
+[01:50:05] It does appear to be towards more exposure, fewer ferns.
+[01:50:11] The most trivial transactions turn out to barf up all sorts of stuff about yourself and everybody in privity with you.
+[01:50:20] What else has to go right
+[01:50:23] in order
+[01:50:25] to change that path? If we're agreed on that goal, which, again, I don't mean to presume too much.
+[01:50:29] I don't know who wants to go first. [DR] I want to nominate Christopher, because what he's working on is going right, and if it spreads, it's gonna help, you know
+[01:50:40] take us another hill higher or closer. [CB] I do want to say, it can go really wrong, and the current trajectory, actually, I think, is the wrong path, so… [JZ] You sound like the head of an AI lab. [CB] But this is this observation, so I mean, even what you were saying, marginalized communities.
+[01:50:57] every time somebody crosses the border, in or out of the U.S, or most countries, your phone
+[01:51:02] can be taken, and they can make clones of it. Anything based off of keys, there's a risk there of these keys are gonna be copied.
+[01:51:09] And so, there are real risks here of you not being in control of your identity.
+[01:51:14] [JZ] For which the ultimate protection there is just not having that information anywhere. [CB] Yeah, you would move away from digital. So, like, you're always going to have people who are not going to have a digital life. In Utah, we said you have a right to paper. You can't condition services on whether you use a physical or digital identity. There are these base protections that states haven't even started talking about, so that's part of what we're trying to do with SETI.
+[01:51:37] But I think for this to go right, you have to have a comprehensive governance framework. You need the law backing this, and we need to clearly say, what does this actually look like? When this data is being transferred, when it's being used, and you have these
+[01:51:52] players in the market of private companies and wallet providers and hospitals that are going to receive this. What does this new governance structure and enforcement look like? The current model is not working, and so that tells us we need something new, and we only have
+[01:52:09] a few years for this. When you look at what are the big companies pushing digital identity, what's happening at the federal level, what's happening at states? It is already here, whether you think it's here or not. You can't file your taxes online without creating a digital identity with a private company, and their terms and conditions say they can delete your account at any time.
+[01:52:29] That's an example of you have no control. So this is a conversation of, for this to go right, we've got to move very quickly over the next 2 or 3 years. There needs to be collaboration, and there needs to be policymakers having a discussion. You're going to realize most states do not have any comprehensive digital identity legislation. They've just said, yeah, let's authorize
+[01:52:48] this mobile driver's license, which was never built to be identity. That's a license or a privilege government can take away. Identity's innate to you, and government should not be able to revoke that. So, to me, that's what we need to nail, is we need the comprehensive public policy, and I'm gonna quote here the ACLU and Liberitas, who we engage with.
+[01:53:08] they love what we're doing, but they've said if this goes wrong, you just need to burn it all down. And it's not worth doing, because it's only gonna get worse, but
+[01:53:16] I think we can do it. So, there needs to be mass coordination, you need policymakers at the table, define the policy, and then the tech can get there. There's really smart people that can do the tech. [JZ] And a healthy number of folks and cycles at the table in the public interest, possibly not just looking to score a buck
+[01:53:35] for that, which is the kind of thing keyring
+[01:53:39] among many others, too, represents. Drummond, you're gonna get the last word.
+[01:53:45] [DR] I think the other
+[01:53:48] element to carry that all the way forward and actually address some of your concerns is something that I understand Berkman's been working on or discussing for quite a while, which is digital fiduciaries.
+[01:54:00] I think that, I mean, one of the concepts we have with a decentralized trust graph is, if everything's confined to your phone.
+[01:54:10] then your phone is a point of tremendous vulnerability. So, if you're not dependent on a single device, you actually have, what we call a verifiable trust agent in the cloud.
+[01:54:21] Then, you take away some of those, and you introduce other risks.
+[01:54:25] But it suggests that if we had digital fiduciaries that have that same responsibility that other fiduciaries have, that can offer that kind of a service.
+[01:54:34] That could significantly change the picture, and it could address, you know, the state's involvement, regulatory involvement behind that. So I just think it has tremendous power, and when we get to AI, it really becomes important. [JZ] Yeah, for which society had evolved.
+[01:54:54] Flawed, imperfect, but aspirational ways to say, here is a stranger who is gonna have a special relationship to you,
+[01:55:04] bank and trust company, to take care of your kids if you're not there to do so, to provide for this, that, or the other thing, to have a safe deposit box for your stuff.
+[01:55:16] And if they fail to do that
+[01:55:20] they will be spoken to in a language that they might understand. Yes. You know, that's where the regulation comes in, and for which there's a cultural layer,
+[01:55:28] that the learned intermediaries with extra power, like lawyers and doctors and clergy, see themselves socially as having them. [DR] 100%. And it's deep enough that in the state of Washington, you can't register a corporate name with the word trust in it unless you are, in fact,
+[01:55:45] you know, one of those legal... [JZ] Leading to all of those Washington companies spelled T-R-U-S-S-T. On that note, I know we're, past time.
+[01:55:56] Please join me in thanking our panelists for this really great, crisp tour
+[01:56:02] of what matters here.
+[01:56:14] Are we on break again? What happens next?
+[01:56:21] Bye?
+[01:56:23] [JM] Alright, thank you, JZ, for that great moderation. Thanks, Alex, for the introduction. So yeah, so first of all, I guess, perhaps third of all, after that list of thanks, thanks for all of you, for coming out here and seeing the demos of our technology. I think one really interesting thing that's come up a lot, both the panel and in some of the demos as well.
+[01:56:43] Is this idea that we both want to give users, more control over various aspects of their online life, but there's all this inertia
+[01:56:52] that comes about from the fact that right now, these big companies have a lot of power, and these governments have a lot of power, and given that we're not, sort of, beings of pure Nietzsche will-based energy, we can't just remake the world the way that we want it to be right now.
+[01:57:09] And so, what's sort of that transition path?
+[01:57:11] You know, how do we get to that sort of utopian or idealized world that we want to get to, given that there's some hurdles that we're going to have to jump over, sort of along the way? And so, you know, the Keyring technology that we discussed today, that's one of our attempts to try to get there in sort of an intermediate baby steps way. You know, you can start using it now. We hope that other services will
+[01:57:33] start using it now.
+[01:57:34] And we also hope that it begins to start some of these conversations about the fact that, you know, there's a bunch of interesting developments in cryptography, other parts of technology, that have made, like, fantastical theme
+[01:57:46] ideas actually, possible now.
+[01:57:49] You know, we can prove all these nice things in zero knowledge. We can take advantage of all these hardware devices that have biometrics and so on and so forth. And so, in some sense, like, that's amazing, in the same way that AI is amazing, right? It's amazing that I can speak in English and have it translated into Klingon.
+[01:58:04] I mean, that's sort of a waste as well, but, like, it's amazing that we can do that. But I think it is also very important for us to center the people who may be, in some sense, like, left behind by even the current wave of technology, and who would be at risk of being left behind at whatever new wave is gonna come up.
+[01:58:20] And so that's another thing that we try to center, and, you know, we really appreciate any feedback that you might have about, you know, oh, the things that we're trying to do right now are neat, but have we thought about Community X, or have we thought about, use case?
+[01:58:33] Because everyone has blind spots, you know, so I've been at big corporations. For example, I used to work at Microsoft, as some of you
+[01:58:41] know before I came here, and that was a thing that I think, to its credit, Microsoft oftentimes did well. They would try to say, who is it that we're not thinking about? And let's try to at least, you know, acknowledge that in our UX design and the way that we deploy our technology. So, that's something we aspire to as well.
+[01:58:58] So, you know, in terms of, next steps, you know, scan the QR code, try out the app. We're all here, you know, there's gonna be, lunch afterwards, so please, folks, talk to each other, talk to us.
+[01:59:12] And hopefully, you know, you've left this, half-day program inspired about, you know, what might come next, and maybe it's given you some of your own ideas about how we might try to
+[01:59:23] in some sense, reclaim some of this, autonomy that essentially has been taken from us, over the past, let's say, 20 years, in some sense, because of a success catastrophe.
+[01:59:35] It is actually amazing some of the stuff that we can do now with data centers and phones and all these types of things, but we've seeded something, we've lost something, along the way. So hopefully, events like these are, some steps towards getting back some of that autonomy, some of that power. And unless there's any other remarks
+[01:59:56] That's right, let us know if anything doesn't work, we will try to fix it. But other than that, yes, thank you so much, enjoy lunch, enjoy each other, thank you.

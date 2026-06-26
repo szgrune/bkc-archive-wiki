@@ -1,0 +1,1615 @@
+[00:00:01] Hi everyone.
+[00:00:03] Before we begin, I'd like everyone
+to take out their phone and if you
+[00:00:07] have not subscribed to these three
+newsletters, scan the QR codes.
+[00:00:12] These are all fantastic organizations.
+[00:00:13] In addition to being posted by the 
+Berkman Klein Center,
+[00:00:16] this event is also sponsored by
+the AI Safety Student Team and
+[00:00:20] the Harvard Law AI Association.
+[00:00:22] In addition to co-sponsoring
+events like this we run
+[00:00:26] workshops, fellowships across
+the university every semester.
+[00:00:30] So you'd like to stay in touch,
+get involved, sign up right there.
+[00:00:34] Also the Berkman
+Klein Center has a new AI tool.
+[00:00:39] If you're interested, you can go
+to this link at the bottom and
+[00:00:43] talk to an AI agent during the
+presentation about the presentation.
+[00:00:49] And that said, let's kick it off.
+[00:00:51] Thomas, it is my pleasure to
+introduce Professor Gabriel Weil.
+[00:00:55] He's one of the leading scholars
+on how we can use the law to
+[00:00:58] mitigate the worst risk from AI.
+[00:01:00] He's an associate professor at a Touro
+University law outside New York, a
+[00:01:04] non-resident senior fellow at the
+Institute for Law and AI. His work has been
+[00:01:09] covered in popular outlets such as Fox,
+and he regularly consults with legislative
+[00:01:14] boards and other AI policy makers.
+[00:01:17] Before turning to AI, he did climate
+work, the Climate Leadership Council, and
+[00:01:21] the White House Council on Environmental
+Quality. He holds degrees from Georgetown, Pace, and
+[00:01:28] Northwestern spanning law, environmental
+policy, political science, and physics.
+[00:01:35] Now, please join me in giving a
+warm welcome to professor Gabriel Weil.
+[00:01:43] Thank you Thomas.
+[00:01:44] And thank you all for coming.
+[00:01:46] So I want to talk to you today
+about the role tort law
+[00:01:48] plays in mitigating AI risk.
+[00:01:51] And I want to convince you of
+five key propositions.
+[00:01:55] So first the AI risk is a policy
+problem, so both it's something
+[00:01:59] worth worrying about and the policy
+has something to say about it.
+[00:02:01] The ex post liability is generally
+preferable to ex ante regulation.
+[00:02:06] Tor the things it works for it's
+the main tool we should rely on.
+[00:02:09] But that negligence and products
+liability, which are the default liability
+[00:02:13] regimes that would apply, are likely to
+be inadequate, to leave significant gaps
+[00:02:18] and so we need stronger forms of
+strict liability, primarily abnormally
+[00:02:22] dangerous activities supplemented by
+vicarious liability theory.
+[00:02:26] Fourth, the judgment-
+proofness that you know,
+[00:02:29] AI companies may cause harms
+[00:02:32] that they could not be practically
+held accountable for ex post
+[00:02:36] is the biggest problem
+with the ex post approach to liability,
+[00:02:42] that this problem can largely be
+overcome through liability insurance
+[00:02:46] requirements and punitive damages in,
+near miss or warning track cases.
+[00:02:51] And finally despite
+my general bullishness about
+[00:02:54] liability, it can't do everything.
+[00:02:56] I'll talk a little bit about the roles
+that I think remain for other policies.
+[00:03:00] Okay, so first I don't
+have time to go into a deep argument about
+[00:03:07] why you should be worried about AI risk.
+[00:03:08] I'm just gonna present
+one set of data points here.
+[00:03:11] This is the, what I
+think is the most important result
+[00:03:14] of a study done by the
+Forecasting Research Institute.
+[00:03:17] They brought together
+super forecasters.
+[00:03:19] These are people that have a
+strong track record of making accurate
+[00:03:24] predictions on relatively short range
+events that we can check their
+[00:03:28] accuracy on, and then experts on different
+kinds of catastrophic existential risk.
+[00:03:32] And so the headline
+that came out of this study
+[00:03:35] was even after they had, you know,
+several hours to bing each other,
+[00:03:40] there was still a roughly order of
+magnitude of disagreement between
+[00:03:43] the median AI risk expert that said
+there was a 3% risk of human extinction,
+[00:03:48] by 2100 from AI and the
+median forecaster that said 0.38%.
+[00:03:54] I think that is noteworthy.
+[00:03:56] but to me the bigger thing, the
+bigger takeaway from this study.
+[00:03:59] Is the 0.38 number from
+the super forecasters.
+[00:04:02] So 0.38 is more than one in 275.
+[00:04:06] I don't think you'd get on a plane
+that had a one in 275 chance of crashing.
+[00:04:10] I certainly don't hope you'd
+put all humanity on that point.
+[00:04:13] And so I think that suggests
+these word paying some attention to.
+[00:04:16] But is it worth policymakers 
+paying attention to?
+[00:04:19] Maybe it's just a technical
+problem that technical AI safety
+[00:04:23] researchers can focus on
+[00:04:25] but the law doesn't have
+anything to say about it.
+[00:04:27] And I think that's wrong.
+[00:04:29] So I think it is a policy problem.
+[00:04:31] I think AI risk is a market
+failure. The building and
+[00:04:34] deploying of advanced AI systems
+[00:04:36] pose a risk of harm to third parties
+[00:04:39] that by default is
+not reflected in market prices.
+[00:04:42] It's not borne by either the developers
+of these systems or their users, or
+[00:04:46] any intermediaries in the supply chain.
+[00:04:48] In economics, this is
+known as negative externality.
+[00:04:51] It's a standard finding
+in economics that that activities
+[00:04:55] that produce negative
+externalities tend to be overproduced.
+[00:04:58] Similarly activities that
+produce positive externalities underproduced.
+[00:05:03] Economists have a standard, 
+prescription for what to
+[00:05:08] do about about negative
+externalities, and it's to try
+[00:05:12] to compel the generators of
+them to internalize them.
+[00:05:17] So that's why I think,
+you know, ex post liability is
+[00:05:22] well positioned to do that.
+[00:05:23] So yeah, the standard economic
+response is to try to
+[00:05:27] internalize them
+[00:05:29] for diffuse externalities that are
+hard to trace to a particular actor
+[00:05:36] we tend to use
+something like a Pigouvian tax.
+[00:05:40] So climate change is well
+addressed by a carbon tax.
+[00:05:43] It's pretty easy to measure
+the carbon content of a fuel.
+[00:05:46] We know roughly you know,
+how much burning that fuel is
+[00:05:49] gonna contribute to climate change.
+[00:05:51] There's disagreement about how bad
+climate change is, but not about
+[00:05:53] proportionate impact 
+of different activities.
+[00:05:57] And so we can argue about 
+what rate the carbon tax should be
+[00:05:59] at, but we know how to assess it.
+[00:06:01] Whereas it would be pretty
+hard to do you know, sort of ex
+[00:06:06] post liability for climate change.
+[00:06:07] You know, you drove your car a
+hundred miles and then someone's
+[00:06:09] house falling to Bangladesh.
+[00:06:10] Are they gonna sue you?
+[00:06:11] Probably not.
+[00:06:12] Conversely for AI, it's
+gonna be much harder to do something
+[00:06:16] like an AI risk tax because it's
+very hard to measure AI risk ex ante.
+[00:06:20] But it is much easier than the climate
+context to attribute harms ex post that
+[00:06:25] could be, you know, specific people
+who suffer harms from specific systems
+[00:06:29] and they can sue the
+people responsible.
+[00:06:31] So that's some intuition as to 
+why short liability is a good tool here.
+[00:06:36] But you might be asking
+why not ex ante regulation?
+[00:06:39] Why are we trying to do
+[00:06:40] pricing at all?
+[00:06:41] And so, you know, I tend to think
+liability and ex ante pricing,
+[00:06:47] depending on the domain, is an
+underrated tool more generally.
+[00:06:51] And we rely too much on ex ante regulation
+generally, but I don't think we
+[00:06:54] have to be persuaded of that, 
+to be convinced that in this
+[00:06:57] context we should rely particularly,
+on ex post liability.
+[00:07:01] And that's for two key reasons.
+[00:07:03] So one is that if you're gonna impose.
+[00:07:05] ex ante regulation you to have some level
+of social consensus about how big the
+[00:07:10] risks are, to know how much ex ante cost
+you can justify.
+[00:07:16] So if you're gonna do you
+know, tight prescriptive rules
+[00:07:20] or FDA style approval regulation,
+ that's gonna be very costly.
+[00:07:24] If the risks are regular
+low, then that wouldn't be worth it.
+[00:07:26] Conversely, you know, if you're
+gonna do just, you know, very low
+[00:07:30] cost disclosures
+or transparency requirements, which is
+[00:07:35] mostly what's on the table politically
+right now, that's gonna be underpowered
+[00:07:38] if the risks  are very large.
+[00:07:40] And we have orders of magnitude of
+social disagreement about these risks from
+[00:07:44] people like Marc Andreessen, who think that
+the risks are basically fake.
+[00:07:47] They're approximately zero to, you
+know, someone on the other extreme,
+[00:07:50] Someone like [inaudible]
+[00:07:51] It's more than 99% that it's
+gonna cause human extinction.
+[00:07:55] You know, maybe, 
+20 orders of magnitude of disagreement.
+[00:07:58] There's obviously lots of people
+in the middle, but it seems like hard
+[00:08:01] for the kind of 
+defenses that you would need.
+[00:08:04] And even if you did, I wouldn't
+be confident that it was true
+[00:08:06] tracking. It's genuinely hard
+[00:08:08] systemic problem.
+[00:08:09] So that's one challenge.
+[00:08:11] but even if we had the political
+will, we had some rough estimate
+[00:08:14] that we agreed upon that
+we thought was pretty accurate,
+[00:08:16] about how big the risks are.
+[00:08:18] I still think it'll be pretty hard
+to do effective ex ante regulation.
+[00:08:21] Because we don't know how to
+break down a set of rules
+[00:08:24] that will make AI systems safe.
+[00:08:26] Most of the expertise needed to
+identify and implement, cost effective
+[00:08:30] risk mitigation measures is concentrated
+in the private sector in the companies
+[00:08:35] that are building these systems.
+[00:08:36] You could try to move those
+people into government, but salary
+[00:08:39] schedules and cultural riffs
+I think would make that difficult.
+[00:08:42] And so it's much more attractive try
+to shift the onus to the companies
+[00:08:46] that are building systems and
+generate these risks to reduce them.
+[00:08:49] And that's what liability does.
+[00:08:50] It aligns their incentives
+with the broader social welfare.
+[00:08:54] And so I think that's
+why we should wanna rely on
+[00:08:57] liability to the extent we can.
+[00:09:02] This is not advancing.
+[00:09:05] Just click inside.
+[00:09:06] Just click.
+[00:09:08] Okay.
+[00:09:08] So the question is, you know, some
+people might think that, I've heard
+[00:09:13] people recently saying this, we don't
+have to worry about AI risk at all.
+[00:09:16] because tort law is just gonna 
+handle it.
+[00:09:18] I don't think that's right.
+[00:09:20] So I think there's been a
+couple gaps in the current liability
+[00:09:23] system first of all about whether,
+whether there will be liability at all
+[00:09:27] under certain circumstances.
+[00:09:29] So I think most of
+you have taken tort law.
+[00:09:32] you know that negligence requires
+the plaintiff to prove
+[00:09:36] the defendant breached their duty
+of reasonable care and that had
+[00:09:39] they exercised reasonable care,
+that would've more likely than not
+[00:09:42] prevented the plaintiff's injury.
+[00:09:45] and the scope of this
+negligence inquiry tends to
+[00:09:47] be, the scope of this breach
+[00:09:49] inquiry tends to be quite narrow.
+[00:09:50] So if a driver, you know, unintentionally
+runs over a pedestrian with their
+[00:09:54] car, courts don't ask questions
+like, well, was the value
+[00:09:59] of this car trip to the driver
+[00:10:01] worth the risk to, to
+pedestrians, was the extra value they got
+[00:10:06] from driving an SUV instead of a compact
+sedan worth the incremental injury
+[00:10:10] risk pedestrians, those are outside
+the scope of the negligence
+[00:10:14] inquiry, the breach inquiry. Driving
+is treated as social use activity.
+[00:10:18] And the question is, well, were
+you drunk, the driver drunk?
+[00:10:20] Where the texting, 
+where they speeding?
+[00:10:23] And so I expect a similar analysis
+to play out in the AI context.
+[00:10:27] Where courts don't ask questions
+like, well, was it reasonable to
+[00:10:30] to train and deploy a system with
+these high level design features
+[00:10:34] given the current state of AI alignment
+and safety science? I expect those to
+[00:10:37] fall outside of the negligence inquiry,
+outside of the breach inquiry.
+[00:10:40] Instead, I expect courts to assess
+[00:10:43] whether there was some off the shelf
+alignment technique or safety practice
+[00:10:47] that the company could have
+implemented that they failed to, and
+[00:10:50] if they had implemented it would've
+prevented the client's injury. That
+[00:10:53] will surely sometimes lead to liability.
+[00:10:55] There's gonna be some responsible
+actors that already been using all
+[00:10:58] the off the shelf alignment
+techniques and safety practices
+[00:11:01] a reasonable person would.
+[00:11:02] But that's inadequate if what
+you think we need is to drive is
+[00:11:06] to motivate sort of a discovery
+of new alignment practice sometimes,
+[00:11:10] if we need to motivate AI
+companies to slow down, if they
+[00:11:15] think they don't have the techniques
+they need to make their model safe,
+[00:11:17] maybe under some circumstances what you
+need them to do is wait six months until
+[00:11:20] they have better interpretability tools.
+[00:11:22] All those things I think, are gonna fall
+outside the scope of the breach inquiry.
+[00:11:26] Nw products liability is
+often called strict liability,
+[00:11:30] so you might think that's better.
+[00:11:32] I am somewhat skeptical of
+this claim, so even if products
+[00:11:36] liability applies which it
+might not to pure software systems.
+[00:11:39] I think those are likely to be treated
+as services much of the time.
+[00:11:43] But even where it applies I
+think it's not gonna end up, analysis is not
+[00:11:47] gonna end up looking that different
+[00:11:49] from negligence analysis.
+[00:11:51] So the kind of products liability that's
+most that's closest to genuine strict
+[00:11:56] liability is manufacturing defects.
+[00:11:59] So if an individual unit of a
+product comes off a production line,
+[00:12:02] deviating from its specifications
+in a way that makes it unsafe, if it's
+[00:12:06] a lemon, like they sometimes say,
+ then the manufacturer can
+[00:12:11] be held liable regardless of say how
+much they invest in quality control.
+[00:12:14] That's pretty strict.
+[00:12:15] But we're not really gonna have
+manufacturing defects, at least for the
+[00:12:19] software side of AI systems, it's pretty
+easy to make perfect copies of software.
+[00:12:23] And if there were some sort of
+copying error, that's just not the main
+[00:12:27] source of risk that we're worried about,
+most of the risks we're worried
+[00:12:30] about would fall under design defects.
+[00:12:32] And the test for design defects
+is much more negligence-like.
+[00:12:35] So the test that most states
+follow - was there some reasonable
+[00:12:37] alternative design that would've
+prevented this injury? Where
+[00:12:41] reasonableness is a balancing task,
+that weighs, you know, price and
+[00:12:45] performance and other product
+features against safety.
+[00:12:50] And so that's gonna look
+pretty similar to the negligence
+[00:12:53] breach analysis in practice.
+[00:12:55] And so I don't think, uh,
+even when, they access [inaudible]
+[00:12:57] products, 
+that's gonna be a game changer.
+[00:13:00] Okay,
+[00:13:00] but I do think it's important
+to have strict liability.
+[00:13:04] And I have a paper 
+where I go into different, you
+[00:13:07] know, normative theories of tort law, I don't
+have time to get weeds of that here
+[00:13:10] but I show that a wide range
+[00:13:13] of theories converge to support
+strict liability in what I call core
+[00:13:16] cases, which are third party harms or
+harms to non-users non-consenting
+[00:13:21] third parties that arise from
+alignment failures as distinct from
+[00:13:26] capabilities failures and misuse.
+[00:13:29] So, you know, users you know,
+they're consenting to these risks.
+[00:13:34] They can they can decide
+to use a different product,
+[00:13:37] or to abstain from using AI at all.
+[00:13:39] And AI companies have
+incentives to protect users.
+[00:13:42] Even as strict liability because it's
+not gonna be good business if your
+[00:13:45] users are getting always getting hurt.
+[00:13:47] Those incentives don't apply,
+[00:13:49] natural market incentives don't apply
+in the same way to third parties.
+[00:13:53] And so that's a reason to
+think the second versus third
+[00:13:55] party distinction matters.
+[00:13:57] And you know, if a user is doing
+something bad with system it's
+[00:14:02] always less straightforward that, 
+that that should give rise to
+[00:14:07] strict liability for the developer.
+[00:14:10] I think that's, that's a
+much more nuanced case.
+[00:14:12] Again, I get into details of what
+I think the test should be there
+[00:14:15] in that paper.
+[00:14:17] but I think the normative
+consensus that I wanna argue for
+[00:14:20] really only holds up in this, in
+these court cases of third party harms
+[00:14:24] arising from alignment of failures.
+[00:14:26] So an example of alignment of failure
+would be you know, in general
+[00:14:30] these are cases where the system is doing
+something either pursuing a goal
+[00:14:35] that diverges from what the user or
+the developer wanted or through means
+[00:14:39] that the user or the
+developer would disapprove of.
+[00:14:42] So if you get into a Waymo and say
+get me to the the airport, I'm in a hurry.
+[00:14:46] And it decides, you know, that
+means it should ignore traffic laws
+[00:14:49] ends up running over pedestrian,
+that would be alignment failure.
+[00:14:52] Whereas if a sensor fail and
+accidentally runs over a pedestrian,
+[00:14:54] that'll be a capabilities failure.
+[00:14:56] If you tell it you an over
+pedestrian, that would be misuse.
+[00:14:58] Okay,
+[00:14:59] so assuming we think strict
+liability is a good idea we may
+[00:15:04] think, well, how can we get there?
+[00:15:05] I think there's both common law
+pathways and legislative pathways.
+[00:15:11] So first let's talk about common law.
+[00:15:13] So the primary doctrinal pathway
+that courts rely on is the
+[00:15:17] Abnormally Dangerous Activities Act.
+[00:15:19] So you may remember from your torts
+class that if you're blasting with
+[00:15:22] dynamite or putting on a fireworks display
+ or there's a doctrine related
+[00:15:26] to wild animals, if you're keeping
+a pet tiger and someone is injured in
+[00:15:30] a way that arises from the inherently
+dangerous nature of that activity,
+[00:15:35] then you can be held liable regardless
+of the level of care you exercise.
+[00:15:39] So these are activities that are
+both uncommon and still pretty dangerous
+[00:15:44] even when reasonable care is exercised.
+[00:15:46] Only a handful of companies in
+the world train frontier AI models.
+[00:15:50] At the very frontier,
+it's three companies.
+[00:15:52] If you wanna expand it a little
+bit, it's maybe 10 or 12.
+[00:15:55] And the leaders of these
+companies say they don't know how
+[00:15:59] to make them safe and they're trying
+really hard, but they can't promise
+[00:16:02] that their systems will be safe.
+[00:16:03] So I think that's a strong suggestion
+that reasonable care is inadequate.
+[00:16:07] I think it is gonna become
+intuitive to judges to say that
+[00:16:12] a subset of software development is
+abnormally dangerous in the same way.
+[00:16:15] Tthat blasting with dynamite is, 
+but I think if they have an accurate
+[00:16:18] understanding of AI risk, then it does
+follow from the doc.
+[00:16:22] At least in the short term when
+when training these powerful models
+[00:16:29] is uncommon.
+[00:16:30] I think it's likely that in the long
+run you know, algorithm efficiency,
+[00:16:35] compute will increases and,
+and these decreases in compute costs
+[00:16:39] will make it much more feasible
+for a larger universe of people
+[00:16:43] to train these models
+and certainly to deploy them.
+[00:16:45] We might come to a point where AI agents
+that are capable of committing conduct
+[00:16:50] that would be tortious for a human are
+widespread we can no longer say it's economic.
+[00:16:54] Now there is a line of scholarship,
+[00:16:56] there's a prominent paper by Shavell and
+Polinsky that says this uncommonness
+[00:17:00] this requirement doesn't make any sense.
+[00:17:02] it should really be all about
+whether reasonable care is adequate.
+[00:17:04] I'm convinced by those arguments,
+but that paper's been out
+[00:17:07] there for 20 years and courts
+have not been convinced by this.
+[00:17:09] So I don't think should count,
+on courts continuing to apply
+[00:17:13] abnormally dangerous activities,
+once , you know, pretty very
+[00:17:16] powerful AI systems becomes common.
+[00:17:18] And that's where I think vicarious
+liability becomes important.
+[00:17:21] It's gonna be much messier.
+[00:17:23] So the idea with vicarious liability
+is that principals are responsible
+[00:17:27] for the torts of their agents.
+[00:17:29] So responding as peers, it says
+employers are responsible, are liable
+[00:17:33] for the torts of their employees.
+[00:17:35] And so, you know, you have to figure
+out who the principal is for an AI agent.
+[00:17:39] Sometimes that's gonna be the user.
+[00:17:40] Sometimes it's gonna be the developer depending on
+the nature of the tortious conduct.
+[00:17:45] The scope of the agency is
+gonna create all kinds of issues;
+[00:17:47] when are AI systems exceeding
+the scope of their agency?
+[00:17:50] Especially, there's gonna be a
+lot for courts to figure out if they
+[00:17:52] go this way, but we might be forced
+to confront this, at least if we're
+[00:17:55] using a common law pathway.
+[00:17:57] So we might also wanna
+consider legislative pathways.
+[00:18:01] I've been working with
+legislators and a couple states on this.
+[00:18:04] And so the legislation that
+I helped put together, the basic principle
+[00:18:08] is that if an AI system does something
+that would be a tort for a human,
+[00:18:11] someone should be liable,
+[00:18:13] there shouldn't be a liability
+gap there just 'cause there isn't a
+[00:18:16] legal person committing the tort.
+[00:18:17] Other people think we should try
+to make AI systems into legal persons.
+[00:18:23] I think that's an interesting
+risk agenda, but I don't think
+[00:18:25] it's happening right now.
+[00:18:26] So in the meantime, some human or
+some other legal person should be liable
+[00:18:30] and so if it's not the user,
+if the user didn't intend or wasn't
+[00:18:33] negligent with respect to the conduct
+and no intermediary did fine tune or
+[00:18:37] scaffold the model, either intended
+or was negligent with respect to
+[00:18:40] the system's tortious conduct, then
+the buck should stop the developer
+[00:18:44] and they, they should be liable
+regardless of the level of care they exercised.
+[00:18:48] And then the legislation also
+includes an affirmative defense that
+[00:18:52] would apply to background law, including
+negligence and products liability.
+[00:18:55] If an AI system is substituting
+for some human function
+[00:19:00] and meets the human standard of
+care then this would be an
+[00:19:04] affirmative defense against liability.
+[00:19:06] This is designed to address
+contexts like autonomous vehicles or
+[00:19:11] certain medical applications where it's
+possible products liability would lead
+[00:19:15] you know, an EV maker to
+be liable for a collision.
+[00:19:19] Even, you know, saying that maybe there's
+some reasonable alternative design that
+[00:19:22] would prevent this collision,
+even if a human driver would not be held
+[00:19:25] negligent, I think that would be bad.
+[00:19:27] I think it would slow deployment
+of technology that on average
+[00:19:30] are preventing many injuries and deaths.
+[00:19:33] and so what's really trying to do
+is level the playing field on both sides
+[00:19:36] so we're not creating a liability gap,
+but we're also not holding an assets
+[00:19:40] to a higher standard than we're holding
+humans to.
+[00:19:43] Okay,
+[00:19:44] so that's whether
+it should be liability at all.
+[00:19:48] There's also this problem even
+if you could hold someone legally liable,
+[00:19:53] whether you could practically enforce
+[00:19:56] a damage in the court
+[00:19:57] and so I want to argue that
+compensatory damages are inadequate
+[00:20:02] because under plausible assumptions,
+most or at least much of the
+[00:20:07] risk comes in these tail risk scenarios,
+ where compensation is not gonna be
+[00:20:12] practically feasible either because
+ of sort of ordinary judgment-proofness
+[00:20:17] problem and the defendant doesn't
+have enough money, they're bankrupt
+[00:20:19] even if you introduce insurance,
+you're gonna have some risks that
+[00:20:23] are uninsurable, that are too big
+to write an insurance policy for,
+[00:20:26] and then more extreme scenario, the
+legal system is no longer functioning
+[00:20:29] or, you know, everyone's dead.
+[00:20:31] There's no one to sue or be sued.
+[00:20:32] And so obviously you're not gonna
+have a lawsuit over agreement extinction.
+[00:20:36] The question is, if they
+don't expect to be liable for that, if
+[00:20:40] the generators of these extreme risks
+don't expect to be liable, they only
+[00:20:43] expect to pay compensatory damages
+[00:20:45] when it's practically enforceable, 
+that's gonna substantially under deter
+[00:20:50] the underlying risky activity,
+it's gonna cause them to underinvest
+[00:20:54] in safety.
+[00:20:55] Okay, so a lot of
+people will conclude.
+[00:20:57] that means we just can't rely
+on on ex post liability
+[00:21:01] to handle uninsurable risks.
+[00:21:03] I think that's wrong.
+[00:21:04] I think we can mostly solve this problem,
+ iin the first instance.
+[00:21:08] We can address
+the, the judgment proofness
+[00:21:10] problem with liability insurance
+[00:21:11] that can get you up to
+the maximum insurable risk.
+[00:21:14] And then we can use punitive damages
+to get at the uninsurable risks.
+[00:21:18] So the basic idea here is if a system
+causes some harm small enough to
+[00:21:24] be practically defensible, but it looks
+like it could have been a lot worse,
+[00:21:28] then we should hold the generators
+of that risk liable not just for
+[00:21:32] the harm they actually caused, but
+for the expected value of the
+[00:21:35] uninsurable risk that we generated.
+[00:21:37] And so yeah, these
+are a cases of associated harm.
+[00:21:42] We particularly want
+to load punitive damages
+[00:21:44] on the types of harms for which it
+is true that the most cost effective steps
+[00:21:50] you would expect generators of these
+risks to take to mitigate them would also
+[00:21:54] tend to mitigate the uninsurable risks.
+[00:21:57] And so an example here, 
+say an AI system were tasked
+[00:22:01] with running a clinical trial
+for risky new drug, it has trouble
+[00:22:05] recruiting participants honestly,
+and so it resorts to some combination
+[00:22:09] of deception and coercion
+to get people to participate.
+[00:22:12] They suffer nasty health
+effects and they sue.
+[00:22:17] And so it looks like
+we had a misaligned system.
+[00:22:19] It wasn't doing what its, you know,
+users oor creators wanted it to do.
+[00:22:23] but for whatever reason it
+had narrow goals or short time
+[00:22:27] horizons or poor situational awareness,
+[00:22:29] it was willing to reveal its
+misalignment in this non catastrophic way.
+[00:22:33] But probably the people who deployed
+it and the people who trained
+[00:22:35] it couldn't have been confident
+[00:22:37] ex ante
+[00:22:38] that if it failed, if the proofness
+aligned, that
+[00:22:42] it would not do something much worse.
+[00:22:43] And so a court should be asking the
+question, what would a reasonable
+[00:22:46] person in the shoes of the of
+the developer deployer at the time
+[00:22:51] they made the critical tortious
+decision, what should they have
+[00:22:54] thought the uninsurable risks were?
+[00:22:56] And we should try to hold
+them accountable for that.
+[00:22:58] Okay.
+[00:22:59] There's a number of challenges
+[00:23:01] to implementing this framework.
+[00:23:03] It's easy to say we should
+base punitive damages on the
+[00:23:06] magnitude of uninsurable risks.
+[00:23:07] Much harder to estimate
+what those are in practice.
+[00:23:10] As I suggested, at the top,
+there's a lot of disagreement
+[00:23:12] about how big these risks are.
+[00:23:13] We'll have more information
+when we get these warning shots.
+[00:23:16] They'll get, they'll put
+us in a better epidemic position,
+[00:23:18] but it still won't be easy.
+[00:23:19] It will still be controversial and
+difficult to make those estimates.
+[00:23:22] In later work
+[00:23:23] I've tried to suggest
+some methods, but I think
+[00:23:25] this is not a solved problem.
+[00:23:27] As I've suggested also,
+there's significant legal barriers
+[00:23:31] under current doctrine at least.
+[00:23:33] If the abnormally dangerous
+activities doctrine is not extended in
+[00:23:37] the way that I think it should be to
+hold AI companies liable at all.
+[00:23:41] And so I think there's a strong case
+for legislation to make it
+[00:23:44] clear the company should expect
+to be held liable when their
+[00:23:47] systems engage in tortious conduct.
+[00:23:49] There's much more formidable
+barriers to the sort of punitive
+[00:23:53] damage than I'm calling for.
+[00:23:55] So longstanding punitive damages
+doctrine requires malice or reckless
+[00:23:59] disregard on the part of the defendants
+in order for plaintiff to
+[00:24:03] be eligible for punitive damages, I
+do not expect courts to change their
+[00:24:07] mind about this because I tell them to.
+[00:24:09] and so I think it's very likely
+that legislation would be needed
+[00:24:12] to implement the kind of punitive
+damage I'm calling for both
+[00:24:15] 'cause of this malice requisition
+guard requirement also because
+[00:24:19] there's no real precedent for basing
+punitive damages on these sort of
+[00:24:22] speculative counterfactual harms,
+[00:24:24] usually we rely on
+ex ante regulation to handle those.
+[00:24:28] Like
+the nuclear power context,
+[00:24:33] I suggest that some reasons why I
+don't think that will work well here, but
+[00:24:36] that is what we have traditionally done.
+[00:24:37] There's also potentially
+some constitutional barriers
+[00:24:40] under the due process
+[00:24:41] clauses of the 5th and 14th amendments.
+[00:24:43] I think in the common
+law context that's likely
+[00:24:47] to be a significant barrier.
+[00:24:49] I think in the context of
+legislative punitive damages.
+[00:24:51] I think that would probably give
+adequate notice such that
+[00:24:55] it would mostly obviate due process
+[00:24:57] challenges, but that's
+worth being aware of.
+[00:25:00] Finally there's this weird feature
+of tort law that you may have learned about.
+[00:25:06] In cases involving mortality the value of
+[00:25:10] decedent's life to them is not compensable.
+[00:25:13] The fact that it kind of sucks, no
+one would be alive, that's
+[00:25:16] not something you can actually sue for.
+[00:25:18] The people who who are
+still alive that are losing
+[00:25:21] something because you're no longer alive,
+[00:25:23] they can sue for what they lost
+and your state can sue for harms
+[00:25:28] you suffered while you were alive.
+[00:25:29] But if you take this like to
+its logical conclusion, then quick
+[00:25:33] and painless human extinction
+[00:25:34] would produce zero damages because there
+would be no survivors that lost anything.
+[00:25:38] I don't think courts would
+take that that seriously, but
+[00:25:40] it's just worth being aware of.
+[00:25:44] Yeah, and we probably
+don't want the punitive
+[00:25:46] damage award to hinge on that.
+[00:25:47] And so I don't know
+quite what the solution is.
+[00:25:49] I think mortality should
+be the, you know, the loss of
+[00:25:54] life to the decedent should
+be compensable for other reasons
+[00:25:58] but again, courts 
+and the legislatures that
+[00:26:01] created these wrongful death statutes
+[00:26:02] have set the policies
+the way they have.
+[00:26:05] And so, it's worth being
+aware of that potential issue.
+[00:26:08] Okay.
+[00:26:08] Finally even if I get everything
+I'm asking for here I still think
+[00:26:12] this doesn't solve all AI risk problems
+[00:26:14] and so there's still
+some roles for other
+[00:26:17] policies.
+[00:26:17] So there might be some independent
+market failures independent
+[00:26:21] of this risk externality problem.
+[00:26:23] S even if you compel generators
+via AI risk to fully internalized
+[00:26:27] the risks that their systems cause
+harm, if they make some breakthroughs
+[00:26:30] in the lab in our safety science,
+[00:26:32] they're probably gonna
+be copied by other labs.
+[00:26:34] It's gonna be hard for
+them to keep that secret
+[00:26:37] and they might not even want to
+[00:26:39] and so that
+makes their research
+[00:26:43] non-rival and not excludable.
+[00:26:44] That's public good.
+[00:26:46] And so another standard
+defining economics that public
+[00:26:48] goods tend to be under produced.
+[00:26:50] So you might want some kind of subsidy,
+for safety research.
+[00:26:54] There might be race dynamics
+or winner take all expectations
+[00:26:58] that would cause actors
+to try to rush ahead.
+[00:27:01] In some way it's independent of
+the externality of market failure.
+[00:27:04] I don't think this has been super
+well specified, but I think there's
+[00:27:07] a plausible argument for that.
+[00:27:08] You might need additional
+policies to constrain that.
+[00:27:11] Other countries might fail
+to take my recommendations right as
+[00:27:15] you could have regulatory arbitrage
+[00:27:17] and so we do need some kind
+[00:27:19] of international coordination.
+[00:27:20] I think that's true.
+[00:27:21] that's a critique that could be leveled against any
+regulatory proposal. In principle
+[00:27:25] you could have the international agreement
+be that we all agreed to implement
+[00:27:27] something like this to our framework.
+[00:27:29] But it's still
+something to be aware of.
+[00:27:31] I think a more core issue
+is that there might be uninsurable risks
+[00:27:35] for which warning shots are unlikely.
+[00:27:37] So say you think the maximum insurable
+risk is a trillion dollars, it's
+[00:27:40] probably lower than that, but pick a
+nice round number and you're trying
+[00:27:43] to internalize the risk of say,
+a $10 trillion casualty event.
+[00:27:48] wWat you would need whatever
+the warning shot is for that to
+[00:27:51] be at least 10 times as likely
+[00:27:53] as the actual
+catastrophe if you're going to
+[00:27:57] fully internalize that risk.
+[00:27:58] And you need that for
+every point along the risk curve.
+[00:28:03] So if there's also some probability of
+a hundred trillion dollars risk,
+[00:28:06] all the way up to human extinction,
+you would need the warning
+[00:28:09] shots to be enough to internalize
+the full area under that risk curve.
+[00:28:12] And we might just be in a more
+hostile world now, but that's
+[00:28:14] not the shape of the events
+[00:28:16] of probably distribution.
+[00:28:19] Now even if that's true,
+it might be that we get most
+[00:28:22] of the risk mitigation we need.
+[00:28:24] 'cause the things you're trying,
+the precautionary measures you're
+[00:28:27] trying to incent are not so costly.
+[00:28:30] Most of the risk mitigation
+comes from the first say 25%.
+[00:28:33] Of internalizing
+risk.
+[00:28:36] I think that might be true
+[00:28:37] but I don't think we
+should be confident about that.
+[00:28:40] And so you might want some
+kind of backstop approval
+[00:28:44] regulator whose main job, I'll
+actually get to that in a minute.
+[00:28:47] So finally there's this
+risk of government misuse.
+[00:28:51] Governments I think are not gonna
+be well deterred by the threat of
+[00:28:54] liability, both because of sovereign
+immunity issues and because I
+[00:28:57] think government actors don't respond
+to economic incentives in the
+[00:29:01] same way that private sector actors do.
+[00:29:03] Okay.
+[00:29:04] So what does that
+suggest about the roles for other
+[00:29:07] policies aside from liability?
+[00:29:09] I think there's three roles
+they can play.
+[00:29:11] So first they can be what
+I call supportive policies.
+[00:29:14] So these are policies that help you
+implement a robust liability regime.
+[00:29:18] The two most important I
+think are sort of information
+[00:29:22] preservation and transparency policies
+that make it easier to attribute
+[00:29:25] harms ex post to particular actors.
+[00:29:27] that would just, you know, make
+it more viable to actually assess
+[00:29:30] causation and assign liability and
+then liability insurance requirements
+[00:29:34] and that we can mitigate, uh,
+to the extent we can the judgment proofness
+[00:29:38] this problem through insurance and
+only rely on punitive damages
+[00:29:41] for genuinely uninsurable risks.
+[00:29:44] Then there is complimentary policies.
+[00:29:48] Which are designed to solve problems
+that liability is just fundamentally
+[00:29:51] poorly positioned to solve.
+[00:29:53] And so I
+mentioned the uninsured risks without
+[00:29:57] warning shots or at least for
+warning shots are insufficiently likely.
+[00:30:00] You might want a backstop
+approval regulator.
+[00:30:02] Maybe their main job is to
+decide how much insurance
+[00:30:05] an AI company needs before they can
+either train or deploy a specific model.
+[00:30:09] but if they assess that that
+a model presents uninsured risks
+[00:30:14] for which warning shots are unlikely,
+then maybe they would be able to
+[00:30:17] say, well, we're gonna put various
+restrictions on how you can deploy
+[00:30:20] this model and how you can train it.
+[00:30:21] and maybe we can just
+refuse approval at all if they
+[00:30:24] think the risks are too high.
+[00:30:26] Similarly for the problem of
+government misuse my colleague
+[00:30:30] at the Institute for Law and AI Cullen O'Keefe
+and some colleagues have a paper,
+[00:30:34] weighing out this law following AI
+research agenda that AI systems should be
+[00:30:38] programmed to refuse unlawful orders.
+[00:30:40] I think that would go a long way,
+to mitigate
+[00:30:44] the risk of government misuse.
+[00:30:45] There's a lot of details to
+still be worked out there.
+[00:30:47] You'd have to have more
+solutions to technical alignment
+[00:30:50] than we have right now.
+[00:30:51] I think that's a
+promising pathway.
+[00:30:54] Finally, there's what I
+call substitutionary policies.
+[00:30:56] So these are policies that I think
+are not first best but that,
+[00:31:02] given the substantial barriers to
+implementing the sort of robust liability
+[00:31:06] framework I call for, might be
+warranted in scenarios where we don't
+[00:31:10] get liability insurance requirements or
+punitive damages or strict liability.
+[00:31:13] Then a lot of the risk
+mitigation weight that
+[00:31:18] we're expecting liability to
+carry it would not be doing.
+[00:31:22] And so then other policies might
+be justified even if they're
+[00:31:25] less efficient or there's other
+barriers that they might think about.
+[00:31:28] Okay.
+[00:31:29] So just to recap,
+these are the five propositions
+[00:31:32] I tried to convince you of.
+[00:31:34] The big takeaways.
+[00:31:35] I think we should have strict liability
+primarily on and abnormally dangerous
+[00:31:39] activities basis supplemented by
+vicarious liability in the long run.
+[00:31:43] To address the judgment proofness
+problem we should rely on
+[00:31:49] liability insurance requirements and
+punitive damages in near miss cases that
+[00:31:54] are associated with uninsurable risk.
+[00:31:56] And liability
+is the primary tool which rely on in this
+[00:32:02] domain of confidence, but that domain is
+limited and we might need other tools
+[00:32:05] to patch the gaps that it leaves.
+[00:32:07] Alright.
+[00:32:07] I'm happy to take your questions.
+[00:32:16] [applause]
+[00:32:17] - Thank you for a very interesting talk.
+[00:32:18] I'll ask two questions before
+turning it over to the audience.
+[00:32:21] So audience, get your questions ready.
+[00:32:27] Can you give us an example of the
+type of large scale risks that your
+[00:32:30] liability regime would help prevent?
+[00:32:32] - Yeah, so I think the specific large
+scale risks are hard to project
+[00:32:37] where, you know, people who are
+building systems are saying that they're
+[00:32:41] trying to build something that is more
+capable by a large margin than humans
+[00:32:45] across all domains of human capabilities,
+at least cognitive capabilities.
+[00:32:49] And so I think, you know, almost
+by definition, I can't tell you
+[00:32:53] the things that they might do, 
+because they're smarter than me.
+[00:32:56] So I think
+the cases that are warning shots
+[00:33:00] are easier to characterize.
+[00:33:01] I think in general the worry
+that when yyou're building
+[00:33:04] something and you're not exactly sure
+what its goals are and therefore
+[00:33:07] whatever its goals are, might be useful
+to like amass a lot of resources.
+[00:33:11] they might be
+worried that we're gonna.
+[00:33:14] Reprogram them or replace them
+with a different AI system
+[00:33:16] that has different goals, right?
+[00:33:18] They might wanna stop that.
+[00:33:19] iIt seems like that
+could go badly for us.
+[00:33:21] I don't know exactly how it would,
+ there's lots of people who, who
+[00:33:24] care to speculate more about that.
+[00:33:26] I mean part of the
+reason I like this liability approach,
+[00:33:30] is it doesn't require you to
+prejudge those kinds of questions.
+[00:33:33] Syaing, well,  we
+have a lot of uncertainty of what
+[00:33:35] the risks are, we don't know exactly
+what the risk mitigation measures are.
+[00:33:38] Let's give the people who are
+generating these risks, the
+[00:33:41] incentive to mitigate that.
+[00:33:42] and so that, that's, that's
+mostly the way I think about.
+[00:33:45] - The current administration and
+many others are quite concerned
+[00:33:49] that AI regulation may stifle
+the tremendous potential of AI..
+[00:33:53] - Mm-hmm.
+[00:33:53] - or set us back back in the race with China.
+[00:33:55] Is there a way in which your proposal
+can be made palatable to them?
+[00:33:58] - Yeah, so there's a few
+things I would say there.
+[00:34:00] one is on the China race angle.
+[00:34:04] I think this is like somewhat
+overrated as a reason to not have
+[00:34:08] domestic AI regulation of some kind.
+[00:34:11] Mostly what China is doing
+right now is fast following.
+[00:34:14] and so they're not mostly
+pushing the frontier on research.
+[00:34:17] I think if we went slower, that would
+mostly mean that China goes slower
+[00:34:21] and that was before we
+had strong export controls.
+[00:34:24] Clearly how
+strongly those export controls
+[00:34:27] are being enforced right now.
+[00:34:28] I think it is slowing
+China's ability to race ahead
+[00:34:31] and so I don't think we have
+to worry about this too much.
+[00:34:34] Now it's true that AI
+ produces a lot of benefits.
+[00:34:38] and that's why I don't favor
+something like a pause or, you
+[00:34:42] know, attacks on AI development.
+[00:34:44] Generally people say we
+should tax data centers.
+[00:34:46] I think if your
+argument is that AI is gonna produce
+[00:34:50] positive externalities and we
+need to subsidize it, I think that's
+[00:34:53] plausible and it seems like a weird way
+to subsidize it to say, well, you're
+[00:34:56] all externalize the risks you generate
+[00:34:58] especially when the risks are not
+that tightly coupled with the benefits
+[00:35:01] and that's particularly
+true for alignment failures.
+[00:35:05] And so in a paper I have on
+this, I get into whether there should
+[00:35:08] be strict liability for misuse.
+[00:35:09] And there I think the risks are
+much more tightly coupled with the
+[00:35:13] benefits if you're, if particularly
+for open weight systems, right?
+[00:35:16] It's really hard if, if
+you're at least a powerful open weights
+[00:35:19] model to, to mitigate those risks.
+[00:35:21] Any safeguard that you
+train in can be trivially
+[00:35:25] traded away with or fine tuned
+away with modest amounts of compute.
+[00:35:29] And so if you hedge strict
+liability for any time someone
+[00:35:34] misuse the system then you might,
+you might stifle, you know, deployment of,
+[00:35:39] of systems that are, are also producing
+a lot of benefits that are captured
+[00:35:43] by, by the company that releases them.
+[00:35:45] and so I think
+that's much tricky, but when we're
+[00:35:47] talking about alignment risk.
+[00:35:49] there, there are lots of tools
+that are available to, to sort of
+[00:35:51] pull apart the, the benefits from the
+risks, and I just want to give them,
+[00:35:55] give the generators of the risk,
+those risks, incentives to do that.
+[00:35:58] So it's also true that, you know,
+electricity and, and the fossil fuel
+[00:36:01] economy produces a lot of benefit.
+[00:36:02] It doesn't mean we shouldn't
+internalize the costs.
+[00:36:04] - Okay.
+[00:36:05] Audience questions.
+[00:36:09] - I have a question.
+[00:36:10] Okay.
+[00:36:11] So I'm wondering whether large
+AI companies' behavior might not be
+[00:36:19] modeled as just like profit seeking.
+[00:36:21] In particular, it seems like
+the large three are all, uh,
+[00:36:26] like modeling, like winning the AI
+race as like capturing like a, like
+[00:36:31] capturing all value in the world.
+[00:36:33] Or maybe they have other motivations
+like, you know, power seeking motivations
+[00:36:37] and not just profit seeking motivations.
+[00:36:39] Maybe they have like moral commitments,
+you know, if they think like,
+[00:36:41] you know, we need to be the one
+to win the race so that we
+[00:36:45] make the future of AI go well.
+[00:36:47] In that case,
+[00:36:53] I'm wondering whether they might just like
+bite the bullet and, and just like pay
+[00:36:56] out lots of damages if by
+doing so they can go faster than their rivals.
+[00:37:03] So the key question becomes
+like, whether it's like money is
+[00:37:08] the bottleneck to faster progress
+or whether it's something else.
+[00:37:11] Yeah.
+[00:37:11] It's like they maybe to go faster,
+they would have to go slower and
+[00:37:15] avoid paying damages so they can
+buy more chips, something like that.
+[00:37:18] But if the bottleneck is actually like.
+[00:37:19] The political relationships you have
+with Washington or Nvidia or like
+[00:37:25] the number of you know, top tier
+ML researchers you have then it might
+[00:37:31] not incentivize them the right way.
+[00:37:33] Does that make sense?
+[00:37:34] - Yeah.
+[00:37:34] So I think if it were just the leaders
+of these labs unilaterally deciding
+[00:37:39] these things, that I think that
+critique would be much more biting,
+[00:37:43] When we're talking about whether
+you have to get liability insurance.
+[00:37:47] the insurance companies underwriting
+these policies, they're deciding how,
+[00:37:50] how risky they think your activities
+are, and then you need to, if that
+[00:37:54] policy is affordable, you know, you
+either need to convince the insurance
+[00:37:56] company the risk isn't too high, or
+you convince  your investors right,
+[00:38:00] that it's worth you know, putting
+up enough capital to pay for that.
+[00:38:04] Right?
+[00:38:04] I think that that provides like, you
+know, put some other more cautious
+[00:38:08] decision makers in,
+into the, into the pipeline.
+[00:38:12] I also think it's important, 
+for sort of sort of influencing
+[00:38:16] internal debates within these companies.
+[00:38:18] So I think say you're in a
+situation where a system is
+[00:38:24] submitted for an eval, say by external
+organization like Meter, right?
+[00:38:29] And Meter says you
+shouldn't deploy the system.
+[00:38:31] You know, we would, you know, it
+has dangerous capabilities and
+[00:38:34] we're not confident it's aligned.
+[00:38:35] Right.
+[00:38:36] And the question is what, what
+the lab should do about that.
+[00:38:38] Right.
+[00:38:39] They might and, and there's like,
+I think they wouldn't just deploy,
+[00:38:42] I don't think they would do that
+under, under, under the status quo.
+[00:38:45] Right.
+[00:38:45] But like how costly are the things
+you're gonna do to make it safe?
+[00:38:49] I think they probably wouldn't even
+just do the obvious thing or like the
+[00:38:52] dumb thing, which is like train away the
+specific or fine tune away, this very
+[00:38:56] specific failure mode that the experience.
+[00:38:58] But there, there's, there's like,
+how far do you wanna wind it back?
+[00:39:02] What kind of adversarial
+training do you want to do?
+[00:39:04] Snd there's gonna be
+voices pushing for the more
+[00:39:08] expensive, annoying thing that
+would buy more risk mitigation.
+[00:39:12] I think this kind of
+proposal empowers them.
+[00:39:15] Snd so I think that's a big part
+of what I'm going for here.
+[00:39:19] But I do think, you know, uh,
+part of your question gets at
+[00:39:22] this like race dynamics issue.
+[00:39:23] So maybe there's some independent.
+[00:39:25] Whether it's market failure or something
+else it's not fully captured by
+[00:39:28] either of the public goods problem or
+or the externality problem.
+[00:39:34] I don't dismiss that.
+[00:39:35] and so I think it's worth some
+attention to what, what other policies
+[00:39:39] might be needed to address that.
+[00:39:42] - Thank you.
+[00:39:43] - Yeah.
+[00:39:44] Thank you very much for your
+talk and your presentation.
+[00:39:46] on one of your last slides, you had
+this like complimentary policy that you
+[00:39:50] were saying, you know, law following AI.
+[00:39:52] Mm-hmm.
+[00:39:52] To me that sounds a lot like
+ex ante regulation, right?
+[00:39:55] Yeah.
+[00:39:55] we decide what kind of frameworks
+we set out and we decide, for instance,
+[00:39:59] as society that we don't want AI from
+a surveillance, et cetera, et cetera.
+[00:40:02] Mm-hmm.
+[00:40:03] So I wonder what's wrong with
+combining both approaches?
+[00:40:05] Because I don't see why, you know.
+[00:40:07] strict liability
+is the only way to go.
+[00:40:11] I see the benefits of that, but
+I also see the benefits of ex
+[00:40:13] anti-regulation because I know we
+can't foresee the whole future, but we
+[00:40:17] can foresee certain futures, right?
+[00:40:19] And setting out clear that we don't
+want them to happen to me feels like
+[00:40:23] building a fence around my house to
+even prevent transparency, right?
+[00:40:26] So why shouldn't I do that?
+[00:40:27] - Yeah, so I, I, I think I tried to say
+that there are some forms of ex ante regulation that
+[00:40:31] compliment liability, to solve
+problems that liability can't solve.
+[00:40:35] I think what I'm saying
+is for the problems I think
+[00:40:38] liability is well situated to
+solve, which rely primarily on that.
+[00:40:42] And that's not to say even there,
+ there's what, you know, what
+[00:40:44] I call supportive policy, right?
+[00:40:46] So a lot of what's on the table right now
+are sort of transparency requirements.
+[00:40:49] I think those are pretty low
+cost and are worth having alongside
+[00:40:52] liability, so I'm not
+opposed to all forms of ex ante regulation.
+[00:40:56] I think on the margin we should be
+pushing more on liability than on
+[00:40:58] other, other directions, and I think
+that there's like a misallocation
+[00:41:01] of, of policy advocacy attention.
+[00:41:04] -Thanks.
+[00:41:05] - In the back.
+[00:41:08] - Could you expand a little
+bit on the uncommon activity
+[00:41:12] requirement for abnormally
+abnormally dangerous activities?
+[00:41:15] When I think about blasting, I think about
+how the benefits of blasting are captured
+[00:41:21] only by a small number of blasting firms.
+[00:41:23] But when I think of Frontier AI
+development, I think of
+[00:41:27] open I advertising, and they
+have a billion people who use
+[00:41:30] ChatGPT and that seems to me like
+[00:41:33] AI is actually an
+extremely common activity.
+[00:41:37] - Yeah.
+[00:41:37] So I think using AI is common.
+[00:41:39] I think developing the
+systems is not right.
+[00:41:41] And if you think most of the risk
+comes from the new, from training a new
+[00:41:45] model that might be misaligned, that
+on first deployment before, it's why
+[00:41:48] we deploy might do something bad.
+[00:41:50] which is I think what most people in
+the Irish community tend to think,
+[00:41:54] then, then that that's not a common activity.
+[00:41:57] and so you know, so driving is
+an example of an activity that id we didn't
+[00:42:01] have this uncommonness requirement
+would, would probably be treated as
+[00:42:04] a normally dangerous, but because
+like more than half of people drive,
+[00:42:07] district liability doesn't apply.
+[00:42:10] if you were, if you were
+inventing some like new kind of car.
+[00:42:14] Right.
+[00:42:15] that like might explode and
+like kill 30 people the first
+[00:42:18] time someone tried to drive it.
+[00:42:19] I think that might be true
+as abnormally dangerous.
+[00:42:21] And then once, you know, millions
+of people were driving it that
+[00:42:24] their use of the system would not be
+subject to the same liability issue.
+[00:42:28] - Do you think that the designing of
+dangerous cars like the Ford Pinto has
+[00:42:33] been addressed under a normally
+dangerous activities in the past?
+[00:42:37] - No, I mean, so the Ford Pinto
+is mostly, was mostly dangerous
+[00:42:40] to its drivers.
+[00:42:42] I think product liability
+worked pretty well there.
+[00:42:44] I think what's different here is
+the risks like that, that are, are, you
+[00:42:48] know, so obviously a car, if something
+goes wrong with it, can, can injure a
+[00:42:51] few people in the immediate vicinity.
+[00:42:54] We're talking about much larger scale.
+[00:42:56] with AI again you know, if
+you take the lowest median from the
+[00:42:59] FFRI study more than a one, two, or
+75 chance of, of human extinction.
+[00:43:03] I think that's much much
+more extremely we're talking about
+[00:43:06] with, with designing a new car.
+[00:43:09] - Thank you.
+[00:43:11] - Do you wanna say anything
+about where civil liability and even
+[00:43:15] regulation might be inadequate and we
+need to think about criminal liability?
+[00:43:20] - Yeah,
+[00:43:20] so criminal liability
+is another solution to the
+[00:43:23] judgment proofness problem.
+[00:43:28] I think it's less likely
+to, to happen in this context.
+[00:43:30] I think the idea that, you know,
+if something goes wrong and you're
+[00:43:32] gonna throw Sam Altman in jail, I
+think, you know, we see from the,
+[00:43:36] you know, what's happened in,
+you know, financial crisis
+[00:43:40] that there weren't
+many people that ended up in jail.
+[00:43:43] I, I'm not a criminal law expert,
+so, so I don't I I can't give
+[00:43:48] you a full answer to why that is.
+[00:43:50] but I think it's worth
+other people exploring.
+[00:43:53] But I'm, I'm relatively pessimistic
+that it's gonna end up being an
+[00:43:56] important part of the solution.
+[00:43:57] - But we're not only talking about Sam
+Altman at this point there maybe
+[00:44:02] talking about someone that, you know,
+the mythical fellow in his basement
+[00:44:07] or in his bedroom.
+[00:44:09] Uh.
+[00:44:10] hacking away or
+producing an agent Yeah.
+[00:44:13] That they're letting free on the internet.
+[00:44:15] - Yeah.
+[00:44:16] So I, I will say you could surely
+have criminal liability for, for
+[00:44:20] the user in this use scenarios,
+ where, you know, say, you know,
+[00:44:24] someone uses an AI system to make a
+bio weapon or something like that.
+[00:44:28] my framework was mostly
+focused on the developers.
+[00:44:31] Now, if the developer intentionally
+created something for that purpose.
+[00:44:34] Then I think criminal liability
+would almost certainly attach.
+[00:44:36] I don't think most of the risk
+is gonna come from people who are
+[00:44:40] trying to make safe systems, 
+but just not being cautious enough.
+[00:44:47] Yeah.
+[00:44:47] - And on that, I'm sure you're familiar
+with this recent study where three
+[00:44:51] different models were pitted against
+each other and all decided to go nuclear
+[00:44:56] in you know, a set of
+scenario like, like war games.
+[00:44:59] And I was just wondering, you know,
+what your thoughts on that are, like in
+[00:45:03] the context of existential risk if we
+already see such, you know, scenarios
+[00:45:07] playing out like. - Yeah, so I, I suggested
+in my talk that, you know, liability
+[00:45:12] is not gonna be well situated to govern
+to governing government use, right?
+[00:45:15] So if it's like, you know.
+[00:45:17] AI systems are advising Pentagon or
+the President on what we should do in
+[00:45:21] some sort of nuclear standoff, right?
+[00:45:23] I don't think a tort lawsuit's
+gonna handle that very well.
+[00:45:26] I think, you know, you're gonna
+need sort of other, other tools that
+[00:45:30] are outside the range of my expertise
+[00:45:32] but I think that's definitely
+something people should be worried about.
+[00:45:35] Hmm.
+[00:45:36] - All the way in the back.
+[00:45:37] Yeah.
+[00:45:38] - I just wanted to ask like how
+amenable you think courts are to like
+[00:45:42] applying strict liability for AI?
+[00:45:44] Like, one thing I was thinking about was
+like, for example, like during like the
+[00:45:47] tobacco litigation courts' perception
+on using strict liability for
+[00:45:51] product liability for
+tobacco, like shifted a lot over time.
+[00:45:55] So I'm thinking I, I'm, I'm wondering
+if there's like similar analogs
+[00:45:57] that can be applied here and what
+you think the current status is?
+[00:46:00] - Yeah, so I think the biggest gap
+right now is that judges don't have
+[00:46:05] like the same understanding of the
+risks that, that I do certainly.
+[00:46:08] and that, I think
+that's the biggest barrier.
+[00:46:11] I think the doctrinal
+hurdle is, is much lower
+[00:46:13] and so I'm actually involved
+in project to educate judges about
+[00:46:16] ai AI capabilities and risks.
+[00:46:17] We're gonna hold the first
+session at Stanford next weekend.
+[00:46:20] but  I think, yeah, once that
+credit is laid, if they were convinced
+[00:46:25] that there's a one in 275 chance that
+[00:46:27] everyone's gonna die of
+this century from AI
+[00:46:30] that then the doctrinal
+move would be pretty straightforward.
+[00:46:34] but that, that getting them
+there is, is the, is the big hurdle.
+[00:46:40] - I wanted to ask, say you're
+successful and there's a bunch of
+[00:46:44] news articles like on the internet,
+ that's like new AI liability
+[00:46:47] system revolutionizes everything.
+[00:46:49] Assuming the kind of AI that
+would create an existential risk, if.
+[00:46:54] A sufficiently kind of capable AI
+can deceive and kind of conceal small
+[00:46:59] misalignments because revealing them
+triggers massive period of damages.
+[00:47:03] Aren't you kind of perversely
+creating an incentive for that AI to
+[00:47:06] select for more deceptive systems?
+[00:47:08] - Yeah, so I mean, that assumes
+the AI like doesn't want it's
+[00:47:11] developer to be held liable.
+[00:47:13] But I take your more general
+point that by,
+[00:47:17] you know, there's a sort of,
+[00:47:20] you're
+trying to use a proxy, right?
+[00:47:23] and so you might deter
+the warning shots without actually
+[00:47:27] mitigating the un trouble risk.
+[00:47:29] And so I actually have a slide on this.
+[00:47:31] Um this is the formula for how I
+think punitive damages should be assigned.
+[00:47:36] so the blue area
+is the uninsurable risk, the
+[00:47:40] red area, the insurable risk.
+[00:47:42] S n is the uninsurable risk,
+but one one important prep.
+[00:47:46] And so, so C is the, is the,
+the compensatory damages.
+[00:47:49] CP is the plaintiff's share.
+[00:47:50] CT is the total expected compensatory
+damages from some deployment,
+[00:47:55] but then there's this elasticity primer.
+[00:47:57] And so we wanna so that the
+elasticity of the plaintiff's harms
+[00:48:01] compared to the average elasticity.
+[00:48:03] And we wanna load punitive damages on the
+cases that are most elastic with the
+[00:48:07] uninsurable risk where elasticity
+is what I was describing earlier.
+[00:48:11] It's the source of harms that
+if you would tried really hard to
+[00:48:15] prevent them, things you would do
+would tend to be the uninsurable risk.
+[00:48:18] If that's not true, then punitive
+damages aren't gonna be helpful.
+[00:48:21] And so that's how I
+would think about that.
+[00:48:23] If it's the case that just in general
+elasticities are very low, then I think
+[00:48:27] that is a critique of, of this framework.
+[00:48:30] I tend to think that's
+not how it is, but I think
+[00:48:33] that's an empirical question.
+[00:48:40] - Okay.
+[00:48:40] I think that's all.
+[00:48:41] Would you like to make
+any of your remarks?
+[00:48:43] - No, thank you all for coming.
+[00:48:51] - Thank you for coming
+[00:48:52] Professor Weil.

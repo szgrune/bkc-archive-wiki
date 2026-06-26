@@ -1,0 +1,2277 @@
+[00:00:00] (crowd members chattering)
+[00:00:01] - Hi everybody, my name is
+Meg, I'm the senior director
+[00:00:04] of the Applied Social Media Lab.
+[00:00:09] - And I would love it if you would
+[00:00:12] wrap up your conversations
+and pay attention to me.
+[00:00:15] Thank you very much.
+[00:00:16] My first order of duty here
+is to introduce you to Nicole,
+[00:00:20] one of our UX designers,
+who's going to explain
+[00:00:23] a little bit about NextSpace,
+which we'll be seeing today.
+[00:00:26] Nicole?
+[00:00:28] - Thank you!
+[00:00:30] Hi everybody, welcome.
+Thank you for coming.
+[00:00:32] My name's Nicole Brennan.
+[00:00:33] I'm one of the senior product
+designers here at ASML.
+[00:00:35] - [Crowd Member] Be
+louder, please. Be louder.
+[00:00:36] - Be louder. Is this better?
+[00:00:38] All right, great. Thank you.
+[00:00:39] I appreciate that. Hi, my
+name is Nicole Brennan.
+[00:00:42] I'm a senior product
+designer here at ASML.
+[00:00:45] We're very excited to show you something
+[00:00:47] that we've solving.
+[00:00:48] Do I need to put...
+[00:00:50] Oh, here it goes. Thank you.
+[00:00:51] Please meet the Event Assistant.
+[00:00:52] It's your go-to companion
+for staying engaged
+[00:00:55] and getting more out of our
+events and getting more value.
+[00:00:58] Think of it as like a tiny
+superpower in your pocket.
+[00:01:02] It's something that listens
+along during a session
+[00:01:05] and can catch you up instantly
+if you happen to drift,
+[00:01:09] get distracted, what have you.
+[00:01:11] You can ask things
+like, "What was the name
+[00:01:14] of that organization that
+they just mentioned?"
+[00:01:16] Or, "What was the name of that author?"
+[00:01:19] Or you can tell it, "I zoned out.
+[00:01:21] Can you catch me up on the last minute?
+[00:01:24] Whatever I missed."
+[00:01:25] You can try it out actually right now
+[00:01:27] at the brk.mn/event-bot.
+[00:01:31] Quick transparency note,
+we run it on OpenAI,
+[00:01:35] a 4.0 mini model, which runs
+through the Harvard API proxy.
+[00:01:40] It's something that
+collects a pseudonymized-
+[00:01:45] - [Crowd Member] Pseudonymized.
+[00:01:46] - Pseudonymized. Such a hard word, sorry.
+[00:01:48] - It's the worst.
+- Pseudonymized message log.
+[00:01:49] It's visible to the team,
+but obviously we don't know
+[00:01:52] who you are as you interact.
+[00:01:53] Big news, we went open-source this week,
+[00:01:56] which is fantastic and we're celebrating.
+[00:01:58] (crowd members cheering)
+(crowd members clapping)
+[00:01:59] Thank you! We're so
+excited, we appreciate it.
+[00:02:02] Jen is going to share more about
+this right after this talk.
+[00:02:06] If you have any thoughts,
+ideas, bold opinions,
+[00:02:10] we would love to hear them all.
+[00:02:11] Please do send them.
+[00:02:12] We have a brk.mn/feedback
+and would absolutely love
+[00:02:17] to hear from you.
+[00:02:19] Next we're going to hear from our PIs,
+[00:02:22] Professor Mickens and Professor Zittrain,
+[00:02:25] and if you could come up, it'd be great.
+[00:02:28] Thank you.
+[00:02:30] (crowd members clapping)
+(crowd members cheering)
+[00:02:34] - All right, thanks!
+[00:02:35] Well, as my dad, who was also a professor,
+[00:02:38] would always tell me,
+there's like a main rule
+[00:02:40] of being a PI, which is five Bs:
+[00:02:43] Be brief, brother, be brief.
+[00:02:44] Don't be in the way
+(crowd members laughing)
+[00:02:46] of the main content.
+[00:02:47] I just wanna say I'm so excited
+to see so many people there.
+[00:02:49] You know, we've been
+running ASML for, you know,
+[00:02:53] close to two years now I guess
+[00:02:54] and it's great to see the
+projects come to fruition,
+[00:02:57] and I think that the most
+exciting thing about ASML
+[00:03:00] is that we had this experiment
+that if you took people
+[00:03:04] who are technologists but
+care about the law and policy
+[00:03:08] and we sort of put them
+in contact with people
+[00:03:09] who know about law and policy
+but aren't technologists
+[00:03:12] in their everyday day job
+that like great things
+[00:03:14] would come out of that. And
+I think that you're gonna see
+[00:03:17] some examples of some of the great stuff
+[00:03:18] that's come out of that,
+and I think that later on
+[00:03:21] when we talk about TikTok
+and things like this,
+[00:03:24] you'll also see a lot of the
+interesting types of analyses
+[00:03:27] that are only possible
+in the type of setting
+[00:03:29] we think that we've tried to create here,
+[00:03:31] which is sort of like an academic setting
+[00:03:35] where you nonetheless bring in people
+[00:03:36] who are classically trained
+as engineers but wanna work
+[00:03:39] with folks who are outside
+of their discipline.
+[00:03:41] So we're so excited to have you here.
+[00:03:43] Lemme just turn over the mic
+to JZ for some reflections.
+[00:03:46] - All right, thank you, Mickens.
+[00:03:48] It's a pleasure working with you
+[00:03:50] over these years on all things ASML
+[00:03:55] and I'm so grateful for all
+the work of the engineers,
+[00:04:00] the project managers, designers,
+the leadership, all of you.
+[00:04:04] Thank you so much, Meg, team,
+[00:04:07] for what you've been able to cook up.
+[00:04:10] Mark Twain said that everybody is always
+[00:04:12] talking about the weather, but nobody
+[00:04:14] ever does anything about it.
+[00:04:17] I guess that's changing now. (laughs)
+[00:04:19] I don't know.
+[00:04:20] The carbon atmosphere, sulfuric acid
+[00:04:24] is beyond the scope of ASML,
+but very few other things are,
+[00:04:28] and you're gonna see
+the kaleidoscopic work
+[00:04:31] as you look at the different
+posters around the wall.
+[00:04:34] And changing the world is hard,
+[00:04:36] so again, we're so
+grateful for all the work
+[00:04:38] that's gone into this often at a distance
+[00:04:41] and having to overcome
+various activation energies.
+[00:04:44] Really grateful for all
+of you for coming out
+[00:04:46] to check it out and perhaps to look
+[00:04:49] for points of connection.
+[00:04:50] Our center really does work
+to draw in as many people
+[00:04:54] as want to be involved
+and to find meaningful
+[00:04:57] and useful ways to contribute.
+[00:05:00] So I hope, Meg, you'll be
+able, when you have the mic,
+[00:05:03] to say exactly how you'd
+prefer to hear from people
+[00:05:06] who want to critique...
+[00:05:09] What is the "Survivor" motto?
+[00:05:10] Outlive, outlast, be brief, be done?
+[00:05:13] - [Crowd Member] Outplay.
+[00:05:14] - Yeah, whatever it might be.
+[00:05:17] But great to see how, you
+know, you went to the trouble
+[00:05:20] of coming all the way to the fifth floor,
+[00:05:21] which I think is really the fourth floor,
+[00:05:24] but don't tell anybody.
+[00:05:25] Formerly the roof of this building.
+[00:05:28] But anyway, you came all this way.
+[00:05:30] Perhaps you wanna metaphorically
+at least stay while,
+[00:05:33] and I'm delighted to talk about
+what that might look like.
+[00:05:37] So with that, I will
+turn it, Meg, over to you
+[00:05:40] to introduce and thank our
+guest for arriving up today
+[00:05:44] to discuss, and I do hope
+you'll give NextSpace a spin.
+[00:05:48] Let's see if we can crash it.
+[00:05:50] (crowd members laughing)
+[00:05:52] - Thank you very much,
+JZ, I appreciate that.
+[00:05:56] One of the ways we do wanna hear from you
+[00:05:58] is by going here and
+asking your questions.
+[00:06:02] And you know, really, I mean,
+maybe don't red-team it,
+[00:06:08] but maybe do, right?
+[00:06:10] (crowd members chuckling)
+[00:06:11] So I've been scooped a little bit,
+[00:06:13] but just to reiterate what
+our lovely PIs said about us,
+[00:06:18] we are a two-year experimental pop-up lab
+[00:06:20] and we are bringing trained
+industry technologists
+[00:06:23] into an academic setting
+to rethink, reboot,
+[00:06:27] and rebuild social media.
+[00:06:28] We have three faculty
+directors, one senior director,
+[00:06:32] that's me, two product
+managers, two UX designers,
+[00:06:35] partridge in a pear tree.
+[00:06:37] That's very seasonal.
+[00:06:38] And five research assistants right now,
+[00:06:41] but really this has been an
+incredible gathering place
+[00:06:44] for all sorts of folks.
+[00:06:47] We've had an amazing group of RAs
+[00:06:49] over and over again in our two years,
+[00:06:52] and you know, also we've had
+so many folks come to like,
+[00:06:56] this is the second synthesizer we've done
+[00:06:59] and we're really just so
+appreciative of all of you
+[00:07:03] coming and sharing your posters
+[00:07:04] and talking with us about the work
+[00:07:07] that we're all trying to do together,
+[00:07:10] which is really to build
+a new internet, right?
+[00:07:12] And the way that we think about that
+[00:07:14] is not just to fix the
+internet that we already have,
+[00:07:18] but to think about the
+internet that we want
+[00:07:21] and the internet that we deserve.
+[00:07:25] But we do also have to reckon
+[00:07:30] with the internet that we currently have,
+[00:07:32] and so I'm very pleased
+to introduce our guest,
+[00:07:36] Emily Baker-White.
+[00:07:38] She is a technology reporter at Forbes
+[00:07:40] where her TikTok coverage has given me
+[00:07:43] lots of FOMO and envy of her editors.
+[00:07:46] It's incredible.
+[00:07:47] If you are not familiar with it,
+[00:07:48] you should immediately sign up
+[00:07:50] for every alert with her name on it.
+[00:07:53] She's the author of "Every
+Screen on the Planet,"
+[00:07:55] which is the first and
+likely will always be
+[00:07:59] the best in-depth investigation of TikTok,
+[00:08:03] and so we are so pleased
+to have her here today.
+[00:08:06] She's an HLS grad, so welcome home.
+[00:08:09] She previously led the Plain View Project,
+[00:08:11] which is an investigation
+into police misconduct
+[00:08:13] on Facebook, and was a criminal defender,
+[00:08:16] and she lives in Philly, which is weird,
+[00:08:21] but she should come here.
+[00:08:22] All right, thank you so much, and Emily,
+[00:08:25] I think I'll turn it over to you.
+[00:08:27] (crowd members clapping)
+[00:08:36] - Testing, testing. It's kinda working.
+[00:08:39] Okay.
+[00:08:41] Can y'all hear me? Does
+this need to be louder?
+[00:08:43] - [Crowd Member] No.
+[00:08:44] - Great! Love it.
+[00:08:45] Love to hear it.
+- [Crowd Member] I said no.
+[00:08:47] (all chuckling)
+[00:08:48] - I'm Emily Baker-White.
+[00:08:50] I am an investigative reporter.
+[00:08:54] I was once a lawyer and I'm gonna spend
+[00:08:58] just a couple minutes explaining
+[00:09:00] how I went on that very strange journey,
+[00:09:02] which for a while also involved
+[00:09:04] being an advisor to Big Tech companies.
+[00:09:09] So I came to law school wanting
+to do public interest work,
+[00:09:15] graduated from law school
+with a public-service
+[00:09:18] venture fellowship, if
+that's still a thing,
+[00:09:21] went and defended guys on
+death row in Philadelphia,
+[00:09:24] and thought that was what I was gonna do
+[00:09:25] for the rest of my life.
+[00:09:26] I loved it. It was super meaningful.
+[00:09:29] It was sort of classic
+public interest work.
+[00:09:32] And I was working up a police
+brutality claim in 2015,
+[00:09:37] I am old, (laughs) in
+that job and I searched
+[00:09:43] a few of the involved
+officers names on Facebook.
+[00:09:46] Back then Facebook was the
+social media company du jour.
+[00:09:51] It was what everyone was using.
+[00:09:53] And I was surprised and not surprised
+[00:09:56] to find that a number of these officers
+[00:09:58] had completely public-facing
+Facebook profiles
+[00:10:00] where they were saying all
+manner of things, (laughs)
+[00:10:04] and I was shocked by that.
+[00:10:06] They were talking about their
+cases, they were referring
+[00:10:08] to suspects and protestors as animals,
+[00:10:11] they would get into these awful doom loops
+[00:10:12] where they would talk
+about how each of them
+[00:10:15] was going to do something
+more violent than the last
+[00:10:17] to a given suspect or protestor,
+[00:10:21] and I was totally horrified.
+[00:10:24] Today that might not make news,
+[00:10:26] but in 2015 times were gentler and it did,
+[00:10:30] and so I ended up spending
+two years of my life
+[00:10:34] building something called
+the Plain View Project,
+[00:10:36] which was a big interactive
+database of statements
+[00:10:40] that hundreds and hundreds
+of police officers
+[00:10:42] across the country had
+made publicly on Facebook
+[00:10:46] that could affect public
+trust and policing
+[00:10:47] for whatever reason.
+[00:10:49] And to do that, I worked with a small team
+[00:10:54] and a technologist who ended up
+[00:10:55] scraping 835,000 Facebook posts,
+[00:10:58] and then my team reviewed
+those Facebook posts
+[00:11:01] to see is this relevant to our project
+[00:11:04] or is this a picture of a
+pie someone made last week?
+[00:11:08] Reviewing 830,000 posts by America's cops
+[00:11:11] really did something to my brain
+[00:11:13] that I still don't fully know what it is,
+[00:11:16] and of course it was alarming
+when it came to politics
+[00:11:20] and misinformation and
+policing in this country,
+[00:11:23] but it was also just a
+group of American people
+[00:11:27] going way down weird tech
+rabbit holes for the first time.
+[00:11:31] And even divorced from
+politics and divorced
+[00:11:33] from civil rights, the experience
+[00:11:35] of vicariously living those
+people's lives online for years
+[00:11:39] as I sorted through them was super weird
+[00:11:43] and it made me obsessed,
+yes, with police brutality,
+[00:11:45] but mostly with Facebook.
+[00:11:47] What was this platform doing?
+[00:11:49] I actually did encounter some material
+[00:11:52] that I now know was
+Russian disinformation.
+[00:11:54] I encountered a lot more that was likely
+[00:11:59] Macedonian teens making a quick buck.
+[00:12:01] There was just like so much slop.
+[00:12:04] It was before there was AI
+slop, but there was slop
+[00:12:05] and I was completely
+obsessed with why things
+[00:12:08] were getting the eyeballs
+that they were getting.
+[00:12:11] And after the project,
+we released the project,
+[00:12:13] it made a big splash, Facebook
+sort of could've sued me
+[00:12:17] or hired me and they hired
+me and I went and worked
+[00:12:20] in Facebook's policy department,
+[00:12:22] which was a wild ride that
+I won't talk too much about.
+[00:12:26] I stayed through the 2020 election
+[00:12:28] and then quit, like a lot of people did.
+[00:12:32] And that was also really formative
+[00:12:34] for me in understanding
+just how much power
+[00:12:37] like random 27 year olds have (laughs)
+[00:12:39] over what information
+millions and millions
+[00:12:41] and millions of people were seeing,
+[00:12:45] and I got to think about all the things
+[00:12:48] I wanted to think about
+when I worked there.
+[00:12:49] I then did the same job
+as Spotify for a while,
+[00:12:52] banning Nazi podcasts, which was okay,
+[00:12:54] but I didn't wanna think
+about these questions
+[00:13:00] for big tech companies.
+[00:13:01] I wanted to think about them
+for the public, for the polity,
+[00:13:05] sort of the way that you
+guys think about them.
+[00:13:08] And the way that I could do that
+[00:13:10] at that moment was to go into journalism,
+[00:13:12] and so that's what I
+did, and ever since then,
+[00:13:14] I joined BuzzFeed News,
+then I joined Forbes,
+[00:13:17] I've been doing
+investigative tech reporting
+[00:13:20] on big tech companies
+mostly and on the way
+[00:13:24] that they affect our culture and commerce
+[00:13:27] and discourse and democracy.
+[00:13:30] I am no longer a lawyer.
+[00:13:31] Maybe I will someday be a lawyer again,
+[00:13:33] but I became obsessed with Facebook.
+[00:13:39] I went to Facebook, I went into tech,
+[00:13:41] and then I went into journalism
+[00:13:42] because the internet is where
+the action is right now.
+[00:13:46] And when I was a student at
+Harvard Law School 10 years ago,
+[00:13:51] I was in HLAB.
+[00:13:52] I dunno if there are HLAB members here,
+[00:13:54] but at the time, the Berkman Center
+[00:13:58] was in a little yellow
+house on Everett Street
+[00:14:01] and you guys were upstairs from HLAB.
+[00:14:04] We were downstairs from you,
+apparently with some mice,
+[00:14:07] (crowd members laughing)
+[00:14:09] and we and the mice would just
+steal all of your event foods
+[00:14:13] after you left, and that was basically
+[00:14:16] my relationship to the Berkman Center
+[00:14:18] when I was a student
+at Harvard Law School.
+[00:14:20] I was among the mice. (laughs)
+[00:14:22] But you guys knew something I didn't,
+[00:14:25] which was that thinking about internet law
+[00:14:28] was public-interest work.
+[00:14:30] It was democracy work.
+[00:14:32] It is constitutional law in
+all of the broader senses
+[00:14:36] that so many people on this campus
+[00:14:37] probably don't realize,
+and many more do now,
+[00:14:40] because back then, 10 years ago,
+[00:14:42] the people who were thinking about that
+[00:14:43] were really early to the problem.
+[00:14:45] But yeah, (laughs) I
+am not a technologist.
+[00:14:51] I will never be a technologist.
+[00:14:52] I'm a B- tech user, but
+going out into the real world
+[00:14:56] and trying to practice
+normal civil rights law,
+[00:14:59] this stuff came crashing down on my head
+[00:15:01] and I have not been able
+to get it out of my head,
+[00:15:03] because the effect that
+internet companies have
+[00:15:08] on understanding who we
+are today, who we become,
+[00:15:11] what information we
+consume, how we interact
+[00:15:13] with each other, that is
+what you guys are studying,
+[00:15:17] this is where the action
+is, and I am thus so honored
+[00:15:20] to get to be a part of this event today.
+[00:15:25] (crowd members clapping)
+[00:15:26] Now I wanna talk about TikTok,
+[00:15:29] which is unlike that talk.
+[00:15:31] - [Meg] Let's talk about TikTok.
+[00:15:32] - Okay, let's do it.
+[00:15:38] - All right, so when you first
+started writing about TikTok,
+[00:15:45] did you find it hard to
+get the editors to listen
+[00:15:48] because it was a dancing
+app or did you join it
+[00:15:51] right when people started
+to say, "Oh, okay?"
+[00:15:55] - No, it wasn't hard to
+get editors to listen,
+[00:15:57] because I started covering
+TikTok in early 2022,
+[00:16:02] which is after it sort
+of hit mainstream appeal.
+[00:16:05] Like so many people had
+downloaded it during the pandemic
+[00:16:07] and so many older people,
+older people meaning
+[00:16:09] like people over the age
+of 20 had downloaded it,
+[00:16:12] but it had sort of hit
+the mainstream by then.
+[00:16:15] - Okay, and so I don't
+wanna scoop too many things
+[00:16:18] in your book, but I'm
+gonna do that anyway-
+[00:16:21] - That's all right.
+[00:16:22] - -and just kind of get right at
+[00:16:25] sort of the heart of the matter,
+[00:16:27] which is that TikTok surveilled you!
+[00:16:28] - Yes. Yeah, they did.
+[00:16:30] - Well, first tell us a little
+bit about how that happened
+[00:16:33] and maybe if you could
+also talk a little bit
+[00:16:34] about the sort of interesting
+origin story of TikTok
+[00:16:37] that you cover your book.
+[00:16:38] But tell us how that happened to you,
+[00:16:40] and then I wanna know if we're all Emily.
+[00:16:41] That's where I'm going with this.
+[00:16:44] - Okay, so I started
+covering TikTok in 2022.
+[00:16:50] I write a story, I go
+talk to a bunch of people
+[00:16:52] inside TikTok and say,
+"What do people not know
+[00:16:54] about this company that they should know?"
+[00:16:56] And they tell me, "Oh, there's this big
+[00:16:57] secret project called Project Texas."
+[00:16:59] And I'm like, great,
+that's a story I can write
+[00:17:01] in, you know, journalistic publication.
+[00:17:04] And so I write the story
+about Project Texas,
+[00:17:07] and Project Texas basically was a way
+[00:17:10] to rewire TikTok's inner workings
+[00:17:15] to limit the amount of
+American private user data
+[00:17:19] that was accessible to employees in China.
+[00:17:23] And the reason Project Texas was necessary
+[00:17:26] is because TikTok was
+owned and mostly created
+[00:17:30] by a company called ByteDance,
+[00:17:32] which is a Chinese tech giant,
+[00:17:34] and so not maliciously, but just because
+[00:17:38] it's how the tech was
+made, all of Americans'
+[00:17:41] sort of personal TikTok
+data was accessible
+[00:17:43] to a bunch of people
+in China and there were
+[00:17:46] a lot of people worried
+that since Chinese companies
+[00:17:48] can be forced to turn over information
+[00:17:50] to the Chinese government that that meant
+[00:17:51] the Chinese government might choose
+[00:17:53] to get that information about Americans.
+[00:17:56] That was Project Texas.
+[00:17:57] I write this story. It's
+a nice little story.
+[00:18:00] Like 10,000 people read it,
+which is not a lot of people,
+[00:18:04] but one of those people was
+a person who worked at TikTok
+[00:18:07] who then sent me an email saying,
+[00:18:09] "Project Texas, want more?"
+[00:18:11] Which is like-
+- The best email
+[00:18:13] you could possibly get-
+- The best email
+[00:18:14] you could possibly get-
+- -in the world.
+[00:18:15] - -as a journalist.
+[00:18:16] It's really a top-notch email.
+[00:18:18] And so I'm like, yeah, in
+fact, I would like more.
+[00:18:20] And that person, it turns out,
+had made a lot of recordings
+[00:18:25] of internal meetings at TikTok,
+[00:18:27] which they eventually shared with me,
+[00:18:30] and so I was able to listen to many,
+[00:18:32] many, many, many hours,
+over I think 80 hours
+[00:18:35] of internal meetings at TikTok,
+[00:18:37] of TikTok employees talking about
+[00:18:39] how to implement Project Texas.
+[00:18:41] At this point, it was really helpful
+[00:18:42] that I'd worked at Facebook and Spotify,
+[00:18:44] because like the acronyms alone,
+[00:18:45] just like, they took a very long time.
+[00:18:47] It took a very long time to
+understand this material,
+[00:18:49] but it was much easier having worked
+[00:18:51] in trust and safety content policy,
+[00:18:54] because that's largely what
+these people were talking about.
+[00:18:57] And so that's like a really
+big leap for any company.
+[00:19:00] It's not a great time for a company
+[00:19:02] that's trying to keep something secret
+[00:19:03] if someone leaks a reporter
+80 hours of audio about it,
+[00:19:06] and so that was a big deal.
+[00:19:09] When I went to the company, I said,
+[00:19:11] "Hey, I have all this information.
+[00:19:12] I'm writing this article.
+[00:19:13] Would you care to comment on any of this?"
+[00:19:16] And part of the company's
+response to that was,
+[00:19:19] "We gotta find the leakers!
+[00:19:20] We gotta stop the leakers."
+[00:19:21] Which if you're ever in a
+position of advising anyone
+[00:19:25] who's dealing with a
+leak, pursuing the leakers
+[00:19:28] is not the way.
+[00:19:29] It's just not gonna get
+you where you wanna go.
+[00:19:31] It's never gonna get
+you where you wanna go
+[00:19:33] and it's always more
+trouble than it's worth.
+[00:19:34] So someone here might
+someday be in a position
+[00:19:37] where you have this situation.
+[00:19:39] Don't pursue the leakers.
+[00:19:40] The way they tried to
+pursue the leakers, though,
+[00:19:43] was even worse.
+[00:19:44] They said, "Okay, if we can
+just look at the TikTok app
+[00:19:49] on Emily Baker-White's phone
+and get all the IP addresses
+[00:19:53] that that phone has pinged from
+[00:19:55] and compare those IP
+addresses to the IP addresses
+[00:19:58] of all of TikTok and
+ByteDance's employee data,
+[00:20:01] like of their employee devices,
+[00:20:03] and see if any of them
+have been in the same place
+[00:20:05] at the same time, then we can know
+[00:20:06] who is meeting with Emily Baker-White."
+[00:20:08] First of all, we often don't
+meet sources in person,
+[00:20:11] so I'm not sure why they
+thought this was gonna
+[00:20:13] solve their problem anyway,
+but (laughs) that aside,
+[00:20:16] they didn't find anything.
+[00:20:18] That was an enormous,
+enormous unforced error.
+[00:20:23] They didn't get any information,
+[00:20:25] but I hear about this from
+people inside the company.
+[00:20:29] They're gonna do this.
+[00:20:30] I write a story about it, they denied it.
+[00:20:32] They said, "Oh, we're not doing that."
+[00:20:33] And then they bring in Covington
+[00:20:35] and they're like, "Can you figure out
+[00:20:36] why she said we did this?"
+[00:20:37] Maybe wait to deny it until after you know
+[00:20:39] if you've done it.
+[00:20:41] They didn't do that.
+[00:20:41] But Covington comes in,
+writes a big report and says,
+[00:20:45] "Yeah, actually, okay,
+there are some employees
+[00:20:47] who did this."
+[00:20:48] And in doing that, they
+had proven the thing
+[00:20:51] that TikTok and ByteDance had been telling
+[00:20:53] the U.S. government, the
+public, anyone who would listen,
+[00:20:57] "We're not spying on you.
+[00:20:58] We're really not spying on you.
+[00:21:00] That's not what we do.
+[00:21:01] We're a normal social media app."
+[00:21:03] And then it turns out,
+actually they did spy
+[00:21:06] on me specifically in an
+effort to try to figure out
+[00:21:10] who was leaking to me.
+[00:21:12] And I don't really care
+that they spied on me.
+[00:21:17] I don't feel like there's
+someone outside in the bushes.
+[00:21:21] Like I'm not afraid, but the
+fact that this happened to me
+[00:21:25] showed that it actually
+could've happened to people
+[00:21:26] who could be afraid,
+and it could've happened
+[00:21:30] in a situation where
+the Chinese government
+[00:21:32] was trying to figure out
+where a dissident was.
+[00:21:34] It could've happened in a situation
+[00:21:35] where the Chinese government
+or some other bad actor
+[00:21:38] was trying to figure out
+where a politician was
+[00:21:41] or where a politician's
+staffers were, right?
+[00:21:42] Like there were ways it
+could've actually been scary.
+[00:21:45] The way it went down was just dumb,
+[00:21:48] but that really blew up
+sort of the conversation
+[00:21:51] about TikTok and whether it
+caused national security risk.
+[00:21:56] - And if you don't mind me
+asking, do you happen to know
+[00:21:59] where those people who accessed
+your data were located?
+[00:22:03] - Some of them were in China.
+[00:22:06] The person that the company
+really sort of blames it on
+[00:22:11] was not in China, he was
+in the United States,
+[00:22:14] but he says it wasn't his idea.
+[00:22:17] It's a little unclear.
+[00:22:18] People were fired for this
+[00:22:20] after the Covington report came out.
+[00:22:21] The company said, "Yikes,
+this is really bad.
+[00:22:24] We did it."
+[00:22:25] They did a little manacle
+the week before Christmas,
+[00:22:26] which is when you do your manacle
+[00:22:28] if you're trying to avoid press attention.
+[00:22:30] And they said, "This is bad.
+[00:22:33] We're gonna make sure
+it never happens again."
+[00:22:35] They fired the people involved
+and they cut off access
+[00:22:38] to the team that those people had been on.
+[00:22:39] They actually then
+disbanded that whole team.
+[00:22:43] But again, there are other teams,
+[00:22:46] and it could've been on the other teams,
+[00:22:47] and I say in the book and
+I've said at other events,
+[00:22:52] like TikTok is messy, not malicious,
+[00:22:55] and I think that's right.
+[00:22:56] Like the people who say
+TikTok is a grand conspiracy
+[00:22:59] set up by the Chinese government
+[00:23:00] don't know what they're talking about.
+[00:23:02] It's not, but messiness
+enables malicious actors,
+[00:23:10] and I think the problem
+with a company like TikTok,
+[00:23:13] and by the way, a company
+like Facebook or like Twitter,
+[00:23:16] now X, or many others,
+is that when you have
+[00:23:20] that degree of chaos, that degree
+[00:23:22] of financially-motivated
+chaos and duplication of work
+[00:23:27] and all of these teams moving
+all of these directions,
+[00:23:30] there's just a lot of opportunity
+[00:23:31] for legitimately bad stuff to happen.
+[00:23:37] - I'm assuming this
+changed your relationship
+[00:23:38] to social media like a little bit.
+[00:23:40] That's an assumption I'm making about you.
+[00:23:42] I'm sort of wondering,
+which changed it more?
+[00:23:44] Was it the experience of
+reporting about TikTok
+[00:23:46] and having, you know, you be the test case
+[00:23:49] for whether or not this
+company could surveil someone
+[00:23:52] or was it working in tech?
+[00:23:54] - Oh, it was definitely working in tech.
+[00:23:56] I mean, I think, we can't go back
+[00:24:03] and relive parts of our lives,
+[00:24:04] but if I hadn't worked in tech,
+[00:24:06] I probably would've been more
+scared and less disappointed,
+[00:24:09] but having seen the way these
+things work on the inside,
+[00:24:12] I wasn't scared.
+[00:24:14] I was just like, are you kidding me?
+[00:24:16] You did what?
+[00:24:19] Was there no meeting where anyone said
+[00:24:21] that might be a bad plan?
+[00:24:23] Because I have been in meetings
+[00:24:24] where people have said,
+"That's a bad idea.
+[00:24:26] Don't do that," right?
+[00:24:29] And I think one thing about TikTok
+[00:24:31] and reporting on TikTok
+is like we all know
+[00:24:33] the famous Mark Zuckerberg,
+"Move fast and break things."
+[00:24:36] TikTok grew so much faster than Facebook
+[00:24:39] and they just moved so much faster
+[00:24:40] and broke so many more things.
+[00:24:41] They just really leaned into that.
+[00:24:43] And like at some point maybe
+we will not move so fast
+[00:24:46] and break fewer things,
+but these companies
+[00:24:51] that have incentives to grow at all costs
+[00:24:54] are going to break stuff,
+and that's maybe not great.
+[00:24:57] - It's maybe not great.
+[00:25:00] It's maybe not great.
+[00:25:01] So your book takes us
+from the sort of like
+[00:25:05] very beginnings of the dancing app
+[00:25:07] all the way up to the present day,
+[00:25:10] and I don't wanna put a
+lot of pressure on you
+[00:25:11] to sort of like foretell
+the future of TikTok,
+[00:25:16] but I think a lot of
+people really enjoy it.
+[00:25:18] I happen to enjoy TikTok, honestly.
+[00:25:21] And we're wondering if these deals
+[00:25:23] that are proposed are
+going to meaningfully fix
+[00:25:27] what I should not call the Emily problem.
+[00:25:30] Don't get mad at me.
+[00:25:31] (all laughing)
+[00:25:34] But like is this, well, first of all,
+[00:25:36] if you wanna be psychic and tell us
+[00:25:37] what's gonna happen, please do,
+[00:25:39] but are these the right
+things for us to be doing?
+[00:25:43] Are they at least the right questions
+[00:25:45] for us to be asking about how these apps
+[00:25:47] are a part of our lives?
+[00:25:49] - I'm gonna ask you to reframe
+that question a little bit.
+[00:25:53] Like are you asking how much the deal,
+[00:25:56] should it go through, would help?
+[00:25:57] - Yes, if you know.
+- Okay.
+[00:26:02] So for years now, actually,
+that first article
+[00:26:05] I wrote about Project
+Texas, TikTok and ByteDance
+[00:26:08] have been trying to
+sell the U.S. government
+[00:26:10] on their solution to the Emily problem.
+[00:26:14] I'm never gonna say
+this outside this room,
+[00:26:16] but you got me for the
+purposes of this conversation.
+[00:26:21] It's efficient. (laughs)
+[00:26:24] Their solution has been a sort
+of series of internal walls.
+[00:26:29] It's changed somewhat over time,
+[00:26:31] but it basically today
+U.S. users' TikTok data
+[00:26:36] created after a certain date
+is held in Oracle servers
+[00:26:42] and sort of gate-kept by Oracle employees.
+[00:26:48] The recommendations algorithm
+and other parts of the app
+[00:26:50] are still maintained by ByteDance,
+[00:26:52] but Oracle theoretically just has
+[00:26:54] a sort of oversight
+function that may or may not
+[00:26:57] like really work that's supposed to ensure
+[00:27:00] that there is no sort of
+foreign influence happening
+[00:27:03] and no data leakage happening.
+[00:27:07] My understanding is the deal whereby
+[00:27:12] custody of that data and control over some
+[00:27:15] but not all functions of TikTok U.S.
+[00:27:18] would be transferred to a new group
+[00:27:20] of U.S. investors,
+including Larry Ellison,
+[00:27:23] possibly the Kochs or the
+Murdochs have both been named,
+[00:27:27] Silver Lakes and other U.S. investors.
+[00:27:32] It's sort of just like a trumped up,
+[00:27:35] sorry for the pun there, but a trumped up
+[00:27:38] Project Texas, right?
+[00:27:39] Like there's already
+this separation custody
+[00:27:43] that would sort of be
+somewhat further removed
+[00:27:44] from ByteDance and TikTok Global,
+[00:27:46] which is owned by ByteDance.
+[00:27:49] Okay. That probably does help.
+[00:27:51] It probably cuts down
+on the amount of data
+[00:27:55] being shared between child and parent.
+[00:27:57] It doesn't totally eliminate it.
+[00:27:59] We know that.
+[00:27:59] There have been instances
+of people giving each other
+[00:28:02] their computers and their passwords
+[00:28:04] because they need some data to, you know,
+[00:28:06] do some e-commerce thing, and
+there will continue to be,
+[00:28:09] because creating a fully
+hermetically-sealed thing
+[00:28:13] with that many employees
+and that much data,
+[00:28:16] it's not gonna happen.
+[00:28:18] You can probably get it to like 99%.
+[00:28:19] You're never gonna get it to 100%.
+[00:28:21] But going back to your question,
+[00:28:23] like are these the things
+we should care about?
+[00:28:25] Does it really fix the
+problem if like Larry Ellison
+[00:28:28] now decides who gets spied on? (laughs)
+[00:28:31] The answer is like, no.
+[00:28:32] I mean, you know, okay, so I
+phrased the question that way
+[00:28:34] and you can see that my answer is no.
+[00:28:39] I think there was a unique
+problem for TikTok itself
+[00:28:42] because of potential
+Chinese government influence
+[00:28:44] that made it different than Facebook, X,
+[00:28:50] you know, Instagram,
+YouTube, whatever else,
+[00:28:53] and I think further
+separation from the parent,
+[00:28:57] and the devil's in the
+details on how much separation
+[00:28:59] really is gonna happen or not happen,
+[00:29:01] if this deal even goes
+through which, don't know,
+[00:29:04] but like assuming it
+does, there will probably
+[00:29:07] be some further mitigation of potential
+[00:29:10] Chinese government influence.
+[00:29:12] There is perhaps uniquely more
+[00:29:16] U.S. government influence now,
+[00:29:17] which is also bad (laughs)
+and bad in different ways,
+[00:29:20] but not necessarily less bad ways,
+[00:29:24] and so that's a consideration.
+[00:29:26] I mean, the truth is
+we got these companies
+[00:29:28] that are run by a few dudes
+who make enormous decisions
+[00:29:32] about our data and
+which information we see
+[00:29:36] and we should be skeptical
+of all those dudes
+[00:29:38] and all the governments that
+are trying to influence them.
+[00:29:40] - All right, well, I'd
+love to take some questions
+[00:29:43] from the audience, if we
+have any at this time.
+[00:30:00] - [Allison] Okay, do I have to turn...
+[00:30:01] Yeah. How do you turn it on?
+[00:30:03] - [Staff Member] It's at the bottom.
+[00:30:04] Wait, now switch these.
+[00:30:10] - [Allison] Dramatic pause.
+[00:30:10] Okay, hi. (laughs)
+[00:30:12] Thanks so much.
+[00:30:13] I'm really looking forward
+to reading your book.
+[00:30:14] I've ordered it on my Kindle
+so I can start immediately.
+[00:30:19] I'm Allison Stanger,
+I'm a faculty affiliate
+[00:30:21] at the Berkman Klein
+Center, and I just wanted
+[00:30:25] to ask you what your thoughts are,
+[00:30:28] kind of following up
+on your question, Meg,
+[00:30:31] you know, is there really
+a deal here with TikTok?
+[00:30:34] Because I'm just looking at
+it, I was just researching this
+[00:30:36] before I came over here.
+[00:30:38] What's happened with that?
+[00:30:39] - Oh, god.
+- And there's a lot
+[00:30:41] of evidence that suggests
+there's no deal at all
+[00:30:43] and we're just kicking
+the can down the road,
+[00:30:45] so I just wanted you to
+perhaps comment on that
+[00:30:49] and what might be causing it.
+[00:30:51] I mean, I have my
+theories, but you're closer
+[00:30:52] to the story, so to speak.
+[00:30:56] - I'm maybe somewhat closer.
+[00:30:58] I have my theories too.
+[00:31:00] I think there's a pretty long history
+[00:31:02] of the president wanting to
+announce that there's a deal
+[00:31:05] and then all of the details of the deal
+[00:31:08] slash the actual deal kind of like
+[00:31:11] being swept out of the way,
+and I think this is seeming
+[00:31:16] like it's an example of that.
+[00:31:18] - [Crowd Member] Yeah.
+[00:31:19] - There is a contract
+that has been negotiated
+[00:31:25] between a consortium of
+investors and ByteDance.
+[00:31:33] It's not clear if that
+is the same set of terms
+[00:31:36] that the Trump administration say they got
+[00:31:39] framework agreement from
+the Chinese in Madrid,
+[00:31:43] so it's like not totally clear (laughs)
+[00:31:44] if that's even the same thing.
+[00:31:48] The other thing is like
+ByteDance has spent
+[00:31:50] the last six years being told,
+"You're gonna have to sell,
+[00:31:53] you're gonna have to sell,
+we're gonna make you sell."
+[00:31:55] And essentially they've
+said, "Okay, make us," right?
+[00:31:57] And they have done nothing and
+kept offering their product
+[00:32:01] and waited, and so far
+that's been effective.
+[00:32:06] And so unless and until
+someone really says,
+[00:32:09] "Okay, we're gonna turn
+the app off unless,"
+[00:32:13] and unless they're
+really willing to do that
+[00:32:15] and maybe even do turn
+the app off for a while,
+[00:32:17] if I'm ByteDance, I'm not gonna
+move with any great haste.
+[00:32:21] I would say like what we
+do know about the deal,
+[00:32:24] Bloomberg reported that
+ByteDance would get a rev share
+[00:32:27] of new money made by the new
+investors like moving forward
+[00:32:33] because of the licensure
+of the algorithms,
+[00:32:35] Reuters also reported that ByteDance
+[00:32:39] would continue to control both advertising
+[00:32:41] and e-commerce on the platform,
+[00:32:44] and so like it's really
+not clear what's in this
+[00:32:48] for the investor group and
+that's what really sounds to me
+[00:32:52] like it's just a trumped-up Project Texas.
+[00:32:53] It's the same thing that ByteDance
+[00:32:55] has been trying to sell the whole time.
+[00:32:56] They continue to get to control
+at least these various parts
+[00:32:59] of the thing.
+[00:33:01] I haven't seen a copy of
+the deal because I've been
+[00:33:04] very public-
+- We don't know who's in it,
+[00:33:05] who the investors are actually,
+except Ellison, right?
+[00:33:08] - Yeah.
+[00:33:09] Trump has thrown around some names.
+[00:33:13] There's been reporting
+on a couple of investors.
+[00:33:16] I think there's now gulf money
+[00:33:20] reportedly involved in this too.
+[00:33:25] So yeah, there's a lot that we don't know.
+[00:33:27] There's a lot that's been reported
+[00:33:29] and some of what's been
+reported I think has changed
+[00:33:31] such that it's no longer accurate too,
+[00:33:33] so it's really hard to know.
+[00:33:34] Some people said Andreessen was in it
+[00:33:35] and then that totally dropped away
+[00:33:37] and I don't think that's right.
+[00:33:38] So really hard to know
+what's going on there,
+[00:33:41] but I think people will slowly
+start asking questions again
+[00:33:45] and he will probably do another
+[00:33:48] questionable executive order again.
+[00:33:50] - [Allison] That seems certain.
+[00:33:52] - [Crowd Member] (laughs)
+That seems certain, yeah.
+[00:33:59] - Yeah!
+- Hi, thanks.
+[00:34:00] I'm Hilary.
+[00:34:01] I'm curious, we're at a school,
+[00:34:04] and also Berkman is a center
+that brings together people
+[00:34:07] from a lot of different sectors,
+and you have a rare career,
+[00:34:11] I would say, in that
+you have hopped across
+[00:34:14] a number of different sectors,
+from being trained in law,
+[00:34:17] to working in tech, to
+then working in journalism,
+[00:34:19] so I'm curious kind of how you
+decided to make those jumps
+[00:34:22] and then what you did
+to like train yourself
+[00:34:25] and position yourself and figure out
+[00:34:27] how to kind of do that
+work as you jumped sectors.
+[00:34:31] - You don't even know that at first
+[00:34:32] I was gonna be a classical violist.
+[00:34:35] (crowd members laughing)
+I went to the conservatory
+[00:34:37] for the...
+[00:34:38] I know, it's hilarious.
+[00:34:39] I've had like 12 careers in 10 minutes.
+[00:34:43] It's very strange.
+[00:34:44] If you think you know
+where you're gonna be
+[00:34:46] in 10 years, you're wrong.
+[00:34:51] I would say, are you a student here?
+[00:34:56] - [Hilary] No, I'm not, I'm staff.
+[00:34:57] - No, you're not.
+[00:35:01] For the students here, but
+also for everyone else here,
+[00:35:07] you are immensely qualified
+to do many more things
+[00:35:10] than you think you are
+and you will be able
+[00:35:14] to take the skills and the resume
+[00:35:18] that got you in this door and apply them
+[00:35:22] to many things that haven't happened yet,
+[00:35:26] so you can't imagine what they are yet.
+[00:35:29] And I really, (laughs) I
+hate being a generalist.
+[00:35:35] I wish I had more like
+specific things that I could do
+[00:35:39] that other people can't do.
+[00:35:40] My husband's like a really
+good software engineer
+[00:35:42] and he can do these things that I can't do
+[00:35:44] and I just sort of like go
+around and talk about stuff.
+[00:35:46] But I am a generalist, much as it is
+[00:35:52] this like curse in my brain, and I think
+[00:35:54] we are all much more generalist
+[00:35:57] than we think we are
+and we desperately need
+[00:36:00] more people with different experiences
+[00:36:04] making decisions about technology.
+[00:36:07] What's not great is when
+you get a bunch of engineers
+[00:36:10] making decisions that
+end up being sociological
+[00:36:13] and political out in Silicon Valley,
+[00:36:15] most of them white men
+from the United States.
+[00:36:18] That's not great.
+[00:36:19] And so to the extent that
+everyone in this room
+[00:36:23] can think about what you
+know and where you came from
+[00:36:26] and what makes your brain
+different from the other brains
+[00:36:29] in the room, use that and lean into that,
+[00:36:34] because you are going to be
+able to help shape the internet
+[00:36:37] for lots of other people
+in ways that a very smart,
+[00:36:43] you know, engineer or very smart lawyer
+[00:36:46] or whatever it is that those
+people are that you aren't,
+[00:36:50] you are going to have
+perspective that they don't have,
+[00:36:52] and I think that's
+actually really important.
+[00:36:53] And so like how did I hop
+from career to career?
+[00:36:57] I followed the action.
+[00:36:59] I followed where the power was.
+[00:37:00] I went to work at Facebook,
+which is not a company
+[00:37:04] I was very fond of at the time
+[00:37:06] and was not a company I was
+very fond of what I left,
+[00:37:08] because there was immense
+power to do good there.
+[00:37:12] There was immense power to
+move the ball a little bit.
+[00:37:17] I clerked out of law school and my judge
+[00:37:19] was among the people who told me,
+[00:37:20] "You can't quit before the election.
+[00:37:22] You know that, right?"
+[00:37:23] And like a lot of people told me that,
+[00:37:25] and I'm sure there are a lot of people
+[00:37:27] who in elections since
+have had the same approach,
+[00:37:31] and the reason that people
+at these tech companies
+[00:37:33] feel like they can't quit
+before the elections,
+[00:37:34] they know that what they're doing,
+[00:37:35] all the stupid meetings
+they're going to every day
+[00:37:37] are moving the election.
+[00:37:39] Like the power that these
+companies have is massive
+[00:37:43] and that's why I went and worked for them.
+[00:37:45] That's why I went and reported on them.
+[00:37:49] There are lots of ways you could do it.
+[00:37:50] You could go sue them,
+you go investigate them,
+[00:37:52] you go work inside them.
+[00:37:54] You can try to build something
+better (laughs) than them
+[00:37:57] that will take a little
+bit of their power back
+[00:38:01] and give it to the people,
+and like all of those things
+[00:38:03] can be really good, but
+there is so much there,
+[00:38:07] and that's ultimately why
+I made the shifts I did.
+[00:38:12] I don't have the mic, I'm
+just smiling at people
+[00:38:14] with their hands up, as
+if I have some power.
+[00:38:15] (crowd members laughing)
+[00:38:17] I was like, yeah, you!
+[00:38:18] But the mic's over
+here, so sorry. (laughs)
+[00:38:21] - [Crowd Member] If TikTok
+had, instead of being owned
+[00:38:23] by a company in China,
+was owned in by somebody
+[00:38:26] in, you know, Japan, India, Brazil,
+[00:38:29] any other country, would it
+have caused the same fuss?
+[00:38:35] - Yes and no.
+[00:38:36] I mean I think Japan, Brazil,
+[00:38:41] I mean, well, what I'm thinking about
+[00:38:42] is like how much are
+each of those governments
+[00:38:44] trying to exert control over internet-
+[00:38:47] - [Crowd Member] I'm just naming countries
+[00:38:47] that have a lethal amount
+of technical savvy.
+[00:38:49] - Sure, and the the question
+I'm asking in my head
+[00:38:53] is like, are these autocracies
+[00:38:55] or are they trying to be autocracies?
+[00:38:56] And I think that's what
+made TikTok scarier
+[00:39:00] to a lot of people, and
+then now we're on our way
+[00:39:03] to building our own autocracy
+so, you know, yikes! (laughs)
+[00:39:07] I think a lot of the questions
+that we asked about TikTok,
+[00:39:11] a lot of the things that made us nervous
+[00:39:13] about TikTok's potential Chinese influence
+[00:39:16] now make me nervous about lots
+[00:39:17] of American tech companies too.
+[00:39:22] - [Crowd Member] Thank you.
+[00:39:23] I think I can-
+- Just talk loud.
+[00:39:24] - [Crowd Member] Lovely, yeah.
+[00:39:27] Following this person.
+[00:39:28] I mean, the same, like I was consulting
+[00:39:30] for a single government.
+[00:39:31] [Indistinct]
+[00:39:33] So anyway, I want to ask this question,
+[00:39:36] because you already worked
+on a couple of platforms.
+[00:39:40] So do you think the traditional
+institution nowadays
+[00:39:45] could still have a capability to absorb
+[00:39:48] or govern those kind of
+big-scale platform or not?
+[00:39:54] Thank you.
+[00:39:56] - Can you repeat your question?
+[00:39:58] - Yeah.
+[00:39:59] I mean, nowadays those kind
+of traditional institution,
+[00:40:04] I mean now like even U.S.,
+China even, or Singapore
+[00:40:08] or Japan, there's all this
+kind of politic institution,
+[00:40:12] or any kind of institution
+or social institution
+[00:40:16] can still have a capability.
+[00:40:23] I mean, could be accept this
+kind of big-scale platform.
+[00:40:29] It means that we have
+ability to do that or not,
+[00:40:34] or what kind of institution we have to.
+[00:40:41] - I think our relationship
+to institutions is changing.
+[00:40:47] When we think about like
+these really big platforms,
+[00:40:50] we've certainly seen, well, I would say
+[00:40:56] that we've seen a sort of bifurcation
+[00:40:57] and people have gone
+into smaller platforms.
+[00:40:59] People have returned to group chats
+[00:41:02] away from the sort of
+Facebook-ificatoin of things.
+[00:41:04] At the same time, TikTok is
+this great, massive phenomenon,
+[00:41:10] and are we gonna see another one of those?
+[00:41:12] I don't know.
+[00:41:14] I think related to that is that TikTok
+[00:41:17] is not really social media.
+[00:41:19] TikTok is more like Netflix, right?
+[00:41:21] Because you're not watching your friends.
+[00:41:25] You're not really interacting
+with people you know.
+[00:41:28] It's just entertainment, right?
+[00:41:30] It's just randos.
+[00:41:31] It's entertaining randos,
+and there's nothing
+[00:41:33] wrong with that, but
+that's a different thing
+[00:41:36] than Mark Zuckerberg's
+obviously very flawed
+[00:41:39] but like, "We're gonna connect the world."
+[00:41:41] And I think there's something
+a little bit less sticky
+[00:41:44] about TikTok and Netflix, because like,
+[00:41:49] I don't know how many people in this room
+[00:41:50] actually routinely use
+Facebook for anything other
+[00:41:53] than buying cheap stuff.
+[00:41:55] (crowd members laughing)
+[00:41:56] Facebook Marketplace
+forever, Craigslist of 2025.
+[00:42:00] But we don't use Facebook anymore,
+[00:42:03] but we haven't deleted it, not just
+[00:42:05] because of Facebook Marketplace,
+[00:42:06] but also because like
+your second cousin's mom
+[00:42:09] is on there and you actually do wanna see
+[00:42:12] those baby pictures occasionally.
+[00:42:15] And the stickiness of that,
+Instagram's the same way, right?
+[00:42:18] These are actually people you know
+[00:42:20] and you kind of do wanna
+stay in touch with them
+[00:42:21] at least a little bit.
+[00:42:22] That's not on TikTok.
+[00:42:24] It's not on YouTube, right?
+[00:42:25] And I think there is
+something about social media
+[00:42:30] that actually does have a
+sort of stickiness to us
+[00:42:37] that something like
+TikTok and Instagram Reels
+[00:42:41] and YouTube doesn't.
+[00:42:43] And so I wonder when we think about like
+[00:42:45] what's the next one gonna be,
+I wonder if it's going to be
+[00:42:51] more social maybe, because I feel like
+[00:42:54] that is what's missing from the apps
+[00:42:56] that people are mostly
+spending their time on today.
+[00:43:05] - [Sam] Hi, Sam Rosen.
+[00:43:06] Building on what you were
+just saying, you know,
+[00:43:09] I'm a little bit curious
+about the post-platform era
+[00:43:13] and more open systems
+that might tie people in,
+[00:43:17] might engage people, and
+might have, you know,
+[00:43:21] more decentralized control,
+more user autonomy.
+[00:43:24] You know, I was at a project
+at another institution
+[00:43:27] in Cambridge last night, NANDA, right?
+[00:43:30] The Internet of Agents.
+[00:43:32] And you know, I'm curious
+what your thoughts are
+[00:43:36] of what it would take for platforms
+[00:43:39] that return control to users
+and break down, you know,
+[00:43:44] this both monetization centralization
+[00:43:47] as well as the control centralization,
+[00:43:50] what those might look like.
+[00:43:51] - Yeah, so like Silicon Valley has spent
+[00:43:54] the last two decades obsessed
+with minimizing friction.
+[00:43:58] That buy-now button is smooth.
+[00:44:01] TikTok is smooth, you
+open it and it just goes.
+[00:44:03] You do nothing, right?
+[00:44:05] And people have to want
+to take agency back.
+[00:44:11] We have to make effort sexy again somehow
+[00:44:15] for this to work, right?
+[00:44:17] It's like when I tried
+to explain to my mom
+[00:44:19] how Bluesky worked, and when
+I tried to actually get her
+[00:44:23] on Bluesky, I was like,
+"Here are these feeds!
+[00:44:24] You get to choose which feeds you want!
+[00:44:26] It's really cool, you get to decide!"
+[00:44:27] And and she was just like
+so overwhelmed by the idea
+[00:44:30] of having to understand how feeds work
+[00:44:33] and go seek them out and choose them.
+[00:44:35] And I think everyone in this room
+[00:44:37] sees a lot of value in
+being able to go out
+[00:44:41] and create and choose your own feeds,
+[00:44:43] but people love doing nothing.
+[00:44:47] They love having to do nothing,
+[00:44:49] and there's a great
+amount of money to be made
+[00:44:52] that already has been made
+in leeching agency away
+[00:44:56] from people on the internet
+and just making things
+[00:44:58] really easy for them.
+[00:44:59] And so I do think actually
+like to break through
+[00:45:03] and to have a lot of
+these creative systems
+[00:45:06] that the types of people
+who hang out in this room
+[00:45:11] are thinking about and
+building and making work
+[00:45:14] really well, actually, you
+just have to put effort in,
+[00:45:17] and I think retraining a
+generation of global minds
+[00:45:22] to want to put in that
+effort is the challenge.
+[00:45:26] - I like to ask people
+what personalization
+[00:45:28] they've actually done
+in their social media
+[00:45:30] and if they've ever done any.
+[00:45:33] What have you done?
+Have you done anything?
+[00:45:35] What personalization have you done?
+[00:45:36] - I mean, I select my Bluesky feeds.
+[00:45:39] - You select your Bluesky...
+[00:45:40] The only one I've ever done,
+and like I'm doing this,
+[00:45:42] but the only one I've ever done
+is block the keyword royals.
+[00:45:46] - Oh, I do block some things.
+[00:45:48] Yeah, I block some things.
+- Yeah, which
+[00:45:49] disproportionately affected
+Lorde, which I feel like is bad.
+[00:45:52] I'm so sorry for her.
+(crowd members laughing)
+[00:45:53] - Yeah, not her fault.
+[00:45:54] - But that was an unintended
+consequence of that.
+[00:45:57] - Yeah, yeah, yeah.
+[00:46:00] Block lists are good.
+[00:46:01] I feel like that's a very digestible one.
+[00:46:05] - That's the bar and it is low.
+[00:46:06] - Yeah, yeah.
+[00:46:07] - It is very low.
+[00:46:09] - And like we're having
+this conversation here.
+[00:46:12] You ask randos out on the street like,
+[00:46:13] "How much personalization have you done
+[00:46:15] on their social media?"
+[00:46:16] Like what language are
+you speaking exactly?
+[00:46:19] - It's basically that.
+[00:46:21] - Oh.
+[00:46:24] - [Crowd Member] Emily, thank
+you so much for being here.
+[00:46:25] This is awesome.
+[00:46:27] I wanna pick up on a thread
+that you were talking about
+[00:46:29] with respect to like the power
+that these 27-year-olds have.
+[00:46:33] - Was one once, can confirm.
+[00:46:35] - [Crowd Member] Yes.
+[00:46:36] So given your experience being in tech,
+[00:46:38] covering tech, et
+cetera, what's your sense
+[00:46:41] of their own sense of their accountability
+[00:46:44] for that power and what scares the people
+[00:46:48] in these companies enough
+to change behavior?
+[00:46:52] - Unfortunately my answer to your question
+[00:46:54] is dated in a way that I think
+is actually like material,
+[00:46:59] but when I worked at
+Facebook in 2019 and 2020,
+[00:47:04] I worked with a bunch of
+people who were thoughtful
+[00:47:10] and trying to do the right thing.
+[00:47:15] The genocide in Myanmar
+had already happened.
+[00:47:18] There were a lot of conversations.
+[00:47:19] Actually when I went to
+like, you know, onboarding,
+[00:47:21] it's like college orientation
+at Facebook headquarters.
+[00:47:24] It's really weird.
+[00:47:25] But there were a number of
+speeches about the 2016 election
+[00:47:30] and Russian interference and finding that
+[00:47:33] and understanding like
+Facebook's sort of role
+[00:47:35] and importance in the world.
+[00:47:36] This was really their
+sort of zenith in power.
+[00:47:38] Everything after that was downhill.
+[00:47:39] But they were trying, and
+it's also like very convenient
+[00:47:45] to rationalize, to see yourself
+in a somewhat better way
+[00:47:48] than you actually are, and
+there was a lot of that
+[00:47:50] going on too.
+[00:47:51] What moved them to change their behavior?
+[00:47:55] I was in so many meetings
+where someone would say,
+[00:47:58] "Do you know what the
+headline would be if,"
+[00:48:00] and that's why I went
+and became a journalist,
+[00:48:03] and now I have been having
+a crisis as a journalist
+[00:48:07] for the past year because
+we don't have shame anymore,
+[00:48:12] and companies like Facebook or TikTok
+[00:48:15] or you know, whatever the
+odd company is du jour,
+[00:48:18] don't fear the type of
+accountability journalism
+[00:48:22] that I set out to do as
+much as they once did,
+[00:48:24] and neither does our
+government, and I don't know
+[00:48:28] what to do about that, but
+it's really freaking me out.
+[00:48:32] - Me too, (laughs) I think.
+[00:48:36] Any more questions?
+[00:48:39] In the back!
+[00:48:42] - [Crowd Member] Hi, I was just wondering
+[00:48:43] like why do you think these tech companies
+[00:48:46] are not scared of that?
+[00:48:47] Like why do you think tech companies
+[00:48:49] are not scared of that accountability
+[00:48:51] that you once thought
+they were scared about?
+[00:48:54] - That's a fair question.
+[00:48:56] I don't know.
+[00:48:56] They're all like nakedly donating
+[00:48:59] to various initiatives in ways
+[00:49:01] that seem a lot like bribery now.
+[00:49:05] Some of them don't respond to reporters
+[00:49:10] the way they used to.
+[00:49:14] I feel like recently I have done,
+[00:49:19] you know, stories that previously
+[00:49:22] I think would make a much
+bigger splash, and some of it
+[00:49:25] is just that they've been
+around the, you know, cycle
+[00:49:29] so many times that they've realized
+[00:49:31] that they can weather it
+and just keep making money,
+[00:49:33] and so maybe it doesn't matter that much.
+[00:49:36] But I do think they are...
+[00:49:42] Maybe the public has gotten tired
+[00:49:44] of what they used to call the techlash.
+[00:49:47] Maybe, you know, everybody
+knows these companies are bad.
+[00:49:51] Too bad, what of it?
+[00:49:53] If you want regulators
+to do something about it,
+[00:49:55] talk to your regulators.
+[00:49:56] Otherwise, meh.
+[00:49:58] Like I do think they
+were more scared of it
+[00:50:01] a couple years ago,
+maybe because they felt
+[00:50:02] that regulators were gonna act on it,
+[00:50:03] maybe because they thought that, you know,
+[00:50:05] congress or state
+legislatures were actually
+[00:50:06] gonna do things, and
+then they kind of didn't
+[00:50:08] and they're like, "Oh, okay.
+[00:50:10] People can talk but we
+can still make our money,
+[00:50:12] so who cares?"
+[00:50:13] Maybe I'm just jaded.
+[00:50:17] - Maybe.
+[00:50:18] (Emily chuckles)
+[00:50:19] We did call it the Emily
+problem, so I think
+[00:50:21] it's fair that you are.
+- I wasn't even
+[00:50:22] talking about that problem at this point.
+[00:50:25] That was a you thing.
+[00:50:26] - Oh, it was a me thing.
+[00:50:28] I take credit for that.
+[00:50:30] Well, if there aren't any more questions,
+[00:50:33] I'd just like to sort
+of end by asking you,
+[00:50:37] if you don't mind, if you
+were us, what would you do-
+[00:50:42] - Oh, god.
+[00:50:42] - -next to sort of make the
+internet a little bit better?
+[00:50:49] - I'll be back in two weeks.
+[00:50:52] (crowd members chuckling)
+[00:50:54] Wow, that is a really hard question.
+[00:50:58] I really enjoyed the posters so far
+[00:51:00] that I've gotten to read.
+[00:51:02] I think you're doing the work.
+[00:51:09] It's boring, but I do
+think the more transparency
+[00:51:14] we can get, if there's anyone
+that's going to publish
+[00:51:20] really bold research about
+how people's understanding
+[00:51:25] of the world, of world events, of wars,
+[00:51:28] of whatever else is shaped
+by 27-year-old goofballs
+[00:51:34] in Silicon Valley, it
+is this group of people,
+[00:51:37] and there's been a lot of that done,
+[00:51:40] but I do think that's really important.
+[00:51:41] And when you talk about building stuff,
+[00:51:45] I think like probably most
+of the people in this room
+[00:51:47] could build a pretty good, you know,
+[00:51:51] like user-centered meaningful social app
+[00:51:55] or news app or whatever.
+[00:51:56] The challenge is adoption,
+and so studying that
+[00:52:00] and figuring that out
+and like how do we get
+[00:52:04] my mom at least onto like
+Bluesky (laughs) or whatever.
+[00:52:07] Like how do we get the
+ideas in here out there
+[00:52:12] I think is the most important,
+[00:52:14] 'cause like it's really
+good to talk to a lot
+[00:52:17] of really smart people
+who've spent a lot of time
+[00:52:19] on the problem.
+[00:52:20] It's a lot harder to
+like go to Thanksgiving
+[00:52:22] and talk about it.
+[00:52:23] We all have to go to Thanksgiving.
+[00:52:24] - We do all have to go to Thanksgiving.
+[00:52:26] Emily Baker-White, thank
+you so much for being here.
+[00:52:28] We really appreciate you.
+[00:52:30] (crowd members clapping)
+[00:52:38] - Thanks, guys!
+[00:52:40] - All right, and I am now very pleased
+[00:52:43] to introduce Brendan and
+Jen who are gonna talk
+[00:52:48] a little bit about NextSpace,
+which is the prototype
+[00:52:51] that you've hopefully been
+playing with during this chat.
+[00:52:56] Brendan and Jen are two of
+the engineers behind it,
+[00:53:00] the NextSpace team, and I
+will turn it over to them.
+[00:53:04] Thank you so much.
+[00:53:06] (crowd members clapping)
+[00:53:19] - Okay, you guys can hear me. Hi.
+[00:53:21] Yeah, thanks for listening
+and engaging with our product.
+[00:53:26] My name's Jen Hickey, I'm
+a senior software engineer
+[00:53:29] at the Applied Social Media Lab.
+[00:53:31] Much like Emily, actually,
+I have had multiple careers,
+[00:53:34] including a former career as an attorney
+[00:53:36] working on police misconduct,
+[00:53:37] so it's an interesting coincidence, yeah.
+[00:53:40] Yeah, we will talk after for sure.
+[00:53:41] So I just wanna spend just a few minutes
+[00:53:44] talking about the tool that
+hopefully a lot of you all used
+[00:53:46] during the presentation,
+and as Nicole mentioned
+[00:53:49] in the beginning, we are very excited
+[00:53:51] to be officially launching
+it out into the public today.
+[00:53:54] So NextSpace is an ASML
+project where we are
+[00:53:56] basically trying to use LLMs
+to create more engaging,
+[00:54:01] insightful, and inclusive events.
+[00:54:03] So this is something we've been working on
+[00:54:05] for quite some time and
+continue working on.
+[00:54:08] So these are just some of the early ideas
+[00:54:10] that we have for this that I'm
+gonna kind of talk through,
+[00:54:14] both what we've used today
+as well as a few other things
+[00:54:16] that we have to offer as well.
+[00:54:20] So some of the key features of NextSpace
+[00:54:22] you've seen kind of here, we're
+in a hybrid event right now
+[00:54:25] that we used it in.
+[00:54:26] So we're live, we're in a room,
+[00:54:28] but we've also got people
+on the Zoom webinar,
+[00:54:29] so it works in multiple formats.
+[00:54:31] We can do fully-virtual events,
+live events, hybrid events,
+[00:54:36] and as you might've seen if
+you played around with it,
+[00:54:38] which I'll show the interface in a second
+[00:54:40] for those who didn't get
+a chance to bring it up,
+[00:54:42] it does have pseudonymous communication.
+[00:54:45] So it's kind of, you
+know, one of the things
+[00:54:47] I'll be talking about a little bit more
+[00:54:48] is making people more comfortable
+engaging with an event,
+[00:54:52] and that's one of the ways
+in which that helps hopefully
+[00:54:54] to feel a little bit more
+comfortable engaging.
+[00:54:57] I'm gonna talk a little
+bit more about the backend,
+[00:55:00] which is kind of its own project.
+[00:55:02] It's a flexible, customizable
+backend for experimentation
+[00:55:05] with LLMs in conversations
+called the LLM Engine,
+[00:55:09] and we have launched that as well
+[00:55:11] as an open-source project today.
+[00:55:15] So just wanna take a quick
+second to acknowledge the team
+[00:55:17] for their hard work and say thank you.
+[00:55:20] We have several engineers on the product,
+[00:55:22] as well as an awesome
+product manager, Nicole,
+[00:55:24] our UX designer, and Johnny Richardson,
+[00:55:27] one of the engineers was supposed
+to be here with me today.
+[00:55:29] Unfortunately he had something
+up and couldn't make it,
+[00:55:33] but we really appreciate all the work
+[00:55:34] that he's been into the project as well.
+[00:55:37] And of course our principal investigator,
+[00:55:38] Professor Jonathan Zittrain.
+[00:55:42] So I'm gonna show a couple of things
+[00:55:43] that currently comprise what
+we consider to be NextSpace.
+[00:55:46] First is the Event Assistant,
+[00:55:48] which is what you are playing with today.
+[00:55:50] So basically that's sort of
+kind of a private event buddy
+[00:55:54] for you to engage with during the event.
+[00:55:57] Can provide recaps to
+catch you up on things
+[00:56:00] if you got distracted or joined late
+[00:56:02] and sort of help you
+clarify some of the points
+[00:56:04] that were made during the event.
+[00:56:06] And of course that's basically
+just a direct channel
+[00:56:09] that you as audience members have.
+[00:56:11] We have another tool that
+we didn't use live today,
+[00:56:13] but I'm gonna show you
+a previous demo of it,
+[00:56:17] which we call the Backchannel,
+and the Backchannel
+[00:56:20] is essentially a tool to
+surface audience interest
+[00:56:23] and questions to the moderator.
+[00:56:25] So it helps audience members
+engage with the event
+[00:56:28] as well as helps moderators
+sort of sift through
+[00:56:31] all the audience feedback and
+tailor the event in real time
+[00:56:34] to what the audience is asking about
+[00:56:37] and what they're interested in.
+[00:56:40] So let me go ahead and get this up.
+[00:56:44] Okay, yeah.
+[00:56:45] So the first thing I wanted to
+show is the Event Assistant,
+[00:56:46] which we used today.
+[00:56:47] I was using it throughout
+Emily and Meg's talk,
+[00:56:51] so I wanted to just kinda highlight
+[00:56:52] of a few of the things that I did with it.
+[00:56:54] Hopefully you all found it useful
+[00:56:56] and did some interesting
+things with it as well.
+[00:56:59] So one of the first, I'll
+first just show the interface.
+[00:57:01] So basically it's kind
+of question and answer
+[00:57:04] with the chat bot.
+[00:57:05] You can see down here
+that I have been assigned
+[00:57:06] a random pseudonym, Adaptive Selkie.
+[00:57:09] I do not know what a selkie is.
+[00:57:11] (crowd members laughing)
+[00:57:12] If anybody, I will be
+looking that up later.
+[00:57:15] But yes, we have a very rich
+name generation feature,
+[00:57:18] so that is who I am today apparently.
+[00:57:21] So you know, essentially I logged on,
+[00:57:23] the Event Assistant messaged me,
+[00:57:26] told me a little bit
+about how I could use it
+[00:57:28] to engage with the event.
+[00:57:30] So one of the things that I did, you know,
+[00:57:32] early on that the Event
+Assistant can help with,
+[00:57:34] as I mentioned before,
+was kind of attention
+[00:57:36] and focus support, right?
+[00:57:37] So kinda finding ways to,
+if your attention drifts,
+[00:57:40] being able to catch
+back up, join the event,
+[00:57:42] figure out what's going on.
+[00:57:44] So one of the first things
+I asked fairly early on
+[00:57:46] was, you know, "I just joined.
+[00:57:48] What did I miss?"
+[00:57:48] And this was right
+after Nicole had talked.
+[00:57:51] So it gave me sort of a rundown
+[00:57:53] of what she had done so
+far, describing this tool,
+[00:57:56] that was very meta, and
+talking a little bit more
+[00:57:59] about how I can provide feedback.
+[00:58:02] And then a little bit later on I asked it
+[00:58:06] kind of some deeper-dive questions, right?
+[00:58:09] So sometimes concepts
+come up during an event
+[00:58:11] and either you need clarity
+because you don't know
+[00:58:14] what ByteDance is, for example,
+or maybe you just wanna know
+[00:58:17] a little bit more about ByteDance.
+[00:58:18] So in that moment I kinda
+said, "Yeah, what is ByteDance?
+[00:58:21] Like who owns it?"
+[00:58:22] So it told me a little bit
+about ByteDance, you know,
+[00:58:25] who started it, when it
+started, that kind of thing.
+[00:58:30] And then I missed a little
+bit of what Emily said
+[00:58:32] about what Project Texas
+was, so I asked it,
+[00:58:34] "Hey, what did she say Project Texas was?"
+[00:58:37] And it kind of caught me up, right,
+[00:58:39] about how it being an initiative by TikTok
+[00:58:41] to limit private user
+data that was accessible
+[00:58:44] to employees in China.
+[00:58:45] So again, you know, this
+is just sort of helping me
+[00:58:47] as I'm going through to stay
+more engaged in the event
+[00:58:51] and get the most out of it.
+[00:58:52] Later on, I wasn't
+really sure what she said
+[00:58:55] about how they were spying on
+her, so I asked that question
+[00:58:58] and it gave me the information
+about how they tried
+[00:59:00] to access the IP addresses on her phone.
+[00:59:04] And then there was some context
+[00:59:06] I didn't really understand.
+[00:59:07] What is this Emily problem,
+right? (crowd members laughing)
+[00:59:10] - [Emily] No!
+[00:59:11] - Like somebody mentioned this.
+[00:59:12] I don't know what this is.
+[00:59:13] Why is it funny?
+[00:59:14] You know, so I'm asking it about like
+[00:59:16] why would she call it the Emily problem?
+[00:59:18] And it, you know, told me a little bit.
+[00:59:19] I'm not sure it actually
+got it exactly right, but-
+[00:59:21] - Oh, it's pretty good!
+- -it was in the ballpark
+[00:59:23] of what the Emily problem was meant to be.
+[00:59:26] So again, just sort of helping
+[00:59:27] like contextual understanding, right?
+[00:59:29] Clarifying when someone maybe
+uses a very jargon-y term
+[00:59:32] or maybe there's just
+something like the audience
+[00:59:34] or the speaker are
+reacting in a certain way
+[00:59:36] or something's coming up where
+you don't fully understand
+[00:59:39] what's going on in the
+context of the discussion,
+[00:59:42] that can help you engage as well.
+[00:59:44] And then I kind of
+wanted another deep dive.
+[00:59:46] So, "Who is Larry Ellison?
+[00:59:48] I don't know who Larry Ellison is."
+[00:59:49] And I do, (laughs) but for
+purposes of this presentation,
+[00:59:53] I did not, so it gave me a little bit
+[00:59:55] more information about that.
+[00:59:57] And then lastly, you know,
+you can kind of use it
+[00:59:59] to sort of help with linguistic encoding.
+[01:00:02] So you could have it kind of
+help you come up with questions
+[01:00:05] for the Q&A, for example,
+or even do things
+[01:00:08] like maybe you wanna
+tweet this awesome event
+[01:00:10] to your friends and so you say, "Hey,
+[01:00:11] give me a tweet real quick that I can use
+[01:00:14] to show this to my friends."
+[01:00:16] So these are just kind
+of some of the things
+[01:00:17] that we've been thinking
+about doing, you know,
+[01:00:20] to make events richer and more engaged.
+[01:00:22] And again, like as I'll say
+at the end of the presentation
+[01:00:25] and throughout, feedback
+is very much welcome
+[01:00:28] on how this tool went for
+you and, you know, what more
+[01:00:31] we can do with it, but this
+was kind of our initial start
+[01:00:34] and we hope that you
+enjoyed the Event Assistant.
+[01:00:37] So moving on to our other tool,
+[01:00:40] which we are currently
+calling the Backchannel.
+[01:00:43] So the purpose of the Backchannel,
+as I mentioned before,
+[01:00:45] was to kind of help
+surface audience questions
+[01:00:49] and interests to the moderators.
+[01:00:50] So there's a few different needs
+[01:00:51] that we're thinking about there.
+[01:00:53] For people who are in the audience,
+[01:00:55] you know, oftentimes you
+might have a question
+[01:00:57] but you don't feel
+comfortable raising your hand
+[01:00:59] during Q&A, or maybe
+you think of something,
+[01:01:01] you know, right in the
+middle of the event.
+[01:01:03] You obviously can't interrupt it.
+[01:01:04] You don't really remember later on,
+[01:01:07] so you wanna kind of get
+it out there right then.
+[01:01:10] For moderators, obviously
+there's a lot going on.
+[01:01:13] They're juggling a lot of things.
+[01:01:14] They're trying to curate
+a meaningful experience
+[01:01:16] for both the speakers
+and the audience members.
+[01:01:19] And you know, this is kind of
+a way for them to get a sense
+[01:01:21] of like where people in
+the audience are, you know,
+[01:01:24] a temperature check, just kind of like
+[01:01:26] what's the best way to focus the speaker
+[01:01:28] maybe in the Q&A portion where you can be
+[01:01:31] a little bit more nimble?
+[01:01:32] Or for speakers who are
+like really comfortable
+[01:01:34] adjusting on the fly, you can kinda help
+[01:01:36] adjust that as well.
+[01:01:38] So I'm just gonna show you,
+we used this a little earlier
+[01:01:40] just to kinda tee it up.
+[01:01:42] So I'm gonna show you three
+use cases basically for this.
+[01:01:45] So this is the audience
+view, and it's, again,
+[01:01:49] kinda a simple interface
+where you can type in messages
+[01:01:51] that go to the moderator channel.
+[01:01:53] Well, first to the LLM for evaluation,
+[01:01:55] and then possibly to
+the moderator channel.
+[01:01:57] There's some quick reaction buttons here,
+[01:01:59] so you can just kinda quickly,
+[01:02:01] like if you have a reaction in the moment.
+[01:02:02] Maybe you wanna tell the speaker
+[01:02:04] that what they said was really cool,
+[01:02:05] and speakers like to
+hear that sort of thing,
+[01:02:07] so you might just hit the button,
+[01:02:09] or if something needs clarification,
+[01:02:11] you can hit the button there.
+[01:02:12] And then also just kind of
+questions as they come up.
+[01:02:15] So what we did for purposes
+of this demo earlier,
+[01:02:17] we played a little bit of Emily's book
+[01:02:21] and we engaged with it
+to kind of tee this up.
+[01:02:23] So in the portion that
+we were listening to,
+[01:02:26] somebody mentioned something
+about digital dominance,
+[01:02:29] so I asked the question as
+an audience member, "Okay,
+[01:02:31] well, why are we assuming the
+U.S. is digitally dominant?
+[01:02:34] What does that mean?"
+[01:02:36] Then later on there was a discussion
+[01:02:37] about cyber sovereignty,
+so you know, I said,
+[01:02:39] "How would you deal with something
+[01:02:41] like a cyber sovereignty situation
+[01:02:43] if you had multinational traffic?"
+[01:02:46] And of course I thought
+something was cool,
+[01:02:49] as I think lots of things
+are cool in the book,
+[01:02:50] and so I made a quick
+reaction there as well.
+[01:02:54] And so for the moderator,
+what the moderator is seeing
+[01:02:57] is kind of, you know, a more condensed,
+[01:02:59] synthesized version of this
+that's been put through an LLM
+[01:03:02] to sort of filter out
+extraneous information
+[01:03:05] and importantly to kind
+of gather shared insights.
+[01:03:08] So because I was doing this
+with some of my team members,
+[01:03:11] it was able to kind of
+identify common themes
+[01:03:14] that we were asking about.
+[01:03:15] Oh, there's lots of people asking,
+[01:03:16] or in this case too,
+asking about, you know,
+[01:03:18] digital dominance in the U.S.
+[01:03:20] There's some people that wanna know more
+[01:03:22] about how cyber sovereignty
+affects global governance.
+[01:03:25] And then of course some
+standalone questions
+[01:03:28] that maybe are really insightful
+[01:03:30] that you wanna make sure
+make it to a moderator,
+[01:03:31] even if it's not a sentiment
+[01:03:33] that's shared amongst the audience.
+[01:03:34] So again, this is kind of
+our early phase of tools
+[01:03:36] that can really help moderators,
+[01:03:38] as well as participants in the event.
+[01:03:41] We also have a live transcript view
+[01:03:43] that's available to the moderator.
+[01:03:46] That's a little weird,
+there we go, (laughs)
+[01:03:48] with how I have it being.
+[01:03:49] So again, this is just
+as the event is going,
+[01:03:52] this is populating and so
+you're able to see that
+[01:03:54] and tie it back essentially
+to the insights.
+[01:03:58] So again, those are just two of the tools
+[01:03:59] that we've been working
+on the most right now
+[01:04:01] that are available in
+the open-sourced version.
+[01:04:03] Much more to come hopefully.
+[01:04:06] One other thing I wanted to show
+[01:04:08] with the NextSpace
+interface is just, you know,
+[01:04:11] kind of simple event admin, right?
+[01:04:12] So I can get a list of all of the events
+[01:04:15] that I have coming up that
+I'm using these things in.
+[01:04:18] I can quickly schedule a new event,
+[01:04:22] just giving kind of the name, the URL,
+[01:04:24] you know, a little bit about like
+[01:04:25] what kind of experience I wanna have.
+[01:04:28] If I wanted to get really fancy,
+[01:04:30] I could give it different
+models to use under the hood.
+[01:04:33] And this is just a subset of
+what we have tested it with.
+[01:04:37] But again, being able
+to kind of, you know,
+[01:04:39] have all my events in one
+place and organize them
+[01:04:42] and quickly deploy these agents
+[01:04:44] into the event as interventions.
+[01:04:48] So I'll just quickly
+show the NextSpace repo.
+[01:04:51] I'll have a QR code at the end
+[01:04:53] if you wanna pull up the GitHub URL,
+[01:04:55] and also, of course, we'll be available
+[01:04:56] for questions in the back
+during the open showcase.
+[01:04:59] But this is the NextSpace front end.
+[01:05:01] So it's basically a React,
+Next.js app type script
+[01:05:05] posted on Vercel, and
+then, right here on time,
+[01:05:11] let's go here. I'm gonna
+spend just a few minutes
+[01:05:14] talking about the backend.
+[01:05:15] So the backend of this product
+is what we call LLM Engine.
+[01:05:19] It's essentially kind of a flexible,
+[01:05:21] headless backend service
+for developing, evaluating,
+[01:05:25] and deploying LLMs in
+conversational multi-user
+[01:05:28] and multi-term environments.
+[01:05:30] So essentially you're
+seeing it today in action
+[01:05:33] on the backend with
+NextSpace, but it does support
+[01:05:36] multiple front-end clients
+and could be extended
+[01:05:38] to support more.
+[01:05:39] So for example, one of the
+biggest examples we have
+[01:05:42] is full Zoom integration.
+[01:05:44] So if this was an
+entirely virtual meeting,
+[01:05:47] all of the functionality
+that you saw today
+[01:05:48] on the NextSpace front end could be done
+[01:05:51] through the Zoom chat.
+[01:05:52] So you could have kind
+of a direct Zoom chat
+[01:05:54] with the Event Assistant in that
+[01:05:56] without having to use
+a separate interface,
+[01:05:58] and the Backchannel works the same way.
+[01:06:01] We have some experimental
+Slack integration as well,
+[01:06:04] which again, we're
+happy to talk more about
+[01:06:06] and show off later in the showcase
+[01:06:07] where you can deploy LLMs
+into Slack conversations.
+[01:06:11] And the screenshot here shows
+an early prototype we did
+[01:06:14] of an agent that was just
+sort of listening to everybody
+[01:06:17] and kind of feeding back
+reflections on shared consensus
+[01:06:22] and just things like that for a little bit
+[01:06:24] of bridging work during
+a group discussion.
+[01:06:29] So we also have within LLM
+Engine, aside from, you know,
+[01:06:32] being able to deploy to
+a number of platforms,
+[01:06:35] we have infrastructure for being able
+[01:06:36] to report on how the
+LLMs did during the event
+[01:06:40] and also to evaluate their performance
+[01:06:42] across a number of
+dimensions like correctness,
+[01:06:45] conciseness, hallucination,
+which hopefully
+[01:06:47] you don't have any of, but
+it does happen, (laughs)
+[01:06:51] retrieval relevance and
+things like safety as well.
+[01:06:54] And so it works with proprietary
+or open-source models.
+[01:06:58] We have tested it internally with things
+[01:06:59] like Mistral and Llama,
+so not just the big guys
+[01:07:02] like OpenAI and Claude.
+[01:07:04] And again, it's pluggable and flexible,
+[01:07:06] so the idea is you could put
+[01:07:07] whatever you want in there
+now that it's open source
+[01:07:10] and you have the ability to do that.
+[01:07:13] So the underlying infrastructure
+for the techie people here,
+[01:07:16] it's a Node.js server with TypeScript,
+[01:07:19] uses Mongo for storage, Chroma for RAG,
+[01:07:23] and LangChain for agent integration.
+[01:07:26] So again, please check
+us out and we're happy
+[01:07:29] to answer any questions in the back.
+[01:07:31] So here are the links.
+[01:07:32] The QR codes go to the GitHub repost.
+[01:07:35] And here's our contact
+information as well.
+[01:07:37] We are happy to hear
+from you later on or now.
+[01:07:41] I think these are also on
+the posters in the back
+[01:07:43] if you miss it, but
+we'll keep the slide up
+[01:07:44] for a little while.
+[01:07:46] And we're really looking
+forward to hearing
+[01:07:48] more of your thoughts and
+maybe doing some collaborations
+[01:07:50] and seeing what you guys
+might do with the tools
+[01:07:52] now that they're publicly available.
+[01:07:54] So thank you so much for your
+time, I really appreciate it.
+[01:07:56] (crowd members clapping)
+[01:08:05] - [Meg] All right, that
+concludes the presenter part
+[01:08:08] of our synthesizer.
+[01:08:09] We have snacks and beverages out
+[01:08:12] in the kinda main lobby area if you all
+[01:08:14] want to head out there.
+[01:08:15] We're gonna flip this room really quick
+[01:08:17] so that we can get tables in here.
+[01:08:18] People can get set up around
+the posters that you see,
+[01:08:21] and then you can come back
+in, ask a lot of questions,
+[01:08:24] people will be demoing.
+[01:08:25] So if you wanna kinda get
+up and and start moving.
+[01:08:28] And thank you one more
+time to all of our guests
+[01:08:30] and presenters, Emily, Meg, Jen, Johnny,
+[01:08:34] who was here in spirit.
+[01:08:36] We appreciate you all and more to come.
+[01:08:40] - [Staff Member] Please make
+sure to remove your items
+[01:08:42] out of the room with
+you so that we're able
+[01:08:44] to move all the chairs
+and bring the tables.
+[01:08:46] Thank you so much.
+[01:08:47] (crowd chattering loudly)
