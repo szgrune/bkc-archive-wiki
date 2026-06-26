@@ -55,7 +55,7 @@ jobs:
           # inject custom styling (explorer scroll fix, etc.); .quartz is a dotfile
           # so it was skipped by the wiki/* copy above and isn't a published page
           if [ -f wiki/.quartz/custom.scss ]; then
-            cp wiki/.quartz/custom.scss quartz/styles/custom.scss
+            cp wiki/.quartz/custom.scss quartz/quartz/styles/custom.scss
           fi
           # point Quartz at the GitHub Pages project URL
           sed -i 's|baseUrl: ".*"|baseUrl: "szgrune.github.io/bkc-archive-wiki"|' quartz/quartz.config.ts
