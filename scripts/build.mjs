@@ -67,6 +67,16 @@ const cleanDescription = (html) => {
   return s.trim();
 };
 
+// Berkman Buzz plain-text body → readable markdown.
+// Converts <url> angle-bracket links to markdown, collapses excessive blank lines.
+const formatBuzzBody = (text) => {
+  if (!text) return "";
+  let t = text.replace(/\r\n/g, "\n").replace(/\r/g, "\n");
+  t = t.replace(/<(https?:\/\/[^>]+)>/g, (_, url) => `[${url}](${url})`);
+  t = t.replace(/\n{3,}/g, "\n\n");
+  return t.trim();
+};
+
 const domainOf = (url) => {
   try {
     return new URL(url).hostname.replace(/^www\./, "");
@@ -137,13 +147,15 @@ for (const it of selected) {
   const authors = splitAuthors(it.authors);
   const feedTags = Array.isArray(it.tags) ? it.tags : [];
   const desc = cleanDescription(it.description);
+  const isBuzz = String(it.id).startsWith("buzz_");
+  const isSyntheticUrl = it.url.includes("cyber.law.harvard.edu/berkman-buzz/");
 
   const fm = [
     "---",
     `id: ${it.id}`,
     "type: item",
     `title: ${yamlStr(it._title)}`,
-    `url: ${yamlStr(it.url)}`,
+    `url: ${isSyntheticUrl ? '""' : yamlStr(it.url)}`,
     `source: ${it._domain}`,
     `date: ${it._date || "unknown"}`,
     `authors: [${authors.map(yamlStr).join(", ")}]`,
@@ -151,24 +163,26 @@ for (const it of selected) {
     "---",
   ].join("\n");
 
+  const sourceLabel = isBuzz
+    ? (isSyntheticUrl ? "Berkman Buzz newsletter" : `[Archived online](${it.url})`)
+    : `[${it._domain}](${it.url})`;
   const metaLine =
-    `**Source:** [${it._domain}](${it.url}) · **Published:** ${it._date || "unknown"}` +
+    `**Source:** ${sourceLabel} · **Published:** ${it._date || "unknown"}` +
     (authors.length ? ` · **By:** ${authors.join(", ")}` : "") +
     (feedTags.length ? ` · **Feed tags:** ${feedTags.join(", ")}` : "");
 
-  const body = [
-    fm,
-    "",
-    `# ${escapeHashtags(it._title)}`,
-    "",
-    metaLine,
-    "",
-    desc ? `> ${desc.replace(/\n/g, "\n> ")}\n` : "",
-    `[Open original ›](${it.url})`,
-    "",
-  ].join("\n");
+  let bodyParts = [fm, "", `# ${escapeHashtags(it._title)}`, "", metaLine, ""];
+  if (isBuzz && it.content) {
+    bodyParts.push("---", "", formatBuzzBody(it.content), "");
+  } else {
+    bodyParts.push(
+      desc ? `> ${desc.replace(/\n/g, "\n> ")}\n` : "",
+      `[Open original ›](${it.url})`,
+      ""
+    );
+  }
 
-  write(join("items", it._year, `${it._stub}.md`), body);
+  write(join("items", it._year, `${it._stub}.md`), bodyParts.join("\n"));
   written++;
 }
 console.log(`Wrote ${written} item stubs (${ALL ? "all years" : `year ${YEAR}`}).`);
