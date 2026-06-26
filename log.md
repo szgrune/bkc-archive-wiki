@@ -115,3 +115,12 @@ Revolution" + Herdict; 2010 WikiLeaks + Google–China + Facebook privacy. 2011�
 thematic digest titles (SOPA/Arab Spring; open access; Snowden/Aaron Swartz; net
 neutrality/encryption; the Buzz sign-off). 2016 documented as the source-transition seam
 (4 items). Fixed stale frontmatter on timeline/2014 (item_count 2 → 48, pre-Buzz-merge).
+
+## [2026-06-26] synthesis | timeline narratives, TagTeam era 2017–2026 (batch 9)
+Wrote per-year narratives for all TagTeam years, grounded in per-year theme-keyword
+profiles over titles: 2017 feed-online/2016-reckoning; 2018 Cambridge Analytica/techlash;
+2019 (largest year) AI-ethics + facial recognition; 2020 pandemic/protest/disinfo
+election; 2021 Jan-6/Great Deplatforming/Facebook Papers; 2022 Musk's Twitter + the
+generative-AI dawn; 2023 the ChatGPT year; 2024 the global "AI election"; 2026 the
+AI-saturated continuation. Rewrote the index.md Timeline section so every year carries a
+one-line theme (was "synthesis pending"). All 21 years (2006–2026) now have narratives.
