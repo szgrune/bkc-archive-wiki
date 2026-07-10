@@ -44,6 +44,18 @@ Env vars:
         optional; if OAuth isn't configured yet, --dry-run can enumerate the
         channel with just an API key (channels/playlistItems/videos are
         public read endpoints).
+
+Credentials, where they live:
+    Production (daily GitHub Actions run): repo Settings -> Secrets and
+    variables -> Actions -> New repository secret, using the three env var
+    names above verbatim — see .github/workflows/fetch-youtube-captions.yml.
+
+    Local testing: this script does NOT auto-load a .env file (no dotenv
+    dependency), so either export the three vars in your shell, or put them
+    in a local .env (already in .gitignore — never commit real values) and
+    load it manually before running:
+        set -a; source .env; set +a
+        python3 scripts/fetch_youtube_api.py --limit 1
 """
 
 import argparse
