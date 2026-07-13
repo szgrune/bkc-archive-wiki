@@ -141,3 +141,9 @@ lives in the cloned Quartz tree's `quartz.config.ts`, not this content repo, and
 deploy workflow wasn't overriding it. Added a sed in `.github/workflows/deploy.yml`
 (alongside the existing baseUrl/graph seds) to set `pageTitle: "BKC Archive Wiki"` at
 build time. Link target unchanged (still the site root). Verified locally.
+
+## [2026-07-13] build | rebuild stubs for YouTube + TagTeam daily-fetch backlog
+Ran `scripts/build.mjs --all` to catch up item stubs/digests for the items merged by
+the new daily fetch pipelines since they went live (88 YouTube videos, 38+ TagTeam items).
+Corpus now 7,468 items, all with stubs. Routine housekeeping ahead of wiring up the daily
+synthesis workflow, which depends on `raw/digest/<year>.md` being current for slug lookups.
