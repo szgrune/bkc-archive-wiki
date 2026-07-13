@@ -1,0 +1,1261 @@
+[00:00:01] - Alright.
+[00:00:02] Hello everybody, how are you doing?
+[00:00:04] (crowd responds enthusiastically)
+[00:00:06] I like that's actually good energy for like
+[00:00:10] afternoon in the dark in February, so thank you.
+[00:00:15] Hi, I'm Becca, I you she/her pronouns.
+[00:00:17] I'm the director of community for the Berkman Klein Center
+[00:00:21] here at Harvard University.
+[00:00:23] We're really grateful that you're here to join us.
+[00:00:27] We wanna start by acknowledging
+[00:00:28] that Harvard is located on the traditional ancestral land
+[00:00:31] of the Massachusett, the original inhabitants
+[00:00:34] of what is now known as Boston and Cambridge.
+[00:00:37] We pay respect to the people of the Massachusett tribe past
+[00:00:40] and present and honor the land itself, which remains sacred
+[00:00:44] to the Massachusett people.
+[00:00:46] And I'm pleased to introduce you to our speakers.
+[00:00:48] We have Brian Vorndran
+[00:00:50] and Alan Raul,
+[00:00:51] who are speaking us today about the Federal Bureau
+[00:00:53] of Investigation's Cyber Division, their strategy,
+[00:00:57] and we'll talk through some case studies.
+[00:00:59] This is the fifth in a series of events sponsored
+[00:01:02] by the Orrick fund for the Colloquium on Cybersecurity
+[00:01:05] and Cyber Law.
+[00:01:07] Okay, bios.
+[00:01:08] Brian Vorndran was named Assistant Director
+[00:01:11] of the Federal Bureau
+[00:01:12] of Investigation's Cyber Division in March, 2021,
+[00:01:15] having most recently served as the special agent in charge
+[00:01:18] of the New Orleans Field office.
+[00:01:21] He joined the FBI as a special agent in 2003.
+[00:01:24] In 2008, he was part of the International
+[00:01:27] Contract Corruption task force in Afghanistan.
+[00:01:30] He was promoted to supervisory special agent in 2009
+[00:01:34] and was assigned to the
+[00:01:35] Counter-Terrorism division at headquarters.
+[00:01:37] He was promoted to unit chief in 2012.
+[00:01:40] In 2013, he led the Washington Field Office's
+[00:01:43] Joint Terrorism Task Force.
+[00:01:45] He was promoted to assistant special agent in charge
+[00:01:48] of the Cyber and Counterintelligence programs at the
+[00:01:51] Baltimore Field Office in 2016.
+[00:01:54] The next year he was promoted to chief
+[00:01:56] of the strategic operations section
+[00:01:57] of the Counter-Terrorism Division at headquarters.
+[00:02:01] He was named Deputy Assistant Director
+[00:02:03] of the Criminal Investigative Division in 2018
+[00:02:06] and is an adjunct professor at Johns Hopkins School
+[00:02:09] of Advanced International Studies.
+[00:02:12] Alan Raul is elect serves
+[00:02:14] as a lecturer on law at Harvard Law School here.
+[00:02:17] Yeah.
+[00:02:18] He's the founder of Sidley Law Firm's,
+[00:02:21] highly ranked global privacy and cybersecurity practice,
+[00:02:24] and is a member of the firm's top ranked crisis management
+[00:02:27] and strategic response team.
+[00:02:29] He represents companies on US
+[00:02:31] and international privacy, cybersecurity,
+[00:02:34] artificial intelligence and technology issues.
+[00:02:38] He's represented a number
+[00:02:39] of leading technology and internet companies whose devices,
+[00:02:42] software, or users have been exploited
+[00:02:45] by state sponsored threat actors
+[00:02:47] who typically involve expense,
+[00:02:49] which typically involves extensive coordination with US
+[00:02:52] and international law enforcement, cybersecurity
+[00:02:55] and regulatory agencies and intelligence services.
+[00:02:59] So you guys know a lot about what you're talking about.
+[00:03:02] We're so grateful that you're here with us
+[00:03:03] and that we'll learn with you tonight.
+[00:03:05] To our virtual attendees in the ceiling, hello.
+[00:03:08] Please note that this event is being recorded,
+[00:03:12] but you as audience members will not be seen.
+[00:03:15] And finally, we strive
+[00:03:16] to create inclusive accessible events here
+[00:03:18] at the Berkman Klein Center.
+[00:03:20] For any questions, comments, concerns,
+[00:03:22] or ideas for future gatherings,
+[00:03:24] please contact events@cyber.harvard.edu.
+[00:03:29] Your feedback is critical to our success
+[00:03:31] and that's a real, we welcome any engaged,
+[00:03:34] thoughtful feedback that you have, so share with us.
+[00:03:37] With that, thank you again for joining us today
+[00:03:40] and let me hand over the mic, the floor.
+[00:03:43] - I'll take it, first momentarily.
+[00:03:46] Thank you Becca, for the introduction.
+[00:03:48] Thank you all for joining in person
+[00:03:50] and those of you virtually,
+[00:03:52] and to Berkman Klein, thanks for hosting this event,
+[00:03:56] this very timely event on challenges that the FBI
+[00:04:02] is facing and fixing in many cases.
+[00:04:04] And we're gonna hear about that in line
+[00:04:08] with the introduction that Becca just provided.
+[00:04:11] I've had the privilege to engage in, what was it, extensive
+[00:04:16] coordination and interaction with law enforcement
+[00:04:19] in the person of one assistant director, Brian Vorndran
+[00:04:24] sitting to my left.
+[00:04:27] And I, you know, as I sat down, we had a chance to discuss
+[00:04:32] with my class on cybersecurity
+[00:04:33] before the,
+[00:04:37] really, the success that the private sector
+[00:04:40] very often has in working with the Federal
+[00:04:43] Bureau of Investigation on cyber
+[00:04:45] investigations where the companies
+[00:04:48] and organizations that find themselves on the wrong side
+[00:04:53] of a cyber threat actor, engaged with the FBI,
+[00:04:58] you know, not in the same context.
+[00:05:00] You were taking a little bit with my class of law students
+[00:05:04] that the FBI is not a regulatory agency, it's a
+[00:05:09] law enforcement agency
+[00:05:10] and also an intelligence, part of the intelligence community
+[00:05:14] and treats the victims of cyber attacks
+[00:05:18] in fact, as victims, not as perpetrators.
+[00:05:21] The FBI leads that to other agencies in the federal
+[00:05:24] government to provide that treatment too, to companies
+[00:05:28] that, again, are, have the sorrow of the being victim
+[00:05:32] of a cyber attack.
+[00:05:34] So it really is an honor, certainly for me personally,
+[00:05:37] for Harvard more broadly,
+[00:05:39] to have the cyber lead at the FBI join us today,
+[00:05:44] especially at a time when there's so much going on that
+[00:05:46] the FBI and the US government is involved
+[00:05:49] in and in fending off,
+[00:05:52] and taking down cyber attacks against US interests.
+[00:05:56] So with that, I'll turn it over to assistant director
+[00:06:00] Vorndran, he's gonna, he has some slides then I,
+[00:06:04] I'll probably ask a question or two
+[00:06:06] and open it up to the questions from the in-person audience.
+[00:06:10] Sadly, we're not logistically able
+[00:06:13] to take questions from the virtual audience,
+[00:06:15] but I trust that there'll be lots of questions here.
+[00:06:18] So with that, turn it over to Assistant Director
+[00:06:21] Vorndran for slides and then move on to questions.
+[00:06:24] - Good evening everyone.
+[00:06:25] I'm gonna stand, I'm gonna power
+[00:06:27] through some slides so we can get to the Q and A.
+[00:06:30] Director Chris Ray testified yesterday
+[00:06:33] in an open hearing in front
+[00:06:34] of the Chinese subcommittee in the house.
+[00:06:37] And if anyone had the opportunity to listen
+[00:06:40] to that testimony, it's very, very well done.
+[00:06:43] It's a very accurate depiction
+[00:06:44] of current threat environment we faced
+[00:06:46] with China specifically.
+[00:06:47] I'll be more broad than that.
+[00:06:49] My goal tonight in the
+[00:06:50] foundational slides, is really to walk you through
+[00:06:53] the authorities that underpin how we do our work,
+[00:06:55] and then walk through some case examples.
+[00:06:58] Just really briefly,
+[00:07:00] we're spread throughout the United States.
+[00:07:01] We have 300 offices.
+[00:07:04] We obviously have a deep international portfolio as well.
+[00:07:07] We're in about 70 countries worldwide.
+[00:07:10] We have dedicated cyber capability in 16 countries
+[00:07:14] with a growth plan to get to 22 by the end
+[00:07:16] of the calendar year '24.
+[00:07:18] I just share that because I think it's important
+[00:07:20] to understand where we fit domestically and internationally.
+[00:07:24] So I just wanna really briefly go through the interagency.
+[00:07:27] So the interagency within the US government
+[00:07:30] and the intelligence committee when it comes
+[00:07:31] to cyber is complicated.
+[00:07:34] But when you distill it down and understand the policies
+[00:07:37] and authorities that define each of our missions,
+[00:07:40] it's actually very clearly defined.
+[00:07:42] So in no particular order,
+[00:07:43] CIA is obviously the foreign intelligence arm
+[00:07:46] of the US government.
+[00:07:48] CISA has responsibility
+[00:07:50] for net defense here in the United States.
+[00:07:53] So essentially producing, providing, sharing intelligence,
+[00:07:56] taking best practices to raise the net defense capability
+[00:08:00] of all public and private sector organizations
+[00:08:02] in the United States.
+[00:08:05] NSA I think speaks for itself.
+[00:08:07] The National Security Council has a very,
+[00:08:08] very active role in the cyber ecosystem within the US
+[00:08:12] government because of the interplay
+[00:08:14] with the diplomatic channels
+[00:08:15] that the US government finds itself in.
+[00:08:18] OFAC is the sanctions entity.
+[00:08:21] US Secret Service traditionally works financial crimes.
+[00:08:24] They touch base into the cyber ecosystem a little bit
+[00:08:28] with traditional investigations.
+[00:08:29] And then our role, I just put our mission statement,
+[00:08:32] which is derived from our strategy.
+[00:08:34] It's essentially work with public
+[00:08:36] and private sector partners, both domestically
+[00:08:38] and globally to design strategic disruption plans
+[00:08:42] to impose costs on our adversaries.
+[00:08:45] We'll talk about the forms that here briefly.
+[00:08:49] Okay, I wanna go into this really important, I'm not trying
+[00:08:51] to be a policy wonk here,
+[00:08:54] but I, this is really, really, really important.
+[00:08:57] Okay?
+[00:08:57] The FBI's authorities, what actually allows us
+[00:09:01] to legally do the work that we do.
+[00:09:03] This is what this slide speaks to.
+[00:09:05] We have broad title 18 investigative authority, that matters
+[00:09:09] because section 1030 of the US code in the legal world,
+[00:09:13] it talks about unauthorized access to a computer network,
+[00:09:16] computer system, right?
+[00:09:18] That's where we reside in the FBI cyber program.
+[00:09:21] Almost every one
+[00:09:22] of our cases is focused on that criminal activity.
+[00:09:26] Rule 41 search and seizure becomes really, really important.
+[00:09:29] And we'll touch on the case about this later in the
+[00:09:31] conversation.
+[00:09:32] The Rule 41 has a very important clause in it
+[00:09:35] that says the FBI can seize quote unquote
+[00:09:38] instrumentalities of a crime.
+[00:09:40] When we think about that, we think about in terms
+[00:09:42] of the physical world.
+[00:09:43] So we would say, of course the FBI can seize a weapon
+[00:09:47] that was used to commit a crime.
+[00:09:49] But we would also articulate
+[00:09:50] that malware surreptitiously installed
+[00:09:53] by the Chinese on US infrastructure is an instrumentality
+[00:09:56] of a crime and therefore we can seize that as well.
+[00:09:59] And we'll provide an example of that.
+[00:10:02] We have broad counterintelligence authorities
+[00:10:03] that basically say anytime a nation state adversary
+[00:10:06] targets an US organization, the FBI has a role in that.
+[00:10:10] Broad domestic intelligence authorities
+[00:10:13] that show in the presence of executive order 12333
+[00:10:16] and title 50, post 9-11, broad title one
+[00:10:19] and title three FISA, which essentially says we can conduct
+[00:10:23] search and surveillance of foreign persons here in the
+[00:10:25] United States that are tied to a nation state.
+[00:10:28] And then FISA 702, which says, if we can prove
+[00:10:31] that an individual doesn't have us-first standing,
+[00:10:34] and then prove that an individual is not located in the
+[00:10:37] United States, we can collect on them under 702.
+[00:10:40] One really important note on that,
+[00:10:43] if an individual is not based in the
+[00:10:45] United States, does not have constitutional protections
+[00:10:48] here, but is using US communication infrastructure
+[00:10:51] to facilitate activity, we can collect on that,
+[00:10:56] even though it's not on the US infrastructure.
+[00:10:59] Okay, how do we approach doing our work
+[00:11:02] in the FBI from the cyber perspective?
+[00:11:03] We distilled it down into these four key slides, right?
+[00:11:07] We will always play the long game
+[00:11:09] of traditional rule of law, right?
+[00:11:10] We will always try to take players off the field
+[00:11:13] through traditional prosecutions.
+[00:11:15] That's in our DNA, it's something we'll always pursue.
+[00:11:18] But we're also under no illusions that we're gonna indict
+[00:11:21] and arrest our way out of a global problem.
+[00:11:24] It's not gonna happen.
+[00:11:26] But I think the American people should reasonably expect
+[00:11:29] that we will always keep our eye down range to understand
+[00:11:33] what we can do for our traditional law enforcement
+[00:11:35] partners.
+[00:11:36] Secondly, we need
+[00:11:38] to leverage our domestic intelligence collective collection
+[00:11:41] to inform private sector, to inform public sector,
+[00:11:44] to inform our domestic
+[00:11:46] and international partners about in my world
+[00:11:49] how the cyber threat is presenting
+[00:11:51] itself here in the United States.
+[00:11:53] That is an authority given to us post 9-11.
+[00:11:56] That is extremely, extremely important for us
+[00:11:58] to fulfill from a mission perspective,
+[00:12:00] and something we take very,
+[00:12:02] very personally and very professionally.
+[00:12:03] Number three is pressure the threat.
+[00:12:06] We need to initiate joint sequence operations with public
+[00:12:10] and private sector partners, both domestically
+[00:12:12] and globally to impose costs on our adversaries.
+[00:12:15] I describe it as anything from a small speed bump
+[00:12:19] to a high hurdle that causes the adversary friction,
+[00:12:22] causes the adversary to slow down,
+[00:12:24] causes the adversary to move off
+[00:12:26] the infrastructure, causes the adversary to move
+[00:12:28] period, is a win for us, right?
+[00:12:30] Because we can't traditionally do prosecution
+[00:12:33] or get somebody extradited back to the United States.
+[00:12:37] So pressuring the threat
+[00:12:38] through an all tools approach is
+[00:12:40] extremely, extremely important.
+[00:12:42] And lastly, victim engagement.
+[00:12:44] We are, and I believe this to be true,
+[00:12:46] a victim centered organization
+[00:12:48] and our commitment to victims is very, very personal to us.
+[00:12:51] A victim of a cyber crime remains a victim, right?
+[00:12:54] And we will treat those individuals that way.
+[00:12:56] We don't share their information outside the FBI
+[00:13:00] and we treat them that way.
+[00:13:01] The reason that is so important is
+[00:13:03] because the victims of cyber crime possess really
+[00:13:06] critical intelligence that allows us to do our jobs better.
+[00:13:10] So to enable that sharing from a victim to the FBI
+[00:13:13] of critical intelligence is a very, very important part
+[00:13:17] of our value proposition that we try at the end of the day.
+[00:13:20] Okay, I'm gonna go into a little bit
+[00:13:22] of a different presentation than I usually give.
+[00:13:24] I'm just gonna go through the ransomware ecosystem
+[00:13:26] here really well
+[00:13:27] because I think especially for this audience,
+[00:13:29] they actually find it quite interesting.
+[00:13:32] So the gig economy, right?
+[00:13:34] Shared and access, right?
+[00:13:36] So we know it in terms of DoorDash, Uber, GrubHub,
+[00:13:40] where you have Car A, Car B, Car C
+[00:13:42] that are running on those apps, right?
+[00:13:44] They're gonna use, the driver's, gonna use the app
+[00:13:46] that probably is most reliable
+[00:13:48] and makes them the most money.
+[00:13:50] When we look at the ransomware ecosystem,
+[00:13:52] it is identical, okay?
+[00:13:54] You have your affiliates, your actors
+[00:13:56] or teams around the bottom that essentially is equivalent
+[00:13:59] to the cars in the previous slide.
+[00:14:01] They're gonna use the different ransomware variants
+[00:14:04] that are most reliable, that are most effective
+[00:14:07] and that make them the most money.
+[00:14:08] It's a shared economy model.
+[00:14:11] We go a little bit deeper and look at the comparison.
+[00:14:13] If you look at Uber's model of the app
+[00:14:16] and the leadership of Uber,
+[00:14:18] how the app ties into the platform,
+[00:14:20] how the car ties into the transportation provider in terms
+[00:14:24] of who owns, who drives the navigator, et cetera.
+[00:14:27] It's almost identical to the business model
+[00:14:29] of ransomware, right?
+[00:14:31] You have the high ransomware variant, there is leaders
+[00:14:34] and developers of that variant
+[00:14:36] and that malware, you have the panel, the payload,
+[00:14:38] the lead site that is tied to the platform,
+[00:14:41] and you have the affiliate or the team, it's tied
+[00:14:43] to the team leader, open source intelligence, et cetera.
+[00:14:47] The models are almost identical.
+[00:14:51] When we look at the affiliate model of ransomware,
+[00:14:55] the key developers
+[00:14:56] of each ransomware variant essentially take a 20% cut, okay?
+[00:15:00] So they sit in a cordoned off kind of royalties environment
+[00:15:04] where they develop the malware, they make it available
+[00:15:07] for affiliates to use and deploy.
+[00:15:09] They manage the communications with the victim,
+[00:15:11] but they remain cordon off
+[00:15:12] and they take a 20% cut, essentially
+[00:15:15] of the ransomware payment that comes through.
+[00:15:17] The affiliate, or the affiliate team will take 80%
+[00:15:20] of the ransom that's paid.
+[00:15:23] If you have an affiliate team model,
+[00:15:24] which is on the right side of the screen,
+[00:15:26] look at the specifics of the breakdown.
+[00:15:28] The team leader of that team is gonna get a 30% cut,
+[00:15:32] the payload deployer is gonna get a 20% cut,
+[00:15:34] the pen testers, et cetera.
+[00:15:36] The point is, it is a very, very,
+[00:15:38] very sophisticated business model that is run
+[00:15:42] by very capable adversaries in the criminal space.
+[00:15:45] It's actually a fascinating business study for those
+[00:15:48] who may be tied to the business school.
+[00:15:51] So what do we do?
+[00:15:52] Our approach is really four pillars, right?
+[00:15:55] How do we target this?
+[00:15:56] We target it through malware and delivery.
+[00:15:58] We target it through the infrastructure,
+[00:16:00] we target the communications
+[00:16:01] and we target the financials, right?
+[00:16:03] Those are the four pillars that we believe we have to attack
+[00:16:07] whenever we're looking at an adversary to impose costs.
+[00:16:11] Not in every operational outcome are we able
+[00:16:14] to impact every one of those four,
+[00:16:16] but our goal is always to impact every one of those four.
+[00:16:21] So let's look at Hive.
+[00:16:23] Hive was a very, very prolific ransomware variant in 2022.
+[00:16:29] It started primarily by targeting the healthcare industry.
+[00:16:32] It's a traditional ransomware as a service model
+[00:16:35] where you have key developers that are core docs,
+[00:16:38] safe haven status in Russia, undoubtedly.
+[00:16:41] And you have an admin
+[00:16:42] and affiliate model where you have an 80
+[00:16:43] 20% financial split.
+[00:16:45] 80% of the proceeds are going to the affiliates,
+[00:16:49] 20% are gonna to the leadership.
+[00:16:51] The first victim that we actually knew
+[00:16:53] of in the FBI, is in July of 2021,
+[00:16:57] and the case was run by our FBI Tampa field office
+[00:17:00] because of the location of the first victim.
+[00:17:02] So in July, 2022, we actually were able
+[00:17:05] to manufacture backend access to through the API
+[00:17:08] and actually pull the decryption keys for every victor.
+[00:17:11] So what that means is when there's a ransomware attack,
+[00:17:14] there's really two levels of extortion, right?
+[00:17:17] You'll have an exfiltration of data
+[00:17:19] and the adversary will hold that data to threaten
+[00:17:22] the spill of that data on the public internet,
+[00:17:24] which forces a payment.
+[00:17:26] The second extortion arm is a encryption event
+[00:17:29] where the adversary will encrypt as many systems
+[00:17:33] as it can in an organization.
+[00:17:35] So we were able to basically manufacture backend access
+[00:17:40] to get the decryption keys so
+[00:17:41] that we could share the decryption keys with victims.
+[00:17:43] So they didn't have to pay, for that second leg
+[00:17:46] of the extortion,
+[00:17:47] that's usually the biggest payment portion for a victim.
+[00:17:50] So what were we able to see?
+[00:17:52] Obviously we're able to extract encryption keys.
+[00:17:54] We were able to identify victims in process,
+[00:17:58] which is hugely powerful for us and for victims.
+[00:18:01] We were able to identify malware hashes, which allowed us
+[00:18:04] to look at how we could defeat the malware
+[00:18:06] and a bunch of other intelligence that really helped us.
+[00:18:09] So because of the ability to pull those decryption keys,
+[00:18:12] we essentially save victims about $130 million over
+[00:18:15] seven months in ransomware payments.
+[00:18:18] And when I talk about being victim centered, this is,
+[00:18:21] these are good days for us, right?
+[00:18:23] There is nothing more important
+[00:18:25] that we do in our organization than helping victims in need.
+[00:18:29] Whether that's a victim of a violent crime,
+[00:18:31] cyber crime, it doesn't matter.
+[00:18:33] That's why all of us join, that's why all of us are there.
+[00:18:36] So to be able to provide 1100 decryption keys
+[00:18:39] and relieve $130 million of potential extortion payments,
+[00:18:43] that's a good day for us.
+[00:18:45] These charts get a little bit confusing,
+[00:18:49] but we estimate that the profit from Hive, the profits
+[00:18:53] that Hive made before we were able
+[00:18:56] to decrypt their encryption events were about $110 million.
+[00:19:00] That's a lot of money, right?
+[00:19:02] That is a lot of money from a criminal
+[00:19:04] conspiracy perspective.
+[00:19:07] So, you know, I'm not gonna go into all the details.
+[00:19:09] I think one thing I would like to touch on is this.
+[00:19:14] There's new CIRCIA is essentially a new law
+[00:19:20] coming into effect, probably May
+[00:19:22] of 2025 over year, where it forces critical infrastructure
+[00:19:26] to report to the US government when they suffer
+[00:19:30] material cyber intrusion.
+[00:19:32] The reason that's so important is
+[00:19:34] because there's massive underreporting of cyber crime
+[00:19:37] to the US government, which impacts our ability
+[00:19:39] to have a common operating picture of
+[00:19:41] what is actually happening in the victim
+[00:19:43] space in the United States.
+[00:19:45] Here's probably the most concerning part though, only 50%
+[00:19:50] of Hive's US victims were critical infrastructure.
+[00:19:54] So we're gonna move with CIRCIA from 25% to 50%,
+[00:19:57] but we're still gonna have a gap, right?
+[00:19:59] In terms of reporting that as mandated,
+[00:20:02] which improves our common operating picture,
+[00:20:05] but it's not gonna get us to where we need to be.
+[00:20:07] That's just an evolution that we need as a society
+[00:20:09] that we're gonna have to continue to go through.
+[00:20:21] This is just a real brief heat map of Hive victims.
+[00:20:24] 48 states in the United States have victims in it.
+[00:20:30] And 88 different countries.
+[00:20:33] And so the most targeted critical infrastructure sector is
+[00:20:35] healthcare, IT, government,
+[00:20:36] commercial critical manufacturing.
+[00:20:39] So great case, this is what we love doing.
+[00:20:43] All of our operational outcomes, our victim relief is based
+[00:20:48] and a result of really good investigative work, right?
+[00:20:51] And so I think sometimes we lose sight of
+[00:20:54] how did this actually happen?
+[00:20:55] This happened by people grinding it out,
+[00:20:58] by doing core investigative work in our Orlando
+[00:21:02] resident agency in the Tampa field office.
+[00:21:04] You continue to find opportunities which led
+[00:21:07] to the backend access, which led
+[00:21:09] to the operational outcomes.
+[00:21:10] It's a really, really good example of how we approach
+[00:21:12] the infrastructure to take notes.
+[00:21:14] Okay Genesis Marketplace.
+[00:21:16] Genesis Marketplace in the start
+[00:21:17] of 2023, the largest criminal marketplace on the internet,
+[00:21:21] it operated on both the open net, the internet
+[00:21:25] as well as the dark web.
+[00:21:27] So it's an illicit marketplace that essentially
+[00:21:30] provided accounts, passwords, cookies
+[00:21:32] and digital fingerprints,
+[00:21:33] which I'll explain here in a minute.
+[00:21:35] It also was critical in providing initial access
+[00:21:38] for onward ransomware attacks.
+[00:21:40] And I'll give you an example here in a minute.
+[00:21:42] Proprietary software exceptionally well
+[00:21:45] designed by the adversary.
+[00:21:47] And for the first time we saw US based users at scale.
+[00:21:52] And so in probably April
+[00:21:54] or May of this year, internally
+[00:21:56] our conversation shifted from, this is a non-US problem
+[00:22:00] to the problem is now starting to be present,
+[00:22:03] not necessarily based, but present in the United States.
+[00:22:07] And that has undoubtedly continued for the rest
+[00:22:10] of '23 and into '24.
+[00:22:13] Okay, for those of you who
+[00:22:16] use automatic password storing on your computer
+[00:22:20] where it defaults your username
+[00:22:22] and your password, which I assume everybody
+[00:22:25] in here probably does.
+[00:22:27] This is what could happen, okay?
+[00:22:29] This is one example of a computer that was compromised
+[00:22:34] by this, what we call stealer malware of Genesis.
+[00:22:38] And through compromising the computer in the upper left,
+[00:22:42] it gave the actors access to all of these stored usernames
+[00:22:45] and passwords for every account that this individual
+[00:22:48] used on their computer, okay?
+[00:22:51] And so it's a really, really important example about
+[00:22:55] what happens if your personal computer actually gets
+[00:22:58] compromised and what can be done
+[00:22:59] with the browser history, right?
+[00:23:01] So just take some time when you have some time
+[00:23:04] to think about how you wanna mitigate that
+[00:23:06] because it is a legitimate risk to all of us.
+[00:23:09] Now on here you see examples like Sony Entertainment,
+[00:23:12] Amazon, Google, and you may say, hey, that's not that big
+[00:23:16] of a deal in terms of vulnerabilities
+[00:23:18] to me as an individual.
+[00:23:20] But what happens when I'm logging into FBI
+[00:23:23] accounts from my personal computer
+[00:23:26] and stealer malware, takes my browser history
+[00:23:28] and takes my credentials from my FBI account
+[00:23:31] or for my another
+[00:23:32] for my Johns Hopkins account off my personal computer.
+[00:23:36] Then that gives the adversary an immediate way
+[00:23:39] in through legitimate credentials to start
+[00:23:41] to escalate privileges to gain in their systems.
+[00:23:43] And that's what happened with Genesis at scale.
+[00:23:48] So this is an example of EA games.
+[00:23:52] EA games, anybody who's in the gaming world knows Fifa,
+[00:23:55] you know these games, EA's behind those games
+[00:23:59] and has a long history.
+[00:24:01] For $10 some adversaries brought, bought credentials off
+[00:24:07] of Genesis Marketplace that gave them access
+[00:24:09] to the EA slack channels that allowed
+[00:24:12] them to manipulate access to EA,
+[00:24:14] which allowed them to steal all of EA's
+[00:24:16] intellectual property, that's how easy it can be.
+[00:24:20] The end users, right,
+[00:24:21] legitimate hackers, drug networks, and then script kiddies.
+[00:24:25] Script kiddies in our world means somebody
+[00:24:27] that doesn't really have the skills
+[00:24:29] to write their own malware code so they steal it
+[00:24:31] or leverage somebody else to write it from that.
+[00:24:33] So you had these three types of hackers using Genesis.
+[00:24:38] I was joking before I got in here,
+[00:24:40] some of the best parts about working for the FBI is
+[00:24:42] how we name our operational takedowns.
+[00:24:45] So this one was Operation Cookie Monster,
+[00:24:47] obviously cookies being on a play on cookies
+[00:24:50] and the derivative ties to your browser history.
+[00:24:53] So we had three objectives when we targeted Genesis, right?
+[00:24:57] Pillar one identified targeted
+[00:24:59] and arrest Genesis administrators.
+[00:25:02] Pillar two, identify targeted arrest seize users
+[00:25:04] and cryptocurrency both domestically and globally.
+[00:25:08] In the FBI we say CONUS
+[00:25:10] and OCONUS, continental United States
+[00:25:12] and outside continental United States.
+[00:25:14] And Pillar three seizes infrastructure.
+[00:25:16] We were largely very successful in pillar two
+[00:25:19] and three pillar with this disruption
+[00:25:20] that essentially forced Genesis administrators
+[00:25:23] to completely walk away from their infrastructure.
+[00:25:26] Let's just talk briefly about HAFNIUM.
+[00:25:29] HALFNIUM is a China based group
+[00:25:33] that operates at the direction and command
+[00:25:36] and control of the Chinese government.
+[00:25:38] And so this is my example of the value of Rule 41
+[00:25:43] to protect US infrastructure.
+[00:25:46] And so we'll walk through it.
+[00:25:47] So in December of 2020,
+[00:25:50] there were three vulnerabilities
+[00:25:51] found in Microsoft Exchange.
+[00:25:54] January 2nd, January 6th,
+[00:25:55] Microsoft essentially releases public disseminations about
+[00:25:59] the presence of those vulnerabilities.
+[00:26:01] And they ultimately on March 3rd issued patching
+[00:26:04] and remediation guidance for those vulnerabilities.
+[00:26:08] On March 10th, the FBI was CISA, which is part of DHS,
+[00:26:12] releases cybersecurity advisory to amplify the remediation
+[00:26:17] and patch guidance from Microsoft.
+[00:26:20] We in the FBI have a preference to move from least intrusive
+[00:26:24] to most intrusive techniques
+[00:26:26] and I'll explain what that means here.
+[00:26:29] But we have to be loyal to our mission to deal
+[00:26:31] with the adversary from a mission perspective
+[00:26:34] and completely neutralize their ability to impact
+[00:26:37] the United States, right?
+[00:26:39] And so our North Star is always mission focused,
+[00:26:43] neutralize the adversary's capability
+[00:26:45] to do harm, within that,
+[00:26:47] our preference is always
+[00:26:48] to move from least intrusive to most intrusive.
+[00:26:51] But the least intrusive
+[00:26:52] to most intrusive always isn't an option.
+[00:26:54] But in this case it was.
+[00:26:56] We issue the cybersecurity advisory,
+[00:26:58] then we go into mass victim notification.
+[00:27:01] Then I don't wanna get too mired down in details here.
+[00:27:05] We don't necessarily see intelligence that says
+[00:27:09] this computer at this location was
+[00:27:11] compromised by the Chinese.
+[00:27:14] What we see is an ISP level piece of intelligence
+[00:27:19] and we have to dig into that through grand jury subpoena
+[00:27:21] after grand jury subpoena to get
+[00:27:23] to the end user level, right?
+[00:27:24] That could take weeks, right?
+[00:27:26] That's not an exaggeration could take 5, 6, 7 rounds
+[00:27:28] of grand jury subpoenas.
+[00:27:30] It brings into this the element of time.
+[00:27:33] So when these vulnerabilities were identified,
+[00:27:37] the Chinese essentially scan the internet
+[00:27:39] and drop 10,000 PowerShells on US servers and US networks.
+[00:27:43] A PowerShell gives them remote backend access
+[00:27:46] to gain persistence into any place
+[00:27:48] there's a power shell, right?
+[00:27:49] That's what it does.
+[00:27:51] So the cybersecurity advisory
+[00:27:52] is issued on March 10th.
+[00:27:56] We do massive amounts of victim notifications
+[00:28:00] and then within those two contracts we have not done
+[00:28:02] anything overly intrusive, right?
+[00:28:04] We've notified the public through a cybersecurity advisory,
+[00:28:08] we've knocked on (audio glitch) problem, we're able
+[00:28:11] to reduce the attack surface by 94%.
+[00:28:14] Okay?
+[00:28:15] So the question comes with 700, 800 networks and servers
+[00:28:19] with still having Chinese PowerShells on them, is
+[00:28:22] that a big enough attack surface for the Chinese
+[00:28:25] to do damage to people in the United States?
+[00:28:28] Our answer to that question is gonna be yes, right?
+[00:28:30] And if we have a legal way to deal with that
+[00:28:33] to neutralize the attack surface, we're gonna do that
+[00:28:36] as long as we can do it within the Constitution.
+[00:28:39] And in this case, we swore out a warrant
+[00:28:41] in the southern district of Texas that allowed us
+[00:28:45] to essentially go in with precision code
+[00:28:47] and delete the malware that the Chinese saw
+[00:28:50] and saw to break the communication with the command
+[00:28:53] and control back to Chinese.
+[00:28:55] Technically, we actually copied it first
+[00:28:57] for evidentiary purposes and then we deleted it
+[00:29:00] and the removal of that malware broke
+[00:29:02] the communication back to the Chinese.
+[00:29:04] So I'll just reflect back to Rule 41 when I said
+[00:29:08] instrumentalities of a crime, would we all agree
+[00:29:12] that malware installed on US infrastructure surreptitiously
+[00:29:15] by the Chinese, by the Russians
+[00:29:17] or someone else is an instrumentality of a crime?
+[00:29:20] I think all reasonable minds would say it's an
+[00:29:22] instrumentality of crime.
+[00:29:24] When we do this work, right,
+[00:29:26] it's through traditional probable cause.
+[00:29:28] So there's an affidavit that any of you can go read, right?
+[00:29:31] That underpins the establishment of probable cause
+[00:29:36] to give us the ability to do that search
+[00:29:38] and seizure on that infrastructure.
+[00:29:41] And then I was just asked to touch briefly about the
+[00:29:43] Securities and Exchange Commission.
+[00:29:45] The SEC published a new rule
+[00:29:47] that went into effect just within the last couple months.
+[00:29:51] That requires SEC regulated entities,
+[00:29:54] which is essentially any publicly traded company here in the
+[00:29:57] United States, to report a material cyber intrusion
+[00:30:00] to the SEC for transparency purposes to shareholders.
+[00:30:06] As part of that, there's a law enforcement national
+[00:30:08] security, sorry, a law enforcement public safety
+[00:30:11] delay provision where those regulated companies
+[00:30:15] who become victims, if they want delay notification,
+[00:30:18] they can engage with the FBI
+[00:30:21] to essentially do an equities check
+[00:30:22] to see if it meets certain criteria.
+[00:30:25] Anybody that wants additional information on that
+[00:30:27] or may work for, or have relationships
+[00:30:30] with any publicly traded company.
+[00:30:32] There's a website on fbi.gov/sec which
+[00:30:35] spells all this out.
+[00:30:37] There's now an intake form which allows users
+[00:30:39] to pretty simply answer about eight different questions.
+[00:30:42] We take that we square
+[00:30:44] with the interagency from an equities perspective
+[00:30:46] and see if it meets certain criteria.
+[00:30:48] The criteria that would be most relevant is this,
+[00:30:53] if you suffer a compromise
+[00:30:55] and there is an unpatched zero day vulnerability that exists
+[00:30:59] as a result of that compromise,
+[00:31:01] obviously amplifying the presence of that cyber intrusion
+[00:31:05] when no one else has closed
+[00:31:08] the zero day or zero day vulnerability is a big public
+[00:31:11] safety issue for many of us in the United States.
+[00:31:14] Those are the types of things we're evaluating.
+[00:31:16] So I think that brings me to the end.
+[00:31:18] And so I'll pause there, get a
+[00:31:20] drink and take some questions.
+[00:31:21] - Terrific, well-
+[00:31:23] (audience applause)
+[00:31:26] Thank you.
+[00:31:27] Fascinating and frightening at the same time,
+[00:31:30] although you've had, you have a lot of success.
+[00:31:34] So it's also exciting to hear about
+[00:31:39] the different successes you've had in bringing down the
+[00:31:44] ransomware networks like, Hive.
+[00:31:45] I'm really interested in the
+[00:31:47] business model that you described.
+[00:31:49] You said, I don't know if there are any business school
+[00:31:51] students here, but how do these criminals, there's the kind
+[00:31:56] of old axiom that there's no honor amongst thieves,
+[00:32:00] how do they actually get together
+[00:32:03] and split the profits
+[00:32:06] and what sorts of insights do you
+[00:32:08] and the FBI have about all those machinations?
+[00:32:12] - So the traditional business model would be
+[00:32:15] that your experts that are coding the malware
+[00:32:19] generally are gonna have safe haven status physically
+[00:32:23] or be cordoned off from the rest of the ecosystem so
+[00:32:27] that their identity is farther down.
+[00:32:30] And so from there they publish malware.
+[00:32:33] And a lot of these affiliates that deploy the malware
+[00:32:36] are always interested in the most effective
+[00:32:39] and the highest return on investment financially.
+[00:32:42] And those affiliates earn their own reputations,
+[00:32:45] no different than many of us would in different social
+[00:32:47] media applications.
+[00:32:49] And they become trusted.
+[00:32:51] But when you look at the engagements with the victims,
+[00:32:53] when you have a successful encryption event
+[00:32:55] or a successful data encryption event,
+[00:32:58] all the communications with the victim,
+[00:33:00] even though it's happened with the affiliate,
+[00:33:02] are still flowing back through the centralized database
+[00:33:05] for the malware developers.
+[00:33:06] So they're able to see the actual negotiations in real time
+[00:33:10] and what the financial payment agreement is,
+[00:33:12] and the payment comes to them first
+[00:33:14] and then they cut off the 80% for the other.
+[00:33:16] So it's a very sophisticated model, a lot
+[00:33:19] of credibility in terms of capabilities, in terms
+[00:33:22] of the malware developer ecosystems.
+[00:33:25] - It's sort of trust but verify, among-
+[00:33:27] - Sure, yeah.
+[00:33:28] - You mentioned the,
+[00:33:30] all the different agencies you had on one slide, you know,
+[00:33:33] cybersecurity and infrastructure security agency says
+[00:33:36] that National Security Agency, CIA, Secret Service.
+[00:33:41] I mean this is a kind of a very basic, you know, question,
+[00:33:45] but do you have a coordination council?
+[00:33:49] Do you get, I mean, is there a kind of a body
+[00:33:53] that convenes with some regularity and formality?
+[00:33:57] Or is it just ad hoc case by case?
+[00:34:01] - It's more ad hoc case by case,
+[00:34:03] bu not in an ununified way.
+[00:34:09] We're extremely mature relationships.
+[00:34:11] At the personal organizational level
+[00:34:13] with all those agencies and their personnel.
+[00:34:16] So for example, if there's a critical infrastructure
+[00:34:19] compromise, think an airport, we will almost always engage
+[00:34:24] that entity with FBI assistance as well.
+[00:34:28] If there is a global disruption of a botnet to take down,
+[00:34:32] we will work on that with cyber command, right?
+[00:34:35] Because we would have traditionally the domestic element
+[00:34:38] disruption cyber command of the global element.
+[00:34:41] - Cyber command is part of NSA?
+[00:34:43] - It's under the big DOD construct,
+[00:34:45] but it's technically separate, right?
+[00:34:48] And so it, we have very, very mature relationships,
+[00:34:52] ongoing dialogue about strategic intent.
+[00:34:54] So that's how I would describe it.
+[00:34:58] - You spoke and the slide on legal authorities
+[00:35:01] that you operate under, one of them is the section 702
+[00:35:06] under the Foreign Intelligence Surveillance Act.
+[00:35:09] You mentioned how it allows access to, you know,
+[00:35:12] foreign communications passing through US networks that is
+[00:35:17] rather well known these days for lots of reasons,
+[00:35:20] but including it, its reauthorization status,
+[00:35:24] Director Ray and others have spoken about how 702 is,
+[00:35:30] you know, one is essential to US national security
+[00:35:33] and intelligence operation,
+[00:35:35] but in particular for cyber, is that how
+[00:35:38] does 702 you know, what is the cyber dimension
+[00:35:42] that is to say for your cybersecurity investigations
+[00:35:46] and disruptions?
+[00:35:48] How does the 702 data factor in?
+[00:35:52] - So I just wanna be really careful here
+[00:35:54] because we're all under like very strict guidelines about
+[00:35:56] what we can and can't say on 702.
+[00:35:59] I would just say this, it's the most agile
+[00:36:01] and effective tool we have in the intelligence
+[00:36:03] community at large, right?
+[00:36:06] And so that's not an FBI specific statement.
+[00:36:08] It is truly irreplaceable tool in the
+[00:36:11] intelligence community.
+[00:36:13] - Right, and then I think it's, was it extended?
+[00:36:16] I think maybe it was extended briefly,
+[00:36:18] but will come up again.
+[00:36:19] It would've sunset in well just the end of last year.
+[00:36:24] It was some consensus extension and,
+[00:36:28] but it, it's still not definitively reauthorized
+[00:36:32] is my understanding.
+[00:36:35] The director spoke,
+[00:36:40] you mentioned the house committee on the side,
+[00:36:44] the Chinese Communist Party on Volt Typhoon,
+[00:36:48] that was another success that was I think
+[00:36:52] formally announced I believe just yesterday.
+[00:36:55] How did, what was the nature of that?
+[00:36:57] What threat did the US face from that?
+[00:36:59] - So Microsoft started publishing on Volt Typhoon in about
+[00:37:03] mid 2023.
+[00:37:06] And the Chinese's intent, successful intent
+[00:37:10] to compromise US critical infrastructure here
+[00:37:13] and to gain persistent footholds
+[00:37:15] in that critical infrastructure.
+[00:37:18] And so the conversation yesterday on Capitol Hill
+[00:37:22] with the director and General Nakasone and Director Easterly
+[00:37:25] and others, was about the persistence of the Chinese threat,
+[00:37:29] targeting critical infrastructure to essentially gain more
+[00:37:33] and more persistence to impact our critical infrastructure.
+[00:37:36] We had a role as detailed in the disruption announcement
+[00:37:41] in terms of dealing with one
+[00:37:42] of the obfuscation networks under Rule 41
+[00:37:45] as we just described.
+[00:37:47] It's tremendous work by our team.
+[00:37:49] We're very, very proud of it.
+[00:37:50] But the reality is there's a lot more to do.
+[00:37:54] - I know that, and I, we've talked a little bit about this
+[00:37:59] with the cybersecurity class,
+[00:38:02] but, for other take downs, one of the experiences
+[00:38:06] that I've had is that, not that I'm in a position
+[00:38:09] to evaluate it, but the technologists
+[00:38:11] and companies that I work with have been
+[00:38:14] just supremely impressed with the technical capabilities
+[00:38:19] of many of your colleagues at at the FBI.
+[00:38:23] And you know, public may not understand
+[00:38:26] that you have this technical capability that is critical
+[00:38:31] to a lot of the successful take downs.
+[00:38:33] Disruption, activities.
+[00:38:36] You know, where do they come from?
+[00:38:38] I mean do they go through the same training and-
+[00:38:42] - Well I just think, you know, I've been with the FBI
+[00:38:45] for over 20 years, which is hard
+[00:38:47] for me to believe at this point.
+[00:38:48] But most of us in my area joined post 9/11
+[00:38:51] because of 9/11.
+[00:38:53] And I think many of us believe
+[00:38:54] that the reason we all applied is
+[00:38:56] because of the mission, which is true.
+[00:38:58] It's a phenomenal mission,
+[00:38:59] and the mission causes you to stay,
+[00:39:01] but the people are just wonderful
+[00:39:03] and the people are what keep all of us there and happy.
+[00:39:06] And I think our retention rate is somewhere near 99.7%,
+[00:39:10] which is extremely high.
+[00:39:13] But I think we're really proud of that
+[00:39:14] and we're really proud of the
+[00:39:16] people that we have to work with.
+[00:39:17] And the technical skills
+[00:39:19] that you're describing, I think they're true.
+[00:39:21] They just happen to be some of our talent
+[00:39:24] that we have throughout the organization.
+[00:39:26] - I'm gonna open it up in the room
+[00:39:28] after just a question about coordination globally.
+[00:39:32] You talked about the domestic agencies
+[00:39:34] with which you collaborate.
+[00:39:36] Does it work pretty smoothly with counterparts
+[00:39:38] and who are the counterparts
+[00:39:39] that you work with internationally?
+[00:39:41] - We have tremendous relationships globally.
+[00:39:43] I mean none of the countries
+[00:39:45] that I would list here are gonna surprise anyone.
+[00:39:47] You have tremendous work relationships with the five I's
+[00:39:51] and with some of the traditional strong cyber capabilities,
+[00:39:53] the Dutch, the Germans, Polls et. cetera,
+[00:39:56] with tremendous working
+[00:39:57] relationships, they're tremendously capable
+[00:39:59] partners as well.
+[00:40:00] And fostering and maturing those relationships against
+[00:40:03] the global threat is just supreme.
+[00:40:07] - Great, okay.
+[00:40:08] Let's have you wanna wait for the microphone and-
+[00:40:16] - [Crowd 1] Hi, I have a question about Bureau's
+[00:40:18] case assignment model.
+[00:40:21] I understand cases are assigned based off
+[00:40:22] of where malware is first detected, but the different RAs
+[00:40:27] and field offices will have different levels of,
+[00:40:30] or different amounts of technical staff, different amounts
+[00:40:33] of computer scientists, you know, different familiarity
+[00:40:37] with filling out requests for FISA warrants.
+[00:40:39] I'm curious if there have been any discussions about
+[00:40:43] adjusting the case assignment model in the cyber domain so
+[00:40:47] that you know, their smaller RAs
+[00:40:52] don't feel pitted against nation state adversaries.
+[00:40:57] - Alright, you obviously know something.
+[00:40:58] (people laugh)
+[00:41:00] - Yeah, wow.
+[00:41:01] - What I would say is that some of what you said is true,
+[00:41:05] but I wanna of course correct a few things.
+[00:41:07] Assignments of cases on the criminal side
+[00:41:13] are varied, right?
+[00:41:15] About how they actually sync with a field office.
+[00:41:18] Sometimes it's based off of first victim, which deals
+[00:41:21] with the venue issue from a prosecutor perspective,
+[00:41:24] which becomes an important derivative conversation.
+[00:41:27] Sometimes it's that we see that the business model
+[00:41:30] of a new variant is tied to a previously known ransomware
+[00:41:35] gang that ran on a variant under a different brand
+[00:41:38] and wanting to couple that together
+[00:41:40] where those expertise already exists, right?
+[00:41:43] What we've learned in terms of assignments is this,
+[00:41:48] that we need scalability, right?
+[00:41:51] So for example, the most prolific
+[00:41:55] ransomware variant right now is Lockbid 3.0.
+[00:41:58] Lockbid 3.0 is run outta our FBI I Newark field office.
+[00:42:02] If we had that assigned to,
+[00:42:04] let's use my previous background,
+[00:42:06] I love the people in New Orleans, right?
+[00:42:08] If we had that case assigned to the FBI New Orleans
+[00:42:11] division, there's no way they have staff
+[00:42:14] in terms of volume to deal with that size of the case.
+[00:42:17] So some of this becomes a scale issue.
+[00:42:20] In terms of the comment about pitted against each other,
+[00:42:23] I would need to talk to you more about what that means.
+[00:42:25] I think that we are trying to grow capacity
+[00:42:29] and capability in real time and that remains a goal of mine
+[00:42:34] and of the bureau at large.
+[00:42:37] So I'd be interested in knowing a
+[00:42:38] little bit more about that piece.
+[00:42:40] - [Crowd 1] Oh my apologies,
+[00:42:42] pitted against nation state adversaries as a smaller office.
+[00:42:46] - Yeah, well again, I would need
+[00:42:48] to know is the exact example,
+[00:42:50] but what we're trying to do is on the nation state side,
+[00:42:54] we have a very specific model
+[00:42:56] that couples different size field offices to work together
+[00:43:00] to bring a force multiplier effect against nation states.
+[00:43:03] I think we have made some internal tweaks
+[00:43:06] to that model recently to gain efficiencies.
+[00:43:09] But like everything, nothing is gonna be perfect
+[00:43:12] organizationally and it's just an evolution for us.
+[00:43:15] I think the best number I can give you is this, it's,
+[00:43:19] you know, Director Ray in his testimony yesterday said just
+[00:43:22] with China, right?
+[00:43:24] Best case scenario we're outnumbered 50
+[00:43:26] to 1, best case scenario.
+[00:43:28] That's not an FBI statement, that's a broader statement.
+[00:43:31] And so when you look at that,
+[00:43:32] it's just a scale issue for all of us.
+[00:43:34] - [Crowd 1] Thank you so much for-
+[00:43:39] - [Crowd 2] Thanks for being here.
+[00:43:40] You mentioned that retention is 99 plus percent
+[00:43:43] across the FBI.
+[00:43:44] I'm wondering what it is specifically in the cyber division.
+[00:43:47] - Yeah, so it's a great question.
+[00:43:49] So we have less of a,
+[00:43:54] the number for our cyber personnel is smaller than the
+[00:43:57] 99.7%, it is,
+[00:43:58] but it's not a significant drop.
+[00:44:01] I don't know the exact number
+[00:44:03] so I don't wanna say it publicly because I dunno it,
+[00:44:06] but where we have retention problems, we almost
+[00:44:11] have no ability to compete.
+[00:44:13] So for example, we've lost people
+[00:44:15] because some of the big strategics have come to them
+[00:44:18] and said, what do you want to include salary?
+[00:44:22] What do you want in terms of benefits?
+[00:44:24] What do you want in terms of work-life balance?
+[00:44:25] In terms of work from home?
+[00:44:27] Which our ability to offer work from home
+[00:44:29] in a classified environment is
+[00:44:31] very, very challenging, right?
+[00:44:33] We're never gonna compete with that
+[00:44:35] and we're not gonna try to compete with that.
+[00:44:37] We're gonna try to compete on mission, we're gonna try
+[00:44:39] to compete on the FBI experience as an employee
+[00:44:42] and you having a well-rounded out career.
+[00:44:45] And so we're dealing with high pay scenarios
+[00:44:49] where we just, we can't try to compete.
+[00:44:51] I mean the factors are two
+[00:44:53] and a half, three x different, right?
+[00:44:56] But you know, we're doing pretty well to be honest with you.
+[00:44:59] I think where we're having challenges is bringing people
+[00:45:02] into the organization and cyber
+[00:45:04] because it's so difficult to attract
+[00:45:07] that talent initially at a young age
+[00:45:10] for a lower salary than the they can get somewhere else.
+[00:45:12] So once we're getting people in, we're fairly successful.
+[00:45:16] But sometimes getting people in proves to be a challenge.
+[00:45:18] - Do you provide training?
+[00:45:20] I mean, in other words, do you grow that capability?
+[00:45:22] - Oh yeah, absolutely.
+[00:45:25] Does that help?
+[00:45:27] Okay.
+[00:45:30] - [Crowd 3] Hi, yeah, you clearly
+[00:45:32] had some amazing successes.
+[00:45:34] I guess my question is, what's on your wishlist?
+[00:45:39] If you could, you know, someone wave a magic wand
+[00:45:42] and give you what you wanted to improve your capabilities
+[00:45:45] of responding to cyber risks, what would it be?
+[00:45:48] Would it be resources, would it be the policy environment?
+[00:45:52] Would it be international cooperation?
+[00:45:54] Like what would be the places
+[00:45:56] that you would be pushing most for improvements?
+[00:46:00] - For me, the number one right out of the gate is liability
+[00:46:04] and privilege protection to engage with victims.
+[00:46:07] And so that CIRCIA, which is the
+[00:46:11] critical infrastructure reporting requirement
+[00:46:15] that's been published, that'll become law
+[00:46:17] in roughly a year and a half.
+[00:46:19] That gives liability
+[00:46:20] and privilege protection for victims to engage
+[00:46:22] with certain other government agencies but not the FBI.
+[00:46:26] And I think that's really, that's just,
+[00:46:29] it's not even an FBI statement.
+[00:46:32] If we want victims to come forward,
+[00:46:34] we should give them broad liability
+[00:46:36] and privilege protections period to engage
+[00:46:38] with the US government.
+[00:46:39] Right now that doesn't exist.
+[00:46:41] And I think that is a no cost option that is
+[00:46:46] legislatively challenging, right?
+[00:46:48] But it's a $0 solution
+[00:46:51] that would be have an outsize impact.
+[00:46:58] - [Crowd 4] First of all, thank you very much
+[00:46:59] for your time today.
+[00:47:00] Can you talk a little bit about the dynamic in the bureau,
+[00:47:03] specific in the cyber division of the,
+[00:47:06] I'd say like competing incentives
+[00:47:07] for law enforcement and counter intel.
+[00:47:10] It seems like one was gonna be short term,
+[00:47:11] one might be long term.
+[00:47:13] And where do you think that's gonna go in the future?
+[00:47:15] - I'm not sure I understand, can you rephrase that?
+[00:47:17] - [Crowd 4] Well from the slides, it seems
+[00:47:19] like the bureau has made
+[00:47:19] like a pretty significant shift away from like name
+[00:47:22] and shame and company and backend approach to combatting
+[00:47:25] strategic cyber threats.
+[00:47:28] Do you imagine that that's gonna stay the same?
+[00:47:30] It seems like on the slides it's more
+[00:47:34] of like a strategic counter intel,
+[00:47:37] I don't wanna say like shift, but kind of the emphasis.
+[00:47:41] Do you think that's gonna continue to stay that way?
+[00:47:43] - So I think, so two answers, right?
+[00:47:46] I think it's gonna stay that way because the interagency
+[00:47:50] and when I talk about the interagency
+[00:47:52] and really talking about those of us
+[00:47:53] with operational authorities, right,
+[00:47:56] to impose cost, have really rallied around the imposition
+[00:48:00] of cost model, right?
+[00:48:02] And so when we talk about how we degrade adversaries,
+[00:48:05] we're all coalesced around that language,
+[00:48:07] which is directly derivative of our strategy,
+[00:48:10] NSA's strategy, cyber command's strategy.
+[00:48:12] And so I don't think that's gonna change.
+[00:48:14] That's becoming more and more and more solid over time
+[00:48:17] and the relationships are maturing in a way that's fair with
+[00:48:20] where we are in time, right?
+[00:48:21] In three years from now, we'll be better
+[00:48:23] with our interagency partners and they'll be better with us.
+[00:48:26] Now that's not because none of us are trying,
+[00:48:28] it's just the evolution of organizations.
+[00:48:31] Where I think there's gonna be a shift is you're gonna see
+[00:48:34] more and more presence of cyber capable actors
+[00:48:39] here in the United States.
+[00:48:42] And I think that is gonna bring back into focus our
+[00:48:44] traditional rule of law law enforcement approach
+[00:48:47] that will be coupled with that,
+[00:48:49] but being still derivative of all of our investigative
+[00:48:52] work.
+[00:48:58] - Hey, about, while people are thinking of other questions,
+[00:49:02] let me follow up on one of your
+[00:49:04] responses about the wishlist,
+[00:49:05] which is, you know,
+[00:49:07] to facilitate interaction with the private sector.
+[00:49:11] One of the very prominent areas
+[00:49:17] of public communication from the FBI from the cybersecurity
+[00:49:24] and infrastructure security agency is a public private
+[00:49:27] cooperation and collaboration.
+[00:49:30] You were featured in the Wall Street Journal along
+[00:49:32] with your boss
+[00:49:34] and director of the FBI on this question,
+[00:49:39] and you talked about the level of interaction
+[00:49:44] and the quality of those interactions,
+[00:49:47] I think you maybe described it as providing Ritz level
+[00:49:52] interaction in that Wall Street Journal article.
+[00:49:55] Good picture by the way.
+[00:49:58] And how, and one of the points that,
+[00:50:05] you know, the FBI mentioned, you mentioned is that
+[00:50:09] companies that fall victim to cyber attacks
+[00:50:13] are in fact victims
+[00:50:15] and, you know, deserve to be treated with respect
+[00:50:19] for the information that they share.
+[00:50:22] How does that, I know that you mentioned that
+[00:50:27] the privilege, you know, the liability
+[00:50:29] for sharing the privilege possible waiver
+[00:50:33] or indignation of the confidentiality of the information.
+[00:50:38] How do you deal with that in terms
+[00:50:42] of making private sector that you need to collaborate with,
+[00:50:46] feel comfortable in working with you
+[00:50:49] and letting you be useful to them
+[00:50:51] and again, helping your mission?
+[00:50:54] - There's generally, when I talk in groups like this,
+[00:50:57] I talk a lot about the before intrusion days, right?
+[00:51:01] Of a relationship.
+[00:51:02] And you know,
+[00:51:05] those relationships have to be familiar
+[00:51:09] between an organization
+[00:51:10] and the FBI at the human name level, not at, in my world,
+[00:51:15] not at a squad level, but at a personal level.
+[00:51:18] And they have to be built on trust primarily through
+[00:51:22] expectation sharing
+[00:51:24] and then bilateral sharing of intelligence
+[00:51:26] before intrusion so that everyone understands
+[00:51:30] how do you want the FBI to engage
+[00:51:31] with you when an intrusion happens,
+[00:51:34] what is the FBI gonna ask for?
+[00:51:36] Is a company or organization actually willing to provide
+[00:51:39] that and many are not
+[00:51:40] and we understand that there is no statutory
+[00:51:42] obligation for that.
+[00:51:44] And so it just becomes this trust-based relationship
+[00:51:46] conversation that starts long, long, long
+[00:51:49] before the intrusion actually happens.
+[00:51:52] And we still have organizations that engage us
+[00:51:55] during an intrusion and they say, hey, we're ready
+[00:51:58] for the FBI to come in and remediate all of our systems.
+[00:52:01] The FBI's never done that, we're never gonna do that.
+[00:52:05] We don't have the capability or the capacity to do that.
+[00:52:08] And there's a multi-billion dollar industry built
+[00:52:10] around doing that.
+[00:52:12] And so that's just an example of
+[00:52:13] where the proper conversations haven't been had about
+[00:52:16] expectations on all sides.
+[00:52:18] So some simple questions, you know, if there's an intrusion,
+[00:52:21] who do you want the FBI to engage with?
+[00:52:23] Do you want it to be in person?
+[00:52:25] Do you want it be on the phone?
+[00:52:26] Do you want it be through another meeting, right?
+[00:52:28] Do you want to be set up at the request of the FBI
+[00:52:31] or at a timeline that you're okay with as an organization?
+[00:52:33] Like all these questions
+[00:52:35] and these conversations lead to comfort and trust.
+[00:52:38] So that's how we start.
+[00:52:42] - One of the,
+[00:52:43] Do I have another question?
+[00:52:44] - [Becca] So we have some questions
+[00:52:45] from those in the ceiling, our remote viewers.
+[00:52:48] May I ask two?
+[00:52:50] I'm gonna ask two of all of 'em.
+[00:52:51] There's a bunch of good ones.
+[00:52:53] The first is,
+[00:52:54] can you talk about the implications
+[00:52:56] or differences related to protecting software
+[00:53:00] as a service versus platform
+[00:53:03] as a service versus traditional infrastructure
+[00:53:07] and how that changes your approach.
+[00:53:09] So that's one question.
+[00:53:11] And then the second question is,
+[00:53:15] do you ever release your tools for researchers?
+[00:53:18] I think that's a good way to round us out.
+[00:53:20] Thinking about how the academic community might be
+[00:53:22] in dialogue with you.
+[00:53:23] Are there things that we might, we
+[00:53:25] as academic communities might have access to, especially
+[00:53:29] for the question asker related to malware
+[00:53:34] and analyzing malware?
+[00:53:35] - Sure, lemme take the first one first.
+[00:53:39] I take a little different spin on, I think there's,
+[00:53:40] I think it may be more relevant.
+[00:53:44] We don't see software as a service, platform
+[00:53:47] as a service, third party application,
+[00:53:50] we see them all as types of supply chain risks, right?
+[00:53:53] Because of the updated processes.
+[00:53:55] And so the example I use is this, we often talk
+[00:54:00] in whether it's the academic environment,
+[00:54:02] whether it's in corporate America about competitors.
+[00:54:05] And I think the better term when it comes to cyber is peers.
+[00:54:09] And so what third party applications are your peers using
+[00:54:14] that if an adversary knew that this group of peer companies
+[00:54:18] or peer prestigious academic universities were using,
+[00:54:22] and if they compromised that they would've an outsize impact
+[00:54:25] because they could compromise all the peers using
+[00:54:27] that third party application.
+[00:54:29] It's a really, really healthy conversation
+[00:54:32] for many, many different people.
+[00:54:33] And one that I find isn't had enough, right?
+[00:54:36] In terms of sharing tools, we don't share tools,
+[00:54:40] but we do share malware executables
+[00:54:42] when we get our hands on them.
+[00:54:44] And so there's a host of reasons we do that,
+[00:54:47] to inform the research community, to inform
+[00:54:51] those writing patches and code to protect against those.
+[00:54:57] And we share that fairly, I don't wanna say narrowly,
+[00:55:01] we share that pretty broadly
+[00:55:05] with those in that ecosystem.
+[00:55:07] And so that was true in 2023 on at least
+[00:55:10] three occasions that I know of.
+[00:55:15] - [Becca] Great, thank you sorry-
+[00:55:18] - It's okay.
+[00:55:21] - [Becca] Technology, I have one final question from me.
+[00:55:25] If, I could, I know we still have a couple minutes,
+[00:55:28] what advice do you have for students who might be looking
+[00:55:31] to engage with this work at any level?
+[00:55:35] Are there things to look out for
+[00:55:37] and be worried about, ethical concerns that you might have
+[00:55:40] as you engage with this work?
+[00:55:42] Things that you wish you knew when you started,
+[00:55:47] you know, for the students in this room
+[00:55:48] and outside this room
+[00:55:50] who might be watching?
+[00:55:52] Do you have any words of wisdom?
+[00:55:53] - I would just say there is a, obviously heavily,
+[00:55:56] heavily reported on research
+[00:55:57] and reported on that the gap in cybersecurity
+[00:56:01] and cyber operational positions that exists
+[00:56:04] in America, right?
+[00:56:06] Not necessarily in the government,
+[00:56:08] and the number of people who are qualified
+[00:56:10] or interested in doing them, that
+[00:56:12] that gap is enormous, right?
+[00:56:15] And there is a growing need for that
+[00:56:17] as we go into the generative AI space
+[00:56:19] and the broader ML space, many of those same
+[00:56:22] academic programs apply to those individuals.
+[00:56:26] What I would say to your core question is this,
+[00:56:30] the Cyber Safety Review board is in its third iteration.
+[00:56:33] It was a board stood up in 2021.
+[00:56:37] I have a role in that board with all
+[00:56:40] of my colleagues in the federal government,
+[00:56:42] at the big agencies as well as many in private sector.
+[00:56:46] And the first study was the log for J log
+[00:56:48] for shell vulnerability,
+[00:56:49] which was a massive Apache vulnerability
+[00:56:52] and an open voting environment.
+[00:56:55] A very, very difficult vulnerability to patch
+[00:56:57] because you know,
+[00:56:58] it's scripted throughout entire operating systems.
+[00:57:04] One of the findings that I think is most interesting
+[00:57:06] in that report is that there are no academic standards
+[00:57:11] for secure coding in the United States.
+[00:57:14] And so when you equate that to,
+[00:57:17] I have a civil engineering degree, imagine the day
+[00:57:20] where we said there are no safety standards
+[00:57:22] for civil engineers to build bridges, right?
+[00:57:24] That's the analogy, right?
+[00:57:25] We would be like, that's ridiculous.
+[00:57:28] Well there are no standards within the academic system
+[00:57:31] in the United States for secure coding.
+[00:57:33] And that's probably something that needs attention
+[00:57:36] as we do secure by design work over the next decade.
+[00:57:40] And something that I think I would encourage all of you
+[00:57:42] to be part of that solution.
+[00:57:44] - [Becca] Where do you think that solution comes from?
+[00:57:46] - I have no idea.
+[00:57:47] (people laugh)
+[00:57:48] - [Becca] Well, I think that that's a big
+[00:57:50] and important order for many of us to take up in our work.
+[00:57:54] I wanna thank you both so much
+[00:57:55] for joining us tonight, for sharing so much.
+[00:57:57] And thank you all for coming.
+[00:57:59] Those in the room, those in the ceiling,
+[00:58:01] those in the future.
+[00:58:03] Thank you all again.
+[00:58:04] (people laugh and cheer)

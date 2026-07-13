@@ -1,0 +1,1686 @@
+[00:00:01] okay we're going to get started again
+[00:00:02] with our second panel which is focusing
+[00:00:04] on um some of the the detailed kind of
+[00:00:07] implementation type questions um that
+[00:00:10] come along with these sorts of mandated
+[00:00:12] access regimes um and I'm just here to
+[00:00:15] to introduce the moderator who will then
+[00:00:17] introduce the panelists um a moderator
+[00:00:19] for this panel is David Lee um a
+[00:00:22] colleague of mine from the University of
+[00:00:23] Toronto although I'm a lawyer and he's a
+[00:00:26] a a computer engineering Professor uh
+[00:00:29] there as well as a tier one candidate
+[00:00:31] research chair in secure and reliable
+[00:00:33] systems David also holds appointments in
+[00:00:35] the department of computer science
+[00:00:37] faculty of law because frequently
+[00:00:39] collaborate um and is a research lead
+[00:00:41] with the shorts resman institute for
+[00:00:42] technology and Society associate
+[00:00:45] director of the data Sciences Institute
+[00:00:47] a vector faculty affiliate and a senior
+[00:00:49] Massie College fellow um so David had
+[00:00:52] many accomplishments the rest of his bio
+[00:00:54] you can read online and I will pass the
+[00:00:56] panel into his capable home
+[00:01:00] thank you very much Lisa yeah so um I'm
+[00:01:03] an engineer by training and that's what
+[00:01:05] I do and so we have our own concept
+[00:01:07] sometimes of implementation but I'm
+[00:01:08] particularly interested in hearing about
+[00:01:10] the implementation challenges that um
+[00:01:13] this panel is going to talk about um so
+[00:01:15] without further Ado I'm going to
+[00:01:16] introduce our panelists first we have
+[00:01:18] doara dark Shany um who's at the data
+[00:01:21] transfer initiative she's the director
+[00:01:23] of policy there and uh which is a
+[00:01:26] nonprofit dedicated to empowering
+[00:01:28] individuals by enabling a effective data
+[00:01:30] transfers before joining the DTI she was
+[00:01:33] at meta where she advised on privacy
+[00:01:36] e-commerce and accessibility issues in
+[00:01:38] meta's reality Labs division she has
+[00:01:41] provided testimony before Congress on
+[00:01:43] privacy and Technology um then we have
+[00:01:46] Becca Ricks uh who's from the Milla
+[00:01:48] foundation and she's a head of Open
+[00:01:50] Source research and investigations there
+[00:01:53] uh she leads the uh digital
+[00:01:56] investigations lab studying how people
+[00:01:57] interact with platforms and Al GMS um
+[00:02:01] such as those used in artificial
+[00:02:03] intelligence and machine learning prior
+[00:02:05] to Milla Becca was at uh was an open web
+[00:02:08] fellow at Human Rights Watch and worked
+[00:02:11] as a fellow as a social sorry as a
+[00:02:14] software developer in the tech industry
+[00:02:16] she was recognized as one of the 100
+[00:02:19] brilliant women in a ethics in
+[00:02:22] 2021 and last but not least we have
+[00:02:24] Hillary Ross um Global course who is at
+[00:02:27] the global Network initiative it serves
+[00:02:29] as a special projects advisor um there
+[00:02:33] she's interested in the in the
+[00:02:35] governance of emerging Technologies
+[00:02:37] transparency as a tool for
+[00:02:38] accountability freedom of expression
+[00:02:40] privacy and security and information
+[00:02:42] integrity and the future of news Hillary
+[00:02:45] was a fellow at the Federation is was a
+[00:02:48] fellow with the Federation of American
+[00:02:50] scientists day one project and the state
+[00:02:53] of the conference um and the Fullbright
+[00:02:56] te and and at the full bright teaching
+[00:02:58] program she was previously part of
+[00:03:01] birkman and continues to maintain
+[00:03:02] affiliation here uh so I invite each of
+[00:03:06] the panelists to maybe talk a little bit
+[00:03:08] about their views maybe we can start
+[00:03:09] with Gara here sure U Can folks hear me
+[00:03:12] okay great thanks um well very grateful
+[00:03:15] to be here today to provide some
+[00:03:17] thoughts um From perspective of our
+[00:03:20] organization's Mission which is to
+[00:03:22] empower users through data portability
+[00:03:25] I'd like to provide a little bit of
+[00:03:26] context uh about our organization to
+[00:03:28] sort of ground my comment
+[00:03:30] um we initially started out as a
+[00:03:32] Consortium of technology companies back
+[00:03:34] in 2018 and back then we were known as
+[00:03:36] the data transfer project uh since then
+[00:03:39] the project has supported the creation
+[00:03:42] of a portfolio of data transfer tools
+[00:03:44] tools such as Google's takeout uh
+[00:03:46] service met as transfer your information
+[00:03:49] tool and last year we revamped as a
+[00:03:51] newly formed nonprofit um and today we
+[00:03:54] continued to build upon that work from
+[00:03:57] back in 2018 on the technical side this
+[00:04:00] means that we're building tools that are
+[00:04:02] simpler faster more secure um and as was
+[00:04:06] alluded to on the previous panel which
+[00:04:08] which uh duct tailed very nicely into
+[00:04:10] the things that we hope to talk about
+[00:04:11] today uh we do believe the future is
+[00:04:14] direct data transfers and that's for a
+[00:04:16] few reasons some designated uh
+[00:04:18] Gatekeepers are required to comply with
+[00:04:20] data portability mandates and direct
+[00:04:22] data transfers under Section uh 69 of
+[00:04:25] the dma uh others have long worked in
+[00:04:28] this space to build good Goodwill and
+[00:04:30] frankly increasingly consumers are are
+[00:04:32] starting to expect to have these simpler
+[00:04:36] um more easily accessible tools to allow
+[00:04:39] data
+[00:04:40] transfer uh so while we are not a trade
+[00:04:43] Association we um remain independent in
+[00:04:46] our day-to-day work we do closely work
+[00:04:49] with our organizations founding members
+[00:04:51] Google Apple and meta um who provide
+[00:04:54] dedicated engineering and product
+[00:04:57] contributions uh equally important
+[00:04:58] though is our policy work where our
+[00:05:01] priorities are not only to educate and
+[00:05:02] convene thought leaders on the novel
+[00:05:05] questions in this space um but we're
+[00:05:07] constantly looking for opportunities to
+[00:05:09] work with companies of all sizes Civil
+[00:05:12] Society researchers uh because we
+[00:05:14] recognize that delivering the best
+[00:05:16] Collective outcomes when it comes to
+[00:05:18] implementation will require extensive
+[00:05:21] collaboration um and cooperation among
+[00:05:25] multidisciplinary stakeholders I think
+[00:05:27] I'll stop there as a preliminary
+[00:05:30] introduction um and let uh you all is it
+[00:05:34] does that sound okay introduce a little
+[00:05:36] bit more about your work yeah perfect
+[00:05:38] thank you hi everyone I'm Becca and I'm
+[00:05:40] with Milla foundation so I head up a
+[00:05:43] digital investigations Lab at the
+[00:05:45] foundation and we're in the unique
+[00:05:47] position of both being research
+[00:05:49] practitioners so doing a lot of platform
+[00:05:52] research primarily via data donation
+[00:05:55] approaches um so we do a lot of tooling
+[00:05:58] we built browser extensions that people
+[00:06:00] have downloaded and have been able to
+[00:06:01] participate in studies um are we built a
+[00:06:05] browser extension called regrets
+[00:06:06] reporter that allows us to study YouTube
+[00:06:09] on a really large scale um our most
+[00:06:11] recent study we ran we had almost 23,000
+[00:06:14] people who participated and donated
+[00:06:16] their data which means we had on the
+[00:06:18] scale of 560 million videos that we had
+[00:06:21] to analyze so we're really invested in
+[00:06:24] building a lot of tooling especially for
+[00:06:26] civil society research to move forward
+[00:06:29] um and through the mechanism of data
+[00:06:32] donation crowdsourced research um we're
+[00:06:35] also really invested in the Civil
+[00:06:37] Society research ecosystem and
+[00:06:40] independent research happening in this
+[00:06:41] field um obviously collaborating with
+[00:06:44] Academia but also outside of Academia
+[00:06:46] some of the really critical research
+[00:06:48] that's happening and so um in addition
+[00:06:50] to being researchers and practitioners
+[00:06:52] we work really closely with our policy
+[00:06:55] team to Think Through um questions
+[00:06:58] around DSA data access and what we think
+[00:07:01] good implementation um of some of these
+[00:07:03] Provisions might look like and um in
+[00:07:06] addition to that because we sort of were
+[00:07:09] born out of the open- source movement of
+[00:07:11] the 90s we also um have a particular
+[00:07:15] interest in how data is protected how
+[00:07:17] it's collected how we ourselves collect
+[00:07:19] data in adherence with our own lean data
+[00:07:22] privacy policies and so I think there's
+[00:07:25] um there's a bigger conversation to be
+[00:07:27] had among independent and civil Society
+[00:07:29] researchers about how we develop norms
+[00:07:32] for how we're managing a lot of this
+[00:07:34] data I'll get over to you Hillary great
+[00:07:37] thanks um thanks so much for having me
+[00:07:39] it's great to be here um it's especially
+[00:07:41] fun to be here because I when I was on
+[00:07:44] staff at brikman the last thing that I
+[00:07:45] helped to do was um to build this
+[00:07:47] institute so it's really cool to be um
+[00:07:49] be back and uh see what's what's
+[00:07:52] happening with it um so for some context
+[00:07:55] um I'm an independent technology policy
+[00:07:58] consultant I work with um
+[00:08:01] organizations uh to examine tricky
+[00:08:04] technology policy questions particularly
+[00:08:06] bringing um stakeholders together around
+[00:08:09] those questions and uh work work
+[00:08:11] together so right now I'm working with
+[00:08:13] the global Network initiative um they
+[00:08:15] multi-stakeholder Alliance that brings
+[00:08:17] together companies and Civil Society
+[00:08:19] organizations um academics and investors
+[00:08:22] to uh work on freedom of expression and
+[00:08:25] privacy globally um and my own
+[00:08:28] background has been particular really
+[00:08:29] focused on transparency in the last
+[00:08:31] number of years um I designed and
+[00:08:34] launched um a researcher access to data
+[00:08:36] program at Twitter um so that's where
+[00:08:40] some of my comments and background will
+[00:08:41] come from um and I also LED um a
+[00:08:44] transparency working group at the
+[00:08:45] Integrity Institute where um I'm a
+[00:08:47] member as well so that's kind of where
+[00:08:49] my own background is coming from um and
+[00:08:53] I guess I'll say not building on um
+[00:08:56] Whata intered with and what gave Ed with
+[00:08:59] of there's both uh as Gabe was saying
+[00:09:02] there's been a big drawback in voluntary
+[00:09:05] data sharing um from platforms to
+[00:09:07] researchers so we're kind of in a moment
+[00:09:09] where uh the level of voluntary access I
+[00:09:12] think has actually really reduced um at
+[00:09:15] this same time we are opening into a new
+[00:09:17] regulatory era where uh we are going to
+[00:09:21] see what data access looks like um and
+[00:09:23] that's kind of being built and being
+[00:09:25] developed um and so these implementation
+[00:09:29] question questions I think are really
+[00:09:30] critical um because really to get that
+[00:09:34] right um we need to get kind of the the
+[00:09:36] details of who gets access what kind of
+[00:09:39] data is granted uh like what kind of
+[00:09:41] data is shared um and how the community
+[00:09:45] is prepared to analyze and make use of
+[00:09:47] that data in a way that actually like is
+[00:09:49] helpful towards Democratic governance
+[00:09:51] and accountability oversight of
+[00:09:53] companies that's kind of like where we
+[00:09:54] are now um so it's great to be in this
+[00:09:57] panel to be thinking through like what
+[00:09:59] kinds of data should we be considering
+[00:10:00] who might be granted access what are the
+[00:10:02] mechanisms to do that what are the kind
+[00:10:04] of accountability mechanisms so that the
+[00:10:06] balance of power sits well within that
+[00:10:09] ecosystem um how do we actually like
+[00:10:11] achieve these broad Democratic goals
+[00:10:14] that we're trying to achieve through
+[00:10:15] data access I'll stop there
+[00:10:19] great okay so I think that delve Tails
+[00:10:22] into one of the um kind of concerns that
+[00:10:25] was brought up in the last panel which
+[00:10:26] is uh you know it's great to have data
+[00:10:29] access but some of the push back we get
+[00:10:31] is concerns around privacy of the data
+[00:10:34] how is that protected what about Trade
+[00:10:36] Secrets and that Al ultimately leads to
+[00:10:38] a question of these are researchers and
+[00:10:41] um they are trusted in some respects
+[00:10:43] with very important information and how
+[00:10:45] can we how can the
+[00:10:47] implementation um enforce that trust and
+[00:10:50] kind of allay some of those concerns
+[00:10:52] around privacy and access to
+[00:10:54] confidential or sensitive information
+[00:10:56] information so um maybe I'll does
+[00:11:01] someone want to lead off on that
+[00:11:03] or yeah I can I can jump in there and
+[00:11:05] then te it up and yeah um so I I guess I
+[00:11:09] would say like to take a step back as
+[00:11:11] we're kind of Designing data access
+[00:11:12] regimes I think there's a number of
+[00:11:14] factors that need we need to consider um
+[00:11:17] some of those are what our principles
+[00:11:18] are so that's things like balancing
+[00:11:20] privacy and security and competition and
+[00:11:22] the ethical and public interest use of
+[00:11:24] data um as well as academic freedom for
+[00:11:27] researchers um and maybe I I consider
+[00:11:30] researchers broadly as FCO was saying to
+[00:11:32] include journalists um civil society and
+[00:11:35] public interest researchers there are um
+[00:11:39] there's a range of types of research
+[00:11:40] that's important and needed in this
+[00:11:42] space so there's like the kind of maybe
+[00:11:43] longer term deeper dive research that
+[00:11:45] academics are very well placed to do
+[00:11:47] there's also like rapid response
+[00:11:49] short-term research um that Civil
+[00:11:52] Society is often well placed to do Civil
+[00:11:54] Society might do longer term research
+[00:11:55] too but like that's kind of broadly how
+[00:11:57] I see that those fields um um taking up
+[00:12:00] these different types of work um so
+[00:12:04] let's say like research Freedom not just
+[00:12:06] academic freedom but we kind of need to
+[00:12:08] think about like what are all of our
+[00:12:09] principles that we're trying to design
+[00:12:11] against and how do we balance them um
+[00:12:14] and so yes we need to think carefully
+[00:12:16] about privacy and security but like the
+[00:12:19] end goal is that we want public like
+[00:12:22] there is a public interest use that we
+[00:12:23] need research data for um and so it is
+[00:12:26] very possible Like It's Tricky to design
+[00:12:29] for privacy but it's possible and it's
+[00:12:32] surmountable um and so we shouldn't like
+[00:12:34] just put that as a barrier of why we
+[00:12:35] cannot proceed um so that's that's kind
+[00:12:38] of how I think at the whole of like how
+[00:12:40] do we design for those principles and
+[00:12:42] then I kind of think we need to think
+[00:12:44] about who the actors are in the system
+[00:12:46] so in the DSA for instance there's like
+[00:12:49] there's broadly the regul regulator so
+[00:12:52] the digital service coordinators play a
+[00:12:53] very key role in the data access regime
+[00:12:56] for the DSA um the companies play a role
+[00:12:59] as well and researchers have to make
+[00:13:01] requests
+[00:13:02] and uh I think mentioned on the first
+[00:13:06] panel that like none of kind of the
+[00:13:10] company power should not sit fully with
+[00:13:12] the companies nor with the The
+[00:13:14] Regulators and so we need to think about
+[00:13:16] designing and hopefully that the
+[00:13:19] delegated act does that and if not then
+[00:13:21] we'll need to like as a research
+[00:13:23] Community um work to try and kind of
+[00:13:26] balance that power so one idea that's
+[00:13:28] been proposed I think that's really
+[00:13:29] promising is having an intermediary body
+[00:13:31] that plays a role between those two
+[00:13:33] power structures um so yeah thinking
+[00:13:36] about our principles thinking about who
+[00:13:38] the actors are who are involved and then
+[00:13:40] thinking about what types of data are
+[00:13:42] researchers requesting I think depending
+[00:13:44] on the types of data then and who is
+[00:13:47] making the request then you're kind of
+[00:13:49] balancing across like how sensitive is
+[00:13:51] that data and what type of institution
+[00:13:54] is that researcher sitting within and
+[00:13:56] what uh like what levels data protection
+[00:13:59] can that institution offer um what kinds
+[00:14:02] of experience does that institution have
+[00:14:05] with doing that kind of data protection
+[00:14:07] or like going
+[00:14:09] through uh like ethical use cases and
+[00:14:11] kind of what are their own practices and
+[00:14:14] how can they demonstrate that they are
+[00:14:16] like a trusted body to be able to um to
+[00:14:19] take take take care of the data that
+[00:14:22] they'll be interested with um you can
+[00:14:24] talk more about like what are all the
+[00:14:25] ways that we could try and ask ask ask
+[00:14:28] that of um institutions or or
+[00:14:30] researchers who will be requesting data
+[00:14:32] but yeah I think that's how I would like
+[00:14:34] start about yeah at the risk of sounding
+[00:14:38] like uh Captain Obvious I mean this is a
+[00:14:40] very sophisticated OB uh audience but I
+[00:14:43] mean these questions obviously entail
+[00:14:45] very delicate balancing acts right there
+[00:14:47] are inherent tensions between making
+[00:14:49] data available letting information flow
+[00:14:51] freely to numerous parties while
+[00:14:53] ensuring that the data is a adequately
+[00:14:56] protected um and overly permissive uh
+[00:14:59] access regime could introduce or Empower
+[00:15:01] Bad actors uh but an overly strict or
+[00:15:03] conservative one would undermine the
+[00:15:05] goals as you mentioned not just of The
+[00:15:07] Regulators researchers good intentions
+[00:15:09] but also even the best interests of the
+[00:15:11] public and of users um and so this
+[00:15:14] tension from our perspective obviously
+[00:15:15] requires a constant balancing of
+[00:15:17] equities um and multi-stakeholder
+[00:15:20] conversations and in in my opinion and I
+[00:15:22] know that not everybody agrees with this
+[00:15:23] and there have been many efforts to come
+[00:15:25] to voluntary commitments and and many
+[00:15:27] efforts uh to have multi uh stakeholder
+[00:15:30] conversations that have not necessarily
+[00:15:32] been helpful and others necessarily have
+[00:15:34] but we think it's a major major um
+[00:15:37] important part of uh this conversation
+[00:15:40] um I think of you know we're all very
+[00:15:42] familiar with the term privacy by Design
+[00:15:45] I like to think of the term inclusivity
+[00:15:47] by Design whether that inclusivity means
+[00:15:49] researchers whether it means
+[00:15:51] underrepresented communities whether it
+[00:15:53] means users and um just all across the
+[00:15:55] stakeholder um ecosystem um that Springs
+[00:15:58] to mind and you also touched on
+[00:16:00] something um and that's and I think
+[00:16:02] that's that trust and the questions that
+[00:16:05] we're looking at it's going to depend on
+[00:16:06] context what kind of data are we sharing
+[00:16:09] is it um publicly available data that
+[00:16:13] one posts on their social media and how
+[00:16:15] does that differ from obviously more
+[00:16:17] legally and policy-wise sensitive types
+[00:16:20] of information um and so I think yeah
+[00:16:23] you made you made great points in those
+[00:16:26] regards yeah just to build on that I
+[00:16:28] think that um a lot of our work has been
+[00:16:30] really centered on that question of
+[00:16:32] publicly available data and what's
+[00:16:34] considered public um and also that
+[00:16:37] definition of like who might be
+[00:16:38] considered a researcher and can have
+[00:16:40] access to that data and I think when
+[00:16:42] we're talking about privacy it's really
+[00:16:44] important as you mentioned to understand
+[00:16:46] the context in which that data exists
+[00:16:49] and also develop regimes based on the
+[00:16:51] sensitivity of that data so um one of
+[00:16:54] the concerns I have with how the DSA
+[00:16:57] implementation has been rolling out is
+[00:16:59] that we run the risk of being really
+[00:17:00] surface level if we aren't um really
+[00:17:04] clear about what the pieces of data are
+[00:17:06] that are being asked for and what the
+[00:17:08] audience that is asking for it is and so
+[00:17:11] one of these examples um just looking at
+[00:17:13] article 39 in the DSA which is focused
+[00:17:16] on ad
+[00:17:17] repositories um this is something that
+[00:17:20] platforms had made previous commitments
+[00:17:22] voluntary commitments around and I think
+[00:17:24] one of the things that came up in the
+[00:17:25] last panel was some of the failures
+[00:17:27] around volun voluntary commitments and
+[00:17:31] um uh sort of the ways in which it lit a
+[00:17:34] fire under a lot of platforms to carry
+[00:17:36] out some of these things but what
+[00:17:38] actually got rolled out maybe wasn't
+[00:17:40] necessarily the most useful to
+[00:17:41] researchers um we last month um with
+[00:17:45] this organization called Chef first just
+[00:17:48] published a a really large analysis of
+[00:17:51] the various ad apis that have been
+[00:17:53] offered by the very large online
+[00:17:54] platforms named uh in the DSA and really
+[00:17:58] what we found is that none of them so
+[00:18:00] far are up to task for doing good
+[00:18:04] monitoring of social media data in
+[00:18:06] Europe especially in the context of 2024
+[00:18:09] elections and some of the the reasons
+[00:18:11] for this is you know basic things like
+[00:18:13] usability so the platform itself um was
+[00:18:18] breaking it was difficult to navigate
+[00:18:20] there are other deeper questions about
+[00:18:22] the accuracy of the data so when you try
+[00:18:24] to harmonize what's in the ad repository
+[00:18:27] that's required by the DS say versus
+[00:18:29] maybe an API it's um there's often
+[00:18:32] really inaccurate or missing data so I
+[00:18:34] think one of the challenges is that you
+[00:18:36] know yes um platforms are required to do
+[00:18:39] this but there's still quite a lot of
+[00:18:41] room for us to articulate what we think
+[00:18:43] good implementation should look like and
+[00:18:45] what it shouldn't look like and I think
+[00:18:47] this is where everyone in this room and
+[00:18:49] in this larger conversation can really
+[00:18:51] get clear and articulate this is what we
+[00:18:54] think is Meaningful um the other thing
+[00:18:57] I'll touch on as well is I think think
+[00:18:59] that the bar is so low right now in
+[00:19:02] terms of things that are public that
+[00:19:04] also are really impactful so you know
+[00:19:07] for example political advertising this
+[00:19:09] is something that I think we all kind of
+[00:19:11] universally agree should be available we
+[00:19:14] should have more information about
+[00:19:16] influence on these platforms and yet
+[00:19:18] even that is very difficult for
+[00:19:20] platforms to achieve so I think that we
+[00:19:23] need to have a big conversation about
+[00:19:24] you know something that's publicly
+[00:19:26] available that probably is low on in
+[00:19:28] terms of of sensitivity platforms are
+[00:19:31] not fully succeeding at even making that
+[00:19:33] data available so I think that's a big
+[00:19:35] question we need to ask um as we think
+[00:19:37] about the different categories of data
+[00:19:40] yeah maybe one one thing to just pick up
+[00:19:42] on there I think is um so for article 40
+[00:19:46] in the DSA where researchers can request
+[00:19:49] specific uh data sets of platforms like
+[00:19:52] that is just going to get started soon
+[00:19:55] and so I think researchers um and the
+[00:19:57] research Community should be thinking
+[00:19:58] about like what our test data sets to be
+[00:20:01] asking for um and think about like what
+[00:20:05] is data that we kind of know reasonably
+[00:20:08] could be publicly like could be
+[00:20:11] requested and given to us and that could
+[00:20:13] do something useful that we haven't been
+[00:20:15] able to analyze before so maybe thinking
+[00:20:17] about different types of um like Public
+[00:20:21] public of content that is publicly
+[00:20:23] available again the question of like
+[00:20:24] what counts as publicly available data
+[00:20:26] is a whole can of worms
+[00:20:28] but um and even like maybe AR like data
+[00:20:32] that's been taken down and could have
+[00:20:34] could have possibly been archived or
+[00:20:35] something to be like that could be
+[00:20:36] interesting like I don't know what
+[00:20:38] counts us like when platforms are
+[00:20:40] removing spam under spam anti- spam
+[00:20:43] policies like what is that that's like
+[00:20:45] what's what what's an archive of like
+[00:20:47] could you ask for an archive data set of
+[00:20:49] what that's looked like over time they
+[00:20:51] might not have that now but if you made
+[00:20:52] that ask like could we build a regime
+[00:20:55] where over time that could be the type
+[00:20:57] of data set that could be asked for um
+[00:20:59] so I I I would really encourage the
+[00:21:01] research Community to be thinking about
+[00:21:04] um building asks for test data sets um
+[00:21:08] and thinking about what questions those
+[00:21:10] data sets could ask or could like could
+[00:21:14] answer um and then like that at least
+[00:21:18] within the DSA that regime will look
+[00:21:19] different across or ideally it should
+[00:21:22] not look different but it is possible
+[00:21:23] that it could look different across
+[00:21:25] different countries so um asks will go
+[00:21:27] to different digital Services different
+[00:21:29] digital service coordinators um Ireland
+[00:21:32] is a really key like plays a very key
+[00:21:35] role in this ecosystem um but I think it
+[00:21:39] would could be interesting to have asks
+[00:21:41] that go to different places and think
+[00:21:42] about what comes back and like could
+[00:21:44] that be kind of audited and what do we
+[00:21:46] learn from doing that um that's a big
+[00:21:48] administrative lift to ask of
+[00:21:50] researchers um and so I think having
+[00:21:54] like independent um the Coalition that
+[00:21:58] um brings together independent
+[00:22:00] technology researchers which I'm also a
+[00:22:01] member of um and many briman folks
+[00:22:03] helped um helped to bring get off the
+[00:22:06] ground um that that's a group that like
+[00:22:09] could play a really interesting role
+[00:22:11] there but I'm sure there are many other
+[00:22:12] groups that could do that as well and I
+[00:22:13] think yeah just trying to think about
+[00:22:15] like how can how can the ecosystem work
+[00:22:17] together to kind of like have test cases
+[00:22:19] and see where they go so uh I think
+[00:22:23] those are great points and they kind of
+[00:22:24] spurred a couple of thoughts on my I am
+[00:22:26] generally approaching a lot of these is
+[00:22:28] issues from the perspective of the dma
+[00:22:30] and data portability in general um but
+[00:22:33] what I have noticed is that there are
+[00:22:35] criticisms that folks aren't doing
+[00:22:37] enough at least with respect to the dma
+[00:22:39] and the recent March 7 implementation
+[00:22:41] deadline and I think that you know as we
+[00:22:44] talk about what are some of the
+[00:22:45] questions that we need to answer I think
+[00:22:47] it's really important to remember that
+[00:22:48] some of these questions about proper
+[00:22:50] scope uh and and additional
+[00:22:53] conversations that need to happen this
+[00:22:55] is going to be an iterative process uh
+[00:22:57] progress will be made but there are a
+[00:23:00] lot of things that still need to be
+[00:23:02] figured out and that's we can't just
+[00:23:04] assume that the very first thing that we
+[00:23:06] all try is going to work and so I think
+[00:23:09] I get the sense that sometimes folks
+[00:23:10] forget that um and that was sort of just
+[00:23:13] my gut reaction to what you just
+[00:23:15] mentioned yeah I mean even like I think
+[00:23:18] it will be iterative right like know ask
+[00:23:20] knowing what data to ask for and if that
+[00:23:23] data is like cated and exists with in a
+[00:23:27] way that a form that's like durble from
+[00:23:29] platforms to researchers like that's
+[00:23:30] going to be a whole process and it
+[00:23:32] probably will be like long and
+[00:23:35] complicated to really get there but
+[00:23:37] hopefully over time I mean as Gabe was
+[00:23:39] talking about like building towards a
+[00:23:41] regime for a data sharing regime in
+[00:23:43] other sectors like and in the healthcare
+[00:23:46] sector I think like it's it will
+[00:23:48] probably take a while to get to a place
+[00:23:50] where like there's like we've we've
+[00:23:52] developed practice um I think the
+[00:23:54] intermediary body that's also been
+[00:23:56] discussed could play a really
+[00:23:57] interesting role in set setting
+[00:23:58] standards of like what can data access
+[00:24:01] requests look like um what kinds of
+[00:24:04] standards might platforms offer in terms
+[00:24:06] of like having documentation for the
+[00:24:08] data that they offer and like there's a
+[00:24:10] bunch of stuff that can be done to make
+[00:24:13] it easier so that we can like get get to
+[00:24:16] a place where it's more regularized and
+[00:24:19] and to your point about this being
+[00:24:20] iterative I think that I would encourage
+[00:24:23] anyone who's a researcher to go and
+[00:24:24] apply for Access um via some of these
+[00:24:27] public p because they've just been
+[00:24:29] rolled out you can learn a lot about
+[00:24:31] what data you can get access to Via them
+[00:24:34] and I think um the research Community
+[00:24:36] right now is already doing some
+[00:24:37] information sharing with each other
+[00:24:39] about which PL platforms have granted
+[00:24:41] them access and which haven't they've
+[00:24:43] been sharing their applications to try
+[00:24:45] to determine what the decision making
+[00:24:46] might be um so I would encourage
+[00:24:48] everyone if you can to go and apply for
+[00:24:50] that and and share that information I
+[00:24:52] believe it's the Coalition for
+[00:24:54] independent Tech research that's
+[00:24:55] collecting that information but I give
+[00:24:58] on your point about being iterative I
+[00:25:00] think it's really important that we be
+[00:25:02] engaged as much as possible especially
+[00:25:04] you know some platforms have not
+[00:25:06] released public documentation about
+[00:25:08] what's in their apis it's a lot of like
+[00:25:11] back and forth of requesting they say
+[00:25:13] they don't have it requesting um I also
+[00:25:16] think there's definitely room for um
+[00:25:19] sort of a surface audit of the different
+[00:25:22] platforms so really getting a good sense
+[00:25:24] of what is publicly available that if I
+[00:25:27] as a user went and was scrolling on a
+[00:25:29] public feed I could be asking for in
+[00:25:32] terms of metrics and engagement so I
+[00:25:34] think there's a real opportunity um I'll
+[00:25:36] say from like Civil Society research
+[00:25:38] side to really collect that data and
+[00:25:40] determine what what could we be asking
+[00:25:42] for if the platforms um haven't yet made
+[00:25:45] it available via their API or other
+[00:25:48] means that's great um actually that
+[00:25:52] leads very well to the next question I
+[00:25:54] had um which is uh it is an iterative
+[00:25:58] process proc and we need to learn
+[00:25:59] lessons are there um things that come to
+[00:26:03] mind lessons that we already should
+[00:26:05] surface for everybody to know about what
+[00:26:07] has worked what hasn't worked in the
+[00:26:09] past or maybe in other domains that are
+[00:26:11] similar to this that could inform how
+[00:26:14] this should look going
+[00:26:17] forward um I think daab talked about a
+[00:26:20] lot of the lessons that have been
+[00:26:21] learned in what worked and what didn't
+[00:26:24] work um in different voluntary access
+[00:26:26] regimes um I'll maybe speak a bit um I I
+[00:26:31] managed um a data sharing a researcher
+[00:26:33] access to data program um at Twitter we
+[00:26:36] specifically shared just one one type of
+[00:26:38] data which was um uh identified
+[00:26:41] information operations that had been
+[00:26:43] removed from the platform so it was a an
+[00:26:46] archive of data basically um and in that
+[00:26:51] program um we were able to share data
+[00:26:54] with researchers from Academia um
+[00:26:57] journalism and society and so I think
+[00:27:00] that can work um and we should like very
+[00:27:03] much should look for ways for the broad
+[00:27:07] research Community um to to get access
+[00:27:09] to data so that's that's one thing that
+[00:27:12] I would
+[00:27:14] yeah I would point to crowd tangle as a
+[00:27:17] as an example um and the reason I want
+[00:27:19] to highlight it is because I think we've
+[00:27:21] all been talking about how there's been
+[00:27:24] sort of a retrenchment when it comes to
+[00:27:26] um transparency inititive that are
+[00:27:28] voluntary that are coming from platforms
+[00:27:31] and the likelihood of a platform
+[00:27:33] releasing a crowd tingle like tool feels
+[00:27:36] less likely now than it did like five
+[00:27:38] years ago and um I think I raise it
+[00:27:41] because I think that there's an
+[00:27:43] opportunity to kind of get clear on what
+[00:27:46] needs to be what's publicly available
+[00:27:48] that's massively impactful and we should
+[00:27:50] sort of um create opportunities for
+[00:27:53] broad sets of researchers in the public
+[00:27:55] to be able to look at and access that
+[00:27:57] data in addition to some of these more
+[00:27:59] um gated or um narrow bands of
+[00:28:03] researchers who have access and so um
+[00:28:06] you know Facebook recently announced
+[00:28:08] that they are rolling back crowd tangle
+[00:28:11] in favor of a different Content Library
+[00:28:14] that doesn't necessarily have all of the
+[00:28:16] features that crowd tingle had around
+[00:28:18] search
+[00:28:19] functionality um download uh
+[00:28:21] capabilities and a lot of other tooling
+[00:28:24] so I think it's a question for us to
+[00:28:26] articulate which is what do we want to
+[00:28:28] see in terms of um some of the uh
+[00:28:31] transparency offerings that are getting
+[00:28:32] released yeah that's a great I think um
+[00:28:36] first shout out to Brandon Silverman who
+[00:28:38] um LED crowd tangle and I think is
+[00:28:40] really doing like phenomenal advocacy
+[00:28:42] work since then um and he's worked a lot
+[00:28:45] with Rebecca Trumble who's also uh
+[00:28:47] helped found the Coalition and has done
+[00:28:49] like just so much work in the space um
+[00:28:52] but yeah I think a a huge lesson from
+[00:28:54] that is usability um so there's like if
+[00:28:58] platforms are providing data but it's
+[00:29:01] not in a form that is accessible or
+[00:29:04] usable um for researchers especially
+[00:29:07] often principal Society researchers I
+[00:29:09] think um or groups that um maybe are
+[00:29:13] like building out tools for the first
+[00:29:14] time there's you know it's not
+[00:29:16] reasonable to expect platforms to build
+[00:29:18] like to have every single option like
+[00:29:20] the you know a super high touch like
+[00:29:24] Perfect Tool but they should be thinking
+[00:29:27] about usability it's not helpful if we
+[00:29:29] have data sets that like people aren't
+[00:29:30] able to make any use of um so I think
+[00:29:33] that's really important and a way that
+[00:29:36] that we can make data more usable is to
+[00:29:39] have uh like those those programs
+[00:29:43] designed through conversation with
+[00:29:45] researchers so I think it's really
+[00:29:46] important to ask like there's been so
+[00:29:48] much asking of researchers what they
+[00:29:50] need and we should be mindful of their
+[00:29:51] time and energies and go back to look at
+[00:29:54] like like this is not new there's been
+[00:29:56] work over a long time to think about
+[00:29:58] like what's needed um we don't need to
+[00:30:01] do all this work from scratch but two
+[00:30:04] platforms should like do their homework
+[00:30:06] and and like look and think about what
+[00:30:08] have has the research Community asked
+[00:30:10] for and then I think as they're rolling
+[00:30:11] out tools like roll out betas and ask
+[00:30:14] people to test it and get feedback and
+[00:30:16] like over time to um yeah to like really
+[00:30:20] build on it I think hopefully it's not
+[00:30:23] just a compliance exercise where it's
+[00:30:25] like we're just putting something out
+[00:30:26] because it needs to be put out
+[00:30:31] uh so I think I think this is a good
+[00:30:34] opportunity for to perhaps talk about
+[00:30:36] some of the trust model work that D the
+[00:30:39] data transfer initiative has undertaken
+[00:30:41] recently and again this is in the
+[00:30:43] context of article 69 of the digital
+[00:30:45] markets act which requires direct
+[00:30:47] reporting to third parties um but you
+[00:30:50] know nothing in that law specifies how
+[00:30:52] harm should be mitigated there are no
+[00:30:54] details or requirements as to how third
+[00:30:56] parties could or should be authorized
+[00:30:58] from a security or privacy perspective
+[00:31:01] um so many important questions related
+[00:31:03] to a lot of things we've talked about
+[00:31:05] today arise how can the originating
+[00:31:07] service be service be confident that
+[00:31:09] data will not introduce security and
+[00:31:11] other risks and how will users be
+[00:31:13] confident that their transfers reflect
+[00:31:16] their understanding and their intentions
+[00:31:18] most importantly their intentions um so
+[00:31:20] in order to to re protect the interests
+[00:31:23] of third parties of end users of
+[00:31:25] services um DTI has drafted and initial
+[00:31:28] security and safety model uh and while
+[00:31:31] this work was inspired by the dma it's
+[00:31:33] meant to uh uh to be its broader goal is
+[00:31:38] actually to help um grow trust in in
+[00:31:41] many other contexts Beyond um beyond
+[00:31:44] that space uh no matter the party at
+[00:31:48] issue or the jurisdiction in which
+[00:31:49] they're located and the some of the
+[00:31:51] clear benefits that that we see in this
+[00:31:53] approach um because I think your
+[00:31:54] question was sort of about Lessons
+[00:31:56] Learned and this would be lessons learn
+[00:31:58] from another context um our main goal is
+[00:32:00] to to guide structure and align um
+[00:32:03] independent imple implementation in an
+[00:32:05] effort towards more consistency and
+[00:32:08] harmonization um because what we've
+[00:32:10] heard is that right now everybody's sort
+[00:32:12] of doing their own things um and so we
+[00:32:14] see this approach as preferable to
+[00:32:16] companies sort and folks just sort of
+[00:32:18] independently developing their own
+[00:32:20] mechanisms promotes greater neutrality
+[00:32:22] and consistency it requires Buy in and
+[00:32:25] acceptance of a baseline set of
+[00:32:27] requirements at least um and it promotes
+[00:32:30] efficiency and so uh I want to be
+[00:32:32] cognizant of our our time our limited
+[00:32:34] time but um I do want encourage you all
+[00:32:37] to to look at the data transfer
+[00:32:38] initiatives website and our related
+[00:32:40] trust model work there thank you thank
+[00:32:42] you and at this point I wanted to open
+[00:32:45] it up to the audience are there
+[00:32:46] questions from the audience uh for
+[00:32:55] analysts yeah I just
+[00:33:01] hey everyone um does this work it works
+[00:33:05] yes
+[00:33:06] um one of the things that seems
+[00:33:08] particularly like a wicked problem in
+[00:33:10] all of this is that definition of public
+[00:33:13] and I just wonder um because we sort of
+[00:33:16] talked around it being hard um maybe is
+[00:33:20] there anything that you all have learned
+[00:33:22] in your efforts that are are like useful
+[00:33:26] bright lines between public and private
+[00:33:28] or useful
+[00:33:30] working with language around public and
+[00:33:33] not public it would just be anyway it
+[00:33:35] could be very interesting I can start
+[00:33:37] off quickly um this is a concept that
+[00:33:40] this is not the first time this concept
+[00:33:41] has come up it's been in federal private
+[00:33:43] the legislation for gosh know how long
+[00:33:46] at least 15 years um but it I from my
+[00:33:49] perspective it's all about and maybe
+[00:33:51] it's different for youth for researchers
+[00:33:53] but user Centric what do the users want
+[00:33:55] and that's that's how we should build
+[00:33:57] our Solutions at least at DTI it should
+[00:34:00] be all about what the user wants
+[00:34:03] and yeah I think that there are a lot of
+[00:34:05] complexities that play because for
+[00:34:07] example a private Facebook group that
+[00:34:09] has hundreds of members should that be
+[00:34:12] considered public spe like is that
+[00:34:14] something that we should have access to
+[00:34:16] versus a post that someone made on Tik
+[00:34:19] Tok that was targeting a very small
+[00:34:21] group of friends that technically is
+[00:34:23] public and you can grab it but the
+[00:34:25] intent of it was not public public in
+[00:34:28] that way so I think there's a lot of
+[00:34:29] really thorny questions that we are just
+[00:34:31] beginning to work through on this
+[00:34:33] question about and you have to factor in
+[00:34:35] the intent of the user and and who the
+[00:34:37] audience was for but also you have to
+[00:34:40] factor in what is the influence of that
+[00:34:42] what is that influence of that Facebook
+[00:34:43] group that has hundreds of
+[00:34:45] members yeah I think um I know one way
+[00:34:49] platforms have thought about this in the
+[00:34:51] past just uh thinking about if one if
+[00:34:55] content is actually public so it's on
+[00:34:56] the open internet so I think there's one
+[00:34:59] is it on the open internet or two is it
+[00:35:02] only through like logged in Access
+[00:35:04] that's like some layers um then if it's
+[00:35:08] on the open internet like do you have a
+[00:35:11] number of followers that's actually one
+[00:35:13] threshold that platforms have used So
+[00:35:15] like um and that again uh relies on a
+[00:35:19] follower based model for the platform
+[00:35:22] not all platforms work that way um so
+[00:35:25] you need to think about it depending on
+[00:35:26] like what your how the platform that
+[00:35:28] you're looking at is designed um but you
+[00:35:31] could have a threshold of like 5,000
+[00:35:33] followers or 10,000 followers um as a
+[00:35:36] like measure of publicness um but yeah I
+[00:35:39] mean like what's the right number I
+[00:35:41] don't think we have great answers um and
+[00:35:43] then there is not a right answer it's
+[00:35:45] like what what can what can the
+[00:35:46] community and what can users come to a
+[00:35:48] place that like feels comfortable I also
+[00:35:50] think then there needs to be options for
+[00:35:53] users to opt out um that's very tricky
+[00:35:57] once you've shared sh data then
+[00:35:58] sometimes you cannot like there's it's
+[00:36:00] not perfect um but there should be some
+[00:36:02] way for users to opt out um and some way
+[00:36:06] for users to like have a sense of what's
+[00:36:08] happening with their data um yeah I mean
+[00:36:11] it's like we are also the like we we all
+[00:36:14] say users but it's it's
+[00:36:17] us so so I think thinking about like
+[00:36:20] what do we feel comfortable with um and
+[00:36:23] who is we and how do we what what kind
+[00:36:25] of bodies do we use to try and um land
+[00:36:28] on a standard or Norm that feels okay
+[00:36:30] there's also um should say there's
+[00:36:32] there's groups that have done this
+[00:36:33] already like the association of Internet
+[00:36:35] researchers has ethical guidance around
+[00:36:37] um doing this kind of research I'm sure
+[00:36:40] there are other groups but that's the
+[00:36:41] one that I'm most familiar with
+[00:36:43] so have a question there and then and
+[00:36:45] then we'll go into the
+[00:36:48] ma this is a a broad strategy question
+[00:36:52] is it uh important to have the same
+[00:36:58] uh API the same access uh implementation
+[00:37:01] for research as well as uh
+[00:37:05] user uh portability uh
+[00:37:08] reasons um or is it uh more useful to
+[00:37:15] separate those two kinds of uh
+[00:37:19] portability
+[00:37:21] definitions uh in practice and I'm
+[00:37:23] talking the UN strategically in terms of
+[00:37:25] adoption as well as in terms of of uh
+[00:37:28] just facilitating the research
+[00:37:31] itself well I think the panelist uh I
+[00:37:34] think I'm looking up there Gabriel I I
+[00:37:37] think touched on this issue and he sort
+[00:37:40] of pointed to data portability in the
+[00:37:42] researcher context a limitation of that
+[00:37:44] being that well you only get certain
+[00:37:47] amounts of certain parts of data right
+[00:37:49] it's only I don't want to miss me but
+[00:37:52] there are limitations on that um so I
+[00:37:55] mean from a user perspective I think
+[00:37:57] that perhaps there should be limitations
+[00:38:00] um again to go along with the the
+[00:38:02] expectations of a of a user and um it
+[00:38:05] doesn't seem right to me that perhaps
+[00:38:07] you should be allowed to share
+[00:38:08] everything and anything that's
+[00:38:09] associated with an account um and so
+[00:38:11] that that's a point that I in the back
+[00:38:13] of the room was making to myself as gab
+[00:38:15] was speaking earlier that doesn't answer
+[00:38:17] your question but it is along the same
+[00:38:20] lines of thinking yeah we're seeing sort
+[00:38:23] of as this implementation around the DSA
+[00:38:26] is happening we're seeing platforms
+[00:38:28] carry it out in a lot of different ways
+[00:38:29] so some platforms have taken their
+[00:38:31] commercial API and they're pointing
+[00:38:34] researchers to that others have created
+[00:38:36] a brand new API and they're saying this
+[00:38:38] is our researcher API and here are the
+[00:38:41] requirements you need to meet in order
+[00:38:42] to be a researcher and then obviously
+[00:38:44] there's also the model of like the broad
+[00:38:46] public what kind of data might they want
+[00:38:48] to access and if they're not programmers
+[00:38:50] they need to be able to access some sort
+[00:38:52] of repository to look at that data and
+[00:38:54] that might be applicable to public
+[00:38:56] interest research who don't know how to
+[00:38:58] code for example so I think that the
+[00:39:00] audience really matters um and we really
+[00:39:03] need to make sure that what's provided
+[00:39:05] is Meaningful to each of those audiences
+[00:39:07] otherwise we just run the risk of this
+[00:39:09] being like compliance theater that's
+[00:39:11] really surface level is what I would
+[00:39:14] say yeah I I agree because like a user
+[00:39:18] portability interface wouldn't have
+[00:39:20] things like what ads are being shown or
+[00:39:22] what your ad profile looks like because
+[00:39:24] you wouldn't necessarily be interested
+[00:39:25] in as a user and similar cly commercial
+[00:39:28] apis wouldn't have wouldn't have the
+[00:39:31] complete data that you might be
+[00:39:32] interested as a researcher because be
+[00:39:34] designed for certain audience totally s
+[00:39:38] um there was a question in the
+[00:39:40] back I want a couple answers ago you
+[00:39:43] started with whatever the user wants
+[00:39:45] well the user wants everything free and
+[00:39:47] no data collected right so my question
+[00:39:50] is wouldn't it if you really want to
+[00:39:52] give what user wants shouldn't you try
+[00:39:55] to give the options
+[00:39:57] like you get this for free in exchange
+[00:40:00] for this much data you have to pay this
+[00:40:02] much if you want to exchange that data
+[00:40:05] and so forth and so on isn't it the most
+[00:40:09] way that the user will get what they
+[00:40:11] want I think I misspoke I think I think
+[00:40:13] I said that um I think what I meant is
+[00:40:16] it needs to align with the user's
+[00:40:18] expectations so
+[00:40:20] uh that's I apologize for misspeaking um
+[00:40:24] but most users have unreasonable
+[00:40:26] expectations
+[00:40:29] um whatever those expectations are I'm
+[00:40:31] not sure it's my place to pass value
+[00:40:33] judgments on that I think it's hopefully
+[00:40:35] the goal is to make sure that their um
+[00:40:39] ones are effectuated that's a tough
+[00:40:41] question I'm not sure if you all have
+[00:40:44] thoughts I mean I feel like the bar is
+[00:40:46] so low right now in terms of
+[00:40:48] explainability like what kinds of
+[00:40:50] information the end user is getting um I
+[00:40:53] won't go too far down this path but we
+[00:40:55] ran a study last year that was basically
+[00:40:56] an experimental algorithmic audit of the
+[00:40:59] user controls that are offered for
+[00:41:02] managing your recommendations and that
+[00:41:04] was one of our main findings was just
+[00:41:06] that people didn't feel like they had
+[00:41:07] good information about how these systems
+[00:41:09] work they didn't feel like YouTube
+[00:41:10] directed them to good information about
+[00:41:12] how to use these tools and so you know
+[00:41:16] regardless of whether the end user wants
+[00:41:18] tons of information tons of control or
+[00:41:21] none I think we need to be able to give
+[00:41:23] people those options right otherwise it
+[00:41:25] under undermines trust in the entirety
+[00:41:27] of the system exactly yeah I think where
+[00:41:30] like this today is mostly focusing
+[00:41:33] around researcher access to data but
+[00:41:34] there's a whole other conversation
+[00:41:36] around transparency and like
+[00:41:39] transparency from like going all the way
+[00:41:41] back to thinking about like how the how
+[00:41:43] platforms are designed and what
+[00:41:46] information is shared as a like as
+[00:41:48] you're navigating using platform and
+[00:41:51] understanding yeah what what is
+[00:41:52] happening when and why
+[00:41:54] um whole other whole other day could be
+[00:41:58] hosted all
+[00:41:59] that I feel like kind of guess what
+[00:42:01] users want or expect is prob can you
+[00:42:05] don't want to go down and uh you know I
+[00:42:07] feel like personally users are perfectly
+[00:42:09] happy to be surprised about things they
+[00:42:11] didn't expect if they're good things
+[00:42:14] that are beneficial so it feels like the
+[00:42:16] focus should be more on encouraging
+[00:42:18] beneficial uses and ways of accessing
+[00:42:21] data than trying to guess what users
+[00:42:23] would expect or not expect or be
+[00:42:25] surprised by can I also add I I just
+[00:42:28] want to go back to something that
+[00:42:30] Gabrielle said in the last panel which
+[00:42:31] is around how transparency needs to
+[00:42:34] cannot be sort of the precursor for
+[00:42:37] accountability you need to have these
+[00:42:38] accountability structures in place for
+[00:42:41] transparency to be meaningful and so I
+[00:42:43] guess I think about it in that in the
+[00:42:44] context of what does good user facing
+[00:42:47] transparency for example look like if we
+[00:42:49] don't have good accountability
+[00:42:50] mechanisms in place if we don't have
+[00:42:52] good legislation or
+[00:42:54] repercussions um then it it's not really
+[00:42:57] a meaningful exercise so I think it's
+[00:42:59] really important to couch that in that
+[00:43:01] context and we don't always have to
+[00:43:03] guess what users want we can engage in
+[00:43:04] meaningful dialogues with them back to
+[00:43:06] my
+[00:43:08] multistakeholder
+[00:43:12] pitch um
+[00:43:16] Lisa sorry go
+[00:43:18] ahead um I wanted to ask a question
+[00:43:20] about how we should be thinking about
+[00:43:22] the costs to companies very inter also
+[00:43:25] in your perspectives because you all
+[00:43:27] have very different relationships to
+[00:43:29] companies but a lot of times when you
+[00:43:31] hear about building out researcher
+[00:43:34] access to data mechanisms companies
+[00:43:37] basically say our data isn't organized
+[00:43:39] in this way we have to re-engineer a
+[00:43:41] bunch of things we got to do all the
+[00:43:43] stuff with our databases I guess my
+[00:43:45] questions are first off is this true is
+[00:43:48] it a really large expense to companies
+[00:43:52] and the second question is should we
+[00:43:54] care
+[00:43:58] that's a good
+[00:44:01] question
+[00:44:02] um I think it's semi true
+[00:44:06] um yes like I I think data is probably
+[00:44:10] not organized internally within I mean I
+[00:44:12] don't know but my guess would be within
+[00:44:14] most companies like at the level that we
+[00:44:15] think that it might be from the outside
+[00:44:17] because that tends to be how all
+[00:44:19] organizations
+[00:44:21] work um so yeah I mean my guess would be
+[00:44:24] to meet data like to put it in to forms
+[00:44:27] that are useful to researchers and to
+[00:44:29] get it to them probably is a bigger
+[00:44:30] effort than we think that it is
+[00:44:33] um and probably requires resources and
+[00:44:38] or and definitely requires like not
+[00:44:41] insignificant resources to do well um
+[00:44:45] and I think that should be their public
+[00:44:47] interest obligation so like that's and
+[00:44:50] part of the reason we are moving into a
+[00:44:52] regulated space in this way is that like
+[00:44:55] that was taken as a public interest
+[00:44:58] obligation like INF fits and starts and
+[00:44:59] was not always um followed through in
+[00:45:01] ways that were were useful um and so
+[00:45:05] that's part of the goal of having a like
+[00:45:07] moving towards um a more regulated area
+[00:45:11] is that like companies are are moving
+[00:45:14] towards having public interest
+[00:45:15] obligations in a different kind of way
+[00:45:17] so yeah um so I I can't speak to the
+[00:45:22] inner workings of various companies but
+[00:45:24] obviously it's going to depend on the
+[00:45:25] size of the company right I mentioned
+[00:45:27] earlier we work with companies of all
+[00:45:29] sizes right now uh it's our founding
+[00:45:31] members who are the large ones but we
+[00:45:32] are actively working um with smaller
+[00:45:35] companies as well um but that's part of
+[00:45:37] the hope at bti is to help sort of
+[00:45:39] lessen that burden there with the cons
+[00:45:41] consistency and harmonization that I
+[00:45:43] alluded to earlier um because I don't
+[00:45:46] think it's something that I do but
+[00:45:47] should hide behind and I don't know the
+[00:45:48] you know I can't see I can't speak to
+[00:45:51] what what happens inside closed doors
+[00:45:53] but we're here to help if that is a
+[00:45:55] concern yeah and I'll say again I also
+[00:45:58] don't know as well but I just I do know
+[00:46:01] from having talked to and worked with
+[00:46:03] engineers at the Milla Corporation side
+[00:46:06] there are lots of things you can do and
+[00:46:08] it is resource intensive but if it is
+[00:46:10] core to your if you have sort of a
+[00:46:12] public interest goal and it's core to
+[00:46:14] your mission you can do a lot really
+[00:46:17] well so for example um you know we did
+[00:46:20] an audit of some of these public
+[00:46:23] apis um and we found that Twitter right
+[00:46:25] now is just offering essentially a CSV
+[00:46:27] that's really slow to load and that for
+[00:46:29] me that's just kind of the bare minimum
+[00:46:31] yes it takes resources to be able to
+[00:46:33] build a dashboard or a repository or
+[00:46:35] good API but I think that we can expect
+[00:46:38] a lot more from these
+[00:46:40] platforms yeah having spent some time as
+[00:46:42] an engineer inside some of these
+[00:46:44] organizations I say that especially
+[00:46:46] social media organiz companies they're
+[00:46:50] they're organized around monetize
+[00:46:53] collecting and monetizing data so
+[00:46:54] they're better positioned to analyze dat
+[00:46:57] than most other organizations in the
+[00:46:59] world of course I I I want to say it's
+[00:47:01] hard to say what's high cost and low
+[00:47:03] cost in a very general way because it
+[00:47:05] really depends on the case but they they
+[00:47:09] should be able to do it at at a
+[00:47:10] reasonable cost because that's kind of
+[00:47:12] how they're organized that being said
+[00:47:15] they're organized for internal access to
+[00:47:17] data for their businesses and making it
+[00:47:20] available to the outside brings in a
+[00:47:22] whole bunch of other complexities and
+[00:47:24] that's where the cost is going to come
+[00:47:25] in around Reg regulation around
+[00:47:27] complexity so I think whatever
+[00:47:30] regulatory framework is designed has to
+[00:47:32] be designed with minimizing those costs
+[00:47:35] it's not actually getting the data
+[00:47:36] together I think that's the easy part
+[00:47:38] it's making it available to people
+[00:47:40] outside the company that's the
+[00:47:43] complexity all right so uh was there
+[00:47:48] another yeah um so we've had a lot of an
+[00:47:50] analogies to um uh health information
+[00:47:55] and one of the things things that it
+[00:47:57] made me think about is in health
+[00:48:00] research you know you have a lot of
+[00:48:01] patient centered kind of research models
+[00:48:05] um and you were talking a lot about you
+[00:48:06] know users and communities and all these
+[00:48:08] things it Mak me wonder if part of our
+[00:48:11] discussion around sort of access to data
+[00:48:14] also has to have a component around um
+[00:48:16] how we think about um stewardship models
+[00:48:19] governance models around data so just
+[00:48:21] even to think about the publicly
+[00:48:23] available information example so in
+[00:48:25] Canadian Privacy Law the Federal private
+[00:48:27] sector right there all we have lots of
+[00:48:29] different levels of the law um you can
+[00:48:32] the publicly available information is
+[00:48:34] outside of kind of what's regulated but
+[00:48:37] only if it's listed in regulations it
+[00:48:38] has to be publicly available and listed
+[00:48:40] in the regulations um this is why clear
+[00:48:43] VII was an easy privacy case in in
+[00:48:45] Canada because people are like well it's
+[00:48:47] just collecting public information it's
+[00:48:49] like no no no it has to be publicly
+[00:48:50] available anal the regulations to be out
+[00:48:53] so there's this role to kind of have a
+[00:48:55] little more granularity about that but
+[00:48:57] you could imagine instead of it being in
+[00:49:00] and in that kind of that kind of a
+[00:49:01] governance structure you could have a
+[00:49:03] different kind of governance structure
+[00:49:04] right you could have a user based one
+[00:49:05] which isn't about necessarily
+[00:49:06] individuals voting their preferences in
+[00:49:08] some way but some kind of more
+[00:49:10] Collective deliberation and if you had a
+[00:49:12] process that had some legitimacy to it
+[00:49:14] then you could stand by sort of you know
+[00:49:16] these are the Norms there could be a way
+[00:49:18] of kind of marking them um and so it
+[00:49:21] seems to me that there's like you know
+[00:49:23] I've always thought that this sort of
+[00:49:24] these access questions were missing this
+[00:49:26] other sort of you know stewardship
+[00:49:29] mechanism um component that brings a lot
+[00:49:32] of more people into the conversation um
+[00:49:35] about some of this um and I was just
+[00:49:37] kind of throwing that out to see what
+[00:49:39] what your Reflections on that would I
+[00:49:41] have a lot of thoughts about this um
+[00:49:43] largely because our model for doing
+[00:49:45] research is a community-driven model so
+[00:49:48] our data donation program relies on
+[00:49:52] having these tens and thousands of
+[00:49:54] community members who have agreed to
+[00:49:56] donate their data who are opting in and
+[00:49:58] this is something we've thought about a
+[00:50:00] lot is sort of that um that
+[00:50:02] infrastructure in terms of relationships
+[00:50:04] that needs to be in place in order to
+[00:50:06] build trust with that community so that
+[00:50:08] they understand you know what data is
+[00:50:10] being collected when they've downloaded
+[00:50:12] the browser extension have opted in
+[00:50:14] ensuring that we you know communicate
+[00:50:17] not only sort of how we're stewarding
+[00:50:19] that data but also there's constant
+[00:50:21] communication about how we're using that
+[00:50:23] data what kind of research we're doing
+[00:50:25] um in many cases asking them what they
+[00:50:27] are worried about and want us to
+[00:50:30] research so we believe that there's a
+[00:50:32] way that you can do that with a
+[00:50:33] community when you're doing data
+[00:50:35] donation so that you're um not sort of
+[00:50:37] just collecting data or um using data in
+[00:50:40] one way but that it's sort of an ongoing
+[00:50:42] iterative
+[00:50:44] process yeah I think um I don't want to
+[00:50:47] speak for his work but Nate Matias has
+[00:50:49] done a lot of work in this space as well
+[00:50:50] and I think thinking about like how to
+[00:50:52] work with communities um and if and then
+[00:50:56] yeah ask questions that are then useful
+[00:50:58] like the answers can be useful and
+[00:51:00] helpful and shape policy that's
+[00:51:02] beneficial to those communities um so
+[00:51:05] yeah I think that's a really important
+[00:51:07] piece of of like this whole puzzle that
+[00:51:10] um goes back to the like we are the
+[00:51:13] users we should think about how to make
+[00:51:15] this work relevant to what our communi
+[00:51:17] is the the working
+[00:51:21] about
+[00:51:23] oh is do we have a question from Jeff
+[00:51:25] there or is it money
+[00:51:27] kind of walk fast okay need go ahead um
+[00:51:31] so just building on Lisa's question I
+[00:51:33] guess like the added component I would
+[00:51:36] kind of throw in there is around like
+[00:51:38] shared incentives so in health there's
+[00:51:40] clear shared incentives on both sides to
+[00:51:42] participate in that model same with the
+[00:51:43] data donation so in the context of
+[00:51:45] corporations in the general public how
+[00:51:48] do we get to a set of shared incentives
+[00:51:52] that encourage people on all ends to
+[00:51:55] participate I think that's the part
+[00:51:58] where we always kind of you know it's
+[00:52:01] it's one of those Wicked problems how do
+[00:52:02] we get to Shared incentive structures
+[00:52:03] and they don't have to be the same
+[00:52:05] incentives for everybody but I think we
+[00:52:07] need to start thinking about what those
+[00:52:09] incentives are you have any thoughts on
+[00:52:19] that that's a really tough question CU I
+[00:52:22] don't I'm not sure those incentives will
+[00:52:24] ever entirely line up but I do feel like
+[00:52:27] there are mechanisms we can be working
+[00:52:29] through like regulation or like sort of
+[00:52:33] a shared conversation um around people's
+[00:52:36] well-being on these plat like I I think
+[00:52:38] there are ways that we can talk about it
+[00:52:40] I'm not totally sure incentives will
+[00:52:41] ever line up um but I don't know if
+[00:52:44] either of you would disagree with that
+[00:52:48] yeah I I I mean I don't know I think I
+[00:52:51] think that like users and that if you
+[00:52:54] can show that like
+[00:52:57] having public interest research about
+[00:53:00] what's happening on platforms is like
+[00:53:04] that brings us evidence to be able to
+[00:53:07] yeah shape policy shape uh shape the
+[00:53:09] design of platforms like that can align
+[00:53:12] people towards an incentive structure
+[00:53:13] where like we are trying to make these
+[00:53:16] big systems that are really integral to
+[00:53:18] our day-to-day life like better um it's
+[00:53:21] not the incentives are never going to
+[00:53:22] fully line up probably because that's
+[00:53:24] just how things work in large systems
+[00:53:26] um but yeah I think that if you can
+[00:53:29] start to show like here's the type of
+[00:53:31] work that we're doing with this um with
+[00:53:34] this data and like here's how in the
+[00:53:35] long term these we could make these
+[00:53:38] platforms more trusted um like over time
+[00:53:41] maybe that's one way yeah I mean you
+[00:53:43] don't have to and it's not um plausible
+[00:53:46] or plausible to agree with every you
+[00:53:49] know everyone in a multistakeholder
+[00:53:52] group for example um but you can align
+[00:53:54] on broader goals and and you know for us
+[00:53:56] DTI it's you know making sure that this
+[00:53:59] a broader ecos system of data
+[00:54:01] portability thrives um so for for me
+[00:54:04] that think that's my goal um but I'm
+[00:54:07] sure with additional thought and
+[00:54:08] conversation it'll become more clear
+[00:54:11] yeah I think you can kind of align on
+[00:54:12] like big broad shared principles and um
+[00:54:16] like things like we can all line around
+[00:54:19] like wanting democratic governments for
+[00:54:21] instance um or and maybe when not
+[00:54:23] everyone can always align them but we
+[00:54:25] can try and align we can try and align
+[00:54:27] communities uh on that in ways that um
+[00:54:30] push things forward so
+[00:54:33] yeah might squeeze in just a question
+[00:54:35] from our online audience very quickly um
+[00:54:37] touching on some of the the social
+[00:54:39] science questions discussed on the first
+[00:54:40] panel that really would benefit from
+[00:54:42] these large data sets um they're just
+[00:54:45] curious about the state of play of the
+[00:54:46] Privacy protecting methods and I guess
+[00:54:48] maybe some of the the complexities of
+[00:54:50] making that data available to external
+[00:54:52] audiences
+[00:55:03] it's a great
+[00:55:06] question well from the technical
+[00:55:08] perspective having done some research in
+[00:55:09] this area I think the Privacy protecting
+[00:55:12] methods that a lot of the regulation is
+[00:55:15] pushing is pretty far behind what is
+[00:55:17] techn technologically feasible so
+[00:55:19] they're definitely has to be work kind
+[00:55:21] of bringing the Regulatory and
+[00:55:23] Technology communities together to kind
+[00:55:26] of agree on whether is like a good
+[00:55:28] standard for privacy protection I'm just
+[00:55:30] talking about the Privacy part there's
+[00:55:32] of course many facets to that but
+[00:55:34] particularly in the Privacy protective
+[00:55:36] Parts because I think that was a good
+[00:55:37] question um there there is work to be
+[00:55:40] done to bring it um to a better
+[00:55:44] standard yeah I mean there's there's
+[00:55:47] like techniques like data clean rooms
+[00:55:49] that could be used there's a variety of
+[00:55:51] techniques that can be used but I think
+[00:55:54] yeah I would say like will be exploring
+[00:55:58] um like how can data clean rooms support
+[00:56:00] some of the goals of the DSA for
+[00:56:02] instance that will be something that
+[00:56:03] will think be emerging um and
+[00:56:07] then like all sorts of privacy
+[00:56:10] preserving techniques that like didn't
+[00:56:12] work so well in some of the other big
+[00:56:14] data sets so um I think TVD if they can
+[00:56:17] be be uh used effectively as we move
+[00:56:20] forward
+[00:56:28] talking about Wicked problems and uh
+[00:56:31] users perspective as a marketing
+[00:56:34] scientists and the consumer Behavior
+[00:56:36] scientists we do know a lot about what
+[00:56:38] what people think but what I would uh
+[00:56:40] would like to know um is transparency
+[00:56:43] each three of or three of you have been
+[00:56:46] touching about about transparency what
+[00:56:49] do you think is it transparency how it
+[00:56:52] should be how is it different than
+[00:56:55] explainability the compliance typee of
+[00:56:58] transparency because it seems like what
+[00:57:00] we are talking about here is not really
+[00:57:03] transparency that we are talking about
+[00:57:05] here is not really what has been
+[00:57:08] explainability compliance transparency
+[00:57:11] where we are going towards accept all
+[00:57:13] type of compliance thank
+[00:57:23] you just like to give another question
+[00:57:26] yeah I I again it's what's useful to the
+[00:57:29] audience
+[00:57:31] maybe so explainability obviously is
+[00:57:33] very useful to a consumer audience I'm
+[00:57:36] thinking maybe there are things that are
+[00:57:38] important to researchers and others that
+[00:57:40] aren't
+[00:57:42] of
+[00:57:43] interest it's it's going to be context
+[00:57:45] dependent that's why I have a
+[00:57:46] wishy-washy answer but I am looking
+[00:57:48] forward to hearing your all
+[00:57:54] thoughts yeah I would go back to just
+[00:57:56] sort of what we were talking about
+[00:57:57] before which is that transparency is
+[00:58:00] only meaningful if it's tied to
+[00:58:01] mechanisms for accountability and if you
+[00:58:04] have the means to enforce those systems
+[00:58:07] so I think I go back to that which is
+[00:58:09] that transparency really is only a a
+[00:58:12] means to an end and and making sure that
+[00:58:14] we focus that on those accountability
+[00:58:16] mechanisms being in place will help
+[00:58:18] inform what pieces of data we ask for or
+[00:58:21] um kind of what users would say is
+[00:58:23] Meaningful to them
+[00:58:26] yeah I mean I I think of transparency as
+[00:58:28] a lever um towards accountability and
+[00:58:32] other um goals I don't think of it just
+[00:58:34] as a lover for accountability I think it
+[00:58:36] helps us understand the world we're
+[00:58:39] living in um I think it can help us
+[00:58:42] collaborate across stakeholders better
+[00:58:44] so if we have information that can help
+[00:58:46] align incentives by bringing
+[00:58:48] stakeholders from across companies from
+[00:58:51] across Civil Society from across
+[00:58:52] Regulators like it can help we we can
+[00:58:55] only kind of align our own goals and
+[00:58:57] know what we want to do if we have the
+[00:58:59] Baseline information um and I think it
+[00:59:02] can help build trust um so yeah I think
+[00:59:05] like transparency is always tied to
+[00:59:07] accountability but or should
+[00:59:09] transparency is not always but should be
+[00:59:11] tied to accountability if it's um if
+[00:59:14] we're doing things right yeah so that's
+[00:59:17] and I think broadly I mean what we're
+[00:59:18] talk to me what we're talking and
+[00:59:20] thinking about when we're thinking about
+[00:59:22] researcher access to data as like one of
+[00:59:24] the facets
+[00:59:26] a very wide range of what transparency
+[00:59:28] can mean is like researchers can kind of
+[00:59:31] like independently investigate and
+[00:59:33] produce insights and produce
+[00:59:36] understanding from data that we have all
+[00:59:39] created as being users on platforms um
+[00:59:43] and that like the platform ecosystems
+[00:59:45] have helped create and that that helps
+[00:59:47] policy makers and platforms and us as
+[00:59:50] people decide how we want to kind of
+[00:59:53] shape the world that we're living in
+[00:59:55] together collectively across whatever LS
+[00:59:56] are available to
+[01:00:00] us oh sorry um thanks so much uh I just
+[01:00:04] had one question about the difference
+[01:00:06] between academic research and public
+[01:00:08] interest research that's relevant to
+[01:00:09] this and that's about Irv approval so
+[01:00:12] one reason why academic researchers
+[01:00:14] maybe focus on in- depth uh or maybe
+[01:00:16] like it takes longer is we have to go
+[01:00:18] through these institutional review
+[01:00:20] boards that talk about our interest
+[01:00:22] especially on human subject research uh
+[01:00:25] which you know you don't have to do in a
+[01:00:26] non-academic setting and so um I'm sure
+[01:00:29] there are other standards that you all
+[01:00:31] adhere to but it's very different then
+[01:00:33] and so it takes forever in some
+[01:00:35] institutions to get this approved um so
+[01:00:38] I'm wondering if we have um
+[01:00:40] collaborations between academics and
+[01:00:42] public interest uh you know for example
+[01:00:44] I run a research lab I can very much see
+[01:00:46] some of my interns working at one of
+[01:00:48] your organizations um but for those
+[01:00:51] kinds of IND uh academic and public
+[01:00:54] interest collaborations
+[01:00:56] do you expect then um to have not
+[01:00:59] incentives to collaborate because you'll
+[01:01:00] have to follow the academic process
+[01:01:02] which can be slow um and it can have all
+[01:01:05] this other uh obstacles uh to using the
+[01:01:09] data that you know once you get access
+[01:01:11] to because I feel like that's something
+[01:01:13] that's um a problem because we should be
+[01:01:16] collaborating more right like we have a
+[01:01:18] bunch of people asking for the same data
+[01:01:20] sometimes for the same questions we
+[01:01:22] duplicating efforts kind of talking
+[01:01:23] about research uh resources
+[01:01:26] but I think there are some like very
+[01:01:28] clear barriers to collaboration too
+[01:01:30] including something like academic IRB
+[01:01:32] and not um but I don't know if you have
+[01:01:34] had prior
+[01:01:36] experience overcoming those challenges
+[01:01:38] because I'd be really curious to see um
+[01:01:41] how that could happen yes I I'll say um
+[01:01:44] we have collaborated with academic Labs
+[01:01:47] before and gone through their IRB
+[01:01:49] processes um we from our side and this
+[01:01:52] might be unique to Milla as a nonprofit
+[01:01:54] have extreme
+[01:01:56] rigorous standards we have to go through
+[01:01:58] in terms of formal um data stewardship
+[01:02:02] review Security review legal review that
+[01:02:05] we have to go through before we even
+[01:02:06] begin to do this kind of research I
+[01:02:08] think not every nonprofit has access to
+[01:02:10] those resources and actually for me this
+[01:02:13] is a a going back to what Gabriel was
+[01:02:15] saying about the crisis and research
+[01:02:16] right now um a lot of people doing this
+[01:02:18] kind of important independent research
+[01:02:20] don't have access to like legal
+[01:02:23] resources privacy security resources to
+[01:02:25] even begin this kind of research so I
+[01:02:28] think there are a lot of opportunities
+[01:02:29] for nonprofit Civil Society journalists
+[01:02:32] to work with academics because they
+[01:02:34] might not have the resources to be able
+[01:02:36] to do that kind of ethical review um
+[01:02:39] we're sort of unique that we do have a
+[01:02:41] ton of those resources to do that kind
+[01:02:43] of review but not I think not every
+[01:02:45] Civil Society researcher does and I also
+[01:02:47] think that from both sides there are
+[01:02:49] different kinds of questions that are
+[01:02:50] going to be asked about the use of the
+[01:02:53] data um the research subjects and so I
+[01:02:55] think it can be be a really fruitful
+[01:02:56] collaboration as
+[01:02:58] well yeah I think plus one to that and I
+[01:03:01] do think um like I know that there are
+[01:03:05] many Civil Society research
+[01:03:06] organizations that do either use an IRB
+[01:03:09] they maybe use like uh just not not an
+[01:03:12] academic institution's IRB but they use
+[01:03:13] irbs um or they have some other like
+[01:03:17] kind of analogous uh system to an IRB
+[01:03:20] and are thinking very deeply about what
+[01:03:22] ethical research looks like um and yeah
+[01:03:27] so I think like collaboration between
+[01:03:29] stakeholders is important and some of
+[01:03:30] that is like learning right so as we're
+[01:03:33] trying to create like effective ethical
+[01:03:37] um public interest data sharing regimes
+[01:03:38] how can um Civil Society groups learn
+[01:03:41] from what Academia does and maybe there
+[01:03:44] are things that Academia does really
+[01:03:45] well and other things that don't aren't
+[01:03:47] working so well right now and like how
+[01:03:49] can that be kind of a lesson and vice
+[01:03:51] versa um like what can academic Labs
+[01:03:54] learn from more rapid responsible
+[01:03:56] Society work that is is ethical and is
+[01:03:59] um is like kind of considering a bunch
+[01:04:02] of these questions so I've been trying
+[01:04:03] to think about like what can we learn
+[01:04:05] and where can there be shared resources
+[01:04:07] because I do think this like capacity
+[01:04:09] question is a really big one um and is
+[01:04:11] really important and and I'll also say
+[01:04:14] like we've really focused on DSA in
+[01:04:16] Europe right now um and this and the US
+[01:04:19] and Canada and this conversation but I
+[01:04:21] think like research globally is very
+[01:04:23] important um STI I think mentioned that
+[01:04:25] on the prior panel um like access for
+[01:04:30] especially for Global majority
+[01:04:31] researchers I think is really really
+[01:04:33] important um and we'll see if there's
+[01:04:37] like any kind of like positive spillover
+[01:04:39] effects from access within DSA regimes
+[01:04:43] to other areas of like whether platforms
+[01:04:45] just kind of like me if they are like
+[01:04:47] well we already have an API so now
+[01:04:48] anybody can apply from different regions
+[01:04:50] um like hopefully we see that um I we
+[01:04:54] have a colleague in Brazil who's done
+[01:04:56] some initial work that like so far that
+[01:04:58] they're not seeing that in Brazil um but
+[01:05:00] it's very early days so we'll see what
+[01:05:02] happens um but yeah I think I think a
+[01:05:05] fear is that like so much attention and
+[01:05:08] resources go into being in compliance
+[01:05:11] with the DSA and in these other regul
+[01:05:13] regulated regimes that um researchers in
+[01:05:17] other jurisdictions maybe actually like
+[01:05:19] get less resources put towards their
+[01:05:22] their work and that would be a huge
+[01:05:23] shame and I hope that does not happen um
+[01:05:26] and yeah I just want to make make a like
+[01:05:29] I think research across civil society
+[01:05:31] and across academic institutions but
+[01:05:32] also across jurisdictions across which
+[01:05:34] is complicated for all the reasons that
+[01:05:36] we've talked about but like as much as
+[01:05:37] possible for people to think about how
+[01:05:40] can we collaborate and like if there's
+[01:05:42] access to data sets or to methodologies
+[01:05:46] to um like Technologies to all the kinds
+[01:05:49] of things that fill the capacity to be
+[01:05:51] able to do this work thinking about like
+[01:05:53] how that can be done in a way that the
+[01:05:54] field can benefit us
+[01:05:57] yeah and I'll add on that I feel like
+[01:05:58] there's been a huge conversation about
+[01:06:00] the Brussels effect which which is
+[01:06:01] essentially like after this is developed
+[01:06:03] in Europe it will become Global and I
+[01:06:05] think it's really important to
+[01:06:07] interrogate that um just because you
+[01:06:10] know the scenario we don't want
+[01:06:11] happening is that um the focus on
+[01:06:14] transparency ends up being academics in
+[01:06:16] the US and EU get access to data and no
+[01:06:19] one else has really any meaningful
+[01:06:21] access to public data so I think that's
+[01:06:23] what we don't want to happen and I think
+[01:06:24] we're at a moment where a watershed
+[01:06:26] moment where we really have the ability
+[01:06:28] to articulate how we think this should
+[01:06:30] go
+[01:06:31] down great wonderful so uh I just want
+[01:06:34] to point out that we're at 12:50 here
+[01:06:36] and um there is Lush though I know some
+[01:06:38] of you have started but I want to make
+[01:06:39] sure our panelists get a chance to get
+[01:06:41] some so um I'm well why don't we
+[01:06:44] continue these conversations over lunch
+[01:06:45] but I want to thank our panelists one
+[01:06:47] more time for um the great insightful
+[01:06:50] comments they have
+[01:06:54] [Applause]
