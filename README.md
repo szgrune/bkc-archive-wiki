@@ -1,8 +1,9 @@
 # BKC Archive Wiki
 
 An LLM-maintained wiki over the **Berkman Klein Center** curated link feed
-(Harvard TagTeam hub 1176) — **6,925 bookmarks**, 2014–2026, across ~2,000 sources
-on internet/tech/society/law/AI/policy.
+(Harvard TagTeam hub 1176) — originally **6,925 bookmarks**, 2014–2026, across
+~2,000 sources on internet/tech/society/law/AI/policy, now growing daily via
+an automated sync (see below).
 
 It follows the **LLM Wiki** pattern: an immutable source
 (`raw/archive.json`) sits underneath a persistent, interlinked set of markdown pages
@@ -71,9 +72,24 @@ python3 scripts/fetch_youtube_api.py --dry-run      # see what's new (no writes)
 python3 scripts/merge_youtube_into_archive.py       # fold fetched videos into archive.json by hand
 ```
 
+## TagTeam items (`archive.json`, daily)
+
+Beyond the original 6,925-item export, **`scripts/fetch_tagteam.py`** syncs
+new items from hub 1176 straight into `archive.json` every day, via
+`.github/workflows/fetch-tagteam-items.yml` — no credentials needed, since
+the hub's `items.json`/`items.rss` are its own public "Export" feature.
+Incremental: pages through newest-first and stops once a full page has
+nothing new, so it never re-walks the full history. Full detail (including a
+known edge case around backdated tags) is in `AGENTS.md` §5.
+
+```bash
+python3 scripts/fetch_tagteam.py --dry-run   # see what's new (no writes)
+python3 scripts/fetch_tagteam.py             # fetch + merge by hand
+```
+
 ## Status
 
 Prototype slice = **2025** (737 items). Once you've reviewed the page formats in
 Obsidian, the next pass runs `--all` and extends the synthesis layer across all years.
-YouTube import is ongoing in the background (daily, automated) — re-run `build.mjs --all`
-periodically to pick up newly-merged `yt_` items.
+Both YouTube import and TagTeam sync are ongoing in the background (daily, automated)
+— re-run `build.mjs --all` periodically to pick up newly-merged items.

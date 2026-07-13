@@ -14,11 +14,14 @@ source. The human curates and asks questions; the LLM does the bookkeeping.
 
 `raw/archive.json` is the **primary source** — a merged dataset of:
 
-- **TagTeam hub 1176** — BKC's curated link feed. **6,925 items**, dated
-  **2014–2026** (bulk 2017+). Each item is a bookmark: `id`, `title`, `url`,
-  `date_published`, `tags`, sometimes a short HTML `description`, almost never
-  full `content`. **2,063 unique domains** (NYT, Wired, techpolicy.press, SSRN,
-  Harvard, 404media…). Subject matter: internet/tech/society/law/AI/policy.
+- **TagTeam hub 1176** — BKC's own curated link feed
+  (tagteam.harvard.edu/hubs/1176), synced daily. Each item is a bookmark:
+  `id` (numeric), `title`, `url`, `date_published`, `tags`, sometimes a short
+  HTML `description`, almost never full `content`. Originally **6,925 items**
+  (2014–2026, bulk 2017+) from a one-time export; `scripts/fetch_tagteam.py`
+  now adds new ones daily (see §5). **2,063 unique domains** (NYT, Wired,
+  techpolicy.press, SSRN, Harvard, 404media…). Subject matter:
+  internet/tech/society/law/AI/policy.
 - **Berkman Buzz newsletters** — 417 email issues, **2006–2015**. Weekly digests
   from the Center. Item IDs: `buzz_YYYYMM_N`. Full body text in `content` field;
   `email` sub-object carries message-id, list, source-file.
@@ -75,7 +78,8 @@ archive-wiki/
     ├── build.mjs          the wiki generator                        [code]
     ├── fetch_youtube.py       @BKCHarvard scraper → collection/      [code]
     ├── fetch_youtube_api.py   @BKCHarvard Data API fetch → collection/ [code]
-    └── merge_youtube_into_archive.py  collection/ → raw/archive.json [code]
+    ├── merge_youtube_into_archive.py  collection/ → raw/archive.json [code]
+    └── fetch_tagteam.py   hub 1176 Export feed → raw/archive.json    [code]
 ```
 
 ### The ownership rule — do not break it
@@ -84,12 +88,15 @@ archive-wiki/
   reminder they're generated.
 - **[LLM]** files are yours. The script **never overwrites** them (it only *seeds*
   `index.md` and `log.md` if they don't exist yet).
-- `raw/archive.json` is the immutable source **for the TagTeam/Buzz corpus** —
-  a wholesale external re-scrape is the only thing that should ever replace those
-  items. One exception: `scripts/merge_youtube_into_archive.py` appends new
-  `yt_` items to it (never touches existing ids), run automatically at the end
-  of the daily `fetch-youtube-captions.yml` workflow. This is deliberate, not a
-  loophole — see §5.
+- `raw/archive.json` is the immutable source **for the original Buzz import
+  and the original 6,925-item TagTeam export** — a wholesale external
+  re-scrape is the only thing that should ever replace those existing items.
+  Two scripts append new items to it going forward, neither touching existing
+  ids: `scripts/merge_youtube_into_archive.py` (new `yt_` items, run at the
+  end of the daily `fetch-youtube-captions.yml`) and `scripts/fetch_tagteam.py`
+  (new numeric-id TagTeam items, run daily by `fetch-tagteam-items.yml`,
+  incrementally syncing hub 1176's own Export feed). Both are deliberate,
+  ongoing exceptions, not loopholes — see §5.
 - `collection/` is also **[SCRIPT]**-owned (by `fetch_youtube.py` /
   `fetch_youtube_api.py`) — don't hand-edit it. It is **additive and
   self-contained**: both fetch scripts only ever *read* `archive.json` (for
@@ -306,11 +313,42 @@ tens of MB for no benefit. The merged item's `content` is the (short) video
 description; the full transcript stays exactly where the fetch scripts put
 it, one `.txt` per video, referenced via `transcript.path`.
 
-### Ingest (the source changed)
-Source updates arrive as a re-scrape of `raw/archive.json` (not one file at a time).
-Flow: re-run `build.mjs --all` → scan the newest rows in `raw/digest/<latest>.md` →
-update/extend affected topic/person/org pages and the relevant `timeline/<year>.md`
-→ update `index.md` → append a `## [date] ingest | …` log entry.
+### Fetch TagTeam items (`scripts/fetch_tagteam.py`)
+Incrementally syncs BKC's own TagTeam hub 1176
+(tagteam.harvard.edu/hubs/1176) into `raw/archive.json` daily, via
+`fetch-tagteam-items.yml` (cron `47 6 * * *`, 30 min after the YouTube
+workflow so the two don't race on the same push). No credentials needed —
+the hub's `items.json`/`items.rss` are its own public "Export" feature.
+
+```bash
+python3 scripts/fetch_tagteam.py --dry-run   # report only, no writes
+python3 scripts/fetch_tagteam.py             # fetch + merge new items
+```
+
+- **How it works:** two calls per page — `items.json` for structured fields
+  (numeric `id`, `url`, `tags`, dates), `items.rss` for the plain-text
+  `description` (not present in the JSON) — merged by URL. Items come back
+  `date_published`-descending; pages through until a full page has zero
+  items not already in `archive.json` by id, then stops.
+- **Known limitation:** an old article tagged into the hub *today* sorts by
+  its (old) `date_published`, not today's date, so it could in principle sit
+  past the stopping point and be missed on the daily incremental sync — rare
+  in practice since BKC's curators tag things near publish time, and the
+  periodic full re-scrape described below remains the safety net for
+  anything this misses.
+- **Politeness:** confirmed via testing that the site does rate-limit (a
+  429) — the script retries with backoff, waits between pages, and sends a
+  descriptive `User-Agent`. Don't lower `PAGE_DELAY`/remove the backoff
+  without re-confirming the site can take it.
+- Log a `## [date] fetch | tagteam …` entry afterward.
+
+### Ingest (a wholesale source re-scrape happened)
+Distinct from the daily incremental `fetch_tagteam.py` sync above — this is
+for when someone hands you an entirely fresh `raw/archive.json` export (not
+one file at a time). Flow: re-run `build.mjs --all` → scan the newest rows in
+`raw/digest/<latest>.md` → update/extend affected topic/person/org pages and
+the relevant `timeline/<year>.md` → update `index.md` → append a
+`## [date] ingest | …` log entry.
 
 ### Synthesis (build the value layer)
 1. Read `raw/digest/<year>.md` for the slice you're working (one pass).
@@ -341,16 +379,18 @@ mechanical. Append a `lint` log entry.
 
 ## 6. Status
 
-**Corpus:** 7,390+ items and growing daily — 6,925 TagTeam bookmarks (2014–2026)
-+ 417 Berkman Buzz newsletters (2006–2015) + BKC YouTube videos (48 merged so
-far of ~1,100; `fetch-youtube-captions.yml` runs daily via the official Data
-API, budgeted to ~40 new videos/day, so the full backlog takes about a month
-unless a quota increase is granted).
+**Corpus:** 7,468+ items and growing daily from two automated pipelines —
+TagTeam bookmarks (6,963+ so far, daily incremental sync via
+`fetch-tagteam-items.yml`) + 417 Berkman Buzz newsletters (2006–2015,
+one-time import) + BKC YouTube videos (88 merged so far of ~1,101 public
+videos; `fetch-youtube-captions.yml` runs daily via the official Data API,
+budgeted ~39 new videos/day, so the backlog takes several more weeks unless a
+quota increase is granted).
 
 **Wiki build:** all years stubbed and digested (`--all`). Thematic synthesis covers
 **2025** fully. Other years have navigational landing pages pending synthesis.
-Re-run `node scripts/build.mjs --all` periodically as YouTube videos accumulate
-in `archive.json` to pick up new `yt_` item stubs.
+Re-run `node scripts/build.mjs --all` periodically as YouTube videos and new
+TagTeam items accumulate in `archive.json` to pick up new item stubs.
 
 **Events layer:** not yet populated. Priority clusters for first pass:
 - 2014–2015: TagTeam + Buzz overlap (earliest cross-source years)

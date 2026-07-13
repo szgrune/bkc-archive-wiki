@@ -1,0 +1,56 @@
+name: Fetch TagTeam items
+
+# Daily incremental sync of BKC's own TagTeam hub 1176
+# (https://tagteam.harvard.edu/hubs/1176) into raw/archive.json. Unlike the
+# YouTube workflow, this needs no credentials — the hub's items.json/.rss
+# export feeds are public — so it's a much simpler pipeline: fetch, merge,
+# commit.
+#
+# Runs 30 minutes after fetch-youtube-captions.yml (17 6 * * *) so the two
+# workflows don't race pushing to main at the same time.
+#
+# Side effect worth knowing: a commit here pushes to main, which triggers
+# deploy.yml (site rebuild) — so new items show up on the published wiki the
+# same day they're fetched (once item stubs are built from archive.json).
+
+on:
+  schedule:
+    - cron: "47 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-tagteam-items
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Fetch TagTeam items
+        run: python scripts/fetch_tagteam.py
+
+      - name: Commit and push new items
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain -- raw/archive.json)" ]; then
+            git add raw/archive.json
+            git commit -m "Automated TagTeam item fetch (hub 1176)"
+            git push
+          else
+            echo "No new items this run — nothing to commit."
+          fi
