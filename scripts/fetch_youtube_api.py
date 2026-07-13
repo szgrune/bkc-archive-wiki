@@ -113,6 +113,30 @@ class Quota:
         self.used += cost
 
 
+class QuotaExceededError(Exception):
+    """Google itself reports quotaExceeded/dailyLimitExceeded (403) — distinct
+    from our own self-imposed --quota-budget stopping early. Caught in main()
+    and handled identically to a self-imposed stop: quit the fetch loop, but
+    still merge whatever's already staged and exit 0, rather than crash (a
+    crash would skip the workflow's merge/commit steps entirely, losing that
+    run's progress — the staging file lives only on the ephemeral runner)."""
+
+
+def _raise_if_quota_error(resp):
+    """Distinguish a real Google quota 403 from other 4xx/404s (deleted
+    video, blocked ASR track, etc.) so only genuine quota exhaustion gets
+    the graceful-stop treatment; anything else is handled by the caller."""
+    if resp.status_code != 403:
+        return
+    try:
+        reasons = {e.get("reason") for e in resp.json().get("error", {}).get("errors", [])}
+    except Exception:
+        return
+    if reasons & {"quotaExceeded", "dailyLimitExceeded", "rateLimitExceeded",
+                  "userRateLimitExceeded"}:
+        raise QuotaExceededError(f"Data API reports {reasons}")
+
+
 def get_access_token():
     client_id = os.environ.get("YT_OAUTH_CLIENT_ID")
     client_secret = os.environ.get("YT_OAUTH_CLIENT_SECRET")
@@ -156,6 +180,7 @@ class YTClient:
 
 def get_uploads_playlist_id(client, quota):
     resp = client.get("channels", {"part": "contentDetails", "id": CHANNEL_ID})
+    _raise_if_quota_error(resp)
     resp.raise_for_status()
     quota.charge(COST_CHANNELS_LIST)
     items = resp.json().get("items", [])
@@ -172,6 +197,7 @@ def iter_uploaded_video_ids(client, uploads_playlist_id, quota):
         if page_token:
             params["pageToken"] = page_token
         resp = client.get("playlistItems", params)
+        _raise_if_quota_error(resp)
         resp.raise_for_status()
         quota.charge(COST_PLAYLIST_ITEMS)
         data = resp.json()
@@ -197,6 +223,7 @@ def fetch_videos_meta(client, video_ids, quota):
     public ones, so filtering has to happen here."""
     resp = client.get("videos", {"part": "snippet,contentDetails,status",
                                   "id": ",".join(video_ids), "maxResults": 50})
+    _raise_if_quota_error(resp)
     resp.raise_for_status()
     quota.charge(COST_VIDEOS_LIST)
     out = {}
@@ -220,6 +247,7 @@ def fetch_videos_meta(client, video_ids, quota):
 def list_caption_tracks(client, video_id, quota):
     resp = client.get("captions", {"part": "snippet", "videoId": video_id})
     quota.charge(COST_CAPTIONS_LIST)
+    _raise_if_quota_error(resp)
     if resp.status_code != 200:
         return []
     return resp.json().get("items", [])
@@ -250,6 +278,7 @@ def download_caption_track(client, track_id, quota):
     quota.charge(COST_CAPTIONS_DOWNLOAD)
     if resp.status_code == 200:
         return resp.text
+    _raise_if_quota_error(resp)
     if resp.status_code in (400, 403, 404):
         return None
     resp.raise_for_status()
@@ -408,17 +437,28 @@ def main():
           f"Staging: {len(staging)} items  |  "
           f"Non-public (excluded): {len(nonpublic_ids)}")
 
-    uploads_playlist_id = get_uploads_playlist_id(client, quota)
-    all_video_ids = list(iter_uploaded_video_ids(client, uploads_playlist_id, quota))
-    print(f"Channel total: {len(all_video_ids)} videos  (enumeration cost: {quota.used} units)")
+    new_video_ids = []
+    total_new = 0
+    try:
+        uploads_playlist_id = get_uploads_playlist_id(client, quota)
+        all_video_ids = list(iter_uploaded_video_ids(client, uploads_playlist_id, quota))
+        print(f"Channel total: {len(all_video_ids)} videos  (enumeration cost: {quota.used} units)")
 
-    new_video_ids = [
-        v for v in all_video_ids
-        if f"yt_{v}" not in seen_ids
-        and f"https://www.youtube.com/watch?v={v}" not in seen_yt_urls
-    ]
-    total_new = len(new_video_ids)
-    print(f"New (not yet in catalog): {total_new}")
+        new_video_ids = [
+            v for v in all_video_ids
+            if f"yt_{v}" not in seen_ids
+            and f"https://www.youtube.com/watch?v={v}" not in seen_yt_urls
+        ]
+        total_new = len(new_video_ids)
+        print(f"New (not yet in catalog): {total_new}")
+    except QuotaExceededError as e:
+        # Nothing staged yet at this point — just report and fall through to
+        # the merge section below (a no-op if staging is empty, but it's the
+        # one exit path so a stale staging file from an interrupted local run
+        # still gets merged rather than silently dropped).
+        print(f"\nGoogle's real API quota is exhausted before any videos were "
+              f"processed this run ({e}). Resume automatically next run.")
+        new_video_ids = []
 
     if args.dry_run:
         for v in new_video_ids[:30]:
@@ -428,8 +468,11 @@ def main():
         return
 
     if not new_video_ids:
-        print("Nothing new to fetch.")
-        return
+        if not staging:
+            print("Nothing new to fetch.")
+            return
+        print("Nothing new to fetch this run, but merging leftover staged "
+              "videos from an earlier interrupted run.")
 
     if not client.authorized:
         sys.exit("OAuth credentials required for caption fetching (API key alone "
@@ -455,7 +498,14 @@ def main():
         if not quota.can_afford(COST_VIDEOS_LIST):
             print("\nQuota budget reached — stopping before fetching more metadata.")
             break
-        metas = fetch_videos_meta(client, chunk, quota)
+
+        try:
+            metas = fetch_videos_meta(client, chunk, quota)
+        except QuotaExceededError as e:
+            print(f"\nGoogle's real API quota was hit fetching metadata ({e}) — "
+                  f"stopping here. Everything processed so far this run still "
+                  f"gets merged and committed; the rest resumes next run.")
+            break
 
         for vid in chunk:
             if args.limit and processed >= args.limit:
@@ -487,19 +537,40 @@ def main():
 
             print(f"[{processed + 1}/{len(new_video_ids)}] {vid}  {meta['title'][:55]}")
 
-            tracks = list_caption_tracks(client, vid, quota)
+            try:
+                tracks = list_caption_tracks(client, vid, quota)
+            except QuotaExceededError as e:
+                print(f"\nGoogle's real API quota was hit listing captions ({e}) — "
+                      f"stopping here (this video is untouched, not miscataloged "
+                      f"as caption-less — it'll be retried next run).")
+                budget_exhausted = True
+                break
             candidates = select_caption_tracks(tracks)
 
             cap_type, captions_text = None, None
+            quota_hit_mid_download = False
             for track in candidates:
                 if not quota.can_afford(COST_CAPTIONS_DOWNLOAD):
                     break
-                body = download_caption_track(client, track["id"], quota)
+                try:
+                    body = download_caption_track(client, track["id"], quota)
+                except QuotaExceededError as e:
+                    print(f"\nGoogle's real API quota was hit downloading captions "
+                          f"({e}) — stopping here.")
+                    quota_hit_mid_download = True
+                    break
                 if body:
                     captions_text = parse_srt(body)
                     kind = track["snippet"].get("trackKind", "").lower()
                     cap_type = "yt_auto" if kind == "asr" else "manual"
                     break
+
+            if quota_hit_mid_download:
+                # Don't catalog this video at all — we don't actually know
+                # whether its tracks are downloadable, just that we couldn't
+                # check. Leave it unseen so it's retried properly next run.
+                budget_exhausted = True
+                break
 
             if cap_type is None:
                 if not tracks:
