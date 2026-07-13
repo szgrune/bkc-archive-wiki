@@ -18,6 +18,15 @@ Writes into the SAME collection/ layout as fetch_youtube.py (shared dedup
 state via youtube_common), so this can pick up wherever either script left
 off, and vice versa.
 
+Public-only: owner-authenticated playlistItems.list on the uploads playlist
+returns private/unlisted videos too, not just public ones — this script
+filters on videos.list's status.privacyStatus and skips anything non-public
+before it's ever cataloged. Skipped ids (never titles) are cached locally in
+collection/nonpublic.json purely so they aren't re-checked every run — that
+file is gitignored and must stay that way, since this repo (and its Actions
+logs) are public and a private video's title is the one field that could
+leak what it's about.
+
 Setup (one-time, by whoever administers the BKC channel's Google account):
     1. Create a Google Cloud project, enable "YouTube Data API v3".
     2. Create an OAuth 2.0 Client ID of type "Desktop app", download its
@@ -78,6 +87,7 @@ API_BASE = "https://www.googleapis.com/youtube/v3"
 TOKEN_URL = "https://oauth2.googleapis.com/token"
 
 RESIDUE_PATH = CATALOG_PATH.parent.parent / "residue.txt"  # collection/residue.txt
+NONPUBLIC_PATH = CATALOG_PATH.parent.parent / "nonpublic.json"  # collection/nonpublic.json
 
 # Quota costs (units) per the Data API v3 pricing table.
 COST_CHANNELS_LIST     = 1
@@ -180,8 +190,12 @@ def description_to_html(description):
 
 
 def fetch_videos_meta(client, video_ids, quota):
-    """Batch metadata fetch (up to 50 ids costs 1 unit total)."""
-    resp = client.get("videos", {"part": "snippet,contentDetails",
+    """Batch metadata fetch (up to 50 ids costs 1 unit total, `status` part
+    is free to add — it rides the same call). `privacy_status` lets the
+    caller skip non-public videos: an owner-authenticated playlistItems.list
+    on the uploads playlist returns private/unlisted videos too, not just
+    public ones, so filtering has to happen here."""
+    resp = client.get("videos", {"part": "snippet,contentDetails,status",
                                   "id": ",".join(video_ids), "maxResults": 50})
     resp.raise_for_status()
     quota.charge(COST_VIDEOS_LIST)
@@ -189,12 +203,14 @@ def fetch_videos_meta(client, video_ids, quota):
     for item in resp.json().get("items", []):
         sn = item.get("snippet", {})
         cd = item.get("contentDetails", {})
+        st = item.get("status", {})
         out[item["id"]] = {
             "title":             sn.get("title", ""),
             "description_full":  sn.get("description", ""),
             "date_published":    normalize_date(sn.get("publishedAt", "")),
             "duration_seconds":  parse_iso_duration(cd.get("duration")),
             "channel_id":        sn.get("channelId", CHANNEL_ID),
+            "privacy_status":    st.get("privacyStatus", "public"),
         }
     return out
 
@@ -321,6 +337,29 @@ def append_residue(video_ids):
     atomic_write(RESIDUE_PATH, "\n".join(sorted(existing)) + "\n")
 
 
+def load_nonpublic():
+    if NONPUBLIC_PATH.exists():
+        return json.loads(NONPUBLIC_PATH.read_text())
+    return []
+
+
+def append_nonpublic(records):
+    """records: list of {id, privacy_status} — deliberately NO title or
+    description. Videos that aren't public are recorded here (never in
+    youtube.json/archive.json, and this file is itself gitignored — see
+    .gitignore) purely as a local cache so they aren't re-checked every run.
+    This repo and its Actions logs are public, so nothing that could
+    identify a private/unlisted video's *content* (title, description) may
+    ever be written to this file or printed to stdout for it — only the
+    opaque video id and its privacy_status."""
+    if not records:
+        return
+    existing = load_nonpublic()
+    existing_ids = {r["id"] for r in existing}
+    existing.extend(r for r in records if r["id"] not in existing_ids)
+    atomic_write(NONPUBLIC_PATH, json.dumps(existing, indent=2, ensure_ascii=False))
+
+
 # ── main ──────────────────────────────────────────────────────────────────────
 
 def main():
@@ -352,9 +391,13 @@ def main():
     catalog = load_catalog()
     staging = json.loads(STAGING_PATH.read_text()) if STAGING_PATH.exists() else []
 
+    nonpublic = load_nonpublic()
+    nonpublic_ids = {r["id"] for r in nonpublic}
+
     seen_ids = {str(i["id"]) for i in archive["items"]}
     seen_ids |= {str(i["id"]) for i in catalog["items"]}
     seen_ids |= {str(i["id"]) for i in staging}
+    seen_ids |= {f"yt_{vid}" for vid in nonpublic_ids}
     seen_yt_urls = {
         i["url"] for i in archive["items"]
         if "youtube.com/watch" in i.get("url", "") or "youtu.be/" in i.get("url", "")
@@ -362,7 +405,8 @@ def main():
 
     print(f"Catalog: {len(catalog['items'])} videos  |  "
           f"Archive (dedup): {len(archive['items'])} items  |  "
-          f"Staging: {len(staging)} items")
+          f"Staging: {len(staging)} items  |  "
+          f"Non-public (excluded): {len(nonpublic_ids)}")
 
     uploads_playlist_id = get_uploads_playlist_id(client, quota)
     all_video_ids = list(iter_uploaded_video_ids(client, uploads_playlist_id, quota))
@@ -398,6 +442,7 @@ def main():
 
     no_captions = []       # video has zero caption tracks
     undownloadable = []    # tracks exist but every download attempt was refused
+    skipped_nonpublic = 0  # count only — never collect ids/titles for the summary
     cap_counts = {}
     processed = 0
     budget_exhausted = False
@@ -426,6 +471,18 @@ def main():
             meta = metas.get(vid)
             if meta is None:
                 print(f"  [warn] {vid}: no metadata (deleted/private?) — skipping")
+                continue
+
+            privacy_status = meta.get("privacy_status", "public")
+            if privacy_status != "public":
+                # Never print the title here — it's the one field that could
+                # leak what a private/unlisted video is *about*, and this
+                # repo's Actions logs are public.
+                print(f"[{processed + 1}/{len(new_video_ids)}] {vid}  "
+                      f"[skip: privacy_status={privacy_status}, not public]")
+                append_nonpublic([{"id": vid, "privacy_status": privacy_status}])
+                skipped_nonpublic += 1
+                processed += 1
                 continue
 
             print(f"[{processed + 1}/{len(new_video_ids)}] {vid}  {meta['title'][:55]}")
@@ -483,6 +540,9 @@ def main():
         print(f"\n{len(no_captions)} with no caption tracks, "
               f"{len(undownloadable)} with tracks but refused on download — "
               f"appended to {RESIDUE_PATH.relative_to(RESIDUE_PATH.parent.parent)}")
+    if skipped_nonpublic:
+        print(f"\n{skipped_nonpublic} excluded as non-public this run "
+              f"(ids only, gitignored — see {NONPUBLIC_PATH.name})")
 
     remaining = total_new - processed
     print(f"\n{max(remaining, 0)} new videos left for future runs.")

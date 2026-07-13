@@ -15,4 +15,9 @@ __pycache__/
 scripts/.proxies*
 collection/json/.youtube-staging.json
 
+# Local cache of non-public (private/unlisted) video ids fetch_youtube_api.py
+# has already excluded — this repo is PUBLIC, so this must never be
+# committed: even the existence/id of a private video shouldn't leak here.
+collection/nonpublic.json
+
 .env
