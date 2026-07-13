@@ -1,0 +1,120 @@
+name: Synthesize wiki (People/Events/Topics)
+
+# Daily automated synthesis of whatever fetch-youtube-captions.yml and
+# fetch-tagteam-items.yml added to raw/archive.json overnight, into the
+# wiki's People/Events/Orgs/Topics value layer — emphasizing People and
+# Events as coherent entities so a YouTube video, a TagTeam bookmark, and a
+# Buzz item about the same person/event get cross-linked from one page
+# (see AGENTS.md §3 and §5's "Automated synthesis" section).
+#
+# Runs on an institutional OpenAI API key (not Claude Code, which is
+# Anthropic-only) — scripts/synthesize_wiki.py calls OpenAI's API directly.
+#
+# Order matters: build.mjs runs FIRST so new items get real item stubs
+# under items/<year>/ — synthesize_wiki.py reads item link slugs straight
+# from those stub filenames rather than reconstructing them (build.mjs's
+# slugify has its own truncation/dedup logic; see AGENTS.md §3).
+#
+# Runs 30-45 min after both fetch workflows (17 6 and 47 6) so today's new
+# items are already in archive.json before this looks for them.
+#
+# Scoped to NEW items only (via raw/.synthesis-state.json) — the historical
+# backlog (most years still "synthesis pending") stays a separate,
+# human-driven effort, not something this workflow attempts.
+#
+# Commits straight to main, like the two fetch pipelines — no PR review
+# step. Guardrails against a bad autonomous edit live in the script itself
+# (a hard path allowlist enforced in code, a --max-items cap, a
+# --max-cost-usd ceiling), not here.
+
+on:
+  schedule:
+    - cron: "15 7 * * *"
+  workflow_dispatch:
+    inputs:
+      max_items:
+        description: "Cap on number of new items to process this run"
+        default: "100"
+      max_cost_usd:
+        description: "Stop before exceeding this estimated cost (USD)"
+        default: "2.0"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: synthesize-wiki
+  cancel-in-progress: false
+
+jobs:
+  synthesize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # GitHub Actions doesn't allow `secrets.*` directly in `if:` conditions,
+      # so check presence here (via env, never printed) and branch on the
+      # step output instead — same pattern as fetch-youtube-captions.yml.
+      - name: Check OpenAI credentials
+        id: creds
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          if [ -n "$OPENAI_API_KEY" ]; then
+            echo "configured=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Skip notice (OpenAI key not configured yet)
+        if: steps.creds.outputs.configured == 'false'
+        run: |
+          echo "::notice::OPENAI_API_KEY is not set — skipping this run. \
+          Configure it as a repo secret to enable the daily synthesis workflow \
+          (see scripts/synthesize_wiki.py)."
+
+      - name: Setup Node
+        if: steps.creds.outputs.configured == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Setup Python
+        if: steps.creds.outputs.configured == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        if: steps.creds.outputs.configured == 'true'
+        run: pip install requests pyyaml
+
+      - name: Rebuild stubs/digests (so new items get correct slugs)
+        if: steps.creds.outputs.configured == 'true'
+        run: node scripts/build.mjs --all
+
+      - name: Synthesize
+        if: steps.creds.outputs.configured == 'true'
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          python scripts/synthesize_wiki.py \
+            --max-items "${{ github.event.inputs.max_items || '100' }}" \
+            --max-cost-usd "${{ github.event.inputs.max_cost_usd || '2.0' }}"
+
+      - name: Commit and push
+        if: steps.creds.outputs.configured == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          PATHS="people/ events/ orgs/ topics/ timeline/ items/ index.md log.md \
+                 raw/.synthesis-state.json raw/digest.md raw/digest/ raw/feed-tags.md \
+                 sources/_domains.md"
+          if [ -n "$(git status --porcelain -- $PATHS)" ]; then
+            git add $PATHS
+            git commit -m "Automated wiki synthesis"
+            git push
+          else
+            echo "Nothing to commit this run."
+          fi

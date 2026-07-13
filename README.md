@@ -30,7 +30,7 @@ Two layers, clear ownership (see [`AGENTS.md`](AGENTS.md) for the full spec):
 | Layer | Who writes it | What |
 | --- | --- | --- |
 | **Generated** | `scripts/build.mjs` | item stubs, `raw/digest/*`, `sources/_domains.md`, `timeline/_counts.md`, `raw/feed-tags.md` |
-| **Synthesis** | the LLM | `topics/`, `people/`, `orgs/`, `timeline/<year>.md`, `index.md`, `log.md` |
+| **Synthesis** | the LLM — interactively, *and* daily via `scripts/synthesize_wiki.py` | `topics/`, `people/`, `orgs/`, `events/`, `timeline/<year>.md`, `index.md`, `log.md` |
 
 Regenerate the generated layer any time (idempotent):
 
@@ -87,9 +87,30 @@ python3 scripts/fetch_tagteam.py --dry-run   # see what's new (no writes)
 python3 scripts/fetch_tagteam.py             # fetch + merge by hand
 ```
 
+## Automated synthesis (`people/`, `events/`, `orgs/`, `topics/`, daily)
+
+**`scripts/synthesize_wiki.py`** turns whatever the two fetch pipelines added
+overnight into wiki content, via `.github/workflows/synthesize-wiki.yml` —
+emphasizing **People and Events as coherent entities**, so a YouTube video, a
+TagTeam bookmark, and a Buzz item that are really about the same person or
+real-world occurrence get filed under, and cross-linked from, one page
+instead of sitting as disconnected item stubs. Runs on an institutional
+OpenAI API key (not Claude Code, which can't use one) via a two-pass design:
+plan which entities each new item touches, then draft the actual page
+content for each. Scoped to new items only — `raw/.synthesis-state.json`
+tracks what's already been considered, and the historical backfill (most
+years still "synthesis pending") stays a separate, human-driven effort.
+Commits straight to `main` like the fetch pipelines, with guardrails
+enforced in code (a hard path allowlist, `--max-items`, `--max-cost-usd`) —
+full detail in `AGENTS.md` §5.
+
+```bash
+python3 scripts/synthesize_wiki.py --dry-run   # see what it would do, no writes
+```
+
 ## Status
 
 Prototype slice = **2025** (737 items). Once you've reviewed the page formats in
 Obsidian, the next pass runs `--all` and extends the synthesis layer across all years.
-Both YouTube import and TagTeam sync are ongoing in the background (daily, automated)
-— re-run `build.mjs --all` periodically to pick up newly-merged items.
+YouTube import, TagTeam sync, and now wiki synthesis itself are all ongoing in the
+background (daily, automated).
