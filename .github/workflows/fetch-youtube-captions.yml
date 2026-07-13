@@ -5,6 +5,13 @@ name: Fetch YouTube captions (Data API)
 # approach. Runs on GitHub's infrastructure (not a laptop), stays under the
 # free 10,000 units/day quota, and commits new captions back to the repo.
 #
+# Every run also folds any newly-fetched videos into raw/archive.json (via
+# scripts/merge_youtube_into_archive.py), so YouTube items get item stubs the
+# next time someone runs `node scripts/build.mjs`, without a separate manual
+# step. See AGENTS.md §1/§2 for why archive.json can have an automated writer
+# for this one path (it stays lightweight — no transcript text inlined, just
+# a pointer to the .txt already written under collection/).
+#
 # Needs channel-owner OAuth credentials as repo secrets before it does
 # anything:
 #   YT_OAUTH_CLIENT_ID
@@ -16,7 +23,7 @@ name: Fetch YouTube captions (Data API)
 #
 # Side effect worth knowing: a commit here pushes to main, which triggers
 # deploy.yml (site rebuild) — so new captions show up on the published wiki
-# the same day they're fetched.
+# the same day they're fetched (once item stubs are built from archive.json).
 
 on:
   schedule:
@@ -88,13 +95,17 @@ jobs:
           fi
           python scripts/fetch_youtube_api.py $ARGS
 
+      - name: Merge new videos into archive.json
+        if: steps.creds.outputs.configured == 'true'
+        run: python scripts/merge_youtube_into_archive.py
+
       - name: Commit and push new captions
         if: steps.creds.outputs.configured == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          if [ -n "$(git status --porcelain -- collection/)" ]; then
-            git add collection/
+          if [ -n "$(git status --porcelain -- collection/ raw/archive.json)" ]; then
+            git add collection/ raw/archive.json
             git commit -m "Automated YouTube caption fetch (Data API)"
             git push
           else

@@ -22,16 +22,21 @@ source. The human curates and asks questions; the LLM does the bookkeeping.
 - **Berkman Buzz newsletters** — 417 email issues, **2006–2015**. Weekly digests
   from the Center. Item IDs: `buzz_YYYYMM_N`. Full body text in `content` field;
   `email` sub-object carries message-id, list, source-file.
-- **BKC YouTube videos** (forthcoming) — @BKCHarvard channel. Item IDs:
-  `yt_VIDEO_ID`. `youtube` sub-object carries captions, duration, speakers.
+- **BKC YouTube videos** — @BKCHarvard channel (~1,100 videos; import ongoing,
+  daily). Item IDs: `yt_VIDEO_ID`. `youtube` sub-object carries duration,
+  speakers, caption type. `content` here is the video description, not the
+  transcript — the full transcript stays out of `archive.json` (see §2) and
+  lives at the path in `transcript.path`.
 
-**Total: 7,342 items** (and growing).
+**Total: 7,390+ items** (and climbing daily as the YouTube fetch proceeds — see §5).
 
 ### Two constraints that shape everything
 1. **Metadata-only for TagTeam items.** There is no article body text. Do **not**
    fetch URLs during normal ingest/synthesis. Topics are derived from titles, domains
    and short descriptions. (On-demand fetching of a *specific* item is fine when asked
-   — note it in the log.) Buzz and YouTube items do carry full `content`.
+   — note it in the log.) Buzz items carry full `content` inline. YouTube items carry
+   only the video description inline — the transcript lives in its own file under
+   `collection/txt/youtube/`, pointed to by `transcript.path` (see §2).
 2. **The feed tags are NOT topical.** `community`, `orbit`, `buzz`, `events`,
    `opportunities` are BKC newsletter-section/workflow tags (plus housekeeping like
    `added`, `skip`). They tell you the *channel*, not the *subject*. All topical
@@ -67,8 +72,10 @@ archive-wiki/
 │   ├── json/youtube.json metadata catalog — 1 entry/video + transcript pointer
 │   └── txt/youtube/yt_<id>.txt   one plain-text transcript per video
 └── scripts/
-    ├── build.mjs      the wiki generator                            [code]
-    └── fetch_youtube.py  @BKCHarvard scraper → collection/          [code]
+    ├── build.mjs          the wiki generator                        [code]
+    ├── fetch_youtube.py       @BKCHarvard scraper → collection/      [code]
+    ├── fetch_youtube_api.py   @BKCHarvard Data API fetch → collection/ [code]
+    └── merge_youtube_into_archive.py  collection/ → raw/archive.json [code]
 ```
 
 ### The ownership rule — do not break it
@@ -77,12 +84,19 @@ archive-wiki/
   reminder they're generated.
 - **[LLM]** files are yours. The script **never overwrites** them (it only *seeds*
   `index.md` and `log.md` if they don't exist yet).
-- The immutable source is `raw/archive.json`. Read it; never write it.
-- `collection/` is also **[SCRIPT]**-owned (by `fetch_youtube.py`) — don't
-  hand-edit it. It is **additive and self-contained**: `fetch_youtube.py` only
-  ever reads `archive.json` (for dedup) and writes under `collection/`, so it
-  never conflicts with a re-scrape of the source. Integrating YouTube entries
-  *into* `archive.json` is a deliberate, separate, later step.
+- `raw/archive.json` is the immutable source **for the TagTeam/Buzz corpus** —
+  a wholesale external re-scrape is the only thing that should ever replace those
+  items. One exception: `scripts/merge_youtube_into_archive.py` appends new
+  `yt_` items to it (never touches existing ids), run automatically at the end
+  of the daily `fetch-youtube-captions.yml` workflow. This is deliberate, not a
+  loophole — see §5.
+- `collection/` is also **[SCRIPT]**-owned (by `fetch_youtube.py` /
+  `fetch_youtube_api.py`) — don't hand-edit it. It is **additive and
+  self-contained**: both fetch scripts only ever *read* `archive.json` (for
+  dedup) and write under `collection/`, so they never conflict with a
+  re-scrape of the TagTeam/Buzz source. `merge_youtube_into_archive.py` is the
+  one script that writes `archive.json`, and only appends lightweight `yt_`
+  entries (description text, not the transcript) — see §5 for why.
 
 > **Note on the metadata-only constraint (§1):** it holds for the TagTeam
 > corpus. `collection/` is the exception — it intentionally carries full
@@ -212,11 +226,37 @@ Counts, digests and tag tables are always computed corpus-wide; only stub pages 
 gated by `--year`. Idempotent — re-run any time; it cleans the year folder(s) it
 rewrites so renamed/removed items don't leave orphans.
 
-### Fetch YouTube transcripts (`scripts/fetch_youtube.py`)
-Scrapes every video on the **@BKCHarvard** channel (~1,100) into the
-`collection/` layer: one metadata entry per video in `collection/json/youtube.json`
-(shaped like an `archive.json` item, plus `youtube` + `transcript` blocks) and one
-plain-text transcript per video in `collection/txt/youtube/yt_<id>.txt`.
+### Fetch YouTube transcripts — two mechanisms, same `collection/` layout
+Both write one metadata entry per video to `collection/json/youtube.json`
+(shaped like an `archive.json` item, plus `youtube` + `transcript` blocks) and
+one plain-text transcript per video to `collection/txt/youtube/yt_<id>.txt`.
+They share dedup state (`youtube_common.py`), so either can resume where the
+other left off.
+
+**`scripts/fetch_youtube_api.py` (official, ToS-compliant, runs daily in CI)**
+— the official YouTube Data API v3, OAuth-authenticated as a BKCHarvard
+channel manager. This is what `.github/workflows/fetch-youtube-captions.yml`
+runs on a `17 6 * * *` cron: fetch, budgeted to stay under the free
+10,000-units/day quota (~40 videos/day, so the ~1,100-video backlog takes
+about a month), then `merge_youtube_into_archive.py` (below), then commit +
+push both `collection/` and `raw/archive.json` together. Needs
+`YT_OAUTH_CLIENT_ID` / `YT_OAUTH_CLIENT_SECRET` / `YT_OAUTH_REFRESH_TOKEN` as
+repo secrets — see the script's docstring for how to mint them and where they
+go (repo secrets for CI; shell-exported or a local `.env` for manual runs, but
+this script doesn't auto-load `.env`, so `set -a; source .env; set +a` first).
+Until those secrets are set, the workflow no-ops daily instead of failing.
+
+```bash
+python3 scripts/fetch_youtube_api.py --dry-run        # enumerate only (works with just YT_API_KEY)
+python3 scripts/fetch_youtube_api.py --limit 5         # small test run
+python3 scripts/fetch_youtube_api.py                   # full run, budgeted 9000 units
+```
+
+**`scripts/fetch_youtube.py` (scraper, manual/local only, not in CI)** —
+YouTube's internal Innertube API + `youtube-transcript-api`. Predates the
+Data API script; kept as a faster (no quota limit) fallback for manual local
+runs, but it isn't the sanctioned access path (see the ToS discussion this
+whole pipeline grew out of), so it's not what the daily workflow uses.
 
 ```bash
 pip install youtube-transcript-api requests           # one-time
@@ -225,15 +265,16 @@ python3 scripts/fetch_youtube.py --limit 5            # small test run
 python3 scripts/fetch_youtube.py                      # full run (resumable)
 ```
 
-- **Resumable & idempotent.** Each transcript is written immediately and progress
-  is staged to `collection/json/.youtube-staging.json` (atomic writes). Re-run to
-  continue — already-cataloged videos and blocked videos are skipped/retried
-  automatically; nothing duplicates. Never writes `archive.json`.
-- **YouTube IP-blocks bulk transcript fetching** (~50 requests/IP). The script
-  distinguishes a genuine "no captions" (cataloged once) from a rate-limit
-  *block* (never cataloged → retried later), and aborts cleanly after
-  `BLOCK_ABORT_THRESHOLD` consecutive all-proxy blocks.
-- **Proxies** beat the block. Put one proxy per line in `scripts/.proxies`
+- **Resumable & idempotent** (both scripts). Each transcript is written immediately
+  and progress is staged to `collection/json/.youtube-staging.json` (atomic writes).
+  Re-run to continue — already-cataloged videos and blocked videos are
+  skipped/retried automatically; nothing duplicates. Neither fetch script writes
+  `archive.json` — only `merge_youtube_into_archive.py` does (see below).
+- **YouTube IP-blocks bulk transcript fetching** (~50 requests/IP) — this only
+  applies to the scraper. The script distinguishes a genuine "no captions"
+  (cataloged once) from a rate-limit *block* (never cataloged → retried later),
+  and aborts cleanly after `BLOCK_ABORT_THRESHOLD` consecutive all-proxy blocks.
+- **Proxies** beat the scraper's block. Put one proxy per line in `scripts/.proxies`
   (gitignored; Webshare's `host:port:user:pass` "Proxy List" export works as-is)
   and the script rotates across them on a block:
   ```bash
@@ -243,6 +284,27 @@ python3 scripts/fetch_youtube.py                      # full run (resumable)
   *residential* is more reliable. With all proxies in cooldown, wait and re-run.
   See `load_proxy_configs()` in the script for all env-var options.
 - Log a `## [date] fetch | youtube …` entry afterward.
+
+### Merge YouTube videos into `archive.json` (`scripts/merge_youtube_into_archive.py`)
+Folds `collection/json/youtube.json` entries into `raw/archive.json` — the
+step that gets YouTube videos an item stub the next time `build.mjs` runs.
+Mirrors `import_buzz.py`'s merge pattern (skip ids already present, merge,
+sort by `date_published`, write) but is meant to be **re-run repeatedly**, not
+a one-time import: every run only appends `yt_` ids not yet in `archive.json`,
+so it's safe to call daily (it runs automatically at the end of
+`fetch-youtube-captions.yml`) or by hand at any time.
+
+```bash
+python3 scripts/merge_youtube_into_archive.py --dry-run   # report only
+python3 scripts/merge_youtube_into_archive.py             # merge new videos
+```
+
+Deliberately does **not** inline transcript text into `archive.json` — a
+transcript can be tens of KB per video, and `archive.json` is one shared
+7,000+-item file; duplicating ~1,100 transcripts into it would bloat it by
+tens of MB for no benefit. The merged item's `content` is the (short) video
+description; the full transcript stays exactly where the fetch scripts put
+it, one `.txt` per video, referenced via `transcript.path`.
 
 ### Ingest (the source changed)
 Source updates arrive as a re-scrape of `raw/archive.json` (not one file at a time).
@@ -279,14 +341,19 @@ mechanical. Append a `lint` log entry.
 
 ## 6. Status
 
-**Corpus:** 7,342 items — 6,925 TagTeam bookmarks (2014–2026) + 417 Berkman Buzz
-newsletters (2006–2015). BKC YouTube videos pending full import (~1,100 videos).
+**Corpus:** 7,390+ items and growing daily — 6,925 TagTeam bookmarks (2014–2026)
++ 417 Berkman Buzz newsletters (2006–2015) + BKC YouTube videos (48 merged so
+far of ~1,100; `fetch-youtube-captions.yml` runs daily via the official Data
+API, budgeted to ~40 new videos/day, so the full backlog takes about a month
+unless a quota increase is granted).
 
 **Wiki build:** all years stubbed and digested (`--all`). Thematic synthesis covers
 **2025** fully. Other years have navigational landing pages pending synthesis.
+Re-run `node scripts/build.mjs --all` periodically as YouTube videos accumulate
+in `archive.json` to pick up new `yt_` item stubs.
 
 **Events layer:** not yet populated. Priority clusters for first pass:
 - 2014–2015: TagTeam + Buzz overlap (earliest cross-source years)
-- 2025: richest TagTeam data; YouTube videos available once imported
+- 2025: richest TagTeam data; YouTube videos now arriving daily
 
-See `log.md` for history. After YouTube import, re-run `build.mjs --all`.
+See `log.md` for history.

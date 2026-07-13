@@ -20,11 +20,11 @@ off, and vice versa.
 
 Setup (one-time, by whoever administers the BKC channel's Google account):
     1. Create a Google Cloud project, enable "YouTube Data API v3".
-    2. Create an OAuth 2.0 Client ID (type: Desktop app or Web app).
-    3. Run the OAuth consent flow once, signed in as a manager of the
-       BKCHarvard channel, requesting scope
-       https://www.googleapis.com/auth/youtube.force-ssl — this mints a
-       refresh token.
+    2. Create an OAuth 2.0 Client ID of type "Desktop app", download its
+       client_secret.json.
+    3. Run scripts/mint_youtube_oauth_token.py --client-secrets <path>,
+       signed in as a manager of the BKCHarvard channel, to mint a refresh
+       token (scope https://www.googleapis.com/auth/youtube.force-ssl).
     4. Set as secrets/env vars: YT_OAUTH_CLIENT_ID, YT_OAUTH_CLIENT_SECRET,
        YT_OAUTH_REFRESH_TOKEN.
 
