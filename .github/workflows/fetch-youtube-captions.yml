@@ -32,7 +32,7 @@ on:
     inputs:
       quota_budget:
         description: "Max Data API units to spend this run"
-        default: "9000"
+        default: "9750"
       limit:
         description: "Cap on number of new videos to process (blank = no cap)"
         default: ""
@@ -89,7 +89,7 @@ jobs:
           YT_OAUTH_CLIENT_SECRET: ${{ secrets.YT_OAUTH_CLIENT_SECRET }}
           YT_OAUTH_REFRESH_TOKEN: ${{ secrets.YT_OAUTH_REFRESH_TOKEN }}
         run: |
-          ARGS="--quota-budget ${{ github.event.inputs.quota_budget || '9000' }}"
+          ARGS="--quota-budget ${{ github.event.inputs.quota_budget || '9750' }}"
           if [ -n "${{ github.event.inputs.limit }}" ]; then
             ARGS="$ARGS --limit ${{ github.event.inputs.limit }}"
           fi

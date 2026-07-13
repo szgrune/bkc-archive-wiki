@@ -249,7 +249,7 @@ Until those secrets are set, the workflow no-ops daily instead of failing.
 ```bash
 python3 scripts/fetch_youtube_api.py --dry-run        # enumerate only (works with just YT_API_KEY)
 python3 scripts/fetch_youtube_api.py --limit 5         # small test run
-python3 scripts/fetch_youtube_api.py                   # full run, budgeted 9000 units
+python3 scripts/fetch_youtube_api.py                   # full run, budgeted 9750 units
 ```
 
 **`scripts/fetch_youtube.py` (scraper, manual/local only, not in CI)** —

@@ -38,7 +38,7 @@ Setup (one-time, by whoever administers the BKC channel's Google account):
        YT_OAUTH_REFRESH_TOKEN.
 
 Usage:
-    python3 scripts/fetch_youtube_api.py                    # fetch, budget 9000 units/day
+    python3 scripts/fetch_youtube_api.py                    # fetch, budget 9750 units/day
     python3 scripts/fetch_youtube_api.py --quota-budget 5000
     python3 scripts/fetch_youtube_api.py --limit 5          # trial run
     python3 scripts/fetch_youtube_api.py --dry-run          # enumerate only;
@@ -96,7 +96,12 @@ COST_VIDEOS_LIST       = 1
 COST_CAPTIONS_LIST     = 50
 COST_CAPTIONS_DOWNLOAD = 200
 
-DEFAULT_QUOTA_BUDGET = 9000  # leave headroom under the 10,000/day free quota
+DEFAULT_QUOTA_BUDGET = 9750  # small margin under the 10,000/day free quota —
+                              # channel enumeration alone costs ~24 units and
+                              # isn't gated by this budget, and a real
+                              # quotaExceeded is handled gracefully (see
+                              # QuotaExceededError) but there's no reason to
+                              # run flush against the exact ceiling every day
 
 
 # ── auth / low-level client ───────────────────────────────────────────────────
