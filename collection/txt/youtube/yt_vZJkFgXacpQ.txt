@@ -1,0 +1,999 @@
+[00:00:00] - Hi everyone, thank you so much for coming.
+[00:00:03] I am super, super excited for this talk today.
+[00:00:07] I am Crystal Lee.
+[00:00:08] I'm a faculty associate here at Berkman
+[00:00:10] and an assistant professor at MIT.
+[00:00:13] So I am extremely excited to introduce my friend
+[00:00:17] and colleague Chao Mbogho who is currently a fellow
+[00:00:21] in responsible computing at Mozilla
+[00:00:23] and the founder and CEO of a social enterprise
+[00:00:25] that compliments classroom learning
+[00:00:28] for tech students called KamiLimu.
+[00:00:32] I'm excited for her to share her award-winning work
+[00:00:35] on computer programming in resource constrained environments
+[00:00:39] and to share her experience supporting educators
+[00:00:42] in Kenya to create ethical and responsible tech curricula.
+[00:00:47] Her work has been featured in Forbes, Vogue,
+[00:00:49] The Conversation Africa.
+[00:00:51] Like way too many places for me to list here.
+[00:00:53] And she is the former dean of the school of Science
+[00:00:56] at her alma mater, Kenya Methodist University.
+[00:01:00] She received her PhD in computer science from the University
+[00:01:02] of Cape Town and her master's degree from Oxford University.
+[00:01:06] So without further ado.
+[00:01:08] Thank you so much.
+[00:01:27] - So dear my , thanks.
+[00:01:30] - So good afternoon everyone who's here physically
+[00:01:34] and those of us who join us online good day.
+[00:01:39] And if I don't it, I'm really glad to be here.
+[00:01:42] It's my first time at Harvard, literally first time today.
+[00:01:47] (indistinct)
+[00:01:51] And my first time at MIT two days ago,
+[00:01:53] so this (indistinct).
+[00:01:55] Naturally yesterday as well.
+[00:01:56] So I'm really glad to be in the area
+[00:01:58] and I hope that I collaborate with a lot more of us
+[00:02:03] in the room and those not here.
+[00:02:07] I'm approximately 11,000 kilometers
+[00:02:11] or 6,800 miles away from home.
+[00:02:16] If I were to take a direct flight,
+[00:02:18] it'll take about 15 hours to get back to Kenya from Harvard.
+[00:02:26] But I'm not stranger to being away from home.
+[00:02:29] With today's need for collaboration,
+[00:02:31] building my career over the last several years has meant
+[00:02:35] immersing myself in a global space virtually and physically.
+[00:02:41] My journey itself is a testament to transcending boundaries
+[00:02:45] and building community whether locally or globally.
+[00:02:51] My career started in computer science
+[00:02:54] and grew to mesh into multiple disciplines.
+[00:02:58] I now contribute to the tech industry at Mozilla Foundation
+[00:03:03] and also by nurturing tech and tech alliance talent
+[00:03:06] for the industry at KamiLimu, a nonprofit that I founded.
+[00:03:12] I am a communicator of science,
+[00:03:16] a skill that I continue to grow
+[00:03:17] through opportunities such as the one today.
+[00:03:20] I build communities through collaboration with individuals
+[00:03:24] and organizations having done so in Africa, Kenya,
+[00:03:30] and globally.
+[00:03:33] Also, my work in computer science research focuses
+[00:03:37] on supporting learning in two ways.
+[00:03:40] Teaching programming in resource constrainted environments
+[00:03:43] and using structured mentorship
+[00:03:45] to complement classroom learning.
+[00:03:48] This first four arms of my career builds
+[00:03:51] and nurture the fifth, which is my passion as an educator.
+[00:03:57] And this focuses on humanizing techs
+[00:04:00] and bridging the skills gap between classroom learning
+[00:04:04] and global competitiveness.
+[00:04:10] As an educator,
+[00:04:11] my career involves working with both students
+[00:04:15] and fellow educators who then impact their own students.
+[00:04:20] Therefore, I mostly work to solve the youth demographic
+[00:04:25] and this demographic plays a significant role in innovation,
+[00:04:29] not just as users but also as creators.
+[00:04:34] And in Africa there's something special
+[00:04:37] about the youth demographic.
+[00:04:42] Africa has a youthful population with 70%
+[00:04:46] under the age of 13 and it's expected
+[00:04:50] that in the next seven years the continent will be host
+[00:04:53] to up to 42% of the world's youth population.
+[00:04:59] This trends mean that the tremendous opportunity
+[00:05:02] for job creation, talent development
+[00:05:05] and involving the youth in politics, justice
+[00:05:08] and policy creation and so on.
+[00:05:12] This trend also mean that Africa's innovation landscape has
+[00:05:16] a very bright brand user
+[00:05:18] and creator base that have contributed
+[00:05:21] to some of the interesting digital trends.
+[00:05:24] And I will share the four examples.
+[00:05:30] In 2021 alone,
+[00:05:33] African best startups attracted over 4 billion
+[00:05:36] in venture funding.
+[00:05:39] Two and a half times more than they did in 2020
+[00:05:43] with financial technology startups accounting
+[00:05:46] for most of the venture funding kick.
+[00:05:51] Partly to contribute to this growing startup environment
+[00:05:54] and also to take part in global opportunities
+[00:05:58] skill building has been at the forefront
+[00:06:01] of tech talent development.
+[00:06:04] For example, GitHub,
+[00:06:06] which is one of the world's largest code hosting platform,
+[00:06:11] recorded a significance increase in the number
+[00:06:14] of new African developers in 2022.
+[00:06:18] For instance, Nigeria, Ethiopia, Ghana, Kenya and Morocco.
+[00:06:23] So at minimum 30% growth in the number
+[00:06:27] of their new developers on the platform.
+[00:06:32] Also, many African learners are using digital platforms
+[00:06:36] for talent development.
+[00:06:38] So for example, which will be one of the other platforms
+[00:06:43] listed three African countries as one
+[00:06:46] of top 10 by learner growth in 2021 alone.
+[00:06:51] And also indicated that the three topmost skills
+[00:06:55] that are most sought after by learners
+[00:06:57] include business skills such as communication,
+[00:07:01] technology such as computer programming
+[00:07:04] and artificial intelligence like machine learning.
+[00:07:10] And speaking of machine learning.
+[00:07:13] In the work of business and conversation
+[00:07:16] with artificial intelligence literally and otherwise,
+[00:07:21] it is worth measuring that Africa is home
+[00:07:24] to over 2000 AI focused companies.
+[00:07:27] 40% of those were founded in the last five years alone
+[00:07:31] and majority are focused in the tech sector.
+[00:07:36] These trends are only a few instances for some
+[00:07:40] of the interesting data developments
+[00:07:43] that has happened on the continent as a whole.
+[00:07:47] A part of that reason for these positive trends is the
+[00:07:51] increased number of relevant policies.
+[00:07:56] For example, the Africa Union's agenda degree is a 50 year
+[00:08:01] framework that encourages member states
+[00:08:04] to build knowledge based economies.
+[00:08:07] And this laid the foundation
+[00:08:10] for the digital transformation strategy
+[00:08:11] that provides a step by step roadmap
+[00:08:14] that member states can use to implement digital initiatives
+[00:08:18] and also collaborations that the Smart alliance Africa,
+[00:08:22] that's a partnership of up to 30 African countries
+[00:08:26] that have a goal to liberate technology,
+[00:08:28] socioeconomic development.
+[00:08:30] But something interesting is that over the last two years a
+[00:08:34] lot of countries are looking into designing startup arts.
+[00:08:38] So for instance, Tunisia were the first African country
+[00:08:42] to pass the Startup Act followed by Senegal a year
+[00:08:46] or so as well.
+[00:08:47] And just last year in October, 2022,
+[00:08:50] Nigeria passed the Startup Act as well.
+[00:08:52] And Rwanda, Ethiopia, Ghana, Kenya are all in the process
+[00:08:56] of passing and discussing that act or developing the same.
+[00:09:03] So these policies provide an environment where trends
+[00:09:07] that we've looked at can continue
+[00:09:10] for an upper trajectory.
+[00:09:13] And also we are responsible for putting and grow.
+[00:09:19] What this trends means is that there's plenty of opportunity
+[00:09:24] to build upper centric invasions ethically, transparently
+[00:09:29] and in an inclusive manner so that they can address issues
+[00:09:33] in digital literacy, infrastructure,
+[00:09:36] local talent development, government policies and so on.
+[00:09:42] And this is applicable to most
+[00:09:43] if not all African countries like Kenya.
+[00:09:50] So Kenya is one of 54 African countries
+[00:09:53] and it's located on the eastern side of the continent.
+[00:09:56] In terms of land size, it's about 6% the size
+[00:09:59] of the United States
+[00:10:00] or it is approximately the size of Texas state.
+[00:10:08] Kenya is home to the first African woman
+[00:10:11] who won a Nobel Peace Prize.
+[00:10:13] The late Professor Wangari Mathai, for her work
+[00:10:16] in environment justice.
+[00:10:19] Kenya's Capital city
+[00:10:20] or the green city under the sun is a city
+[00:10:24] that is thriving both socially, technically
+[00:10:27] and also in a number of economic ways.
+[00:10:31] And it is the only city in the world
+[00:10:35] with a game park is less than 10 kilometers away
+[00:10:38] from the city center, Nairobi National Park.
+[00:10:46] I live and work in Nairobi and my work is on two sides
+[00:10:50] of the education picture.
+[00:10:52] On one hand my work involves supporting tech students
+[00:10:56] and tech students to out outside classroom skills
+[00:11:01] in order to be globally competitive
+[00:11:04] through structured mentorship.
+[00:11:06] And they do that at .
+[00:11:08] On the other hand, as Mozilla, I support educators
+[00:11:11] to build ethics into their curriculum
+[00:11:14] so they can train students who can think holistically
+[00:11:18] about the innovations to solve some
+[00:11:19] of our most pressing economic problem.
+[00:11:23] Therefore, the two arm of my work contribute
+[00:11:26] to the Kenya state industries,
+[00:11:28] an industry that has shown really interesting strengths
+[00:11:32] over the last couple of years.
+[00:11:34] And I'll share four examples.
+[00:11:39] The Kenya tech scene is a bubbling and thriving landscape
+[00:11:44] that contributes up to 8% to the countries GDP and is part
+[00:11:49] of a really crucial contributor to the Kenya economic space.
+[00:11:55] Some of the plan in the tech of system include global
+[00:11:58] companies that have recently opened offices in Kenya like
+[00:12:02] the Microsoft Africa Development Center
+[00:12:05] or the Visa Innovation Hub that opened its office
+[00:12:09] in Nairobi as the first innovation hub in Africa
+[00:12:12] and only one of six of its innovation hubs globally.
+[00:12:18] Just like in most places in the world,
+[00:12:21] the Covid 19 pandemic accelerated digital adoption
+[00:12:25] in business and personal use.
+[00:12:28] For instance, small and medium interfaces like Ahadi,
+[00:12:32] which is education company in Kenya,
+[00:12:34] adopted Google ads and Google services
+[00:12:37] to expand their user base and their growth rates.
+[00:12:43] One of the contributors to the Kenyan tech is the higher
+[00:12:47] education center that enrolls at least half a million
+[00:12:51] students here up to 10% of whom are integrated courses.
+[00:13:00] These trends are also enabled by government policies
+[00:13:05] such as the digital bus plan
+[00:13:06] that was launched just recently in 2022.
+[00:13:10] It's a 10 year plan that provides Kenya
+[00:13:13] with a framework for digital .
+[00:13:16] And this is built on already existing politics
+[00:13:20] like Kenya's Vision 2030 and the Science, Technology
+[00:13:24] and Innovation Act.
+[00:13:28] All these aspects of the Kenyan tech scene means
+[00:13:31] that significant progress has been made
+[00:13:34] to create an enabling environment,
+[00:13:37] but some gaps still remain.
+[00:13:42] And these gaps could be addressed
+[00:13:45] by responsible computing such that the design
+[00:13:47] of technology can include holistic thinking.
+[00:13:52] Some of these gaps can be found in digital access,
+[00:13:56] gender inclusion, data reliability and talent development.
+[00:14:02] I will explore just these four gaps
+[00:14:04] and then suggest opportunities
+[00:14:07] for how responsible computing can contribute
+[00:14:10] towards the solution.
+[00:14:12] Then I will give two examples of innovations
+[00:14:17] and seek to address some of these gaps.
+[00:14:26] More than half of the world is online,
+[00:14:30] but this is a headline of additional encryption article
+[00:14:34] that was written in the 2019 Mozilla Health Reports.
+[00:14:39] But at the beginning of the COVID 19 pandemic,
+[00:14:42] there was an increase in the number of people who
+[00:14:44] became collected globally.
+[00:14:46] So I could revise that statement
+[00:14:47] to read more than 60% of the world is online, but.
+[00:14:56] These two statements are proof
+[00:14:58] that while most of the world is connected,
+[00:15:01] they're still digitally unequalness in a lot of places
+[00:15:05] in the world and Kenya is not exception.
+[00:15:12] With a population of up to 50 million people
+[00:15:16] Kenya has a mobile sim card subscription rate of up to 122%
+[00:15:23] because some people own more than one sim card.
+[00:15:27] Similarly, the ownership of multiple mobile devices mean
+[00:15:30] that the percentage of mobile phones connected
+[00:15:33] to the networks found at 122%.
+[00:15:37] Now if we shift our focus to looking at the ownership
+[00:15:41] of what type of mobile devices,
+[00:15:44] we see that more than 50% of feature points.
+[00:15:49] What that means is even as we design
+[00:15:52] and innovate for smartphones,
+[00:15:54] we shouldn't forget to design
+[00:15:55] and innovate for the users who still have phones.
+[00:16:00] And also being cognizant of the fact
+[00:16:03] that owning a mobile phone does not necessarily win.
+[00:16:08] It's always available for use,
+[00:16:09] especially individuals where are
+[00:16:12] off the national electricity grids
+[00:16:15] or where availability of electricity is inconsistent.
+[00:16:22] And while majority of Kenyans live in the rural areas,
+[00:16:25] there's only a about 6% internet access rate
+[00:16:29] in those regions compared to 59% in urban areas.
+[00:16:37] Some of the barriers to internet access extend
+[00:16:40] beyond the lack of ownership
+[00:16:43] and access to devices or infrastructure.
+[00:16:47] And they include affordability,
+[00:16:49] limited digital availability,
+[00:16:51] the right content that users can relate to,
+[00:16:55] both in language or even type
+[00:16:58] and limited meaningful connection and so on.
+[00:17:02] What these examples mean for responsible computing is
+[00:17:06] that innovation technology should consider access technology
+[00:17:10] beyond just device ownership.
+[00:17:21] Looking at gender inclusion,
+[00:17:23] one of my favorite Ethiopian proverbs reads,
+[00:17:26] "He who learns teaches."
+[00:17:27] So I've adapted it to read, "She who learns teaches."
+[00:17:31] And we can go as far as saying,
+[00:17:33] "She who is digitally empowered transforms."
+[00:17:37] Implying that the benefits of empowering women
+[00:17:40] in communities costs kids to their communities.
+[00:17:44] But we see a disparity in the gender digital empowerment
+[00:17:48] in Kenyan adult population.
+[00:17:51] Now that level obtained for this talk is categorized
+[00:17:56] in two gender identifiers, male and female or man and woman.
+[00:18:00] For the sake of this discussion,
+[00:18:01] I will retain those identified in the example that I gave.
+[00:18:10] So for Kenya's adults population,
+[00:18:12] men have a slightly higher mobile ownership than women.
+[00:18:17] But if we look at the internet access rates,
+[00:18:20] we find that men have a higher rate
+[00:18:23] of internet access than women.
+[00:18:27] Some of the factors that contribute
+[00:18:29] to this include digital interest in device use
+[00:18:34] and content creation and even in some cases having more
+[00:18:39] autonomy among men to buy pay for
+[00:18:42] or even choose mobile devices.
+[00:18:46] And for women with disabilities,
+[00:18:48] the barrier for using internet worsens
+[00:18:51] because most of the devices and innovations
+[00:18:55] that we built are mainly designed for non-disabled users.
+[00:19:02] But the COVID 19 pandemic saw an increase in the smartphone
+[00:19:07] ownership of the Kenyan working woman with an increase from
+[00:19:10] 30%, 37%.
+[00:19:14] Some of those reasons include the working woman being able
+[00:19:19] to use the smartphones to earn alternative sources
+[00:19:21] of in come, for example.
+[00:19:24] While in the same period the working men
+[00:19:27] experienced a 2% increase in ownership,
+[00:19:29] but overly the smartphone ownership was still higher among
+[00:19:33] men than it was for women.
+[00:19:37] Unfortunately though for Kenyan non working women,
+[00:19:43] smartphone ownership in 2020-2021 decreased.
+[00:19:48] Some of the reasons for this include the hard economic times
+[00:19:51] during the pandemic where some non working women had
+[00:19:54] to sell their smartphone to sustain their families among
+[00:19:58] other reserves.
+[00:20:02] Now shifting our eyes from device ownership
+[00:20:05] and connectivity, we look
+[00:20:06] at the gender education specifically
+[00:20:09] in Kenyan higher education landscape.
+[00:20:15] Of the students enrolled in tech ecosystem in public
+[00:20:17] and private university, only 30% are female.
+[00:20:22] And this number trickles down as you move
+[00:20:24] from undergraduates, master's, PhD
+[00:20:26] and father owned treat staff.
+[00:20:29] In fact,
+[00:20:30] in many institutions in Kenya it is not uncommon to find
+[00:20:34] that there is no female lecturer who is a PhD holder
+[00:20:37] in tech related process.
+[00:20:41] Such discrepancies also reflect in the tech sector.
+[00:20:46] Previously I mentioned that Africa received over $4 billion
+[00:20:51] in venture funding in 2021 alone,
+[00:20:55] but on average, female net startups attracted less than 7%
+[00:21:01] of that funding.
+[00:21:03] However, Kenya fared a little better than most
+[00:21:07] of the other African countries with only 29%
+[00:21:10] of the venture funding raised
+[00:21:12] by female-led startups in 2021.
+[00:21:15] But in 2022 in the past quarter,
+[00:21:18] only 2.5% went to female-led startups.
+[00:21:25] Some of the complaints that have come from combination
+[00:21:28] and tech sector include the double edged sword
+[00:21:32] of limited mentorship internal models on one hand,
+[00:21:36] especially where the entire plan do things as we go up.
+[00:21:43] And what I like call over mentorship
+[00:21:46] on the other hand, where female entrepreneurs are presented
+[00:21:50] with fellowships and incubation programs
+[00:21:53] but no had cash on the table.
+[00:21:56] So we end up with a discrepancy in lack of funding
+[00:22:00] for female entrepreneurs and very few opportunity
+[00:22:03] for actual money.
+[00:22:08] So this trends show that responsible computing
+[00:22:11] and broad participation and surface difficult conversations
+[00:22:16] from economic barriers such as access to resources
+[00:22:20] and hard cash culture or barriers such as norms
+[00:22:25] that should use access to technology.
+[00:22:29] Professional barriers such as unstructured mentorship
+[00:22:32] that don't consider the needs
+[00:22:34] and skills of women entrepreneurs or women in technology.
+[00:22:39] And even social barriers like disabilities
+[00:22:42] and access for women and girls online safely.
+[00:22:51] Let's look at data availability.
+[00:22:54] The lines of affordable internet say that limited data
+[00:22:58] availability is like navigating without instrument
+[00:23:02] because without measured concretes and accurates
+[00:23:06] and available data innovators are policy makers are hampered
+[00:23:10] in their process.
+[00:23:12] Unfortunately, most African countries do not collect data
+[00:23:17] that they need to make informed decisions
+[00:23:20] or build innovations.
+[00:23:24] For example, Kenya runs fast in East Africa
+[00:23:28] in data coverage coverage.
+[00:23:31] Coverage here means data availability
+[00:23:33] in the last five to 10 years.
+[00:23:35] And also availability of the table with data.
+[00:23:38] Whether by agenda, socioeconomic status and so on.
+[00:23:41] For instance,
+[00:23:43] there's quite good data for the economic setup
+[00:23:46] but not so good data in say pollution for example.
+[00:23:50] So the country ranks well, however,
+[00:23:55] in data openness being 163rd globally out
+[00:24:00] of 103 countries that were profit
+[00:24:02] and openness here means data that is not, is in
+[00:24:05] non - proprietary formats.
+[00:24:08] It's downloadable, is machine readable, has a license,
+[00:24:12] contains metadata and so on.
+[00:24:16] So it is not enough to provide data
+[00:24:20] but we also have to look at data that is truly open by
+[00:24:24] meeting all this indicator including gender categorization.
+[00:24:29] And some barriers for data openness include limited human
+[00:24:33] and technical resources to collect, analyze,
+[00:24:35] and prepare data and even sometimes lack of coordination
+[00:24:39] amongst stakeholders.
+[00:24:43] So responsible computing therefore has the opportunity
+[00:24:47] to provide frameworks that look at the entire life cycle
+[00:24:52] of data collection, creation, analysis, storage, openness,
+[00:24:56] and not just data collection.
+[00:25:03] Moving on to talents development.
+[00:25:08] Non-technical skills are not soft skills.
+[00:25:12] They're core skills.
+[00:25:14] And responsible computing skills should not be secondary
+[00:25:17] to technical skills but they need to form part
+[00:25:20] of curricular higher requirements,
+[00:25:23] company metrics and so on.
+[00:25:27] But looking at Kenya itself,
+[00:25:30] even as 80,000 graduates get
+[00:25:33] into the job markets every year,
+[00:25:36] employers indicate that they incur costs up to 65%
+[00:25:41] of the employers indicate that
+[00:25:42] they incur retraining costs when hiring fresh graduates.
+[00:25:48] Several factors will contribute to these trends.
+[00:25:52] For example, while enrollment has increased in the country
+[00:25:56] allocation of government funds
+[00:25:58] to institution has not followed the same trend.
+[00:26:01] And this is perceived as limiting technical
+[00:26:04] and human resources that's affecting quality of training.
+[00:26:08] Others have cited too few opportunities
+[00:26:10] for all the barriers that contribute get
+[00:26:13] into the job market.
+[00:26:15] I mean that the problem is not structure,
+[00:26:17] it is the problem is structure, it is not the graduates.
+[00:26:21] And skills mismatch has also been alluded to contribute.
+[00:26:26] That is a skill gap between classroom learning
+[00:26:28] and what is expected in the industry.
+[00:26:32] Whichever of these reasons,
+[00:26:34] they all show that demand is demand for the structure
+[00:26:38] to structure learning process
+[00:26:40] towards better talent development.
+[00:26:44] So as we restructure to fill the skills gap
+[00:26:47] between classroom learning
+[00:26:48] and global , perhaps the person
+[00:26:51] to ask is including the coding interview,
+[00:26:56] she responsible completing your skills with a requirement.
+[00:27:03] Another way that talent development occurs is
+[00:27:06] by investing capital in local entrepreneurs.
+[00:27:12] But even as Africa and Kenya enjoys the rise in venture
+[00:27:19] capital and venture investment expert founders get more
+[00:27:24] funding than companies with only local founders.
+[00:27:31] For example, only 10% of venture funding goes
+[00:27:36] to local founders in East Africa.
+[00:27:40] Some of this results for this training include funding
+[00:27:44] for early startups, largely emanate
+[00:27:46] from outside the continent with little
+[00:27:50] to no management of those funds locally.
+[00:27:54] But in the last couple of years we've seen quite a number
+[00:27:57] of African based venture funding
+[00:27:59] that are coming to period in this.
+[00:28:01] But there's still a lot more that can be done.
+[00:28:06] So responsible computing is not just
+[00:28:10] about upskilling local talent,
+[00:28:13] but it's also about empowering local expertise
+[00:28:17] with resources.
+[00:28:18] Money, money, I say that twice
+[00:28:22] and autonomy as investors as well as founders.
+[00:28:30] So I'll present two examples of innovations
+[00:28:34] that are continuing to work towards filling some
+[00:28:38] of these gaps.
+[00:28:40] KamiLimu and Mozilla Foundation.
+[00:28:47] The two issues that KamiLimu address are talent development
+[00:28:50] for skills, gender inclusion,
+[00:28:52] and a third one is data availability.
+[00:28:56] When you look at the skills gap between classroom learning
+[00:28:58] and global competitiveness,
+[00:29:00] we conducted a survey among students from 36 Kenyan
+[00:29:04] Universities and we found that up to 75%
+[00:29:08] of these students do not receive consistent mentorship
+[00:29:11] outside the classroom, therefore leaving a gap
+[00:29:15] in learning 21st century skills.
+[00:29:21] So there is local competing themes that we'll be looking
+[00:29:24] at when I present the solution on the results are structured
+[00:29:27] learning, broadening participation, access, technology,
+[00:29:31] learning and assessment.
+[00:29:37] The first part of the solution that KamiLimu provides
+[00:29:41] in terms of structured mentorship is conducting a skills
+[00:29:45] needs assessment among students
+[00:29:47] in tech and undergraduate level.
+[00:29:50] And we found that what was missing was six categories
+[00:29:54] of skills.
+[00:29:56] Personal development, professional development,
+[00:30:00] innovation, scholarship, ICT skills
+[00:30:04] that are industry relevant as well as community engagement.
+[00:30:09] So this needs assessment then led the basis
+[00:30:13] of what the first line of what a structured mentorship is.
+[00:30:19] What's that followed is putting together a collaboration
+[00:30:22] of tiered mentorship where each mentee
+[00:30:25] that joins KamiLimu is supported by up
+[00:30:28] to six different levels of mentors.
+[00:30:31] From peer to peer to professional mentors
+[00:30:34] to tech directed mentors
+[00:30:36] and to the committee that works
+[00:30:39] on different levels of expertise.
+[00:30:46] The third part of structured mentorship is simulated
+[00:30:48] environment where the students are immersed in real life
+[00:30:52] environment to be able to contribute to innovations.
+[00:30:56] So for instance,
+[00:30:57] one of the tasks and projects that the students perform are
+[00:31:01] innovation projects that they build throughout the eight
+[00:31:04] months of the program.
+[00:31:05] By the time the students graduate,
+[00:31:07] they're able to leave with a portfolio
+[00:31:09] of at least one or two innovations
+[00:31:12] that they can then showcase in interviews
+[00:31:15] or even in their jobs.
+[00:31:19] And the part of gender inclusion is we ensure
+[00:31:22] that our students that join the program are identify as male
+[00:31:26] or female.
+[00:31:27] We make sure that if we have 34 students,
+[00:31:29] then 17 are male and 17 are female.
+[00:31:34] So these aspects form a structured method of mentorship
+[00:31:39] that then enables us to offer out of classroom skills
+[00:31:43] that are not taught within the four walls of the classroom.
+[00:31:48] The results is that for the last six years we are now
+[00:31:52] in the seventh cohort of students
+[00:31:55] and we've served 234 students from 24 Kenya universities.
+[00:32:00] We've also worked with more than 150 collaborators,
+[00:32:04] as mentors and organizations to offer the structure
+[00:32:08] of the mentorship.
+[00:32:11] And 97% of KamiLimu alumni are in employment.
+[00:32:16] So far the alumni and the program and the mentees
+[00:32:20] of the program rates the benefits of the program
+[00:32:26] in terms of nurturing employability,
+[00:32:28] up to length 4% useful rating.
+[00:32:33] So this means that by applying those four responsible
+[00:32:37] competing themes, we are able to meet the needs
+[00:32:40] of students out of the classroom
+[00:32:42] and thus they're able to continue impacting
+[00:32:45] and implementing those within their programs.
+[00:32:52] Looking at Mozilla foundation.
+[00:32:54] The issues that Mozilla foundation in terms of the core
+[00:32:57] that I presented earlier are talent development,
+[00:33:00] skills and investment as well as data availability.
+[00:33:05] And the gap that we are addressing is limited inclusion
+[00:33:08] of ethical and inclusive innovation principles
+[00:33:11] in the tech in institutions of higher learning.
+[00:33:16] And that means that the responsible competing themes
+[00:33:18] that we look at are several,
+[00:33:20] but some of them include access technology,
+[00:33:23] structured thinking, participation
+[00:33:26] and learning and assessment.
+[00:33:31] So the process is first a needs assessment
+[00:33:34] indicated the gaps in the curriculum in terms of tech
+[00:33:37] and this needs were then implemented in terms
+[00:33:41] of putting out a call for faculty members
+[00:33:44] to apply for the funding.
+[00:33:47] And so the collaborators that we're working with are Kenyan
+[00:33:49] faculty who are immersed
+[00:33:51] and they they're offering tech curriculum
+[00:33:53] in the universities.
+[00:33:56] And what the model does is we are offering second caters the
+[00:34:02] opportunity to redesign the and make that data open
+[00:34:05] with ethical innovation as the founding principle.
+[00:34:09] And of course all of this is funded.
+[00:34:16] The results for this is we are just about
+[00:34:18] to welcome the local cohorts of the grantees this year.
+[00:34:23] And myself as the local who is in charge
+[00:34:27] of supporting this work,
+[00:34:29] I'm able to support the educators to be able
+[00:34:31] to implement their project.
+[00:34:33] We envision that for this inaugural cohorts will have up
+[00:34:37] to 10 Kenya faculty in impact at least 500 students.
+[00:34:41] And this will cascade our point as we get
+[00:34:44] in more grant phase.
+[00:34:46] And for this fast cohort,
+[00:34:48] we expect to discuss at least two $50,000 to be able
+[00:34:52] to implement this project and we hope to scale this
+[00:34:56] up as we go along.
+[00:35:01] So what this means is that responsible computing is earning
+[00:35:05] its place to empower Kenya's digital transformation using a
+[00:35:11] contextualized and inclusive structure.
+[00:35:19] So while I may be 11,000 kilometers away from home,
+[00:35:25] the inclusion of this talk in the Harvard series of talk
+[00:35:28] and your presence in the room
+[00:35:29] and those online means that while we come
+[00:35:32] from different geographical situations and projects,
+[00:35:36] we are all concerned about rethinking, relearning,
+[00:35:40] recreating and re-innovating
+[00:35:42] with ethical principles in mind.
+[00:35:45] And that means that I'm right at the heart that's close
+[00:35:48] to the movement that is doing responsible computing.
+[00:35:53] And for that reason I am not far away from home at all.
+[00:35:59] Thank you.
+[00:36:05] - [Tech 1] Thank you so much Dr. Chao.
+[00:36:08] Are there questions from the audience?
+[00:36:09] I think there's someone running mics around.
+[00:36:25] - [Greg] Thank you so much.
+[00:36:26] My name is Greg Conway.
+[00:36:27] I'm a visiting scholar here with (indistinct) social media.
+[00:36:32] My question is kind of related and not related
+[00:36:35] but you know, I'm just curious
+[00:36:38] and excited about some of the things you pointed to
+[00:36:43] and one of them is the lack of, you know, valuable data sets
+[00:36:50] and data, you know, and the irony is we still present data
+[00:36:57] even when we don't have valuable data sets, you know,
+[00:37:01] and that kind of makes me curious in terms of like questions
+[00:37:08] like internet penetration, you know,
+[00:37:11] like to what extent can we say the data
+[00:37:13] that is out there is really, it is reliable.
+[00:37:20] You know, I did some checking around a couple of weeks ago
+[00:37:24] and I noticed that what we have today,
+[00:37:28] even with legitimate sources is actually based on estimates.
+[00:37:33] And those estimates were made like maybe in 2013
+[00:37:36] and they said probably projections by 2023,
+[00:37:41] this is how the penetration of the internet.
+[00:37:45] But I think over time with technology we've seen, you know,
+[00:37:50] unexpected things happening who we never thought
+[00:37:53] about Chat GDP.
+[00:37:55] We never thought about all those things.
+[00:37:56] And I think making those estimations kind
+[00:37:59] of like does skew the data.
+[00:38:04] So I'm concerned
+[00:38:05] about just the idea of internet penetration.
+[00:38:08] Also let's say participation, you know,
+[00:38:11] in terms of gender and then also you mentioned about,
+[00:38:16] you know, smartphones, you know,
+[00:38:20] and I started thinking about what is a smartphone, you know,
+[00:38:25] and what is not a smartphone,
+[00:38:27] especially when we think about it in terms of Africa
+[00:38:33] Sub-Saharan Africa, thank you.
+[00:38:38] - I think those were more comments than questions.
+[00:38:43] Thank you for sharing that.
+[00:38:46] You mentioned Chat GPT
+[00:38:49] and I'm wondering if anyone knows how much
+[00:38:52] of the language model is trained on data
+[00:38:56] that is inclusive of data from Africa?
+[00:39:00] Does anyone have any information on that?
+[00:39:03] Do you think the data,
+[00:39:06] whatever that was changed ethnicity inclusive?
+[00:39:12] I can see people shaking their heads,
+[00:39:13] so that's a big for maybe no, but
+[00:39:17] that's an interesting question because yes you.
+[00:39:19] - [Attendee 1] I was just going to say, I mean I can query,
+[00:39:21] I can ask things in Swahili and (indistinct)
+[00:39:24] but does it mean the data was harvested
+[00:39:32] in that language or is it?
+[00:39:33] You know, that's why I'm like, I'm not sure.
+[00:39:35] It's a bit difficult to answer.
+[00:39:37] - Yes, yeah, but I think it is obviously
+[00:39:40] an interesting question in terms
+[00:39:42] of how much of the data that train the language model is
+[00:39:47] inclusive of all the world.
+[00:39:49] I think hopefully you'll have an answer to that question as
+[00:39:53] we continue using students.
+[00:39:56] Any other question?
+[00:40:01] - Hello, you mentioned
+[00:40:05] that right there was like data faculty, not much in Kenya.
+[00:40:12] What kind of data sets are in that?
+[00:40:13] Is it government data?
+[00:40:15] Is it, you know, advertising data?
+[00:40:17] Is it welcome data is being collected
+[00:40:18] that would really be useful there?
+[00:40:21] - Yep, so, different agencies are actually working
+[00:40:24] on the data.
+[00:40:25] So the, for example, the open Kenya open data was an
+[00:40:28] initiative that started that.
+[00:40:30] We have the Kenya Bureau of Statistics that does a really
+[00:40:33] good job in keeping the data and even data
+[00:40:36] about Kenyan sensor cells can be hard online
+[00:40:40] and its stratified.
+[00:40:41] So that's why I say we we're doing very well in things like
+[00:40:44] economic data, but things like pollution data is quite,
+[00:40:47] so there's a quite a incompetency honestly.
+[00:40:50] But there's different players who are contributing
+[00:40:53] to that data.
+[00:40:54] In fact, if you followed the elections ma year, we,
+[00:40:57] the live transmission included when stratified data that we
+[00:41:01] could download and get online
+[00:41:03] and analyze we can talk separately about data protection
+[00:41:09] and whatnot, but there was available data
+[00:41:12] that came in very stratified.
+[00:41:14] So we are doing,
+[00:41:16] we do very well in that coverage
+[00:41:18] but our openness on the other hand is where the gap is.
+[00:41:22] Yeah.
+[00:41:24] But there are different players who contribute to it,
+[00:41:27] both private as well as.
+[00:41:37] - [Regis] Hi, my name is Regis
+[00:41:38] and my question is more so sorry, I feel good,
+[00:41:44] I'm prepared cause I heard about 10 minutes before it
+[00:41:47] happened. So I came with 3000 questions.
+[00:41:50] Now I have about 15,000.
+[00:41:53] So my question is more I would say tactical than
+[00:41:57] analytical and philosophical and policy and academic,
+[00:42:03] sorry for the academic people here and so on.
+[00:42:06] It's more practical.
+[00:42:07] So there are challenges, resources, challenges.
+[00:42:12] And my understanding, cause my background is more
+[00:42:15] in infrastructure than anything else.
+[00:42:18] I moved to the U.S.
+[00:42:19] and here my first internet access connection was
+[00:42:23] through phone lines.
+[00:42:25] And up to now we still have the major providers offering
+[00:42:30] access to DSL.
+[00:42:31] So when we're talking about access to resources,
+[00:42:34] have we exhausted those simple basic
+[00:42:38] like really standard access?
+[00:42:41] 'Cause when I look at the,
+[00:42:42] we are always talking about we are already in the AI.
+[00:42:46] We are already high speed intercontinental, interplanetary,
+[00:42:50] but we don't even have functioning online.
+[00:42:54] So what is, I mean, sorry, I'm thinking as I speaking,
+[00:42:59] what are you doing to address that?
+[00:43:02] When you say skills, needs.
+[00:43:04] Is Mozilla or you, in your approach, are you trying
+[00:43:09] to match what's there?
+[00:43:10] Like we have phones.
+[00:43:13] Like are you using leveraging phone lines to provide access?
+[00:43:16] Like what's the, sorry, I'm thinking.
+[00:43:19] - That's okay, yeah.
+[00:43:20] - [Regis] So, resource, what are the challenges?
+[00:43:23] What real challenges is availability
+[00:43:26] or non is not used enough or what exactly?
+[00:43:31] 'Cause I'm having a hard time.
+[00:43:32] - Yeah, so in terms of devices
+[00:43:34] for example, you see that the challenge is not availability
+[00:43:37] of devices, right?
+[00:43:39] So the challenge comes in affordability.
+[00:43:41] In being because having a phone does not mean,
+[00:43:44] for example, you can access it or use it.
+[00:43:47] Sometimes there's no money for the internet
+[00:43:49] and sometimes it's just about content.
+[00:43:52] So redesigning our content to feed, for example, phones
+[00:43:56] that the users have is one approach.
+[00:43:57] So we are not saying take the phones they don't have
+[00:44:00] and give them other phones,
+[00:44:02] but design innovations that fit the phones that users have.
+[00:44:06] And I can give other examples of,
+[00:44:08] of how part of the work is actually looking at how we can
+[00:44:11] redesign mobile phones the user have so that students can be
+[00:44:16] able to write Java programs on the phones that they have as
+[00:44:18] small on screen as those things are.
+[00:44:21] So the solution, one of many solutions will
+[00:44:24] be building innovations that look at the limited size
+[00:44:27] of the screen, look at the limited memory
+[00:44:29] and work with that to still build for smartphones
+[00:44:32] and for feature phones or any type of phone.
+[00:44:35] So the issue in terms of devices is not availability,
+[00:44:39] but in internet that will also be availability.
+[00:44:42] But designing for those different scenarios,
+[00:44:45] which is part of what the work that we are doing,
+[00:44:49] but also part of access technology,
+[00:44:50] other responsible competing team means you design
+[00:44:53] for the user not the other way around..
+[00:44:57] - [Tech 1] So we actually have a great set
+[00:45:00] of hard-hitting questions that end with a question mark
+[00:45:03] from Sabella.
+[00:45:05] Sabella, off to you.
+[00:45:11] - [Tech 2] Sabella, there we go, great.
+[00:45:21] - [Sabella] Oh, sorry can you hear me?
+[00:45:23] - [Tech 1] Yes.
+[00:45:26] - [Sabella] Sorry about that.
+[00:45:28] Thank you for the talk.
+[00:45:29] I sort of had a few questions.
+[00:45:32] I'll try to list maybe in a way that makes sense.
+[00:45:36] I wanted to sort of understand when you're talking about the
+[00:45:40] ethical innovation, what role are local traditions,
+[00:45:45] ethical traditions,
+[00:45:46] value systems playing in how you and Mozilla are thinking
+[00:45:49] about responsible computing?
+[00:45:52] And secondly, is there any action
+[00:45:55] or legislation currently on tax big tech companies in Kenya
+[00:46:02] or Eastern Africa?
+[00:46:03] And if you can comment,
+[00:46:05] what is the responsible AI view of that in terms
+[00:46:09] of the social harms
+[00:46:10] or the benefits of taxing big tech in Kenya.
+[00:46:17] And lastly, you spoke about how 10%
+[00:46:20] of Kenyans, local Kenyans, receive funding for startups
+[00:46:24] and how most of the money comes from the outside world.
+[00:46:29] Can you comment on if there are any efforts
+[00:46:32] by the government to protect local ecosystems,
+[00:46:36] maybe through taxation rules or tariffs or incentives
+[00:46:42] of some sort?
+[00:46:43] So what is the local eco, like are there any protections
+[00:46:46] and what is I guess Mozilla's view as well
+[00:46:51] on also helping the local ecosystem protect itself
+[00:46:56] from outside competition, from people go to Africa
+[00:47:02] to start African companies
+[00:47:03] but they're not really African companies at heart.
+[00:47:07] Yeah, I think I can just leave it there for now.
+[00:47:10] - So I'll take the last question Kathy and Steve.
+[00:47:13] Do you wanna help really fast?
+[00:47:16] - [Kathy] Sure, hey it's Kathy.
+[00:47:20] Do you wanna also give Dr Chao one line of your,
+[00:47:24] your background and your recent,
+[00:47:27] if that's really relevant as as well?
+[00:47:28] Maybe one or two sentences?
+[00:47:32] - [Sabella] Sure, I work in ethics
+[00:47:36] and AI with a focus on Sub-Saharan Africa.
+[00:47:41] - [Kathy] Thank you.
+[00:47:42] And I, something Ella has said in the past is
+[00:47:44] to really think a lot about local contexts
+[00:47:46] and traditions of how they manifest themselves
+[00:47:47] and the culture of how we build technology.
+[00:47:52] So leading into, I think one of your first questions.
+[00:47:55] I didn't write them down, so apologies if I missed them
+[00:47:57] and I'll turn it over to Steve who is the new pro,
+[00:47:59] the new lead for responsible computing at Mozilla.
+[00:48:02] We got really lucky because we found Dr. Chao
+[00:48:07] and who is the reason we were able to even launch
+[00:48:10] into Kenya at all and is leading the effort there.
+[00:48:13] And for us it was a recognition that there was no way our
+[00:48:16] team, even though we launched a U.S. version,
+[00:48:19] would even remotely understand what it would be like
+[00:48:22] to launch a version in Kenya
+[00:48:24] and any other country around Africa
+[00:48:27] and other countries around the world.
+[00:48:29] So even things like the amount of funding that makes sense
+[00:48:32] in which kinds of colleges and universities,
+[00:48:35] assuming the words colleges and university are even the
+[00:48:39] right words to use,
+[00:48:40] assuming that we're responsible computing or ethics,
+[00:48:41] any of those things.
+[00:48:42] Recognizing we don't know any of that.
+[00:48:44] We launched a new region region.
+[00:48:46] So I think Mozilla's big push in general.
+[00:48:48] So this, I'll speak on Mozilla's behalf
+[00:48:50] and some of this is also like personal.
+[00:48:53] I think in general one of Mozilla's take is that when we
+[00:48:55] expand, I forget what is that Bob,
+[00:48:58] one of our senior VPs would say, but it's,
+[00:49:01] she has a great quote about, about expanding locally,
+[00:49:04] but it's really important for us to expand locally by
+[00:49:06] respecting the people who are local and not at any point
+[00:49:10] thinking that we can design a program for where we are.
+[00:49:13] So we're really grateful to Dr. Chao
+[00:49:16] for bringing that to Mozilla.
+[00:49:19] I don't, I lost track of other questions.
+[00:49:23] I dunno.
+[00:49:23] Steve you have something to add to that?
+[00:49:26] - [Steve] Is there, Dr, do you wanna answer the question?
+[00:49:32] - So in terms of government efforts, the parts that I
+[00:49:35] for sure do not know is if the government is doing anything
+[00:49:40] to protect the whole 10% issue.
+[00:49:44] So that I do not have any information in terms
+[00:49:47] of is there any active way to protect local founders
+[00:49:51] from not getting the funding.
+[00:49:54] That I do not have information on.
+[00:49:56] But what I know is that there's a lot of initiatives,
+[00:49:59] especially on talent development and being able
+[00:50:02] to really nurture the development
+[00:50:05] of local adults to be able to think, you know,
+[00:50:11] think about innovation responsibly
+[00:50:14] and in a way that they can be able to contribute the type
+[00:50:18] of system.
+[00:50:20] So an example is a presidential digital talent
+[00:50:21] because I have, I know a few students who brought into that.
+[00:50:24] Of course the downside is we normally, what I,
+[00:50:28] again I call over mentorship or over training so we can
+[00:50:32] really implement as many problems as we want.
+[00:50:35] But what happens at the end of that pipeline?
+[00:50:37] Are we able to take those students and push them
+[00:50:39] in the marketplace?
+[00:50:41] Are we able to find the innovations?
+[00:50:43] So there's that that needs to be addressed but I don't have
+[00:50:47] information about if there's any sort of protection actively
+[00:50:51] to protect local founders from that particular trend.
+[00:50:58] - [Steve] Did that answer the multiple questions you had
+[00:51:01] or is there other outstanding questions we can address?
+[00:51:04] - [Sabella] There was a taxation question
+[00:51:06] because I understand Kenya
+[00:51:07] and Nigeria are the only two African countries
+[00:51:09] to pass any legislation,
+[00:51:10] but nothing has been done from what I understand.
+[00:51:13] So I wanted to kind of understand as well what are the local
+[00:51:17] efforts at this moment in Kenya for taxing Google
+[00:51:20] and Facebook as well as you know,
+[00:51:23] is that also part of responsible AI?
+[00:51:25] Do you think personally
+[00:51:26] or is an organization that those companies should be taxed,
+[00:51:29] like how they taxed in India for example,
+[00:51:32] but not in Africa and have you thought of like the could I
+[00:51:36] power the ecosystem locally
+[00:51:37] or could that cause prices to go higher?
+[00:51:40] Like has there been sort of work in that area?
+[00:51:45] - In fact, I'm gonna even draw as in the works
+[00:51:48] and say that another conversation that is happening
+[00:51:50] besides taxing companies is should remote workers be taxed.
+[00:51:56] So people who work on app work for example.
+[00:51:59] Should you get your cash then go pay tax
+[00:52:02] at the Kenya revenue authority?
+[00:52:04] So those are all discussions
+[00:52:05] that I know are currently happening
+[00:52:08] and I don't again particularly know of how much
+[00:52:11] tax say Microsoft or Visa is paying
+[00:52:14] or the towards that.
+[00:52:16] But I know that they're very difficult accommodations,
+[00:52:19] especially when it comes to individual engineers.
+[00:52:22] And in Kenya they're quite a number who work
+[00:52:23] for companies abroad.
+[00:52:25] What is the taxation system?
+[00:52:28] Do I think that those will contribute
+[00:52:31] to the local ecosystem?
+[00:52:35] Again, my question is does tax contribute
+[00:52:38] to the local system and leave that open?
+[00:52:44] So June, June.
+[00:52:47] - [June] June in my other life as tech policy practitioner,
+[00:52:54] I mean it as practice in Kenya for years and years.
+[00:52:57] So I know the conversations that are happening
+[00:52:59] from our policy team.
+[00:53:00] So in terms of tax, I worked to work Google
+[00:53:01] and Facebook in Kenya.
+[00:53:04] We do pay corporate, well they pay corporate tax.
+[00:53:06] That's normal to every other company.
+[00:53:09] There's new tax that was in introduced in Kenya digital
+[00:53:13] services tax for any Kenyan user that consumes digital
+[00:53:18] products or digital services in Kenya.
+[00:53:21] And I think it's about 10 to 15%, I'm not sure.
+[00:53:24] But then what all these companies did is they added it into
+[00:53:26] their regular fees and it goes down to the consumer.
+[00:53:29] So if you get your bill at the end of the month
+[00:53:32] for let's say Google One services,
+[00:53:35] you'll say that there's a Kenya service tax there
+[00:53:38] that's been added.
+[00:53:39] On the content creator side,
+[00:53:40] especially like influencers now.
+[00:53:41] And so from me, their content creators,
+[00:53:43] they are taxed as well.
+[00:53:45] Remote workers,
+[00:53:46] especially in tech have gotten away
+[00:53:48] with it for a really long time.
+[00:53:49] Like they've gotten away with not paying taxes just
+[00:53:52] because of how difficult it is to trace and track.
+[00:53:54] And that's an ongoing conversation.
+[00:53:57] Ideally they should pay either 5% withholding tax
+[00:54:00] or 30% pay as you earn taxes every other Kenya employee.
+[00:54:03] But that's an ongoing conversation
+[00:54:05] that no one really wants to get into.
+[00:54:08] The other tax that I think is relevant for big tech is
+[00:54:11] around excess duty and access to the internet, right?
+[00:54:15] So that was recently introduced and there's an ongoing
+[00:54:18] policy conversation around
+[00:54:19] because client's duty is typically considered same tax.
+[00:54:22] And so the conversation that we're pushing for is it
+[00:54:26] you shouldn't be taxed the same way you'd be taxed if you
+[00:54:29] consume alcohol or cigarettes or any other in both sins as
+[00:54:33] you would for accessing the internet and getting online.
+[00:54:37] Especially cause of the connectivity gap
+[00:54:39] that we have as a country.
+[00:54:41] I think something else that the Kenyan ecosystem,
+[00:54:44] or at least the Kenyan department has recently done was
+[00:54:47] around local shareholding ownership.
+[00:54:48] So those are policy decision
+[00:54:52] that has been in place for years, probably like 10,
+[00:54:55] 20 years that says that all telco companies
+[00:54:57] and all tech companies that were registered,
+[00:54:59] incorporated and licensed in Kenya had
+[00:55:01] to have 30% local shareholding.
+[00:55:03] Literally two days ago the president said,
+[00:55:05] "We're gonna take that out."
+[00:55:07] And that has been a big, big pain
+[00:55:09] because if you're licensed, you are licensed,
+[00:55:11] you're given three years to comply
+[00:55:12] with that local shareholding rule.
+[00:55:14] And that's been very problem problematic
+[00:55:16] for global companies.
+[00:55:18] Depending on who you ask it was good for the local entities
+[00:55:21] because that meant that everyone was participating
+[00:55:24] in the ecosystem at least had a fair chance
+[00:55:26] to compete with global startups and the global ecosystem.
+[00:55:29] But then on the other hand, if they fail to close out
+[00:55:32] and to close off the ecosystem and the country
+[00:55:34] to other foreign players would bring more investment
+[00:55:37] and income into the economy.
+[00:55:39] It's a actually two ongoing conversation that that has just
+[00:55:41] been done away with.
+[00:55:43] They're also having conversations around stocks as well.
+[00:55:46] Nothing in paper yet,
+[00:55:48] but then the presidents made that declaration two days ago.
+[00:55:53] - [Tech 1] Okay, one last question from Elaine in the chat.
+[00:55:57] Could you add, this will be the final question of the event.
+[00:56:00] Could you also say that government buy-in is an issue around
+[00:56:04] lack of open data and access to public intent data
+[00:56:07] because the Kenyan building data initiative was practically
+[00:56:10] abandoned by the previous regime.
+[00:56:14] - Excellent, yeah, definitely.
+[00:56:15] And one of the issues,
+[00:56:17] the challenges we have in open data is really lack
+[00:56:20] of coordination because especially when you talk of really
+[00:56:23] large data sets for this education or economies,
+[00:56:27] all players have to really having pay because it is,
+[00:56:30] they're going from connection to even push the data on the
+[00:56:34] portal and how that, the data, how is data displayed,
+[00:56:37] how do we protect user?
+[00:56:40] I mean the, the people who are, whose data connected.
+[00:56:42] So the lack of tion between different stakeholders has been
+[00:56:46] quite a big pain and, and then you right,
+[00:56:49] the Kenyan open data initiative installed
+[00:56:51] and we hope to see that coming back up.
+[00:56:54] So definitely government buy-in because government is one of
+[00:56:58] the biggest players in data collection will definitely be a
+[00:57:01] very key strategy goal.
+[00:57:04] - [Tech 1] Thank you so much Dr. Chao.
+[00:57:05] Let's give her a final round of applause.

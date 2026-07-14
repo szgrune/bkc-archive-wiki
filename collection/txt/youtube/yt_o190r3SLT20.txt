@@ -1,0 +1,1120 @@
+[00:00:00] Hey, everyone. Welcome to today's event.
+[00:00:03] I am going to start my presentation.
+[00:00:08] Okay, so welcome.
+[00:00:10] My name is Gabriella Coleman.
+[00:00:12] I'm actually a newly-minted professor
+[00:00:15] at Harvard University, anthropology department,
+[00:00:17] as well as a faculty associate at the Berkman Center.
+[00:00:22] And today what we're gonna be doing is giving you
+[00:00:27] an overview, a cursory overview of "Wearing Many Hats:
+[00:00:31] The Rise Of The Professional Security Hacker,"
+[00:00:33] a 41,000 word report co-authored by Matt Goerzen and I.
+[00:00:38] I'm gonna start with a brief overview.
+[00:00:40] I'm gonna turn it over to Matt Goerzen
+[00:00:42] from Data & Society, a researcher there
+[00:00:45] who will talk about a technical method
+[00:00:48] that was innovated by hackers.
+[00:00:50] And then I'm gonna turn it over to myself
+[00:00:53] to talk about a short section that I worked on.
+[00:00:57] And then we will have Brian Friedberg,
+[00:01:00] who is a researcher at the Shorenstein Center,
+[00:01:03] lead with a Q&A.
+[00:01:06] So to start, I'm actually gonna,
+[00:01:08] this Data & Society report, which is coming out this week,
+[00:01:12] I'm gonna start with a video to set the mood
+[00:01:15] and the tone of the 1990s
+[00:01:17] when hackers were transitioning to the security field.
+[00:01:21] This is Window Snyder,
+[00:01:23] a very respected security researcher and former hacker
+[00:01:27] who's talking about the 1990s.
+[00:01:31] So let me play this.
+[00:01:32] - And I fell in with a group of, let's say,
+[00:01:37] computer security hobbyists in Boston.
+[00:01:40] (audience laughs)
+[00:01:42] Voluntary sys. admins.
+[00:01:44] (audience laughs)
+[00:01:46] This space where there at the time,
+[00:01:48] there wasn't a set of books.
+[00:01:50] I couldn't go join a program
+[00:01:51] and take a class in any of this stuff.
+[00:01:54] So we built our own tools.
+[00:01:56] We came up with our own systems for figuring this stuff out,
+[00:01:59] for identifying vulnerability, for building resilience.
+[00:02:02] And it eventually turned into an industry
+[00:02:07] because other people found value in this work,
+[00:02:09] which was fantastic.
+[00:02:10] - So here is Snyder talking about the fact
+[00:02:14] that during the 1990s, these so-called hobbyists,
+[00:02:17] AKA hackers, were basically in the know
+[00:02:20] when it came to security.
+[00:02:23] However, it was not an academic field.
+[00:02:27] It was very hard to learn this knowledge.
+[00:02:30] And it was hackers who would acquire the knowledge
+[00:02:34] in the security field
+[00:02:36] often by getting their hands on illicit documentation.
+[00:02:39] And then she talks about
+[00:02:41] how they were just sort of valuable
+[00:02:43] and accepted into the security field.
+[00:02:46] But in fact, a lot had to happen
+[00:02:48] for hackers to be accepted into security,
+[00:02:53] the nascent security industry.
+[00:02:55] And so while they were experts,
+[00:02:57] part of the problem was that they lacked credibility.
+[00:03:01] They were hackers.
+[00:03:02] We know that hackers were branded negatively in the media.
+[00:03:07] More so, many of them as they started to transition
+[00:03:11] from the hacker underground into the security industry,
+[00:03:14] they wanted to retain the hacker label.
+[00:03:17] And this is important.
+[00:03:19] It would have been much easier
+[00:03:20] if they just wanted to shed it.
+[00:03:22] And then finally, another problem
+[00:03:24] as they were entering into the security field
+[00:03:27] was that there were some experts,
+[00:03:28] academics, journalists, who were like,
+[00:03:30] "Do not touch these so-called experts with a 10-foot pole."
+[00:03:36] And I want to just give you a taste of that
+[00:03:38] to give you a sense of how hard it was
+[00:03:41] to maybe convince the public
+[00:03:43] that these were the people that you should hire.
+[00:03:47] So there was a group of hackers who created a security firm
+[00:03:51] in the 1990s, Comsec, in the early '90s,
+[00:03:55] and that company failed.
+[00:03:58] And there was a journalist who wrote about it
+[00:04:02] who basically said, "Would I hire a safecracker
+[00:04:06] to be a security guy at my bank?"
+[00:04:08] Right? So a lot of people were saying,
+[00:04:10] "No, these people are not trustworthy."
+[00:04:14] Here is another example of that.
+[00:04:17] So this is from the Association of Computer Machinery,
+[00:04:22] and it is recounting what Gene Spafford,
+[00:04:27] a very respected academic at Purdue,
+[00:04:31] was relaying about these so-called hackers
+[00:04:36] who were entering the security field.
+[00:04:39] And basically he was saying,
+[00:04:42] "Hiring one of these individuals
+[00:04:45] is like having an arsonist install a fire alarm."
+[00:04:50] Spafford insists, "Just because he can start a fire
+[00:04:54] doesn't mean he knows how to extinguish one."
+[00:04:58] So this is basically the milieu
+[00:05:02] that these hackers found themselves in,
+[00:05:05] whereby they had to establish their credibility,
+[00:05:10] their legitimacy, even though they had expert knowledge.
+[00:05:13] I didn't write this book.
+[00:05:14] I just thought it was handy
+[00:05:16] to note that they had to do this.
+[00:05:18] And they had to do it
+[00:05:20] when they were both proposing very controversial methods
+[00:05:25] for exposing security,
+[00:05:27] and that is what Matt Goerzen is gonna talk about
+[00:05:29] with full disclosure,
+[00:05:31] and as they were calling the BS of Microsoft, in particular,
+[00:05:37] and other software vendors were claiming
+[00:05:39] that there was no security problems.
+[00:05:42] So they're building their credibility
+[00:05:43] as their reputation was already under threat
+[00:05:47] and as they were doing controversial things.
+[00:05:49] So now I'm gonna turn it over to Matt Goerzen
+[00:05:51] who will talk about full disclosure.
+[00:05:59] - Hey, everyone.
+[00:06:00] I'm just gonna get my presentation going here.
+[00:06:06] All right, so, yeah, my name is Matt Goerzen.
+[00:06:08] I'm a researcher at Data & Society
+[00:06:11] and ah Biella was my master's thesis advisor
+[00:06:15] and Brian's an old colleague of mine at Data & Society.
+[00:06:19] So this is really a treat to be here for this event.
+[00:06:24] So as Biella mentioned,
+[00:06:26] I'm gonna talk about a practice called full disclosure,
+[00:06:31] and particularly I'm gonna talk about
+[00:06:32] how it manifested on a mailing list,
+[00:06:34] a controversial mailing list called Bugtraq
+[00:06:37] in the early 1990s
+[00:06:38] that existed for a couple of decades after that.
+[00:06:44] And ah one sec here.
+[00:06:46] All right, so first, I'm gonna talk about a few precursors
+[00:06:51] to the full disclosure movement.
+[00:06:55] So beginning of the 1970s,
+[00:06:58] the phreaks, the phone phreaks,
+[00:07:01] the precursor to the hackers that we know today,
+[00:07:04] started sharing information
+[00:07:06] about how to exploit the US telecom system.
+[00:07:12] So one zine associated with that
+[00:07:17] was called the Youth International Party Line.
+[00:07:20] And it would share techniques and also technical documents.
+[00:07:25] And then the 1980s,
+[00:07:26] you had the emergence of some hacker-focused periodicals.
+[00:07:31] One was called 2600 Magazine.
+[00:07:33] And it was actually a print magazine
+[00:07:35] that eventually could be found at Barnes & Noble.
+[00:07:38] And another hugely influential electronic magazine
+[00:07:42] was called Phrack which you can see on the right there,
+[00:07:46] the first issue of that.
+[00:07:47] And both of these zines were devoted
+[00:07:51] to initially some of the phreaking techniques
+[00:07:55] that were talked about
+[00:07:56] in the Youth International Party Line,
+[00:07:58] but also over time,
+[00:08:00] techniques for gaining access to computer systems
+[00:08:04] and that sort of thing.
+[00:08:05] So this wasn't known as full disclosure at that time,
+[00:08:09] but it was really like a subculture
+[00:08:12] that was devoted to sharing techniques
+[00:08:14] for manipulating and exploiting technology
+[00:08:18] often to gain access or to allow exploration
+[00:08:21] or to allow conversation with distant colleagues.
+[00:08:26] So here's a couple
+[00:08:27] from the original Youth International Party Line.
+[00:08:29] One is a technical diagram for creating a tool
+[00:08:33] that would allow you to perfect your ability to whistle
+[00:08:36] at the precise 2,600 hertz frequency
+[00:08:39] that would allow you to control the phone system,
+[00:08:42] and another more low-tech hack of how to send mail
+[00:08:46] and recover the stamp later on.
+[00:08:51] Also in the 1980s, BBSes started emerging.
+[00:08:55] And so this is a screenshot
+[00:08:57] from the Demon Roach Underground,
+[00:08:59] which was hosted by one of the founders
+[00:09:02] of the Cult of the Dead Cow,
+[00:09:03] a notorious hacking and text file group.
+[00:09:08] And so BBSes became a way that people would share text files
+[00:09:13] and exploits and ways to gain access to things.
+[00:09:19] And so this stepped the,
+[00:09:21] this was the backdrop of how this type of knowledge
+[00:09:25] was shared in the 1970s and 1980s.
+[00:09:28] And towards the ends of the 1980s,
+[00:09:31] one really significant event occurred,
+[00:09:33] which was Robert Tappan Morris
+[00:09:36] invented the first truly significant computer worm,
+[00:09:40] and it spread across the early internet
+[00:09:42] and caused a significant amount of cleanup costs.
+[00:09:46] And so the US government and some partners established CERT,
+[00:09:50] the Computer Emergency Response Team at Carnegie Mellon.
+[00:09:57] And also in the 1990s on the heel of a legislation
+[00:10:00] called the Computer Fraud And Abuse Act
+[00:10:02] that emerged in the mid-1980s,
+[00:10:04] hackers associated with the Legion of Doom
+[00:10:06] and a variety of other groups
+[00:10:08] were subject to law enforcement crackdown.
+[00:10:12] And so as Biella mentioned,
+[00:10:14] in the early 1990s on the heels of this,
+[00:10:17] some hackers started to try and go more legitimate,
+[00:10:21] including Legion of Doom members
+[00:10:23] who created a company called Comsec
+[00:10:26] which was devoted to offering security services
+[00:10:31] like penetration testing and auditing and things like that.
+[00:10:36] It was extremely controversial upon its founding,
+[00:10:40] and hackers accused them
+[00:10:42] of using their institutional legitimacy
+[00:10:45] to out compete rivals or to snoop on them,
+[00:10:50] and business didn't trust them
+[00:10:52] thinking that they were just gonna gain backend access
+[00:10:56] to their systems to exfiltrate data.
+[00:11:01] And so Comsec folded in 1993,
+[00:11:05] and one of the founders of former LOD members,
+[00:11:10] Scott Chasin who's known as Doc Holiday,
+[00:11:13] created a mailing list called Bugtraq.
+[00:11:17] And Bugtraq was really like a core platform
+[00:11:24] for what became known as full disclosure.
+[00:11:27] So it was the practice of disclosing information
+[00:11:32] about computer vulnerabilities
+[00:11:34] and also methods for exploiting them
+[00:11:36] in a completely no-hold-bars capacity.
+[00:11:40] And this was also extremely controversial practice.
+[00:11:45] CERT had filled this role as a clearing house
+[00:11:49] for vulnerabilities in the 1980s,
+[00:11:52] but a lot of hackers, but also representatives
+[00:11:55] from industry and systems administrators
+[00:12:00] tasked with protecting computer networks
+[00:12:03] and things of this nature,
+[00:12:05] they're were all dissatisfied
+[00:12:08] with how CERT would often reveal only the smallest amount
+[00:12:13] of information about vulnerabilities,
+[00:12:15] and there'll be long lag times
+[00:12:17] between vulnerabilities being submitted to CERT
+[00:12:20] and being disclosed to the public.
+[00:12:21] Sometimes they were never disclosed to the public at all.
+[00:12:24] And so Bugtraq, even though it was founded by a hacker,
+[00:12:28] it attracted a wide range of participants.
+[00:12:32] So very early on, you had people sending in posts
+[00:12:36] to Bugtraq from organizations like the MITRE corporation,
+[00:12:41] the University of Florida, people from NASA.
+[00:12:45] And you could see all of these domains
+[00:12:48] where these emails were originating.
+[00:12:50] And of course there were also people writing in
+[00:12:52] from early hacker-led ISPs like MindVox and Panix
+[00:12:57] and participants from early hacker groups,
+[00:13:00] like the LOpht Heavy Industries and so on.
+[00:13:03] And eventually over time, Bugtraq became moderated,
+[00:13:08] I think, in 1996, by Elias 'Aleph One' Levy,
+[00:13:12] who was also in the same year,
+[00:13:15] wrote an extremely influential article for Phrack
+[00:13:19] called "Smashing the Stack for Fun and Profit,"
+[00:13:21] which offered a general technique for buffer overflows,
+[00:13:26] which was a very potent exploitation technique
+[00:13:31] that still in some instances persists today.
+[00:13:35] And so this association
+[00:13:38] between institutional actors and hackers
+[00:13:42] and more independent systems administrators,
+[00:13:45] all oriented towards sharing vulnerabilities,
+[00:13:48] function as a trading zone for an extra institutional,
+[00:13:52] extra establishment group of people,
+[00:13:55] to discuss practical techniques for discovering
+[00:13:58] and perhaps dealing with vulnerabilities in a different way,
+[00:14:03] in different ways.
+[00:14:05] But Bugtraq was also controversial
+[00:14:08] because not only did it attract participants
+[00:14:13] who had the positive project of improving security in mind,
+[00:14:19] but it also, there was a lot of suspicion
+[00:14:22] that some of the hackers
+[00:14:23] that were involved in the mailing list
+[00:14:25] were taking the vulnerabilities that they would find there
+[00:14:28] and using them to engage in unauthorized computer access
+[00:14:32] or criminal hacking or things like this.
+[00:14:35] And so this really set some of the ground
+[00:14:38] for the discussions that would emerge
+[00:14:40] around white hat hacking,
+[00:14:42] black hat hacking and later gray hat hacking,
+[00:14:44] which I think Biella is gonna talk about subsequently.
+[00:14:49] And also at this time, it's really important to note
+[00:14:52] that there was some computer security researchers,
+[00:14:55] like Dan Farmer, started developing tools,
+[00:14:58] like one of the most notorious ones was called SATAN.
+[00:15:02] and I think it's called the Security Assessment.
+[00:15:06] Actually, I can't remember the acronym right now,
+[00:15:08] but the point is, it was controversial
+[00:15:11] not only because  of the name,
+[00:15:13] but also because it automated
+[00:15:14] a lot of these vulnerability detection techniques
+[00:15:18] into a tool that someone could run on a potential target
+[00:15:23] to discover ways that it could be exploited.
+[00:15:26] Of course, it could also be used by a systems administrator
+[00:15:28] to audit their own networks and figure out ways to patch it.
+[00:15:35] So all of these vulnerabilities were going into this,
+[00:15:39] building this pool of knowledge
+[00:15:41] that could be used to a range of different ends,
+[00:15:43] and so it was extremely controversial.
+[00:15:47] Some people who defended full disclosure
+[00:15:50] argued that it would increase pressure on vendors
+[00:15:53] like Microsoft to more quickly address security issues,
+[00:15:57] and something Biella will talk about as well.
+[00:16:01] Also that it could facilitate the education of people
+[00:16:05] into the field of security more generally.
+[00:16:08] Again, this was a time
+[00:16:09] when there wasn't a lot of academic classes
+[00:16:12] being taught on the subject of security.
+[00:16:14] So people who wanted to learn about vulnerabilities
+[00:16:17] often had to either engage hands-on on their own
+[00:16:21] or learn from these kinds of hacker periodicals.
+[00:16:25] So it could also empower systems administrators
+[00:16:27] to patch or disable software on their own networks
+[00:16:32] that was allowing people to get in.
+[00:16:34] And in the longterm, all of these things could contribute,
+[00:16:37] it was thought, to the security of the broad user community.
+[00:16:42] Of course, there was also detractors.
+[00:16:44] One of the main critiques was that it can empower a class
+[00:16:46] of hacker known as the script kiddie,
+[00:16:49] which was someone who could just take the exploit code
+[00:16:51] posted on Bugtraq and deploy it to break into a system
+[00:16:56] without even necessarily understanding
+[00:16:58] the technical backdrop on which they're operating.
+[00:17:03] Later on, there was criticism
+[00:17:05] that this kind of disclosure of vulnerabilities
+[00:17:07] created market incentives.
+[00:17:10] In the mid '90s,
+[00:17:11] a lot of security firms were starting to come out.
+[00:17:14] So the argument was that
+[00:17:16] by making vulnerabilities more publicly available
+[00:17:22] and incentivizing script kiddies
+[00:17:25] you're also creating a marketing incentive
+[00:17:28] where these companies that are often staffed
+[00:17:31] by the same people making the disclosures
+[00:17:33] stood to profit by offering solutions to those issues.
+[00:17:38] And in the short term,
+[00:17:40] the basic idea that it could endanger users.
+[00:17:45] There's also backlash from the digital underground,
+[00:17:48] the hacker underground,
+[00:17:49] who saw the disclosure vulnerabilities
+[00:17:52] and the resulting efforts made to patch them
+[00:17:56] as a threat to their own power
+[00:17:59] or also just the ability to play and explore networks.
+[00:18:02] So it was controversial, not only from establishment actors,
+[00:18:07] but also from the underground figures themselves,
+[00:18:09] in some cases.
+[00:18:11] So ultimately full disclosure,
+[00:18:15] and particularly as cited on Bugtraq,
+[00:18:18] had some very concrete outcomes.
+[00:18:20] I mean, it put hackers in dialogue
+[00:18:22] with respected mainstream technologists,
+[00:18:24] allowed them to gain mutual trust.
+[00:18:27] Also by the end of the 1990s, vulnerability disclosures
+[00:18:32] by hackers who were using their real names
+[00:18:34] rather than their handles
+[00:18:36] were increasingly serving as line entries on CVs.
+[00:18:40] So people looking to find employment
+[00:18:43] on the emerging security firms
+[00:18:45] could point to a vulnerability that they disclosed.
+[00:18:49] And also the vulnerabilities themselves
+[00:18:52] could serve as products as a market immersion,
+[00:18:57] the early 2000s, for selling vulnerabilities.
+[00:19:01] But it also,
+[00:19:02] this created a lot of tension with the hacker underground
+[00:19:04] because sometimes the people disclosing vulnerabilities
+[00:19:08] hadn't necessarily been the ones who had discovered it
+[00:19:10] and instead had found out about these vulnerabilities
+[00:19:14] through underground trust networks.
+[00:19:16] And then they were able to claim ownership
+[00:19:20] in a way that would enhance their professional career.
+[00:19:23] And more generally,
+[00:19:24] full disclosure moved the security industry
+[00:19:27] into a model premised on awareness and vigilance.
+[00:19:31] So instead of a security by obscurity approach
+[00:19:33] where security was achieved
+[00:19:36] by hoping that these vulnerabilities
+[00:19:38] would never be discovered,
+[00:19:40] instead they created a security model
+[00:19:42] where discovery and quickly addressing
+[00:19:46] and relying on security firms
+[00:19:48] able to provide services to help audit networks, and so,
+[00:19:52] really became the standard.
+[00:19:54] All of this also created a ambient background
+[00:19:58] throughout the 1990s where vendors had to be more responsive
+[00:20:03] and there was more public awareness of security risks,
+[00:20:07] and hackers were able to leverage that general backdrop
+[00:20:13] in their own interest and to enhance their own legitimacy.
+[00:20:17] And that's something that Biella will now pick up,
+[00:20:20] talking about, and thanks for your time.
+[00:20:27] - Okay.
+[00:20:29] All right, so I'm gonna pick up.
+[00:20:32] Let me just move these forward.
+[00:20:34] So basically as full disclosure was developing
+[00:20:38] as this very robust but controversial practice,
+[00:20:43] hackers individually and as groups
+[00:20:46] started to a lot of reputational work,
+[00:20:49] and that entailed educating journalists.
+[00:20:53] They were courting business opportunities,
+[00:20:56] and they were still, like I had mentioned,
+[00:21:00] very, very invested in retaining the hacker label
+[00:21:03] and relationships to the hacker community.
+[00:21:09] And as the security industry
+[00:21:11] was interested in courting hackers,
+[00:21:15] a very stark binary started to grow.
+[00:21:18] There was black hats, and there were white hats.
+[00:21:20] And this is one way the corporations
+[00:21:23] were trying to control the message.
+[00:21:26] And actually in the late 1990s,
+[00:21:28] what is really interesting is that just at the moment
+[00:21:31] where it seemed like the black and the white
+[00:21:34] was really being sedimented, the LOpht,
+[00:21:38] which is a group that was based out of Boston,
+[00:21:42] basically came up with a linguistic innovation
+[00:21:45] which ran parallel to really intensive media efforts.
+[00:21:50] And this was the coining of the term gray hat.
+[00:21:54] So this is a quote from Chris Wysopal,
+[00:21:58] the blue one, which notes that:
+[00:22:01] 'The commercial world was trying to adopt the techniques
+[00:22:04] and capabilities of the underground,
+[00:22:06] but wanting to draw clear lines.
+[00:22:09] We didn't want to do that.
+[00:22:10] They wanted to learn from us and take the information
+[00:22:12] and commercialize it, leaving the tainted researcher behind.
+[00:22:15] We were non-white hat.
+[00:22:17] We wanted to be the researcher
+[00:22:19] to be accepted as the authority and get them jobs.'
+[00:22:23] And so the gray hat term allowed them
+[00:22:26] to do some of that work
+[00:22:28] which was push against this stark moral binary,
+[00:22:31] and also convey that they had sound intentions,
+[00:22:35] but they were also very much willing to rock the boat.
+[00:22:39] And indeed in the late 1990s,
+[00:22:43] they were willing to rock the boat
+[00:22:45] through publishing vulnerabilities,
+[00:22:47] but also going really aggressively
+[00:22:50] after the software vendors, especially Microsoft,
+[00:22:53] which basically had a monopoly in the late 1990s.
+[00:22:57] Now, the LOpht was just one group.
+[00:23:00] The Cult of the Dead Cow was another group
+[00:23:03] that went after Microsoft.
+[00:23:04] This was not coordinated between groups and individuals.
+[00:23:09] It happened organically, but as 1990s marched on,
+[00:23:13] it did become more aggressive.
+[00:23:16] Microsoft and their problems with their security
+[00:23:20] came up in talks and mailing lists, posts and advisories,
+[00:23:24] but the most rhetorically powerful way
+[00:23:27] that Microsoft was put on the hot seat
+[00:23:30] was through tools that cracked Microsoft products.
+[00:23:35] And I'll get to the tools in a moment, but just,
+[00:23:41] I want to make it clear that for years,
+[00:23:44] for years, the response from Microsoft
+[00:23:47] was that there is nothing wrong with our products.
+[00:23:52] It's really malicious actors that is the problem, right?
+[00:23:58] And this is a one quote from Microsoft.
+[00:24:01] I'm not gonna read it. You can read it up there.
+[00:24:03] That conveys what their stance was,
+[00:24:06] stonewalling, stonewalling and stonewalling.
+[00:24:09] So again, there was lots of groups and individuals
+[00:24:12] who were participating in this pushback against Microsoft,
+[00:24:16] again, in the moment, were these hackers
+[00:24:18] are also trying to rehabilitate their image.
+[00:24:21] And the two most visible groups
+[00:24:24] were the Cult of the Dead Cow
+[00:24:26] and the LOpht Heavy Industries.
+[00:24:28] And there was some shared membership between the two,
+[00:24:32] but Cult of the Dead Cow was the slightly bigger,
+[00:24:36] more diffuse group.
+[00:24:38] And so the two tools that they created were LOphtCrack,
+[00:24:44] which was a password recovery and auditing tool,
+[00:24:48] and then Back Orifice, which had two versions,
+[00:24:52] and that was a remote administration tool
+[00:24:54] allowing for stealth remote control
+[00:24:57] of Microsoft Window 95, 98,
+[00:24:59] machines with or without a user's knowing consent.
+[00:25:04] Now what's interesting about the tools
+[00:25:07] is that they have some similar functionality,
+[00:25:10] some differences as well, but the groups behind the tools
+[00:25:15] and the ways that the tools were presented to the public
+[00:25:18] and the hacker public and the nascent security world
+[00:25:21] was quite different.
+[00:25:23] And so I like this quote from our report,
+[00:25:27] which really captures some of these differences
+[00:25:31] between the groups.
+[00:25:32] So where the LOpht sought to present an image
+[00:25:34] of the underground hacker as a Renaissance figure,
+[00:25:38] the Cult of the Dead Cow
+[00:25:39] frequently played into the stereotypes of the hacker menace
+[00:25:43] in an ironic manner, laughing at the media's willingness
+[00:25:46] to play up the hacker menace.
+[00:25:48] Fittingly, another cDc tagline read,
+[00:25:51] hyperbole is our business.
+[00:25:54] And indeed, when they released Back Orifice
+[00:25:58] for the first time at DEF CON,
+[00:26:02] a very famous hacker conference,
+[00:26:05] they went full on theatrical.
+[00:26:07] This was full on spectacle.
+[00:26:10] So Back Orifice's technical presentation at DEF CON
+[00:26:14] was proceeded by cDc co-founder Kevin Grandmaster Rats.
+[00:26:18] You can see him.
+[00:26:19] He's pacing back and forth on a conference table
+[00:26:22] wearing leather chaps, a thick chain necklace,
+[00:26:25] and two holstered presumably fake pistols,
+[00:26:27] demanding of the crowd,
+[00:26:29] "When I say dead, you say cow."
+[00:26:31] Another cDc member then encouraged members of the audience
+[00:26:34] to use tools like BackOrfice
+[00:26:35] in service of a particular goal.
+[00:26:38] "Hacktivism," he said, "What we have here is a concept
+[00:26:41] in a series of tools and a whole methodology
+[00:26:43] that takes the slacker ethic out of all you people.
+[00:26:46] We're making it easy enough
+[00:26:47] that an eight year old can make a difference,
+[00:26:49] can fuck shit up a little bit for the Cult of the Dead Cow,"
+[00:26:53] Right?
+[00:26:54] So this was really, really stirring the pot of controversy.
+[00:26:59] They were playing up the bad boy image,
+[00:27:03] and Microsoft really kind of, again, stonewalled.
+[00:27:07] They said, "No, these are the bad hackers."
+[00:27:10] And then the cDc would issue press releases
+[00:27:14] that flipped the moral narrative.
+[00:27:16] Journalists would write about it.
+[00:27:18] So they were the most theatrical in this hyperbolic mode,
+[00:27:23] but at the very same time that they were doing this,
+[00:27:27] the LOpht again,
+[00:27:28] using a little bit more buttoned up approach,
+[00:27:30] but still quite aggressive against Microsoft.
+[00:27:33] And then in the late 1990s, in 1998,
+[00:27:37] they were invited to testify in front of four senators,
+[00:27:42] which you can see here.
+[00:27:43] And even though this is a different type of theatrics,
+[00:27:47] nevertheless, it was quite theatrical in its presentation.
+[00:27:51] And this catapulted them into the limelight.
+[00:27:54] There was a New York Times magazine feature article
+[00:27:57] about them where they can also explain gray hats
+[00:28:00] and they're hands-on methodology.
+[00:28:04] So basically between the LOpht, which was good cop,
+[00:28:09] cDc, the bad cop, you basically have a period of time
+[00:28:15] where these hackers are able to interface with journalists
+[00:28:21] and also convey security by spectacle,
+[00:28:26] which we define as the following:
+[00:28:28] It is the advancement of security
+[00:28:30] by making both technical instances of insecurity
+[00:28:33] and also the negligent practices,
+[00:28:35] not only public, but also really un-ignorable.
+[00:28:40] The cDc's Back Orifice can be seen to epitomize the process
+[00:28:45] for the way that it staged a mediatic encounter
+[00:28:48] between hackers and a powerful corporation,
+[00:28:50] ultimately nominating both technical design decisions
+[00:28:54] and corporate governance questions for public debate.
+[00:28:57] They set the agenda in a very powerful way.
+[00:29:02] You know, there was other mechanisms and factors,
+[00:29:07] but by 2002, Bill Gates had declared security
+[00:29:11] under the guise of trustworthy computing
+[00:29:15] as the company's highest priority.
+[00:29:19] And they proceeded to hire former enemies, hackers,
+[00:29:22] to help lead the way, and in fact, Window Snyder,
+[00:29:25] who I started my presentation with, was hired at this time.
+[00:29:29] And she invited many hackers
+[00:29:32] under the BlueHat Security Conference.
+[00:29:35] And although there were many changes
+[00:29:37] subsequent to this period
+[00:29:39] that toned down the adversarial nature
+[00:29:43] of the late 1990s politics enacted by these hackers,
+[00:29:47] this was really, really central
+[00:29:49] in changing security and putting it on the map.
+[00:29:52] So I'm just gonna leave it at that
+[00:29:55] and turn it over to Brian
+[00:29:57] who will now proceed with a Q&A period.
+[00:30:02] - Yeah, I'm looking forward to getting a little bit deeper
+[00:30:06] on some specific questions.
+[00:30:08] First of all, thank you for the report.
+[00:30:11] After getting to read it,
+[00:30:13] it not only filled in a lot of gaps in the history
+[00:30:18] of how a lot of this stuff came to be,
+[00:30:21] but also serves as an excellent prelude
+[00:30:24] to a lot of your other work, Dr. Coleman.
+[00:30:27] I know that this is a representation
+[00:30:30] of a much larger body of research
+[00:30:32] that the both of you have been undertaking
+[00:30:34] for quite some time.
+[00:30:35] I'm wondering if you can talk a little bit about
+[00:30:38] both sort of like the joys and the challenges
+[00:30:41] of putting together internet history research,
+[00:30:45] what materials you were using,
+[00:30:48] how journalism may have helped or made that process harder
+[00:30:52] and some of the interviews you've done.
+[00:30:55] - Do you wanna start, Matt?
+[00:30:57] - Sure, yeah. I mean, yeah.
+[00:31:00] So, I mean, Data & Society funded us to do this work
+[00:31:04] starting, I guess, like three years ago or so.
+[00:31:07] And it's been a really interesting time.
+[00:31:11] I think like one of the most interesting things is that we,
+[00:31:14] because it's about 30 years out
+[00:31:18] from the start of where we were looking, and that allowed us
+[00:31:22] to have a really interesting methodological approach
+[00:31:26] where we simultaneously were really deeply engaged
+[00:31:30] in archival material,
+[00:31:32] a lot of which is still available online,
+[00:31:35] but like is literally vanishing day by day.
+[00:31:39] I was just looking through our final proof and found a link
+[00:31:45] to the original announcement of the Bugtraq mailing list
+[00:31:49] that was hosted on Google groups,
+[00:31:51] because I'd used that posting.
+[00:31:54] And it's not there as of six months ago or whatever,
+[00:31:58] but also of course,
+[00:32:00] because all of the people that we're talking about
+[00:32:03] for the most part are still alive
+[00:32:06] and maybe a bit more open to talking
+[00:32:08] honestly about what was going on.
+[00:32:10] We were also able to compliment that archival research
+[00:32:13] by talking to the people,
+[00:32:15] and triangulating between those two things.
+[00:32:18] In some cases correcting the memories of people
+[00:32:21] who have forgotten things, and in some cases,
+[00:32:24] having people tell us things that at the time
+[00:32:27] were contentious or speculated on and confirming things.
+[00:32:30] It was really, really fruitful and interesting.
+[00:32:34] - Yeah, I'm gonna just add one more thing.
+[00:32:36] You put it beautifully.
+[00:32:38] I'm thinking about this methodologically
+[00:32:40] is living histories of the internet.
+[00:32:42] When you're doing research on the present,
+[00:32:45] you could absolutely, and you should absolutely
+[00:32:48] document, document, document and start theorizing,
+[00:32:51] but actually not enough time sometimes passes for you
+[00:32:54] to really understand inflection points
+[00:32:57] or the significance of things.
+[00:32:59] And I feel like once 20, 30 years passes, you can do that.
+[00:33:06] And being able to compliment archival work with interviews
+[00:33:11] is beautiful precisely because you can juxtapose them
+[00:33:15] and do a lot of fact checking.
+[00:33:18] And so I think it's a really fruitful method
+[00:33:21] for kind of internet history.
+[00:33:24] And so while we have very particular arguments
+[00:33:27] around the security industry, I think in some ways,
+[00:33:30] hopefully one day, we'll write up something
+[00:33:33] about the methods that we went through
+[00:33:36] that would be a value to other researchers.
+[00:33:40] - In the report, you talk in great detail
+[00:33:43] about how hackers trained the media to write about them,
+[00:33:49] both through specialized access
+[00:33:52] but then also forms of punishment
+[00:33:55] when the story wasn't quite right.
+[00:33:58] Going back through them as primary materials
+[00:34:02] for what you're doing,
+[00:34:03] as well as talking to some of the individuals involved,
+[00:34:07] did you get any sense
+[00:34:08] about how that style of engagement with the media,
+[00:34:13] how they learn to do that?
+[00:34:19] - I mean, the LOpht was especially good at that.
+[00:34:22] And they had press packets.
+[00:34:27] They had cultivated special relationships
+[00:34:30] with specific journalists that they gave special access to.
+[00:34:35] And I think it was also
+[00:34:37] just very much a iterative organic process as well,
+[00:34:41] where they would do an interview
+[00:34:44] and then they would go out to dinner and have some beers
+[00:34:47] and basically talk about what happened.
+[00:34:50] And in some ways, probably like their tech methodology
+[00:34:54] was applied to how they dealt with the press as well.
+[00:34:59] I think with the cDc, they had a very different method,
+[00:35:03] which was let's be a little bit crazy
+[00:35:06] in order to court the attention
+[00:35:09] and then be able to throw some other grenade out there.
+[00:35:12] So they're almost in some ways diametrically opposed.
+[00:35:16] One was very like finessed and curated.
+[00:35:19] The other one was like a little bit more freewheeling,
+[00:35:23] but both were very, very effective
+[00:35:25] and very central to them being able control the agenda.
+[00:35:31] - Yeah, I think that's totally right.
+[00:35:33] And also it's interesting because the cDc really had a,
+[00:35:39] you know, their initial tagline
+[00:35:41] was global domination through media saturation,
+[00:35:44] and they really had a relationship with the media
+[00:35:47] quite early on because as early as beginning in the 1980s
+[00:35:54] and certainly in earnest in the 1990s,
+[00:35:57] typically when the media wrote about hackers,
+[00:36:00] it was as this like spectral threat.
+[00:36:04] And so cDc early on,
+[00:36:07] under the guidance of their minister of propaganda,
+[00:36:12] Death Veggie, Death Vegetable,
+[00:36:14] they would actually like,
+[00:36:16] I guess what we recognize today as like trolling really
+[00:36:19] where they would actually court media controversy,
+[00:36:22] not so much to improve the security agenda
+[00:36:25] or even to rehabilitate the nature of hackers
+[00:36:28] or the image of hackers, but more to parody,
+[00:36:32] or to point to the absurdity of some of those things.
+[00:36:37] So I think Death Veggie published a text file
+[00:36:40] on how to make a bomb in the early 1990s
+[00:36:43] or in the mid-1990s, and it was just completely absurd,
+[00:36:46] but of course the media, it got some media coverage,
+[00:36:49] and then he was able to use that as leverage
+[00:36:52] to turn the tables and shame the media
+[00:36:54] for their bleeding headlines approach to things.
+[00:36:59] And so I think through those kinds
+[00:37:02] of more like playful, prankish, puckish engagements,
+[00:37:07] that also offered a template
+[00:37:09] for the type of work that the LOpht was doing
+[00:37:11] and using that same, leveraging that same kind of spectacle
+[00:37:14] to actually change the conversation around security.
+[00:37:19] - I wanted to touch a little bit deeper
+[00:37:21] on motivations that this era of hackers engaged in.
+[00:37:29] From what I was able to gather the term hacktivist,
+[00:37:33] as we know it today,
+[00:37:34] that didn't really come into use until the late '90s.
+[00:37:38] So at the tail end of the period of time
+[00:37:40] you were looking at.
+[00:37:41] So thinking about the interplay
+[00:37:44] between ideological motivation, economic motivation,
+[00:37:50] and then a third murkier bucket.
+[00:37:52] For some it seems to be play.
+[00:37:54] Other seems to be the thrill of exploration.
+[00:37:58] If you could talk about if those categories are sufficient,
+[00:38:02] but if not, what other motivations did you see bubble up?
+[00:38:07] - I'm gonna just briefly say something
+[00:38:10] that helps set the scene.
+[00:38:11] I mean, obviously, for example,
+[00:38:14] the LOpht had a business plan.
+[00:38:16] We quote from it. We were very lucky to get it.
+[00:38:20] They were trying to court business.
+[00:38:21] So some people, I think, retroactively impute on them like,
+[00:38:25] "Oh, they just wanted to make a buttload of money.
+[00:38:28] And they did."
+[00:38:30] But actually, I think, reading,
+[00:38:33] I read the autobiography of one member of the LOpht
+[00:38:38] right as we were writing this, which was super helpful,
+[00:38:40] because it made me realize how much the LOpht was struggling
+[00:38:44] to actually court business.
+[00:38:47] Like they really just wanted to be able to make a salary
+[00:38:51] and work on this full time, you know?
+[00:38:54] And I just mentioned this because, yes,
+[00:38:56] they wanted to make some money,
+[00:38:58] but I don't think that the gold rush,
+[00:39:01] which definitely came about later,
+[00:39:04] was something that was obvious to most.
+[00:39:07] And so from my perspective,
+[00:39:10] it was mostly about doing the right thing technically
+[00:39:13] from a narrow security perspective, and, yes,
+[00:39:18] let's make a solid middle-class living from this.
+[00:39:22] And then as the industry really takes off,
+[00:39:25] I mean, wow, there is so much money to be made,
+[00:39:28] and then that just changes everything.
+[00:39:30] So that's all I'll say around that,
+[00:39:32] but, Matt, I think you probably have more to say.
+[00:39:35] - Yeah, I think, I mean, I think, that conveys
+[00:39:40] a big part of the approach to professionalizing,
+[00:39:45] but I think the bigger question of activism among hackers
+[00:39:49] or nascent political sensibilities among hackers,
+[00:39:52] I think, obviously, a couple of the images I showed
+[00:39:56] were from the Youth International Party Line,
+[00:39:58] which was associated with the Yippies in the 1970s.
+[00:40:02] So there's always this politics
+[00:40:06] that were a part of the formation of the hacker scene.
+[00:40:10] And, I think, throughout the period that we look at
+[00:40:14] in the late 1980s and 1990s,
+[00:40:15] a lot of that politics manifested
+[00:40:18] as the struggle to gain access.
+[00:40:24] So whether it's being able
+[00:40:27] to access this new technological infrastructure
+[00:40:31] and not be written out of it
+[00:40:34] or not have that access compromised,
+[00:40:36] and also to be able to secure oneself.
+[00:40:39] So one of the biggest politicized hacker struggles
+[00:40:44] before hacktivism was around encryption.
+[00:40:47] So in the early 1990s,
+[00:40:49] there's what's the called the Crypto Wars
+[00:40:51] where there was a real struggle
+[00:40:53] over whether the public would be able to have access
+[00:40:56] to government level encryption,
+[00:41:02] which was being classified as munitions
+[00:41:05] because of its military applications.
+[00:41:07] So there was a lot of early hacker activism around that,
+[00:41:11] and also a lot of the text files had a libertarian,
+[00:41:15] anti-corporate, anti-government, not necessarily both,
+[00:41:19] one of the two kind of tendency to it.
+[00:41:23] And so actually one of the things we're looking at now
+[00:41:27] is, I think, that hacker politicization.
+[00:41:32] It can be understood through the idea
+[00:41:35] of what Chris Kelty's called a recursive public,
+[00:41:38] like basically activism to secure your access to technology,
+[00:41:43] your integrity as a community.
+[00:41:45] And what we're really interested in looking at now
+[00:41:47] in the subsequent work in part
+[00:41:49] is how once professionalization and some of those issues
+[00:41:55] around access were resolved in the 1990s,
+[00:41:58] a lot of the hackers
+[00:41:58] that didn't have the same technical skills
+[00:42:01] or didn't have the ability to professionalize
+[00:42:03] 'cause they had criminal histories
+[00:42:05] or had a very strong commitment to a type of politics
+[00:42:09] that was beyond just simply securing tech corporate property
+[00:42:15] or securing technology or securing users,
+[00:42:18] they started to go in different directions,
+[00:42:22] where they started applying hacking techniques
+[00:42:26] to political ends.
+[00:42:28] And so that's when you start to see
+[00:42:30] the more contemporary manifestation of hacktivism
+[00:42:34] in a variety of different directions.
+[00:42:37] - Which leads into what I'd to talk about next,
+[00:42:41] which is one of the,
+[00:42:43] there's two really excellent contributions
+[00:42:46] and definitions in this report, the security by spectacle,
+[00:42:50] and then the bottom-up securitization, which, again,
+[00:42:54] I'm sure there's lots more to be said about that
+[00:42:57] in the next report as well,
+[00:42:59] but the long tail of this security by spectacle,
+[00:43:03] the practices, the media engagement,
+[00:43:06] the institutional impact that these groups had,
+[00:43:11] that toolkit was passed on to other generations.
+[00:43:16] And even if originally maybe these weren't done
+[00:43:19] for what we would call ideological reasons,
+[00:43:21] they became the deep lore of the next era
+[00:43:24] of political hacktivist ideology.
+[00:43:27] So maybe transitioning more from the next era.
+[00:43:31] So early to mid-2000s,
+[00:43:34] what do you see as the long tail of this practice?
+[00:43:42] - Should I go first?
+[00:43:45] Yeah, I mean, I think in many ways
+[00:43:48] this report and the related work
+[00:43:52] is a prelude to Biella's work
+[00:43:56] on Anonymous and other activists groups.
+[00:44:03] And, I think,
+[00:44:05] you could think of it similar
+[00:44:08] to how the Cult of the Dead Cow
+[00:44:10] and their more prankerish, trickstery media play
+[00:44:15] gave way to these techniques that can be used
+[00:44:19] to set the agenda around what security meant,
+[00:44:23] the idea of bottom-up securitization.
+[00:44:25] I think it's still the case
+[00:44:28] that similar techniques like these
+[00:44:31] could be and to some extent are being used today
+[00:44:35] to challenge what security means.
+[00:44:38] So, I mean, in the most direct way, you see the hacktivist
+[00:44:42] that grew out of or were inspired by these communities,
+[00:44:45] like Anonymous, that were using hacker techniques
+[00:44:49] and also media manipulation techniques
+[00:44:53] to really challenge the idea that,
+[00:44:56] or really to confront the security,
+[00:44:59] what they would call the security intelligence complex.
+[00:45:04] So drawing attention
+[00:45:05] to the emergence of private security firms
+[00:45:08] that were developing tools that could be used by governments
+[00:45:12] to crack down on activists or to surveil their citizens.
+[00:45:17] So actually making an argument
+[00:45:20] that insecurity could be used to,
+[00:45:25] exploiting security vulnerabilities could actually be used
+[00:45:29] to draw attention to other types of security concerns.
+[00:45:32] And today, we're also, of course,
+[00:45:34] having, seeing a lot of discussion about security
+[00:45:37] on social media,
+[00:45:38] security of all algorithmic systems and so on.
+[00:45:41] And so it's interesting to think about
+[00:45:43] how similar techniques of bottom-up securitization
+[00:45:47] and media agenda setting could be used
+[00:45:49] to shape those kinds of conversations and expand the circle
+[00:45:53] of what we consider to be computer security
+[00:45:56] and what types of people
+[00:45:57] should be involved in those conversations.
+[00:45:59] I mean, in the '90s,
+[00:46:01] it took the inclusion of these hacker outsiders.
+[00:46:04] What types of figures need to be in the room today
+[00:46:07] to elevate our understanding
+[00:46:11] of what the security risks facing us are
+[00:46:13] and how they can be addressed.
+[00:46:15] What do you think, Biella?
+[00:46:17] - Yeah, yeah.
+[00:46:18] I mean, I'm just gonna add maybe two things.
+[00:46:20] One's a point of emphasis on something you said
+[00:46:23] and something slightly different.
+[00:46:24] I mean, it's interesting
+[00:46:26] because the security industry as it formed
+[00:46:29] was very technically oriented.
+[00:46:31] It tended to serve corporate and nation state interests.
+[00:46:35] There wasn't even a pro bono arm for most firms
+[00:46:39] to do civil society security work
+[00:46:42] that came with groups like the Citizen Lab.
+[00:46:45] So it's very narrow,
+[00:46:47] but also there was a very unethical place too
+[00:46:50] that the security industry went
+[00:46:52] with groups like NSO and HackingTeam,
+[00:46:56] so that security was used
+[00:46:58] to basically hunt down dissidents and activists,
+[00:47:01] and I'm mentioning that because one questions gets to that.
+[00:47:04] And it's interesting to see
+[00:47:05] how the different era of hacktivists
+[00:47:08] use spectacle and a different sense of security
+[00:47:11] to put that on the map,
+[00:47:14] but the people we looked at and studied
+[00:47:17] didn't quite foresee some of the most unethical uses
+[00:47:21] of security in the security industry.
+[00:47:24] The other thing too just very briefly,
+[00:47:26] and then we can get to the audience questions is,
+[00:47:29] the era that we looked at, there wasn't really social media.
+[00:47:33] So you really had to court your spectacle
+[00:47:37] to be threaded through establishment journalism.
+[00:47:40] And today the game has changed with social media,
+[00:47:43] with social movements coming out of the image boards.
+[00:47:46] And so there's both more opportunity
+[00:47:49] for spectacle bypassing, initially, the media.
+[00:47:52] You always need them at the end,
+[00:47:55] but it's also there's so much noise out there as well
+[00:47:59] that I think it's really hard
+[00:48:00] to create sustained conversations over time.
+[00:48:04] And the way that I think happened in the late '90s,
+[00:48:07] everyone was on the same page over these security issues
+[00:48:11] 'cause you had less noise.
+[00:48:15] - So do you want to look through the Q&A?
+[00:48:19] Should we turn to audience?
+[00:48:21] - Let's do it.
+[00:48:22] - Sure, there's a lot of great questions.
+[00:48:38] I mean, I'll start with the first one very briefly.
+[00:48:40] And maybe, Matt, you could look at one to follow up with.
+[00:48:44] Can, [name], could you please elaborate
+[00:48:48] as to why the spectacle was necessary in the first place?
+[00:48:50] Why are companies like Microsoft so reluctant to admit
+[00:48:52] and fix vulnerabilities in their systems?
+[00:48:54] I mean, I think just back at the time,
+[00:48:57] it was a combination of, first of all,
+[00:49:00] no one likes to point out that you have dirty laundry.
+[00:49:05] And that's never an easy thing.
+[00:49:08] Second was like, again, when people were building software,
+[00:49:12] there weren't security minded protocols
+[00:49:16] for the building of software,
+[00:49:18] and that wasn't necessarily obvious to people.
+[00:49:21] And third, there was a long period on the internet
+[00:49:25] where there weren't malicious actors.
+[00:49:28] And so in some ways it really wasn't seen as a problem
+[00:49:33] because it wasn't as much of a problem.
+[00:49:36] So all of these converged to create this situation
+[00:49:42] where there was clearly a problem,
+[00:49:44] but people in charge were denying it.
+[00:49:47] And so you really, really, really, really
+[00:49:49] had to rattle the boat to make that obvious.
+[00:49:54] Matt, do you want to answer a question?
+[00:49:57] - Yeah, sure. I think.
+[00:49:59] I mean, there's a bunch of interesting questions here.
+[00:50:01] I think a lot of them can be answered by reading our report.
+[00:50:05] I'll just mention the report. (Gabriella laughs)
+[00:50:08] I mean, well, one of the questions is, sorry.
+[00:50:13] One of the questions is, where's the report posted?
+[00:50:16] So it's actually gonna be posted in the next, hopefully,
+[00:50:19] sometime this week it'll be on the Data & Society website.
+[00:50:21] So that's datasociety.net.
+[00:50:24] And yeah, I just, some of the questions
+[00:50:27] are elaborating on certain things we've discussed,
+[00:50:30] like the hat terminology, for example.
+[00:50:32] And that's something we cover in depth in the report.
+[00:50:35] I think I'll take a crack at answering a question
+[00:50:40] from [name], because it's.
+[00:50:43] So they asked, "Can you say more
+[00:50:45] about the articulation of the politics of hacking,
+[00:50:48] the broader socioeconomic context of this period
+[00:50:50] and the outsize role played by techno libertarianism
+[00:50:53] in the tech world today?"
+[00:50:54] So I think, I mean, this is a big question,
+[00:50:57] but it's something that we explore a little bit
+[00:51:01] in this first report
+[00:51:02] and that we want to tackle more head-on in subsequent work.
+[00:51:06] And I think, earlier I mentioned
+[00:51:09] the recursive public approach to hacker activism
+[00:51:13] and the effort to secure access to information,
+[00:51:19] access to encryption, access to infrastructure and so on.
+[00:51:23] And so I think after professionalization occurred
+[00:51:26] around the year 2000,
+[00:51:27] you start to see a couple of different things.
+[00:51:30] I mean, I think.
+[00:51:32] I think the defining computer security
+[00:51:37] and cybersecurity on such technical,
+[00:51:40] on such technically focused terms
+[00:51:44] was a way to obviate politics
+[00:51:46] for a lot of hackers in some way,
+[00:51:48] because it allowed them to focus
+[00:51:51] on this thing that they cared about,
+[00:51:54] which was improving security solely on technical terms
+[00:51:58] and sidelining the question
+[00:52:00] of what the politics of that engagement was, right?
+[00:52:05] Like securing a software so that a user
+[00:52:09] can't have their credit card information stolen.
+[00:52:11] I mean, that seems good to most people.
+[00:52:13] And so what you see in the backlash to that
+[00:52:16] which is something we're gonna talk about in our next report
+[00:52:18] is basically challenging that idea
+[00:52:20] and challenging the idea of whether securing products
+[00:52:25] that are being pushed by big corporations
+[00:52:27] or securing infrastructure that is being used by governments
+[00:52:31] and not necessarily being made
+[00:52:33] to serve the interests of particular communities
+[00:52:35] is necessarily what security should be about.
+[00:52:38] And so that's where hacktivism takes things.
+[00:52:42] I think the techno libertarianism extends from that idea
+[00:52:47] that if you can just focused
+[00:52:48] on solving these technical problems,
+[00:52:52] then that's all you need to do.
+[00:52:54] And maybe from one very liberal perspective,
+[00:52:57] that's the case.
+[00:52:58] It's this societal progress in step with technical progress
+[00:53:03] of patching all of these issues,
+[00:53:06] but I'm really interested in grappling
+[00:53:07] with these bigger challenges to that approach to security,
+[00:53:10] which is saying,
+[00:53:12] what are these software actually being used for?
+[00:53:14] What infrastructure is not in place that should be there?
+[00:53:18] What infrastructure do communities use?
+[00:53:20] How do they have control over that infrastructure?
+[00:53:23] How do they define what security means for themselves?
+[00:53:26] And I think there was people in the early hacker world
+[00:53:31] that cared about those questions, and you see them,
+[00:53:34] you see those questions come to front stage
+[00:53:36] in the wake of this hacker professionalization
+[00:53:40] that we talked about in the first report.
+[00:53:41] So hopefully we'll be able to answer that question
+[00:53:44] a little bit more head on in the near future.
+[00:53:52] Do you have any other questions
+[00:53:54] that jump out at you, Biella?
+[00:53:56] - Yeah, I mean, I will take John's question,
+[00:54:00] and I'm just gonna read the last part of it.
+[00:54:08] "The terms of black and white hat
+[00:54:11] seem to break down outside of a simple case.
+[00:54:13] What about NSA group?
+[00:54:15] Is it fair to say white/black hat
+[00:54:17] is a language that mostly has mostly to do with brand image
+[00:54:19] on the part of the sec industry and governments?
+[00:54:21] Based on the above, does gray hat open a space
+[00:54:23] for those who want to reject the framing of the world
+[00:54:26] as a game of cops versus robbers?"
+[00:54:30] And I just, I don't know.
+[00:54:31] I think that's a really good question.
+[00:54:33] I mean, first of all, it's interesting to note
+[00:54:34] that a lot of hackers today will be like,
+[00:54:36] "Oh, that terminology is a bit lame and outdated.
+[00:54:41] You know, it served its purpose."
+[00:54:44] It's also interesting.
+[00:54:45] We do, in our report,
+[00:54:47] address issues of race and gender and harassment,
+[00:54:51] and even in the security world,
+[00:54:53] there's been a reckoning around language.
+[00:54:56] The hat one was not one that was taken up too much,
+[00:55:01] but nevertheless, I think it's one
+[00:55:03] that in some ways people are leaving behind
+[00:55:06] both because it's done its purpose, it's outdated,
+[00:55:09] but also some of the racial connotations.
+[00:55:12] But that said, I mean,
+[00:55:14] I do think that it's useful to not have stark binaries.
+[00:55:20] And I think the thing that I always did appreciate
+[00:55:23] about the gray hat mentality and labeling and ethic,
+[00:55:27] especially in the late 1990s,
+[00:55:29] is that you do need to rock the boat.
+[00:55:32] You need to rock the boat. You need to rock the boat.
+[00:55:34] You need to push against things,
+[00:55:36] even in your own corner or industry.
+[00:55:40] But that's really, really hard.
+[00:55:42] That's really hard to do
+[00:55:43] if you are working in that industry.
+[00:55:47] So what do you need?
+[00:55:48] You always need outsiders, for example.
+[00:55:51] You need watchdogs.
+[00:55:52] You need those who are willing to call out the problems.
+[00:55:57] The process is perpetual and constant.
+[00:56:00] And I think that there's something
+[00:56:01] about the gray hat framing
+[00:56:03] that allows for thinking about those types of politics
+[00:56:08] that are so central to anything
+[00:56:11] where you have to be constantly pushing on groups
+[00:56:16] and corporations to do the right thing.
+[00:56:23] Matt, do you want to take a last question
+[00:56:25] since we have just a couple more minutes?
+[00:56:27] - Sure, well, I can just build off that a little bit
+[00:56:30] because I think there's two questions
+[00:56:33] that are asking about the incentives,
+[00:56:36] the economics incentives related to security.
+[00:56:39] One about how much resources Microsoft had
+[00:56:43] to throw at the problem.
+[00:56:45] - Yeah, that's a great question.
+[00:56:46] - And one about how socioeconomics played into it.
+[00:56:51] I mean, I think,
+[00:56:55] you know, there's one,
+[00:56:56] there's a concept of security economics
+[00:57:00] that some people have talked about
+[00:57:02] starting in the early 2000s.
+[00:57:06] And I think there's basically the idea
+[00:57:07] that part of the reason Microsoft responded
+[00:57:11] to these issues in the first place
+[00:57:13] is because they threatened their bottom line, right?
+[00:57:15] A lot of what the cDc and the LOpht were doing
+[00:57:18] were jeopardizing Microsoft's ability
+[00:57:22] to defend its products.
+[00:57:26] And I think also
+[00:57:27] feeding into some of the anti-monopoly stuff
+[00:57:29] going on at that time.
+[00:57:31] So I think the idea of like, yeah,
+[00:57:34] attaching economic incentives or disincentives
+[00:57:37] to security activity is really compelling
+[00:57:41] and was super important at this time.
+[00:57:43] And actually Microsoft,
+[00:57:45] when it did start taking on these issues more pointedly,
+[00:57:50] some of that was based on economic incentives as well.
+[00:57:53] I think there was actually a moment around 2003
+[00:57:56] when they started adopting the security development
+[00:57:58] or the software development life cycle,
+[00:58:00] where they actually started pegging bonuses
+[00:58:02] for software developers, software engineers,
+[00:58:05] to the security outcomes of their technologies.
+[00:58:09] So again, I mean, this is something that enhanced security
+[00:58:13] in so far as we can equate security to securing software,
+[00:58:17] but I think Microsoft had a lot of success
+[00:58:20] with taking an economic approach.
+[00:58:23] - Yeah.
+[00:58:25] Great, it looks we're done.
+[00:58:27] So I'm just gonna say
+[00:58:28] that this report is almost 50,000 words.
+[00:58:32] That's long, so there's a lot there,
+[00:58:34] but please give us comments and feedback.
+[00:58:38] There's a secondary report,
+[00:58:39] and we hope to turn this into a book,
+[00:58:41] and there are missing pieces.
+[00:58:42] Like we couldn't interview that many Microsoft people,
+[00:58:45] and some of the questions today reminds me,
+[00:58:48] "Oh, wow, we should do that."
+[00:58:50] So I just want to thank Berkman Center,
+[00:58:53] Brian, Matt and everyone who made this possible.
+[00:58:58] And just reach out to any one of us
+[00:59:00] if you can't find the report,
+[00:59:02] and, otherwise, have a great day.

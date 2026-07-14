@@ -1,0 +1,1634 @@
+[00:00:01] - Well, hello everybody.
+[00:00:03] Can you hear me alright?
+[00:00:05] And we are streaming, is that right?
+[00:00:06] We are live?
+[00:00:08] We probably already had several hot mic moments.
+[00:00:10] But, uh,
+[00:00:12] thank you all for coming out
+[00:00:14] for our lunch discussion today
+[00:00:18] on algorithmic discrimination and fairness in AI.
+[00:00:21] It's a big week for AI
+[00:00:24] because GPT-3 has been slightly upgraded and repackaged
+[00:00:28] as ChatGPT,
+[00:00:29] who knew that the branding was so important?
+[00:00:32] And I guess it doesn't cost money to use it anymore.
+[00:00:35] So you might be using it right now for all we know.
+[00:00:39] But we hope that the questions will all come from humans
+[00:00:42] at the end.
+[00:00:43] And we are so eager to talk about this, I think,
+[00:00:47] just speaking for myself.
+[00:00:49] Because,
+[00:00:51] I think of AI as asbestos,
+[00:00:54] it's wholesale, not retail.
+[00:00:56] It's not like you're like, "I'll take the building,"
+[00:00:58] "but does it have asbestos?"
+[00:01:01] You might ask that in a negative way these days.
+[00:01:02] But when you're first doing it,
+[00:01:03] it's just something that seems pretty nifty.
+[00:01:06] It gets implemented at some point
+[00:01:08] in a process that end users
+[00:01:11] or those affected by it may not be aware of.
+[00:01:15] It works great and there's no inventory
+[00:01:18] of its use everywhere.
+[00:01:20] And then at some point later we're like, "Oh,"
+[00:01:23] "there might be problems here."
+[00:01:25] At which point the absence of an inventory
+[00:01:27] or a set of remedies is a real issue.
+[00:01:30] Asbestos in the American legal system
+[00:01:32] at one point represented I think more than half
+[00:01:35] of the cases in the federal system,
+[00:01:37] which hard to believe.
+[00:01:40] But that was how big a kind of reckoning there was with it.
+[00:01:43] And I dunno if it's gonna be litigation,
+[00:01:45] but there's probably a reckoning that some are trying to
+[00:01:50] inspire right now in what are still surely the early days.
+[00:01:55] So we have a terrific panel of people to explore this,
+[00:01:59] including from multiple methodological
+[00:02:02] and interdisciplinary angles.
+[00:02:05] To try to get a better sense of, like,
+[00:02:06] well what are the problems?
+[00:02:07] Particularly with respect to bias.
+[00:02:09] What might the solutions be?
+[00:02:12] And there might even be a chance to talk about
+[00:02:15] are there solutions that themselves,
+[00:02:18] might or might not run afoul
+[00:02:20] of current American anti-discrimination doctrine?
+[00:02:24] It'd be very strange if some of the remedies themselves
+[00:02:27] turned out to be something that under American
+[00:02:29] or other laws would themselves be problematic.
+[00:02:32] So, we have a great group of people to chat about this
+[00:02:36] and we have Holli Sargeant to lead the discussion.
+[00:02:38] Thank you Holli for that.
+[00:02:40] Holli, I don't,
+[00:02:41] I'll give you a brief introduction.
+[00:02:43] You're an exchange student from the University of Cambridge,
+[00:02:46] Cambridge Prime.
+[00:02:48] I guess we're probably Cambridge Prime.
+[00:02:50] You're the original Cambridge.
+[00:02:52] And you've been studying this stuff for your PhD.
+[00:02:55] And so thank you so much for being willing to
+[00:02:58] lend your expertise and voice in the panel.
+[00:03:00] Anything I'm missing on introducing you?
+[00:03:03] No, oh wonderful.
+[00:03:06] And then, uh,
+[00:03:08] let me just hold the mic a little better.
+[00:03:09] We have Professor Debbie Hellman visiting now
+[00:03:12] at Harvard Law School from the University of Virginia
+[00:03:15] where I hear the weather is about to, um,
+[00:03:17] not be great compared to UVA.
+[00:03:20] And Debbie, you've been writing about these issues,
+[00:03:23] and I think fair to say,
+[00:03:25] when, if at all, can we operationalize
+[00:03:29] in a sense that a computer scientist
+[00:03:31] can get excited about fairness?
+[00:03:34] And if we can't,
+[00:03:35] what does that say about any of these systems that we use?
+[00:03:39] Not to put words in your mouth,
+[00:03:40] but you'll have plenty of chance to explain
+[00:03:42] how I just mischaracterized what you were saying, um,
+[00:03:45] what I was saying.
+[00:03:47] And we also have Professor Sharad Goel
+[00:03:50] from the Harvard Kennedy School,
+[00:03:52] who's been studying machine learning and its applications
+[00:03:54] for quite a while,
+[00:03:55] also an affiliate of our Computer Science department.
+[00:03:58] And Professor Ben Green, former BKC Fellow,
+[00:04:03] longtime BKC Affiliate,
+[00:04:06] now at the University of Michigan.
+[00:04:08] I think I'm supposed to say, "Go, Blue."
+[00:04:10] So, "Go, Blue?"
+[00:04:12] - Yeah. - All right.
+[00:04:13] The forms have been observed.
+[00:04:16] And just as a couple of situating quotations
+[00:04:20] that those of us putting the event on
+[00:04:23] with thanks to all who helped organize,
+[00:04:25] including You Jeen Ha.
+[00:04:27] Thank you, You Jeen.
+[00:04:31] And Xia, thank you Xia for everything.
+[00:04:34] I dunno if I'm,
+[00:04:34] am I missing anybody else on organizing?
+[00:04:36] No, that is good.
+[00:04:37] So thank you for that.
+[00:04:40] Technology Review, I think, journalist Melissa Heikkailä
+[00:04:43] describes a burnout problem among those who work
+[00:04:46] in responsible AI.
+[00:04:49] The pace of publication,
+[00:04:50] dealing with the industry,
+[00:04:52] and what she describes as the cognitive dissonance
+[00:04:55] of working in responsible AI has caused a lot of people
+[00:04:58] to burn out in a field that,
+[00:05:00] you know, maybe five or 10 years ago,
+[00:05:01] was not even understood to be a field.
+[00:05:04] Rumman Chowdhury, formerly of Twitter,
+[00:05:08] heading up their responsible AI efforts says,
+[00:05:11] "There are people who think ethics is a worthless field
+[00:05:13] that we're negative about the progress of AI."
+[00:05:17] She thinks it surely can't all be that.
+[00:05:19] And the philosopher Emmanuel Goffi says,
+[00:05:22] "Companies want a quick technical fix
+[00:05:24] and to explain to them how to be ethical
+[00:05:27] through PowerPoint,
+[00:05:28] with three slides and four bullet points."
+[00:05:30] It's our earnest hope, I think that ChatGPT
+[00:05:32] can finally produce those slides,
+[00:05:35] having solved the problem that we thought
+[00:05:37] (Professor Zittrain speaks faintly)
+[00:05:39] /sarcasm.
+[00:05:41] Okay, great.
+[00:05:42] So with that,
+[00:05:44] the only other logistical things to say are
+[00:05:45] this is being recorded.
+[00:05:47] I think people who aren't in the front circle here
+[00:05:50] are not being featured,
+[00:05:51] but somehow later an AI-based inferential engine
+[00:05:54] can probably infer that you were here.
+[00:05:57] And,
+[00:05:59] is there a link for our newsletter
+[00:06:01] or for future events?
+[00:06:02] And that link is cyber.harvard.edu/?
+[00:06:06] - [Organizers] Get involved.
+[00:06:07] - Get involved, (panel laughs)
+[00:06:09] kind of an imperative.
+[00:06:11] All right, wonderful.
+[00:06:12] Thank you again panel for joining us.
+[00:06:14] Holli, over to you.
+[00:06:17] - Thank you.
+[00:06:21] Thank you, everyone for coming out.
+[00:06:22] I know it's Reading Week so I hope you're not just here
+[00:06:25] for the free lunch amid your study.
+[00:06:27] And thanks everyone joining us online.
+[00:06:30] JZ has set not only an interesting introduction
+[00:06:33] and background to this field,
+[00:06:34] but also a bit of a high bar to say,
+[00:06:36] you know, can we describe ethical AI in three dot points
+[00:06:40] in a PowerPoint slide?
+[00:06:41] And so, I think let's open with kind of a sense
+[00:06:45] of where the field is.
+[00:06:46] Debbie, I wanna start with you,
+[00:06:47] because let's just say that you're probably newer
+[00:06:50] to the algorithmic fairness field based on your expertise
+[00:06:53] in other areas of doctrinal law,
+[00:06:54] especially discrimination.
+[00:06:56] How did you find entering
+[00:06:58] into the algorithmic fairness ecosystem?
+[00:07:02] - Um, well, I found it super intriguing,
+[00:07:05] but also there were some barriers to entry
+[00:07:08] in the sense of different languages
+[00:07:10] that different disciplines speak,
+[00:07:13] and the challenges involved in kind of
+[00:07:16] getting over those barriers.
+[00:07:19] What AI is doing in a lot of areas
+[00:07:23] is something that involves differentiating among people.
+[00:07:26] So for a scholar of discrimination,
+[00:07:29] it was super interesting.
+[00:07:31] And thinking about how to bring that conversation
+[00:07:33] that we have about discrimination, law, and philosophy
+[00:07:37] into the world of the technical types,
+[00:07:41] was often challenging.
+[00:07:42] I mean, Sharad and I were just chatting before
+[00:07:44] about a really fruitful conversation we once had
+[00:07:48] at a conference where,
+[00:07:50] you know, for someone who is not math-based
+[00:07:52] to read the papers in the field
+[00:07:54] and think, "I think I'm getting it."
+[00:07:56] I read the beginning part,
+[00:07:58] lots of fancy formulas,
+[00:07:59] skip over that,
+[00:08:00] read a little more.
+[00:08:01] But sometimes you're not getting it
+[00:08:03] and it's important to have those connecting conversations.
+[00:08:06] - Yeah.
+[00:08:07] Ben, as someone who is probably math-based,
+[00:08:09] do you feel like you sit in the majority view
+[00:08:13] of how algorithmic fairness is progressing?
+[00:08:15] Or do you think you're kind of rebelling
+[00:08:17] against some of the majority view in your recent work?
+[00:08:20] (Ben laughs)
+[00:08:21] - I don't, yeah,
+[00:08:22] I would say somewhat in the middle of those
+[00:08:25] and trying to really push the boundaries
+[00:08:27] of what it means to study algorithmic fairness.
+[00:08:30] I was in graduate school doing my PhD in Computer Science
+[00:08:34] as the field of algorithmic fairness was really developing.
+[00:08:38] But, very quickly felt a bit of a disconnect
+[00:08:41] between, you know, much of the research is driven
+[00:08:43] by concerns about algorithmic harms in child welfare,
+[00:08:48] in pretrial detention,
+[00:08:49] in college admissions,
+[00:08:51] and employment.
+[00:08:52] But then the actual research in the field,
+[00:08:55] in the computer science world,
+[00:08:56] is really just a bunch of math papers, right?
+[00:08:59] We define a metric
+[00:09:00] and try to optimize an algorithm
+[00:09:03] to satisfy that metric,
+[00:09:05] which then means it's certifiably fair.
+[00:09:07] And, what I'm really interested in my work is
+[00:09:10] how do we move beyond that purely formal
+[00:09:12] and formalization-based approach,
+[00:09:14] to thinking about the broader social and political context,
+[00:09:19] and ensure that we're not just taking fairness
+[00:09:21] as a convenient mathematical definition
+[00:09:25] but sort of missing the bigger picture.
+[00:09:27] - And do you think that's been well accepted,
+[00:09:29] or do you think there are still people that rebel
+[00:09:30] against the convergence of kind of social sciences
+[00:09:34] and the true mathematical method of algorithmic fairness?
+[00:09:37] - I think the real challenge is not a matter
+[00:09:40] of people rejecting the basic idea,
+[00:09:43] but of a challenge of what does it mean to do that, right?
+[00:09:45] How do you operationalize that?
+[00:09:46] Can we come up
+[00:09:48] with more substantive mathematical definitions,
+[00:09:50] and then just optimize the algorithm for that?
+[00:09:53] Or do we have to look beyond the algorithm itself?
+[00:09:55] Are there normative components of these systems
+[00:09:58] that we can't define just with the data
+[00:10:00] or just with the algorithm metrics?
+[00:10:02] I fall much more strongly in the second camp,
+[00:10:05] but that's much harder to do
+[00:10:06] and falls much more outside of the typical wheelhouse
+[00:10:09] of what computer scientists think about.
+[00:10:12] - Sharad, you've probably worked
+[00:10:14] in this industry the longest.
+[00:10:15] In fact, you've been substantively working
+[00:10:17] on algorithmic fairness for, let's say, 10 years?
+[00:10:20] - Probably not, 'cause I'm not that old.
+[00:10:22] (panel laughs)
+[00:10:23] - It's been something like 10 years.
+[00:10:24] - It was meant as a compliment, I will say.
+[00:10:25] (Holli laughs)
+[00:10:26] How do you feel the discipline has evolved
+[00:10:29] from where you started with algorithmic fairness,
+[00:10:32] say five, six years ago,
+[00:10:33] it was kind the first new papers
+[00:10:35] to where it is now.
+[00:10:37] - It's a good question.
+[00:10:38] I, so,
+[00:10:38] even taking a little bit of a broader view.
+[00:10:41] I was working on discrimination
+[00:10:42] and statistical approach to discrimination
+[00:10:44] maybe 10, or even 15 years ago.
+[00:10:46] And the first papers that we were writing then
+[00:10:48] were getting rejected by statistics journals,
+[00:10:50] because they were too "political".
+[00:10:52] And now the same papers,
+[00:10:54] essentially, I've been writing the same paper
+[00:10:56] for like 10 years.
+[00:10:56] And now these papers are getting rejected,
+[00:10:59] because they're not "political" enough.
+[00:11:00] And,
+[00:11:01] so this is like a pretty extreme swing I would say over,
+[00:11:05] over the time that I've worked on it.
+[00:11:07] And I think much of its positive,
+[00:11:09] I think people really do like care about these issues.
+[00:11:11] At the beginning they were just like, you know, "Rah, rah,"
+[00:11:13] (radio interference drowns out Sharad)
+[00:11:14] everything will be great."
+[00:11:15] And I think we've realize that
+[00:11:16] that's not a sustainable approach,
+[00:11:18] it's not a healthy approach.
+[00:11:20] But we're still trying to figure out what this field needs.
+[00:11:22] And as Ben, um,
+[00:11:24] alluded to,
+[00:11:25] the dominant way of thinking about algorithmic fairness
+[00:11:28] right now is mathematical.
+[00:11:29] I was trained as a mathematician and a computer scientist,
+[00:11:32] so it's an approach that I am sympathetic to,
+[00:11:35] but I have also been extremely critical of that approach.
+[00:11:39] And I, you know, maybe,
+[00:11:40] I think we probably largely agree
+[00:11:42] that this is not a way forward.
+[00:11:45] I don't see the mathematization of fairness
+[00:11:48] being a productive way forward,
+[00:11:50] but the problem is this is what computer scientists do.
+[00:11:54] And so one implication of this,
+[00:11:57] is that it's cutting out a discipline,
+[00:11:59] which by and large have been driving this charge.
+[00:12:01] And that is not an easy message to hear.
+[00:12:04] And so I don't think there's been a lot of,
+[00:12:06] there has been quite a bit of pushback
+[00:12:08] towards that message.
+[00:12:10] But, you know, I,
+[00:12:12] I believe that that is just the reality of it.
+[00:12:14] That there isn't some meta algorithm
+[00:12:15] that's gonna tell us that some other algorithm is fair
+[00:12:18] in the same way there's not a meta algorithm
+[00:12:19] that'll tell us if some law is fair.
+[00:12:21] Obviously for a law it's kind of an eye-roll obvious.
+[00:12:25] Like of course then that algorithm doesn't exist.
+[00:12:27] But if we somehow say substitute law for algorithm
+[00:12:30] then it's like, "Oh, well maybe there is,
+[00:12:32] this algorithm out there,
+[00:12:33] maybe there's this mathematical definition out there
+[00:12:35] that will tell me if this algorithm is fair."
+[00:12:37] But it's a, I would say, it's a funny,
+[00:12:40] it's a funny view to have, in my opinion.
+[00:12:43] But,
+[00:12:43] and certainly a minority view
+[00:12:45] in the computer science (Sharad speaks faintly).
+[00:12:47] - Debbie, how did you find entering the world
+[00:12:49] where fairness is described mathematically?
+[00:12:52] Especially with all the philosophy background that you have,
+[00:12:55] is that frustrating or was it interesting?
+[00:12:57] - I think it was a little bit of both,
+[00:13:00] both frustrating and interesting.
+[00:13:02] The idea that there would be, um,
+[00:13:06] one notion of fairness
+[00:13:08] and we just have to figure out which one it is.
+[00:13:10] When philosophy is littered with debates
+[00:13:13] about a complex concept,
+[00:13:16] seemed strange.
+[00:13:18] So,
+[00:13:20] and, uh,
+[00:13:21] somewhat confusing initially.
+[00:13:23] But on the other hand,
+[00:13:24] I think it's,
+[00:13:26] um,
+[00:13:27] interesting to think about
+[00:13:30] what the different mathematical measures are.
+[00:13:33] They're getting at something
+[00:13:36] and,
+[00:13:39] by putting them in those forms
+[00:13:41] you can surface the debates
+[00:13:43] or replay certain features of debates
+[00:13:46] about what we might care about.
+[00:13:48] And even in reaction to Ben's thought
+[00:13:52] that we shouldn't just focus on kind of these measures
+[00:13:57] at a particular decision point,
+[00:13:59] but think about broader structural, um,
+[00:14:03] dimensions to decision making,
+[00:14:07] which I am sympathetic with.
+[00:14:09] I do wonder whether also some
+[00:14:11] of the mathematical tools could still be useful
+[00:14:14] just to do something slightly different.
+[00:14:16] Which is if we think that people,
+[00:14:20] absent in justice in the world.
+[00:14:23] Groups of people defined
+[00:14:25] by their socially identifiable traits,
+[00:14:27] wouldn't be actually different
+[00:14:30] in terms of their wealth,
+[00:14:32] and health,
+[00:14:33] and educational attainment,
+[00:14:35] or what have you.
+[00:14:36] So,
+[00:14:38] what some of the,
+[00:14:40] what some of the mathematical tools can demonstrate
+[00:14:43] for us is the degrees of unfairness of our world.
+[00:14:48] And I actually think that has been one of the features
+[00:14:51] that's come out of this
+[00:14:52] as people look to get the unfairness out of the algorithm.
+[00:14:55] They realize how hard it is,
+[00:14:58] because actually we're just,
+[00:15:02] you know, showing the degree to which a long history
+[00:15:05] of unfairness has had effects on people's lives
+[00:15:08] and on their abilities to flourish.
+[00:15:10] And I think that shows us that in a very visceral
+[00:15:13] and clear way,
+[00:15:15] the way that maths sometimes can.
+[00:15:17] - Do you mind if jump in here?
+[00:15:19] So I think this is a super interesting point
+[00:15:20] and there's,
+[00:15:21] I think there are two different things
+[00:15:23] that one can conceive of
+[00:15:24] when you're talking about algorithmic fairness
+[00:15:26] or empirical methods of fairness.
+[00:15:27] In one, I think, you articulated very well
+[00:15:29] of using empirical methods to measure
+[00:15:32] and ideally remediate discrimination.
+[00:15:34] And that I would say is a pretty old idea.
+[00:15:37] It's certainly not central in computer science.
+[00:15:40] And, you know, at least economics for 70 years about
+[00:15:43] has done a version of this.
+[00:15:44] And I think that is like super, super important
+[00:15:47] and there's a lot of work there that we still need to do.
+[00:15:51] But then there's this flip side of algorithm fairness
+[00:15:53] which I think of as very specific
+[00:15:55] in the sense of now let's come up with a rule
+[00:15:57] for determining whether or not
+[00:15:59] our algorithm is,"there."
+[00:16:01] You know, not in this like broader sense
+[00:16:03] of measuring and reducing inequality.
+[00:16:06] But in this narrower sense
+[00:16:08] of giving a rule or a metric for determining
+[00:16:10] whether or not this algorithm is there.
+[00:16:12] And that is a thing that I'm personally critical of.
+[00:16:13] So I think it's helpful in this discussion to differentiate
+[00:16:17] between these two ideas.
+[00:16:19] You know, I think they have evolved quite differently
+[00:16:21] and have very different implications by default.
+[00:16:24] - Yeah, another response to your comments, Debbie.
+[00:16:27] I think that that's a really important point.
+[00:16:30] And I think part of what the challenge
+[00:16:33] that algorithmic decision making has raised is
+[00:16:36] exactly this recognition that we can't just rationalize
+[00:16:40] our way into fairness or equality.
+[00:16:43] Because what we're dealing with,
+[00:16:45] often is not just, uh,
+[00:16:47] bad data that doesn't accurately capture inequality
+[00:16:51] and sort of is biased
+[00:16:52] through human data collection processes,
+[00:16:54] which is a real problem.
+[00:16:56] But also that we have data that is accurately picking up
+[00:16:59] on the remnants of discrimination and oppression.
+[00:17:02] And so you have empirical differences
+[00:17:05] and outcomes across groups.
+[00:17:06] And so if we simply say, "Well we can have an algorithm,
+[00:17:09] that will replace a human,
+[00:17:10] and that will have perfectly accurate decisions."
+[00:17:13] Even if we could achieve that perfect accuracy,
+[00:17:15] what we would end up doing
+[00:17:16] is just entrenching the inequality that already exists.
+[00:17:19] And so I think this raises a really,
+[00:17:21] and the algorithmic measurement here
+[00:17:24] helps us recognize this as a challenge,
+[00:17:25] not just for algorithms but for decision making
+[00:17:28] and discrimination a lot more generally.
+[00:17:30] And so I think,
+[00:17:31] you know, there is then this question
+[00:17:33] of how do both of these areas respond?
+[00:17:35] How do we ensure
+[00:17:36] that we're not defining good decision making just
+[00:17:40] in a sense of being accurate?
+[00:17:43] - That perfectly sets up where I wanted to go next,
+[00:17:46] so thank you.
+[00:17:47] 'Cause I think, JZ's right,
+[00:17:49] it's been a big moment for AI,
+[00:17:51] it's also been a big moment for discrimination,
+[00:17:53] especially affirmative action.
+[00:17:54] And so of course in talking about
+[00:17:56] how can we operationalize concepts
+[00:17:58] of algorithmic fairness and discrimination,
+[00:18:00] let's try and operationalize it.
+[00:18:02] So we wanted to work through kind of a hypo
+[00:18:04] to try and conceptualize what does it mean
+[00:18:06] to look at these statistical metrics,
+[00:18:08] but also these normative and philosophical
+[00:18:10] as well as legal doctrinal questions.
+[00:18:12] So if we were to think about
+[00:18:15] Harvard changing its current model
+[00:18:17] and using an algorithm for its college admissions.
+[00:18:20] I wanted to set up the idea
+[00:18:21] of what would be the critical doctrinal issues
+[00:18:24] and how would we balance that
+[00:18:25] with the potential opportunities of using an algorithm?
+[00:18:28] Like what was pointing out to actually identify
+[00:18:31] these issues that currently exist.
+[00:18:33] And so,
+[00:18:35] there's plenty of different ways
+[00:18:36] that we can approach this question.
+[00:18:38] Debbie, do you wanna kick us off
+[00:18:40] with perhaps what would this look like
+[00:18:42] if the Harvard case does overturn Bakke.
+[00:18:43] Would this really change the way that we could think
+[00:18:46] about a race-neutral policy for admissions?
+[00:18:49] - Well, I don't know if I'm gonna be answering your question
+[00:18:52] or, um,
+[00:18:54] kicking the can down the road or something.
+[00:18:56] I think if the court overturns Bakke,
+[00:19:00] it's gonna set up, uh,
+[00:19:02] some questions that we're gonna need to think about more.
+[00:19:06] And I would put them into two buckets
+[00:19:08] and they're probably more also,
+[00:19:10] but these are the two that I'm particularly interested in.
+[00:19:13] One, you saw a lot,
+[00:19:15] actually both of them you probably saw in the oral argument.
+[00:19:19] And that is,
+[00:19:20] we're gonna have to think more seriously
+[00:19:22] about what the "trait",
+[00:19:24] in the case of affirmative action, race is?
+[00:19:28] Like what does it mean to discriminate
+[00:19:30] on the basis of "race"?
+[00:19:32] We need to have a conception of what race is.
+[00:19:34] And you saw in the oral argument
+[00:19:36] a lot of debates about that.
+[00:19:37] You know, Justice Jackson said something like,
+[00:19:39] "You know, if some student wanted to write
+[00:19:43] in his or her essay that going to UNC is super important
+[00:19:47] to me because my ancestors
+[00:19:50] were excluded from UNC."
+[00:19:53] If UNC were to take that as a positive in his file,
+[00:19:58] would they be deciding on the basis of race then?
+[00:20:03] And so, we haven't actually defined these traits.
+[00:20:07] And the legal system,
+[00:20:09] the laws,
+[00:20:09] either constitutional law or statutory law of issue,
+[00:20:12] doesn't contain a definition of race.
+[00:20:15] So we're gonna be,
+[00:20:16] we're gonna be doing a lot of legal work
+[00:20:18] around
+[00:20:19] that concept.
+[00:20:22] And not only the Court's affirmative action case
+[00:20:25] but also this term the Indian Child Welfare Act case
+[00:20:28] is also about the definition of race.
+[00:20:31] So I think we'll have two really interesting entrance
+[00:20:34] into that discussion.
+[00:20:35] But the other one that interests me also is,
+[00:20:38] and you saw this in the oral argument also,
+[00:20:41] was what does it mean for something to be a proxy for race?
+[00:20:44] And I take it that being a proxy for race,
+[00:20:46] is something different than being "race."
+[00:20:50] And what does it mean to be a proxy for race?
+[00:20:53] We could be asking that just as a, um,
+[00:20:56] like how do we use the word proxy?
+[00:20:57] But that's I think the less interesting way
+[00:21:00] to think about it.
+[00:21:01] But rather I,
+[00:21:02] I'm interested in what does it mean to be a proxy
+[00:21:05] where that word has a kind of normative oomph, if you will.
+[00:21:09] Like, think about classic bad, um,
+[00:21:12] redlining.
+[00:21:13] And like a bank that deliberately decides
+[00:21:16] they're gonna use zip code to exclude minority borrowers.
+[00:21:21] What our, I think, moral reaction to that is,
+[00:21:24] is that,
+[00:21:26] the bank is, uh,
+[00:21:29] while it may be explicitly differentiating
+[00:21:31] on the basis of zip code.
+[00:21:33] That is, that's disparate treatment
+[00:21:35] on the basis of zip code,
+[00:21:36] we're gonna treat that as if it's disparate treatment
+[00:21:39] on the basis of race.
+[00:21:40] Because zip code is being used
+[00:21:42] in this normatively freighted way as a proxy for race.
+[00:21:46] So if that's the classic case of kind of bad proxying.
+[00:21:49] What are its normatively significant features?
+[00:21:54] And the two kind of adjacent cases
+[00:21:57] that I think the affirmative action,
+[00:22:00] striking down the affirmative action sets up are,
+[00:22:04] and I can put them in an algorithmic way.
+[00:22:06] That is what if Harvard's algorithm,
+[00:22:11] you know, it's trained on the prior students,
+[00:22:14] and we at the admissions committee see what it produces
+[00:22:17] in terms of a class.
+[00:22:18] And we think, "Uh, too few minority candidates,
+[00:22:22] let's tweak this feature,
+[00:22:24] and let's tweak that feature
+[00:22:26] of the things that we're looking at
+[00:22:27] to get a better,
+[00:22:29] to get a better class that has more racial diversity."
+[00:22:33] Is that using those traits as a proxy for race
+[00:22:37] in the same way that the bad redlining case is?
+[00:22:41] So that's one analogous case.
+[00:22:43] That's where there's something deliberate,
+[00:22:45] but the,
+[00:22:46] or intentional.
+[00:22:46] But the, we might feel differently
+[00:22:48] about the moral significance of that intention.
+[00:22:51] The other nearby case is one
+[00:22:53] that doesn't have intentions in it,
+[00:22:55] but it's the algorithm is trained on the data
+[00:22:59] of who were the successful Harvard undergraduates
+[00:23:03] in the past.
+[00:23:04] And the algorithm develops a view of,
+[00:23:07] you know, develops a,
+[00:23:09] we develop an algorithm, I guess,
+[00:23:11] that's the better way of saying it,
+[00:23:12] that picks the class.
+[00:23:14] And,
+[00:23:16] the algorithm is, um,
+[00:23:19] weighting, let's say, field hockey players a lot.
+[00:23:22] That's a sport that only women play in the United States.
+[00:23:25] So it's gonna pick up more women if it does that.
+[00:23:28] Or people who say they wanna major
+[00:23:31] in African American studies.
+[00:23:33] Now obviously lots of people can major
+[00:23:35] in African American studies,
+[00:23:36] but probably more racial minorities
+[00:23:38] are majoring in that.
+[00:23:41] Do we wanna say that field hockey is a proxy for sex
+[00:23:44] and a major saying you wanna major
+[00:23:47] in African American studies is that a proxy for race?
+[00:23:50] So I think these questions about what it counts,
+[00:23:52] what makes something a proxy for race
+[00:23:54] are also gonna be super interesting.
+[00:23:56] Maybe I went on too long there.
+[00:23:58] - Not at all, that is super interesting.
+[00:24:00] I think we'll come back to some
+[00:24:01] of the things that were raised.
+[00:24:03] But Sharad, I first wanted to ask you,
+[00:24:04] 'cuz you wrote an article about the Harvard case.
+[00:24:07] And you described some of the issues that come up
+[00:24:09] as kind of this impasse
+[00:24:10] between deep statistical questions
+[00:24:13] and questions of legal discrimination.
+[00:24:16] And kind of what merit means
+[00:24:17] in the purpose of higher education institutions.
+[00:24:20] How do you view the Harvard case?
+[00:24:22] - Yeah, it's a big question.
+[00:24:25] So,
+[00:24:27] let me see.
+[00:24:28] So, one thing is,
+[00:24:29] this case has been framed
+[00:24:30] as the case about affirmative action.
+[00:24:32] And I think fundamentally at the statistical level,
+[00:24:34] it's not really about affirmative action,
+[00:24:36] it's about the extent to
+[00:24:37] which there might be an Asian penalty.
+[00:24:39] There's kind of been this co-opting of the Asian penalty
+[00:24:43] as affirmative action at large for very strategic reasons.
+[00:24:46] But, you know,
+[00:24:47] I think it's important to distinguish
+[00:24:48] between these two things.
+[00:24:50] And so,
+[00:24:51] when you think about the,
+[00:24:53] you know, whether, to the extent to
+[00:24:54] which there might be an Asian penalty.
+[00:24:56] The empirical analysis proceeds by saying,
+[00:24:58] "Let's look at this applicant pool,
+[00:25:01] we're gonna run our a regression,
+[00:25:02] essentially we're gonna adjust for a bunch of covariates
+[00:25:05] and we're gonna say what is the likelihood
+[00:25:07] that somebody is admitted?"
+[00:25:08] And so, the kind of one thing you might throw in
+[00:25:11] is test scores.
+[00:25:12] And that's like seems reasonably uncontroversial.
+[00:25:14] We want to admit students who are,
+[00:25:16] you know, qualified to do well in our classes.
+[00:25:19] You know, any kind of reasonable educational institution
+[00:25:21] will probably have some kind of bar like that.
+[00:25:24] But now it gets controversial
+[00:25:26] if you start throwing in things like,
+[00:25:28] you know, field hockey or other sports.
+[00:25:30] Or, you know, chess club,
+[00:25:31] or all these other things.
+[00:25:32] You say, "Well we're gonna adjust for all of this stuff."
+[00:25:35] And, you know,
+[00:25:35] particular we're going to adjust for where you grew up.
+[00:25:39] And it turns out if you look at the data
+[00:25:41] that if you're an applicant from California, all else equal,
+[00:25:45] it's much harder to get into a place like Harvard.
+[00:25:48] And so on one hand you can say, "Well, you know,"
+[00:25:51] "if you run the regression there's no race penalty now."
+[00:25:54] You know, all applicants with the same test score
+[00:25:57] from California get in at the same rate,
+[00:26:00] hypothetically, that's not quite true.
+[00:26:01] But let's, for the sake of this, let's say that's true.
+[00:26:03] And all people from Montana with the same test score
+[00:26:07] get in at the same rate, again roughly true.
+[00:26:10] But the problem is that it's much harder
+[00:26:13] to get in from California,
+[00:26:15] and the disproportionate number
+[00:26:17] of Asian applicants come from California.
+[00:26:20] And so now what you've,
+[00:26:22] what you have is this big normative question
+[00:26:24] of saying, "Should we have a policy,
+[00:26:26] that gives preferential treatments to applicants
+[00:26:30] from California?"
+[00:26:32] Even let's say, let's kind of,
+[00:26:34] you know, sidestep this issue of is it a proxy?
+[00:26:36] Let's give everyone the benefit of the doubt
+[00:26:38] and say, you know, it's not supposed to be a covert way
+[00:26:40] of trying to restrict the number
+[00:26:42] of Asian students on campus.
+[00:26:44] It's actually,
+[00:26:45] sometimes I really just don't want
+[00:26:46] that many Californian students on campus.
+[00:26:48] Because we have 50 states and even though,
+[00:26:51] you know, 10% of the population is in California,
+[00:26:53] we actually don't want that proportion on campus
+[00:26:57] that we wanna spread it out.
+[00:26:58] You know, that is an argument that someone can make.
+[00:27:00] And so now this choice is embedded
+[00:27:03] in your statistical analysis.
+[00:27:05] And this is essentially what the argument,
+[00:27:07] the statistical argument in the case boils down to.
+[00:27:09] It's saying that, on one side is saying effectively
+[00:27:12] you should run your regression
+[00:27:13] without using things like geography.
+[00:27:16] The other side,
+[00:27:17] Harvard,
+[00:27:18] is saying, "Well no, we should include all of this stuff,
+[00:27:21] because that is what we mean by 'holistic' admissions."
+[00:27:25] And, it's been,
+[00:27:26] you know, there's like literally a thousand pages
+[00:27:28] of statistical analysis.
+[00:27:29] But, you know, that is essentially the argument
+[00:27:31] and we call this included variable bias.
+[00:27:34] Because the bias,
+[00:27:36] the "bias" is in what you decide to adjust for
+[00:27:39] in your model.
+[00:27:40] And I think what's interesting about this is
+[00:27:43] all of the complexity in the normative complexity
+[00:27:46] of what you should do
+[00:27:47] has really nothing to do with the statistical,
+[00:27:49] it's just like should we give a preference
+[00:27:53] for certain groups?
+[00:27:54] For example, based on geography,
+[00:27:55] other things that pop out are legacy.
+[00:27:58] Again, especially South Asian students
+[00:28:00] are much, much less likely to have legacy status
+[00:28:03] compared to white applicants or even East Asian applicants.
+[00:28:08] But, when you adjust for legacy status
+[00:28:12] admissions (radio interference drowns out Sharad).
+[00:28:14] When you don't adjust for
+[00:28:15] (radio interference drowns out Sharad)
+[00:28:16] the legacy applicants are much, much more likely to get in.
+[00:28:18] And also Asian students are much less likely
+[00:28:21] to have legacy status.
+[00:28:22] So this is kind of the,
+[00:28:23] I think the issue as (Sharad speaks faintly)
+[00:28:26] and the status quo.
+[00:28:28] - Ben, if I can compare this
+[00:28:29] to something you've written about.
+[00:28:31] Where you, as we were talking about
+[00:28:32] there's this formal idea about algorithm fairness,
+[00:28:34] which you're looking at comparing groups
+[00:28:36] and then there's this substantive idea.
+[00:28:38] And in that you described trying to overcome structural
+[00:28:41] and relational disparities.
+[00:28:42] How would you kind of describe those conflicts
+[00:28:45] in relation to the Harvard case?
+[00:28:46] - Yeah, well I think, uh,
+[00:28:48] you know, the discussion of proxies
+[00:28:50] is a great segue into that.
+[00:28:52] Because the question of proxies sort of starts,
+[00:28:56] I think, typically right with the example of zip code
+[00:28:58] and redlining,
+[00:28:59] which is a very obvious proxy for race.
+[00:29:01] One that we can also sort of put a historical,
+[00:29:04] malevolent intention, all of that.
+[00:29:06] Then you have really obvious proxies also,
+[00:29:09] like your pursued major,
+[00:29:10] or a sport you wanna play.
+[00:29:13] But then,
+[00:29:14] you know, where do we go?
+[00:29:16] What do we,
+[00:29:17] where do we draw the line between everything else
+[00:29:18] that just so happens to be correlated with say, race?
+[00:29:21] I mean, Sharad mentioned test scores,
+[00:29:23] which you'd think would be in any admissions' model,
+[00:29:26] but we could also think of test scores as a proxy for race.
+[00:29:28] Certainly there are differential outcomes across race.
+[00:29:31] So,
+[00:29:32] you know, so that raises this question.
+[00:29:33] And Debbie, I don't know if,
+[00:29:35] you know, you have a more,
+[00:29:38] you might have an answer to this issue that I'm raising,
+[00:29:40] which is there sort of seems like
+[00:29:41] there's not a clear line to say that these are bad proxies
+[00:29:44] and these are good proxies.
+[00:29:46] Because if we acknowledge that
+[00:29:48] pretty much everything is going to be,
+[00:29:51] or anything that is going to be helpful predictively
+[00:29:54] is going to be correlated with race
+[00:29:56] or other protected categories
+[00:29:58] that we care about normatively.
+[00:30:00] Then it seems like it's not necessarily a helpful,
+[00:30:03] uh,
+[00:30:04] term or a helpful concept,
+[00:30:06] to say we can rely on these things,
+[00:30:07] these input variables
+[00:30:09] and we can't rely on these other input variables.
+[00:30:11] And so that then raises this issue
+[00:30:13] of what do we do when
+[00:30:14] what we're dealing with is not just a desire
+[00:30:17] to make accurate decisions,
+[00:30:18] but a desire to intervene or make decisions
+[00:30:21] in the backdrop of deep inequality across groups?
+[00:30:26] But also when these decisions are incredibly high stakes.
+[00:30:28] This is not,
+[00:30:30] you know, the reason that there's such high,
+[00:30:32] such debate about who gets into Harvard is
+[00:30:34] because admissions into Harvard has extreme social mobility
+[00:30:38] and social prestige attached to it.
+[00:30:40] And so I think,
+[00:30:41] you know, we wanna be thinking about both
+[00:30:43] on the sort of upstream side,
+[00:30:45] what are the inequalities that we're,
+[00:30:46] that are feeding into the decision making process?
+[00:30:49] And then on the downstream side,
+[00:30:51] what are the impacts of the decisions that are getting made?
+[00:30:55] And how are we allocating benefits or punishment
+[00:30:58] in ways that are typically correlated
+[00:31:00] with who's been benefited or punished in the past.
+[00:31:03] And so I think that's sort of
+[00:31:04] where a substantive analysis,
+[00:31:06] and it takes me at least,
+[00:31:08] is sort of thinking about these upstream
+[00:31:10] and downstream elements of inequality and consequences.
+[00:31:15] - That sets up the next question for Debbie.
+[00:31:17] And I think sometimes from what I've read in the discipline,
+[00:31:20] people will feel like
+[00:31:21] the lawyers are the ones standing in the way.
+[00:31:23] There's this legal bottleneck of, like,
+[00:31:25] well we can have normative discussions,
+[00:31:27] we can have mathematical discussions,
+[00:31:28] but what does the law say we can and cannot do?
+[00:31:31] And obviously we are awaiting a big judgment
+[00:31:33] that might change that.
+[00:31:34] But in the interim,
+[00:31:35] what do you think are the red lines
+[00:31:37] and where are we kind of wading through legal ambiguity?
+[00:31:41] - Okay, well,
+[00:31:42] the clear,
+[00:31:44] red line, I think,
+[00:31:46] is the idea that, um,
+[00:31:49] absent, well, um.
+[00:31:53] The clear,
+[00:31:54] maybe the, the clear, um,
+[00:31:58] legal standard would be
+[00:32:00] that you can't,
+[00:32:01] that if you're gonna explicitly use race
+[00:32:04] to determine the desired outcome, that is, who gets in.
+[00:32:09] That's gonna have to jump over the strict scrutiny
+[00:32:12] who can, the upshot of the current cases
+[00:32:16] likely gonna be that it's also just flatly impermissible.
+[00:32:20] But that's obviously a prediction.
+[00:32:22] But that leaves open a lot of questions
+[00:32:26] and I'll just highlight two.
+[00:32:29] So,
+[00:32:30] in the example I just gave you,
+[00:32:32] I said that the use of an explicit use of race
+[00:32:36] to determine the outcome that matters to people.
+[00:32:41] But there are other ways that race, let's say,
+[00:32:44] could be used within an algorithm
+[00:32:47] that is, it could be the case let's say,
+[00:32:50] that,
+[00:32:51] if,
+[00:32:53] just thinking of grades and test scores
+[00:32:55] as two inputs, obviously there are other inputs.
+[00:32:57] But it could be the case that the relative weighting
+[00:33:02] of grades versus test scores
+[00:33:05] is, um,
+[00:33:07] that how we ought to weigh those for, um,
+[00:33:11] whites relative to each other,
+[00:33:13] in order to predict success in college is different
+[00:33:17] than for racial minorities.
+[00:33:19] I'm just making this up,
+[00:33:20] but it's plausible or possible
+[00:33:23] that
+[00:33:25] race is relevant to
+[00:33:27] how we ought to weigh the other factors
+[00:33:30] that we use,
+[00:33:32] in order,
+[00:33:32] if we said, "I wanna predict,
+[00:33:33] who's gonna be successful in college."
+[00:33:36] And obviously picking that as an end point
+[00:33:38] is itself a normative choice.
+[00:33:39] But I'm just gonna take that as given.
+[00:33:44] If that were the case,
+[00:33:45] that let's say for black students grades are more predictive
+[00:33:51] and for white students SAT scores are more predictive
+[00:33:55] and so you ought to weigh them differently
+[00:33:57] in order to produce the same outcome of predicting,
+[00:34:01] you know, grades in college,
+[00:34:02] even to pick something super numerical.
+[00:34:05] Could you use race within the algorithm to decide
+[00:34:09] what the balance of test scores versus grades should be?
+[00:34:14] So that's not using race to determine who gets in,
+[00:34:17] it's using race within the algorithm to decide
+[00:34:20] how to weigh the various other factors.
+[00:34:22] I actually think that's an open question
+[00:34:24] of what the court would say about that.
+[00:34:27] I mean, we could engage in prediction,
+[00:34:29] but based on what the court has said so far,
+[00:34:34] I think it's arguably permissible.
+[00:34:36] I think it's probably permissible based on
+[00:34:39] what the court has said so far.
+[00:34:41] But if I'm thinking as a,
+[00:34:42] about a prediction of what the court would say
+[00:34:44] in the future, I think that's probably less clear.
+[00:34:50] There was another question I was gonna highlight,
+[00:34:53] but let's let someone else jump in,
+[00:34:55] because it's gone outta my head.
+[00:34:56] - Sharad, do you wanna respond to Debbie,
+[00:34:59] but I'm adding a sub question.
+[00:35:01] Which is, I think, lawyers use a lot of statistical tests
+[00:35:04] that we don't really know how to apply.
+[00:35:07] We have balance of probabilities beyond reasonable doubt.
+[00:35:09] What do we,
+[00:35:10] did we mean 51% or do we not?
+[00:35:12] I think lawyers have rarely, truly engaged
+[00:35:15] in proper statistical empirical work.
+[00:35:18] Do you think that holds back the field?
+[00:35:20] Or do you,
+[00:35:21] or is that an opportunity for perhaps lawyers
+[00:35:22] to engage better with the field?
+[00:35:23] - So, we say the the field,
+[00:35:25] does that mean the field of algorithmic fairness, or?
+[00:35:28] Um, sorry this is quite loud.
+[00:35:35] I don't think it,
+[00:35:36] I don't think it,
+[00:35:36] (mic crackles loudly)
+[00:35:40] - [Technical Person] It might be your mic,
+[00:35:41] (radio interference drowns out technical person)
+[00:35:43] - Yeah, mic's are (Holli speaks faintly).
+[00:35:44] - [Technical Person] Probably, yeah, better.
+[00:35:48] - I'm not shouting, I promise.
+[00:35:52] (Assistant speaks faintly)
+[00:35:54] - Okay, I think we are, are we good?
+[00:35:55] Okay.
+[00:35:56] So,
+[00:35:58] I don't think it's a bottleneck in the field
+[00:36:01] in the sense that the field largely doesn't concern itself
+[00:36:05] for better or for worse with the law.
+[00:36:08] (panel and audience laughs)
+[00:36:10] So,
+[00:36:11] and also, I mean, I think there is this sense that,
+[00:36:15] that when we talk about the law,
+[00:36:16] there's like an American, you know, centric,
+[00:36:19] Eurocentric view of it.
+[00:36:20] And the world is a diverse place,
+[00:36:22] and lots of things are gonna change over time.
+[00:36:24] And it's hard,
+[00:36:25] especially now to say that the court is the arbiter
+[00:36:29] of fairness.
+[00:36:30] And it's like,
+[00:36:31] it was probably always pretty hard to say that.
+[00:36:33] But I think now it's like, especially hard to think that.
+[00:36:35] And so the idea that we are gonna tailor ourselves
+[00:36:39] to one particular set of people whose,
+[00:36:42] you know, opinions are,
+[00:36:44] are very, very loosely representative
+[00:36:47] of another small set of people in the world.
+[00:36:50] I think that's a hard argument to make.
+[00:36:51] So in that sense,
+[00:36:52] I don't think the fairness field has really cared
+[00:36:55] that much about it.
+[00:36:56] But I do think in practice,
+[00:36:58] obviously this is like a huge, huge bottleneck.
+[00:37:01] And so some of the,
+[00:37:02] the work I've done with, um,
+[00:37:05] you know, civil society groups,
+[00:37:08] you know, we are arguing in front of judges
+[00:37:11] and we're trying to present statistical evidence
+[00:37:13] and we're essentially presenting a normative argument
+[00:37:16] which is not entirely recognized in legal circles.
+[00:37:20] And this gives us the fact
+[00:37:22] that it hasn't been completely recognized,
+[00:37:25] gives us an opening to say,
+[00:37:26] well it should, you know, the court hasn't thought
+[00:37:28] about it in these terms before,
+[00:37:30] and so here's an opening to think about it rigorously
+[00:37:32] and we're gonna set the stage going forward.
+[00:37:34] But it's also problematic,
+[00:37:36] because there's not a precedent
+[00:37:37] and no one wants to be like,
+[00:37:38] I'm the first one who is going to decide
+[00:37:40] for as many cases based on some statistical tests
+[00:37:43] that these random people in front of me have just proposed.
+[00:37:46] So it's, you know, I think this is,
+[00:37:48] this is the trickiness of it.
+[00:37:50] At the end of the world,
+[00:37:51] at end of the day, I at least, want to have impact
+[00:37:53] in the world.
+[00:37:54] And that means dealing with all sorts of,
+[00:37:57] you know, political, legal, technical limitations.
+[00:38:01] But I don't think the field as a whole is,
+[00:38:03] is really,
+[00:38:04] I don't think it's a bottleneck.
+[00:38:05] Like, "Oh, it's not, if we get a different decision
+[00:38:07] from the court, the whole field is gonna turn on,
+[00:38:10] you know, turn on its heels
+[00:38:11] and start doing something else."
+[00:38:13] - I think you talked about something similar
+[00:38:15] where you were sort of saying you were trying to move
+[00:38:17] more into this substantive question
+[00:38:19] where you are really looking
+[00:38:20] at the socio-technical context for algorithms.
+[00:38:23] How do you feel the role
+[00:38:25] of like interdisciplinary work plays into that?
+[00:38:26] Do we need more interdisciplinary?
+[00:38:28] Do we just need better interdisciplinary?
+[00:38:30] What does it look like from your perspective?
+[00:38:32] - Yeah, yeah, it's a great question.
+[00:38:34] I think, you know,
+[00:38:35] I'm sure, I was actually surprised
+[00:38:37] by Sharad your characterization
+[00:38:39] that the field isn't interested in what the law has to say.
+[00:38:41] I think I would read it a little bit differently.
+[00:38:44] I completely agree that computer scientists
+[00:38:46] are not worried about what the courts are saying
+[00:38:49] at that level of detail.
+[00:38:50] But I do think the basic notions,
+[00:38:52] and again, most of this research is happening in the US
+[00:38:54] and so the basic notions of disparate treatment
+[00:38:57] and disparate impact,
+[00:38:58] I think are shaping the definitions and the horizons
+[00:39:01] of what algorithmic fairness researchers are focused on
+[00:39:05] in terms of sort of assuming that, uh,
+[00:39:08] you know,
+[00:39:09] disparate treatment is this sort of hard line
+[00:39:12] of things that we can't cross.
+[00:39:13] And so even in debates
+[00:39:15] about different definitions of fairness,
+[00:39:17] typically the one that satisfies disparate treatment
+[00:39:20] will win out over the definitions
+[00:39:21] that would almost necessarily
+[00:39:23] require violating disparate treatment.
+[00:39:25] So I think in terms of the scope
+[00:39:26] of what gets pushed forward,
+[00:39:29] there is I think a somewhat loose,
+[00:39:31] and maybe not the most rigorous,
+[00:39:33] but a general attention to what the law says.
+[00:39:37] And,
+[00:39:37] and so I think in the context of interdisciplinary work,
+[00:39:40] this requires really what I think of
+[00:39:42] as the hardest and best type of interdisciplinary work,
+[00:39:45] which is not just translation across fields,
+[00:39:48] but actually fields coming together to figure out like,
+[00:39:50] here is this challenge that operates
+[00:39:52] or exists at the intersection of these fields
+[00:39:55] that neither of us could even identify,
+[00:39:58] let alone solve on our own.
+[00:40:00] And I think this challenge is,
+[00:40:01] is really getting past the notions
+[00:40:04] of disparate treatment that,
+[00:40:06] that are really at the better
+[00:40:08] of most anti-discrimination law to think about,
+[00:40:11] especially as algorithms raise these issues
+[00:40:13] about perpetuating inequality.
+[00:40:16] I think shed new light on these issues,
+[00:40:17] even though it didn't introduce them.
+[00:40:20] Then the question is how do we regulate algorithms
+[00:40:23] with that broader context in mind
+[00:40:26] so that we're not just,
+[00:40:28] you know, there are laws now that essentially are saying
+[00:40:30] algorithms that are free from bias
+[00:40:32] and they don't really define bias,
+[00:40:33] it's not clear what that means.
+[00:40:35] Does that just mean algorithms that are free
+[00:40:37] from a particular type of disparate ratio
+[00:40:41] of errors across races,
+[00:40:43] but that doesn't really capture the full normative scope.
+[00:40:45] And so I think you can't just have direct translation.
+[00:40:48] There's also this very difficult question.
+[00:40:50] I have more insights into what we can do
+[00:40:52] as a design methodology.
+[00:40:54] I have much less knowledge,
+[00:40:55] but I think it's a huge question
+[00:40:56] of what does that mean for regulations?
+[00:40:58] What should these,
+[00:40:59] you know, there's the EU AI Act,
+[00:41:01] there are many states in the US
+[00:41:02] that are pushing for regulations of AI.
+[00:41:04] They're all trying to say something about bias,
+[00:41:07] but what are they as supposed to say is actually really hard
+[00:41:10] because they shouldn't just be relying
+[00:41:12] on the computer science definitions.
+[00:41:15] They're sort of doing a mis,
+[00:41:16] loose translations of computer science definitions,
+[00:41:18] which are loose translation of legal definitions.
+[00:41:20] And I think rather than that sort of ping pong approach,
+[00:41:25] we need to think more holistically.
+[00:41:26] What is the approach that we should be embedding
+[00:41:29] into law and algorithms,
+[00:41:31] as we think about what decision making should look like
+[00:41:33] over the next 50 years.
+[00:41:36] - That's great, thank you Ben.
+[00:41:37] So I wanna ask each of you the same question to wrap up.
+[00:41:41] And so Debbie,
+[00:41:42] I'll start with you, 'cause I think that follows on
+[00:41:44] from what Ben was saying.
+[00:41:45] What's the one thing that public interest,
+[00:41:49] government, courts,
+[00:41:50] whatever it is.
+[00:41:51] One change in the current ecosystem that would kind of
+[00:41:53] either push us through the bottleneck
+[00:41:55] or rapidly change the way that these things look
+[00:41:58] at the moment?
+[00:42:01] - And it has to, well,
+[00:42:03] so I'm gonna say something that isn't as big a change
+[00:42:07] as because it's something more realistic
+[00:42:10] rather than something pie in the sky.
+[00:42:12] I mean, pie in the sky,
+[00:42:14] I wish we'd moved to a more closer to a disparate treatment,
+[00:42:18] I mean disparate impact model, but that's not gonna happen.
+[00:42:20] So,
+[00:42:22] so something Ben just said was,
+[00:42:24] you know, we don't have a sense of what we mean by bias
+[00:42:28] and I think that it's important to recognize,
+[00:42:31] so I would like the public sector
+[00:42:35] who's consuming the critique of algorithms.
+[00:42:39] When they see, "Oh my goodness,"
+[00:42:41] "this algorithm produced,
+[00:42:42] you know, no women got loans when we used this algorithm,"
+[00:42:45] et cetera.
+[00:42:46] I would like us to separate two types of bias.
+[00:42:50] One, that's what I like to call accuracy affecting,
+[00:42:54] you know, bias.
+[00:42:55] Where you said, but it's exactly what Ben said before,
+[00:42:58] that there's some either defect in the data collection
+[00:43:02] or the processing of the data.
+[00:43:03] So that what's happening is
+[00:43:05] there's actual errors.
+[00:43:08] So that if you care about accuracy,
+[00:43:11] you would wanna fix that
+[00:43:13] and that would also lead to more justice.
+[00:43:15] But there's a lot of bias that's just the fact
+[00:43:19] that we've had a long history of injustice
+[00:43:21] that produces effects in people's lives.
+[00:43:23] So there's no bias in the sense of inaccuracy in the system,
+[00:43:27] but it's because people who've been oppressed in the past
+[00:43:31] have fewer skills,
+[00:43:33] and less wealth,
+[00:43:34] and all that stuff.
+[00:43:35] I would like us to separate those,
+[00:43:37] because I think,
+[00:43:39] now maybe this is Pollyanna-ish of me.
+[00:43:41] But I think when we see in such a visceral mathematical way,
+[00:43:47] the degree to which that injustice is producing effects
+[00:43:52] in the world,
+[00:43:53] that we see that disparate impact.
+[00:43:56] And that it's not,
+[00:43:57] instead of saying,
+[00:43:58] "Oh, there must be some like inaccuracy in the algorithm."
+[00:44:02] We see it as not the inaccuracy in the algorithm,
+[00:44:04] but the bad history and its effects in the world.
+[00:44:09] Maybe we'll be motivated to do something structural
+[00:44:11] about it.
+[00:44:12] So I want us to,
+[00:44:13] as a population to separate those concepts,
+[00:44:16] which seems plausible.
+[00:44:17] - Mm-hmm.
+[00:44:19] - Ben, what's your one thing?
+[00:44:20] - Yeah, so, completely.
+[00:44:22] First, thanks for that great explanation
+[00:44:25] of the divide between those two things.
+[00:44:27] One additional element that hasn't really come up
+[00:44:30] is just the role of the tech industry in all of this.
+[00:44:33] And Jonathan mentioned the,
+[00:44:34] you know, AI ethics burnout.
+[00:44:37] But I think broadly a lot of the discourse of AI ethics
+[00:44:41] and algorithmic fairness is being shaped
+[00:44:42] by technology companies.
+[00:44:44] Which have a strong interest in being able to def,
+[00:44:48] respond to, you know, deep critique of the industry
+[00:44:52] at large,
+[00:44:53] in particular products.
+[00:44:54] By saying this is a technical problem,
+[00:44:56] we can have technical solutions.
+[00:44:57] And it's really rigorous.
+[00:44:58] There's a lot of math,
+[00:44:59] look at all of these peer-reviewed research studies.
+[00:45:02] And,
+[00:45:02] there's a real challenge of sort of pushing beyond that
+[00:45:06] and finding ways to,
+[00:45:08] you know, be critical of the,
+[00:45:10] the amount of lobbying power
+[00:45:12] and influence that major technology companies are having
+[00:45:15] in terms of shaping the regulations.
+[00:45:18] And really just the media,
+[00:45:19] and the journalism,
+[00:45:20] and all of the discussion around what these topics are
+[00:45:23] to sort of just push back on all of that power.
+[00:45:27] - Sharad, do you wanna end about what your thing would be?
+[00:45:30] - Yeah, and I,
+[00:45:31] so I think both of these really touch on what I'm,
+[00:45:33] what I'm thinking.
+[00:45:34] I'm probably a little bit more optimistic
+[00:45:35] about disparate impact law.
+[00:45:37] So I do,
+[00:45:38] I am equally pessimistic that we're unlikely
+[00:45:40] to get to a place where the courts require us to,
+[00:45:45] um,
+[00:45:46] reduce bias in the,
+[00:45:48] conceived in the sense of disparate impact.
+[00:45:50] I don't think we're gonna get there.
+[00:45:52] But a lot of, um,
+[00:45:53] a lot of private actors.
+[00:45:55] A lot of,
+[00:45:55] a lot of people can still,
+[00:45:58] even government agencies can work to reduce disparate impact
+[00:46:01] in a way that I think is currently lawful
+[00:46:02] and will likely continue to be lawful
+[00:46:04] for the foreseeable future.
+[00:46:06] And so this is just more or less a,
+[00:46:08] a policy decision rather than a legal requirement.
+[00:46:11] And the agencies that I work with,
+[00:46:13] this is definitely what I advocate for
+[00:46:15] and they've been generally receptive,
+[00:46:17] even what I would say relatively conservative organizations
+[00:46:21] like police departments,
+[00:46:22] are still receptive towards these types of recommendations,
+[00:46:25] even though there isn't a legal obligation to pursue them.
+[00:46:29] So that's a sense
+[00:46:29] in which I'm more optimistic about disparate impact.
+[00:46:32] And on the,
+[00:46:33] (indistinct) side,
+[00:46:34] I kind of,
+[00:46:35] a slightly more extreme version
+[00:46:37] of what Ben is saying,
+[00:46:37] I would probably toss out most of the technical work
+[00:46:41] that we've done in the last 10 years
+[00:46:43] on algorithmic fairness,
+[00:46:44] I think it was fine.
+[00:46:44] The field's evolved.
+[00:46:45] This is like it's,
+[00:46:47] and it is like not a,
+[00:46:49] you know, it's not saying that people have bad intentions,
+[00:46:50] like this is a new area.
+[00:46:52] And, you know, we developed with a certain mindset.
+[00:46:55] Like if physicists developed,
+[00:46:56] you know, started entering this field,
+[00:46:57] we would have a different set of things
+[00:46:58] that we talk about now.
+[00:47:00] Economists are the one that happened to be,
+[00:47:02] you know, the first movers in this field
+[00:47:04] we would have a different conversation right now.
+[00:47:05] Well it happens,
+[00:47:06] that when you use the word algorithm,
+[00:47:08] computer scientists are the first movers in this field.
+[00:47:10] And so I think we have gone down the trajectory,
+[00:47:13] which is not helpful,
+[00:47:14] and I would argue has been pretty unhelpful,
+[00:47:16] pretty hurtful for a lot of groups of people
+[00:47:19] with the exception that
+[00:47:20] at least we're having a conversation.
+[00:47:22] And so I would at this point, restart.
+[00:47:24] We've talked about this for 10 years,
+[00:47:26] we've made lots of mistakes.
+[00:47:27] We haven't recognized those mistakes,
+[00:47:29] we haven't admitted to those mistakes yet.
+[00:47:31] Whether or not we admit to them going future,
+[00:47:33] going forward,
+[00:47:34] I think we probably have to more or less restart.
+[00:47:38] And the optimistic part of me says that
+[00:47:40] when I talk to people in the industry,
+[00:47:42] or in government.
+[00:47:44] Mostly they have ignored the work coming out
+[00:47:47] of the computer science literature,
+[00:47:49] because it's so unhelpful on the ground.
+[00:47:52] It's like thousands of papers that have written
+[00:47:54] about this stuff.
+[00:47:55] But when you actually try to implement it,
+[00:47:57] it's so clearly problematic that it's laughable.
+[00:48:00] And so this is very positive
+[00:48:03] in the sense that no one is crazy enough
+[00:48:05] to do this stuff that we are writing papers about.
+[00:48:08] It's also embarrassing being a computer scientist
+[00:48:10] that contributes to this field.
+[00:48:12] But, you know, we all make mistakes
+[00:48:13] and now we're gonna move forward.
+[00:48:15] (radio interference drowns out Sharad)
+[00:48:17] my optimistic version of the world.
+[00:48:18] - What a fantastic note to end on.
+[00:48:20] Wipe the slate clean and start again.
+[00:48:22] So a great opportunity for everyone in the audience
+[00:48:24] who might want to contribute to a new field
+[00:48:26] of algorithm fairness.
+[00:48:28] We've tried to leave some time at the end
+[00:48:29] for an Q&A.
+[00:48:31] It would be great if we can get through
+[00:48:32] as many questions as possible.
+[00:48:33] So if you've got a question put your hand up,
+[00:48:36] try and keep it short,
+[00:48:37] and we'll...
+[00:48:44] - [Organizer] We also have a couple
+[00:48:45] of virtual audience questions as well,
+[00:48:46] if you wanna kick off with those first.
+[00:48:48] Great, okay.
+[00:48:50] So one of 'em is,
+[00:48:51] "Is there a case use example,
+[00:48:53] that the panelists have encountered to help us understand
+[00:48:55] how we can operationalize fairness?
+[00:48:58] Also, if they can recommend sources or frameworks
+[00:49:01] that we can refer to
+[00:49:02] in order to start these operational fairness as well?"
+[00:49:11] - So, I,
+[00:49:12] one of my favorite studies is the Obermeyer et al work
+[00:49:14] that is looking at, um,
+[00:49:17] I don't know if folks are familiar with this,
+[00:49:18] this is looking what's called "label bias"
+[00:49:20] in healthcare decisions.
+[00:49:22] And so the basic observation is that
+[00:49:25] the algorithm was trained to predict future healthcare costs
+[00:49:28] as a proxy for healthcare needs.
+[00:49:31] And it turns out that racial minorities,
+[00:49:33] particularly black patients because of access to healthcare,
+[00:49:36] are, um,
+[00:49:38] are spending at the same level of healthcare needs
+[00:49:41] as white patients are spending less money
+[00:49:44] and therefore deprioritized
+[00:49:45] in the algorithmic allocation of services.
+[00:49:48] And so I think this idea of thinking about
+[00:49:51] what is it that you fundamentally want to predict?
+[00:49:54] Is in my mind the most important thing
+[00:49:56] when you're designing an algorithm.
+[00:49:58] And so the fact that that was recognized and,
+[00:50:02] and I, you know, I
+[00:50:03] to my understanding something's being done about that now.
+[00:50:06] I think this is like the first place to start
+[00:50:08] whenever you're designing an outcome.
+[00:50:09] What is it that you care about?
+[00:50:10] What is the decisions that you're going to make
+[00:50:12] after that point?
+[00:50:13] You know, is this a proxy?
+[00:50:14] I mean all these other questions stem from that.
+[00:50:16] But I think this is one way that
+[00:50:17] I think about designing equitable outcomes.
+[00:50:22] - [Petra] Thank you so much.
+[00:50:23] My name is Petra, I work on technologies used
+[00:50:25] in migration,
+[00:50:26] and AI particularly.
+[00:50:28] So this is really helpful.
+[00:50:29] I was wondering if you can expand
+[00:50:31] on kinda the political dimension that underpins all this.
+[00:50:34] You already talked about kind of normative logic,
+[00:50:36] so the private sector and all of that.
+[00:50:38] But also the way that this is often a political project,
+[00:50:42] particularly geopolitically,
+[00:50:43] as we are moving towards a world
+[00:50:46] where more and more AI is being used particularly
+[00:50:48] on the margins of society.
+[00:50:50] Thanks.
+[00:50:52] - Well I think,
+[00:50:53] one dimension of that is
+[00:50:55] really what is it that's drawing institutions
+[00:50:59] to adopt these algorithms?
+[00:51:00] And often there is this sort of in response to scrutiny
+[00:51:05] and concern about discrimination and bias.
+[00:51:07] And so, you know, we've seen that certainly
+[00:51:09] I think policing was sort of the first mover in that.
+[00:51:12] The courts, particularly with sentencing
+[00:51:14] and pretrial risk assessment algorithms,
+[00:51:17] child welfare.
+[00:51:18] All of these as sort of a political,
+[00:51:22] a technical response to a political problem.
+[00:51:24] Where various,
+[00:51:26] you know, the subjects of these decisions
+[00:51:28] and advocacy groups are saying,
+[00:51:30] you know, these are,
+[00:51:30] these decisions are biased.
+[00:51:31] They are contributing to either mass incarceration
+[00:51:34] or other forms of oppression.
+[00:51:36] And then the response is to say,
+[00:51:37] "Well, we don't have to,
+[00:51:39] we can respond to that by replacing human decision makers
+[00:51:43] or augmenting human decision makers with algorithms."
+[00:51:46] Which present a idea that you're being more rational,
+[00:51:50] you're being more objective,
+[00:51:52] and that there's a sort of progressive response, right?
+[00:51:55] Algorithms have this idea
+[00:51:56] that you're being forward thinking.
+[00:51:58] And so, I don't know as much sort of
+[00:52:00] what do you have in mind in terms
+[00:52:01] of the broader geopolitical dimension.
+[00:52:03] But I see that at least on the more local scale,
+[00:52:05] certainly as a core political, uh,
+[00:52:08] dynamic that is driving a lot
+[00:52:10] of the turn to these algorithms.
+[00:52:11] And actually one,
+[00:52:12] one other component of that,
+[00:52:14] is the broader politics of austerity.
+[00:52:16] Where another response is about we don't have enough people,
+[00:52:20] we don't have enough resources to hire more people.
+[00:52:23] So there's the idea,
+[00:52:24] you know, we have to find ways to make these decisions
+[00:52:27] in an objective way,
+[00:52:29] with a very limited number of resources
+[00:52:32] to actually do that.
+[00:52:33] So I think that the austerity
+[00:52:36] that many government agencies are facing is another turn,
+[00:52:39] reasonable motivation to turn to these systems.
+[00:52:42] Typically it ends up costing
+[00:52:43] far more than it saves them, but.
+[00:52:49] - Back.
+[00:52:53] - [Lucy] Hi, my name is Lucy.
+[00:52:54] I'm a current undergrad studying CS and math,
+[00:52:57] and really interested in algorithmic fairness.
+[00:52:59] My question is sort of
+[00:53:01] on like the metrics that we were discussing.
+[00:53:04] So you guys were suggesting maybe it's time
+[00:53:06] for us to move beyond just looking at a metric, for example,
+[00:53:09] there are like so many group fairness metrics out there.
+[00:53:12] So what are some concrete things
+[00:53:13] that as computer scientists can do,
+[00:53:16] if they're,
+[00:53:17] if they don't now they don't have a metric to look at?
+[00:53:20] Or this is not something that can just reduce.
+[00:53:23] Thank you.
+[00:53:26] - So okay,
+[00:53:27] I'll, I'll try to answer.
+[00:53:29] So I think the way you approach this question is saying,
+[00:53:31] "What can one do to help move this field forward?"
+[00:53:35] But I think the problem is
+[00:53:36] that once you frame it as a computer scientist,
+[00:53:39] then I think we start getting into trouble.
+[00:53:41] And so the answer might be not a lot, right?
+[00:53:44] And that is an answer.
+[00:53:45] I'm not saying that is the answer.
+[00:53:46] I think we have to be open to that answer,
+[00:53:48] or else we end up in this kind of funny place
+[00:53:51] where we're saying,
+[00:53:52] where we end up doing things that are convenient,
+[00:53:54] that are not actually pushing the field forward.
+[00:53:57] And so now with that being said,
+[00:53:59] and I think there are interesting technical problems open.
+[00:54:02] I don't think they are of the form,
+[00:54:04] here is a new metric,
+[00:54:05] or here's a new meta algorithm to evaluate
+[00:54:07] all these other algorithms.
+[00:54:09] But the one thing, for example, that we're doing
+[00:54:11] is,
+[00:54:12] we are,
+[00:54:14] we're trying to do right allocation in Santa Clara County
+[00:54:17] for people who have upcoming court dates.
+[00:54:19] And we want to,
+[00:54:21] we want to figure out a way to allocate these things
+[00:54:23] in an equitable,
+[00:54:24] "equitable" manner.
+[00:54:26] Because if you miss your court date,
+[00:54:27] then all of a sudden you're gonna be jailed
+[00:54:29] or a bench warrant won't be issued,
+[00:54:31] and all sorts of bad stuff happens.
+[00:54:33] And so there's a technical problem there
+[00:54:34] of how do you kind of learn efficiently
+[00:54:36] in this noisy environment?
+[00:54:38] And how do you, in the end of the day,
+[00:54:40] allocate these resources?
+[00:54:41] And so,
+[00:54:42] you know, that's like so we can use
+[00:54:43] these reinforcement learning methods to do this.
+[00:54:45] And there are kind of this,
+[00:54:47] there's this whole set of technical tools underneath.
+[00:54:50] But the way that we started that problem was
+[00:54:52] we are working with a group,
+[00:54:54] we want to help reduce this problem
+[00:54:57] that we're seeing in the world.
+[00:54:58] I would be very, very happy personally
+[00:55:00] if the solution didn't require technical tools.
+[00:55:02] It turned out in this case that there is some value
+[00:55:04] to those technical tools.
+[00:55:06] And so that was, you know, fine for us.
+[00:55:09] But that's my first recommendation,
+[00:55:11] for everyone who's interested in this field,
+[00:55:13] is frame the question as
+[00:55:15] what can we do to make this kind of,
+[00:55:17] to lead to better outcomes?
+[00:55:18] Not what can you do from your particular skill set
+[00:55:22] to make these better outcomes?
+[00:55:24] Because the answer just really might not be there.
+[00:55:26] Like it just might be a bad fit depending on,
+[00:55:29] on exactly what the problem is.
+[00:55:31] - The question up there.
+[00:55:34] - [Maddie] Hi, I'll stand up so you can see me.
+[00:55:36] Hi, I'm Maddie.
+[00:55:37] I'm a first year law student.
+[00:55:39] I used to work in the British government
+[00:55:40] on some of these questions.
+[00:55:42] And in thinking through the procurement
+[00:55:45] of algorithmic tools from the government perspective,
+[00:55:48] the question was often already should the algorithm be used?
+[00:55:54] Which is kinda speaking to your point Sharad
+[00:55:55] of that being kind of a narrow policy question,
+[00:55:58] to begin with.
+[00:56:00] So what are kind practical refrains that we can give
+[00:56:02] to policy makers who are procuring these tools
+[00:56:05] or companies,
+[00:56:07] to stop kind of starting at the algorithmic question,
+[00:56:10] and starting at a different question
+[00:56:11] of does it even make sense to use this tool?
+[00:56:14] Is it costly?
+[00:56:15] Is the evaluation of its use going to be costly?
+[00:56:18] Like what are some sub-questions we wanna be asking
+[00:56:21] those looking to use these tools?
+[00:56:25] - I dunno if I'm the one with the most to say about that.
+[00:56:28] But,
+[00:56:29] I think, Maddie, that you're on the relevant questions.
+[00:56:33] I mean, I think you have to think about
+[00:56:35] what, I mean, this is just back to what Sharad said
+[00:56:38] about what is it you're trying to achieve?
+[00:56:41] And given what you're trying to achieve,
+[00:56:44] what are the various types of tools you could bring to bear?
+[00:56:47] And one of which might be a kind of algorithmic tool,
+[00:56:51] but there are other ones.
+[00:56:52] And sometimes that's gonna be helpful
+[00:56:54] and sometimes it's not.
+[00:56:56] And there are gonna be pluses and minuses
+[00:56:59] to the various types of interventions
+[00:57:01] you could bring to bear.
+[00:57:03] I mean, I think there is a way
+[00:57:04] in which these tools are trendy and fun
+[00:57:06] and so they get to the top of the list.
+[00:57:09] But sometimes they're helpful probably
+[00:57:11] and sometimes they're not.
+[00:57:14] - Just have one more question, yes.
+[00:57:20] - Hi, I'm Rebecca.
+[00:57:21] I'm a technologist in residence at LIL downstairs,
+[00:57:24] at the Library Innovation Lab.
+[00:57:26] (Rebecca coughs)
+[00:57:27] Excuse me.
+[00:57:28] So one of the things that I've been reading
+[00:57:30] about algorithm fairness and influence
+[00:57:33] is that in an attempt to combat the effects,
+[00:57:37] there have been a lot of calls for transparency.
+[00:57:39] And I think this gets to your point as well
+[00:57:41] of if you make it clear what you're trying to select for,
+[00:57:44] then at least people have the option to use it or not.
+[00:57:48] However, with some of these AI tools,
+[00:57:50] you know, as they're learning,
+[00:57:51] machine learning, that kind of thing.
+[00:57:54] It,
+[00:57:54] I've seen a counter argument like,
+[00:57:56] transparency is impossible in this situation.
+[00:57:57] You can say what you were initially aiming for,
+[00:58:00] but you can't necessarily say
+[00:58:01] where you end up.
+[00:58:03] What,
+[00:58:03] how would you all kind of try to address this issue?
+[00:58:09] - Yeah, I think you're,
+[00:58:11] you know, even in your question you're sort of getting
+[00:58:13] at I think the importance of breaking down
+[00:58:16] what transparency can mean many different things.
+[00:58:18] And I think generally I'm,
+[00:58:19] I'm somewhat,
+[00:58:21] I'm skeptical of the calls for transparency
+[00:58:23] as the primary solution.
+[00:58:25] I think in a lot of settings it can provide
+[00:58:28] a false sense of security.
+[00:58:29] Certainly when you provide transparency
+[00:58:31] to the decision makers using algorithms,
+[00:58:33] it tends not to help.
+[00:58:35] Often the transparency can lead to,
+[00:58:39] you know, it can be the,
+[00:58:40] the system can be quite complex.
+[00:58:42] It can be hard to really understand what's going on.
+[00:58:44] So I think,
+[00:58:45] you know, you really wanna be pointing transparency
+[00:58:47] at the the key places.
+[00:58:49] Part of that would be,
+[00:58:51] also not just about the technical system and the data,
+[00:58:54] but also about the process itself, right?
+[00:58:56] You might have great transparency
+[00:58:58] about an algorithm and a data set,
+[00:58:59] but no transparency sort of to the prior question
+[00:59:02] about procurement,
+[00:59:03] on who's developing this system?
+[00:59:05] Who's responsible for it if it fails?
+[00:59:07] Who decided this was a good idea?
+[00:59:10] And I think opening up some of those elements as well,
+[00:59:13] not transparency just into the technical system.
+[00:59:15] But transparency into the,
+[00:59:17] and transparency tied to democratic decision making
+[00:59:20] and oversight ideally around the,
+[00:59:23] the procurement process,
+[00:59:24] and the decision-making process.
+[00:59:26] And the types of outputs,
+[00:59:27] and the types of evaluations that have been made
+[00:59:31] in a way that is meant to be actionable
+[00:59:33] for public response is sort of the,
+[00:59:36] the place that I would go with the idea.
+[00:59:39] You know, what transparency can be good for,
+[00:59:41] given its limits.
+[00:59:45] - [Organizer] We have one more question
+[00:59:46] from the virtual audience,
+[00:59:47] I hope you don't mind.
+[00:59:48] This individual works on the issue of online schism
+[00:59:51] and is developing content moderation algorithms
+[00:59:54] that aim to optimize fairness and accuracy
+[00:59:56] to avoid discrimination against marginalized groups.
+[00:59:58] But in your opinions,
+[01:00:00] what is this individual missing
+[01:00:01] when focusing algorithmic training
+[01:00:03] on the optimization of mathematical fairness
+[01:00:05] in a context where algorithms need to be fair towards race,
+[01:00:08] gender, and all of the marginalized identity groups?
+[01:00:14] - I just, it's,
+[01:00:16] (Debbie laughs)
+[01:00:17] yeah, exactly.
+[01:00:18] But that's,
+[01:00:19] I mean,
+[01:00:21] just as we were discussing earlier
+[01:00:22] that people use the term bias
+[01:00:25] to mean so many different things.
+[01:00:26] It's hard to know what to,
+[01:00:28] what that question's getting at.
+[01:00:30] Because,
+[01:00:32] implicit under there is some conception
+[01:00:34] of what fairness to marginalized groups means.
+[01:00:37] And so obviously people have different views about that.
+[01:00:40] So we'd have to know what,
+[01:00:42] you know, one,
+[01:00:44] what I think the questioner is getting at
+[01:00:46] is avoiding disparate impact.
+[01:00:49] And then the question is,
+[01:00:51] what can we do to minimize disparate impact?
+[01:00:54] And I would agree with Sharad
+[01:00:56] that a lot of private actors in my limited experience
+[01:01:01] are actually motivated to,
+[01:01:05] to try to lessen disparate impact.
+[01:01:07] And so it's interesting to think about
+[01:01:10] how you can use,
+[01:01:11] you know, the idea of kind of tweaking the dial
+[01:01:14] on other features that you're looking at
+[01:01:16] to minimize disparate impact.
+[01:01:18] And if that's what the questioner means by unfairness,
+[01:01:21] I think that's what you would aim to do.
+[01:01:25] - Fantastic, thank you so much for the questions.
+[01:01:27] Thank you everyone for attending.
+[01:01:29] Thank you so much to our panelists.
+[01:01:30] And, of course, as always,
+[01:01:31] to the Berkman Klein Center,
+[01:01:33] to Professor Zittrain,
+[01:01:33] You Jeen Ha,
+[01:01:34] Xia,
+[01:01:35] and many others who have been able
+[01:01:36] to put this together today.
+[01:01:38] I hope this sparks many conversations to come.
+[01:01:40] Obviously we're asking some big questions,
+[01:01:42] so this is really just sort of scraping the surface.
+[01:01:44] So thank you everyone, enjoy the rest of your day.
+[01:01:47] - Thank you for having us.
+[01:01:48] - Yes, thank you.
