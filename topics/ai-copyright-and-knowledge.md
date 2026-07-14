@@ -1,7 +1,7 @@
 ---
 type: topic
 title: AI, Copyright & Knowledge Institutions
-item_count: 11
+item_count: 12
 related: [content-moderation-and-speech, ai-chatbots-and-mental-health, platform-power-and-antitrust, ai-labor-and-economy]
 ---
 # AI, Copyright & Knowledge Institutions
@@ -28,6 +28,7 @@ epistemics worries in [[ai-chatbots-and-mental-health]].
 - [[14973734-journalism-minus-the-journalist|Journalism minus the 'journalist']] — 2025-07-31 · newsletter.projectc.biz
 - [[16919253-trapped-by-what-they-know-young-adults-algorithmic-cynicism|Trapped by what they know: Young adults' algorithmic cynicism]] — 2025-11-19 · niemanlab.org
 - [[17080039-pluriversality-of-knowledge-in-the-age-of-ai-bot-populi|Pluriversality of Knowledge in the Age of AI]] — 2025-12-03 · botpopuli.net
+- [[yt_9CSB0oG2KTw-ai-and-copyright|AI and Copyright]] — 2023-07-25 · youtube — text-and-data-mining law in Canada & African countries
 
 ## Related
 [[content-moderation-and-speech]] · [[ai-chatbots-and-mental-health]] · [[platform-power-and-antitrust]] · [[ai-labor-and-economy]] · [[berkman-klein-center]]

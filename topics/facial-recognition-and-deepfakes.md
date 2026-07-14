@@ -1,7 +1,7 @@
 ---
 type: topic
 title: Facial Recognition, Biometrics & Deepfakes
-item_count: 12
+item_count: 13
 related: [privacy-and-surveillance, surveillance-and-immigration-tech, ai-chatbots-and-mental-health, digital-colonialism-and-global-south]
 ---
 # Facial Recognition, Biometrics & Deepfakes
@@ -32,6 +32,7 @@ technology's realism than the **social and legal vacuum** it exploits. Overlaps
 - [[16612938-chatbots-and-deepfakes-are-eroding-our-shared-reality|Chatbots and deepfakes are eroding our shared reality]] — 2025-10-31 · prospectmagazine.co.uk
 - [[18290663-hello-boss-inside-the-chinese-realtime-deepfake-software-pow|'HELLO BOSS': Inside the Chinese Realtime Deepfake Software Powering Scams]] — 2026-05-20 · 404media.co
 - [[17886444-amid-a-high-profile-scandal-germany-considers-deepfake-porn|Germany considers deepfake porn punishments]] — 2026-04-07 · npr.org
+- [[yt_USfr2GxOVHg-your-face-belongs-to-us-a-conversation-with-kashmir-hill|Your Face Belongs to Us: A Conversation with Kashmir Hill]] — 2023-10-31 · youtube — Clearview AI's rise, [[2023-future-of-the-internet-summit|Future of the Internet Summit]]
 
 ## Related
 [[privacy-and-surveillance]] · [[surveillance-and-immigration-tech]] · [[ai-chatbots-and-mental-health]] · [[digital-colonialism-and-global-south]] · [[404-media]]

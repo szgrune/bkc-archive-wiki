@@ -17,9 +17,9 @@ Per-year scanning surfaces for the synthesis layer.
 - [[raw/digest/2018|2018]] — 943 items → `raw/digest/2018.md`
 - [[raw/digest/2019|2019]] — 972 items → `raw/digest/2019.md`
 - [[raw/digest/2020|2020]] — 824 items → `raw/digest/2020.md`
-- [[raw/digest/2021|2021]] — 705 items → `raw/digest/2021.md`
-- [[raw/digest/2022|2022]] — 536 items → `raw/digest/2022.md`
-- [[raw/digest/2023|2023]] — 622 items → `raw/digest/2023.md`
+- [[raw/digest/2021|2021]] — 708 items → `raw/digest/2021.md`
+- [[raw/digest/2022|2022]] — 549 items → `raw/digest/2022.md`
+- [[raw/digest/2023|2023]] — 648 items → `raw/digest/2023.md`
 - [[raw/digest/2024|2024]] — 952 items → `raw/digest/2024.md`
 - [[raw/digest/2025|2025]] — 769 items → `raw/digest/2025.md`
 - [[raw/digest/2026|2026]] — 497 items → `raw/digest/2026.md`

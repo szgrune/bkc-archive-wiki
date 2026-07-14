@@ -25,6 +25,8 @@ systems, and direct litigation against social-media surveillance.
 - [[13717339-clinic-represents-epic-in-election-deepfake-case|Cyberlaw Clinic represents EPIC in Election Deepfake Case]] — 2025-05-01 · clinic.cyber.harvard.edu
 - [[13778669-a-milestone-in-the-pioneering-work-of-the-cyberlaw-clinic-ha|A milestone in the pioneering work of the Cyberlaw Clinic]] — 2025-05-12 · hls.harvard.edu
 - [[16413307-generational-data-interviews-library-innovation-lab|Generational Data Interviews / Library Innovation Lab]] — 2025-10-14 · lil.law.harvard.edu
+- [[yt_XKrNdn7XcXs-1-25-final-ra-session|1 25 FINAL RA Session]] — 2022-02-09 · youtube — Research Assistantship recruiting info session
+- [[yt_yf_3HtlNh7E-open-house-2022|Open House 2022]] — 2022-12-08 · youtube — [[jonathan-zittrain]] welcomes the new academic year
 
 ## Related
-[[jonathan-zittrain]] · [[bruce-schneier]] · [[ai-safety-and-agents]] · [[ai-copyright-and-knowledge]] · [[content-moderation-and-speech]]
+[[jonathan-zittrain]] · [[bruce-schneier]] · [[ai-safety-and-agents]] · [[ai-copyright-and-knowledge]] · [[content-moderation-and-speech]] · [[cyberlaw-clinic]] · [[institute-for-rebooting-social-media]] · [[applied-social-media-lab]]

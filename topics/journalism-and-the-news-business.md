@@ -1,7 +1,7 @@
 ---
 type: topic
 title: Journalism & the News Business
-item_count: 11
+item_count: 13
 related: [misinformation-and-elections, ai-copyright-and-knowledge, content-moderation-and-speech, platform-power-and-antitrust]
 ---
 # Journalism & the News Business
@@ -30,6 +30,8 @@ The topic sits at the intersection of [[misinformation-and-elections]] (trust),
 - [[7462070-can-journalism-resist-a-chatbot-fueled-race-to-the-bottom-bu|Can journalism resist a chatbot-fueled race to the bottom?]] — 2023-04-17 · thebulletin.org
 - [[12867519-media-owners-will-protect-the-powerful-nieman-journalism-lab|Media owners will protect the powerful]] — 2024-12-18 · niemanlab.org
 - [[16919253-trapped-by-what-they-know-young-adults-algorithmic-cynicism|Trapped by what they know: Young adults' algorithmic cynicism]] — 2025-11-19 · niemanlab.org
+- [[yt_wvMb-euIQHM-weaponizing-misogyny-gender-based-harassments-impact-on-jour|"Weaponizing Misogyny": Gender-Based Harassment's Impact on Journalists and Free Expression]] — 2023-04-04 · youtube — feat. Taylor Lorenz
+- [[yt_gkjQkQR9aDc-navigating-the-social-media-headwinds-in-2024-and-beyond|Navigating the Social Media Headwinds in 2024 and Beyond]] — 2023-10-30 · youtube — Nabiha Syed (The Markup), Martha Minow, Nancy Gibbs
 
 ## Related
 [[misinformation-and-elections]] · [[ai-copyright-and-knowledge]] · [[content-moderation-and-speech]] · [[platform-power-and-antitrust]] · [[nieman-lab]] · [[ethan-zuckerman]]

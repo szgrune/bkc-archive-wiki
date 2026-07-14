@@ -1,7 +1,7 @@
 ---
 type: topic
 title: AI, Labor & the Economy
-item_count: 12
+item_count: 14
 related: [platform-power-and-antitrust, digital-colonialism-and-global-south, ai-governance-and-regulation, ai-safety-and-agents]
 ---
 # AI, Labor & the Economy
@@ -29,6 +29,8 @@ frame — concentrated platform power extracting value — and connects this top
 - [[16554797-big-tech-wants-ai-without-rules-heres-how-workers-are-fighti|Big Tech Wants AI Without Rules. Here's How Workers are Fighting Back]] — 2025-10-27 · poweratwork.us
 - [[13664347-how-big-techs-ai-labor-supply-chain-relies-on-hidden-african|How Big Tech's AI labor supply chain relies on hidden African workers]] — 2025-04-21 · restofworld.org
 - [[16599341-the-job-search-has-become-a-humiliation-ritual|The Job Search Has Become a Humiliation Ritual]] — 2025-10-30 · thecut.com
+- [[yt_wQn-9VCgKVQ-the-young-and-the-influential-labor-law-reform-to-protect-ki|The Young and the Influential: Labor Law Reform to Protect Kid-Influencers]] — 2023-11-13 · youtube — [[leah-plunkett|Leah Plunkett]] et al. on kid-influencer labor rights
+- [[yt_dIjwBks0Xcw-the-tech-that-comes-next|The Tech That Comes Next]] — 2022-07-07 · youtube — who builds, funds, and uses tech for the social-impact sector
 
 ## Related
 [[platform-power-and-antitrust]] · [[digital-colonialism-and-global-south]] · [[ai-governance-and-regulation]] · [[ai-safety-and-agents]] · [[tim-wu]] · [[rest-of-world]]

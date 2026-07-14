@@ -1,7 +1,7 @@
 ---
 type: topic
 title: Copyright, IP & Open Access
-item_count: 12
+item_count: 14
 related: [ai-copyright-and-knowledge, journalism-and-the-news-business, platform-power-and-antitrust]
 ---
 # Copyright, IP & Open Access
@@ -31,6 +31,8 @@ The throughline is a tension between **access/sharing** (open access, the common
 - [[12624822-former-openai-researcher-says-company-broke-copyright-law-th|Former OpenAI Researcher Says Company Broke Copyright Law]] — 2024-11-07 · nytimes.com
 - [[17098482-scotus-amicus-brief-on-copyright-and-ai|SCOTUS Amicus Brief on copyright & AI]] — 2025-12-08 · supremecourt.gov
 - [[18335754-copyright-law-struggling-to-parse-ais-ascendancy-harvard-law|Copyright law 'struggling' to parse AI's ascendancy]] — 2026-06-11 · hls.harvard.edu
+- [[yt_KVViqYD_4Lc-the-future-of-online-lending-a-discussion-of-controlled-digi|The Future of Online Lending: A Discussion of Controlled Digital Lending and Hachette]] — 2022-12-13 · youtube — Brewster Kahle on Hachette v. Internet Archive
+- [[yt_8Mdhk4Ioi6c-chokepoint-capitalism-how-to-beat-big-tech-and-big-content-t|Chokepoint Capitalism: how to beat Big Tech and Big Content to get artists paid]] — 2022-12-07 · youtube — [[cory-doctorow|Cory Doctorow]] & Rebecca Giblin
 
 ## Related
 [[ai-copyright-and-knowledge]] · [[journalism-and-the-news-business]] · [[platform-power-and-antitrust]] · [[berkman-klein-center]] · [[lawrence-lessig]] · [[creative-commons]]

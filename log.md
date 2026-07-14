@@ -147,3 +147,34 @@ Ran `scripts/build.mjs --all` to catch up item stubs/digests for the items merge
 the new daily fetch pipelines since they went live (88 YouTube videos, 38+ TagTeam items).
 Corpus now 7,468 items, all with stubs. Routine housekeeping ahead of wiring up the daily
 synthesis workflow, which depends on `raw/digest/<year>.md` being current for slug lookups.
+
+## [2026-07-14] synthesis | manual pass over 42 new YouTube items (2021–2023)
+`git pull` brought in the daily `fetch-youtube-captions.yml` run's latest merge (39 new
+`yt_` items into `raw/archive.json`, 130 YouTube videos total now). Sanity-checked the
+new transcripts before synthesizing: timestamps monotonic, no repeated-line/caption-spam
+patterns, 135–210 wpm (normal speech rate), one legitimately caption-less video
+(`yt_KVViqYD_4Lc`, `available: false` in `collection/json/youtube.json`, not a fetch bug).
+Ran `scripts/build.mjs --all` for fresh stub slugs, then did the manual Synthesis workflow
+(AGENTS.md §5) by hand rather than `scripts/synthesize_wiki.py` — per user instruction,
+not because the script is broken. Diffed `raw/.synthesis-state.json`'s `processed_ids`
+against current archive ids (42 unprocessed, all `yt_`, 2021–2023) to scope the work.
+
+Filed all 42 items: 34 into existing topic pages (heaviest: content-moderation-and-speech
++9, privacy-and-surveillance +5, ai-governance-and-regulation +5), 3 BKC-internal
+recruiting/info-session videos linked only from [[berkman-klein-center]] and
+[[institute-for-rebooting-social-media]], and 8 into two new **Events** — the archive's
+first events built from a genuine multi-recording real-world occurrence rather than a
+single TagTeam artifact: [[2023-future-of-the-internet-summit]] (5 videos, ASML launch,
+feat. Barack Obama) and [[2023-rsm-genai-oversight-fireside-series]] (3-part series).
+Created 3 new org pages for BKC sub-initiatives that recur heavily in this batch —
+[[institute-for-rebooting-social-media]], [[applied-social-media-lab]],
+[[cyberlaw-clinic]] — and 4 new people pages for names confirmed recurring corpus-wide
+via grep before creating a page (not just this batch's single mention): [[kendra-albert]]
+(29 corpus mentions), [[cory-doctorow]] (11), [[joan-donovan]] (8), [[leah-plunkett]] (8).
+Extended [[jonathan-zittrain]] and [[lawrence-lessig]] with their new items. Updated
+item_count/Key items on every touched topic/org/person page, timeline/2021–2023.md
+narratives and counts, and index.md (also caught timeline/2024–2026.md counts drifting
+stale from the daily TagTeam sync while already in that section — 2024 917→952, 2025
+737→769, 2026 444→497; unrelated to this batch but cheap to fix in passing). Marked all
+42 ids processed in `raw/.synthesis-state.json` so the daily automated `synthesize-wiki.yml`
+run doesn't redo this work.

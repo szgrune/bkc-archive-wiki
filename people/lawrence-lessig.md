@@ -18,6 +18,7 @@ today's [[content-moderation-and-speech]] and [[ai-governance-and-regulation]] d
 ## Items
 - [[2446939-congress-latest-move-to-extend-copyright-protection-is-misgu|Congress' Latest Move to Extend Copyright Protection Is Misguided]] — 2018-05-18 · wired.com
 - [[8938845-harvard-professor-lawrence-lessig-on-why-ai-and-tiktok-are-c|Lawrence Lessig on why AI and TikTok are causing a free-speech crisis for the internet]] — 2023-10-24 · theverge.com
+- [[yt_vMvvNjBtaJI-the-labs-inaugural-sprints-generative-ai-political-polarizat|The Lab's Inaugural Sprints: Generative AI, Political Polarization, and More]] — 2023-10-30 · youtube — [[applied-social-media-lab|ASML]] founding faculty
 
 ## Related
 [[copyright-and-open-access]] · [[content-moderation-and-speech]] · [[ai-governance-and-regulation]] · [[berkman-klein-center]] · [[creative-commons]]

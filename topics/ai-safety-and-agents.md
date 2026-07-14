@@ -1,7 +1,7 @@
 ---
 type: topic
 title: AI Safety, Risk & Agents
-item_count: 11
+item_count: 12
 related: [ai-governance-and-regulation, ai-chatbots-and-mental-health, ai-labor-and-economy, platform-power-and-antitrust]
 ---
 # AI Safety, Risk & Agents
@@ -28,6 +28,7 @@ over whether frontier AI "should be open-source."
 - [[14936600-jonathan-zittrain-ai-agents-and-trust-youtube|Jonathan Zittrain: AI Agents and Trust]] — 2025-07-29 · youtube.com — [[jonathan-zittrain]]
 - [[16317648-ai-researcher-burnout-the-greatest-existential-threat-to-hum|AI researcher burnout: the greatest existential threat to humanity?]] — 2025-10-09 · alignmentalignment.ai — satire
 - [[15848263-center-for-the-alignment-of-ai-alignment-centers|Center for the Alignment of AI Alignment Centers]] — 2025-09-12 · alignmentalignment.ai — satire
+- [[yt_6a2_zq9szIY-not-with-a-bug-but-with-a-sticker|Not With A Bug, But With A Sticker]] — 2023-11-10 · youtube — Ram Shankar Siva Kumar & Hyrum Anderson on AI-system attacks as the dominant risk
 
 ## Related
 [[ai-governance-and-regulation]] · [[ai-chatbots-and-mental-health]] · [[ai-labor-and-economy]] · [[platform-power-and-antitrust]] · [[jonathan-zittrain]]

@@ -1,7 +1,7 @@
 ---
 type: topic
 title: Misinformation, Disinformation & Elections
-item_count: 12
+item_count: 14
 related: [content-moderation-and-speech, ai-and-democracy, journalism-and-the-news-business, platform-power-and-antitrust]
 ---
 # Misinformation, Disinformation & Elections
@@ -31,6 +31,8 @@ a content-moderation problem and treating it as a symptom of broken trust and
 - [[12701889-the-apocalypse-that-wasnt-ai-was-everywhere-in-2024s-electio|The apocalypse that wasn't: AI was everywhere in 2024's elections]] — 2024-12-02 · theconversation.com
 - [[15538269-we-failed-the-misinformation-fight-now-what|We Failed The Misinformation Fight. Now What?]] — 2025-08-28 · noemamag.com — the post-mortem
 - [[16845022-ai-driven-disinformation-and-political-influence-on-whatsapp|AI-Driven Disinformation and Political Influence on WhatsApp in South Africa's 2024 Elections]] — 2025-11-14 · journals.sagepub.com — the Global-South front
+- [[yt_JdiI0ow7pK0-meme-wars-black-skinhead-book-talk|Meme Wars / Black Skinhead Book Talk]] — 2022-12-08 · youtube — [[joan-donovan|Joan Donovan]] & Brian Friedberg
+- [[yt_EgoDC_KuKWo-disinformation-pulse-lessons-learned-from-brazils-2022-elect|Disinformation Pulse: Lessons Learned from Brazil's 2022 Elections]] — 2023-11-08 · youtube — [[institute-for-rebooting-social-media|RSM Speaker Series]]
 
 ## Related
 [[content-moderation-and-speech]] · [[ai-and-democracy]] · [[journalism-and-the-news-business]] · [[platform-power-and-antitrust]] · [[data-society]]

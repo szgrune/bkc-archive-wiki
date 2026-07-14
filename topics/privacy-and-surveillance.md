@@ -1,7 +1,7 @@
 ---
 type: topic
 title: Privacy, Data & Surveillance
-item_count: 12
+item_count: 17
 related: [surveillance-and-immigration-tech, facial-recognition-and-deepfakes, cybersecurity-and-encryption, platform-power-and-antitrust]
 ---
 # Privacy, Data & Surveillance
@@ -32,6 +32,11 @@ topic; for the 2025 ICE/immigration-specific cluster see
 - [[12692098-ai-border-surveillance-tech-profits-soar-human-rights-across|AI Border Surveillance Tech Profits Soar — Petra Molnar]] — 2024-11-27 · theanalysis.news
 - [[17079953-the-fight-to-protect-our-phones-a-multi-prong-approach-to-sp|The Fight to Protect Our Phones: A Multi-Prong Approach to Spyware Reform]] — 2025-12-03 · epic.org
 - [[18317506-good-luck-opting-out-manipulative-design-patterns-in-opt-out|Good Luck Opting Out: Manipulative Design Patterns in Opt-Out Processes]] — 2026-06-02 · epic.org — dark patterns in privacy "choice"
+- [[yt_RUPp3LUDrrE-data-at-the-end-of-the-world|Data at the end of the world]] — 2022-12-13 · youtube — Brian Michael Murphy's *We the Dead*, [[cyberlaw-clinic|Cyberlaw Clinic]]
+- [[yt_rF1QO6MzaOg-lawyering-after-dobbs|Lawyering after Dobbs]] — 2022-12-13 · youtube — digital privacy/security for reproductive-health patients post-*Dobbs*
+- [[yt_-QIssQ4vNd0-the-afterlife-of-anthony-comstock-abortion-bodily-autonomy-a|The Afterlife of Anthony Comstock: Abortion, Bodily Autonomy, and Obscenity (1873-2023)]] — 2023-11-15 · youtube — [[kendra-albert|Kendra Albert]] et al.
+- [[yt_57OVzyM2nC4-how-should-data-governance-be-shaped-to-facilitate-altruisti|How Should Data Governance be Shaped to Facilitate Altruistic Data Sharing?]] — 2023-02-21 · youtube — [[leah-plunkett|Leah Plunkett]] on youth & "data altruism"
+- [[yt_Q9E9mZNAn9k-youth-perspectives-on-digital-self-determination|Youth Perspectives on Digital Self-Determination]] — 2023-11-29 · youtube — first-person interviews on tracking, cookies, and platform control
 
 ## Related
 [[surveillance-and-immigration-tech]] · [[facial-recognition-and-deepfakes]] · [[cybersecurity-and-encryption]] · [[platform-power-and-antitrust]] · [[woodrow-hartzog]] · [[data-society]] · [[electronic-frontier-foundation]]
