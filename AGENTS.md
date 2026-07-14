@@ -30,8 +30,17 @@ source. The human curates and asks questions; the LLM does the bookkeeping.
   speakers, caption type. `content` here is the video description, not the
   transcript — the full transcript stays out of `archive.json` (see §2) and
   lives at the path in `transcript.path`.
+- **BKC publications** — from BKC's own curated index at
+  cyber.harvard.edu/publications (NOT scraped from SSRN — see §5 for why),
+  synced daily via `scripts/fetch_publications.py`. Item IDs:
+  `pub_<year>-<slug>` derived from BKC's own URL. `content` is the full
+  abstract (BKC's own published summary). `publication` sub-object carries
+  `topics` (BKC's own categorization), `external_links` (`{"ssrn": url,
+  "dash": url}` — wherever BKC's page itself links out to), and
+  `authors_profiles` (`[{name, bkc_profile_url}]` — useful for cross-
+  referencing existing `people/*.md` pages during synthesis).
 
-**Total: 7,390+ items** (and climbing daily as the YouTube fetch proceeds — see §5).
+**Total: 7,390+ items** (and climbing daily — see §5).
 
 ### Two constraints that shape everything
 1. **Metadata-only for TagTeam items.** There is no article body text. Do **not**
@@ -81,6 +90,7 @@ archive-wiki/
     ├── fetch_youtube_api.py   @BKCHarvard Data API fetch → collection/ [code]
     ├── merge_youtube_into_archive.py  collection/ → raw/archive.json [code]
     ├── fetch_tagteam.py   hub 1176 Export feed → raw/archive.json    [code]
+    ├── fetch_publications.py  cyber.harvard.edu/publications → raw/archive.json [code]
     └── synthesize_wiki.py new items → people/events/orgs/topics      [code]
 ```
 
@@ -99,12 +109,14 @@ archive-wiki/
 - `raw/archive.json` is the immutable source **for the original Buzz import
   and the original 6,925-item TagTeam export** — a wholesale external
   re-scrape is the only thing that should ever replace those existing items.
-  Two scripts append new items to it going forward, neither touching existing
+  Three scripts append new items to it going forward, none touching existing
   ids: `scripts/merge_youtube_into_archive.py` (new `yt_` items, run at the
-  end of the daily `fetch-youtube-captions.yml`) and `scripts/fetch_tagteam.py`
+  end of the daily `fetch-youtube-captions.yml`), `scripts/fetch_tagteam.py`
   (new numeric-id TagTeam items, run daily by `fetch-tagteam-items.yml`,
-  incrementally syncing hub 1176's own Export feed). Both are deliberate,
-  ongoing exceptions, not loopholes — see §5.
+  incrementally syncing hub 1176's own Export feed), and
+  `scripts/fetch_publications.py` (new `pub_` items, run daily by
+  `fetch-publications.yml`, syncing BKC's own publications index). All three
+  are deliberate, ongoing exceptions, not loopholes — see §5.
 - `collection/` is also **[SCRIPT]**-owned (by `fetch_youtube.py` /
   `fetch_youtube_api.py`) — don't hand-edit it. It is **additive and
   self-contained**: both fetch scripts only ever *read* `archive.json` (for
@@ -350,6 +362,87 @@ python3 scripts/fetch_tagteam.py             # fetch + merge new items
   without re-confirming the site can take it.
 - Log a `## [date] fetch | tagteam …` entry afterward.
 
+### Fetch BKC publications (`scripts/fetch_publications.py`)
+Syncs BKC's own publications index (cyber.harvard.edu/publications) into
+`raw/archive.json` daily, via `fetch-publications.yml` (cron `05 7 * * *`,
+between TagTeam and Synthesis). No credentials needed — it's a public page.
+
+```bash
+python3 scripts/fetch_publications.py --dry-run --limit 5   # small sanity check
+python3 scripts/fetch_publications.py                        # fetch + merge new items
+```
+
+- **Why BKC's own page, not SSRN directly:** there's no single SSRN eJournal
+  aggregating BKC's output (papers just carry a "Berkman Klein Center
+  Research Publication No." label individually — nothing to follow), and
+  SSRN itself sends explicit anti-automation signals: `robots.txt` blocks
+  `GPTBot`/`ChatGPT-User`/`Google-Extended` by name, a direct request gets
+  Cloudflare's bot-challenge block, and the response carries a
+  `tdm-reservation: 1` header — Elsevier's formal Text-and-Data-Mining
+  opt-out signal. Unlike TagTeam or this website (BKC's own tools), SSRN is
+  a third-party commercial platform with no institutional relationship
+  giving standing here, so this script **never touches SSRN**. BKC's own
+  publications page already links out to SSRN/DASH per entry, so the wiki
+  still ends up linking to SSRN — just via BKC's own citation.
+- **How it works:** pages `/publications?page=N` (confirmed
+  reverse-chronological); for each entry not already covered, fetches its
+  detail page for title/date/authors/abstract/topics/external links.
+  BeautifulSoup-based (the listing/detail HTML has real structure worth
+  parsing properly, unlike the simple meta-tag regexes elsewhere in this
+  repo). Same incremental strategy as `fetch_tagteam.py` — stops once a
+  full page has nothing new. Full `YYYY-MM-DD` dates come straight from each
+  detail page's `<time datetime="...">` — exact, not just year/month.
+- **Three URL schemes across BKC's history, all handled:**
+  `/publication/<year>/<slug>` (current), `/publications/<year>[/<mm>]/<slug>`
+  (old, plural — the scheme some already-archived TagTeam items use too),
+  and bare `/node/<nid>` for the oldest content with no slug alias at all.
+  The listing selector and `derive_id` both match all three — matching only
+  the current scheme made pages several years back look "empty" (0 real
+  publication links, even though `c-unique-item` blocks were present) and
+  falsely tripped the stop-on-nothing-new logic partway through history.
+- **First run is slow, on purpose:** 0 `pub_` items exist yet, so nothing
+  stops the walk early — it processes the full history in one go (BKC's
+  publications page goes back to 1993; the first real run merged 330 items,
+  reaching e.g. Zittrain/Nesson/Lessig's 1999 "Open Code / Open Content /
+  Open Law"). Not capped, since there's no hard quota (unlike YouTube's Data
+  API); daily runs after that are fast (usually 0-1 pages).
+- **Resumable, like the YouTube scripts:** each item is staged to
+  `raw/.publications-staging.json` (atomic write) immediately after it's
+  built, merged into `archive.json` only at the end. A crash mid-run loses
+  at most the one item in flight — testing surfaced that this site's
+  connections go stale after the per-request delay (every request failing
+  once before succeeding on retry), so a long historical run is exactly
+  the kind of thing worth checkpointing rather than trusting to finish
+  in one uninterrupted shot.
+- **`Connection: close`** on the session fixed that staleness issue
+  outright (a fresh connection per request costs a handshake, but that's
+  far cheaper than the 8s+ backoff a stale-connection reset was costing on
+  nearly every single request before this).
+- **Dedup by URL, not just id:** several publications are already in
+  `archive.json` via incidental TagTeam bookmarking, under a numeric id
+  rather than this script's `pub_<year>-<slug>` scheme — skip if the
+  publication's own URL *or* an external link found on its detail page
+  (SSRN/DASH) matches an existing item's `url`. URL comparison is
+  scheme-normalized (`normalize_url`) since some existing entries were
+  captured years ago as `http://`, not `https://` — an easy dedup miss if
+  compared as exact strings.
+- **Politeness:** `robots.txt` carries a `Crawl-delay: 15` scoped to one
+  specific block, but applying it as the general rule is the safe read;
+  retry+backoff; a descriptive `User-Agent`.
+- **DASH is not integrated (yet).** DASH (`dash.harvard.edu`) has no
+  `robots.txt` restrictions and a real public API (LibraryCloud,
+  `api.lib.harvard.edu/v2/items.json`, confirmed live/JSON/unauthenticated),
+  but no clean way to scope a query to "Berkman Klein Center" specifically
+  was found (`repository=DASH` → 0 results, `collection=` → undefined Solr
+  field error) within a reasonable research effort — plain full-text author
+  search works (e.g. 64 hits for "Zittrain") but isn't reliably
+  affiliation-scoped, so it'd add noise (matches on name alone, not
+  BKC-authorship) to an unattended daily job rather than clean coverage.
+  Follow-up if picked back up: either find real LibraryCloud field docs
+  beyond what's publicly indexed, or query per known `people/*.md` author
+  name and accept it as a partial supplement, not primary coverage.
+- Log a `## [date] fetch | publications …` entry afterward.
+
 ### Ingest (a wholesale source re-scrape happened)
 Distinct from the daily incremental `fetch_tagteam.py` sync above — this is
 for when someone hands you an entirely fresh `raw/archive.json` export (not
@@ -425,13 +518,17 @@ mechanical. Append a `lint` log entry.
 
 ## 6. Status
 
-**Corpus:** 7,468+ items and growing daily from two automated fetch
-pipelines — TagTeam bookmarks (6,963+ so far, daily incremental sync via
+**Corpus:** 7,884 items and growing daily from three automated fetch
+pipelines — TagTeam bookmarks (daily incremental sync via
 `fetch-tagteam-items.yml`) + 417 Berkman Buzz newsletters (2006–2015,
-one-time import) + BKC YouTube videos (88 merged so far of ~1,101 public
-videos; `fetch-youtube-captions.yml` runs daily via the official Data API,
-budgeted ~39 new videos/day, so the backlog takes several more weeks unless a
-quota increase is granted).
+one-time import) + BKC YouTube videos (~1,101 public videos;
+`fetch-youtube-captions.yml` runs daily via the official Data API, budgeted
+~39 new videos/day, so the backlog takes several more weeks unless a quota
+increase is granted) + 374 BKC publications (`pub_` items, back to 1993,
+fully backfilled; daily via `fetch-publications.yml`, syncing
+cyber.harvard.edu/publications — not SSRN directly, see §5). The daily
+`synthesize-wiki.yml` workflow exists but is currently dormant (no
+`OPENAI_API_KEY` secret set yet) — set aside for now, not removed.
 
 **Wiki build:** all years stubbed and digested (`--all`). Thematic synthesis covers
 **2025** fully. Other years have navigational landing pages pending synthesis

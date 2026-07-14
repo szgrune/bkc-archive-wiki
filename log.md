@@ -178,3 +178,18 @@ stale from the daily TagTeam sync while already in that section — 2024 917→9
 737→769, 2026 444→497; unrelated to this batch but cheap to fix in passing). Marked all
 42 ids processed in `raw/.synthesis-state.json` so the daily automated `synthesize-wiki.yml`
 run doesn't redo this work.
+
+## [2026-07-14] fetch | publications — daily sync of cyber.harvard.edu/publications live
+Added scripts/fetch_publications.py + fetch-publications.yml: syncs BKC's own publications
+index into archive.json daily (pub_ ids), not SSRN directly — SSRN sends explicit
+anti-automation signals (robots.txt blocks AI crawlers by name, Cloudflare bot-challenge,
+a TDM-reservation header), whereas BKC's own page is unrestricted and already links out to
+SSRN/DASH per entry with an abstract. First run fully backfilled the historical archive:
+374 items back to 1993 (Fisher/Horwitz's "American Legal Realism"), including foundational
+BKC work like Zittrain/Nesson/Lessig's 1999 "Open Code / Open Content / Open Law". Handles
+three URL schemes across BKC's history (/publication/, old-plural /publications/, bare
+/node/<nid>) after an early version silently missed pre-2018 entries matching only the
+current scheme. Resumable (staged writes) after testing surfaced the site's connections
+going stale between requests; fixed outright with `Connection: close`. DASH (LibraryCloud
+API) investigated as a supplement but not integrated — no clean way found to scope a query
+to BKC affiliation specifically within a reasonable effort; documented as a follow-up.

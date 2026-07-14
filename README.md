@@ -87,11 +87,33 @@ python3 scripts/fetch_tagteam.py --dry-run   # see what's new (no writes)
 python3 scripts/fetch_tagteam.py             # fetch + merge by hand
 ```
 
-## Automated synthesis (`people/`, `events/`, `orgs/`, `topics/`, daily)
+## BKC publications (`archive.json`, daily)
 
-**`scripts/synthesize_wiki.py`** turns whatever the two fetch pipelines added
-overnight into wiki content, via `.github/workflows/synthesize-wiki.yml` —
-emphasizing **People and Events as coherent entities**, so a YouTube video, a
+**`scripts/fetch_publications.py`** syncs BKC's own publications index
+(cyber.harvard.edu/publications) into `archive.json` daily, via
+`.github/workflows/fetch-publications.yml` — **not SSRN directly**: there's
+no single SSRN eJournal for BKC to follow, and SSRN sends explicit
+anti-automation signals (`robots.txt` blocks AI crawlers by name, a
+Cloudflare bot-challenge, an Elsevier Text-and-Data-Mining opt-out header).
+BKC's own page already links out to SSRN/DASH per entry and shows an
+abstract, so the wiki still ends up linking to SSRN — just via BKC's own
+citation, never by scraping SSRN's site. Already fully backfilled: 374
+publications, back to 1993. Daily runs from here are fast (usually 0-1
+pages). Full detail (dedup, the DASH-integration follow-up) is in
+`AGENTS.md` §5.
+
+```bash
+python3 scripts/fetch_publications.py --dry-run --limit 5   # small sanity check
+python3 scripts/fetch_publications.py                        # fetch + merge by hand
+```
+
+## Automated synthesis (`people/`, `events/`, `orgs/`, `topics/`, daily — currently paused)
+
+Set aside for now (workflow file exists but no `OPENAI_API_KEY` secret is
+set, so it's dormant, not removed). **`scripts/synthesize_wiki.py`** turns
+whatever the fetch pipelines added overnight into wiki content, via
+`.github/workflows/synthesize-wiki.yml` — emphasizing **People and Events as
+coherent entities**, so a YouTube video, a
 TagTeam bookmark, and a Buzz item that are really about the same person or
 real-world occurrence get filed under, and cross-linked from, one page
 instead of sitting as disconnected item stubs. Runs on an institutional
