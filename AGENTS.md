@@ -556,8 +556,10 @@ one-time import) + BKC YouTube videos (~1,101 public videos;
 increase is granted) + 374 BKC publications (`pub_` items, back to 1993,
 fully backfilled; daily via `fetch-publications.yml`, syncing
 cyber.harvard.edu/publications — not SSRN directly, see §5). The daily
-`synthesize-wiki.yml` workflow exists but is currently dormant (no
-`OPENAI_API_KEY` secret set yet) — set aside for now, not removed.
+`synthesize-wiki.yml` workflow exists but its cron trigger is **disabled**
+(commented out in the workflow file, not just no-oping on a missing
+`OPENAI_API_KEY`) until that secret is actually set — set aside for now, not
+removed. `workflow_dispatch` still works for manual test runs.
 
 **Wiki build:** all years stubbed and digested (`--all`). Thematic synthesis now
 spans the **full corpus, 1993–2026** — every `timeline/<year>.md` carries a real
