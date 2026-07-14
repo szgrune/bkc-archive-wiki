@@ -40,7 +40,7 @@ source. The human curates and asks questions; the LLM does the bookkeeping.
   `authors_profiles` (`[{name, bkc_profile_url}]` — useful for cross-
   referencing existing `people/*.md` pages during synthesis).
 
-**Total: 7,390+ items** (and climbing daily — see §5).
+**Total: 7,884+ items** (and climbing daily — see §5).
 
 ### Two constraints that shape everything
 1. **Metadata-only for TagTeam items.** There is no article body text. Do **not**
@@ -137,7 +137,7 @@ archive-wiki/
 Synthesis pages (topics/people/orgs/timeline) link **to** item stubs:
 `[[<id>-<slug>|Readable Title]]`. In Obsidian, **backlinks appear automatically**
 on the item page — so every connection shows up on the item without ever editing
-the (script-owned) stub. This keeps the 6,925 stubs cheap and regenerable while
+the (script-owned) stub. This keeps the (7,880+ and growing) stubs cheap and regenerable while
 all cross-referencing lives in your synthesis pages.
 
 **Practical consequence:** to file an item under a topic, you add a line to the
@@ -189,15 +189,28 @@ related topics/people.
 
 ### Event — `events/<slug>.md`
 A concrete real-world occurrence (talk, paper publication, workshop, podcast
-episode) that generated **≥2 archive items from different source types**. Events
-are the bridge between Buzz announcements, YouTube recordings, TagTeam community
-posts, and press coverage of the same thing.
+episode) that generated **≥2 archive items documenting it**. Events are the
+bridge between Buzz announcements, YouTube recordings, TagTeam community posts,
+and press coverage of the same thing — and, within a single source type, the
+bridge between several recordings of the same multi-part occurrence.
 
-**When to create:** 2+ items from different source categories reference the same
-occurrence. Common signals:
-- Buzz `events`-tagged item + YouTube video sharing a title phrase or person name
-- TagTeam `bkc-happenings` post + YouTube recording within the same week
-- Three-source cluster: Buzz announcement + TagTeam post + YouTube recording
+**When to create — two patterns:**
+1. **Cross-source cluster** (the original, still the richest signal): 2+ items
+   from *different* source categories reference the same occurrence. Common
+   signals:
+   - Buzz `events`-tagged item + YouTube video sharing a title phrase or person name
+   - TagTeam `bkc-happenings` post + YouTube recording within the same week
+   - Three-source cluster: Buzz announcement + TagTeam post + YouTube recording
+2. **Multi-session cluster, same source type**: 2+ items of one source type
+   (almost always YouTube) that are each a distinct session/recording of one
+   real-world occurrence — a daylong summit with several recorded panels, or a
+   named multi-part series/fireside sequence. The occurrence, not the source
+   mix, is what makes it an event. Precedent: [[2023-future-of-the-internet-summit]]
+   (5 YouTube recordings, one summit) and
+   [[2023-rsm-genai-oversight-fireside-series]] (3-part fireside series) — see
+   index.md's Events section, which distinguishes "cross-source clusters" from
+   "multi-session YouTube clusters" as separate sub-buckets under the same
+   `events/` format.
 
 ```markdown
 ---
@@ -452,15 +465,31 @@ the relevant `timeline/<year>.md` → update `index.md` → append a
 `## [date] ingest | …` log entry.
 
 ### Synthesis (build the value layer)
-1. Read `raw/digest/<year>.md` for the slice you're working (one pass).
+1. Read `raw/digest/<year>.md` for the slice you're working (one pass). **Exception
+   for `pub_` items:** cluster by BKC's own `publication.topics` field first (§1) —
+   it's real BKC-authored subject tagging, a much stronger signal than
+   title-clustering, and works even for items with sparse/empty `content`. Only
+   fall back to title/domain clustering for the ~half of `pub_` items with no
+   `publication.topics` set.
 2. Cluster titles into topics. Create/extend `topics/*.md`; file each item by adding
-   its `[[stub|Title]]` line under a topic's **Key items**.
+   its `[[stub|Title]]` line under a topic's **Key items**. Don't force-fit into the
+   existing (2025-anchored) AI-cluster topics — a distinct BKC research program from
+   another era (e.g. the OpenNet Initiative, the Internet & Democracy Project) usually
+   warrants its own topic page rather than a strained cross-link.
 3. Extract recurring people (authors + names in titles) and orgs; create their pages.
-4. **Identify cross-source event clusters:** when a Buzz item, a YouTube video, and/or
-   a TagTeam post appear to reference the same real-world occurrence (matching title
-   phrases, person names, dates within ≤7 days), create an `events/<slug>.md` page.
-   Link the event from relevant topic/person pages. See §4 for the event format.
+   For `pub_` items, check `authors_profiles` against existing `people/*.md` first,
+   and — before creating a new person page — grep the *whole* corpus for the name to
+   confirm real recurrence, not just recurrence within the batch you're synthesizing.
+4. **Identify event clusters** — see §4 for the two patterns (cross-source, and
+   same-source multi-session). When a Buzz item, a YouTube video, and/or a TagTeam
+   post appear to reference the same real-world occurrence (matching title phrases,
+   person names, dates within ≤7 days), or when several same-type items (typically
+   YouTube) are each a session of one occurrence, create an `events/<slug>.md` page.
+   Link the event from relevant topic/person pages.
 5. Write/update `timeline/<year>.md`, refresh `index.md`, append a `synthesis` log entry.
+   If the new material changes a year's actual story (not just its item count) — e.g.
+   a year previously described as "quiet" turns out to have a whole research program
+   underneath it — rewrite the narrative, don't just bump the count.
 
 Prefer working one year at a time. An item can appear under several topics and in one event.
 
@@ -530,17 +559,28 @@ cyber.harvard.edu/publications — not SSRN directly, see §5). The daily
 `synthesize-wiki.yml` workflow exists but is currently dormant (no
 `OPENAI_API_KEY` secret set yet) — set aside for now, not removed.
 
-**Wiki build:** all years stubbed and digested (`--all`). Thematic synthesis covers
-**2025** fully. Other years have navigational landing pages pending synthesis
-— that historical backfill is still a human-driven effort (see Synthesis
-above); the daily `synthesize-wiki.yml` workflow only ever processes items
-newer than its `raw/.synthesis-state.json` baseline, never the backlog.
+**Wiki build:** all years stubbed and digested (`--all`). Thematic synthesis now
+spans the **full corpus, 1993–2026** — every `timeline/<year>.md` carries a real
+narrative (no year is still a bare "navigational landing page"), with 23 topic
+pages, 26 people pages, and 16 org pages. The historical backfill described in
+earlier revisions of this file as pending is **done** as a first pass: the
+cross-cutting topics/people/orgs batches (2006–2026, log.md batches 1–10), the
+2021–2023 YouTube layer, and the 1993–2026 BKC-publications layer have all had a
+manual synthesis pass. What's left is **depth, not coverage** — most non-2025
+topic pages hold a curated sample of Key items, not an exhaustive filing of
+everything on-topic in the corpus, and new items still land daily via the fetch
+pipelines faster than any synthesis pass files them. The daily `synthesize-wiki.yml`
+workflow (dormant, see above) only ever processes items newer than its
+`raw/.synthesis-state.json` baseline — it was never meant to do this backfill,
+manual sessions did.
 
-**Events layer:** 8 pages so far (recurring conferences/series populated in
-batch 10 — see `log.md`), now growing incrementally via the daily automated
-synthesis run in addition to interactive sessions. Priority clusters still
-worth a manual pass:
+**Events layer:** 10 pages (8 recurring-conference/cross-source pages from batch
+10, plus 2 same-source multi-session YouTube events added in the 2023 YouTube
+synthesis pass — see §4 for that pattern). Priority clusters still worth a
+manual pass:
 - 2014–2015: TagTeam + Buzz overlap (earliest cross-source years)
-- 2025: richest TagTeam data; YouTube videos now arriving daily
+- 2025–2026: richest TagTeam data, and where most of the ~970 still-unmerged
+  YouTube videos will land as the daily fetch continues — likely the next
+  source of multi-session events once that backlog clears
 
 See `log.md` for history.
