@@ -26,10 +26,17 @@ name: Synthesize wiki (People/Events/Topics)
 # step. Guardrails against a bad autonomous edit live in the script itself
 # (a hard path allowlist enforced in code, a --max-items cap, a
 # --max-cost-usd ceiling), not here.
+#
+# DISABLED as of 2026-07-14: the cron trigger is commented out below so this
+# stops appearing in the Actions run history entirely (the credential check
+# already no-oped every run, but that still cost a run + a notice daily).
+# Re-enable by uncommenting the `schedule:` block once OPENAI_API_KEY is set
+# as a repo secret. `workflow_dispatch` is left active for manual test runs
+# in the meantime.
 
 on:
-  schedule:
-    - cron: "15 7 * * *"
+  # schedule:
+  #   - cron: "15 7 * * *"
   workflow_dispatch:
     inputs:
       max_items:
