@@ -1,7 +1,7 @@
 ---
 type: topic
 title: Net Neutrality & Internet Access
-item_count: 9
+item_count: 13
 related: [platform-power-and-antitrust, digital-colonialism-and-global-south, content-moderation-and-speech]
 ---
 # Net Neutrality & Internet Access
@@ -13,7 +13,10 @@ and free-speech** one ("how net neutrality affects human rights"), with the BKC
 **Cyberlaw Clinic** directly litigating the rollback. As the federal fight winds down,
 the emphasis shifts to the **access-equity** dimension that outlasts it: municipal
 broadband (and the organized opposition to it), "the ability to pay for broadband," and
-the public sector's role in closing the divide. The access lens connects to
+the public sector's role in closing the divide. BKC's own Municipal Fiber Broadband
+Initiative (David Talbot, 2015–2017) supplies detailed town-by-town case studies —
+Holyoke, WiredWest, and Concord, MA — of communities building their own fiber networks
+against incumbent-telecom opposition. The access lens connects to
 [[digital-colonialism-and-global-south|global connectivity]] and the infrastructure
 side of [[platform-power-and-antitrust]].
 
@@ -27,6 +30,10 @@ side of [[platform-power-and-antitrust]].
 - [[2469684-spectrum-comcast-and-the-telecom-fight-to-win-free-speech-wi|Spectrum, Comcast, and the Telecom Fight to Win Free Speech]] — 2018-12-08 · wired.com
 - [[2478278-public-sector-should-lead-on-broadband-opinion|Public sector should lead on broadband]] — 2019-04-03 · tallahassee.com
 - [[2484680-the-ability-to-pay-for-broadband-communication-research-and|The ability to pay for broadband]] — 2019-06-20 · tandfonline.com — access as equity
+- [[pub_2015-municipal-fiber-holyoke-a-massachusetts-municipal-light-plant-seizes-interne|Holyoke: A Massachusetts Municipal Light Plant Seizes Internet Access Business Opportunities]] — 2015-07-08 · pub — David Talbot, Waide Warner, Kira Hessekiel
+- [[pub_2016-wiredwest-case-study-wiredwest-a-cooperative-of-municipalities-forms-to-build-a-f|WiredWest: a Cooperative of Municipalities Forms to Build a Fiber Optic Network]] — 2016-04-20 · pub — David Talbot, Waide Warner, Susan Crawford
+- [[pub_2017-09-fibercompetition-enabling-competition-and-innovation-on-a-city-fiber-network|Enabling Competition & Innovation on a City Fiber Network]] — 2017-10-05 · pub — David Talbot
+- [[pub_2017-10-zerorating-zero-rating-and-internet-adoption|Zero Rating & Internet Adoption]] — 2017-10-05 · pub — Samantha Weinstock, Christopher Bavitz, Kira Hessekiel
 
 ## Related
 [[platform-power-and-antitrust]] · [[digital-colonialism-and-global-south]] · [[content-moderation-and-speech]] · [[berkman-klein-center]]

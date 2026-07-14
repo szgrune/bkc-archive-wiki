@@ -1,22 +1,27 @@
 ---
 type: topic
 title: Copyright, IP & Open Access
-item_count: 14
+item_count: 20
 related: [ai-copyright-and-knowledge, journalism-and-the-news-business, platform-power-and-antitrust]
 ---
 # Copyright, IP & Open Access
 
 The archive's oldest intellectual-property thread runs from BKC's **Lessig-era roots**
-to today's AI copyright wars. The Buzz years are the **commons era**: open access
-campaigns, CopyrightX, Creative Commons, DPLA/Europeana, the "six myths about open
-access." The late 2010s are doctrinal housekeeping — fair use for video-game history,
-Star Trek parody, the Warhol/Prince case at the Supreme Court. From 2023 the topic is
-**overwhelmingly about AI training data**: whether ingesting copyrighted works to train
-models is fair use, OpenAI litigation, HLS fair-use convenings, and SCOTUS amicus
-briefs — with copyright law itself described as "struggling to parse AI's ascendancy."
-The throughline is a tension between **access/sharing** (open access, the commons) and
-**control/extraction** (rightsholders, and now AI labs). Continues in
-[[ai-copyright-and-knowledge]].
+to today's AI copyright wars — roots now documented directly via the BKC publications
+backfill: [[lawrence-lessig|Lawrence Lessig]]'s own foundational trilogy, *Code and
+Other Laws of Cyberspace* (1999), *Free Culture* (2004), and *Code: Version 2.0*
+(2006), plus Yochai Benkler's commons-economics companion pieces *The Wealth of
+Networks* (2006) and *The Penguin and the Leviathan* (2011), arguing peer production
+and cooperation can outperform proprietary, incentive-based models. The Buzz years are
+the **commons era**: open access campaigns, CopyrightX, Creative Commons, DPLA/Europeana,
+the "six myths about open access." The late 2010s are doctrinal housekeeping — fair use
+for video-game history, Star Trek parody, the Warhol/Prince case at the Supreme Court.
+From 2023 the topic is **overwhelmingly about AI training data**: whether ingesting
+copyrighted works to train models is fair use, OpenAI litigation, HLS fair-use
+convenings, and SCOTUS amicus briefs — with copyright law itself described as
+"struggling to parse AI's ascendancy." The throughline is a tension between
+**access/sharing** (open access, the commons) and **control/extraction** (rightsholders,
+and now AI labs). Continues in [[ai-copyright-and-knowledge]].
 
 ## Key items
 - [[buzz_201106_1-mapping-the-us-blogosphere-tupac-shakur-open-access|Mapping the US blogosphere; open access]] — 2011-06-03 · cyber.law.harvard.edu
@@ -33,6 +38,12 @@ The throughline is a tension between **access/sharing** (open access, the common
 - [[18335754-copyright-law-struggling-to-parse-ais-ascendancy-harvard-law|Copyright law 'struggling' to parse AI's ascendancy]] — 2026-06-11 · hls.harvard.edu
 - [[yt_KVViqYD_4Lc-the-future-of-online-lending-a-discussion-of-controlled-digi|The Future of Online Lending: A Discussion of Controlled Digital Lending and Hachette]] — 2022-12-13 · youtube — Brewster Kahle on Hachette v. Internet Archive
 - [[yt_8Mdhk4Ioi6c-chokepoint-capitalism-how-to-beat-big-tech-and-big-content-t|Chokepoint Capitalism: how to beat Big Tech and Big Content to get artists paid]] — 2022-12-07 · youtube — [[cory-doctorow|Cory Doctorow]] & Rebecca Giblin
+- [[pub_1999-code-and-other-laws-of-cyberspace-code-and-other-laws-of-cyberspace|Code and Other Laws of Cyberspace]] — 1999-12-15 · pub — [[lawrence-lessig|Lawrence Lessig]] — "code is law," the field's founding text
+- [[pub_2004-free-culture-free-culture|Free Culture]] — 2004-03-25 · pub — Lawrence Lessig
+- [[pub_2006-code-2-0-code-version-2-0|Code: Version 2.0]] — 2006-12-30 · pub — Lawrence Lessig
+- [[pub_2006-the-wealth-of-networks-the-wealth-of-networks|The Wealth of Networks]] — 2006-05-15 · pub — Yochai Benkler
+- [[pub_2011-penguin-and-the-leviathan-the-penguin-and-the-leviathan-how-cooperation-triumphs-over|The Penguin and the Leviathan: How Cooperation Triumphs over Self-Interest]] — 2011-08-09 · pub — Yochai Benkler
+- [[pub_2012-openaccess-open-access|Open Access]] — 2012-06-01 · pub — Peter Suber — the movement's own primer
 
 ## Related
 [[ai-copyright-and-knowledge]] · [[journalism-and-the-news-business]] · [[platform-power-and-antitrust]] · [[berkman-klein-center]] · [[lawrence-lessig]] · [[creative-commons]]

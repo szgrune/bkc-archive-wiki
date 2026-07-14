@@ -7,15 +7,22 @@ related_topics: [ai-and-democracy, ai-safety-and-agents, cybersecurity-and-encry
 # Bruce Schneier
 
 Security technologist and **Berkman Klein Center** affiliate, and one of the archive's
-most durable public-intellectual voices. His arc tracks the field's: from classic
-**security thinking** (the pandemic's effect on threat models, "make software better")
-to his 2023 book *A Hacker's Mind* (reframing hacking as the exploitation of *any*
-rules-based system, including law and markets), to a steady 2024–26 run on **AI security
-and AI & democracy** — much of it co-authored with Nathan E. Sanders in *The Guardian*,
-arguing AI can *strengthen* democracies, a counterweight to the archive's heavier
-AI-as-threat strand. Bridges [[cybersecurity-and-encryption]] and [[ai-and-democracy]].
+most durable public-intellectual voices. BKC's own publications backfill adds an
+earlier chapter: a 2016 survey identifying 865 encryption products from 55 countries
+(arguing that US backdoor mandates can't work when hundreds of foreign alternatives
+exist) and, the same year, "Don't Panic" — with [[jonathan-zittrain|Jonathan
+Zittrain]], Urs Gasser, and others — on the encryption "Going Dark" debate. His arc
+then tracks the field's: from classic **security thinking** (the pandemic's effect on
+threat models, "make software better") to his 2023 book *A Hacker's Mind* (reframing
+hacking as the exploitation of *any* rules-based system, including law and markets), to
+a steady 2024–26 run on **AI security and AI & democracy** — much of it co-authored
+with Nathan E. Sanders in *The Guardian*, arguing AI can *strengthen* democracies, a
+counterweight to the archive's heavier AI-as-threat strand. Bridges
+[[cybersecurity-and-encryption]] and [[ai-and-democracy]].
 
 ## Items
+- [[pub_2016-encryption-survey-a-worldwide-survey-of-encryption-products|A Worldwide Survey of Encryption Products]] — 2016-02-11 · pub
+- [[pub_2016-cybersecurity-dont-panic-dont-panic-making-progress-on-the-going-dark-debate|Don't Panic: Making Progress on the "Going Dark" Debate]] — 2016-02-01 · pub — with Jonathan Zittrain & Urs Gasser
 - [[2652275-an-interview-with-bruce-schneier-renowned-security-technolog|An Interview with Bruce Schneier, Renowned Security Technologist]] — 2020-04-02 · thepolitic.org
 - [[2720490-bruce-schneier-on-the-future-impacted-by-coronavirus-quartz|Bruce Schneier on the future impacted by coronavirus]] — 2020-06-30 · qz.com
 - [[6913626-pluralistic-bruce-schneiers-a-hackers-mind-06-feb-2023-plura|Bruce Schneier's "A Hacker's Mind"]] — 2023-02-06 · pluralistic.net

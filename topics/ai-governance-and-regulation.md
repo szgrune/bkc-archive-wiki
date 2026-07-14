@@ -1,7 +1,7 @@
 ---
 type: topic
 title: AI Governance & Regulation
-item_count: 21
+item_count: 24
 related: [ai-and-democracy, platform-power-and-antitrust, ai-safety-and-agents, ai-labor-and-economy]
 ---
 # AI Governance & Regulation
@@ -42,6 +42,10 @@ reallocates corporate power.
 - [[yt_5dIasUpm_AY-how-is-generative-ai-changing-the-landscape-of-ai-harms|How is Generative AI changing the landscape of AI harms?]] — 2023 · youtube — [[2023-rsm-genai-oversight-fireside-series|RSM fireside series]] pt.1
 - [[yt__Oc8jA9vRDQ-balancing-transparency-and-security-in-open-research-on-gene|Balancing Transparency and Security in Open Research on Generative AI]] — 2023 · youtube — fireside pt.2
 - [[yt_yrTtYruGmTk-enabling-accountable-technical-oversight-of-generative-ai|Enabling Accountable Technical Oversight of Generative AI]] — 2023 · youtube — fireside pt.3, Julia Angwin & Brandon Silverman
+- [[pub_node-100108-a-layered-model-for-ai-governance|A Layered Model for AI Governance]] — 2017-11-20 · pub — Urs Gasser & Virgilio Almeida — an early framework, predating the 2025 US/EU fight by 8 years
+- [[pub_2017-11-aiexplanation-accountability-of-ai-under-the-law-the-role-of-explanation|Accountability of AI Under the Law: The Role of Explanation]] — 2017-11-27 · pub — Finale Doshi-Velez
+- [[pub_2017-11-openletter-an-open-letter-to-the-members-of-the-massachusetts-legislatu|An Open Letter to the Members of the Massachusetts Legislature Regarding the Adoption of Actuarial Risk Assessment Tools]] — 2017-11-09 · pub — [[jonathan-zittrain]] et al.
+- [[pub_2023-vectors-ai-governance-vectors-of-ai-governance|Vectors of AI Governance]] — 2023-06-22 · pub — Urs Gasser
 
 ## Related
 [[ai-and-democracy]] · [[platform-power-and-antitrust]] · [[ai-safety-and-agents]] · [[ai-labor-and-economy]] · [[berkman-klein-center]] · [[techpolicy-press]] · [[2023-rsm-genai-oversight-fireside-series]]

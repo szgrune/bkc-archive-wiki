@@ -1,7 +1,7 @@
 # Index
 
 Catalog of the wiki. Start here, then drill into pages. Maintained by the LLM.
-**Scope:** **7,510 items** — TagTeam bookmarks (2014–2026, daily incremental sync) + 417 Berkman Buzz newsletters (2006–2015) + 130 BKC YouTube videos merged so far (of ~1,101 public videos; daily Data API fetch, budgeted). All years are built as item stubs and per-year digests. Thematic synthesis (Topics/People/Organizations/Events) is being extended **corpus-wide (2006–2026)**; the AI-cluster topics remain 2025-anchored while cross-cutting topics span all years. The YouTube layer (2021–2023 synthesized so far) is starting to supply the archive's first true cross-source Events. Counts in parentheses are items filed on that page.
+**Scope:** **7,884 items** — TagTeam bookmarks (2014–2026, daily incremental sync) + 417 Berkman Buzz newsletters (2006–2015) + 130 BKC YouTube videos merged so far (of ~1,101 public videos; daily Data API fetch, budgeted) + 374 BKC publications (1993–2026, `pub_` items, fully backfilled from cyber.harvard.edu/publications, not scraped from SSRN — see AGENTS.md §5). All years are built as item stubs and per-year digests, including 1993–2005, newly synthesized entirely from the publications backfill (no Buzz/TagTeam coverage exists that far back). Thematic synthesis (Topics/People/Organizations/Events) is being extended **corpus-wide (1993–2026)**; the AI-cluster topics remain 2025-anchored while cross-cutting topics span all years. The YouTube layer (2021–2023 synthesized) supplies the archive's first true multi-recording Events; the publications backfill supplies its first pre-2006 history and several of BKC's own defining research programs (OpenNet Initiative, Internet & Democracy Project, Digital Natives). Counts in parentheses are items filed on that page.
 
 ## Topics
 - [[ai-governance-and-regulation|AI Governance & Regulation]] — the state-vs-federal regulatory tug-of-war (21)
@@ -23,6 +23,10 @@ Catalog of the wiki. Start here, then drill into pages. Maintained by the LLM.
 - [[facial-recognition-and-deepfakes|Facial Recognition, Biometrics & Deepfakes]] — biometric ID, recognition bans, NCII (13)
 - [[net-neutrality-and-internet-access|Net Neutrality & Internet Access]] — the 2014–18 fight, then broadband equity (9)
 - [[algorithmic-accountability|Algorithms & Algorithmic Accountability]] — from bias audits to "algorithms as institutions" (13)
+- [[internet-governance-and-icann|Internet Governance & Institutional Design]] — ICANN, interoperability, multistakeholder groups (9)
+- [[internet-filtering-and-openness|Internet Filtering, Censorship & Openness]] — the OpenNet Initiative trilogy, circumvention, Internet Monitor (10)
+- [[digital-natives-and-youth-privacy|Digital Natives & Youth Privacy]] — *Born Digital*, teens' privacy, student data (12)
+- [[internet-democracy-and-networked-protest|Internet & Democracy — Networked Protest to Networked Propaganda]] — blogosphere mapping to *Network Propaganda* (14)
 
 ## People
 - [[rudy-fraser|Rudy Fraser]] — builder of Blacksky; decentralized community infrastructure (5)
@@ -41,6 +45,17 @@ Catalog of the wiki. Start here, then drill into pages. Maintained by the LLM.
 - [[leah-plunkett|Leah Plunkett]] — BKC Youth & Media; kid-influencer labor law, youth data governance (2)
 - [[cory-doctorow|Cory Doctorow]] — author/activist; *Chokepoint Capitalism* (1)
 - [[joan-donovan|Joan Donovan]] — disinformation researcher; *Meme Wars* (1)
+- [[urs-gasser|Urs Gasser]] — former BKC executive director; the corpus's most-published author (10)
+- [[john-palfrey|John Palfrey]] — see above, expanded (6)
+- [[robert-faris|Robert Faris]] — Internet & Democracy Project research director (7)
+- [[sandra-cortesi|Sandra Cortesi]] — Youth and Media program director (7)
+- [[hal-roberts|Hal Roberts]] — OpenNet Initiative circumvention research; *Network Propaganda* (7)
+- [[yochai-benkler|Yochai Benkler]] — *The Wealth of Networks*; *Network Propaganda* (6)
+- [[bruce-etling|Bruce Etling]] — Internet & Democracy Project, blogosphere mapping (5)
+- [[john-kelly|John Kelly]] — network-mapping methodologist, Morningside Analytics (6)
+- [[david-obrien|David O'Brien]] — differential-privacy research; "Don't Panic" (5)
+- [[susan-crawford|Susan Crawford]] — telecom scholar; municipal-fiber case studies (4)
+- [[william-fisher|William Fisher]] — IP scholar; founder of CopyrightX (3)
 
 ## Organizations
 - [[berkman-klein-center|Berkman Klein Center]] — the archive's institutional home (11)
@@ -84,29 +99,40 @@ to be refined/deduped when YouTube is incorporated).
 - [[privacy-law-scholars-conference|Privacy Law Scholars Conference]] — the field's annual privacy-law workshop (3)
 
 ## Timeline
-Every year now carries a narrative. Two corpora: **Berkman Buzz** newsletters (2006–2015)
-and the **TagTeam** feed (2017+), with 2016 the seam between them.
-- [[timeline/2026|2026]] — the story continues: AI-saturated democracy, global majority, security (497)
-- [[timeline/2025|2025]] — techlash matures into a structural-power critique (769)
-- [[timeline/2024|2024]] — the global "AI election" year; the deepfake apocalypse that wasn't (952)
-- [[timeline/2023|2023]] — the ChatGPT year: generative AI reorganizes every thread (648)
-- [[timeline/2022|2022]] — Musk's Twitter and the eve of generative AI (549)
-- [[timeline/2021|2021]] — Jan 6, the Great Deplatforming, the Facebook Papers (708)
-- [[timeline/2020|2020]] — pandemic, protest, and the disinformation election (824)
-- [[timeline/2019|2019]] — the largest year: AI ethics & platform governance mature (972)
-- [[timeline/2018|2018]] — Cambridge Analytica and the techlash in full (943)
-- [[timeline/2017|2017]] — the feed comes online; the 2016 reckoning begins (225)
-- [[timeline/2016|2016]] — the quiet seam between the two corpora (4)
-- [[timeline/2015|2015]] — the Buzz signs off: right-to-be-forgotten, zero rating (14)
-- [[timeline/2014|2014]] — net neutrality, encryption, platform frictions (48)
-- [[timeline/2013|2013]] — Snowden and the surveillance turn; Aaron Swartz (40)
-- [[timeline/2012|2012]] — open access ascendant, in SOPA's shadow (44)
-- [[timeline/2011|2011]] — networked protest (Arab Spring, Occupy) and the copyright wars (49)
-- [[timeline/2010|2010]] — WikiLeaks and the Google–China confrontation (50)
-- [[timeline/2009|2009]] — Iran's "Twitter Revolution"; Herdict launches (49)
-- [[timeline/2008|2008]] — election year through the Internet & Democracy lens (50)
-- [[timeline/2007|2007]] — Global Voices, Citizen Media Law, OpenNet take shape (51)
-- [[timeline/2006|2006]] — the archive opens: blogosphere, Tor, open culture (24)
+Every year now carries a narrative. Three corpora: BKC's own **publications** archive
+(1993–2026, sparse before 2006), **Berkman Buzz** newsletters (2006–2015), and the
+**TagTeam** feed (2017+), with 2016 the seam between the latter two.
+- [[timeline/2026|2026]] — the story continues: AI-saturated democracy, global majority, security (501)
+- [[timeline/2025|2025]] — techlash matures into a structural-power critique (770)
+- [[timeline/2024|2024]] — the global "AI election" year; the deepfake apocalypse that wasn't (953)
+- [[timeline/2023|2023]] — the ChatGPT year: generative AI reorganizes every thread (650)
+- [[timeline/2022|2022]] — Musk's Twitter and the eve of generative AI (551)
+- [[timeline/2021|2021]] — Jan 6, the Great Deplatforming, the Facebook Papers (715)
+- [[timeline/2020|2020]] — pandemic, protest, and the disinformation election (832)
+- [[timeline/2019|2019]] — the largest year: AI ethics & platform governance mature (976)
+- [[timeline/2018|2018]] — Cambridge Analytica and the techlash in full; *Network Propaganda* (956)
+- [[timeline/2017|2017]] — the feed comes online; the 2016 reckoning begins, including BKC's own (242)
+- [[timeline/2016|2016]] — quiet only in the curated feed — BKC's own publications reveal a busy research year ("Don't Panic," OpenNet, youth privacy) (29)
+- [[timeline/2015|2015]] — the Buzz signs off: right-to-be-forgotten, zero rating, *Digitally Connected* goes global (32)
+- [[timeline/2014|2014]] — net neutrality, encryption, platform frictions; Internet Monitor 2014 (62)
+- [[timeline/2013|2013]] — Snowden and the surveillance turn; Aaron Swartz; CopyrightX launches (58)
+- [[timeline/2012|2012]] — open access ascendant, in SOPA's shadow; *Interop* (82)
+- [[timeline/2011|2011]] — networked protest (Arab Spring, Occupy) and the copyright wars; *Access Contested* closes the OpenNet trilogy (62)
+- [[timeline/2010|2010]] — WikiLeaks and the Google–China confrontation; *Access Controlled* (66)
+- [[timeline/2009|2009]] — Iran's "Twitter Revolution"; Herdict launches; Mapping the Arabic Blogosphere (56)
+- [[timeline/2008|2008]] — election year through the Internet & Democracy lens; *Access Denied* and *Born Digital* (62)
+- [[timeline/2007|2007]] — Global Voices, Citizen Media Law, OpenNet take shape; *Everything is Miscellaneous* (73)
+- [[timeline/2006|2006]] — the archive opens: blogosphere, Tor, open culture; *The Wealth of Networks* (64)
+- [[timeline/2005|2005]] — OpenNet's first country filtering studies; the *Grokster* amicus brief (30)
+- [[timeline/2004|2004]] — the "Berkman Briefing" series; *Free Culture*; the iTunes/DRM case study (28)
+- [[timeline/2003|2003]] — the OpenNet Initiative's origin: empirical filtering research in China (12)
+- [[timeline/2002|2002]] — early global-development readiness reports (3)
+- [[timeline/2001|2001]] — *The Cluetrain Manifesto*; *The Future of Ideas* (2)
+- [[timeline/2000|2000]] — Zittrain on IP and privacy in "an era of trusted publication" (1)
+- [[timeline/1999|1999]] — cyberlaw's founding-text year: *Code and Other Laws of Cyberspace*, "The Law of the Horse" (11)
+- [[timeline/1998|1998]] — Lessig's early speech-regulation draft, CDA 2.0 vs. filtering (1)
+- [[timeline/1997|1997]] — BKC's own founding conference (3)
+- [[timeline/1993|1993]] — the archive's earliest item: "American Legal Realism" (1)
 
 ## Reference (generated — do not hand-edit)
 - [[_domains|Sources by domain]] — 2,063 domains, full corpus

@@ -1,7 +1,7 @@
 ---
 type: topic
 title: Privacy, Data & Surveillance
-item_count: 17
+item_count: 23
 related: [surveillance-and-immigration-tech, facial-recognition-and-deepfakes, cybersecurity-and-encryption, platform-power-and-antitrust]
 ---
 # Privacy, Data & Surveillance
@@ -17,7 +17,10 @@ than discrete harms. A recurring analytic move (Woodrow Hartzog, the LPE Project
 to reject the consent-and-notice framing of privacy as "the wrong question" and to
 recast it as a problem of power and structural exposure. This is the broad cross-year
 topic; for the 2025 ICE/immigration-specific cluster see
-[[surveillance-and-immigration-tech]].
+[[surveillance-and-immigration-tech]]. BKC's own publications backfill (2014–2018)
+adds a technical-privacy thread underneath the policy debates: Salil Vadhan, Alexandra
+Wood, and David O'Brien's differential-privacy research program, and the
+Zittrain/Schneier-coauthored "Don't Panic" report on the encryption "Going Dark" debate.
 
 ## Key items
 - [[buzz_201309_1-online-security-in-the-face-of-nsa-surveillance-the-future-o|Online security in the face of NSA surveillance]] — 2013-09-06 · cyber.law.harvard.edu — the Snowden moment, as BKC framed it
@@ -37,6 +40,11 @@ topic; for the 2025 ICE/immigration-specific cluster see
 - [[yt_-QIssQ4vNd0-the-afterlife-of-anthony-comstock-abortion-bodily-autonomy-a|The Afterlife of Anthony Comstock: Abortion, Bodily Autonomy, and Obscenity (1873-2023)]] — 2023-11-15 · youtube — [[kendra-albert|Kendra Albert]] et al.
 - [[yt_57OVzyM2nC4-how-should-data-governance-be-shaped-to-facilitate-altruisti|How Should Data Governance be Shaped to Facilitate Altruistic Data Sharing?]] — 2023-02-21 · youtube — [[leah-plunkett|Leah Plunkett]] on youth & "data altruism"
 - [[yt_Q9E9mZNAn9k-youth-perspectives-on-digital-self-determination|Youth Perspectives on Digital Self-Determination]] — 2023-11-29 · youtube — first-person interviews on tracking, cookies, and platform control
+- [[pub_2016-cybersecurity-dont-panic-dont-panic-making-progress-on-the-going-dark-debate|Don't Panic: Making Progress on the "Going Dark" Debate]] — 2016-02-01 · pub — [[jonathan-zittrain]], [[bruce-schneier]] et al. on the encryption/law-enforcement-access debate
+- [[pub_node-95742-integrating-approaches-to-privacy-across-the-research-lifecy|Integrating Approaches to Privacy across the Research Lifecycle: Long-term Longitudinal Studies]] — 2014-08-03 · pub — Alexandra Wood, David O'Brien, Urs Gasser, Salil Vadhan
+- [[pub_2016-privacy-aware-government-data-releases-towards-a-modern-approach-to-privacy-aware-government-data-r|Towards a Modern Approach to Privacy-Aware Government Data Releases]] — 2016-05-31 · pub
+- [[pub_2018-differential-privacy-differential-privacy|Differential Privacy]] — 2018-11-01 · pub — Salil Vadhan et al. — the technical-legal reference
+- [[pub_2017-09-berklett-cross-border-data-access-reform|Cross-Border Data Access Reform]] — 2017-09-13 · pub — Tiffany Lin, Mailyn Fidler
 
 ## Related
 [[surveillance-and-immigration-tech]] · [[facial-recognition-and-deepfakes]] · [[cybersecurity-and-encryption]] · [[platform-power-and-antitrust]] · [[woodrow-hartzog]] · [[data-society]] · [[electronic-frontier-foundation]]

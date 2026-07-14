@@ -1,7 +1,7 @@
 ---
 type: topic
 title: Cybersecurity, Encryption & Spyware
-item_count: 14
+item_count: 15
 related: [privacy-and-surveillance, digital-colonialism-and-global-south, ai-safety-and-agents]
 ---
 # Cybersecurity, Encryption & Spyware
@@ -34,6 +34,7 @@ cybersecurity gap" that frontier labs both widen and claim to close. Tightly cou
 - [[18192510-how-ai-is-changing-cybersecurity-ieee-spectrum|How AI Is Changing Cybersecurity]] — 2026-04-24 · spectrum.ieee.org
 - [[yt_o190r3SLT20-security-by-spectacle|Security by Spectacle]] — 2022-02-07 · youtube — Gabriella Coleman & Matt Goerzen ([[data-society|Data & Society]]) on hacker culture's path to cybersecurity legitimacy
 - [[yt_KQ3DJNPSphc-cyber-security-and-resilience-lessons-from-ukraine|Cyber security and resilience: Lessons from Ukraine]] — 2023-06-20 · youtube — anti-corruption procurement reform as cyber resilience
+- [[pub_2016-encryption-survey-a-worldwide-survey-of-encryption-products|A Worldwide Survey of Encryption Products]] — 2016-02-11 · pub — [[bruce-schneier]], surveying 865 encryption products worldwide ahead of the "Going Dark" debate
 
 ## Related
 [[privacy-and-surveillance]] · [[digital-colonialism-and-global-south]] · [[ai-safety-and-agents]] · [[citizen-lab]] · [[electronic-frontier-foundation]] · [[bruce-schneier]]

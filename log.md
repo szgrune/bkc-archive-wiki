@@ -193,3 +193,50 @@ current scheme. Resumable (staged writes) after testing surfaced the site's conn
 going stale between requests; fixed outright with `Connection: close`. DASH (LibraryCloud
 API) investigated as a supplement but not integrated — no clean way found to scope a query
 to BKC affiliation specifically within a reasonable effort; documented as a follow-up.
+
+## [2026-07-14] synthesis | manual pass over 374 BKC publications (1993–2026)
+Manual synthesis (AGENTS.md §5) of the full `pub_` backfill — by far the largest single
+batch to date, and the first to touch pre-2006 history. Ran `scripts/build.mjs --all`
+for fresh stubs, then worked from BKC's own `publication.topics` categorization (189/374
+items tagged, 8 categories) rather than re-deriving topics from titles alone, since this
+source — unlike TagTeam — carries real BKC-authored subject tags.
+
+**4 new topic pages**, each a defining BKC research program the AI-cluster topics don't
+cover: [[internet-governance-and-icann]] (ICANN, interoperability, multistakeholder
+governance), [[internet-filtering-and-openness]] (the OpenNet Initiative's
+Access Denied/Controlled/Contested trilogy + Internet Monitor), [[digital-natives-and-youth-privacy]]
+(*Born Digital* and a decade of youth-privacy empirical work), and
+[[internet-democracy-and-networked-protest]] (blogosphere-mapping optimism 2007–2013
+pivoting to the *Network Propaganda* media-ecosystem critique 2017–2020 — same research
+team, inverted conclusion). **6 existing topics extended**:
+[[privacy-and-surveillance]], [[cybersecurity-and-encryption]],
+[[copyright-and-open-access]] (Lessig's and Benkler's actual founding texts, not just
+Buzz-era coverage of them), [[net-neutrality-and-internet-access]],
+[[ai-governance-and-regulation]] (an 8-years-early 2017 framework), and
+[[digital-colonialism-and-global-south]].
+
+**10 new people pages** for authors confirmed recurring corpus-wide before creating a
+page (not just this batch): [[urs-gasser]] (86 items — BKC's most-published author by
+far), [[robert-faris]] (32), [[sandra-cortesi]] (22), [[hal-roberts]] (17),
+[[bruce-etling]] (14), [[yochai-benkler]] (13), [[john-kelly]] (12), [[david-obrien]]
+(10), [[susan-crawford]] (9), [[william-fisher]] (6, but foundational — the corpus's
+earliest author by date). **7 existing people pages substantially deepened** with their
+actual authored works, not just Buzz-era coverage: [[jonathan-zittrain]] (the Access
+Denied trilogy, "The Generative Internet," Don't Panic), [[john-palfrey]] (same
+trilogy, *Born Digital*, *Interop*), [[lawrence-lessig]] (his actual 1999–2006 books:
+*Code*, *Free Culture*, *The Future of Ideas*), [[david-weinberger]] (*Cluetrain*,
+*Small Pieces*, *Everything is Miscellaneous*), [[danah-boyd]] (2007–2012 youth-safety
+research predating *It's Complicated*), [[bruce-schneier]] (the 2016 encryption survey
+and "Don't Panic"), and [[ethan-zuckerman]] (2003–2009 OpenNet/Media Re:public work).
+
+**Timeline:** wrote first-ever narratives for 1993, 1997–2005 (previously bare
+navigational stubs — no Buzz/TagTeam coverage exists that far back, so these years are
+now 100% publications-sourced) and enriched 2006–2020 with cross-links to the new
+topics/people, correcting each year's `item_count` and — where the added material
+changed the actual story, not just the count — the narrative itself (2016 was
+previously described as "the quiet seam" with only 4 items; it's actually one of BKC's
+busiest research years, just invisible to the Buzz/TagTeam feeds).
+
+Updated index.md scope line, all three lists (Topics/People/Timeline), and every touched
+page's `item_count`. Appended this entry and marked all 374 `pub_` ids processed in
+`raw/.synthesis-state.json`.

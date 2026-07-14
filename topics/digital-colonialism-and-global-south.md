@@ -1,7 +1,7 @@
 ---
 type: topic
 title: Digital Colonialism & the Global South
-item_count: 14
+item_count: 16
 related: [ai-labor-and-economy, platform-power-and-antitrust, ai-and-the-environment, ai-and-democracy]
 ---
 # Digital Colonialism & the Global South
@@ -32,6 +32,8 @@ fragmentation.
 - [[14000770-research-paper-internet-fragmentations-outward-turn-by-maily|Internet Fragmentation's Outward Turn]] — 2025-06-05 · sciencespo.fr — Mailyn Fidler
 - [[16769816-1-of-2-job-head-of-sovereign-tech-fund-all-genders-sovereign|Head of Sovereign Tech Fund / Sovereign Tech Agency]] — 2025-11-10 · sovereign.tech
 - [[yt_vZJkFgXacpQ-responsible-computing-for-computer-science-education-in-keny|Responsible computing for Computer Science education in Kenya]] — 2023-06-14 · youtube — the Mozilla Foundation's Responsible Computing Challenge
+- [[pub_2003-andean-readiness-for-the-networked-world-introduction-and-regional-overview-andean-readiness-for-the-networked-world-introduction-and-re|Andean Readiness for the Networked World, Introduction and Regional Overview]] — 2003-11-01 · pub — Colin Maclay — one of the archive's earliest global-development studies
+- [[pub_2010-best-practices-technology-access-to-justice-best-practices-in-the-use-of-technology-to-facilitate-access|Best Practices in the Use of Technology to Facilitate Access to Justice Initiatives]] — 2010-07-29 · pub — Phil Malone et al.
 
 ## Related
 [[ai-labor-and-economy]] · [[platform-power-and-antitrust]] · [[ai-and-the-environment]] · [[ai-and-democracy]] · [[rest-of-world]]
