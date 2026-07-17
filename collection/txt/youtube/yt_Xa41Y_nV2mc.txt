@@ -1,0 +1,253 @@
+[00:00:08] ELIZABETH DUBOIS: So I am Elizabeth.
+[00:00:10] I'm going to talk to you today about positionality-aware
+[00:00:13] machine learning.
+[00:00:14] We are going to start off with a question.
+[00:00:17] Tomato, fruit or vegetable?
+[00:00:19] What do you guys think?
+[00:00:20] AUDIENCE: Fruit.
+[00:00:20] ELIZABETH DUBOIS: Fruit, vegetable, right.
+[00:00:22] OK, it's a matter of perspective.
+[00:00:24] It's also a matter of context in which
+[00:00:25] you want to use that answer.
+[00:00:27] If you're a botanist, you say fruit.
+[00:00:29] If you are a nutritionist, you say vegetable.
+[00:00:32] Lawyers and judges in the US have agreed vegetable.
+[00:00:35] Computer vision researchers say it's miscellaneous.
+[00:00:41] This idea of classification, it's
+[00:00:42] the process of assigning a name or a category
+[00:00:48] to particular idea, concept, thing.
+[00:00:51] It's a process that we go through in our daily lives
+[00:00:54] continually.
+[00:00:54] The idea of classification is also
+[00:00:56] the idea of creating taxonomies for understanding
+[00:00:59] the world around us and reducing the large amounts of nuance
+[00:01:02] and detail that there are in the world usefully.
+[00:01:05] We see it when we're trying to understand how diseases
+[00:01:08] spread around the world.
+[00:01:09] We use it when we're trying to understand what
+[00:01:11] online harassment looks like.
+[00:01:12] We use it to understand differences in race or gender.
+[00:01:16] Gender is a particularly interesting one,
+[00:01:17] particularly in the Western societal context,
+[00:01:21] where, at one point, we saw gender as pretty much agreed
+[00:01:24] upon as a binary variable.
+[00:01:26] There were two options.
+[00:01:28] But now, that's no longer the case.
+[00:01:30] So if we're thinking about these classification processes
+[00:01:33] and trying to embed them into the machines we're building,
+[00:01:36] we need to be thinking about it critically
+[00:01:38] and in the context that we're currently in
+[00:01:41] and what might change moving forward.
+[00:01:45] This is a quote that we had from one of the many user interviews
+[00:01:49] we conducted with different ML and AI engineers.
+[00:01:53] This woman is at a major US news organization,
+[00:01:57] and she talked about the idea of classification
+[00:02:00] and when it might present problems in terms of harms
+[00:02:03] it could cause.
+[00:02:05] She said, there are sometimes when it just doesn't matter.
+[00:02:07] It's not an issue to do with harm.
+[00:02:10] She started with the idea of, OK, our auto-toner model
+[00:02:14] for imagery re-colorization, well,
+[00:02:15] that's not going to cause anyone harm, paused, thought about it.
+[00:02:21] Actually, maybe it does.
+[00:02:23] It's kind of a weird algorithm that may lead to whitewashing.
+[00:02:28] And so this is something we saw time and time again
+[00:02:30] as we were asking these practitioners to think
+[00:02:33] about their classification choices
+[00:02:35] and when they might be problematic,
+[00:02:37] that once they started digging into that problem,
+[00:02:39] they realized there was this potential
+[00:02:41] for problematic decision making that, on the surface,
+[00:02:45] wasn't an issue in the first place.
+[00:02:48] And so this is where we come to our idea of positionality.
+[00:02:51] Positionality is the specific position
+[00:02:54] that-- or perspective that an individual
+[00:02:56] takes given their past experiences, their knowledge.
+[00:03:00] Their world view is shaped by positionality.
+[00:03:03] It's a unique but partial view of the world.
+[00:03:06] And when we're designing machines,
+[00:03:08] we're embedding positionality into those machines
+[00:03:10] with all of the choices we're making about what counts
+[00:03:13] and what doesn't count.
+[00:03:17] So this is a very, very simplified data pipeline, OK?
+[00:03:20] This is when we go from data into our ML model
+[00:03:23] that we are trying to train.
+[00:03:25] I'm going to use the context of online harassment.
+[00:03:28] Let's imagine we have a whole bunch of tweets
+[00:03:30] and we wanted to find whether or not those tweets are
+[00:03:33] exemplifying harassment or not.
+[00:03:36] Well, we would grab our data.
+[00:03:38] We would apply new labels to that data-- harassment, not
+[00:03:41] harassment-- and then we'd train a model on it
+[00:03:43] so it could predict.
+[00:03:45] This requires a really complex classification system, right?
+[00:03:50] So we have a system to decide what counts as harassment
+[00:03:54] or what doesn't.
+[00:03:55] We have to train a whole bunch of annotators
+[00:03:56] to literally go through the data piece by piece
+[00:03:59] and assign those labels.
+[00:04:01] Then they apply that, and that's when
+[00:04:04] we get to feed into that model.
+[00:04:07] So thinking about online harassment--
+[00:04:10] in a project I worked on, we started with three categories.
+[00:04:13] That was our classification system, our taxonomy, right?
+[00:04:17] We had positive, neutral, and negative.
+[00:04:19] Every tweet was going to fit into one of these categories.
+[00:04:23] Our annotators could not agree.
+[00:04:25] Three categories did not work.
+[00:04:27] And it was because there was a bunch of boundary cases
+[00:04:29] between neutral and negative.
+[00:04:31] It caused tons of problem we could not
+[00:04:33] get good inter-coder reliability or inter-rater
+[00:04:36] reliability, which is a common tool
+[00:04:38] to use to assess agreement.
+[00:04:41] We added a fourth category called critical.
+[00:04:44] And all of a sudden, our annotators
+[00:04:46] agreed the majority of the time.
+[00:04:48] We had to redesign our classification system in order
+[00:04:51] to respond to the actual data the way
+[00:04:53] that data was being presented and the way
+[00:04:56] humans interact with that and understand it.
+[00:05:00] So what we're saying is, to interrogate
+[00:05:02] these classification systems, we need
+[00:05:04] to be thinking about what counts in what context.
+[00:05:08] We need to be thinking about who those annotators are, why we've
+[00:05:11] selected them, how they've been trained,
+[00:05:13] at what moment in time.
+[00:05:16] And we need to think about the actual application
+[00:05:18] of the classification systems and question whether or not
+[00:05:21] there is sufficient agreement and whether or not
+[00:05:23] our approach has been reliable.
+[00:05:27] That was an example of a home-grown classification
+[00:05:29] system for a very specific project.
+[00:05:31] But this idea of positionality is embedded even
+[00:05:34] in the very old institutionalized
+[00:05:37] classification systems that are used around the world.
+[00:05:40] So the International Classification of Diseases
+[00:05:43] is a tool that's used internationally
+[00:05:46] to identify and classify health problems.
+[00:05:48] And it actually underpins a lot of the US health care billing
+[00:05:51] system.
+[00:05:53] This is an example of the different codes
+[00:05:55] you can use in the ICD for being harmed by birds, OK?
+[00:06:00] So there is a code for having been
+[00:06:02] harmed by a chicken, or a goose, or a parrot.
+[00:06:07] There is no code for ostrich, though.
+[00:06:10] OK?
+[00:06:10] Think about how big an ostrich is,
+[00:06:13] then think about maybe living in Australia.
+[00:06:15] If you ask an Australian, what is
+[00:06:17] going to be a more risky, harmful health situation,
+[00:06:21] being kicked by an ostrich or being bitten by a goose?
+[00:06:24] Probably, they're going to think the ostrich is the more
+[00:06:26] important thing to count.
+[00:06:28] But the ICD, it wasn't developed with that in mind.
+[00:06:32] The ICD was developed with its origins in the 1850s.
+[00:06:35] It's now maintained by the WHO.
+[00:06:37] And it was designed primarily by White men
+[00:06:40] in Western Europe and North America.
+[00:06:44] Their positionality, it's embedded in the ICD today,
+[00:06:47] and it will continue to be unless we routinely question
+[00:06:50] what that position looks like.
+[00:06:55] Ultimately, choices here are inevitable,
+[00:06:58] and this idea of removing bias, it just
+[00:07:00] doesn't jive when we're understanding
+[00:07:03] that these choices are going to happen regardless.
+[00:07:05] A lot of the conversation about debiasing algorithms
+[00:07:08] is about adding rows.
+[00:07:09] If you just add enough data, you'll
+[00:07:12] be able to get a representative view of the world.
+[00:07:15] But if you limit yourself to only the columns for parrot,
+[00:07:20] chicken, and goose, and you don't
+[00:07:22] have a column for ostrich, you will never
+[00:07:24] capture how many ostrich kicks there were.
+[00:07:28] So if the debiasing debate isn't helpful, what do we do instead?
+[00:07:32] We argue that you could look towards being
+[00:07:34] positionality-aware.
+[00:07:36] And we suggest that there are three basic steps that machine
+[00:07:40] learning engineers and others involved in the process
+[00:07:43] can take.
+[00:07:44] The first is to uncover positionality
+[00:07:46] in your own workflows.
+[00:07:48] Look not only at the classification systems,
+[00:07:50] but also the data and the models that you're making use of,
+[00:07:53] and think about where positionality enters.
+[00:07:55] Keep track of it.
+[00:07:57] Next is to try and assure there's context alignment.
+[00:08:01] That's an alignment between the classification system
+[00:08:03] and the context in which it was developed
+[00:08:05] and the actual application scenario
+[00:08:07] for the machine learning tool that you are creating.
+[00:08:10] And here, let's return to that online harassment example.
+[00:08:14] We developed that for Twitter.
+[00:08:16] Maybe we want to use it on Reddit now.
+[00:08:18] If you're thinking about just taking
+[00:08:19] the model that was created for Twitter
+[00:08:21] and applying it to Reddit, there's
+[00:08:22] very few options for embedding a positionality-aware approach.
+[00:08:27] If you're thinking about, well, maybe if I just
+[00:08:28] feed in a bunch of new data, I can solve the problem.
+[00:08:32] So you trained it on Twitter data.
+[00:08:34] Now, you're going to train it on Reddit data.
+[00:08:36] That'll get you closer.
+[00:08:38] But what you actually need to do is question that classification
+[00:08:41] system.
+[00:08:42] You need to go back and look at how you're actually assessing
+[00:08:46] what counts as harassment and what doesn't because the way
+[00:08:49] people communicate on Twitter is different from Reddit.
+[00:08:51] On Twitter, you have a short character count.
+[00:08:54] You might use hashtags, at replies.
+[00:08:56] On Reddit, you are probably talking
+[00:08:58] in very specific subreddits.
+[00:08:59] You're probably engaging in particular language
+[00:09:02] because there's a moderator watching what you're
+[00:09:04] doing and keeping track to make sure
+[00:09:06] that you're within the bounds of what that community has
+[00:09:08] deemed to be acceptable.
+[00:09:10] You have way more space to do it, right?
+[00:09:12] And so the ways that we classify content for Twitter and Reddit,
+[00:09:17] they're probably going to be different.
+[00:09:18] Certainly, the ways we train our annotators
+[00:09:21] has to be different because those approaches do not
+[00:09:25] work when the content and the context are completely changed.
+[00:09:32] The last step here is to remember
+[00:09:33] that you need to be continually trying to ensure
+[00:09:36] that that alignment exists.
+[00:09:39] The models might change.
+[00:09:40] The data might change.
+[00:09:42] The classification systems themselves might change.
+[00:09:44] The ICD, it's changed by the WHO relatively routinely.
+[00:09:48] And so if you're making use of it,
+[00:09:49] you need to update your approaches.
+[00:09:52] It's also important to recognize that the context in which
+[00:09:55] you're building something might change
+[00:09:57] whether you like it or not.
+[00:09:58] And so having a lack of control there
+[00:10:01] requires you to be aware of what's
+[00:10:04] shifting in order to build a reasonable and responsible
+[00:10:06] tool.
+[00:10:09] So with all of this in mind, what we did
+[00:10:13] was run a workshop with ML engineers.
+[00:10:15] And we've got a number of other workshops already submitted.
+[00:10:18] So we've submitted to EPIC and FAT*.
+[00:10:20] We've created a white paper that's
+[00:10:22] available on our website and plan
+[00:10:24] to write a more detailed position paper
+[00:10:26] that we can make available widely.
+[00:10:30] I will let you go explore the website on your own.
+[00:10:32] But before I do that, I just want to leave you with this.
+[00:10:35] Right now, ML and AI systems are like a one-size-fits-all
+[00:10:40] t-shirt.
+[00:10:41] They fit very few people.
+[00:10:43] A lot of us end up kind of unhappy.
+[00:10:46] But we can do better.
+[00:10:47] We can harness this opportunity to be
+[00:10:50] aware of the very specific context in which these tools
+[00:10:53] can be deployed, think about how they can be tracked over time,
+[00:10:57] and find ways to serve the specific needs of the users
+[00:11:00] and the developers in order to be
+[00:11:03] aware of the particular perspective from which we are
+[00:11:05] designing and that perspective which is embedded in all
+[00:11:09] of the tools we're creating.
+[00:11:11] Thanks.
+[00:11:12] [APPLAUSE]

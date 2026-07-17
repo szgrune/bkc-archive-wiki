@@ -1,0 +1,235 @@
+[00:00:01] OK, good.
+[00:00:02] OK, so they asked me to talk about something controversial,
+[00:00:06] so I'm going to do that.
+[00:00:08] OK, so my talk is called "Please Stop Doing 'Explainable'
+[00:00:11] Machine Learning."
+[00:00:13] All right, now why am I talking about that?
+[00:00:15] It's because bad stuff is happening now.
+[00:00:17] There are bad bail and parole decisions
+[00:00:20] being made because people typed the wrong number
+[00:00:22] into a black box model.
+[00:00:23] And it's letting dangerous people go free,
+[00:00:25] and it's keeping people in prison
+[00:00:27] who don't deserve to be there.
+[00:00:29] We're doing a lot of bad medical diagnosis and screening.
+[00:00:33] Because for example, the algorithms
+[00:00:35] are dependent on factors that are not
+[00:00:37] allowed to be there, like words within an X-ray image.
+[00:00:41] It's depending on those, rather than the actual X-ray.
+[00:00:45] We are making bad loans and credit decisions
+[00:00:48] based on faulty information.
+[00:00:50] And I claim that explainable machine learning actually
+[00:00:54] perpetuates this problem.
+[00:00:56] OK, so why is that?
+[00:00:57] Well, I'm going to make a distinction
+[00:00:59] between explainable machine learning,
+[00:01:00] and interpretable machine learning.
+[00:01:02] Explainable machine learning is when you use a black box,
+[00:01:05] and you explain it afterwards.
+[00:01:07] So that's a post-hoc analysis.
+[00:01:09] Whereas interpretable machine learning
+[00:01:11] is when you use a model that is not
+[00:01:12] black box in the first place.
+[00:01:15] Now, interpretable machine learning
+[00:01:16] is not simply the cart algorithm.
+[00:01:19] If you think we haven't done anything since 1984,
+[00:01:22] you would be wrong.
+[00:01:23] Now, variable importance plots, or partial dependence plots,
+[00:01:27] are not interpretable machine learning.
+[00:01:29] A lot of people say that all they
+[00:01:30] need is their partial dependence plots,
+[00:01:32] but that's explainable and not interpretable.
+[00:01:36] Can you imagine someone bringing out
+[00:01:37] some kind of partial dependence plot
+[00:01:39] in a courtroom that determines someone's fate?
+[00:01:43] So I'm going to make--
+[00:01:45] and I want to clarify that the context of this talk
+[00:01:48] is on high stakes decisions and when you actually need
+[00:01:51] to troubleshoot your model.
+[00:01:52] Those are the main two times that you really
+[00:01:57] need a model that's either explainable or interpretable
+[00:01:59] it's when you actually care about the decision you're
+[00:02:01] making, or you're trying to troubleshoot your model.
+[00:02:05] This is not for things like computational advertising,
+[00:02:07] and Google Search, and stuff like that.
+[00:02:11] OK, so I want to make two arguments
+[00:02:16] on why we should stop working on explainable machine learning.
+[00:02:20] Now the first one is that the accuracy interpretability
+[00:02:23] trade off, is as far as I can tell, a myth.
+[00:02:26] So I kept seeing this plot all over the place.
+[00:02:29] This particular version of the plot
+[00:02:32] is from the DARPA explainable AI BAA.
+[00:02:36] Now, I don't know why they keep producing this plot.
+[00:02:38] Because there is no application that corresponds to this plot.
+[00:02:43] What application is this?
+[00:02:44] And what are the axes on this plot?
+[00:02:46] And are these points for like different machine learning
+[00:02:50] models?
+[00:02:51] Which models do they try?
+[00:02:53] And then is this for a static data
+[00:02:55] set where they tried a whole bunch of different machine
+[00:02:57] learning methods?
+[00:02:58] This plot-- it's mathiness.
+[00:02:59] It doesn't mean anything.
+[00:03:01] Now if this plot is for a static data set,
+[00:03:05] I would argue that there's no high stakes decision, or case
+[00:03:09] where you're troubleshooting your model,
+[00:03:11] where you have a static data set.
+[00:03:13] Data science, or knowledge discovery as it
+[00:03:15] kind of used to be called, it's an iterative process.
+[00:03:19] So you're supposed to take-- this
+[00:03:22] is the KDD process from 1996.
+[00:03:24] It's identical to the CCC big data white paper,
+[00:03:27] the process that was rediscovered there.
+[00:03:29] But you're supposed to process the data,
+[00:03:31] do data mining, machine learning,
+[00:03:33] and then interpret or evaluate your model.
+[00:03:35] And then go back and change the processing
+[00:03:38] and improve the whole system.
+[00:03:40] And so I'm arguing that in fact, if you have a better
+[00:03:45] understanding, and you used a model that was interpretable,
+[00:03:48] that would actually lead to overall better performance,
+[00:03:51] not worse.
+[00:03:53] So we saw this firsthand when I was
+[00:03:55] working on maintaining the New York City power
+[00:03:59] grid with machine learning.
+[00:04:00] And we tried a whole bunch of different machine learning
+[00:04:02] methods on the data we had, and it amounted to,
+[00:04:06] at most, a 1% change in performance
+[00:04:08] between the different algorithms.
+[00:04:11] But then when we started using interpretable models,
+[00:04:14] we could actually figure out what was wrong with our data,
+[00:04:16] and what was wrong with our model,
+[00:04:17] and go back and change things.
+[00:04:19] And make huge leaps in performance
+[00:04:21] after we started doing that.
+[00:04:23] So I claim that this figure is nonexistent, and it's a myth.
+[00:04:28] OK, so I'll make an even stronger argument, which
+[00:04:33] is that even if you did have a static data set,
+[00:04:37] and you tried a whole bunch of different machine
+[00:04:39] learning algorithms on it, then on many data science problems,
+[00:04:43] with good data representations, all machine learning methods
+[00:04:46] perform approximately the same.
+[00:04:49] And so when I say good data representations,
+[00:04:51] I mean data that naturally comes with representation.
+[00:04:53] So I'm excluding things like computer vision, sometimes
+[00:04:57] serious problems, some genomics problems,
+[00:05:00] and some natural language processing problems.
+[00:05:03] And that's why machine learning kind of
+[00:05:04] focuses on those problems, because the data representation
+[00:05:08] needs to be constructed.
+[00:05:10] On the rest of the problems, all the algorithms
+[00:05:13] perform approximately the same.
+[00:05:15] So this figure, as far as I can tell for most data
+[00:05:18] science problems, doesn't exist.
+[00:05:22] Now, I will say that I've worked on a lot of data science
+[00:05:24] problems, and I've always been able to produce
+[00:05:27] an interpretable model that is just as accurate as the best
+[00:05:30] black box that we could find.
+[00:05:32] And I worked in a lot of medical problems,
+[00:05:35] criminological problems.
+[00:05:37] I've worked on meeting analysis.
+[00:05:38] And lately, we've been working on computer vision.
+[00:05:41] And even there, we can actually get somewhere
+[00:05:43] with some level of interpretability.
+[00:05:47] It's not the same as in the other problems,
+[00:05:48] but you can at least--
+[00:05:51] you don't really truly need a fully complete black box.
+[00:05:56] OK, so my second argument is that explainable machine
+[00:06:01] learning is fundamentally flawed because it forces you to rely
+[00:06:04] on two models instead of one.
+[00:06:06] You have the original black box, and then you
+[00:06:08] have the model for the explanation.
+[00:06:10] Now, those models necessarily disagree with each other.
+[00:06:13] Because if they didn't, then you could throw out the black box
+[00:06:16] altogether, and just use the explanation model.
+[00:06:19] So they have to disagree with each other.
+[00:06:21] So let's say that you have an explanation model that's
+[00:06:25] right 80% of the time.
+[00:06:27] Now, usually people say that's pretty good.
+[00:06:29] But the fact is that model is wrong 20% of the time.
+[00:06:33] So what it means is that the explanations
+[00:06:35] you're getting fairly often are wrong,
+[00:06:37] which means you can't trust the explanations, which means
+[00:06:40] you can't trust the black box.
+[00:06:41] And you are back to where you started.
+[00:06:44] Also, the explanation, sometimes they're not consistent.
+[00:06:48] So for instance, the black box could
+[00:06:50] say it denied my credit, because I didn't have
+[00:06:53] a very long credit history.
+[00:06:55] But maybe I could point to somebody over there
+[00:06:57] who had exactly the same length of credit history as me,
+[00:06:59] and that guy did get the loan, or something like that.
+[00:07:03] So the explanations can be inconsistent.
+[00:07:06] And sometimes they don't actually make any sense at all.
+[00:07:10] So for instance, the computer vision people
+[00:07:12] really like saliency.
+[00:07:14] Saliency is where you can figure out what part of the image
+[00:07:17] the neural network is looking at.
+[00:07:20] But the problem is saliency is that if the image is
+[00:07:27] misclassified, then you could see where the network is
+[00:07:29] looking, but it doesn't tell you anything about what
+[00:07:32] the network is actually doing.
+[00:07:34] So you realize you'd never understood what it
+[00:07:36] was doing in the first place.
+[00:07:39] Now, I will say that you, if you're like most scientists,
+[00:07:45] your reward function is designed to favor explainable machine
+[00:07:49] learning.
+[00:07:49] But I believe that, at least for the next few years,
+[00:07:52] the world would be better if you don't.
+[00:07:55] So, why is that?
+[00:07:57] Well, it's because people love their black boxes.
+[00:08:00] Companies can make money off black boxes.
+[00:08:02] You can't make money if you give away the model.
+[00:08:04] The model is completely interpretable.
+[00:08:06] You can't make any money off of it.
+[00:08:09] Black boxes are magical, and they uncover things.
+[00:08:11] They uncover patterns you didn't know about.
+[00:08:13] But that's also true for interpretable machine learning.
+[00:08:16] And in fact, the patterns are much clearer.
+[00:08:18] So if you have a choice between an interpretable model
+[00:08:20] and a black box, a lot of people would choose the black box.
+[00:08:23] But I claim that that makes no sense.
+[00:08:27] Black box models are much easier to train
+[00:08:29] than interpretable models.
+[00:08:30] There's no question about that, because interpretable models,
+[00:08:34] you need to have the constraints to make them interpretable.
+[00:08:37] And then also, black boxes are an excuse
+[00:08:40] not to do any feature engineering,
+[00:08:42] because you don't need to.
+[00:08:43] The machine learning algorithms should supposedly
+[00:08:45] do it for you.
+[00:08:47] But I claim that for any high stakes decision,
+[00:08:49] you should really be very carefully looking
+[00:08:51] at what your features are, and what they mean.
+[00:08:55] Now, people think that the black boxes are more accurate.
+[00:08:59] But they often do that without testing that hypothesis.
+[00:09:02] They very often don't even try to find an interpretable model
+[00:09:05] that's accurate.
+[00:09:08] Now, what's going on right now in the education of machine
+[00:09:12] learning is that we don't even teach interpretable machine
+[00:09:14] learning anymore.
+[00:09:15] Most machine learning classes do not even teach CART.
+[00:09:18] So people only know their black boxes.
+[00:09:23] Now it is much easier as an academic
+[00:09:25] to write a paper introducing an explainability method
+[00:09:28] than an interpretable modeling method.
+[00:09:29] Because explainability methods have often involved just
+[00:09:32] taking derivatives, whereas interpretable modeling
+[00:09:34] requires solving a hard optimization problem
+[00:09:36] with interpretability constraints.
+[00:09:40] Now, when the world writes mostly papers
+[00:09:41] about explainable AI, it actually
+[00:09:43] encourages black boxes.
+[00:09:44] Because people think that you can just
+[00:09:46] make a black box, and somebody can explain it.
+[00:09:48] So you might as well just make the black box.
+[00:09:51] Now my bottom line is that I think statisticians
+[00:09:54] can fix this problem.
+[00:09:55] It's not going to happen in machine learning,
+[00:09:57] not the way things are going.
+[00:09:59] But applied statistics has always
+[00:10:01] cared about interpretability.
+[00:10:03] So if the field of statistics wants
+[00:10:06] to be leaders of data science, I claim
+[00:10:08] that it should solve problems like this.

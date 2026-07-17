@@ -1,0 +1,1360 @@
+[00:00:01] SPEAKER 1: Thank you.
+[00:00:02] Thanks to everyone for coming.
+[00:00:05] This talk, we're so lucky to have Amanda Askell.
+[00:00:07] This talk is sponsored or helped, brought into real life
+[00:00:13] by the ethics governance initiative.
+[00:00:16] And then I just want to say that we're also live recording
+[00:00:19] this entire event, so anything you say
+[00:00:21] will be forever in the scrapbook of the internet.
+[00:00:27] And I think next week, next Tuesday, we're
+[00:00:29] going to be having a set of ignite talks, which
+[00:00:31] are like five minute really quick lightning talks
+[00:00:34] by various members of the Brookline community,
+[00:00:38] and that'll be next Tuesday also at lunch here.
+[00:00:43] So you guys should all come for that.
+[00:00:45] OK.
+[00:00:45] So I want to introduce Amanda Askell, who's going
+[00:00:47] to be talking to us today.
+[00:00:49] She's a research scientist in ethics and Policy
+[00:00:51] at Open AI, where she works on topics like responsible AI
+[00:00:56] Development, Corporation and safety.
+[00:01:00] Before joining Open AI she's studied philosophy,
+[00:01:03] her PhD in philosophy at NYU.
+[00:01:05] Where she wrote a piece on infinite ethics, which
+[00:01:08] she's going to talk about.
+[00:01:09] [LAUGHTER]
+[00:01:10] Which we're going to make her talk about.
+[00:01:13] But then before that she had Bphil in philosophy at Oxford.
+[00:01:19] So in addition to that, she writes
+[00:01:21] a bunch for popular audiences Fox, the Guardian or courts.
+[00:01:24] So let's give her a little warm welcome.
+[00:01:28] [APPLAUSE]
+[00:01:33] AMANDA ASKELL: Hi.
+[00:01:34] Thank you.
+[00:01:35] I will come around this way.
+[00:01:38] Don't know if anyone else was slightly horrified,
+[00:01:40] by the way this will be on the internet forever.
+[00:01:43] I know I am, but maybe I have more reason to be.
+[00:01:45] So today I'm going to be talking a little bit about AI
+[00:01:48] development.
+[00:01:49] And in particular how to develop a competitively
+[00:01:52] without falling victim to collective action problems.
+[00:01:55] So I guess a key thing that I want to emphasize,
+[00:01:58] is that people talk a lot about competitive development
+[00:02:01] and how it could end up being really bad for the safety
+[00:02:04] and security of the AI systems.
+[00:02:06] And basically going to say that there are lots of mechanisms
+[00:02:08] for preventing that from being the case,
+[00:02:10] and they don't necessarily involve ceasing competition.
+[00:02:13] So that's the kind of key thesis.
+[00:02:15] So here are some cakes.
+[00:02:16] I promise to torture this analogy a bit later,
+[00:02:20] but for now here are some robots as well.
+[00:02:25] I want to get into this thing here.
+[00:02:28] OK.
+[00:02:28] So basically there's going to be five sections of varying
+[00:02:32] lengths.
+[00:02:33] So the first thing that I'm going to claim,
+[00:02:35] is just the AI systems can be more
+[00:02:37] or less beneficial to society.
+[00:02:39] I hope people kind of agree with that already but in case not,
+[00:02:42] I will go over it.
+[00:02:45] The second is the developers in general
+[00:02:47] want to build more beneficial AI systems if possible.
+[00:02:50] I think that's true even if you think of the most
+[00:02:52] kind of like a self-interested, doesn't really
+[00:02:56] care about the world sort of ideally fictional AI developer,
+[00:03:00] But.
+[00:03:00] Think it's even more true of real world developers.
+[00:03:04] The third thing I'm going to argue
+[00:03:05] is just that competitive pressures
+[00:03:07] can reduce investment in system value,
+[00:03:10] or at least incentives to invest in system value,
+[00:03:13] even if you're a developer that wants to develop things safely.
+[00:03:16] And well and this is like a problem.
+[00:03:19] I'm then going to give a kind of very simple game
+[00:03:22] theoretic analysis of that basically,
+[00:03:24] to indicate that there are five factors that
+[00:03:27] affect the rationality of investing in systems
+[00:03:29] value in this kind of situation where
+[00:03:31] there's competitive pressure.
+[00:03:35] And then I'm just going to argue that these five factors can
+[00:03:38] be leveraged to improve AI development even when
+[00:03:42] you have a lot of competition.
+[00:03:44] OK, so first premise.
+[00:03:48] AI systems can be more or less beneficial to society.
+[00:03:53] So picture of climber.
+[00:03:55] I feel like since I moved to San Francisco,
+[00:03:57] I became the quintessential Bay Area person, which
+[00:04:00] means I go climbing a lot.
+[00:04:01] So I'm going to use a climbing analogy here.
+[00:04:04] So there's a question of imagine this
+[00:04:06] is like your kind of system here,
+[00:04:07] where you've got like your harness and all of your safety
+[00:04:09] equipment, and you're going climbing in the outdoors.
+[00:04:11] And the question is like what makes this system beneficial?
+[00:04:15] And unlike most systems, including
+[00:04:17] like in technology but also elsewhere,
+[00:04:19] have like three key components to being beneficial.
+[00:04:22] So the first one is just safety.
+[00:04:24] This system is like if it's designed well
+[00:04:27] it's not going to like put me at risk
+[00:04:29] of getting into an accident.
+[00:04:31] It's basically not going to like fail unexpectedly,
+[00:04:34] I know what it's going to do, and I
+[00:04:36] know that the risk of an accident is low.
+[00:04:37] And ideally I know that if there is an accident
+[00:04:39] it's going to be like one that isn't like very bad for me.
+[00:04:43] And the equivalent in technology is just
+[00:04:45] making sure that your systems don't suddenly or unexpectedly
+[00:04:47] fail.
+[00:04:48] So it be really bad if I had like a safety critical system
+[00:04:50] and I had some aspect of it that just failed unexpectedly
+[00:04:55] in New circumstances.
+[00:04:58] This is the kind of failure that we want to avoid.
+[00:05:01] Third one is security.
+[00:05:03] Now ideally this applies less to the case of climbing,
+[00:05:05] but the idea here is, if I have someone who is very malicious
+[00:05:08] and wants to do me harm, my system should basically
+[00:05:11] be impervious to any of their attempt to undermine my safety
+[00:05:19] equipment.
+[00:05:20] So in this case, it might be that like doing checks
+[00:05:22] for example, as a way of making sure
+[00:05:23] that if there's been any tampering with your equipment
+[00:05:25] that you're not going to like then go and rely on it.
+[00:05:27] So that would be a system that's secure,
+[00:05:29] and obviously in the case of technology,
+[00:05:30] this is mainly things like if someone wants to steal data,
+[00:05:33] I have a good way of protecting the data of my users.
+[00:05:35] And if that system is working well then
+[00:05:37] I have a secure system.
+[00:05:39] Finally, I want to have a good social impact.
+[00:05:42] So a couple of natural ways in which my system for climbing
+[00:05:45] can be of good social impact, is that it can not
+[00:05:48] ruin the environment.
+[00:05:49] So that more people can come to the park and enjoy it.
+[00:05:51] And I haven't destroyed it with my climbing equipment.
+[00:05:53] And also just like the roof is enjoyable like people
+[00:05:56] find it pleasant no one finds it too hard et cetera.
+[00:06:00] And in the case of technology systems,
+[00:06:02] I think we want to think a lot about this, because it's
+[00:06:05] an easy thing to overlook.
+[00:06:06] You can think, well I have this system that is safe and secure,
+[00:06:08] but you could have a safe and secure system
+[00:06:10] that like decreases like trust in like really
+[00:06:13] reliable information sources, and that
+[00:06:15] would be a social harm that is unrelated to safety
+[00:06:19] and security in the kind of standard sense.
+[00:06:21] So AI systems have these properties
+[00:06:24] to greater or lesser degrees as do other technology systems
+[00:06:27] as the systems more generally.
+[00:06:29] So basically AI systems are in inside systems.
+[00:06:34] And here is an example of where AI systems can go wrong.
+[00:06:38] So this is a system where it's learning
+[00:06:41] how to control this sport here.
+[00:06:44] And you can see it's kind of crashing into things,
+[00:06:46] but then eventually is learning that it gets a bunch of points
+[00:06:49] here if it gets these turbos.
+[00:06:51] And so now it just keeps crashing into this
+[00:06:53] over and over and over again.
+[00:06:54] So the goal for the humans had in mind here
+[00:06:57] was that it would go to the end of the course,
+[00:06:59] and instead what you found was that the system just
+[00:07:01] started crashing, in order to get
+[00:07:03] these points from these turbos.
+[00:07:04] So this is an example of a way in which like an AI system.
+[00:07:07] Can you think you've designed it for this one task,
+[00:07:10] you haven't realized that actually the way that you've
+[00:07:13] created the incentives are such that are just
+[00:07:15] is going to set itself on fire.
+[00:07:17] So if that's bad.
+[00:07:18] We don't want that.
+[00:07:19] We want systems that are better than that.
+[00:07:21] OK.
+[00:07:23] AI developers want to build more beneficial systems if possible.
+[00:07:26] So I think the one thing worth noting
+[00:07:28] is it's like strongly in companies
+[00:07:30] incentives in general, to invest in making sure
+[00:07:32] that their products are safe.
+[00:07:34] Now why is that?
+[00:07:35] And I think this is true across domains.
+[00:07:37] So first, obvious reason is just like money people
+[00:07:41] don't want to buy systems where it's really easy for someone
+[00:07:44] to just like hack the system and steal all of their data.
+[00:07:47] So that's an incentive for companies
+[00:07:49] to make secure systems.
+[00:07:50] People don't want systems that are just
+[00:07:52] going to fail suddenly, and so that's
+[00:07:53] like a reason to build systems that
+[00:07:55] are free of accidents, and in general people
+[00:07:57] want systems that enhance their lives.
+[00:07:59] And so that's a reason to want systems
+[00:08:01] that have high social value.
+[00:08:03] And typically like I guess like in the kind
+[00:08:05] of ideal economic model, this is all we would need.
+[00:08:08] If you had like a perfect market with perfect information,
+[00:08:11] and then you would end up just developing things
+[00:08:13] with like the perfect level of the kind of socially
+[00:08:17] optimal level of risk.
+[00:08:18] Because otherwise people wouldn't buy it.
+[00:08:20] So you wouldn't overinvest in safety
+[00:08:22] you wouldn't spend unnecessarily,
+[00:08:24] but you also wouldn't invest.
+[00:08:26] I guess a key point worth noting there is that you can in fact,
+[00:08:29] over invest in these things.
+[00:08:31] If I were to have a food production company,
+[00:08:34] and are to say I know I'll double the cost of the food
+[00:08:37] that I'm producing, but in order because what I want to do is I
+[00:08:40] want to have taste testers for absolutely every piece of food
+[00:08:43] that goes out.
+[00:08:44] So essentially you can guarantee that someone
+[00:08:45] has in fact eaten a small corner of this food before you eat it.
+[00:08:48] I think most people just would be like that's unnecessary,
+[00:08:51] and I'm not paying like $20 for a sandwich,
+[00:08:53] for that to be the case.
+[00:08:56] So ideally you want to get to this socially optimal point.
+[00:08:59] The second key incentive is just like litigation basically,
+[00:09:02] so the Civil liability law is a way
+[00:09:04] of ensuring that you just kind of internalize
+[00:09:06] any externalities.
+[00:09:08] Like you harm me, I get to sue you as a company,
+[00:09:10] and now you are like in turn harmed by the harm
+[00:09:14] that you caused me.
+[00:09:14] So like a standard example that's used here,
+[00:09:17] are things like pharmaceuticals that go wrong.
+[00:09:19] So very famously drugs for morning sickness
+[00:09:24] which cause birth defects, and led to lawsuits for millions
+[00:09:27] of against the companies that produced those drugs.
+[00:09:31] The third one is regulation.
+[00:09:33] And you'll notice here that I have like an umpire,
+[00:09:35] rather than like something that's from I
+[00:09:38] could have had a government building
+[00:09:39] or something like that.
+[00:09:40] The reason for this is just that regulation doesn't always
+[00:09:43] have to come from government, so that obviously can,
+[00:09:46] and governments are these kind of external actors
+[00:09:48] that can force kind of safety regulations on an industry.
+[00:09:53] But also a lot of industries do engage
+[00:09:54] in things like self regulation, and in that case,
+[00:09:57] it's like this kind of regulatory incentive
+[00:09:59] to develop safely.
+[00:10:01] Finally, I think that companies in general
+[00:10:03] just want to build things that are in fact good,
+[00:10:06] and I think it's always worth remembering this.
+[00:10:08] When people join companies, they don't
+[00:10:10] do it thinking "Oh well I don't really
+[00:10:11] care that I spend my 9:00 to 5:00,
+[00:10:13] like working on this system that I think is going
+[00:10:15] to harm a bunch of people."
+[00:10:17] I think most people couldn't do that.
+[00:10:19] And so for the most part, people and companies are actually
+[00:10:21] compelled to build products that are good for people,
+[00:10:23] good for their users and they do in fact care about this.
+[00:10:27] I think that in many ways, the way
+[00:10:29] that we're kind of designing society,
+[00:10:30] so that we don't need that, but is an important component.
+[00:10:35] OK so no we're going to do the fun kind of game theory
+[00:10:39] bit where I like torture the cake analogy quite a lot,
+[00:10:43] which I was really excited by, so I
+[00:10:44] hope you guys like the tortured cake analogy I guess.
+[00:10:48] I also kind of like baking shows,
+[00:10:50] and so maybe this is just me going a bit overboard on that.
+[00:10:53] I swear this has to do with AI.
+[00:10:55] And I will bring it back to AI at the end,
+[00:10:59] then maybe I'll be like think about this
+[00:11:01] is like a potential development contest between two developers.
+[00:11:04] So imagine this imaginary baking show,
+[00:11:07] there are two bakers involved in this baking show
+[00:11:10] and they are going to cook something, like they're
+[00:11:12] going to bake a cake.
+[00:11:13] And the way that it works, is that the bakers
+[00:11:15] are scored from 0 to 5.
+[00:11:18] But the first Baker gets this advantage.
+[00:11:20] So the first bakers score gets a kind of plus 2 at the end.
+[00:11:23] So if you get a bake of three, then at the end of your first,
+[00:11:27] you're going to get like a five overall.
+[00:11:29] No the time ends as soon as the first Baker is finished.
+[00:11:32] So you can see this is basically trying
+[00:11:34] to model this like first mover advantage.
+[00:11:36] If I'm the first to market, I get the product out,
+[00:11:39] but like that's it.
+[00:11:40] Like suppose that we just look at what
+[00:11:41] people get at that point, what each baker gets.
+[00:11:44] So they get their score times $100.
+[00:11:47] So if I bake something faster than you do, and it's
+[00:11:49] like a 2 out of 5, then I get 4 and you
+[00:11:52] get whatever the scores of your current bake.
+[00:11:54] So if you're like halfway through, and it's terrible,
+[00:11:56] then you maybe get a 1.
+[00:11:57] And then I get $400 you $100.
+[00:11:59] So this is really kind of replicating
+[00:12:01] something akin to a simple version of like a development
+[00:12:04] race.
+[00:12:04] I want to be the first out with the product because I get more,
+[00:12:08] but I also want a better product.
+[00:12:09] Because ultimately if I just rush to market with something
+[00:12:11] that's terrible I'm not going to gain anything.
+[00:12:16] So in the case where there was no race,
+[00:12:18] if I wasn't trying to race against you,
+[00:12:21] I would just take all of the time.
+[00:12:22] And I would make this like five out five bake.
+[00:12:25] I would get like maybe I get the plus 2, if for some reason
+[00:12:27] I'm still getting the plus 2 for like winning,
+[00:12:30] and then I get like $700.
+[00:12:32] So if there is zero competition I just would in no way rush.
+[00:12:37] But the bakeries does give me an incentive
+[00:12:40] to reduce the quality in order to get faster bake.
+[00:12:43] So this is the basic idea behind ways
+[00:12:45] in which competitive pressure can make things go badly wrong,
+[00:12:48] if you don't have enough incentive
+[00:12:49] to actually make things safe.
+[00:12:51] So in this competition, I could do
+[00:12:54] I'm going to cooperating which is I can use up
+[00:12:56] all of the time, and I can make it perfect bake,
+[00:12:59] or I could defect.
+[00:13:00] I could bake as fast as possible,
+[00:13:01] and make a mediocre bake.
+[00:13:03] So in the case of any system this
+[00:13:04] is going to be like spending a lot of time trying
+[00:13:06] to make sure my system is socially beneficial,
+[00:13:09] or just trying to get out to market as best as I can.
+[00:13:13] Now if we both have the same [AUDIO OUT],,
+[00:13:17] we each have a 50% chance of winning.
+[00:13:20] To keep this simple, you can work this out
+[00:13:23] in more complicated games, but I just
+[00:13:25] want to get the kind of simple thoughts out.
+[00:13:27] So I suppose I just have a 50-50 chance of winning.
+[00:13:31] If we have different strategies though, then
+[00:13:33] whoever defects is going to finish first.
+[00:13:35] If you just decide to make the mediocre bake,
+[00:13:37] you're just going to beat me if I try and make
+[00:13:39] a really good fancy like cake with lots of layers and stuff.
+[00:13:42] If I could do that, which I can't.
+[00:13:46] So now imagine a case where there's Anne and Ben,
+[00:13:48] and these are the two people who are competing.
+[00:13:50] And the idea is, OK, so if they both cook an excellent bake,
+[00:13:54] then they each have a 50% chance of winning,
+[00:13:59] but they're both guaranteed to have like a 5 out of 5 bake.
+[00:14:02] And so they don't know which will come first.
+[00:14:04] So there's that plus 2, and so this
+[00:14:05] is distributed equally among them in expectation.
+[00:14:08] So you're guarantee a five but you don't know who
+[00:14:11] the extra 2 is going to go to.
+[00:14:13] Now, if Anne does a quick bake, and Ben does a slow bake,
+[00:14:17] hopefully I actually have a little pointer.
+[00:14:18] Oh no I don't.
+[00:14:19] OK, never mind I don't want to get close to someone.
+[00:14:22] That would be bad.
+[00:14:24] Then she's guaranteed to, then Ben is guaranteed to win,
+[00:14:29] and so Ben is going to get a payoff of four,
+[00:14:31] because his bake is a 3 of, his because the two of five,
+[00:14:36] but he's getting the extra two.
+[00:14:37] I hope I did the numbers correctly here,
+[00:14:39] I often change my numbers last minute
+[00:14:40] and then they become wrong.
+[00:14:42] So I know everything that follows is correct,
+[00:14:44] but if I use the wrong number earlier
+[00:14:46] when I talked about the score of the bed back then I apologize.
+[00:14:49] But Anne is guaranteed to get 2, because she's
+[00:14:51] going to be last she has this two out of five bake,
+[00:14:54] and so she doesn't get the extra two points.
+[00:14:56] Now, if they both rush they both have
+[00:14:58] a 50% chance of getting the extra point,
+[00:15:00] because it's a 50-50 chance of her win but there is a 2 at 5.
+[00:15:04] So they each get three.
+[00:15:06] So in this game like many games it
+[00:15:09] depends a lot on what they think the other person will do.
+[00:15:11] So here Anne should cooperate, and she should
+[00:15:13] go for the excellent bake.
+[00:15:15] If she thinks there's at least a one third chance that Ben will,
+[00:15:18] and you can see that Ben is in a symmetric situation.
+[00:15:20] So Ben should also excellent be it can take up all the time,
+[00:15:23] if he thinks that there's at least
+[00:15:24] one third chance the end will.
+[00:15:25] And for the sake of this, we can just
+[00:15:27] imagine that they have to put the things
+[00:15:28] in the oven at a certain time.
+[00:15:29] And so there's no there's no chance of a last minute
+[00:15:32] defection.
+[00:15:32] I can talk about that in questions
+[00:15:34] if people have thoughts there.
+[00:15:36] OK.
+[00:15:38] So, again in the No race case, we
+[00:15:40] would aim for five out five bake.
+[00:15:42] But in the bake race, if we think
+[00:15:44] it's pretty likely that the others will race,
+[00:15:46] then we should go for a mediocre bake.
+[00:15:48] So this is the thing that's concerning
+[00:15:50] about competition with respect to things like product safety.
+[00:15:53] So what if it's the case that I'm just
+[00:15:54] really confident that other developers are going
+[00:15:56] to kind of under invest in making sure
+[00:15:57] that their systems are socially beneficial,
+[00:15:59] and it's like well then I'm in a collective action problem.
+[00:16:02] We'd all be better off if we engaged in this race
+[00:16:05] over beneficial AI systems, but we find ourselves
+[00:16:08] with individual incentives to instead defect and just
+[00:16:11] try and build something really quickly.
+[00:16:13] And so this is unfortunate.
+[00:16:15] Is basically a tension between the group interests
+[00:16:18] and individual interests.
+[00:16:20] And so in this case responsible AI development
+[00:16:23] can become a collective action problem
+[00:16:25] when you're confident that the other person is going
+[00:16:28] to race, or basically just as a result
+[00:16:30] of competitive pressures, and I'll talk a little bit more
+[00:16:32] about that.
+[00:16:35] So in the case of AI is just to really bring it back
+[00:16:37] because I've been talking about baking quite a lot.
+[00:16:40] But let's just say building AI is like baking a cake I guess,
+[00:16:45] where when you call for it you're saying,
+[00:16:47] we're going to make sure we invest in making
+[00:16:49] our systems beneficial.
+[00:16:51] When you defect, you say like no we need to develop faster.
+[00:16:56] And we can do this at the cost of making like a worse cake,
+[00:16:58] or in the case of AI, like making a worse system.
+[00:17:02] Knowing that it might be less secure than it otherwise
+[00:17:04] could be et cetera.
+[00:17:06] Cool.
+[00:17:07] OK.
+[00:17:08] So, that was literally just exactly the same thing
+[00:17:13] but showing you how this analogy works.
+[00:17:15] And again, people may be like look
+[00:17:17] you're doing something that's a one shot game,
+[00:17:19] and I'm to those people who have that thought, if anyone.
+[00:17:22] I guess, we can talk about a no win one short games later.
+[00:17:27] It's just harder to represent them.
+[00:17:28] It's hard enough to represent these ones.
+[00:17:30] OK, so a fun thing that falls out of this, I think,
+[00:17:33] is actually really important, is that trusts know actually has
+[00:17:36] a real kind of monetary value.
+[00:17:39] And maybe it's like I don't mean to like
+[00:17:41] that I don't think that's like dismissive it means you should
+[00:17:43] actually be investing a lot in making it the case
+[00:17:45] that you and Ben can work together.
+[00:17:47] So if you're baking, and you can spend some money
+[00:17:49] to like go out for drinks with Ben,
+[00:17:51] really chat with him about how he's going to bake tomorrow
+[00:17:54] like find a way of gaining each other's trust that you're going
+[00:17:57] to actually follow through in your actions,
+[00:17:59] you should be willing to invest that.
+[00:18:01] So the idea is like if I have 0% confidence that Ben will
+[00:18:04] corporate, then my expected reward
+[00:18:05] from the baking competition is $300.
+[00:18:08] If I can move that to 100% or in fact,
+[00:18:10] even if I can just shift it above the one in 3,
+[00:18:13] I start to gain money all the way through but simplest case I
+[00:18:17] move it to 100% and I get $600.
+[00:18:21] So the idea here is like in order
+[00:18:23] to move my confidence in-band from 0% to 100%,
+[00:18:27] I should be willing to spend like several dollars.
+[00:18:30] Because it's just worth it.
+[00:18:32] And ideally it wouldn't require that, hopefully Ben
+[00:18:35] is a good person.
+[00:18:36] But you know I don't know, Ben I haven't gone out
+[00:18:40] for these drinks with him yet, so maybe I'll
+[00:18:42] spend like $60 on those drinks.
+[00:18:44] OK.
+[00:18:48] So in this kind of example, and I do think this generalizes,
+[00:18:52] there are these five key factors that
+[00:18:54] affect the rationality of investing in system value
+[00:18:57] even under this kind of competitive pressure.
+[00:19:00] And they're actually these are five factors that things like
+[00:19:04] I'll talk a little bit about market incentives,
+[00:19:06] and liability again because the old lean on one
+[00:19:08] of these factors at the very least.
+[00:19:11] So five factors that increase the rationality of cooperation.
+[00:19:14] So having a higher expected value
+[00:19:16] to mutual responsible development is one such factor.
+[00:19:19] I'll go through each of these and give some cases.
+[00:19:21] So we don't need to focus.
+[00:19:23] So this is the case where the bear like
+[00:19:25] if I suddenly scored out of 10, and you could get 10 out
+[00:19:29] of 10 bake, and the bad bake would still be a 2 out of 10,
+[00:19:34] then this would increase your incentive
+[00:19:36] to cooperate with Ben.
+[00:19:37] I'll show that in a second.
+[00:19:40] Lowering the expected cost to unreciprocated responsible
+[00:19:43] development.
+[00:19:44] So if I develop responsibly but I
+[00:19:47] don't expect that that's actually
+[00:19:48] going to harm me very much, if the other person turns around
+[00:19:51] and defects, then that's going to increase my incentive
+[00:19:54] to cooperate.
+[00:19:56] Luring the expected value of not reciprocating
+[00:19:59] responsible development.
+[00:20:00] So if it's the case that the bake that I make is worse.
+[00:20:05] If I don't make responsibly, in this case
+[00:20:08] or build AI responsibly then this
+[00:20:10] decreases my reason to defect.
+[00:20:15] Lower expected value to mutual quick development.
+[00:20:17] So if we just think that the cost of building
+[00:20:19] these systems that don't work very well,
+[00:20:20] is really high and quite distributed.
+[00:20:23] Then that's another kind of factor
+[00:20:24] that's going to mean that I should actually
+[00:20:26] cooperate with agents more.
+[00:20:29] And having greater confidence that others will reciprocate
+[00:20:32] responsible development, is a final factor
+[00:20:33] that's really important when it comes
+[00:20:35] to increasing the expected value of AI systems.
+[00:20:40] And I think it's worth just emphasizing that in many cases,
+[00:20:43] companies are competing with one another over maybe
+[00:20:47] it's good time to give a kind of analogy here,
+[00:20:50] but companies are often competing over
+[00:20:53] how safe to make their systems, know this competition is
+[00:20:55] occurring in car manufacturers, it's
+[00:20:58] occurring in plane manufacturers.
+[00:21:00] It's just that we think that the point at to which
+[00:21:03] they are competing, is not one that's bad.
+[00:21:05] So plane safety is like very good,
+[00:21:07] maybe like recent events undermine our confidence
+[00:21:10] in that a little bit, but a car safety is also extremely good,
+[00:21:16] and the idea is that we have just
+[00:21:17] created the system of incentives so that the point that they're
+[00:21:20] racing towards is like ideally is close to socially optimal
+[00:21:24] as possible.
+[00:21:25] It's basically people don't want to spend more on safety
+[00:21:27] they're really happy with the safety of their cars
+[00:21:29] same with the safety of their planes.
+[00:21:31] So I think when people hear something
+[00:21:32] like competitive pressure pushes this down,
+[00:21:34] it's like we should only be worried about that,
+[00:21:37] if it pushes at the lower point that we think is acceptable.
+[00:21:41] And by using these levers we can make sure
+[00:21:43] that point remains kind of high.
+[00:21:47] I'll try and talk a little bit.
+[00:21:49] So this is just like to illustrate the things that I
+[00:21:51] gave, I hope you just trust me on this I did go through it
+[00:21:53] so hopefully these are kind of correct.
+[00:21:56] So this was the earlier case, this
+[00:21:57] was the original case where the trust threshold was 1/3.
+[00:22:00] I had to have greater than a third confidence
+[00:22:02] that the other person would reciprocate
+[00:22:04] so now factor first to mutual responsible development.
+[00:22:09] Now the trust the threshold has gone down to 1 in 7
+[00:22:12] I think that there's a greater than 1 in seven chance
+[00:22:14] that he will reciprocate, then I will.
+[00:22:17] Or that he will in this case build a beneficial system,
+[00:22:21] and so will I. The second is lowering the expected cost
+[00:22:24] to unreciprocated responsible development.
+[00:22:27] So that's making this a little bit better.
+[00:22:29] It's a little bit better if I build the really Safe System,
+[00:22:31] and the other person defects on me and builds the bad system.
+[00:22:35] And in that case, the trust threshold is lowered to 1/5.
+[00:22:39] The third factor was lower the expected cost
+[00:22:41] to unreciprocated responsible development.
+[00:22:42] So I developed responsibly, is this did I accidentally?
+[00:22:47] The third one is not that, ignore the one at the top.
+[00:22:50] I knew there would be an error in these, there always is.
+[00:22:53] OK so this is saying reduce the benefits of defecting
+[00:22:57] against the other person.
+[00:22:58] So my bake isn't actually going to be that good
+[00:23:00] if I defect against you.
+[00:23:01] You're sufficiently good Baker that if I try and be quickly
+[00:23:04] against you, I get a 1 and 5.
+[00:23:06] And so this introduces me to a 3 and here the trust threshold
+[00:23:09] is down from a 1/3 to 1/4.
+[00:23:12] Finally, lower the expected value
+[00:23:15] of mutual quick development.
+[00:23:16] So, if we both defect against one another,
+[00:23:18] suppose that we each therefore make a much worse bake,
+[00:23:21] so we only get 2.
+[00:23:22] We get scored at like 1/5 5 again.
+[00:23:26] The trust threshold now is zero.
+[00:23:27] So now it just doesn't make any, basically you're
+[00:23:29] like I don't care how confident I am.
+[00:23:33] Ben has no interest in defecting neither
+[00:23:35] do I. We should both just like try and do the best we can
+[00:23:39] in the baking contest, or in the AI contest,
+[00:23:43] we should build responsibly.
+[00:23:45] So excellent.
+[00:23:46] We have these things that can affect responsible development.
+[00:23:52] these 5 factors can be leveraged to improve AI development.
+[00:23:56] So before you go into this, I think
+[00:23:59] I'm kind of showing you this abstract thing of like,
+[00:24:01] here are these factors that make it more or less
+[00:24:04] rational to develop something responsibly
+[00:24:06] and they apply pretty generally.
+[00:24:09] I think that sometimes people still get
+[00:24:10] this instinct of like, but like companies are just
+[00:24:14] super cutthroat, and they just want to, I don't know,
+[00:24:18] compete one another.
+[00:24:19] And this is really pie in the sky thinking.
+[00:24:23] And I think to that.
+[00:24:24] I mean, one thing that's interesting
+[00:24:25] or that's worth noting is I'm talking about collective action
+[00:24:28] problems with negative externalities here.
+[00:24:31] So this is a collective action problem
+[00:24:33] where it reduces the safety of systems and expectation.
+[00:24:37] There are some collective action problems that actually
+[00:24:39] have positive externalities.
+[00:24:42] So when people feel to collectively act actually
+[00:24:44] to the social benefit of everyone.
+[00:24:46] So like a really standard example of this
+[00:24:48] is going to be a price war between companies.
+[00:24:50] So, if companies if I'm like a large drinks corporation
+[00:24:54] and you are the other major large drinks corporation,
+[00:24:57] and there's basically no competition in our field,
+[00:25:00] and I'm like well look like people
+[00:25:02] want to buy this kind of like I don't want to say any names.
+[00:25:05] Because I'm like "Oh gosh what if"
+[00:25:07] I was like I'm not implying that anyone is colluding,
+[00:25:09] but like I want to increase the cost of a can of soda
+[00:25:13] to like $10 a can.
+[00:25:15] Would you like to also do this?
+[00:25:17] I can only do this if you also raise the cost of yours.
+[00:25:20] And then we'll still get about half the market each,
+[00:25:22] but will each be making $10 a can.
+[00:25:26] If it's the case, now that's a case
+[00:25:27] where we are cooperating in order
+[00:25:30] to get more money from consumers.
+[00:25:33] And doing that is in violation of antitrust.
+[00:25:36] Because like it massively raises the cost for consumers,
+[00:25:40] and the idea here is that failing
+[00:25:41] in that collective action problem, i.e. defecting
+[00:25:44] against one another.
+[00:25:45] Is the thing that drives prices down.
+[00:25:47] Like in that case, if I raise it to $10 you have like a pretty
+[00:25:51] good incentive to be like I will make my $9.90 next month,
+[00:25:55] and then I would be like well I make my $9.80 next month.
+[00:25:57] And that's exactly the kind of defection pattern
+[00:25:59] that you see in a price war.
+[00:26:02] The really interesting thing is that we
+[00:26:04] have an entire legal framework to make sure that kind
+[00:26:06] of coordination doesn't happen.
+[00:26:08] So if you think that we should be really pessimistic
+[00:26:10] about coordination between industry to make sure
+[00:26:13] that they are developing safely, which
+[00:26:15] is like what happens in a lot of self regulated industries
+[00:26:17] but also elsewhere, it's like we think
+[00:26:21] that like when it's in people's interest to coordinate.
+[00:26:23] It's often such a kind of strong incentive
+[00:26:25] that we actually have to if it has
+[00:26:27] negative rather than positive externalities,
+[00:26:29] we actually make it illegal.
+[00:26:31] So like that's the kind of case for like I'm not giving you
+[00:26:34] a pie in the sky thing and I think that this
+[00:26:36] is genuinely quite possible.
+[00:26:38] But the AI industry is young.
+[00:26:40] And so in many ways still has to develop
+[00:26:42] a lot of these mechanisms, that other industries have already
+[00:26:45] developed over time.
+[00:26:46] And I can talk a little bit about that later.
+[00:26:48] OK.
+[00:26:50] So just to give a kind of overview of some levers
+[00:26:53] that would increase cooperation if I'm correct,
+[00:26:55] and I think this list is huge it's
+[00:26:57] like very kind of under explored,
+[00:26:59] and I think this should be a major area of research.
+[00:27:02] One, is that you can try and distribute the benefits of AI
+[00:27:05] among developers more.
+[00:27:07] Or just like correct misperceptions
+[00:27:10] about the long term benefits to everyone.
+[00:27:12] So lots of industries don't actually
+[00:27:13] have an incredibly strong first mover advantage.
+[00:27:16] In fact, in some cases, there's like sufficient first mover
+[00:27:20] disadvantage is that it is actually better
+[00:27:22] to be a kind of second in the development race.
+[00:27:28] But I think in general this could involve agreements
+[00:27:30] to distribute the benefits or just
+[00:27:31] basically ensuring that your systems are actually
+[00:27:33] such that other developers can build on them for example.
+[00:27:38] Correct misinformation about system safety
+[00:27:41] among the public and regulators.
+[00:27:42] So a large point of failure in the mechanisms that I talked
+[00:27:46] about earlier, is just if the public
+[00:27:48] doesn't know how safe or secure the system in question is.
+[00:27:51] If I have no way of verifying how secure you are being
+[00:27:55] with my data, then I can't really vote with my dollar
+[00:27:58] and not purchase your system.
+[00:28:00] I just don't have the relevant information.
+[00:28:02] And if I'm a regulator and I want
+[00:28:03] to come in and look at how secure your system is,
+[00:28:05] and I just have no way of knowing like I just
+[00:28:08] don't have the expertise, or it's really hard to find out
+[00:28:11] this information, then that similarly
+[00:28:13] is just going to mean that I can't really
+[00:28:14] enforce regulations that say that you have
+[00:28:16] to have a very secure system.
+[00:28:19] Giving access to shared resources
+[00:28:21] conditional on responsible development.
+[00:28:23] So this would just be a case where it's like, Yeah
+[00:28:26] like you are more willing to see work together
+[00:28:28] with people who are like agree to develop responsibly,
+[00:28:32] that agree to sets of ethical principles,
+[00:28:34] and that can kind of demonstrate that they have done.
+[00:28:36] So this is kind of like positive bonus
+[00:28:39] and I should say that all of these follow the five factors.
+[00:28:43] Make it easier to verify that is being developed responsibly
+[00:28:46] so that's a way of reducing the likelihood that someone
+[00:28:48] is going to kind of defect in this way.
+[00:28:51] So that might just involve finding ways of just
+[00:28:53] like verifying that people are making sure
+[00:28:55] that they have a bunch of people employed
+[00:28:58] for things like security work.
+[00:29:00] It could involve more rigorous things than that,
+[00:29:02] but this is just a kind of example.
+[00:29:06] Consider front runner mergers to reduce harmful race dynamics.
+[00:29:09] So this is something that like AI has it discusses
+[00:29:14] mergers in its charter.
+[00:29:15] It's like a little bit of a kind of unusual principle,
+[00:29:19] but it's kind of interesting to me.
+[00:29:20] Where the idea is that, if you have a map if basically
+[00:29:24] being a responsible development developer
+[00:29:26] is like a large advantage, then you actually massively reduce
+[00:29:30] the cost of someone else defecting on you,
+[00:29:33] because you're like look people want
+[00:29:34] to buy my safe, secure awesome system,
+[00:29:37] I'm not super worried about this person
+[00:29:38] far away and second who is building a much worse system,
+[00:29:42] because they're just not going to develop it first
+[00:29:44] and people are not going to want to consume it.
+[00:29:47] And so in fact doing that reducing these like head
+[00:29:50] to head competitions between front runner developers,
+[00:29:54] is like one thing that can also help with this kind of thing.
+[00:29:59] Finally, in fact, I think I may have a couple more
+[00:30:02] but developers can make trades based
+[00:30:04] on each of their concerns.
+[00:30:05] If I'm really concerned about like data privacy,
+[00:30:07] and you're concerned about something else
+[00:30:09] that misinformation, then maybe we can group like,
+[00:30:12] it can be kind of like this thing
+[00:30:14] where each person tries to express their concerns,
+[00:30:16] and most developers try to cover most concerns.
+[00:30:19] And that's another example of cooperation between developers.
+[00:30:23] And building trust between developers
+[00:30:25] by increasing communication and collaboration.
+[00:30:27] So collaborating on a socially beneficial projects
+[00:30:29] is a good example of that.
+[00:30:32] And there's less of a concern that that's
+[00:30:34] about specific systems you're developing,
+[00:30:36] that's more just about making sure
+[00:30:37] that the social impact is good.
+[00:30:39] And creating economic incentive to develop a responsibly
+[00:30:42] so that could be an industry, or it
+[00:30:43] could be through a regulator.
+[00:30:49] Those failed.
+[00:30:51] That was like a mistake slide.
+[00:30:54] OK.
+[00:30:55] So one thing that's worth noting at the very end here,
+[00:30:58] is that a lot of these things have really interesting
+[00:31:00] feedback mechanisms.
+[00:31:02] So in the case of trust, my confidence
+[00:31:05] that you will cooperate with me increases thereby
+[00:31:09] increases your confidence that I will cooperate with you.
+[00:31:12] Because it increases my incentive
+[00:31:16] to cooperate with you.
+[00:31:17] But similarly, you can get these negative spirals
+[00:31:20] where if my confidence that you cooperate decreases,
+[00:31:23] then your confidence that I will cooperate decreases.
+[00:31:25] And I think this is really worth noting because historically
+[00:31:28] we've seen this kind of thing play out
+[00:31:29] just through misperception.
+[00:31:31] So if you look at like the Cold War, for example,
+[00:31:33] the US and the USSR like in some cases
+[00:31:38] just misperceived the actions of the other
+[00:31:40] in a way that caused these kind of negative spirals.
+[00:31:42] So in the case of global politics
+[00:31:44] this can obviously be extremely dangerous,
+[00:31:47] but it can also just seem kind of wasteful
+[00:31:48] it's really unfortunate if one person does
+[00:31:50] something that seems to indicate that they are not cooperating
+[00:31:53] and the other just like says you're not cooperating.
+[00:31:56] So I will then cease to cooperate.
+[00:31:57] Basically forgiveness is a really important principle
+[00:31:59] in these sorts of games.
+[00:32:01] So you forgive, and then you get this positive spiral.
+[00:32:05] So that's the kind of importance of trust,
+[00:32:08] I think I've talked about a lot of mechanisms here.
+[00:32:10] There was a lot of things that I wanted
+[00:32:12] to cover that I didn't so hopefully some of those
+[00:32:13] will come out in the questions, but that's the end of my talk.
+[00:32:16] [APPLAUSE]
+[00:32:26] SPEAKER 1: I think we can just open it up to questions
+[00:32:29] and I'll pass around the mic.
+[00:32:32] AUDIENCE: I've got one, please introduce yourself.
+[00:32:39] AUDIENCE: My name is Sam.
+[00:32:42] So there's a lot that happened in this talk.
+[00:32:47] it was packed full of information.
+[00:32:49] I was wondering you sort of have this,
+[00:32:55] it's a little fuzzy as to what the concrete outcome is, like
+[00:32:59] are you talking about development while we're still
+[00:33:02] attempting to reach some sort of AGI,
+[00:33:04] or are you talking about sort of the final end product of "Oh
+[00:33:10] we can through this game theoretic principle,
+[00:33:13] we understand that the final AGI will be a safe AGI."
+[00:33:19] AMANDA ASKELL: Yeah so there's a question
+[00:33:20] of let me know if I've kind of misunderstood
+[00:33:23] but one issue is like when you think about development races,
+[00:33:27] this could mean one of two things.
+[00:33:29] It could mean like there's like two kinds of races often one
+[00:33:33] is like a race to just reach some end point.
+[00:33:35] So maybe like AGI is a good example of an endpoint.
+[00:33:38] I don't think it necessarily.
+[00:33:39] Is actually a good example of an endpoint,
+[00:33:41] but let's suppose it is.
+[00:33:44] Or you can just be like racing to stay ahead, and develop
+[00:33:47] kind of like ever more advanced systems.
+[00:33:51] I think that a lot of this should apply to either case,
+[00:33:55] you may have certain concerns about so
+[00:33:57] like in the case of case where you're thinking of something
+[00:34:01] like AGI, and you're thinking, OK, this
+[00:34:04] is some kind of extremely powerful general system,
+[00:34:09] you could have this dynamic where
+[00:34:11] like you're incentivized to kind of the concern
+[00:34:14] that you might have in a race to stay ahead,
+[00:34:17] you can be kind of increasingly like incentivized
+[00:34:19] to defect towards the end.
+[00:34:22] And the reason why I'm making this argument
+[00:34:23] is that if you have throughout the development process
+[00:34:27] put into place the kind of mechanisms that
+[00:34:29] make sure that development is safe, then
+[00:34:32] basically defecting at the n is less costly to everyone.
+[00:34:35] So the idea is this is about what you do over
+[00:34:38] the course of development, with the hope that you then
+[00:34:41] ensure that regardless of what happens at the very end you
+[00:34:44] make sure that things are safe.
+[00:34:45] Now that's not completely guaranteed,
+[00:34:46] but that's the kind of motivation behind this sort
+[00:34:49] of like action so I guess.
+[00:34:53] AUDIENCE: Cool.
+[00:34:54] So then my sort of follow up question
+[00:34:55] to that then is, how do you deal with the fact
+[00:34:59] that sometimes companies are not playing
+[00:35:04] the same game although they may perceive themselves
+[00:35:07] to be doing so?
+[00:35:09] Like there's some sort of non-compliance that is unknown,
+[00:35:14] and like it seems to me that, they're, I don't know.
+[00:35:21] Yeah I guess that's probably good.
+[00:35:23] AMANDA ASKELL: Yeah.
+[00:35:24] No I think that's right so this is
+[00:35:26] it's one of those things where you want to make sure that you
+[00:35:31] bring all developers, ideally like make it transparent
+[00:35:35] what game that they are playing, or so think like trying
+[00:35:40] to make that information known.
+[00:35:42] So people can like a lot of this can be based on just
+[00:35:44] like people can think that the incentives are
+[00:35:46] different from what they are.
+[00:35:48] If I perceive the benefits of advanced systems
+[00:35:51] to be like really great, then like
+[00:35:53] I am playing a more cooperative game than you are, if you just
+[00:35:56] think there's some benefits but that they're not that high.
+[00:36:01] And in that case I think that's just
+[00:36:02] like breaking those information asymmetries is
+[00:36:04] really important, and ideally also finding ways of just
+[00:36:09] like verifying so like trust is one trust is
+[00:36:12] like confidence that the other agent is
+[00:36:13] going to cooperate with you.
+[00:36:15] Can really reduce the need for trust in a sense,
+[00:36:17] if you can just like verify whether they
+[00:36:19] are cooperating with you.
+[00:36:20] And so some of the mechanisms I didn't talk about
+[00:36:22] that people may or didn't explore as much,
+[00:36:25] are things like just basically seeing
+[00:36:27] that you are in fact doing what you say you're doing.
+[00:36:29] And the more you can find mechanisms
+[00:36:31] for doing that the better I think things are going to be.
+[00:36:33] AUDIENCE: I guess I was thinking more
+[00:36:35] along the lines of if two companies like Google and Apple
+[00:36:39] are both producing AI technology,
+[00:36:43] but one is incentivized through like advertising,
+[00:36:46] an advertising platform and the other
+[00:36:48] is not incentivized through that they're incentivized
+[00:36:51] to make hardware sales.
+[00:36:52] But they develop, they both develop air technologies.
+[00:36:56] They potentially like compete in a game that
+[00:36:59] looks fairly similar, but they're
+[00:37:01] incentivized in different ways.
+[00:37:02] Like how do you take that into account?
+[00:37:04] AMANDA ASKELL: Yeah, I think it's
+[00:37:05] going to depend a lot on the particularities of the game.
+[00:37:10] And there's so many different components here.
+[00:37:12] So one is like we have shared incentives
+[00:37:15] to cooperate if for example there's like shared
+[00:37:17] reputational effects.
+[00:37:18] So if a huge data lake at Apple is bad for Google,
+[00:37:21] then in many ways it's costly for one major entity
+[00:37:25] if the other entity is not developing things that
+[00:37:28] are securely, that are secure.
+[00:37:31] But it also depends a lot on whether you're
+[00:37:33] competing over the same domain.
+[00:37:34] So like if I am trying to build something in advertising,
+[00:37:37] and you're trying to build something
+[00:37:39] in an entirely different market, then I think that there's less,
+[00:37:43] basically we're not even in the kind of game
+[00:37:45] like we're not even competitors.
+[00:37:47] Really in this sense.
+[00:37:48] Because we're not competing over the same kind of like market
+[00:37:50] share.
+[00:37:51] So it has to, it has to be the case that I'm incentivized
+[00:37:55] over the same sort of product.
+[00:37:57] So yeah like, I don't think that really answers your question
+[00:38:00] because I think you have a specific scenario in mind,
+[00:38:02] but I'm also totally happy to work through that later.
+[00:38:08] Other questions?
+[00:38:16] AUDIENCE: Let's say I go to Columbia for machine learning,
+[00:38:19] I was hoping you could go into the idea of it
+[00:38:22] not being a one shot game.
+[00:38:23] Especially in iterated game with the fixed end point
+[00:38:25] of one person going to market.
+[00:38:28] AMANDA ASKELL: Yeah.
+[00:38:29] So the case of an ongoing game in some ways is better, so like
+[00:38:37] one short game--
+[00:38:38] and there's a part of reason why I like focus a lot on the worst
+[00:38:42] case scenarios because it's sort of to try and outline
+[00:38:44] that like the worst case scenarios are potentially not
+[00:38:47] as bad as people are thinking.
+[00:38:49] So a case of an iterated game, I can get a lot more information
+[00:38:54] about the intentions of the other developer
+[00:38:57] and what they're doing.
+[00:38:58] And I have this large period of reputational effects.
+[00:39:03] So an example is iterated prisoner's dilemmas
+[00:39:06] are just famously much better than one
+[00:39:08] shot prisoner's dilemmas.
+[00:39:11] So prisoner's dilemma is I just have a complete incentive
+[00:39:13] to defect, they don't have any incentive to cooperate.
+[00:39:16] It's actually not clear that the game structure of one
+[00:39:18] of a prisoner's dilemma played repeatedly,
+[00:39:21] is the same as that of a one shot prisoner's dilemma.
+[00:39:24] In fact, in many cases, it seems like there's an incentive
+[00:39:26] to cooperate, because I give you information when I cooperate
+[00:39:29] namely that I'm going to cooperate with you,
+[00:39:31] you can give me reciprocal information.
+[00:39:33] So we can build this kind of like trust component over time.
+[00:39:36] So I think that there's actually reason
+[00:39:37] to be more optimistic in the case of a kind
+[00:39:41] of like iterated game.
+[00:39:43] In the case of going to market, I
+[00:39:47] think that the dynamics are going
+[00:39:48] to be fairly similar if it's the case that you were kind
+[00:39:50] of racing to stay ahead, because you
+[00:39:52] can think of that as a kind of series of points
+[00:39:54] that you're trying to reach where you're just trying
+[00:39:56] to make sure that you continue to develop before someone else.
+[00:40:00] And in that case, I think there's still
+[00:40:01] going to be an ongoing incentive to do
+[00:40:03] that securely if it's the case that you
+[00:40:07] have this kind of dynamic.
+[00:40:09] But I'm not sure if you were more interested in that point
+[00:40:14] or in the kind of iteration point.
+[00:40:17] AUDIENCE: Yeah, I think the idea of ensuring
+[00:40:19] that it's not a fixed endpoint, seems like the way out
+[00:40:23] of the problem.
+[00:40:25] AMANDA ASKELL: Yeah, the problem can get a lot easier
+[00:40:27] in that case although you make it,
+[00:40:29] I think it's still interesting to look
+[00:40:30] at these kinds of dynamics, both in terms of it
+[00:40:34] makes things look a little bit worse,
+[00:40:36] but also because you might have points along the way,
+[00:40:38] that you're kind of like so even when you're
+[00:40:40] racing to stay ahead it's not clear
+[00:40:41] that developers when they do that
+[00:40:43] don't end up kind of like competing over
+[00:40:44] like having some slightly better system of some form,
+[00:40:47] than the other.
+[00:40:48] And so I think it's still kind of useful to think
+[00:40:50] at least in terms of endpoints in this kind
+[00:40:52] of like progressive sense.
+[00:40:55] But yeah, I think that basically you
+[00:40:56] improve the game by making it not a game
+[00:40:59] where there's this like super fixed endpoint,
+[00:41:01] because then I'm just like that incentivizes me to defect
+[00:41:04] at the very end, whereas in a case of an ongoing game
+[00:41:07] I probably have like less of an incentive to do that,
+[00:41:10] and also I get like good of reputational effects.
+[00:41:13] So I do think that this is like a worse kind of game
+[00:41:15] than the iterated game, but that all of the factors that apply
+[00:41:21] and also apply to the iterated game, which is
+[00:41:24] kind of interesting or helpful.
+[00:41:27] So yeah maybe an example of this would be in the iterated game,
+[00:41:32] imagine it's the case that I can have like a certain amount of,
+[00:41:37] like, so you and I are competing to stay ahead,
+[00:41:40] but we can make more or less secure systems.
+[00:41:43] And those are like more or less valuable.
+[00:41:45] If I continually get better payoff
+[00:41:47] from my ongoing development of more secure systems,
+[00:41:50] then this gives me a reason to cooperate with you.
+[00:41:52] And if I can increase that payoff,
+[00:41:54] I have more of an incentive to continue to try and develop
+[00:41:56] those systems with like a high level of security.
+[00:41:58] So that's an example of where the first factor can still
+[00:42:01] increase overall security of the systems,
+[00:42:04] even though we're not actually competing
+[00:42:06] to a specific endpoint.
+[00:42:14] AUDIENCE: I might throw out a question.
+[00:42:17] So my name is Nicole.
+[00:42:18] I'm a staff at the Berkman Klein Center.
+[00:42:22] So I think we host a lot of different talks
+[00:42:26] here about ethics and governance,
+[00:42:28] and not often do we go down the route of the games, which
+[00:42:32] I think is really interesting.
+[00:42:34] But for me I'm unfamiliar with it.
+[00:42:35] So I'm trying to situate it in relationship
+[00:42:37] to some of the discussions that are going on about how
+[00:42:40] to think about this space?
+[00:42:41] AMANDA ASKELL: Yep.
+[00:42:42] AUDIENCE: And I think something that
+[00:42:44] like I would love to hear how you relate it to this
+[00:42:46] would be concerned that I think are
+[00:42:50] hard to situate relative to the incentive structures
+[00:42:55] that you're talking about, between
+[00:42:56] these competitive games.
+[00:42:58] So I'm we've heard from [? Virginia ?] [? Eubanks ?]
+[00:43:02] talking about the development of systems for allocation
+[00:43:07] of public resources.
+[00:43:08] And we've heard from others talking about the ways
+[00:43:12] that data can contain bias or contain artifacts that kind of
+[00:43:19] have impacts in the world.
+[00:43:20] That it would be hard to see how they would relate to the market
+[00:43:25] competition around AI.
+[00:43:27] And so know you've painted a kind of optimistic picture,
+[00:43:32] but I'm wondering like which concerns
+[00:43:35] you're optimistic about.
+[00:43:36] And if this structure that you're offering really
+[00:43:38] addresses some of those others.
+[00:43:39] AMANDA ASKELL: Yeah so in many ways
+[00:43:41] it's optimistic because I'm like, hey they're making it.
+[00:43:44] Like the first thing to say is like there
+[00:43:46] are potential failures here, that there might not
+[00:43:48] be in other industries.
+[00:43:49] So I think a really good example of this
+[00:43:50] is the case of things like bias in data sets.
+[00:43:54] So like in many cases, when you develop systems, the people who
+[00:43:58] would be harmed by those systems are
+[00:43:59] not the same as the people who are purchasing those systems.
+[00:44:02] And so this can lead to the kind of asymmetry that
+[00:44:04] doesn't let market mechanisms, kind of like
+[00:44:07] cause you to bear the cost of that harm.
+[00:44:10] So imagine a case where I'm trying
+[00:44:11] to decide how much jail time someone should get,
+[00:44:14] and I release a system that's really good at just telling
+[00:44:16] judges like this case given all of the facts you've made
+[00:44:20] available to me, here's like my I'm just like a requirement I
+[00:44:23] just recommend like how much jail time to give someone
+[00:44:25] when you're sentencing.
+[00:44:27] And you find out that that system is hugely biased.
+[00:44:30] The person, the agents that are using that system i.e.
+[00:44:33] the local governance structures, like
+[00:44:36] whoever decides to implement it and whatever at whatever level,
+[00:44:39] are just not the same as the people will be harmed by it.
+[00:44:42] And also in a lot of cases the people
+[00:44:43] are harmed by that system are fairly disenfranchised.
+[00:44:45] So it's not like easy for me, if there
+[00:44:48] is as it turns out bias and that system
+[00:44:51] and I'm given an overly punitive jail sentence, to then take
+[00:44:55] this system builder to court and like and sue them for this.
+[00:44:59] And so that's the kind of case where
+[00:45:01] you can see a real failure in some of these mechanisms.
+[00:45:03] So I think the main thing I'm arguing
+[00:45:05] is basically that like and on a lot of my work on this,
+[00:45:10] I actually am like AI is a special case where
+[00:45:14] a lot of these standard mechanisms either don't apply
+[00:45:16] or they fail.
+[00:45:17] So like currently it's like a fairly unregulated market,
+[00:45:20] so you're not looking at a case where
+[00:45:21] there's an external regulator.
+[00:45:23] There's a huge amount of asymmetry
+[00:45:25] in who's purchasing the systems and who
+[00:45:27] is potentially harmed by them.
+[00:45:29] There is like a huge asymmetry in information
+[00:45:31] between regulators and developers
+[00:45:33] and between consumers and developers,
+[00:45:35] and that's like another case where
+[00:45:36] you don't expect market mechanisms to really
+[00:45:38] be able to help you.
+[00:45:39] And currently there isn't and we do have the liability framework
+[00:45:43] but it's not always super clear how
+[00:45:45] that's going to apply to some of these systems,
+[00:45:46] where we can't know how they're making
+[00:45:48] the decisions for example.
+[00:45:49] And so in many ways like there is actually
+[00:45:51] this huge problem, which is like all the incentives I gave you
+[00:45:54] at the beginning, apply a little bit less well to AI.
+[00:45:57] And so I think the kind of key thing
+[00:45:58] that I'm pointing to is actually we have an incentive
+[00:46:01] to build those structures, and that's the important factor.
+[00:46:05] And so like AI is this novel industry to many degrees.
+[00:46:08] And I think novel industries often make
+[00:46:10] mistakes of this form, until they basically
+[00:46:13] learn to coordinate.
+[00:46:14] So maybe I can give a couple of examples of that.
+[00:46:16] So one is this like the kind of scooters
+[00:46:19] the electric scooters in the Bay Area, where
+[00:46:22] I could be getting the kind of facts wrong,
+[00:46:24] but I think that what happened was
+[00:46:26] they were basically originally working
+[00:46:27] with the city about where to put them make sure they're safe
+[00:46:31] et cetera.
+[00:46:32] And then I think a company just like put their scooters
+[00:46:35] on the street, and the city hadn't given approval
+[00:46:38] et cetera.
+[00:46:39] And the city responds by just banning this
+[00:46:42] like banning electric scooters.
+[00:46:44] And you're like well that's no good for, like
+[00:46:47] and essentially that's like an act of defection that's
+[00:46:49] like then harming everyone.
+[00:46:51] And so then people like work together,
+[00:46:53] like I think that then some of the companies
+[00:46:56] have worked with the city and are now
+[00:46:58] allowed back in the city.
+[00:46:59] And so that's an example of a novel industry basically making
+[00:47:02] a mistake I think.
+[00:47:03] And a lot of industries.
+[00:47:04] If you look like when I have done some kind of case studies,
+[00:47:08] make mistakes initially that are in fact harmful.
+[00:47:10] And then you learn from that and they improve.
+[00:47:12] And I think that in the case of AI,
+[00:47:14] these systems are often so kind of general and important
+[00:47:16] that I actually don't like that dynamic.
+[00:47:18] I don't think that in development we
+[00:47:20] should be like producing systems and then learning from mistakes
+[00:47:23] in the world, and then being like, Oh actually
+[00:47:26] we should coordinate to make sure that we're all
+[00:47:28] developing safely.
+[00:47:29] I just think it's too costly.
+[00:47:30] And so that's why I'm trying to preempt that, and be like,
+[00:47:32] let's not be like a novel industry.
+[00:47:34] Let's kind of like bypass that stage and just
+[00:47:36] start building these mechanisms now,
+[00:47:38] and learn from other industries instead.
+[00:47:41] And you just see this in other cases.
+[00:47:44] So I think it was like the pharmaceuticals industry with.
+[00:47:48] So when you look at like Peter medicine Sellers
+[00:47:50] they came along and pharmaceutical industry exists,
+[00:47:53] and patent medicine sellers come and they just
+[00:47:55] start directly selling these medicines that
+[00:47:58] don't work to consumers.
+[00:48:00] You already have the pharmaceutical industry
+[00:48:02] here selling to doctors, and I think that they actually
+[00:48:05] ended up supporting some of the legislation that eventually
+[00:48:07] became the existence of current drug laws like the FDA
+[00:48:13] as the ultimate entity there.
+[00:48:15] And many cases, and you're seeing this in AI as well,
+[00:48:18] like a lot of companies are now basically coming
+[00:48:20] out in support of certain forms of regulation
+[00:48:22] of things like facial recognition technology.
+[00:48:24] And so I think it's this thing where
+[00:48:26] I'm trying to say the AI's actually big problems here,
+[00:48:29] but like as an industry, like AI bill first
+[00:48:32] can in fact just kind of like bypass some
+[00:48:34] of the mistaken bad phases, and just like move
+[00:48:37] through these phases where we instead
+[00:48:39] like develop the mechanism to prevent it from going wrong.
+[00:48:42] So hopefully that kind of ties it in a little bit to the case
+[00:48:45] that you were thinking of, and why
+[00:48:47] I think that there is an initial problem
+[00:48:48] but I'm maybe a bit more optimistic about finding
+[00:48:51] solutions.
+[00:49:02] AUDIENCE: Yep, I had a question about the five principles
+[00:49:05] you put up?
+[00:49:05] AMANDA ASKELL: Yep I can go back to [INAUDIBLE]
+[00:49:07] AUDIENCE: The first four of them corresponded to the four states
+[00:49:11] of the game that you described.
+[00:49:13] AMANDA ASKELL: Yep And I realize this is not the most famous.
+[00:49:21] They're are somewhere.
+[00:49:27] AUDIENCE: And then the, so the first four corresponds
+[00:49:29] to the four in the square,
+[00:49:31] AMANDA ASKELL: Yeah--
+[00:49:31] AUDIENCE: --and then the fifth one kind of
+[00:49:32] seemed like it was an outcome of the first four.
+[00:49:34] So I was just wondering if I'm thinking about that correctly,
+[00:49:37] or if there are ways maybe to intervene on that greater
+[00:49:40] confidence factor that are not through those first four
+[00:49:43] levers.
+[00:49:43] AMANDA ASKELL: Yeah, so this is like I
+[00:49:46] did a bit of a kind of cheat here,
+[00:49:48] because in many ways like I'm treating,
+[00:49:49] especially like it makes it look like I'm treating trust
+[00:49:52] as this external thing.
+[00:49:54] And it's just sort of useful for is useful for me
+[00:49:56] to do that to talk specifically about mechanisms that
+[00:49:58] can improve trust, but then you look
+[00:50:00] at a lot of those mechanisms and they're really
+[00:50:02] applying via these incentives.
+[00:50:05] And also if you actually look closely
+[00:50:07] at a lot of these incentives the affect each other quite a lot.
+[00:50:11] And so like also I mean another I'm just
+[00:50:15] going to reveal all of my cheats here,
+[00:50:16] because I'm like look at the fact
+[00:50:17] that it's like expected value.
+[00:50:18] So that means you can adjust these things
+[00:50:20] not only by changing the actual value of the outcomes
+[00:50:22] but by changing their probabilities.
+[00:50:25] So like there's a lot going on here
+[00:50:28] that I sort of like merge together, but yet
+[00:50:32] trust is like highly integrated with other factors.
+[00:50:37] And in some cases, you might just
+[00:50:38] think falls out of it I think for that to be the case.
+[00:50:41] You also have to have this premise about the agents
+[00:50:44] that you're kind of working with.
+[00:50:46] So if I just think that you only respond
+[00:50:48] to your kind of self-interested incentives,
+[00:50:50] then the way that I would like make the kind of trust
+[00:50:53] threshold like the way I would get greater
+[00:50:54] confidence that you're going to reciprocate,
+[00:50:56] is by changing your incentives.
+[00:50:58] And I agree that that is one way that I can do this,
+[00:51:03] like that does in fact give me evidence
+[00:51:04] that you're trustworthy if it's just not in your interest
+[00:51:07] as much to defect, but I think that maybe this is like we
+[00:51:12] should also think about the ways that are not seem
+[00:51:15] super incentives driven, to increase confidence that others
+[00:51:20] like will cooperate.
+[00:51:22] So in many ways I just think that if I just
+[00:51:24] get to know someone a little bit better,
+[00:51:26] get to know the kind of person that they are,
+[00:51:28] that's a way that I have more trust
+[00:51:30] that they're going to reciprocate
+[00:51:33] l my own responsible development,
+[00:51:35] or in the case of cakes my own excellent baking.
+[00:51:40] But that's maybe not as covered by these factors here.
+[00:51:44] So it's like I do think that, Yes each of these
+[00:51:46] relates to one another.
+[00:51:47] But if but we should also not model agencies these kind
+[00:51:50] of like [? Homo ?] [? economicus, ?] or whatever.
+[00:51:53] We should think so I just get information about you
+[00:51:55] as a person, and that kind of thing
+[00:51:57] can also just increase trust.
+[00:52:05] AUDIENCE: Hi, I'm Stephanie I have two questions.
+[00:52:08] So I guess the first one being how much you
+[00:52:10] think of your analysis applies to nation states,
+[00:52:13] as opposed to commercial developers?
+[00:52:15] AMANDA ASKELL: Yeah.
+[00:52:16] AUDIENCE: And the second one being how confident you
+[00:52:19] are that game theory in general, is the right framework
+[00:52:21] to think about, yeah, AI development
+[00:52:24] and how to model the relationships between actors
+[00:52:27] in that space.
+[00:52:28] AMANDA ASKELL: Yeah so in the first question,
+[00:52:30] like at the moment like most of the key developers in the AI
+[00:52:34] space are companies.
+[00:52:35] That's why I started a lot of literature
+[00:52:37] has explored these dynamics with companies,
+[00:52:40] because companies care about making money
+[00:52:42] and like it's probably a good source of funding.
+[00:52:47] I think that with nation states suppose
+[00:52:50] that it depends on what the nation state is doing,
+[00:52:52] so on the one hand, it could be facilitating
+[00:52:53] AI development, on the other hand,
+[00:52:55] it could be like developing AI itself as part of some program.
+[00:52:59] I think that a lot of the same incentives apply.
+[00:53:02] There's like the same kind of potential for collective action
+[00:53:05] problems between states.
+[00:53:06] There are few like analogies that
+[00:53:08] are interesting I guess so in the case of companies
+[00:53:11] the absolute gains that they care about
+[00:53:13] are just things like making money,
+[00:53:15] and I think companies are much more driven by absolute gains.
+[00:53:18] Like I don't really care if my competitor is doing better than
+[00:53:21] me, if I am doing better overall than I would be otherwise.
+[00:53:24] So like if I get like if I get 40 million of a market,
+[00:53:28] and my competitor gets 60 million of that market,
+[00:53:31] but we developed in a way that grew
+[00:53:33] the market to $100 million.
+[00:53:34] I would rather that in a situation
+[00:53:36] where the market is $50 million and I have 30
+[00:53:38] and my developer has 20.
+[00:53:40] I just want to like I just want to make more revenue.
+[00:53:43] If your state like at least a lot of the standard thoughts
+[00:53:46] are that states are much more compelled by relative gains,
+[00:53:49] so things like having a relative economic advantage
+[00:53:51] over other states.
+[00:53:53] And the more like you're motivated
+[00:53:54] by relative gains on this framework,
+[00:53:56] and I think just generally the more you're
+[00:53:58] going to be kind of adversarial, and the less willing
+[00:54:00] you are going to be to cooperate.
+[00:54:01] So one factor is basically how you incentivize our states
+[00:54:05] by these relative gains.
+[00:54:07] I actually think people maybe this
+[00:54:09] is like a really interesting question, because for states
+[00:54:11] there are these large bundles of relative gains, large bundles
+[00:54:15] of absolute gains.
+[00:54:16] And I think it's really easy for people
+[00:54:17] to say all states care about like power.
+[00:54:19] And I'm like I don't think that's actually accurate.
+[00:54:21] I think they care a lot about lots of factors, just
+[00:54:26] general economic development, the prosperity of their people
+[00:54:29] as well as their relationships with other states, all
+[00:54:32] of these kind of mixed incentives.
+[00:54:34] So it does apply but that's like an asymmetry war
+[00:54:37] incentives how much of them are relative or absolute.
+[00:54:40] I think a second key issue, is that in the case
+[00:54:42] of private developers.
+[00:54:44] There's very often this third party, which is the state.
+[00:54:47] And the state actually has this ability
+[00:54:49] to come in and regulate you for example.
+[00:54:52] So if you're just doing things really terribly,
+[00:54:54] like a regulator can just come in and be
+[00:54:55] like you need to stop.
+[00:54:56] And I'm just not going to let you continue.
+[00:54:58] So this ability to appeal to third party oversight
+[00:55:01] is really useful, and is not something
+[00:55:03] that states have as much of.
+[00:55:04] So there are international bodies.
+[00:55:06] But in the case of international oversight
+[00:55:10] you might just think it's like a little bit less
+[00:55:12] robust than the case of a state that
+[00:55:14] can just come in and be like you need to stop operations.
+[00:55:16] There's not really an international body
+[00:55:18] that does that to states, but there is also it is also worth
+[00:55:23] noting that there is that body.
+[00:55:25] But if you look like a lot of the mechanisms
+[00:55:27] and things like that, they are also very similar.
+[00:55:29] So if you look like arms control.
+[00:55:31] Like this fits really nicely into this kind of framework.
+[00:55:35] So this is like a long way of saying
+[00:55:36] like when I think about states there are a few asymmetries,
+[00:55:39] but there are also like symmetries that
+[00:55:41] should mean that we should maybe want to appeal
+[00:55:43] to similar structures.
+[00:55:44] The second case is like how relevant
+[00:55:46] is game theory in general?
+[00:55:48] So the way that I think about what I'm doing,
+[00:55:50] and maybe this is kind of wrong is but,
+[00:55:53] you see here I give a one shot game.
+[00:55:55] I kind of like, I've given you I've revealed all of my cheats
+[00:55:59] here.
+[00:55:59] And in many ways I'm not doing much more
+[00:56:01] than this like super basic analysis
+[00:56:02] of like what are the rough incentives here,
+[00:56:04] and basically I think that my concern is
+[00:56:06] that the narrative is sometimes at this really
+[00:56:08] early stage of like everyone is just
+[00:56:10] fighting against one another.
+[00:56:11] And that's going to mean that we're all
+[00:56:12] going to develop things that are really terrible.
+[00:56:14] And I'm like let's just move that one step further, and be
+[00:56:17] like actually when you start to just analyze
+[00:56:19] these really simple games, that's not actually true.
+[00:56:22] You do, in fact, have pretty strong incentives
+[00:56:24] to cooperate with other developers
+[00:56:26] to make sure you're developing responsibly.
+[00:56:28] You can also take that to like this further stage of doing
+[00:56:31] a full kind of game theoretic analysis, and I'm like,
+[00:56:34] I like game theory and so I would love.
+[00:56:36] I want people to do those analysis,
+[00:56:38] especially because they're then more realistic,
+[00:56:40] they're like they're across time,
+[00:56:41] they think about a number of developers,
+[00:56:43] they have many more variables than I have here.
+[00:56:46] I do think that's useful.
+[00:56:48] I think the main goal that I've had though, is just
+[00:56:50] to kind of communicate these ideas to people,
+[00:56:52] and communicate this like less pessimistic picture.
+[00:56:57] And so I'm not saying something like,
+[00:56:59] "Oh, this game theory is like super advanced and useful."
+[00:57:02] It just kind of like hey look like even really simple models
+[00:57:05] are just like simple kind of like naive ways of looking
+[00:57:07] at what's going on here.
+[00:57:09] We should be a bit more optimistic.
+[00:57:11] So it's like I'd love to see the game theory done,
+[00:57:14] I would love if people like listen to it,
+[00:57:16] but if they're like ultimately I want just people
+[00:57:19] to kind of think about the things that are ideally
+[00:57:22] like the most important.
+[00:57:23] And just like one step beyond the kind
+[00:57:25] of naif like super adversarial framing.
+[00:57:31] AUDIENCE: [INAUDIBLE]
+[00:57:35] [APPLAUSE]
