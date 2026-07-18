@@ -1,0 +1,1354 @@
+[00:00:00] DAVID O'BRIEN: So good afternoon, everybody.
+[00:00:02] We'll get started.
+[00:00:03] For those of you who don't know me, my name is David O'Brien.
+[00:00:07] I'm a Senior Researcher and Assistant Research
+[00:00:11] Director for Privacy and Security
+[00:00:13] at the Berkman Klein Center.
+[00:00:14] And before I introduce our speaker today,
+[00:00:17] I have a few housekeeping notes to share with you.
+[00:00:21] First, we are webcasting this event today.
+[00:00:25] So please be aware that we're both broadcasting
+[00:00:28] live and we're recording it.
+[00:00:30] The video will show up on the Berkman Klein's website.
+[00:00:33] And second, for anyone who is watching remotely,
+[00:00:36] hello, and welcome to the room.
+[00:00:38] We will be monitoring tweets.
+[00:00:41] If you have a question or a thought,
+[00:00:43] we'll keep an eye on those.
+[00:00:45] If you tweet @bkcharvard, we'll make
+[00:00:48] sure to weave it into our Q&A session.
+[00:00:51] And today, it's my pleasure to introduce all of you
+[00:00:54] to Woody Hartzog.
+[00:00:55] Woody is a Professor of Law and Computer Science
+[00:00:59] at Northeastern University.
+[00:01:01] He's also a faculty associate this year
+[00:01:04] at the Berkman Klein Center.
+[00:01:06] His research focuses on a really interesting area,
+[00:01:09] in particular, on the evolving conceptions of privacy, data
+[00:01:13] protection frameworks, the rules around automation,
+[00:01:17] artificial intelligence, and robotics.
+[00:01:20] He is one of the rare breeds of law professor
+[00:01:24] that also holds a PhD in mass communications.
+[00:01:29] And if you study this field, you're
+[00:01:31] actually likely already familiar with a lot of his work.
+[00:01:34] I count him, certainly, among the leading scholars.
+[00:01:37] He's written numerous articles, I think,
+[00:01:40] that have been great contributions to the field.
+[00:01:42] You can find those things in places like the Yale, Columbia,
+[00:01:46] California, and Michigan law reviews.
+[00:01:49] And he's also written in The Guardian, and Wired, and BBC,
+[00:01:53] and many other places.
+[00:01:55] Just last week, Woody was down on the Hill in DC
+[00:01:59] testifying before the Senate Commerce Committee
+[00:02:01] on federal data privacy frameworks.
+[00:02:05] And today, what he's here to talk about
+[00:02:07] is his latest book, which you see here
+[00:02:09] on the screen, Privacy's Blueprint, which
+[00:02:11] was published by the Harvard University Press.
+[00:02:13] I personally can't recommend this book enough.
+[00:02:16] Any time someone asks me, I'm really
+[00:02:18] interested in this, what should I read, I point them to this.
+[00:02:21] And you all should, if you haven't already,
+[00:02:24] take the time to read it and meditate on it.
+[00:02:28] And, well, without further ado, Woody,
+[00:02:29] why you want to come on up here and we'll welcome you up
+[00:02:31] to the stage.
+[00:02:32] [APPLAUSE]
+[00:02:36] Thank you so much.
+[00:02:37] WOODY HARTZOG: I appreciate it.
+[00:02:38] Thanks, David and everyone at the Berkman Center,
+[00:02:41] for hosting me today.
+[00:02:43] It's really a pleasure to be able to come and talk to you.
+[00:02:47] Let me make sure I don't have a hot mic here.
+[00:02:51] So I want to start my talk with a series of stories.
+[00:02:58] The first one is a story about a user interface
+[00:03:04] that asked people if they would give their permission
+[00:03:09] to share their contact information, including
+[00:03:12] information about their network friends,
+[00:03:15] to third-party apps that they were downloading or using.
+[00:03:19] And as many of you may know, that data
+[00:03:21] made its way to the firm Cambridge Analytica, which
+[00:03:25] then spilled over and began an international debate, I think,
+[00:03:30] about the ways in which we collect and use information.
+[00:03:37] A second story has to do with this photo, which
+[00:03:42] I found when I was doing research for the book.
+[00:03:44] This is a photo from a hacked Wi-Fi-enabled baby monitor.
+[00:03:50] And the disturbing thing about this photo
+[00:03:53] is not necessarily that this is a hacked photo,
+[00:03:56] but that it was found--
+[00:03:57] I found this through a story on Ars Technica--
+[00:04:01] on a search engine dedicated to archiving
+[00:04:05] photos of hacked baby monitors.
+[00:04:08] And so it's not just one photo, there's a search engine for it
+[00:04:11] if you're interested in it.
+[00:04:13] And then the final story that I wanted to talk about,
+[00:04:17] that many of you are likely familiar with, is
+[00:04:18] the story of the fight between Apple
+[00:04:22] and the Department of Justice and the FBI
+[00:04:24] regarding whether Apple would make
+[00:04:27] an alternative version of its iOS software
+[00:04:32] on the iPhone that allowed law enforcement to bypass
+[00:04:36] encryption.
+[00:04:38] Now, what do all of these three stories have in common?
+[00:04:43] That is, that they are stories about the design of information
+[00:04:47] technologies.
+[00:04:47] So in my talk today, I'd like to make three points.
+[00:04:50] And this is the same three points
+[00:04:52] that I try to make in the book, that design matters for privacy
+[00:04:57] more than we lawmakers, in particular,
+[00:05:00] and policymakers have admitted.
+[00:05:04] The second point is the thesis of the book,
+[00:05:06] which is that privacy laws should take design
+[00:05:09] more seriously.
+[00:05:10] And I'm going talk a little bit about what that is.
+[00:05:13] And the third one is that a design agenda
+[00:05:14] should have roots in consumer protection and surveillance
+[00:05:18] law, in contrast to some of the prevailing wisdom about how we
+[00:05:23] should regulate data and information technologies,
+[00:05:26] which looks at things from a data protection perspective.
+[00:05:29] And I'll compare the two and what I
+[00:05:31] think is different about them.
+[00:05:33] So first, design matters for privacy.
+[00:05:36] The reason that I think design matters for privacy
+[00:05:39] is that it is everywhere, it is power, and it is political.
+[00:05:45] What do I mean by that?
+[00:05:46] Well, first design is everywhere.
+[00:05:49] This is one of those things, one of the most interesting things
+[00:05:51] about writing the book, looking for anecdotes for the book
+[00:05:57] and examples to prove the points,
+[00:05:58] is that once you start seeing the ways in which design
+[00:06:01] matters for our privacy, you see it all over the place.
+[00:06:05] And a really good example is this.
+[00:06:08] Does anyone know what this is?
+[00:06:12] Does anyone recognize this?
+[00:06:13] What is this?
+[00:06:14] Snapchat.
+[00:06:16] This is technically marketing materials for Snapchat.
+[00:06:19] But it's a mock up of the user interface for the social medium
+[00:06:25] Snapchat.
+[00:06:27] Without knowing what this is or what this does,
+[00:06:32] what do you think this app is used for?
+[00:06:36] I have given this talk to a lot of non-academic audiences.
+[00:06:43] And my favorite thing is to get people that have never
+[00:06:46] even heard of Snapchat.
+[00:06:47] What does this do?
+[00:06:48] AUDIENCE: It's saying that after seven seconds,
+[00:06:50] it will take a photo and sent it somewhere.
+[00:06:54] WOODY HARTZOG: Close.
+[00:06:55] The seven seconds matters.
+[00:06:56] It allows you to take a photo and, after seven seconds,
+[00:06:59] the photo is supposed to disappear on the other end.
+[00:07:04] It's supposed to be an ephemeral media service.
+[00:07:08] And this is when it first launched.
+[00:07:10] And and you can guess that precisely
+[00:07:12] because it's got the scroll wheel.
+[00:07:15] Without any directions, we know exactly how long
+[00:07:18] it's supposed to last.
+[00:07:19] You can send it to other people.
+[00:07:21] And then there's another design element here
+[00:07:23] that's maybe not so subtle.
+[00:07:27] What sort of photos do you think Snapchat is telling you
+[00:07:32] this service could be good for?
+[00:07:36] Sexual ones, right?
+[00:07:38] Snapchat, when it first came out,
+[00:07:39] at least, was known as the sexting app.
+[00:07:42] And perhaps it's no secret why.
+[00:07:44] We've got some very carefully cropped photos here,
+[00:07:48] that you can't tell whether these women are wearing clothes
+[00:07:52] or not.
+[00:07:52] And the invitation, the cumulative effect
+[00:07:56] of the design, is you can share this on our site
+[00:08:01] because it's safe, because it won't last forever.
+[00:08:04] It's temporary.
+[00:08:06] See that all of the signs that are temporary?
+[00:08:08] So you can be a little more risque on this site
+[00:08:11] than you could with other sites.
+[00:08:13] And all of this is conveyed with pure design,
+[00:08:15] without any sort of explicit instruction.
+[00:08:19] Design decisions are all over the place.
+[00:08:22] What is This?
+[00:08:23] Everyone probably knows what this
+[00:08:25] is, Google Glass, Google Glass, one of the more
+[00:08:33] infamous wearable technologies.
+[00:08:36] People could have handled, I think, a screen
+[00:08:39] over their eyes.
+[00:08:40] But there was one design decision
+[00:08:42] that may have doomed Google Glass's Project, what was it?
+[00:08:51] Oh, the vibration, I didn't even think about that one.
+[00:08:54] Actually, I was thinking about the camera.
+[00:08:56] AUDIENCE: You don't know when it's on.
+[00:08:58] WOODY HARTZOG: You don't know when it's on.
+[00:08:59] Although, technically, there was an interesting design
+[00:09:01] feature there.
+[00:09:03] There was a red light that was supposed to come
+[00:09:05] on whenever it was active.
+[00:09:07] But that didn't seem to comfort people
+[00:09:08] too much because there was a camera.
+[00:09:12] Now, the question about whether there was a camera, ostensibly,
+[00:09:16] might seem silly because, of course, every single one of us
+[00:09:20] already has a camera on us at all times.
+[00:09:24] There's actually another design decision that
+[00:09:28] makes the camera difference.
+[00:09:31] And that's the fact that it goes around your ears,
+[00:09:35] and you can wear it at all times.
+[00:09:37] It reduces the cost of accessing the camera from having--
+[00:09:41] now, it seems trivial, right?
+[00:09:43] Having to reach in, pull out, open the thing, take the photo.
+[00:09:47] Google Glass use design to reduce
+[00:09:49] the cost of taking photos.
+[00:09:51] And that made people intensely uncomfortable.
+[00:09:53] AUDIENCE: It's also surreptitious.
+[00:09:55] WOODY HARTZOG: Right, in-surreptitious, right.
+[00:09:59] Right, exactly right.
+[00:10:01] It's something, not just a cost, but it
+[00:10:03] was more visible as well.
+[00:10:05] And people might not notice the red light
+[00:10:07] if it was supposed to be on.
+[00:10:09] And so there were websites dedicated to glass-holes,
+[00:10:14] as they were called.
+[00:10:16] And it was met with a lot of feedback because of the design
+[00:10:19] decision.
+[00:10:20] And then many of you may recognize this icon.
+[00:10:24] Does anyone here know what this is?
+[00:10:34] well, it certainly indicates something nefarious,
+[00:10:37] doesn't it?
+[00:10:38] Or possibly, or at least some kind of subterfuge.
+[00:10:43] What is this?
+[00:10:43] AUDIENCE: Private browsing.
+[00:10:44] WOODY HARTZOG: Private browsing.
+[00:10:46] This is Incognito mode for the Google Chrome browser.
+[00:10:48] And whenever you open up Incognito mode,
+[00:10:51] you see this, I don't know, shady character,
+[00:10:54] someone who doesn't want to be detected,
+[00:10:56] someone who has got the hat pulled down low
+[00:10:59] and the collar pulled up.
+[00:11:01] And the idea is if you don't want to be seen or recognized,
+[00:11:07] you are now in a context where that's possible.
+[00:11:11] Now, without saying anything else,
+[00:11:13] you might think that you were overprotected because,
+[00:11:16] of course, that's not how Google Chrome works.
+[00:11:20] Just because you're using Incognito mode
+[00:11:22] doesn't necessarily mean that no one can see anything
+[00:11:25] that you're doing.
+[00:11:26] The website that you're interacting with
+[00:11:27] can still see what you're doing.
+[00:11:28] Your ISP can still see what you're doing.
+[00:11:30] Incognito mode just removes these traces
+[00:11:33] of what you've been doing on your own computer.
+[00:11:35] And to Google's credit, they actually
+[00:11:37] have a series of disclaimers about what incognito mode does
+[00:11:40] right below this icon.
+[00:11:42] But if those weren't there, you might think, oh,
+[00:11:45] now I'm in private surfing mode, no one
+[00:11:48] can see what I do online, all because of design.
+[00:11:51] So design is everywhere.
+[00:11:53] Design is also power, meaning that it
+[00:11:58] does several different things.
+[00:11:59] It makes things easier or harder.
+[00:12:02] It affects the transaction cost.
+[00:12:04] And it gives off signals.
+[00:12:05] It tells us something about the nature
+[00:12:07] of how the technology works or about the relationship
+[00:12:13] that we're getting into with the tech user.
+[00:12:15] One of my favorite research projects
+[00:12:18] that I looked at for this book was actually
+[00:12:22] one that was conducted by Harvard's own--
+[00:12:25] Leslie John, and Alessandro Acquisti,
+[00:12:27] and George Loewenstein at Carnegie Mellon.
+[00:12:30] And they brought research subjects in.
+[00:12:34] And they had them answer a series of questions.
+[00:12:36] And the questions were relatively sensitive.
+[00:12:42] So if you can see this, it says, have you ever smoked marijuana?
+[00:12:45] Have you ever cheated while in a relationship?
+[00:12:47] Have you ever driven when you were
+[00:12:49] pretty sure you were over the legal blood alcohol level?
+[00:12:52] And this is just a taste of the kind of questions
+[00:12:54] that they were asked.
+[00:12:55] Basically, have you ever committed a crime.
+[00:12:57] And what's the first thing that you
+[00:13:00] notice when you sit down and look at this interface.
+[00:13:04] AUDIENCE: Comic Sans font.
+[00:13:05] WOODY HARTZOG: Comic Sans font.
+[00:13:07] No one has ever taken anything seriously,
+[00:13:10] in the history, that is written in Comic Sans font.
+[00:13:13] What else?
+[00:13:20] Yeah, the devil icon and the U, right?
+[00:13:22] So right, it's funny, right?
+[00:13:24] So the devil icon is like a devil,
+[00:13:26] but it's an emoji devil that's like, oh, it's a cutie devil.
+[00:13:30] And it says, how bad are you, with the multiple exclamation
+[00:13:34] points.
+[00:13:35] And the idea is it's like cutesy.
+[00:13:44] Oh, yeah, binary answers here, yes or no.
+[00:13:48] There's no sort of in-between.
+[00:13:49] There's no Skip option here, forced choices.
+[00:13:54] But the overall sort of effect of this
+[00:13:56] here is they want to say how bad are you.
+[00:14:01] But what they're really saying is, you're bad,
+[00:14:04] you're just a little bad.
+[00:14:05] Everyone's just a little bad, you can admit it here.
+[00:14:09] Now here's the control group.
+[00:14:13] Gone is the Comic Sans, replaced with a respectable Sans Serif
+[00:14:19] font.
+[00:14:21] Gone is they "how bad are U," replaced
+[00:14:23] with a respectable imprimatur of Carnegie Mellon University.
+[00:14:28] And this research project really illustrated to me--
+[00:14:34] and I want to quote it exactly because I
+[00:14:36] don't want to misstate their conclusions--
+[00:14:40] but they call this the non-frivolous interface
+[00:14:43] and this the frivolous interface.
+[00:14:45] And the scholars said that, relative
+[00:14:49] to the non-frivolous interface, participants
+[00:14:51] in the frivolous looking survey, which
+[00:14:53] is this, that asked identical questions
+[00:14:56] were, on average, 1.7 times more likely to admit
+[00:14:59] to having engaged in risky behaviors.
+[00:15:02] For example, the scholars said, a participant
+[00:15:04] in the frivolous looking survey was,
+[00:15:06] on average, 2.03 times more likely
+[00:15:09] to admit having ever taken nude pictures of himself
+[00:15:12] or a partner.
+[00:15:14] And they concluded that people, it seems,
+[00:15:15] feel more comfortable providing personal information
+[00:15:19] on unprofessional sites that, arguably, particularly
+[00:15:22] are more and most likely are more likely to misuse it.
+[00:15:26] Every single design decision makes a certain reality
+[00:15:30] more or less likely.
+[00:15:33] It is power distributed.
+[00:15:36] Finally, that brings me to my last point,
+[00:15:39] design is political.
+[00:15:41] It's always political.
+[00:15:42] When I first started giving this talk,
+[00:15:45] I got some pushback from some people that said,
+[00:15:49] why are you obsessed with the design
+[00:15:51] of information technologies?
+[00:15:52] Why wouldn't you just regulate misuses of that technology?
+[00:15:56] And we see this carrying out in debates now.
+[00:15:58] So people say, you wouldn't regulate a knife.
+[00:16:04] You regulate stabbing people.
+[00:16:06] Knives can cut vegetables.
+[00:16:07] They can be used for very useful things.
+[00:16:09] But they can also be used for bad things.
+[00:16:11] And so we should regulate those uses, not
+[00:16:15] the technologies, themselves.
+[00:16:19] And it sort of often gets distilled down
+[00:16:22] to this sort of maxim, which is there are no bad technologies,
+[00:16:26] only bad users.
+[00:16:28] I don't think that's true.
+[00:16:29] I think that because every single design decision makes
+[00:16:33] a certain reality more or less likely,
+[00:16:35] that means that every technology that
+[00:16:37] is designed to have some sort of effect on the world
+[00:16:41] is inherently political, maybe just a little bit.
+[00:16:44] But even ignoring the certain realities
+[00:16:48] that technologies are likely to lead to
+[00:16:50] is a decision, in and of itself.
+[00:16:52] And so what it means I think, in the way
+[00:16:54] that this sort of plays out, is that lawmakers should not
+[00:16:57] ignore the design of information technology,
+[00:17:01] to do so is actually a choice to ignore the effects.
+[00:17:05] And maybe those choices are good or not,
+[00:17:07] but let's not do so under the pretense of neutrality.
+[00:17:13] The second part of the book that I try to get into
+[00:17:15] is that privacy law should take design more seriously.
+[00:17:21] And the reason why is because, if you look at privacy law,
+[00:17:25] there's actually a design gap.
+[00:17:27] There are several holes that I think
+[00:17:32] ignoring the role of design has left in our jurisprudence.
+[00:17:36] Now, I teach information privacy law.
+[00:17:40] And it turns out that even though it's infinitely complex,
+[00:17:46] a lot of data privacy law can be distilled down
+[00:17:48] to three rules, just three.
+[00:17:50] And so now I'll summarize it so you never
+[00:17:52] have to take information privacy law.
+[00:17:54] The first one is basically follow the FIPs.
+[00:17:57] Follow what is known as the Fair Information Practices.
+[00:18:01] The fair information practices are the building blocks
+[00:18:04] of modern data protection law.
+[00:18:06] They are things like access, notice, choice, data
+[00:18:11] minimization, procedural safeguards,
+[00:18:13] things that we all recognize.
+[00:18:15] They are the fundamental building blocks of statutes
+[00:18:18] like the Fair Credit Reporting Act, the Privacy Act, and most
+[00:18:21] notably, the General Data Protection Regulation
+[00:18:24] in Europe.
+[00:18:26] The FIPs have become amazingly, for a concept,
+[00:18:30] a sort of broad and diverse as privacy,
+[00:18:37] almost a international language of privacy, which is amazing.
+[00:18:42] And so the FIPs are what we tend to embrace.
+[00:18:45] But the problem with the FIPs is that it almost always
+[00:18:50] distills down into this notion that we should give people,
+[00:18:54] people as data subjects, control over
+[00:18:57] their personal information.
+[00:18:59] This is a compelling concept.
+[00:19:01] It drives a lot of our national conversation
+[00:19:04] about what our data protection law should be.
+[00:19:07] The problem with control--
+[00:19:09] and this is one of the major points of the book,
+[00:19:11] and something that I feel really strongly about--
+[00:19:16] is that control isn't workable as a solution,
+[00:19:22] as a regulatory strategy for privacy.
+[00:19:24] And here's why.
+[00:19:25] The way that control gets instantiated
+[00:19:30] is through listening.
+[00:19:33] Everyone recognizes this.
+[00:19:34] It's a toggle switch.
+[00:19:36] Can this app collect your geolocation information?
+[00:19:41] Green means yes, gray means no.
+[00:19:44] You click one button, boop, done and done.
+[00:19:46] Fair enough, simple enough, right?
+[00:19:49] Except it's never just one.
+[00:19:52] So we say, OK, I got a few decisions to make here.
+[00:19:56] Compass calibration, that seems good.
+[00:19:59] I think I want that.
+[00:20:00] Find my iPad, that's useful.
+[00:20:01] It helps me find my iPad when I've lost that.
+[00:20:03] I can remotely break it.
+[00:20:04] That's good.
+[00:20:05] Location-based alerts, I don't know what that is,
+[00:20:08] but maybe it's good.
+[00:20:09] Location-based ads, I don't know how
+[00:20:11] that's different than location-based alerts,
+[00:20:12] but maybe that's good.
+[00:20:14] Setting time zones, share my location with who?
+[00:20:17] So we've got a series of decisions
+[00:20:18] that we have to go through here.
+[00:20:20] But maybe let's say we take the time, we make the decisions,
+[00:20:24] we go through.
+[00:20:25] We pour a second cup of coffee.
+[00:20:27] We work through, we say, OK, I think I'm set.
+[00:20:32] Oh, God, now I've got lots of decisions to make.
+[00:20:36] The problem with thinking about privacy
+[00:20:40] is control is that it simply doesn't scale.
+[00:20:43] We don't have the resources because we
+[00:20:45] have to keep fiddling with these switches forever and ever,
+[00:20:49] every day for the rest of our life.
+[00:20:52] If we conceptualize privacy as control,
+[00:20:55] then we are gifted with so much of it that we choke on it.
+[00:20:59] And the way that it happens is through design.
+[00:21:03] The second rule of privacy is do not lie.
+[00:21:08] This is how the US first entered regulating privacy
+[00:21:11] in the 1990s, through the Federal Trade Commission
+[00:21:13] authority, to regulate unfair and deceptive trade
+[00:21:16] practices, where they said, listen,
+[00:21:18] we don't want to regulate too much because it's
+[00:21:20] a brand new technology.
+[00:21:21] The internet's a little baby.
+[00:21:22] We don't want to crush it.
+[00:21:23] So what we're going to say is do whatever you want.
+[00:21:27] But if you promise something, just make sure that you do it.
+[00:21:32] Fair enough.
+[00:21:33] The problem with the do not lie ethos,
+[00:21:36] though, is that technical truths can
+[00:21:38] get embedded all sorts of places and mean nothing.
+[00:21:41] If you wanted to hide the location of a dead body
+[00:21:46] somewhere, where's the first place
+[00:21:47] you would put it where no one would read it?
+[00:21:53] In the terms and conditions.
+[00:21:54] You'd put it in the privacy policy
+[00:21:56] because it would be guaranteed to remain unread.
+[00:22:01] So technically true, the do not lie sort of rule
+[00:22:05] doesn't help us when technical truth
+[00:22:06] or are embedded in places where we they're never going to get
+[00:22:11] read through design.
+[00:22:13] Or what happens is that we oversimplify.
+[00:22:17] We use design to have like a pop-up that says, by the way,
+[00:22:21] here's a thing.
+[00:22:21] But there's only so much information
+[00:22:23] you can convey in a little pop-up ad.
+[00:22:25] How many people, when you are in Europe and you go to a website,
+[00:22:29] and the I agree banner pops, and you're like,
+[00:22:31] this website uses cookies.
+[00:22:32] You're like, yes, yes, yes, fine,
+[00:22:33] whatever, click, and you agree.
+[00:22:35] A technical truth, worthless for privacy.
+[00:22:39] The final area in which privacy's design gap
+[00:22:44] manifests itself as in the rule of do not harm.
+[00:22:46] This is sort of the final rule.
+[00:22:48] And it's manifested in the Federal Trade Commission's
+[00:22:53] requirement to police unfair trade practices.
+[00:22:57] And the do not harm mentality says, well,
+[00:23:00] as long as you don't physically, or emotionally, or financially
+[00:23:04] hurt someone, then you're fine.
+[00:23:08] But the problem with modern privacy harms
+[00:23:10] is that, actually, they don't always manifest themselves
+[00:23:14] in clearly tangible harms.
+[00:23:18] Rather, it's sort of death by 1,000
+[00:23:20] cuts, a little information here, a little information there.
+[00:23:24] And each discrete disclosure isn't enough, necessarily,
+[00:23:28] to rise to the level of what the law would
+[00:23:31] recognize as a tangible harm.
+[00:23:33] And so when data breaches happen, for example,
+[00:23:37] information gets slowly compromised, bit by bit.
+[00:23:40] But it's difficult to say any of those rise
+[00:23:42] to one particular level of harm, unless you
+[00:23:44] have your bank account compromised or something
+[00:23:46] like that.
+[00:23:47] And so the design gap manifests there.
+[00:23:51] OK, so what do we do about it?
+[00:23:55] This is the next part of the book,
+[00:23:56] where I propose a theory, a design agenda, for lawmakers.
+[00:24:01] And the way in which I manifest this is three parts.
+[00:24:06] One is we have to identify values.
+[00:24:09] What are the values that we want design to further?
+[00:24:12] Two, what are the boundaries that we want design
+[00:24:15] to not cross?
+[00:24:18] And then what are the tools we can use to effectuate that?
+[00:24:21] In terms of values, I say your mileage could vary.
+[00:24:25] There are multiple values that you might want
+[00:24:27] to see represented in design.
+[00:24:29] For my part, I chose three that I
+[00:24:31] think are the most important values for, at least privacy.
+[00:24:35] And it's actually not control, it's
+[00:24:38] trust, obscurity, and autonomy.
+[00:24:41] Trust, I think, as one of the key components
+[00:24:43] of modern privacy law is something
+[00:24:44] that we've forgotten about, which
+[00:24:46] is that when we disclose information to people,
+[00:24:49] we often do so within relationships of trust.
+[00:24:51] There are promises that are made,
+[00:24:53] expectations that people have, about discretion,
+[00:24:56] whether you're going to reveal, certain kinds of information,
+[00:24:59] about honesty--
+[00:25:01] what sort of things do I need to know
+[00:25:02] that was buried in the fine print,
+[00:25:04] but that you should tell me, even
+[00:25:05] if you don't want me to know.
+[00:25:07] Protection, are you going to store my passwords
+[00:25:10] in clear text?
+[00:25:11] Please, no.
+[00:25:12] And finally, and one I think is one
+[00:25:14] of the most important values or concepts that's
+[00:25:18] been missing in privacy law thus far
+[00:25:21] is the concept of loyalty, which is not putting the data
+[00:25:26] processors own needs in front of the interests
+[00:25:31] or needs of the data subject, or at least not unreasonably so.
+[00:25:34] This is in harmony with Jack Balkin and Jonathan
+[00:25:38] Zittrain's concept of information fiduciaries--
+[00:25:41] we can talk about that a little later--
+[00:25:43] and argue that these values should
+[00:25:45] be reflected in the design of information technologies.
+[00:25:49] Another value that I think is less established in privacy
+[00:25:52] law, but equally important, is the concept of obscurity,
+[00:25:56] the idea that if information or people are
+[00:25:58] unlikely to be found or understood,
+[00:26:00] they are, to a relative degree, safe.
+[00:26:03] And we live our lives surrounded in zones of obscurity.
+[00:26:07] When all of you walked here today,
+[00:26:09] you walked down the street probably thinking
+[00:26:12] that that walk wasn't going to be broadcast on the Times
+[00:26:17] Square jumbotron, right?
+[00:26:19] And we use our risk calculus to adjust ourselves all the time.
+[00:26:23] And the problem is that surveillance technologies
+[00:26:26] and what I call seeking technologies
+[00:26:29] can eviscerate that obscurity.
+[00:26:31] There are biometrics and other sorts
+[00:26:33] of surveillance technologies that can significantly
+[00:26:36] alter the risk calculus that we use every day to adjust
+[00:26:40] whether it's safe to pick our nose, or gossip in the hallway,
+[00:26:43] or do random things that we're pretty sure that most
+[00:26:46] people are never going to see.
+[00:26:49] And then finally, the value that we should seek to further
+[00:26:52] is autonomy.
+[00:26:54] And I draw a distinction between autonomy and control.
+[00:26:57] Sometimes people use those two terms synonymously.
+[00:27:01] But I don't think they're the same thing.
+[00:27:02] Control could serve autonomy.
+[00:27:04] But as I've tried to demonstrate earlier,
+[00:27:06] if you're given too much control through design,
+[00:27:09] it actually is corrosive to autonomy
+[00:27:11] because it inhibits our ability to make a decision
+[00:27:14] and, actually, it works as an interference
+[00:27:17] because our silence can be taken as acquiescence.
+[00:27:23] So at the end of the book, I make the argument
+[00:27:25] that the design agenda should have
+[00:27:27] roots in consumer protection and surveillance law.
+[00:27:31] And I say that there are--
+[00:27:32] if you look at what we've already created,
+[00:27:36] not within data protection law, but within consumer protection
+[00:27:39] surveillance law, we can pull from a couple of standards
+[00:27:42] already--
+[00:27:43] deceptive design, abusive design,
+[00:27:45] and dangerous design-- which are particular
+[00:27:47] boundaries that we can draw from.
+[00:27:50] If we create an app that says add friends,
+[00:27:53] the idea is that it's not going to go through your address
+[00:27:56] book, and automatically upload the entire address book,
+[00:27:59] and send invitations out to everyone.
+[00:28:02] This is the Path case that the Federal Trade Commission
+[00:28:04] brought a complaint against the social medium Path.
+[00:28:09] We should avoid interfaces that are unduly malicious,
+[00:28:14] or abusive, or manipulative.
+[00:28:16] And what I mean by that is one of the things that
+[00:28:20] has been interesting and fun to try to collect
+[00:28:23] is all the examples of what designer
+[00:28:25] Harry Brignull calls dark patterns, which
+[00:28:29] are user interfaces designed to make people do things that they
+[00:28:34] might not want to do, or to channel them
+[00:28:36] into certain kinds of behavior.
+[00:28:37] And this is one that's sort of I think called confirm shaming,
+[00:28:42] which is, here at the bottom, it says, no thanks, I'd rather pay
+[00:28:45] full price for delicious tea.
+[00:28:46] If you want to decline, click off the op-ed.
+[00:28:50] If you see here, you have shaming.
+[00:28:55] What if your neighbors knew whether you voted or not?
+[00:28:58] So people's personal information is leveraged against them
+[00:29:01] in sort of abusive ways.
+[00:29:05] Here it says, stop losing customers.
+[00:29:07] And then it, in fine, it says, no thanks,
+[00:29:08] I'm fine with losing customers.
+[00:29:11] There was one that I found that.
+[00:29:13] It was for a health app .
+[00:29:20] And to decline it you had to click, no thanks,
+[00:29:22] I prefer to bleed out, or something like that.
+[00:29:26] And of course, we laugh it off.
+[00:29:28] But over time, that's sort of wheedling and chipping away
+[00:29:32] at our resolve can have an effect in the aggregate.
+[00:29:35] The use of things like double and triple-negatives,
+[00:29:37] like I don't not disagree to this thing.
+[00:29:40] It's not deceptive, but it is abusive.
+[00:29:43] And then it leverages our own cognitive and resource
+[00:29:45] limitations against us.
+[00:29:48] And then finally, there are certain things
+[00:29:50] that are outright dangerous.
+[00:29:51] Spy cams, I think, could be outright dangerous.
+[00:29:55] This is a camera.
+[00:29:56] This was designed for one thing only.
+[00:30:00] It is to surveil you in a way that you don't
+[00:30:04] know that you're being watched.
+[00:30:05] In the book, I talk about there's a toothbrush that
+[00:30:09] has a camera in it.
+[00:30:10] And it's a spy cam.
+[00:30:11] That's designed for one thing, bathroom voyeurism.
+[00:30:14] And that, to me, might be too dangerous.
+[00:30:16] And so what are the responses that we could have here?
+[00:30:19] Well, we could have a soft response,
+[00:30:21] we could have a moderate response, or a robust response.
+[00:30:23] The soft response involves funding.
+[00:30:26] It involves education efforts.
+[00:30:27] And it involves trying to work with academics and industry
+[00:30:32] to create standards around the design of information
+[00:30:35] technologies.
+[00:30:36] And we see certain efforts underway to do that right now.
+[00:30:40] And there could be moderate efforts.
+[00:30:42] Moderate efforts might involve simply
+[00:30:45] being more aware of design in the frameworks
+[00:30:47] that we currently have.
+[00:30:49] And so in the book, I talk a lot about how
+[00:30:51] promises are being made through design all the time.
+[00:30:54] Yet, judges, when interpreting what the agreement is
+[00:30:59] between users and websites, very rarely look to the design.
+[00:31:03] They almost exclusively look to the terms of use,
+[00:31:05] even though things like padlock icons
+[00:31:08] are basically design-based promises
+[00:31:10] for some kind of protection.
+[00:31:13] They say, well, this will protect you some way.
+[00:31:15] And we need to be a little more critical about, well,
+[00:31:18] what is design trying to tell us?
+[00:31:21] And then finally-- and we can talk about this in the Q&A
+[00:31:23] a little--
+[00:31:24] some of the robust responses could
+[00:31:27] include financial punishment for creating
+[00:31:32] certain kinds of technologies or, perhaps, outright bans.
+[00:31:37] We banned spyware.
+[00:31:38] We banned the trafficking in the spyware.
+[00:31:39] We might want to consider that model a little more.
+[00:31:43] One of the things that I've been vocal about
+[00:31:44] is facial recognition technology,
+[00:31:46] which I view as probably the most dangerous surveillance
+[00:31:50] technology ever created.
+[00:31:52] And I think that it's so dangerous
+[00:31:53] that we need to move beyond simply trying to get consent
+[00:31:58] for uses of facial rec and start thinking a little bit more
+[00:32:03] about robust responses and what that might look like,
+[00:32:05] including possible moratoriums or outright bans.
+[00:32:09] And then the final part of the book,
+[00:32:10] I take the blueprint that I proposed and I show
+[00:32:16] how it might work within the context of social media,
+[00:32:19] how it might work within hide-and-seek technologies,
+[00:32:22] and how it might work in the what
+[00:32:26] I call a flaming dumpster fire of the internet of things.
+[00:32:30] And so that's it.
+[00:32:31] I'll wrap up now.
+[00:32:32] And I'm happy to move to Q&A.
+[00:32:34] DAVID O'BRIEN: Excellent.
+[00:32:35] Thank you, Woody.
+[00:32:35] [APPLAUSE]
+[00:32:40] So that was really a terrific presentation.
+[00:32:42] Thank you so much.
+[00:32:43] Now we'll go over to Q&A. And actually, we
+[00:32:45] have ample time for that, so start
+[00:32:47] to think about your questions.
+[00:32:48] I had a couple that I wanted to get us going with.
+[00:32:52] And I'm going to put on my libertarian hat
+[00:32:56] as best I can here.
+[00:32:57] And it seems a little bit like what you're saying
+[00:33:00] is we need to be a little bit more
+[00:33:03] maternalistic or paternalistic when
+[00:33:05] it comes to design choices, from the top-down, more or less.
+[00:33:08] But you also mentioned autonomy and control are still
+[00:33:12] important factors here.
+[00:33:13] I mean, where does consent fit into this?
+[00:33:17] We know how it fails.
+[00:33:18] We know that people don't read things like terms of service.
+[00:33:23] Could there still be places for consent,
+[00:33:24] or how do you think about that?
+[00:33:26] And then the other thing I'd like you to address,
+[00:33:28] if you might, is manipulation.
+[00:33:30] That's a wonderful topic.
+[00:33:33] It's incredibly broad and very subjective,
+[00:33:35] perhaps, in my view.
+[00:33:36] How do we think about that too?
+[00:33:38] WOODY HARTZOG: OK, those are great question.
+[00:33:39] Thank you.
+[00:33:40] So in terms of consent, somewhere along the way,
+[00:33:49] in the 1970s, when data protection frameworks
+[00:33:53] were first being conceived, and we first
+[00:33:55] started to realize that data being aggregated
+[00:33:59] posed potential issues, we started
+[00:34:02] thinking about what the framework should
+[00:34:05] be for regulating data.
+[00:34:08] And one of the frameworks that came out
+[00:34:10] was this concept of informed consent,
+[00:34:14] that people should have a choice as to whether their data is
+[00:34:18] used or not.
+[00:34:20] And it seemed like a really good thing
+[00:34:23] because who doesn't want more control and more choice?
+[00:34:28] And it works, at least somewhat well,
+[00:34:31] in other areas, like with informed consent as a cause
+[00:34:36] of action for surgery.
+[00:34:37] So anyone here that's had a medical procedure done
+[00:34:39] recently, someone came to you.
+[00:34:41] They sat down.
+[00:34:41] They said, listen, this could be pretty risky.
+[00:34:45] Are you sure you want to do this?
+[00:34:47] Here are the alternatives.
+[00:34:49] And then you sign off and you say, I give informed consent.
+[00:34:52] I teach torts.
+[00:34:53] We use consent as a defense to battery consent.
+[00:34:56] It's not as though we just sort of drew it out of thin air,
+[00:34:59] drew this concept into thin air.
+[00:35:01] Here's the problem though, we didn't think it through enough,
+[00:35:05] because consent only works within a limited context,
+[00:35:10] within a limited environment.
+[00:35:11] And if you think about areas in which informed consent
+[00:35:15] theoretically works, it's got three common things
+[00:35:19] that make it at least a possibly workable concept.
+[00:35:23] One of those is that informed consent is asked infrequently.
+[00:35:28] So when we give consent for surgery,
+[00:35:30] we don't have to make that decision very often.
+[00:35:33] So we actually have time to think about it
+[00:35:35] and say, OK, this is a big deal, I should consider this.
+[00:35:38] The exact opposite is true for data environments,
+[00:35:41] where we are given a relentless onslaught of I-agree options.
+[00:35:45] And we press that button over, and over, and over,
+[00:35:47] multiple times a day.
+[00:35:49] And so it doesn't work there.
+[00:35:50] Another area-- a sort of precondition for what I call
+[00:35:54] gold standard consent in work that I've done with Neil
+[00:35:56] Richards--
+[00:35:57] is the idea that the harms that we envision
+[00:36:02] are visceral or easy to imagine.
+[00:36:05] So when you give consent for surgery,
+[00:36:08] you could imagine someone having a scalpel,
+[00:36:11] and sneezing, and slipping, and cutting, right?
+[00:36:13] That's a very visceral thing that I can actually
+[00:36:15] envision in my head.
+[00:36:16] I'm like, that's scary.
+[00:36:17] When you consent to contact on the football field,
+[00:36:22] you can imagine what might happen if it goes wrong,
+[00:36:24] you could get hit very hard, right?
+[00:36:26] We can see it with our eyes.
+[00:36:27] The exact opposite is true in the data environment, where
+[00:36:30] once our information is disclosed,
+[00:36:33] the flows in which it travels is largely invisible to us.
+[00:36:38] And so it becomes very difficult for us
+[00:36:40] to do any meaningful risk calculus consistently.
+[00:36:44] It's basically guessing.
+[00:36:46] It's just wild guessing.
+[00:36:47] And then the final precondition for gold standard consent,
+[00:36:51] I think, is that the harms are, the discrete harms--
+[00:36:54] and what I mean by discreet is each individual decision
+[00:36:57] point has a consequence that is significant.
+[00:37:02] So if I make the wrong decision about surgery, I could die.
+[00:37:06] If I make the wrong decision about football,
+[00:37:10] getting hit on the football field,
+[00:37:11] I could get seriously injured.
+[00:37:14] There are all these reasons why I
+[00:37:16] might want to take this particular decision seriously.
+[00:37:21] None of that exists in the data environment
+[00:37:23] because, each time we're asked, we're usually just giving
+[00:37:28] just a little bit of information, every time, just
+[00:37:31] a little bit, maybe just my geolocation, just this one
+[00:37:34] time, maybe my name and address, just this one time.
+[00:37:37] And we have difficulty having the right incentives
+[00:37:40] to take each I agree button seriously.
+[00:37:45] And what we do is we fail to do it every time.
+[00:37:48] We collectively gloss over it.
+[00:37:50] And then you look up, and you've got over it 400 times.
+[00:37:54] And so consent, I'm not convinced.
+[00:37:57] Now, the pushback to this, and the pushback that I've gotten,
+[00:38:01] is, do you think people are idiots?
+[00:38:03] Do you have no faith in humanity that we
+[00:38:06] don't have the capacity to decide for ourselves what
+[00:38:10] we want to do?
+[00:38:16] My response to that would be it's
+[00:38:18] not that I don't have faith in humanity,
+[00:38:20] it's that so much is being asked of us, it's unrealistic.
+[00:38:23] And so we chose a regulatory strategy that
+[00:38:27] just doesn't work at scale.
+[00:38:30] If the preconditions for effective consent were there,
+[00:38:33] it might be different.
+[00:38:36] And there might be a place for it,
+[00:38:37] but it requires a really difficult conversation
+[00:38:40] that we haven't had yet.
+[00:38:41] And that difficult conversation is, do we
+[00:38:44] start prioritizing requests?
+[00:38:48] So we could have a place for consent,
+[00:38:50] but not everybody gets to ask it because, right now,
+[00:38:52] our request for consent are weighted equally.
+[00:38:56] So Google gets to ask for consent,
+[00:38:58] then some random app gets to ask for consent,
+[00:39:00] and they're all weighted equally.
+[00:39:04] And the kinds of requests-- can I have all your information?
+[00:39:06] Can I have just your geolocation information?
+[00:39:08] Can I just have your name and address--
+[00:39:10] all those requests are also weighted equally.
+[00:39:14] And if we want to prioritize what
+[00:39:16] I think is a finite resource, then we're
+[00:39:18] going to have to start categorizing.
+[00:39:19] It's going to have to be like bankruptcy, where everybody
+[00:39:22] gets in line right and we have a pecking order for consent.
+[00:39:26] And we haven't yet had that conversation,
+[00:39:28] and it's a hard one.
+[00:39:29] I mean, who's to say that that geolocation is the most
+[00:39:32] important thing to ask for?
+[00:39:33] Who's to say that the app that I spend most of my time with
+[00:39:39] gets priority on consent?
+[00:39:40] I mean, how do we even begin to construct that,
+[00:39:43] but it's a place we need to be.
+[00:39:44] And in terms of manipulation--
+[00:39:47] I talk a lot about wrongful manipulative design
+[00:39:50] or abusive design in the book--
+[00:39:53] that's hard.
+[00:39:54] And it's something that we've been struggling
+[00:39:56] with for a while in the advertising context
+[00:39:58] because manipulation, by a less pejorative term,
+[00:40:05] is trying to get people to do the thing that you want them
+[00:40:08] to do, which is advertising.
+[00:40:10] And that can be, actually, a good thing, and it
+[00:40:13] can inform people and give them lots of options.
+[00:40:16] And so the best examples that I've seen so far, one of them
+[00:40:21] has to do with a design.
+[00:40:29] If you look at the Consumer Financial Protection Bureau,
+[00:40:32] unlike the Federal Trade Commission,
+[00:40:34] the Consumer Financial Protection Bureau
+[00:40:35] has a three-pronged consumer protection mandate,
+[00:40:38] unfair, deceptive, and abusive trade practices.
+[00:40:41] And abusive trade practices are those that leverage people's
+[00:40:45] own limitations against them.
+[00:40:47] And there are things where we might
+[00:40:49] be able to start identifying the constellation
+[00:40:52] of abusive practices in the way that, when negligence law was
+[00:40:55] first of thing, who knew what it was, but now
+[00:40:58] we have of zeroed in on it.
+[00:41:01] And it could be things like the use of triple negatives
+[00:41:04] or double negatives, the use of negative option marketing,
+[00:41:09] where you stay enrolled unless you don't opt out
+[00:41:15] or the use of false choices, these sort of false binaries.
+[00:41:20] There are these patterns that, consistently, I think
+[00:41:24] we've learned to identify.
+[00:41:25] But that's going to take a lot more conversation, I think.
+[00:41:30] DAVID O'BRIEN: Questions, we have mics running around here.
+[00:41:32] When one reaches you, please state your name and a question.
+[00:41:39] AUDIENCE: Hello, my name is Sebastiano.
+[00:41:41] I want to know if you think that substantive provisions can
+[00:41:45] be used to regulate design.
+[00:41:47] I was thinking, on the California Privacy Act,
+[00:41:50] that it has the equal services provision.
+[00:41:52] And I think most of the designs that you showed in the end will
+[00:41:55] be legal because if you make a choice of information,
+[00:41:59] you cannot be given different services.
+[00:42:02] So do you think this is a good way of regulating the design?
+[00:42:06] What do you think about that?
+[00:42:07] WOODY HARTZOG: Yeah, so I am of two minds about these sort
+[00:42:11] of substantive rules.
+[00:42:15] And one of the big fights that we're
+[00:42:16] having I think now in data security
+[00:42:19] is whether we're going to have clear rules.
+[00:42:22] And I think industry, generally speaking, can respond to a lot,
+[00:42:25] as long as the rules are clear, which is something
+[00:42:27] they've advocated for.
+[00:42:28] But there's also a virtue, I think,
+[00:42:30] in having a reasonableness approach which
+[00:42:34] has a lot more flexibility.
+[00:42:35] Because my fear about having very specific
+[00:42:37] substantive rules is we ossify things relatively quickly,
+[00:42:41] particularly with the design of information technologies
+[00:42:44] where it can change a little.
+[00:42:45] And so unless we do so within a structure that has things like
+[00:42:49] sunset provisions and mandatory sort of wrappings,
+[00:42:53] I think we risk creating-- if we have very specific rules,
+[00:42:56] substantive specific rules, which, generally,
+[00:42:58] I'm in favor of--
+[00:43:01] I think we risk sort of ossifying.
+[00:43:03] And then and then the more specific we get,
+[00:43:06] the more we sort of allow through omission.
+[00:43:08] Whereas if we create responsibilities
+[00:43:11] to avoid abusive design, for example, unreasonably
+[00:43:16] dangerous design, then we're, I think,
+[00:43:20] relieving a little of what we ask of users.
+[00:43:23] And we are putting more risk on companies.
+[00:43:27] But the companies are the ones that, A, are designing
+[00:43:29] the technologies, and B, I think are
+[00:43:33] able to make changes to that.
+[00:43:39] AUDIENCE: I want to go back to the last phrase you
+[00:43:41] used in your last sentence, unreasonably dangerous design.
+[00:43:46] How do you decide what's reasonable
+[00:43:47] and what's unreasonable?
+[00:43:49] WOODY HARTZOG: Such a good question, thank you.
+[00:43:53] The short answer is you can bring--
+[00:43:57] there are a number of collective strategies
+[00:43:59] to decide what's reasonable and reasonable.
+[00:44:01] One of them is--
+[00:44:06] so a tort law, sort of negligence,
+[00:44:08] is acting unreasonably under the circumstances,
+[00:44:11] to create an unreasonable risk of harm to others.
+[00:44:13] That's the whole torts.
+[00:44:14] What is it?
+[00:44:15] It depends on context.
+[00:44:17] So the short and easy answer is you
+[00:44:19] have to look at the context.
+[00:44:20] And the way in which we inform that is we
+[00:44:23] look at things like custom industry standard.
+[00:44:28] We look at, perhaps, international standards.
+[00:44:32] We can look at things like reasonable alternative design.
+[00:44:36] This is one of the ways in which we decide weather products are
+[00:44:40] going to be, under products liability law,
+[00:44:44] whether something is a defective design,
+[00:44:47] unreasonably defective design.
+[00:44:50] The reasonableness test, generally speaking,
+[00:44:52] is broad and undefined.
+[00:44:56] But it's not something that I think law is unfamiliar with.
+[00:45:01] It would require, I think, a lot more serious conversation.
+[00:45:06] But I think we could get there through time, and then
+[00:45:09] iteratively.
+[00:45:13] AUDIENCE: You're disadvantaging new industries that do not
+[00:45:17] have any kind of customer standards,
+[00:45:20] and therefore, you're kind of slowing down
+[00:45:24] the progress in a sense.
+[00:45:27] I don't see much of a difference between that
+[00:45:30] and now Walmart to be allowed to sell in India,
+[00:45:33] and then India is changing the law
+[00:45:35] once it has become popular, that you can only
+[00:45:37] sell things that are produced within the country.
+[00:45:40] And we're certainly not a third-world country
+[00:45:42] to not oblige to some grandfather clauses.
+[00:45:47] WOODY HARTZOG: So the question of data localization, I think,
+[00:45:50] is an interesting one, but I would distinguish this
+[00:45:53] from that.
+[00:45:54] And would I be imposing a cost on companies?
+[00:45:58] Absolutely.
+[00:45:59] I mean, I think that we need to be clear here
+[00:46:02] that when we're talking about design rules,
+[00:46:04] we're talking about rules that limit what industry
+[00:46:09] will be able to create.
+[00:46:11] My point is that maybe that's the cost of admission,
+[00:46:14] given how dangerous these information technologies are.
+[00:46:18] And then if we can't do it safely, then
+[00:46:20] maybe we shouldn't do it at all.
+[00:46:25] AUDIENCE: So children are a protected class,
+[00:46:26] so I'm wondering what you think in terms
+[00:46:28] of these concepts being applied to both children and families,
+[00:46:31] in terms of the issues and then the appropriate response.
+[00:46:34] WOODY HARTZOG: So I agree.
+[00:46:37] Generally speaking, one of the reasons
+[00:46:41] that I am so critical of consent structures is because we often,
+[00:46:49] even in COPPA, which I think is a well-meaning law
+[00:46:51] and in many ways has been at least
+[00:46:55] effective from its ability to bring claims and get some sort
+[00:47:01] of consequences from it.
+[00:47:02] But we're asking, A, I think that it's
+[00:47:05] important to consider children, specifically.
+[00:47:07] So I would agree with the idea that it's worth
+[00:47:10] differentiating people--
+[00:47:12] and not just children-- but lots of different populations that
+[00:47:17] suffer the effects of design differently,
+[00:47:20] so people of color, women, in certain instances.
+[00:47:25] There are lots of people for whom design affects differently
+[00:47:28] within privacy.
+[00:47:29] And I think it's worth having a legal system that
+[00:47:33] is sensitive to that.
+[00:47:35] And I think that when we're talking about children,
+[00:47:38] one of the things that has motivated me
+[00:47:41] in this entire field is the idea that the way in which we grow
+[00:47:46] up is through certain sorts of zones of privacy,
+[00:47:48] so that we can have room to play in experiments
+[00:47:52] and fail in the way in which people develop.
+[00:47:56] And so I would push back, I would
+[00:48:00] support getting rid of this idea of consent
+[00:48:03] because, also, at least in contract doctrine,
+[00:48:06] the idea of having consent regimes based on children
+[00:48:13] is, A, they don't have enough practice making
+[00:48:15] those sorts of decisions.
+[00:48:17] B, they probably haven't had enough time
+[00:48:19] to accumulate the wisdom that would
+[00:48:20] help them sort of calibrate the right decisions.
+[00:48:23] And so to the extent that I'm critical of consent,
+[00:48:27] I'm particularly critical of consents
+[00:48:29] with the space of children, and then
+[00:48:30] actually would encourage, and maybe even be able to justify,
+[00:48:34] design protections for children even more than sort
+[00:48:37] of the general populace.
+[00:48:41] DAVID O'BRIEN: Oh, I'm sorry, the mic's back here.
+[00:48:43] AUDIENCE: Hi, thank you for the presentation.
+[00:48:45] DAVID O'BRIEN: And name first, if you might.
+[00:48:46] AUDIENCE: My name is Erin.
+[00:48:47] I'm an LLM student here.
+[00:48:49] So I think consent is closely related to choice.
+[00:48:52] And how much choice do users have
+[00:48:54] when the tech companies with the services they provide,
+[00:48:58] they're increasingly becoming monopolies?
+[00:49:00] And maybe the GDPR is disappointing in that sense
+[00:49:04] because it's being criticized for having
+[00:49:06] a disproportionate effect on small companies.
+[00:49:09] And it doesn't really matter to the large sync companies,
+[00:49:12] and they're also monopolies.
+[00:49:14] So what would you advise to, perhaps, other jurisdictions
+[00:49:17] who are working on comprehensive data protection law
+[00:49:20] to avoid this from happening?
+[00:49:22] WOODY HARTZOG: So I gather that, in terms
+[00:49:25] of the net effect on competition of data protection
+[00:49:33] framework like the GDPR, one of the things
+[00:49:35] that was built in to try to increase consumer choice--
+[00:49:40] and, generally speaking, I should
+[00:49:42] say that, even though I'm highly critical of consent regimes,
+[00:49:45] I'm very much in for a data subject rights,
+[00:49:47] so rights of access, rights of deletion.
+[00:49:51] And the area in which I think is meant
+[00:49:53] to be pro-competitive is data portability, the idea
+[00:49:56] that you can just sort of like wholesale download.
+[00:49:59] Now, that's an insanely complicated thing.
+[00:50:01] But to the extent that we can encourage that,
+[00:50:05] I think that we should encourage data subject rights
+[00:50:09] as a way to empower people.
+[00:50:15] I'm supportive of choice, in that sense,
+[00:50:18] in terms of a range of options to choose from.
+[00:50:22] The problem is when we ask for people's choice
+[00:50:25] to transfer rights away, that's where
+[00:50:28] it becomes really problematic.
+[00:50:29] So people should be protected, I think,
+[00:50:32] regardless of what they consent to or choose.
+[00:50:35] In other words, I just want a higher floor
+[00:50:37] than what we seem to have right now.
+[00:50:39] So I'd focus on data subject rights and also, maybe,
+[00:50:43] getting serious about anti-competition law if we want
+[00:50:46] to--
+[00:50:46] but that's a different conversation.
+[00:50:48] And I'm not a competition law scholar
+[00:50:51] AUDIENCE: Hi, Michael Rand, from New York City and Columbia
+[00:50:55] University.
+[00:50:57] And my question is, I know here in Cambridge,
+[00:51:00] there's a firm called IDEO, and of course, there
+[00:51:04] are a lot of other places too.
+[00:51:06] And I was curious if you'd gone to
+[00:51:09] or had any interaction with any of the design people, studios,
+[00:51:14] et cetera, in thinking about solutions to this,
+[00:51:19] identifying the problems, et cetera,
+[00:51:20] et cetera, since design, in theory,
+[00:51:23] is their bread and butter.
+[00:51:26] WOODY HARTZOG: So I have given this particular target
+[00:51:30] at multiple technology companies.
+[00:51:33] And I've had the privilege of meeting
+[00:51:35] with a lot of their designers and engineers afterwards.
+[00:51:40] And it's, A, always, immediately, a humbling
+[00:51:44] experience because the complexity of the problem
+[00:51:47] is always presented very starkly.
+[00:51:51] But it is something that I've thought about
+[00:51:53] and hope to continue to think about.
+[00:51:57] One of the things in which I would love to see,
+[00:52:03] and generally am supportive of, is these sort
+[00:52:06] of dashboards that are being created now
+[00:52:10] for people to be able to take stock
+[00:52:12] and in a non sort of synchronous flash point way of get deletion
+[00:52:16] rights, and then making sure that it does what
+[00:52:20] people think they should do.
+[00:52:23] AUDIENCE: Hi, my name is Alicia.
+[00:52:25] I noticed that we've talked a lot about design,
+[00:52:27] in terms of user-facing design.
+[00:52:29] So I was wondering about the relationship between design,
+[00:52:31] in the sense of software engineering choices at lower
+[00:52:33] levels, in relationship to privacy.
+[00:52:35] WOODY HARTZOG: Yes, so a lot of the focus on the book
+[00:52:39] is on the UX, UI, and less about design,
+[00:52:46] it's several layers down in the stack.
+[00:52:49] I think that that's equally relevant, and probably is
+[00:52:53] it is a bigger component of this.
+[00:52:55] So when I talk about privacy by design or privacy and design,
+[00:52:59] I actually mean all of it.
+[00:53:02] But in terms of what I focus the most of my energy
+[00:53:08] on for the book, it was the user-facing step.
+[00:53:10] That's where I see the biggest gap.
+[00:53:11] Because I think that there are a lot of other scholars
+[00:53:14] that are doing some really great work on ways
+[00:53:17] to engineer design solutions and do other parts of the system.
+[00:53:22] So segmentation, de-identification solutions,
+[00:53:26] I think, are really interesting, back-end encryption solutions.
+[00:53:32] And a lot of this also overlaps with data security law,
+[00:53:35] generally speaking, which is my next project.
+[00:53:38] So that's a a long-witted a way of me
+[00:53:40] saying that's I think it's relevant,
+[00:53:43] but I haven't thought about it as much,
+[00:53:45] specifically for this book.
+[00:53:47] DAVID O'BRIEN: Time for maybe three more questions,
+[00:53:50] if we go quickly.
+[00:53:53] AUDIENCE: Andy Summer, I'm an ALI fellow.
+[00:53:55] Can you talk a little bit about the enforcement mechanism
+[00:53:59] that you envision for this regime.
+[00:54:02] Do you do you think there are existing agencies that would
+[00:54:05] be responsible enforcement?
+[00:54:06] Would you give the private right of action?
+[00:54:08] WOODY HARTZOG: Yes, I would.
+[00:54:09] So my short approach to enforcements of design--
+[00:54:16] the design agenda that I propose in the book
+[00:54:18] is sort of letting 1,000 flowers bloom.
+[00:54:21] I like the overlapping jurisdiction
+[00:54:23] between the Federal Trade Commission and state attorneys
+[00:54:26] general, which is why I suggest the consumer protection
+[00:54:29] approach.
+[00:54:30] While I think that establishing a US data protection authority
+[00:54:35] can be beneficial in some ways, I
+[00:54:37] view it as relatively limiting in other ways
+[00:54:40] because privacy, in my mind, is about more
+[00:54:42] than just personal data and the harms that
+[00:54:45] come with the aggregation of personal data.
+[00:54:48] I would like to see civil rights law sort of brought
+[00:54:50] into this conversation a little bit more.
+[00:54:52] Other values that are identified in a design,
+[00:54:55] I think it could bring to bear their accessibility concerns
+[00:54:58] that I think we would want to bring into it.
+[00:54:59] And so the Federal Trade Commission
+[00:55:03] is the agency that identifies most easily able to implement,
+[00:55:09] immediately, some of the suggestions in the book.
+[00:55:12] They would require an additional grant him authority
+[00:55:14] under some circumstances.
+[00:55:17] And then judges were actually a part
+[00:55:21] of the audience of my book, which is that they
+[00:55:23] oversee a lot of disputes.
+[00:55:26] And if we had a private cause of action,
+[00:55:27] they would oversee more, which I would encourage.
+[00:55:30] And to be more cognizant of the role the design plays
+[00:55:33] in shaping people's expectations I think
+[00:55:35] would be an important step forward.
+[00:55:41] AUDIENCE: In the case--
+[00:55:42] I don't know if you want to put the slide back up-- of the user
+[00:55:44] interface that presented you with the choice of getting
+[00:55:47] 10% off or not, depending whether you gave them
+[00:55:50] your data, do you believe that that was just
+[00:55:52] a misleading interface or do you think
+[00:55:54] that's a choice, that abuse of choice,
+[00:55:56] that should never be presented to a user in the first place?
+[00:55:59] WOODY HARTZOG: Yeah, so I think that probably
+[00:56:01] would fall on the--
+[00:56:04] if we addressed it, we addressed it through the soft response.
+[00:56:08] So I think it's an issue of the idea that, in the aggregate,
+[00:56:13] that sort of thing can wear us down.
+[00:56:16] That particular one, in isolation,
+[00:56:19] might not be necessarily violative,
+[00:56:24] but the use of things like double negatives might,
+[00:56:26] absolutely.
+[00:56:27] AUDIENCE: I was just wondering whether you
+[00:56:28] felt that the practice of giving a discount in exchange
+[00:56:32] for giving up your data is, itself, an abusive practice.
+[00:56:35] Is that what you were aiming at, or is it just
+[00:56:37] or is it just the user interface of making that choice
+[00:56:40] that you were aiming at?
+[00:56:41] WOODY HARTZOG: So I have to say, I don't love that practice.
+[00:56:43] And the reason why is I don't love the practice.
+[00:56:45] I don't like I don't like the idea of the more you disclose,
+[00:56:51] the more you can take, without having
+[00:56:53] a sort of trustworthy relationship rules imposed.
+[00:56:57] Now, if we did it within the context
+[00:56:58] of a trustworthy relationship I might be OK with it,
+[00:57:00] because then we've got loyalty, protection, honesty,
+[00:57:03] discretion.
+[00:57:05] But I don't like-- and this brings into a larger debate
+[00:57:09] about should we sell our data--
+[00:57:11] so will.i.am and, I think, someone in California saying
+[00:57:15] we should be paid for our data.
+[00:57:17] I think that's a really dangerous frame, frankly,
+[00:57:20] and would push back against it.
+[00:57:22] Because when you take something that is as broad as privacy,
+[00:57:27] that incorporates human flourishing civil rights, well
+[00:57:32] being, so many other things, and when we distill it
+[00:57:34] down to a market transaction, that sort of
+[00:57:39] implies you can now do what you will with this data.
+[00:57:42] I don't think we're going to like what
+[00:57:44] people get on the end of that.
+[00:57:47] And also, I don't want privacy to be something
+[00:57:49] that only those--
+[00:57:51] and the sort of the flipside of that
+[00:57:53] is people that can afford it don't
+[00:57:55] have to take the discount.
+[00:57:57] And I don't want privacy to be a luxury good.
+[00:58:02] DAVID O'BRIEN: Maybe one last question for me.
+[00:58:04] So we know right now, you were just on the Hill last week.
+[00:58:06] And right now, Congress is, of course,
+[00:58:08] debating the future of our privacy laws in this country.
+[00:58:11] If you could make a prediction right now
+[00:58:13] about what things look like a few years from now,
+[00:58:16] is there no change, is there a little bit of change,
+[00:58:18] do we see a lot of change?
+[00:58:19] And how long do you think it would
+[00:58:21] take to implement a shift in the direction
+[00:58:23] that you suggest in your book?
+[00:58:24] WOODY HARTZOG: So that's a really great question.
+[00:58:28] I think the answer to that question
+[00:58:29] depends upon what happens in the states
+[00:58:33] because this thing could break two different ways, I think.
+[00:58:35] One is that Washington--
+[00:58:39] so there are a couple of bills now floating around the states.
+[00:58:42] Because the number one question here, you should all know,
+[00:58:44] I think, is preemption.
+[00:58:45] So is the thing that kicked off the hearing it's apparently
+[00:58:48] the only thing that seems to matter right now.
+[00:58:50] And so what that means is we have
+[00:58:52] to watch very carefully what the states are doing.
+[00:58:54] If it breaks like the data protection laws broke--
+[00:58:58] so California introduces the first data protection law
+[00:59:01] in 2003.
+[00:59:02] All the other states look around and say, that's a great idea.
+[00:59:04] And they start passing their own data protection laws,
+[00:59:07] but they're all more or less the same.
+[00:59:09] I mean, there are important differences,
+[00:59:11] and I don't want to overgeneralize.
+[00:59:13] But we've been living with the 50-state framework
+[00:59:16] of 50 different data breach laws for a few years now.
+[00:59:19] And the economy has not crumbled apart because of that.
+[00:59:23] If privacy law breaks the same way,
+[00:59:25] you're not going to get as big of a push
+[00:59:28] for federal legislation.
+[00:59:29] And we might actually end up with something like a 50--
+[00:59:32] continue our 50-state framework of privacy
+[00:59:35] with a little more legislation.
+[00:59:37] If a couple of states go out on a ledge and create wide
+[00:59:45] variance from, like the California Privacy Protection
+[00:59:47] Act, for example, or something that, even worse,
+[00:59:51] would be incompatible-- in other words,
+[00:59:53] a company literally could not dual-comply with multiple state
+[00:59:56] laws by going to the ceiling--
+[01:00:00] then you're going to see--
+[01:00:03] because I think there's an appetite for regulation
+[01:00:06] now, in the wake of Cambridge Analytica,
+[01:00:08] in a way that I haven't seen it before.
+[01:00:11] And if you had asked me this question two years ago,
+[01:00:13] I would have said you won't see federal legislation for 20
+[01:00:16] years.
+[01:00:17] Now I think it's really dependent upon what
+[01:00:19] the states do.
+[01:00:20] Massachusetts just introduced a bill.
+[01:00:25] And how long would it take?
+[01:00:27] My agenda is severable, so you could break it off
+[01:00:31] in lots of different parts.
+[01:00:33] There are things we could do, flip the switch now,
+[01:00:36] and the Federal Trade Commission judges and state attorney's
+[01:00:39] general could easily implement.
+[01:00:42] You could pass a small upgrade bill to the Federal Trade
+[01:00:47] Commission to do a lot of what I am requesting in the bill.
+[01:00:50] And then some of the stuff that I'm
+[01:00:53] introducing, like outright bans or moratoriums,
+[01:00:56] San Francisco just introduced a moratorium--
+[01:00:58] I mean, an outright ban on facial recognition technology.
+[01:01:01] I don't know whether it'll pass.
+[01:01:03] Moratoriums have been proposed on facial recognition
+[01:01:06] in Washington state and in Massachusetts.
+[01:01:10] And so there are bits of it that are
+[01:01:12] sort of percolating even now.
+[01:01:16] And so, actually, I'm optimistic, actually.
+[01:01:19] AUDIENCE: Could you say more about
+[01:01:20] why you mentioned earlier that you
+[01:01:22] think that facial recognition is the most
+[01:01:25] dangerous kind of surveillance?
+[01:01:26] WOODY HARTZOG: Sure, absolutely.
+[01:01:27] So even among biometrics, I think
+[01:01:29] it's the most dangerous technology ever invented.
+[01:01:31] And the reason why, there are three reasons why.
+[01:01:34] One is that there is a legacy of name-face databases
+[01:01:41] that exist that doesn't exist for other biometrics.
+[01:01:45] So facial rec is almost like plug-and-play
+[01:01:47] because Facebook is the largest name-face database
+[01:01:51] in the world, I would assume.
+[01:01:54] And so, because biometrics surveillance typically
+[01:02:00] relies upon both the database and the implementation,
+[01:02:03] one of them's already been fulfilled there.
+[01:02:05] Whereas with things like iris recognition, gait recognition,
+[01:02:09] those databases have to be created,
+[01:02:13] So facial recognition is already ahead.
+[01:02:15] Number two, it's a lot harder to hide your face, right?
+[01:02:19] So if you wanted to engage in surveillance countermeasures,
+[01:02:23] there are ways to do that for other biometrics.
+[01:02:25] It's really hard.
+[01:02:26] And in fact, there are laws that sometimes
+[01:02:28] prohibit hiding your face.
+[01:02:31] And then the third reason, is that of all the things,
+[01:02:34] of all the physical traits that are central
+[01:02:38] to a person's-- external physical traits that are
+[01:02:41] central to a person's identity, it is your face.
+[01:02:44] So if you all, a week from, now someone mentions, hey,
+[01:02:51] I saw a talk by Woody Hartzog, and you sort of conjure
+[01:02:54] that up, you probably will think of my face, not my hands,
+[01:02:58] not my gait, not my ears--
+[01:03:01] these are all sort of biometrics--
+[01:03:03] you will think of my face.
+[01:03:04] And so it's something, I think, on a conceptual level, that's
+[01:03:08] worth protecting even more.
+[01:03:11] And so that's why I think it's so uniquely
+[01:03:15] dangerous, particularly given the incentive for creep here.
+[01:03:21] So facial recognition technology has, thus far what I've seen,
+[01:03:27] has lots of-- there are three sorts of benefits--
+[01:03:30] the benefits we don't know about yet,
+[01:03:32] the benefits that are stated, which
+[01:03:35] are great and difficult to deny, and then
+[01:03:39] what I call modest benefits.
+[01:03:42] The modest benefits are stuff like being
+[01:03:43] able to unlock your phone with your face,
+[01:03:45] rather than a thumbprint-- it's a modest improvement--
+[01:03:49] or maybe being able to have your face recognized
+[01:03:53] in a series of photos so that you can organize all
+[01:03:55] your photos according to people's faces that
+[01:03:57] are in it, something like that.
+[01:03:59] They're useful.
+[01:04:00] But we were getting along--
+[01:04:02] it's not fulfilling some long-met desperate need
+[01:04:05] for society.
+[01:04:07] There are benefits of facial recognition
+[01:04:10] that might fulfill that.
+[01:04:13] Sometimes when I propose a moratorium
+[01:04:15] or a ban on facial recognition technology,
+[01:04:17] the first question I get is, why do you hate missing children?
+[01:04:21] Why do you want the bad guy to get caught?
+[01:04:23] Facial recognition offers the promise
+[01:04:25] of being able to find anyone, anywhere.
+[01:04:28] The problem with that benefit is that, to achieve it,
+[01:04:31] we will have to give up everything.
+[01:04:33] We will have to have surveillance on every corner.
+[01:04:36] If we want that, we will have to say we have to leverage so
+[01:04:41] much, in terms of implementing an infrastructure
+[01:04:44] to realize that, and that's when the real abuse of potential
+[01:04:48] comes to life for facial recognition.
+[01:04:50] And so the way in which I cash out
+[01:04:52] the sort of net-positive benefits,
+[01:04:54] I don't see any way that we come out ahead
+[01:04:57] embracing facial recognition.
+[01:05:01] I think there's lots of room for disagreement in this debate.
+[01:05:04] There are many people that say, with effective controls,
+[01:05:06] it can be effectively regulated technology.
+[01:05:09] But I just, for several reasons, view it as uniquely dangerous.
+[01:05:13] DAVID O'BRIEN: I thought we were going
+[01:05:14] to end on an uplifting note--
+[01:05:16] WOODY HARTZOG: Sorry.
+[01:05:17] DAVID O'BRIEN: I think, most decidely, that takes out.
+[01:05:19] Woody, thank you so much for this really thoughtful--
+[01:05:21] WOODY HARTZOG: Thank you all, I really appreciate it.
+[01:05:22] Thank you.
+[01:05:23] [APPLAUSE]

@@ -1,0 +1,1526 @@
+[00:00:00] [CROWD CHATTER]
+[00:00:05] DAVID WEINBERGER: Hello.
+[00:00:06] We're going to get started.
+[00:00:08] We are a sellout crowd.
+[00:00:11] We are short of chairs.
+[00:00:13] There seems to be no remedy except standing.
+[00:00:15] So this is a standing room only event.
+[00:00:18] So very nice, men, and well-deserved.
+[00:00:22] I'm David Weinberger.
+[00:00:23] I'll be moderating lightly.
+[00:00:27] It's really-- so there's, as I think most if not all of you
+[00:00:31] know, there are some basic things
+[00:00:33] you should know about how these work.
+[00:00:35] So Ben is going to talk.
+[00:00:36] We're going to open it up for questions.
+[00:00:37] This is a recorded--
+[00:00:40] streamed event.
+[00:00:41] It will live on the internet forever, so just
+[00:00:44] be aware of that as you participate.
+[00:00:48] We will have a hard stop at 1:15.
+[00:00:51] Am I leaving anything out?
+[00:00:55] OK, so it's a great pleasure to introduce Ben.
+[00:01:00] Ben is an affiliate at the Berkman Klein Center.
+[00:01:02] He's also a PhD candidate at Harvard's School of Engineering
+[00:01:06] and Applied Science.
+[00:01:08] His background is just perfect for his topic.
+[00:01:13] He's introducing his book, The Smart Enough City.
+[00:01:17] So he spent a year with a city-wide analytics team
+[00:01:23] in Boston.
+[00:01:25] He was at New Haven's Department of Transportation, Traffic,
+[00:01:29] and Parking, where he worked, for example, on parking meter
+[00:01:33] software as well as bike policy and the like.
+[00:01:38] He was an Eric and Wendy Schmidt Summer
+[00:01:41] Fellow in the Data Science for Social Good program,
+[00:01:45] where he was working with Memphis, using machine learning
+[00:01:50] to identify blighted homes.
+[00:01:56] This book, which is fantastic--
+[00:02:00] it is technically a trade book, which
+[00:02:03] means it's accessible to people who are not experts
+[00:02:07] in the field, who are not academics or come
+[00:02:11] into it with a great deal of technical knowledge.
+[00:02:14] It is provocative.
+[00:02:17] It is-- if I say surprisingly well-written,
+[00:02:20] I don't mean anything about Ben.
+[00:02:23] Just, it's so well-written on a topic
+[00:02:27] that deals with such detailed and deep technical issues.
+[00:02:32] To be able to communicate in a way that
+[00:02:34] is clear and accessible is really, really remarkable.
+[00:02:41] The Strong Ideas Series from MIT Press
+[00:02:43] publishes both in hard-copy and in open access, both versions.
+[00:02:48] So open access, as everybody here knows, you can go.
+[00:02:51] You can read it.
+[00:02:51] You can share it all for free online.
+[00:02:56] Both versions should be available on April 2nd.
+[00:03:00] So, Ben.
+[00:03:03] [APPLAUSE]
+[00:03:12] BEN GREEN: All right.
+[00:03:13] Thank you, David, so much for that introduction.
+[00:03:16] David deserves a lot of credit here,
+[00:03:18] because he was really instrumental
+[00:03:20] in bringing this book to the surface in the first place,
+[00:03:23] by putting together this really great Strong Ideas Series.
+[00:03:27] And David was absolutely instrumental
+[00:03:29] in helping me bring together my early vague ideas,
+[00:03:32] for something that maybe resembled
+[00:03:34] a book, into an actual outline, and something
+[00:03:36] that turned into the book that's coming out
+[00:03:38] in just a couple of weeks.
+[00:03:40] So this is the first real book talk
+[00:03:42] that I'm giving for the book, and I can't imagine a better
+[00:03:45] venue for it than here at the Berkman Klein Center Lunch
+[00:03:48] Talks.
+[00:03:49] The Berkman Klein Center has been a really great source
+[00:03:52] of inspiration and support and friendship for several years,
+[00:03:56] dating back even before I started writing the book.
+[00:03:59] So in broad terms, the book is about the movement
+[00:04:02] for Smart Cities--
+[00:04:03] and I'll describe what that means in a minute.
+[00:04:05] And more broadly, it's about the dangers
+[00:04:07] of trying to solve social problems with technology,
+[00:04:10] and attempts to chart a path for how we can actually
+[00:04:13] think about the role of technology
+[00:04:15] in addressing social ills, but how
+[00:04:17] it can be integrated into broader and more holistic
+[00:04:20] visions for society.
+[00:04:22] So I'll talk for about 25, 30 minutes.
+[00:04:24] The first half, I'll give a high level overview of the book's
+[00:04:27] core thesis, and then I'll get into some
+[00:04:29] of the more grounded principles and examples
+[00:04:32] that I talk about in the book, including case studies
+[00:04:34] from various cities across the country.
+[00:04:38] So to start out, we should define what we're actually
+[00:04:40] talking about today.
+[00:04:41] What is a Smart City?
+[00:04:42] And I thought that, since the movement for smart cities--
+[00:04:45] the term itself largely comes from the technology industry,
+[00:04:48] we should start at the source.
+[00:04:50] This definition from Cisco provides a good starting point.
+[00:04:53] They write, "A Smart City is one that
+[00:04:55] combines traditional infrastructure--
+[00:04:57] roads, buildings, and so on-- with technology
+[00:05:00] to enrich the lives of its citizens."
+[00:05:03] So it sounds pretty straightforward.
+[00:05:04] We're applying technology to solve social problems
+[00:05:07] in cities.
+[00:05:08] And this maps onto the pretty typical use of the word "smart"
+[00:05:12] nowadays, which tends to mean applying
+[00:05:14] digital technology to existing processes or practices
+[00:05:18] or items.
+[00:05:18] And this applies whether you're talking
+[00:05:20] about a smart city or a smart home
+[00:05:22] or a smartwatch or even a smart toaster.
+[00:05:26] And Smart Cities have become pretty widely adopted
+[00:05:30] as this broad vision for the future of cities.
+[00:05:34] Not just tech companies, but also local governments,
+[00:05:36] the federal government, and national governments
+[00:05:39] around the world, are adopting the Smart City and this frame
+[00:05:42] of thinking about what the future of urban life and city
+[00:05:45] government is going to look like.
+[00:05:47] Just about every city has adopted or deployed
+[00:05:50] or at least explored some form of Smart City
+[00:05:53] projects, and often brand themselves
+[00:05:55] just by how smart they are.
+[00:05:58] Kansas City, Missouri calls itself the World's Most
+[00:06:00] Connected Smart City.
+[00:06:02] That's really fundamental to its vision for itself nowadays.
+[00:06:05] So Smart Cities are incredibly important.
+[00:06:08] They're really the vision that is shaping much of 21st century
+[00:06:11] urbanism as we move more deeply into the century.
+[00:06:15] But as with any utopian vision for the future,
+[00:06:19] and especially utopian visions grounded in technology,
+[00:06:22] we need to scratch the surface of these promises
+[00:06:24] and ask several fundamental questions.
+[00:06:27] The first is whether or not these technologies are actually
+[00:06:29] possible.
+[00:06:30] Are the promises even able to be achieved by technology?
+[00:06:35] The second question is, regardless of whether or not
+[00:06:38] it's possible, whether we actually
+[00:06:39] think that these futures are desirable,
+[00:06:41] whether we would want these technologies to be implemented
+[00:06:44] at all, regardless of feasibility.
+[00:06:47] And with Smart Cities, I would argue
+[00:06:48] that the answer to both of these questions is no.
+[00:06:51] As I will describe, the Smart City
+[00:06:53] is ultimately a vision full of false promises
+[00:06:55] and hidden dangers.
+[00:06:58] So my favorite example that really encapsulates
+[00:07:01] the dangers of Smart Cities is a simulation
+[00:07:03] by a group of researchers, showing
+[00:07:05] how with self-driving cars, we can have cities
+[00:07:08] without traffic lights.
+[00:07:10] We can get rid of congestion and have streets where cars just
+[00:07:15] zoom through without having to deal with congestion.
+[00:07:17] And when you first look at this, it looks pretty remarkable.
+[00:07:20] It's very different than the type of urban gridlock
+[00:07:22] that we're used to seeing.
+[00:07:24] But if you spend a couple more seconds watching this video,
+[00:07:27] something might jump out at you, which
+[00:07:28] is that it doesn't look like a city at all.
+[00:07:30] There are no people.
+[00:07:31] There are no buses.
+[00:07:32] There are no parks.
+[00:07:33] There barely are even buildings.
+[00:07:35] And it doesn't even start to tell if there are even
+[00:07:37] people in the cars.
+[00:07:39] So what we've seen here, is that there's just this abstraction
+[00:07:42] of the city into this problem.
+[00:07:45] And what's remarkable here, is that this is not
+[00:07:47] just some simulated generic urban intersection
+[00:07:51] to show the promise of this technology.
+[00:07:52] It actually depicts a specific intersection
+[00:07:55] in downtown Boston, one at the intersection of Mass Ave.
+[00:07:59] And Columbus Ave. In Back Bay.
+[00:08:01] And if you spend a couple of minutes there,
+[00:08:03] it looks nothing like this.
+[00:08:04] You'll see people walking around.
+[00:08:08] You'll see cars waiting for people
+[00:08:09] to cross the street, which seems like a pretty reasonable reason
+[00:08:13] to stop.
+[00:08:14] You'll see countless cyclists, and you'll
+[00:08:16] see many people getting off and on the one bus which goes down
+[00:08:18] Mass Ave., and there's a stop right at this intersection.
+[00:08:21] And of course this spot in Boston
+[00:08:23] is not just a transportation place--
+[00:08:26] a place where transportation happens.
+[00:08:27] There's broader layers of social and political context
+[00:08:31] to give just one example.
+[00:08:33] This is along what's known in Boston as Methadone Mile.
+[00:08:35] It's the epicenter of the city's opioid epidemic.
+[00:08:39] But all of these different people and their needs,
+[00:08:41] and the broader institutions and systems
+[00:08:43] that exist in this place, have been completely erased in order
+[00:08:47] to create a landscape where traffic efficiency, where
+[00:08:50] rapidly moving self-driving cars are possible,
+[00:08:53] and even look like an attractive future.
+[00:08:56] And so it begs the question of--
+[00:08:58] we must ask whenever we are presented
+[00:08:59] with technological solutions to complex social problems.
+[00:09:04] What sorts of futures will these technologies actually create?
+[00:09:09] The attitude that leads us to find
+[00:09:11] Smart City vision so attractive is one
+[00:09:14] that I call tech goggles.
+[00:09:15] And it captures just what makes these visions come
+[00:09:18] to bear and seem so appealing.
+[00:09:20] It's a perspective on the world that
+[00:09:21] causes one to see the city as a technology problem,
+[00:09:25] to see every issue as a problem to be solved by technology,
+[00:09:29] to diagnose only those issues that
+[00:09:32] have a technological solution.
+[00:09:34] And tech goggles are grounded in two fundamental myths
+[00:09:37] about the role of technology in society.
+[00:09:40] The first is that technology is the fundamental driver
+[00:09:43] of social change.
+[00:09:44] They believe that progress happens
+[00:09:46] when you introduce new technology
+[00:09:48] into existing or outdated systems.
+[00:09:51] The second myth is that technology
+[00:09:53] provides neutral and objective solutions to social problems.
+[00:09:57] So not only does technology drive progress,
+[00:09:59] it drives optimal and socially beneficial
+[00:10:03] solutions that everyone could agree on.
+[00:10:06] It's often considered that technological solutions
+[00:10:08] have no politics.
+[00:10:09] They simply are better ways of doing things.
+[00:10:12] There's a great quote from the president of IBM describing
+[00:10:15] Smart City systems, where he says,
+[00:10:18] "If the leaders of smarter city systems do share an ideology,
+[00:10:21] it is this.
+[00:10:23] We believe in a smarter way to get things done."
+[00:10:26] So as he would tell it, there are no politics here.
+[00:10:28] There are no broader social issues to be thinking about,
+[00:10:31] and different types of needs that may win or lose out
+[00:10:33] as we adopt these solutions.
+[00:10:35] They simply benefit everyone.
+[00:10:37] But of course this vision is completely blind to--
+[00:10:40] or perhaps intentionally blinds us
+[00:10:43] to the broader normative and political elements
+[00:10:45] of these technological propositions.
+[00:10:49] We end up evaluating the social solutions
+[00:10:52] that we-- the technological solutions along purely
+[00:10:55] technical criteria such as efficiency,
+[00:10:57] overlooking broader consequences in a way that
+[00:11:00] tends to entrench established systems,
+[00:11:02] and prevent us from thinking about
+[00:11:04] or achieving more systemic reforms.
+[00:11:08] Most fundamentally, tech goggles create severe distortion
+[00:11:12] in our understanding of society.
+[00:11:14] It allows us to look at a city street and all
+[00:11:17] of its complexities and different people,
+[00:11:19] and simply see an abstract technical process that
+[00:11:23] needs to be optimized using sensors and data
+[00:11:25] and algorithms, and other forms of new technology.
+[00:11:29] And this to me, is the fundamental issue
+[00:11:31] with Smart Cities.
+[00:11:32] It's not just that the technology
+[00:11:34] is unable to actually even achieve
+[00:11:36] the benefits that are promised.
+[00:11:37] In many cases if you dig into the technology,
+[00:11:40] what they're promising is incoherent and unachievable.
+[00:11:43] But more fundamentally, the problems
+[00:11:45] that we think we're solving are fundamentally
+[00:11:47] distorted versions of the actual problems that
+[00:11:50] exist in society, because all we're seeing
+[00:11:52] is the technological aspects of those problems.
+[00:11:55] And our attempts to solve those distorted understandings
+[00:12:00] of the problems often create more issues than they solve.
+[00:12:05] And so Smart Cities are not simply-- and tech goggles more
+[00:12:08] generally is not simply some misguided and naive set
+[00:12:12] of ideas.
+[00:12:13] It's a powerful ideology that has
+[00:12:15] been adopted by tech companies and city officials,
+[00:12:17] and many other--
+[00:12:19] journalists and others across the country and the world.
+[00:12:21] And it has the potential to fundamentally reshape cities.
+[00:12:25] As we adopt technology following these utopian visions,
+[00:12:29] the technologies that get implemented
+[00:12:30] will reinforce the ideas of tech goggles
+[00:12:33] and cut off our path towards more systemic and fundamental
+[00:12:37] reforms.
+[00:12:38] And so I argue that, to the extent that the smart city
+[00:12:41] revolutionizes urban life, as is so often promised
+[00:12:44] about these visions, it will be by transforming
+[00:12:47] the landscape of urban power and politics,
+[00:12:50] rather than creating some sort of optimized technological
+[00:12:53] utopia.
+[00:12:54] Reconstructing urban life and city governments following
+[00:12:58] these techno-utopian perspectives,
+[00:13:00] will lead to cities that are superficially smart,
+[00:13:03] but under the surface are rife with injustice and inequity.
+[00:13:08] So I argue in the book that we need
+[00:13:11] to adopt a new way of thinking about these things.
+[00:13:13] We must reject the ideology of Smart Cities, that
+[00:13:16] would have us think that all we need
+[00:13:18] is to have as much technology as possible.
+[00:13:21] And instead adopt what I call Smart Enough Cities that value
+[00:13:24] technology and see the role that it can play, but fundamentally
+[00:13:28] are grounded in broader and more holistic
+[00:13:30] social and political visions.
+[00:13:32] Rather than trying to be smart, in other words positioning
+[00:13:35] technology itself as the end, cities
+[00:13:37] need to be simply smart enough, using their technology only
+[00:13:41] to the extent to which it can actually benefit
+[00:13:43] their broader social goals.
+[00:13:45] So throughout the book, I attempt
+[00:13:47] to draw these contrasts between Smart Cities and Smart Enough
+[00:13:50] Cities, highlighting just where the Smart City visions go
+[00:13:54] wrong, and providing a roadmap for how we can pursue
+[00:13:57] Smart Enough Cities, how we can work towards more
+[00:14:00] responsible and equitable cities that's still where technology
+[00:14:03] still has a role to play.
+[00:14:06] So I want to get into, now for the second half of the talk,
+[00:14:09] into some of the principles I developed
+[00:14:10] for how we can promote Smart Enough Cities,
+[00:14:12] and how that corrects for some of the greatest
+[00:14:15] failings of Smart Cities.
+[00:14:19] Principle one is to address complex problems
+[00:14:22] rather than solve artificially simple ones.
+[00:14:24] Now this cuts really right to the core of tech googles, which
+[00:14:28] often abstract complex and intractable social issues
+[00:14:33] into ones that appear solvable.
+[00:14:34] That's sort of the nature of mathematical modeling.
+[00:14:37] You simplify the world into something
+[00:14:39] where your mathematical model appears tractable,
+[00:14:42] and that's incredibly appealing for technologists
+[00:14:44] because it makes the problems easier.
+[00:14:46] But it also gives us a distorted understanding of just how well
+[00:14:50] we have solved the problem.
+[00:14:51] And those engineering solutions often make the problems worse.
+[00:14:55] We've already sort of seen this at play
+[00:14:57] with the simulations of self-driving cars, which
+[00:15:00] make it seem like we can optimize traffic
+[00:15:02] but only because we've eliminated all
+[00:15:04] of the other things that actually happen in cities,
+[00:15:07] and that might slow traffic down.
+[00:15:09] These visions are remarkably similar to utopian proposals
+[00:15:13] from last century, put forward by the automobile and oil
+[00:15:16] industries, showing us cities with highways
+[00:15:18] running through them rather than traffic.
+[00:15:21] And we know that those turned out pretty badly.
+[00:15:24] So I fear that we're likely to--
+[00:15:26] if we follow these visions we may end up
+[00:15:28] recreating many of the most grave errors of city planning
+[00:15:31] from last century.
+[00:15:34] But there are cities that are thoughtfully
+[00:15:36] adopting new technology to address mobility.
+[00:15:39] Columbus, Ohio, in 2016, won the Department
+[00:15:42] of Transportation Smart City Challenge, which
+[00:15:45] came with $40 million to create a first of its kind
+[00:15:48] smart transportation system.
+[00:15:51] And when I first heard about this plan,
+[00:15:52] and I was about to read Columbus's plans,
+[00:15:55] I was really skeptical.
+[00:15:56] I expected to see something like the visions and simulations
+[00:16:01] on the previous slide.
+[00:16:02] You know, self-driving cars to solve
+[00:16:04] all of the city's problems.
+[00:16:06] But in fact, rather than coming up
+[00:16:08] with some futuristic fancy but ultimately ill-conceived plan,
+[00:16:12] Columbus focused on the connection
+[00:16:14] between transportation mobility and social mobility.
+[00:16:17] They focused in particular on improving mobility
+[00:16:20] in a particular low-income neighborhood with high infant
+[00:16:23] mortality, which was often because health care was
+[00:16:26] inaccessible to many of the women and mothers
+[00:16:28] in that neighborhood.
+[00:16:30] And as they thought about how to address these issues,
+[00:16:32] rather than coming up with the optimal technology on paper,
+[00:16:35] they went out and they actually talked to people.
+[00:16:37] They talked to the neighborhood and the people
+[00:16:40] and the different mothers who lived in that area
+[00:16:42] to understand what sorts of challenges and needs
+[00:16:44] they actually faced.
+[00:16:46] And the set of responses that they developed
+[00:16:48] were pretty remarkable, in just the diversity of items
+[00:16:52] and the way that they address different challenges
+[00:16:54] that the people who live in this area face.
+[00:16:56] They range from better transportation apps and payment
+[00:17:00] systems, to on-demand rides for pregnant mothers,
+[00:17:03] to providing child care so that women with children
+[00:17:07] could go to the doctor's office, and go to job interviews.
+[00:17:13] When talking about and reflecting
+[00:17:14] on these projects, one of the leaders of Columbus's project
+[00:17:18] told me, we really needed to look at it
+[00:17:21] from a more holistic viewpoint.
+[00:17:22] As geeky technology people, we wouldn't
+[00:17:25] have thought about these things had we not
+[00:17:26] considered the whole picture.
+[00:17:28] So it's incredibly important to focus
+[00:17:30] on real people and real problems,
+[00:17:32] rather than expect technology to create optimal solutions.
+[00:17:37] Principle number two is to implement technology
+[00:17:39] to address social needs and advance policy.
+[00:17:42] Now this may sound so obvious as to be practically
+[00:17:46] trivial and not worth saying.
+[00:17:47] But it's actually a really important place
+[00:17:49] where many Smart City projects go wrong.
+[00:17:52] The allure of new technology prompts
+[00:17:54] many city leaders and other members of cities
+[00:17:57] to adopt the types of goals that align with technology,
+[00:18:00] thinking about efficiency and convenience
+[00:18:02] rather than focusing on the real values of democracy and equity
+[00:18:05] and justice, that are actually fundamental to thriving cities.
+[00:18:10] The city's broader strategy becomes colonized by the tech
+[00:18:13] logic of Smart Cities.
+[00:18:16] A compelling example of this is in civic engagement
+[00:18:19] and democracy, where many cities have been adopting apps
+[00:18:22] like 311 systems, which allow you to notify
+[00:18:25] the government where there are issues
+[00:18:27] like potholes and graffiti and broken street lights.
+[00:18:30] And while well intentioned, these types of apps
+[00:18:32] fundamentally conceive of democracy
+[00:18:35] as technology and optimization problems.
+[00:18:37] They're grounded in a goal of making
+[00:18:40] politics more simple and efficient and able to scale.
+[00:18:44] So they don't actually address any
+[00:18:46] of the core fundamental challenges
+[00:18:48] that prevent a functioning and thriving democracy
+[00:18:52] and civic engagement.
+[00:18:53] And because of that, oftentimes these tools
+[00:18:56] end up benefiting the most well-off,
+[00:18:58] in particular, in cities.
+[00:19:02] So what's needed are programs and technologies
+[00:19:04] grounded in meaningful empowerment and engagement
+[00:19:07] that address the real barriers to democracy.
+[00:19:10] Various cities have explored technological tools
+[00:19:13] that are grounded, not in efficiency but inefficiency,
+[00:19:16] recognizing that civic actions such as deliberation
+[00:19:19] and dissent and capacity building
+[00:19:21] are actually fundamentally inefficient,
+[00:19:23] but are necessary to what democracy actually means.
+[00:19:26] Other cities such as Vallejo, California, as well as
+[00:19:29] here in Cambridge, have adopted programs
+[00:19:31] of participatory budgeting, providing the public
+[00:19:34] with meaningful power and decision-making
+[00:19:36] control over municipal budgets and programs and priorities.
+[00:19:40] These programs are grounded in the types of values
+[00:19:43] and processes that technology so often stamps out,
+[00:19:46] and that is precisely why they are valuable.
+[00:19:50] Principle number three is to prioritize
+[00:19:53] innovative policy and program reforms
+[00:19:55] above innovative technology.
+[00:19:58] Smart Cities are grounded in the idea that innovation is good,
+[00:20:01] and that innovation means new technology.
+[00:20:04] And so often in Smart Cities, we throw technology
+[00:20:07] at long-standing problems, expecting the technology
+[00:20:10] to solve those problems rather than
+[00:20:12] addressing some of the underlying issues that
+[00:20:14] are fundamentally not technological in nature.
+[00:20:18] I think the most dangerous example of this in Smart Cities
+[00:20:21] today is predictive policing.
+[00:20:23] These are algorithms that police departments have been adopting
+[00:20:26] to help them predict where crime is going to happen,
+[00:20:29] with the idea--
+[00:20:30] and these are particularly attractive in the face
+[00:20:33] of growing outrage about discriminatory police practices
+[00:20:37] and abuse and energy for police reform.
+[00:20:39] But these algorithms are a way of pushing that energy away--
+[00:20:44] of saying we can have algorithms make these decisions instead
+[00:20:47] of people, and therefore that's how we're creating change.
+[00:20:51] But these algorithms are fundamentally flawed
+[00:20:54] in several ways.
+[00:20:55] There are important technical flaws.
+[00:20:56] The systems don't actually have the impacts that are promised,
+[00:21:00] and the predictions themselves are often
+[00:21:01] biased due to the historical discrimination
+[00:21:04] of police departments.
+[00:21:06] But more importantly, in going back to the principle at hand
+[00:21:08] here, these algorithms distract us from the fundamental choices
+[00:21:12] that we have to make about the role of police.
+[00:21:14] What types of issues they should be addressing and not
+[00:21:17] addressing, And what their priorities and practices
+[00:21:20] should be.
+[00:21:21] By focusing on technological enhancement,
+[00:21:23] we're simply greasing the wheels of existing systems
+[00:21:26] rather than reimagining those systems entirely.
+[00:21:29] Treating technology as progress prevents us
+[00:21:32] from pursuing or imagining deeper reforms that
+[00:21:34] can spur real progress.
+[00:21:37] But this is what happened in Johnson County, Kansas.
+[00:21:39] They took a very different approach Many years ago,
+[00:21:42] they recognized that they were falling short,
+[00:21:44] because many of their policing systems were inadequate.
+[00:21:47] Because many of the people who were ending up in jail
+[00:21:50] were there because they had mental illness
+[00:21:52] or related issues that weren't getting
+[00:21:54] addressed around homelessness and drug addiction.
+[00:21:57] And because these issues were going untreated,
+[00:21:59] they were ending up in jail because that
+[00:22:01] was sort of where their services were equipped to bring people.
+[00:22:04] So they've spent a decade developing programs
+[00:22:07] that divert these low-level offenders with mental illness
+[00:22:09] away from the criminal justice system and into treatment.
+[00:22:13] And in recent years they've begun
+[00:22:14] deploying machine learning algorithms
+[00:22:16] to help improve these systems, to provide proactive treatment
+[00:22:20] to prevent people from coming into contact with police
+[00:22:23] in the first place.
+[00:22:24] And these algorithms have shown remarkable promise
+[00:22:26] to identify high-need individuals
+[00:22:29] and keep them out of jail.
+[00:22:31] And so the contrast between Johnson County
+[00:22:33] and predictive policing is quite clear, I think.
+[00:22:36] We can see that Smart Enough Cities
+[00:22:37] are driven by clear policy goals and long-term planning efforts.
+[00:22:41] In Johnson County, many of the things that made this possible
+[00:22:43] started 20 years ago.
+[00:22:46] And they generated these benefits
+[00:22:48] not by creating some infallible perfect optimization
+[00:22:52] problem to make their existing practices better,
+[00:22:54] but by reforming their programs, by evaluating
+[00:22:57] where their programs were falling short
+[00:22:59] and thinking about what they could
+[00:23:00] do to change how they were dealing
+[00:23:03] with social disorder around the city.
+[00:23:05] Only then could machine learning come in
+[00:23:07] and actually create a positive impact.
+[00:23:11] Principle number four is to ensure that technology's design
+[00:23:14] and implementation promote democratic values.
+[00:23:18] This is an incredibly important one in Smart Cities,
+[00:23:20] because a technology's impacts have
+[00:23:22] to do with far more than just their explicit nominal
+[00:23:25] function.
+[00:23:26] It's often grounded in how that technology is structured,
+[00:23:29] who owns that technology, how they pay for it,
+[00:23:31] who controls the technology.
+[00:23:34] Smart City technologies are very often designed explicitly
+[00:23:39] with the goal of collecting as much data as possible
+[00:23:41] about individuals.
+[00:23:42] The Smart City is, while often talked about in terms
+[00:23:45] of optimization and convenience, at its core
+[00:23:48] it's a covert tool in many cases for increasing surveillance
+[00:23:51] and profits for tech companies.
+[00:23:53] It is a dream come true for tech companies.
+[00:23:56] We can see this in New York, where they have adopted
+[00:24:00] LinkNYC kiosks, a program to deploy free public Wi-Fi
+[00:24:04] across the city.
+[00:24:06] And while this is an important service
+[00:24:08] to provide for the public, the way
+[00:24:10] that these kiosks are structured is incredibly dangerous.
+[00:24:14] They are owned and managed by a Google-owned company,
+[00:24:17] and so it should be little surprise
+[00:24:18] that how these kiosks are paid for
+[00:24:20] is not by government funds or taxpayer dollars,
+[00:24:23] but by collecting as much data about people who use the item.
+[00:24:27] They're designed to collect your data
+[00:24:29] and to provide targeted ads to people.
+[00:24:31] And as we can see, there are thousands of these
+[00:24:33] throughout the city, meaning that the price
+[00:24:35] of free public Wi-Fi is a city-wide surveillance network.
+[00:24:42] But these are not inevitable outcomes
+[00:24:44] dictated by the technical demands of this technology.
+[00:24:47] These are often the political and economic arrangements
+[00:24:49] desired by those who control and manage the technology.
+[00:24:53] Chicago is developing a program called
+[00:24:56] The Array of Things, which on many ways
+[00:24:59] might seem similar to LinkNYC.
+[00:25:01] It's a city-wide set of sensors to collect data.
+[00:25:05] But it's actually very different and provides a very stark
+[00:25:08] contrast.
+[00:25:09] These sensors are designed to collect information
+[00:25:12] about environmental conditions and other things that
+[00:25:14] are going on in the city, and are explicitly designed
+[00:25:17] because they are funded--
+[00:25:18] it's an academic and City of Chicago program.
+[00:25:23] They're funded for public benefit as opposed
+[00:25:25] to private monetization.
+[00:25:27] And the city performed extensive public engagement
+[00:25:30] and civic engagement processes, to ensure
+[00:25:33] that the governance of this technology
+[00:25:35] was actually grounded in the broader public's values
+[00:25:38] about what data should and should not be collected.
+[00:25:41] In the process of developing their policies
+[00:25:43] and governance strategies for the AOT,
+[00:25:45] they altered many of their practices based on feedback
+[00:25:48] that they got from the public.
+[00:25:51] And of course, there's much more to be
+[00:25:52] done in this venue of protecting privacy.
+[00:25:54] Many cities, including Cambridge just recently,
+[00:25:57] have passed surveillance oversight ordinances
+[00:25:59] that provide the public with meaningful oversight
+[00:26:04] and insight into what sorts of data and technologies
+[00:26:07] are actually used by city governments.
+[00:26:09] And more broadly, many cities I think,
+[00:26:11] are just starting to recognize that they
+[00:26:12] have an incredible responsibility
+[00:26:14] and power as market makers.
+[00:26:16] That rather than simply accepting whatever terms Google
+[00:26:20] comes to them with, they can actually
+[00:26:22] enforce democratic standards and protect privacy
+[00:26:25] in the development of these programs in the first place.
+[00:26:28] And what they've found is that protecting privacy
+[00:26:31] is actually essential to innovation,
+[00:26:33] and in fact often enhances rather than hinders
+[00:26:36] the appropriate deployment of technology.
+[00:26:40] So principle number five--
+[00:26:41] and this is the last one-- shifts
+[00:26:43] gears a bit to be a little more operational,
+[00:26:45] And it's about how to use data effectively.
+[00:26:48] And what's incredibly important is
+[00:26:49] to develop capacities and processes
+[00:26:51] within municipal government for actually using data.
+[00:26:54] Oftentimes, discussions of Smart Cities
+[00:26:56] and pitches from tech companies talk about the solutions,
+[00:27:00] as if simply having the most technology, having as much data
+[00:27:03] as possible, will by itself solve problems.
+[00:27:06] But this presumes that technology operates
+[00:27:08] in a vacuum, when in fact, it's incredibly important to success
+[00:27:12] to be grounded and integrated into municipal structures
+[00:27:15] and practices.
+[00:27:18] This came to bear quite strongly in New York
+[00:27:20] City, which in 2015 faced an outbreak of Legionnaires'
+[00:27:23] disease.
+[00:27:24] This is an acute form of bacteria
+[00:27:26] that was incubating in air conditioning systems
+[00:27:30] at various neighborhoods across the city.
+[00:27:32] And so to address this outbreak, the city officials
+[00:27:35] had to figure out where these air conditioning systems were,
+[00:27:37] which ones were infected, which ones needed to be cleaned,
+[00:27:40] which ones were already cleaned.
+[00:27:42] And this was an incredibly daunting challenge.
+[00:27:45] This is not a data set that already existed,
+[00:27:47] and they simply did not have the practices in place
+[00:27:50] to actually bring the information together.
+[00:27:52] The data that they had was often incomplete.
+[00:27:56] It had errors within it, and often data sets
+[00:27:58] were unable to be brought together and synthesized
+[00:28:02] to paint a full cohesive picture of what was going on.
+[00:28:06] Fortunately they were able to, through various processes,
+[00:28:09] bring this together.
+[00:28:10] But afterwards they learned their lesson.
+[00:28:12] They created what they call data drills, which
+[00:28:14] are akin to fire drills but for municipal data use.
+[00:28:19] So they practice-- they've developed data infrastructure
+[00:28:22] tools to enable synthesized pictures of what's
+[00:28:24] going on around the city, developed
+[00:28:26] generalized technical skills for various members
+[00:28:29] of different departments across the city,
+[00:28:31] and created processes for sharing and managing data,
+[00:28:34] ultimately all grounded in the understanding
+[00:28:36] that taking action with data fundamentally relies, first
+[00:28:39] and foremost, on having that data be properly managed
+[00:28:43] and understood in the first place.
+[00:28:46] So hopefully I've at least begun to convince you
+[00:28:49] that there are many dangers to Smart Cities,
+[00:28:51] that the seductive logic of smartness
+[00:28:53] distorts our view of cities, and subverts opportunities
+[00:28:56] to truly improve urban life.
+[00:28:58] But despite the hype that tells us that the age of Smart Cities
+[00:29:02] is inevitable and imminent and desirable,
+[00:29:04] we can and we must chart an alternative path
+[00:29:07] to pursue Smart Enough Cities, that integrate technology
+[00:29:10] into holistic visions of democratic and egalitarian
+[00:29:14] urban futures.
+[00:29:14] Thank you.
+[00:29:15] [APPLAUSE]
+[00:29:25] DAVID WEINBERGER: Questions?
+[00:29:29] BEN GREEN: We have a couple of mics going around.
+[00:29:35] SPEAKER 1: Hi, you mentioned 311 as a technology that could have
+[00:29:39] unexpected negative effects.
+[00:29:41] But you didn't go into that at all.
+[00:29:42] Can you expand?
+[00:29:44] BEN GREEN: Yeah.
+[00:29:45] So 311, there's a couple of different ways
+[00:29:48] that I think they can be sort of distorted
+[00:29:50] by the logic of efficiency.
+[00:29:52] I think first and foremost, what we've
+[00:29:53] seen in most cities is that, the reports themselves--
+[00:29:57] 311 reports, people reporting potholes
+[00:30:00] and street light issues are ultimately--
+[00:30:04] there are many more reports in the white and more wealthy
+[00:30:07] neighborhoods where people both have access to smartphones,
+[00:30:09] but also have a sense of trust in the government.
+[00:30:13] So they have a sense that the government
+[00:30:14] will solve their problems.
+[00:30:15] So this was something that I worked on
+[00:30:17] in the city of Boston.
+[00:30:18] And we looked at whether or not 311 data actually
+[00:30:22] provided any value.
+[00:30:23] And what we found was both, the data
+[00:30:25] was highly skewed to more well-off neighborhoods,
+[00:30:31] and that the data didn't actually
+[00:30:33] map onto other estimates of conditions in the city.
+[00:30:37] So estimates of bad streets from 311 reports
+[00:30:40] actually had very little correlation
+[00:30:42] to our own internal estimates of where street quality was bad.
+[00:30:46] So it really was quite a bad tool for--
+[00:30:48] SPEAKER 2: And even if--
+[00:30:49] [INAUDIBLE] coming in who--
+[00:30:50] SPEAKER 3: Use microphone so people [INAUDIBLE]
+[00:30:52] can hear you.
+[00:30:53] SPEAKER 2: Sorry.
+[00:30:54] Is this even if 311 is not restricted to smartphones,
+[00:30:57] but also can come in from telephone calls?
+[00:31:00] BEN GREEN: So even in Boston, it is coming through
+[00:31:02] with multiple channels.
+[00:31:03] But smartphones, within a couple of years
+[00:31:07] of introducing the app, smartphones
+[00:31:08] represent around 80% or 90% of the reports that are coming in.
+[00:31:13] And I think just more fundamentally,
+[00:31:16] we can see how the logic of efficiency
+[00:31:20] promotes certain types of engagement that are
+[00:31:22] more transactional than others.
+[00:31:23] So if you look at what types of issues these apps care about,
+[00:31:26] it's issues like broken streetlights or potholes
+[00:31:29] or graffiti.
+[00:31:30] The types of issues that are far more fundamental
+[00:31:32] but are ultimately inefficient, are issues--
+[00:31:35] if we have bad schools or bad transportation systems
+[00:31:38] or too much crime in neighborhoods.
+[00:31:40] These are issues that are inefficient.
+[00:31:42] These are issues that require a great deal more than simply
+[00:31:45] transactional, telling your city official what's going on.
+[00:31:49] And so I think that, even just in their fundamental structure,
+[00:31:54] they are prioritizing very limited types of issues,
+[00:31:57] but still sort of focusing on that as the nature of sort
+[00:32:01] of new forms of engagement.
+[00:32:10] SPEAKER 4: Hey.
+[00:32:11] So this got me thinking about a lot of things.
+[00:32:14] So one of my friends is a mayor of a city
+[00:32:17] in Western Mass called Holyoke.
+[00:32:18] And he was like a young millennial mayor.
+[00:32:21] And so he got elected a very young age,
+[00:32:23] and was kind of like thinking about--
+[00:32:26] I think around the time he was-- obviously grew up
+[00:32:29] with a lot of technology, and was like, hey,
+[00:32:30] I'm going to implement all these technological things.
+[00:32:33] And then had all these tech companies
+[00:32:34] and other related folks making pitches
+[00:32:36] about, hey, move to technology.
+[00:32:39] And even though he kind of understood what
+[00:32:41] some of the social to urban city with, you know--
+[00:32:44] And then you had the people.
+[00:32:45] The community was kind of demanding more efficiency,
+[00:32:48] wanting to engage differently with the public.
+[00:32:51] And we figured out the barrier was actually, not even
+[00:32:54] department heads, his direct reports, but just like the rank
+[00:32:57] and file, or the people who've been working
+[00:33:00] in City Hall for years, who technically don't live
+[00:33:03] in the places where you get proximate to a lot
+[00:33:06] of social problems in the city.
+[00:33:08] And so one of the things that we thought about--
+[00:33:10] I don't know if this became something you
+[00:33:14] saw in some of the cities but--
+[00:33:16] before we even do the training around implementing
+[00:33:19] new technology, how do you do training
+[00:33:21] around some of those social problems that
+[00:33:22] exist in the city, before you think
+[00:33:25] about the technological solution.
+[00:33:27] Because I think what we realized is,
+[00:33:29] folks who worked in the city didn't really
+[00:33:31] see how this technology might advance, or might help improve
+[00:33:37] some of the social issues.
+[00:33:38] I don't know if that's something you found in some places
+[00:33:40] you worked or learned about.
+[00:33:42] But this idea that even if you have
+[00:33:45] a great progressive millennial person,
+[00:33:47] and you have a community [INAUDIBLE],,
+[00:33:48] there's some people in the middle who actually are going
+[00:33:51] to be the front line in helping troubleshoot and implement,
+[00:33:54] who you need to kind of move along as well.
+[00:33:58] BEN GREEN: That's a really great question,
+[00:34:00] and a really important point, and actually something
+[00:34:03] that I experienced in Boston when I was a data scientist
+[00:34:06] there that I think fundamentally shaped my understanding
+[00:34:09] of a lot of these issues.
+[00:34:10] So in Boston, we were--
+[00:34:11] one of the projects I was working on
+[00:34:13] was to create a new open data portal.
+[00:34:15] So many cities nowadays-- many of you
+[00:34:18] have probably heard about this-- have these open data systems
+[00:34:20] where they have websites where public municipal data is
+[00:34:23] out there for anyone to use.
+[00:34:25] And in the process we-- we were in the process
+[00:34:28] of reimagining what this could look like
+[00:34:30] and what our goals were.
+[00:34:31] And after six months of really sitting and being
+[00:34:36] on the inside, and thinking about what functionality this
+[00:34:38] should have, and what sorts of data to have,
+[00:34:41] we started going out and spending
+[00:34:43] time in public libraries.
+[00:34:44] And thinking about, OK, let's just
+[00:34:46] go talk to people who live here and think
+[00:34:48] about what do they want to see.
+[00:34:50] What sorts of data sets do they care about?
+[00:34:53] And what we found was pretty remarkable.
+[00:34:54] We'd set up shop in one of the libraries around Boston,
+[00:34:57] and we'd have a little stand and we'd
+[00:34:59] wait for people to walk by, and we'd say,
+[00:35:01] hey, we're here from the Boston Open Data Team.
+[00:35:03] What data do you want to see?
+[00:35:05] And they didn't care.
+[00:35:06] They just walked right by.
+[00:35:07] Or they'd say, like, I don't know.
+[00:35:10] And then we sort of shifted our strategy a bit.
+[00:35:12] Because we were like, we actually
+[00:35:14] want to talk to people.
+[00:35:15] So we stopped asking about technology.
+[00:35:17] We started asking about, oh, you have two kids.
+[00:35:19] How do they like the schools?
+[00:35:20] How do you like the parks?
+[00:35:22] How often do you come to this library?
+[00:35:23] And it was this really-- and we would
+[00:35:25] have amazing conversations lasting oftentimes
+[00:35:27] up to an hour.
+[00:35:29] So it was this really amazing shift
+[00:35:30] in recognizing that, while we were conceiving of everything
+[00:35:33] in terms of the technology both internally,
+[00:35:36] in terms of what is our process for moving a data set
+[00:35:39] from a department to review to open data,
+[00:35:42] and thinking about all the tech functionality.
+[00:35:45] It really reminded us that what we're ultimately-- the goal
+[00:35:49] here is that people are not engaging with their real life
+[00:35:52] issues as technology problems.
+[00:35:53] I mean they're not technology problems,
+[00:35:55] and they rightly don't see them as such.
+[00:35:57] So I think that was really eye-opening for me,
+[00:36:00] and definitely shifted some of our approaches
+[00:36:02] to thinking about what role open data could play,
+[00:36:04] and how to actually help facilitate those outcomes.
+[00:36:08] So I thought it was really amazing.
+[00:36:10] And I think this gets to the story in Columbus,
+[00:36:12] where they had a similar process of going out and talking
+[00:36:14] to people.
+[00:36:15] And I think some form of almost mini-ethnographic work,
+[00:36:18] or you can call it design thinking
+[00:36:20] or user-centered design, I think those
+[00:36:23] can be incredibly powerful ways to get the people who
+[00:36:25] are focused on implementing this technology to really understand
+[00:36:29] the real people and the real issues.
+[00:36:31] I think that oftentimes, that has
+[00:36:33] to come from leadership, though.
+[00:36:34] Because there is this disconnect where a lot of technology
+[00:36:39] is focused often on the middle manager level or employee
+[00:36:43] level, but ultimately that has to somehow turn
+[00:36:47] into public benefit.
+[00:36:48] And often there's a disconnect between what
+[00:36:50] is convenient for someone who's on the inside,
+[00:36:53] trying to manage all of the 311 reports
+[00:36:55] and make sure they meet their metrics for managing
+[00:36:57] 311 reports, as opposed to what actually matters
+[00:37:00] for the people on the ground, who
+[00:37:01] might be dealing with those issues in the first place.
+[00:37:10] SPEAKER 5: Hi.
+[00:37:10] I'm really, really enjoying your discussion
+[00:37:15] in this book, especially about the critical thinking
+[00:37:17] side, or sort of the [INAUDIBLE] side of technology.
+[00:37:20] I am a technologist, I'm a computer scientist.
+[00:37:23] And I'm having a great deal of difficulty
+[00:37:25] sitting in some meetings.
+[00:37:27] I'll pick, for example like, driverless
+[00:37:29] cars, autonomous vehicles and the adoption of them.
+[00:37:33] I'm enamored naturally by the technology,
+[00:37:36] the things it can do for people with vision impairment,
+[00:37:38] and all these wonderful things for communities who otherwise
+[00:37:41] would not be mobile.
+[00:37:42] However not enough people seem to be asking the question--
+[00:37:45] well, for instance, I was at a talk with a member of the New
+[00:37:48] Urban Mechanics.
+[00:37:49] And they were talking about the data, the 311, all this.
+[00:37:51] It was fantastic.
+[00:37:53] So I brought up the question.
+[00:37:54] I said, in terms of driverless cars,
+[00:37:57] I know that people are testing.
+[00:37:59] Who's really in the room who's making
+[00:38:01] the decisions about these?
+[00:38:03] I said, do you have somebody who has
+[00:38:04] the numbers for the Bureau of Labor Statistics of all
+[00:38:07] the displacement for all the Uber and Lyft
+[00:38:10] drivers and the taxi drivers and the bus drivers
+[00:38:12] and the school bus drivers and truck drivers,
+[00:38:14] will not have jobs.
+[00:38:16] It's like, no, we don't-- not that they haven't thought about
+[00:38:20] it, but like, yeah, we'll kind of get to it.
+[00:38:25] It was a non-answer.
+[00:38:26] I've asked people-- technologists--
+[00:38:29] would you put your child on a driverless school bus
+[00:38:31] today, now?
+[00:38:33] Not other people's children.
+[00:38:37] I said, your precious cargo.
+[00:38:39] I've never gotten a straight answer.
+[00:38:41] It's a yes or no question.
+[00:38:42] And I've gotten gobbledygook.
+[00:38:45] So I'm just curious about the decisions,
+[00:38:48] about who's making the decisions.
+[00:38:50] Who's included?
+[00:38:52] As a resident of Boston, I've never been invited.
+[00:38:56] Who's making the decisions about what will be forced upon us
+[00:38:59] or how we should adopt a technology?
+[00:39:05] BEN GREEN: That's one of the most central areas
+[00:39:07] of these Smart City conversations,
+[00:39:08] where so often the people who so often are left out
+[00:39:13] of public conversations continue to be left out
+[00:39:15] of these conversations.
+[00:39:17] I think in part, there's a sense--
+[00:39:19] one of the things that the tech companies do really
+[00:39:22] well is that they create this sense of urgency.
+[00:39:25] And the media will often play into that.
+[00:39:27] There's a sense that we need to rush forward,
+[00:39:29] we need to be thoughtful and innovative
+[00:39:31] and adopt this technology now, and at least explore it.
+[00:39:34] And we'll manage the consequences
+[00:39:35] or think about how we're going to govern
+[00:39:37] this technology later.
+[00:39:39] That's the case with many of the places with self-driving cars.
+[00:39:42] Where many cities are having these pilot programs,
+[00:39:46] they're reducing regulations so that self-driving car companies
+[00:39:49] can come in, because there is this sense that this has value,
+[00:39:53] that this needs to have value, and that any city wants
+[00:39:56] to be moving into the future.
+[00:40:00] So I think pushing back on that idea, that sort of urgency
+[00:40:03] that the tech companies can put forward, is really important.
+[00:40:07] And I think we are starting to see shifts
+[00:40:09] where the sort of unequivocal optimism around the technology
+[00:40:14] is shifting, where it's no longer just an obvious win
+[00:40:17] to bring in new technology and have these programs.
+[00:40:20] But people are actually starting to see the downsides.
+[00:40:24] The mayor saying, we have this new technology,
+[00:40:26] is no longer just going to win points.
+[00:40:28] I think we can see with what happened with Amazon last week,
+[00:40:31] that bringing in tech companies-- people
+[00:40:33] are starting to realize that there are other issues that
+[00:40:36] need to be considered, which then comes along
+[00:40:38] with other people who need to be in the rooms
+[00:40:40] when we have these conversations.
+[00:40:42] But I think that the surveillance oversight
+[00:40:45] ordinances is a really powerful way of actually enforcing that
+[00:40:48] control, making sure that it's--
+[00:40:51] there need to be public hearings about new technologies
+[00:40:54] and that the public needs to actually
+[00:40:56] have insight into that technology,
+[00:40:58] and ultimately have some form of veto power over technology
+[00:41:01] that they don't approve of.
+[00:41:03] So I think there's always going to be this pressure of making
+[00:41:06] sure that the conversations move beyond the insiders
+[00:41:10] in the government, and the tech companies and the vendors who
+[00:41:14] are trying to push these solutions on them.
+[00:41:17] It's an ongoing struggle.
+[00:41:18] And I think I've seen a lot of cities where,
+[00:41:21] in New York and Toronto, where there's the whole Sidewalk Labs
+[00:41:23] project.
+[00:41:24] So a lot of people are, with really inspiring activism,
+[00:41:27] forcing other voices to be in those rooms.
+[00:41:30] But I think it's a constant struggle.
+[00:41:31] And I think that's something that there are forms though,
+[00:41:34] of regulation and processes that we can be instituting, often
+[00:41:37] with some struggle, to make sure that those voices are not
+[00:41:40] just at the table but have a meaningful voice at the table
+[00:41:43] as well.
+[00:41:49] SPEAKER 6: Thanks.
+[00:41:50] That was a great talk.
+[00:41:52] I'm wondering if you looked at any non North American cities.
+[00:41:56] Because one of the things I'm dealing
+[00:41:58] with in a different project is, I was in Kigali recently,
+[00:42:02] moving away from the self-driving cars.
+[00:42:04] Where Google managed to convince the government of Rwanda
+[00:42:08] to have digital addresses.
+[00:42:11] Right?
+[00:42:11] So that you could use it on Google Maps.
+[00:42:13] So nobody uses these addresses, that's a problem.
+[00:42:17] But this is a country where the state was highly efficient
+[00:42:20] in the '90s, in finding people it did not like
+[00:42:22] and throwing them into prison, and the genocide
+[00:42:26] in the '90s, right?
+[00:42:27] But it seems as though nobody figured out
+[00:42:29] that this was a context we needed to worry about, i.e.,
+[00:42:33] when it's easy to find somebody online in a country that
+[00:42:36] is coming from a genocide, what does that actually mean?
+[00:42:39] And I'm wondering if you looked at non North American cities,
+[00:42:45] and what are some of the conversations
+[00:42:47] that they're having?
+[00:42:48] Because in Kigali nobody had this conversation.
+[00:42:50] Google went and convinced them, and suddenly they
+[00:42:53] were posting these addresses on everybody's gates.
+[00:42:58] BEN GREEN: So I didn't look in too much detail outside
+[00:43:02] of North America, just to sort be able to focus
+[00:43:04] on the specific context here.
+[00:43:06] But I think there are a lot of interesting parallels.
+[00:43:08] There are a lot of--
+[00:43:09] this is a global movement.
+[00:43:12] China and India are creating these new Smart Cities
+[00:43:15] from scratch, rapidly developing cities
+[00:43:19] that they're building from nothing to a Smart City in just
+[00:43:22] a span of a couple of years.
+[00:43:23] China in particular has--
+[00:43:25] if we think the surveillance here is out of control,
+[00:43:27] in China it's often many magnitudes more than that.
+[00:43:32] But there are other places that have actually really inspired
+[00:43:35] me.
+[00:43:35] Barcelona is a really great example
+[00:43:38] of a city that has been pursuing Smart City approaches,
+[00:43:41] but really from a fundamentally different approach grounded
+[00:43:44] in democracy and civic control rather than simply technology.
+[00:43:49] They've restructured-- they've actually been really the one
+[00:43:52] place that has most strongly worked or bargained
+[00:43:56] against tech companies, to create policies
+[00:43:59] and public private partnerships that really give
+[00:44:02] the public more control, and making sure
+[00:44:04] that all the data that's collected
+[00:44:06] is ultimately about public benefit rather
+[00:44:09] than private profit.
+[00:44:11] So I think there's a lot of lessons
+[00:44:12] to be learned from looking at these different contexts.
+[00:44:16] And across the board, to your point about just making sure
+[00:44:20] that we actually understand what the dangers of these systems
+[00:44:22] are.
+[00:44:23] Again the vendor trying to sell a tech solution
+[00:44:26] is always going to talk about what the positive outcomes are
+[00:44:28] and just how great the technology is.
+[00:44:31] But it's important, as we've seen
+[00:44:33] over the last couple of years, a sort of general deeper
+[00:44:36] understanding and education about how
+[00:44:38] technology can be misused.
+[00:44:41] And I think even in the US though, many of those issues
+[00:44:43] still come to bear, where there's both--
+[00:44:46] I often find myself conflicted or seeing
+[00:44:49] these two conversations that often don't talk to each other.
+[00:44:51] On the one hand saying, cities need more data.
+[00:44:54] It's great, we can optimize services.
+[00:44:56] But also recognizing that in many cases
+[00:44:58] there are specific aspects of the government, especially
+[00:45:01] law enforcement, that we maybe don't want to have access
+[00:45:03] to certain types of data.
+[00:45:05] So we can't simply recognize these systems
+[00:45:07] as monolithic and often--
+[00:45:10] I was at a presentation six months ago,
+[00:45:12] where people were talking about how to create unified data
+[00:45:14] systems so that everyone in the city
+[00:45:16] could have access to all of the data.
+[00:45:18] And while that might be great for the Transportation or Parks
+[00:45:20] Department, all of the examples that
+[00:45:22] are out there about police and law enforcement officers
+[00:45:27] having access to more and more data, simply
+[00:45:29] leads to more and more abuse with game databases
+[00:45:31] and predictive policing and risk assessment.
+[00:45:34] So we have to think really deeply about exactly
+[00:45:36] which aspects of governance we care about supporting and not
+[00:45:40] supporting, which goes back to the point
+[00:45:42] about really engaging in fundamental evaluations,
+[00:45:47] of which systems we care about and want to keep and promote,
+[00:45:50] and which ones you might want to fundamentally change.
+[00:45:55] This middle table.
+[00:45:57] I think, behind you first, and then we'll go to you.
+[00:46:00] SPEAKER 7: Hi.
+[00:46:01] This was a great talk.
+[00:46:03] But I'd like to follow up on your question
+[00:46:05] about your sort of vision in conversations
+[00:46:10] on open data in Boston.
+[00:46:12] Because I just came from a meeting
+[00:46:15] with a Cambridge City councilor, talking about how insular
+[00:46:18] the Cambridge open data strategy is.
+[00:46:21] And if you wanted to put up something opposite
+[00:46:27] to what you've done, it would be the perfect case study.
+[00:46:32] What were the practical outcomes of those conversations
+[00:46:35] you had in public libraries?
+[00:46:38] What actually changed about the Boston strategy?
+[00:46:43] I mean, what data sets did you go after after that?
+[00:46:47] And were there actual data to address
+[00:46:51] the concerns of families you encountered in the libraries?
+[00:46:56] BEN GREEN: So I would say it was more of an unrealized vision.
+[00:46:59] We were, as is often the case with these things
+[00:47:01] that we were facing in Boston, was--
+[00:47:03] and it's actually sort of a good lesson in how these things go.
+[00:47:05] So there was a year, maybe 18 months sprint
+[00:47:08] to get the first pass at this new open data portal launched.
+[00:47:13] And right after it ended, we hit the point
+[00:47:17] where a grant that had been funding this program ended.
+[00:47:19] So all of the people who were in charge left.
+[00:47:21] All of the interns who have been involved
+[00:47:23] in getting this project up to speed,
+[00:47:25] including myself, left very soon after that.
+[00:47:28] And so capacity for this program--
+[00:47:30] there was the initial sprint to get the thing launched,
+[00:47:32] and then immediately nothing has happened since.
+[00:47:35] But I think the vision that I brought was,
+[00:47:40] really recognizing a disconnect between the way we talk
+[00:47:42] about open data, and recognizing that just throwing
+[00:47:45] data sets onto a website doesn't actually create any impact.
+[00:47:49] The data set needs to be somehow engaged with,
+[00:47:53] in some sort of process that's going to somehow create impact.
+[00:47:56] The theory of change around open data is often very shallow.
+[00:48:00] So one thing that I had wanted to build out,
+[00:48:04] was sort of recognizing the sense of, maybe
+[00:48:07] think about it like conduits or intermediaries.
+[00:48:09] Where we might be releasing data,
+[00:48:10] but the average person is not looking at that data
+[00:48:13] or even caring about that data.
+[00:48:15] So I would have wanted to see much more strong partnerships
+[00:48:17] with specific journalists and academics and researchers
+[00:48:21] and community groups, who themselves maybe
+[00:48:23] have the capacity to think about how to use that data,
+[00:48:25] and could inform our strategy without--
+[00:48:29] getting us out of the idea of just thinking
+[00:48:31] that we would throw it out there,
+[00:48:32] and that someone in the city or somewhere in the world
+[00:48:35] would simply look at that data and solve some problem.
+[00:48:38] One thing that I actually quite liked from Cambridge,
+[00:48:41] that they did a couple of years ago was,
+[00:48:43] they put out a sort of--
+[00:48:45] I forget what they called it exactly--
+[00:48:46] it was sort of like a problem spec sheet.
+[00:48:48] Where with all of their data sets,
+[00:48:50] they actually-- at least for some of them at least-- they
+[00:48:53] put out, here are some things that we'd
+[00:48:54] be curious to see an analysis of, or an app built around.
+[00:48:58] To at least give some sense to the public, of what problems
+[00:49:01] are actually being faced with the open data.
+[00:49:04] So I think those ways of just bringing the connections
+[00:49:06] together to say, here's what we as the city
+[00:49:10] might find value in, and also learning a lot more about what
+[00:49:13] the public might be able to do and be interested in.
+[00:49:15] But I actually think open data-- it's a really hard problem
+[00:49:18] to make it useful.
+[00:49:19] Yeah.
+[00:49:22] SPEAKER 8: I really enjoyed your talk.
+[00:49:24] I was wondering in terms of your work
+[00:49:26] in your research, what are the implications for policy
+[00:49:29] at the state or national level, where party politics might
+[00:49:33] come into play?
+[00:49:37] BEN GREEN: That's a great question.
+[00:49:38] Something I probably haven't thought about enough.
+[00:49:41] I think at the state level--
+[00:49:42] I mean state and federal, we are increasingly
+[00:49:44] seeing similar movements towards,
+[00:49:47] especially these internal data science teams.
+[00:49:49] I know the state of Massachusetts
+[00:49:51] has a data science team to inform policy.
+[00:49:54] And the federal government, especially under Obama,
+[00:49:58] had new offices like 18F and USDS, the United States Digital
+[00:50:02] Services.
+[00:50:03] So those are-- one form of thing that they're
+[00:50:07] doing, that's quite valuable, to just
+[00:50:09] build in deeper technological expertise,
+[00:50:12] both for building internal tools and for evaluating
+[00:50:15] external tools.
+[00:50:17] And I think just providing more funding
+[00:50:20] for these types of programs.
+[00:50:22] The DOT Smart City Challenge actually
+[00:50:24] turned into a really great program in Columbus.
+[00:50:26] And so continuing to provide support for these broader
+[00:50:30] municipal projects, recognizing the role of technology,
+[00:50:34] but avoiding falling into the trap of simply picking
+[00:50:38] the one that seems most technological,
+[00:50:40] or framing it solely around Smart City projects, that
+[00:50:44] then ask for the city that's doing the most
+[00:50:46] to create a city-wide layer of tech and sensors,
+[00:50:50] rather than thinking about how the technology is being used.
+[00:50:54] And then there are the broader issues
+[00:50:56] that we're seeing in urban policy
+[00:50:59] generally, where cities just don't have often
+[00:51:01] the decision-making power because of the way
+[00:51:03] things are fragmented, because of the way
+[00:51:05] tax bases are fragmented.
+[00:51:06] Many of the issues that we're seeing are--
+[00:51:10] there are two things that I think
+[00:51:12] are particularly challenging.
+[00:51:14] One is the underfunding of cities,
+[00:51:16] which allows these deals with tech companies
+[00:51:19] to seem so attractive.
+[00:51:20] Because Google can come in and say,
+[00:51:22] we will provide you with free public Wi-Fi,
+[00:51:24] and don't worry about how we're funding that.
+[00:51:27] We're just going to give you that free service, because you
+[00:51:28] can't pay for that yourselves.
+[00:51:30] So that's often the trade-off that's being made,
+[00:51:32] because cities aren't able to do these things themselves.
+[00:51:36] And then-- I had a second one but I'm blanking on it now.
+[00:51:41] I'll come back to you if I remember it.
+[00:51:42] Yeah.
+[00:51:43] [INAUDIBLE]
+[00:51:44] SPEAKER 9: Hello.
+[00:51:45] Thank you so much for your talk.
+[00:51:46] You gave an example earlier of how Google was providing
+[00:51:50] free public Wi-Fi in New York, and how this could be
+[00:51:53] a surveillance city in a way.
+[00:51:55] And you're suggesting the city should
+[00:51:57] have the power to negotiate better privacy and things
+[00:52:00] like that.
+[00:52:02] So in general, what are your thoughts
+[00:52:03] on cities having the power to request the data that
+[00:52:08] belongs to these large companies,
+[00:52:10] in order to use it for public good?
+[00:52:12] So for example, you may think of a city in a developing country,
+[00:52:15] where there's not enough infrastructure or sensors
+[00:52:18] to actually collect data.
+[00:52:19] But there's a large tech company there.
+[00:52:22] And so being able to request that data, in order
+[00:52:24] to use it for public good.
+[00:52:26] What are your thoughts on that?
+[00:52:28] BEN GREEN: Yeah, I think that's one of the things that can be--
+[00:52:31] that's something that tech companies have resisted.
+[00:52:33] In Boston we, before I came in, there
+[00:52:36] was a partnership with Uber, that essentially was them
+[00:52:39] only giving the most meager amount of data,
+[00:52:42] and led to some little debates in the press, even.
+[00:52:46] And it's sort of funny because when tech companies will resist
+[00:52:49] it, they'll often talk about protecting
+[00:52:51] privacy, which they never care about in any other context.
+[00:52:55] So and there actually are some privacy issues
+[00:52:58] to think about when you're giving this data over
+[00:53:00] to government, thinking about it in terms of public records.
+[00:53:03] But generally, this is exactly the type of thing
+[00:53:05] that can be negotiated.
+[00:53:06] Right?
+[00:53:06] If you're New York City, you're the largest, most powerful city
+[00:53:09] in the country.
+[00:53:10] There's no reason why you simply have
+[00:53:11] to agree to whatever terms a tech company says.
+[00:53:14] You know, here's what we're going
+[00:53:16] to do, take it or leave it.
+[00:53:19] So I think cities have started to say, in the contract,
+[00:53:24] if you're going to be working here,
+[00:53:25] we will have access, whether it's
+[00:53:27] a monthly dump of the data, or we'll
+[00:53:29] have some access to this information.
+[00:53:30] Because the companies are often collecting
+[00:53:33] far more data than a government could, or certainly is,
+[00:53:37] and especially in the developing world where cities aren't even
+[00:53:41] collecting data often to the extent that cities here are.
+[00:53:43] So I think that information can be incredibly
+[00:53:46] valuable as a tool, and is exactly the sort of thing
+[00:53:48] that we need to be thinking about.
+[00:53:50] What are we actually going to be signing up for?
+[00:53:53] But it's something that often hasn't been thought about.
+[00:53:56] When I was in Boston--
+[00:53:59] I think only recently have cities
+[00:54:01] started to recognize that these are important issues
+[00:54:03] to even put on the table, rather than thinking about them
+[00:54:06] after the fact, or not thinking about them at all.
+[00:54:09] In Boston, we were restructuring a privacy policy for our end,
+[00:54:14] around our free public Wi-Fi network.
+[00:54:16] And we realized that we didn't even
+[00:54:19] have full control over what data was or was not collected,
+[00:54:22] because of what the vendor we had been working with actually
+[00:54:25] set in their terms.
+[00:54:26] We hadn't even thought to consider privacy or data
+[00:54:29] collection in the process of setting up
+[00:54:31] that agreement in the first place,
+[00:54:33] and procuring that technology.
+[00:54:35] So increasingly, instead of just thinking
+[00:54:38] about efficiency and optimization,
+[00:54:39] these broader concerns about structure and access
+[00:54:43] and public access to these things
+[00:54:45] should be increasingly fundamental considerations
+[00:54:49] when we're thinking about this technology at all.
+[00:54:54] Maybe right behind you.
+[00:54:56] Yeah.
+[00:54:58] SPEAKER 10: So my question is a framing question,
+[00:55:01] prompted by your reframing of the Smart City
+[00:55:03] into Smart Enough Cities.
+[00:55:04] So something I feel like I've seen over the past few years,
+[00:55:08] especially in Europe, is the reframing as a Living Lab.
+[00:55:11] And there's some cities in the US that I think use this,
+[00:55:14] but it seems to be sort of a European idea.
+[00:55:16] And it it seems to contain some of the thoughts
+[00:55:19] about bottom-up co-creation.
+[00:55:23] Another thing though, that it is also kind of forwarding,
+[00:55:25] is the idea of experimentation.
+[00:55:27] And I was just curious what you thought--
+[00:55:29] first what you think the work of the framing
+[00:55:31] does, whether it's useful, if it's
+[00:55:33] obscuring the same process going on everywhere.
+[00:55:37] But then also specifically the experimentation element,
+[00:55:39] where you think the place of that is in these projects?
+[00:55:42] BEN GREEN: Yeah.
+[00:55:43] If you spend enough time in the Smart City space,
+[00:55:45] you'll see a lot of different words and labels thrown around.
+[00:55:47] Everyone's got their catchy way of putting what they're doing
+[00:55:51] or what the city should be.
+[00:55:54] And I think we shouldn't discount-- although sometimes
+[00:55:57] it can be overwhelming to see just how many terms
+[00:55:59] are out there-- we shouldn't discount
+[00:56:00] the role of this framing.
+[00:56:02] So at least for me, the goal is really,
+[00:56:05] I think that when you talk about Smart Cities,
+[00:56:08] no matter how thoughtful you try to be,
+[00:56:10] Smart Cities puts you on an axis where being smart
+[00:56:13] means having more technology.
+[00:56:15] And that positions using less technology
+[00:56:19] as sort of the dumb city.
+[00:56:21] Those are the two options that you have.
+[00:56:23] And so even though there are a lot
+[00:56:24] of people who try to talk about a truly
+[00:56:26] Smart City, or other forms of Smart Cities, or this
+[00:56:30] is what I think a Smart City is.
+[00:56:31] I think just even as we use that language,
+[00:56:33] and allow that framing to come to bear,
+[00:56:36] it fundamentally shapes what we see
+[00:56:38] as the ways of evaluating things.
+[00:56:42] If you're thinking about Smart Cities,
+[00:56:44] the axis that you're on, or the ranking
+[00:56:45] of that system that you're going to be thinking about,
+[00:56:48] is how much technology do you have.
+[00:56:50] So I think these reframings are really powerful.
+[00:56:52] And I at least tried to get towards one
+[00:56:54] where the goal was clearly not around anything
+[00:56:57] that has to do with just how much technology you're using.
+[00:57:01] And I think experimentation, broadly speaking,
+[00:57:03] is a really powerful thing that cities are just
+[00:57:05] starting to adopt.
+[00:57:06] Oftentimes-- and that's a great example
+[00:57:10] of how we can think about innovation, to mean something
+[00:57:13] much more broadly than just adopting new sensors
+[00:57:16] or algorithms.
+[00:57:17] So innovation in terms of broader practices,
+[00:57:20] or thought processes around what it means to pursue change,
+[00:57:24] is often way more powerful than innovation that
+[00:57:27] means buying some new sensors.
+[00:57:29] So I think cities in Europe, and I
+[00:57:31] know Boston is a place that has been doing a lot of thinking
+[00:57:34] about experimentation.
+[00:57:35] Thinking about urban science and what
+[00:57:38] it means to actually have your programs be grounded
+[00:57:41] in maybe not formal academic research,
+[00:57:44] but what we can think of as research projects, and say,
+[00:57:46] does this actually have an impact?
+[00:57:48] Because recognizing the complexity of cities
+[00:57:51] means that we have to understand,
+[00:57:53] that what seems really nice on paper
+[00:57:55] may not actually work as intended.
+[00:57:56] There can be backlash effects or just
+[00:57:59] unintended weird consequences, especially
+[00:58:01] if you think about second and third order effects.
+[00:58:04] So experimentation is a great tool
+[00:58:06] and broadly speaks to the growing movement for cities
+[00:58:10] to become more.
+[00:58:11] And this is maybe a place where some technology
+[00:58:14] thinking is useful, but there's the idea of agile development.
+[00:58:16] And so thinking about agile testing and whatnot,
+[00:58:21] can be a really great way for cities to think
+[00:58:23] about what they're doing.
+[00:58:25] A great example of this actually is in New York, where they--
+[00:58:29] if you've been to Times Square in the last couple of years,
+[00:58:31] you'll see that all of Times Square
+[00:58:33] pretty much has been replaced.
+[00:58:35] There's no traffic going through most of the Times Square,
+[00:58:37] it's a pedestrian plaza with seats and all of that.
+[00:58:40] They first just experimented with that,
+[00:58:42] by getting some like $2 beach chairs at Target
+[00:58:46] and putting them out, and just seeing
+[00:58:47] would people actually sit here?
+[00:58:48] And they found that it had a huge impact, far more than they
+[00:58:51] ever would have expected.
+[00:58:52] So that's now a massive change that will hopefully
+[00:58:56] stay in New York for the foreseeable future, that
+[00:58:58] was started with a couple of people
+[00:59:00] going out one morning with some beach chairs,
+[00:59:02] just to see what happens.
+[00:59:03] So I think recognizing urban space is fluid,
+[00:59:06] and that there are many different ways to pursue change
+[00:59:10] and progress, is important.
+[00:59:12] And we have to think about the alternatives
+[00:59:14] and what might and might not work, rather than simply
+[00:59:16] saying, this is what's good, or this
+[00:59:19] is the system we've procured, and so now we're
+[00:59:21] stuck with it for five years.
+[00:59:22] DAVID WEINBERGER: So we have time
+[00:59:24] for a couple more questions.
+[00:59:27] BEN GREEN: Yeah.
+[00:59:31] SPEAKER 11: Thanks so much, Ben, for this really wonderful talk.
+[00:59:35] My question is also related to the framing,
+[00:59:38] and about holding cities accountable
+[00:59:41] perhaps to this new framing.
+[00:59:43] And the question is really just that.
+[00:59:46] How would we hold cities accountable,
+[00:59:48] and how can we really distinguish in practice--
+[00:59:50] I know you've put up a few really helpful examples,
+[00:59:52] but more in real time--
+[00:59:54] the difference between a Smart City and a Smart Enough City.
+[00:59:57] And ensuring that the public sector is really moving forward
+[01:00:01] with this idea, because in the same way
+[01:00:03] that we've seen the term Smart City being
+[01:00:06] co-opted, not only by the public sector, by industry
+[01:00:10] and all different stakeholders to kind of claim
+[01:00:13] that they're using technology for the social good.
+[01:00:15] I could see the same sort of damage happening with the Smart
+[01:00:20] Enough City.
+[01:00:21] So I'm thinking about what you might envision
+[01:00:24] for holding cities accountable.
+[01:00:26] And also thinking about how we measure
+[01:00:29] the impact of any sorts of technologies
+[01:00:34] being put into place.
+[01:00:36] BEN GREEN: Yeah.
+[01:00:36] This is an area I've seen--
+[01:00:38] I've been very encouraged in this realm or this domain
+[01:00:41] over the last couple of years.
+[01:00:43] Where I think three years ago, more of these technologies
+[01:00:45] would be thrown out.
+[01:00:46] And there'd be critics but, that was not
+[01:00:49] what people were talking about.
+[01:00:50] And at least now, there's been a lot
+[01:00:52] of great work talking about the dangers of technology
+[01:00:55] across the board, not just in cities.
+[01:00:56] And I think we've become much more skeptical of algorithms,
+[01:00:59] much more skeptical about data collection,
+[01:01:02] and especially much more skeptical
+[01:01:03] about these companies like Google and Facebook
+[01:01:06] and Microsoft and Amazon, no longer
+[01:01:09] viewing them as sort of the great messiahs that
+[01:01:13] will bring us to the future.
+[01:01:15] So I think continuing to build out
+[01:01:18] that broader public awareness and understanding is
+[01:01:20] really important, so that we can get to a point--
+[01:01:23] I think as I alluded to earlier--
+[01:01:24] where a mayor coming in and saying,
+[01:01:27] we have all of this great new technology,
+[01:01:28] we've just brought in Amazon or Google
+[01:01:31] or Verizon to do this thing, no longer just
+[01:01:33] gets easy political points.
+[01:01:35] Even if there are a couple of critics behind the scenes.
+[01:01:37] That needs to be something where broadly, the public
+[01:01:40] is skeptical of and needs to be convinced,
+[01:01:43] such that it's actually only even politically
+[01:01:47] viable for someone to bring those projects forward,
+[01:01:49] if they really have thought about these things
+[01:01:51] and made sure that they have addressed the types of concerns
+[01:01:54] that are going to come up.
+[01:01:55] So that's one place.
+[01:01:57] But I think there are more grounded, tangible things
+[01:02:01] we can do through--
+[01:02:02] I talked about the surveillance oversight ordinances.
+[01:02:05] In New York, there's a task force
+[01:02:07] for creating algorithmic oversight.
+[01:02:11] So those types of programs I think,
+[01:02:13] are pretty valuable ways of not just enforcing power
+[01:02:18] from the outside, but actually getting some form
+[01:02:20] of grounded tangible voice into these decisions and things
+[01:02:24] like that.
+[01:02:25] So many cities are starting to explore
+[01:02:27] these types of regulations, and that's really important.
+[01:02:31] And I think just more broadly, in cities generally,
+[01:02:34] we're seeing more and more people
+[01:02:36] expecting to have voice in these decisions.
+[01:02:38] So we shouldn't view them simply as democracy
+[01:02:41] around Smart Cities or technology,
+[01:02:43] but democracy in cities generally.
+[01:02:45] This is just one manifestation of municipal government
+[01:02:49] that is not really that fundamentally
+[01:02:52] different from many other things that the government does.
+[01:02:54] But increasingly, we are seeing people expecting
+[01:02:56] to have these types of voice, and we're
+[01:02:59] pushing back against the things like not being sucked
+[01:03:03] into the allure of the 311 systems, that
+[01:03:06] would say you have a voice because you get to tell us
+[01:03:08] where there's a pothole, and we're
+[01:03:09] going to be your customer service agency
+[01:03:11] and come fill your pothole pretty quickly.
+[01:03:16] Maybe one more.
+[01:03:17] SPEAKER 12: Thanks for your presentation.
+[01:03:19] But two years ago, a Capstone class that I taught
+[01:03:22] worked with the Kansas City, Missouri,
+[01:03:24] mayor's office to develop communication plans related
+[01:03:28] to their Smart City initiatives.
+[01:03:29] And at the time students conducted interviews and focus
+[01:03:32] groups and openly heard citizens feeling their voices
+[01:03:36] were not heard.
+[01:03:37] Of course, the city wants to do something like this research,
+[01:03:41] right, but yet they lack resources.
+[01:03:43] And I think that's something you touched on earlier as well.
+[01:03:47] So I wondered while doing research for your book,
+[01:03:52] whether you encountered any good examples of cities'
+[01:03:55] collaboration with nonprofit entities or higher education
+[01:04:01] entities, asking better questions
+[01:04:04] and maybe perhaps collecting and analyzing data systematically?
+[01:04:12] BEN GREEN: I think to go back, Boston
+[01:04:14] is an example of a city that has thought
+[01:04:16] about these questions a lot.
+[01:04:19] About a year ago they published a broader urban research
+[01:04:23] agenda, where they asked something
+[01:04:24] like 150 or 200 questions, ranging from super large
+[01:04:28] to super small, about cities.
+[01:04:31] So that's one perspective on how to think
+[01:04:33] about a research and experimentation oriented
+[01:04:35] approach.
+[01:04:36] There are a lot of places that have begun, in certain spaces,
+[01:04:39] developing partnerships with academics
+[01:04:43] and other institutes--
+[01:04:44] So that Data Science for Social Good
+[01:04:45] program that I was part of about five years ago,
+[01:04:49] we worked with cities and governments across the world,
+[01:04:54] providing the data science expertise that they might not
+[01:04:57] otherwise have.
+[01:04:58] But these sorts of funding and resource issues
+[01:05:03] are often very much at play in all of these conversations.
+[01:05:08] And I think both, in many cases where,
+[01:05:10] the optimizations that we're trying
+[01:05:12] to achieve with Smart Cities is so often
+[01:05:14] because we've been facing austerity for so many years.
+[01:05:16] There's this idea that we need to be as efficient as possible,
+[01:05:20] because we're so cash-strapped, because cities
+[01:05:22] don't have resources.
+[01:05:27] So I think that's a really important issue.
+[01:05:29] So one example of how the resource limitations play out,
+[01:05:33] is a story I actually ended up cutting from the book.
+[01:05:36] But in Chicago where they had predictions to identify where
+[01:05:40] kids would be getting lead poisoning.
+[01:05:42] They were able to identify, by pulling together
+[01:05:45] various sources, which homes were
+[01:05:47] going to have lead in the paint, and which of those homes also
+[01:05:50] we're going to have an infant who
+[01:05:51] would get the lead poisoning.
+[01:05:53] And they developed an algorithm, they
+[01:05:54] worked with the Chicago Department of Public Health
+[01:05:56] and developed a really great way to start thinking about how
+[01:05:59] to deploy these systems.
+[01:06:01] But ultimately, they're fundamentally limited
+[01:06:03] by the fact that they just don't have enough resources.
+[01:06:05] They don't have enough people to actually go out and inspect
+[01:06:07] the homes.
+[01:06:08] They don't have enough resources to then go
+[01:06:10] fix the homes that are created.
+[01:06:12] And they don't have the enforcement in place
+[01:06:15] to hold landlords to account, and to force landlords
+[01:06:18] to actually fix these issues.
+[01:06:20] So fundamentally they have this great nice tech solution.
+[01:06:23] It's a great integration of technology
+[01:06:25] to solve a social problem.
+[01:06:26] But we're seeing even there, that you're
+[01:06:28] limited by resource constraints and funding issues
+[01:06:31] and legal barriers, that don't put power
+[01:06:34] into the right places.
+[01:06:36] Yeah.
+[01:06:38] DAVID WEINBERGER: Thank you so much for such a
+[01:06:41] clear and compelling and grounded and important talk.
+[01:06:45] BEN GREEN: Thank you very much for having me.
+[01:06:47] Thanks.
+[01:06:47] [APPLAUSE]

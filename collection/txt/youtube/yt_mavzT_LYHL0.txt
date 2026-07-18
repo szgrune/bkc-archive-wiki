@@ -1,0 +1,1169 @@
+[00:00:00] SPEAKER 1: Hi, everyone.
+[00:00:01] And thanks for coming to this Berkman Klein Luncheon Series
+[00:00:04] talk by Scott Bradner called A History of The Internet.
+[00:00:09] Scott Bradner was involved in the design, operation and use
+[00:00:13] of data networks at Harvard University since the early days
+[00:00:16] of the ARPANET.
+[00:00:18] He was involved in the design of the original Harvard Data
+[00:00:20] Networks, the Longwood Medical Area Network, LMAnet
+[00:00:23] and New England Academic and Research Network, NEARnet.
+[00:00:27] He was founding chair of the technical committees of LMAnet,
+[00:00:30] NEARnet and the Corporation for Research and Enterprise
+[00:00:32] Network.
+[00:00:34] Mr. Bradner served in a number of roles at the IETF.
+[00:00:37] He was the co-director of the Operational Requirements
+[00:00:40] Area from 1993 to 1997; IPNV Area from 1993 to 1996;
+[00:00:47] Transport Area from 1997 to 2003;
+[00:00:50] and Sub IP Area from 2001 to 2003.
+[00:00:54] He was a member of the IESG from 1993 to 2003,
+[00:00:58] and was an elected trustee of the Internet Society 1993
+[00:01:01] to 1999, where he was the VP for Standards
+[00:01:05] from 1995 to 2003 and Secretary to the Board of Trustees
+[00:01:09] from 2003 to 2016.
+[00:01:12] Scott was also a member of the IETF Administrative Support
+[00:01:15] Activity as well as a trustee of the IETF trust
+[00:01:18] from 2012 to 2016.
+[00:01:21] Mr. Bradner retired from Harvard University in 2016
+[00:01:25] after 50 years working there in the areas of Computer
+[00:01:27] Programming, Systems Management, Networking, IT Security
+[00:01:31] and Identity Management.
+[00:01:33] He still does some patent-related consulting.
+[00:01:35] Before I bring him up here, I want
+[00:01:37] to do just a couple of housekeeping notes.
+[00:01:39] One is this talk is being live streamed and recorded.
+[00:01:44] Two, please silence your phones, I always forget that.
+[00:01:48] During the talk, on those silenced
+[00:01:50] phones feel free to tweet us at BKC Harvard.
+[00:01:53] Scott will take questions at any time,
+[00:01:55] please use the mic so that you can be heard on the stream.
+[00:01:58] There will be a microphone runner to get that mic to you.
+[00:02:01] Questions are not comments and they end in question marks.
+[00:02:05] And without further ado, Scott.
+[00:02:07] SPEAKER 2: Is this thing working?
+[00:02:09] [APPLAUSE]
+[00:02:13] SPEAKER 2: It's nice to get applause.
+[00:02:15] Before, it's nicer to get it afterwards.
+[00:02:17] OK, so I'm going to talk about a history of the internet.
+[00:02:21] This is not the history of the internet, there isn't one.
+[00:02:24] This is a very much Rashomon kind of environment.
+[00:02:27] I've talked to a lot of people that were involved in this,
+[00:02:30] I lived through part of it.
+[00:02:32] The people that I talked to, some of their stories
+[00:02:35] have changed over time.
+[00:02:37] So even within one person, they have different memories.
+[00:02:41] But I'm going to talk about an overview, specifically
+[00:02:43] an episodic overview.
+[00:02:47] This is certainly not a complete picture
+[00:02:49] but it's a basic picture.
+[00:02:51] It all started with a grapefruit,
+[00:02:53] the electronic grapefruit Sputnik.
+[00:02:55] With the Russians popped up Sputnik,
+[00:02:57] the US military industrial complex
+[00:03:01] and the political complex went apeshit.
+[00:03:04] Lyndon Johnson says the skies were alien.
+[00:03:07] Well, Lyndon had a way with words but it was a big deal.
+[00:03:12] But luckily at the time, we had a president that
+[00:03:15] actually believed in science.
+[00:03:17] Imagine that person who believes in science.
+[00:03:20] Well, Dwight Eisenhower, being a military guy
+[00:03:22] definitely believed in science.
+[00:03:24] And he, along with his science advisor
+[00:03:28] put together in three months, Advanced Research Projects
+[00:03:32] Agency for the Department of Defense.
+[00:03:33] The idea of putting together anything
+[00:03:35] in Washington in three months is amazing, but he did it.
+[00:03:38] He got it.
+[00:03:38] He got it going.
+[00:03:39] The Advanced Research Projects Agency
+[00:03:42] who had a mission of basically exploring new stuff
+[00:03:47] was the formal mission.
+[00:03:48] The informal mission is anything and talents
+[00:03:51] here as quotes from "source material".
+[00:03:53] The actual mission according to contemporary materials
+[00:03:57] was "prevent technological surprise
+[00:03:59] like the launch of Sputnik".
+[00:04:02] So here's the ARPA setting up process
+[00:04:05] starting to work on things.
+[00:04:07] But it wasn't just ARPA that was being funded by the US
+[00:04:11] government to do work.
+[00:04:13] RAND was funded - the Air Force was funding RAND and Hughes
+[00:04:17] Aircraft, and there's a fellow named Paul Baran that
+[00:04:20] was working there.
+[00:04:23] Paul Baran came up with the basic concept
+[00:04:25] of what is today's internet.
+[00:04:28] He came in 1960 paper and he described ways
+[00:04:33] that you could build a reliable network out
+[00:04:34] of unreliable components.
+[00:04:37] So cheap and inexpensive devices that we can call routers today.
+[00:04:42] You put enough of those things together with enough redundancy
+[00:04:44] that can be a reliable environment.
+[00:04:47] And then in 1962, his seminal paper followed up
+[00:04:51] two years later by an 11 volume set,
+[00:04:54] described the full set of internet protocols
+[00:04:57] that we have today - the full set of conceptual internet
+[00:05:01] protocols.
+[00:05:02] We started, except it wasn't internet,
+[00:05:04] it was a network protocol.
+[00:05:05] So he came up with the idea of breaking communications up
+[00:05:08] into chunks.
+[00:05:10] He called them "standardized message blocks,"
+[00:05:12] but the idea was you had a big file
+[00:05:14] and you made it into little pieces.
+[00:05:16] You had a voice conversation and you made it into little pieces.
+[00:05:20] Each of those little pieces had an address
+[00:05:23] at the beginning that says where the piece was going,
+[00:05:26] an address after that saying where the piece is coming from,
+[00:05:29] some other information and a payload, which
+[00:05:32] was a chunk of voice or the chunk of data.
+[00:05:35] It was a distributed network, the bottom picture
+[00:05:37] is the distributed network.
+[00:05:38] A bunch of little dots are the routers or the forwarding
+[00:05:43] engines.
+[00:05:44] All the messages which the blocks were storing forward
+[00:05:48] will be forwarded to the next little router along the path.
+[00:05:52] Save there, figured out where they go next, and then go next.
+[00:05:55] It had the advantage that if you took out some of those dots,
+[00:05:59] there were other paths around it.
+[00:06:01] And the routers would figure out those other paths and forward
+[00:06:04] the traffic along the other paths.
+[00:06:08] This is indicative of the times.
+[00:06:11] This is a chart out of his 1962 paper
+[00:06:14] which is plotting the probability
+[00:06:17] of a message getting through against the probability
+[00:06:20] of nodes being destroyed - an atomic attack.
+[00:06:24] So you take out half the nodes and if you've got enough nodes,
+[00:06:28] the message will still get through.
+[00:06:30] So he was describing a resilient infrastructure
+[00:06:33] to survive an atomic attack.
+[00:06:36] Big advantages to the message block-based things
+[00:06:38] or the packet-based thing.
+[00:06:40] You can put together multiple communications
+[00:06:42] on the same wire that can be running at different speeds.
+[00:06:47] If there's a failure or if somebody blows
+[00:06:50] up a router, or router dies or somebody hits a phone pole
+[00:06:53] and takes out of a fiber cable, it takes a minimum of time
+[00:06:57] to switch over to a new path.
+[00:06:59] Many different applications including voice,
+[00:07:01] he described using it for voice from 1962.
+[00:07:06] The environment he was working in was the Cold War.
+[00:07:09] It was a pretty ugly environment and he was very much anti-war.
+[00:07:15] And his oral history, which is pointed too here, he
+[00:07:19] talks about what he was trying to do
+[00:07:21] was create a command and control network which
+[00:07:25] would survive a first strike.
+[00:07:29] But unlike most people, he wanted the Russians have it
+[00:07:33] too.
+[00:07:35] He wanted it so that the Russians wouldn't
+[00:07:38] think that the US wouldn't retaliate from a first strike,
+[00:07:42] and he wanted the US to not think
+[00:07:43] the Russians could retaliate.
+[00:07:46] So he wanted both to have it.
+[00:07:48] It was primarily all of his documents were open.
+[00:07:51] There are public there was to that work
+[00:07:53] to do with security of the system.
+[00:07:56] But basically, his idea was to make
+[00:07:58] a public environment which keeps both sides from killing
+[00:08:02] the other.
+[00:08:03] It didn't work and it didn't get built.
+[00:08:07] And what it describes in his oral history of going into AT&T
+[00:08:12] to tell them all about this.
+[00:08:14] And after he made his presentation,
+[00:08:17] they said, "Son, let me tell you about how telephones
+[00:08:20] work," and spent the next few hours telling my telephone
+[00:08:24] works.
+[00:08:25] And at the end said, "Do you understand now,
+[00:08:28] and you understand why this will work?"
+[00:08:30] And he said, no.
+[00:08:32] He moved on but he was offered an opportunity to get it built.
+[00:08:36] But the Defense Communications Agency
+[00:08:39] would have been the ones that had to build it.
+[00:08:41] And there was no conceivable way the Defense Communications
+[00:08:44] Agency could have built it.
+[00:08:46] He realized that they didn't believe in it,
+[00:08:48] and they would have built something
+[00:08:51] which would have failed.
+[00:08:53] And then it would kill the whole concept for eons,
+[00:08:56] so he declined to have them build it.
+[00:09:00] That was him.
+[00:09:02] Meanwhile, J.C.R Licklider at MIT
+[00:09:06] was talking about Intergalactic networks which was really
+[00:09:10] talking about global networks, and talking
+[00:09:12] about how people would interact with computers in the future.
+[00:09:15] He wasn't the first to do that, but he was an important one
+[00:09:17] to do that.
+[00:09:19] In 1962, he argued for created and then started up
+[00:09:24] the Information Processing Techniques office in ARPA.
+[00:09:29] This was called ARPA or Advanced Research Projects
+[00:09:32] Agency some of the time, and DARPA or Defense Advanced
+[00:09:36] Research Projects Agency some of the time.
+[00:09:37] Congress flipped its name from time
+[00:09:39] to time for congressional reasons,
+[00:09:41] nothing to do with logic.
+[00:09:43] But he created this IPTO will come along
+[00:09:47] because that's the organization that built the ARPANET.
+[00:09:51] Bob Taylor took over IPTO in 1965 and got the money,
+[00:09:59] he got a million bucks to build what we came the ARPANET.
+[00:10:04] Now, it didn't cost a million bucks,
+[00:10:06] it costs a few million bucks to build the original ARPANET.
+[00:10:09] But still, he got the initial money to do it.
+[00:10:12] He was a pretty important person in this
+[00:10:17] because he believed in the concept,
+[00:10:18] he believed in what Licklider been talking about
+[00:10:22] and he believed that networks and computers
+[00:10:25] were an important thing.
+[00:10:27] Meanwhile, over in England, Donald Davies
+[00:10:29] was working on the same general concepts that Baran had.
+[00:10:34] He developed them independently, but in his paper
+[00:10:38] that he wrote later on, he says Baran invented the whole thing.
+[00:10:44] He needed more details than Davies had.
+[00:10:48] Davies came up with the word "packet"
+[00:10:50] instead of Standardized Message Block, which
+[00:10:52] doesn't roll off the tongue anywhere near as well.
+[00:10:54] So packet is a nice thing.
+[00:10:57] He was introduced to Baran's work,
+[00:10:59] and then he said, OK that's it.
+[00:11:01] And he learn from Baran but also taught Baran.
+[00:11:05] The next person is pictures Larry Roberts.
+[00:11:09] He was appointed by Taylor to actually build the ARPANET.
+[00:11:15] A key thing that he was going to go with the idea
+[00:11:18] here the ARPANET was to be sharing large computing
+[00:11:22] resources.
+[00:11:24] The Defense Department and other government agencies
+[00:11:26] were buying big computers for people.
+[00:11:28] Big computers for researchers, not for people,
+[00:11:30] for research organizations.
+[00:11:32] And computers on organizations were
+[00:11:34] very big and very expensive and there weren't many of them.
+[00:11:38] So you want to share them, the ARPA wanted to share them.
+[00:11:42] Licklider and companies said this is the right way
+[00:11:44] to share these resources.
+[00:11:46] But the people who own those resources
+[00:11:49] weren't all that interested in sharing them,
+[00:11:51] but they were persuaded by the fact
+[00:11:52] that the guys who were providing the money
+[00:11:54] said you will see who will share.
+[00:11:56] But they really didn't want their computers
+[00:11:59] to be doing the processing of sending data around.
+[00:12:03] They were OK if somebody wanted to remotely log in and use it.
+[00:12:07] But they didn't like the idea that their computer
+[00:12:10] was going to be processing all those packets that
+[00:12:12] went through.
+[00:12:13] And Wes Clark came up with the idea
+[00:12:15] of building separate little boxes which
+[00:12:17] would do the processing.
+[00:12:18] And that's rescue the basic concept
+[00:12:20] because Roberts wasn't going to get through with the idea
+[00:12:25] that they were going to have sharing resources where
+[00:12:27] 20% of the machine would be taking up
+[00:12:29] and moving packets around.
+[00:12:30] So Clark's idea of having a separate box which
+[00:12:33] is now called a router was a key thing.
+[00:12:40] Roberts had come up with the idea
+[00:12:42] of building such a network, but he didn't know how to do it.
+[00:12:46] He didn't know what technique, what things and what technology
+[00:12:48] to use it, and what technology.
+[00:12:51] He knew and he didn't want circuits
+[00:12:53] because circuits were going to be dedicated between links,
+[00:12:55] and that was he didn't have dedicated--
+[00:12:58] He want to share those links amongst multiple researchers
+[00:13:01] so he didn't know what circuit.
+[00:13:02] He didn't really know what to do.
+[00:13:06] He went to a meeting, an ACM meeting in Gatlinburg,
+[00:13:12] Tennessee on 1967.
+[00:13:16] He presented a paper about the justification
+[00:13:19] and the general concept of this ARPANET, this resource sharing
+[00:13:23] network.
+[00:13:25] Another person at that same meeting
+[00:13:27] was a fellow from Donald Davies group
+[00:13:30] who presented about packet networks.
+[00:13:33] Roberts told me personally that he had never
+[00:13:37] heard of packet networks before this meeting.
+[00:13:40] They had never heard of Baran's work
+[00:13:41] and he had never heard of packet networks.
+[00:13:44] Scantlebury told Roberts in the meeting about Baran's work.
+[00:13:50] Roberts had volumes of Baran's work
+[00:13:54] on his shelf in his office, and he went back and read them.
+[00:13:57] And he said that was a revelation
+[00:13:59] and they basically took all of Baran's ideas, modified
+[00:14:04] by Davies and updated by Davies, and that's
+[00:14:08] what he decided to use his packet
+[00:14:10] networks for the ARPANET.
+[00:14:12] And he took over the IPTO in 1969.
+[00:14:16] So there's the ARPANET starting up.
+[00:14:20] In 1968, an RFQ went out and 140 companies
+[00:14:26] were asked to bid on building these little message
+[00:14:30] processors - what turned out routers,
+[00:14:33] and only 12 companies actually bid.
+[00:14:36] IBM did not bid, later on, they justified it
+[00:14:40] by saying they didn't think it could be done cost effectively.
+[00:14:44] AT&T didn't bid but they said they didn't
+[00:14:47] bid because it wouldn't work.
+[00:14:49] Packet networking was never going to be useful for anything
+[00:14:52] just like they had told Baran.
+[00:14:54] Bolt Beranek and Newsman here in Fresh Pond won the contract.
+[00:14:58] And within a year, less than a year,
+[00:15:01] they delivered the first router, the first IMP
+[00:15:03] or Interface Message Processor, even
+[00:15:07] though Ted Kennedy called it the Interfaith Message Processor.
+[00:15:11] It's an entirely different concept.
+[00:15:15] So the first node was delivered to UCLA in 1969,
+[00:15:20] and a month and a half later, the first message
+[00:15:25] was sent between two different IMPs and two
+[00:15:28] different locations.
+[00:15:29] Initial networks were four nodes.
+[00:15:32] Kleinrock and others were there, and it's quickly
+[00:15:36] expanded by the next year it was on the East Coast.
+[00:15:42] John Clansman reminds me that MIT got on before Harvard
+[00:15:46] so here it is, there you are John.
+[00:15:49] And then BNN got in there some place.
+[00:15:53] By 1973, it was international.
+[00:15:56] By 1980, it was a couple of hosts and 20,000 users,
+[00:16:00] but those were users were people in the US.
+[00:16:04] There were only people with the US government funding,
+[00:16:06] or who are staff on computers that
+[00:16:09] were funded by the US government - it wasn't open to all people.
+[00:16:14] I got my first account in 1971 by conning my way
+[00:16:18] into being staff on the PPP 10 that
+[00:16:22] was the ARPANET interface and a computer labs.
+[00:16:26] But otherwise, I wouldn't have been
+[00:16:27] able to get on because I wasn't government funded.
+[00:16:30] I was up time to time, but not at that particular time.
+[00:16:35] Everything changed in 1983 when CSNET made a deal
+[00:16:39] with the ARPANET that any organization getting
+[00:16:43] their CSNET Computer Science Network
+[00:16:45] connectivity via the ARPANET could open up
+[00:16:49] that pipe for every faculty, staff, and student.
+[00:16:54] For email, not for file transfer - for email.
+[00:16:58] So starting in 1983, we started creating
+[00:17:02] teaching generations of students about this networking stuff.
+[00:17:06] Before, it was only the Computer Scientists,
+[00:17:08] but now it's generations of students.
+[00:17:11] So when I graduated, I went out of business.
+[00:17:15] We need this, join up.
+[00:17:18] So that was a huge forcing factor
+[00:17:20] of getting the internet dispersed.
+[00:17:24] So basic question: Baran's work was for anti-war
+[00:17:33] for protecting against the bomb.
+[00:17:36] Robert's Work was for sharing large resources.
+[00:17:40] I've talked to a number of the people
+[00:17:41] that where the worker bees at the time.
+[00:17:44] And they all say from their point of view
+[00:17:46] it was sharing resources, that had nothing to do with a bomb,
+[00:17:48] it had nothing to do with resilient infrastructure
+[00:17:51] for the bomb.
+[00:17:52] Yes, the resilient infrastructure was there.
+[00:17:54] It's like what Bruce Davies said that he was building
+[00:17:58] his network over the French Telecommunications System
+[00:18:00] so he knew it was unreliable.
+[00:18:03] It was a feature and so he had to build
+[00:18:05] a network that would not depend on reliability underneath.
+[00:18:10] The packets could be lost, they could be duplicated,
+[00:18:13] they could be reordered and that was OK.
+[00:18:16] Because the network was controlled from the edges.
+[00:18:20] The source and destination machines
+[00:18:22] took care of making it reliable, took care of reordering things,
+[00:18:25] took care of asking for retransmission
+[00:18:27] if things were lost.
+[00:18:29] So the worker bees at the time said,
+[00:18:32] we're rolling a resilient resource sharing network.
+[00:18:37] Steve Crocker said that this was what
+[00:18:39] he believed he was one of the people in there.
+[00:18:42] But he later on a few years ago talked
+[00:18:45] to one of the higher ups in the Pentagon at the time.
+[00:18:48] And the guy said, "You don't know
+[00:18:50] what I was telling my boss.
+[00:18:54] The money was coming from the Pentagon,
+[00:18:57] the money was coming from the Defense Department."
+[00:19:00] So it's very conceivable that the top levels of the Pentagon
+[00:19:04] were telling Congress, and they were telling
+[00:19:05] each other this is for anti-nuclear,
+[00:19:08] this is for surviving nuclear war,
+[00:19:12] even though the people who are doing the work
+[00:19:13] didn't think that.
+[00:19:15] So the answer is ambiguous, and it's not
+[00:19:19] something I can answer.
+[00:19:20] This is all you present you with the information.
+[00:19:22] SPEAKER 3: [INAUDIBLE]
+[00:19:35] SPEAKER 2: A lot of people were adamant.
+[00:19:39] You should use the microphone.
+[00:19:41] That's the John Clinton I mentioned a minute ago.
+[00:19:50] SPEAKER 3: The reason why the DOD changed ARPA to DARPA
+[00:19:56] and back several times was because Senator Mansfield, who
+[00:20:00] would have been one of the first people in Congress
+[00:20:02] to be told this story, thought that there was too much that
+[00:20:05] was being done, which was not directly defense-related i.e.
+[00:20:09] Building bombs.
+[00:20:11] And he tried to force the ARPANET project out
+[00:20:14] as part of one of those transitions
+[00:20:16] because it wasn't obviously defense-related enough.
+[00:20:20] And that was both the source name change
+[00:20:22] and the rest of this.
+[00:20:24] So I don't know who is telling who what,
+[00:20:26] but certainly nobody told Mansfield in a persuasive way
+[00:20:30] that this was about bombs.
+[00:20:32] SPEAKER 2: It was not about bombs.
+[00:20:33] SPEAKER 3: It was not about bombs?
+[00:20:35] Well, he told Mansfield that it was about bombs in order
+[00:20:37] to convince him that it was OK.
+[00:20:39] SPEAKER 2: And that's basically what's Crocker told me.
+[00:20:41] It was that going up to Congress - it was about bombs.
+[00:20:46] But anyway, we'll move on.
+[00:20:49] So now Bob Kahn shows up in this picture.
+[00:20:53] He got his PhD at Princeton but then went off to work for BBN
+[00:20:57] and worked on the IMP.
+[00:21:00] He moved to ARPA IPTO, and then made
+[00:21:04] a big demonstration in 1972 of what
+[00:21:07] was then the ARPANET sharing resources in Washington.
+[00:21:12] One of the people that were demonstrating there, I think
+[00:21:14] was Bob Metcalf.
+[00:21:15] He said that he was demonstrating
+[00:21:18] all day of how do resource sharing
+[00:21:20] and it was working perfectly.
+[00:21:22] And a bunch of people from AT&T came in late in the afternoon
+[00:21:25] all dressed up in their pretty little suits,
+[00:21:27] and stood at the back of the room
+[00:21:29] and while he was demonstrating in a crash for the first time.
+[00:21:32] And he turned around just in time
+[00:21:34] to see them all grinning and laughing.
+[00:21:36] And he said it was that moment that I realized
+[00:21:39] they were the enemy, but they didn't really
+[00:21:42] believe in this stuff.
+[00:21:45] Cohen is there, we'll come back to Kahn.
+[00:21:47] Danny Cohen was a Harvard student and then
+[00:21:50] an MIT student.
+[00:21:51] He was doing flight simulators work between Harvard and MIT,
+[00:21:55] and using the ARPANET link for that.
+[00:21:59] He was mostly working on later on speech,
+[00:22:02] and he did do speech work over the ARPANET.
+[00:22:05] But he realized that the original ARPANET
+[00:22:07] protocol, NCP Network Control Program,
+[00:22:11] was a reliable protocol.
+[00:22:13] And a reliable protocol is reliable
+[00:22:16] because it knows when something's
+[00:22:17] missing by timing out, and saying,
+[00:22:21] Oh, I need that packet again.
+[00:22:23] Well, if you're in the middle of speech
+[00:22:25] and you get a two second drop out of the middle,
+[00:22:27] it doesn't work very well.
+[00:22:28] So he said we need an unreliable.
+[00:22:30] We need something which is not part
+[00:22:32] of the reliability picture.
+[00:22:33] And he was given permission to use
+[00:22:35] an unreliable pathway through NCP in order to get his speech
+[00:22:39] work done.
+[00:22:41] Over in France, Louis Pouzin was working on his version
+[00:22:45] of a packet network.
+[00:22:48] Pure Datagram Network over France telecom lines
+[00:22:54] couldn't possibly be reliable all of the stuff ent-to-end.
+[00:23:01] Bob Kahn asked Vint Cerf to figure out
+[00:23:04] a way to be able to make a scalable network.
+[00:23:08] The ARPANET as it began was to connect computers together.
+[00:23:12] Connect a computer at Harvard to a computer at Berkeley
+[00:23:15] to a computer at MIT.
+[00:23:17] It was not to connect networks together.
+[00:23:20] Kahn realize that scaling wires you needed
+[00:23:22] to connect networks together.
+[00:23:24] And he worked with Vint Cerf to come up with a set of protocols
+[00:23:29] to connect interconnect networks and the computers
+[00:23:32] on those networks.
+[00:23:33] And that's the internet protocol.
+[00:23:36] The Internet Protocol, Laird protocol,
+[00:23:40] the first version of this was a reliable protocol called ITCP.
+[00:23:45] It was meant to be reliable because of course you
+[00:23:48] want a reliable transfer data.
+[00:23:50] Danny Cohen and Jon Postel and David Reid
+[00:23:57] cornered Vint Cerf in a hallway in Southern California
+[00:24:00] and said, we can't do this.
+[00:24:02] We need a way to do something that's
+[00:24:03] unreliable for voice and for management.
+[00:24:07] If your network is all screwed up,
+[00:24:09] you don't want to have force reliability on your management
+[00:24:12] protocol which is talking to your routers
+[00:24:14] because the message will never get through.
+[00:24:16] So you want an unreliable method.
+[00:24:18] So they added what is called UDP or User Datagram
+[00:24:23] Protocol, otherwise known to unreliable,
+[00:24:26] that enables the voice over IP that we use today.
+[00:24:30] The general idea that the networks are just
+[00:24:32] going to deliver the stuff and is not
+[00:24:35] going to be involved in the value decisions
+[00:24:37] was articulated in the end-to-end arguments
+[00:24:39] in system design from Soltzer, Ried and Clark from MIT.
+[00:24:44] Basically, you don't put stuff in the network
+[00:24:47] which is redundant with what the end-to-end systems could do.
+[00:24:51] The end-to-end systems knows what service they want out
+[00:24:53] of the network, the network cannot know that.
+[00:24:56] There's no way for the network to figure out
+[00:24:58] what service they need, what level of reliability,
+[00:25:02] what latency - all of that kind of stuff
+[00:25:03] they can't figure that out.
+[00:25:05] But the telephone companies and the carriers
+[00:25:08] thought it was a really good idea
+[00:25:10] to have the network understand what's going on.
+[00:25:14] That conflict between a stupid network that just delivers
+[00:25:19] the bits, and an intelligent network which the telephone
+[00:25:22] number and telephone company called
+[00:25:24] their network of the intelligent network
+[00:25:26] because all of the smarts were the telephone switches.
+[00:25:29] STAR69 was a telephone switch thing
+[00:25:32] that took 10 years to deploy.
+[00:25:34] So it's an article called Netheads versus Bellheads
+[00:25:37] in wired magazine.
+[00:25:38] If you've not read that, read it.
+[00:25:39] It's a very good explanation of that conflict.
+[00:25:43] David Eisenberg wrote the rise of the "Stupid Network"
+[00:25:45] while he was an AT&T employee.
+[00:25:47] He wasn't one for long because this message was basically
+[00:25:53] AT&T, the network should be ignorant,
+[00:25:56] the network should simply deliver the bits.
+[00:25:58] So just get out of the way, deliver the bits.
+[00:26:02] And of course, AT&T didn't think that was a good idea
+[00:26:04] and to this day, they won't let David
+[00:26:06] post a copy of his paper on his website,
+[00:26:09] because he was an AT&T employee when he did that.
+[00:26:12] There was a website there pointers to other people
+[00:26:14] are posting it.
+[00:26:19] The internet, as it evolved from the ARPANET on,
+[00:26:23] really didn't need control.
+[00:26:25] It didn't need centralization, it needed coordination.
+[00:26:30] Everybody had to agree that this field in this packet when
+[00:26:33] it said 25 meant email.
+[00:26:36] They didn't care what the number was as long as everybody
+[00:26:38] agreed the same number.
+[00:26:40] So somebody wrote that down as though it was 25 means email,
+[00:26:43] that was Jon Postel.
+[00:26:45] Also have to say who has what IP addresses,
+[00:26:48] and Jon wrote that one Harvard dated his first batch of IP
+[00:26:51] addresses.
+[00:26:52] I sent Jon Postel a message saying we need IP addresses.
+[00:26:55] And he sent me back a message saying,
+[00:26:57] here they are - 128.103.0.0 glaspie.
+[00:27:01] That's Harvard's - Harvard's got more since then.
+[00:27:06] And then there's got to be some pointers to when you resolve
+[00:27:09] DNS names Harvard IDDU to you or www.HarvardIDDU
+[00:27:14] There's got to be somebody up there pointing
+[00:27:15] at the top level who were the computers that
+[00:27:18] resolves the names for DaDDU.
+[00:27:22] There's a coordination, not governance
+[00:27:23] - they're not control.
+[00:27:26] All of that stuff was done by Jon evolved it
+[00:27:29] into the Tyyana internet association for names
+[00:27:32] and numbers, that turned into authority for names
+[00:27:36] that turned into I can a little later on.
+[00:27:40] So what are the powers that be think this internet thing was?
+[00:27:43] They always was irrelevant.
+[00:27:45] It's a toy.
+[00:27:46] This is best effort, packet based, no guarantees,
+[00:27:50] no reliability, no security, nothing - it's a toy.
+[00:27:56] IBM, AT&T, and in particular important, the regulators,
+[00:28:01] this is a toy - a research toy or a Research Network
+[00:28:04] and a research toy.
+[00:28:05] So it's not important enough to regulate.
+[00:28:09] That was key because if it was regulated,
+[00:28:11] it would have to get permission to do things.
+[00:28:14] The bumblebee is on there because IBM...
+[00:28:17] I was persuaded and a lot of IBM user groups at one point.
+[00:28:21] And IBM said, "You cannot build a corporate network out
+[00:28:26] of TCP/IP," from a fellow named Gray at IBM.
+[00:28:32] I was the co-chair of the TCP project
+[00:28:35] within this IBM user group.
+[00:28:38] We choose a bumblebee for our badge symbol.
+[00:28:41] You put badge symbols like if you
+[00:28:43] were in communications, an octopus
+[00:28:45] because it goes everywhere.
+[00:28:46] If you were numerically intensive computing,
+[00:28:48] it's a circle with a 42 in it.
+[00:28:50] If you didn't know what that meant, you didn't get one.
+[00:28:53] We chose a bumblebee because IBM said TCP/IP wouldn't fly.
+[00:28:57] Aerodynamic theoreticians had said
+[00:28:59] that bumblebees couldn't fly, bumblebees didn't give a crap,
+[00:29:02] they kept flying.
+[00:29:03] We didn't give a crap, we kept going.
+[00:29:06] IP kept going.
+[00:29:09] So with connectivity evolution, let's
+[00:29:12] with the ARPANET, CSNet and NSFNET, the Regional Networks,
+[00:29:17] NEARnet, which was mentioned in the introduction,
+[00:29:20] BARRNET people like that, and then migrated
+[00:29:22] to commercial ISPs.
+[00:29:24] The feds are completely out of the business of providing
+[00:29:26] network connectivity for the public in the mid 1990s,
+[00:29:32] and then we got carriers.
+[00:29:33] It's moved from something which was feds to regional networks
+[00:29:37] to commercial carriers.
+[00:29:40] Commercial internet service providers whose business
+[00:29:42] was providing internet service to carriers,
+[00:29:45] whose business was content and is now
+[00:29:48] doing internet provision.
+[00:29:50] That comes back to haunt us in a bit.
+[00:29:52] Then the web expanded, the web exploded and made it
+[00:29:55] so that anybody could do anything.
+[00:29:58] I was asked a few years back looking forward from the 1980s
+[00:30:02] to the internet of the day, what was my biggest surprise?
+[00:30:06] When I thought that the internet was
+[00:30:08] going to be a very important thing in the mid 90s,
+[00:30:10] it was going to be an important thing for everybody.
+[00:30:14] It was going to telecommunications
+[00:30:16] infrastructure.
+[00:30:17] My answer was mom surfing.
+[00:30:19] It never occurred to me my mother
+[00:30:21] would use this because it took magic incantations to do it.
+[00:30:26] The web changed all of that, the web
+[00:30:28] made it so that anybody could use it and use exploded.
+[00:30:32] So what made the internet important?
+[00:30:34] What was the key things?
+[00:30:36] Well, it was the end-to-end model and neutral networks.
+[00:30:40] Network neutrality where the packet and the network
+[00:30:44] just delivers the bits doesn't get involved
+[00:30:47] in deciding what bits should be delivered
+[00:30:49] and which way, doesn't get decided on,
+[00:30:51] doesn't decide whose bits should be prioritized,
+[00:30:55] or whose bits should be let through
+[00:30:56] - the networks are neutral.
+[00:30:59] That allowed permission-less innovation.
+[00:31:02] Any company like Tim Berners Lee could invent something
+[00:31:05] like the web or somebody could invent Skype,
+[00:31:08] and you didn't need permission from the carriers to do it,
+[00:31:11] you just did it.
+[00:31:12] You didn't need permission from the regulators to do it,
+[00:31:14] you just did it.
+[00:31:16] Of course, capacity increase with Moore's law and the fiber
+[00:31:19] bandwidth was a big deal.
+[00:31:22] We didn't change the net for any particular application,
+[00:31:25] the net was not designed to support some particular thing.
+[00:31:31] When we first started getting the big push from the telephone
+[00:31:34] companies, they wanted to change the protocol
+[00:31:36] to make it better for voice.
+[00:31:38] When we said no, the internet is good enough for stuff.
+[00:31:43] The stuff it's good enough for use it for.
+[00:31:45] If it's not good enough for it, don't use it.
+[00:31:47] It's a pretty simple equation.
+[00:31:48] Now, it's gotten better for everything
+[00:31:50] because the speed increases.
+[00:31:52] And no regulations are meant we had permission this deployment.
+[00:31:56] So we can innovate and we could deploy.
+[00:31:58] And then very importantly, the Communications Decency Act
+[00:32:02] was killed and overturned by the Supreme
+[00:32:05] Court as unconstitutional.
+[00:32:06] That was an act which required you personally
+[00:32:10] to ensure that if you sent something on the internet
+[00:32:13] that somebody anywhere in the world under 18 shouldn't see,
+[00:32:16] they didn't see it.
+[00:32:18] Technically, that's a tough bit of a tough row.
+[00:32:21] The fact that it was technically impossible,
+[00:32:23] it was irrelevant to the court case.
+[00:32:26] The Supreme Court decided on it not
+[00:32:28] because it was technically impossible,
+[00:32:30] but because it wasn't the best way to achieve those results.
+[00:32:33] They thought the best way was to put filters
+[00:32:36] on the individual kids computers rather than trying
+[00:32:40] to block the entire world.
+[00:32:41] Because, of course, most of the world
+[00:32:43] doesn't pay attention to the US.
+[00:32:45] So under the first amendment, this
+[00:32:46] was just too much of a burden on speakers
+[00:32:49] to be able to be supported.
+[00:32:52] Section 230, on the other hand, of the Communications Decency
+[00:32:55] Act, is the section that permits Harvard to be an ISP,
+[00:33:00] and not be killed if some Harvard student download music.
+[00:33:06] We can be a neutral thing, we're not
+[00:33:09] responsible for the actions of our users
+[00:33:11] as long as we do due diligence when we're
+[00:33:13] informed of those actions.
+[00:33:16] And of course, the key thing that
+[00:33:18] made the internet successful is that everything
+[00:33:20] is bits - everything is bits.
+[00:33:25] Ada Lovelace figured out that in 1843
+[00:33:28] that computers and analytical machines
+[00:33:34] weren't limited to dealing with numbers,
+[00:33:36] they could deal with anything that those numbers could
+[00:33:39] represent such as music, and she talked
+[00:33:41] about using it for music.
+[00:33:44] So what's the future of the internet and technology?
+[00:33:48] All of these things - ATM, MPLS, Per-flow queuing,
+[00:33:52] and things like that, are things that different people have
+[00:33:55] proposed and different organizations proposed has
+[00:33:57] to replace the internet this year.
+[00:34:00] Almost as a circuit based.
+[00:34:02] So get rid of the unpredictability,
+[00:34:05] put in circuits.
+[00:34:06] That's ATMs, MPLS, Per-flow queuing, et cetera.
+[00:34:09] By the way, how many people have seen the movie Touch of Evil?
+[00:34:13] So reasonable number.
+[00:34:15] It's a great film to watch.
+[00:34:17] A film from Orson Welles.
+[00:34:18] This is a scene in there where Orson as a Sheriff
+[00:34:23] comes into Marlene Dietrich as a brothel runner Madam,
+[00:34:30] and says, tell me my future.
+[00:34:32] Come on, read my future.
+[00:34:34] You haven't got any.
+[00:34:35] What do you mean?
+[00:34:37] Your future is all used up.
+[00:34:39] Every one of those things - ATM, MPLS, Pre-flow queuing,
+[00:34:43] et cetera, is some company, some organization,
+[00:34:47] some standards body, some government has said,
+[00:34:49] the internet's future is used up, we've got to do it right.
+[00:34:53] The Internet has kept going.
+[00:34:55] The 3G, 4G, 5G thing here...
+[00:34:58] First time I heard this was in Taiwan
+[00:35:00] by one of the telephone people say 3G is around the corner.
+[00:35:03] And when 3G shows up, you won't need any local area networks,
+[00:35:07] you won't need any corporate networks
+[00:35:09] - it'll all be provided by the telephone company.
+[00:35:13] Same thing they said for 4G and they're saying that now for 5G.
+[00:35:16] Well, I didn't believe it then, I don't believe it now.
+[00:35:19] And other things.
+[00:35:21] But this internet thing has been impactful.
+[00:35:26] It's destroyed businesses, it's destroyed societies,
+[00:35:31] it was a key facilitator of the Arab Spring, it's a big hit.
+[00:35:37] This paragraph at the bottom here
+[00:35:39] is from the first International Telecommunications Convention
+[00:35:44] treaty of 1865, and it's the telegraph convention.
+[00:35:51] There was required that telegraph operators watch
+[00:35:55] their traffic and watch the telegrams
+[00:35:57] and block any that would be endanger
+[00:36:00] the security of the state, violate
+[00:36:02] the laws of the country public order or morals,
+[00:36:06] and to report it.
+[00:36:08] So the very first regulation we have
+[00:36:10] on International Telecommunications
+[00:36:12] was a spy one.
+[00:36:14] Spy on your users and report those that
+[00:36:16] are doing something immoral.
+[00:36:18] That's something we do not have in the internet.
+[00:36:21] We have been regulation free the CDA tried to do that
+[00:36:25] and was killed in the US.
+[00:36:27] That doesn't mean that it doesn't happen
+[00:36:28] in other countries, it does.
+[00:36:31] So what's the future?
+[00:36:33] On the control side, Carrie is, of course,
+[00:36:36] I've been trying to control it ever since I figured out
+[00:36:38] that there was something there to control
+[00:36:40] and that it wasn't entirely bumblebees and uselessness,
+[00:36:43] it was something that's really there
+[00:36:44] that could actually add value.
+[00:36:46] Some of the big carriers like Comcast
+[00:36:48] are now getting more money from internet service
+[00:36:51] than they are getting from video.
+[00:36:54] Governments, of course, the same and people
+[00:36:57] petitioning the ITU to take over governance of the internet
+[00:37:00] so they can control it and they can
+[00:37:02] avoid the loss of telephone revenue,
+[00:37:05] for example, things like that.
+[00:37:06] Certainly, the current FCC is blowing away the title
+[00:37:10] to network neutrality rules are enabling carrier control.
+[00:37:15] They are making it completely legal
+[00:37:17] for the telephone carrier ISP to control anything.
+[00:37:21] Like what you can talk to, who you can talk to,
+[00:37:24] what you can use to do the talking.
+[00:37:27] Newt Gingrich was once quoted as saying, "A role of government
+[00:37:31] is to guide technology".
+[00:37:34] Not something I'd necessarily want the Congress to do.
+[00:37:38] A guided or controlled internet wouldn't
+[00:37:40] have been what the internet has been to date.
+[00:37:46] And 22 years ago or so, I testify in the Communications
+[00:37:51] Decency Act hearing.
+[00:37:52] I was the witness for the American Library Association.
+[00:37:55] And I said that the power of the internet
+[00:37:58] was chaotic, the power of the internet
+[00:38:00] was the forum to innovate, which was chaotic.
+[00:38:04] You could not predict what would succeed and what would fail,
+[00:38:08] it was chaotic.
+[00:38:09] But that was the fundamental power of the net
+[00:38:12] was represented by that chaos.
+[00:38:14] And the question on the table today
+[00:38:17] is well that forum continue.
+[00:38:23] That's it.
+[00:38:23] [APPLAUSE]
+[00:38:30] SPEAKER 2: So for questions, please use the microphone
+[00:38:32] because the people out there in audio land need to hear.
+[00:38:35] John.
+[00:38:38] SPEAKER 3: I'm going to skip quibbling about history
+[00:38:41] and ask a more interesting question.
+[00:38:44] You in my mind correctly denounced the efforts
+[00:38:48] to fix the internet to make it better
+[00:38:50] for particular applications.
+[00:38:52] And similarly denounced some of the related issues
+[00:38:58] about pulling things together and switching
+[00:39:01] toward more circuits like things again
+[00:39:04] to facilitate particular applications.
+[00:39:06] How do you feel about changing the internet
+[00:39:07] to make it better for the web?
+[00:39:10] Or to put it differently, would you like to comment on quick?
+[00:39:15] SPEAKER 2: I think that anything which
+[00:39:16] makes it better for one application
+[00:39:18] makes it worse for others, and there's no perfect unity.
+[00:39:26] And it's the general purpose of computers
+[00:39:28] because they are powerful, not because they're good at math.
+[00:39:35] Any other questions?
+[00:39:39] Back in the back.
+[00:39:43] No, no.
+[00:39:43] You got to use the microphone because people out there
+[00:39:46] and streaming land on air.
+[00:39:47] SPEAKER 4: Oh, my bad.
+[00:39:50] Can you talk more about Title 2 and what
+[00:39:52] that is actually affected?
+[00:39:55] SPEAKER 2: Title to is the--
+[00:39:57] well, the history there is that the Federal Communications
+[00:40:01] Commission under Powell came up with four principles
+[00:40:05] of a proper internet.
+[00:40:09] They were that you could use any legal device you wanted to,
+[00:40:13] you could access any legal content
+[00:40:16] and you could access any legal application,
+[00:40:21] and you had transparency of what was going on.
+[00:40:24] The FCC put out those four principles try to enforce them.
+[00:40:28] They got sued and I got kicked out
+[00:40:30] because they had done no proper procedures to adopt
+[00:40:33] those policies.
+[00:40:36] They then went through a procedure
+[00:40:37] to try and adopt something very similar.
+[00:40:40] They got sued again and it got thrown out
+[00:40:42] because they didn't undergo the right process.
+[00:40:44] They didn't have the statutory authority to do it.
+[00:40:47] They tried again and got kicked out again.
+[00:40:48] And that last time the court said,
+[00:40:51] "The only thing you can do in order
+[00:40:53] to be able to do this kind of regulation
+[00:40:55] is to declare that the internet service is a common carrier".
+[00:41:01] So it's under Title II of the Communications Act.
+[00:41:05] The FCC did that.
+[00:41:08] They got sued and it was upheld, the FCC
+[00:41:10] was upheld in court that they were legitimate for them
+[00:41:15] to decide that internet service providers were common carriers
+[00:41:19] and therefore had to abide by the rules of common carriage.
+[00:41:21] The particular thing the FCC did was, say,
+[00:41:24] they're subject to Title II, but we will only actually enforce
+[00:41:29] will for bear on other rules that are relative to those four
+[00:41:34] principles.
+[00:41:35] So the 200 other rules out there for who
+[00:41:38] we can give free tickets to the movies too,
+[00:41:40] literally that's the kind of thing that's
+[00:41:42] in the telephone regs, they don't apply
+[00:41:44] and the FCC don't apply.
+[00:41:46] A lot of people really didn't like the fact of Title II
+[00:41:50] because it gives the FCC so much power.
+[00:41:53] You have to get how much you're going to pay for things,
+[00:41:57] the Paris have to be pre-approved,
+[00:42:00] the application had to be pre-approved,
+[00:42:01] all of that kind of stuff is potential.
+[00:42:04] But the way the FCC approved this particular rule is they're
+[00:42:09] going to forbearing all of that.
+[00:42:11] People don't like it because it's got the potential there.
+[00:42:14] Somebody could sue the FCC later on
+[00:42:16] and say these people are being unfair.
+[00:42:18] Under Title II, you can do this.
+[00:42:20] Go do this and the courts could in theory
+[00:42:22] tell them to do something like control prices.
+[00:42:26] But the courts have said the only way
+[00:42:28] they could do it is Title II.
+[00:42:30] So the new FCC overturn that threw out that title to stuff.
+[00:42:37] But in their new regulations, say
+[00:42:40] the ISPs can do anything they want except they have
+[00:42:43] to be transparent about it.
+[00:42:46] The rubric under which they said they have to be transparent
+[00:42:49] is exactly the same rubric that the courts threw out
+[00:42:53] when the FCC was trying to do the four principles.
+[00:42:57] So that's in court today and was argued last Friday.
+[00:43:04] They could be overturned on a number of different reasons,
+[00:43:09] it could overturn the overturning of Title II
+[00:43:13] because that process the FCC used was bad.
+[00:43:16] They literally ignored 20 million comments,
+[00:43:20] they completely ignored them, now, it
+[00:43:22] happens that a significant chunk of those comments
+[00:43:24] were done by bots.
+[00:43:25] Research later on showed that all of the bots
+[00:43:28] hated network neutrality and wanted Title II overturned,
+[00:43:31] and all of the humans wanted it and retained.
+[00:43:35] It gives you some information about bots.
+[00:43:38] So it could be overturned on that basis,
+[00:43:40] it also can be overturned on the basis
+[00:43:41] that they're imposing this transparency requirement
+[00:43:44] that they don't have the authority to impose.
+[00:43:48] It's potentially very big blunderbuss,
+[00:43:51] but it's the only one the courts would let the FCC use.
+[00:43:56] You need to wait for the microphone.
+[00:43:58] Stop, that's one back in the back.
+[00:44:00] This one in the back first.
+[00:44:03] SPEAKER 5: A packet design of TCP/IP
+[00:44:08] is necessarily somewhat arbitrary.
+[00:44:10] I mean you could design another packet that
+[00:44:12] would still work, and used to have that
+[00:44:14] in between it and joblessness.
+[00:44:17] So is that packet design somehow superior,
+[00:44:20] or is it entirely arbitrary?
+[00:44:21] And if we can design a better one somehow, not whether,
+[00:44:29] but when will it be installed to completely rewrite
+[00:44:31] the internet?
+[00:44:32] SPEAKER 2: Well, first of all, the TCP/IP
+[00:44:36] is as much a regulatory accident as anything.
+[00:44:39] The Defense Department agreed to switch the ARPANET to TCP/IP
+[00:44:43] and joint January 1, 1983.
+[00:44:46] The NSFNET when it started up, the Dennis Jennings said,
+[00:44:51] only IP is enabled, it can be run over the NSFnet.
+[00:44:55] You couldn't run DECnet, Harvard had a DECnet computer.
+[00:44:58] Talking to a DECnet computer at Princeton over the NSF
+[00:45:02] sponsored regional network link.
+[00:45:05] And the physicists at Harvard said
+[00:45:08] we would like to use DECnet, is that OK?
+[00:45:11] And NSF said no, you have to use TCP/IP, so enforce that.
+[00:45:15] Second thing is that ARPA paid Berkeley
+[00:45:21] to take the BNN and TCP/IP code and put it into Unix.
+[00:45:26] And then startups could buy a whole tape
+[00:45:30] with all of Unix including full TCP/IP stack for 50 grand
+[00:45:34] or so - much cheaper than it would
+[00:45:36] be for them to build their own.
+[00:45:38] So the Department of Defense basically
+[00:45:41] pushed out IP to everybody much cheaper than building your own,
+[00:45:46] so that meant that all the little startups there.
+[00:45:48] The big guys started moving OSI like DECnet,
+[00:45:52] but tried to move to OSI.
+[00:45:54] It was so much more complicated and so much more fragile
+[00:45:59] that it just didn't work.
+[00:46:02] And finally, the US Defense Department,
+[00:46:05] which had a US government, which had said,
+[00:46:08] "If you're going to sell networking stuff to the US
+[00:46:10] government, you have to support OSI".
+[00:46:14] Backed off and said, you can buy whatever
+[00:46:16] would do your job, including specifically TCP/IP.
+[00:46:21] So it was somewhat of a regulatory accident
+[00:46:24] that it's IP.
+[00:46:25] DEC was out there with DECnet, IBM was out there with SNA,
+[00:46:28] Xerox was out there with XNS, Novell is out there with IPX.
+[00:46:34] They all had their strengths and weaknesses.
+[00:46:38] IP is there because it became the common language.
+[00:46:42] SPEAKER 5: Do you think it ever be
+[00:46:43] replaced by something or something packet-wise superior?
+[00:46:51] SPEAKER 2: The ARPANET switched from NCP
+[00:46:54] to TCP/IP officially on January 1, 1983.
+[00:46:58] It took six months and there were a couple of hundred
+[00:47:01] of computers.
+[00:47:03] If you project that out and if you
+[00:47:05] want to switch the internet of today which
+[00:47:07] has a few billion computers to a new protocol,
+[00:47:10] it would take a few 100,000 times the projected lifetime
+[00:47:15] of the universe to do.
+[00:47:17] So don't bet on it.
+[00:47:22] SPEAKER 6: So 5G.
+[00:47:25] I ran into a telecom guy at a party the other night
+[00:47:29] who said that the internet was a Trojan horse for the telecoms
+[00:47:34] and have been trying to get the horse out ever since.
+[00:47:37] 5G is how they think they're going to do it
+[00:47:39] and he's a telecom guy.
+[00:47:40] The idea he said is you're going to get very high speed,
+[00:47:43] you're going to get it on your phone,
+[00:47:45] you get it on everything it's going to have local storage,
+[00:47:47] you are going to compete with Amazon
+[00:47:49] by blowing up their cloud or distributing it everywhere.
+[00:47:51] And they're going to have their cloud
+[00:47:52] and they're going to charge.
+[00:47:53] They're going to get in on Hollywood's business
+[00:47:54] and going to be the Netflix business.
+[00:47:56] And it's going to be all top down distribution,
+[00:47:58] and then they finally win.
+[00:47:59] So two questions, one is that true or close enough?
+[00:48:04] And b, how do we fight that shit?
+[00:48:06] SPEAKER 2: Well, first of all, if it was a Trojan horse,
+[00:48:10] it was against the telecoms.
+[00:48:13] So it wasn't for the telecoms.
+[00:48:14] SPEAKER 6: Oh, right.
+[00:48:15] That's definitely.
+[00:48:16] SPEAKER 2: Yeah.
+[00:48:17] And that's the same pipe dream that the carriers
+[00:48:20] have had from the beginning.
+[00:48:21] The carriers have considered that there's a whole big
+[00:48:24] to do in the late 90s.
+[00:48:26] That content was King that somehow
+[00:48:29] that when the carriers started providing you with the ability
+[00:48:32] to have TiVo on demand, a couch potato heaven of TiVo,
+[00:48:38] you're going to triple or quadruple your monthly fee
+[00:48:41] to the telephone company.
+[00:48:43] While content isn't King and those days that particular days
+[00:48:47] when the telephone company was saying that,
+[00:48:49] there was 10 times more revenue from telephone calls,
+[00:48:51] and there was room for all of Hollywood put together.
+[00:48:55] And yet they thought that once they got the movies,
+[00:48:57] they would increase their revenue by 5-fold.
+[00:49:00] It didn't make any sense then, it doesn't make any sense now.
+[00:49:03] If you really want a bit depend on Verizon
+[00:49:07] as your entire lifetime, for your entire life experience,
+[00:49:12] I don't think so.
+[00:49:14] It's not quite as bad as what a fellow from MIT
+[00:49:18] said a few years ago.
+[00:49:19] And Nynex was used to be the telephone carrier in the Boston
+[00:49:25] area.
+[00:49:26] And he said that that was the Iroquois word for moron.
+[00:49:32] So Verizon is quite that bad, but it's not good.
+[00:49:41] SPEAKER 7: Hi.
+[00:49:41] The story from the party sounds sadly like the plot of the TV
+[00:49:46] show Silicon Valley, which is satire.
+[00:49:49] So I'm not sure I would treat it with it
+[00:49:52] a great deal of respect.
+[00:49:53] But my real question is, whatever happened to IPv6
+[00:49:58] and IPsec...
+[00:50:00] SPEAKER 2: What do you have in your hand?
+[00:50:02] SPEAKER 7: My phone.
+[00:50:03] SPEAKER 2: That one, what kind of phone?
+[00:50:04] SPEAKER 7: IPhone.
+[00:50:05] SPEAKER 2: You got IPv6 six?
+[00:50:09] IPv6 is native on the iPhone.
+[00:50:12] But that's native on most cell most smartphones.
+[00:50:15] It doesn't have to do anything right here because Harvard
+[00:50:19] doesn't support IPv6.
+[00:50:21] But if you're using the Verizon network,
+[00:50:24] what network are you using?
+[00:50:27] SPEAKER 7: T-Mobile.
+[00:50:28] SPEAKER 2: T-Mobile.
+[00:50:29] I'm not sure about T-Mobile, Verizon supports V6.
+[00:50:32] Comcast does V6 to your House.
+[00:50:35] The big thing with the V6 was it was invented
+[00:50:37] to solve a particular problem which was running out
+[00:50:40] of IP addresses.
+[00:50:41] And tried to do a little bit more at the same time,
+[00:50:44] but it didn't provide a huge number of carrots.
+[00:50:46] So it didn't have a lot of weight reason
+[00:50:49] to move there unless you're running out of addresses.
+[00:50:51] We've run out of addresses.
+[00:50:52] So big carriers like Verizon and Comcast
+[00:50:55] can't use V4 to address because there aren't enough of them.
+[00:50:58] So they're V6 it's transparent to you
+[00:51:01] because it's infrastructure.
+[00:51:02] Just like Mom Surfing, it's completely transparent to you.
+[00:51:05] But it's there and it will continue
+[00:51:09] to expand because there isn't any choice.
+[00:51:11] There's no V4 address available, not in the US anyway.
+[00:51:16] SPEAKER 7: And IPsec?
+[00:51:18] SPEAKER 2: IPsec is a VPN.
+[00:51:20] You go to your system controls on the iPhone and press
+[00:51:26] VPN, that's IPsec.
+[00:51:30] Anything else?
+[00:51:33] We got a question in the back.
+[00:51:39] SPEAKER 8: So you would first mention that regulation would
+[00:51:41] be a bad thing, but then you seem
+[00:51:43] to agree that things like net neutrality were positive.
+[00:51:47] So would you agree that there might
+[00:51:49] be some types of regulation that could be positive,
+[00:51:53] and what would those types be?
+[00:51:55] What are we lacking right now in terms of regulation
+[00:51:58] that perhaps promotes or enforces openness?
+[00:52:01] SPEAKER 2: Well, at this instant,
+[00:52:02] what we're lacking is the enforcing factor
+[00:52:06] to be sure that the ISP keeps out of the way.
+[00:52:09] That's what net neutrality is all about.
+[00:52:12] We had that with the Title II stuff,
+[00:52:16] we don't have that anymore because that was overturned
+[00:52:19] though it's in court.
+[00:52:20] So we'll see what happens there.
+[00:52:23] That regulation is not telling you to do something,
+[00:52:30] it's telling you not to do something
+[00:52:32] - and that's the difference.
+[00:52:35] The regulation that telephone companies undergo, for example,
+[00:52:39] is I want to bring up Star69.
+[00:52:41] Well, I got to get permission through a regulatory process
+[00:52:44] to say how much that's going to cost.
+[00:52:47] And then that's never been the case with the net.
+[00:52:50] But with the ISPs now in the middle,
+[00:52:52] it's not a regulatory thing.
+[00:52:53] But ISP guess can say, well, if you subscribe to this service,
+[00:52:56] it doesn't count against your packet limit, your byte limit
+[00:53:01] or your download limit.
+[00:53:02] But if you subscribe to this other service which
+[00:53:04] we don't have a business relationship with,
+[00:53:06] then it does.
+[00:53:07] And now the ISP is in the middle of deciding
+[00:53:09] who's winners and losers.
+[00:53:14] A regulation that says keep out of the way,
+[00:53:17] it's very different than a regulation
+[00:53:19] that says ask me first.
+[00:53:22] There was, at one point, a while back,
+[00:53:24] Verizon wanted to regulate so that all voice over IP
+[00:53:30] had to go through central servers.
+[00:53:33] Now,
+[00:53:33] They said it was so the FBI could enforce wiretapping.
+[00:53:37] But really, so that they could build for it.
+[00:53:40] And that kind of regulation to force that
+[00:53:43] would inhibit the innovation.
+[00:53:46] We have the ability to have that chaotic environment innovate.
+[00:53:50] Anything which gets in the way of that asking permission first
+[00:53:55] to innovate or permission to deploy
+[00:53:59] is the inhibition of the dynamics
+[00:54:03] which got us the internet.
+[00:54:07] John, again.
+[00:54:11] SPEAKER 3: I would give a slightly different answer
+[00:54:13] to that last question, because I think another aspect of that
+[00:54:16] is important.
+[00:54:19] One of the things we have been lousy
+[00:54:20] at as a society at a networking community
+[00:54:25] is distinguishing between things which are ultimately
+[00:54:28] legal matters, and things which ultimately technology matters.
+[00:54:32] We try to substitute the technology
+[00:54:34] for the legal issues, we try to substitute much more rarely
+[00:54:38] lately, but more so in years past, legal solutions
+[00:54:43] for technology issues.
+[00:54:45] We're spending tremendous resources on the network
+[00:54:49] usually at the wrong end trying to deal with spam and phishing
+[00:54:52] and other kinds of attacks, which
+[00:54:54] are basically legal problems.
+[00:54:56] And if you think about those as part of the regulatory picture,
+[00:55:02] then a lot of the answer to the answer Scott gave you
+[00:55:08] to your question is we better get
+[00:55:10] a lot better at figuring out the difference
+[00:55:13] between the legal problems, the criminal code
+[00:55:17] problems, and the technical solutions real or alleged.
+[00:55:23] The question I wanted to ask you is that one of your
+[00:55:25] slides you put up a picture of the logos
+[00:55:29] of a large collection of relatively early entry
+[00:55:33] commercial ISPs.
+[00:55:34] SPEAKER 2: And then a few more recent ones.
+[00:55:36] SPEAKER 3: And a few more recent ones.
+[00:55:38] But in the last few years, we've seen significant consolidation
+[00:55:42] there.
+[00:55:44] To the point that if that picture were drawn today,
+[00:55:46] it would have a lot fewer icons on it.
+[00:55:48] SPEAKER 2: It's basically where's
+[00:55:49] the bottom three I think.
+[00:55:50] SPEAKER 3: Yeah.
+[00:55:52] Do you think that's an issue going forward?
+[00:55:55] And if not, why not?
+[00:55:56] And if so, what do you think we do about it if anything?
+[00:55:58] SPEAKER 2: Well, I think it's a significant issue
+[00:56:00] not in and of itself.
+[00:56:03] It's the pipe dream of the fiction that the FCC undergoes
+[00:56:08] saying is this competition for the residential market -
+[00:56:11] there isn't.
+[00:56:12] And yet the FCC says that 60% of the country
+[00:56:15] or 70% of the country has realistic competition
+[00:56:19] for high speed internet service.
+[00:56:21] Their definition of high speeds 5 megabits so
+[00:56:23] that's questionable, or 5 megabits down and down two
+[00:56:28] up or one up, which is piddling in Europe and Asia.
+[00:56:33] But I think that fiction is a very serious issue.
+[00:56:38] Which is the fiction which is driving this getting
+[00:56:41] rid of Title II it's the fiction that driving
+[00:56:46] the Congress in general.
+[00:56:48] And a few years ago, I wrote a column
+[00:56:50] that the people in Congress think that there's competition
+[00:56:56] on the internet service provider environment,
+[00:57:00] but they also think that the driver of the internet
+[00:57:03] is the carrier.
+[00:57:05] And this is like you've been asked to evaluate highways.
+[00:57:11] You're standing beside a highway,
+[00:57:14] but your eye is in your ankle and all you can see
+[00:57:16] is the asphalt. You can't see the cars and the trucks
+[00:57:19] and everything going over the highway.
+[00:57:21] So your answer to a better more highways
+[00:57:24] is to enable asphalt manufacturers, not
+[00:57:28] to enable car manufacturers.
+[00:57:30] And the Congress with their eyes on their ankles,
+[00:57:33] all they're seeing is the carriers -
+[00:57:36] the telecommunication carriers.
+[00:57:37] They're not seeing the power that the fact
+[00:57:41] that those carriers are out of the way drove.
+[00:57:44] That's the Google's and the Amazons and the Skypes
+[00:57:48] and everything else is riding over on top.
+[00:57:51] That they can't see, they don't see that that's
+[00:57:53] part of the internet.
+[00:57:54] And to me, that's the biggest problem.
+[00:57:57] There's no competition.
+[00:57:59] The myth that there is and belief that the internet equals
+[00:58:04] carriers, that's just crazy.
+[00:58:07] On that positive note.
+[00:58:09] [APPLAUSE]
