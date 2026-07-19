@@ -1,0 +1,1453 @@
+[00:00:00] Welcome everybody um to this talk. My
+[00:00:02] name is Chelsea Barbabis. I am from the
+[00:00:04] media lab uh which is one half of the
+[00:00:07] equation for this AI ethics and
+[00:00:09] governance initiative that we are
+[00:00:10] jointly kind of pursuing with um the
+[00:00:13] Harvard Burkman crew. And I am very
+[00:00:16] happy today to uh have the opportunity
+[00:00:18] to introduce Julia. Um Julia is coming
+[00:00:21] to present um some of her uh
+[00:00:24] undergraduate research work actually
+[00:00:26] which is you know phenomenal that uh
+[00:00:29] she's able to do work like this. Um so
+[00:00:31] recently graduated last year from
+[00:00:33] Dartmouth College uh and is now working
+[00:00:34] as a software engineer in Silicon
+[00:00:36] Valley. Her background is both in
+[00:00:38] computer science and uh women's
+[00:00:41] sexuality and gender studies.
+[00:00:43] Yeah. Yeah. So kickass, right? like um
+[00:00:46] and um so and I think her work really
+[00:00:49] kind of embodies like the power of being
+[00:00:51] able to compi com combine disciplines
+[00:00:53] like that and is um helping to fuel a
+[00:00:56] lot of kind of the underlying
+[00:00:58] assumptions around the ethics of using
+[00:01:00] actuarial tools to improve decision-m uh
+[00:01:03] by probing at really some of the most
+[00:01:05] fundamental questions of do these do
+[00:01:07] these predictions actually help us make
+[00:01:09] better more accurate decisions moving
+[00:01:11] forward. So super excited to hear your
+[00:01:13] talk. Um and then we'll have Q&A
+[00:01:15] afterwards. Just um some points of
+[00:01:18] housekeeping. Um so we are recording
+[00:01:20] this. Um it'll be web it's also being
+[00:01:22] webcast live. Uh so if you're watching
+[00:01:26] uh online you can participate by h um
+[00:01:28] asking questions at the
+[00:01:29] hashtagbkcarvard.
+[00:01:32] And then um we're going to wait to have
+[00:01:34] questions until the end. And then when
+[00:01:36] we do we're going to pass around the
+[00:01:37] mic. So please speak into the mic so
+[00:01:39] everybody who's watching via the
+[00:01:40] recording can uh hear. Okay. Thanks,
+[00:01:43] Julia.
+[00:01:43] Thank you.
+[00:01:45] [Applause]
+[00:01:50] Hi. Is this We're We're good on mic. All
+[00:01:52] right. Thank you so much for having me.
+[00:01:55] I'm going to be speaking about my
+[00:01:56] research on the accuracy, fairness, and
+[00:01:59] limits of predicting recidivism.
+[00:02:02] With the rise of big data and the
+[00:02:04] prevalence of technology in everything
+[00:02:06] we do, we become very frequent subjects
+[00:02:09] of algorithms. Tons of data is collected
+[00:02:12] on all of us on a daily basis and a lot
+[00:02:14] of our daily experiences might be
+[00:02:17] determined by algorithmic systems.
+[00:02:19] Couple of examples. Google has
+[00:02:21] algorithms to determine what search
+[00:02:23] results to give you, which ads to show
+[00:02:25] you. Spotify has personalized song
+[00:02:27] recommendations.
+[00:02:29] Amazon has algorithms to determine which
+[00:02:32] products to show which user. And even
+[00:02:34] banks and online lenders like Zest
+[00:02:36] Finance use algorithms to determine who
+[00:02:38] to give loans to.
+[00:02:40] Recently, algorithms have crept their
+[00:02:42] way into the criminal justice system.
+[00:02:44] Uh, for example, the police force in
+[00:02:46] Atlanta uses a predictive software
+[00:02:48] called PRP pole to predict where in the
+[00:02:51] city a crime is most likely to occur at
+[00:02:54] each hour of the day. In Chicago, the
+[00:02:57] police force there actually has
+[00:02:59] technology to make a list of the top 400
+[00:03:02] riskiest individual individuals in the
+[00:03:04] city, ranked by their likelihood of
+[00:03:06] committing a homicide.
+[00:03:09] Tools known as risk assessment
+[00:03:12] instruments take into account a
+[00:03:13] defendant's criminal history and
+[00:03:16] demographic information to make
+[00:03:17] predictions about how risky a defendant
+[00:03:20] is.
+[00:03:21] Recidivism prediction instruments are a
+[00:03:24] type of risk prediction and they are
+[00:03:26] meant to predict recidivism which is
+[00:03:29] when a criminal defendant reaffends at
+[00:03:31] some point in the future.
+[00:03:35] The compass recidivism risk scale is a
+[00:03:38] recidivism prediction instrument that is
+[00:03:40] built by the for-profit company called
+[00:03:42] Equivant which was recently North Point
+[00:03:45] has been rebranded to Equavant. Compass
+[00:03:47] is used in courts in many states in this
+[00:03:49] country to predict recidivism.
+[00:03:52] Specifically, the tool was built to
+[00:03:53] predict a new misdemeanor or a felony
+[00:03:56] within two years of when the score is
+[00:03:57] calculated. Compass is used in pre-trial
+[00:04:01] and sentencing and parole decisions. And
+[00:04:03] since it was built in 1998, it has been
+[00:04:06] used to assess over 1 million criminal
+[00:04:08] defendants.
+[00:04:11] In May of 2016, which is around little
+[00:04:13] less than two years ago, we came across
+[00:04:15] this study by ProPublica on the fairness
+[00:04:18] of Compass. What ProPublica found was
+[00:04:21] that although Compass is has pretty much
+[00:04:24] the same accuracy for white and black
+[00:04:26] defendants, it makes very different
+[00:04:27] types of mistakes on these two groups.
+[00:04:30] It found that if you're black, you are
+[00:04:32] almost twice as likely than a white
+[00:04:34] defendant to be classified as high risk
+[00:04:37] and then not reaffend. And the opposite
+[00:04:40] is also true. White defendants were
+[00:04:42] almost twice as likely to be classified
+[00:04:44] as low risk and then actually go on to
+[00:04:46] reaffend. So ProPublica released the
+[00:04:50] analysis saying that Compass was biased
+[00:04:52] towards black defendants because the
+[00:04:54] tool was underpredicting recidivism for
+[00:04:56] white defendants and overpredicting
+[00:04:58] recidivism for black defendants.
+[00:05:02] Tools like Compass are introduced in
+[00:05:04] criminal justice because we assume that
+[00:05:06] they're going to be more accurate and
+[00:05:08] more objective than the people who are
+[00:05:10] tasked with making these types of
+[00:05:12] predictions. And people hear words like
+[00:05:15] big data and machine learning and they
+[00:05:16] sound really impressive. And it's people
+[00:05:18] are usually pretty quick to assume that
+[00:05:21] tools that use these methods are
+[00:05:25] accurate and objective simply because
+[00:05:27] they were built on a lot of data. And we
+[00:05:30] started doing our own research into
+[00:05:32] compass and recidivism prediction
+[00:05:33] algorithms in general after this
+[00:05:35] ProPublica piece came out and noticed
+[00:05:37] that there was this assumption
+[00:05:39] underlying the whole conversation about
+[00:05:41] algorithms in general which is that
+[00:05:44] algorithmic prediction is inherently
+[00:05:46] superior to human prediction just
+[00:05:48] because it's built on data. But we
+[00:05:50] actually couldn't find any research that
+[00:05:53] proved that algorithmic recidivism
+[00:05:55] prediction was definitively superior to
+[00:05:58] human recidivism prediction.
+[00:06:01] Compass's accuracy is around 65% which
+[00:06:05] seems pretty low and this tool has very
+[00:06:08] serious consequences. The decision that
+[00:06:10] it help the decisions that it helps
+[00:06:12] makes have very severe implications on a
+[00:06:15] defendant's future on their life. So, we
+[00:06:18] wanted to confirm is Compass
+[00:06:21] outperforming human predictions.
+[00:06:25] For this study, we had a data set of
+[00:06:27] over 7,000 um criminal defendants from
+[00:06:31] Brower County, Florida. This is the same
+[00:06:32] data set that ProPublica used in their
+[00:06:35] study. This data set has the defendant's
+[00:06:37] demographic information, their criminal
+[00:06:39] history, the crime they most recently
+[00:06:41] had committed, and the compass
+[00:06:44] recidivism risk score that they were
+[00:06:46] given at their pre-trial um assessment.
+[00:06:49] It also had whether or not they actually
+[00:06:52] recidivated over a 2-year period after
+[00:06:55] they were assessed by Compass. And this
+[00:06:57] 2-year period did not include any time
+[00:06:59] that that person may have spent
+[00:07:00] incarcerated.
+[00:07:03] To assess the human performance of
+[00:07:06] recidivism, we used Amazon Mechanical
+[00:07:08] Turk, which is an online crowdsourcing
+[00:07:10] marketplace where people are paid to
+[00:07:12] perform short tasks.
+[00:07:15] The short task for our study was that
+[00:07:17] participants would read a small
+[00:07:19] paragraph about a criminal defendant and
+[00:07:22] then were asked to predict, do you think
+[00:07:24] this person will commit a new crime
+[00:07:26] within the next two years?
+[00:07:29] These are the seven variables that were
+[00:07:31] in each of those paragraphs about a
+[00:07:33] criminal defendant. It had the
+[00:07:34] defendant's gender, their age, the crime
+[00:07:37] that they committed, and then at the
+[00:07:38] bottom, kind of a small description of
+[00:07:40] what that crime was, whether or not the
+[00:07:43] crime was classified as a misdemeanor or
+[00:07:44] a felony, how many juvenile misdemeanor
+[00:07:47] and felonies were on their record, and
+[00:07:48] then the number of prior crimes on their
+[00:07:51] whole record.
+[00:07:53] You should note that the participants
+[00:07:55] did not see a defendant's race when
+[00:07:56] making these predictions.
+[00:08:00] our study or for the study, we randomly
+[00:08:03] selected a subset of 1,00 defendants
+[00:08:06] from that larger data set of 7,000. And
+[00:08:08] we picked this subset so that it was a
+[00:08:11] representative sample of sorry, so that
+[00:08:13] Compass's performance on that subset was
+[00:08:16] representative of how Compass performs
+[00:08:18] on the larger data set of over 7,000
+[00:08:20] defendants. Our study had 400
+[00:08:23] participants and the participants were
+[00:08:26] each assigned to see a random block of
+[00:08:28] 50 defendants. They were paid $1 to
+[00:08:31] complete the task and we wanted to
+[00:08:33] incentivize them to pay attention and to
+[00:08:35] do their best. Uh people who were doing
+[00:08:38] tasks tasks on Mechanical Turk make more
+[00:08:41] money the more tasks they complete. So
+[00:08:42] we wanted to incentivize them to slow
+[00:08:45] down, take their time, try their best.
+[00:08:47] And so we offered them a $5 bonus if
+[00:08:50] their accuracy was greater than 65%.
+[00:08:54] It's also important to remember that
+[00:08:56] these people who were in our study were
+[00:08:59] people getting paid to answer an online
+[00:09:01] survey and we assume have little to no
+[00:09:04] experience in the criminal justice
+[00:09:06] system.
+[00:09:08] Here are the results from this study.
+[00:09:10] Here's the distribution of uh 400
+[00:09:13] participant accuracies. These
+[00:09:15] participants achieved an average
+[00:09:17] accuracy of 62.1%
+[00:09:19] with a median accuracy of 64%.
+[00:09:23] And statistically this was just barely
+[00:09:26] uh less accurate than Compass's accuracy
+[00:09:29] on this data set. So
+[00:09:32] these individuals responding to the
+[00:09:34] survey, they did pretty well compared to
+[00:09:36] Compass, but statistically were just
+[00:09:37] barely uh less accurate than Compass.
+[00:09:41] There's a concept called the wisdom of a
+[00:09:44] crowd, which is that the judgment of a
+[00:09:47] crowd of individuals can actually
+[00:09:49] outperform the individual judgment of
+[00:09:52] those people if those individual people
+[00:09:54] aren't experts in what they're judging.
+[00:09:57] And we wanted to know if there was any
+[00:09:59] wisdom in the crowd of people that we
+[00:10:01] had assembled for this study for each Oh
+[00:10:05] no, that looks awful.
+[00:10:08] That's such a bummer. Okay. Shoot.
+[00:10:12] Okay. Well, this is a better graphic.
+[00:10:14] I'm sorry. I don't know what happened
+[00:10:15] with that. Um, each of the 10,00
+[00:10:18] defendants was seen by a small crowd of
+[00:10:21] 20 participants. Each of those
+[00:10:23] participants made a yes or no prediction
+[00:10:25] on that defendant. Yes, this person will
+[00:10:28] recidivate. No, this person will not
+[00:10:30] recidivate. So if over 50% of the crowd
+[00:10:34] predicted that someone would recidivate,
+[00:10:36] we considered that a crowd prediction
+[00:10:38] that this person would commit a new
+[00:10:40] crime. And then if 50% or more predicted
+[00:10:44] no, that was considered a crowd
+[00:10:46] prediction that that individual would
+[00:10:48] not recidivate. So by pulling together
+[00:10:51] this crowd wisdom, the crowd was able to
+[00:10:54] achieve an accuracy of 67%. And this is
+[00:10:57] statistically indistinguishable from
+[00:10:59] compass. So this is pretty crazy that by
+[00:11:02] just pulling together 20 responses from
+[00:11:05] people who responded to this online
+[00:11:06] survey, we were able to achieve the same
+[00:11:08] accuracy that Compass achieves.
+[00:11:11] There are a couple different ways that
+[00:11:13] we can compare the performance of the
+[00:11:15] human crowd and compass. First, like I
+[00:11:18] said, in terms of accuracy, performance
+[00:11:21] was the same. We can also look at the AU
+[00:11:24] ROC value uh which you might be familiar
+[00:11:27] with uh is a pretty standard way to
+[00:11:30] measure predictive validity in this type
+[00:11:32] of prediction. And in terms of this AUC
+[00:11:36] value, the crowd and compass had the
+[00:11:39] exact same performance.
+[00:11:41] We can also assess accuracy in terms of
+[00:11:43] sensitivity and bias which is a signal
+[00:11:45] detection theory uh measurement and in
+[00:11:48] terms of both sensitivity and bi bias
+[00:11:50] the performance was the same.
+[00:11:54] We also compared how this crowd
+[00:11:57] performance compared to compass in terms
+[00:11:59] of racial fairness. Before I go into
+[00:12:01] fairness, I want to define a couple key
+[00:12:03] things you need to know to understand
+[00:12:05] how we looked at fairness. So in this
+[00:12:09] sort of prediction scheme there are two
+[00:12:12] things that are predicted. Either
+[00:12:14] someone will recidivate or they will not
+[00:12:16] recidivate. And then what actually
+[00:12:18] happens? Either someone does go on to
+[00:12:20] commit a new crime or they do not. So if
+[00:12:23] somebody is predicted to recidivate and
+[00:12:25] they actually go on to do so, this is
+[00:12:27] called a true positive. If someone is
+[00:12:30] predicted to not recidivate and then
+[00:12:32] they don't recidivate, this is called a
+[00:12:35] true negative.
+[00:12:36] What's important to look at is when the
+[00:12:38] predictions are wrong. There are two
+[00:12:40] different types of errors that happen in
+[00:12:42] this case. The first is called a true
+[00:12:44] sorry a false positive. False positive
+[00:12:47] error in this is when someone is
+[00:12:49] predicted to recidivate but they do not.
+[00:12:52] And in terms of recidivism prediction,
+[00:12:55] this is a detrimental error in the from
+[00:12:58] the point of view of a criminal
+[00:12:59] defendant. A defendant who is given a
+[00:13:02] false positive error was scored to be
+[00:13:04] high risk even though they actually did
+[00:13:06] not go on to recidivate. And so they
+[00:13:08] because these scores are used in
+[00:13:10] pre-trial sentencing parole decisions,
+[00:13:13] they were scored to be riskier than they
+[00:13:15] actually were and could have faced
+[00:13:16] harsher consequences because of that.
+[00:13:19] The other type of error is a false
+[00:13:21] negative error which is when the
+[00:13:22] prediction is that someone will not
+[00:13:25] recidivate and then they actually do.
+[00:13:27] From the point of view of a defendant,
+[00:13:29] this is a I guess beneficial error to
+[00:13:31] happen to you because you were scored to
+[00:13:33] be less risky than you actually were.
+[00:13:39] So first we in terms of fairness, we
+[00:13:42] looked at how the human crowd and
+[00:13:45] compass did in terms of accuracy on
+[00:13:47] these two groups. So the black defendant
+[00:13:50] accuracies on the right, white defendant
+[00:13:52] accuracies on the left,
+[00:13:56] pretty much the same. Both human and
+[00:13:57] compass had pretty much the same
+[00:13:59] accuracy on both white and black
+[00:14:01] defendants. However, if we look at those
+[00:14:03] false positive, false negative errors,
+[00:14:04] they made very different types of errors
+[00:14:06] on these two groups. Both the human
+[00:14:09] predictions and Compass's predictions
+[00:14:11] suffered from
+[00:14:13] significantly higher false positive
+[00:14:15] errors on black defendants than white
+[00:14:17] defendants. And the opposite was also
+[00:14:19] true. Both the human predictions and
+[00:14:21] Compass's predictions suffered from
+[00:14:23] significantly higher false negative
+[00:14:25] errors on white defendants than on black
+[00:14:27] defendants. This is the same type of
+[00:14:29] bias that ProPublica initially found
+[00:14:32] about the compass predictions. And this
+[00:14:34] shows that in terms of this measurement
+[00:14:36] of fairness, the compass predictions and
+[00:14:38] this human predictions are
+[00:14:40] indistinguishable. Compass isn't being
+[00:14:43] more fair than these human predictions
+[00:14:44] are. There are a lot of different ways
+[00:14:47] to measure fairness in an algorithm and
+[00:14:50] the debate about what the best way to
+[00:14:52] look at fairness is actually still
+[00:14:54] ongoing and there hasn't been consensus
+[00:14:56] about which measurement is the best in
+[00:14:59] order to establish that that an
+[00:15:01] algorithm is fair or not. Uh we looked
+[00:15:03] at three other standard forms of
+[00:15:06] fairness that I'm not going to go into
+[00:15:08] for the sake of time. In every single
+[00:15:10] way that we compared the fairness of the
+[00:15:12] human predictions to the fairness of the
+[00:15:14] compass predictions, the predictions
+[00:15:16] were the same. There was no category in
+[00:15:18] which the humans were more fair or
+[00:15:20] compass was more fair.
+[00:15:24] To summarize, these results suggest two
+[00:15:27] things. First, compass is not more
+[00:15:30] accurate than human prediction. These
+[00:15:32] people responding to an online survey
+[00:15:34] were able to achieve the same accuracy
+[00:15:36] as compass.
+[00:15:38] The second is that compass is not more
+[00:15:40] objective than human prediction. In all
+[00:15:42] of the ways that we looked at compass's
+[00:15:44] predictions offered no form of fairness
+[00:15:47] or objectivity that the human
+[00:15:48] predictions were lacking. So to wrap
+[00:15:52] this up, we've shown that this
+[00:15:54] commercial software that is used in many
+[00:15:56] states in this country to predict
+[00:15:57] recidivism is not more accurate and not
+[00:16:00] more fair than random people responding
+[00:16:03] to an online survey making the same
+[00:16:05] predictions.
+[00:16:12] One of the major concerns about bringing
+[00:16:14] al algorithms into the criminal justice
+[00:16:16] system is that they're what are
+[00:16:18] considered black boxes. A black box is a
+[00:16:20] term to describe a machine that takes in
+[00:16:23] a series of inputs and then produces an
+[00:16:25] output from a series of unknown or
+[00:16:28] unexplained steps. You don't know what's
+[00:16:29] happening in the black box.
+[00:16:32] Judges that see scores like Compass
+[00:16:35] don't always know how a defendant's
+[00:16:37] identity and criminal history were used
+[00:16:39] to create those scores.
+[00:16:42] Equavant, the company that builds
+[00:16:44] Compass, does not share the inner
+[00:16:46] workings of the Compass algorithm. And
+[00:16:47] they actually fought in court for their
+[00:16:50] right to keep the algorithm secret
+[00:16:51] because it is proprietary or a trade
+[00:16:53] secret.
+[00:16:55] Because we found that these non-experts
+[00:16:58] were as accurate as Compass, we started
+[00:17:00] to wonder about what was going on here.
+[00:17:02] What is Compass doing? Why is it not
+[00:17:04] more accurate than these people? And we
+[00:17:06] were wanted to know what the inner
+[00:17:08] workings of Compass were. Because
+[00:17:12] Equavant doesn't publish this
+[00:17:13] information, we decided to try to
+[00:17:15] reverse engineer it and see what was
+[00:17:17] happening.
+[00:17:19] So, we built some of our own
+[00:17:20] classifiers. Uh we built the classifiers
+[00:17:23] on the full data set of over 7,000
+[00:17:25] defendants. And these are the same seven
+[00:17:28] features that all of our participants
+[00:17:30] saw in those paragraphs that they used
+[00:17:32] to make predictions.
+[00:17:36] On this data set, compass achieves an
+[00:17:38] accuracy of 65.4% which is slightly
+[00:17:41] different than it did on that smaller
+[00:17:43] data set. We started with uh by training
+[00:17:46] a powerful nonlinear support vector
+[00:17:48] machine a classifier which can learn
+[00:17:51] nonlinear separations in data and
+[00:17:54] shockingly this produced an average
+[00:17:56] accuracy of 65.2%.
+[00:17:59] How we built these classifiers was over
+[00:18:01] uh a thousand iterations of 8020
+[00:18:04] training testing splits. Um so this is
+[00:18:06] the average accuracy over those a
+[00:18:08] thousand iterations.
+[00:18:10] So this wasn't any better than compass
+[00:18:13] which was a little bit shocking. We we
+[00:18:15] said okay we replicated it but maybe how
+[00:18:19] maybe it's simpler than this maybe it's
+[00:18:20] even simpler than a nonlinear appro
+[00:18:22] approach maybe a linear approach can do
+[00:18:24] the same thing. So then we built a
+[00:18:27] simple linear classifier logistic
+[00:18:29] regression using those seven features
+[00:18:31] and again we're able to achieve the same
+[00:18:34] accuracy 66.6%.
+[00:18:36] So then our next question was okay
+[00:18:39] what's the simplest thing that we can
+[00:18:41] build the absolute simplest thing we can
+[00:18:42] build that still reaches this accuracy.
+[00:18:46] Again these were the seven features that
+[00:18:49] we were training our classifiers on. So
+[00:18:50] we trained our classifiers on every
+[00:18:53] single subset of these seven features.
+[00:18:56] And what we found is that a classifier
+[00:18:59] that only looks at a defendant's age and
+[00:19:02] the number of prior convictions on their
+[00:19:03] record produces the same accuracy as all
+[00:19:07] of those other classifiers.
+[00:19:12] So these are again this is compass's
+[00:19:15] accuracy the nonlinear support vector
+[00:19:17] machine logistic regression trained on
+[00:19:19] all seven features and then this is
+[00:19:21] logistic regression trained on just age
+[00:19:23] and number of priors.
+[00:19:27] Given that these all reached an accuracy
+[00:19:30] ceiling of around 66% it's important to
+[00:19:33] start thinking about whether or not any
+[00:19:35] improvement on this accuracy is
+[00:19:37] possible.
+[00:19:40] To summarize all of this together, this
+[00:19:42] research has three main findings. The
+[00:19:44] first, compass is not more accurate than
+[00:19:47] human prediction. The second, compass is
+[00:19:50] not more objective than human
+[00:19:52] prediction. And the third, no matter
+[00:19:55] what's inside Compass's blackbox
+[00:19:57] algorithm, it's the same as it's
+[00:19:59] equivalent to a very simple classifier
+[00:20:01] built on only two features.
+[00:20:06] Couple of conclusions from this whole
+[00:20:07] study. First, when we're talking about
+[00:20:10] the use of compass in the courtroom, we
+[00:20:12] have to ask ourselves, would we place
+[00:20:14] these same very serious decisions in the
+[00:20:17] hands of 20 people who we pay 1 to6
+[00:20:19] dollars to answer an online survey?
+[00:20:23] Because what we showed is that these two
+[00:20:25] approaches are functionally equivalent.
+[00:20:27] The second is that we can't take any
+[00:20:31] algorithm's accuracy or fairness for
+[00:20:33] granted. This just shows that that
+[00:20:36] Compass is equivalent to these the this
+[00:20:39] small crowd of people. But I think
+[00:20:41] what's important to take away is that we
+[00:20:44] can't assume that any algorithmic
+[00:20:46] approach is going to be super accurate
+[00:20:48] or that it's going to be more fair than
+[00:20:49] human predictions just because it was
+[00:20:51] built on data.
+[00:20:54] Finally, we need to hold all of these
+[00:20:56] type of software accountable. We need to
+[00:20:59] have systems in place that test this
+[00:21:01] stuff, that make sure it's achieving
+[00:21:03] high accuracies, that make sure it's
+[00:21:05] fair, and that make sure it's actually
+[00:21:07] performing as we expect it to before we
+[00:21:10] let it loose on the criminal justice
+[00:21:12] system. Currently, there are a lot of
+[00:21:14] software like Compass that are in use
+[00:21:16] already all over the country. And if
+[00:21:19] they are going to be in the courts, it's
+[00:21:20] essential that judges know how accurate
+[00:21:23] they are. if they're going to still see
+[00:21:25] them. It's important that they know that
+[00:21:26] something is only 65% accurate, that
+[00:21:29] it's not more accurate than normal
+[00:21:30] people guessing, instead of thinking and
+[00:21:33] assuming that these scores are the magic
+[00:21:35] solution, that they have perfect
+[00:21:37] prediction.
+[00:21:39] As we move into the discussion, I wanted
+[00:21:41] to pose a couple questions for the group
+[00:21:43] and I'm interested in hearing what
+[00:21:45] people's thoughts are on these. The
+[00:21:47] first, what is more important, accuracy
+[00:21:49] or transparency? If I have a tool that I
+[00:21:52] can prove to you has an accuracy of say
+[00:21:55] 99%, but I can't tell you what's in it.
+[00:21:57] I can't tell you what features it uses.
+[00:21:59] I can't tell you what weight anything is
+[00:22:01] given, but I can prove that it's 99%
+[00:22:03] accuracy. Are we happy with that? Do we
+[00:22:06] want to use that in the criminal justice
+[00:22:08] system? Or would we rather a tool that's
+[00:22:11] 75% accurate, 70% accurate, but I can
+[00:22:14] tell you exactly how it works? If I can
+[00:22:15] tell you it uses these three things,
+[00:22:17] these are the weights. This is how you
+[00:22:18] make it, but it's only 70% accurate. Is
+[00:22:21] that better? The second, if we can't
+[00:22:24] have perfect prediction, what's an error
+[00:22:26] rate that we're comfortable with? Do we
+[00:22:29] want 70% accuracy, 80% accuracy? What is
+[00:22:32] going to be that threshold for accurate
+[00:22:34] enough where we feel ethically okay
+[00:22:37] making decisions about people's lives
+[00:22:39] through this? And then the third is who
+[00:22:42] should be responsible for regulating and
+[00:22:44] verifying this type of software. At what
+[00:22:46] point in the system should there be
+[00:22:49] intervention to make sure that it's
+[00:22:51] performing as we expect it to and who
+[00:22:53] should be held accountable when it's
+[00:22:54] not?
+[00:22:56] Thank you. Question
+[00:23:10] Thanks.
+[00:23:11] Hi. Uh, that was a great talk. Thank
+[00:23:13] you. And thanks for that research. My
+[00:23:15] name is Kate Crockford. I work with the
+[00:23:16] ACLU here in Boston. Um, really
+[00:23:19] interested in what you've done here. I'm
+[00:23:20] definitely going to use it in in my work
+[00:23:22] at the state house here. Um, I just
+[00:23:24] wanted to point out to everybody in the
+[00:23:26] room that one word that didn't come up
+[00:23:28] in your presentation is justice, right?
+[00:23:30] I mean, there's accuracy and there's
+[00:23:32] fairness, but say we had a system that
+[00:23:35] um predicted someone's recidivism 100
+[00:23:38] with 100% accuracy, right? I mean, I
+[00:23:40] think this is sort of what you're
+[00:23:41] getting at with your first question.
+[00:23:42] Would we as a society think it's
+[00:23:44] acceptable to cage someone on the basis
+[00:23:47] of, you know, the possibility that they
+[00:23:49] may commit a future crime? I think that
+[00:23:52] sort of flips our justice system, at
+[00:23:53] least the way it's supposed to work, on
+[00:23:55] its head. Um, so I just wanted to raise
+[00:23:57] that issue and get your response.
+[00:23:58] Thanks.
+[00:23:59] Yeah, absolutely. Um I think that that
+[00:24:03] is a really good question to take into
+[00:24:05] account no matter what that accuracy is.
+[00:24:08] Um is that at every point we're making
+[00:24:11] decisions based on what someone might do
+[00:24:13] in the future. And I think to a good
+[00:24:17] idea to respond to that would be maybe
+[00:24:19] we need to shift how we're thinking
+[00:24:21] about why we're trying to predict this
+[00:24:23] in the first place. Are we trying to
+[00:24:24] predict this because we're trying to
+[00:24:25] keep them locked up? There's been a lot
+[00:24:27] of research that shows that length of a
+[00:24:29] sentence does not have any h doesn't
+[00:24:32] help you not commit new crimes in the
+[00:24:34] future. So if you're going to keep
+[00:24:37] someone in jail or in prison
+[00:24:38] indefinitely because they might commit a
+[00:24:41] new crime in the future, seems like
+[00:24:42] maybe not the best approach. Maybe we
+[00:24:45] need to be if we know someone's 100%
+[00:24:47] going to commit a crime. How can we put
+[00:24:49] resources into helping that person not
+[00:24:51] do that thing and change the course of
+[00:24:53] their life? be my answer to that.
+[00:24:57] Hi, I'm over here.
+[00:24:59] Hi.
+[00:25:00] Um, that was great and I loved that
+[00:25:02] question as well. Um, but outside of
+[00:25:04] that, wouldn't we expect that compass
+[00:25:06] would have the same accuracy rates
+[00:25:08] because it's training on human data
+[00:25:10] anyway? Um, and also what I got from the
+[00:25:13] like the two features being the most
+[00:25:15] predictive is that maybe those two
+[00:25:17] things are the most predictive and we
+[00:25:19] should should just be using that. But
+[00:25:20] another thing is that maybe we should be
+[00:25:22] thinking about why prior convictions is
+[00:25:24] something that is so predictive and it's
+[00:25:26] clearly highly racialized as well. So is
+[00:25:28] there a way to look at that causally? Um
+[00:25:30] and also like even though it's so simple
+[00:25:33] maybe like should we be using that
+[00:25:35] because it makes sense? Yeah.
+[00:25:39] So couple questions there. The first one
+[00:25:41] is that did we expect compass to be as
+[00:25:44] accurate as humans because it was
+[00:25:45] trained on human data? So it was trained
+[00:25:47] on recidivism data, not human prediction
+[00:25:51] data, if that makes sense. So it was
+[00:25:52] trained on these are individuals, these
+[00:25:55] are this is their demographic, this is
+[00:25:56] their criminal history, and then this is
+[00:25:58] whether or not they committed a new
+[00:25:59] crime. Um, sorry.
+[00:26:01] Yeah. Yeah. Also like recidivism
+[00:26:05] includes Sorry,
+[00:26:07] sorry. Recidivism also includes like a
+[00:26:09] police officer has to catch someone
+[00:26:10] which is also racialized and then if
+[00:26:12] someone reaffends but doesn't get caught
+[00:26:14] versus if they went to prison and would
+[00:26:17] have recidividated but didn't because
+[00:26:19] they were in prison. How do you
+[00:26:20] distinguish between those types of
+[00:26:21] features?
+[00:26:21] Yeah. And that's you bring up a really
+[00:26:23] good point which is that this shows and
+[00:26:25] this confirms the work of a lot of
+[00:26:27] different uh researchers that prior
+[00:26:29] crimes is one of the most indicative
+[00:26:32] variables of future recidivism. But it's
+[00:26:34] not perfectly predictive and as you
+[00:26:36] mentioned correlated with race and
+[00:26:38] that's where we see those racially uh
+[00:26:42] sorry the racial bias in the false
+[00:26:44] positive false negative predictions is
+[00:26:46] because
+[00:26:48] the black individuals in this data set
+[00:26:50] and nationwide are more likely to have
+[00:26:52] prior crimes and more prior crimes on
+[00:26:54] their record. And so because that's one
+[00:26:56] of the most predictive variables,
+[00:26:58] they're more likely to be classified as
+[00:26:59] high risk even if they won't actually
+[00:27:01] recidivate. And if you are a white
+[00:27:04] individual in this data set and in the
+[00:27:06] nation, you're more likely to have fewer
+[00:27:08] prior crimes on your record, which means
+[00:27:09] you're more likely to be classified as
+[00:27:11] low risk even if you will actually
+[00:27:13] commit a new crime in the future. So
+[00:27:16] there's absolutely so many stages where
+[00:27:19] human decisions, human biases
+[00:27:22] are baked into that data and have
+[00:27:23] produced the data that the classifiers
+[00:27:25] are being trained on.
+[00:27:27] U the question for you about the uh the
+[00:27:30] crowd sourcing element of this. Did you
+[00:27:33] find a relationship between unonymity
+[00:27:35] among people who were voting in the
+[00:27:37] current? So if all 20 people thought
+[00:27:39] they would recidivate, did that predict
+[00:27:41] a higher uh accuracy than than just one
+[00:27:44] person?
+[00:27:45] I don't remember if we looked at that,
+[00:27:46] but that is definitely something that is
+[00:27:48] worth looking at. I don't think that
+[00:27:49] there were many cases where
+[00:27:52] everybody had the same answer, but I
+[00:27:55] could be wrong. But that is something
+[00:27:56] that I will look into because that's a
+[00:27:57] great question. Thank you.
+[00:28:00] Um, like Kate, is it Kade? Like Kate was
+[00:28:03] saying and also um what you were saying,
+[00:28:06] uh, we talk about race and we talk about
+[00:28:10] racialized, but I like for us to
+[00:28:11] actually discuss the word racism because
+[00:28:14] there is racism inherent not just in um,
+[00:28:18] the people that you ask to code, whether
+[00:28:20] or not you put the race of the criminal,
+[00:28:22] they have somebody in their mind that is
+[00:28:24] a criminal and it probably ain't white.
+[00:28:27] And so the data also is biased because
+[00:28:31] it's the collection of all these other
+[00:28:34] racist um infused interactions and media
+[00:28:38] portrayals. And so um
+[00:28:41] kind of grabbing from Sophia Noble's
+[00:28:43] book um algorithms of oppression and
+[00:28:45] also a discussion that we've been having
+[00:28:48] um internally in uh Kathy's um ethical
+[00:28:52] tech uh group. Do you as the researcher
+[00:28:56] believe that algorithms themselves can
+[00:28:59] be characterized as racist or do you
+[00:29:02] believe that algorithms are somehow
+[00:29:04] objective and are simply used in racist
+[00:29:08] ways?
+[00:29:09] So I think that the algorithms
+[00:29:11] themselves unless there's somebody
+[00:29:14] writing if black predict yes unless that
+[00:29:17] type of thing is happening the algorithm
+[00:29:19] itself isn't racist but the algorithm
+[00:29:23] can be trained on data that produces
+[00:29:26] racist outcomes and that data can be
+[00:29:28] result of racist policing sentencing
+[00:29:32] etc. So the algorithm itself, the math
+[00:29:35] isn't racist in its own way, but it can
+[00:29:37] that doesn't mean that it can't produce
+[00:29:38] racist outcomes.
+[00:29:42] Uh just a very simple question, has
+[00:29:44] Compass aware of your results and have
+[00:29:47] they said anything?
+[00:29:48] Yes, they have. Uh they they released a
+[00:29:51] press release right when the paper came
+[00:29:53] out. Um they had the main things they
+[00:29:56] said were first we had reported that
+[00:29:59] Compass uses 137 features in their uh
+[00:30:02] prediction because that was the number
+[00:30:04] we had available to us given the
+[00:30:06] documents that they have made public. Uh
+[00:30:08] and so they responded saying that
+[00:30:09] Compass only uses six features in their
+[00:30:11] predictions. Um
+[00:30:15] and then the other thing that they said
+[00:30:16] was that the study confirms that compass
+[00:30:19] is predictively valid because it has
+[00:30:22] that AUC value of 71. Uh it's important
+[00:30:25] to understand that 71 is at the bottom
+[00:30:28] of the threshold for satisfactory
+[00:30:30] performance. Satisfactory performance
+[00:30:32] starts at 7. Um so and that doesn't
+[00:30:37] negate the fact that the human crowd
+[00:30:39] produced that same AUC value. And this
+[00:30:41] is an important distinction and
+[00:30:43] something I've tried to emphasize in the
+[00:30:46] reporting of this article is we're not
+[00:30:48] trying to celebrate human prediction.
+[00:30:50] This shouldn't the takeaway from this
+[00:30:52] study shouldn't be oh humans are great
+[00:30:54] at this because neither of these are
+[00:30:56] great at predicting. They're reaching
+[00:30:58] accuracies of around 65%. So it's
+[00:31:00] important to remember that the takeaway
+[00:31:03] is that compass isn't more accurate than
+[00:31:05] humans, not that humans are as accurate
+[00:31:07] as compass.
+[00:31:10] So um thank you so much for your
+[00:31:12] presentation. Uh I wanted to ask about
+[00:31:14] your uh use of the word human
+[00:31:17] prediction. Yeah. Uh as the category
+[00:31:19] because obviously in the criminal
+[00:31:21] justice context the relevant actor or
+[00:31:25] consumer of the product is not uh you
+[00:31:28] know is not just humans in general. It's
+[00:31:30] judges
+[00:31:31] and you know and so there are sort of
+[00:31:34] two scenarios that one could could
+[00:31:37] imagine. One is that because judges are,
+[00:31:39] you know, professionals in the sense
+[00:31:42] that they see, you know, thousands of
+[00:31:44] cases that maybe they might have somehow
+[00:31:47] a better sense of of what outcomes might
+[00:31:51] be than uh than uh you know a random
+[00:31:56] selection of humans. But then there are
+[00:31:58] other scenarios that you could imagine
+[00:32:00] where you know the judges maybe are
+[00:32:04] racist or uh or maybe even you know in
+[00:32:08] cases where judges are elected they're
+[00:32:10] not whereas your question was framed
+[00:32:12] around you know trying to increase the
+[00:32:14] folks accuracy. Um maybe judges uh are
+[00:32:19] they're concerned about accuracy, but
+[00:32:21] maybe they're also concerned if they're
+[00:32:23] elected in trying to avoid uh false uh
+[00:32:27] false negatives because that could play
+[00:32:30] very poorly, you know, if someone that
+[00:32:32] they let out on bail then goes and
+[00:32:34] murders someone. Whereas false positives
+[00:32:37] are less likely to cause political
+[00:32:39] repercussions. So in which case, you
+[00:32:43] know, in that scenario, you could
+[00:32:44] imagine a situation where we might
+[00:32:46] actually view judges as being worse than
+[00:32:48] a random selection of humans. And so I
+[00:32:51] was wondering you know how you uh in
+[00:32:54] terms of your research you know
+[00:32:55] obviously you weren't able to you know
+[00:32:58] you know run this with a thousand judges
+[00:33:00] but I was wondering you know how you
+[00:33:01] thought about that relationship between
+[00:33:03] humans in general versus uh you know the
+[00:33:06] actual people who would be using these
+[00:33:08] tools or that these tools could in
+[00:33:10] theory replace uh judges. It's a it's a
+[00:33:13] great question and it's something that
+[00:33:14] we've thought a lot about and we are
+[00:33:17] trying to figure out if we could
+[00:33:18] possibly run a study with judges um
+[00:33:21] because it's a question we've gotten a
+[00:33:23] lot and I think it's an important one to
+[00:33:24] ask is what would judge performance be
+[00:33:28] on this same task um in terms of the use
+[00:33:32] of the word human the efforts of this
+[00:33:35] were trying to figure out what's what's
+[00:33:37] the baseline what are we working with if
+[00:33:38] we're trying to make an algorithm that's
+[00:33:40] more accurate than people well how
+[00:33:42] accurate fair people and we couldn't
+[00:33:44] really find any information about what
+[00:33:46] that human baseline was. And so
+[00:33:48] obviously these tools are meant to
+[00:33:50] assist judges predictions and these
+[00:33:52] aren't judges predictions, but again
+[00:33:55] it's important to remember that this is
+[00:33:56] trying to show that this software isn't
+[00:34:00] performing as well as we expect it to.
+[00:34:02] Um, and the human baseline shouldn't be
+[00:34:05] used as
+[00:34:08] a measurement of what a judge's
+[00:34:09] predictive ability should be. It should
+[00:34:11] be used as a way to show that this
+[00:34:12] software needs to be held to a higher
+[00:34:14] standard and there needs to be
+[00:34:15] transparency in what its accuracy
+[00:34:17] actually is.
+[00:34:19] Hi, um I am Kathy, a fellow computer
+[00:34:23] scientist. Um I have a comment that will
+[00:34:26] lead into my question. I actually
+[00:34:27] respectfully disagree that algorithms um
+[00:34:30] don't aren't racist. Um, I think we
+[00:34:33] might not explicitly see if black then
+[00:34:35] this, if white then that, but we can
+[00:34:37] have if neighborhood then this or if
+[00:34:40] income level then this and somehow
+[00:34:43] sometimes those secondary features are
+[00:34:45] are in the algorithms can inherently um
+[00:34:49] make the algorithm racist. So that leads
+[00:34:51] into my question of what are your ways
+[00:34:53] you think um developers for example
+[00:34:57] developers who make the compass tools or
+[00:34:58] other developers who make many of these
+[00:35:01] many tools that are deployed across many
+[00:35:03] governments and sell these tools um to
+[00:35:05] government. How how can do that they do
+[00:35:07] better? How can they know that like a
+[00:35:11] number of prior crime rates aren't
+[00:35:13] actually? So how do they what are your
+[00:35:15] thoughts on getting developers and
+[00:35:17] people who make these tools to do
+[00:35:18] better?
+[00:35:20] So to the first point, um I think that
+[00:35:24] even something that has a zip code or
+[00:35:27] anything that is a proxy for race is a
+[00:35:29] product of the data, not the algorithm.
+[00:35:31] Maybe this is just kind of a distinction
+[00:35:33] of what part of the algorithm you're
+[00:35:36] talking about, but that is that the data
+[00:35:38] in having zip code in having prior
+[00:35:40] crimes. You have a variable in there
+[00:35:42] that is essentially putting race into
+[00:35:44] the algorithm and that has racially uh
+[00:35:46] biased outcomes in terms of what kind of
+[00:35:50] technologists can do in creating this. I
+[00:35:52] think first is awareness. First is not
+[00:35:54] operating under the assumption that what
+[00:35:56] you're building is perfect. not under
+[00:35:57] operating under the assumption that
+[00:35:59] you're going to be devoid of bias if you
+[00:36:01] put even more data in. Even more data
+[00:36:04] might not make this better. And so I
+[00:36:06] think it's asking the right questions.
+[00:36:08] How can we mathematically try to level
+[00:36:11] the playing field? How can we with an
+[00:36:13] awareness of what the differences are in
+[00:36:17] prior crime rates amongst these
+[00:36:19] different demographics? If we know that
+[00:36:20] that is what we're working with, can we
+[00:36:22] try to tweak these numbers so that when
+[00:36:25] you put someone in, they can't tell what
+[00:36:27] the race of a person is, even if that
+[00:36:28] variable in the past was a proxy for
+[00:36:31] race. So, I think it's first just having
+[00:36:33] an awareness of what the consequences
+[00:36:35] could be and then trying to
+[00:36:37] mathematically build to make that not
+[00:36:39] happen.
+[00:36:42] Hi. Um, up here. Um, so I'm wondering
+[00:36:45] with the prior crimes, um, and whether
+[00:36:48] or not the data either Compass or or
+[00:36:50] other, um, algorithms that are out there
+[00:36:52] or the one that you used, whether or not
+[00:36:54] you disagregated what the prior crimes
+[00:36:56] were, because there are different
+[00:36:57] recetivism rates, if it's the same crime
+[00:36:59] that the person is repeating over and
+[00:37:01] over again or if it's, you know, various
+[00:37:02] crimes over their life. And so just um,
+[00:37:05] for predictability purposes, whether or
+[00:37:07] not you think it's worth disagregating
+[00:37:10] data points that actually do present
+[00:37:11] differences in the real world. um and if
+[00:37:13] you tried to do that.
+[00:37:14] So the data set that we had
+[00:37:16] unfortunately didn't have every single
+[00:37:18] crime that they had committed. It only
+[00:37:20] had that number of priors. So we had
+[00:37:22] their most recent crime they had
+[00:37:23] committed um and the one that they if
+[00:37:25] they recidivated the one that the new
+[00:37:27] crime that they committed, but we didn't
+[00:37:28] have that history. But I think it's
+[00:37:30] important because if you're trying to
+[00:37:32] predict whether someone will shoplift
+[00:37:34] versus murder someone, those are very
+[00:37:37] different outcomes. And so having
+[00:37:40] possibly specific crime classifiers or
+[00:37:44] specific trying to predict a specific
+[00:37:47] kind of risk depending on what type of
+[00:37:50] crime some you think someone might
+[00:37:51] commit. I think that's definitely a
+[00:37:52] worthy question to ask and something to
+[00:37:54] look into.
+[00:37:57] Um actually wanted to follow up on
+[00:38:00] Cathy's question about race and
+[00:38:02] algorithms and data. And um one thing
+[00:38:04] that's occurred to me is that I I agree
+[00:38:06] with you that often it's bad data that
+[00:38:09] causes these uh uh racist outcomes and
+[00:38:12] algorithms. But you know also what about
+[00:38:15] and this is I guess specific to the
+[00:38:16] content context of machine learning
+[00:38:18] which we're seeing underlies a lot of
+[00:38:20] these the choice of what variables
+[00:38:22] you're optimizing for. Right? So the
+[00:38:24] idea that preventing reaffense is the
+[00:38:28] primary goal here is not an entirely
+[00:38:32] objective one. It's one that's you know
+[00:38:34] laden with cultural values and which and
+[00:38:36] are likely associated with you know race
+[00:38:38] as well as income level and you know pro
+[00:38:40] possibly even things like level of
+[00:38:42] education. um you know and so something
+[00:38:44] that was to say like if you did
+[00:38:46] something like compass but instead of
+[00:38:48] using did the person reoffend in two
+[00:38:49] years you said did the person
+[00:38:51] subjectively see their quality of life
+[00:38:53] as higher after 5 years right then maybe
+[00:38:56] you start saying you're optimizing for a
+[00:38:58] different social value so I what I guess
+[00:39:01] what is your thought about developers
+[00:39:03] not just looking at the data but the
+[00:39:05] choices they make about how to uh set up
+[00:39:08] their kind of machine learning goals
+[00:39:10] what's the responsibility there to look
+[00:39:12] beyond beyond kind of the status quo.
+[00:39:14] Yeah, I think that the responsibility
+[00:39:16] lies at every single step of the way.
+[00:39:18] Um, which is why I'm grateful for the
+[00:39:21] liberal arts education that I did get.
+[00:39:23] And the fact that I was a double major
+[00:39:26] in computer science and women's gender
+[00:39:27] and sexuality studies and this other
+[00:39:29] major that was not related to computer
+[00:39:31] science was the one that taught me to
+[00:39:33] ask these questions and to be aware of
+[00:39:35] how certain factors influence people
+[00:39:38] differently based on their identities.
+[00:39:39] And so we need computer scientists in
+[00:39:42] education at every level to be taking
+[00:39:45] classes that make them think about the
+[00:39:46] consequences of what they're building.
+[00:39:48] And they can't say, "Oh, I just made the
+[00:39:51] thing they told me to and pass it on.
+[00:39:53] That's someone else's problem. That's
+[00:39:55] not my job to be asking the ethical
+[00:39:57] questions." I don't agree. I think that
+[00:39:59] someone who is making an algorithm that
+[00:40:01] is going to affect other people should
+[00:40:03] be responsible for the decisions and
+[00:40:05] what they're optimizing for. And then
+[00:40:08] also at other steps of the way, people
+[00:40:09] should be verifying that what they built
+[00:40:11] is actually optimizing for what they
+[00:40:12] said that they were building for.
+[00:40:17] I don't know where the mic is.
+[00:40:18] Okay. Um, you built several systems
+[00:40:22] trying to mimic Compass. Did you find
+[00:40:24] that those systems all had the same
+[00:40:25] racial bias as Compass?
+[00:40:27] Yeah. And that's pretty much because the
+[00:40:30] most predictive variable is prior crimes
+[00:40:32] and that is correlated with race. And so
+[00:40:34] that racial the racially biased outcome
+[00:40:36] happened in pretty much everything.
+[00:40:38] And you say neither compass nor the
+[00:40:39] humans were explicitly given the race
+[00:40:42] nor were they given like photographs or
+[00:40:45] names or anything else that might der
+[00:40:47] that you could might try to derive race
+[00:40:49] from.
+[00:40:50] Exactly.
+[00:40:50] So basically, you know, despite
+[00:40:52] attempting not to put that factor in, it
+[00:40:54] got there anyway.
+[00:40:55] Exactly.
+[00:41:00] Um, yeah. The the the the differences
+[00:41:05] between false positives and false
+[00:41:06] negatives by race were pretty revealing.
+[00:41:09] Has there been any comparable research
+[00:41:11] to see if such differences exist uh when
+[00:41:14] broken down by gender?
+[00:41:16] There definitely Oh, I bet there has
+[00:41:18] been. I'm not I don't have the
+[00:41:21] definitive answer for that, but I'm sure
+[00:41:22] that there has been. There's been a lot
+[00:41:24] of research on uh gender differences
+[00:41:26] also because there are very distinct
+[00:41:28] gender differences in criminal behavior
+[00:41:30] in general. And so that's a whole
+[00:41:32] different conversation as to whether or
+[00:41:34] not there should be different prediction
+[00:41:38] software for men and women in general
+[00:41:40] because these two
+[00:41:43] two genders have very different criminal
+[00:41:45] history. Um but no, I'm not sure if
+[00:41:47] there has been work done. I bet that
+[00:41:48] there has, but I'm not positive.
+[00:41:54] Hi. Uh, so you I think a couple of times
+[00:41:57] and people in their questions a couple
+[00:41:59] of times have mentioned how race became
+[00:42:02] an item in the algorithm even though it
+[00:42:04] wasn't explicitly stated. And then if I
+[00:42:07] remember correctly, one thing you said
+[00:42:08] was the hope or I'm paraphrasing this,
+[00:42:11] but the hope is that we could somehow
+[00:42:14] take race out of the algorithms. But I'm
+[00:42:16] wondering also if there's a way to allow
+[00:42:19] for race to exist in the algorithms or
+[00:42:22] allow all of these factors that then put
+[00:42:24] race into the algorithms and doing
+[00:42:25] better work on realizing the bias in the
+[00:42:28] outcomes and how we can then um adjust
+[00:42:30] for the bias in the outcome. So knowing
+[00:42:32] that race is going to seep its way into
+[00:42:34] these algorithms and then we see the
+[00:42:36] higher rates of false positives for
+[00:42:39] black people, can we actually look at
+[00:42:41] those results and then tell judges to
+[00:42:43] know that there's a high rate of false
+[00:42:45] positive? So assume maybe um that
+[00:42:47] there's that bias in the information and
+[00:42:49] use the information differently based on
+[00:42:51] the race of the individual.
+[00:42:52] Yeah, absolutely. There's also I think
+[00:42:55] what's important is that there's
+[00:42:57] awareness that even if you don't put
+[00:42:59] race as a factor that that doesn't mean
+[00:43:01] that there can't be racially biased
+[00:43:03] results. And so maybe we should stop
+[00:43:05] kidding ourselves by not putting race
+[00:43:06] into the algorithm and maybe use it as a
+[00:43:08] variable to try to even that playing
+[00:43:10] field um mathematically. I I know that
+[00:43:12] there are a lot of people working on
+[00:43:14] this. Um, so there's hopefully will be
+[00:43:15] research about how we can have an
+[00:43:18] awareness of how someone's identity may
+[00:43:20] have affected their entire life's
+[00:43:22] history and if we can use that
+[00:43:24] accordingly to make those predictions
+[00:43:26] and then absolutely and I think that in
+[00:43:29] terms of judges there should be
+[00:43:30] transparency in what the rates what the
+[00:43:33] success rate what's the false positive
+[00:43:34] false negative rates there should be
+[00:43:36] transparency in what the performance of
+[00:43:37] this these tools are overall so that
+[00:43:39] they can interpret those values as they
+[00:43:41] should and interpret them accordingly.
+[00:43:50] Hi, great presentation, really
+[00:43:52] interesting research. Um, I was
+[00:43:54] wondering if you could tell us how uh
+[00:43:56] your research or the compass tools in
+[00:43:59] general came to have binary categories
+[00:44:01] for race and also if you knew how racial
+[00:44:03] categories were collected, uh, whether
+[00:44:05] it was self-reported or whether an
+[00:44:07] official in some capacity is the one
+[00:44:09] that chose those categories. So there
+[00:44:12] weren't um the b the the categories for
+[00:44:14] race weren't binary in the data set nor
+[00:44:17] in this study, but they were the white
+[00:44:20] group and the group sorry the group of
+[00:44:21] white defendants and the group of black
+[00:44:22] defendants were the two most popular
+[00:44:24] that's not the right word. Um largest
+[00:44:27] groups in the data set. Um so we only
+[00:44:29] looked at those two, but I think that
+[00:44:31] there were six categories of race in the
+[00:44:33] data set and in our study. Um I'm not
+[00:44:36] sure how those this was that was the
+[00:44:38] data that came in from that county in
+[00:44:40] Florida where the data is from. That's
+[00:44:42] how the race classification happened.
+[00:44:44] Was there a second part to your
+[00:44:45] question?
+[00:44:45] Um how it was collected, but do you
+[00:44:48] happen to know how the accuracy rates
+[00:44:50] were for other groups?
+[00:44:52] Not off the top of my head, but I
+[00:44:55] yeah, I'm not sure.
+[00:44:56] Thank you.
+[00:44:58] Uh thanks for your presentation. It was
+[00:45:00] great. Um you may have touched on this.
+[00:45:02] I apologize if I'm re asking the
+[00:45:04] question, but uh does Mechanical Turk uh
+[00:45:07] capture demographic data and was the
+[00:45:10] sample that you or that you used
+[00:45:13] representative of a population of judges
+[00:45:16] or the United States or some other uh
+[00:45:20] population. So, Mechanical Turk doesn't
+[00:45:22] capture demographic information, but we
+[00:45:24] asked. So, we asked for race, gender,
+[00:45:28] age,
+[00:45:30] um, education level. There might have
+[00:45:33] been more, but that was it. And our our
+[00:45:36] demographic was definitely not
+[00:45:37] representative of the nation at all. Uh,
+[00:45:41] there was it was a majority white uh
+[00:45:44] demographic, but they did have we did
+[00:45:46] have ages from 18 to over 74 and of all
+[00:45:49] different education levels. So, racially
+[00:45:52] not as diverse as we wanted it to be
+[00:45:53] with the um respondents, but we did have
+[00:45:57] a good scale of other types of
+[00:46:00] demographics for that.
+[00:46:03] I was just curious um if you could speak
+[00:46:06] to like the more general problem of
+[00:46:08] using al algorithms in the sense of
+[00:46:10] using group level data to predict you
+[00:46:12] know individual recidivism versus you
+[00:46:14] know the more typical model in the past
+[00:46:17] of having um a judge sort of make the
+[00:46:19] individual determination. Yeah, that's a
+[00:46:22] great question and something that um
+[00:46:24] there was a case in Wisconsin where an
+[00:46:26] individual refu they were given a
+[00:46:29] sentence and that sentence included the
+[00:46:32] compass score that they were given and
+[00:46:34] that was one of their arguments was that
+[00:46:36] they were using group level data to make
+[00:46:38] a decision about an individual person.
+[00:46:41] Um I think that that is just a question
+[00:46:43] of whether or not we should be using
+[00:46:44] these algorithms in general because you
+[00:46:46] are using historical data about not that
+[00:46:49] individual to make a prediction about
+[00:46:51] that individual. So that is just a basic
+[00:46:54] question of whether or not these should
+[00:46:55] be used in the criminal justice system
+[00:46:57] in general.
+[00:47:06] Actually just have two questions. One is
+[00:47:08] are is there an effort being made to
+[00:47:10] educate judges about your research? And
+[00:47:12] then the other question is um
+[00:47:16] I forget. Okay.
+[00:47:19] Answer the first one. Um I don't not a
+[00:47:24] there's not an official effort to
+[00:47:26] educate judges. Um we're hoping that the
+[00:47:29] media attention that this got brought
+[00:47:31] this into public people's attention. We
+[00:47:33] have gotten some emails from judges
+[00:47:35] about it. Um, and one state, oh, I don't
+[00:47:38] remember which it was. There's a state
+[00:47:40] that was undergoing a kind of committee
+[00:47:43] review where they had something up for
+[00:47:45] vote to mandate the use of one of these
+[00:47:48] types of tools. And so they reached out
+[00:47:50] to us asking for an opinion. Um, so I'm
+[00:47:52] not sure if there's an official there,
+[00:47:54] as far as I know, there's no official
+[00:47:56] effort to have this aware or to make
+[00:47:59] judges aware of this, but it's also
+[00:48:00] specific to what tool they're using. And
+[00:48:03] that's why there's it's important that
+[00:48:04] there's transparency about any software
+[00:48:06] that's in that's in the criminal justice
+[00:48:08] system so that when a judge sees a
+[00:48:10] score, it knows where it came from and
+[00:48:12] it knows this is only 60% accurate or
+[00:48:14] this is 80% accurate or this is, you
+[00:48:16] know, so an awareness of where that
+[00:48:18] score came from and how reliable it is.
+[00:48:21] And I just remembered my second
+[00:48:22] question, which is are litigators using
+[00:48:25] your your research to try to get
+[00:48:28] defendants, you know, to make it
+[00:48:30] recognize that maybe that's not the best
+[00:48:32] predictor.
+[00:48:33] Not that I know of.
+[00:48:36] Not sure.
+[00:48:42] I just have a Sorry, Sebastian Diaz from
+[00:48:44] the Burkeman Klein. Uh I just have a
+[00:48:46] question about the data.
+[00:48:47] Yes.
+[00:48:47] Specifically, is
+[00:48:49] the data is the score that Compass gives
+[00:48:52] a binary data or is it on a scale?
+[00:48:54] Good question. So, Compass's scores
+[00:48:56] actually range from 1 to 10. Um there
+[00:48:59] were a lot of details that I didn't get
+[00:49:01] to go into about the study that for the
+[00:49:03] sake of time but yeah compass gives
+[00:49:05] scores from 1 to 10. 1 to 4 is low risk,
+[00:49:08] 5 to 7 is high is medium risk and 8 to
+[00:49:11] 10 is high risk. Um the decision to make
+[00:49:14] it a binary cutoff was to be able to
+[00:49:17] compare it directly to the human
+[00:49:18] predictions. And we wanted the human
+[00:49:21] prediction to be as simple as possible
+[00:49:22] and not have people be giving scores
+[00:49:24] from 1 to 10. but it was based off of um
+[00:49:27] the practitioners guide for Compass says
+[00:49:31] that scores above a four should be
+[00:49:33] considered a an indication that that
+[00:49:35] person will recidivate. So the scores
+[00:49:38] aren't binary but they have
+[00:49:42] given sorry
+[00:49:44] oh the scores aren't binary but they
+[00:49:46] have kind of a binary interpretation of
+[00:49:49] and so this is a a followup if since
+[00:49:51] they're not binary did your group
+[00:49:53] metrics match the scores that were given
+[00:49:55] by compass
+[00:49:57] did our group metrics
+[00:49:58] so when you had one to 20 I imagine if
+[00:50:00] you divided by the two you would have
+[00:50:01] one
+[00:50:01] so okay so how we did yeah so when we
+[00:50:04] did translate the crowd
+[00:50:07] votes into a score from 1 to 10 um so
+[00:50:10] that we could calculate those AUC
+[00:50:12] values. So the the crowd was just what
+[00:50:14] percentage of people guessed yes that
+[00:50:16] was the score that or like binned into
+[00:50:19] one to 10 that was the score that we
+[00:50:21] were assigning people based on the crowd
+[00:50:22] votes.
+[00:50:23] Did that match compass?
+[00:50:25] Oh yes um it matched compasses.
+[00:50:29] Oh no, in binary ways it didn't
+[00:50:31] completely match Compass in the binary
+[00:50:34] prediction. The crowd predictions and
+[00:50:36] Compass's prediction matched in I think
+[00:50:38] 669 of the cases of the thousand cases.
+[00:50:42] It's somewhere around that number. Um so
+[00:50:45] when it was binary the crowd predictions
+[00:50:47] and compasses predictions were in
+[00:50:49] agreement about 70% of the time.
+[00:50:58] Hi. Thank you. Um there's a lot of ways
+[00:51:01] to reduce uh recidivism uh by social
+[00:51:04] work, education, job opportunities. Uh
+[00:51:07] is Compass blind to to those uh
+[00:51:10] programs?
+[00:51:13] Um I'm not sure. I think that well
+[00:51:16] actually they so they do in the
+[00:51:19] assessment for Compass an individual has
+[00:51:21] to answer those 137 questions and a lot
+[00:51:25] of those are what are called needs
+[00:51:27] assessment. So, they only use those six
+[00:51:30] variables, which probably are very
+[00:51:32] similar to the six variables we used.
+[00:51:33] I'm not sure, but they probably are. Um,
+[00:51:36] and a lot of those other questions give
+[00:51:40] uh the court and anyone involved in
+[00:51:43] creating a plan for them an idea of
+[00:51:47] different places where they need
+[00:51:48] support. So, I'm not sure. I know that
+[00:51:51] Compass they do provide those questions
+[00:51:53] so that uh the judge knows a little bit
+[00:51:56] more about that defendant but I'm not
+[00:51:58] sure if they are they the Equavant the
+[00:52:01] company that makes Compass has a lot of
+[00:52:03] different uh programs and software that
+[00:52:05] available so they might be doing more in
+[00:52:09] that sphere but I'm not sure
+[00:52:20] I just thought I'd follow up to that and
+[00:52:21] say there's a great paper called zombie
+[00:52:23] predictions by the guys at Upturn which
+[00:52:26] actually talk about this specifically.
+[00:52:27] One of the weaknesses being that risk
+[00:52:30] assessments right now don't incorporate
+[00:52:32] learnings around risk reduction
+[00:52:33] strategies. So you're likely to get
+[00:52:35] zombie predictions, things that are
+[00:52:37] based on older data that h that existed
+[00:52:40] prior to some sort of risk reduction
+[00:52:42] intervention happening and therefore
+[00:52:44] would skew the predictive, you know,
+[00:52:46] capacity of the results. And so I I
+[00:52:48] thought maybe as a question of that, how
+[00:52:50] would you like to see people
+[00:52:52] like incorporating I guess risk
+[00:52:54] reduction as an a strategy into these
+[00:52:56] tools? Are there ways we could like
+[00:52:58] change risk assessments to be more
+[00:53:00] intentional about thinking about risk as
+[00:53:02] this thing that changes and that we
+[00:53:04] could actually reduce as opposed to just
+[00:53:06] asking the binary question of like lock
+[00:53:07] up or release.
+[00:53:08] Yeah. And I think maybe that's related
+[00:53:10] to this question about what are we
+[00:53:11] optimizing for? What are we trying to
+[00:53:13] predict? What are we optimizing for?
+[00:53:14] what kinds of errors do we prefer over
+[00:53:16] others? And so maybe we can be
+[00:53:20] optimizing for if they're going into
+[00:53:22] this program, how did that play out two
+[00:53:24] to three years later? And that maybe
+[00:53:26] we're not saying play out in terms of
+[00:53:28] recidivism, but play out in terms of do
+[00:53:29] they have a job two to three years
+[00:53:31] later? And so what are we trying to
+[00:53:33] predict and like what are those features
+[00:53:35] we're putting in? I think could be a
+[00:53:37] good way to start.
+[00:53:40] Hi, my name is Sar. I'm working at MIT
+[00:53:43] on AI for public interest projects. Um
+[00:53:46] I'm curious, you'd mentioned earlier
+[00:53:48] different sort of methods for measuring
+[00:53:51] fairness, algorithmic fairness. I was
+[00:53:53] wondering if you could say a bit more
+[00:53:54] about that, whether you've done research
+[00:53:56] and what the tradeoffs might be uh and
+[00:53:59] utilizing different measures um as we in
+[00:54:01] a way audit the public sector's use of
+[00:54:04] algorithms.
+[00:54:05] It's a great question. So one of the
+[00:54:09] uh
+[00:54:10] what came out of the ProPublica article
+[00:54:12] about Compass. So ProPublica said these
+[00:54:14] false positive and false negative
+[00:54:16] errors. There's a discrepancy in terms
+[00:54:18] of race. This is biased. And North Point
+[00:54:21] sorry at the time North Point now
+[00:54:22] Equivant responded saying that their
+[00:54:24] tool was well calibrated. So what
+[00:54:27] calibration is is
+[00:54:30] any recidivism risk score should mean
+[00:54:32] the same thing regardless of race. So
+[00:54:34] Compass's scores are ranged from 1 to 10
+[00:54:37] and a score of three should mean the
+[00:54:38] same thing no matter if you're white or
+[00:54:40] black. So what they responded saying is
+[00:54:43] that the scores are actually well
+[00:54:45] calalibrated which is that at every
+[00:54:47] score your chance of recidivism is the
+[00:54:50] same regardless of race and they are
+[00:54:53] accurate in saying that their scores are
+[00:54:54] well calibrated. And this sparked this
+[00:54:58] debate over how can this be true? How
+[00:55:01] can both of these seemingly valid ways
+[00:55:05] to measure fairness
+[00:55:07] be contradicting with each other? And
+[00:55:09] what people figured out is that under
+[00:55:12] certain circumstances, satisfying these
+[00:55:15] two types of fairness requirements is
+[00:55:17] mathematically impossible. So if the
+[00:55:19] recidivism rate in two different groups
+[00:55:21] is different, you can't have a tool that
+[00:55:23] is both well calibrated and it um has
+[00:55:28] the same false positive false negative
+[00:55:30] errors. Um, that's kind of a math thing
+[00:55:32] that will take a long longer to explain,
+[00:55:34] but basically what's important is that
+[00:55:36] certain fairness requirements are
+[00:55:38] mathematically impossible to
+[00:55:40] simultaneously satisfy under certain
+[00:55:44] situations, which is kind of crazy
+[00:55:46] because they're both we want both of
+[00:55:47] those things. We want a score to mean
+[00:55:49] the same thing no matter if you're white
+[00:55:50] or black. We also don't want black
+[00:55:53] individuals to suffer from twice as high
+[00:55:55] false positive rates than white people.
+[00:55:57] So both of these measurements are
+[00:56:01] ethically valid to want in an algorithm.
+[00:56:03] And if the recidivism rate isn't the
+[00:56:05] same, we can't get both of those. And so
+[00:56:08] this this is why the debate about how to
+[00:56:11] measure fairness is so important because
+[00:56:13] there's so many different fairness
+[00:56:16] measurements and fairness kind of
+[00:56:18] constraints that we want in these
+[00:56:20] algorithms that are totally valid to
+[00:56:23] desire. And we have to figure out what
+[00:56:25] we're optimizing for, what is important
+[00:56:28] in this specific context, and maybe what
+[00:56:30] is the most important fairness
+[00:56:32] measurement with these scores. There are
+[00:56:35] other a couple other fairness things,
+[00:56:36] but that's the main that's the main one
+[00:56:38] that we also looked at. Yeah.
