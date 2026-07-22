@@ -1,0 +1,1562 @@
+[00:00:00] so much and hello everyone very warm
+[00:00:02] welcome this sunny day for a fabulous
+[00:00:05] lunch talk I I have the great pleasure
+[00:00:07] to welcome introduce Professor Sandra
+[00:00:10] Breman um who's a professor of
+[00:00:12] communication and the Avid professor of
+[00:00:14] Liberal Liberal Arts at Texas A&M
+[00:00:18] University um she's a very distinguished
+[00:00:21] scholar uh had many uh professorships
+[00:00:25] around the world uh on three continents
+[00:00:27] I believe Europe uh Latin America as
+[00:00:31] well as um Africa uh she has written
+[00:00:34] extensively on uh information polic
+[00:00:37] policy issues both from an international
+[00:00:39] and a domestic perspective and in fact
+[00:00:43] uh she has helped to build this field of
+[00:00:45] information uh policy and uh shapes it
+[00:00:49] and continues to shape it uh through her
+[00:00:51] uh scholarship her book um uh with the
+[00:00:56] title change of state information policy
+[00:00:59] and Power is really a seminal um piece
+[00:01:02] of work in the field and has shaped
+[00:01:05] certainly also my thinking uh when when
+[00:01:08] um discussing the role of information in
+[00:01:12] this changing world and the question uh
+[00:01:15] related to power and
+[00:01:17] policym uh her work has been supported
+[00:01:20] by many foundations she had various
+[00:01:23] scholarships is a very accomplished uh
+[00:01:26] colleague uh she also serves actually
+[00:01:29] and that's where we met uh uh at the MIT
+[00:01:33] uh in a role as the editor of the
+[00:01:35] information uh policy book series at MIT
+[00:01:38] press um was the chair uh of the
+[00:01:42] communication law and policy division of
+[00:01:44] the International Communication
+[00:01:46] associations among many other um
+[00:01:49] distinguished positions so really happy
+[00:01:52] uh to welcoming you to burkman Klein
+[00:01:55] today and to listen to uh a talk that
+[00:01:59] actually is worth at least eight talks
+[00:02:02] because uh what Professor Beman is going
+[00:02:04] to do is essentially uh to present a
+[00:02:07] really fascinating body of work an
+[00:02:09] analysis she has conducted over the
+[00:02:11] years of Internet requests for comments
+[00:02:15] uh and looking at actually the role of
+[00:02:18] Engineers and computer scientists who by
+[00:02:22] solving addressing technical problems
+[00:02:25] become actual policy makers and so the
+[00:02:28] question is how do these
+[00:02:30] the technical community as we often call
+[00:02:32] them right in their role as policy
+[00:02:34] makers think about policy issues how do
+[00:02:37] they address them and so Professor
+[00:02:39] Breman has written I think seven or
+[00:02:42] eight papers on this topic um and
+[00:02:45] will'll do the magic today to fold them
+[00:02:47] all into one talk uh looking at lessons
+[00:02:51] for emerging media Professor Breman
+[00:02:53] thank you so much for being with
+[00:02:55] us thank you so much Ur and uh thank you
+[00:02:58] for the opportunity to speak to you at
+[00:03:00] all of course uh what goes on here at
+[00:03:02] Berkman Klein is important uh for all of
+[00:03:04] us around the world um as Ur mentioned
+[00:03:08] this is um an unusual effort for me
+[00:03:10] because this is a massive research
+[00:03:12] project that so far has produced eight
+[00:03:14] uh Journal articles as another half
+[00:03:16] dozen to come and I appreciate the
+[00:03:19] challenge uh offered by this opportunity
+[00:03:21] to think about what the findings from
+[00:03:23] this research would be uh how they how
+[00:03:25] they could be useful as takeaways uh for
+[00:03:28] those of you who are working with New
+[00:03:29] Media kinds of issues
+[00:03:32] so uh so that's the question what can we
+[00:03:34] learn from the internet design process
+[00:03:37] uh if you're designing apps or services
+[00:03:39] or other kinds of things in today's uh
+[00:03:42] environment uh this is what I'm going to
+[00:03:44] do today just introduce the study
+[00:03:45] introduce the rfc's in case there's
+[00:03:47] anyone in the room who doesn't know what
+[00:03:48] they are and there are five areas in
+[00:03:50] which I'm going to try to uh summarize
+[00:03:52] my research findings in terms of
+[00:03:54] takeaways uh for today so the study was
+[00:03:58] an inductive discourse analysis is of
+[00:04:00] the internet rfc's for the first 40
+[00:04:02] years it was comprehensive for the first
+[00:04:04] decade meaning I read every single line
+[00:04:06] of every single document it was topical
+[00:04:08] from 1980 to 2009 it's worth the the wow
+[00:04:12] is appropriate when I wrote The Proposal
+[00:04:14] the NSF funded this I was looking at
+[00:04:16] documents that were like three
+[00:04:18] paragraphs to three pages long not
+[00:04:20] realizing that quickly they became 150
+[00:04:22] pages long and the project was much
+[00:04:24] larger than um I had imagined and
+[00:04:27] actually the NSF wanted me to go on
+[00:04:29] after the first round but I realized
+[00:04:30] that my grandchildren could not finish
+[00:04:32] this project so my goal is to show the
+[00:04:35] kinds of work that can be done
+[00:04:36] demonstrate the method and I hope the
+[00:04:37] others will take up um every single line
+[00:04:40] of every uh everyone that comes after
+[00:04:42] that um so my launch question was uh the
+[00:04:46] way Ur uh phrased it so beautifully but
+[00:04:48] how do those responsible for Designing
+[00:04:50] the internet think about policy when I
+[00:04:52] Define information policy I include not
+[00:04:54] just the formal operations of
+[00:04:56] geopolitically recognized governments
+[00:04:58] but also the informal Al processes and
+[00:05:01] decision-making procedures of private
+[00:05:03] sector as well as public sector ENT
+[00:05:05] entities and governmentality meaning the
+[00:05:07] cultural habits and predispositions that
+[00:05:09] enable and support both governance and
+[00:05:12] government so for me this was in the
+[00:05:14] domain of governance and certainly a
+[00:05:16] place to look at uh what it really means
+[00:05:19] when we say code is law at the
+[00:05:21] architecture level so what it's not is
+[00:05:23] in-depth analysis of decision- making on
+[00:05:25] specific technical issues in this way my
+[00:05:28] work is completely arthog to that of
+[00:05:30] Laura denardis um but what it is is
+[00:05:33] policy analysis its recuperation of
+[00:05:35] History I've met a lot of people
+[00:05:36] involved in this process who come up to
+[00:05:38] me I was terrified when I first started
+[00:05:40] talking about it thinking they would
+[00:05:41] laugh me out of the room but in fact
+[00:05:43] they said I you know I was there you're
+[00:05:45] right utterly fascinating had no idea
+[00:05:47] you could get this stuff out of it I
+[00:05:49] think of this as soot technical boundary
+[00:05:51] work and as support for Theory building
+[00:05:54] regarding large scale soot technical
+[00:05:56] infrastructure there were a lot of
+[00:05:58] methodological challenges I am NE
+[00:06:00] neither an electrical engineer nor a
+[00:06:01] computer scientist so for me reading
+[00:06:03] this stuff was like reading Martian
+[00:06:05] upside down in the mirror um it turned
+[00:06:08] out that it was it really is every
+[00:06:09] single document and every single
+[00:06:11] sentence so you might be reading
+[00:06:13] something that is actually an
+[00:06:14] explanation of code and embedded in the
+[00:06:16] middle of it there's a side comment
+[00:06:18] about privacy you simply can't stop
+[00:06:20] reading so in that sense it was the most
+[00:06:22] difficult reading I've ever done um it
+[00:06:25] was I had 30 students who were
+[00:06:27] ultimately involved in the project but
+[00:06:30] the level of sophistication required to
+[00:06:32] do a secondary reading of technical
+[00:06:34] documents from a policy perspective in
+[00:06:36] large part required really a high level
+[00:06:38] of sophistication so there were lots of
+[00:06:40] things they could do but some things
+[00:06:42] they could not and of course everything
+[00:06:44] keeps changing I want to make the
+[00:06:46] methodological point because I get asked
+[00:06:48] every single time I give a talk from
+[00:06:50] this automated analysis is absolutely
+[00:06:52] useless when it comes to this Corpus um
+[00:06:55] I did an experiment with privacy which
+[00:06:57] is the most discussed policy issue issue
+[00:06:59] no surprise if you do an automated
+[00:07:02] search on the on the obvious terms you
+[00:07:04] get to um 12% of the documents but many
+[00:07:07] of those actually have nothing to do
+[00:07:09] with privacy when you read inductively
+[00:07:11] you get to 18% and often quite different
+[00:07:13] documents from the one you find when you
+[00:07:15] do word search uh if you did natural
+[00:07:17] language processing you'd wind up with a
+[00:07:18] map of the world because of subject
+[00:07:20] matter and the terminology keep changing
+[00:07:23] um so I I coded for about 70 variables
+[00:07:25] within the text and code classify the
+[00:07:28] text along a number of variables as
+[00:07:31] well okay screwed up okay um so does
+[00:07:37] everybody everybody knows what these are
+[00:07:38] in this room I can anybody uh one thing
+[00:07:41] to point out so there were almost 50
+[00:07:44] 5700 documents in the first 40 years
+[00:07:46] which is what I was looking at um it's
+[00:07:49] worth noting I haven't seen anybody else
+[00:07:51] talk about this yet but how many
+[00:07:53] different authors how many different
+[00:07:54] kinds of entities and how many different
+[00:07:56] countries were involved in the design
+[00:07:59] process I'm going to do this
+[00:08:01] repeatedly um genres uh differ they have
+[00:08:04] a formal distinction among types of
+[00:08:05] genres we used a we added another set of
+[00:08:08] genre distinctions and there's a wide
+[00:08:10] range of suctions that they functions
+[00:08:11] that they serve this is what it looks
+[00:08:13] like totally randomly chosen um after
+[00:08:16] the abstract you can go into your 1 to
+[00:08:18] 300 Page document that is analyzing the
+[00:08:20] technical uh problem involved again
+[00:08:23] freely available online hosted by the
+[00:08:25] ietf so um a lot of policy issues show
+[00:08:28] up really early and I've underlined some
+[00:08:30] that may be surprises they were already
+[00:08:32] talking about commercialization in 71
+[00:08:35] they were already talking about access
+[00:08:36] to the network and rural areas thank you
+[00:08:38] Canadian government um they were talking
+[00:08:40] about energy issues in
+[00:08:42] 1972 high school students were hacking
+[00:08:44] it already in 75 uh and so a lot of what
+[00:08:47] we look at today has a very long history
+[00:08:51] when it comes to thinking about the
+[00:08:52] policymaking process uh we see this I'm
+[00:08:55] going to flip through my sides rather
+[00:08:56] quickly because of the what I'm trying
+[00:08:58] to do here here um but I'm happy to
+[00:09:00] share the slides if that's useful
+[00:09:02] afterwards and the uh articles are all
+[00:09:04] freely available um so they're defining
+[00:09:06] the policy subject what are we even
+[00:09:08] talking about here what is the network
+[00:09:10] this it is through the medium of the
+[00:09:12] rfc's that the uh governance mechanisms
+[00:09:15] of the ietf and I can evolve uh there
+[00:09:18] are implementation programs guides
+[00:09:21] establishment of Behavioral nor norms
+[00:09:23] and something that is underinvestigated
+[00:09:25] is that the rfc's were a venue through
+[00:09:28] which a lot of vendors
+[00:09:30] uh engaged in their conflicts and had
+[00:09:32] their conflicts resolved so it's a very
+[00:09:34] interesting place to look for details on
+[00:09:36] Commercial battles when we think about
+[00:09:39] the relationship between Technical and
+[00:09:40] legal thinking and one of my original
+[00:09:42] motivations was to find a way to try to
+[00:09:44] bring together the technical and legal
+[00:09:46] communities around this area of shared
+[00:09:48] interest and engagement we find that the
+[00:09:51] rfc's do offer support for some people
+[00:09:53] who are quite critical of the design
+[00:09:55] process very little on disability
+[00:09:57] nothing on the elderly
+[00:09:59] but there's also evidence that really
+[00:10:01] counters the critics so it's very
+[00:10:03] popular to criticize the um the the
+[00:10:06] internet for not having been
+[00:10:07] International enough for not being
+[00:10:09] sensitive enough or or making it easy
+[00:10:11] enough for people who use other
+[00:10:12] languages besides English and other um
+[00:10:15] alphabets uh besides the Roman the Latin
+[00:10:19] um but actually they were talking about
+[00:10:21] that from the very beginning it was
+[00:10:23] simply that there were a whole lot of
+[00:10:24] technical problems that had to be
+[00:10:26] resolved before that could be achieved
+[00:10:28] so it's uh in my view not legitimate to
+[00:10:30] criticize them when when the issue was
+[00:10:32] trying to solve the technical problems
+[00:10:35] the implicit policy analysis was
+[00:10:36] surprisingly Rich so as one example the
+[00:10:40] view of privacy as contextual and as
+[00:10:43] boundary definitional appears in the
+[00:10:45] rfc's decades decades before it shows up
+[00:10:48] in the social science literature and of
+[00:10:49] course it showed up in social science
+[00:10:51] literature long before it started
+[00:10:53] showing up into legal literature when it
+[00:10:55] comes to policymaking there is
+[00:10:57] announcement of positions uh in the 70s
+[00:11:00] they we will not get involved with
+[00:11:02] wiretapping uh defining online telepan
+[00:11:05] they get involved with thinking about
+[00:11:06] General legal issues like antitrust and
+[00:11:08] fraud of course internet specific legal
+[00:11:11] issues like spam and fishing responses
+[00:11:14] to US law because they realized they had
+[00:11:17] to comply and and talk about the
+[00:11:19] technical inadequacies of the law what
+[00:11:21] Congress did regard to spam in the 90s
+[00:11:24] was laughable and the respond to laws of
+[00:11:26] other countries besides the us as well
+[00:11:29] when it came to policy analysis some of
+[00:11:31] it was quite explicit um some of it
+[00:11:33] provides technical background for policy
+[00:11:36] issues that are still uring and I would
+[00:11:38] point to a piece that is yet to come has
+[00:11:40] been given as oral presentations but not
+[00:11:42] written up yet but the rsc's onfair
+[00:11:44] queuing and quality of service are
+[00:11:46] actually key to understanding the
+[00:11:48] problem of network neutrality which
+[00:11:49] again we are going to have to address
+[00:11:52] with great seriousness um they offer
+[00:11:54] critiques of statutory law explanations
+[00:11:56] of technical contradictions in laws and
+[00:11:58] regulations and so forth and then
+[00:12:00] there's a lot of imp what I would call
+[00:12:02] implicit policy analysis technical
+[00:12:04] analysis of dimensions of policy issues
+[00:12:07] that are not yet apparent legal
+[00:12:08] discussions but they but the sensitivity
+[00:12:10] to the fact that they would be legal
+[00:12:12] problems was there among the uh computer
+[00:12:15] scientists and electrical
+[00:12:17] engineers there is more discussion of
+[00:12:19] political thought than I had imagined
+[00:12:21] would be the case so there is talk about
+[00:12:24] the Free Speech value of the network
+[00:12:25] long before the NGS get involved comes
+[00:12:27] up first in a joke become serious fairly
+[00:12:30] quickly jurisdictional issues and not
+[00:12:32] just the geopolitical problem that would
+[00:12:34] be familiar to all of us but one of the
+[00:12:36] pieces I've publish is on the tension
+[00:12:38] between geopolitical citizenship and
+[00:12:40] what I'm calling Network political
+[00:12:42] citizenship because there are areas for
+[00:12:44] example when you're dealing with malware
+[00:12:47] where uh which is your primary
+[00:12:49] citizenship
+[00:12:50] identification um will determine how you
+[00:12:52] would respond to the problem and it may
+[00:12:54] be very different kinds of behaviors
+[00:12:56] required by the different kind of
+[00:12:58] citizenship that that is your primary
+[00:12:59] Allegiance uh there were efforts to be
+[00:13:01] agnostic regarding what is a country
+[00:13:03] when it came to the DNS and some uh very
+[00:13:06] interesting complications there when it
+[00:13:08] came to
+[00:13:09] internationalization uh they talked
+[00:13:10] about uses of law in a technical
+[00:13:12] environment so they actually rely on us
+[00:13:15] constitutional principles when they're
+[00:13:17] thinking about how to design and change
+[00:13:18] the ietf uh they think about compliance
+[00:13:21] and they think about what is legality in
+[00:13:23] the first place what is
+[00:13:24] governance so uh these are areas in
+[00:13:27] which I think there's some findings that
+[00:13:29] um um that provide models for kinds of
+[00:13:32] things you want to think about when
+[00:13:34] you're working with other New Media in
+[00:13:36] today's environment one is that uh
+[00:13:38] design criteria really can be treated as
+[00:13:41] constitutional principles people talked
+[00:13:43] about that for the internet before I
+[00:13:45] came along but I did an analysis of what
+[00:13:46] I thought were uh the fundamental
+[00:13:49] constitutional principles as they were
+[00:13:50] established here in the first decade of
+[00:13:53] the design process 69 to 79 so there are
+[00:13:56] logistical principles and as with the US
+[00:13:58] constition tion they talk about sort of
+[00:14:00] how is this thing going to work
+[00:14:02] operationally um more interesting uh
+[00:14:05] those are important but more interesting
+[00:14:06] is they do talk about user
+[00:14:09] democracy um the the false imaginaries
+[00:14:13] about the history of Internet design are
+[00:14:15] Myriad and growing so you know just this
+[00:14:18] week again you read the you're asked to
+[00:14:20] review the journal manuscript that talks
+[00:14:22] about the fact that when the internet
+[00:14:23] designed it was only for the military
+[00:14:25] and now we have all these uses and users
+[00:14:27] ding um so it was designed for all types
+[00:14:30] of uses and users techn what I'm calling
+[00:14:32] technological democracy which means that
+[00:14:35] from the start the effort was design not
+[00:14:37] only for The Cutting Edge the fastest uh
+[00:14:40] computers the greatest bandwidth but
+[00:14:42] also remember to design always for the
+[00:14:44] slowest bandwidth and um and the least
+[00:14:48] computationally effective uh computers
+[00:14:51] because the goal was to have everybody
+[00:14:53] in the network from the start there was
+[00:14:55] the goal of experiencing Computing at a
+[00:14:57] distance as if it we're local we aren't
+[00:15:00] thinking so much about telepresence
+[00:15:01] anymore as we've all gotten used to it
+[00:15:03] but I think it's worth noting that that
+[00:15:04] was a social goal for the designers
+[00:15:07] early on very aware of the tension
+[00:15:09] between the need to have user control
+[00:15:11] and extreme flexibility with what it was
+[00:15:14] that needed to be standardized in order
+[00:15:16] for the network to operate at all they
+[00:15:18] were interested in stimulating
+[00:15:20] Innovation for the for the sake of
+[00:15:22] innovation interoperability meaning uh
+[00:15:25] including compatibility backward and
+[00:15:27] forward and extensibility across types
+[00:15:29] of networks uh irrespective of the
+[00:15:31] Innovations and the scales involved
+[00:15:34] other kinds of social goals included
+[00:15:36] promoting social interaction among users
+[00:15:37] and we'll get back to community uh again
+[00:15:41] so there are conceptualizations of the
+[00:15:42] uses and the users which were extremely
+[00:15:44] broad andrich driven by a number of uh
+[00:15:48] motivations and conceptualizations and
+[00:15:50] yes science fiction does play a
+[00:15:52] role rfc1 they're assuming from day one
+[00:15:57] that it's going to be everybody doing
+[00:15:59] everything by 1971 already you had these
+[00:16:03] private sector these commercial uses
+[00:16:05] were already being discussed General
+[00:16:07] Motors is already in a corporation and
+[00:16:09] many into the conversation and many
+[00:16:11] other corporations followed in quickly
+[00:16:14] and from already by 1971 they're
+[00:16:16] supporting users who are not in the
+[00:16:17] original Grant funded uh group uh that
+[00:16:21] came out of DARPA government uses
+[00:16:23] foreseen the first decade I think it's
+[00:16:25] also interesting in the military needs
+[00:16:27] that was actually a separate ation so it
+[00:16:29] shows up in the rfc's only by the
+[00:16:31] authors so when you see miter you can
+[00:16:33] assume certain kinds of interests or in
+[00:16:35] underlying assumptions and some of the
+[00:16:37] problems like malware address but
+[00:16:39] they're not directly addressed in the
+[00:16:40] text but note that egovernment was
+[00:16:42] already being discussed by
+[00:16:45] 1972 uh users the most interesting thing
+[00:16:48] uh surprised to me I hadn't thought
+[00:16:50] about it ahead of time although I had
+[00:16:52] already been writing about post-human
+[00:16:53] law before I engaged in this work I
+[00:16:56] published first on post-human law the
+[00:16:58] replace of human decision-making for
+[00:16:59] legal purposes uh by machines in a
+[00:17:02] variety of ways I published on that in
+[00:17:04] 2002 but I wasn't thinking about that
+[00:17:07] when I entered this but they were as
+[00:17:08] designing as much or more for the
+[00:17:11] non-human users as for the humans and
+[00:17:13] they actually use the word demon this is
+[00:17:15] a Greek concept that showed up again in
+[00:17:17] the medieval period to refer to agents
+[00:17:19] who were neither human nor Divine so the
+[00:17:22] demon users in the internet are
+[00:17:24] operating systems software other layers
+[00:17:27] of the network structure and so forth
+[00:17:29] and actually they kind of preferred
+[00:17:31] thinking about the demon users and the
+[00:17:33] humans were totally annoying and
+[00:17:34] mystifying why do they care about names
+[00:17:36] they can remember and so forth although
+[00:17:38] when they designed for humans it of
+[00:17:40] course uh was good for the demons as
+[00:17:42] well at any rate other kinds of user
+[00:17:44] distinctions that were
+[00:17:45] important um uh notably they did get
+[00:17:48] engaged in social science already in the
+[00:17:50] first decade trying to study what was
+[00:17:52] going on and how uses reacted but of
+[00:17:54] course that social science was done by
+[00:17:56] computer scientists and electrical
+[00:17:57] engineers using themselves and their
+[00:17:59] students as subject so those of us who
+[00:18:01] are social scientists might question
+[00:18:03] some of what they did uh addressing
+[00:18:06] diversity so there are a lot of ways of
+[00:18:07] thinking about this and it's a big issue
+[00:18:10] and and should be and remains an
+[00:18:11] important issue and and will remain so
+[00:18:15] but uh the most prevalent area in which
+[00:18:17] this kind of problem was discussed in
+[00:18:19] especially in the first decade uh but
+[00:18:21] throughout the first 40 years was in the
+[00:18:22] question of
+[00:18:23] internationalization so I just wanted to
+[00:18:25] highlight some of the different ways in
+[00:18:27] which that's actually approached and one
+[00:18:30] of my um pet peeves that I'm I'm
+[00:18:33] responding to here and in some of the
+[00:18:35] other things I'm saying today again is
+[00:18:36] that often people who are involved in uh
+[00:18:40] social design considerations for the
+[00:18:42] internet or for other Technologies tend
+[00:18:44] to think that issues are singular in
+[00:18:46] nature and if they think of one kind of
+[00:18:48] fix they got it but no issue is singular
+[00:18:50] in nature and it takes a whole lot of
+[00:18:52] different kinds of things to deal with
+[00:18:53] any kind of social issue so when it came
+[00:18:55] to internationalization you had
+[00:18:57] authorship and particip ation in the
+[00:18:58] conversation the influence of
+[00:19:00] international organizations uh standard
+[00:19:02] setting organizations so forth were
+[00:19:04] involved extension of the network beyond
+[00:19:06] the US which took place by
+[00:19:08] 1973 uh the issues that they talked
+[00:19:11] about I'll come back to uh
+[00:19:13] internationalization showed up in how
+[00:19:15] they conceptually and operationally
+[00:19:17] developed their definitions and it shows
+[00:19:19] up in their design criteria these are
+[00:19:22] just uh again I don't have time to talk
+[00:19:24] them all through but some of the kinds
+[00:19:25] of issues that are discussed in the RFC
+[00:19:28] as they think about what it takes to
+[00:19:30] operate in an international environment
+[00:19:32] and these will be familiar to us from
+[00:19:34] other domains but they these are the
+[00:19:35] computer scientists and electrical
+[00:19:37] engineers were thinking about these
+[00:19:39] kinds of problems uh and more um tariffs
+[00:19:43] things like tariffs uh and dual use
+[00:19:46] Technologies the fact that Technologies
+[00:19:47] can be used both for purposes of peace
+[00:19:49] and for purposes of War they um were not
+[00:19:52] ones that they thought about until they
+[00:19:53] started going International and bumped
+[00:19:55] into the fact that oh yeah there
+[00:19:57] actually is a regulatory EnV environment
+[00:19:58] out here that we have to get involved
+[00:20:00] with but then they
+[00:20:02] did um again the language issues in
+[00:20:05] 1971 um another way of thinking about
+[00:20:08] the problem of issue nuance and
+[00:20:10] multi-dimensionality comes at it from
+[00:20:12] the point I just made about
+[00:20:14] issues uh so um there are multiple
+[00:20:17] issues uh and I've published on this in
+[00:20:20] which they are coming at any single
+[00:20:22] problem from multiple Dimensions but I
+[00:20:24] wanted to take the example again a
+[00:20:26] privacy is the single most disussed for
+[00:20:28] obvious reasons policy issue um so just
+[00:20:31] again during the first decade they came
+[00:20:33] up with multiple ways of thinking about
+[00:20:36] how to deal with privacy issues not and
+[00:20:39] and concerns that were raised on behalf
+[00:20:41] of the humans on behalf of the network
+[00:20:44] and be on a behalf of the data when it
+[00:20:46] came to human protections there was all
+[00:20:48] kinds of attention early on of course to
+[00:20:51] logging in issues there was a very
+[00:20:53] interesting concept that had a life of
+[00:20:55] two or three years in which they decided
+[00:20:58] that you would have an internet
+[00:21:00] birthplace so wherever you first came
+[00:21:02] online that would be your geopolitical
+[00:21:04] and your identification for the rest of
+[00:21:07] your internet life we have lost that but
+[00:21:09] it was an interesting conversation uh
+[00:21:12] masking your input and as Wikileaks
+[00:21:15] likes with the air gap a variety of
+[00:21:17] offline Arrangements were being
+[00:21:18] discussed in the 1970s as ways to
+[00:21:20] protect uh what you were doing online
+[00:21:23] when it comes to the network of course
+[00:21:24] there was discussion of private
+[00:21:25] networking and how to protect that
+[00:21:27] private Network
+[00:21:28] again offline storage snail mail as ways
+[00:21:31] of putting in what we would Now call an
+[00:21:33] air gap uh termination of activity is a
+[00:21:35] means of achieving privacy stopping
+[00:21:37] processes flushing input and output
+[00:21:40] information and destroying files things
+[00:21:42] that are again becoming familiar in
+[00:21:44] practice they looked at message design
+[00:21:46] from a privacy perspective packetizing
+[00:21:48] how they went about packetizing um
+[00:21:50] header design again uh different issues
+[00:21:52] as they addressed humans and Demon users
+[00:21:55] uh connection identity and they thought
+[00:21:58] thought about the data so that included
+[00:22:00] information architecture a lot of
+[00:22:01] attention when they were thinking about
+[00:22:03] file name and path name structures how
+[00:22:05] to use metadata and of course
+[00:22:08] encryption coping with instability may
+[00:22:10] be the problem that you're all very
+[00:22:12] familiar with as well it's hard to think
+[00:22:14] of uh an app or a service or a program
+[00:22:17] or uh anything you would want to do
+[00:22:19] online that doesn't have instability as
+[00:22:20] a problem um there are there's horory
+[00:22:23] value in the design process for lessons
+[00:22:25] not learned they began to they started
+[00:22:28] by insisting on backward compatibility
+[00:22:30] but of course IPv6 is not Backward
+[00:22:32] Compatible uh so they weren't able to
+[00:22:34] sustain that um it's worth noting that
+[00:22:36] the internet rfc's have become a model
+[00:22:38] for large scale soot technical
+[00:22:40] decision-making about infrastructure um
+[00:22:43] and I think it's because of things like
+[00:22:44] this that they learn things about how to
+[00:22:47] handle uh instability so the difficult
+[00:22:50] interestingly enough they began by
+[00:22:51] thinking that every decision they made
+[00:22:54] in 1969 and 1970 would have to be
+[00:22:56] permanent so these at the time largely
+[00:22:59] graduate students involved were quite
+[00:23:00] paralyzed they were uncertain they kept
+[00:23:03] thinking there must be experts somewhere
+[00:23:04] who would come and tell them what to do
+[00:23:06] if they just like hung around long
+[00:23:08] enough that that that guy would show up
+[00:23:10] uh but then they realized that
+[00:23:12] everything was going to be susceptible
+[00:23:14] to change and of course that's still the
+[00:23:15] case whether that's the languages
+[00:23:17] software Hardware how you're thinking
+[00:23:18] about levels of the network who are the
+[00:23:21] users what are the user practices and it
+[00:23:23] just keeps uh
+[00:23:25] ramifying a number of techniques were
+[00:23:27] developed
+[00:23:28] uh to deal with that kind of instability
+[00:23:30] and I'd like to talk through a few of
+[00:23:32] those um so definitional and conceptual
+[00:23:36] labor this is
+[00:23:37] really
+[00:23:39] um uh I think that those who are not um
+[00:23:42] trying to resolve technical problems
+[00:23:44] there's often a lot of in my view dis
+[00:23:47] absurd disdain because there was an
+[00:23:50] enormous amount of conceptual and really
+[00:23:52] theoretical work even to think of the
+[00:23:54] simplest Concepts it's actually in the
+[00:23:56] rfc's that they first agree upon what a
+[00:23:58] bite is for computing purposes so
+[00:24:01] they're having to think about what are
+[00:24:03] communication processes what is the
+[00:24:05] network what are the elements of the
+[00:24:06] network they had to figure out what was
+[00:24:08] the difference between experimentation
+[00:24:10] and what it really meant to change a
+[00:24:12] protocol that's a conceptual problem
+[00:24:14] it's not a technical problem they had to
+[00:24:16] distinguish between what was error and
+[00:24:19] what was idiosyncratic use and actually
+[00:24:21] in the fake news environment that's
+[00:24:22] still an ongoing question offline as
+[00:24:25] well um they were dealing with
+[00:24:27] globalization how you deal with the
+[00:24:29] global in gloal global in the local
+[00:24:32] context um a lot of rhetorical tools
+[00:24:34] were used uh so there were uh there was
+[00:24:37] a real emphasis on expressing your
+[00:24:40] design assumptions uh talking about the
+[00:24:42] design constraints sharing
+[00:24:45] recommendations and an interesting
+[00:24:47] insistence on the language of the the
+[00:24:51] written language the text of the rfc's
+[00:24:54] and basically the position that you have
+[00:24:56] to be really precise and if it isn't
+[00:24:58] precisely there in the written text not
+[00:25:00] the code if it isn't there in the
+[00:25:02] written text it doesn't exist we're
+[00:25:03] going to assume it's not there at the
+[00:25:06] same time they realized that of course
+[00:25:07] there's going to be a gap between text
+[00:25:09] and reality but they kept trying to
+[00:25:10] drive the designers towards Precision in
+[00:25:13] the written language um they were aware
+[00:25:16] that models shaped their perceptions of
+[00:25:17] problems and the possible solutions in
+[00:25:20] really very sophisticated ways um they
+[00:25:23] saw that texts were problemsolving
+[00:25:25] provocations but again not the um not
+[00:25:28] the equivalent of implementation and I
+[00:25:30] came to think of uh what I started
+[00:25:32] calling skins or design wraps as
+[00:25:34] affordances for thinking about new kinds
+[00:25:36] of
+[00:25:37] problems very interesting uh I guess
+[00:25:40] politicians might find this familiar but
+[00:25:42] the ways in which they manipulate the
+[00:25:44] process as means of coping with
+[00:25:46] instability so one trick was
+[00:25:48] delay um everything's uncertain among us
+[00:25:52] we got lots of problems to solve let's
+[00:25:53] take this one and just wait and maybe
+[00:25:56] things will settle down and we can get
+[00:25:57] to to it um in a calmer uh moment um
+[00:26:00] although there was a drive towards very
+[00:26:02] detailed and precise specification in
+[00:26:04] the written texts they also used
+[00:26:07] incomplete specification as a means of
+[00:26:10] sort of riding over what might be in
+[00:26:12] unstable and what might be uh changing
+[00:26:14] even uh within uh the very near
+[00:26:17] foreseeable uh future and there's a kind
+[00:26:19] of parallel again and legal thinking
+[00:26:21] when we go to C sunstein and his
+[00:26:23] thinking about incomplete theorization
+[00:26:25] of the law actually fulfills much of the
+[00:26:27] same function ions as we see in the
+[00:26:29] rfc's um they they treated
+[00:26:31] experimentation as a form of a
+[00:26:33] culturation they wouldn't have used they
+[00:26:34] didn't use that word but Anyone who
+[00:26:36] reads social theory would use that word
+[00:26:39] um there was the impact of personal
+[00:26:41] Force as a grad student John costell
+[00:26:43] says I will be the naming Zar and then
+[00:26:46] he was um uh there were I I'm wasn't
+[00:26:51] going to discuss it here but especially
+[00:26:53] in the first decade there's a lot of
+[00:26:54] language there that made you made clear
+[00:26:56] that they didn't think anybody else
+[00:26:58] would ever read these lots of people are
+[00:27:00] saying things that your mother really
+[00:27:01] told you not to say to anybody and it's
+[00:27:03] really quite fascinating after about 20
+[00:27:05] years it becomes exceedingly dry and I
+[00:27:09] appreciate the fact that David Clark at
+[00:27:10] MIT has have had this discussion
+[00:27:12] repeatedly with him and and he agrees
+[00:27:14] with me that the amount of political and
+[00:27:17] policy discussion you're going to get
+[00:27:18] after about 20 years in is much lower
+[00:27:20] because the the nature of the genre
+[00:27:22] publication process has become so
+[00:27:24] formalized but early on it's really
+[00:27:26] rather juicy um onw workking Network
+[00:27:29] measurement as a mean you know keep
+[00:27:31] testing it at first they went a number
+[00:27:33] of years without actually looking at
+[00:27:34] what was happening and they finally
+[00:27:35] realized they had to be GA gathering
+[00:27:37] data about what was going on in a
+[00:27:39] regular way um details could be provided
+[00:27:41] on a need to know basis and of course
+[00:27:43] the RF sees themselves that conversation
+[00:27:46] was a critical uh and remains a critical
+[00:27:48] policy tool enormous difference to the
+[00:27:51] community so strong normative pressures
+[00:27:54] my piece the framing years goes into
+[00:27:55] this in the most depth um um uh so the
+[00:28:00] um the site where design decisions take
+[00:28:03] place the community preferences and
+[00:28:04] compliance interact if you went ahead
+[00:28:06] and tried to Institute something without
+[00:28:08] running it by the community that was
+[00:28:11] vigorously castigated um uh but but of
+[00:28:15] course there were limits so the internet
+[00:28:16] design Community said no to property
+[00:28:19] rights and domain L names but the legal
+[00:28:21] community of course was able to achieve
+[00:28:23] a yes uh the internet uh design
+[00:28:26] Community want wanted user input but
+[00:28:29] kept bumping into sort of knowledge
+[00:28:30] realities and the difference between
+[00:28:32] those with and without technical
+[00:28:34] knowledge and they keep moving back and
+[00:28:36] forth on that kind of thing and you can
+[00:28:38] see it in the organizational design a
+[00:28:40] committee that's for all Commerce and
+[00:28:41] then a subcommittee that SS with
+[00:28:42] technical knowledge and they keep
+[00:28:44] opening and
+[00:28:45] closing and living with Paradox um they
+[00:28:49] expect instability and commands and
+[00:28:52] identities but in order to operate you
+[00:28:54] have to assume that everything works
+[00:28:55] just as we've said it's going to work
+[00:28:58] there's the push to document everything
+[00:29:00] and again that precision and language
+[00:29:02] but they assume there's a leg between uh
+[00:29:05] the changes the technical changes and
+[00:29:07] what actually shows up in the
+[00:29:08] documentation even though the
+[00:29:10] documentation should come first uh there
+[00:29:12] is the Press again to be very precise in
+[00:29:15] the protocols but also happily using um
+[00:29:20] symbolic expressions like Fubar just to
+[00:29:22] like Smooth over and get past something
+[00:29:24] in which actually you can't be precise
+[00:29:26] and then what I call the use of
+[00:29:28] paradoxes is canniness and I was um
+[00:29:31] inspired by a political scientist who
+[00:29:33] talks about the canny state um ronera is
+[00:29:36] her name but she talks about India and
+[00:29:38] that and the canny state is uh is that
+[00:29:41] in which the government uh makes dual
+[00:29:43] use of the the borderline between
+[00:29:45] International and domestic policymaking
+[00:29:47] so for a government who wants to do that
+[00:29:49] wants to do something domestically that
+[00:29:51] is not what the international
+[00:29:52] environment uh wants to do uh you just
+[00:29:55] say to the inter International envir I
+[00:29:57] can't my you know my domestic people
+[00:30:00] just can't do it if the government wants
+[00:30:02] to do something that is uh pressed from
+[00:30:04] outside whether it's another country or
+[00:30:06] the international environment and the
+[00:30:08] country doesn't want to do it you just
+[00:30:09] say I've got we've got to do it because
+[00:30:11] the international environment forces us
+[00:30:12] to do it and you play the game depending
+[00:30:15] on what it is you actually want to
+[00:30:16] accomplish and you can see that kind of
+[00:30:18] canniness in play by the internet
+[00:30:20] designers who are using paradoxes and
+[00:30:23] position using the fact that there are
+[00:30:25] paradoxes to position themselves and in
+[00:30:27] order to get particular kinds of things
+[00:30:28] accomplished that they want to get
+[00:30:30] accomplished so uh in some they
+[00:30:33] recognize this is 1972 that Network
+[00:30:36] topology is a complicated political and
+[00:30:38] economic question um and uh you've
+[00:30:41] listened to a lot of detail here so let
+[00:30:43] me stop here and see what kind of
+[00:30:44] conversations you may have about how you
+[00:30:46] can use this in the problems that you're
+[00:30:48] trying to solve today uh briefly full
+[00:30:50] text of many most of my Publications are
+[00:30:52] up there at the
+[00:30:54] website thank you so much what a
+[00:30:56] wonderful
+[00:31:01] talk so before we open up may ask one
+[00:31:05] question to start with and that is um we
+[00:31:08] having so much debates these days about
+[00:31:11] how to better Bridge the world of
+[00:31:13] computer science and engineering and the
+[00:31:15] policy governance social science space
+[00:31:18] looking at at problems concerning
+[00:31:21] artificial intelligence looking at other
+[00:31:23] emerging Technologies and with this Rich
+[00:31:26] experience in
+[00:31:28] mind also perhaps you know looking at
+[00:31:31] what has worked better and what has
+[00:31:33] worked not that well in in the history
+[00:31:35] at this interface are there some sort of
+[00:31:39] in addition to to the very rich menu you
+[00:31:41] already presented but are there some
+[00:31:43] sort of higher level takeaways what what
+[00:31:46] are success factors um to to build these
+[00:31:49] Bridges because my takeway was there was
+[00:31:52] a lot of policy thinking in the
+[00:31:54] engineering world but I think I
+[00:31:57] hypothesize uh there was less technical
+[00:32:00] thinking in the policy world and so how
+[00:32:03] can we do a better job building these
+[00:32:05] Bridges um maybe looking from one side
+[00:32:07] and then from the other that's the big
+[00:32:09] question and as I mentioned that was
+[00:32:11] really trying to get there was one of
+[00:32:12] the was a primary motivation for this
+[00:32:14] work and I have not done enough work to
+[00:32:16] get there yet but here are the things
+[00:32:19] the Avenues that I think of I actually
+[00:32:20] did an analysis at one point of there
+[00:32:22] used to be an internet policy caucus
+[00:32:24] this in the 90s in Congress and I didn't
+[00:32:26] announ is of the what then 181 people
+[00:32:29] who were in The caucus and none of them
+[00:32:32] had technical backgrounds and there was
+[00:32:33] a brief period when there were
+[00:32:35] opportunities to talk to staffers in
+[00:32:37] Congress about the technical side of
+[00:32:39] things that came and went rather quickly
+[00:32:41] but that would be one approach uh worth
+[00:32:43] thinking about I think that uh David
+[00:32:45] Clark actually has a book the draft of
+[00:32:48] which is on his website and which will
+[00:32:50] be uh once revised coming out actually
+[00:32:52] in the information policy series at MIT
+[00:32:54] press that talks about um
+[00:32:58] design issues that have been David for
+[00:33:01] those of you who don't know him was one
+[00:33:03] of the key was one of the really on the
+[00:33:05] design side kind of the equivalent to
+[00:33:07] Vince surf as political Guru and design
+[00:33:10] Guru for the history of Internet design
+[00:33:12] has been involved since the early 1970s
+[00:33:14] and led the NSF funded efforts to design
+[00:33:17] the future of the internet and um he now
+[00:33:21] has a sole authored book that talks
+[00:33:22] about the design principles the design
+[00:33:24] questions and the issues that have been
+[00:33:27] important in the past and that are
+[00:33:28] important going forward he initially
+[00:33:30] thought of that as going just to the
+[00:33:31] technical community but we convinced him
+[00:33:33] that no this needs to be written for the
+[00:33:35] for the broader policy Community as well
+[00:33:37] so there's that kind of writing task I
+[00:33:39] think there's a there's a job to be done
+[00:33:42] with it and ACM in terms of bringing
+[00:33:45] this kind of thing actually into the
+[00:33:47] engineering classes as well and on the
+[00:33:49] law school and um and where the law is
+[00:33:52] taught side actually I did a report for
+[00:33:55] the Rockefeller foundation in the 1990s
+[00:33:57] about how law was being taught in this
+[00:33:59] area across the country and across kinds
+[00:34:01] of disciplines and there were two big
+[00:34:03] takeaways um I'm sorry it was it was uh
+[00:34:06] the mid it was about 2004 2005 there
+[00:34:09] were two big takeaways and one was that
+[00:34:12] um uh most communication law courses
+[00:34:14] were history because they ignored
+[00:34:15] everything that had happened since 2001
+[00:34:18] as if it wasn't there but the other was
+[00:34:20] this problem of the technical side of it
+[00:34:21] and I would love to see an institution
+[00:34:24] develop um it could be done online and
+[00:34:27] serve all institutions um a a technical
+[00:34:31] training thing for people who are
+[00:34:32] thinking about the law so that with uh
+[00:34:35] so that they would gain that kind of
+[00:34:37] sophistication and be able to think
+[00:34:38] about these kinds of problems Time After
+[00:34:40] Time Congress does things that are just
+[00:34:42] simply laughable from a technical point
+[00:34:43] of
+[00:34:50] view introduce yourself I I'm Ryan Bish
+[00:34:53] and I'm a senior researcher at the
+[00:34:55] Berkman coin Center um and thank you for
+[00:34:57] this really fascinating talk and I was
+[00:35:01] wondering if you could talk a little bit
+[00:35:03] more about you know the ways that some
+[00:35:06] of the early decisions might have
+[00:35:10] created I don't know if path
+[00:35:11] dependencies is the right word but sort
+[00:35:13] of created the the momentum or or or or
+[00:35:18] and helped enable you know some of this
+[00:35:21] policymaking uh approaches later on in
+[00:35:24] particular I'm just thinking about like
+[00:35:25] the very fact that they decided to use
+[00:35:28] the RFC process at all and the fact that
+[00:35:31] they wrote these things down in such a
+[00:35:33] way and that they created these sort of
+[00:35:35] rules like you know anything that's not
+[00:35:37] written doesn't exist and you know so
+[00:35:40] I'm just curious to hear more about your
+[00:35:42] thoughts on how those sort of initial
+[00:35:44] decisions then impacted these uh sort of
+[00:35:49] this policies almost constitutional like
+[00:35:52] approach that they've taken I think
+[00:35:54] that's that's a great question it's not
+[00:35:55] a kind of work that have done I should
+[00:35:57] mention that this is actually a side
+[00:35:59] path for me this is not at the center of
+[00:36:00] my research um so this this I thought
+[00:36:03] was a casual sort of haha side thing um
+[00:36:06] but so um I haven't done those kinds of
+[00:36:10] analyses one thing of course that you
+[00:36:11] want to do is as with Shepherd ising you
+[00:36:14] can see which later rfc's depend on
+[00:36:17] certain earlier rfc's and that uh that's
+[00:36:20] available without analysis easily but
+[00:36:22] the analysis of how that went would be
+[00:36:24] one path of doing that and then I think
+[00:36:27] you would really have to take an issue
+[00:36:28] specific approach like Laura dinardis
+[00:36:30] does and go across decision-making
+[00:36:32] venues and watch the movement o over
+[00:36:34] time from the technical Arena to the
+[00:36:36] policy Arena and back um so not not many
+[00:36:40] people have done that kind of work but I
+[00:36:42] encourage
+[00:36:43] it hi thank you for your talk my name is
+[00:36:46] Mary Gray I'm a Brookman fellow Brookman
+[00:36:47] Klein fellow and I'm at I'm a senior
+[00:36:50] researcher at Microsoft research and a
+[00:36:52] faculty member of in Indiana University
+[00:36:54] sorry to get that all in um I'm required
+[00:36:58] contractually my question I love I I'm
+[00:37:02] I'm a social scientist and
+[00:37:02] Anthropologist by training I love your
+[00:37:05] approach I think it's incredibly rich
+[00:37:07] and I'm wondering it's this seems
+[00:37:09] outside the scope of what you done but
+[00:37:11] have you considered tracing who's
+[00:37:14] responding and doing the agenda setting
+[00:37:17] around the rfc's I I'm struck by how it
+[00:37:20] early on it's juicy um they're clearly
+[00:37:23] players who are setting agendas who are
+[00:37:25] coming from specific ific domains and
+[00:37:28] I'm always um curious SL supicious When
+[00:37:31] Things become boring because that
+[00:37:33] usually means they're being
+[00:37:34] professionalized towards somebody's
+[00:37:36] benefit so that people tune out so have
+[00:37:38] you thought about um mapping the
+[00:37:41] networks of who setting agendas for
+[00:37:43] these RFP rfc's so I mentioned that I
+[00:37:47] had 30 students involved but that most I
+[00:37:49] had one exception on outstanding
+[00:37:50] undergrad but mostly I couldn't ask them
+[00:37:52] to do the policy analysis because they
+[00:37:54] that was just not available to them so
+[00:37:57] what do you have them do we so something
+[00:37:59] that hasn't been analyzed yet but we
+[00:38:01] actually have the data on is we looked
+[00:38:03] at every single author and every single
+[00:38:06] employer and that's how I get to 14
+[00:38:08] kinds of Institutions and across all
+[00:38:10] those countries but that data hasn't
+[00:38:12] actually been uh analyzed yet you could
+[00:38:15] take that analysis and put it onto who's
+[00:38:17] using which rfc's and other kinds of
+[00:38:19] histories that other people are doing
+[00:38:21] about histories of different kinds of
+[00:38:22] decision-making Arenas and get to that
+[00:38:24] kind of answer
+[00:38:33] uh Kyle Drake uh with Neo cities um that
+[00:38:36] first of all thank you really important
+[00:38:38] work this is I I also like the structure
+[00:38:40] you had here um with this analysis uh
+[00:38:44] and I I wanted to go like one step uh
+[00:38:46] Beyond even like companies sort of
+[00:38:48] organizations influencing things and you
+[00:38:50] know potentially making them boring so
+[00:38:52] that people tune out and sort of
+[00:38:54] influence them um which is sort of just
+[00:38:56] a proc like a natural process of like
+[00:38:58] anything where like money can be made uh
+[00:39:00] in this country but um I wanted to step
+[00:39:03] back just a little bit from that even
+[00:39:04] and sort of ask you um and maybe it's an
+[00:39:07] unanswerable question uh is is has any
+[00:39:09] of this research sort of informed your
+[00:39:12] views on technological determinism you
+[00:39:15] know is the technology at the end of the
+[00:39:17] day in the driving wheel or sort of in
+[00:39:19] the driver's seat driving this or is are
+[00:39:23] and are humans just sort of like
+[00:39:24] attempting to steer from like the
+[00:39:26] passenger side or are are sort of you
+[00:39:29] know what what like are are humans in
+[00:39:32] charge of this ultimately or do you
+[00:39:33] think that the technology sort of like
+[00:39:35] go is driving us and we're sort of
+[00:39:36] trying to figure out how to like manage
+[00:39:38] it I think it uh confirmed the position
+[00:39:42] I would have walked into this research
+[00:39:44] with which is more opposition of
+[00:39:46] technological conjunctural ISM than
+[00:39:48] determinism so uh I'm always suspicious
+[00:39:51] of anybody who uses a mono theoretical
+[00:39:54] approach to anything so am I influenced
+[00:39:57] by Marx yes I'm influenced by Marx but
+[00:39:59] I'm marxian not marxis not Marxist
+[00:40:02] because that's one factor but only one
+[00:40:04] so to analyze any given historical
+[00:40:06] conjunction there are multiple causal
+[00:40:09] trajectories Each of which may require a
+[00:40:11] different kind of theoretical approach
+[00:40:12] to understand it and then that
+[00:40:14] multiplies when you go across uh levels
+[00:40:16] of analysis I'm very influenced by
+[00:40:18] complex adaptive systems which which is
+[00:40:20] a means of bringing together then I
+[00:40:22] think a theoretically pluralist approach
+[00:40:24] to analyzing any specific historical
+[00:40:27] conjuncture event phenomenon so that I
+[00:40:30] walked into this research with that and
+[00:40:32] I think it confirmed it so I have
+[00:40:33] published on um uh the internet and what
+[00:40:36] I call the autopoetic state again what
+[00:40:39] what this offers to human as human
+[00:40:42] affordances for uh whether uh and the
+[00:40:45] question whether or not does it mean
+[00:40:46] we're going to be Democratic or
+[00:40:47] undemocratic it offers a lot of
+[00:40:49] opportunities and it comes down still to
+[00:40:51] what we're going to do with them and the
+[00:40:53] and the flexibilities are still
+[00:40:55] enormous especially because it still is
+[00:40:57] a mathematical game so we're still into
+[00:41:00] um uh whatever seems to be a moment of
+[00:41:02] stasis regarding where the points of
+[00:41:04] control would be can still be easily
+[00:41:08] outrun hi I'm Greg leopard affiliate at
+[00:41:11] the Berkman CL center it's clear you
+[00:41:13] have such a wonderful Rich appreciation
+[00:41:15] for the complexity of all of this having
+[00:41:18] gone through um I'm wondering where your
+[00:41:22] mindset started before you went into
+[00:41:25] this review process how it evolved and
+[00:41:28] how other people might without taking
+[00:41:31] your complete Journey also come to
+[00:41:33] appreciate the complexities that were
+[00:41:35] involved in all of
+[00:41:41] this I'm not sure I could answer the
+[00:41:43] second question but um but the book
+[00:41:45] change of state that was mentioned um
+[00:41:48] was actually a 25 year project trying to
+[00:41:51] think about how to think about uh using
+[00:41:55] information policy as an term to refer
+[00:41:57] to any kind of laws and regulations uh
+[00:42:01] legal principles as applied to any form
+[00:42:02] of information creation processing flows
+[00:42:05] into use so um that presents a pretty
+[00:42:08] complex picture of what that map is and
+[00:42:10] the Realms in which we have to think and
+[00:42:12] so I think the the sort of decision to
+[00:42:15] go down this path uh relates to what I
+[00:42:17] said earlier change of state talks about
+[00:42:20] the fact that in this environment
+[00:42:21] information policy does involve not just
+[00:42:23] government but governance and
+[00:42:25] governmentality the book change of state
+[00:42:27] looks at government it looks at 32
+[00:42:29] different legal issues and interactions
+[00:42:31] between what we know from social science
+[00:42:33] research findings and what we know from
+[00:42:35] the history of legal developments about
+[00:42:37] how they're affecting each other in some
+[00:42:39] trying to answer the question of what
+[00:42:40] are we doing to ourselves um so that
+[00:42:43] focused on government and this was my
+[00:42:44] effort then to address governance is
+[00:42:46] sort of the innocent question that
+[00:42:48] walked me into it um I guess I'd
+[00:42:50] encourage you to read change of
+[00:42:53] state yeah uh I'm ya I'm a fellow of the
+[00:42:57] Berman Center also and um thanks for the
+[00:43:00] talk for the brilliant talk uh my
+[00:43:03] question is almost a followup to Sarah's
+[00:43:05] question uh because I was uh chair of a
+[00:43:08] working group at
+[00:43:10] WC and uh for like about three years and
+[00:43:14] I I realized that the funding for
+[00:43:16] participating the working group and and
+[00:43:19] in the work of the working group was
+[00:43:20] very important to the agenda setting of
+[00:43:23] the group itself so
+[00:43:26] uh in our group uh something very
+[00:43:30] uh unconventional happening because CGI
+[00:43:35] funded five Brazilian institutions to be
+[00:43:38] in the group and work with us so this
+[00:43:40] has this had a a a huge impact in the
+[00:43:42] work of our working group so I wonder if
+[00:43:45] that there's any um study about the
+[00:43:48] funding or I mean the money flowing this
+[00:43:53] ecosystem of like standard thirs because
+[00:43:58] I think it's absolutely JP Singh has
+[00:44:01] done a brilliant book on the role of
+[00:44:04] those kinds of factors in determining
+[00:44:06] what happens in international
+[00:44:07] organizations that it's one thing to say
+[00:44:09] you're all in the game but it's another
+[00:44:11] thing to say you can keep people on the
+[00:44:12] ground in Geneva for mons on end and and
+[00:44:15] the implications of that so that's
+[00:44:16] that's a great book to read about the
+[00:44:18] problem in
+[00:44:19] general one of my disappointments in the
+[00:44:21] internet governance Community is Mo that
+[00:44:23] most of the people who are studying
+[00:44:25] questions of that kind are looking at
+[00:44:27] the igf the internet governance form
+[00:44:28] which is a talk shop not a
+[00:44:30] decision-making shop and frankly to me
+[00:44:32] of of minimal interest for that reason
+[00:44:35] um and so I think they're kind of
+[00:44:36] missing where the ball
+[00:44:40] is um hi uh I'm Sasha castanza chak I'm
+[00:44:44] associate professor of Civic media at
+[00:44:45] MIT and a faculty affiliate at the brck
+[00:44:47] Klein uh Senator thanks for the talk um
+[00:44:50] this kind of follows on yasu's question
+[00:44:53] um
+[00:44:54] so um John Jennings has recently been uh
+[00:44:58] talking about uh trying to develop a uh
+[00:45:02] critical race design studies approach
+[00:45:05] where he's looking at insights from uh
+[00:45:07] critical race studies and legal Theory
+[00:45:10] you know which looks at the ways that
+[00:45:12] structural forms of inequality
+[00:45:14] structural racism but also it's you know
+[00:45:16] people in that space have been have
+[00:45:17] broaden that to look at uh intersecting
+[00:45:20] structures of Oppression and resistance
+[00:45:22] race class gender uh and so on um how
+[00:45:25] those structure the law uh and how the
+[00:45:28] law then reproduces structural
+[00:45:30] inequality and so I'm wondering you know
+[00:45:32] going through all of this material and
+[00:45:34] looking at um you know this these early
+[00:45:38] moments uh of development of the network
+[00:45:40] architecture and so on but then also uh
+[00:45:43] speculating forward um what what would
+[00:45:47] be what what are the sort of key moments
+[00:45:50] when communities whether it's raced and
+[00:45:53] gendered uh communities or other types
+[00:45:55] of of subjectivities are sort of
+[00:45:58] excluded from the processes but then
+[00:46:00] break in or were there are debates about
+[00:46:02] that or you know if there are I'm just
+[00:46:04] really curious to hear your Reflections
+[00:46:06] on sort of critical moments in the
+[00:46:08] eruption of conversations about
+[00:46:09] structural inequality and how it might
+[00:46:10] be reproduced through Network
+[00:46:12] architecture um is that something that
+[00:46:14] you see where does that happen um and
+[00:46:17] what you know what what can we learn
+[00:46:19] from uh from these moments that you've
+[00:46:21] looked at in that
+[00:46:23] conversation another great question and
+[00:46:26] I think you would want to look at other
+[00:46:27] kinds of histories of the design process
+[00:46:29] critical legal theory of course since
+[00:46:30] the 90s has talked about critical race
+[00:46:33] uh issues I think that here the only
+[00:46:36] thing that would have been um visible
+[00:46:39] around the rfc's to my that I am aware
+[00:46:41] of which doesn't mean it isn't there but
+[00:46:43] I haven't studied it and I don't know if
+[00:46:44] anybody else who has but Vince surf
+[00:46:46] Delights in telling the story of the guy
+[00:46:49] in India uh what the important issue was
+[00:46:52] publishing the rfc's and that anybody
+[00:46:54] could have access to them and so he you
+[00:46:56] know he actually met a guy in India who
+[00:46:58] said he figured out how to build a
+[00:47:00] network that could connect with the
+[00:47:01] internet simply by sitting alone by
+[00:47:03] himself and reading the rfc's so there
+[00:47:06] was an access point from the documents
+[00:47:08] but otherwise again I would just
+[00:47:09] identify that as you know that would be
+[00:47:11] a great work for somebody to
+[00:47:14] do hi I'm kristofh Graber I'm a faculty
+[00:47:18] associate at the burkman clan Center
+[00:47:20] visiting from the University of suich in
+[00:47:22] Switzerland where I am a law professor
+[00:47:24] so I was most f inated by your
+[00:47:27] Reflections on the intersection between
+[00:47:29] law and
+[00:47:31] Technology um and I would like to know
+[00:47:34] um with regard to what you mentioned um
+[00:47:37] related to um the rfc's as as written
+[00:47:42] text if I recall correctly you said um
+[00:47:46] these um this language has has to be
+[00:47:49] very precise and what is not in this uh
+[00:47:53] text is not in the world more or less
+[00:47:56] does not exist so my question would be
+[00:47:59] um in comparison to Legal texts text
+[00:48:03] that you find in statutes How Could An
+[00:48:05] RFC be compared with a statute I mean in
+[00:48:08] a statute you have a judge who needs to
+[00:48:11] interpret the language the text the
+[00:48:13] wordings of the statutes and there is
+[00:48:16] often deliberately left room for
+[00:48:19] interpretation be it that the parliament
+[00:48:22] is not able to actually come to a
+[00:48:24] certain conclusion so it leaves it up to
+[00:48:26] the judge who then has to deal with it
+[00:48:29] with this openness how is this um
+[00:48:31] similar or different with regard to
+[00:48:34] rfc's and is there any kind of Judge who
+[00:48:37] then uh deals with these issues related
+[00:48:40] to interpretation of the text what a
+[00:48:43] great question
+[00:48:45] um is that attached to the same question
+[00:48:48] no okay um so I think the my
+[00:48:53] understanding is that the ultimate judge
+[00:48:56] in the case of the of protocol
+[00:48:58] development is going to be the community
+[00:48:59] and what they agree to do and so where
+[00:49:01] there is a lack of clarity then there
+[00:49:04] would be experimentation and then
+[00:49:05] ultimately somebody's going to make a
+[00:49:07] more precise proposal on some small
+[00:49:09] Point there's a whole lot of something I
+[00:49:10] didn't get into here but there's a whole
+[00:49:12] lot of oh we could unbundle the problem
+[00:49:14] and something we thought was a single
+[00:49:16] technical issue we can break into four
+[00:49:17] points and and deal with them as smaller
+[00:49:20] problems and so that would leave
+[00:49:22] something unresolved but we can fix this
+[00:49:23] bit so there's that kind of UN Ling and
+[00:49:26] bundling of the problems um so I think
+[00:49:29] it would go on in the in the
+[00:49:31] experimentation the refinement of what
+[00:49:33] it is is the size of the problem that
+[00:49:34] you're looking at and then ultimately
+[00:49:36] the community level decision- making as
+[00:49:39] I understand
+[00:49:40] it hi I'm Sal tenam I'm a free agent um
+[00:49:45] I actually want to give a slight another
+[00:49:48] answer to that question I mean the ietf
+[00:49:50] Mantra is sort of rough consensus and
+[00:49:53] running code um and there are events you
+[00:49:57] know called connectons with people with
+[00:50:00] you know products that run in a certain
+[00:50:02] protocol space you know all get into
+[00:50:04] some sets of rooms and try and
+[00:50:06] interoperate with each other um and
+[00:50:08] that's sort of the me one of the
+[00:50:10] mechanisms that you know operates to um
+[00:50:14] you know come to a decision on what this
+[00:50:16] stuff really means so that would fall
+[00:50:18] into the category of experimentation for
+[00:50:20] yeah um but I had a completely different
+[00:50:23] question sort of taking a step back I
+[00:50:25] mean we've sort of loosely talked about
+[00:50:28] money because there I mean there's a lot
+[00:50:30] of money in rfc's but the rfc's
+[00:50:33] themselves are freely open while other
+[00:50:36] um you know in other domains the
+[00:50:38] standards themselves would be a revenue
+[00:50:40] opportunity and the intellectual
+[00:50:42] property in the documents you know open
+[00:50:45] and available to um anybody have you
+[00:50:48] done any work on looking at how that
+[00:50:51] evolved and the conflicts that must have
+[00:50:53] Arisen there no I'm very interested Ed
+[00:50:55] in that because initially they were not
+[00:50:57] copyrighted and then there's a moment
+[00:50:58] and it comes after a battle and I'm
+[00:51:00] aware of that but I haven't looked at
+[00:51:02] the battle but it was interesting to me
+[00:51:04] even in the first decade there were a
+[00:51:05] number of rfc's that they said were not
+[00:51:10] available which I had guessed would be
+[00:51:13] because they dealt with military issues
+[00:51:15] that were
+[00:51:16] classified but in the end as far as I
+[00:51:19] could get to was the claim that it was
+[00:51:21] uh intellectual property rights that the
+[00:51:24] the employer of whoever was putting that
+[00:51:26] forward wouldn't let them have it out
+[00:51:28] there so no that would be worthy of an
+[00:51:29] article in its own
+[00:51:33] right hi my name is Caroline tro and I'm
+[00:51:35] a researcher at the Fletcher school at
+[00:51:37] at TS University and I wanted to ask you
+[00:51:39] more about that International um
+[00:51:42] insights that you had earlier um
+[00:51:44] particularly were there international
+[00:51:47] participants in drafting or responding
+[00:51:49] to these rfc's and were then the rfc's
+[00:51:53] when they had concerns about those that
+[00:51:54] participated ated or about third actors
+[00:51:56] that perhaps didn't get to be part of
+[00:51:58] the
+[00:51:59] process oh okay so I haven't I haven't
+[00:52:02] read all of the documents that would uh
+[00:52:05] fall into that category that's a
+[00:52:07] really I know what all the documents are
+[00:52:10] and that would be a question that could
+[00:52:11] be answered but I haven't asked it that
+[00:52:13] way but what I'm what I'm aware of so
+[00:52:15] far are that when we're talking about
+[00:52:17] International we mean representatives of
+[00:52:19] governments like the Canadian government
+[00:52:20] came in in
+[00:52:21] 1972 um employers of of um employing
+[00:52:27] institutions that were based outside the
+[00:52:29] US although their employees might have
+[00:52:31] been in the US and then individuals who
+[00:52:34] are outside the US irrespective of where
+[00:52:36] it is that their employing institution
+[00:52:38] was based and we tried to distinguish
+[00:52:40] between the geographic location of the
+[00:52:41] author and the geographic home base of
+[00:52:43] the uh employing institution but they
+[00:52:46] full uh if if you weren't asking the
+[00:52:48] question about whether or not they're
+[00:52:49] International there's nothing different
+[00:52:51] in terms of the kinds of documents so
+[00:52:53] they're putting together you know
+[00:52:54] they're they're presenting the results
+[00:52:55] of experiments they're uh proposing
+[00:52:59] protocols in particular areas they're
+[00:53:00] responding they're critiquing protocol
+[00:53:02] suggestions put out by others the the
+[00:53:05] RFC genres uh you know distinguish
+[00:53:07] between are you asking a technical you
+[00:53:09] know are you raising a problem for
+[00:53:11] people to address are you putting out a
+[00:53:12] draft are we discussing it is it
+[00:53:15] absolutely the standard the official
+[00:53:16] standard and they're participating in
+[00:53:18] all the same ways that everybody else is
+[00:53:20] um I would think I it would be uh my of
+[00:53:23] the text that I'm familiar with with
+[00:53:25] there are some that are working on
+[00:53:27] behalf of third parties so again the
+[00:53:28] Canadian government they were concerned
+[00:53:30] that was a period when Canada was very
+[00:53:32] concerned about telecommunications
+[00:53:34] across its vast space and they just
+[00:53:36] wanted to make sure that from the
+[00:53:37] beginning the internet was available
+[00:53:39] even to the inite and all of that so
+[00:53:41] that would be a third party example I
+[00:53:43] think also the NGS would have come in
+[00:53:45] and been more um they're the group the
+[00:53:47] category of institutional employers that
+[00:53:49] would have been most active on behalf of
+[00:53:51] third
+[00:53:54] parties we have time for about one or
+[00:53:56] two more
+[00:53:59] questions then I will ask one if I may
+[00:54:02] um so you had a bit of a deep dive in
+[00:54:05] your talk focusing on on privacy issues
+[00:54:07] and how the debate emerged quite early
+[00:54:10] actually um I was wondering whether you
+[00:54:12] could share some highlights with respect
+[00:54:14] to cyber security because obviously
+[00:54:16] security is such a Hot Topic these days
+[00:54:19] in particular and one wonders right have
+[00:54:22] has the community thought very care
+[00:54:25] carefully about the security aspects or
+[00:54:29] they didn't miss that right because it's
+[00:54:32] still somehow posing that what I um
+[00:54:35] learned today there were there were much
+[00:54:38] earlier than I thought actually all
+[00:54:40] these considerations that the internet
+[00:54:42] could become this very big thing with
+[00:54:44] many users and all these different
+[00:54:46] actors including Bad actors and the like
+[00:54:49] so why or why not did did cyber security
+[00:54:53] ultim ultimately be one of the kind of
+[00:54:55] design principles in all of this is
+[00:54:58] there an answer to that question so um
+[00:55:02] early on there was this position you
+[00:55:05] know I'm not going to help the US
+[00:55:06] government surveil uh people say things
+[00:55:08] like this and there was a kind of
+[00:55:09] resistance to um to facilitating
+[00:55:13] surveillance that's this is just one
+[00:55:15] piece of a cyber security problem I know
+[00:55:17] more about cyber security from the legal
+[00:55:19] side so I started studying the use of
+[00:55:21] information policy provisions and arms
+[00:55:23] control treaties in the late s um and
+[00:55:26] again we have come back to that but I've
+[00:55:28] spent a fair amount of time with the
+[00:55:29] toin manual on uh on now on Cyber
+[00:55:33] operations in toin manual 2.0 um it
+[00:55:36] would be worth mapping the toin manual
+[00:55:38] onto like the last decade of rfc's
+[00:55:41] that's not work I've done but but I am
+[00:55:45] imagining so my educated guess here is
+[00:55:47] that at some point after the first 20
+[00:55:50] years it does become so professionalized
+[00:55:52] and dry that you're only focusing on the
+[00:55:54] technical problem and kind of la la la
+[00:55:56] pretending you don't know what the other
+[00:55:57] issues are um and what's interesting in
+[00:56:00] that toin manual in my view
+[00:56:04] um I don't know how many people here
+[00:56:06] know that toin Manuel but this is a
+[00:56:07] group of international experts funded by
+[00:56:09] NATO to look at ways in which existing
+[00:56:11] international law applies to in the
+[00:56:14] first edition which was 2013 cyber
+[00:56:16] security and cyber warfare the second
+[00:56:19] edition just out folds those into the
+[00:56:20] general category of cyber operations and
+[00:56:23] they identify a number of ways in which
+[00:56:25] existing international law applies uh
+[00:56:28] but then they also identify a number of
+[00:56:30] areas in which the two dozen experts
+[00:56:32] involved could not reach a consensus and
+[00:56:34] I love this actually as a genre model
+[00:56:37] because they also go into Exquisite
+[00:56:39] detail about each of the arguments that
+[00:56:40] is presented and the responses to it so
+[00:56:42] you can really track the conversation in
+[00:56:44] a way that is not usually available to
+[00:56:46] us but um so I did an analysis of the
+[00:56:49] first edition and all the areas in which
+[00:56:51] the international experts could not
+[00:56:53] agree on ways in which existing
+[00:56:55] international law applied and and each
+[00:56:57] of those pieces this is published each
+[00:56:59] of those pieces points to a way in which
+[00:57:01] uh the the actually the survival of the
+[00:57:03] West failan State and the existing
+[00:57:05] International System uh challenges to
+[00:57:07] that state and to the system and and
+[00:57:09] questions about whether or not it will
+[00:57:10] survive but what's very interesting is
+[00:57:12] as a way of trying to keep the West
+[00:57:16] failan State and the International
+[00:57:17] System alive in this environment they
+[00:57:19] actually propose not um implicitly
+[00:57:23] propos put forward the not of what I'm
+[00:57:25] calling the right not to know so if for
+[00:57:28] example a state is aware of everything
+[00:57:30] that's going through its networks then
+[00:57:32] there's the problem of accountability
+[00:57:34] even if you weren't the subject of
+[00:57:35] attack or the source of attack if it's
+[00:57:36] flowing across your territory so in
+[00:57:38] existing international law if that's the
+[00:57:40] army tank going across your territory
+[00:57:42] you've got responsibility how do you
+[00:57:44] deal with that in the Cyber environment
+[00:57:46] so the basically they've moved towards a
+[00:57:49] you know don't know don't ask don't tell
+[00:57:51] don't know so we have for the first time
+[00:57:54] a right not to know so bringing those
+[00:57:57] together would be really worthwhile
+[00:57:59] that's sort of as far as I've been able
+[00:58:00] to go with it so far
+[00:58:03] intellectually one last
+[00:58:05] question hi my name is Karen Sue and I'm
+[00:58:09] a master in design engineering student
+[00:58:11] here at Harvard um this question is
+[00:58:14] closely related to your question about
+[00:58:15] structural inequality uh you mentioned
+[00:58:18] the one of that that one of the earliest
+[00:58:20] design principles was that of Designing
+[00:58:22] for inclusion by catering to those with
+[00:58:25] the lowest capacity uh in your opinion
+[00:58:27] how has that played out is it still
+[00:58:30] relevant today could there be things
+[00:58:32] that are done better today in the future
+[00:58:36] great question I think the problem today
+[00:58:39] is not so much on the infrastructure
+[00:58:41] side is on the services side so we're
+[00:58:44] driven to upgrade computers because
+[00:58:47] Services require us to in order to
+[00:58:50] manage their oper you know op manage
+[00:58:52] their operating systems or manage their
+[00:58:53] software so I think the the response in
+[00:58:56] today's environment where we're all
+[00:58:57] aware of still the enormous inequities
+[00:58:59] out there both within and across
+[00:59:01] societies um uh is the you know is the
+[00:59:05] Linux path is the Open Access path that
+[00:59:07] allows you much more flexibility
+[00:59:09] regarding what it is you need in order
+[00:59:11] to do what you want to do but that's
+[00:59:13] less that's not network issues to my
+[00:59:16] knowledge it is more what happens that
+[00:59:18] what you connect to it and what you ask
+[00:59:20] of what you connect to
+[00:59:21] it thank you very much please join me in
+[00:59:24] thanking Professor for a fascinating
+[00:59:26] talk thank
+[00:59:29] you have a good day everyone see you
+[00:59:53] soon

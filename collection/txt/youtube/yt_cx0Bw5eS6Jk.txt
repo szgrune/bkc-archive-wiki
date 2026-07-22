@@ -1,0 +1,1438 @@
+[00:00:02] hi uh my name is Jonathan citran I uh
+[00:00:05] teach here at the burkman Klein Center
+[00:00:08] for internet and Society sounds more
+[00:00:11] normal every time I say it um and uh
+[00:00:16] first an administrative announcement we
+[00:00:18] are being recorded not just by the usual
+[00:00:20] panoply of suspects but by uh intention
+[00:00:25] and uh we are live webcasting so be
+[00:00:27] aware that anything you say will be
+[00:00:30] recorded forever and might be used
+[00:00:32] against you we always like to bring a
+[00:00:33] Miranda warning um it's my pleasure to
+[00:00:36] introduce Kendra Albert for today's talk
+[00:00:41] uh I'm so pleased to have a chance to
+[00:00:43] introduce my colleague friend sometime
+[00:00:46] Mentor Kendra uh when I first met Kendra
+[00:00:51] uh they had been studying the dalbert
+[00:00:54] case and its relationship to the fry
+[00:00:57] standard of evidence in the federal
+[00:00:59] court
+[00:01:00] which was a little surprising because
+[00:01:02] Kendra was undergraduate and not a law
+[00:01:05] student or law graduate and Kendra
+[00:01:09] carried on that tradition through a
+[00:01:11] summer at the burkman then burkman
+[00:01:13] Center uh program working not only on
+[00:01:16] our openet initiative but later our H2O
+[00:01:20] project for open casebooks and uh they
+[00:01:24] took not only to helping to format the
+[00:01:26] cases and such and doing some basic
+[00:01:29] research but started editing the cases
+[00:01:31] and then reading all of the cases for a
+[00:01:33] course on torz for those of you who are
+[00:01:35] a law students you will realize that
+[00:01:37] voluntarily reading all the cases for a
+[00:01:39] course on torz is an extraordinarily
+[00:01:42] unusual thing for somebody to be
+[00:01:44] motivated to do and I think that did
+[00:01:47] inevitably despite Kendra's efforts at
+[00:01:49] times to avoid it Point Kendra towards
+[00:01:52] law school um which to our uh great
+[00:01:55] Fortune Kendra attended here and uh
+[00:01:59] while here for those of you again
+[00:02:01] thinking about how to be involved in
+[00:02:02] cyber related topics uh Kendra punched a
+[00:02:06] ticket in so many different wonderful
+[00:02:08] places uh the public citizen litigation
+[00:02:11] group The Electronic Frontier Foundation
+[00:02:14] and an unlikely third in that
+[00:02:16] triumvirate Cloud flare the um
+[00:02:19] organization that will help you uh avoid
+[00:02:23] getting ddosed when you least expect it
+[00:02:25] it will tell you you're going to get
+[00:02:26] dsed and then you're dsed um and it's
+[00:02:30] also a good opportunity to thank
+[00:02:31] cloudfare for their pro bono support of
+[00:02:34] our Perma project cloudfare we love you
+[00:02:38] um and it's interesting that while
+[00:02:40] working there Kendra took up an
+[00:02:44] examination of some of the boilerplate
+[00:02:47] legales passed around like Christmas
+[00:02:49] fruit cakes from one company to another
+[00:02:52] without attribu attribution is that
+[00:02:54] still a good reference that the fruit
+[00:02:56] cakes that just get passed on cuz nobody
+[00:02:58] actually wants to eat it but they're
+[00:02:59] still an appropriate gift and they never
+[00:03:00] expire and the same is true of legal
+[00:03:03] boilerplate uh but then Kendra
+[00:03:07] actually decided to read it and think
+[00:03:10] about how it might apply to not just
+[00:03:14] terms of service of the usual sort about
+[00:03:18] you know if you do something uh to the
+[00:03:20] company then your warranties or void or
+[00:03:22] whatever it usually says but rather what
+[00:03:25] is the role of the company in trying to
+[00:03:28] enforce basic Humane Behavior among
+[00:03:32] users of a service for which otherwise
+[00:03:34] the company might prefer to be invisible
+[00:03:37] and to what extent can that be governed
+[00:03:39] by boilerplate to the customer to the
+[00:03:42] company itself inheriting that
+[00:03:43] boilerplate from somewhere else and to
+[00:03:45] what extent is it a challenge to every
+[00:03:47] company to actually sit back and think
+[00:03:50] about as Terry fiser would say what are
+[00:03:52] the prerequisites for human flourishing
+[00:03:55] and how should we embody that in our
+[00:03:56] terms of service and I think not to
+[00:03:59] anticip ate too much Kendra's talk uh
+[00:04:02] the answer May lie um disarmingly closer
+[00:04:05] to the second answer than to the first
+[00:04:08] and that of course uh poses some really
+[00:04:11] tough questions for the companies and
+[00:04:14] for all of us as we try to put companies
+[00:04:17] into a role of policing some of the most
+[00:04:21] profound questions that face Us in the
+[00:04:23] digital space as people communicate with
+[00:04:25] one another get into conflicts troll one
+[00:04:28] another how to mediate that is just an
+[00:04:32] unanswered question nobody has figured
+[00:04:34] this out yet and I'm hoping uh by the
+[00:04:36] end of this talk we will have done so
+[00:04:38] thanks to Kendra so with that modest
+[00:04:41] introduction um I turn it over to uh
+[00:04:44] Kendra for her validatory lap back at uh
+[00:04:48] the home team uh after she had gone to
+[00:04:51] the Zeitgeist law firm uh a technology
+[00:04:54] oriented Law Firm that's thinking about
+[00:04:55] this stuff Kendra take it away thank you
+[00:04:58] thank you uh and Jonathan that was an
+[00:05:00] amazing
+[00:05:01] introduction
+[00:05:03] um and I'm not sure the talk lives up to
+[00:05:05] the promise of the introduction but
+[00:05:07] maybe it does something different and
+[00:05:08] hopefully that's how all good talks work
+[00:05:10] I suppose um but before I get started I
+[00:05:12] want to just take a moment um to express
+[00:05:15] solidarity with Unite Here Local 26 who
+[00:05:17] are the folks who are protesting
+[00:05:19] outside um I think it's important even
+[00:05:22] as we problematize and deconstruct
+[00:05:24] Notions of free speech to recognize that
+[00:05:26] it has an important role in some of the
+[00:05:28] things that are most valuable which is
+[00:05:29] ensuring people who including ensuring
+[00:05:31] people who represent workers can strike
+[00:05:33] and be heard um so I'm going about to
+[00:05:36] like uh do a lot of things beating up
+[00:05:39] free speech um but first I want to sort
+[00:05:40] of recognize its its role and sort of
+[00:05:42] Express solidarity with them so when I
+[00:05:45] use the phrase legal Talisman what I
+[00:05:47] mean to suggest as Jonathan sort of uh
+[00:05:49] alluded to is that I'm talking about a
+[00:05:52] legal term of art a legal word that's
+[00:05:55] out of place um and it's invoked to make
+[00:05:58] or Justify substantive decis decisions
+[00:06:00] that don't involve formal legal process
+[00:06:02] right decisions that are made in a way
+[00:06:05] that does not involve the court system
+[00:06:07] does not involve legislatures does not
+[00:06:08] involve administrative procedures it's a
+[00:06:11] legal term that shows up in sort of the
+[00:06:12] places you would least expect it the
+[00:06:14] arguments that you would least think
+[00:06:16] that it's justifiable and I started
+[00:06:18] looking into this as Jonathan said
+[00:06:20] because I was spending a lot of time
+[00:06:22] thinking about online abuse and often
+[00:06:24] what you see in online abuse is legal
+[00:06:27] talismans everywhere um the most sort of
+[00:06:31] common of these as pointed out by the
+[00:06:33] work of Sarah Jang and others in
+[00:06:34] deconstructing the role of uh Speech
+[00:06:36] arguments is a free speech or freeze
+[00:06:38] Peach um as it is sometimes known and
+[00:06:41] you can see that this both this comic is
+[00:06:44] sort of a funny a joke about the role of
+[00:06:46] free speech online but this idea of
+[00:06:48] nuance free or self-righteous pain
+[00:06:50] comparisons right really points to this
+[00:06:52] idea that free free speech has come to
+[00:06:54] mean something in online discourse that
+[00:06:56] is separated from the First Amendment
+[00:06:58] reality or first or from the law that
+[00:07:01] it's invoked in places that we might
+[00:07:02] think of as rather unlikely for sort of
+[00:07:05] a first first amendment rhetoric and so
+[00:07:07] if we imagine why that happens if we
+[00:07:10] imagine the the magical powers that the
+[00:07:13] Free Speech Talisman can embody it sort
+[00:07:15] of wards off regulation responsibility
+[00:07:17] and liability um it's ideal for use in
+[00:07:19] the United States um and it is crafted
+[00:07:22] to be especially effective to responding
+[00:07:24] to claims of on rampant on platform
+[00:07:26] abuse like what does what does invoking
+[00:07:29] the term term Free Speech allow us to do
+[00:07:30] well it allows us to shift the
+[00:07:32] conversation in a way that's really
+[00:07:33] meaningful and in a way that changes our
+[00:07:35] relationship to regulation and liability
+[00:07:38] of course I'm not the first person to
+[00:07:41] point out that the use of the term free
+[00:07:43] speech is not really legal I think the
+[00:07:45] now like obvious counterargument is this
+[00:07:48] XKCD which is actually not new um which
+[00:07:52] invokes the act the legalistic responses
+[00:07:54] to free speech well it's not the
+[00:07:56] government doing the censorship or the
+[00:07:58] you know the platform are not government
+[00:08:00] speakers um people don't have to listen
+[00:08:02] to you right that's all the sorts of
+[00:08:04] thing that comes that come along with
+[00:08:06] these
+[00:08:07] invocations and it's not sort of just
+[00:08:10] confined to trolls online um this is our
+[00:08:14] friend Ted Cruz um who was talking about
+[00:08:16] the Ian transition um which was the
+[00:08:19] process by which uh the US was ceasing
+[00:08:21] its uh contract with the uh
+[00:08:24] International assigned Corporation of
+[00:08:26] names and
+[00:08:27] numbers uh and I probably got that wrong
+[00:08:30] sorry um but anyway what he says is that
+[00:08:34] the internet is the Internet it's an
+[00:08:35] oasis of Freedom today because of the
+[00:08:38] First Amendment um which is like a sort
+[00:08:40] of a strange claim because I think most
+[00:08:43] folks who are actually involved in I can
+[00:08:45] would argue that like the first although
+[00:08:47] First Amendment principles may be
+[00:08:48] involved in decisions that I can made or
+[00:08:50] underlying platform uh or technical
+[00:08:54] thoughts the like first amendment was
+[00:08:56] not like super involved in like the I
+[00:08:58] can contra CCT um and before I go any
+[00:09:01] further uh especially since Jonathan
+[00:09:03] mentioned clout Flair I want to say this
+[00:09:05] is just me talking not my employers or
+[00:09:07] my clients so some other places we see
+[00:09:10] free speech um are in corporate
+[00:09:12] corporate responses so Apple to the FBI
+[00:09:15] forcing us to unlock the iPhone violates
+[00:09:18] Free Speech Cloud flare and Free Speech
+[00:09:20] which is a blog post that Matthew Prince
+[00:09:22] the CEO of cloud flare wrote um about
+[00:09:24] how they dealt with uh like Islamic um
+[00:09:28] Islamic ter ISM and or radical Islam and
+[00:09:31] Jihadi Jihadi posts on the platform
+[00:09:34] Verizon net neutrality violates our Free
+[00:09:36] Speech rights which was one of their
+[00:09:37] responses to the fcc's uh net neutrality
+[00:09:40] rules and then Twi perhaps maybe the
+[00:09:42] most famous quote of these four is from
+[00:09:44] Twitter's Tony Wang where he said we are
+[00:09:46] the free speech wing of the Free Speech
+[00:09:48] party something I'm sure he regretted
+[00:09:51] for pretty much the rest of uh what came
+[00:09:54] after and some of these are actually
+[00:09:56] about legal proceedings the Apple vers
+[00:09:58] to FBI and Verizon are about court
+[00:10:00] proceedings where they were making a
+[00:10:01] First Amendment argument about what they
+[00:10:03] had the potential to do but Cloud flare
+[00:10:06] and free speech and Twitter's uh Free
+[00:10:08] Speech position are they're not this is
+[00:10:11] not in reference to his particular court
+[00:10:12] proceeding this is not because they're
+[00:10:14] putting forward an argument about their
+[00:10:15] particular liability or lack of
+[00:10:17] liability or how they should necessarily
+[00:10:19] be regulated in fact it's just a
+[00:10:22] shorthand it's a reference to a body of
+[00:10:24] knowledge that stores that's stored
+[00:10:26] elsewhere um and it's a shorthand for a
+[00:10:29] bigger more complicated set of ideas a
+[00:10:31] set of rehearsed arguments about like
+[00:10:34] free speech and the marketplace of ideas
+[00:10:36] and like allowing everyone to speak and
+[00:10:38] the heckler's veto and sort of this
+[00:10:40] whole long set of things that you might
+[00:10:42] hear if you sat in on a First Amendment
+[00:10:44] class or r a First Amendment case um and
+[00:10:47] it's often a way to make things feel a
+[00:10:49] little less arbitrary right if if
+[00:10:51] Twitter had said we take down whatever
+[00:10:53] we feel like that maybe would present a
+[00:10:56] less compelling statement of their
+[00:10:57] position on the subject even if it was
+[00:10:59] just as true as we are the free speech
+[00:11:01] wing of the Free Speech party legal
+[00:11:03] talismans also avoid definitional
+[00:11:05] problems they allow for us to look at
+[00:11:08] this body of law as a way of
+[00:11:10] understanding what exactly is going on
+[00:11:13] um but with it comes its own problem so
+[00:11:16] this may be familiar to most of you as
+[00:11:18] the uh text of part of the First
+[00:11:20] Amendment which says Congress shall make
+[00:11:22] no law Bridging the freedom of speech of
+[00:11:24] course the reality is that congress
+[00:11:27] makes law abridging the freedom of
+[00:11:28] speech all the time
+[00:11:30] um and so when we look at what this
+[00:11:32] means in practice um I actually stole
+[00:11:34] this outline from a law student um but I
+[00:11:36] think it's actually a very powerful
+[00:11:38] illustration of all the things we have
+[00:11:39] defined as not speech in order to AB
+[00:11:42] Bridge them right the all of the the
+[00:11:45] things that we claim are lower value
+[00:11:46] speech like commercial speech or um uh
+[00:11:50] like employee speech um all of the
+[00:11:52] things we claim are not speech at all
+[00:11:54] defamation true threats um incitement
+[00:11:57] and how really
+[00:11:59] this is kind of much more what the First
+[00:12:01] Amendment looks like there's an asterisk
+[00:12:05] after every word that with with which
+[00:12:07] comes a very long set of definitions of
+[00:12:10] what that means like even Congress
+[00:12:12] really also means and the states right
+[00:12:15] because of the fourth 14th Amendment so
+[00:12:17] when we um so when we unpack the meaning
+[00:12:19] of these words we get we understand that
+[00:12:21] they actually have all of this context
+[00:12:24] and all of these things that come with
+[00:12:25] them that aren't necessarily obvious
+[00:12:27] from the face of the of the amendment
+[00:12:31] moreover and to reference the xkcd again
+[00:12:34] Leo Talisman invoke the power and
+[00:12:36] obligations of the state and I feel kind
+[00:12:38] of silly saying this because it's so
+[00:12:40] obvious right like when we talk about
+[00:12:41] law we're talking about the state but I
+[00:12:44] mean perhaps obviously platforms don't
+[00:12:47] have the same obligations to their users
+[00:12:49] that the state has to its citizens terms
+[00:12:52] of service are not constitutions and for
+[00:12:54] the most part platforms don't Grant
+[00:12:56] users positive rights um and so when we
+[00:13:00] take think about the legal Frameworks
+[00:13:02] that um take into account state power
+[00:13:04] and state constraints right like that's
+[00:13:06] what all of those asteris in the First
+[00:13:08] Amendment are about like state power
+[00:13:09] State constraint how do we think about
+[00:13:11] the relationship of the state and the
+[00:13:12] power Dynamic with with people that's
+[00:13:14] why we have a First Amendment in the
+[00:13:16] first place um we have to understand
+[00:13:19] that law exists in a world where the
+[00:13:22] actor that's enforcing it is the state
+[00:13:24] and sometimes users might want those
+[00:13:27] state-like restrictions in the context
+[00:13:29] of platforms if you believe that your
+[00:13:31] that use of Twitter is so fundamental to
+[00:13:33] your identity that actually you want it
+[00:13:35] to be treated like a utility and you
+[00:13:36] want due process for getting blocked
+[00:13:38] then like maybe you're you actually
+[00:13:40] would love all of the sort of
+[00:13:42] restrictions and the costs of the first
+[00:13:43] amendment that come along with the uh
+[00:13:47] that come along with the use of these
+[00:13:48] words but sometimes users definitely
+[00:13:50] don't want all of the same things that
+[00:13:53] we want from um our government when
+[00:13:56] we're thinking about our online services
+[00:13:58] or all of the same protections um that
+[00:14:01] for particular people that we want from
+[00:14:03] the
+[00:14:04] government so that's how I'm defining a
+[00:14:07] legal term of art out of place invoke to
+[00:14:10] make or Justify a substantive decision
+[00:14:12] that do not involve formal legal process
+[00:14:14] and I've said a lot of things about the
+[00:14:15] First Amendment um because I think for
+[00:14:18] many people it's the most tangible like
+[00:14:20] easy to think of way in which this
+[00:14:22] manifests right we're used to the idea
+[00:14:24] that these legal obligations um that
+[00:14:26] people talk about the first amendment
+[00:14:28] and Free Speech inde dependent of the
+[00:14:29] actual legal obligations or legal
+[00:14:31] content of those of those words but what
+[00:14:34] I'm about to do is to apply critical
+[00:14:36] legal studies principles to a more
+[00:14:38] specific legal term in the regulation of
+[00:14:39] online spaces so critical legal studies
+[00:14:42] for those who aren't aware um was a
+[00:14:44] legal movement that concentrated on sort
+[00:14:46] of unpacking some of the baggage that
+[00:14:49] these words come with most famously one
+[00:14:52] of the practitioners was Duncan Kennedy
+[00:14:54] who taught here for a very very long
+[00:14:56] time um but other F other people from
+[00:14:59] Martha chamales to Derek Bell have all
+[00:15:01] used the tools of critical legal studies
+[00:15:02] for feminist Pursuits for queer Pursuits
+[00:15:04] for critical race Theory Pursuits in
+[00:15:06] order to defamiliarize the familiar to
+[00:15:09] take the words that we think we
+[00:15:11] understand and to show us how we really
+[00:15:13] don't understand them at all and so when
+[00:15:15] I talk about something like defamation I
+[00:15:18] think it's really worth
+[00:15:20] defamiliarizing because to most people
+[00:15:23] defamation means Nast saying nasty
+[00:15:25] untrue things about people is illegal
+[00:15:27] right like if we want to talk about the
+[00:15:28] most basic definition you could possibly
+[00:15:30] give that's the best one I got I've
+[00:15:32] tried to make it shorter and I think I
+[00:15:34] need all of those words um or about a
+[00:15:36] person even um but it shows up
+[00:15:41] everywhere right this is the first one
+[00:15:43] of those is the terms of service of
+[00:15:45] slack so if you have ever said anything
+[00:15:47] defamatory about anybody on a uh private
+[00:15:50] slack um that's against their terms the
+[00:15:52] second one of those is Dropbox um so no
+[00:15:55] defamatory material in Dropbox and then
+[00:15:57] the third one of those perhaps maybe
+[00:15:59] even most ironically um is yak um so
+[00:16:04] you're not allowed to defame people on
+[00:16:05] Yak which as folks may know is a sort of
+[00:16:07] service for people to anonymously sort
+[00:16:10] of comment on things that was primarily
+[00:16:12] used by college students um I'm sure
+[00:16:15] Reay Ray hunko is probably turning over
+[00:16:17] like just like had a had a the force Mo
+[00:16:20] moment in uh Indiana as I characterize
+[00:16:23] it that way um but the legal standard
+[00:16:26] for defamation to do my best at putting
+[00:16:28] it slightly more precisely is that the
+[00:16:31] defendant who is the person who you're
+[00:16:32] suing um published a statement the
+[00:16:35] statement is about the plaintiff the
+[00:16:37] statement harms the reputation of the
+[00:16:38] plaintiff the statement was published
+[00:16:40] with some level of fault which depend on
+[00:16:42] depends on who the plaintiff is and the
+[00:16:44] statement was published without some
+[00:16:45] privilege now even that a slightly more
+[00:16:49] precise definition is uh hard so this is
+[00:16:53] uh William prer um in or in prer and
+[00:16:57] Keaton on the law of torts and what he
+[00:16:59] says which you do not need to read you
+[00:17:01] just need to take my word for it that an
+[00:17:02] old white dude who' spent a lot of time
+[00:17:04] thinking about torz also thinks
+[00:17:05] defamation is really complicated and
+[00:17:07] difficult and that we're really bad at
+[00:17:09] it um but uh defamation gorgeous
+[00:17:13] traditional design hides deeply sexist
+[00:17:16] racist and horob which means anti-sex
+[00:17:18] worker uh connotations um the reality is
+[00:17:22] defamation is a talsman and I mean it as
+[00:17:25] a talsman Because the actual analysis is
+[00:17:28] so specific as to be unactionable in a
+[00:17:30] practical matter during a Content review
+[00:17:32] it is incredibly difficult for the sort
+[00:17:34] of content reviewer that we talk think
+[00:17:36] about Facebook or Twitter having the
+[00:17:38] person The Click worker in Malaysia
+[00:17:40] who's like trying to figure out whether
+[00:17:41] something is like okay or not okay to
+[00:17:43] figure out if something's defamation
+[00:17:44] under us law that's just like not a
+[00:17:46] thing they could actually possibly do in
+[00:17:48] part because truth is an absolute
+[00:17:50] defense so you have to know whether the
+[00:17:51] thing's true or not to know if it's
+[00:17:54] defamatory but the history of defamation
+[00:17:59] it's pretty damn sexist in England in
+[00:18:02] the SL under the slander of women acts
+[00:18:04] of 1991 female plaintiffs were could
+[00:18:07] that alleged slander for words that
+[00:18:08] impute unchastity or adultery need not
+[00:18:10] show others reputational harms and that
+[00:18:13] law was repealed in
+[00:18:15] 2014 um which like yay for that I guess
+[00:18:18] but
+[00:18:19] 2014 um and this historical context is
+[00:18:23] not just like unique to England
+[00:18:25] defamation law in general is deeply
+[00:18:27] invested with Notions binary gender and
+[00:18:29] appropriate roles for women in fact many
+[00:18:32] of the first defamation statutes in the
+[00:18:33] US specifically noted um that imping on
+[00:18:36] a woman's Chastity falsely was per se
+[00:18:39] defamatory and this is why I say def
+[00:18:41] defamation law is hor phobic um because
+[00:18:43] it assumes that being called a sex
+[00:18:44] worker is inherently harmful to
+[00:18:46] someone's
+[00:18:47] character um it's not just sexist in
+[00:18:50] practice or in it's not just it's it's
+[00:18:53] sexist in practice and sexist in theory
+[00:18:56] um because the reality is that even if
+[00:18:58] the statutes are Sim are not sexist on
+[00:19:01] their face when Lial and slander actions
+[00:19:03] are brought by female plaintiffs they
+[00:19:04] are more likely to succeed if they are
+[00:19:06] suggesting that talking about things
+[00:19:08] that are in the private sphere like
+[00:19:10] accusations of being un chased as
+[00:19:12] opposed to talking about their business
+[00:19:13] role so when we see defamation law in
+[00:19:15] practice it enforces a sort of sex
+[00:19:17] segregation of roles for women um it
+[00:19:20] also oh by the way I didn't add this to
+[00:19:22] my list originally but is also really
+[00:19:24] homophobic in 2012 uh New York finally
+[00:19:27] overturned um the law on its books that
+[00:19:30] suggested that being called Gay was per
+[00:19:32] se
+[00:19:33] defamatory and so when we look at sort
+[00:19:35] of histories of how this plays out you
+[00:19:37] can see this is Virginia uh dunha she's
+[00:19:40] an Argentinian Entertainer and she won a
+[00:19:41] lower Court ruling against Google for
+[00:19:43] search results for her names that led to
+[00:19:44] porn websites we can see that it
+[00:19:47] actually does play out as a defamation
+[00:19:49] law having a focus on women's Chastity
+[00:19:50] as a successful model for legal
+[00:19:52] intervention and so the moral of the
+[00:19:55] sexism story is the defamation can work
+[00:19:57] for you as a woman so long as you're
+[00:19:59] concerned about your Chastity but much
+[00:20:00] less so if you're concerned about your
+[00:20:02] business reputation or any of these
+[00:20:04] things that involve sort of public
+[00:20:05] sphere roles as if that wasn't enough
+[00:20:08] unpacking or defamiliarizing we can also
+[00:20:11] talk about the ways in which defamation
+[00:20:12] lies racist and was racist and is racist
+[00:20:16] so uh defamation per se by racial
+[00:20:19] misidentification which is if you call a
+[00:20:21] white person black that is per se
+[00:20:22] defamatory and uh harmful to their
+[00:20:24] character um was the law in many parts
+[00:20:27] of the US um up until like uh really
+[00:20:31] really recently which is the sad part in
+[00:20:33] the Tor was analyzed by uh John C Watson
+[00:20:36] in his Landmark article defamation by
+[00:20:38] racial misidentification a study of the
+[00:20:39] social Tor in it he talks about many
+[00:20:41] things but this case really stuck out to
+[00:20:44] me um from 1957 in South Carolina which
+[00:20:47] is is it liable as per se to publish the
+[00:20:50] imprint of a white person that she is a
+[00:20:52] Negro that such a publication as lialis
+[00:20:54] per se is supported by the very great
+[00:20:56] weight of
+[00:20:57] authority so so facial racism facial
+[00:21:02] sexism facial hor phobia also you get
+[00:21:06] all the inherent structural problems of
+[00:21:08] the rest of civil litigation right just
+[00:21:10] because a law is not discriminatory on
+[00:21:12] its actual phase doesn't mean that
+[00:21:13] there's it doesn't end up being
+[00:21:15] discriminatory in the way it's practiced
+[00:21:17] so what we know about the structure of
+[00:21:18] civil litigation is that it it favors
+[00:21:20] the rich over the poor that it favors as
+[00:21:23] in the words of Mark ganter repeat
+[00:21:25] players over onetime litigant people who
+[00:21:27] are familiar with the system and who
+[00:21:29] understand how it works and it favors
+[00:21:32] frankly people who are considered more
+[00:21:34] likable by juries right defamation as I
+[00:21:37] said before really fact specific you end
+[00:21:40] up going into if you end up going to a
+[00:21:41] jury trial right can
+[00:21:44] we understanding that like sexism and
+[00:21:47] racism are still things within the
+[00:21:49] United States we have to look at How
+[00:21:51] likely that like a black woman plaintiff
+[00:21:53] who's suing over her own personal um
+[00:21:56] over her over her business reput
+[00:21:59] might be to succeed versus a white male
+[00:22:01] plaintiff who's suing over his business
+[00:22:03] reputation so people from historically
+[00:22:06] marginalized groups or people who are
+[00:22:08] seen as reaching above their station are
+[00:22:09] generally not necessarily likable by
+[00:22:12] jurries so I want to come back to this
+[00:22:15] because like it's sort of funny in one
+[00:22:18] way that these these terms prohibit this
+[00:22:20] kind of material but at the same time do
+[00:22:23] we I'd like to think that if slack
+[00:22:25] understood what the history of the term
+[00:22:28] Li
+[00:22:29] was that like maybe that's not exactly
+[00:22:31] how they would choose to frame their
+[00:22:32] terms of service but the reality is that
+[00:22:36] this isn't just about defamation legal
+[00:22:39] Talisman were whitewash real problems in
+[00:22:41] all sorts of different ways and when we
+[00:22:43] invoke these legal words we can't invoke
+[00:22:45] them without the baggage in the words of
+[00:22:48] anigo Montoya you keep using that word I
+[00:22:51] don't think it means what you think it
+[00:22:55] means and the law is not neutral the law
+[00:22:59] is not some neutral force that we reach
+[00:23:01] out to and we can pull in pull into our
+[00:23:03] terms of service or into our online
+[00:23:05] spaces without bringing with it its long
+[00:23:07] long history of being of oppressing the
+[00:23:10] oppressed right the law is both
+[00:23:12] something that shapes the world for
+[00:23:14] example we know what reputational harm
+[00:23:17] looks like because it is defamatory and
+[00:23:20] it's shaped by it we know what uh
+[00:23:23] defamation is because we know what
+[00:23:24] reputational harm looks like and so when
+[00:23:27] we talk about these laws they're also
+[00:23:30] contested sites right the question of
+[00:23:32] whether material is defamatory the
+[00:23:34] questions of whether these laws apply at
+[00:23:35] all is also a thing that we need to do
+[00:23:37] some serious Reckoning with so although
+[00:23:41] these talismans may appear to be ready
+[00:23:43] to wear perfect with every outfit their
+[00:23:46] invocation suggests a bright line rule
+[00:23:48] that in practice it's really
+[00:23:50] messy both in the law and it's an
+[00:23:53] enforce and it's in its enforcement and
+[00:23:56] the power of the words is what makes
+[00:23:57] them dangerous
+[00:23:59] the fact that they feel neutral is what
+[00:24:01] makes what means that we should give
+[00:24:02] them a second look so I want to turn
+[00:24:05] back to our headlines from earlier have
+[00:24:08] folks has anybody seen the movie They
+[00:24:10] Live oh okay all right at least one
+[00:24:13] person well then this joke is worth it
+[00:24:15] um so in they live um uh which is a cult
+[00:24:20] movie that everyone I'm not sure
+[00:24:21] everyone should go see everyone should
+[00:24:22] go watch this this clip um John
+[00:24:25] Carpenter the lead character puts on
+[00:24:27] these sunglasses which allow him to
+[00:24:29] discover and I quote Wikipedia the
+[00:24:31] ruling class are in fact aliens
+[00:24:33] conceding their appearance and
+[00:24:34] manipulating people to spend money breed
+[00:24:36] and accept the status quo with sublimal
+[00:24:38] messages in mass media um so I'm going
+[00:24:42] to ask us to put on our they live
+[00:24:44] glasses um and turn back to these
+[00:24:48] headlines um so Apple to FBI forcing us
+[00:24:52] to unlock iPhone suddenly politicizes
+[00:24:53] engineering decisions that we framed as
+[00:24:55] technical Cloud flare and how our
+[00:24:57] business model is protected by a
+[00:24:59] non-interventionist position Verizon net
+[00:25:02] neutrality violates our vision of how to
+[00:25:03] make money to be fair that's actually
+[00:25:05] pretty obvious from the face of the rest
+[00:25:07] of the argument um and Twitter's Tony
+[00:25:09] Wayne we have no clue what constitutes
+[00:25:12] appropriate content on our platform nor
+[00:25:13] should we have to decide because what's
+[00:25:15] hard and would piss people
+[00:25:17] off and I I both mean these as jokes and
+[00:25:20] not as jokes at all because I sympathize
+[00:25:22] deeply and I actually share the
+[00:25:24] positions of many of the people I'm
+[00:25:26] making fun of that I understand that for
+[00:25:29] a company like Cloud flare or a company
+[00:25:32] like apple the Free Speech argument may
+[00:25:34] be what they have the tool using the
+[00:25:36] tools that they have in order to make
+[00:25:38] the argument that they feel is actually
+[00:25:40] just like normatively the best for the
+[00:25:42] best outcome but once we understand that
+[00:25:45] legal Talisman are protective
+[00:25:47] invocations we have to be critical of
+[00:25:49] them even the ones we like because they
+[00:25:52] come from this history of using these
+[00:25:54] terms in ways that actually don't create
+[00:25:57] the shorthand is not comprehensible to
+[00:25:59] users and the shorthand is not
+[00:26:00] comprehensible to people more generally
+[00:26:03] so when legal talents import difficult
+[00:26:05] Concepts we see the distributional
+[00:26:06] effects of offloading legal
+[00:26:08] responsibility we see that there are
+[00:26:10] real consequences to from Twitter who
+[00:26:13] has lawyers to push off the decisions
+[00:26:16] about what constitutes defamatory to
+[00:26:18] people who use Twitter who don't
+[00:26:20] generally don't have lawyers um and that
+[00:26:23] legal Talisman can both be over Brad and
+[00:26:25] yet too narrow there are thought lots of
+[00:26:27] things I don't feel like I have to say
+[00:26:29] this too much but there are lots of
+[00:26:30] things that are perfectly legal that are
+[00:26:31] still harmful and that's something that
+[00:26:33] comes up in the online abuse space a lot
+[00:26:35] and indeed framing abuse around what's
+[00:26:37] legally permissible and impermissible is
+[00:26:39] deeply ill advised the insertion of
+[00:26:41] legal language creates the idea that law
+[00:26:44] not ethics or empathy is what governs
+[00:26:47] and it substitutes for real discussions
+[00:26:49] of the values that Define community
+[00:26:50] spaces I'm not saying that you can't
+[00:26:53] come to the exact same conclusion about
+[00:26:56] what is appropriate on your platform or
+[00:26:58] or what you should do that you would if
+[00:26:59] you invoked the idea of Free Speech but
+[00:27:02] I'm saying that the shorthand of saying
+[00:27:04] well we're making all the same arguments
+[00:27:06] they made in all of the free speech
+[00:27:08] cases that most people haven't read um
+[00:27:11] is not NE is not comprehensible to users
+[00:27:13] and ignore is things like the real
+[00:27:15] questions I feel like we should ask like
+[00:27:17] what legal structures does this policy
+[00:27:19] invoke and what values do those legal
+[00:27:21] structures take for granted when we talk
+[00:27:23] about defamation it's pretty much
+[00:27:26] impossible to separate his defamation
+[00:27:28] historically from fear of sex workers is
+[00:27:30] that what you meant like is that the
+[00:27:32] value that your legal structure you want
+[00:27:34] your legal structure to take and whose
+[00:27:36] interests do those legal structures
+[00:27:38] serve and again we may come to the same
+[00:27:40] answers but just going through this
+[00:27:42] process of understanding our own
+[00:27:44] normative values in a cont context
+[00:27:46] that's other than legal argumentation
+[00:27:49] allows us to ask why and why is harder
+[00:27:54] why no defamation why Free Speech why
+[00:27:57] these processes why these distributional
+[00:28:00] outcomes but and it's much harder than
+[00:28:03] this than this um because the talismans
+[00:28:06] are so pretty right they they're shiny
+[00:28:09] and they're distracting and we get
+[00:28:10] caught up in whether they're the right
+[00:28:12] Talisman or whether like there's some
+[00:28:13] you know some ugly thing on them um
+[00:28:17] they're really deeply appealing but if
+[00:28:19] we want our online spaces to avoid
+[00:28:20] replicating the mistakes that are legal
+[00:28:22] system has already made we have to move
+[00:28:24] past them thank you
+[00:28:36] um so I was asked to end with a question
+[00:28:39] um because this is meant to provoke a
+[00:28:40] discussion and I have all the faith that
+[00:28:42] this would provoke a discussion
+[00:28:43] independent of whether I ended with a
+[00:28:44] question or not but I do have a question
+[00:28:46] the one that I'm really struggling with
+[00:28:48] now having spent a lot of time thinking
+[00:28:50] about the baggage of legal systems which
+[00:28:54] is are the Alternatives worse um and so
+[00:28:58] thank you so much for your time and
+[00:29:00] attention um and I think I'm going to
+[00:29:01] call on people and then someone will
+[00:29:03] come around with microphone um so are
+[00:29:06] there questions or if you're going to do
+[00:29:08] a comment like tweet length please uh
+[00:29:10] that's otherwise other folks won't
+[00:29:12] necessarily get to
+[00:29:17] speak well I guess I've convinced
+[00:29:19] everybody
+[00:29:30] I hope you don't take this the wrong way
+[00:29:31] but
+[00:29:33] um do you want to address the fact that
+[00:29:36] most people don't even read this
+[00:29:39] information to begin with and what um I
+[00:29:43] don't know sure I'd be happy to I mean I
+[00:29:45] think it reinforces my point about like
+[00:29:47] offloading consequences onto users right
+[00:29:49] the sort of fiction that the terms are
+[00:29:51] binding whether you've read them or not
+[00:29:53] is really convenient from a sort of
+[00:29:55] contractual business perspective right
+[00:29:58] because if businesses actually if
+[00:29:59] companies or people had to make sure
+[00:30:01] someone understands a conflict a
+[00:30:02] contract before it was binding a it' be
+[00:30:04] a lot harder for courts right like
+[00:30:06] because that's like a deeply factual
+[00:30:07] question um and it would be a lot harder
+[00:30:10] for us to make the kinds of Contra
+[00:30:12] contractual transactions that many argue
+[00:30:14] are what make capitalist systems work um
+[00:30:18] so I don't think like so I think it just
+[00:30:21] reinforces my point that like people
+[00:30:22] don't read this stuff um because I don't
+[00:30:26] like it doesn't B not bind them because
+[00:30:29] they don't read it read them and it just
+[00:30:31] offloads responsibility for sort of
+[00:30:33] enforce like the enforcement can happen
+[00:30:37] like sort of independent of you knew
+[00:30:39] whether you knew the thing or
+[00:30:46] not hey so following up on that um if
+[00:30:50] enforcement is let's say independent of
+[00:30:52] whether the user is really cognizant of
+[00:30:55] what's in the toss then does it matter
+[00:30:57] that the is speaking in legal terms
+[00:31:00] instead of in Terms that the user might
+[00:31:01] be more familiar with um and and the
+[00:31:04] other point I kind of wanted to bring in
+[00:31:06] was that um you know I think it's easy
+[00:31:10] for non- lawyers to think of of
+[00:31:11] lawyering as kind of rarified and
+[00:31:15] obscure and so I I wonder if you can
+[00:31:17] talk about the value of including the
+[00:31:21] broader community in the in the
+[00:31:23] normative discussion that necessarily
+[00:31:25] underlies all of those legal Concepts
+[00:31:28] um yes sorry I'm going to address the
+[00:31:30] second part first and then talk about
+[00:31:32] the toss I think that um obviously
+[00:31:35] there's some irony to giving this talk
+[00:31:37] as a lawyer because like my value
+[00:31:39] proposition is like hey I know these
+[00:31:41] words you should hire me um but uh I do
+[00:31:44] think that like really good lawyering is
+[00:31:47] not around legal terms and I think good
+[00:31:49] terms of service are are also not don't
+[00:31:52] use these legal terms because or don't
+[00:31:55] just use these legal terms like
+[00:31:56] sometimes you kind of can't get away
+[00:31:57] with not because actually you really
+[00:31:59] need all the baggage um there is no
+[00:32:01] other set of words that uh sort of comes
+[00:32:04] out to mean the same thing um but I
+[00:32:06] think that Community involvement is as
+[00:32:08] you said really important um because
+[00:32:11] that can help people figure out what
+[00:32:13] what what the pain points are in terms
+[00:32:16] of like people not understanding what
+[00:32:17] their obligations are I think um so I
+[00:32:19] was trying to think of some other
+[00:32:20] examples just in case somebody quizzed
+[00:32:22] me uh before this um and one of the
+[00:32:24] things I kept coming back to is the sort
+[00:32:25] of no copyright infringement intended
+[00:32:27] that you see kind of often in fandom um
+[00:32:31] which is like sort of tal it is totally
+[00:32:33] talismanic and it's like please don't
+[00:32:34] sue me I didn't mean it um which like
+[00:32:37] unfortunately doesn't really matter a
+[00:32:39] ton uh for most copyright infringements
+[00:32:42] laws or for many copyright infringement
+[00:32:44] lawsuits but yeah so I think like when
+[00:32:47] you see like that kind of community out
+[00:32:50] like output where people are clearly
+[00:32:52] trying to engage on the legal substance
+[00:32:54] or trying to like come up with a better
+[00:32:55] way to explain what they mean um that's
+[00:32:57] like a place where like law lawyering
+[00:32:59] can be really helpful in Trans in
+[00:33:01] translating like what the community
+[00:33:03] wants into words that are cognizable to
+[00:33:05] the legal system because that's kind of
+[00:33:06] what lawyering is about in terms of the
+[00:33:09] terms of service and like enforcement um
+[00:33:13] so I I admit um I actually originally
+[00:33:16] did structure this talk around things in
+[00:33:18] the terms of service but then I sort of
+[00:33:20] figured I would make it a little more
+[00:33:22] broad um because terms of service are in
+[00:33:25] some ways actual legal documents they're
+[00:33:27] contracts right um and although they're
+[00:33:29] not usually uh enforced by the courts
+[00:33:32] they are written as usually written as
+[00:33:35] enforceable right so I think what
+[00:33:37] actually worries me more is the presence
+[00:33:39] of these words in spaces where they were
+[00:33:42] like not even terms of service right
+[00:33:43] like in yikyak it's in the content
+[00:33:46] guidelines which are Incorporated by
+[00:33:47] reference into the terms of service um
+[00:33:49] but are sort of meant to be the
+[00:33:51] cognizable easily understandable like
+[00:33:54] you can you can follow these things um
+[00:33:57] and and I'm sorry I think I'm not sure I
+[00:33:59] answered your question directly I maybe
+[00:34:01] talked around it for a while but if you
+[00:34:02] want to Reas it I will try my best to
+[00:34:04] answer it directly or I can just move
+[00:34:09] on
+[00:34:13] yeah so speaking of users not reading
+[00:34:16] terms of service let's say that you read
+[00:34:17] it but you disagree with it right now
+[00:34:20] there's not currently a mechanism where
+[00:34:22] you can say actually I don't agree to
+[00:34:24] this part so it's like okay well then
+[00:34:27] you you don't like our terms of service
+[00:34:29] at slack then don't use slack um and as
+[00:34:33] somebody who's not involved in the
+[00:34:35] company or not a lawyer like what are my
+[00:34:39] what recourse do I have is that
+[00:34:41] something that companies are interested
+[00:34:43] how would I as an Engaged Community
+[00:34:45] member go about making some kind of
+[00:34:49] change um so I mean the sort of legal
+[00:34:52] answer is you can't don't use the
+[00:34:53] service the sort of actual answer is
+[00:34:55] that I do think there are some companies
+[00:34:58] and some groups who actually really care
+[00:34:59] deeply what their users think about
+[00:35:01] their terms of service um and are
+[00:35:03] responsive to user feedback I for like
+[00:35:07] I've been on in conversations where
+[00:35:10] folks were like well somebody really
+[00:35:11] said they're not joining our service
+[00:35:12] because of our abration Clause can we
+[00:35:14] get rid of our arbitration Clause like
+[00:35:16] that is an actual conversation that I've
+[00:35:17] seen happen so it's not just like a
+[00:35:19] figment of my imagination um although
+[00:35:23] sometimes it feels like it was um but so
+[00:35:25] like it does you know users do have the
+[00:35:27] recourse of reaching out and being like
+[00:35:29] hey I don't like this thing that you're
+[00:35:30] doing realistically part of the problem
+[00:35:33] is like all of the stuff we talked about
+[00:35:36] with uh respect to defamation some of
+[00:35:38] that same stuff holds during contract
+[00:35:40] law right like the history of contracts
+[00:35:42] of adhesion which is contracts that are
+[00:35:44] non-negotiable um and sort of the way
+[00:35:46] that that's come to to govern in terms
+[00:35:48] of service is sort of kind of uh in some
+[00:35:53] ways not particularly reconcilable with
+[00:35:54] a model that emphasizes user agency
+[00:35:57] right like you can't you know um you
+[00:35:59] could try to like send them back vers
+[00:36:02] versions of their terms of service with
+[00:36:03] like Parts crossed out like good luck um
+[00:36:07] but the uh yeah we like have our body of
+[00:36:10] contract law is just not well equipped
+[00:36:12] to deal or either is not well equipped
+[00:36:15] if you think the goal should be uh
+[00:36:17] agency by Third parties or is very well
+[00:36:19] equipped if you think the goal should be
+[00:36:21] having companies buying people as easily
+[00:36:23] as possible to contracts um so
+[00:36:26] unfortunately there aren't a of answers
+[00:36:28] but I do think you can especially if you
+[00:36:30] know the company is one that maybe cares
+[00:36:32] about users um or think the company is
+[00:36:35] one that cares about users like reaching
+[00:36:36] out to them and being like hey I really
+[00:36:38] want to use your service but you have
+[00:36:39] this thing like you know sorry
+[00:36:46] um so this is a a Half Baked idea so I
+[00:36:50] may regret bring it up I'm wondering if
+[00:36:52] your critique of legal talismans could
+[00:36:54] be extended to the way that courts
+[00:36:56] themselves apply legal terms to
+[00:36:59] conclusions and I'm thinking of the way
+[00:37:01] that the Supreme Court will decide what
+[00:37:03] is obscenity or not what conduct is
+[00:37:05] speech or not that is it is that also a
+[00:37:08] cultural perspective that is having a
+[00:37:10] label slapped on it at the end sort of
+[00:37:12] concealing what's really going on Yeah
+[00:37:14] the secret problem with this argument is
+[00:37:16] applies to all law um I mean or the not
+[00:37:19] problem at all with this argument right
+[00:37:21] that like putting things into categories
+[00:37:23] that are complicated that people don't
+[00:37:24] understand and then applying arbitrary
+[00:37:26] rules to them is kind of what judges do
+[00:37:27] do and what lawyers do all the time so
+[00:37:30] um that like this problem is not unique
+[00:37:32] unique to online platforms um and so I
+[00:37:35] like some people would consider that a
+[00:37:36] flaw in my argument but I consider it a
+[00:37:38] strength um so uh and what I mean by
+[00:37:42] that is that like yes it turns out like
+[00:37:45] all of these systems have these have
+[00:37:47] this bag in and have these roots that
+[00:37:49] like we if we dig deep enough we're
+[00:37:51] going to find the creepy crawlies that
+[00:37:53] this metaphor got away from me that are
+[00:37:55] under the lock right like that like
+[00:37:57] there the baggage is not unique to one
+[00:38:00] area of Law and I think often actually
+[00:38:02] when we talk about the internet we're
+[00:38:03] sort of we we all can come up from it
+[00:38:07] come to it from this perspective that
+[00:38:09] things like everything is new and
+[00:38:10] nothing has happened before and you know
+[00:38:13] I think that the argument here is that
+[00:38:16] we should take the lessons that we've
+[00:38:17] learned from all of this other stuff
+[00:38:19] about how you know we don't like it when
+[00:38:20] judges Mis understand technology and
+[00:38:22] then come to the wrong decisions well it
+[00:38:23] turns out like they've been judges have
+[00:38:24] been misunderstanding things since time
+[00:38:26] immemorial right
+[00:38:28] um and the the problems are not unique
+[00:38:30] to technology but we can learn a lot
+[00:38:32] from the scholarship that has already
+[00:38:34] criticized these phenomenons and that's
+[00:38:35] part of why I invoke Duncan Kennedy so
+[00:38:44] um seems like to avoid falling into the
+[00:38:47] Trap you describe if I was to write a a
+[00:38:50] set of terms of serice or just
+[00:38:52] guidelines for for some some something I
+[00:38:54] run I would have to avoid any reference
+[00:38:56] to any legal terminal ology whatsoever I
+[00:38:59] can't say harassment I can't say liel I
+[00:39:01] can't say
+[00:39:02] defamation
+[00:39:05] um even if I go to real you like fourth
+[00:39:08] grade playing English it seems like I
+[00:39:10] can't really avoid these terms so what
+[00:39:12] do I
+[00:39:13] do um I mean I do think you can avoid
+[00:39:15] these terms um I actually think uh since
+[00:39:19] I've like started thinking about this I
+[00:39:20] actually think Twitter and Facebook have
+[00:39:22] made huge progress on their content
+[00:39:24] guidelines about removing legal terms um
+[00:39:26] and part of that is because I think they
+[00:39:28] realized that the legal terms were not
+[00:39:29] actually serving a good purpose for what
+[00:39:31] they wanted to accomplish um but if you
+[00:39:33] look at someone like the Facebook's
+[00:39:35] conduct guidelines Facebook conduct
+[00:39:37] guidelines do not contain the word
+[00:39:39] defame um their terms of service might
+[00:39:41] but their content guidelines don't the
+[00:39:43] word defame they don't talk about
+[00:39:44] defamation say harassment that also has
+[00:39:46] a lot yeah so but like harassment like
+[00:39:50] you usually need a word in front of
+[00:39:52] harassment before you like get a very
+[00:39:54] specific set of legal technical terms in
+[00:39:56] a way that's different than defamation
+[00:39:57] or liel or slander um so I do think it's
+[00:40:00] possible to move away from this and I
+[00:40:02] actually think that like for speaking of
+[00:40:04] Half Baked ideas um forcing people to
+[00:40:07] write their terms of service in like
+[00:40:09] like explain it to me like I'm five
+[00:40:11] style might actually not be a bad idea
+[00:40:13] for like forcing people to actually
+[00:40:15] reckon with what they're putting in
+[00:40:16] there because the reality is that people
+[00:40:19] often are doing this in such way that
+[00:40:21] they're not spending a ton of time um
+[00:40:24] that as Jonathan suggested it's sort of
+[00:40:26] the the fruit cake right it's like you
+[00:40:28] know they grabbed it they copied it from
+[00:40:30] some other site modified the parts that
+[00:40:32] obviously should be modified and then
+[00:40:33] like turned it over and I know none of
+[00:40:34] the lawyers in this room this room would
+[00:40:36] ever do that but i' I've heard that it
+[00:40:38] happens um and so uh yeah so I think
+[00:40:43] that like the process of actually having
+[00:40:44] to sit down and think about what you
+[00:40:45] mean is like really important um and
+[00:40:49] being you know being intentional like
+[00:40:52] about the process by which you come up
+[00:40:54] with the the terms that govern your
+[00:40:56] community and the the behavior that's
+[00:40:58] acceptable in your community forces your
+[00:41:01] instincts into tension with the sort of
+[00:41:04] realistic focus of what you're what
+[00:41:06] you're doing so I do think it's actually
+[00:41:08] possible um it may be hard but like you
+[00:41:12] know so are a lot of things that are
+[00:41:13] worth Doing
+[00:41:18] Crystal thank you this is a great talk
+[00:41:21] um
+[00:41:23] I I find it really fascinating that I
+[00:41:25] didn't really know anything about
+[00:41:27] the basically the more problematic um
+[00:41:32] meanings of the phrases like defamation
+[00:41:34] and other types of things that you
+[00:41:36] brought up and so applying critical
+[00:41:38] legal studies seems to be a really key
+[00:41:40] part of this argument and realizing that
+[00:41:42] legal talans are an issue so I'm
+[00:41:45] wondering how you bridge the gap between
+[00:41:48] people kind of glibly or not gbly using
+[00:41:51] legal terms casually whether or not it's
+[00:41:53] in news reports or in terms of service
+[00:41:55] or in other capacities online and and
+[00:41:57] getting to the part where you actually
+[00:41:59] start to see that it's problematic just
+[00:42:01] from not just from a legal sense and the
+[00:42:03] fact that laws are complicated legal
+[00:42:05] terms are complicated but they also have
+[00:42:07] even more underlying issues beyond that
+[00:42:10] yeah I think there are some folks who
+[00:42:12] write like it it's it's hard because I
+[00:42:15] think most critical legal scholarship
+[00:42:17] would not necessarily characterize
+[00:42:18] itself in the terms I have characterized
+[00:42:20] it the sort of defamiliarize the
+[00:42:22] familiar or with the express purpose of
+[00:42:24] sort of like complicating these terms
+[00:42:26] although I think that that is one of the
+[00:42:28] very powerful things that brings to the
+[00:42:29] table is the sort of historical
+[00:42:32] understanding of where these words come
+[00:42:33] from and it's actually something I think
+[00:42:34] that people should learn more in law
+[00:42:36] school thank you John Hansen um so uh I
+[00:42:40] do think like law school is actually one
+[00:42:41] really good place for people to learn
+[00:42:43] the history of these terms and it's sort
+[00:42:44] of something that doesn't really happen
+[00:42:46] in the traditional doctrinal subjects um
+[00:42:48] where everyone's so worried about making
+[00:42:49] sure that you understand what strict
+[00:42:51] scrutiny is um which is a First
+[00:42:53] Amendment test um that they like forget
+[00:42:56] to talk about like you know what happen
+[00:43:00] why we have incitement law or like what
+[00:43:02] defamation means um in fact I'm pretty
+[00:43:05] sure well my first amendment course did
+[00:43:07] not cover defamation very much at all um
+[00:43:10] but so I think in terms of there it is
+[00:43:13] possible to write persuasively for the
+[00:43:15] public on this it's definitely hard
+[00:43:17] because it can often seem like the uh
+[00:43:21] this historical perspective is really
+[00:43:23] like oh well that was the past and
+[00:43:25] things are better now right like when
+[00:43:27] we're talking about like the history of
+[00:43:28] defamation oh like in 2014 they got rid
+[00:43:30] of that part about women's Chastity and
+[00:43:32] like 2012 it's like homosexuality is no
+[00:43:35] longer per se lialis hooray uh so um it
+[00:43:40] can seem sort of historical but I think
+[00:43:42] you know to be trite uh those who don't
+[00:43:45] know history are doomed to repeat it
+[00:43:47] right like that we you know we think of
+[00:43:49] these new terms and or we we come up
+[00:43:51] with these new legal Concepts and we
+[00:43:53] make the same mistakes that we often
+[00:43:54] have made before so I think you can
+[00:43:57] write publicly on the subject and I
+[00:43:58] think like just like literally reading a
+[00:44:00] law review article and then like writing
+[00:44:01] a blog post about being like wow I found
+[00:44:03] out all these things about defamation or
+[00:44:05] like wow it turns out like the history
+[00:44:07] of incitement is full of a lot of people
+[00:44:08] wanting to kill Communists um like is a
+[00:44:12] useful contribution to like unpacking
+[00:44:14] some of these
+[00:44:17] things
+[00:44:24] yeah hi thanks so this was super
+[00:44:26] interesting um I really like I work a
+[00:44:29] lot with like critical legal studies and
+[00:44:31] um but I have a question
+[00:44:34] regarding um the content that legal
+[00:44:39] Concepts carry um which is sort of what
+[00:44:42] legal like you're unpacking and like
+[00:44:44] creates unpack and sort of like the more
+[00:44:47] generalized content that people have
+[00:44:50] about those talismans and how they use
+[00:44:53] them to communicate and Achieve things
+[00:44:56] under day daily lives with which doesn't
+[00:44:58] necessarily match the impact content
+[00:45:00] which you're doing and um I wonder how
+[00:45:02] you see the interaction of this like
+[00:45:05] unpacked content which usually comes
+[00:45:07] from the past and there like constant
+[00:45:09] construction of Concepts that happen in
+[00:45:11] their life that doesn't really have to
+[00:45:13] be related and that actually leads to
+[00:45:15] many legal outcomes that strategically
+[00:45:18] people like in the headlines that you
+[00:45:19] showed um I don't know apple or Twitter
+[00:45:22] use and how you see like how they relate
+[00:45:24] and how to add out yeah that's a it's a
+[00:45:28] great question um and I think one thing
+[00:45:30] to be really careful of is to not talk
+[00:45:31] about the legal definition as the right
+[00:45:34] one right like I think especially
+[00:45:36] lawyers have this idea that like we have
+[00:45:38] found the one true meaning of this term
+[00:45:40] and it comes from this history and I
+[00:45:41] apologize if that's what I was sort of
+[00:45:43] suggesting because that is one that is
+[00:45:45] one true meaning of the term but it is
+[00:45:46] not the one true meaning of the term to
+[00:45:48] sort of rule them all right like
+[00:45:50] cultural understandings of defamation
+[00:45:52] actually carry huge amounts of weight in
+[00:45:53] how we understand how these things work
+[00:45:55] right like we can't just ignore them
+[00:45:57] because we like the legal one better or
+[00:46:00] and this happens like straight up
+[00:46:03] constantly in the content in discussions
+[00:46:05] of free speech because people who talk
+[00:46:07] about Free Speech are often using it as
+[00:46:09] a shorthand for like I feel like my
+[00:46:11] voice isn't be being heard or I'm being
+[00:46:12] deny due process by Twitter or whatever
+[00:46:14] right like and whether you agree with
+[00:46:16] them factually or not the sort of fasile
+[00:46:20] well the government's not here so what
+[00:46:22] are you complaining about is tense I
+[00:46:24] think is just not necessarily
+[00:46:26] constructive
+[00:46:27] as a response um so I think it's really
+[00:46:30] important to think about like popular
+[00:46:32] definitions and legal definitions as
+[00:46:34] both valid for different things and that
+[00:46:37] like the legal definition is probably
+[00:46:40] going to win in court right um that like
+[00:46:43] that's you know the virtue of it is that
+[00:46:45] courts apply legal definitions and
+[00:46:47] knowledge of those legal definitions can
+[00:46:49] be used very effectively as a source of
+[00:46:52] authority um in ways that can sort of
+[00:46:54] Silence more popular cultural
+[00:46:56] Construction right that's the no
+[00:46:58] copyright intended thing um no copyright
+[00:47:00] infringement intended which is sort of a
+[00:47:02] tag that people put on like fan works
+[00:47:04] like fan fiction where they're using
+[00:47:06] like other people's copyrighted
+[00:47:08] characters that may or may not be
+[00:47:09] copyrighted in ways that may or may not
+[00:47:10] be fair use um like we you
+[00:47:16] know it is tempting as a lawyer to be
+[00:47:19] like hey we don't have I don't have to
+[00:47:21] pay attention to that CU that's not real
+[00:47:22] copyright um but cultural constructions
+[00:47:25] matter and like how people think about
+[00:47:26] the law matters in some cases more than
+[00:47:29] what the law is um so I also think that
+[00:47:34] like um I think it's Jessica Selby who's
+[00:47:37] been doing a lot of work um on like what
+[00:47:39] people mean when they talk about
+[00:47:40] copyright and what creators mean when
+[00:47:41] they talk about copyright and I think
+[00:47:42] that is like that sort of more
+[00:47:44] ethnographic work is a really powerful
+[00:47:46] way to sort of create a to look at
+[00:47:49] cultural consensus around what legal
+[00:47:51] terms mean um in a way that because of
+[00:47:54] the constructions of academic knowledge
+[00:47:55] gives it auth Authority that's maybe
+[00:47:57] comparable to Legal Authority so I think
+[00:47:59] that it's just uh to sort of sum up a
+[00:48:02] sort of rambling answer um it's just
+[00:48:04] really important not to talk about one
+[00:48:06] term as correct because one term might
+[00:48:08] be enforcable with within the law um and
+[00:48:12] that the cultural understandings of
+[00:48:14] these terms are in many ways more
+[00:48:17] impactful um on people's daily life than
+[00:48:21] the sort of reality of like what may be
+[00:48:24] on the books
+[00:48:27] I think didn't oh go
+[00:48:30] ahead hi thanks for that that was got a
+[00:48:33] lot of thoughts going through my head
+[00:48:35] because I actually spent the morning
+[00:48:36] looking at the community standards of
+[00:48:37] three of the biggest social media
+[00:48:39] platforms for me um and one of the
+[00:48:42] things that actually I wanted to to draw
+[00:48:44] out and um is what you were began with
+[00:48:48] by talking about um you know the
+[00:48:50] companies aren't Pro aren't providing us
+[00:48:52] with a positive right and one of the
+[00:48:54] things that actually stood out for me is
+[00:48:56] when you look at their Community
+[00:48:58] guidelines or the Twitter rules they
+[00:49:01] really invoke all this very flowery
+[00:49:03] language about we are providing you with
+[00:49:06] the opportunity to share and exchange in
+[00:49:09] this bounty of goodness and it seems
+[00:49:11] like they would argue right that that is
+[00:49:13] a positive right just the ability to be
+[00:49:16] able to go forth and prosper and we can
+[00:49:19] roll our eyes and we know it's a bit
+[00:49:20] ridiculous but I'm wondering if that has
+[00:49:23] any kind of standing in terms of how
+[00:49:25] that makes us think about this notion of
+[00:49:27] of Rights if that is and if that has any
+[00:49:30] kind of legal framing in that question
+[00:49:33] so uh the one of the sort
+[00:49:36] of uh one of the things we talk law law
+[00:49:40] school talks a lot about is there's no
+[00:49:41] right without a remedy right this idea
+[00:49:44] that like without some sort of
+[00:49:45] consequence for the violation of right
+[00:49:47] of a right that like the right might as
+[00:49:48] well not exist and so although often PE
+[00:49:52] like you're totally you're very
+[00:49:54] obviously having just read them but like
+[00:49:55] you're totally correct there's all this
+[00:49:57] kind of Flowery language about using our
+[00:49:59] information service to spread you know
+[00:50:01] Global Peace and flowers and chocolate
+[00:50:03] worldwide and like pets and kittens or
+[00:50:04] whatever right like the um I mean the
+[00:50:07] reality and this is sort of where the
+[00:50:10] cultural constructions versus like legal
+[00:50:12] reality kind of like butt heads right is
+[00:50:14] that if you look at this the terms and
+[00:50:16] not the community guidelines what
+[00:50:17] they're going to say is that we can
+[00:50:19] terminate your service at any time and
+[00:50:21] like if we do your remedy is we'll pay
+[00:50:23] you any money you we like we'll give you
+[00:50:26] the money we you we might owe you back
+[00:50:29] which like in the context of a free
+[00:50:30] service is like okay great so I get
+[00:50:33] nothing right so without remedies
+[00:50:36] positive rights are not necessarily
+[00:50:37] meaningful um and so and this is
+[00:50:41] something that comes up in all kinds of
+[00:50:42] different forms of jurist prudence but
+[00:50:45] when like if we talk about these
+[00:50:46] documents as sort of trying to give
+[00:50:47] people a sense of foundational rights um
+[00:50:50] then the question is actually like what
+[00:50:52] times like do they provide due process
+[00:50:55] like or like things that we could
+[00:50:56] attempt to understand as du process
+[00:50:58] rights or like do they provide remedies
+[00:51:00] for the sort of for not being able to
+[00:51:03] access the service anymore and I'm going
+[00:51:04] to pretty much guess that the answer is
+[00:51:06] probably no um so in the absence of a
+[00:51:09] remedy what is a
+[00:51:15] right
+[00:51:18] yeah uh thanks Kendra so much uh for a
+[00:51:22] lot of this it certainly your last
+[00:51:24] question got me thinking a little bit
+[00:51:26] about the Alternatives and um it kind of
+[00:51:29] led me to a place which I guess is going
+[00:51:31] to be a question for you and that's
+[00:51:33] really um how much is the role of the
+[00:51:36] terms of service to sort of um set like
+[00:51:39] Community Values and standards and
+[00:51:42] communicate this is what we do here and
+[00:51:44] give notice versus how much is simply
+[00:51:47] like oh this is a shield in case angry
+[00:51:50] person wants to litigate against us
+[00:51:52] because we like arbitrarily booted him
+[00:51:55] off or her that
+[00:51:57] um and kind of like what role like
+[00:52:00] should there be two separate things or
+[00:52:02] something like that yeah I think it's a
+[00:52:04] great question and I think actually many
+[00:52:05] platforms have sort of gone to two
+[00:52:07] separate things which sort of I've been
+[00:52:09] maybe alluding to somewhat but Community
+[00:52:11] guidelines versus terms of service right
+[00:52:13] and like how those differ um and I do
+[00:52:15] think that
+[00:52:18] I I mean I think terms of service are
+[00:52:20] fundamentally legal documents and
+[00:52:22] they're often drafted not always like
+[00:52:24] certainly not always and like I don't
+[00:52:26] mean to impune The Good the good names
+[00:52:29] of many of the lawyers who dra term
+[00:52:30] draft of terms of service of which I am
+[00:52:32] one um so the like they are often
+[00:52:36] drafted with an eye towards shielding
+[00:52:39] from liability and not with the sort of
+[00:52:41] foundational document kind of uh in mind
+[00:52:44] and I think that
+[00:52:47] the
+[00:52:50] um I have not seen although I'm welcome
+[00:52:54] like suggestions on where to look um
+[00:52:56] people who have done the sort of
+[00:52:58] foundational document thing in a way
+[00:53:00] that did not that passed the sniff test
+[00:53:02] um like Facebook sort of event at like
+[00:53:04] Global governance where like 1% of all
+[00:53:07] Facebook users would have to vote on
+[00:53:08] something which is just like an an an
+[00:53:11] enormous amount of people that was
+[00:53:13] unrealistic uh in every way to think
+[00:53:16] that they would engage with this issue
+[00:53:17] with the issues Facebook was uh pushing
+[00:53:21] um so I do think like yeah there's sort
+[00:53:23] of this two this idea of splitting them
+[00:53:25] off and these have two separate
+[00:53:26] audiences and this is our legally
+[00:53:27] binding one but I mean
+[00:53:31] like if your if your community
+[00:53:33] guidelines are all puppies and rainbows
+[00:53:35] and your your legally binding document
+[00:53:37] is all like you know we reserve the
+[00:53:39] right to terminate at any time like this
+[00:53:41] is like we can like kick you off for any
+[00:53:43] reason you know I think you may be
+[00:53:45] trying to say one thing out of one side
+[00:53:47] of your mouth and the another thing out
+[00:53:49] of the other side of your mouth and in
+[00:53:50] maybe some context that's totally
+[00:53:52] appropriate and totally okay but like
+[00:53:53] you have to question whether that
+[00:53:56] whether that represents the values that
+[00:53:58] you want to try to promote like it's
+[00:54:00] through like the intentional process of
+[00:54:01] actually thinking about like what is it
+[00:54:03] we're trying to do here right um and
+[00:54:06] that there are costs to being
+[00:54:09] intentional and thinking about values
+[00:54:12] right like yes not having an arbitration
+[00:54:15] cause in your contract May cost you a
+[00:54:16] lot more money because you're going to
+[00:54:17] get sued by a bunch of plain of Slayers
+[00:54:20] for a class action but like if you think
+[00:54:22] arbitration clauses are not are bad then
+[00:54:25] like that's maybe a decision you make
+[00:54:26] there all of these decisions involve
+[00:54:28] trade-offs um so I think that it
+[00:54:31] individual companies do need to reckon
+[00:54:33] with like sort of the reality that we've
+[00:54:35] constructed um and why I ask if the
+[00:54:38] alternatives are worse um is that like
+[00:54:41] in some sense it's like well like am I
+[00:54:44] now asking companies to do the kind of
+[00:54:46] soul searching that our legal government
+[00:54:48] has our democratically
+[00:54:50] effect uh elected government has failed
+[00:54:52] at right um and I am and I realized that
+[00:54:56] that's like a pretty hard position for
+[00:54:58] me to take um on a lot of days and a lot
+[00:55:00] of places because I don't necessarily
+[00:55:02] trust companies but at the moment um
+[00:55:05] they're doing it they're they're making
+[00:55:07] value statements anyway right whether I
+[00:55:10] like it or not and I'd rather they were
+[00:55:12] more intentional about their values so
+[00:55:14] that's I'm answering my own are the
+[00:55:15] Alternatives Works question um I think
+[00:55:18] we may be at time or I don't know do of
+[00:55:21] um so and seeing no no people with their
+[00:55:25] hands strenuously up I want to thank you
+[00:55:27] all so much for coming um and I'm happy
+[00:55:29] to talk to folks after
+[00:55:33] [Applause]
