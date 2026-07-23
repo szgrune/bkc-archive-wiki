@@ -1,0 +1,2109 @@
+[00:00:00] okay great well thank you very much for
+[00:00:02] having me um this is a wonderfully
+[00:00:03] diverse crowd and so I hope that I will
+[00:00:06] I will have
+[00:00:07] um a nice perspective for us to talk
+[00:00:09] about
+[00:00:10] um so I I already was given an
+[00:00:11] introduction but um you know I always
+[00:00:13] throw this slide at the beginning of my
+[00:00:15] deck I usually actually put another
+[00:00:17] slide too
+[00:00:19] um so I'm a research scientist at the
+[00:00:20] Wikimedia Foundation but I'm also a
+[00:00:22] Wikipedia editor and I've been working
+[00:00:24] on the Technologies around Wikipedia and
+[00:00:27] open knowledge for for a long time I
+[00:00:29] actually started there before I went to
+[00:00:30] graduate school
+[00:00:32] um I I actually started out as a
+[00:00:34] computer scientist and so I like
+[00:00:35] building things and that sort of stuff
+[00:00:36] but I didn't really realize that
+[00:00:38] building things for Wikipedia could turn
+[00:00:40] into a research agenda so I was happily
+[00:00:43] surprised when when I got funding to
+[00:00:44] look at conflict on the internet
+[00:00:46] um and it turned out that there there
+[00:00:48] were technologies that we could explore
+[00:00:49] building around conflict in Wikipedia
+[00:00:51] and so I could turn my hobby into my
+[00:00:53] profession which has turned into awful
+[00:00:55] hours of work but I am sure that
+[00:00:56] everybody in the room can relate to that
+[00:00:59] um so there are three things that I want
+[00:01:00] to talk to you about today these things
+[00:01:01] must come in three so I have three
+[00:01:03] um first I want to talk to you about
+[00:01:05] Wikipedia how I look at it um as a
+[00:01:08] socio-technical system and so I'm going
+[00:01:10] to talk to you a little bit about
+[00:01:11] systems thinking and use a biological
+[00:01:14] metaphor to talk about how I think about
+[00:01:16] how Wikipedia subsystems work together
+[00:01:18] um next I want to talk to you about a
+[00:01:20] critique that I raised as my PhD thesis
+[00:01:23] from the University of Minnesota a
+[00:01:25] critique of how algorithmic quality
+[00:01:27] control works in Wikipedia and so I'll
+[00:01:29] draw from standpoint epistemology and
+[00:01:31] this idea about how we encode the our
+[00:01:34] ideologies and the technologies that we
+[00:01:36] build in order to discuss how Wikipedia
+[00:01:38] got to the state and why it hasn't
+[00:01:39] recovered
+[00:01:41] um and then finally I'll talk about an
+[00:01:43] experimental program that I'm working on
+[00:01:44] to try and build infrastructure to
+[00:01:46] change this socio-technical fabric
+[00:01:48] around quality control in Wikipedia I'll
+[00:01:51] introduce this term that I use progress
+[00:01:53] Catalyst and also talk about how I draw
+[00:01:55] from a feminist Theory to inspire the
+[00:01:58] design of system like this specifically
+[00:02:00] talking about hearing to speech as
+[00:02:02] opposed to speaking to be heard and the
+[00:02:04] recent literature around the dangers of
+[00:02:06] subjective algorithms in Social spaces
+[00:02:08] without further Ado let's get on to this
+[00:02:10] socio-technical of Wikipedia
+[00:02:13] so I've got to start with this question
+[00:02:15] usually my audience has a mixture of
+[00:02:17] knowledge about Wikipedia or not but I
+[00:02:19] you know I'm not really going to talk
+[00:02:20] about what Wikipedia is but I do want to
+[00:02:22] show you something that I think a few
+[00:02:24] things that I think are fun about
+[00:02:25] Wikipedia so it's really big and of
+[00:02:27] course this begs a lot of questions
+[00:02:29] about how it got to be this big and how
+[00:02:31] it got to be such high quality we have
+[00:02:32] about 5 million articles in English
+[00:02:34] Wikipedia and that's bigger than any
+[00:02:36] traditional encyclopedia ever
+[00:02:38] um there's wonderful articles on
+[00:02:39] Wikipedia one of my favorites to show
+[00:02:41] off is this article called the list of
+[00:02:43] lists of lists which is exactly what you
+[00:02:46] might expect that it would be
+[00:02:47] um so for example it's kind of hard to
+[00:02:49] see on the screen here but that top link
+[00:02:51] on the list is list of ancient Kings and
+[00:02:53] so if we click on that link we will get
+[00:02:54] to another list which is a list of
+[00:02:56] ancient Kings and so let's pick on our
+[00:02:58] or lists of ancient Kings let's pick on
+[00:03:00] lists of pharaohs which is the top link
+[00:03:02] there and then we can get to this
+[00:03:04] wonderful article which is actually a
+[00:03:05] list article but it has a lot of
+[00:03:06] information about pharaohs too and how
+[00:03:08] they progress and that sort of stuff
+[00:03:10] um so if we scroll down the page and get
+[00:03:12] to the list the first pharaoh that is
+[00:03:14] talked about here is pita and so Peta is
+[00:03:17] you know uh actually now I've forgotten
+[00:03:19] I've actually given this top before and
+[00:03:21] I've forgotten the introduction to
+[00:03:22] beta's article but the thing that I
+[00:03:23] really want to share with you is that I
+[00:03:25] know that you pronounce the P because
+[00:03:26] wikipedians have put through the effort
+[00:03:28] to make sure that their pronunciation
+[00:03:29] guides here and so it's not a silent P
+[00:03:31] which is what I originally suspected
+[00:03:33] when I came to this article you actually
+[00:03:34] do pronounce p sound
+[00:03:36] so uh Wikipedia is also a Wiki which is
+[00:03:39] a bit of software and this is the thing
+[00:03:40] that I I think that especially as a
+[00:03:42] technologist people tend to be most
+[00:03:43] familiar with uh anybody can edit it's
+[00:03:46] shared authorship it's an online
+[00:03:47] database this is the the thing that's
+[00:03:49] very interesting about Wikipedia as a
+[00:03:51] publishing medium
+[00:03:52] um and it flips the publication model so
+[00:03:54] uh anybody can edit so you publish first
+[00:03:56] and we'll worry about review after the
+[00:03:58] fact
+[00:03:59] um and this this involves a lot of of uh
+[00:04:02] wonderful and concerning things about
+[00:04:03] Wikipedia which I'm going to get into
+[00:04:04] later how this review process actually
+[00:04:06] happens
+[00:04:08] um it's also an online community
+[00:04:10] um if we take all the language
+[00:04:11] wikipedias and put them together of
+[00:04:13] which they're a great number many of
+[00:04:15] which are not terribly active but if we
+[00:04:17] just look at the Active editors in these
+[00:04:19] communities there's about a hundred
+[00:04:20] thousand
+[00:04:21] um they focus their efforts in all sorts
+[00:04:23] of different spaces there are discussion
+[00:04:25] forums like these Village pump things
+[00:04:27] that Focus around technical concerns
+[00:04:28] policy concerns that sort of stuff and
+[00:04:30] there's also Wiki projects that are
+[00:04:32] subject specific such as Wiki project
+[00:04:34] video games and Wiki project medicine
+[00:04:35] two very of Wiki projects in the English
+[00:04:37] Wikipedia
+[00:04:39] um the way that I like to look at
+[00:04:41] Wikipedia though is as a system that
+[00:04:43] converts uh available human attention
+[00:04:46] into encyclopedia material and like any
+[00:04:48] system of course it has this input and
+[00:04:50] output Dynamic
+[00:04:52] um I think that it's it's of course
+[00:04:53] limiting to think of Wikipedia like this
+[00:04:55] but it can help uh help sort of bridge
+[00:04:58] the gap between a lot of thought that we
+[00:05:00] have about efficiency and how a
+[00:05:02] socio-technical systems like Wikipedia
+[00:05:04] work and so uh when I when I give this
+[00:05:07] talk it's uh it may be important for you
+[00:05:09] to know that I'm coming from this
+[00:05:10] position of trying to figure out how
+[00:05:12] this socio-technical system manages
+[00:05:14] these inputs and outputs
+[00:05:17] so and when I say socio-technical uh I
+[00:05:20] I'm really drawing from a literature
+[00:05:22] that's that's kind of old uh literature
+[00:05:24] that I uh that's uh the the field of
+[00:05:26] computer supported Cooperative work
+[00:05:28] um so uh a long time ago when uh
+[00:05:31] computers started to uh become things
+[00:05:33] that uh uh would actually enter social
+[00:05:35] spaces uh social and technical things
+[00:05:38] were seen as entirely separate social
+[00:05:40] things that were things that would
+[00:05:41] happen maybe next to a computer but the
+[00:05:44] computer wasn't really involved in this
+[00:05:45] sort of uh experience
+[00:05:48] um after a while we realized that we
+[00:05:49] could develop technologies that would
+[00:05:51] help us solve social problems like
+[00:05:52] communicating with each other through
+[00:05:54] email or coordinating our activities
+[00:05:56] through calendar applications
+[00:05:58] um and so uh like I I see sort of a
+[00:06:01] partial overlap between social and
+[00:06:03] Technical as this sort of group where
+[00:06:05] period of thinking about social things
+[00:06:06] and Computing
+[00:06:08] um but then uh like we we ended up
+[00:06:11] starting to explore the this idea of a
+[00:06:13] computer-mediated space a space where
+[00:06:15] most people are connecting through the
+[00:06:16] computer computer and the technologies
+[00:06:18] that people are using affect everything
+[00:06:20] and so that's really where I think
+[00:06:22] Wikipedia operates and this is why I
+[00:06:24] wanted to use the terms socio-technical
+[00:06:26] in my introduction that
+[00:06:29] um and I'll explain just a moment uh uh
+[00:06:31] how how I think about the integration
+[00:06:33] between these things so this is
+[00:06:34] important I got to stand next to my
+[00:06:36] arrow so I I'm a technologist and that's
+[00:06:38] really where most of my my training is
+[00:06:40] but for a moment I want to talk to you
+[00:06:42] as though I'm a technobiologist and I'm
+[00:06:44] going to draw some correlations between
+[00:06:45] biology and Technical Systems
+[00:06:48] um so uh considering uh some some nice
+[00:06:51] uh living systems that we've probably
+[00:06:53] encountered in our anatomy classes are
+[00:06:55] not Anatomy but biology so the bacterium
+[00:06:57] and the paramecium and if there's any
+[00:06:59] anybody who has a good background in
+[00:07:01] biology in the room they should tell me
+[00:07:02] that that paramecium or that bacterium
+[00:07:04] is way too big it is way too enormous it
+[00:07:07] should be like one of the little tiny
+[00:07:08] specs that the paramecium is farting out
+[00:07:10] right there it should not be visible and
+[00:07:12] that will be important in just a moment
+[00:07:15] um so a bacterium is a very a simple
+[00:07:17] organism it's really just like a sack of
+[00:07:19] salt water that contains some stuff that
+[00:07:21] does some interesting things by you know
+[00:07:23] chemical Pathways things running into
+[00:07:24] each other it's got some DNA some
+[00:07:26] ribosomes some vacuoles but they're
+[00:07:27] mostly just floating around in space on
+[00:07:29] the inside of the bacterium whereas a
+[00:07:31] paramecium is a very complex organism it
+[00:07:34] has these subsystems that float around
+[00:07:36] like for example the endoplasmic
+[00:07:38] reticulum is a specialized subsystem
+[00:07:40] that allows you to encode RNA into
+[00:07:42] proteins much faster and more
+[00:07:43] effectively than just ribosomes floating
+[00:07:45] around in the bacterium it has
+[00:07:47] specialized vacuoles like the
+[00:07:49] contractile vacuole that allows the
+[00:07:51] paramecium to operate in both fresh and
+[00:07:52] salt water
+[00:07:53] anyway so these systems operate at
+[00:07:57] entirely different scales and I think
+[00:08:00] that this is a useful way to think about
+[00:08:01] how populations of people can operate so
+[00:08:04] on the left side of the screen it's kind
+[00:08:05] of hard to see but beneath the bacterium
+[00:08:07] I have a photo of a fishing Village a
+[00:08:10] small village that's very often studied
+[00:08:12] for for the social practices that are
+[00:08:15] there one of the people who studied a
+[00:08:16] lot of fishing villages was Dunbar and
+[00:08:20] so Dunbar came up with this this
+[00:08:22] consistency that he started to see as he
+[00:08:24] was studying these uh small sort of uh
+[00:08:28] historically simple social structures
+[00:08:30] around fishing villages
+[00:08:32] um that they never grew Beyond 150 and
+[00:08:34] whenever they did they encountered
+[00:08:36] social problems and we would very often
+[00:08:38] split or or there would be something
+[00:08:39] that would limit them to about this size
+[00:08:43] um and so um uh when I think about uh uh
+[00:08:47] Wikipedia Wikipedia is a collection of
+[00:08:49] people just like a fishing Village
+[00:08:51] um but there's all sorts of
+[00:08:52] infrastructure and subsystems that allow
+[00:08:55] Wikipedia to operate at a different
+[00:08:56] scale so I think of Wikipedia much more
+[00:08:58] like a paramecium so the fishing Village
+[00:09:00] is at 150 as I was saying earlier
+[00:09:02] Wikipedia is at about a hundred and ten
+[00:09:05] thousand
+[00:09:06] um but uh this it's made up of these two
+[00:09:09] things so uh the collection of people
+[00:09:11] that write Wikipedia and it's of course
+[00:09:12] terrible to see this picture that's a
+[00:09:14] photo from wikimania 2014 which is our
+[00:09:17] major conference for talking about Wiki
+[00:09:18] things
+[00:09:19] um and uh the technologies that they use
+[00:09:22] and when I say the word technology I
+[00:09:24] don't just mean digital Technologies the
+[00:09:25] software the the hardware that the
+[00:09:27] system runs on but also the policies
+[00:09:29] that they form and the processes that
+[00:09:31] they use the external tools that are not
+[00:09:33] midi Wiki but are developed by
+[00:09:35] wikipedians themselves to support their
+[00:09:36] processes that make that work and just
+[00:09:39] like you would never study a paramecium
+[00:09:42] as a bare Museum that I have here
+[00:09:44] without considering it's it's organelles
+[00:09:46] and its subsystems and how they interact
+[00:09:48] and operate you would consider them
+[00:09:49] together so when I think about socio and
+[00:09:51] Technical and why we have this these two
+[00:09:54] words jammed together I'm talking about
+[00:09:56] uh why you study the paramecium as an
+[00:09:59] entire thing not not uh the sack of of
+[00:10:02] uh salt water and and its membrane
+[00:10:05] separate from its its organelles and
+[00:10:07] subparts you have to study them in
+[00:10:09] context because they all interact with
+[00:10:11] each other in order to make this larger
+[00:10:12] system work that's what I mean when I
+[00:10:14] say socio-technical in the context of
+[00:10:16] Wikipedia you can't just understand the
+[00:10:18] people you can't just look at the
+[00:10:20] technology if you want to understand how
+[00:10:21] the system works you have to look at how
+[00:10:23] the people interact with the technology
+[00:10:25] and vice versa
+[00:10:26] so
+[00:10:28] um I like to think about Wikipedia in
+[00:10:30] this way and with the biological
+[00:10:32] metaphor because I think just like this
+[00:10:34] paramecium Wikipedia is a system with
+[00:10:36] specialized subsystems so I want to talk
+[00:10:38] very briefly about what I think a nice
+[00:10:41] view of Wikipedia's specialized
+[00:10:44] subsystems are
+[00:10:45] so one of the problems that Wikipedia
+[00:10:48] has to solve is how we're going to
+[00:10:50] allocate work who's going to do the
+[00:10:52] tasks what tasks are there to do and
+[00:10:54] what tasks are we going to do first how
+[00:10:55] are we going to prioritize those things
+[00:10:57] and so there are a few things that we
+[00:10:59] know about this
+[00:11:00] um we largely get this for free due to
+[00:11:02] Linus's Law And so there's actually a
+[00:11:05] couple versions of Linus's law I'm not
+[00:11:06] actually talking about linuses Linus's
+[00:11:08] law this is Eric Raymond's Linus's law
+[00:11:10] and that's that given enough eyeballs
+[00:11:13] all bugs are shallow so um not that kind
+[00:11:17] of bugs sorry I never set up that joke
+[00:11:18] right
+[00:11:19] um so the idea is that given given a a
+[00:11:22] problem in a piece of software that if
+[00:11:24] you have enough people look at that
+[00:11:25] problem there's going to be somebody who
+[00:11:27] has the insights and expertise to fix
+[00:11:29] that problem easily and that's the idea
+[00:11:30] of a bug being shallow whereas a deep
+[00:11:32] bug would be hard so the Insight of this
+[00:11:35] is that visibility is critical to open
+[00:11:37] systems this is one of the ways that we
+[00:11:39] can take advantage of the open nature of
+[00:11:41] a publishing platform or a software
+[00:11:43] repository is that a lot of people can
+[00:11:45] and see it and we can get efficient
+[00:11:47] contributions by people who might
+[00:11:48] otherwise not have known or might not
+[00:11:50] have otherwise been available and so a
+[00:11:53] corollary for Wikipedia is that given
+[00:11:55] enough people see an incomplete article
+[00:11:57] all potential contributions to that
+[00:11:59] article will be easy for somebody
+[00:12:01] um and so just a brief overview of the
+[00:12:03] literature it turns out this is tends to
+[00:12:05] work in theory it's part of becoming a
+[00:12:07] Wikipedia editor we can support this
+[00:12:10] visibility with technology technologies
+[00:12:12] that call attention to various things
+[00:12:13] and bad things happen when we take it
+[00:12:16] away we can actually see massive
+[00:12:17] productivity losses when we make things
+[00:12:19] less visible in Wikipedia
+[00:12:21] okay second subsystem I want to talk to
+[00:12:24] you about is regulation of behavior if
+[00:12:26] we're going to have a big crowd of
+[00:12:27] people in the same space we need to
+[00:12:28] figure out our Norms we need to
+[00:12:30] propagate them we need to enforce them
+[00:12:31] we need to deal with our our problems we
+[00:12:33] need to of course decide how we're going
+[00:12:35] to consistently work in the same
+[00:12:36] direction
+[00:12:37] um this is probably one of the most
+[00:12:39] well-studied questions in Wikipedia how
+[00:12:42] does it actually organize
+[00:12:43] um so I I went to Google Scholar this
+[00:12:45] was actually about a year ago and I
+[00:12:47] searched for Wikipedia governance and of
+[00:12:48] course Google gives me this absurd
+[00:12:50] estimate that there's 37 400 Papers
+[00:12:53] written about Wikipedia governments and
+[00:12:54] of course there's not that many but
+[00:12:56] there are a lot and so I went to the
+[00:12:58] 10th page of results about this and uh
+[00:13:02] you you might notice if you're familiar
+[00:13:03] with this field that actually a lot of
+[00:13:04] those results on the 10 page are
+[00:13:06] actually relevant they are about
+[00:13:07] governance patterns in Wikipedia so I
+[00:13:09] just want to give you the impression
+[00:13:10] that this is really well studied so I'm
+[00:13:12] going to tell you the view on Wikipedia
+[00:13:15] governance that I think would be most
+[00:13:16] practical if you were starting as a
+[00:13:18] wikipedian today
+[00:13:19] so there's two types of norms in
+[00:13:21] Wikipedia one is prescriptive where we
+[00:13:23] say I think people should do this and
+[00:13:26] one is descriptive where people have
+[00:13:28] been doing this and it seems to be
+[00:13:30] working pretty well let's write that
+[00:13:31] down so that we keep doing it that way
+[00:13:32] and new people know that we do it that
+[00:13:34] way so that's prescriptive and
+[00:13:36] descriptive so let's say that you
+[00:13:37] identify one of those then you would
+[00:13:39] write an essay and so which is just a
+[00:13:41] long-form uh written document that you
+[00:13:43] would put on the encyclopedia
+[00:13:45] um then you would once you had that
+[00:13:46] essay ready you would file a request for
+[00:13:48] comments there would be a discussion we
+[00:13:50] would decide whether this is a norm that
+[00:13:52] we want to adopt maybe we want to make
+[00:13:53] some changes to it maybe it's actually
+[00:13:55] already covered by a past Norm
+[00:13:57] um if it passes that request for
+[00:13:59] comments it becomes something that we
+[00:14:00] call a policy or a guideline which is a
+[00:14:02] formalized norm if it doesn't pass that
+[00:14:04] request for comments it just goes back
+[00:14:05] to being in an essay status and it could
+[00:14:07] go back to another request for comments
+[00:14:09] although a lot of these things just
+[00:14:10] remain as essays and so
+[00:14:13] um this really forms a divide between
+[00:14:15] the the for the the described Norms in
+[00:14:18] Wikipedia as informal and formal if a
+[00:14:21] norm becomes formalized as a guideline
+[00:14:23] or policy it's sort of like it becoming
+[00:14:24] law it's much easier to enforce whereas
+[00:14:27] if it stays as an essay people might
+[00:14:29] talk about it it might affect how people
+[00:14:30] think about Wikipedia but it's much
+[00:14:32] harder to enforce an essay because not
+[00:14:34] everybody has agreed on it already
+[00:14:37] um and so for informal Norms you get
+[00:14:39] things like which Wikipedia's guide or
+[00:14:41] essay on don't stuff beans up your nose
+[00:14:43] which is an essay that says don't tell
+[00:14:46] vandals not to do a thing they haven't
+[00:14:47] already done yet because maybe they
+[00:14:49] haven't thought of that with the Insight
+[00:14:51] that if you tell a child not to put
+[00:14:52] beans in their nose they might go oh
+[00:14:53] yeah Bean would fit in my nose
+[00:14:55] um and then of course on the formalized
+[00:14:57] side of things one of the most important
+[00:14:59] policies in my opinion in for Wikipedia
+[00:15:01] is verifiability that Wikipedia is not
+[00:15:04] truth Wikipedia are those things that
+[00:15:06] are verifiable because if we tried to
+[00:15:08] reach for truth we would never be able
+[00:15:10] to solve arguments there's too much
+[00:15:12] debate about truth what we need is
+[00:15:14] something that we can verify in cite and
+[00:15:16] so those are the things that are
+[00:15:17] intended to be covered in Wikipedia lots
+[00:15:19] of interesting problems that go along
+[00:15:20] with this that I'd love to talk about
+[00:15:22] later
+[00:15:24] um so we can do some interesting
+[00:15:26] analyzes to sort of figure out the
+[00:15:27] Dynamics of these sort of Norm
+[00:15:29] formations in Wikipedia and so in this
+[00:15:31] graph we're looking at the the rise and
+[00:15:34] decline of the growth rate of these
+[00:15:36] formal and uh informal norms and so uh
+[00:15:39] for the two types of formal Norms they
+[00:15:41] mostly grew until about 2006 and then
+[00:15:44] they started to slow down rapidly
+[00:15:46] they're not growing nearly at the rate
+[00:15:47] that they used to
+[00:15:49] um whereas informal Norms have just
+[00:15:51] exploded around the same time so at the
+[00:15:54] time where we started to decide that
+[00:15:55] we're going to have a formalized process
+[00:15:56] around building these Norms there was a
+[00:15:58] sudden explosion in the rate that people
+[00:16:00] were creating these these uh essays that
+[00:16:03] we couldn't figure out how to formalize
+[00:16:05] that we didn't want to make Universal
+[00:16:06] rules but people really wanted to write
+[00:16:08] about them
+[00:16:09] we can also look at the the way at which
+[00:16:12] people cite these Norms when they talk
+[00:16:13] to each other and argue about what
+[00:16:14] content belongs in Wikipedia or what
+[00:16:16] behaviors are appropriate
+[00:16:18] um and I can't dig too much into this
+[00:16:19] research but one of the things that I
+[00:16:21] think is very cool that this this
+[00:16:22] research found is that Wikipedia's
+[00:16:24] governance structure is generally
+[00:16:25] inclusionary that the Norms are really
+[00:16:27] well documented and anybody who knows
+[00:16:29] about them can cite them in an argument
+[00:16:31] and this is basically the best way that
+[00:16:32] you can win an argument in Wikipedia
+[00:16:34] newcomers to Wikipedia may not know
+[00:16:36] about these Norms but they learn about
+[00:16:37] them very fast because as soon as
+[00:16:39] somebody cites one of them at you now
+[00:16:41] that's a weapon in your repertoire and
+[00:16:43] so a lot of work goes into
+[00:16:45] citing these things at each other it
+[00:16:47] turns out that um The Who cites these
+[00:16:50] policies distributes from experienced
+[00:16:52] people to newcomers relatively quickly
+[00:16:56] um okay third system I want to talk to
+[00:16:58] you about and this is one I'm going to
+[00:16:59] dig into quite a bit later so I'm going
+[00:17:01] to be a little bit cursory about it
+[00:17:02] right now and that's the quality control
+[00:17:04] system this is maybe the biggest
+[00:17:06] question about Wikipedia you know if you
+[00:17:08] if you haven't seen any of the
+[00:17:09] literature around Wikipedia's quality
+[00:17:11] the first question that you might ask is
+[00:17:13] how could you actually have a high
+[00:17:14] quality encyclopedia if anybody
+[00:17:16] contribute to it so we need to identify
+[00:17:18] and remove damage and vandalism and
+[00:17:20] falsehoods and that sort of stuff
+[00:17:22] so the way that this works is also
+[00:17:25] benefited by Linus's law that for any
+[00:17:27] given article a mistake is likely to be
+[00:17:30] noticed by somebody who's going to see
+[00:17:31] that that's wrong and then they can take
+[00:17:33] it upon themselves to fix that in
+[00:17:34] relatively efficient way so any damage
+[00:17:36] is shallow to somebody probably shallow
+[00:17:38] to lots of people because vandals aren't
+[00:17:40] terribly clever
+[00:17:41] um we also supplement this with uh two
+[00:17:44] technologies that operate in sequence on
+[00:17:46] Wikipedia one is a fully automated
+[00:17:48] quality control system that uses a
+[00:17:50] machine learning model to detect
+[00:17:52] vandalism it's saved in Wikipedia the
+[00:17:55] system is really fast it'll revert
+[00:17:57] vandalism about five seconds after it's
+[00:17:58] saved it requires no human effort but
+[00:18:01] because of limitations in natural
+[00:18:03] language processing it doesn't actually
+[00:18:05] read the article it doesn't know if you
+[00:18:06] inserted a falsehood it's really looking
+[00:18:08] if you inserted a curse word or if you
+[00:18:09] did something that's kind of strange
+[00:18:10] with the article so it can only catch a
+[00:18:13] small proportion of the the vandalism
+[00:18:15] the stuff that makes it past that goes
+[00:18:17] into our semi-automated systems so these
+[00:18:19] are actually humans using an interface
+[00:18:21] that very quickly shows them edits and
+[00:18:23] then ask them to make a judgment about
+[00:18:24] whether it's good or bad this is still
+[00:18:26] pretty fast people using the system will
+[00:18:28] revert vandalism about 30 seconds after
+[00:18:31] it happens and it's designed to minimize
+[00:18:33] human effort that goes into this Quality
+[00:18:35] Control process with the Insight that
+[00:18:36] humans catch most vandalism at a glance
+[00:18:39] much better than machines at it and it
+[00:18:42] turns out that people looking at
+[00:18:44] articles these semi-automated and fully
+[00:18:46] automated quality control systems and
+[00:18:48] the administrators of Wikipedia and
+[00:18:50] their notice board for catching vandals
+[00:18:52] as they're causing problems in Wikipedia
+[00:18:53] operate in a nice distributed system
+[00:18:55] that in a lot of ways mimics the innate
+[00:18:58] and adaptive immune systems that we see
+[00:19:00] in biology where innate is you get an
+[00:19:03] inflammation on your skin right where
+[00:19:04] you get an infection that's not your
+[00:19:06] what we generally refer to as your
+[00:19:08] immune system it's the immediate white
+[00:19:10] blood cells attacking whatever is weird
+[00:19:12] right here so that's the people who are
+[00:19:14] reverting vandalism at the boundary of
+[00:19:16] Wikipedia whereas we also have this
+[00:19:18] adaptive immune system uh which is we we
+[00:19:20] our bodies learn about a specific
+[00:19:22] pathogen and Builds an immunity to that
+[00:19:24] pathogen so wikipedians will learn about
+[00:19:27] vandals and figure out who's vandaling
+[00:19:29] and what from what IP address ranges and
+[00:19:31] then they'll figure out ways to ban
+[00:19:32] these people and prevent them from uh
+[00:19:34] vandalizing Wikipedia again so it's slow
+[00:19:37] but it's specific and it works globally
+[00:19:39] once you've identified a vandal then you
+[00:19:42] can ban them globally from the entire
+[00:19:43] site and we don't have to deal with
+[00:19:44] their damage again
+[00:19:46] um
+[00:19:46] okay two more systems that I want to
+[00:19:48] talk to you about Community Management
+[00:19:50] Wikipedia is built by a large group of
+[00:19:52] people we need to train them we need to
+[00:19:54] welcome newcomers in we need to make
+[00:19:56] sure that they they find work that they
+[00:19:57] want to do we need to uh uh mediate
+[00:20:00] disputes and you know of course we need
+[00:20:02] to do training not just for newcomers
+[00:20:03] but for all sorts of things so Wikipedia
+[00:20:06] gets a fire hose of newcomers there's
+[00:20:07] about 6 000 newcomers who join Wikipedia
+[00:20:10] and edit something a day
+[00:20:13] um and so we have some routing systems
+[00:20:15] in place that split off the vandals from
+[00:20:17] this group of newcomers and Route the uh
+[00:20:20] quote unquote good faith newcomers which
+[00:20:22] is a wikipedian bit of jargon for
+[00:20:24] well-meaning newcomers towards newcomer
+[00:20:26] help spaces like our question and answer
+[00:20:28] space the tea house and I'm going to get
+[00:20:30] into a little bit of this later I don't
+[00:20:32] want to dig too deep into that we're
+[00:20:33] going to get into Community Management
+[00:20:35] issues in a little bit the last
+[00:20:37] subsystem that I think is really
+[00:20:38] important but often overlooked in this
+[00:20:41] kind of space is reflection and
+[00:20:43] adaptation
+[00:20:44] wikipedians own Wikipedia um I work for
+[00:20:47] the Wikimedia Foundation but we don't
+[00:20:48] really set the direction of what
+[00:20:50] Wikipedia is this is a common mistake
+[00:20:52] that people would think about with this
+[00:20:54] company we're sort of like a flea riding
+[00:20:55] a horse you know we we can we can do
+[00:20:58] minor things but generally the horse
+[00:20:59] goes where it wants to go so does
+[00:21:01] Wikipedia figure out where it wants to
+[00:21:03] go well
+[00:21:05] um you know so they have to ask these
+[00:21:06] questions where do we want to go and how
+[00:21:08] do we want to get there what should
+[00:21:09] Wikipedia be what is it right now what
+[00:21:11] are our problems
+[00:21:12] um
+[00:21:13] so uh going back to those policies in
+[00:21:15] Norm formation I like to think about uh
+[00:21:18] the these two types of of norms the uh
+[00:21:22] uh in informal and formal as reflection
+[00:21:24] and adaptation so a lot of the essays if
+[00:21:27] you sit down and read them they'll talk
+[00:21:28] about where are we going where should we
+[00:21:30] go how should we get there
+[00:21:32] um but adaptation is when we actually
+[00:21:33] formalize a plan for how we're going to
+[00:21:35] get there here's how we're going to
+[00:21:36] change our Behavior here's what belongs
+[00:21:37] it doesn't belong so it's a very clear
+[00:21:39] way uh to to build in that adaptation
+[00:21:42] into the system but this plot might make
+[00:21:45] you ask the question why are we now
+[00:21:47] having a whole bunch of reflection but
+[00:21:49] not very much adaptation in this Norm
+[00:21:51] formalization space and I think that's a
+[00:21:53] really good question that I don't have
+[00:21:54] an answer about but we might like to
+[00:21:55] talk about later
+[00:21:57] um so brief summary of the the direction
+[00:21:59] that I'm going with this biological
+[00:22:01] metaphor and thinking about this as
+[00:22:02] systems so I this paramecium is a
+[00:22:06] complex system of chemical interactions
+[00:22:07] that you can't really look at one
+[00:22:09] molecule and really figure out what's
+[00:22:11] going on in the system because the
+[00:22:13] system is complex and it has these these
+[00:22:15] exponential and and stabilizing effects
+[00:22:18] in the same way that Wikipedia it's not
+[00:22:20] interactions between chemicals it's
+[00:22:22] interactions between people the
+[00:22:23] Technologies the policies that they
+[00:22:24] build you can't look at a policy you
+[00:22:26] can't look at an individual person you
+[00:22:27] can't look at a technology and know what
+[00:22:29] the system is doing in the same way that
+[00:22:31] you can't look at an individual molecule
+[00:22:32] or an individual organelle in a
+[00:22:34] paramecium and know what it's doing
+[00:22:37] so
+[00:22:38] um on to looking at this like a system
+[00:22:41] so this brings me to an issue that I
+[00:22:44] think is happening or in the uh
+[00:22:46] socio-technical system of Wikipedia
+[00:22:49] so um this is actually some work that I
+[00:22:51] published around 2012 it was it was one
+[00:22:53] of the cornerstones of my PhD
+[00:22:55] dissertation I don't have a lot of time
+[00:22:57] to dig into like the methods and that
+[00:22:59] sort of stuff for this study so I want
+[00:23:01] to tell you the story quick but but know
+[00:23:02] that if you have access to the slides
+[00:23:04] which I'm sure are online by now
+[00:23:06] um there is a an Open Access article
+[00:23:08] that I wrote about this and so you can
+[00:23:10] dig into that
+[00:23:11] um called the the rise and Decline and
+[00:23:13] so I'm going to tell this story using
+[00:23:14] this graph that shows the active editor
+[00:23:17] population in English Wikipedia over
+[00:23:18] time
+[00:23:19] in three phases so in the early phase of
+[00:23:23] Wikipedia there weren't that many people
+[00:23:24] around this is between 2001 and 2004.
+[00:23:27] you mostly knew everybody and if we
+[00:23:29] think about Wikipedia as like a
+[00:23:31] Wikipedia systems as a set of Gears the
+[00:23:33] gears were mostly made of people there
+[00:23:35] was the media Wiki software but all of
+[00:23:37] the infrastructures that people put in
+[00:23:38] place to organize the system and make it
+[00:23:40] work were human infrastructures there
+[00:23:42] were people that understand processes
+[00:23:44] and implemented them
+[00:23:46] around 2004 to 2007 there was an
+[00:23:49] exponential growth in Wikipedia um and
+[00:23:51] so this is the time where Wikipedia
+[00:23:52] suddenly became a fire hose and the
+[00:23:54] people who were long-term editors in
+[00:23:56] 2004 were vastly outnumbered by the
+[00:23:58] people who were coming to the site and
+[00:24:00] so they had to deal with these problems
+[00:24:01] of scaling so one of the ways that they
+[00:24:04] dealt with this fire hose was by
+[00:24:05] building these algorithmic quality
+[00:24:07] control tools and building them into
+[00:24:09] their socio-technical infrastructure and
+[00:24:11] so here I have gears that represent the
+[00:24:14] um the uh fully automated Quality
+[00:24:16] Control Systems in the semi-automated
+[00:24:18] quality control systems interacting with
+[00:24:20] fewer humans you just needed fewer
+[00:24:22] people to do quality control work once
+[00:24:24] these semi-automated and fully automated
+[00:24:25] systems were put in place and so this
+[00:24:27] helped them deal with the the growth
+[00:24:29] that was happening but after this period
+[00:24:31] we see an Abrupt and steady decline in
+[00:24:35] the the population of Wikipedia it
+[00:24:38] actually took us a little while to to
+[00:24:40] figure this out okay I forgot before we
+[00:24:41] get into that before I tell you what I
+[00:24:43] think was happening into in this decline
+[00:24:45] I want to talk to to you about how
+[00:24:47] people thought about the technologies
+[00:24:48] that they were building during this
+[00:24:50] growth period these semi-automated and
+[00:24:52] fully automated quality control tools
+[00:24:54] so in order to talk to you about that I
+[00:24:56] want to talk to you about these concepts
+[00:24:57] of standpoints and objectivities
+[00:25:00] um and for this I'm going to try my best
+[00:25:02] to channel uh Donna haraway who's a
+[00:25:04] philosophy of science scholar
+[00:25:07] um so uh in her study she was looking at
+[00:25:09] scientists who were studying Apes
+[00:25:12] um and so she looked at uh two sort of
+[00:25:14] characteristic groups of scientists who
+[00:25:16] were looking at ape Behavior
+[00:25:18] male scientists or male dominated uh uh
+[00:25:21] science labs and a female scientist and
+[00:25:25] I put an asterisk there because uh when
+[00:25:27] I say female scientists I really mean
+[00:25:29] like feminism and sort of New Wave
+[00:25:31] informed groups that were
+[00:25:33] maybe not dominated by female scientists
+[00:25:36] but at least uh were inspired by uh
+[00:25:39] certain directions that feminism was
+[00:25:42] taking so both of these groups looked at
+[00:25:45] the same the same uh uh real thing they
+[00:25:48] were taking observations of the the same
+[00:25:50] species of Apes the same types of
+[00:25:53] behavior the same context of those
+[00:25:54] because behaviors but they ended up
+[00:25:56] drawing different conclusions so the the
+[00:25:58] male dominated science groups Drew
+[00:26:01] conclusions about reproductive dominance
+[00:26:03] or reproductive competition and
+[00:26:04] dominance whereas the the female
+[00:26:06] scientists Drew conclusions around
+[00:26:08] communication and social grooming
+[00:26:11] um and so um the idea that she came up
+[00:26:13] with in thinking about why this happened
+[00:26:16] um was uh around the these terms
+[00:26:18] standpoints and objectivity so your
+[00:26:20] standpoint gives you a view of what's
+[00:26:23] important and valuable so is
+[00:26:25] communication practices valuable or
+[00:26:27] dominance around sexual selection
+[00:26:28] valuable to understand about ape
+[00:26:30] behavior and so the objectivity that you
+[00:26:32] construct is something that brings this
+[00:26:34] value to life so say the methodology
+[00:26:36] that you apply so when you're observing
+[00:26:38] a behavior do you look at grooming
+[00:26:40] patterns or do you look at how sexual
+[00:26:42] partners are selected
+[00:26:44] um and uh through the application of
+[00:26:46] these things you can come to different
+[00:26:48] conclusions but the I think a really key
+[00:26:50] insight to this is that it's not an
+[00:26:52] argument about which answer was more
+[00:26:54] right both of these uh can be merged
+[00:26:57] together and extended to form a more
+[00:26:58] complete picture of a behavior so if you
+[00:27:01] were looking at a textbook right now of
+[00:27:03] a behavior you would see all of these
+[00:27:05] things you would see an expanded
+[00:27:06] standpoint of what's important to know
+[00:27:08] about apes you would read about
+[00:27:09] reproductive competition dominance
+[00:27:11] community patient and social grooming so
+[00:27:13] so it's really important to know we're
+[00:27:15] not critiquing and saying throwing away
+[00:27:17] this sort of old view that the the male
+[00:27:20] dominated scientists had we're extending
+[00:27:22] it with this new standpoint
+[00:27:24] um so now to discuss the standpoint of
+[00:27:27] the growth period of editors in
+[00:27:29] Wikipedia so what they saw was that
+[00:27:31] Wikipedia is a fire hose there's just a
+[00:27:33] massive amount of new stuff coming in
+[00:27:34] and it shows no sign of stopping any
+[00:27:36] soon and anytime soon bad edits need to
+[00:27:39] be reverted this is the main concern
+[00:27:41] about Wikipedia how can it actually have
+[00:27:43] quality When anybody can edit it we need
+[00:27:44] to make sure that we don't let the bad
+[00:27:46] edits in and it would be great if we can
+[00:27:49] minimize the effort that we waste doing
+[00:27:51] quality control work and so we can spend
+[00:27:53] time writing the encyclopedia instead
+[00:27:55] so they've built this objectivity into
+[00:27:58] the tools that operate as filters of new
+[00:28:00] contributions coming into Wikipedia
+[00:28:02] these tools really separate edits into
+[00:28:04] good and bad and operate in this sort of
+[00:28:06] distributed quality control system
+[00:28:08] appropriately to that and for this
+[00:28:11] standpoint for these values that they
+[00:28:13] came to it was a massive success
+[00:28:15] Wikipedia is extremely high quality
+[00:28:17] vandalism is reverted incredibly quickly
+[00:28:19] and when these tools go down they I know
+[00:28:23] that they're very effective because
+[00:28:24] we've done natural experiments on when
+[00:28:26] they went down it takes an awful long
+[00:28:29] time to revert vandalism when we don't
+[00:28:30] have these things here so as a
+[00:28:32] technological intervention this was a
+[00:28:33] massive success
+[00:28:35] and so right now this is a this is a
+[00:28:37] pretty good view of Wikipedia you have
+[00:28:39] the internet on one side and you have
+[00:28:40] Wikipedia with its recent changes viewed
+[00:28:43] on the other side and we have these
+[00:28:44] systems in between that reduce the
+[00:28:46] workload of reverting vandalism by about
+[00:28:48] 90 to 95 percent
+[00:28:51] um but so in these tools were generally
+[00:28:53] designed around 2007 by 2009 we realized
+[00:28:56] oh no that exponential growth that we
+[00:28:59] were just taking for granted it's not
+[00:29:00] actually happening anymore and it turns
+[00:29:02] out that what's happening is that the
+[00:29:04] newcomers uh are still like people are
+[00:29:06] still coming to Wikipedia and droves but
+[00:29:09] the newcomers aren't sticking around all
+[00:29:10] the people who were in Wikipedia for a
+[00:29:12] while are still there and staying there
+[00:29:14] as long as they ever did but the
+[00:29:15] newcomers are are not sticking
+[00:29:18] um so when it took us a few years to
+[00:29:19] actually figure out why
+[00:29:21] um and so here's the the result of this
+[00:29:24] work that I was talking to about for my
+[00:29:25] thesis is that we forgot to design for
+[00:29:27] socializing the newcomers as they were
+[00:29:29] coming in so let me talk to you about
+[00:29:31] how this updated our standpoint
+[00:29:33] um oh yeah and so this is to to say it
+[00:29:36] very clearly it seems that quality our
+[00:29:38] quality control subsystem was squashing
+[00:29:40] Our Community Management subsystem
+[00:29:42] because we were throwing out the baby
+[00:29:43] with the bathwater we were essentially
+[00:29:45] having good faith newcomers getting
+[00:29:46] stuck in this quality control system and
+[00:29:48] being pushed out so given this Wikipedia
+[00:29:52] is still a fire hose we still have to uh
+[00:29:55] make sure that the bad edits are
+[00:29:56] reverted we still want to minimize the
+[00:29:58] effort wasted on doing quality control
+[00:30:00] work but we we now know that it's super
+[00:30:02] valuable we have to socialize and train
+[00:30:04] the newcomers people who are new in
+[00:30:06] Wikipedia need to make friends they need
+[00:30:08] to feel like the experience is rewarding
+[00:30:09] we can't just tell them when they've
+[00:30:10] done something bad with a robot
+[00:30:13] um so this new standpoint was
+[00:30:15] incorporated into a lot of conversations
+[00:30:17] about how we organize uh uh stuff for
+[00:30:19] newcomers in Wikipedia so more newcomers
+[00:30:22] has become a major Wikimedia Foundation
+[00:30:23] goal and so we've been working on a lot
+[00:30:25] of initiatives in this space and also
+[00:30:27] people in the Wikipedia Community have
+[00:30:29] been working on initiatives in this
+[00:30:30] space such as mentoring spaces like the
+[00:30:32] the co-op which is like a one-to-one
+[00:30:35] mentoring pattern you can sign up and
+[00:30:36] get a mentor in the hope you edit
+[00:30:37] Wikipedia and the tea house which is a
+[00:30:39] question and answer system
+[00:30:41] um where you can file a question like I
+[00:30:43] was reverted and I don't understand why
+[00:30:44] can somebody take a look and let me know
+[00:30:45] what's going on
+[00:30:47] um so this is a win we extended our
+[00:30:49] standpoint we changed how Wikipedia
+[00:30:51] works and so this is great but
+[00:30:54] um there's something that didn't change
+[00:30:55] and so I want to talk to you about one
+[00:30:57] of the most uh dominant quality control
+[00:30:59] tools one of the ones that people use to
+[00:31:01] interact with newcomers the most just
+[00:31:03] because of the temporal rhythms of these
+[00:31:05] things so first I have to start with the
+[00:31:07] sugar because I generally give this talk
+[00:31:09] to wikipedians they need to know that
+[00:31:11] I'm not coming from an area of pure
+[00:31:12] critique
+[00:31:13] Huggle which is one of these
+[00:31:15] semi-automated systems is an amazing
+[00:31:17] piece of software I have no doubt that
+[00:31:19] it represents the state of the art in
+[00:31:20] distributed quality control this
+[00:31:22] software and its users are responsible
+[00:31:24] for critical work without this Wikipedia
+[00:31:26] probably would have crashed during the
+[00:31:28] exponential growth period we uh it's
+[00:31:30] developers and users are wonderful
+[00:31:32] people they're actually a lot of my
+[00:31:33] collaborators of the people who work on
+[00:31:35] these tools we owe them a lot for their
+[00:31:36] thankless work and so thank you
+[00:31:40] all right
+[00:31:41] I believe what I say they're really cool
+[00:31:44] you know the medicine
+[00:31:45] so
+[00:31:47] when we discovered that Wikipedia was
+[00:31:49] declining this is what uh what Huggle
+[00:31:52] looked like
+[00:31:53] um so in this interface it's kind of
+[00:31:55] hard to see I'm sorry but uh uh this
+[00:31:57] this part of the interface here is
+[00:31:58] showing you the the diff
+[00:32:00] um it's showing you the actual change
+[00:32:02] that was made into an article on
+[00:32:03] Wikipedia
+[00:32:05] um this part of the interface are the
+[00:32:06] two buttons that you push to say this is
+[00:32:08] good or this is bad
+[00:32:10] um and there's a list that's sorted on
+[00:32:13] the side by the probability that the
+[00:32:14] edit is bad and so they use some basic
+[00:32:16] machine learning algorithms to try and
+[00:32:18] predict is this edit likely bad or is
+[00:32:19] this edit likely good
+[00:32:21] um and note that when you click those
+[00:32:23] buttons a whole bunch of actions will
+[00:32:25] Cascade if you hit the bad button this
+[00:32:27] edit will be reverted a warning message
+[00:32:28] will be sent to the user who made that
+[00:32:30] edit telling them to stop analyzing
+[00:32:31] Wikipedia and if they have a couple of
+[00:32:33] those already sent to them then they'll
+[00:32:34] automatically be reported to the
+[00:32:36] administrator's notice board so that
+[00:32:37] they can go block them in the the
+[00:32:39] Adaptive immune system can take its
+[00:32:41] pathway
+[00:32:42] um so this critique has been going on
+[00:32:44] for a long time like I said I published
+[00:32:46] this in 2012. well here's what Huggle
+[00:32:48] looks like today so you can see there's
+[00:32:50] still this this diff pane here we still
+[00:32:53] have the the good and bad buttons
+[00:32:55] um and uh there's still this list that
+[00:32:57] sorts things by uh the probability that
+[00:33:00] they were bad but the interaction
+[00:33:01] between uh newcomers and quality control
+[00:33:04] people hasn't changed we're still sort
+[00:33:06] of cramming people into this idea of
+[00:33:08] they're either good or bad they can't be
+[00:33:10] good faith in making a mistake they're
+[00:33:12] vandalizing Wikipedia and they need a
+[00:33:14] warning that tells them to stop doing
+[00:33:15] that
+[00:33:16] um and so oh and to their credit though
+[00:33:18] the developers did add a button that if
+[00:33:20] you click it will send a welcome message
+[00:33:21] to this newcomer uh regretfully it seems
+[00:33:24] that nobody really uses that uh welcome
+[00:33:26] message at least the last time that I
+[00:33:27] did an analysis here
+[00:33:29] um so the in the end it looks like
+[00:33:32] quality control in Wikipedia is still
+[00:33:34] not designed with newcomer socialization
+[00:33:36] in mind the conversation moved to
+[00:33:38] developing these new social spaces for
+[00:33:40] newcomers but not the design of the
+[00:33:42] Technical Systems that people had put in
+[00:33:44] place back in 2007.
+[00:33:46] um so newcomers especially those who
+[00:33:48] don't conform to the normal wikipedian
+[00:33:50] uh uh mindset and pattern of behavior
+[00:33:53] remain marginalized by this because
+[00:33:55] they're being hammered by these quality
+[00:33:56] control tools for making mistakes or
+[00:33:57] just not doing it the way that
+[00:33:58] wikipedians have done it in the past and
+[00:34:01] so we're still not seeing Mass like not
+[00:34:03] any real substantial gains in the
+[00:34:05] retention of good faith newcomers and so
+[00:34:06] we're still having this decline because
+[00:34:08] newcomers who are trying to contribute
+[00:34:10] productively are being pushed away and
+[00:34:12] so that begs the question of why why if
+[00:34:16] we extended the conversation in some
+[00:34:17] spaces why didn't the technology change
+[00:34:19] too what is it about the technology that
+[00:34:21] made it so so stable that that it didn't
+[00:34:24] adapt
+[00:34:25] um and so this brings me to the third
+[00:34:27] part of the talk that I want to talk to
+[00:34:29] you about which is the infrastructure
+[00:34:30] for socio-technical change
+[00:34:33] so the core part of all of these quality
+[00:34:36] control tools that I've been talking to
+[00:34:37] you about is the machine learning
+[00:34:39] classifier the basic way that this works
+[00:34:41] is you take a set of statistics about an
+[00:34:43] edit is this user Anonymous that's a
+[00:34:45] Boolean value how many characters did
+[00:34:47] they add
+[00:34:48] um what's the longest token that they
+[00:34:50] added to the article because a lot of
+[00:34:52] vandalism is just matching the keys and
+[00:34:53] if you don't put any spaces that makes a
+[00:34:55] really long token and of course how many
+[00:34:56] bad words from a like a list of curse
+[00:34:58] words and and that sort of stuff did
+[00:35:00] they did they add to the article the
+[00:35:02] machine learning algorithm does
+[00:35:03] something which is mostly building up
+[00:35:04] correlations in some sort of uh
+[00:35:06] difficult to explain way and difficult
+[00:35:08] to describe after the fact for sure and
+[00:35:10] then it makes some judgment over whether
+[00:35:12] this edit was good or bad if it was bad
+[00:35:14] enough with high enough confidence then
+[00:35:16] kubot will automatically revert it and
+[00:35:19] uh but if it was somewhere between kind
+[00:35:21] of bad and totally good then it'll show
+[00:35:24] up in this sorted list inside of Huggle
+[00:35:26] and so people will review the probably
+[00:35:28] bad edits first
+[00:35:30] um it turns out that the three dominant
+[00:35:32] quality control tools and English
+[00:35:33] Wikipedia all have their own machine
+[00:35:36] learning classifier that are essentially
+[00:35:37] solving the same problem just in
+[00:35:39] slightly different ways with similar
+[00:35:40] Fitness so let's say that you wanted to
+[00:35:43] sit down and take this expanded view of
+[00:35:46] what what a newcomer is coming into
+[00:35:48] Wikipedia and quality control like how
+[00:35:50] we should deal with the fire hose you
+[00:35:51] want to take this expanded point of view
+[00:35:53] and do something different to
+[00:35:55] incorporate this extended standpoint
+[00:35:57] then the first thing that you're going
+[00:35:58] to need to do is build a machine
+[00:36:00] learning model that will help you detect
+[00:36:01] damage so that you can deal with it
+[00:36:03] efficiently like we have in the past so
+[00:36:06] in order to do that effectively you're
+[00:36:07] going to have to read about 20 plus
+[00:36:08] research papers on Wikipedia damage
+[00:36:10] detection machine classification is not
+[00:36:12] part of a standard computer science
+[00:36:14] degree which would be fine because most
+[00:36:16] tool developers don't have a standard
+[00:36:17] computer science degree anyway
+[00:36:19] it's extremely labor intensive there are
+[00:36:21] a lot of performance considerations not
+[00:36:23] just for applying the model but for
+[00:36:24] extracting the features that go into the
+[00:36:25] model so you're probably going to pull
+[00:36:27] your hair out and give up and so this is
+[00:36:29] what I think has generally been
+[00:36:30] happening as people consider what we can
+[00:36:32] do in this space and so so to talk about
+[00:36:34] this I want to borrow this this type of
+[00:36:37] plot from chemistry and just a quick
+[00:36:39] show of hands how many people are
+[00:36:40] familiar with this this plot on the
+[00:36:42] screen with no explanation
+[00:36:44] okay so we so we have maybe about a
+[00:36:46] third a quarter of the room I have seen
+[00:36:48] something like this before so
+[00:36:50] essentially what we're looking at is how
+[00:36:51] you fry an egg
+[00:36:53] um so this is this is a reaction pathway
+[00:36:55] how you have a chemical reaction in this
+[00:36:57] case we're denaturing the proteins in
+[00:36:58] the egg by applying heat and we need a
+[00:37:01] certain amount of heat which is about
+[00:37:02] 149 degrees it doesn't exactly work that
+[00:37:04] way because you know a molecule spawns
+[00:37:06] around in there so there's some
+[00:37:08] Randomness that have to do with heat but
+[00:37:09] generally if you get an egg up to about
+[00:37:11] 149 degrees the transparent stuff turns
+[00:37:15] white
+[00:37:16] um and that's what we're looking at in
+[00:37:17] this graph the idea that I think is very
+[00:37:19] interesting here is that there's this
+[00:37:21] threshold you have to cross this energy
+[00:37:23] threshold in order to make it further in
+[00:37:25] the reaction path but you can introduce
+[00:37:27] a catalyst so if we had an egg yolkat or
+[00:37:30] an egg white Catalyst then we could
+[00:37:32] potentially reduce this temperature
+[00:37:33] substantially you might imagine a
+[00:37:35] catalyst that could allow us to convert
+[00:37:38] a white egg to or a transparent egg to a
+[00:37:40] white egg at room temperature if we had
+[00:37:42] something that made that chemical
+[00:37:44] reaction easier so when I think about
+[00:37:46] the current state of the art that we
+[00:37:48] have around quality control and newcomer
+[00:37:50] socialization in Wikipedia and where we
+[00:37:52] would like to go I see this building a
+[00:37:55] machine learning model as sort of an
+[00:37:56] activation threshold that you have to
+[00:37:58] put in this certain amount of work in
+[00:38:00] order to even start working in a better
+[00:38:02] Direction
+[00:38:03] but it'd be great if we could knock that
+[00:38:06] down if we could dramatically reduce
+[00:38:07] what that threshold looked like so
+[00:38:09] people could experiment in the space
+[00:38:10] much more easily and so I see that as
+[00:38:12] sort of a progress Catalyst that if we
+[00:38:13] want to make progress in the space we
+[00:38:15] need to make progress easier at least
+[00:38:17] easier to get started for somebody who's
+[00:38:18] not like me and it's a computer science
+[00:38:20] background
+[00:38:22] um and so this is one of the systems
+[00:38:23] that we're building in Wikipedia so the
+[00:38:25] idea is that we take this idea of the
+[00:38:27] machine learning model that's in all
+[00:38:28] these different systems and we
+[00:38:30] centralize it we make one we make it as
+[00:38:32] efficient and effective as we can we do
+[00:38:34] uh public evaluation metrics we make
+[00:38:36] sure that it's really good
+[00:38:38] um and we make sure that it has
+[00:38:39] excellent uptime so that we don't suffer
+[00:38:40] from those times when the quality
+[00:38:41] control tools go down and vandalism
+[00:38:43] sticks in Wikipedia for a while and so
+[00:38:45] the cool thing about centralizing this
+[00:38:46] is that we won't just benefit the
+[00:38:48] current quality control tools will
+[00:38:49] benefit new tools that can take
+[00:38:51] advantage of these things tools that are
+[00:38:53] aimed more towards socializing newcomers
+[00:38:55] host spot was the one that routes
+[00:38:56] newcomers to good faith newcomer spaces
+[00:38:58] and snuggle is a side project that we
+[00:39:00] can get into if you want to talk about
+[00:39:01] that so that if you have your idea about
+[00:39:04] how you would apply this extended
+[00:39:05] standpoint now you don't have to go
+[00:39:07] through the effort of building up a
+[00:39:08] machine learning model you can just reap
+[00:39:10] the benefits of actually having one
+[00:39:11] available so how does this work it's
+[00:39:14] just a web address it's a simple web API
+[00:39:17] and I'll show you how it works right now
+[00:39:19] so if you you can actually bring this
+[00:39:21] this web address up in your browser and
+[00:39:23] it'll do the classification but you
+[00:39:24] don't have to do that I'm going to walk
+[00:39:25] through it real quick so in this URL
+[00:39:28] we're encoding a few things and Wiki is
+[00:39:30] the database name for English Wikipedia
+[00:39:32] we're gonna we're gonna look for some
+[00:39:33] some scores there we want to know is
+[00:39:35] this edit damaging or not that's one of
+[00:39:37] the models that we host
+[00:39:38] um is it is it harming the article
+[00:39:41] um and this this number is an ID number
+[00:39:43] for a particular edit in Wikipedia and
+[00:39:45] so if you give this URL to the system
+[00:39:47] um oh and by the way I forgot um you're
+[00:39:49] not quite going to see this but this
+[00:39:51] this particular edit the 638-307 884
+[00:39:54] corresponds to a good edit where
+[00:39:56] somebody is making sure that a link to
+[00:39:58] the old woman which goes to a page
+[00:40:00] saying there's lots of things that are
+[00:40:02] called The Old Woman there's these plays
+[00:40:03] there's all these sorts of things
+[00:40:05] um you know which one do you want to go
+[00:40:06] to well here they're changing the link
+[00:40:08] to make sure that it goes to the play
+[00:40:09] Because when we say the old woman in
+[00:40:11] this article we want somebody who clicks
+[00:40:13] on that to go to the article about the
+[00:40:14] play so this is a good edit it's called
+[00:40:15] link disambiguation wikipedians do this
+[00:40:17] quite a lot
+[00:40:18] um so you give this to the system and it
+[00:40:20] says I predict fall pulse with a high
+[00:40:22] certainty this is not a damaging edit to
+[00:40:25] Wikipedia but let's take another edit
+[00:40:27] um so
+[00:40:29] 642-215-410 so in this edit this editor
+[00:40:32] whose username by the way is blank one
+[00:40:34] two three four five six seven eight nine
+[00:40:36] already an indicator
+[00:40:37] um it removes a reference in the article
+[00:40:39] and replaces it with all caps llama
+[00:40:42] grows on trees or llamas grow on trees
+[00:40:44] um I should get the grammar right
+[00:40:47] um so if we give this edit to the system
+[00:40:49] then it says yes I predict with high
+[00:40:51] certainty that this is in fact vandalism
+[00:40:53] and you should maybe go review it and
+[00:40:55] see if it actually is damaging and so
+[00:40:56] this is how all these systems work but
+[00:40:58] the cool thing is that you can just go
+[00:40:59] to this web address and it'll do these
+[00:41:01] things for you if you've ever written
+[00:41:02] any code before you'll know that making
+[00:41:04] a request to an external service like
+[00:41:06] this to have it do something for you is
+[00:41:07] really really easy and if you recognize
+[00:41:09] this this output format is Json this is
+[00:41:12] where all the cool kids are using these
+[00:41:13] days on the internet whether they have a
+[00:41:14] computer science degree or not okay so
+[00:41:17] the system is fast we we can score an
+[00:41:19] edit in about 0.1 seconds so
+[00:41:21] theoretically we can be much faster than
+[00:41:22] uh even the automated Quality Control
+[00:41:24] Systems right now
+[00:41:26] um it's scalable and redundant I have a
+[00:41:27] computer science background I've studied
+[00:41:29] distributed systems I can do this you
+[00:41:30] know I have good support from engineers
+[00:41:32] at the Wikimedia foundation and we're
+[00:41:34] comparable to the state of the art
+[00:41:35] because I've dug into the research
+[00:41:36] literature and I'm incorporating
+[00:41:37] everything that I can into making the
+[00:41:39] system work
+[00:41:40] um you know it's and by the way this is
+[00:41:41] good for research too so if you're
+[00:41:43] looking at Wikipedia and you want to ask
+[00:41:44] research questions and quality is part
+[00:41:46] of your question I think this would be
+[00:41:48] very valuable you should talk to me
+[00:41:49] about that
+[00:41:50] so um what I'm hoping that this system
+[00:41:52] will do is act as this Catalyst where uh
+[00:41:55] in the example before we were
+[00:41:57] essentially reducing the activation
+[00:41:58] threshold by about 70 degrees Fahrenheit
+[00:42:00] in this case we're reducing the
+[00:42:02] activation threshold by about 20 000
+[00:42:04] lines of code to get one of these
+[00:42:05] systems working and running in real time
+[00:42:07] and one Advanced degree in computer
+[00:42:09] science so you no longer need those
+[00:42:12] things to have this type of reaction
+[00:42:13] take place
+[00:42:15] and so what we're hoping is that we'll
+[00:42:17] get an explosion of sort of ideas on how
+[00:42:19] we incorporate this new standpoint and
+[00:42:21] improve the type of work that we do and
+[00:42:24] we've already seen some success with
+[00:42:25] this where uh Huggle is now using our
+[00:42:28] system to sort those edits on the side
+[00:42:30] by the probability that they're damaging
+[00:42:32] and so we now get to have much more
+[00:42:34] substantial conversations with the
+[00:42:35] developers about how they're sorting
+[00:42:37] those edits we can actually solve some
+[00:42:39] of the problems that I think are
+[00:42:40] happening in Huggle by improving the
+[00:42:41] algorithm and having our better false
+[00:42:43] positive rate
+[00:42:45] um so there's one more thing that I want
+[00:42:47] to talk to you about but I I wanted to
+[00:42:48] separate this into its own section but
+[00:42:50] because this is this is really this is
+[00:42:52] my story when I talk to technologists
+[00:42:54] this is the thing that I really want
+[00:42:55] them to take away from a talk like this
+[00:42:57] and that's what you can pull from the
+[00:42:59] critiques that we get from uh feminist
+[00:43:01] Theory and how we can turn those
+[00:43:03] critiques into design that actually
+[00:43:04] makes the system work better it's not
+[00:43:06] just better for people it's better by
+[00:43:07] efficiency standards
+[00:43:09] um so one of them is subjective
+[00:43:10] algorithms so there's been a lot of
+[00:43:12] literature recently about how algorithms
+[00:43:14] and social spaces can cause social
+[00:43:16] problems so I'm quoting as a neptu fecky
+[00:43:19] here uh these uh subjective algorithms
+[00:43:22] are algorithms oftenated by Big Data now
+[00:43:25] make decisions in subjective Realms
+[00:43:27] where there is no right decision and no
+[00:43:29] anchor with which to judge outcomes so
+[00:43:31] for example what is good what is
+[00:43:32] relevant what's important what's
+[00:43:34] desirable and what's valuable that's
+[00:43:35] exactly what we're doing here
+[00:43:38] um so looking at this classifier we're
+[00:43:40] trying to predict what's good and bad
+[00:43:41] but of course we're not going to do
+[00:43:43] perfectly so we're going to predict good
+[00:43:45] and some important bad stuff and bad and
+[00:43:47] some important good stuff and so it's
+[00:43:48] going to make mistakes um so there's
+[00:43:51] this really long quote that I have from
+[00:43:52] a Wikipedia But I just want to uh to to
+[00:43:54] get the important part which is avoid
+[00:43:57] encoding racism and other biases into
+[00:43:59] the AI scheme
+[00:44:00] um so for example this editor is
+[00:44:02] concerned about local writing style like
+[00:44:04] saying beautiful Village which is common
+[00:44:05] to writing about villages in Pakistan
+[00:44:07] are targeted by people who are just
+[00:44:10] opposed to that sort of thing being in
+[00:44:12] Wikipedia and so if we trained our AI
+[00:44:15] scheme based on just what's removed from
+[00:44:17] Wikipedia it might learn these sort of
+[00:44:19] things and it would hide that never mind
+[00:44:21] anybody how the decision is made because
+[00:44:23] it's hidden inside that black box of the
+[00:44:25] AI model so let's say that we train this
+[00:44:28] model on whether an editor or an edit is
+[00:44:30] reverted or not from Wikipedia it would
+[00:44:32] probably in a hidden way down weight
+[00:44:34] anything that has beautiful Village
+[00:44:36] added into it and so we wouldn't just
+[00:44:38] predict bad in a random sample of some
+[00:44:40] important good stuff we would predict
+[00:44:41] bad in a biased sample of edits to
+[00:44:43] Pakistan Villages and what's worse is if
+[00:44:46] we update the model and train it on new
+[00:44:48] data as vandalism changes over time
+[00:44:50] we'll get into this feedback loop where
+[00:44:52] as we as we target these edits to
+[00:44:54] Pakistan Villages those will get
+[00:44:55] reverted more and then we'll train into
+[00:44:57] reverting those things more and
+[00:44:58] eventually we're going to end up with a
+[00:44:59] Pakistan Village classifier
+[00:45:02] um
+[00:45:02] so one more concern that I think is
+[00:45:04] really important here is empowerment
+[00:45:06] versus power over so um and here I'm
+[00:45:09] trying to my best to channel uh Nell
+[00:45:11] Morton who talks about this idea of
+[00:45:13] hearing to speech as opposed to speaking
+[00:45:15] to be heard so the idea of hearing to
+[00:45:17] speech is that I want to hear what you
+[00:45:19] have to say so I'm going to make a space
+[00:45:21] for you uh to say it and listen
+[00:45:24] um whereas speaking to be heard is more
+[00:45:26] I want to set the tone of our
+[00:45:27] conversation by talking first
+[00:45:29] um and so when it comes to conversations
+[00:45:32] about Tools in Wikipedia I'm pretty
+[00:45:35] powerful I've been a software engineer
+[00:45:37] for greater than four years before I
+[00:45:39] started working on the research space I
+[00:45:41] have a PhD in computer science I have a
+[00:45:44] substantial background in Psychology
+[00:45:45] social science systems theory and human
+[00:45:47] computer design and practices and I'm a
+[00:45:50] Wikimedia Foundation staff member this
+[00:45:52] gives me a lot of power I'm in a very
+[00:45:53] privileged position
+[00:45:55] um so what I want to do rather than
+[00:45:57] saying here's how we should change our
+[00:45:59] Behavior instead I'm specifically
+[00:46:02] targeting making it easier for other
+[00:46:04] people to experiment in this space so I
+[00:46:06] I have done I have done interventions
+[00:46:08] where I've tried to make newcomer
+[00:46:10] socialization better by building a
+[00:46:11] specific tool and what I've learned from
+[00:46:13] a success and failure in that area is
+[00:46:16] what people really want is me to reduce
+[00:46:18] some barriers so they can do their own
+[00:46:20] experiment experimentation in the space
+[00:46:22] so this intervention we're actually
+[00:46:24] targeting empowerment rather than power
+[00:46:26] over uh in this way and I think that
+[00:46:28] this will actually end up being more
+[00:46:29] effective we'll actually have a better
+[00:46:31] outcome because of this but even the
+[00:46:34] basis of this conversation I think
+[00:46:35] quality control is important we should
+[00:46:37] have a conversation about socialization
+[00:46:38] but somebody else might say actually you
+[00:46:41] know that might be right Aaron but I
+[00:46:42] think that you're wrong I think that we
+[00:46:43] should also have this conversation about
+[00:46:45] something else so it'd be great if the
+[00:46:47] system that we're building could help
+[00:46:48] them predict that's something else that
+[00:46:50] they want to get at in order to do that
+[00:46:52] we're going to need to be able to train
+[00:46:54] this system on what that something else
+[00:46:55] is so in order to train this system
+[00:46:58] we've built a labeling system inside of
+[00:47:01] Wikipedia where you you can manually
+[00:47:03] review edits and say after the fact
+[00:47:05] whether they were reverted or not
+[00:47:07] whether they were actually damaging and
+[00:47:09] so we have people who are uh keeping in
+[00:47:11] mind this bias manually re-reviewing
+[00:47:13] edits to tell us whether they're
+[00:47:15] damaging or not and so this helps us
+[00:47:16] deal with the feedback loop so we have
+[00:47:18] people who who are on the lookout for
+[00:47:20] the Pakistani Villages problem to
+[00:47:22] manually labeling these things so that
+[00:47:24] they don't look at what was reverted in
+[00:47:26] the past when they consider what's
+[00:47:27] damaging now and we're also working on
+[00:47:29] the hearing to speech angle by making
+[00:47:31] sure that the system is easily
+[00:47:32] configurable so that if somebody shows
+[00:47:34] up and they want to make other
+[00:47:35] predictions then we can load another
+[00:47:37] sample of data into the system to be
+[00:47:39] labeled and they can configure a new
+[00:47:41] type of form then asks a different
+[00:47:42] question so that we can build machine
+[00:47:43] learning models that predict that and so
+[00:47:46] using this system and machine learning
+[00:47:48] together I'm hoping that we can build
+[00:47:50] lots of infrastructure that uses machine
+[00:47:52] learning in a responsible way in the
+[00:47:53] social space to make Wikipedia more
+[00:47:55] efficient and affect a lot of the
+[00:47:57] different aspects of the socio-technical
+[00:47:59] fabric of Wikipedia
+[00:48:01] so and one of the things that we're
+[00:48:03] doing is targeting host bot and so this
+[00:48:06] is really my next project is using this
+[00:48:09] classification service to more
+[00:48:11] efficiently detect good faith newcomers
+[00:48:13] who are trying to work productively and
+[00:48:15] running into troubles in Wikipedia and
+[00:48:16] make sure that they get routed to our
+[00:48:18] newcomer help spaces
+[00:48:20] um yes make host about a machine
+[00:48:22] Learning System
+[00:48:23] um so in summary I talked to you about
+[00:48:25] Wikipedia's a socio-technical system we
+[00:48:27] talked about systems and biological
+[00:48:29] metaphors we talked about this critique
+[00:48:31] of automatic Quality Control Systems how
+[00:48:33] standpoint epistemology can help us
+[00:48:35] think about why they were designed the
+[00:48:36] way that they are and how they encoded a
+[00:48:38] certain ideology into them and then
+[00:48:40] finally I talked about infrastructure
+[00:48:41] for socio-technical change why I think
+[00:48:43] that the change in these Technical
+[00:48:45] Systems is limited by the difficulty in
+[00:48:47] actually implementing some of the
+[00:48:48] technologies that we can build Services
+[00:48:50] as sort of a progress Catalyst to get
+[00:48:52] these things so that they can the
+[00:48:54] conversation can finally move forward
+[00:48:56] and I talked about how using these ideas
+[00:48:59] of hearing to speech as opposed to
+[00:49:00] speaking to be heard we can think about
+[00:49:02] designing these Technologies to empower
+[00:49:04] other people rather than just imposing
+[00:49:06] my limited idea of what should happen
+[00:49:07] next I talked about the dangers of
+[00:49:09] subjective algorithms and how we can
+[00:49:11] engineer systems to be aware of those
+[00:49:12] things thank you
+[00:49:17] thank you
+[00:49:18] [Applause]
+[00:49:20] well so thank you very much Aaron for
+[00:49:23] sharing all of that like very
+[00:49:27] fascinating and thought-provoking
+[00:49:28] material with us we have about 20
+[00:49:32] minutes or so for questions and
+[00:49:34] discussions so there's plenty of time
+[00:49:37] for that I will remind folks that
+[00:49:39] questions are usually short statements
+[00:49:42] that are interrogative in nature often
+[00:49:45] including with a raising of the pitch of
+[00:49:48] your question
+[00:49:50] and also I imagine Aaron you may have a
+[00:49:54] little bit of time afterwards if people
+[00:49:56] have like extended conversations like
+[00:49:58] you're really excited about exploring
+[00:50:00] we'll be here until about 4pm cool so
+[00:50:04] oh thanks for that that's cool
+[00:50:06] um I'm curious about how you approach
+[00:50:10] the kind of
+[00:50:12] process by which users can
+[00:50:15] kind of propose their own you know
+[00:50:18] things to include in your machine
+[00:50:20] learning algorithm like because because
+[00:50:22] there's a certain need for them
+[00:50:24] understanding how to even phrase their
+[00:50:26] proposal and say is this even possible
+[00:50:29] and so like how do you bridge that
+[00:50:31] language and knowledge Gap with regard
+[00:50:33] to what they could even think about
+[00:50:34] doing with machine learning to help
+[00:50:36] create a more inclusive system yeah
+[00:50:39] that's a good question so I I present
+[00:50:41] about this work a lot in as many spaces
+[00:50:43] as I can and one of those spaces are
+[00:50:45] around where tool developers congregate
+[00:50:47] and wikipedians congregate so we have
+[00:50:49] like conferences and hackathons and that
+[00:50:50] sort of stuff and so when I give that
+[00:50:52] presentation I talk a lot more about how
+[00:50:55] backlogs are pervasive to the work in
+[00:50:57] Wikipedia and the sort of things that a
+[00:50:58] machine learning algorithm can do to
+[00:51:00] help sort and filter these types of of
+[00:51:02] backlogs and so like reviewing new
+[00:51:04] article Creations assessing articles for
+[00:51:07] their certain quality level there's all
+[00:51:08] sorts of things like this that that
+[00:51:10] wikipedians need to do that machines can
+[00:51:11] help them Target their time on and so I
+[00:51:14] present the idea that way that I want
+[00:51:16] you to think about backlogs and then
+[00:51:18] tell me about your backlogs another way
+[00:51:20] that we do this is so this system is
+[00:51:22] actually up and running in
+[00:51:24] 17 languages now 17 language
+[00:51:27] encyclopedias and so in order to get it
+[00:51:29] up and running in one of these local
+[00:51:31] wikipedias it's a completely different
+[00:51:32] social structure and that sort of thing
+[00:51:34] we need Confederates who are from those
+[00:51:35] communities to help us get it set up
+[00:51:37] help talk to people about why they might
+[00:51:39] want it and then help help us get things
+[00:51:40] translated so it'll actually work in
+[00:51:42] those systems and so uh we we talked to
+[00:51:44] those people who work with us quite a
+[00:51:46] bit about the problems that they see
+[00:51:47] because they're probably different than
+[00:51:48] English Wikipedia and so we have a huge
+[00:51:51] backlog of of potential uh new
+[00:51:54] classifiers that we can put in place
+[00:51:55] like spam detection aggressive
+[00:51:57] discussions on on in the discussion
+[00:51:59] spaces in Wikipedia and that sort of
+[00:52:01] stuff so I'm not sure that we're we're
+[00:52:02] doing necessarily a great job at pulling
+[00:52:05] everybody in but we're definitely
+[00:52:06] pulling a lot of people in to to propose
+[00:52:09] these things we're mostly feeling it out
+[00:52:10] as we go we haven't built a lot of
+[00:52:12] infrastructure we haven't decided like
+[00:52:14] this is the way that you propose
+[00:52:15] something it's generally if if you if
+[00:52:17] you find any way to to interact with us
+[00:52:19] in a space on a Wiki send an email find
+[00:52:22] us an IRC talk to me how to talk then we
+[00:52:24] encode it in our backlog and start
+[00:52:26] talking about how we can actually
+[00:52:27] Implement that that classifier or that
+[00:52:29] predictor do you imagine it could get
+[00:52:31] beyond the kind of requirement for a
+[00:52:33] high-touch discussion
+[00:52:34] um to something that is more streamlined
+[00:52:36] or do you think that high touch
+[00:52:37] discussion is required in order to
+[00:52:39] really understand context I think that
+[00:52:41] it can get beyond that
+[00:52:42] um I right now like I really want this
+[00:52:45] system to be there and work and I don't
+[00:52:47] quite I don't think that we can engineer
+[00:52:48] like a low-touch sort of system right
+[00:52:50] now and do it do it quickly
+[00:52:53] um but but I definitely think that
+[00:52:54] that's that's possible that's tractable
+[00:52:56] we can we can do that we we could make
+[00:52:58] it so that we can actually have people
+[00:53:00] who are you know in their local context
+[00:53:02] they can get a little bit of training
+[00:53:03] about how to create a test set how to
+[00:53:05] evaluate it have the system give them
+[00:53:07] General indicators and so rather than
+[00:53:09] coming to me at the beginning saying I
+[00:53:10] have a problem can you solve it they
+[00:53:12] would say maybe I've trained this model
+[00:53:13] and I'm not getting good evaluation
+[00:53:15] metrics can you help me take a look at
+[00:53:16] it
+[00:53:17] um I definitely think that's possible
+[00:53:19] over here raise the hand yeah yeah any
+[00:53:24] insight about the solution networks that
+[00:53:25] you're seeing inside Wikipedia between
+[00:53:27] Wikipedia like the social networks um
+[00:53:30] can you help me yeah like people engage
+[00:53:32] with each other in these discussions so
+[00:53:34] has anyone looked at that and how is
+[00:53:36] that changing over time like when you
+[00:53:37] see the explanation arise
+[00:53:39] so so I I would like to defer that
+[00:53:42] question to Brian King if I could uh so
+[00:53:46] like you care about the discussion
+[00:53:47] graphs I mean so like there's some
+[00:53:48] researchers like Andreas Kelton Bruner
+[00:53:50] and David lanaido like done things
+[00:53:52] around like how people how long does
+[00:53:54] like a discussion take to wrap up so you
+[00:53:55] look at I know it was a really famous
+[00:53:57] discussion on donzig versus Gdansk and
+[00:54:00] like this was a discussion about this
+[00:54:01] like this German polish town on the
+[00:54:03] border what should we call on Wikipedia
+[00:54:05] and that was a discussion that went on
+[00:54:06] for 10 years it was very sort of active
+[00:54:08] a lot of like people 500 000 words
+[00:54:11] roughly involved in that uh discussion
+[00:54:15] um so certainly there's many kinds of
+[00:54:17] relationships you can pull out of what
+[00:54:19] people discussing with each other a lot
+[00:54:21] of work that Aaron's done that I like is
+[00:54:22] looked at uh whether or not like you
+[00:54:24] write a word how long does that word
+[00:54:25] persist so maybe you could passionate
+[00:54:28] back yeah so so
+[00:54:30] um like one of the one of the things
+[00:54:31] that I I would really like to to look at
+[00:54:33] more is not just like the the direct
+[00:54:35] explicit interactions that people are
+[00:54:37] having with each other but also the
+[00:54:38] implicit interaction because I think
+[00:54:40] that we can probably learn a lot about
+[00:54:42] who's removing whose words that were
+[00:54:44] added from articles and that sort of
+[00:54:45] thing so a big research program that I
+[00:54:46] have right now is about around
+[00:54:48] developing uh efficient infrastructure
+[00:54:50] where we can develop some data sets that
+[00:54:52] are easier to process that will will
+[00:54:54] give you a lot of the institutional
+[00:54:56] knowledge that I have about how to
+[00:54:58] process these things efficiently for
+[00:54:59] free so that you as an external
+[00:55:01] researcher can pick up one of these data
+[00:55:03] sets and ask your questions about these
+[00:55:04] sort of interactions so another one that
+[00:55:06] we're digging into right now is are the
+[00:55:08] explicit conversations that are on talk
+[00:55:10] pages right now because we have we don't
+[00:55:11] actually have discussion forums on
+[00:55:12] Wikipedia we have talk Pages they're a
+[00:55:14] page that you edit and you sort of tab
+[00:55:16] your comment in so that it looks like
+[00:55:17] it's a reply structure you you sign it
+[00:55:20] with four till these or actually
+[00:55:21] whatever you want you can even just not
+[00:55:23] sign it at all and so it's a it's
+[00:55:25] anybody's guest who actually posted that
+[00:55:26] comment um but the Norms generally hold
+[00:55:28] and I know a lot of those institutional
+[00:55:30] norms and we're developing software so
+[00:55:32] that we can encode that extract the data
+[00:55:33] and then you can just say well I want to
+[00:55:35] know who replied to who and what sort of
+[00:55:36] linguistic characteristics it had I
+[00:55:38] don't really care how wikipedians format
+[00:55:39] talk pages so that's something that
+[00:55:41] we're digging into really hard
+[00:55:45] okay
+[00:55:47] um you showed us an example of what club
+[00:55:49] would be called an undesirable uh
+[00:55:51] positive feedback loop
+[00:55:53] is there a way that positive feedback
+[00:55:55] loop is something that can be
+[00:55:56] automatically identified
+[00:55:59] or uh
+[00:56:01] see
+[00:56:03] oh gosh this is an important credit
+[00:56:06] is that something that can be
+[00:56:08] yeah so this is this is something that
+[00:56:10] I've been uh looking into a lot um so
+[00:56:13] gosh I wish this would actually uh link
+[00:56:15] to the the page that I was hoping to
+[00:56:17] show you but um so like one of the
+[00:56:18] projects that I'm running in parallel to
+[00:56:20] this is a project that's I'm not going
+[00:56:23] to get a graph whatever anyway it's
+[00:56:24] around the idea that a lot of a lot of
+[00:56:27] the incentive structures for Wikipedia
+[00:56:29] are um sort of like there's a big gap
+[00:56:32] for especially like subject matter
+[00:56:33] experts and that sort of thing to to
+[00:56:35] engage in the the Wikipedia space it's
+[00:56:37] hard to claim credit for the work that
+[00:56:39] you did and so I'm working on robust
+[00:56:41] measurement strategies for measuring the
+[00:56:44] productivity of a Wikipedia contributor
+[00:56:46] and the value of the work that they're
+[00:56:48] doing based on uh some like kind of like
+[00:56:50] third rail sort of things like uh you
+[00:56:53] know if you edit articles that get a lot
+[00:56:54] of page views that's probably more
+[00:56:56] valuable than if you added an article
+[00:56:57] that doesn't get that many page views
+[00:56:59] um however uh uh the article on Breaking
+[00:57:02] Bad gets about 10 times as many page
+[00:57:03] views as the article on chemistry and so
+[00:57:06] so of course like is Breaking Bad more
+[00:57:07] important to an encyclopedia than
+[00:57:09] chemistry I know I don't know I don't I
+[00:57:10] don't know if I want to say that I'm
+[00:57:11] like uh you know like academic you know
+[00:57:13] we should cover for the subject first
+[00:57:14] maybe breaking bad actually is that
+[00:57:16] important as a social artifact but this
+[00:57:18] is one of the things that we're
+[00:57:19] exploring right now and actually trying
+[00:57:20] to take these measurements but I think
+[00:57:22] that if we can settle on uh like a set
+[00:57:25] of measurements that capture maybe
+[00:57:26] different aspects of importance and
+[00:57:28] productivity and allow people to to look
+[00:57:30] at those things they might then Target
+[00:57:32] their work and say well I care about
+[00:57:34] importance with regards to academic
+[00:57:36] importance this measurement targets
+[00:57:38] academic importance nicely so now I'm
+[00:57:40] going to use that to try and guide my
+[00:57:42] work and so we we have recommender
+[00:57:44] systems that will find articles that you
+[00:57:45] would like to edit I would like to
+[00:57:47] re-weight those predictions by articles
+[00:57:49] that you would like to edit that will
+[00:57:50] have a high impact in the way that you
+[00:57:52] want to be impactful and so I think
+[00:57:54] we're just on the cusp of running
+[00:57:56] experiments interventions in that in
+[00:57:58] that respect
+[00:57:59] um oh one other thing that I would
+[00:58:01] really like to do is I would really like
+[00:58:02] it so that it when you apply for
+[00:58:04] um you know a tenure track position or
+[00:58:06] or tenure that you can you can pull up a
+[00:58:10] well-known uh metrics resource about
+[00:58:12] Wikipedia and say I added this much
+[00:58:14] value to articles about discipline of
+[00:58:17] choice
+[00:58:20] uh so uh two related questions uh the
+[00:58:24] first one is kind of in a world where
+[00:58:26] you're scaling uh why go the machine
+[00:58:29] learning route and not just deputize a
+[00:58:32] ton of new editors and throw people at
+[00:58:34] the problem and then the second is um
+[00:58:37] why bother bucketing into good and bad
+[00:58:40] faith at all and instead just treat
+[00:58:42] everyone as good faith maybe the Llama
+[00:58:44] guy had a point or something I don't
+[00:58:46] know yeah
+[00:58:47] so I think that's I I think the last
+[00:58:49] question is is surprisingly Fair
+[00:58:52] um that that uh like there's been a lot
+[00:58:54] of look into like what is legitimate in
+[00:58:56] Wikipedia and how do we arrive at that
+[00:58:58] and it's it's a blurry line at best I
+[00:59:00] mean really describing it as a line is
+[00:59:02] is really difficult there are a lot of
+[00:59:04] people who control content in ways that
+[00:59:06] are not explicit
+[00:59:07] um I think that we might say that you
+[00:59:09] know of course putting all caps llamas
+[00:59:10] grow on trees is not uh intended to be
+[00:59:14] um a productive contribution but there
+[00:59:16] are a lot of things that are in that
+[00:59:17] space where it's totally unclear and
+[00:59:18] people will revert you for it anyway
+[00:59:21] um but so so going back to the like why
+[00:59:23] bucket people into to good faith and bad
+[00:59:25] faith um I I think that that's a really
+[00:59:27] interesting question especially because
+[00:59:29] so I started editing Wikipedia by
+[00:59:31] vandalizing Wikipedia
+[00:59:33] I did and I don't think that uh no uh
+[00:59:37] because I only did it once and and I got
+[00:59:39] a personalized message saying hey I saw
+[00:59:41] that you were testing things out maybe
+[00:59:42] you shouldn't do that and maybe you
+[00:59:44] should consider contributing
+[00:59:45] productively and I did
+[00:59:47] um and I I think that I think that we
+[00:59:48] should uh consider that a lot of the
+[00:59:50] damage that happens in Wikipedia are
+[00:59:52] people who are just trying to see how it
+[00:59:53] works so they're trying to be funny but
+[00:59:54] if we have if we have the right
+[00:59:56] interaction with them then we'll find
+[00:59:57] out that they actually are good faith
+[00:59:59] and they didn't really mean any harm and
+[01:00:00] and if we if we welcome them and say you
+[01:00:02] know there's space for you we have a lot
+[01:00:03] of work to do and it would be cool if
+[01:00:04] you stuck around then they would there
+[01:00:06] are some people who are kind of clearly
+[01:00:08] bad faith but they're a really really
+[01:00:10] vanishingly a small proportion the
+[01:00:13] people who just want to put a little bit
+[01:00:15] of garbage in Wikipedia are pretty
+[01:00:16] common
+[01:00:19] your experience sort of seeks into my
+[01:00:22] question when when I saw so so so the
+[01:00:24] example you gave with the Llama whatever
+[01:00:26] all the output that there was was either
+[01:00:28] true or false when it comes in terms of
+[01:00:31] process of how this uh how the the
+[01:00:33] algorithm gives back response to the
+[01:00:36] person who writes uh does he see for
+[01:00:39] example how the the the the algorithm
+[01:00:43] ponderated it's its own edits and what
+[01:00:45] criteria it usually just says yes or no
+[01:00:48] I think uh feedback and output is might
+[01:00:51] be interesting in the process that goes
+[01:00:53] with it so like one of the things that's
+[01:00:55] sort of notoriously hard with a machine
+[01:00:57] learning algorithm especially one that
+[01:00:59] works particularly well is figuring out
+[01:01:01] why
+[01:01:02] like attributing a real why to why it
+[01:01:04] made the prediction that it did
+[01:01:06] um and so um rather than going in that
+[01:01:09] direction we're trying to do two things
+[01:01:11] so we have an open uh feature request
+[01:01:13] that I've been working on to uh publish
+[01:01:16] like the features that were extracted
+[01:01:17] for this edit so that let's say it makes
+[01:01:19] a weird prediction you could look at
+[01:01:21] well maybe maybe it actually measured
+[01:01:23] something wrong about this edit and you
+[01:01:24] could get a sense that hey we're
+[01:01:26] actually predicting false a lot when you
+[01:01:27] take this type of measurement about what
+[01:01:29] was happening in the edit and it
+[01:01:30] shouldn't be false the other thing that
+[01:01:32] we're working on is we have we actually
+[01:01:34] have separate several different models
+[01:01:36] in place right now which will give you a
+[01:01:37] little bit of context about the
+[01:01:38] prediction so for English Wikipedia we
+[01:01:40] have a model that predicts whether the
+[01:01:41] edit will need to be reverted whether it
+[01:01:44] actually caused harm to the article
+[01:01:45] because a lot of edits don't cause harm
+[01:01:47] but they need to be reverted for other
+[01:01:48] reasons and finally an edit that
+[01:01:51] predicts whether it was good faith or
+[01:01:52] not so you can you can do something in
+[01:01:55] good faith it didn't damage the article
+[01:01:57] but it needs to be reverted for other
+[01:01:58] reasons you can or you can do something
+[01:02:00] uh um in bad faith that did damage the
+[01:02:03] article and needs to be reverted and so
+[01:02:06] what we're experimenting with is showing
+[01:02:07] all of those different predictions and
+[01:02:09] the same user interface I think that we
+[01:02:11] can do better right now we're modeling
+[01:02:13] on the edit level if we model on the
+[01:02:15] user level we can do much much better my
+[01:02:17] my open Bug request to the Huggle people
+[01:02:19] is to incorporate our is this editor
+[01:02:23] working in good faith model so that
+[01:02:24] whenever you say revert this editor if
+[01:02:27] the model predicts that they're editing
+[01:02:28] in good faith then you can you can it
+[01:02:31] will stop you and say hey you should
+[01:02:32] really send a customized message to this
+[01:02:34] person don't just let it be the Vandal
+[01:02:35] message this is somebody who's worth
+[01:02:37] your time to reach out to it helps to be
+[01:02:40] able to approach this sort of like
+[01:02:42] should you reverse this or should you
+[01:02:43] not revert this in this way because I'm
+[01:02:45] not just saying hey you should be better
+[01:02:46] I'm saying hey you have a lot of work
+[01:02:48] and I realize that but I can help you
+[01:02:51] know when it's going to be most
+[01:02:52] beneficial for you to be better so it's
+[01:02:54] it's not going to be that much more work
+[01:02:55] to be better I'm going to help you
+[01:02:57] maximize that impact there's a lot of
+[01:02:59] danger in this area
+[01:03:01] um so so like really the biggest thing
+[01:03:03] that we're doing is having our entire
+[01:03:04] process for building these models all of
+[01:03:06] our evaluation metrics uh open every
+[01:03:09] conversation that I have with my
+[01:03:10] colleagues who I work on this is in a
+[01:03:12] space where we have like a Vibrant
+[01:03:13] Community who are talking to us about
+[01:03:15] these things and so
+[01:03:17] um there are a lot of people who are
+[01:03:18] developing intuitions about them but
+[01:03:20] regretfully to come back to your
+[01:03:21] original question I I don't know if
+[01:03:23] we'll ever get to the place where we can
+[01:03:24] say why it made the prediction that it
+[01:03:25] did and that's too bad
+[01:03:27] he's attention about two more questions
+[01:03:34] um actually following up on on what you
+[01:03:35] were just saying with regard to that
+[01:03:36] goal for having an open discussion I'm
+[01:03:38] curious about your biological metaphor
+[01:03:40] particularly when it comes to immune
+[01:03:42] response because you can have situations
+[01:03:45] in which the immune system goes Hayward
+[01:03:47] right and it starts attacking good
+[01:03:49] actors and destroying the community to
+[01:03:50] bring it back to Wikipedia and so I'm
+[01:03:52] curious have you seen examples of that
+[01:03:54] is the standpoint problem part of that
+[01:03:58] issue when it gets codified
+[01:03:59] technologically and how does the kind of
+[01:04:01] machine learning and Technical
+[01:04:02] approaches maybe either exacerbate that
+[01:04:05] into kind of flash crash with you know
+[01:04:06] algorithmic trading or or get away from
+[01:04:09] some of the problems when uh when people
+[01:04:12] would adopt problematic policies that
+[01:04:13] hurt themselves yeah so I I really like
+[01:04:16] that way of describing it I've I've
+[01:04:18] described this as an autoimmune disorder
+[01:04:20] that Wikipedia has uh quite a bit and
+[01:04:22] why I like to bring up that example of
+[01:04:24] the the immune system and so so uh like
+[01:04:27] I I think that there are a bunch of
+[01:04:28] things that you can draw between
+[01:04:30] um you know like immune responses and
+[01:04:32] and this sort of problematic pattern how
+[01:04:35] people with immune diseases tend to get
+[01:04:36] inflammations and that's the the innate
+[01:04:38] immune system and Wikipedia suffers most
+[01:04:40] in its innate space
+[01:04:42] um so so the the question that I I want
+[01:04:44] to ask and which I would really like to
+[01:04:45] have somebody who's like a immune
+[01:04:47] biologist
+[01:04:48] um to help me think through is uh how do
+[01:04:50] biological systems adapt and what is the
+[01:04:53] failure of the biological systems like
+[01:04:54] from an abstract space what's the
+[01:04:56] failure of the biological system that
+[01:04:57] results in the autoimmune disorder and
+[01:04:59] uh maybe we can actually look at that
+[01:05:01] from the same direction as standpoints
+[01:05:03] and see that this is happening in Social
+[01:05:04] spaces too that there's something about
+[01:05:06] these complex systems and their strategy
+[01:05:08] for dealing with this this open problem
+[01:05:10] of damaging things sometimes come in
+[01:05:13] um that that we can use to gain insights
+[01:05:15] maybe on both sides or at least you know
+[01:05:17] because a lot of uh there are a lot more
+[01:05:18] people who are immunologists than there
+[01:05:20] are socio-technologists looking at
+[01:05:22] things like Wikipedia and so I bet you I
+[01:05:24] could learn a lot from them regretfully
+[01:05:25] I haven't found somebody who's super
+[01:05:26] excited about that and has that
+[01:05:27] background in that place but I would
+[01:05:29] love if you would direct love to me
+[01:05:32] so I have a question Aaron
+[01:05:34] um so you've outlined one way that it's
+[01:05:37] possible to bring on board critiques
+[01:05:40] from feminist standpoints and feminist
+[01:05:43] research
+[01:05:44] which is to
+[01:05:46] take questions and critiques that are
+[01:05:49] sometimes coming from qualitative
+[01:05:50] researchers and using them to develop
+[01:05:54] basically new dependent variables like
+[01:05:56] new measures that are still quantitative
+[01:05:58] in nature to try to get at some of the
+[01:06:00] spirit of what these
+[01:06:03] critics are are bringing I'm curious uh
+[01:06:08] if you feel there's also a scope for
+[01:06:11] expanding
+[01:06:12] the methods of inquiry Beyond these like
+[01:06:16] machine learning or quantitative methods
+[01:06:18] while still making sense of Wikipedia at
+[01:06:22] the scale that it is yeah so I I would
+[01:06:25] actually put that in the class of
+[01:06:26] response to critique like um so the like
+[01:06:30] my my methodological home is really
+[01:06:32] behavioral measures at you know like
+[01:06:34] quantitatively
+[01:06:35] um but I I like my practice is that I'm
+[01:06:38] a member of the community in which I
+[01:06:40] operate that I I like I mean just
+[01:06:42] yesterday I did uh four interviews of
+[01:06:46] people who are working around these
+[01:06:47] curation spaces that I I think that
+[01:06:50] methodological breath and you don't you
+[01:06:52] don't have to be like a proper
+[01:06:53] ethnographer to benefit from
+[01:06:55] ethnographic practices that becoming a
+[01:06:58] member of your community going and
+[01:06:59] reverting some vandalism trying to be a
+[01:07:01] newcomer and seeing what that's like can
+[01:07:03] inform the way that you think about the
+[01:07:04] system can inform the the strategies
+[01:07:06] that you employ to Design Systems to
+[01:07:08] pull people on board to evaluate them at
+[01:07:10] the end and so that's that's really what
+[01:07:13] I what I would argue is that
+[01:07:15] um that my my uh position is a skeptic
+[01:07:18] of how things work and what I'm really
+[01:07:20] seeing actually being the truth sort of
+[01:07:22] necessitates me to to figure out how
+[01:07:25] these other methodologies work and how I
+[01:07:27] can address my questions more
+[01:07:29] effectively by incorporating these broad
+[01:07:30] methodologies
+[01:07:32] um one thing that I also abuse quite
+[01:07:34] massively is finding collaborators who
+[01:07:36] aren't like me and working with them
+[01:07:39] especially ones who are particularly
+[01:07:41] critical of my work whether they're
+[01:07:42] Wikipedia editors or other researchers
+[01:07:45] because I think that the people who are
+[01:07:47] most critical of your work especially
+[01:07:49] the ones who demonstrate a massive
+[01:07:51] amount of Competency know something that
+[01:07:53] you don't and have a perspective that
+[01:07:54] you don't have and I think that we too
+[01:07:56] seldom invite people who are in that
+[01:07:58] sort of critical relationship to the
+[01:08:00] design table to say you know like here
+[01:08:02] are the words that I'm using to talk
+[01:08:03] about this here are the words that
+[01:08:04] you're using to talk about this can you
+[01:08:05] line these things up and talk about how
+[01:08:07] we can do it better
+[01:08:09] I think we do have time for one more
+[01:08:10] question if there is one
+[01:08:15] well thank you so much Aaron and let's
+[01:08:17] all thank him
+[01:08:24] are you around for a few minutes yep
+[01:08:26] excellent
