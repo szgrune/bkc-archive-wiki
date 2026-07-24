@@ -1,0 +1,1261 @@
+[00:00:00] so most of my presentation uh is going
+[00:00:02] to be focused obviously on my particular
+[00:00:04] bent uh the library box uh piece of
+[00:00:07] technology but uh you can apply a lot of
+[00:00:11] the the the theoretical stuff I'm going
+[00:00:12] to talk about near the end to any of the
+[00:00:15] any of the pieces of software that I
+[00:00:17] just mentioned and a lot that I didn't
+[00:00:19] mention so what is a library box what is
+[00:00:22] why why do we care um the the general
+[00:00:25] description that I use is portable
+[00:00:27] private digital distribution it's a a a
+[00:00:29] small piece of of Hardware I'm holding
+[00:00:32] one here and there's a handful of other
+[00:00:34] of other um options for Hardware here
+[00:00:37] little tiny hockey puck shaped thing
+[00:00:39] this is all commodity Hardware very very
+[00:00:42] inexpensive very cheap that um that you
+[00:00:45] can use to develop to provide access to
+[00:00:48] digital objects in a very private
+[00:00:51] controlled small space so that's uh
+[00:00:55] that's this thing uh that I'm holding
+[00:00:58] here and the the general idea to kind of
+[00:01:01] wrap your head around it is this is you
+[00:01:02] know the the internet is Big um but what
+[00:01:05] happens if you want to break a little
+[00:01:07] piece of it off and take it with you
+[00:01:09] somewhere right maybe somewhere where
+[00:01:12] there isn't any infrastructure right
+[00:01:14] maybe somewhere where the infrastructure
+[00:01:16] that is in the area has been damaged in
+[00:01:18] some way so how do you how do you deploy
+[00:01:22] digital information how do you take the
+[00:01:24] web with you into places that don't have
+[00:01:27] anything well you can do it with these s
+[00:01:30] of devices Library box works with open
+[00:01:33] source software standard web
+[00:01:34] Technologies it provides its own Wi-Fi
+[00:01:37] signal that is obviously anything with
+[00:01:40] Wi-Fi can attach to it um and then
+[00:01:42] anything with a web browser can interact
+[00:01:44] with it so again standard web
+[00:01:46] Technologies uh cell phones laptops
+[00:01:49] desktops tablets e-readers anything like
+[00:01:52] that if you get bored there is one that
+[00:01:56] is running here in the room um the SSID
+[00:01:59] is libr liary box and if you just want
+[00:02:01] to like catch up on your Con Academy
+[00:02:02] studies or read some Wikipedia articles
+[00:02:05] or watch Plan 9 from Outer Space um
+[00:02:08] that's all uh being served to you right
+[00:02:10] now by this little battery powered box
+[00:02:11] that I can put in my
+[00:02:16] pocket so I'm going to go through very
+[00:02:19] quickly uh the history of Library box
+[00:02:22] and kind of how it got where it is now
+[00:02:25] uh before we go into the the future of
+[00:02:27] it it started with pirate box pirate box
+[00:02:29] was originally developed by Dr David
+[00:02:31] darts at NYU as a sort of art project it
+[00:02:34] wasn't even really um wasn't wasn't
+[00:02:37] really seen at the time as a as a
+[00:02:41] technology project even it was mostly
+[00:02:43] about uh anti-copyright stance uh he
+[00:02:46] developed it as an anonymous way to
+[00:02:49] share copyrighted material that really
+[00:02:51] was the kind of art project that he put
+[00:02:54] together and it was big the original uh
+[00:02:56] the original instantiation of pirate box
+[00:02:58] required some Fair big Hardware lead
+[00:03:00] acid battery sealed up in a in a um a
+[00:03:05] lunch box with a little external
+[00:03:07] antennas and you know it was a pretty
+[00:03:09] hefty little suitcase size sort of thing
+[00:03:12] um shortly after he rolled out the kind
+[00:03:16] of initial code base for pirate box I
+[00:03:19] saw it and got the idea that if we could
+[00:03:23] manipulate a little bit it would be
+[00:03:25] really interesting in a library context
+[00:03:27] to be able to share information out in
+[00:03:28] the world right to take again to break
+[00:03:30] off a piece of the web to take a piece
+[00:03:32] of the library out into the world with
+[00:03:34] you and be able to share it directly
+[00:03:36] with people so in the spring of 2012 I
+[00:03:39] um forked a pirate box and then uh came
+[00:03:42] up with a library box version
+[00:03:46] one um very very very prototype it uh
+[00:03:51] relied on a lot of uh customization
+[00:03:55] through uh the terminal you had to go in
+[00:03:57] and really kind of hack it Linux for a
+[00:03:58] little while to make it work work so was
+[00:04:00] a great proof of concept but nobody was
+[00:04:01] going to use it like nobody was actually
+[00:04:02] going to build one of these things
+[00:04:04] because it required a a fair amount of
+[00:04:07] fair amount of hackery especially in the
+[00:04:08] library world there's just not that many
+[00:04:10] people that were going to go through the
+[00:04:11] trouble so um in Fall of 2012 I changed
+[00:04:17] the installation process and uh
+[00:04:19] basically automated it to make it a
+[00:04:21] little bit easier for people to uh to
+[00:04:23] build this is when the project really
+[00:04:25] started getting some traction and
+[00:04:26] started taking off and I saw of what it
+[00:04:30] could be where where it could go after
+[00:04:33] um it started getting some attention in
+[00:04:36] a variety of places out in the world so
+[00:04:40] then with the 2.0 release I decided I
+[00:04:43] really wanted to go big or go home I
+[00:04:45] wanted to have something that was really
+[00:04:46] a
+[00:04:48] reasonable piece of interesting
+[00:04:50] technology that people could take out
+[00:04:52] into the
+[00:04:53] world and that included uh the ability
+[00:04:56] to have statistics on it uh the actual
+[00:04:59] easy installation something that didn't
+[00:05:00] require you to be able to tnet into
+[00:05:03] Linux and run terminal commands um it
+[00:05:05] needed to be responsive because
+[00:05:08] obviously responsiveness is an important
+[00:05:09] thing for web design it needed to have
+[00:05:12] easily customizable web pages so that if
+[00:05:15] a library or other group wanted to
+[00:05:16] customize the experience they could do
+[00:05:18] that and I wanted to expand the hardware
+[00:05:21] choices at the time we were really only
+[00:05:22] playing with kind of one little corner
+[00:05:24] of the hardware world and I wanted to
+[00:05:25] make it as um International as possible
+[00:05:28] because not all Hardware available in
+[00:05:30] every country so to make it kind of
+[00:05:32] worldwide I wanted to uh to expand the
+[00:05:35] the hardware choices so uh I needed
+[00:05:37] money and when you have an idea and you
+[00:05:40] don't have money one of the options is
+[00:05:42] Kickstarter so I went to uh I went to
+[00:05:45] Kickstarter in uh June of 2013 and I
+[00:05:49] launched a Kickstarter campaign at the
+[00:05:50] American Library Association annual
+[00:05:52] conference in Chicago in the summer of
+[00:05:55] 2013 um I thought at the time that I
+[00:05:59] needed a few thousand doar right I was
+[00:06:01] aiming very low it was going to be a
+[00:06:03] small project was it going to be a big
+[00:06:05] deal I was going to need three or
+[00:06:06] $4,000 to kind of you know slide a
+[00:06:09] developer to let them do some some
+[00:06:11] custom coding for
+[00:06:13] me no no no big deal so I uh so I
+[00:06:17] launched it and uh it was funded in six
+[00:06:23] hours in two days I was uh I was over
+[00:06:26] double my
+[00:06:27] goal and then on about day three this
+[00:06:30] guy came in the
+[00:06:32] picture um and if you don't know that's
+[00:06:35] Corey docr um famous sci-fi author eff
+[00:06:40] evangelist um and generally all around
+[00:06:42] famous on the internet guy uh and he was
+[00:06:46] at the American Library Association
+[00:06:48] conference I had a chance to meet him
+[00:06:49] and I had a chance to show him Library
+[00:06:52] box which led to boing boing doing a
+[00:06:54] story about it and um eventually Corey
+[00:06:58] himself backing it and it turns out when
+[00:07:02] the largest blog in the world backs your
+[00:07:03] Kickstarter
+[00:07:05] project well you know things
+[00:07:09] happen so uh over the course of the 30
+[00:07:13] days I ended up at a th% of my
+[00:07:18] goal and it showed me that there really
+[00:07:21] was a like desire for this sort of
+[00:07:24] technology that allowed people to run
+[00:07:27] private uh the private sharing of
+[00:07:29] digital information to a small group of
+[00:07:31] people out in the world it's kind of a
+[00:07:33] proof of
+[00:07:36] Interest so that was delivered that
+[00:07:38] information uh that particular code base
+[00:07:40] we worked on it um post post Kickstarter
+[00:07:44] we got the 2.0 out in the spring of 2014
+[00:07:48] and then we went to the next one right
+[00:07:49] we started we started the next round of
+[00:07:51] development because it can always be
+[00:07:53] better and this time around I ended up
+[00:07:56] with a night Foundation prototype grant
+[00:07:58] for the project which is fantastic and
+[00:08:02] in this particular uh this particular
+[00:08:04] round we added a lot of things that I
+[00:08:05] think are incredibly important for the
+[00:08:07] the kind of future of the project we
+[00:08:09] added localization and
+[00:08:10] internationalization for language so
+[00:08:13] that we're using uh we have um a
+[00:08:15] translation engine that's doing uh
+[00:08:18] internationalization uh we expanded the
+[00:08:20] hardware reach of the code base we added
+[00:08:22] a mini DLNA server so you can actually
+[00:08:24] use it as a as a multimedia server for
+[00:08:26] your smart TVs and things like that um
+[00:08:30] we added uh more responsiveness in the
+[00:08:32] in the HTML and directory listings and
+[00:08:35] then we added an automatic updator so
+[00:08:37] that on the next rounds of updates we
+[00:08:39] get some automatic um some automatic
+[00:08:42] updating going on uh these are the
+[00:08:44] languages we're at 11 languages now and
+[00:08:46] I know there are a lot of people in here
+[00:08:47] that speak more than one language so one
+[00:08:49] of the things that I will talk to you
+[00:08:51] about later is hey if you would like to
+[00:08:53] help me internationalize it yet further
+[00:08:55] that is something that I would love to
+[00:08:58] do
+[00:09:00] so how's the project being used this is
+[00:09:01] really the interesting bit right is how
+[00:09:04] how are people using the project what
+[00:09:05] are they doing with the hardware how are
+[00:09:07] they dealing with um with it and I will
+[00:09:11] say like any good tool it's being used
+[00:09:13] in ways that people didn't mean for it
+[00:09:16] to be used right I uh I developed it
+[00:09:19] initially with the thought really for
+[00:09:20] kind of libraries and education it turns
+[00:09:22] out um there's a lot of a lot of other
+[00:09:25] uses um the the typical uses do tend to
+[00:09:28] be uh in the education and Library space
+[00:09:31] a lot of libraries are using it for
+[00:09:33] outreach they'll preload it with uh
+[00:09:36] electronic books uh and movies things
+[00:09:38] like that and then go out into their
+[00:09:39] community on their bookmobiles or other
+[00:09:41] kind of you know mobile sharing um sites
+[00:09:45] and use Library box to share things that
+[00:09:47] way um it's being used internationally
+[00:09:51] this is the uh State library of
+[00:09:52] Queensland tweeting about the uh their
+[00:09:56] use they're actually making library
+[00:09:57] boxes then going out into incred L rural
+[00:09:59] areas of Australia if you know anything
+[00:10:02] about that part of Australia it is it is
+[00:10:05] rural beyond belief um and they are
+[00:10:08] going out uh and delivering electronic
+[00:10:10] things out into the world using library
+[00:10:13] boxes um it's being used when libraries
+[00:10:16] do author talks to to deliver uh when an
+[00:10:19] author agrees obviously to license their
+[00:10:21] books for free distribution as Cory drod
+[00:10:24] does uh when he goes to libraries often
+[00:10:26] libraries freely share his books right
+[00:10:28] using a Library box it's being used in
+[00:10:31] popup libraries this is actually a small
+[00:10:33] town in northern France where uh they
+[00:10:35] built a little pop-up library next to a
+[00:10:38] uh bus station and included a library
+[00:10:40] box as a way to deliver information at
+[00:10:43] point of need to people who are just you
+[00:10:45] know standing around waiting on
+[00:10:51] buses it's being used by the Monterey
+[00:10:54] Bay Aquarium to deliver uh scholarly
+[00:10:57] papers out to remote Pacific Islands
+[00:11:00] which I thought was really kind of a
+[00:11:01] fascinating use of it uh as a series of
+[00:11:04] researchers that are uh going out into
+[00:11:06] you know very very very tiny remote
+[00:11:08] Islands on the Pacific but they need to
+[00:11:10] be able to share scholarly research that
+[00:11:12] they found with the people uh with the
+[00:11:14] researchers that are already there
+[00:11:15] they're using library boxes as a way to
+[00:11:18] uh to move that information back and
+[00:11:19] forth it's being used at Fort Knox
+[00:11:22] Kentucky at the army base um both as a
+[00:11:26] uh as a as a tool to promote the library
+[00:11:28] and as a to share Library resources with
+[00:11:30] people that are that are uh that are
+[00:11:32] just coming
+[00:11:36] in um there have been robots built with
+[00:11:39] Library box on them uh this was uh a
+[00:11:41] robot that was built by uh Steve T at
+[00:11:44] the Detroit Public Library uh uh for a
+[00:11:46] maker day that they had there at the
+[00:11:48] library and it just basically wandered
+[00:11:50] the floor sharing books right which I
+[00:11:53] thought was pretty
+[00:11:56] fantastic um there is a librarian named
+[00:12:00] Patrick Sweeney who has the book boo
+[00:12:02] that
+[00:12:03] sails the Pacific uh coast of California
+[00:12:07] delivering books to small coastal
+[00:12:09] communities uh who has a library box on
+[00:12:11] the book boo to share uh information as
+[00:12:14] he docks and uh can share things that
+[00:12:17] way it's being used by corporations uh
+[00:12:20] these are two of my uh two of my
+[00:12:21] favorite examples spark funnel
+[00:12:22] electronics and open Hardware um
+[00:12:25] Electronics uh manufacturer in Boulder
+[00:12:28] just outside of Boulder Colorado does a
+[00:12:30] lot of educational work and they're
+[00:12:31] pre-loading all their code samples and
+[00:12:33] code bases onto library boxes and then
+[00:12:35] taking them with them out into when they
+[00:12:37] do Middle School and High School
+[00:12:39] Educational events and then using that
+[00:12:41] as the the point of uh the point of need
+[00:12:44] sharing anyone who has ever had to deal
+[00:12:46] with a middle school or High School
+[00:12:49] Wi-Fi network understands why they have
+[00:12:51] to have something to share the
+[00:12:52] information with rather than relying on
+[00:12:55] the internet inside of school because
+[00:12:57] boy howy that's Terri
+[00:12:59] terrible
+[00:13:01] um this was one of the most surprising
+[00:13:04] uses uh IBM was using a library box um
+[00:13:09] at a conference to deliver sales
+[00:13:12] materials to people and I was trying to
+[00:13:15] understand why IBM didn't have a better
+[00:13:16] tool for this but I'll take it uh I'll
+[00:13:20] I'll I'll allow
+[00:13:24] it uh the largest single user probably
+[00:13:28] in the nonprofit space at this point for
+[00:13:31] Library box is um and is the American
+[00:13:34] International Health Alliance a
+[00:13:35] nonprofit that does health education
+[00:13:37] mostly in Africa they have um
+[00:13:40] distributed uh almost 50 library boxes
+[00:13:44] in um uh let's see Zambia Ethiopia and
+[00:13:47] South America um as part of their AIDS
+[00:13:50] education in the area they preload
+[00:13:53] library boxes with educational
+[00:13:55] information about uh the prevention of
+[00:13:57] AIDS and then they take them out along
+[00:13:59] with some nursing materials and things
+[00:14:00] and then take them out into very remote
+[00:14:02] communities in Africa to be able to
+[00:14:05] share the information people have mobile
+[00:14:06] phones but may not have connectivity
+[00:14:08] this is an easy way to get them the
+[00:14:09] information they
+[00:14:12] need and then my very favorite example
+[00:14:16] of a library box use before we talk a
+[00:14:19] little bit about the future of the box
+[00:14:21] is um an English teacher who contacted
+[00:14:25] me from uh Shenzhen China who uh wrote
+[00:14:30] me an email that said you know I'm
+[00:14:31] teaching English in uh in this area
+[00:14:34] where I have students from all sorts of
+[00:14:37] from the a wide range of economic
+[00:14:39] classes and the students from from uh
+[00:14:44] households with with you know not as
+[00:14:46] much money can't afford a VPN to get
+[00:14:49] through the great firewall to get the
+[00:14:50] information that I'm suggesting that
+[00:14:52] they read uh and it's blocked the higher
+[00:14:55] economic households have VPN at home and
+[00:14:59] they can just tunnel through the great
+[00:15:00] firewall and it's no big deal they just
+[00:15:02] get whatever they want um and this
+[00:15:05] disparity in the ability literally just
+[00:15:08] across economic lines to get information
+[00:15:10] is I think at the heart of what I want
+[00:15:12] Library box to be doing um he would then
+[00:15:15] obviously preload the stuff that he
+[00:15:16] wants and take it into the class and
+[00:15:18] everybody could get to it regardless of
+[00:15:20] what their home Internet situation was
+[00:15:24] like um it's grown the project keeps
+[00:15:28] growing and I hope to continue this sort
+[00:15:30] of growth um since 2012 we've expanded
+[00:15:35] uh fairly regularly throughout the world
+[00:15:38] uh this is last month's uh this is last
+[00:15:40] month's data that I have uh because it's
+[00:15:43] an offline sharing device it it doesn't
+[00:15:46] connect to anything it's an island I
+[00:15:48] don't actually have a way to track
+[00:15:50] because I can't poke it right doesn't
+[00:15:54] connect anything um so I kind of rely on
+[00:15:57] the community to to tell me where
+[00:15:59] library boxes Library boxing have been
+[00:16:03] you know installed so this is the the
+[00:16:06] community's report to me of where where
+[00:16:08] Library boxing have been um have been
+[00:16:11] placed uh we're up to about 33 States 37
+[00:16:14] countries in six continents and I have
+[00:16:16] said this every time I've talked about
+[00:16:18] Library box but if anyone knows anyone
+[00:16:21] that goes to Antarctica regularly I
+[00:16:23] really want to get a library box on that
+[00:16:25] seventh continent so I will happily send
+[00:16:28] them one for free if anybody knows
+[00:16:29] someone who regularly goes back and
+[00:16:31] forth to Antarctica so uh I will I will
+[00:16:35] happily happily make that
+[00:16:37] happen and if any Community knows
+[00:16:39] somebody that regularly goes to
+[00:16:41] Antarctica it's probably this one so
+[00:16:43] tell me
+[00:16:45] um what let's chat excellent fantastic
+[00:16:49] that's that's great I really want to get
+[00:16:51] one on that seventh
+[00:16:52] continent okay so I'm here uh as a
+[00:16:55] burkman fellow this year to work on this
+[00:16:57] project to push it for forward to make
+[00:16:59] it more interesting to make it do more
+[00:17:01] to make more people aware of it all of
+[00:17:03] these sorts of things right so what
+[00:17:05] sorts of things am I looking to do over
+[00:17:08] the next year put another way what are
+[00:17:11] the sorts of things that I would love
+[00:17:13] this community to help me do over the
+[00:17:14] next year um and uh there are a number
+[00:17:17] of them some of them Technical and some
+[00:17:19] of them not the technical ones are
+[00:17:20] things like um I would love to find a
+[00:17:24] reliable way for the devices to mesh
+[00:17:26] Network together we have some very rough
+[00:17:29] mesh code in the release right now where
+[00:17:32] it does some automatic syncing but it's
+[00:17:34] not true kind of networked mesh
+[00:17:37] um and that would be interesting to do
+[00:17:40] small local networks with these
+[00:17:43] devices encryption and security is
+[00:17:45] another one because these devices are
+[00:17:47] offline they don't obviously connect to
+[00:17:49] the internet they're little Islands they
+[00:17:51] can't use the traditional mechanisms
+[00:17:54] that websites use to secure themselves
+[00:17:56] SSL is right out because you can't have
+[00:17:59] trusted security certificates not
+[00:18:01] talking to the rest of the world so um
+[00:18:04] figuring out exactly how to make that
+[00:18:07] happen is something that I would really
+[00:18:10] like to do I would love to have more
+[00:18:12] secure connectivity on on library boxes
+[00:18:16] uh content packs on the non-technical
+[00:18:18] side I would really like to work with
+[00:18:20] people who are interested in education
+[00:18:22] and curricula and develop open access
+[00:18:26] curricula for deployment on boxes so
+[00:18:29] that we could put together you know a
+[00:18:30] school in a box and give it out to
+[00:18:33] people that would be really fantastic um
+[00:18:35] custom Hardware is something that I'm
+[00:18:37] interested in I um I'm I'm very very
+[00:18:40] interested in open hardware and pushing
+[00:18:41] kind of what open Hardware can do so I'm
+[00:18:44] interested in kind of working on what
+[00:18:45] the hardware choices are for our
+[00:18:48] codebase and then of course you know
+[00:18:49] funding everybody needs funding all the
+[00:18:51] time for all their projects so that's
+[00:18:53] something that I'm I'm hoping to work
+[00:18:56] on the thing that read really at the
+[00:18:59] bottom right like all of the Open Access
+[00:19:01] to information share easy sharing of
+[00:19:03] information all of this stuff is you
+[00:19:06] know deeply held um as a as a as a core
+[00:19:10] need for as as as a core thing for this
+[00:19:13] project the thing that interests me
+[00:19:16] about the project though goes deeper
+[00:19:18] than just that level the thing that
+[00:19:20] really interests me is the stuff that's
+[00:19:22] kind of five four years from now 5 years
+[00:19:25] from now um everyone knows uh Gordon
+[00:19:28] Moore's law about you know chips getting
+[00:19:31] faster and cheaper over time kum's law
+[00:19:35] is one that's less known but has to do
+[00:19:38] uh with the same time frame every 18
+[00:19:39] months a computer chip uh does the same
+[00:19:43] amount of processing for half as much
+[00:19:44] power so the power curve goes down over
+[00:19:47] the course of uh over the course of time
+[00:19:49] when you combine the two right you have
+[00:19:51] um all of our electronic stuff gets
+[00:19:54] better faster cheaper and uses less
+[00:19:56] power so um these boxes run on about um
+[00:20:02] 3 and 1 half to 5 volts they're
+[00:20:04] incredibly power efficient little things
+[00:20:06] they run on solar panels um but what
+[00:20:10] happens when you're able to have these
+[00:20:12] right even smaller even cheaper even
+[00:20:16] more energy efficient uh even more
+[00:20:19] memory as these sorts of things become
+[00:20:22] smaller and easier for people to
+[00:20:25] implement I think that the concept of
+[00:20:29] individuals having their Library if
+[00:20:33] you'd like to to to co-op the word for
+[00:20:35] it that they bring into the world and
+[00:20:38] share with you is an interesting one
+[00:20:40] because that's going to get easier and
+[00:20:42] easier and easier and easier and easier
+[00:20:44] for people to do and it is going to
+[00:20:46] increasingly confound uh copyright law
+[00:20:48] right um that that gets easier and
+[00:20:51] easier and easier for people to do and
+[00:20:53] harder and harder and harder to track
+[00:20:55] because these are not connected to the
+[00:20:57] net
+[00:20:58] and you can't just know that someone is
+[00:21:01] sharing right you can't uh audio
+[00:21:03] fingerprint the YouTube video and send
+[00:21:05] it dmca take down because it's not
+[00:21:08] online and those things are very very
+[00:21:11] interesting as we move into the
+[00:21:14] so-called internet of things which is a
+[00:21:16] phrase that drives me crazy uh but as we
+[00:21:19] move in that direction of everything in
+[00:21:21] the world having uh an IP
+[00:21:23] address I'm really interested in people
+[00:21:26] controlling that and having the devices
+[00:21:28] open hardware and open source software
+[00:21:29] that control and allow those things to
+[00:21:32] happen rather than relying on the
+[00:21:36] corporate overlords to to provide it to
+[00:21:39] us so the long game is making things
+[00:21:43] that make it easier for people to
+[00:21:44] control their own
+[00:21:46] information um as a result of being
+[00:21:48] easier to use and cheaper that's the
+[00:21:50] long game for this
+[00:21:53] project so that's it um that's Library
+[00:21:56] box um we'll have have a lot of time for
+[00:21:59] questions so uh and I'm looking forward
+[00:22:01] to it that's uh Library box and that's
+[00:22:04] me if you want to contact me afterwards
+[00:22:07] if you have to run for something and
+[00:22:08] don't have time for the questions so
+[00:22:10] thanks
+[00:22:12] [Applause]
+[00:22:19] guys let's have a let's have a
+[00:22:22] discussion oh we got um let's I think
+[00:22:24] that first hand was over there and then
+[00:22:26] Nathan on the ground so you shouldn't be
+[00:22:28] able to see me um my name is Mary Gray
+[00:22:31] I'm a fellow this year uh this looks so
+[00:22:33] fascinating and I think the thing that
+[00:22:35] caught me was um at the end when you're
+[00:22:37] when you're imagining you know the
+[00:22:40] incredible shrinkage um is that
+[00:22:42] necessary to the vision because if I if
+[00:22:44] I think about some of the critiques of
+[00:22:46] of kind of positioning that as a law
+[00:22:48] with a big
+[00:22:49] L what would what have you thought
+[00:22:51] through what you get out of keeping it
+[00:22:53] at this really fantastic
+[00:22:55] portability and where you would go with
+[00:22:57] that yeah that's a that's a that's a
+[00:22:59] great question um I do think that
+[00:23:01] shrinkage I do think that uh Mo and Kumi
+[00:23:04] are fairly inevitable I mean I know that
+[00:23:06] there are you physical limits and
+[00:23:08] electrons only want to be so close
+[00:23:09] together and uh I know all that stuff um
+[00:23:13] but uh I don't think that the march of
+[00:23:16] those two laws is going to slow anytime
+[00:23:18] in five 10 years even probably um these
+[00:23:22] are great like like you said these are I
+[00:23:24] mean you know these are fantastic little
+[00:23:26] devices they easily fit in a pocket um I
+[00:23:30] think one of the more interesting things
+[00:23:32] that might come from the march of at
+[00:23:34] least kum's law is so you've
+[00:23:37] got these two two separate pieces of
+[00:23:39] Hardware um this larger one is heavier
+[00:23:42] and has a 10,000 mli hour battery in it
+[00:23:45] this one is much smaller just a you a
+[00:23:47] little over the size of a credit card
+[00:23:49] and has I think a 2200 mli hour battery
+[00:23:51] in it this runs for about five or six
+[00:23:53] hours this runs for about 3 days and
+[00:23:56] like if they got more and more energy
+[00:23:58] efficient I think that's better for
+[00:23:59] remote uses right so the more energy
+[00:24:02] efficient we can make them I think
+[00:24:03] that's a win for everyone I would love
+[00:24:06] to be able to have something that was
+[00:24:08] you know half this size that ran on a
+[00:24:11] you know a solar panel that big like
+[00:24:13] that would be fantastic if we could get
+[00:24:15] that level of of power um going so U I
+[00:24:20] think Nathan was
+[00:24:22] next I know one of the ways you contrast
+[00:24:25] Library box with pirate box is that
+[00:24:26] library boxes read only yeah and pirate
+[00:24:29] box you know you can upload and share so
+[00:24:31] sure at the same time seems like
+[00:24:33] libraries are becoming more of a Commons
+[00:24:36] for sharing and creating and remixing
+[00:24:38] sure so how I know why you've done it in
+[00:24:41] sort of V1 V2 do you is there a readr
+[00:24:44] future for Library box yeah I definitely
+[00:24:46] think that there is I mean I I think the
+[00:24:48] you're you're completely right that the
+[00:24:50] future of libraries is the collection of
+[00:24:53] information from their communities I
+[00:24:54] mean the the history of libraries is the
+[00:24:56] collection of information from their
+[00:24:57] communities as well we've kind of lost
+[00:24:59] that in the midst of the well commercial
+[00:25:02] copyright uh world uh so long-term I I
+[00:25:06] definitely think so using one of these
+[00:25:08] as a as a story box where you go out
+[00:25:10] into the world and you collect your your
+[00:25:12] Patron stories photographs those sorts
+[00:25:14] of things I think is a really powerful
+[00:25:17] use for this sort of tech um the reason
+[00:25:21] initially that I went with the no
+[00:25:22] uploading right as an interface Choice
+[00:25:25] uh was was was purely to make libr
+[00:25:27] comfortable with it right it's it's a
+[00:25:29] it's it's way easier to sell it uh to
+[00:25:32] not sell it but to make them uh make it
+[00:25:34] available for their use um if they are
+[00:25:37] not worried about it so it was marketing
+[00:25:40] more than more than obviously Tech um
+[00:25:44] there are a few other differences at
+[00:25:45] this point we've we support each other
+[00:25:48] pirate box and Library box support each
+[00:25:50] other we've run our code bases back and
+[00:25:52] forth a couple of times at this point
+[00:25:54] where the installation process that we
+[00:25:56] did for the V2 went into the pirate box
+[00:25:58] core code and so we've we work together
+[00:26:01] well I can see us working together
+[00:26:04] more uh yeah up here question sure what
+[00:26:08] sort of what sort of capacities do you
+[00:26:10] have in it now in terms of memory
+[00:26:12] storage and so forth yeah um uh second
+[00:26:15] is uh uh well actually I'll just do two
+[00:26:18] make it shorter second is um is there
+[00:26:20] anything about this that couldn't
+[00:26:22] possibly be fundamentally implemented as
+[00:26:25] a cell phone app on a you know access
+[00:26:29] point enabled cell phone y that great
+[00:26:31] great questions so uh for my bent on the
+[00:26:36] technology right the limitation for uh
+[00:26:39] drive storage is the USB that you throw
+[00:26:41] at it
+[00:26:43] so yeah so you can you can do a number I
+[00:26:46] mean to actually get into it um you can
+[00:26:48] do a number of things if you're doing
+[00:26:49] things kind of deeper into the the Linux
+[00:26:52] part of it which is open wrrt uh is the
+[00:26:54] Linux underbelly that we use you can uh
+[00:26:57] tell letter S shn and you know just go
+[00:26:59] to town uh if you want to customize the
+[00:27:02] look or the feel of the UI that's all on
+[00:27:04] the on the USB key as well as all of the
+[00:27:06] shared files so if you just want to put
+[00:27:09] a new book on it all you have to do is
+[00:27:10] turn it off pull the USB throw it in
+[00:27:12] your computer load stuff put it back in
+[00:27:14] turn it on um same with customizing the
+[00:27:18] website that it delivers you anything
+[00:27:20] like that all of that is on the USB
+[00:27:23] um and the SEC what was the second again
+[00:27:26] second question oh you smartphone
+[00:27:28] smartphone use yes as a matter of fact
+[00:27:30] pirate box has a Android app that does
+[00:27:34] um that does act as a effectively as a
+[00:27:36] pirate box it is entirely possible that
+[00:27:38] we would eventually go that way
+[00:27:41] um there are two reasons that we haven't
+[00:27:44] one is is cost so um let me see I think
+[00:27:48] this is the cheapest one I've got up
+[00:27:49] here so this box is about
+[00:27:53] $22 right like it's hard to beat for an
+[00:27:59] access point that you can put in your
+[00:28:00] pocket and you can carry around with you
+[00:28:02] um even with smartphone prices going
+[00:28:04] through the floor I think it's going to
+[00:28:05] be a little while before we hit 22 bucks
+[00:28:07] for the ability to do this sort of thing
+[00:28:14] um yeah I mean I think that's I think
+[00:28:20] that's um a lot of the communities that
+[00:28:23] libraries serve and a lot of the places
+[00:28:25] where the education Market is Main not
+[00:28:27] have the sort of smartphone that can run
+[00:28:29] apps right and that's a worry eventually
+[00:28:32] totally I mean that we're going that
+[00:28:34] direction right like everybody's gonna
+[00:28:35] have a smartphone at some
+[00:28:38] point uh yeah sir the
+[00:28:41] back Adrian graer uh a many months ago
+[00:28:45] uh we had a talk here like this like
+[00:28:47] yours from a person talking about the
+[00:28:50] importance of owning your router yeah
+[00:28:53] and you talk in um you mentioned the
+[00:28:57] ability to have automatic
+[00:28:59] upgrades uh as well as as was brought up
+[00:29:02] the read write capability yeah um at
+[00:29:05] what point does the library box have to
+[00:29:10] merge with your router for any of these
+[00:29:14] reasons in other
+[00:29:15] words will these be separate things or
+[00:29:18] are they invariably going to have to
+[00:29:19] merge in terms of owned Hardware
+[00:29:22] Sovereign
+[00:29:23] Hardware um I I see the the the kind of
+[00:29:27] the roles of the kind of traditional
+[00:29:29] Wi-Fi router and the roles of a library
+[00:29:31] box different obviously this is a router
+[00:29:32] that's what it does like that's what the
+[00:29:34] hardware is built to do um but I think
+[00:29:38] it
+[00:29:39] is from my perspective philosophically
+[00:29:41] important that this never be on the
+[00:29:43] internet like the part of the strength
+[00:29:47] of the project is that
+[00:29:49] this none of these boxes connect to the
+[00:29:52] broader web and that in some ways is um
+[00:29:56] a a a a problem because we can't tell
+[00:29:59] where they're being used right and I
+[00:30:01] can't push an update to them uh but I
+[00:30:04] can give we can when I said automatic
+[00:30:06] updates um what I meant was you put a
+[00:30:08] file on the thing you put it in and you
+[00:30:10] turn it on and it works it you know it
+[00:30:12] updates itself um keeping it air gapped
+[00:30:17] from the real internet I think is part
+[00:30:22] of the strength of the tech and if you
+[00:30:25] build it into the router obviously
+[00:30:26] that's all bets are off so I think that
+[00:30:28] having it as a separate thing
+[00:30:31] philosophically is an important
+[00:30:37] piece
+[00:30:39] yeah so um you say it's air gapped but
+[00:30:42] it's connecting to machines that will
+[00:30:44] connect to the internet it it could true
+[00:30:46] totally true I do I think that you know
+[00:30:48] from the use cases you're describing in
+[00:30:50] some cases it's going to be operating in
+[00:30:52] a hostile environment where this device
+[00:30:54] might be gathering the details of what
+[00:30:56] media people are access in and then
+[00:30:57] that's a very attractive Target so what
+[00:31:00] how much you're talking about encryption
+[00:31:01] how much have you engineered for for
+[00:31:02] that use case well that's uh that is one
+[00:31:04] of the things I want to do this year is
+[00:31:06] is over engineer uh the safety of the
+[00:31:09] network traffic that's passing through
+[00:31:11] it as devices connect um as I I'm you
+[00:31:14] know I mentioned very briefly the
+[00:31:15] traditional way of doing it on the web
+[00:31:17] just doesn't work right you can't have
+[00:31:18] an SSL CT right and and another one
+[00:31:21] there might be the state on the box like
+[00:31:22] what kind of logging is it doing and or
+[00:31:24] not doing yes that's uh that's a fine
+[00:31:25] point uh because this was built with the
+[00:31:28] initial code base and the initial
+[00:31:30] concept was all built with libraries in
+[00:31:32] mind it's not doing any logging no Mac
+[00:31:34] tracking uh none of that the it keeps
+[00:31:38] statistics of um links clicked but
+[00:31:41] there's no IP and no Max related to any
+[00:31:44] of that that's ever on the box so yeah
+[00:31:47] it secur privacy is
+[00:31:50] key yeah darus uh when I showed the map
+[00:31:54] it would seem that most of the users are
+[00:31:57] in the US or Europe yeah so I'm
+[00:31:59] wondering whether this is because you
+[00:32:00] know the libraries can afford it more
+[00:32:02] there or is it the reports are more
+[00:32:06] abandoned from this area or is it like a
+[00:32:07] personal Network that is affecting this
+[00:32:11] I think it's a combination of a number
+[00:32:12] of things I mean yeah obviously like
+[00:32:14] it's easier for me to evangelize in the
+[00:32:16] US right like it's easier for me to I go
+[00:32:18] to national conferences and I talk about
+[00:32:20] this so uh the fact that the user base
+[00:32:22] is larger in the US um I think has a lot
+[00:32:25] to do with the fact that more people
+[00:32:26] have heard of it it's just simple
+[00:32:27] marketing um Europe was um interesting
+[00:32:32] for for reasons that I am not entirely
+[00:32:34] clear on one of the largest initial
+[00:32:38] groups to latch onto the project was in
+[00:32:40] France and from there um it spread
+[00:32:43] fairly quickly the one of the lead
+[00:32:46] Developers for the project is in Germany
+[00:32:48] as well and that helps in kind of
+[00:32:50] getting information in in Europe so that
+[00:32:55] may explain it but that's a fine thing I
+[00:32:57] would love to know more I mean that
+[00:32:59] obviously is something else I could
+[00:33:00] probably I could do while I'm here is
+[00:33:01] work on kind of How It's been
+[00:33:03] distributed and why the kind of social
+[00:33:06] net that has done it is something that's
+[00:33:08] really interesting to
+[00:33:10] me uh yes
+[00:33:15] sir um a couple questions about content
+[00:33:19] how much can you put on the box and um I
+[00:33:22] would think that reading from a mobile
+[00:33:25] application would be really
+[00:33:27] um ideal for this um so do you have a
+[00:33:30] way of um optimizing the content uh for
+[00:33:34] uh reading on mobile devices as opposed
+[00:33:36] to browsers and other things sure so um
+[00:33:39] so the the only limit for storage is the
+[00:33:41] USB that you connect to it so uh if you
+[00:33:44] may not be able to see very clearly but
+[00:33:46] you can come up and take a look at the
+[00:33:48] devices afterwards uh there's a little
+[00:33:49] us little thumb drive and the thumb
+[00:33:52] drive is your hard drive so if you
+[00:33:54] connect a a 16 gig thumb drive you've
+[00:33:57] got 16 gigs of storage if you connect a
+[00:33:58] 128 you've got 128 gigs if you connect
+[00:34:01] an external hard drive and you plug it
+[00:34:03] in and you've got a 4 terabyte raid
+[00:34:05] you've got four terabytes of of storage
+[00:34:08] it's it's entirely dependent upon the
+[00:34:10] the external external storage for that
+[00:34:13] um we have again kind of philosophically
+[00:34:17] intentionally not optimized for any
+[00:34:18] particular kind of content um that is
+[00:34:22] both that is intentional um it is up to
+[00:34:25] the client that next to be able to read
+[00:34:28] the content in question so if you throw
+[00:34:31] um uh if you throw an mp4 at a phone
+[00:34:36] that doesn't have an mp4 uh decryption
+[00:34:40] you know program um if you can't read
+[00:34:42] the codec then it can't read the file
+[00:34:46] but that also means that we can serve
+[00:34:49] anything so you want to serve huge data
+[00:34:53] sets to people fine throw them on here
+[00:34:55] and give them something that can reach
+[00:34:57] huge data sets and they can pull it off
+[00:34:58] right totally agnostic as to the the
+[00:35:01] digital thing that you want to share so
+[00:35:05] and it also means that uh we can stay
+[00:35:08] within web standards for the sharing
+[00:35:10] which means that any
+[00:35:12] browser can access it so we've had
+[00:35:15] discussions with people about optimizing
+[00:35:16] with an app right having a an iOS or an
+[00:35:19] Android app that connected directly to
+[00:35:21] the box and was the interface for
+[00:35:24] getting content off but again that um
+[00:35:26] that walls you it doesn't free you so we
+[00:35:29] want to make it as accessible as
+[00:35:31] possible
+[00:35:38] so that that just makes me wonder
+[00:35:40] there's some new stuff that's coming out
+[00:35:42] with the uh WN auth you know Wi-Fi
+[00:35:44] authentication that might be interesting
+[00:35:46] to do that sort of automated login yeah
+[00:35:49] there's a there's a handful there was a
+[00:35:50] there's a there's a handful of of newer
+[00:35:53] Wi-Fi things that I would love to look
+[00:35:54] into there's a um uh
+[00:35:58] uh a corporate Wi-Fi thing that I looked
+[00:36:01] at very briefly that does end to end
+[00:36:03] encryption um without using SSL um that
+[00:36:07] one didn't go very far but I hope to
+[00:36:09] find something that does because yeah it
+[00:36:11] would be ideal that's what I want is for
+[00:36:13] it to be in and encrypted on every
+[00:36:18] device yeah in the
+[00:36:22] back hi uh I've been working on the one
+[00:36:25] laptop for child School server for many
+[00:36:27] years and it's kind of a larger version
+[00:36:29] of this yeah and uh well first the good
+[00:36:32] news um when when I worked in Madagascar
+[00:36:37] and Ghana people prefer this to the
+[00:36:39] internet
+[00:36:41] yeah and the so-called
+[00:36:44] whites can't they because they're
+[00:36:47] addicted to Google and they're addicted
+[00:36:48] to their smartphones so there's a
+[00:36:51] limited window because it's faster the
+[00:36:54] content is closer yeah and it's a cultur
+[00:36:56] divide you know we cannot resist
+[00:36:59] grabbing Google in our pocket we just
+[00:37:01] can't we're addicted to it so there's a
+[00:37:03] kind of a limited time to deploy these
+[00:37:06] things whether it's 10 years or whatever
+[00:37:07] yeah um and my perspective so this
+[00:37:12] pessimist so you're supposed to be The
+[00:37:13] Optimist is that it's not going to work
+[00:37:15] unless we have an incredibly powerful
+[00:37:18] brand name like Wikipedia or United
+[00:37:21] Nations or pick your favorite you
+[00:37:23] private public whatever um because the
+[00:37:25] costs
+[00:37:27] to deploy are much larger than the cost
+[00:37:29] of the hardware oh yeah we all have $10
+[00:37:31] units $100 units I consider that
+[00:37:33] completely irrelevant yeah the
+[00:37:35] deployment costs are the real costs and
+[00:37:37] so unless we find a way to become Henry
+[00:37:40] Ford this will remain a tinkerers game
+[00:37:43] an interesting tinkerers game yeah yeah
+[00:37:46] yeah I don't I don't disagree I would
+[00:37:47] love to become Henry Ford
+[00:37:51] so well okay part of Henry
+[00:37:55] Ford hi I'm Eller um just going off of
+[00:37:58] that can you talk about how like how do
+[00:38:01] I get it if I live in Zambia and I don't
+[00:38:04] know you or me or any of us I mean I
+[00:38:06] think just a lot of these tools like
+[00:38:09] they're really cool and can be useful
+[00:38:12] and context with low connectivity but
+[00:38:14] the how do you get it if you don't have
+[00:38:16] a credit card if you don't if ordering
+[00:38:18] something online is not an option yeah
+[00:38:21] and you're not connected to these kind
+[00:38:22] of networks and then how do you know how
+[00:38:24] to use it yeah how the the last m
+[00:38:26] problem is a real one and uh especially
+[00:38:29] for physical Goods um I you know part of
+[00:38:32] the goal of the project has been to make
+[00:38:34] it as easy as possible to install to
+[00:38:37] build right so uh we have intentionally
+[00:38:41] tried to support International versions
+[00:38:43] of all of the hardware so you can go to
+[00:38:46] a local electronic store in much of the
+[00:38:50] world I won't say all of the world
+[00:38:52] because I don't know all of the world
+[00:38:53] but much of the world you can go into a
+[00:38:55] local electronic store and buy whatever
+[00:38:58] the local version of this Hardware is
+[00:39:00] because TPL link these are all tplink
+[00:39:02] routers well okay three of them are TP
+[00:39:04] Link routers they're a global company um
+[00:39:08] you can buy some version of this that we
+[00:39:10] support almost everywhere now if you're
+[00:39:14] in a remote area that doesn't have an
+[00:39:16] electronic store obviously that's a
+[00:39:18] problem um as far as building it you do
+[00:39:22] need initial access to be able to build
+[00:39:25] it so the you know the implementation
+[00:39:28] can't take place in a vacuum and um
+[00:39:32] honestly I I don't have a solution for
+[00:39:34] how do you build it in the middle of you
+[00:39:36] know nowhere um we can slowly start
+[00:39:40] answering that question maybe through
+[00:39:42] better better methodologies for
+[00:39:44] installing it from you know
+[00:39:46] offline but we're not there yet no but
+[00:39:49] we have tried to make sure that we
+[00:39:52] support some version of Hardware that is
+[00:39:54] available you know again on every
+[00:39:56] continent in most countries um certainly
+[00:40:01] anywhere that anyone has contacted me
+[00:40:04] and said you know I haven't been able to
+[00:40:05] find the mr3020 our local version is the
+[00:40:08] WR
+[00:40:10] 173 okay well we'll now build it for the
+[00:40:12] WR 173 you know so we've tried to hit
+[00:40:15] when people ask but yeah it's a
+[00:40:18] problem
+[00:40:23] yeah uh have you talked to fabb
+[00:40:26] communities at all um to kind of
+[00:40:28] following off of that and um you know
+[00:40:30] could you make a library box that makes
+[00:40:32] other library boxes essentially right
+[00:40:33] like the plans on it right the
+[00:40:35] information that you need maybe two USB
+[00:40:38] ports so that you can copy over the Y
+[00:40:39] code you can you can build a box from a
+[00:40:42] box yes that's totally doable and legit
+[00:40:44] and works and is fairly easily done um
+[00:40:49] so yes once you have one you can have
+[00:40:51] many um the uh the Fab Lab Community is
+[00:40:54] one of my favorite communities in the
+[00:40:55] whole world I Absol Ely love love love
+[00:40:58] all things maker maker space fabbing um
+[00:41:01] working with spark fun um on a couple of
+[00:41:05] projects has introduced me to wide swads
+[00:41:07] of that community and yes I would adore
+[00:41:09] working with them more especially in the
+[00:41:11] open hardwarefront to try to free I mean
+[00:41:14] these are um you know open source code
+[00:41:17] but the hardware on this particular box
+[00:41:19] is not open um which bothers me and I
+[00:41:22] would like to continue to work with
+[00:41:24] communities to make it more so
+[00:41:26] to riff off of the I'm Willow hello
+[00:41:28] everyone um to riff off of the idea of
+[00:41:31] Fab labs and data that you brought up
+[00:41:33] earlier and openness yeah I do a fair
+[00:41:36] amount of hackathons in places with low
+[00:41:38] connectivity and being able to walk in
+[00:41:40] with the libraries and the and the data
+[00:41:43] would be dreamy because the power is
+[00:41:46] never reliable and the connectivity is
+[00:41:48] never reliable and taking enough with me
+[00:41:50] to be able to leave them yeah um would
+[00:41:53] be great yeah well that's I that is
+[00:41:55] exactly the sort of use case that I
+[00:41:58] think this particular project shines
+[00:42:00] with that is that is almost exactly
+[00:42:02] spark fund's use case like right they
+[00:42:04] have pre-built all their libraries and
+[00:42:06] everything into a box and they just take
+[00:42:08] it with them and it the the Box costs
+[00:42:11] $40 they just leave it with the school
+[00:42:16] yep yeah to follow up on that question
+[00:42:20] wouldn't it make sense for all of us to
+[00:42:22] have this software on our
+[00:42:24] laptops well your laptop can't run off a
+[00:42:26] solar panel typically um and uh probably
+[00:42:30] isn't going to be uh quite that size
+[00:42:33] right I mean
+[00:42:36] so oh sure sure sure but again like you
+[00:42:40] you I mean there are really cheap
+[00:42:42] laptops so you know if you have a $50
+[00:42:44] laptop sure you can leave it behind um
+[00:42:47] the uh the goal of this is to try to
+[00:42:49] push the price down to the point I mean
+[00:42:51] one of the goals is to try to make it
+[00:42:53] you know absolutely I want these things
+[00:42:55] in like you know ser box Hardware I want
+[00:42:57] it to be as cheap as humanly possible to
+[00:43:00] roll out um to give you so I did yeah so
+[00:43:05] I've talked a couple of times about
+[00:43:06] solar panels I brought one just to you
+[00:43:08] know the these boxes will run if you're
+[00:43:10] in full sun on a solar panel this size
+[00:43:13] so it doesn't take a lot of space if
+[00:43:15] you're running it in a remote
+[00:43:17] area so so I think with a lot of these
+[00:43:20] questions you're hearing about can it be
+[00:43:22] an app can it be on my laptop um I mean
+[00:43:24] I've rolled my own version of this 20
+[00:43:26] times in the last 10 years and I think
+[00:43:29] everyone should maybe in some ways I
+[00:43:32] think you're stuck on the thing of the
+[00:43:34] box versus The Thing of the light box
+[00:43:38] and that like maybe it's better if
+[00:43:40] people say oh I've set up a web server
+[00:43:42] on my land and you can it's like oh I
+[00:43:44] put up a library box yeah and maybe it
+[00:43:46] has nothing to do with your software
+[00:43:47] your Hardware it's just it's a now a
+[00:43:48] verb I Library boxed it or I would love
+[00:43:51] to be a verb that'd be awesome Henry
+[00:43:53] Ford and a verb great I mean it's a
+[00:43:54] concept that the idea that you don't
+[00:43:57] need the Internet yeah that you have the
+[00:43:59] right to share freely licensed content Y
+[00:44:01] and that this is something you should do
+[00:44:02] as a community act or a resistant act or
+[00:44:05] something like that's a bigger gift to
+[00:44:07] the state of the world than like selling
+[00:44:10] your box yes so totally AG you know that
+[00:44:12] yeah no that's well said Thank you
+[00:44:15] Nan um I was sort of impressed by the
+[00:44:18] the picture you put on your presentation
+[00:44:20] showing a sort of bookshelf that was
+[00:44:23] half empty with just a little Library
+[00:44:25] box I was reminded of the own e efforts
+[00:44:28] we've been having in my department at
+[00:44:30] the University of Geneva of downsizing
+[00:44:32] some of our libraries because they were
+[00:44:34] saying you have everything online you
+[00:44:37] have everything digitized anyway so I
+[00:44:39] was wondering do you have any policy
+[00:44:42] standpoints regarding uh the issue of
+[00:44:44] the digital Dark Age the idea that every
+[00:44:48] data is now digital and we'll have being
+[00:44:50] we we're going to have trouble uh
+[00:44:52] getting back to our own history and
+[00:44:54] getting back to uh to to to our data
+[00:44:57] like 50 years from now I definitely I
+[00:44:59] mean obviously there are lots of
+[00:45:00] libraries that have thought about that
+[00:45:01] there's probably Librarians in the room
+[00:45:03] that are more qualified to talk about
+[00:45:04] that than me honestly um uh I do think
+[00:45:09] that I one of the thing again kind of
+[00:45:11] philosophically that makes me continue
+[00:45:15] to be interested in this project and
+[00:45:16] projects like it is the idea that it is
+[00:45:20] possible for people to easily and
+[00:45:23] cheaply you know be their own archive
+[00:45:26] right to that their information can
+[00:45:28] easily be kept and shared by themselves
+[00:45:33] um and I think that that I mean that
+[00:45:36] again kind of concept is fairly powerful
+[00:45:38] once you start you know start seeing it
+[00:45:40] in the
+[00:45:42] world
+[00:45:47] so got through all the
+[00:45:53] questions yeah one more sure
+[00:45:57] yeah further yeah no sort of a semic
+[00:46:00] comment that actually the image that
+[00:46:02] just came to me I recall I think it
+[00:46:04] started around 10 years ago where you'd
+[00:46:06] see people especially kind of geeky
+[00:46:08] people at geeky events who would have
+[00:46:10] their you know uh uh USB thumb drive
+[00:46:14] hanging around their neck with all of
+[00:46:16] their vital stuff this sort of strikes
+[00:46:17] me as like a you know a USB thumb drive
+[00:46:19] that broadcasts yeah um but I think that
+[00:46:22] the uh question raised here is really
+[00:46:25] when you look
+[00:46:26] ahead um I
+[00:46:28] mean uh with the technology changing as
+[00:46:31] rapidly as it is the notion that you can
+[00:46:33] rely on archiving in these forms starts
+[00:46:37] to get a little dicey doesn't it down
+[00:46:39] the road yeah absolutely yeah yeah yeah
+[00:46:41] I mean if you know no data format is is
+[00:46:44] immutable or you know immune from bit
+[00:46:46] rot or any number of other um you know
+[00:46:50] problems digital information storage
+[00:46:53] over time both in codec and in just
+[00:46:56] again physical storage I mean physically
+[00:46:58] storing digital things is hard if what
+[00:47:01] you want is absolute bit forbit copies
+[00:47:04] um yeah I I do not think this is a you
+[00:47:07] know magic archive box that is just that
+[00:47:10] is just not what this is and um uh this
+[00:47:14] really is more about sharing than arov
+[00:47:16] but as a as a potential Point as as I
+[00:47:19] you know said to to Nathan's question a
+[00:47:21] little earlier um the potential point
+[00:47:24] for using it as a collection device and
+[00:47:26] then moving it into the Aral sort of um
+[00:47:30] more stable Aral form I think is a
+[00:47:33] fairly interesting one this could be the
+[00:47:35] shuttlecraft for the Mother Ship right
+[00:47:41] so thanks
+[00:47:44] Carrie just a a tiny push back on the
+[00:47:47] laptop question um one of the things uh
+[00:47:50] we're playing with in our kind of one
+[00:47:52] laptop per child the server world is uh
+[00:47:55] um
+[00:47:56] well not officially it's kind of a an
+[00:47:58] underground hack of the old OPC laptops
+[00:48:01] to turn them into something like this
+[00:48:03] yeah U because there's about 3 million
+[00:48:05] these you know littered around the world
+[00:48:07] right so the cost is zero right
+[00:48:10] literally zero because they're they're
+[00:48:12] being pushed out of schools and they're
+[00:48:14] easy to find right yeah so why pay
+[00:48:17] anything when it's completely free so
+[00:48:19] you have a screen as well and yeah and
+[00:48:21] maybe the laptop is actually a better
+[00:48:23] form factor because if you're looking at
+[00:48:26] cultural adoption um you're not
+[00:48:28] demanding someone have any fancy
+[00:48:30] smartphone lowend smartphone anything
+[00:48:32] yeah and you as one of the gentlemen
+[00:48:35] over here I forget said you you have an
+[00:48:36] AP you're you're spreading the knowledge
+[00:48:38] through the little village and do you do
+[00:48:42] you consider that form factor possible
+[00:48:44] as well yeah yeah no that's I I know I
+[00:48:47] mean I mean the OPC project in general
+[00:48:50] is a great one uh the the particular
+[00:48:52] reuse of it I mean I it is a fantastic
+[00:48:55] idea to reuse old old Hardware in this
+[00:48:58] way that is uh really yes I mean both
+[00:49:02] environmentally friendly and it's just
+[00:49:03] an awesome use of old Hardware um I mean
+[00:49:07] we again like my particular project
+[00:49:09] hasn't gone that route because we don't
+[00:49:11] have access to three million free
+[00:49:12] laptops
+[00:49:14] um you got it I will happily talk to you
+[00:49:18] about about using them um but yeah no I
+[00:49:21] I the the form factor again kind of
+[00:49:23] philosophically form factor doesn't
+[00:49:25] matter at all it's more about the kind
+[00:49:29] of reconceptualizing the way that we
+[00:49:32] share things being able to do it very
+[00:49:36] very very cheaply in areas with no
+[00:49:38] infrastructure honestly I think that's
+[00:49:40] an
+[00:49:40] important reconceptualization of the way
+[00:49:43] we share digital
+[00:49:45] things so I think we have time for one
+[00:49:48] more question if anyone would like one
+[00:49:49] more didn't even look at what time it
+[00:49:50] was so all right so last one no pressure
+[00:49:53] you want to take the mic if somebody
+[00:49:54] else had something to say
+[00:49:56] um well I was I was going to say and I
+[00:49:58] don't know this is probably obvious to
+[00:50:00] most people in the room but this is like
+[00:50:01] such a lovely example of values and
+[00:50:03] design so you youve really embedded um a
+[00:50:07] philosophical several philosophical
+[00:50:09] positions in your in your build and I I
+[00:50:12] missed the very beginning of your talk
+[00:50:13] so I'm not sure if you laid out kind of
+[00:50:15] the philosophical principles that are
+[00:50:17] there yeah and I did want to introduce
+[00:50:19] at one point you used the word we're
+[00:50:20] kind of agnostic to what the data is
+[00:50:23] those places where um there is very much
+[00:50:26] a a philosophical position that means
+[00:50:28] you can't necessarily make claims to
+[00:50:31] agnosticism and if you if you maybe
+[00:50:34] agree or disagree with that statement
+[00:50:35] but it just does seem like such an
+[00:50:36] interesting example for people like me
+[00:50:38] who would say oh actually your values
+[00:50:40] are absolutely baked into what you're
+[00:50:42] doing um this is like par excellance
+[00:50:44] what we're talking about when we say
+[00:50:46] that yeah I I I absolutely agree I mean
+[00:50:50] the you I I am by training uh a
+[00:50:53] librarian I have spent time uh as a
+[00:50:55] librarian over the last decade um it is
+[00:50:59] fairly clear to anyone that knows
+[00:51:00] Librarians and libraries that there is a
+[00:51:03] the philosophical basis of it is pretty
+[00:51:05] firmly rooted in the library World um
+[00:51:08] open and free access to information
+[00:51:10] everywhere all the time um agnosticism
+[00:51:14] about what people are reading is a core
+[00:51:18] Library value right we don't care what
+[00:51:19] you read as long as you're reading um we
+[00:51:22] don't even want to know what you read we
+[00:51:24] just want you to read um um we don't
+[00:51:26] care uh so all of those sorts of Library
+[00:51:29] values I think are um are part of the uh
+[00:51:34] are part of the underbelly of of this
+[00:51:36] project at least I hope they are I want
+[00:51:38] them to be and it makes me really happy
+[00:51:40] that you think they are um because that
+[00:51:42] is I think a piece of what I want to uh
+[00:51:46] put out with the project is those those
+[00:51:49] positions um it is one of the ways that
+[00:51:52] we differentiate ourselves from all of
+[00:51:54] the other potential
+[00:51:56] projects right there are other ways to
+[00:51:57] do this as again I keep relating back to
+[00:52:00] to to Nathan um he you know he said
+[00:52:03] people have rolled their own on this
+[00:52:04] sort of thing a lot um there are other
+[00:52:07] ways you can do this but we have a
+[00:52:11] particular bent and we want a particular
+[00:52:15] thing out of the project and um I'm
+[00:52:19] willing to you know I'm willing to make
+[00:52:22] the decisions that make it go the way we
+[00:52:24] want so thank
+[00:52:26] you all right thank you guys I'll put
+[00:52:32] my all right there's me again if you if
+[00:52:35] you want to get in touch uh I would love
+[00:52:37] to hear from anyone and everyone so
+[00:52:39] thank you so
+[00:52:40] much and if you want to come up and look
+[00:52:42] at stuff whatever come on
+[00:52:50] up thank
+[00:52:54] you

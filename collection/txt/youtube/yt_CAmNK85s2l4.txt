@@ -1,0 +1,1305 @@
+[00:00:02] Melody is finishing a two-year
+[00:00:05] appointment at ATF the US Digital
+[00:00:07] Services Agency she spent quite a lot of
+[00:00:09] time working in public media has done
+[00:00:12] amazing work that if you have not looked
+[00:00:14] at her website I absolutely uh recommend
+[00:00:17] checking it out it is probably amongst
+[00:00:19] the most well documented uh uh uh work
+[00:00:24] that I've ever seen anybody do she puts
+[00:00:26] everything on GitHub uh it's it's a
+[00:00:30] amazing amazing resource she's going to
+[00:00:32] share just a small piece of that today
+[00:00:35] um but has just a like a really truly
+[00:00:38] amazing um set of resources she's also
+[00:00:40] currently a visiting uh fellow at the at
+[00:00:43] the Neiman foundation for journalism and
+[00:00:45] her work spans um so much so I'm not GNA
+[00:00:48] drone on but I'm gonna give it over to
+[00:00:50] Melody and please welcome her with
+[00:00:54] [Applause]
+[00:00:57] me thank you so much um
+[00:01:01] I thought I would start by showing you
+[00:01:03] this website that was designed for my
+[00:01:04] 89-year-old neighbor Betty who I took to
+[00:01:08] politics and Pros in DC for a book
+[00:01:11] reading and all of this is online all of
+[00:01:13] the links are online you don't need to
+[00:01:14] take pictures of this stuff because I
+[00:01:15] can send you the links um and I took
+[00:01:18] Betty to a reading and I watched her
+[00:01:20] read the New York Times and she kept
+[00:01:22] clicking on ads by mistake and I thought
+[00:01:25] there needs to be a better News website
+[00:01:27] designed for 89-year-old people so so I
+[00:01:30] put out a query online I said I want to
+[00:01:32] design a better News website for my
+[00:01:34] 89-year-old neighbor Betty and this is
+[00:01:36] the result this is called news for Betty
+[00:01:38] um it's designed specifically for her
+[00:01:40] these are the news websites that she
+[00:01:42] likes to read these are the sections
+[00:01:44] that she likes to read and it basically
+[00:01:46] just queries the API and shows her
+[00:01:49] exactly what she needs to get to um and
+[00:01:52] then she can click on the link and she
+[00:01:53] knows to go back um what this project
+[00:01:56] demonstrates and what I'm going to be
+[00:01:58] talking about today are way to include
+[00:02:00] community in the process of building
+[00:02:02] things in newsrooms and specifically in
+[00:02:04] public radio stations um as a little bit
+[00:02:07] of background I started working at NPR
+[00:02:10] when I was 21 on a fellowship I left the
+[00:02:12] fellowship early to go to waight wait
+[00:02:14] don't tell me where I directed edited
+[00:02:16] wrote for and produced the show um I
+[00:02:19] left there to run digital strategy at
+[00:02:21] Fresh Air with Terry Gross um then I
+[00:02:23] went to medical school then I dropped
+[00:02:25] out um and then I was a digital
+[00:02:28] strategist and editor NPR and what that
+[00:02:31] means was I developed products and tools
+[00:02:34] that either made our Newsroom more
+[00:02:35] efficient or made us better interact
+[00:02:37] with our audience and I tried to include
+[00:02:39] the audience in everything that we did
+[00:02:42] um what do I currently work at atnf in
+[00:02:45] the federal government I'm on a two-year
+[00:02:47] term appointment um I try to make things
+[00:02:50] in the federal government more
+[00:02:51] accessible and transparent and I took
+[00:02:53] the role in part because I wanted to
+[00:02:55] figure out how to work within a
+[00:02:57] well-designed Skunk Works operation that
+[00:03:00] I could one day potentially run or work
+[00:03:02] with for public media so these are the
+[00:03:04] different things that I like to think
+[00:03:05] about I'm very very open with my work I
+[00:03:08] try to build everything out in the open
+[00:03:10] with the audience and for the audience
+[00:03:12] um I think that public media in
+[00:03:14] particular should be doing that with
+[00:03:16] everything that they build I believe
+[00:03:18] that all of the software and public
+[00:03:19] media should be open source I believe
+[00:03:21] breaking news and investigative Works
+[00:03:22] should be Creative Commons license so it
+[00:03:24] gets to the widest audience possible and
+[00:03:27] I think we should be including the
+[00:03:28] audience more in what we do
+[00:03:31] so I'm going to start by showing you
+[00:03:33] this picture of Yellowstone National
+[00:03:35] Park which was posted again all of these
+[00:03:37] slides are online um so this is
+[00:03:39] Yellowstone National Park and this is me
+[00:03:42] in fourth
+[00:03:44] grade and in February President Obama
+[00:03:47] announced that every fourth grader in
+[00:03:48] the country is going to receive a free
+[00:03:50] national park pass next year and they'll
+[00:03:53] be able to go to the national parks as
+[00:03:55] will their families so these are my
+[00:03:56] brothers and these are my parents so all
+[00:03:58] of us would get to go to the national
+[00:04:00] park for a year which is really cool
+[00:04:02] people are going to be able to go to the
+[00:04:03] national park that otherwise wouldn't be
+[00:04:05] able to go to um and experience the
+[00:04:07] national
+[00:04:08] park so let's think about what those
+[00:04:10] fourth graders are going to be doing 30
+[00:04:12] years from now of course they're going
+[00:04:14] to have a fond memory of visiting the
+[00:04:16] national park with their family but I
+[00:04:18] think that they'll more strongly
+[00:04:19] identify as supporters of the national
+[00:04:21] park they'll feel satisfaction and
+[00:04:23] loyalty towards the national park and
+[00:04:26] they'll recognize the national park for
+[00:04:27] a vital public resource
+[00:04:30] so that's essentially what I would like
+[00:04:32] to do but for public media I'm not
+[00:04:33] talking about doing anything new these
+[00:04:35] are the things that I'm going to talk
+[00:04:37] about today have already been done by
+[00:04:38] other organizations and institutions and
+[00:04:41] I'd like to bring them to public media
+[00:04:43] but I'm going to pause for a sec because
+[00:04:44] I like making these things interactive
+[00:04:46] and just open this up to the audience
+[00:04:48] and ask you the question what does it
+[00:04:50] mean to you to be a member of an
+[00:04:52] organization and I'm thinking of things
+[00:04:54] like a YMCA or a JCC or a Girl Scout
+[00:04:57] Troop or a gym what do you get out of
+[00:05:00] being a member of an
+[00:05:04] organization anyone
+[00:05:14] yeah
+[00:05:17] sorry relation with similar thinking
+[00:05:20] people a relation with similar thinking
+[00:05:22] people anybody
+[00:05:24] else a tote bag you a tote bag okay
+[00:05:30] [Music]
+[00:05:38] so identifying yourself through
+[00:05:40] affiliations these are all really good
+[00:05:42] answers perks that come with the
+[00:05:44] collective group versus individual
+[00:05:46] efforts so perks that come with being
+[00:05:48] part of a collective group rather than
+[00:05:49] thinking of yourself as an individual
+[00:05:52] you're contributor to that so you're a
+[00:05:55] contributor to that
+[00:05:56] organization access to resources you
+[00:05:59] wouldn't be able to obtain with just
+[00:06:01] your own me access to resources that you
+[00:06:04] wouldn't be able to obtain otherwise
+[00:06:07] seems like a pretty good list or one
+[00:06:08] more well I'd like to contribute to the
+[00:06:09] organization and push it in a better
+[00:06:11] Direction so contribute to the
+[00:06:12] organization and push it in a better
+[00:06:15] Direction a little bit of a change on
+[00:06:17] that same question what does it mean to
+[00:06:19] you to be a member of a public radio
+[00:06:23] station for the people watching the
+[00:06:25] webcast there's complete silence in the
+[00:06:27] room also you should feel free to tweet
+[00:06:29] like all of this I don't yeah fing
+[00:06:35] stories funding stories that we feel
+[00:06:37] need to be
+[00:06:41] funded yeah I don't have to feel guilty
+[00:06:44] when they keep
+[00:06:46] asking a lack of guilt during pledge
+[00:06:51] drives so this is a question that I've
+[00:06:53] been asking a lot of people over the
+[00:06:55] past few weeks I started the Neiman
+[00:06:57] Fellowship in early May I've actually
+[00:06:59] been working on this project since
+[00:07:01] finding out that I got the fellowship
+[00:07:02] last
+[00:07:06] October and I've been asking people who
+[00:07:09] work in public media and people who
+[00:07:10] think a lot about public media and
+[00:07:12] people who listen to public media and
+[00:07:14] people who don't listen to public media
+[00:07:16] so out of all of the people that I've
+[00:07:18] interviewed who do not work in public
+[00:07:20] media no one can quite identify what it
+[00:07:22] means to be a member of a station um
+[00:07:25] people have said you know I feel like I
+[00:07:28] should and then I say why and they're
+[00:07:31] not able to articulate that or they say
+[00:07:33] I don't know what I get out of being a
+[00:07:34] member and they're not able to say
+[00:07:36] anything more than that and then I
+[00:07:38] interviewed people who do work in public
+[00:07:39] media and somebody said are you talking
+[00:07:41] about tote bags and I said no I'm not
+[00:07:44] talking about tote bags forget the tote
+[00:07:46] bag what does it be mean to be a member
+[00:07:48] of your station and they said I'm not
+[00:07:50] sure that we articulate that very well
+[00:07:52] and somebody else said to me well
+[00:07:54] members get an e newsletter so I said
+[00:07:56] you send a newsletter out to members
+[00:07:58] that you do not send to to the rest of
+[00:07:59] the people about events that people
+[00:08:01] would pay for at your station and they
+[00:08:03] said yes so membership isn't idea that
+[00:08:08] is that is tricky in public media why am
+[00:08:11] I telling you all of this i' I worked in
+[00:08:13] public media for more than a decade I
+[00:08:14] plan to go back to public media I really
+[00:08:17] value and love public media I think it's
+[00:08:19] something that should exist in the
+[00:08:20] United States and I'm really
+[00:08:21] increasingly worried about its
+[00:08:23] future here's another question that I'll
+[00:08:25] just pose to the group where's the
+[00:08:27] public in public media
+[00:08:31] this is this is something that somebody
+[00:08:32] wrote In
+[00:08:33] 1980 um I'll read it for you in case you
+[00:08:37] would like that um the uncomfortable
+[00:08:39] fact is that most public radio stations
+[00:08:41] do not serve significant portions of
+[00:08:42] their Community this is true even though
+[00:08:45] we support a goal of making our services
+[00:08:46] available through the most efficient
+[00:08:48] Equitable and appropriate means but
+[00:08:50] radio stations with small audiences are
+[00:08:52] not inherently efficient or appropriate
+[00:08:54] so this is something that was written in
+[00:08:55] 1980 but I've heard people say this as
+[00:08:58] recently as a month ago so this is
+[00:09:00] something that's been ongoing for the
+[00:09:01] past 35 years how do we include the
+[00:09:03] public in what we do one last question
+[00:09:06] for the
+[00:09:07] group are there ways to think about
+[00:09:09] expanding what it means to be a member
+[00:09:11] currently in public media membership is
+[00:09:14] based on a financial relationship you
+[00:09:16] give money to a station and you become a
+[00:09:18] member but I operating under the
+[00:09:20] assumption that it doesn't have to be a
+[00:09:21] financial relationship for something
+[00:09:23] meaningful to take place so I'm creating
+[00:09:26] something that I call Media public I'm
+[00:09:28] calling it that because it takes public
+[00:09:30] media and turns it on its head it's also
+[00:09:32] a way of putting the public first and
+[00:09:33] it's saying what would happen if we
+[00:09:35] expanded the definition of what
+[00:09:37] membership is and I'm looking at other
+[00:09:39] organizations who have already thought
+[00:09:40] about this so I'm talking to things like
+[00:09:42] food co-ops and libraries and code for
+[00:09:45] America brigades and thinking about how
+[00:09:48] in code for America the brigades work
+[00:09:50] with cities and get technologists in
+[00:09:52] those cities to think in different ways
+[00:09:53] about the city in which they they live
+[00:09:55] and food co-ops ask members to donate
+[00:09:58] time or help with projects and have
+[00:10:00] people feel more invested in their
+[00:10:01] organization or public libraries um I
+[00:10:04] live in Washington DC my public library
+[00:10:07] um has created a maker space and
+[00:10:09] activities for people who might never
+[00:10:11] check out a book to come into the public
+[00:10:13] library use its space and then advocate
+[00:10:15] for the existence of the public library
+[00:10:17] and that's kind of what I think public
+[00:10:19] radio stations need to do so I'm
+[00:10:21] operating from this mindset what if we
+[00:10:23] expand the ways in which somebody could
+[00:10:25] become a member and what might that look
+[00:10:27] like um this is just a list of things
+[00:10:29] things that I've thought of I'm sure
+[00:10:30] there are other meaningful ways to
+[00:10:32] contribute to a station but I'm starting
+[00:10:33] with the list um that I put together
+[00:10:35] what if you could donate code or
+[00:10:37] participate in a hackathon there are
+[00:10:39] many reporters around the country who
+[00:10:40] would like to do deep data Dives and
+[00:10:42] don't have developers on staff what if
+[00:10:44] we could partner them with a developer
+[00:10:46] in their Community who wanted to enhance
+[00:10:47] his or her portfolio um is there a way
+[00:10:50] that somebody could tag or digitize an
+[00:10:51] archive and become a member is there a
+[00:10:54] way that somebody could do user testing
+[00:10:55] for a new iteration of a public media
+[00:10:57] website and become a member why solely
+[00:10:59] basing membership on this financial
+[00:11:01] transaction so there are 835 physical
+[00:11:04] spaces across the United States where
+[00:11:06] public media stations um operate um and
+[00:11:10] this is the experiment that I'll be
+[00:11:12] running over the next year I've
+[00:11:13] identified 10 stations that are doing a
+[00:11:15] pilot project with me um and they've
+[00:11:18] each identified a cohort of people that
+[00:11:20] they're going to make members of their
+[00:11:21] station for a year for contributing in
+[00:11:23] non-financial ways um one of the
+[00:11:26] stations is making people who conduct
+[00:11:29] oral histories of people in their
+[00:11:31] Community they're making the people who
+[00:11:32] do those oral histories members one
+[00:11:34] station has seventh and eighth graders
+[00:11:36] put together a PVS documentary every
+[00:11:38] year those seventh and eighth graders
+[00:11:39] are going to be made members um in three
+[00:11:42] cities stations are going to partner
+[00:11:44] with their local um code for America
+[00:11:46] Brigade and those people are going to
+[00:11:48] work on mapping projects for the station
+[00:11:50] that will enhance their ability to
+[00:11:52] transmit information online then we're
+[00:11:54] looking at what is automated in terms of
+[00:11:56] emails that go out to those people so if
+[00:11:59] you you become a member of a public
+[00:12:00] radio station about like eight months
+[00:12:01] later you you get an email that says are
+[00:12:03] you ready to donate again do you want to
+[00:12:05] pledge you get a series of emails if if
+[00:12:07] people are donating in the this way
+[00:12:09] those emails need to be changed or
+[00:12:10] stopped um so we're changing and
+[00:12:12] stopping that stuff and then I'm
+[00:12:13] interviewing the people who are in these
+[00:12:15] cohorts and thinking about how they view
+[00:12:17] public media now how they're going to
+[00:12:18] view it a year from now and how that
+[00:12:20] changes their um relationship with the
+[00:12:22] station this is something that's already
+[00:12:24] going on in different markets across the
+[00:12:26] country on a very small scale last no
+[00:12:29] nober the code for DC Brigade made the
+[00:12:31] election website for WAMU so people who
+[00:12:35] worked at code for DC coded this map um
+[00:12:38] that WAMU put on their website for
+[00:12:40] election night and in Rochester New York
+[00:12:42] the station worked with the local hacks
+[00:12:44] hackers Brigade to make this app which
+[00:12:46] allows the station to ask questions and
+[00:12:48] receive answers from their community so
+[00:12:50] it's it's partnering already existing
+[00:12:52] organizations that could benefit from
+[00:12:54] each other
+[00:12:55] together everything that I'm doing as
+[00:12:57] part of this project is public um so you
+[00:12:59] can follow along I'm treating the Neiman
+[00:13:01] Fellowship as a series of Sprints I've
+[00:13:03] divided it into four Cycles everything
+[00:13:05] that I do during the Sprint I'm making
+[00:13:06] public um so I'm I'm saying what would I
+[00:13:09] like to accomplish over the next two
+[00:13:10] weeks um and then I'm articulating
+[00:13:13] whether or not I've accomplished that
+[00:13:15] and I'm thinking a lot about the words
+[00:13:16] that are currently used in public media
+[00:13:18] to think if we can turn them on its head
+[00:13:20] so currently pledge is associated with
+[00:13:22] giving money but what if by belonging to
+[00:13:24] a public radio station you were actually
+[00:13:25] saying I'm going to be a more engaged
+[00:13:27] member of my local community or I'm
+[00:13:29] becoming more informed about a topic or
+[00:13:31] I'm teaching somebody in my community
+[00:13:33] something that they should know about
+[00:13:34] how do we think about how people
+[00:13:36] actively and constructively participate
+[00:13:39] and I'm using that phrase in particular
+[00:13:41] because it's part of NPR's original
+[00:13:42] mission statement which was written by
+[00:13:44] my friend Bill who said National Public
+[00:13:47] Radio will serve the individual it will
+[00:13:48] promote personal growth it will
+[00:13:50] encourage a sense of active constructive
+[00:13:52] participation and the way that I think a
+[00:13:54] lot of public radio stations operate
+[00:13:55] currently is as a distributor rather
+[00:13:57] than a facilitator and I'm thinking of
+[00:13:59] ways to create more
+[00:14:00] facilitation so what if instead of
+[00:14:03] membership being a financial transaction
+[00:14:05] it meant you belonged more to a
+[00:14:06] community so what if a public radio
+[00:14:08] station as a physical space meant a
+[00:14:10] place where you could learn all of these
+[00:14:12] different
+[00:14:13] things what is public media I had
+[00:14:16] somebody ask me last week well what is
+[00:14:17] even the point of a local station I get
+[00:14:19] all of my news through the national
+[00:14:20] network and that really frightened me
+[00:14:22] because the person who asked me that
+[00:14:23] question was extremely smart and I
+[00:14:25] thought oh geez like maybe I need to
+[00:14:27] take a step back and explain the
+[00:14:28] importance of local um there are local
+[00:14:32] stations all over the country that have
+[00:14:34] very very small staffs that are doing
+[00:14:36] extremely good jobs of like Civic
+[00:14:37] reporting projects are reporting on
+[00:14:39] local government are reporting on things
+[00:14:40] that don't necessarily make money but
+[00:14:42] need to be reported on and I strongly
+[00:14:44] value that and thinks that it's a um
+[00:14:46] model that needs to survive so I'm
+[00:14:49] really glad you're all here today it was
+[00:14:50] very nice of you to come out these are
+[00:14:52] the questions that I have for you um I'm
+[00:14:54] at the very start of this project I plan
+[00:14:56] to go back to work in July but continue
+[00:14:58] to work on this project project I have
+[00:14:59] people across the country who are
+[00:15:01] developers and designers and um ux
+[00:15:03] people and like just really good
+[00:15:05] thinkers who are helping me with this
+[00:15:06] project I would love it if you join that
+[00:15:08] team I have a GitHub I can add you to it
+[00:15:10] um I have a list serve like I will just
+[00:15:13] add you to anything that you want to be
+[00:15:14] added to the more the merrier with this
+[00:15:16] um and these are all the ways that you
+[00:15:17] can get in touch with me if you'd like
+[00:15:25] thanks and I'll go back to that slide um
+[00:15:28] so we can begin to open it up and
+[00:15:30] there's some microphones that are gonna
+[00:15:32] run around so just raise your hand and a
+[00:15:34] mic will come to you and this was like
+[00:15:36] the the 20-minute version of the speech
+[00:15:38] I've given an ignite talk which was the
+[00:15:39] five minute version and an hourong
+[00:15:41] version so if you'd like to hear this
+[00:15:42] again much longer happy to do that as
+[00:15:52] well hi should I introduce myself yeah U
+[00:15:55] my name is Anne Bennett I'm a fellow at
+[00:15:57] Harvard humanitarian initi but I work in
+[00:16:00] public service U broadcasting in in
+[00:16:02] Africa so um I'm thinking of it from
+[00:16:05] from that perspective um you know we're
+[00:16:08] always looking for engagement as well
+[00:16:10] for for a number of reasons not just for
+[00:16:11] the financial side but also to improve
+[00:16:13] our the way that we serve our
+[00:16:15] communities and our audience um but one
+[00:16:17] of the things that we encounter over and
+[00:16:18] over is on the editorial side some push
+[00:16:21] back um and and this fear of of sort of
+[00:16:24] relinquishing any kind of editorial
+[00:16:27] control to to the audience that's out
+[00:16:29] there um you know this idea that as
+[00:16:31] journalists and editors we're
+[00:16:33] professionals um and we know better than
+[00:16:36] our audience um have you encountered
+[00:16:38] that and I'd love to hear your thoughts
+[00:16:41] on on on that as well yeah I I was going
+[00:16:43] to point out this project to you which
+[00:16:45] um was created by my friend Jen who
+[00:16:47] worked at WBEZ at the time um it's a
+[00:16:49] project called curious City and it
+[00:16:51] allowed people from the city of Chicago
+[00:16:52] to post questions they had about the
+[00:16:54] city of Chicago and then the person who
+[00:16:55] asked the question and the reporter
+[00:16:57] would go out and work on the story
+[00:16:58] together
+[00:16:59] and the the person who posed the
+[00:17:01] question asked different questions asked
+[00:17:04] in a lot of cases better questions and
+[00:17:06] was considered to be an equivalent
+[00:17:08] reporter on the project and it just
+[00:17:10] shaped different kinds of stories that
+[00:17:12] WBEZ began to tell I I think if we're
+[00:17:15] not including our audience in the
+[00:17:18] process we're we're missing out it we
+[00:17:20] become like this this broadcaster and
+[00:17:22] and not thinking about how we can
+[00:17:25] horizontally build everybody up um I do
+[00:17:28] I have en push back from editorial on on
+[00:17:31] these things I'm thinking long-term
+[00:17:33] survival if if we don't the NPR
+[00:17:36] aesthetic and the public radio aesthetic
+[00:17:37] has been replicated by the for-profit
+[00:17:39] sector there are many podcasts that
+[00:17:41] spring up now that sound like NPR that
+[00:17:43] are virtually indistinguishable
+[00:17:45] aesthetically from the NPR sense so how
+[00:17:47] do we differentiate ourselves we say
+[00:17:49] we're including the audience in the
+[00:17:50] process we're a trusted news source
+[00:17:52] we're we're talking about things that we
+[00:17:54] otherwise wouldn't talk about and how
+[00:17:55] are there ways to include the audience
+[00:17:57] um in the process that we might not have
+[00:18:01] thought of I'm just going to show you
+[00:18:02] one more site uh prop publica has a page
+[00:18:04] called get involved where every single
+[00:18:06] story that they post has a way for the
+[00:18:07] audience to get involved and it's
+[00:18:09] sometimes as simple as asking the
+[00:18:10] audience to share their story which is a
+[00:18:12] better way of saying leave a
+[00:18:14] comment it's essentially just asking
+[00:18:16] people to leave a comment I'm not sure
+[00:18:17] why that's not loading let me try to
+[00:18:19] bring that up for you
+[00:18:22] uh um yeah here we go ways to get
+[00:18:24] involved so join the discussion ask a
+[00:18:27] question take a quiz share your story um
+[00:18:30] its ways of including the audience but
+[00:18:32] maybe not from day one but maybe from
+[00:18:34] day
+[00:18:35] three and in thinking about including
+[00:18:37] the audience I think that if folks have
+[00:18:39] responses to other people's questions as
+[00:18:41] well please like feel free to jump in
+[00:18:43] just by no means
+[00:18:45] one hi I'm Rebecca Wexler I'm a visiting
+[00:18:48] scholar with the history of science
+[00:18:50] department and I am wondering if you
+[00:18:52] could give us your definition of the
+[00:18:56] public like like people well I don't
+[00:18:59] know if that's your definition that'd be
+[00:19:00] great I'm just wondering so you're
+[00:19:01] talking a lot about public media or
+[00:19:04] media public turning those things on its
+[00:19:06] head and so is it I I I I have I think I
+[00:19:10] I think I would just say it's it's it's
+[00:19:11] everybody who lives in an existing
+[00:19:13] Community like how do we include voices
+[00:19:14] from people who we're not currently
+[00:19:16] reaching out to or not um I I'll show
+[00:19:19] you something that might
+[00:19:21] um I ran this project uh called 64 ways
+[00:19:25] to think about a homepage where I put
+[00:19:26] really smart people in a room and said
+[00:19:28] come up with a home homepage that people
+[00:19:29] in news haven't thought of yet and one
+[00:19:31] of the things that we talked about was
+[00:19:33] how do we get news to people who might
+[00:19:36] be in public spaces so how do we think
+[00:19:38] of disseminating information to people
+[00:19:40] who might be standing at a public um
+[00:19:42] transportation stop or or might be
+[00:19:44] standing in public how how do we not
+[00:19:46] think of ourselves as as being in a
+[00:19:47] building and broadcasting on the radio
+[00:19:50] but but talking to people on the street
+[00:19:51] including them I I would say the public
+[00:19:53] is just people who live in a community
+[00:19:54] or people who care about a certain topic
+[00:19:56] or or people just just people
+[00:19:59] so does anybody else have a either
+[00:20:01] thought or comment on either of the
+[00:20:03] questions that have been posed so
+[00:20:07] far oh
+[00:20:10] thanks um I wanted to quickly ask um how
+[00:20:14] much the platform plays into making it
+[00:20:17] easier for audiences to participate so
+[00:20:19] if you see something like CNN I report
+[00:20:21] it's really simple it's an Instagram you
+[00:20:25] take a take a video and post it and they
+[00:20:27] they sort of retweet it in a way but
+[00:20:29] then there are other systems that are
+[00:20:30] very difficult for an audience to use
+[00:20:32] and not as um you know they're not
+[00:20:35] willing to put in the effort to learn
+[00:20:36] about the system so I wanted to know
+[00:20:38] what you thought the the platforms that
+[00:20:41] I'm thinking of developing one already
+[00:20:43] exists and was created by the group that
+[00:20:44] I work with in the federal government
+[00:20:46] it's called Midas it allows anyone in
+[00:20:48] the federal government to post something
+[00:20:49] that they need help with and for people
+[00:20:51] to sign up to help with that project um
+[00:20:53] so it's it's really easy because we
+[00:20:55] needed people who um worked all across
+[00:20:58] the federal government to be able to use
+[00:20:59] it this already exists it's an open
+[00:21:01] source GitHub project and then I'm
+[00:21:03] developing this website which would have
+[00:21:05] all of this information in one place
+[00:21:07] allow people to share connect people
+[00:21:09] across public media who think like this
+[00:21:10] with each other public media is very
+[00:21:12] siloed there's five Facebook groups
+[00:21:14] there's three slack channels there's
+[00:21:15] like seven list serves that I'm on
+[00:21:17] people are not really talking to one
+[00:21:18] another within the system people are not
+[00:21:20] sharing code with each other within the
+[00:21:21] system um the public certainly isn't
+[00:21:24] invited into all of the processes going
+[00:21:26] on um there's no space for that right
+[00:21:27] now so I I think the best use of my time
+[00:21:31] and energy is developing the central
+[00:21:33] location for that um I'm not a developer
+[00:21:35] or designer so if anybody has those
+[00:21:39] skills and would like to work on this
+[00:21:40] project or can connect me with people
+[00:21:41] who can work on this project this is a
+[00:21:43] GitHub that I'm working on with several
+[00:21:50] people
+[00:21:52] hi hi I'm Soul ten I'm a local blogger
+[00:21:55] and I apologize for the totebag snark
+[00:21:59] um um I I want to to follow up on the
+[00:22:03] first
+[00:22:04] question and sort of unpack something
+[00:22:07] you said early on um you mean you said
+[00:22:11] you were looking at co-ops as a model
+[00:22:14] and of people contributing um time but
+[00:22:19] co-ops are really a ownership and
+[00:22:22] governance structure um I mean you join
+[00:22:25] a co-op and then you're a part owner um
+[00:22:29] I mean you're not you know in Tech I
+[00:22:31] mean you're you're working for the
+[00:22:34] collective um you haven't really I mean
+[00:22:37] the the first question sort of um you
+[00:22:39] know pulled at the no this is ours we
+[00:22:42] don't want the unwashed masses trying to
+[00:22:45] tell us how to um you know do our jobs
+[00:22:51] um I mean are there people talking about
+[00:22:54] actual Co-op models and this is a new
+[00:22:57] co-op called the banion project it's a
+[00:22:59] local website for the community of H
+[00:23:01] Hill or H Mill Massachusetts
+[00:23:06] Hil uh so so people are playing around
+[00:23:08] with this model um I think especially at
+[00:23:12] the local level for local to
+[00:23:14] survive there has to be a model that's
+[00:23:16] not based on strict local advertising
+[00:23:18] they've gone National Yelp Facebook and
+[00:23:21] Google are all based in California
+[00:23:23] people are sending their advertising
+[00:23:24] dollars there because it makes more
+[00:23:26] sense how do you show value and and get
+[00:23:28] people to you know it's thinking about
+[00:23:31] different news models I don't think that
+[00:23:32] there's a one-size fits-all solution I
+[00:23:34] see folks from WB here what works from
+[00:23:36] WB doesn't work for Arkansas Public
+[00:23:39] Media um but I do think that we need to
+[00:23:41] be playing around with different models
+[00:23:43] uh and and trying different models to
+[00:23:45] see what sticks and what could work in a
+[00:23:46] small Market a medium-sized Market a
+[00:23:48] large Market I'm not worried about the
+[00:23:50] top five to 10 markets in public media I
+[00:23:52] think they're structured differently
+[00:23:53] they have different Staffing models um
+[00:23:55] but from midsize to smaller markets I
+[00:23:57] really think that they need to
+[00:23:59] think Beyond um underwriting both
+[00:24:01] digitally and uh on on air
+[00:24:06] John John David Al from WB I figure if
+[00:24:09] I'm going to get called out say I'm here
+[00:24:12] um there's a number of us here I think
+[00:24:15] um B raise your hands actually maybe I'm
+[00:24:19] the only I think they all went over I
+[00:24:21] think we have various cohorts here of
+[00:24:24] for we have Community who is
+[00:24:25] contributing to the well-being of BU
+[00:24:27] who's here
+[00:24:29] um I think you're really smart to not uh
+[00:24:32] look at things as monolithic and uh sort
+[00:24:36] of generalize across the system I think
+[00:24:38] there are larger stations there are
+[00:24:40] medium small and small stations they all
+[00:24:42] have different needs and different
+[00:24:44] resources um one of the questions and
+[00:24:47] I'm you know even bu we do a lot of
+[00:24:51] Outreach we want to do more Outreach um
+[00:24:54] we try to get A Confederacy of the
+[00:24:57] willing as much as possible possible and
+[00:24:59] we are looking always to partner with
+[00:25:01] people who have great ideas and it comes
+[00:25:03] down to even a station the size of ours
+[00:25:06] uh to
+[00:25:06] bandwidth um we only have so many
+[00:25:09] resources to dedicate to this and I
+[00:25:12] think how to organize that and create a
+[00:25:14] structure which I think you're working
+[00:25:16] towards and sort of a templated approach
+[00:25:20] which I think would be extremely helpful
+[00:25:23] what I'm wondering about and we all want
+[00:25:25] public R to survive and we all are not
+[00:25:27] the biggest fans of the Pledge drives or
+[00:25:31] other ways that we are you know other
+[00:25:34] ways that we bring in Revenue are there
+[00:25:38] thoughts about taking sort of this
+[00:25:41] Coalition of the Willing that you are
+[00:25:44] bringing in to be part of and engaging
+[00:25:46] the community of using them as either
+[00:25:51] ambassadors cultivators of donations
+[00:25:54] identifying those people as donations uh
+[00:25:59] possibilities using them as sort of the
+[00:26:03] the classic CH you know fund funnel of
+[00:26:05] Engagement where people can actually
+[00:26:08] provide us money so we can support the
+[00:26:11] great work and reporting that we're
+[00:26:12] doing so I I was talking to somebody at
+[00:26:15] a different station who who pointed me
+[00:26:16] to this website which allows people to
+[00:26:18] say I don't want birthday gifts this
+[00:26:19] year I want people to donate for this
+[00:26:21] organization on behalf of my birthday I
+[00:26:24] I think that you can treat people as
+[00:26:27] ambassadors but you have to show why
+[00:26:28] they should be ambassadors first um and
+[00:26:31] I think that people who care about
+[00:26:34] different things in their Community are
+[00:26:35] willing to donate money but it might not
+[00:26:37] be the first thing you ask for so you
+[00:26:39] can say to somebody help us with this
+[00:26:41] project or help you know come in and be
+[00:26:44] a user tester help WB figure out this
+[00:26:47] thing and then a year from now you send
+[00:26:49] them a postcard in the mail that says
+[00:26:50] how would you like to become a member
+[00:26:51] this year do you want to give 20 bucks
+[00:26:53] or do you want to donate 15 hours of
+[00:26:54] your time again so you give yeah I'm
+[00:26:59] that I'm sorry is that is that part of
+[00:27:03] your overall project is that an outcome
+[00:27:05] that you're you know as part of your
+[00:27:08] project I want to increase uhhuh
+[00:27:10] financial support this is based on
+[00:27:12] thinking the ways that
+[00:27:15] people listening habits are going to
+[00:27:18] change as Internet becomes more um
+[00:27:21] available in cars so the default for
+[00:27:24] high quality audio in cars will not
+[00:27:26] necessarily be public media
+[00:27:28] um donation habits for people under a
+[00:27:31] certain age are radically different than
+[00:27:32] their parents and my concern is that
+[00:27:35] stations think people will graduate into
+[00:27:37] the listening and donation habits of
+[00:27:39] their parents and that's not true um and
+[00:27:41] if we don't start to engage with people
+[00:27:43] now who are donating and listening
+[00:27:45] differently then we've lost them and if
+[00:27:48] the average age of a person donating I
+[00:27:50] think to a news station is in their late
+[00:27:52] 50s the average age of a person donating
+[00:27:54] to PBS or a classical station is in
+[00:27:56] their early 70s I think if we think that
+[00:27:59] people under those ages are going to
+[00:28:01] graduate into those habits we're we're
+[00:28:03] we're thinking that the world has not
+[00:28:05] changed in terms of the internet in the
+[00:28:07] past 15 to 20 years so I'm thinking how
+[00:28:09] do we get people I hate to use the word
+[00:28:11] funnel I don't like to talk about this
+[00:28:13] in marketing terms I I think that I I
+[00:28:16] prefer more Community oriented language
+[00:28:18] but the idea is to funnel a certain
+[00:28:20] percentage of people who take this
+[00:28:22] action will eventually be into this
+[00:28:23] cohort you know and we need to run those
+[00:28:25] experiments now and I'm talking about
+[00:28:26] what are the experiments that we can run
+[00:28:28] as a system to figure out what to do
+[00:28:30] next I I'm not saying this is you know I
+[00:28:33] I got a lot of push back when I first
+[00:28:35] announced this idea from a lot of people
+[00:28:37] at stations who said she's you know
+[00:28:39] she's messing up our entire business
+[00:28:40] model like what is she thinking no like
+[00:28:43] people who my parents are always going
+[00:28:45] to donate to wh y y financially that
+[00:28:48] that's what they're used to and that's
+[00:28:49] what they like doing um people my age
+[00:28:52] have no connection to wh in the way that
+[00:28:54] my parents do and might not graduate
+[00:28:56] into that so it's thinking how do you
+[00:28:58] create a model so that they graduate
+[00:29:00] into
+[00:29:01] Financial ownership that that isn't
+[00:29:03] based on what we're currently doing
+[00:29:08] yeah and I
+[00:29:13] right and I I should also say that I I
+[00:29:17] don't think of myself as like standing
+[00:29:20] on a little soap box and like shouting
+[00:29:22] this stuff and having people go through
+[00:29:23] me this needs to I want every station to
+[00:29:26] be like playing around with this stuff
+[00:29:27] and not think like I have to go through
+[00:29:28] Melody Kramer oh I have to wait for
+[00:29:30] Melody Kramer no like if you have an
+[00:29:32] idea and you want to run with this like
+[00:29:33] run with it it's it's it's an idea to
+[00:29:35] help the system um it's not like it
+[00:29:38] doesn't need to start with me or end
+[00:29:39] with
+[00:29:42] me
+[00:29:45] yeah uh Andromeda yelton I do a lot of
+[00:29:48] things involving code in libraries and
+[00:29:50] making trouble um so along those lines
+[00:29:53] my consumption of public media is
+[00:29:55] exclusively podcast oriented and I find
+[00:29:58] that I feel a strong sense of
+[00:30:01] affiliation with a lot of the things I
+[00:30:02] listen to but they're produced by a
+[00:30:05] variety of stations and non-st entities
+[00:30:09] and all of the uh the mechanisms I have
+[00:30:13] for donating or getting involved are
+[00:30:14] station-based so is there a bridge
+[00:30:17] somewhere between those two in this I
+[00:30:21] think if stations can articulate other
+[00:30:23] ways you can get involved that also
+[00:30:25] involve getting involved with a podcast
+[00:30:28] I'm I'm going to ask stations to post
+[00:30:30] different ways that people can get
+[00:30:32] involved so let's just pick a random
+[00:30:34] podcast uh there's a podcast called the
+[00:30:36] urban Amish that's produced by a station
+[00:30:39] I think in South Dakota let's say you
+[00:30:41] really wanted to help the urban Amish
+[00:30:43] podcast the station from South Dakota
+[00:30:46] could list that on their page on the
+[00:30:47] site ways to help that would help that
+[00:30:50] station because that station is
+[00:30:51] producing that podcast um you know wmyc
+[00:30:55] has something interesting on their page
+[00:30:57] uh
+[00:30:58] on their ways to donate page they
+[00:31:00] actually say you can help us by coding
+[00:31:03] for us what they haven't yet done is
+[00:31:05] extending that to membership so they
+[00:31:07] haven't said if you code for us and code
+[00:31:09] well for us uh we'll make you a member
+[00:31:11] um I'm working with a guy who works at
+[00:31:13] code for America to make this website
+[00:31:16] which isn't complete yet so I'm showing
+[00:31:18] you something that might not even load
+[00:31:21] but the idea is that if stations have
+[00:31:29] uh you can help with those issues that
+[00:31:31] are open but right now I'm starting with
+[00:31:33] stations there's no reason not to extend
+[00:31:36] this to podcast so this is a map of the
+[00:31:38] United States um this allows you to
+[00:31:40] click on any station with a GitHub
+[00:31:42] project see what currently is up on
+[00:31:44] GitHub GitHub for those of you who don't
+[00:31:46] know is Version Control software that
+[00:31:48] allows people to work on software
+[00:31:50] projects together so I can if we think
+[00:31:53] of GitHub as creating a recipe together
+[00:31:55] I write um ingredients you write
+[00:31:57] ingredients I say your ingredients
+[00:31:59] should be added to my ingredient list um
+[00:32:01] kich uh it's just doing that for code so
+[00:32:04] this is going to put all of the GitHub
+[00:32:05] projects that stations use in one place
+[00:32:08] what this also does is say to stations
+[00:32:09] hey no need to create that from scratch
+[00:32:11] another station has already made that
+[00:32:13] like we don't need to reinvent the wheel
+[00:32:14] 450
+[00:32:17] times yeah oh wait wait for the
+[00:32:21] mic um so I'm an intern at the Berkman
+[00:32:23] Center um what's your name Jenny and um
+[00:32:26] I was wondering what you
+[00:32:28] kind of expect when you interview people
+[00:32:30] who participate in public media that's
+[00:32:32] like a non-financial participation what
+[00:32:34] you expect slh hope um they'll gain kind
+[00:32:37] of um both in kind of like a substantive
+[00:32:42] way but also just in how they kind of
+[00:32:44] perceive and conceive of participation
+[00:32:46] and also if you have any insight into
+[00:32:48] how that might compare with people who
+[00:32:49] pledge Financial contributions so I
+[00:32:53] scraped OK Cupid uh which is a dating
+[00:32:55] website and I looked at people who had
+[00:32:57] said that they have an interest in
+[00:32:59] public media related terms and it's
+[00:33:01] really high there's like thousands of
+[00:33:03] people who list either NPR or Terry
+[00:33:04] Gross in their Okay Cupid profile
+[00:33:07] because public media says something
+[00:33:09] about you like if you listen to public
+[00:33:11] radio it says that you're you know you
+[00:33:14] like knowing about the world that you're
+[00:33:15] interested in the news like you want to
+[00:33:17] date other people who are like you I've
+[00:33:20] been running into a lot of people who
+[00:33:21] graduate college or in their 20s and 30s
+[00:33:23] and want to meet other people like them
+[00:33:25] offline and not in bars and there aren't
+[00:33:28] many mechanisms to do that like there
+[00:33:29] aren't places that you can go to meet
+[00:33:31] other people like you work on something
+[00:33:34] meaningful together make new friends
+[00:33:35] they you know it's it's hard to find
+[00:33:38] that if you're not religious and you're
+[00:33:39] not into the bar scene which a lot of
+[00:33:41] people fall into that cohort myself
+[00:33:44] included um and so if stations could be
+[00:33:47] more of like a public space which
+[00:33:48] attracts people who might want to um
+[00:33:51] meet one another if stations could also
+[00:33:53] operate more like a library where you
+[00:33:55] know the library is open to everybody
+[00:33:58] and the library benefits from being open
+[00:33:59] to anybody um I talked to a community
+[00:34:02] station in Utah and they have a
+[00:34:04] podcasting booth that if you're a member
+[00:34:06] anybody can create a podcast in their
+[00:34:07] Booth that's amazing like they get
+[00:34:09] content that they wouldn't otherwise get
+[00:34:11] from a community that they might not
+[00:34:12] otherwise be attracting or or speaking
+[00:34:15] with or thinking about um and you know
+[00:34:18] if you think about uh what public media
+[00:34:21] is or what Current public media
+[00:34:22] currently sounds like it's very white um
+[00:34:25] it's very male um it's very Northeast
+[00:34:27] it's it's very Professor
+[00:34:30] thinktank uh journalist driven if you
+[00:34:32] listen to certain interviews I can
+[00:34:34] listen to an hour of an unnamed show and
+[00:34:37] hear professor professor male male male
+[00:34:39] white male white male I'm not hearing
+[00:34:41] other people um how are ways how can
+[00:34:44] stations be the spot where that opens up
+[00:34:46] to a community that is not it doesn't
+[00:34:48] hear itself on public radio so doesn't
+[00:34:51] want to contribute to public media in
+[00:34:52] any meaningful way so I realized that
+[00:34:55] that's very idealistic and and not
+[00:34:58] something that can happen overnight but
+[00:34:59] I think by opening up these spaces and
+[00:35:01] creating these spaces where people can
+[00:35:03] um you know meet each other that there
+[00:35:06] will be very real associations with
+[00:35:08] public media and positive things um my
+[00:35:11] friend Alex told me to think of it as
+[00:35:12] like a cruise ship director points
+[00:35:14] people to activities and then extracts
+[00:35:16] herself from the process so like you
+[00:35:18] want to go to gambling I don't know what
+[00:35:20] people do on a cruise ship but like
+[00:35:22] let's let's think of cruise ship related
+[00:35:23] activities points people in different
+[00:35:25] directions you find a cohort of people
+[00:35:27] in that activity and then you associate
+[00:35:29] that activity with the cruise ship um so
+[00:35:31] what could public radio be associated
+[00:35:33] with that it's not currently associated
+[00:35:34] with um I also think
+[00:35:37] that um in comparison to how people
+[00:35:40] typically donate now which is pledge
+[00:35:43] Financial um there's a people feel like
+[00:35:46] like he said there's like a guilt
+[00:35:48] complex involved you know that's kind of
+[00:35:51] what I've been hearing over and over
+[00:35:52] again I feel guilty I listen or I'm not
+[00:35:55] sure what I'm getting out of this but
+[00:35:56] feel like I should and and I think that
+[00:35:58] there's a better relationship that
+[00:36:00] people should have with their stations
+[00:36:01] rather than guilt so I'm going to jump
+[00:36:04] in because I mic already uh my name is
+[00:36:06] Adrian I'm uh the community manager at
+[00:36:08] Harvard Business Schools digital
+[00:36:10] initiative and then previously the
+[00:36:12] Boston Globe boston.com um but I wanted
+[00:36:14] to build on your idea of like this new
+[00:36:16] model for uh community in public media
+[00:36:20] because I think I think though you don't
+[00:36:22] want to go into the kind of Revenue
+[00:36:24] potential like I'm going to go there
+[00:36:26] because there is significant portion I
+[00:36:28] think sometimes when you're trying to
+[00:36:30] convince people who are revenu minded
+[00:36:35] like by not bringing it into the
+[00:36:37] conversation they inherently assume that
+[00:36:40] there's no potential there um but if you
+[00:36:42] think about churches and religious
+[00:36:45] organizations as a case study um there
+[00:36:48] obviously like many of them are very
+[00:36:50] well-funded because when you're part of
+[00:36:52] a religious community you spend a lot of
+[00:36:54] time there you want it to you want it to
+[00:36:57] continue to exist um and so you give
+[00:36:59] them money you also give them money
+[00:37:00] maybe because you don't want to go to
+[00:37:02] hell but like you know maybe we can work
+[00:37:04] that in like hypothetically you know you
+[00:37:07] also give the money because you want
+[00:37:09] that church to still be there because
+[00:37:11] it's part of your community um and
+[00:37:13] especially in these like small towns
+[00:37:14] where you see small and midlevel uh
+[00:37:17] stations the more personal connection
+[00:37:20] that younger audiences can have with
+[00:37:21] these stations the more likely they are
+[00:37:24] to go to bat for them when it kind of
+[00:37:26] comes down to um to to the tax of it you
+[00:37:30] know like yeah you know and I I should
+[00:37:33] say you saying that made me think of
+[00:37:35] something I have no business background
+[00:37:37] I I was an English major in college like
+[00:37:39] if anybody can help me with the revenue
+[00:37:40] part of this like that would be really
+[00:37:44] helpful thanks I agree with you I think
+[00:37:46] that um anything that stations can do to
+[00:37:50] situate themselves as in people's minds
+[00:37:52] as more than just a broadcaster I wrote
+[00:37:54] this piece on my website called if I ran
+[00:37:57] a public radio station what I would do
+[00:37:58] and I just it's called if I ran a
+[00:38:00] station um and it was just different
+[00:38:02] things people could do like in a station
+[00:38:04] to make themselves more Community
+[00:38:05] oriented and then I tossed it back out
+[00:38:07] to the the audience and said what would
+[00:38:09] you do and people came up with all of
+[00:38:10] these ideas for what like an ideal
+[00:38:11] station would look like this is not
+[00:38:13] going to happen like these 19 things are
+[00:38:15] but but if a station runs with one of
+[00:38:17] them and says like this is what we could
+[00:38:18] do like it gets people thinking in
+[00:38:19] different
+[00:38:21] ways and there there's also revenue for
+[00:38:24] stations in this like I think that they
+[00:38:25] could set up storytelling as a service
+[00:38:27] you you know how how do you the moth
+[00:38:29] runs workshops for
+[00:38:32] organizations that to tell moth-like
+[00:38:34] stories that help fund The Moth so are
+[00:38:36] there models that stations could see
+[00:38:38] themselves as people who tell audio
+[00:38:39] stories are so good at conveying
+[00:38:42] information are their classes workshops
+[00:38:44] things that they could run in their
+[00:38:45] community that help people or
+[00:38:47] communities tell their own stories or to
+[00:38:49] help um local organizations tell their
+[00:38:51] own stories I think there is revenue
+[00:38:52] potential
+[00:38:53] there
+[00:38:56] yeah mentioned that it's important to
+[00:38:58] hear people with completely different
+[00:39:00] opinions however I was a little bit
+[00:39:02] surprised when you call on John and he
+[00:39:04] said we
+[00:39:06] all uh I've learned at a very young age
+[00:39:09] that we all never applies to everybody
+[00:39:12] uh all doesn't even go to the bathroom
+[00:39:14] some people pee in a floor in a a bed
+[00:39:17] but I can't get out of my mind when you
+[00:39:20] said it's virtually
+[00:39:23] indistinguishable do you remember in a
+[00:39:25] your very first answer you said it's
+[00:39:27] virtually in I'm sorry I'm nervous uh
+[00:39:30] it's okay you were talking about the
+[00:39:32] podcasts okay oh oh virtually
+[00:39:34] indistinguishable from the aesthetic yes
+[00:39:37] yes so I want to address that for a
+[00:39:39] second okay if it's virtually
+[00:39:42] indistinguishable and um obviously
+[00:39:46] majority of young people choosen not to
+[00:39:49] um donate to classical station unless
+[00:39:52] they in the'
+[00:39:53] 70s do we really need it and if if it if
+[00:39:58] it's virtually
+[00:39:59] indistinguishable why do we need to have
+[00:40:02] it public I mean if we're getting a
+[00:40:04] government support tax money then we're
+[00:40:07] competing with private businesses and
+[00:40:09] that's not a role of the
+[00:40:12] government in fact it's illegal by
+[00:40:15] Constitution to compete with for the
+[00:40:17] government subsidize and to compete with
+[00:40:20] private
+[00:40:22] businesses John
+[00:40:29] Adrian so I think that like with the
+[00:40:32] rise of the internet we're seeing this
+[00:40:33] rise of privately owned public spaces um
+[00:40:37] like Facebook right we we use Facebook
+[00:40:41] but we don't own Facebook we don't we
+[00:40:43] have no control over what Facebook does
+[00:40:46] because it's a private company um the
+[00:40:48] difference I'm sorry we have control
+[00:40:50] because
+[00:40:52] stop that's way of control sure I mean
+[00:40:56] in in very large aggregate we can have
+[00:40:58] some control over Facebook but I think
+[00:40:59] it's been proven multiple times that you
+[00:41:02] know you as a person or you as a small
+[00:41:05] group or community of people have very
+[00:41:06] little control over what Facebook does
+[00:41:09] um as you know you log on sometimes and
+[00:41:11] Facebook's totally different um but the
+[00:41:14] difference
+[00:41:18] is all right well getting away from one
+[00:41:20] specific case study there are many
+[00:41:21] examples of privately owned public
+[00:41:23] spaces if you want to look at physical
+[00:41:25] spaces there are many of the public like
+[00:41:27] the public spaces in New York City are
+[00:41:29] actually privately owned pieces of land
+[00:41:32] that the company allows people to use
+[00:41:35] zucati Park is one of them um and but
+[00:41:38] the problem becomes when you want to use
+[00:41:40] that space for something other than what
+[00:41:42] that private company wants you to do
+[00:41:44] with it um and they have the power to
+[00:41:46] say no way um the pro the difference is
+[00:41:50] with actual public spaces that are owned
+[00:41:52] in aggregate by a community is that you
+[00:41:55] have more control over what is or isn't
+[00:41:57] done to that space so it's like
+[00:41:59] Wikipedia versus or like an open sour
+[00:42:02] like kind of a a nonprofit Wikipedia
+[00:42:04] versus like a uh like a brittanica.com
+[00:42:08] right
+[00:42:09] like I think if the conversation becomes
+[00:42:12] should public media exist we've gone in
+[00:42:13] a different direction and I'd prefer to
+[00:42:14] just keep it on membership and then
+[00:42:16] address that afterwards because I I want
+[00:42:17] to hear from people who can help this
+[00:42:18] specific project and the question of
+[00:42:20] whether public media should exist is is
+[00:42:21] not the the point of
+[00:42:24] this anyone else
+[00:42:29] Jo Joel Abrams I used to work at the
+[00:42:32] Boston Globe on digital properties um I
+[00:42:36] think and and there I spent a lot of
+[00:42:39] time thinking well how does journalism
+[00:42:41] pay for itself and and that business
+[00:42:43] model and public media I think has a
+[00:42:45] great advantage over that of well if you
+[00:42:49] if you the globe is asking you to do
+[00:42:51] something you're you're benefiting a
+[00:42:53] billionaire who owns it loses a lot of
+[00:42:56] money on it but still um whereas when
+[00:42:59] your public radio station asks you you
+[00:43:03] are doing something for of a common good
+[00:43:06] and so that that provides an altruistic
+[00:43:08] Mo an altruistic motive it's not just um
+[00:43:13] guilt but it's that that flip side of it
+[00:43:15] that why people support the
+[00:43:17] organizations that they feel part of is
+[00:43:19] because oh well I'm helping to do good
+[00:43:21] I'm advancing a cause that I feel is
+[00:43:24] important and and as Adrien said it it's
+[00:43:28] important to have that public space and
+[00:43:30] that different voices being
+[00:43:32] heard yeah I mean I I think of this as
+[00:43:34] like public libraries public parks
+[00:43:36] public I'm lumping in a whole bunch of
+[00:43:38] public facilities together um and and
+[00:43:41] you know I think public libraries and
+[00:43:43] public parks have tackled this really
+[00:43:44] well the National Park Service people
+[00:43:47] love it people people would advocate for
+[00:43:49] the existence of the National Park
+[00:43:51] Service because they get something out
+[00:43:52] of it um and I love what they're doing
+[00:43:55] with the fourth graders I think that
+[00:43:57] that is just so smart on so many levels
+[00:43:59] to think you know we're providing this
+[00:44:02] ability to utilize this public space and
+[00:44:04] what they're giving them is the ability
+[00:44:05] to park so you can go to any public park
+[00:44:08] but there's a small parking fee and that
+[00:44:10] does affect people's ability to go but
+[00:44:12] if you say to 4th graders you get to go
+[00:44:14] your families get to go you get to
+[00:44:15] experience this you know that person's
+[00:44:18] relationship with that public space will
+[00:44:20] change over
+[00:44:25] time yeah
+[00:44:28] um hi my name is Mariel I'm an activist
+[00:44:30] based in Mexico and I think that I mean
+[00:44:33] I don't know if it's my
+[00:44:34] oversimplification of this but I think
+[00:44:36] that what we're trying to do is to get
+[00:44:38] people to see that there's a tangible
+[00:44:42] value in being members and that the
+[00:44:44] challenge is how to make it tangible for
+[00:44:46] certain audiences and the one thing that
+[00:44:48] got me to donate as a person under 30 in
+[00:44:52] Mexico to a medium was H being able to
+[00:44:56] decide what stories got funded so the
+[00:45:00] outlet in Mexico started doing
+[00:45:03] a scholarships for investigative
+[00:45:07] journalists H they'll fund stories for a
+[00:45:10] month h i mean that's not how they use
+[00:45:12] all their funding but they said some of
+[00:45:14] the funding that we get from people will
+[00:45:16] go to pay for certain stories and
+[00:45:19] because of the context right now H they
+[00:45:22] picked stories that would be banned by
+[00:45:24] the government so like pedophilia sh in
+[00:45:27] stories or um disappearance stories like
+[00:45:31] stories that would get journalists in
+[00:45:33] trouble with their government ads if
+[00:45:36] they were pursuing them and so being
+[00:45:38] able to have a say in what stories would
+[00:45:41] get funded and they had like this
+[00:45:42] transparent voting system where um I
+[00:45:45] don't know how many submissions they had
+[00:45:47] but then they picked like the top 10 and
+[00:45:49] then they said how many votes each story
+[00:45:52] got I feel like it maybe doesn't solve
+[00:45:56] the problem of how to get more members
+[00:45:59] like Vol volume donations but how to get
+[00:46:02] those members to donate more those who
+[00:46:05] are your members already like Bing on
+[00:46:08] the depth of the donation and so I think
+[00:46:10] that I mean that's personally what had
+[00:46:12] me donate a large sum of money to to
+[00:46:16] this
+[00:46:17] organization even without money like
+[00:46:19] running running something like the
+[00:46:21] Curious city project allows people to
+[00:46:22] have a say in something that is covered
+[00:46:24] on the air that might be um meaningful
+[00:46:27] to a large group of people that a
+[00:46:28] reporter in the station wouldn't have
+[00:46:30] thought about um extending this to what
+[00:46:32] it would look like for an investigative
+[00:46:33] journalist would be really
+[00:46:40] interesting do you have a mic so my name
+[00:46:43] is Liz and I am also a Berkman intern um
+[00:46:47] my question is kind of
+[00:46:50] um it's so with the old model when
+[00:46:54] people you know pledged money to a radio
+[00:46:57] station they become a member of that
+[00:46:59] station and with a lot of these newer
+[00:47:02] projects we're talking about it's like
+[00:47:03] this one project your crowdfunding for
+[00:47:06] one project or um I was thinking of
+[00:47:09] um some like science I think Radio Lab
+[00:47:12] did this once and um oh or like the else
+[00:47:16] citizen science thing with like the poy
+[00:47:19] the like the Planet Money makes a
+[00:47:21] t-shirt like it was one project thing
+[00:47:23] exactly it's one project so when you
+[00:47:25] have something like that and people are
+[00:47:27] becoming members because you know
+[00:47:28] they're giving their time they're giving
+[00:47:30] putting effort into one project how do
+[00:47:32] you say okay now you're a member of um
+[00:47:35] WNYC now you're a member you're also a
+[00:47:37] member of the station I mean do you have
+[00:47:39] any is there any disconnect there with
+[00:47:41] that that you've come I would say that
+[00:47:43] when I when I worked with a lot of
+[00:47:44] reporters at NPR I would say if if you
+[00:47:46] think your storytelling stops when the
+[00:47:48] story is published
+[00:47:50] like the story doesn't stop at the at
+[00:47:53] the publication point and you move on to
+[00:47:55] the next story it then becomes how do
+[00:47:57] you say what happened so that people
+[00:47:59] realize the value of your reporting and
+[00:48:01] then that becomes the the story of the
+[00:48:03] station so let's say I'll give you an
+[00:48:06] example Howard burkus is a reporter in
+[00:48:07] NPR he does a lot of work in in mining
+[00:48:10] which I have to tell you is is not
+[00:48:12] something that's reported by a lot of
+[00:48:13] Publications because mining stories on
+[00:48:15] the NPR website do not get a lot of
+[00:48:16] traffic uh but Howard has changed laws
+[00:48:19] in West Virginia and like that's a story
+[00:48:21] that NPR should be telling how Howard's
+[00:48:23] reporting helped change laws in West
+[00:48:25] Virginia that's showing impact that not
+[00:48:27] page views that's not showing you know
+[00:48:29] but that had meaningful change in the
+[00:48:31] state of West Virginia based on Howard's
+[00:48:32] reporting I almost think like you need a
+[00:48:35] unit internally to tell the story of the
+[00:48:37] stories that are being told that sounds
+[00:48:39] very meta but if if you're doing this
+[00:48:41] kind of public impact reporting how do
+[00:48:43] you tell the story of that to say based
+[00:48:45] on your donation we were able to do this
+[00:48:47] we were able to tell these stories these
+[00:48:48] people were able to achieve this and now
+[00:48:50] we'd like to do this
+[00:48:56] and I'm happy to stay afterwards to talk
+[00:48:58] oneon-one um I have nothing else planned
+[00:49:00] for
+[00:49:01] today so is there one last question
+[00:49:04] before we wrap
+[00:49:07] up otherwise thank you to Melody thank
+[00:49:10] you
