@@ -1,0 +1,2303 @@
+[00:00:01] well good evening whoa is that too loud
+[00:00:04] no who knew there there are official
+[00:00:07] people here in charge of volume
+[00:00:10] um there he is there's the volume and
+[00:00:11] there's another person in charge of
+[00:00:12] quality so we have both things covered
+[00:00:15] okay then my name is Jonathan zitrin and
+[00:00:18] uh I am so pleased to be in conversation
+[00:00:21] tonight with Bruce schneier
+[00:00:24] Bruce is
+[00:00:26] a kind of a really good person to
+[00:00:28] introduce in the sense that he's
+[00:00:30] extremely well known
+[00:00:32] but not for trite reasons it's actually
+[00:00:36] hard to put a bumper sticker on Bruce
+[00:00:39] and not simply because he's security
+[00:00:41] conscious I think the closest thing
+[00:00:44] would be uh he's extremely well known
+[00:00:47] for his attitudes and uh Common Sense
+[00:00:52] around TSA and I believe you actually
+[00:00:55] coined the phrase security theater is
+[00:00:58] mine and that's a great phrase and you
+[00:01:01] can't help but enjoy every episode of
+[00:01:04] security theater as you encounter it now
+[00:01:06] on uh the way
+[00:01:08] and uh it's also been really interesting
+[00:01:12] to see Bruce's Evolution from somebody
+[00:01:15] writing a canonical text in applied
+[00:01:17] cryptography kind of has the technical
+[00:01:19] chops then really thinking more
+[00:01:21] systemically including human factors
+[00:01:23] about security and again in his
+[00:01:27] explanations being Lucid but not
+[00:01:29] reducing in ways that immediately make
+[00:01:32] good guys and bad guys and sort of
+[00:01:34] simplistic uh slogans and yet still
+[00:01:37] again popular enough that I believe you
+[00:01:39] are an internet meme are you not oddly
+[00:01:41] enough yes there is an internet meme
+[00:01:42] about you look up Bruce Schneider facts
+[00:01:44] I have nothing to do with them uh
+[00:01:46] exactly well just not now well it's too
+[00:01:50] late don't you guys put these rooms in
+[00:01:53] Faraday cages I don't that would be an
+[00:01:55] MIT thing to do okay and yet not because
+[00:01:57] then they would hack the Faraday cage
+[00:01:59] but um we just rely on law to keep
+[00:02:02] people honest and it doesn't work
+[00:02:06] um so that's a deeper problem than the
+[00:02:08] ones we're going probably to talk about
+[00:02:09] uh tonight the last time Bruce and I
+[00:02:12] shared a stage I believe it was 2010 and
+[00:02:16] it was for the Intelligence Squared
+[00:02:18] debate resolved the Cyber War threat has
+[00:02:23] been greatly exaggerated grossly
+[00:02:25] exaggerated grossly exaggerated I mean
+[00:02:27] it was kind of interesting it was it was
+[00:02:29] myself and Mark ruttenberg on one side
+[00:02:32] we were the sides of yes it's grossly
+[00:02:33] exaggerated on the other side was Mike
+[00:02:35] McConnell used to run the NSA now a big
+[00:02:38] executive who's Allen Hamilton One of
+[00:02:40] the people who grossly exaggerates cyber
+[00:02:42] War for a living and you seems only
+[00:02:45] fitting to be on that side of the debate
+[00:02:46] and I actually thought it pretty easy I
+[00:02:48] would present a list of gross
+[00:02:50] exaggerations we'd all vote and then
+[00:02:52] we'd go home
+[00:02:53] uh it was more complicated and I
+[00:02:56] actually lost that debate it really
+[00:02:58] surprised me
+[00:03:00] but at the end of the hour and a half or
+[00:03:02] something more and the vote was they
+[00:03:05] pulled the audience in the beginning and
+[00:03:06] pulled the audience to the end so you
+[00:03:08] could think about how to game the system
+[00:03:09] let's assume people didn't uh but more
+[00:03:12] more people are convinced that cyber was
+[00:03:14] a real threat then was grossly
+[00:03:17] exaggerated
+[00:03:18] and it really was thinking about that
+[00:03:21] loss that really got me to understand
+[00:03:25] the Cyber war debate you know why we
+[00:03:29] lost and a lot of it was definitional we
+[00:03:32] spent most of the time
+[00:03:34] arguing on the definition of cyber War
+[00:03:38] and I think that is in a lot of ways the
+[00:03:42] policy problem today
+[00:03:44] that we don't know when cyber war starts
+[00:03:47] when it ends what it looks like when
+[00:03:49] it's going on and it's not just you know
+[00:03:52] The Debaters or or
+[00:03:55] or researchers it's you know it's policy
+[00:03:58] people
+[00:03:59] don't ha don't have a good definitions
+[00:04:02] so it's real hard to discuss whether the
+[00:04:04] threat is exaggerated unless you know
+[00:04:06] what the is is
+[00:04:11] and I'm going to go on a little bit this
+[00:04:12] is it used to be in the real world you
+[00:04:17] would judge
+[00:04:18] you would judge the threat by the
+[00:04:20] Weaponry right when you saw a tank
+[00:04:22] driving at you you knew it was war
+[00:04:25] because only governments could afford
+[00:04:27] tanks
+[00:04:29] problem in cyberspace is everyone's
+[00:04:32] using the same weaponry
+[00:04:35] right everyone's using DDOS attacks
+[00:04:37] everyone's using exploits everyone's
+[00:04:38] using exfiltration they're all doing the
+[00:04:40] same thing you can't look at the weapon
+[00:04:42] or you can't look at the tactics and
+[00:04:44] figure out who you're fighting
+[00:04:48] and this is a problem right because when
+[00:04:50] when you're being attacked in cyber
+[00:04:52] spray you're doing attacked in general a
+[00:04:54] lot of people you can call right you can
+[00:04:55] call the police
+[00:04:56] you can call them military you can call
+[00:04:58] Homeland Security you can call your
+[00:05:00] lawyers I guess we're here
+[00:05:02] right and and the regime in which your
+[00:05:05] defense operates depends on exactly two
+[00:05:08] things who's attacking you and why
+[00:05:11] and when you're intact in cyberspace the
+[00:05:13] exact two things you don't know are
+[00:05:16] who's attacking you and why
+[00:05:19] so you were seeing the military use a
+[00:05:22] very expansive definition
+[00:05:25] because they want to you know capture
+[00:05:27] the whole you know the whole gamut of
+[00:05:30] the attacks where I argue very strongly
+[00:05:33] for a much narrower definition
+[00:05:36] and that's that is why I lost that
+[00:05:39] debate you've never heard that
+[00:05:41] um well I think it's because you debated
+[00:05:42] better than I do no in fact you didn't I
+[00:05:45] was haha
+[00:05:46] I was going to say you lost because we
+[00:05:48] hacked the vote thereby proving our side
+[00:05:52] um and uh well more of McConnell's
+[00:05:55] friends were in the audience yes and
+[00:05:57] right and if of course if they voted no
+[00:05:58] to start they but I assume they played
+[00:06:01] Fair
+[00:06:02] uh indeed well this isn't a debate in
+[00:06:06] the sense that we often I think share
+[00:06:08] more views than we disagree upon and
+[00:06:11] it's also not a debate in the sense that
+[00:06:13] I think we're wanting to structure this
+[00:06:15] conversation and the one that we'll put
+[00:06:17] out to the entire room uh before too
+[00:06:19] long as thinking aloud more than
+[00:06:22] advancing some particular View and
+[00:06:25] asking people to hammer upon it this
+[00:06:27] really is especially given the
+[00:06:28] collective Brain Trust I already see in
+[00:06:31] this room this is like a group study
+[00:06:34] exercise more than it is a delivery of
+[00:06:37] an academic paper or a thesis that we're
+[00:06:39] then supposed to uh beat up upon
+[00:06:43] um by way of framing though I think it
+[00:06:45] is interesting first just from the
+[00:06:47] remarks as you were getting into
+[00:06:48] substance to already hear you using
+[00:06:50] words like weapon which already seems to
+[00:06:53] me to be conceding a big part of the
+[00:06:55] frame of the debate something that you
+[00:06:57] see the likes of anonymous I think
+[00:06:59] ironically
+[00:07:00] deploying when they talk about the low
+[00:07:02] orbit ion cannon which is I think life
+[00:07:06] imitating art imitating art imitating
+[00:07:09] life because the low orbit ion cannon is
+[00:07:11] itself not a real Canon
+[00:07:13] um but uh
+[00:07:15] I I think also it I hope we'll get a
+[00:07:18] chance to talk about what I perceive at
+[00:07:20] least as a trajectory in your own
+[00:07:22] thinking
+[00:07:23] from the Beyond fear phase which
+[00:07:27] captured a lot of your thinking about
+[00:07:28] look it's complicated that it's not like
+[00:07:30] there aren't real threats but we're
+[00:07:32] often focused on exactly the wrong stuff
+[00:07:34] to our detriment hence let's get Beyond
+[00:07:36] fear so what I think is shaping up to be
+[00:07:40] maybe your next book which you haven't
+[00:07:43] named it yet but as best I can tell the
+[00:07:44] title might be be afraid be very afraid
+[00:07:47] and it's about asymmetric threats very
+[00:07:51] generally from technology not even
+[00:07:53] limited to cyber and again I'm
+[00:07:55] characterizing this because he'll feel
+[00:07:57] free to correct my characterization in a
+[00:07:59] moment but I know you have a lot of
+[00:08:01] worries about the asymmetries between
+[00:08:04] offense and defense and the prospect
+[00:08:06] that as time goes on
+[00:08:09] are normal ways of handling things and
+[00:08:11] including normal is how reasonable
+[00:08:13] technically oriented people would handle
+[00:08:15] them may fall short and thereby leave us
+[00:08:19] with a real dilemma about how to secure
+[00:08:22] ourselves that's at least I think where
+[00:08:24] you're at on the current puzzle so we
+[00:08:26] can start there and work back or start
+[00:08:27] at the beginning and work forward that's
+[00:08:29] a piece of it and it is a small piece
+[00:08:30] but it's something I've been wondering
+[00:08:32] about for a while and I wrote it down
+[00:08:34] and uh you know some of the comments I
+[00:08:36] got was wow you must had a really bad
+[00:08:38] day
+[00:08:39] meant very generally
+[00:08:43] very generally we accept a certain
+[00:08:46] amount of of bad action in society right
+[00:08:49] the right the price of freedom is the
+[00:08:50] possibility of crime we recognize that
+[00:08:52] that in order to be a free Society we
+[00:08:56] deliberately limit what the police can
+[00:08:58] do we do a bunch of things to make crime
+[00:09:01] possible and there's a crime rate that
+[00:09:02] we accept right the murder rate is not
+[00:09:05] zero and we wouldn't want it to be zero
+[00:09:07] there's a whole lot of reasons why that
+[00:09:09] would be bad and we have some now we
+[00:09:11] might want it to be zero but we realize
+[00:09:13] that what it would take to make it so
+[00:09:15] would we would what's not the society we
+[00:09:17] wanted we wanted the ill effects right
+[00:09:18] yeah we'd be too many false or false
+[00:09:21] arrests I mean a whole lot of reasons
+[00:09:22] why you wouldn't want that so yeah
+[00:09:25] and if you think about this the amount
+[00:09:28] of damage a bad actor can do is vaguely
+[00:09:32] a function of Technology
+[00:09:34] I mean that uh terrorists can kill
+[00:09:37] ex-people as a function of Technology
+[00:09:39] one ten a hundred a thousand as their
+[00:09:42] Weaponry gets better uh a bank robber
+[00:09:44] can steal more money or steal more
+[00:09:46] accounts as the amount of damage an
+[00:09:49] individual bad actor can do increases
+[00:09:52] the fewer Bad actors we're willing to
+[00:09:55] tolerate right if assuming that effect
+[00:09:58] is constant I mean we want a murder rate
+[00:10:00] of x if a murderer is murder 10 times
+[00:10:02] many people as before then we read one
+[00:10:04] tenth of them to keep that number I mean
+[00:10:06] this is very hand wavy and vague
+[00:10:09] which is this Justin Bruce will never be
+[00:10:11] running for elective office ever oh God
+[00:10:14] no in fact appointed office is now
+[00:10:17] seriously in question
+[00:10:19] a whole lot of reasons for that
+[00:10:22] so as we legalized soon
+[00:10:24] as the amount
+[00:10:28] as the amount of damage increases
+[00:10:33] the number of Bad actors we're willing
+[00:10:35] to tolerate decreases
+[00:10:36] and in theory you can imagine it gets to
+[00:10:39] the point where even one is bad even one
+[00:10:42] is too much this is the weapons of mass
+[00:10:44] destruction debate
+[00:10:46] right the terrorists can do so much
+[00:10:48] freaking damage that we must rewrite
+[00:10:52] ever all of our laws to make sure we
+[00:10:55] catch them before they do their bad
+[00:10:57] thing right no more after the fact
+[00:10:59] detection response that works for murder
+[00:11:01] and a lot of other crimes I mean this
+[00:11:03] must be predictive policing this must be
+[00:11:06] arresting people on conspiracy I mean
+[00:11:08] all of those reasons why you have these
+[00:11:10] very invasive
+[00:11:12] uh investigative tools which is to say
+[00:11:14] what used to be a spectrum on a dial of
+[00:11:16] enforcement to try to scale to the
+[00:11:18] nature of the problem becomes a binary
+[00:11:20] choice between doom from terrorist or
+[00:11:23] Doom from police state
+[00:11:28] yeah just on the bumper no that's good
+[00:11:31] and eventually I'll do I'll do a bumper
+[00:11:32] sticker because I like them too
+[00:11:34] eventually you get to the point where
+[00:11:37] technology becomes so great and I'm
+[00:11:39] wondering this is not now a general rule
+[00:11:40] of civilization we could apply around
+[00:11:42] apply around the Galaxy if there becomes
+[00:11:44] a point in any species technological
+[00:11:47] advancement where the amount of damage
+[00:11:50] one lone actor can do is so devastating
+[00:11:54] that it destroys Society
+[00:11:57] right if that's the case
+[00:11:59] and I'm postulating that destroying is
+[00:12:01] easier than preventing destruction
+[00:12:04] there will be a window in technological
+[00:12:06] advancement where one lone actor or
+[00:12:10] Google and actors can destroy Society
+[00:12:13] so now what is the chance that Society
+[00:12:15] can get beyond that
+[00:12:19] I'm not sure I'm optimistic about the
+[00:12:22] chances
+[00:12:24] right yeah it's you know we we tend to
+[00:12:28] run a pretty wide-tailed bell curve
+[00:12:30] around our species
+[00:12:34] so that's in general the worry
+[00:12:37] now what does that mean
+[00:12:40] I'm not sure
+[00:12:41] is it true I mean a lot of things I
+[00:12:43] wrote this to see if people can refute
+[00:12:46] that well
+[00:12:49] right maybe an argument in the last book
+[00:12:52] I spent a whole chapter arguing on the
+[00:12:54] on this notion that uh
+[00:12:57] the attackers have an inherited
+[00:12:59] Advantage because they're they're a
+[00:13:01] first mover
+[00:13:02] they're a first move and they can react
+[00:13:04] quicker oh what's an example uh someone
+[00:13:06] invents the motor car and the police say
+[00:13:09] what a great idea and they have a a
+[00:13:11] committee to study the use of a car they
+[00:13:13] produce an RFP they get bids they buy a
+[00:13:15] car they have a training program they
+[00:13:16] figure out how to use it meanwhile the
+[00:13:18] bank robber says oh look new getaway
+[00:13:19] vehicle
+[00:13:21] right the and we saw this on the
+[00:13:22] internet right you know as soon as the
+[00:13:24] internet appears you suddenly have this
+[00:13:25] new breed of cyber criminal who like
+[00:13:27] emerges organically and figures out how
+[00:13:30] to commit crime in the internet
+[00:13:31] meanwhile the police who have been
+[00:13:33] trained on Agatha Christie novels it
+[00:13:36] took them what 10 years to figure out
+[00:13:39] how to defend
+[00:13:42] and I'll argue in general there will be
+[00:13:45] this temporal Gap
+[00:13:47] as Society increases I mean as
+[00:13:49] technology increases where the the Bad
+[00:13:52] actors the loan actors The Fringe actors
+[00:13:55] are more agile it is interesting though
+[00:13:57] your story is basically
+[00:13:59] good cops and bad robbers are on a
+[00:14:03] similar Baseline and then the robbers
+[00:14:05] adopt enabling technology sooner it may
+[00:14:08] also be a little bit
+[00:14:10] the good cops or just cops right very
+[00:14:14] well resourced use that to have an
+[00:14:17] advantage that they might not have in
+[00:14:18] sheer numbers but use the technology to
+[00:14:21] leverage it I can listen in on a
+[00:14:23] conversation that you can't and then the
+[00:14:25] technology has a democratizing effect
+[00:14:27] that levels the playing field but makes
+[00:14:30] it so that the cops no longer have the
+[00:14:32] multiplier they were I guess either way
+[00:14:34] yeah I don't know I mean I have in other
+[00:14:37] thoughts where we're seeing power use
+[00:14:40] Technologies to effects that we didn't
+[00:14:42] imagine before
+[00:14:44] and there are exceptions to this uh
+[00:14:45] fingerprint Technologies is an easy
+[00:14:47] exception right this is a technology
+[00:14:49] that benefited the police and didn't
+[00:14:50] benefit criminals at all
+[00:14:52] or really the the thing that advanced
+[00:14:55] policing most probably in the last
+[00:14:58] thousand years is the invention of the
+[00:15:00] radio
+[00:15:01] that it true that fundamentally changed
+[00:15:04] the way police work works
+[00:15:05] because no longer was a policeman a lone
+[00:15:07] actor in the community he was able to
+[00:15:10] radio for backup and that just changed
+[00:15:12] everything
+[00:15:14] uh right you can argue that and I think
+[00:15:17] this is also true while the the
+[00:15:21] The Fringe actors are more nimble
+[00:15:24] the uh the state actors the powerful
+[00:15:27] actors have have a greater multiplier
+[00:15:30] right can make use of Technology not
+[00:15:32] faster but once they figure it out
+[00:15:35] to Greater effect
+[00:15:38] right so and we're seeing that now in
+[00:15:39] the government of of Syria using
+[00:15:42] Facebook to to spy on people or you know
+[00:15:45] using internet internet Technologies for
+[00:15:47] surveillance whereas five years ago the
+[00:15:50] only people using them effectively were
+[00:15:51] the dissidents and now it's not clear
+[00:15:55] where the new balance is well so I want
+[00:15:59] to just uh bookmark a little bit as we
+[00:16:01] go because we can put a few ideas on the
+[00:16:03] table and then have a larger
+[00:16:05] conversation so one idea on the table is
+[00:16:06] what I kind of called be very afraid
+[00:16:09] another way of describing it is
+[00:16:12] asymmetry between offense and defense
+[00:16:14] I'm an inherent optimist so it's weird
+[00:16:16] to sort of have this dystopian essay
+[00:16:19] under my belt well especially because
+[00:16:21] it's not just dystopian
+[00:16:24] it runs in a very different flow from a
+[00:16:28] lot of your other works such as your
+[00:16:29] work on digital feudalism there's a
+[00:16:32] loaded term for you
+[00:16:33] in which you worry a lot about
+[00:16:35] centralization of certain technological
+[00:16:38] functionalities uh either with private
+[00:16:41] actors the Googles and apples or whoever
+[00:16:43] of the world or public authorities the
+[00:16:46] series of the world and that's the kind
+[00:16:49] of thing for which it's exactly those
+[00:16:51] folks that would want to do that and
+[00:16:54] encourage that centralization that would
+[00:16:55] benefit from Fanning the fears of the
+[00:16:57] first topic you know if you want to be
+[00:17:00] protected from these asymmetries come
+[00:17:02] shelter your website under Amazon web
+[00:17:04] services come do your email through
+[00:17:07] Gmail and let us filter your spam and
+[00:17:09] wow where and by the way I think Bruce
+[00:17:12] and I may be the only people in the room
+[00:17:13] still using Eudora
+[00:17:16] any other Eudora users
+[00:17:20] I wasn't a my email client is older than
+[00:17:22] yours challenge I knew there'd be Pine
+[00:17:25] users I was just that one moment in
+[00:17:27] history that we both tend to
+[00:17:29] it's it's gonna be sad when we have to
+[00:17:32] give up you Dory because nothing else is
+[00:17:33] like it I keep clicking on as many
+[00:17:35] banner ads as possible just to keep it
+[00:17:36] afloat but uh
+[00:17:39] anyway it so that like a second cluster
+[00:17:41] of thinking that you have
+[00:17:43] uh recently is around this sort of
+[00:17:45] digital fuse and I want to just give you
+[00:17:47] a little space to kind of map that out
+[00:17:48] and say welcome to the club of people
+[00:17:50] worrying about this actually to me this
+[00:17:51] this does Echo the stuff that was that
+[00:17:53] was in your book which I actually had to
+[00:17:55] re-look at after forgetting it and
+[00:17:57] re-remembering it that's a that's a
+[00:17:59] blurb worth putting on the back the
+[00:18:01] book's so nice I read it twice after I
+[00:18:03] forgot it the first time
+[00:18:07] actually not that bad
+[00:18:10] the book or the blurb the blurb okay
+[00:18:13] good
+[00:18:14] I've been thinking a lot about about
+[00:18:16] power I mean power and power asymmetry
+[00:18:19] and I see increasingly we're living in a
+[00:18:22] Computing world that I liken to
+[00:18:24] feudalism but the idea being if you
+[00:18:27] Pledge Your Allegiance to uh apple and
+[00:18:31] give them your email and your calendar
+[00:18:33] and your address book and your
+[00:18:35] photographs
+[00:18:36] your life is easy
+[00:18:39] right and they in turn I guess they
+[00:18:42] promise to protect you right you can
+[00:18:45] Pledge Your Allegiance to Google
+[00:18:47] ins a lot of us pledge some of our
+[00:18:49] allegiance to Facebook to Amazon I mean
+[00:18:51] all these companies that are
+[00:18:54] increasingly uh controlling our data
+[00:18:57] right as we move them onto these
+[00:18:59] platforms
+[00:19:00] and controlling our end user devices
+[00:19:04] right the the era of general purpose
+[00:19:07] Computing seems to be fading
+[00:19:09] right Apple controls whatever what is
+[00:19:12] allowed to be on your iPhone and iPad
+[00:19:15] right I mean Amazon controls what could
+[00:19:17] be in your Kindle and we end last year
+[00:19:19] they they forcibly removed the book it
+[00:19:21] was happened to be 1984 which was you
+[00:19:23] couldn't write that stuff
+[00:19:25] you couldn't write that stuff
+[00:19:31] and I mean I like the feudal metaphor
+[00:19:33] because in a lot of ways we are Pawns
+[00:19:37] so for example I I found this out
+[00:19:40] recently that while I can that that
+[00:19:42] Google and apple are two feudal Lords
+[00:19:45] fighting and one of the effects is that
+[00:19:47] I can run Google Maps on my iPhone but
+[00:19:50] not my iPad
+[00:19:53] right uh Google and Facebook are
+[00:19:57] fighting and one of the effects is that
+[00:19:59] Google Reader is disappearing
+[00:20:01] right I mean these things are happening
+[00:20:04] uh these companies are
+[00:20:07] they're protecting us but they're also
+[00:20:09] selling us they're using us
+[00:20:12] and it is very much and I I mean feudal
+[00:20:16] is kind of half history and half Game of
+[00:20:18] Thrones here
+[00:20:19] you know I really mean it as a metaphor
+[00:20:21] not an exact uh and we are members of No
+[00:20:25] house here right here we are the
+[00:20:27] peasantry right we are we are we are we
+[00:20:30] are collateral damage
+[00:20:32] I mean dropping Google Reader is
+[00:20:34] collateral damage the fact that I can't
+[00:20:36] get
+[00:20:37] the maps on my iPad is collateral damage
+[00:20:40] and
+[00:20:41] if if you read about historical
+[00:20:43] feudalism
+[00:20:45] it ended with the rise of the
+[00:20:47] nation-state
+[00:20:48] with things like the Magna Carta and
+[00:20:51] what basically happened is a larger
+[00:20:53] government said to the feudal Lords look
+[00:20:55] you have all of these rights you now
+[00:20:59] have to have responsibilities
+[00:21:01] meant that that having just one is you
+[00:21:04] know is fun for you guys but no fun for
+[00:21:06] everybody else
+[00:21:08] and I I'm I want that metaphor to guide
+[00:21:12] what we need to do on the internet so
+[00:21:15] what's the piece of Westphalia here
+[00:21:20] I'm not that detailed
+[00:21:24] what I think we need I was just thinking
+[00:21:27] the next book is Westphalia it's not
+[00:21:28] just for ham yeah you know but nobody
+[00:21:30] would buy that or the people would buy
+[00:21:33] it expecting something very different
+[00:21:36] you know I I think we need to recognize
+[00:21:39] that these corporations are de facto
+[00:21:45] states which now sounds like Mark
+[00:21:47] Zuckerberg on at least one day he woke
+[00:21:49] up and decided that was an interesting
+[00:21:51] thing to say I don't know how much he
+[00:21:53] stands behind me I know but but I want
+[00:21:55] to regulate him so he's not going to
+[00:21:57] like where I'm going yes right and that
+[00:22:00] we need to rein them in that that you
+[00:22:04] know on the internet there's no such
+[00:22:06] thing as as a public space it's more
+[00:22:08] privately owned that but but we treat
+[00:22:10] these spaces as public we we treat these
+[00:22:14] as infrastructure not as
+[00:22:18] as corporations and it's more obscured
+[00:22:20] by the fact that the basic Market model
+[00:22:23] which is I buy something you sell to me
+[00:22:25] and the way we have this
+[00:22:28] this capitalistic change that that
+[00:22:31] really is the base of the system fails
+[00:22:33] because we are not customers of these
+[00:22:36] things we use
+[00:22:37] right we are users we are product
+[00:22:39] whatever you want to call us
+[00:22:40] so a lot of this is obscured
+[00:22:44] so we're laying down markers here as
+[00:22:46] we're laying down this marker that's
+[00:22:48] roughly by your label in the realm of
+[00:22:50] digital feudalism let me just uh
+[00:22:53] mention the kinds of pushback that come
+[00:22:57] to this kind of argument that I'm well
+[00:22:59] familiar with since I argued similar
+[00:23:01] things without the same terminology uh
+[00:23:05] in my work it's the bumper sticker it is
+[00:23:09] um uh and it's also a form of futile-ism
+[00:23:12] so it has a nice double entender going
+[00:23:14] on which you appear to need for almost
+[00:23:15] any book cover don't blame me but uh the
+[00:23:19] pushback includes an out Channel folks
+[00:23:22] like the mercatus center or you know
+[00:23:24] name your favorite libertarian
+[00:23:27] um
+[00:23:28] the first objection to that is give me a
+[00:23:32] break you're a communist all right get
+[00:23:33] past that second is
+[00:23:36] we have more technological affordances
+[00:23:39] today than we had yesterday than we had
+[00:23:42] last year isn't most of your worry front
+[00:23:45] loaded to some future that hasn't at
+[00:23:47] least arrived yet so there is a quality
+[00:23:50] of Chicken Little because
+[00:23:52] I know I can't get Google Maps on my
+[00:23:54] incredible iPad Mini that didn't exist
+[00:23:57] three years ago talk about the glass
+[00:23:59] being one million empty sure but it's a
+[00:24:03] lot it's a lot more than that you know
+[00:24:05] we we know that
+[00:24:08] Google
+[00:24:10] collects this data I mean I'm worried a
+[00:24:13] lot about government corporate
+[00:24:14] interaction
+[00:24:15] we know that Google collects this data
+[00:24:17] and we know that the government asked
+[00:24:19] them for it I read an article I've been
+[00:24:21] talking about I guess crazy Libertarians
+[00:24:22] about uh on the gun control you said
+[00:24:24] crazy
+[00:24:26] I will say it again and I will endeavor
+[00:24:29] to prove it if I have to that that the
+[00:24:31] reason we oppose uh registering gun
+[00:24:34] owners is because there'll be lists of
+[00:24:35] Gunners the government used to use to
+[00:24:37] confiscate guns right that's the
+[00:24:39] argument I'm reading this I'm thinking
+[00:24:40] why does the government need to get a
+[00:24:42] list what if they just ask Google what
+[00:24:44] is asked ax.com
+[00:24:47] and and I think we're seeing more
+[00:24:49] remember when uh how does Google know
+[00:24:51] how many gun owners there are I'm sure
+[00:24:53] I'm sure on Google's data if you ask
+[00:24:55] Google who owns guns I'm sure they give
+[00:24:57] you a decent list really based on Search
+[00:25:00] terms based on on topics discussed based
+[00:25:03] on purchasing history I mean it depends
+[00:25:05] who you ask the the question is and if
+[00:25:07] not now when will it happen I bet it's
+[00:25:08] soon when will
+[00:25:11] the corporate sphere just in the data
+[00:25:13] they're collecting about our actions
+[00:25:14] have that list
+[00:25:16] right we know that the TSA when they
+[00:25:19] were trying to do uh not secure it was
+[00:25:22] Secure flight was called in like 05 and
+[00:25:24] 06 they wanted to use
+[00:25:27] corporate data
+[00:25:29] to differentially screen passengers I
+[00:25:31] mean they recognized that data that that
+[00:25:34] ex that we are willingly giving these
+[00:25:36] these companies
+[00:25:38] they could use for differential law
+[00:25:41] enforcement in this case
+[00:25:43] and I
+[00:25:44] I wonder if the era of the government
+[00:25:48] needs to know data from us is ending I
+[00:25:51] can imagine the IRS saying you know it's
+[00:25:54] hard to figure out how to who to audit
+[00:25:56] we're going to go to a credit bureau
+[00:25:57] we're gonna we're gonna ask them to run
+[00:26:00] a differential base what they think your
+[00:26:01] income is what you said your income is
+[00:26:03] and we're going to audit people who uh
+[00:26:05] who mismatch this is a good idea or a
+[00:26:07] bad idea
+[00:26:07] it might be a it might be an effective
+[00:26:10] idea I don't think it's a good idea I
+[00:26:12] mean I mean so but but it's an idea that
+[00:26:14] we should discuss the possibility of
+[00:26:15] before they go to site to do it without
+[00:26:17] telling us yes
+[00:26:19] okay but now so so getting to sort of
+[00:26:22] the question that
+[00:26:24] I mean things are things are looking
+[00:26:25] really good why are we worried
+[00:26:28] you know we're at a point and a lot of
+[00:26:30] that is the opt-out answer you don't
+[00:26:32] like it don't do it don't carry it but I
+[00:26:34] don't that's not really possible I mean
+[00:26:37] you can't not have a credit card you
+[00:26:39] can't you actually really can't not have
+[00:26:41] a cell phone can you not have an iPad
+[00:26:43] you could not have an iPad but but your
+[00:26:45] your choices are few and if the two
+[00:26:47] choices don't compete on the feature
+[00:26:49] you're pissed about you're stuck I mean
+[00:26:51] you can't fly you know more secure
+[00:26:55] Airways you run a background check on
+[00:26:56] everybody or less secure Airways we you
+[00:26:58] know hand you a knife when you get on
+[00:27:00] board I mean you
+[00:27:01] you you don't have that ability right
+[00:27:04] all cell phone plans are the market has
+[00:27:06] not spoken or or at least the few
+[00:27:10] sellers in the market have decided not
+[00:27:12] to speak on that issue and it might just
+[00:27:15] be some one-time Flyers right I mean
+[00:27:17] there isn't a
+[00:27:19] a a a Facebook that won't collect your
+[00:27:22] data which is an interesting puzzle by
+[00:27:24] the way why I don't maybe we should just
+[00:27:26] do a quick Market test although there's
+[00:27:28] obviously selection bias and who chose
+[00:27:30] to come tonight but uh how many people
+[00:27:32] would be how many people are Facebook
+[00:27:34] users
+[00:27:36] all right let the record show a lot how
+[00:27:38] many people
+[00:27:39] um are a little queasy about Facebook
+[00:27:41] the record shows more
+[00:27:44] um and how many people would be okay
+[00:27:47] with paying five dollars a month and in
+[00:27:53] exchange Facebook will do zip
+[00:27:55] with any data it collects it expunges it
+[00:27:58] as it has it and offers you six bucks
+[00:28:00] we're gonna run an auction now just five
+[00:28:03] bucks is a is it how many people pay
+[00:28:05] five now why is that all right first of
+[00:28:07] all very I'd say uh maybe 20 percent of
+[00:28:10] the hands went out because you asked the
+[00:28:12] question wrong oh the question is how
+[00:28:13] many of you willing to pay five bucks to
+[00:28:15] be in a non-intrusive Facebook when all
+[00:28:18] of your other friends are on Facebook
+[00:28:20] that's the problem it's the network
+[00:28:22] effect
+[00:28:24] if you're not on Facebook you don't get
+[00:28:26] invited to parties you don't get dates
+[00:28:28] you don't get laid but these folks are
+[00:28:29] on Facebook and they're not wanting to
+[00:28:32] pay the five bucks whether they're on it
+[00:28:33] because they feel they have to be on it
+[00:28:34] or they're on it because they like it
+[00:28:35] either way they're not willing to pay
+[00:28:37] the five bucks for the most part sure
+[00:28:38] and some are some aren't I mean the
+[00:28:40] problem and then probably have with a
+[00:28:42] lot of these systems is is they accrete
+[00:28:45] you know we're on Facebook I happen not
+[00:28:47] to me but I'm the Eudora using freak
+[00:28:49] wait who am I friends with then you know
+[00:28:52] I do I honestly I I get could have
+[00:28:54] turned out to be Chuck Norris I get
+[00:28:56] email I get I get email from people
+[00:28:58] thanking me for friending them on
+[00:28:59] Twitter I'm not on Twitter so I don't
+[00:29:01] know who you're friends with
+[00:29:02] this does seem poor security doesn't it
+[00:29:05] spoofing it's only so much I can do but
+[00:29:09] now
+[00:29:09] um this leads to the other I think main
+[00:29:12] objection although we may hear more
+[00:29:13] shortly uh on this riff of Mark doesn't
+[00:29:18] like what I have to say because I say I
+[00:29:20] want to regulate them a big part of your
+[00:29:23] objection to these loci of
+[00:29:26] concentrations of data is that it's very
+[00:29:28] easy for the government to get it and
+[00:29:30] yet here you are saying let's have the
+[00:29:32] government come in and regulate these
+[00:29:33] guys
+[00:29:34] when's the last time the government came
+[00:29:36] in in this space and did something you
+[00:29:38] thought improved the situation in this
+[00:29:40] space but I mean so I you have to take a
+[00:29:43] long-term View right I mean this is the
+[00:29:46] only quote we shouldn't tell the
+[00:29:48] Senators it's a bill about the internet
+[00:29:49] until the very end
+[00:29:51] longer term longer term the the quote
+[00:29:54] that lets me survive in this world is
+[00:29:57] Martin Luther King the Ark of history is
+[00:29:59] long but bends towards Justice
+[00:30:01] might mean 100 years ago half of us in
+[00:30:03] this room couldn't vote
+[00:30:05] right 200 years ago a bunch of us were
+[00:30:06] slaves I mean in the long term
+[00:30:09] assuming my my dystopian Vision doesn't
+[00:30:11] happen
+[00:30:12] governments will do the right thing how
+[00:30:16] long do we have to wait to do the
+[00:30:18] Facebook regulation you want you might
+[00:30:19] have to wait 20 years you might have to
+[00:30:21] wait a generation yep so we have any
+[00:30:24] regulated Friendster yet but it's like
+[00:30:25] let's keep on let's see how this thing
+[00:30:28] shakes out law okay short term I'm
+[00:30:30] actually very pessimistic I mean I I
+[00:30:31] don't think it's I don't think
+[00:30:32] government can pass a good law at this
+[00:30:36] point so you're called to testify Mr
+[00:30:39] schneier should we get into the business
+[00:30:41] of protecting the defenseless American
+[00:30:44] public from these economic engines
+[00:30:47] called Facebook and Google and
+[00:30:48] everything should we get into this or
+[00:30:50] should we just keep on walking for 20
+[00:30:52] years what's your answer you guys you
+[00:30:54] money grubbing senatorial morons you
+[00:30:57] shouldn't do anything he's definitely
+[00:30:59] not confirmable
+[00:31:00] okay
+[00:31:01] right I mean we're living in a world
+[00:31:04] with a very dysfunctional government and
+[00:31:06] this is another one of my threads that
+[00:31:08] that that power is now using
+[00:31:10] itself to increase power
+[00:31:13] so while in the near term I I have
+[00:31:16] actually no hope for I mean I mean I
+[00:31:18] think the update of the computer forward
+[00:31:20] an Abuse Act would be a disaster because
+[00:31:23] I can't imagine them making it better
+[00:31:26] I'd love it to make it better but I
+[00:31:28] can't imagine it happening I'm terrified
+[00:31:29] that they'll get their hands but if
+[00:31:31] that's the case I just want to pin you
+[00:31:32] down for a moment here you do slippery I
+[00:31:35] know it so you have a theoretical answer
+[00:31:37] that says there ought to be some
+[00:31:40] regulatory muscle that could be but not
+[00:31:44] always is flexed that answers to
+[00:31:47] something other than a market that
+[00:31:48] answers to a polity to deal with certain
+[00:31:50] market failures you've identified but in
+[00:31:53] the real world at least for the next 19
+[00:31:55] and a half years
+[00:31:57] or it's gonna kick in the wrong
+[00:32:00] direction in which case what should we
+[00:32:01] do right now
+[00:32:04] I don't know I mean and and I I
+[00:32:08] don't know if there's an answer I mean a
+[00:32:10] lot of ways oh well you're screwed
+[00:32:13] I mean what what do we do
+[00:32:16] what do we do in the face of of a
+[00:32:18] government I mean the U.S government
+[00:32:19] that that doesn't even follow its own
+[00:32:21] law yes with respect to data collection
+[00:32:24] data retention and data use
+[00:32:26] that that carves exceptions into its
+[00:32:28] laws right I mean we've learned recently
+[00:32:30] that the FBI has been for the past over
+[00:32:32] the over the decade uh running fake cell
+[00:32:36] towers
+[00:32:37] for surveillance uh almost certainly
+[00:32:40] against law
+[00:32:42] right I mean NSA is eavesdropping uh
+[00:32:45] we're pretty sure that the uh the DHS
+[00:32:48] has collected the financial records of
+[00:32:50] everybody
+[00:32:51] under a national security letter
+[00:32:53] I mean I mean these things that are
+[00:32:54] happening are are you know since pretty
+[00:32:57] abhorrent
+[00:32:58] and I mean on the other hand I mean what
+[00:33:02] we all we can do is keep up keep
+[00:33:04] fighting uh last week and I've attended
+[00:33:06] to a few people I've talked to I don't
+[00:33:08] know if people read Glenn Greenwald
+[00:33:09] uh he wrote a really nice essay on gay
+[00:33:12] marriage where he said I mean it was all
+[00:33:14] one of those uplifting things I've read
+[00:33:16] in the in years he said you know look at
+[00:33:18] what's gone on we have for years been
+[00:33:22] been fighting an issue that we had no
+[00:33:25] hope of winning
+[00:33:26] and in a space of three months what the
+[00:33:28] hell happened it all turned around
+[00:33:30] whereas it's now it seems that winning
+[00:33:32] is inevitable
+[00:33:34] look don't give up which was his his
+[00:33:37] moral which is more General that his
+[00:33:40] moral was that about that in Guantanamo
+[00:33:41] and all the other things he yeah he
+[00:33:43] argues about
+[00:33:45] I don't know I have to believe that
+[00:33:47] sooner or later yes
+[00:33:50] you know and and we've got people
+[00:33:52] working I mean once Larry lessig solves
+[00:33:54] the money problem I'm in
+[00:33:58] so you know I I'm just counting here I
+[00:34:00] count on him just to be like a month
+[00:34:03] ahead with the solution yes as long as
+[00:34:05] that happens yeah we're good internet
+[00:34:07] question mark question mark question
+[00:34:08] mark lessig profit
+[00:34:12] somebody needs to alert him but this is
+[00:34:15] uh progress now you mentioned Glenn
+[00:34:17] greedwald that's not a bad segue because
+[00:34:20] Glenn was one of the people who had been
+[00:34:24] identified as uh an ally of sorts
+[00:34:29] conspirator allies Wikileaks yes to to
+[00:34:32] something and Anonymous in turn managed
+[00:34:37] to hack
+[00:34:38] HB Gary Federal one of the be afraid be
+[00:34:43] very afraid write us a check profit no
+[00:34:46] question mark there
+[00:34:48] um and Anonymous was able to completely
+[00:34:51] uh own them get all of their internal
+[00:34:55] Corporate email including PowerPoint
+[00:34:57] decks where they made their sales
+[00:34:59] pitches to the likes of Bank of America
+[00:35:00] and where they proposed a dirty tricks
+[00:35:05] campaign against Glenn Greenwald and
+[00:35:07] other but yes and others and I'm just
+[00:35:09] curious
+[00:35:11] I'm curious I know that you you have
+[00:35:14] thoughts about leaks and their value in
+[00:35:16] a society but I'm curious to really
+[00:35:18] think about the function of something
+[00:35:20] like Anonymous uh
+[00:35:23] feels like a powerful entity
+[00:35:27] that has the future of not being
+[00:35:29] harnessed to write the traditional
+[00:35:31] forces that may be not great but it's
+[00:35:34] also not harnessed to anything how do
+[00:35:35] you think about that there's a lot to be
+[00:35:37] said about about non-state actors I mean
+[00:35:39] there's a lot to be said about that that
+[00:35:40] whole whole Escapade it's you know we're
+[00:35:43] living in a world where
+[00:35:45] a bunch of hackers can you know drop a
+[00:35:48] company
+[00:35:49] and and later than a few a few months
+[00:35:53] later
+[00:35:54] and this this made the news less
+[00:35:55] anonymous
+[00:35:57] told NATO not to mess with it
+[00:35:59] we're living in a world where a bunch of
+[00:36:01] guys can threaten NATO
+[00:36:04] I thought you were kind of freaky
+[00:36:05] interesting because they've also I think
+[00:36:07] weighed in against North Korea saying
+[00:36:09] your time has come
+[00:36:11] um but I I thought you were going to
+[00:36:13] bring up that anonymous had a war within
+[00:36:15] itself and there was a moment if you uh
+[00:36:17] if you went to a one of anonymous's main
+[00:36:19] Pages it said there's a guy
+[00:36:23] who used to be us who compromised our
+[00:36:26] server until further notice don't visit
+[00:36:28] our website anymore you might get owned
+[00:36:31] and at that point I was just like the
+[00:36:33] center cannot hold yeah well I don't
+[00:36:35] know who the Falcon and the falconer is
+[00:36:37] anonymous is like a lot of movements
+[00:36:39] that that are that are given you know we
+[00:36:42] we as a species-like organization so we
+[00:36:45] tend to assume the our enemies organized
+[00:36:48] reminds me of the way the Black Panthers
+[00:36:51] were treated in the 60s uh the way Al
+[00:36:53] Qaeda was treated 10 years ago that we
+[00:36:55] assumed it was this organization you
+[00:36:57] know with with roles and hierarchies and
+[00:37:00] an org chart and you drew a salary and
+[00:37:02] got benefits but it in all those cases
+[00:37:05] it tends to be random people who pick up
+[00:37:09] the banner and say I'm Al Qaeda I'm
+[00:37:11] Anonymous I'm this and maybe they're
+[00:37:14] Loosely connected maybe their
+[00:37:15] ideologically connected maybe they're
+[00:37:16] just using the name
+[00:37:18] and it's a lot more diffuse
+[00:37:21] so there you know there really isn't an
+[00:37:24] anonymous there are the people who today
+[00:37:27] have done things and said hey look we're
+[00:37:28] Anonymous and what's but what's your
+[00:37:30] thinking around that phenomenon
+[00:37:33] uh I I think the the rise of non-state
+[00:37:36] actors is really interesting uh that
+[00:37:39] they can do real damage I mean it's this
+[00:37:42] will be called the next cyber War but
+[00:37:44] you know it's not it's a bunch of guys
+[00:37:46] uh
+[00:37:48] another thought that came out of my head
+[00:37:52] right it's it it was a non-state actors
+[00:37:55] it's their power
+[00:37:56] uh not being tied to a population makes
+[00:38:01] them much more random
+[00:38:04] and
+[00:38:07] I I lost very well it'll come back I'll
+[00:38:09] share some of my thinking about it which
+[00:38:12] is
+[00:38:14] um
+[00:38:15] there's a paper
+[00:38:17] that talks about uh an arrangement
+[00:38:20] reached in the American
+[00:38:23] Antebellum North and South between
+[00:38:25] political Elites about a very
+[00:38:28] contentious issue at the time the return
+[00:38:30] of fugitive slaves and the north agreed
+[00:38:33] to return fugitive slaves in order to
+[00:38:35] keep the larger peace right and it
+[00:38:37] turned out that the north couldn't
+[00:38:39] deliver
+[00:38:40] because there wasn't professionalized
+[00:38:43] law enforcement the way there is today
+[00:38:44] and in order to get pretty much anything
+[00:38:46] done in the law enforcement context like
+[00:38:48] return to fugitive slave you had to
+[00:38:51] convene a posse which was to say you had
+[00:38:53] asked the citizenry to come help and
+[00:38:54] this isn't suddenly was going to be
+[00:38:56] shampooing their cat that day like they
+[00:38:58] were not interested in doing that and it
+[00:39:02] was an interesting way of applying a
+[00:39:05] template that perhaps subsists or
+[00:39:07] persists only now in the uh tradition of
+[00:39:10] the jury
+[00:39:11] where before you can just put somebody
+[00:39:13] away you get 12 citizens good and true
+[00:39:15] or however many and have them be the
+[00:39:18] last ones to weigh in on this and that
+[00:39:22] is less and less needed as enforcement
+[00:39:25] becomes more push button
+[00:39:27] we see it with anything ranging from
+[00:39:29] YouTube takedowns to surveillance to Etc
+[00:39:31] you don't need the Posse anymore and I'm
+[00:39:34] wondering is the rise of something like
+[00:39:36] Anonymous and many counterparts a
+[00:39:40] reintroduction of actually having to get
+[00:39:43] a good portion of the polity in line
+[00:39:46] with something for it to actually happen
+[00:39:48] in the world or is it something else you
+[00:39:51] know I think that they are
+[00:39:53] one of the first examples that we've
+[00:39:56] seen of what Civil Disobedience looks
+[00:39:58] like in the internet age
+[00:40:00] you know what what it did what it means
+[00:40:02] to protest what a what a sit-in looks
+[00:40:05] like what a picket line Looks like what
+[00:40:07] what and do you have a view by the way
+[00:40:09] on DDOS is it sit-in and should be
+[00:40:11] treated as such but stalman would say or
+[00:40:13] is it but but rocking information
+[00:40:15] remember I said in the beginning yeah I
+[00:40:18] mean it used to be you can tell by the
+[00:40:20] Weaponry now you can't so DDOS is either
+[00:40:23] it's been used for extortion
+[00:40:25] uh in in happens tends to happen most on
+[00:40:28] Fringe Industries offshore online
+[00:40:31] gambling online gaming online porn there
+[00:40:33] is DDOS extortion
+[00:40:36] it is used for uh for for causing damage
+[00:40:39] it is used as protest
+[00:40:42] it is used because schools out and we're
+[00:40:45] bored
+[00:40:46] it you know so it's used for all of
+[00:40:48] these things actually uh there are cases
+[00:40:51] a few years ago the Victorious secret
+[00:40:54] secret website went down not because of
+[00:40:57] a DDOS attack but because of a lot of
+[00:40:59] people wanted to see the pictures
+[00:41:02] but you couldn't tell the difference not
+[00:41:04] exactly this just in
+[00:41:05] but but you can't tell the difference if
+[00:41:08] you were on the receiving end you can't
+[00:41:10] tell the difference
+[00:41:12] so anonymous
+[00:41:14] largely I believe engaged in legitimate
+[00:41:18] Civil Disobedience and should be treated
+[00:41:20] that way not because of less because of
+[00:41:23] what they did and because of who they
+[00:41:25] are and why they did it
+[00:41:27] so and I mean this is hard in the real
+[00:41:31] world we tend to have
+[00:41:33] not different laws but different
+[00:41:35] expectations around Civil Disobedience
+[00:41:37] so you know that you'll get arrested and
+[00:41:41] you'll you know you'll you may send a
+[00:41:42] few hours in jail and this is all part
+[00:41:44] of of what we do but of course Anonymous
+[00:41:46] if it's true to its name wants the
+[00:41:50] impact of Civil Disobedience without the
+[00:41:52] part of Civil Disobedience where you go
+[00:41:54] to jail but In fairness going to jail
+[00:41:56] for 40 years for something wasn't in the
+[00:41:58] cards at a counter sit-ins right because
+[00:42:00] in in the U.S at least we are and I
+[00:42:03] think we're doing this because of
+[00:42:05] corporate pressure classifying all of
+[00:42:08] this as
+[00:42:09] you know these these horrible crimes
+[00:42:12] against the internet and and we are
+[00:42:15] really exaggerating what these are so
+[00:42:18] you know I would want to remain
+[00:42:19] anonymous too I
+[00:42:22] we really don't have an agreement
+[00:42:27] among all of us of of what a valid
+[00:42:30] protest is now you mean defacing a
+[00:42:32] website right could easily be you know I
+[00:42:35] mean you remember Greenpeace and they
+[00:42:37] they throw a banner on on a uh on a
+[00:42:39] smoke stack I mean that that's the
+[00:42:41] equivalent of defacing a website you you
+[00:42:43] make a public statement that those who
+[00:42:46] are or it's a picket line you make a
+[00:42:47] statements of those who are going to
+[00:42:49] where whatever it is you're protesting
+[00:42:51] have to see it have to interact with it
+[00:42:54] you know but but if you do it on the net
+[00:42:56] you are a cyber criminal and and you get
+[00:42:58] a a really exaggerated sentence I mean
+[00:43:02] Bunches of examples and if your views
+[00:43:04] though I just want to dwell on us for
+[00:43:07] one moment if somebody manages online to
+[00:43:10] disrupt things not just in a expressive
+[00:43:13] kind of way vandalism is almost the
+[00:43:15] easiest case for online protests it's
+[00:43:17] the graffiti kind of right but manages
+[00:43:20] to do so in a way that you know PayPal
+[00:43:22] or Mastercard not just the brochure
+[00:43:24] front page but the actual functionality
+[00:43:26] the apis aren't working for a while and
+[00:43:29] a bunch of Commerce grinds to a halt
+[00:43:31] you're saying in your view the motive of
+[00:43:33] such an attack would be material to you
+[00:43:35] in wanting to figure out how to treat it
+[00:43:38] that feels in in line with with with the
+[00:43:41] way law works I mean we do look at at
+[00:43:45] motive you know accidental homicide
+[00:43:46] versus murder well in this case it's
+[00:43:49] intentional homicide but one was for a
+[00:43:51] cause and the other was for money okay
+[00:43:53] so so so it's less sorry indeed
+[00:44:00] right I mean so I think I think motive
+[00:44:02] actually does matter I mean I think
+[00:44:03] anything matters in all in all crimes
+[00:44:06] I mean I've always
+[00:44:08] I've always wondered why you can be
+[00:44:11] tried for murder over here with these
+[00:44:13] horrible penalties and attempted murder
+[00:44:14] for here with much less fewer penalties
+[00:44:16] based on like something as weird as how
+[00:44:18] good your aim is
+[00:44:22] but does that make any sense to I mean
+[00:44:24] it makes no sense to me it seems like if
+[00:44:26] that's what you wanted to do why should
+[00:44:29] like or maybe how how much the wind was
+[00:44:32] blowing
+[00:44:33] or how lucky you know why should your
+[00:44:36] penalty be based on factors that have
+[00:44:38] nothing to do with intent hmm
+[00:44:41] now I'm not an attorney so it's probably
+[00:44:44] good reads because I mean certainly it's
+[00:44:46] easier to measure the effects than the
+[00:44:49] intent right so I mean my guess is that
+[00:44:51] as we invent law
+[00:44:54] we could do the hard thing but it's way
+[00:44:56] easier to do the easy thing and just
+[00:44:58] hope
+[00:44:59] you on the negative I wonder how much it
+[00:45:01] puzzles you on the positive should we
+[00:45:03] give a Nobel Prize for an effort like
+[00:45:05] flogaston I'm sorry it didn't pan out
+[00:45:07] but there's a lot of work that went into
+[00:45:09] that was pretty genius it just wasn't
+[00:45:10] true
+[00:45:13] but there's there's a there's a
+[00:45:14] difference there because there you
+[00:45:17] actually are awarding a result
+[00:45:20] right you're not awarding you're not
+[00:45:23] passing I mean you could give you can it
+[00:45:25] would be funny if somebody accidentally
+[00:45:27] cured cancer and won the Nobel Prize and
+[00:45:30] the speech was just like it can happen
+[00:45:31] to you too
+[00:45:33] this will be like The Beverly
+[00:45:35] Hillbillies of science yes that's right
+[00:45:38] black DNA gold that would and that would
+[00:45:40] make a great Caltech tea that would make
+[00:45:42] a great sitcom because now he's faculty
+[00:45:44] at Harvard he doesn't know a thing and
+[00:45:46] he's got to teach and
+[00:45:48] wow a less unusual situation than you
+[00:45:52] would think
+[00:45:54] but uh
+[00:45:57] so um I feel like we should open it up
+[00:46:00] and uh to do so and it's being recorded
+[00:46:03] I think it's not going not live but it
+[00:46:05] will be produced at your hearing
+[00:46:08] um
+[00:46:08] we should see is there a uh at least one
+[00:46:11] handheld so that there won't be The
+[00:46:13] Annoying phenomenon of questions are
+[00:46:16] asked but the multitudes who watch it
+[00:46:17] later don't so let's just let these
+[00:46:19] handhelds find Repose and I guess my
+[00:46:22] only suggestion aside from the usual try
+[00:46:25] not to speak unduly long is I'm happy to
+[00:46:28] try to engender a conversation more than
+[00:46:30] a ping pong back and forth so we'll
+[00:46:32] weigh in when we're moved but let's have
+[00:46:34] a conversation so here's a hand here's a
+[00:46:37] hand here are mics and also feel free to
+[00:46:40] say who you are or not because it's
+[00:46:42] being recorded
+[00:46:43] okay hi Daniel Dern I see enough
+[00:46:46] scenarios here that we don't have the
+[00:46:48] week to talk about it but on one hand
+[00:46:50] you know Bruce you go to a restaurant
+[00:46:53] you get ready to your hamburger comes
+[00:46:55] and then the guy at the register says
+[00:46:57] I'm sorry Mr schneer but the restaurant
+[00:46:59] computer refuses to sell you another
+[00:47:01] hamburger this week because you you know
+[00:47:04] because your medical records say that's
+[00:47:06] all you're allowed until next Thursday
+[00:47:08] on the other hand somewhere in the
+[00:47:11] basement of the FBI there's a big master
+[00:47:13] switch that says all cars except ours
+[00:47:18] stop you know Cruise Crews to a safe
+[00:47:21] stop and don't move or even which is the
+[00:47:25] more terrifying scenario or even United
+[00:47:28] or even the government says all Network
+[00:47:31] routing devices must use our code you
+[00:47:36] know Etc and we're not telling you
+[00:47:38] what's in it like China is trying to do
+[00:47:40] I mean right that's not even that's not
+[00:47:42] even theoretical so I have to choose
+[00:47:47] yeah
+[00:47:48] and I gotta say Bruce does run a
+[00:47:51] semi-annual movie plot contest
+[00:47:54] it's true so you're all ready you got
+[00:47:56] two entries going there and I as I
+[00:47:58] understand the rules it's to come up
+[00:47:59] with as scary and yet realistic a plot
+[00:48:03] as possible but one for which there's no
+[00:48:06] cognizable specific policy that the
+[00:48:08] government could do that it was would be
+[00:48:10] a response so the phrase movie plot
+[00:48:12] threat I I coined to be and you see
+[00:48:14] these these overly specific scare
+[00:48:16] stories you'll hear
+[00:48:18] in an effort to to make you afraid that
+[00:48:21] you sound like a great Showtime series
+[00:48:22] overly specific scare stories well but
+[00:48:24] you remember them remember remember the
+[00:48:27] terrorists with scuba gear the
+[00:48:28] terrorists with almanacs I mean all
+[00:48:30] those sorts of you know they make great
+[00:48:33] movie plots but you don't want to craft
+[00:48:36] policy around them yet those are and
+[00:48:39] when I first did the contest I I I got
+[00:48:42] email from saying oh my God how could
+[00:48:43] you give the terrorists ideas
+[00:48:46] like people actually thought that the
+[00:48:48] hard part of terrorism was the idea that
+[00:48:50] once you told them look you can you can
+[00:48:54] bomb a dam they'd say God why didn't I
+[00:48:55] think of that and run off and do it
+[00:48:57] so I just on that one point for a moment
+[00:49:01] there is I don't know how many people
+[00:49:03] remember this but back in the day there
+[00:49:05] was that movie Independence Day they're
+[00:49:07] making a sequel they're making a sequel
+[00:49:10] Arbor Day
+[00:49:11] they're just going down the whole
+[00:49:13] federal holiday calendar
+[00:49:17] um and the British internationalized
+[00:49:19] counterpart bank holiday bank holiday
+[00:49:21] too
+[00:49:23] anyhow I'm now confusing myself with
+[00:49:25] what my question was Independence Day
+[00:49:27] the trailer came out and that trailer
+[00:49:30] featured the White House being blown to
+[00:49:32] bits and I don't know how many people
+[00:49:34] happen to have remembered being in the
+[00:49:37] theater the first time you saw that
+[00:49:39] trailer I at least remember
+[00:49:42] feeling like whoa that was intense and
+[00:49:47] the reaction of the rest of the theater
+[00:49:48] was kind of a stunned silence wow even
+[00:49:51] though there's been plenty of B movies
+[00:49:53] that show Godzilla tearing cities apart
+[00:49:55] and
+[00:49:57] even within the cycle of that trailer
+[00:50:00] by the time it was getting stale people
+[00:50:02] were laughing at it and of course now I
+[00:50:05] think there are two movies being
+[00:50:06] released this week which is like the
+[00:50:08] lighthouse blows up even more
+[00:50:10] and there is maybe something I wonder
+[00:50:13] about making certain things more
+[00:50:16] thinkable not by a contest right on a
+[00:50:19] Blog but by making mainstream certain
+[00:50:21] acts I I think so I want to address the
+[00:50:24] uh the original the hamburger yes
+[00:50:27] basically what we're saying is do we
+[00:50:30] want the government to regulate our
+[00:50:32] choices that's the question and we do
+[00:50:35] all the time right the the
+[00:50:37] Pharmaceuticals you can buy uh that
+[00:50:39] hamburger you know can't have more than
+[00:50:42] there's some amount of bug parts that
+[00:50:44] are allowed and some that are too much
+[00:50:46] it's not
+[00:50:49] you cannot sell raw milk right
+[00:50:54] okay yeah okay it seems awfully hard to
+[00:50:56] buy it if people can't sell it but okay
+[00:50:59] I'm not I'm not sure there's there might
+[00:51:01] be I mean okay then on the on the takes
+[00:51:04] to take drugs on the prescription side
+[00:51:05] you know some people can buy this
+[00:51:08] pharmaceutical the rest of us can't
+[00:51:09] because there's a mechanism by which you
+[00:51:11] can you can get it uh we as Society
+[00:51:15] I mean there's a long riff here I I
+[00:51:17] think you can make a reasonable argument
+[00:51:19] that Modern Advertising is an unfair
+[00:51:22] trade practice
+[00:51:23] that it is no longer a seller informing
+[00:51:27] a potential buyer of the virtues of his
+[00:51:29] product and it's now deliberate
+[00:51:31] psychological manipulation
+[00:51:34] I can't think of any other reason I'm
+[00:51:36] buying most of the stuff I buy yeah so
+[00:51:38] working backwards I can't be to blame so
+[00:51:41] I mean I mean along with my Riff on
+[00:51:44] libertarianism is completely wrong is
+[00:51:46] the notion that and there's a lot of
+[00:51:49] psychological studies to back this up
+[00:51:50] that the point of sale is a terrible
+[00:51:53] place to gauge preferences
+[00:51:56] that that we know that on the long term
+[00:52:00] people want to eat better on the short
+[00:52:01] term man that hamburger looks good I
+[00:52:03] mean I ate one of those damn Che Chex
+[00:52:04] Mix bags when I came in here now I've
+[00:52:07] been way happy sponsored by checks right
+[00:52:10] I've been way hot I mean this is why we
+[00:52:12] have this is why we we've adopted term
+[00:52:14] limits
+[00:52:16] right please pass a law to prevent me
+[00:52:18] from exercising my preferences like but
+[00:52:21] that's a truly wacky thing let me
+[00:52:23] interject right here because this so
+[00:52:26] nicely fits into your earlier riff about
+[00:52:29] Facebook and Google or kind of you can't
+[00:52:32] just say it's Market they're kind of
+[00:52:33] have an advantage and that's why
+[00:52:34] government should come in so the analogy
+[00:52:36] here would be one reason they might not
+[00:52:39] sell you the hamburger is because you
+[00:52:40] signed up ahead of time and said no
+[00:52:42] matter what I do please stop me yeah the
+[00:52:45] other reason might be some bloombergian
+[00:52:48] sunstinian nudge or something where they
+[00:52:51] are actually doing their best to remind
+[00:52:53] you of the kind of commitments you want
+[00:52:55] or the burgers have to be served with
+[00:52:57] blue buns and they may get less esculent
+[00:52:59] that way whatever it is but we are but
+[00:53:01] that's an example of the government
+[00:53:03] intervening to save us from the market
+[00:53:07] right because so who's worse in this
+[00:53:09] circumstance Bloomberg or big gulp but
+[00:53:13] so we these manipulations are happening
+[00:53:15] I mean in your grocery store store
+[00:53:18] products are paying for eye level
+[00:53:20] placement ones that don't pay get high
+[00:53:21] or low those big gulps were designed for
+[00:53:25] you to so if the government intervenes
+[00:53:26] to swim out someone's intervened
+[00:53:28] someone's interviewing yeah intervention
+[00:53:30] is happening we can't we can either say
+[00:53:33] no intervention
+[00:53:35] which maybe we can do or we can try I
+[00:53:39] mean and this is where I have trouble
+[00:53:40] with Solutions but my guess is that
+[00:53:43] Solutions will be the multiple
+[00:53:45] distrustful parties
+[00:53:48] each keeping the other in check so do we
+[00:53:51] want government intervention to limit
+[00:53:53] corporate intervention
+[00:53:55] I mean and I I think some solution will
+[00:53:57] have a corporate component a government
+[00:53:59] component an NGO component that
+[00:54:01] everybody will be sort of keeping an eye
+[00:54:03] on everybody else uh
+[00:54:05] of course this could fail I mean I
+[00:54:07] thought this is the way the US
+[00:54:08] government was supposed to work but yeah
+[00:54:10] post 911
+[00:54:11] everybody fell down on the job right the
+[00:54:14] you know Congress wouldn't wouldn't keep
+[00:54:16] the president in check the court said I
+[00:54:18] don't know you can keep me out of this
+[00:54:21] but in theory that's the sort of system
+[00:54:25] I want to work well at the very least it
+[00:54:27] means one can Retreat to we really need
+[00:54:29] a self-conscious dialogue about what
+[00:54:31] kinds of forces you know that at least
+[00:54:33] it's not much but it's something I'm a
+[00:54:35] big fan of of this of the assessing
+[00:54:38] nudges because then
+[00:54:40] even though they are manipulation but
+[00:54:42] the manipulation is happening anyway I
+[00:54:44] mean this is this is my My Fair Trade
+[00:54:46] Practices argument that that we're being
+[00:54:48] manipulated for profit I mean maybe it's
+[00:54:51] not that bad to be manipulated for
+[00:54:53] benevolence yeah now the question is of
+[00:54:55] course who decides what benevolence is I
+[00:54:57] mean there's a lot that there's a lot of
+[00:54:58] devil in the details but there's a whole
+[00:55:00] lot of devil if you don't do these
+[00:55:02] details well as was promised this is a
+[00:55:05] week's worth of stuff is there anything
+[00:55:06] you want to say about the FBI turning
+[00:55:08] off all our cars which when I put it
+[00:55:10] that way makes it sound absurd but in
+[00:55:11] fact the more the devices are tethered
+[00:55:14] the more a government can ask but and
+[00:55:16] you want to say something about that
+[00:55:17] before and and we've seen requests for
+[00:55:19] that you know in the event of a
+[00:55:20] terrorist emergencies can the government
+[00:55:22] shut off the internet
+[00:55:23] I mean this is being asked the cars is
+[00:55:26] going to be uh driverless cars
+[00:55:29] high-speed chase we need the ability to
+[00:55:30] turn off cars on this highway for the
+[00:55:32] safety of everybody I mean you can you
+[00:55:34] can see how that could make sense right
+[00:55:36] because or at least how that would be
+[00:55:37] requested yeah but uh internet kill
+[00:55:40] switch has been debated I mean I mean to
+[00:55:43] me that's fundamentally crazy for a
+[00:55:44] whole lot of other reasons
+[00:55:47] you know I
+[00:55:48] I should say In fairness the at the time
+[00:55:51] it was debated the Senators pushing the
+[00:55:53] bill that was said to contain it said
+[00:55:56] this bill doesn't contain that in fact
+[00:55:58] the government has long since had that
+[00:56:00] Authority since amendments to the
+[00:56:01] communications Act made in the wake of
+[00:56:03] Pearl Harbor so
+[00:56:05] um there is I think I missed the
+[00:56:08] internet provision and that was passed
+[00:56:10] down in the 40s yeah
+[00:56:12] um so we should keep the conversation
+[00:56:14] going if the mics found another home how
+[00:56:16] about over here oh go ahead
+[00:56:18] got someone there
+[00:56:21] so this is not my opinion in particular
+[00:56:23] but I've been exposed to the opinion by
+[00:56:25] people in this computer security
+[00:56:27] community that the way in which to deal
+[00:56:29] with these sorts of problems is that
+[00:56:31] rather than is that everybody should be
+[00:56:34] responsible for their own Information
+[00:56:35] Technology security that everybody
+[00:56:38] should learn the skill set in full and
+[00:56:41] that if you don't learn the skill set
+[00:56:43] that it's your own problem Dan gear is
+[00:56:46] one of the people who's talked about an
+[00:56:47] internet driver's license the business
+[00:56:49] and it's actually not only your problem
+[00:56:52] you know we are we are too
+[00:56:54] interconnected
+[00:56:55] I mean if you think of DDOS attacks and
+[00:56:58] Bots your security is very directly a
+[00:57:02] function of whether my mother remembers
+[00:57:04] to turn her firewall back on
+[00:57:07] because if she doesn't there are more
+[00:57:10] insecure computers being used for more
+[00:57:12] but I guess one question is how much low
+[00:57:13] hanging fruit is there in trying to get
+[00:57:16] Grandma to turn on the firewall of all
+[00:57:18] the things that make security hard is
+[00:57:21] there some space comparatively honestly
+[00:57:25] use her education I'm not a big fan of
+[00:57:27] user education I think user education is
+[00:57:28] a cop-out I think user education is a
+[00:57:31] cop-out when computer security people
+[00:57:32] like me design crap systems you could
+[00:57:36] get these you get these warnings right
+[00:57:38] you see them on your computer uh complex
+[00:57:40] security thing blah blah blah blah blah
+[00:57:42] do you want to say yes no and you what
+[00:57:43] you read is blah blah blah blah blah
+[00:57:45] make this but make this dialog box go
+[00:57:48] away
+[00:57:48] that's what you read and you click would
+[00:57:51] you like to continue with what you're
+[00:57:52] doing right okay would you like me to
+[00:57:54] stop annoying you
+[00:57:56] uh you know it is it is rare that the
+[00:58:00] user can make a better decision I can't
+[00:58:03] wait for the Firefox plug-in called yes
+[00:58:04] man that just answers all dialog boxes
+[00:58:08] okay
+[00:58:09] yeah
+[00:58:10] I'm patenting that
+[00:58:12] you know so so I I I want systems that
+[00:58:16] are robust enough to deal with an
+[00:58:19] uneducated user I mean we can't
+[00:58:21] legitimately say you have to you know
+[00:58:24] you you need to pass a skill test to use
+[00:58:26] the internet we it'll be real hard to
+[00:58:30] turn it into something like driving a
+[00:58:31] car
+[00:58:32] and I'm not sure we want so right now
+[00:58:35] just uh share with us
+[00:58:38] your best conception of the process of a
+[00:58:43] user
+[00:58:44] checking email from a server whoever the
+[00:58:48] provider might be what would be the best
+[00:58:49] practice using today's technology so
+[00:58:53] that the email provider could make it as
+[00:58:54] secure as possible without the user
+[00:58:57] having to be anybody other than grandma
+[00:59:00] you know what we have today is mostly
+[00:59:02] good I mean I I like seeing the
+[00:59:04] additional authentication mechanisms I
+[00:59:07] like seeing the backup authentication
+[00:59:08] mechanisms improved
+[00:59:10] you know it's not a lot
+[00:59:13] so you don't see anything out there that
+[00:59:14] isn't already kind of working its way
+[00:59:16] yeah and this is this is a surprise it's
+[00:59:18] a surprise really from from your one
+[00:59:19] with your book when I read your book you
+[00:59:21] made a really good point that that
+[00:59:23] openness is so much better and that that
+[00:59:26] a closed system will be rejected and I
+[00:59:29] believe that too and we got it wrong
+[00:59:31] people love the iPhone
+[00:59:33] an iPhone is a very close I iPhone is
+[00:59:36] giving you more security because they
+[00:59:39] regulate what goes on that platform
+[00:59:43] right and it turns out much to my
+[00:59:46] annoyance
+[00:59:48] that people like that I mean and this is
+[00:59:50] the problem with the feudal metaphor we
+[00:59:52] we
+[00:59:53] like these feudal systems because my
+[00:59:57] mother does a way better job with her
+[00:59:59] photos on Flickr
+[01:00:01] it's really better for her to be on
+[01:00:03] Gmail it's better for her her calendar
+[01:00:06] dress book she loses her phone she gets
+[01:00:09] a new one pushes a button it all appears
+[01:00:10] magically
+[01:00:12] right for the average user this feudal
+[01:00:15] trade-off isn't that bad
+[01:00:18] I'd like it to be worse but it turns out
+[01:00:20] not to be
+[01:00:22] right because the cost my mother is
+[01:00:25] paying is largely invisible
+[01:00:28] it's largely long term
+[01:00:30] right it's it's it's along solely the
+[01:00:33] dimension of security against third
+[01:00:35] party attack it may well be more secure
+[01:00:37] almost certainly is but but even against
+[01:00:39] the thing one more worried about I'm
+[01:00:41] what I'm more worried about the third
+[01:00:42] party attack is she making a mistake
+[01:00:45] right you know you make a mistake and
+[01:00:47] you lose your photos you lose your email
+[01:00:48] you your hard drive no longer works it's
+[01:00:51] robust against the naive user which is
+[01:00:55] really valuable yes because if we want
+[01:00:58] an internet to be socially useful it has
+[01:01:01] to be technologically easy yes Ethan
+[01:01:04] Zuckerman uh hi guys I wanted to return
+[01:01:07] to this idea of the asymmetric attack
+[01:01:10] and the notion that the bad guys get way
+[01:01:13] ahead of the good guys and what this
+[01:01:15] makes us think about open and closed
+[01:01:16] environments and Bruce I was working on
+[01:01:18] my entry for the movie plot and I put
+[01:01:21] together two current events uh one
+[01:01:24] current event was this strange little
+[01:01:27] paper where someone claims that they
+[01:01:29] infected a hundred thousand cable set
+[01:01:32] top boxes and used them to make a map of
+[01:01:34] the internet hard to verify but a fairly
+[01:01:37] convincing paper suggesting that someone
+[01:01:40] built a little worm that was capable of
+[01:01:42] getting into many many many many setup
+[01:01:45] boxes and roughly at the same time a
+[01:01:49] really big DDOS attack using DNS
+[01:01:52] amplification which we've all known
+[01:01:53] about for a very long time but swamping
+[01:01:56] spam house our friends and sometimes
+[01:01:58] enemies who try to knock out internet
+[01:02:00] spam under 300 gigabits per second of
+[01:02:04] traffic a level that many of us thought
+[01:02:06] was kind of unfeasible for those things
+[01:02:09] you put the two of those together and
+[01:02:11] you suddenly have a scenario in which
+[01:02:13] everyone's cable box compromise becomes
+[01:02:15] part of a giant DDOS Network hitting DNS
+[01:02:18] and knocking out servers and and for the
+[01:02:19] first time you have them have a
+[01:02:21] broadcast fake news then you've got a
+[01:02:23] really good James Bond plan so so that's
+[01:02:25] not already happening for the first time
+[01:02:29] people would not notice people might not
+[01:02:32] notice the first time in all of this I
+[01:02:33] found myself sort of looking at this and
+[01:02:34] going
+[01:02:35] maybe I'm actually scared about this
+[01:02:37] maybe I've actually hit the point where
+[01:02:40] these open systems that for years we've
+[01:02:43] known are riddled with holes because we
+[01:02:45] are idiots about security but we are so
+[01:02:48] resilient because we share information
+[01:02:49] very quickly we adapt so on and so forth
+[01:02:52] I find myself wondering if we're hitting
+[01:02:54] a point where not just on the consumer
+[01:02:57] devices where I think you're absolutely
+[01:02:58] right Bruce that people in many cases
+[01:03:00] are preferring the safer environments
+[01:03:02] whether we're going to hit this point on
+[01:03:05] the actual core net do we think that we
+[01:03:08] might be reaching a Tipping Point on
+[01:03:09] this is that part of what's reflected in
+[01:03:12] you writing somebody that's
+[01:03:13] significantly depressing and the
+[01:03:15] follow-up to this is is this going to
+[01:03:17] shake the train at all on this who thus
+[01:03:19] far has been really good about sort of
+[01:03:21] coming back and saying yeah in general
+[01:03:24] we're willing to trade a lot to make
+[01:03:26] sure that we have the openness out there
+[01:03:28] and so far it hasn't been missing the
+[01:03:29] butt is this finally the time we get
+[01:03:32] so I I think I mean that's a good
+[01:03:34] example so and My worry is is really
+[01:03:37] that the fear of these things will lead
+[01:03:39] the actuality
+[01:03:41] I mean this whole weapons of mass
+[01:03:43] destruction debate is largely a fear
+[01:03:45] debate the cyborg debate is largely a
+[01:03:47] fear debate these are not based on
+[01:03:48] realistic threats
+[01:03:50] but you know that 10 20 30 years they
+[01:03:53] likely will be
+[01:03:55] uh
+[01:03:57] I'm afraid you have a point
+[01:04:02] um I find myself wanting to say
+[01:04:04] especially when I ran into that spam
+[01:04:07] house situation
+[01:04:09] I find myself wanted to say yes this is
+[01:04:11] exactly what I predicted because my book
+[01:04:14] wasn't things are great except people
+[01:04:17] are paranoid and the paranoia is going
+[01:04:20] to destroy us that was not
+[01:04:22] the theme it was things may be great now
+[01:04:25] but the better they get the higher the
+[01:04:28] stakes are for somebody to find Value in
+[01:04:30] making it worse and unless we come up
+[01:04:33] with a defense to it that is constructed
+[01:04:37] along the lines of what made it great to
+[01:04:39] begin with namely a distributed Civic
+[01:04:41] defense for a distributed Civic Network
+[01:04:44] the most obvious defense when the trolls
+[01:04:47] come is going to be a centralized
+[01:04:49] response a militarized response and
+[01:04:51] that's bad so I think that fits the
+[01:04:53] template in the sense of
+[01:04:55] people are a little bit kind of asleep
+[01:04:58] at the switch or a collective action
+[01:05:00] problem there ought to be ways and there
+[01:05:02] have been ways suggested to secure
+[01:05:04] border Gateway protocol to secure DNS
+[01:05:07] service and DNS
+[01:05:09] um uh servers
+[01:05:11] because each of those cable boxes
+[01:05:13] contains a DNS resolver who knew that is
+[01:05:17] a public proxy like what
+[01:05:19] so these are the kinds of things that
+[01:05:22] either might be so specific a movie plot
+[01:05:24] but it's hard to go just closing doors
+[01:05:25] after horses leave but that
+[01:05:28] actually had been long anticipated and
+[01:05:31] if the community that has roughly
+[01:05:34] existed to build this distributed
+[01:05:36] Collective hallucination to begin with
+[01:05:38] could come up with the distributed
+[01:05:40] defense of it
+[01:05:42] so far the way Wikipedia has managed to
+[01:05:44] do with the content layer a distributed
+[01:05:46] content generation system that contains
+[01:05:50] its own defense not just against Garden
+[01:05:52] variety and accuracy but against every
+[01:05:54] page being turned into an ad for a Rolex
+[01:05:56] watch which you can guarantee is being
+[01:05:58] attempted as we speak
+[01:06:00] um that gives me hope I just worry that
+[01:06:04] the paranoia generated by the very real
+[01:06:06] dangers represented by that incident
+[01:06:08] will have us just say we've got to send
+[01:06:10] the Marines somewhere and I I agree with
+[01:06:13] a paranoia worry I mean any solution is
+[01:06:16] going to look like some form of
+[01:06:18] resilience
+[01:06:19] and whether it's I mean the Wikipedia
+[01:06:22] distributed type of resilience whether
+[01:06:25] it's something built into the internet
+[01:06:26] you know there'll be different different
+[01:06:28] aspects of it but in a world
+[01:06:33] I mean we we're seeing people today
+[01:06:35] calling the Cyber to cyber threat an
+[01:06:39] existential threat to humanity those
+[01:06:42] words are being used by actual policy
+[01:06:45] makers that is fundamentally a crazy
+[01:06:49] thing to say
+[01:06:51] but
+[01:06:54] you know getting past that is going to
+[01:06:57] be a realization that you know 911 you
+[01:07:02] know the the the existential threat was
+[01:07:04] not this terrorist attack was our
+[01:07:05] reaction to it
+[01:07:07] that it if we have a
+[01:07:11] if we come from not from fear but from
+[01:07:14] indomability
+[01:07:15] I mean imagine if that's what you know
+[01:07:17] President Bush got up and said yes this
+[01:07:20] is horrible yes we're going to be after
+[01:07:21] them yes we're gonna we're going to
+[01:07:23] achieve justice but our country is
+[01:07:26] better than this We're Not Gonna you
+[01:07:28] know the things they killed us for are
+[01:07:30] not we're not going to change because
+[01:07:31] they try I mean those sorts of ways and
+[01:07:35] I think that rhetoric makes a huge
+[01:07:38] difference but see up to the minute
+[01:07:40] Bruce schneier who worries about
+[01:07:41] asymmetric offense because we have an
+[01:07:43] existential you know we said in the
+[01:07:45] beginning this is not a consistent talk
+[01:07:46] yes
+[01:07:47] well it isn't it isn't
+[01:07:50] right
+[01:07:51] it's right
+[01:07:53] cheap shot I'm sorry
+[01:07:55] um other mics yes back here hi I'm Gilly
+[01:07:58] I'm a senior at the college here in a
+[01:08:00] former bergton
+[01:08:01] um so it seemed that the most pragmatic
+[01:08:03] solution we have come up with thus far
+[01:08:05] is to start a discussion so I want to
+[01:08:07] ask about how to frame that discussion I
+[01:08:10] think that the role of metaphors has
+[01:08:12] sort of come up here and and we talked
+[01:08:14] about war as a metaphor and it's sort of
+[01:08:16] both a conflation of the threat and the
+[01:08:19] use of Notions from National Security
+[01:08:20] and then another thing that Bruce seems
+[01:08:23] to support uh to me is the public health
+[01:08:26] metaphor in a sense you know the
+[01:08:28] Bloomberg intervention and the sort of
+[01:08:31] making sure Grandma turns on the the
+[01:08:33] firewall again are there any other
+[01:08:36] metaphors we should be considering and
+[01:08:37] should we be aware of these metaphors
+[01:08:39] and what they imply and I mean I think
+[01:08:41] metaphors are extraordinarily important
+[01:08:43] I mean I mean just taking the the Cyber
+[01:08:46] War metaphor when you use the word more
+[01:08:49] war you invoke a certain solution space
+[01:08:52] right things certain things that
+[01:08:55] wouldn't be considered are reasonable
+[01:08:58] when you're at War
+[01:08:59] for for these type of cyber attacks I
+[01:09:02] much prefer a a police metaphor actually
+[01:09:05] for terrorism I much prefer a police
+[01:09:07] metaphor I think it's more accurate and
+[01:09:09] I think that we as a people would make
+[01:09:12] better trade-offs right you know when
+[01:09:14] it's War when the NSA goes to you and
+[01:09:16] says you know can I eavesdrop on every
+[01:09:18] phone call
+[01:09:19] but you don't say whereas you want you
+[01:09:21] say okay you know put the stuff in the
+[01:09:23] closet they don't tell anybody and
+[01:09:25] that's because your thinking is war
+[01:09:28] so I you know I find the war metaphor
+[01:09:30] dangerous uh I I like a public I think a
+[01:09:33] public health model I think actually I
+[01:09:35] think biological metaphors are in
+[01:09:37] general useful for the internet that
+[01:09:40] there's a lot of analog I mean not the
+[01:09:43] least of is viruses and it's funny I was
+[01:09:45] trying to see that go back we're
+[01:09:46] starting to see the the term virus came
+[01:09:49] from Health we're trying to see ways
+[01:09:51] that we're thinking about computer
+[01:09:52] viruses going back into the medical
+[01:09:55] community and they're using some of the
+[01:09:57] tools we've developed for computer
+[01:09:59] viruses to look at the spread of actual
+[01:10:01] biological viruses
+[01:10:03] uh
+[01:10:06] rather than the metaphor of how the
+[01:10:08] internet of the internet is stateless
+[01:10:10] versus stateful
+[01:10:12] and not not uh not from a uh a finite
+[01:10:15] statement but for a government
+[01:10:16] perspective I mean the the metaphor of
+[01:10:18] the 90s remember the the internet is
+[01:10:21] outside of any nation state
+[01:10:23] right is turning out to be not true at
+[01:10:26] all and there's more censorship than
+[01:10:28] ever and and then now with this arise
+[01:10:30] thing that that's called the Cyber
+[01:10:32] sovereignty movement which is terrify
+[01:10:34] all of us
+[01:10:35] right where countries are are saying
+[01:10:37] look you know the all of every piece of
+[01:10:41] the internet is in somebody's border and
+[01:10:43] the ones that are in my border I get to
+[01:10:45] control right and the I this is the itu
+[01:10:47] getting involved uh a lot of this I
+[01:10:50] think you fight on the level of metaphor
+[01:10:53] you get the right metaphor
+[01:10:55] [Music]
+[01:11:00] magical things happen
+[01:11:02] it it really frames the debate these
+[01:11:05] debates are hard they're technical
+[01:11:07] they're confusing
+[01:11:09] and the metaphors matter an enormous
+[01:11:11] amount
+[01:11:12] but what it's worth the metaphor I'm
+[01:11:14] most uh intrigued by these days is
+[01:11:16] mutual Aid and if I'm in a uh a military
+[01:11:20] environment I'll call it a NATO for
+[01:11:22] cyberspace but elsewhere it's mutual Aid
+[01:11:25] um that tries to push against the idea
+[01:11:28] of I wrote my check give me internet and
+[01:11:32] if there's a problem with it it's a
+[01:11:34] customer service issue that a lot of
+[01:11:36] what built it was a form of mutuality
+[01:11:38] and there may be useful ways for people
+[01:11:40] to be able to help one another
+[01:11:42] with cycles and bandwidth with expertise
+[01:11:47] and even at the content layer in times
+[01:11:50] of real crisis that is it a good thing
+[01:11:53] to imagine should something happen
+[01:11:55] natural disaster otherwise my 3G goes
+[01:12:00] down my Wi-Fi isn't going anywhere I'm
+[01:12:03] stuck but what if my phone were a
+[01:12:05] two-way radio that could talk to every
+[01:12:07] other two-way radio in the room and what
+[01:12:09] if my Facebook credentials were cached
+[01:12:11] and I could then say or any of my
+[01:12:12] Facebook friends in this ad hoc network
+[01:12:16] and if they are I'd like to send them a
+[01:12:18] message and is there anybody in the
+[01:12:19] Network that has a pre-cached root
+[01:12:20] certificate that says I'm from the
+[01:12:22] government and I'm here to help because
+[01:12:23] I'd like some help those are examples to
+[01:12:27] me of mutual Aid and action it's not a
+[01:12:29] solution to every problem but it tends
+[01:12:31] to be overlooked because it isn't all
+[01:12:34] that helpful in many other Public Safety
+[01:12:37] defense operations
+[01:12:40] that the other metaphors tend to invoke
+[01:12:42] I like to like infrastructure metaphors
+[01:12:46] yeah but Sun had the idea of the
+[01:12:48] internet dial tone I kind of like that I
+[01:12:51] mean and I think there's something to be
+[01:12:52] said for starting to realize that the
+[01:12:54] internet is
+[01:12:56] infrastructure is a utility is not you
+[01:12:59] know is not optional it's like water
+[01:13:01] it's like power
+[01:13:04] and I think that's valuable
+[01:13:10] British Telecom had a great slogan a
+[01:13:12] couple of years ago called Innovation at
+[01:13:15] the speed of life and they meant it to
+[01:13:17] mean going really fast and I thought of
+[01:13:19] it and said wouldn't it be neat to slow
+[01:13:21] down like that
+[01:13:23] I'm thinking about the cereal
+[01:13:26] um
+[01:13:27] okay so uh why don't we take a few more
+[01:13:30] questions we only have 14 minutes left
+[01:13:33] wow so my suggestion is that we take
+[01:13:36] some thoughts and they're going to pile
+[01:13:38] up and be specific but uh Bruce has a
+[01:13:40] pen he's going to write some stuff down
+[01:13:42] I just want to get some more voices in
+[01:13:44] um as we go so please uh so
+[01:13:47] I'm less concerned about threats from
+[01:13:49] the internet to humans but threats from
+[01:13:52] humans to the internet
+[01:13:54] um and if you look at World War II or
+[01:13:55] World War one uh where you had you know
+[01:13:58] a global scale conflict you saw
+[01:14:01] um letters sort of being smuggled across
+[01:14:03] borders and there were some
+[01:14:05] communication was possible but it was
+[01:14:06] extremely limited I'm curious what um if
+[01:14:09] the internet can exist post a global
+[01:14:11] scale conflict where nations are
+[01:14:12] rebuilding their networks
+[01:14:15] um and whether the internet can exist
+[01:14:16] during a global scale conflict and uh
+[01:14:19] what your thoughts on that are uh-huh
+[01:14:21] let's take some other questions wherever
+[01:14:23] the mics happen to be
+[01:14:25] this may I realize favor people on the
+[01:14:27] periphery but yes
+[01:14:29] um Eric law student
+[01:14:32] um so you mentioned that
+[01:14:35] speaking about Anonymous that we're
+[01:14:37] going to call it the next cyber War but
+[01:14:38] it's not it's just a bunch of random
+[01:14:40] guys
+[01:14:42] um and yet your emphasis on the
+[01:14:44] asymmetry of attack and defense seems to
+[01:14:47] run against the idea that war can't be
+[01:14:50] about random guys and I I just like some
+[01:14:54] comments on that
+[01:14:56] got it I was going to ask you about
+[01:14:58] government policy too but we'll let you
+[01:15:00] succeed uh where's the other Mike yep I
+[01:15:03] was going to suggest that the reason you
+[01:15:04] got a tepid response to would you pay
+[01:15:06] sixty dollars for a a less data
+[01:15:08] collecting Facebook is that it would be
+[01:15:10] a less useful Facebook you would be
+[01:15:11] losing all of the people who like X also
+[01:15:14] like why suggestions that people tend to
+[01:15:16] actually like getting Facebook comes
+[01:15:18] back and says for you we'll still keep
+[01:15:20] that for your five bucks would that get
+[01:15:22] your hand up
+[01:15:26] in other words you think what you hate
+[01:15:28] is also what you like in in general
+[01:15:30] people tend to like the primary uses
+[01:15:32] Everyone likes Amazon suggesting books
+[01:15:34] they like basic books they bought what
+[01:15:36] people tend to dislike are the secondary
+[01:15:38] uses that Amazon then sells that data to
+[01:15:40] somebody else and it propagates out we
+[01:15:42] tend to be okay with the immediate
+[01:15:45] recommender systems and and the
+[01:15:46] immediate systems although it is
+[01:15:48] interesting to imagine those applied to
+[01:15:49] people
+[01:15:50] uh suggesting well people who like this
+[01:15:53] will like this other person especially
+[01:15:55] in a real environment rather than just
+[01:15:57] Facebook and that is yeah getting really
+[01:16:01] close people who attended this lecture
+[01:16:02] might like to attend the lecture next
+[01:16:04] week yeah
+[01:16:06] um where are the other mics are they yep
+[01:16:09] um on the subject Anonymous I'm just
+[01:16:11] wondering how much you think Anonymous
+[01:16:12] is sort of a reaction to a loss of faith
+[01:16:15] in the government for example with
+[01:16:16] Wikileaks people who supported Wikileaks
+[01:16:18] didn't have really a standard way of
+[01:16:21] aiding this within the system it wasn't
+[01:16:23] like the FBI was standing up and saying
+[01:16:25] well if you experiment not be legal but
+[01:16:27] we're going to hunt down these people
+[01:16:28] who are doing DDOS on Wikileaks so
+[01:16:30] Anonymous is sort of people who said
+[01:16:33] well our only option is to go DDOS other
+[01:16:35] people and then we can sort of defend I
+[01:16:37] guess this is the Batman theory of uh
+[01:16:39] yeah yes the times call for the person
+[01:16:42] is the other mic floating around
+[01:16:43] somewhere oh right
+[01:16:46] there uh sorry yeah um did you go back
+[01:16:48] to the feudal metaphor oh my name is Hal
+[01:16:50] Hodson um to go back to the feudal
+[01:16:52] metaphor briefly
+[01:16:53] um I guess the feudal system became bad
+[01:16:55] when people started getting hurt and you
+[01:16:56] could kind of imagine that at the
+[01:16:57] beginning it was rather nice kind of
+[01:17:00] like at the beginning yeah yeah you can
+[01:17:02] kind of Imagine at the beginning Google
+[01:17:03] was rather nice and it was so what
+[01:17:05] what's the the internet company
+[01:17:07] equivalent of you know killing peasants
+[01:17:10] because you don't you know because you
+[01:17:11] you're pissed off like what's what's
+[01:17:13] gonna happen what what are the damage
+[01:17:15] equivalents for internet companies of
+[01:17:16] the I think there's a lot of Google
+[01:17:18] Reader is the one we got right now
+[01:17:19] Google Reader is hardly you know killing
+[01:17:22] villagers what what's gonna hurt me
+[01:17:23] Google Reader is just inconvenient
+[01:17:25] what's actually going to harm me I don't
+[01:17:27] think I don't think you took away my
+[01:17:28] free product
+[01:17:30] how dare you I don't I don't think Ben
+[01:17:32] and Jerry's I want ice cream every day
+[01:17:35] I don't think you get that kind of
+[01:17:37] holiday it is the internet
+[01:17:38] I mean it's not the real world
+[01:17:41] so you're not gonna get you're not gonna
+[01:17:43] get Facebook as Captain Kirk would say
+[01:17:45] for how long Mr schneier four how long
+[01:17:49] you're not gonna get Facebook spearing
+[01:17:51] its users I mean it's just not gonna
+[01:17:52] happen
+[01:17:54] well there's at least a silver lining to
+[01:17:56] his pessimism
+[01:17:59] um now I know we've powered up a lot of
+[01:18:01] questions you want to is there anything
+[01:18:02] you wanted to say on what's happened so
+[01:18:03] far before we open it up again well I
+[01:18:05] mean is
+[01:18:07] the question I thought was that the
+[01:18:09] notion of of you know can can a bunch of
+[01:18:12] guys declare war
+[01:18:14] they can do something but I think you
+[01:18:17] know war is is a very specific thing and
+[01:18:19] it's something nation states do
+[01:18:21] I I argue that what a bunch of guys do
+[01:18:24] even if it's damaging and there's a lot
+[01:18:27] of history but organized crime does I
+[01:18:29] can do a lot of damage we what a couple
+[01:18:32] of weeks ago
+[01:18:33] had someone assassinate a a prosecutor
+[01:18:37] in Texas and then lastly and and I think
+[01:18:40] this is very much
+[01:18:43] I I don't know if it's terrorism I don't
+[01:18:45] know what to call it but a couple of
+[01:18:48] days ago another prosecutor has has
+[01:18:50] stepped off a case Prosecuting the Aryan
+[01:18:52] Brotherhood because he fears for his
+[01:18:55] life
+[01:18:55] I mean this is
+[01:18:57] a a violent action to change policy
+[01:19:03] so you know I'm not sure to call it but
+[01:19:05] you know these if these things even
+[01:19:07] though they're they're bad even though
+[01:19:09] they kill people they're not war and War
+[01:19:12] to me is nation state versus nation
+[01:19:14] state and yes there are these new sorts
+[01:19:16] of asymmetric threats and they are
+[01:19:18] important
+[01:19:20] but is the war metaphor the proper way
+[01:19:23] to deal with it and we screwed this up
+[01:19:25] right we we were we were attacked in 911
+[01:19:28] and in response we invaded a country
+[01:19:32] because that's what militaries do if the
+[01:19:36] FBI were in charge
+[01:19:39] we wouldn't have invaded a country
+[01:19:40] because that's not what the FBI does
+[01:19:43] now we can argue with invading the
+[01:19:45] country was the right thing to do but
+[01:19:47] there was no actual debate about it
+[01:19:49] because the war metaphor was immediately
+[01:19:51] invoked it is funny to think if the
+[01:19:55] president in the wake of 9 11 had said
+[01:19:57] we are starting a full criminal
+[01:19:59] investigation the U.S attorney and the
+[01:20:01] southern district which is what we would
+[01:20:03] have been run out on a road which is
+[01:20:04] what we did with every other terrorist
+[01:20:07] attack to date yes I mean that's what we
+[01:20:09] did after Mumbai
+[01:20:12] the uh
+[01:20:20] a decade later
+[01:20:22] that choice which may well have been
+[01:20:25] sort of by Democratic accountability a
+[01:20:28] somewhat uh forced one to assign I
+[01:20:30] that's no doubt debatable
+[01:20:33] um it was psychologically the right
+[01:20:34] choice unfortunately but it's
+[01:20:36] interesting that choice then persists in
+[01:20:38] the sense that attempts to downshift
+[01:20:40] into a let's try these folks in the
+[01:20:43] criminal system mode
+[01:20:45] still results in a lot of pushbacks
+[01:20:47] remember that that we were trying to
+[01:20:49] bring one terrorist from guantano into
+[01:20:51] New York to Triumph and right there was
+[01:20:54] actual fear we couldn't put him in a U.S
+[01:20:57] jail and I'm thinking what is he Magneto
+[01:21:00] I mean
+[01:21:01] he's just a guy yeah but there there's
+[01:21:05] there is is this fear I think Obama had
+[01:21:08] had the opportunity to change it yeah
+[01:21:10] when he took office he could have said
+[01:21:13] and it's a perfectly reasonable reaction
+[01:21:15] that when you're especially if Congress
+[01:21:17] actually passed a statute yes preventing
+[01:21:20] his authorization act that prevented it
+[01:21:22] yeah
+[01:21:23] um there was one other quick thought too
+[01:21:24] on uh your notion about when you have
+[01:21:28] prosecutors withdrawing from cases out
+[01:21:31] of fear for their physical safety that's
+[01:21:33] what happened in the U.S right The Habit
+[01:21:35] that happens in other countries or other
+[01:21:36] countries where you have judges wearing
+[01:21:38] hoods right I mean that happens in
+[01:21:40] Mexico that doesn't happen but it gets
+[01:21:42] back to the question of if our own
+[01:21:45] primary institutions are faltering does
+[01:21:47] that push for Alternatives and it to me
+[01:21:49] it calls to mind a book uh to be
+[01:21:52] published by Yale University press
+[01:21:53] called the cartoons that shook the world
+[01:21:56] a very scholarly treatment peer-reviewed
+[01:21:59] of the Muhammad cartoon wow Denmark and
+[01:22:04] it included not only the cartoons in
+[01:22:05] question but depictions of Muhammad over
+[01:22:08] the centuries and Yale University press
+[01:22:11] did a Security review prior to going
+[01:22:14] ahead to publication and concluded that
+[01:22:17] it was not safe to publish and insisted
+[01:22:20] that all of the cartoons and all of the
+[01:22:23] other depictions be removed from the
+[01:22:24] book and the book was still published
+[01:22:26] over the objections of the author it was
+[01:22:28] removed the book was published without
+[01:22:30] them and when Yale responded to
+[01:22:33] assertions that they were kind of giving
+[01:22:35] in to uh threats of violence kind of
+[01:22:38] thing they said well you know you can
+[01:22:39] just get to them on Wikipedia
+[01:22:43] and it's an interesting kind of point
+[01:22:45] that Wikipedia there's not even enough
+[01:22:48] of it there there to decide whether to
+[01:22:50] take the cartoons off that they're a
+[01:22:53] click away and in fact there is a
+[01:22:54] discussion a talk tab on the page about
+[01:22:57] the cartoons on Wikipedia talking about
+[01:23:00] offending sensibilities not threats of
+[01:23:02] physical violence and they decided it
+[01:23:03] would be a very small thumbnail and then
+[01:23:05] you could click if you wanted there that
+[01:23:07] was the wikipedians solution but then
+[01:23:10] the problem that goes to his point of of
+[01:23:12] anonymous being right a losses that's
+[01:23:14] what I mean and I think if you sort of
+[01:23:18] look at at their activism it is
+[01:23:22] both a frustration at the institutions
+[01:23:25] who are who are be who are behaving
+[01:23:27] badly and a belief that the institutions
+[01:23:30] aren't
+[01:23:31] aren't going to follow through on what
+[01:23:34] they should do so my guess is the mics
+[01:23:36] are in two hands currently or about to
+[01:23:38] be let's do those last two mics and then
+[01:23:41] we should wrap where are they uh right
+[01:23:43] here sir Adrian gropper you invoked
+[01:23:45] lessig and the gay marriage
+[01:23:48] flip and uh the question is how
+[01:23:53] optimistic can we be that the
+[01:23:55] nation-state becomes redefined by the
+[01:23:58] internet in time to save us from this
+[01:24:01] apocalypse that is that is the question
+[01:24:02] so right so the question really is is
+[01:24:05] the relative speed of social change
+[01:24:07] political change and technological
+[01:24:09] change right that's your question it's a
+[01:24:11] really good one
+[01:24:15] detecting a theme in tonight's uh talk
+[01:24:18] yes hi Pete Devlin I was wondering
+[01:24:21] whether at least in some cases uh we
+[01:24:24] don't have to be so afraid that the
+[01:24:26] government has access to our data so we
+[01:24:28] talked about
+[01:24:29] them using our financial data to decide
+[01:24:32] who to audit and if they're mining
+[01:24:35] through our data
+[01:24:36] everyone's Anonymous as they're going
+[01:24:38] through until you are identified as
+[01:24:40] someone likely to have committed tax
+[01:24:44] fraud and whereas before the internet
+[01:24:45] they would have had two
+[01:24:47] uh break into your house look around see
+[01:24:51] if the pool is in the back or not and
+[01:24:53] that seems to me like a much
+[01:24:55] more fundamental invasion of privacy
+[01:24:58] than just seeing your Anonymous data and
+[01:25:00] then pulling out the committers and in a
+[01:25:02] lot of cases you can build
+[01:25:05] you can build privacy preserving systems
+[01:25:07] I mean
+[01:25:08] already we allow the police a remarkable
+[01:25:12] level of intrusion into our lives we do
+[01:25:15] that willingly but we put in a security
+[01:25:17] mechanism right the the warrant process
+[01:25:19] is meant to be a security mechanism so I
+[01:25:22] will allow the police to intrude in my
+[01:25:23] life but they have to first convince a
+[01:25:26] neutral third party that is in society's
+[01:25:28] best interest to do so the rules about
+[01:25:30] telling me they did it after the fact
+[01:25:31] there's a whole lot of mechanisms not to
+[01:25:34] limit what the police can do
+[01:25:36] but to limit how they can do it
+[01:25:40] and so that that's our trade-off to make
+[01:25:42] that work now those sorts of Traders are
+[01:25:45] certainly possible in all of these
+[01:25:47] technological type of of surveillances
+[01:25:50] Investigations data collections we're
+[01:25:53] not doing any of them
+[01:25:55] uh you know an example is in full body
+[01:25:58] scanners at airports right there that
+[01:26:00] you can either see the picture or you
+[01:26:02] can blur out the the human form and see
+[01:26:05] a stylized picture and just the
+[01:26:08] Contraband objects you're looking for
+[01:26:10] right we know they they're both
+[01:26:11] technologically the same Larry lessig
+[01:26:13] does the great point of a license plate
+[01:26:17] right the police say look we need to
+[01:26:18] know who's driving the cars because the
+[01:26:21] cars are hitting things and killing
+[01:26:22] people and driving away and that sucks
+[01:26:24] that our idea the police says is to put
+[01:26:26] everybody's name on the back of the car
+[01:26:29] right someone says wait don't do that
+[01:26:31] that loses anonymity put a random number
+[01:26:35] on the back of the car we will give you
+[01:26:36] the police the database of random
+[01:26:39] numbers attached to people and that way
+[01:26:40] you can look cars up when you need to
+[01:26:42] right that that's a mechanism that gives
+[01:26:46] the police what they wanted but
+[01:26:47] preserves privacy there are a lot of
+[01:26:50] really clever things we can do
+[01:26:52] to do that we're just not doing them
+[01:26:55] which also tends to raise the question
+[01:26:57] that often divides engineers and lawyers
+[01:27:00] and you kind of gave the lawyers answer
+[01:27:02] descriptively speaking which is well we
+[01:27:05] can hash it we'll have a table and then
+[01:27:07] the government can consult the table
+[01:27:08] when it has good cause and often the
+[01:27:10] engineering answer is I never trust them
+[01:27:12] to have good cause I want a fake license
+[01:27:15] plate or no license plate or something
+[01:27:17] there's an argument to made to made that
+[01:27:20] one of the solutions here to you know
+[01:27:22] the very invasive police measures is to
+[01:27:25] give the police better tools yeah right
+[01:27:27] the reason I mean they're just trying to
+[01:27:29] do their job in most cases yeah and it's
+[01:27:31] a job we want done
+[01:27:33] and the reason they have to be so so
+[01:27:36] expansive is is this no sir that we
+[01:27:39] don't have the surgical tools and if we
+[01:27:41] could design them we'll have a better
+[01:27:43] chance of having them not do the things
+[01:27:46] we don't want them to do So speaking of
+[01:27:48] Engineers and lawyers this event is
+[01:27:50] co-sponsored by the center for research
+[01:27:52] on computation in society at the School
+[01:27:54] of Engineering in applied sciences and
+[01:27:57] the Berkman Center for internet and
+[01:27:58] Society of Harvard University but often
+[01:28:00] identified with Harvard Law School
+[01:28:03] um and I think tonight's conversation
+[01:28:06] has been as kaleidoscopic and
+[01:28:08] freewheeling as it was promised to be
+[01:28:11] and we're still trying to figure out how
+[01:28:15] to make the most of a physical Gathering
+[01:28:17] like this a gathering augmented by the
+[01:28:19] various Technologies we know are
+[01:28:21] happening at the moment in the
+[01:28:22] background there could have been a big
+[01:28:23] Twitter feed or something on the screen
+[01:28:25] behind us
+[01:28:27] um
+[01:28:27] but these are threads of conversation I
+[01:28:30] think that show first how hard this
+[01:28:32] stuff is and not purporting to have
+[01:28:34] answers where we don't yet have them and
+[01:28:37] that also really cause us I think to ask
+[01:28:40] how many of our Solutions can be General
+[01:28:42] type Solutions a sort of approach that
+[01:28:45] can work from Zone to Zone to zone or
+[01:28:48] how much of it is just trying to fix one
+[01:28:50] leak at a time and do so in a way that
+[01:28:53] may feel like your movie plot example
+[01:28:56] which is you just keep closing barn
+[01:28:58] doors but it provides I think a lot of
+[01:29:01] puzzle that we continue to work on in
+[01:29:04] venues very different from a public
+[01:29:06] lecture we're very hopeful that Bruce
+[01:29:09] will continue to be in our environments
+[01:29:11] here in Cambridge and virtually and
+[01:29:14] we'll have chance to continue the kinds
+[01:29:16] of conversations that are happening here
+[01:29:18] and I actually really appreciate the
+[01:29:20] conversation this is this is stuff I am
+[01:29:21] as you can tell still trying to figure
+[01:29:23] out so I'm glad it's been it's been
+[01:29:26] taped because I wasn't taking notes but
+[01:29:28] I will listen to this again for that
+[01:29:29] week I said stuff I didn't realize I was
+[01:29:31] going to say
+[01:29:32] and you guys there's a bunch of people
+[01:29:33] tweeting stuff that you were friending
+[01:29:36] you on Facebook now and we have to tell
+[01:29:38] them it ain't you okay there actually is
+[01:29:40] a Facebook account that mirrors my blog
+[01:29:42] and there's a Twitter account that
+[01:29:43] mirrors my blog I control a Facebook
+[01:29:45] account but not the Twitter account
+[01:29:46] someone else set that up
+[01:29:49] but I never actually visit these sites
+[01:29:53] all right then so so don't don't don't
+[01:29:57] don't don't send me stuff on Facebook so
+[01:30:00] please join me in thanking Bruce
+[01:30:01] schneier for a very good
