@@ -60,6 +60,33 @@ YouTube rate-limits bulk transcript fetching, so the run is resumable and suppor
 rotating proxies (`YT_PROXY_FILE`). Full operational detail — including the
 Webshare proxy workflow and the block/cooldown behavior — is in `AGENTS.md` §5.
 
+## The Archive API (`api/`)
+
+`api/` is a small **HTTP + MCP service over this wiki**, so `llm_engine` (and any
+MCP client) can search, read, and file back into the archive without a local
+checkout. It's a separate npm package inside this repo; full detail — endpoints,
+production notes, MCP setup — is in [`api/README.md`](api/README.md).
+
+```bash
+cd api
+npm install
+npm run dev                          # dev: tsx watch, http://localhost:4000
+curl localhost:4000/v1/health
+
+npm ci && npm run build && npm start # production: node dist/index.js
+```
+
+Configure via `api/.env` (copy `api/.env.example`): `PORT`, `ARCHIVE_PATH`
+(defaults to this repo root), and `ARCHIVE_API_TOKEN` — **set the token in
+production**; when it's unset the API runs unauthenticated. The engine side then
+gets `ARCHIVE_API_URL` + the same `ARCHIVE_API_TOKEN`.
+
+Two things to know operationally: the search index is built **at startup**, so
+after content changes restart or `POST /v1/reindex`; and conversations filed by
+the engine land in `inbox/conversations/` as **drafts for curator review** —
+they are not published pages (the deploy workflow strips `inbox/` and `api/`
+from the site). See `AGENTS.md` §5 "Review the inbox".
+
 ## Status
 
 Prototype slice = **2025** (737 items). Once you've reviewed the page formats in

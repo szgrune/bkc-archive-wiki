@@ -52,6 +52,8 @@ jobs:
           cp -R wiki/* quartz/content/
           # the 4 MB source is in the repo but isn't a page — keep the site lean
           rm -f quartz/content/raw/archive.json
+          # not pages: the API service code, and unreviewed conversation drafts
+          rm -rf quartz/content/api quartz/content/inbox
           # inject custom styling (explorer scroll fix, etc.); .quartz is a dotfile
           # so it was skipped by the wiki/* copy above and isn't a published page
           if [ -f wiki/.quartz/custom.scss ]; then
