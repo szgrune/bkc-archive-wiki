@@ -1,0 +1,187 @@
+[00:00:00] - Hi, I'm Jonathan Zittrain.
+[00:00:01] I teach on law and computer science at Harvard University.
+[00:00:04] And I'm a director of the Berkman Klein Center
+[00:00:06] for Internet and Society.
+[00:00:09] And in this video, I just want to get some terms straight
+[00:00:12] around contact tracing.
+[00:00:14] The World Health Organization defines
+[00:00:16] contact tracing as identifying, assessing, and managing people
+[00:00:21] who've been exposed to a disease to prevent onward transmission.
+[00:00:25] I realize that word "managing" might sound a little ominous.
+[00:00:27] But really what it's talking about
+[00:00:29] is having people be in a position
+[00:00:32] to know that they are infected and could be contagious
+[00:00:35] even if they're not yet showing symptoms,
+[00:00:37] so they would naturally maybe self-isolate.
+[00:00:41] And if it turns out you've tested positive,
+[00:00:44] the ability to know that soon and to be
+[00:00:47] able to find out who you've been in touch with during the window
+[00:00:50] in which you might yourself have been contagious--
+[00:00:53] and once you do that, that contact tracing
+[00:00:55] allows those people that you've been
+[00:00:57] in touch with to themselves be notified that they could be
+[00:01:01] exposed and to let them quarantine so that they're not
+[00:01:05] further exposing others as they wait
+[00:01:08] to see whether, in fact, they've come down with the illness
+[00:01:11] that you might well have shared with them.
+[00:01:14] Contact tracing, in its traditional forms,
+[00:01:17] involves interviews.
+[00:01:18] And this also might be why you've
+[00:01:20] seen in the United States news of the standing
+[00:01:22] up of, according to what Johns Hopkins study,
+[00:01:24] up to 100,000 new workers who will be contact tracers working
+[00:01:29] for states, counties, and cities.
+[00:01:32] Their health departments doing these sorts of interviews.
+[00:01:37] Now is it necessary to do this?
+[00:01:39] You might be about to find out.
+[00:01:41] If you look at any of the plans for reopening the United States
+[00:01:45] in the spring of 2020, these plans all
+[00:01:47] contemplate testing, tracing, and quarantine as a key pillar.
+[00:01:54] And the White House plan for reopening has as one
+[00:01:57] of its three sets of core state preparedness responsibilities,
+[00:02:02] testing and tracing.
+[00:02:05] Now the traditional interviews that I was just mentioning,
+[00:02:08] they rely on imperfect human recollection
+[00:02:11] in order to figure out where somebody has been
+[00:02:14] and who they've been in touch with.
+[00:02:16] And those interviews also involve really specialized work
+[00:02:19] and handling sensitive data.
+[00:02:22] And right now, it's hard to scale up all of the contact
+[00:02:26] tracers we would need able to handle that data sensitively,
+[00:02:29] to figure out the right survey instruments,
+[00:02:32] and how to offer the kinds of services that they can.
+[00:02:35] And that's why we also now start hearing
+[00:02:37] about digital contact tracing, a subset of case management
+[00:02:41] tools.
+[00:02:43] Case management tools can be something as basic and boring
+[00:02:47] as the software that a contact tracing professional
+[00:02:51] might use to keep track of all the people their calling, what
+[00:02:53] those people are telling them, who needs to be called next,
+[00:02:56] where the follow-ups are.
+[00:02:57] And there are contracts out by many of the states
+[00:03:00] and municipalities engaging in contact tracing to have
+[00:03:04] that kind of software at hand.
+[00:03:06] But there is a second form of digital contact tracing
+[00:03:11] assistance tools that involve possibly
+[00:03:14] using your smartphone in some way
+[00:03:17] in order to be able to say the data that this phone is
+[00:03:20] gathering as you walk around in the world could really
+[00:03:23] help either by some lights, substitute for,
+[00:03:27] and by many others, simply be a helpful input to a complement
+[00:03:32] to the kind of interviewing that we expect to happen when
+[00:03:34] digital contact tracing happens.
+[00:03:37] And a big question definitional here is to what extent
+[00:03:42] will the data on that phone be used
+[00:03:45] as GPS or geolocation, absolute location data.
+[00:03:49] If the data on the phone can tell you
+[00:03:51] where you have been at various times during the day,
+[00:03:54] during the past few weeks, or something, that's
+[00:03:56] the kind of thing that would really help a contact tracer
+[00:03:58] help you jog your memory, oh, yeah.
+[00:04:00] I went to the store on Wednesday, not Thursday,
+[00:04:03] or oh, I remember I was on the highway at that time.
+[00:04:07] And so anybody I was near, no problem because I
+[00:04:09] was in the car.
+[00:04:10] I was inside.
+[00:04:11] I was outside.
+[00:04:12] These are all things that can affect
+[00:04:13] the transmission of COVID-19 as a disease,
+[00:04:17] and it might be material.
+[00:04:19] Now there's a catch.
+[00:04:20] Because a lot of the contact-tracing apps that
+[00:04:23] we've seen made available to people,
+[00:04:25] some of them seek to use geolocation data, others don't.
+[00:04:30] And one reason is because Apple and Google have come up
+[00:04:34] with a framework, a framework that they are wanting apps
+[00:04:39] to be able to tap into on Android phones or iPhones that
+[00:04:45] will use a neat clever trick to figure out
+[00:04:48] who has been near whom without needing to know where anybody
+[00:04:52] has been.
+[00:04:54] And the parlor trick, the rabbit in the hat
+[00:04:56] is more or less something called BLE, Bluetooth Low Energy.
+[00:05:00] And this is part of newer iPhones and Android phones
+[00:05:04] that has the phone able to send out
+[00:05:06] a small beacon, a kind of RSSI, or received signal strength
+[00:05:12] indicator, from one Bluetooth beacon to another
+[00:05:14] that can say, oh, yeah.
+[00:05:15] I've been within 6 feet or 12 feet
+[00:05:19] or something of another beacon, another phone,
+[00:05:22] for example, whether or not I know the person who
+[00:05:24] has that phone or whether or not our phones have
+[00:05:26] talked to one another.
+[00:05:28] And the idea is that apps could be written
+[00:05:30] to tap into that Bluetooth Low Energy
+[00:05:33] so that you would know when your phone has been near another,
+[00:05:36] or more important, your phone would know--
+[00:05:39] and should you test positive and be
+[00:05:41] able to certify as much to an app on your phone
+[00:05:44] with the assistance of the public health authority,
+[00:05:47] that phone would now be able to send a cascade of notifications
+[00:05:50] out to people meeting that certain threshold for thinking
+[00:05:55] that their phone has been near your phone
+[00:05:57] within a particular period of time.
+[00:06:01] Now the catch is that for privacy reasons,
+[00:06:03] Google and Apple's framework does not contemplate
+[00:06:06] the use of any location data.
+[00:06:08] So it'll tell you that you have been near another phone
+[00:06:13] and tell the owner of that phone without telling you
+[00:06:15] who it is that your phone has been their phone.
+[00:06:18] And they don't get told who you are either.
+[00:06:19] They then have a chance to call their health department
+[00:06:22] and say, I think I've been exposed.
+[00:06:23] But no other data other than that proximity
+[00:06:26] is used to do it.
+[00:06:27] And the database itself is basically
+[00:06:30] distributed among all the phones.
+[00:06:33] Now that's great from a privacy perspective.
+[00:06:36] It does tend to make for trouble if what
+[00:06:40] you want is the more fulsome data that a contact
+[00:06:43] tracer doing an interview would you
+[00:06:45] is to say, oh, I see you've been proximate to this other person,
+[00:06:49] but that's because you're in apartment building,
+[00:06:51] and they're on the floor above you or below you.
+[00:06:53] So that's no problem.
+[00:06:53] You're not sharing any air between you,
+[00:06:55] and that shouldn't count as a contact.
+[00:06:59] So these are some of the issues we'll
+[00:07:01] see as we look at different app makers looking
+[00:07:04] to make apps that can be helpful in tracing
+[00:07:06] or an exposure notification.
+[00:07:08] They're going to have to choose whether to use
+[00:07:09] the Apple-Google framework, which will only
+[00:07:11] do this kind of cool proximity, or if they want
+[00:07:14] to try to kind of freelance on their own
+[00:07:16] and make apps that might make use of location or other data
+[00:07:20] on the phone, thereby though precluding them
+[00:07:23] from using the special framework that Apple and Google have
+[00:07:25] come up with.
+[00:07:26] A lots of other issues too, ranging from battery life
+[00:07:30] on the technical side of things.
+[00:07:31] If your phone is trying to figure out
+[00:07:33] where you are all the time, that can lead to a lot of trouble
+[00:07:37] in just using the phone for its normal purposes.
+[00:07:40] And in the broader perspective, it
+[00:07:43] leads to some issues around opt in and voluntariness.
+[00:07:46] For these sorts of apps to work, to be linked to one another,
+[00:07:50] even if the people don't know who one another are,
+[00:07:54] it's going to be important for those apps to be installed
+[00:07:57] on a lot of phones.
+[00:07:58] And right now we're contemplating people
+[00:08:00] going and downloading the right app and doing that.
+[00:08:03] It might be that we need as many as 60% or 70%
+[00:08:06] of the population to be using these apps.
+[00:08:08] And not only that, but to have them installed and running
+[00:08:11] days or a week or two before they're
+[00:08:13] notified that they might be testing positive
+[00:08:16] or have themselves been exposed and then wanting
+[00:08:19] to use the data.
+[00:08:20] Figuring out these sorts of issues, distributed versus
+[00:08:23] centralized, databases, the privacy dimensions,
+[00:08:28] and trade-offs around what kind of data gets used
+[00:08:30] and how it gets shared and how labeled it is
+[00:08:34] and how these apps are or aren't meant
+[00:08:37] to integrate or able to be integrated
+[00:08:39] with the traditional interview-based
+[00:08:42] social-work-based contact tracing kinds of activities
+[00:08:46] that we see from the public health departments.
+[00:08:48] These will be the subjects of the next video.

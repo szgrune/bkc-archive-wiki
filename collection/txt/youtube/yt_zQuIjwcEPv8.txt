@@ -1,0 +1,1531 @@
+[00:00:11] the plan I had was to kind of have an
+[00:00:14] informal discussion about it in two
+[00:00:15] parts first I'd kind of lay out the
+[00:00:17] vision behind open library and what
+[00:00:19] we're doing and try and get you to be
+[00:00:21] excited about it and feel part of it and
+[00:00:23] then I can give you a more candidate
+[00:00:25] status report about how we've done so
+[00:00:27] far and how you can help
+[00:00:29] the idea behind open library started out
+[00:00:32] really simple it spiraled out of control
+[00:00:34] from there but it started out simple the
+[00:00:37] idea is one web page per book
+[00:00:39] books are such important artifacts
+[00:00:42] they're the kind of repositories of
+[00:00:43] knowledge in our culture that where you
+[00:00:45] go when you have a great idea or a great
+[00:00:47] piece of literature or a great piece of
+[00:00:48] art you know you write about it and you
+[00:00:50] publish it in a book and it goes in a
+[00:00:52] library and it seemed kind of tragic to
+[00:00:54] me that these important cultural
+[00:00:56] artifacts never had a really strong
+[00:00:58] first class place on the web they were
+[00:01:01] always you know either on a publishers
+[00:01:04] website if they were in print or a
+[00:01:05] bookstores website or occasionally a
+[00:01:07] couple pages scattered across libraries
+[00:01:10] but there wasn't a definitive place you
+[00:01:12] could kind of go to to find out about a
+[00:01:14] book an open libraries goal is to be
+[00:01:16] that place the first thing we realized
+[00:01:20] is that if we're going to make a website
+[00:01:22] this big and this ambitious a website
+[00:01:23] with a page for every book that tried to
+[00:01:25] collect all the information about that
+[00:01:27] book on that page it had to be editable
+[00:01:28] you know this is the era of Wikipedia
+[00:01:30] and people user-contributed websites
+[00:01:32] like YouTube and so it doesn't make
+[00:01:34] sense to be the definitive website
+[00:01:36] unless users can contribute so what we
+[00:01:38] did is we decided to make it into a
+[00:01:40] structured wiki a new kind of wiki in
+[00:01:42] which we store all the data about a book
+[00:01:46] in a structured database format but
+[00:01:49] anyone else can go and edit it so if you
+[00:01:52] look at Wikipedia book and you want to
+[00:02:04] edit it what happens is you get back
+[00:02:07] this big block of text here and the
+[00:02:11] problem with a big block of text is
+[00:02:13] while humans can sometimes edit it
+[00:02:15] although Wikipedia is editing syntax is
+[00:02:17] somewhat confusing computers can't so it
+[00:02:20] can't be reused in any kind of library
+[00:02:22] system it can't be reused by software
+[00:02:24] you can't do
+[00:02:24] queries about it and find interesting
+[00:02:26] things we wanted open library to support
+[00:02:29] all those things so what we did is we
+[00:02:31] made it more structured if you go find a
+[00:02:33] book on open library this one we have
+[00:02:39] separate fields for all the different
+[00:02:40] data elements like the title the author
+[00:02:42] all of those sorts of things and that
+[00:02:44] one to us for example if you click on an
+[00:02:47] author's name we automatically generate
+[00:02:48] a bibliography and show you all the
+[00:02:50] books that authors written because that
+[00:02:52] data is stored with a structured way
+[00:02:53] when you add a new book and you say it's
+[00:02:56] written by this author we automatically
+[00:02:57] know and add it to this page and all of
+[00:02:59] this data is available for people to
+[00:03:01] reuse and recreate in different ways the
+[00:03:07] other thing we realized very quickly is
+[00:03:08] that it had to be really open you know
+[00:03:10] our name is the open library open this
+[00:03:12] is like a core part but the plan was
+[00:03:15] that this isn't something like you know
+[00:03:17] I could do or a small group could do or
+[00:03:19] you know even a big company could do
+[00:03:21] this is something that really has to be
+[00:03:22] a collaboration between a lot of
+[00:03:24] different people so we brought in
+[00:03:27] publishers we've brought in libraries
+[00:03:29] we've bought book lovers we've brought
+[00:03:30] in reviewers we're trying to get
+[00:03:31] everyone to come together and contribute
+[00:03:33] their data to one site where it's all
+[00:03:35] available for free it's all available
+[00:03:37] for download and reuse everything is
+[00:03:40] completely open anyone can contribute
+[00:03:42] anyone can you take advantage of it
+[00:03:44] anyone can use it we're just this kind
+[00:03:46] of central hub coordinating all these
+[00:03:48] different actors the other thing we
+[00:03:51] realized was that you want to have full
+[00:03:53] text so for books that are out of
+[00:03:56] copyright or we can scan them and put
+[00:03:58] full text we want it to do that we
+[00:04:01] springs up some interesting questions
+[00:04:03] about how to read books online nobody
+[00:04:05] has really kind of found a great model
+[00:04:06] for reading books and webpages you know
+[00:04:08] you can have a really long HTML page
+[00:04:10] that people can scroll through you can
+[00:04:12] have a little flip book interface and
+[00:04:14] we're trying both of those but I think
+[00:04:16] we need people to help us find ways to
+[00:04:17] make these books more accessible to
+[00:04:19] people we also want to have a way for
+[00:04:23] people to find them in their local
+[00:04:25] library so if people come to our site
+[00:04:26] through a search engine they come across
+[00:04:28] a page that seems interesting they want
+[00:04:30] to get a copy of that book and so we
+[00:04:31] want to be able to say oh just down the
+[00:04:33] street there's a library that has a copy
+[00:04:35] you go and visit them
+[00:04:36] and in an era where people think
+[00:04:37] research means going to do a search on
+[00:04:39] Google this is really important because
+[00:04:41] it allows us to pull people from google
+[00:04:43] into physical libraries where they can
+[00:04:46] go and visit and collect books so our
+[00:04:48] motto is kind of on the side of every
+[00:04:50] book we have a little option where you
+[00:04:51] can buy borrow or down a steal or
+[00:04:55] download I guess you know by by going to
+[00:05:02] an online bookstore or physical
+[00:05:04] bookstore or borrow by looking at a
+[00:05:06] local library or at one of these book
+[00:05:08] trading services and then download buy
+[00:05:11] if we have a scan we'll make that
+[00:05:12] available the other thing of course is
+[00:05:16] we want to integrate reviews both
+[00:05:17] professional reviews from major journals
+[00:05:19] and publications and also amateur
+[00:05:23] reviews like Amazon has where people can
+[00:05:24] contribute reviews we want to have
+[00:05:26] subjects when we first started the
+[00:05:28] project we brought in a bunch of
+[00:05:29] librarians and the first thing they
+[00:05:31] started arguing about was which subject
+[00:05:33] system to use you know should we use the
+[00:05:34] Library of Congress subject system or
+[00:05:36] should we use this you know dissidents
+[00:05:38] version of the Library of Congress
+[00:05:39] subject system where the Vietnam War is
+[00:05:41] classified as a real war because the
+[00:05:43] Library of Congress only changed that
+[00:05:44] recently and so our answer was very
+[00:05:47] simple we don't have to choose on the
+[00:05:48] internet we don't have to put the books
+[00:05:50] in one place or only put one category
+[00:05:52] system on each heading card we can store
+[00:05:54] all the category systems and let people
+[00:05:56] sort by whatever system they want and so
+[00:06:00] that's our goal is to be open in that
+[00:06:02] way that if you want to sort it by Dewey
+[00:06:04] Decimal you can add in Dewey Decimal
+[00:06:05] numbers if you want Elsie SH you can add
+[00:06:07] Elsie SH headings all of the various
+[00:06:09] options we want to be able to put on our
+[00:06:11] website and let people sort and direct
+[00:06:13] through whatever mechanisms is necessary
+[00:06:15] and try and connect up similar
+[00:06:17] categories to say this you know Library
+[00:06:19] of Congress subject heading is very
+[00:06:20] similar to this publisher subject
+[00:06:22] heading and so on
+[00:06:23] same thing with identifier z' right now
+[00:06:26] you know there's ISBNs there's OCLC
+[00:06:28] numbers you know every organization
+[00:06:30] seems to come up with a new identifier
+[00:06:32] each week UPC's and so on you know we
+[00:06:36] want to be the repository to take all
+[00:06:38] the different identifiers to take
+[00:06:40] everything we can put it in this one
+[00:06:42] database and then let people jump
+[00:06:44] between them so you give us an ISBN and
+[00:06:46] we'll give you back into a CLC number
+[00:06:47] you give us an OCLC number we'll give
+[00:06:49] you back an open
+[00:06:50] right number we have to we obviously
+[00:06:52] have to create our own identifier system
+[00:06:54] because we're gonna have more books and
+[00:06:55] different books than other systems do
+[00:06:57] you but we're gonna be able to link that
+[00:06:59] with all the other identifier systems
+[00:07:02] the other big challenge is what you know
+[00:07:05] much to the confusion of my friends with
+[00:07:07] children the library world calls Ferber
+[00:07:08] ization
+[00:07:09] which basically means connecting books
+[00:07:13] like physical books in a library
+[00:07:15] connecting those to the collection of
+[00:07:17] all those physical books that are
+[00:07:18] basically the same and in the same print
+[00:07:20] run collecting those to all the
+[00:07:22] different editions and collecting those
+[00:07:24] to the translations and video
+[00:07:26] adaptations and the CDs and managing the
+[00:07:29] links between that the library world is
+[00:07:31] taken some tentative steps to that but
+[00:07:33] they've mainly been really focused on
+[00:07:34] the physical copy of the book they have
+[00:07:36] on the shelves and so we're going to
+[00:07:39] have to come up with new and different
+[00:07:40] kinds of relationships between books to
+[00:07:42] represent that and we want to store that
+[00:07:44] along our websites you could jump from a
+[00:07:46] physical book to the you know audio CD
+[00:07:48] to a movie based on it keep that all in
+[00:07:50] one database and keep the relationships
+[00:07:52] between them structured also we want to
+[00:07:54] let people add new kinds of
+[00:07:55] relationships like this book was
+[00:07:57] inspired by that book or this book is a
+[00:07:59] rebuttal of that book you know this book
+[00:08:01] shows some serious errors in the other
+[00:08:03] book or this book you know is a new
+[00:08:05] edition that should replace this old
+[00:08:07] book we want to be able to store all
+[00:08:09] those links between books in one website
+[00:08:13] in terms of getting books to people
+[00:08:15] we're also experimenting with
+[00:08:16] print-on-demand
+[00:08:17] we want to be able to let you print out
+[00:08:20] a book you have it mailed to you that's
+[00:08:22] we've scanned and is available in
+[00:08:23] full-text you can read it in physical
+[00:08:25] form we also want to do scan on-demand
+[00:08:27] which is the reverse side of the
+[00:08:29] equation so we've gotten we want you to
+[00:08:31] be able to find a book that seems
+[00:08:33] interesting in our catalog and if it's
+[00:08:34] not scanned click a scan this book
+[00:08:36] button and maybe pay you know a $20 or
+[00:08:39] something have someone go page it off
+[00:08:42] the shelves bring it to the scanning
+[00:08:43] center that's nearby scan through the
+[00:08:45] book and send you a PDF so the big
+[00:08:48] vision we started with was that this
+[00:08:51] would be kind of a true library of ideas
+[00:08:53] a place where you could go and find an
+[00:08:54] interesting book and click jump from
+[00:08:56] there to all the other books by that
+[00:08:58] author or other books on that subject or
+[00:09:00] worse bottles to that book or reviews of
+[00:09:02] that book just be able to float
+[00:09:04] through this kind of vast web of
+[00:09:06] interconnected ideas that's represented
+[00:09:08] by books and make that really visible
+[00:09:10] and exciting the people said the
+[00:09:15] immediate question people ask us is oh
+[00:09:16] isn't someone already doing this so the
+[00:09:19] major Canada is Amazon right now when
+[00:09:22] you want to link to a book you link to
+[00:09:23] Amazon the problem with them is that
+[00:09:26] they're basically a bookseller and they
+[00:09:28] give you a lot of information about
+[00:09:29] selling books but little beyond that and
+[00:09:31] they really don't have much good data on
+[00:09:34] stuff that's out of print which is the
+[00:09:35] core of what's really interesting about
+[00:09:36] libraries and what's really unavailable
+[00:09:38] on the web right now um Google which I'm
+[00:09:41] sure will talk a little bit more about
+[00:09:43] later has been going through and
+[00:09:45] scanning books and collecting library
+[00:09:47] catalogs and making them available
+[00:09:49] through Google book search but they have
+[00:09:51] very little community features and if
+[00:09:52] you look at Google they've never been
+[00:09:54] good at building community features you
+[00:09:56] know the closest that came was like
+[00:09:57] Google Answers and they shut that down
+[00:09:59] eventually and of course there's
+[00:10:03] WorldCat which is a non-profit run by a
+[00:10:06] it's a OCLC of a non-profit they run the
+[00:10:09] site called WorldCat which aggregates
+[00:10:11] library catalogs from a bunch of
+[00:10:12] different libraries unfortunately their
+[00:10:15] business model depends on selling this
+[00:10:17] data to people so they've been very
+[00:10:18] hesitant about making it available for
+[00:10:20] free online and letting people reuse it
+[00:10:23] so we really want to be this public
+[00:10:25] resource that's not controlled by any
+[00:10:27] particular group that everyone can use
+[00:10:28] unlike these other organizations so
+[00:10:33] that's the big vision I guess I'll pause
+[00:10:35] for some questions about that before
+[00:10:37] going on and tell you about how we've
+[00:10:39] done so far is anyone confused or think
+[00:10:43] it's a bad idea right now we're just
+[00:10:49] English language only but obviously
+[00:10:50] internationalization is a huge part
+[00:10:52] we're trying to get library catalogs
+[00:10:54] from other countries and we want to be
+[00:10:56] able to both have different
+[00:10:59] translate the content of the website so
+[00:11:01] a summary of the book should be able to
+[00:11:03] be translated in different languages as
+[00:11:04] well as the interface so people can
+[00:11:06] browse it in different languages but we
+[00:11:09] don't have that yet sure
+[00:11:14] so the plan is to start with just
+[00:11:16] monographs these kind of books serials
+[00:11:19] is the next big task we want to handle
+[00:11:20] after this and it's a little bit harder
+[00:11:23] because you know there's it's so so much
+[00:11:25] more complicated than that with a
+[00:11:27] monograph you basically get the title
+[00:11:28] and the author and you're done whereas
+[00:11:29] serials are in these vast sets over time
+[00:11:32] and each individual article is
+[00:11:34] interesting and people want to read it
+[00:11:35] but that's the next big challenge we
+[00:11:37] want to tackle after this yeah that's an
+[00:11:55] interesting question because the library
+[00:11:57] world is you know kind of binary right
+[00:11:59] the systems only have one way to enter
+[00:12:00] things and usually right now we've
+[00:12:02] mainly try to adopt that by having lots
+[00:12:05] of different kinds of ways you can
+[00:12:06] connect books but we haven't really done
+[00:12:07] anything fuzzy systems will you allow
+[00:12:14] users to make up their own categories
+[00:12:16] ancestors sure so we want to have
+[00:12:18] tagging and that kind of user
+[00:12:19] contributed cataloging as well you know
+[00:12:21] in the same way that we're gonna have to
+[00:12:22] have a new identifier scheme to
+[00:12:23] represent books in the open library
+[00:12:24] tagging is kind of our new category
+[00:12:26] scheme
+[00:12:51] maybe the answer is let me talk a little
+[00:13:16] bit about how we've we've done so far in
+[00:13:18] each of these goals this was kind of the
+[00:13:20] grand vision that we said had for
+[00:13:21] yourselves but you know it's been really
+[00:13:24] difficult as you might imagine
+[00:13:26] collecting a page for every book in the
+[00:13:27] world has been hard and so I can talk a
+[00:13:30] bit more about how far we've gotten and
+[00:13:32] how people can help fill in the gaps the
+[00:13:36] software as you can see has been working
+[00:13:38] really well we thought it would be hard
+[00:13:40] to build a something that combined this
+[00:13:43] kind of database structure as well as
+[00:13:45] the flexibility of a wiki and it never
+[00:13:46] really been done before and on day one
+[00:13:49] when we started importing books we got
+[00:13:50] six million from the Library of Congress
+[00:13:52] and that's bigger than any wiki that
+[00:13:53] exists so far but that's working really
+[00:13:56] well I'm really excited we imported six
+[00:13:58] million books we've got around ten
+[00:13:59] million now and it seems to be working
+[00:14:01] fine so for book we mean catalog record
+[00:14:08] so we got the catalog records from the
+[00:14:10] Library of Congress for full text we
+[00:14:12] only have around 400,000 so far and we
+[00:14:15] get the full-text ones mostly through
+[00:14:17] the open internet archives OCA scanning
+[00:14:20] project so the Internet Archive builds
+[00:14:23] these scanning machines they took them
+[00:14:24] out to various major libraries I think
+[00:14:27] they have like 70 or something now they
+[00:14:29] have a lot of them in the Boston Public
+[00:14:31] Library is one in the Library of
+[00:14:33] Congress and the New York Public Library
+[00:14:34] in Toronto and so on and then then
+[00:14:38] people fund them they take books off the
+[00:14:39] shelves run them through the scanning
+[00:14:40] machine and they get uploaded to our
+[00:14:42] servers and converted into PDF
+[00:14:44] we've been trying to work with Google
+[00:14:47] and with other people who have copies of
+[00:14:49] scan books and if Harvard has some scan
+[00:14:51] scanning collection we'd love to include
+[00:14:53] those as well to try and bring all of
+[00:14:56] those when full-text is available into
+[00:14:57] the open library for catalog data
+[00:15:02] publishers have been really helpful they
+[00:15:04] want to promote their books so they send
+[00:15:05] us lots of data about in print books
+[00:15:07] book stores have also been pretty
+[00:15:09] helpful but again mostly focused in
+[00:15:12] print books for libraries hello for
+[00:15:20] libraries it's been a little bit harder
+[00:15:21] persuading them to give us their
+[00:15:23] catalogs they've been kind of hesitant
+[00:15:24] um it's been great getting six million
+[00:15:27] from the Library of Congress we've
+[00:15:28] gotten another five million recently
+[00:15:29] from University of North Carolina but
+[00:15:31] we're still trying to push them you know
+[00:15:33] and just getting them to contribute data
+[00:15:36] to our site would be really helpful
+[00:15:37] because it's those kinds of features
+[00:15:38] that allow us to do things like find in
+[00:15:40] your local library and stuff like that
+[00:15:43] for reviews we're trying to scan review
+[00:15:46] indexes and this is another place we
+[00:15:48] need help is if people have copies of
+[00:15:50] review indexes on digitized or on cd-rom
+[00:15:53] or something we love those to be
+[00:15:54] contributed it's been really hard
+[00:15:56] trucking down a copy of these
+[00:15:59] identifiers is in kind of a mess nobody
+[00:16:02] really wants to share scan on demand is
+[00:16:04] making some good progress we've got
+[00:16:06] University of Toronto and University of
+[00:16:07] North Carolina signing up and so
+[00:16:09] basically we've got this system where
+[00:16:11] you go on the web you pay 10 cents a
+[00:16:13] page and a $5 fee and they go and get it
+[00:16:16] off the shelves and they can turn it
+[00:16:18] around within a couple days now and then
+[00:16:20] remember that you paid for it we put a
+[00:16:21] little book plate in the online version
+[00:16:23] so we think once we get that running
+[00:16:25] smoothie that'll be really popular
+[00:16:28] Korean on-demand has also been pretty
+[00:16:31] exciting we got number 4 of these
+[00:16:33] on-demand books machines in our offices
+[00:16:36] in San Francisco it's this huge machine
+[00:16:38] that takes up half the room but it you
+[00:16:40] feed it some paper and ink and some glue
+[00:16:42] in and out comes a fully printed press
+[00:16:44] book on the other end within five
+[00:16:46] minutes or so it's really amazing to
+[00:16:48] watch so we have this machine just
+[00:16:49] cranking out books they're gonna send
+[00:16:51] another one of them to New Orleans to
+[00:16:53] reprint the New Orleans Public Library
+[00:16:56] system that got destroyed taking the
+[00:16:58] thought
+[00:16:58] thousands of books we scan and just
+[00:17:00] printing out copies of them and filling
+[00:17:01] the shelves again so that's been really
+[00:17:03] excited but we still need a lot of help
+[00:17:07] the biggest thing is with data if you
+[00:17:09] have data that you can contribute about
+[00:17:11] catalog records or about books you've
+[00:17:13] scanned or reviews of books anyone who
+[00:17:15] has data about books we'd love your
+[00:17:17] contributions if you don't have data but
+[00:17:19] you have good social skills we need help
+[00:17:21] calling people and hanging them until
+[00:17:23] they give us data if you can program we
+[00:17:26] need more coders it's you know Bish's
+[00:17:29] problem trying to reprocess the data and
+[00:17:32] munch it into some form that's usable
+[00:17:34] and if you love books soon we'd love
+[00:17:37] your help curating and collecting them
+[00:17:39] and annotating them so I guess that's
+[00:17:44] basically my progress report if people
+[00:17:46] have questions about the bigger project
+[00:17:47] or about any particular aspect I'd love
+[00:17:50] to take them so obviously right now you
+[00:17:59] can do an interlibrary loan for books
+[00:18:01] and copyright and you can get the
+[00:18:02] physical book sent to you and often you
+[00:18:03] can get a photocopy of the books consent
+[00:18:05] to you what we want to do is we want to
+[00:18:07] do digital interlibrary loan so that we
+[00:18:09] can scan the book save a copy and send
+[00:18:11] you the PDF and you know we've talked it
+[00:18:15] over with some publishers and they seem
+[00:18:17] okay with it we've talked it over with
+[00:18:18] some libraries and they seem okay with
+[00:18:20] it and there are a couple who are gonna
+[00:18:21] go ahead with it and have us as they're
+[00:18:24] scanning partner and do digital
+[00:18:26] interlibrary loan for out of you know
+[00:18:28] books that you can't get in a bookstore
+[00:18:29] they're how to print right but they're
+[00:18:31] not yet out of copyright
+[00:18:47] information sharing it but then you're
+[00:18:49] getting resistance so yeah the publisher
+[00:18:57] is you know are happy because this is
+[00:19:00] yet another way to promote their books
+[00:19:01] you know people come across it on the
+[00:19:03] internet interested in the book and they
+[00:19:06] saw another copy and the publishers have
+[00:19:08] a system set up for promoting their
+[00:19:10] books they have a system of onyx feeds
+[00:19:11] as they're called these XML feeds that
+[00:19:13] describe their books and go to the major
+[00:19:15] bookstores and so on the libraries have
+[00:19:19] been much more difficult they're mostly
+[00:19:23] it seems just because of you know the
+[00:19:25] complicated bureaucracy and because of
+[00:19:26] you know they're worried about legal
+[00:19:28] issues that worried about you know
+[00:19:30] whether we're you know trustworthy and
+[00:19:33] so it's just been this long hard slog to
+[00:19:35] persuade them to give us records and I
+[00:19:39] mean there are a lot of librarians here
+[00:19:42] if you guys can give us advice on what
+[00:19:43] we're doing wrong or what the right way
+[00:19:45] to approach libraries is what we're
+[00:19:47] missing that would be really helpful
+[00:19:50] well you described so far than mainly us
+[00:19:53] related are you making a international
+[00:19:55] pushi as well we want to do an
+[00:19:57] international push we don't have you
+[00:20:00] know we have better contacts in the US
+[00:20:01] we have some contacts in Canada we're
+[00:20:04] trying right now in India to try and get
+[00:20:06] a collection of Indian books we have a
+[00:20:08] couple contacts and some European
+[00:20:10] countries to try that but we're
+[00:20:12] basically you know we just we don't know
+[00:20:14] people in the right areas and so if
+[00:20:16] we're looking all the time for
+[00:20:18] international people who can help us
+[00:20:19] with it but you know we've had enough
+[00:20:21] trouble dealing with US library is that
+[00:20:23] dealing with other countries is a bit
+[00:20:25] beyond our grasp at the moment
+[00:20:31] delicious library like sort of people
+[00:20:35] doing their own thing Kellogg their own
+[00:20:37] libraries consumer software the main
+[00:20:45] people we've been working with is this
+[00:20:48] site called library thing which is a
+[00:20:50] popular web-based version of kind of
+[00:20:52] like delicious library where you
+[00:20:53] uploaded a list of books and it builds
+[00:20:55] you a catalog the major sites like
+[00:20:59] delicious library and so on all those
+[00:21:00] programs they kind of pull from other
+[00:21:02] library records so we've been thinking
+[00:21:03] instead of trying to aggregate those we
+[00:21:06] go back to the source and try and get
+[00:21:07] the data that way what are you doing to
+[00:21:16] reach the social tipping point that I
+[00:21:20] think cuz I feel like there's a lot of
+[00:21:23] effort towards getting the data and boy
+[00:21:26] there's a lot you can do right but I
+[00:21:28] mean if you look at the changelog of
+[00:21:29] normal stuff explained you're on all of
+[00:21:31] the effort seems to be on the outside
+[00:21:36] yeah so the the plan is kind of to do it
+[00:21:39] in two phases one is kind of getting the
+[00:21:41] data into the right format so that we
+[00:21:44] need to be comfortable that the data is
+[00:21:45] up there in a way that's stable and so
+[00:21:47] when people try and make contributions
+[00:21:48] they won't get lost the next time we try
+[00:21:50] and import new data or change the format
+[00:21:51] and we're just now at a point where we
+[00:21:53] can declare that kind of stability so
+[00:21:54] we've been holding off on encouraging
+[00:21:57] new contributors one that happens
+[00:21:59] obviously that's going to be a big part
+[00:22:01] of our push is trying to find people and
+[00:22:03] you know we've looked at the history of
+[00:22:04] Wikipedia and of other wiki sites to try
+[00:22:07] and figure out tricks for bringing
+[00:22:08] people in and getting people to
+[00:22:10] contribute I think a lot of it is as I
+[00:22:12] suggested you know people will come in
+[00:22:14] through Google their enormous number of
+[00:22:16] people searching for books and there's
+[00:22:17] very little data about a lot of the out
+[00:22:19] of print books so if we can start to
+[00:22:21] pull those people in and get them
+[00:22:22] interested that way we're hoping we can
+[00:22:24] build a community through that another
+[00:22:27] question what's the financial plan how
+[00:22:29] is it how is the money working so right
+[00:22:32] now we're mostly funded by the Internet
+[00:22:33] Archive it's not for-profit and same
+[00:22:35] with this guy that's been doing book
+[00:22:36] scanning and other projects we've gotten
+[00:22:38] a grant from the California State
+[00:22:40] Library Commission or whatever it's
+[00:22:41] called to
+[00:22:43] to work on it and we're applying for
+[00:22:45] more grants through funding a hope is
+[00:22:47] that long-term it'll start to be self
+[00:22:49] sustainable through things like
+[00:22:50] affiliate revenues of sending people to
+[00:22:52] bookstores and stuff like that and
+[00:22:53] through a little bit of money we make
+[00:22:55] off with things like scan on demand and
+[00:22:56] print on demand but for now these
+[00:22:59] startup costs are being paid by these
+[00:23:01] foundations yeah I mean there's this
+[00:23:24] constant tension because a lot of the
+[00:23:25] other people at the project say oh I
+[00:23:27] want to do that partner you know I want
+[00:23:28] to have this bookshelf feature and I you
+[00:23:31] know I sometimes have to say no let's
+[00:23:32] hold off and let other people develop
+[00:23:34] this one we just you know the
+[00:23:37] fundamental constraint is we don't have
+[00:23:39] the resources to do all of it ourselves
+[00:23:40] there are some things where we think we
+[00:23:42] can add real value like scan on demand
+[00:23:44] because we have the scanners and the
+[00:23:46] library contacts that at the Internet
+[00:23:48] Archive they can make that kind of thing
+[00:23:49] happen with print on demand I think you
+[00:23:52] know we have a print on demand machine
+[00:23:54] we're one of the few people that do and
+[00:23:55] we got it because of some other projects
+[00:23:57] that we're working on so I might as well
+[00:23:59] use it but we're also going to link to
+[00:24:00] lulu and other people doing print on
+[00:24:02] demand operations
+[00:24:15] yeah we're still working on picking the
+[00:24:18] identifier system I mean right now the
+[00:24:19] URL is our unique identifier but we're
+[00:24:21] gonna we've gotten said we're trying to
+[00:24:23] get feedback on what the right
+[00:24:24] identifier is for people's different
+[00:24:26] applications and then the next round I
+[00:24:28] think we're gonna use that instead and
+[00:24:31] of course we have an API so that you can
+[00:24:33] query by all sorts of different things
+[00:24:34] and get that you know various library
+[00:24:36] records ferberize ation comes from the
+[00:24:42] hard VR yes
+[00:24:46] much all my friends with kids get
+[00:24:49] totally confused when I talk about it's
+[00:24:59] very similar it's just we look the books
+[00:25:00] calm feel sympathy and catalogue them
+[00:25:04] properly the crying so where we are is
+[00:25:10] this fairly well structured set of
+[00:25:12] metadata concepts that goes I just say
+[00:25:16] Co some additions all the way up to
+[00:25:18] broader ideas of what constitutes a book
+[00:25:21] it's nautical example is chocolate or
+[00:25:23] collection boob or artboard yes so it's
+[00:25:26] Hamlet the particular Edition is the
+[00:25:28] large print edition is a particular
+[00:25:29] print runs over so there's this fairly
+[00:25:32] structured thing in existence and then I
+[00:25:34] think was wendy was who I was asking
+[00:25:39] about the so all of the the messy
+[00:25:42] relationships that one might create such
+[00:25:46] as based on he says a refutes it is a
+[00:25:50] parody of something so sorry Longwood
+[00:25:53] introduction to the question which is
+[00:25:54] it's easy to see how somebody could sit
+[00:25:57] down it have a centralized authority
+[00:25:59] could come up with a fervor that would
+[00:26:01] be useful it's it's harder to see and
+[00:26:06] it's easy to think to imagine that
+[00:26:08] people can make up whatever tags they
+[00:26:09] want that whatever relationship they
+[00:26:11] want whether it's it's a parody of or is
+[00:26:14] funny if you know about / it's harder to
+[00:26:17] see how you're gonna get those get the
+[00:26:19] right degree of structure and
+[00:26:21] coordination around the set of
+[00:26:23] relationships it's predictable about
+[00:26:25] what people are gonna say so what's
+[00:26:27] what's your plan for doing that Lord you
+[00:26:28] just want to see what emerges yeah I
+[00:26:31] think you know it's kind of
+[00:26:32] accommodation right so we're gonna
+[00:26:34] obviously have some built in one that's
+[00:26:36] like refutes or is related to you or you
+[00:26:40] probably would also like but after that
+[00:26:43] we want to how are you gonna decide on
+[00:26:44] those I pick my favorites you know
+[00:26:49] we don't live the way we want to just to
+[00:26:51] kind of seed it with a couple that
+[00:26:52] seemed interesting to us and then after
+[00:26:54] that the goal is to the database
+[00:26:57] software the wiki software use is very
+[00:26:58] flexible so people can have their own
+[00:27:00] fields they can add their own tags they
+[00:27:02] can have their own in relationships and
+[00:27:03] we'll see what happens when we get our
+[00:27:05] user community our hope is that it will
+[00:27:07] kind of end up like Wikipedia where
+[00:27:09] these people who kind of build a
+[00:27:10] community on Wikipedia and say this is
+[00:27:12] the right way to categorize this kind of
+[00:27:14] object this is the right way they
+[00:27:16] connect these two things and hopefully
+[00:27:17] we the same thing will happen with us it
+[00:27:21] doesn't remain need to hire some people
+[00:27:22] to push things into line you know this
+[00:27:32] goes somewhat - to something
+[00:27:34] David had a post about Hamlet where
+[00:27:36] we're you know maybe the answer in these
+[00:27:39] circumstances is not to impose the same
+[00:27:42] sort of binary relationships that exist
+[00:27:45] in other library data like for example
+[00:27:47] LCS age something either is or is not a
+[00:27:50] love story they're more love stories you
+[00:27:54] think of the best right and the
+[00:27:56] connections between books whether Romeo
+[00:27:58] and Juliet is is like West Side Story
+[00:28:00] it's also a similarly sort of nuanced
+[00:28:02] thing and it would be cool if some
+[00:28:04] system could capture that you know yeah
+[00:28:10] if you know how to do that that would be
+[00:28:13] great it's it's really tricky to some
+[00:28:17] extent right because you can't change
+[00:28:18] other people's tags right on
+[00:28:21] LibraryThing we just introduced a
+[00:28:22] feature where we have a field of wiki
+[00:28:24] for putting in data right right the
+[00:28:26] first thing that happened is people said
+[00:28:28] wait a second your gender field doesn't
+[00:28:30] have enough options
+[00:28:31] wait a second you're asking for bc-ad I
+[00:28:33] want be CEC right and the problem with
+[00:28:36] cataloging is that someone wins right
+[00:28:39] and you can offer more options like well
+[00:28:42] we're gonna put in multiple genders at
+[00:28:44] some point someone wins and librarians
+[00:28:47] really that is it is an interesting
+[00:28:51] problem um all right snap the librarian
+[00:28:54] because the authors take David Smith
+[00:28:58] which David Smith
+[00:29:00] now I mean if you're David Nathan Smith
+[00:29:03] you want that and the dates in there and
+[00:29:06] you want to be specifically identified
+[00:29:08] you want to get mixed up with other with
+[00:29:10] other people about you it's hard to do
+[00:29:13] that with if everybody is just putting
+[00:29:15] in the data and some people don't know
+[00:29:16] that it's David Nathan's but they just
+[00:29:18] know it's David Smith and the data gets
+[00:29:21] messed up so what do you want clean but
+[00:29:24] there really is an answer to who wrote a
+[00:29:25] book there really is an answer isn't an
+[00:29:27] answer to what is the gender of this
+[00:29:29] transgender author right why do you need
+[00:29:34] this well because you want to know who
+[00:29:36] are the female mystery writers in the
+[00:29:37] bus yeah I mean the idea of letting
+[00:29:50] everyone kind of pick their own answer
+[00:29:52] is interesting I don't think anyone's
+[00:29:53] really try to wiki that way for that
+[00:29:56] particular problem of making sure you
+[00:29:58] get the authors right what we want to do
+[00:29:59] is have a kind of autocomplete drop-down
+[00:30:01] so as you type an author's name it'll
+[00:30:03] say oh did you mean the author of this
+[00:30:06] book or the author or the separate
+[00:30:07] author who was born this year and wrote
+[00:30:09] this book and hopefully that'll get
+[00:30:10] people to pick the right author so we've
+[00:30:15] been working on that way it's not quite
+[00:30:16] finished yet but that's our hope but as
+[00:30:20] for letting everyone decide what
+[00:30:21] someone's gender is I mean I think we
+[00:30:25] could SJ will probably comment on this
+[00:30:27] but Wikipedia is kind of pick the system
+[00:30:29] where you have a discussion and come to
+[00:30:31] consensus and then you pick the answer
+[00:30:33] that you know everyone can kind of sign
+[00:30:35] on to you as opposed to letting everyone
+[00:30:37] pick their own point of view Wikipedia
+[00:30:39] and write up the story from their
+[00:30:40] perspective I think it would be an
+[00:30:43] interesting experiment and I guess
+[00:30:45] there's some wiki clones that are trying
+[00:30:46] to do that but I think it's just we're
+[00:30:49] already taking on somebody challenges
+[00:30:50] that that one would throw us over the
+[00:30:52] top I asked a different question which
+[00:30:56] is whether you're hot linking to any
+[00:30:58] databases right now
+[00:31:00] top linking two databases meaning either
+[00:31:03] their drawing their data directly from
+[00:31:05] your identities now right now it's all
+[00:31:10] imported just because when you have two
+[00:31:13] million records if you want to do a live
+[00:31:14] query you know every week to get it up
+[00:31:17] to hit it it's difficult things like
+[00:31:19] price records we're gonna we're gonna do
+[00:31:21] on the fly because they change
+[00:31:22] frequently and because nobody really
+[00:31:24] wants to query too much on them what but
+[00:31:31] there is an answer sorry I first met
+[00:31:46] Aaron a long time ago at a at a summer
+[00:31:49] event around rcj bridge heads he rents
+[00:31:59] company we build some social software
+[00:32:01] from building communities online in the
+[00:32:03] canonical one of the canonical
+[00:32:04] experiments to see whether you knew how
+[00:32:06] to use that software was figuring out
+[00:32:08] how to automatically calculate
+[00:32:15] make up frequently in in the context of
+[00:32:21] worker deception on Wikipedia the answer
+[00:32:23] to we don't know how to you know what is
+[00:32:26] the correct ender is well we're raising
+[00:32:29] the question completely wrong anyway
+[00:32:32] we're going to create a new way or we're
+[00:32:34] going to of cataloging this or we're
+[00:32:36] just going to introduce it differently
+[00:32:38] by writing little note that explains
+[00:32:41] that gender this particular situation is
+[00:32:45] the kind of thing that seems like that
+[00:32:49] there's a whole class of solutions
+[00:32:50] they're easier in the context of you
+[00:32:53] because is it is on the structure you
+[00:32:55] can have answers you can have ways of
+[00:32:57] addressing or answering the question
+[00:33:00] that are unstructured and one-off ways
+[00:33:03] of doing it but the advantage of having
+[00:33:06] a field with wiki
+[00:33:07] is that you have the structure that's
+[00:33:09] right that's what I'm saying well and
+[00:33:11] you want to know when when the query you
+[00:33:13] were making was with poorly-trained
+[00:33:21] right the Wikipedia is very good at
+[00:33:23] coming to people collaborating in the
+[00:33:26] media are very good at answering this
+[00:33:28] question in some way but that's in part
+[00:33:30] because the answer is the types of
+[00:33:32] answers in in that context are less
+[00:33:34] constrained than the women so this was
+[00:33:37] one of the problems we faced at the
+[00:33:38] beginning was where to find this balance
+[00:33:40] between structure that people can reuse
+[00:33:42] and put into databases for others
+[00:33:44] purposes and flexibility like the kind
+[00:33:46] you can see on Wikipedia where you can
+[00:33:47] completely revamp the page and make it
+[00:33:49] look totally different and like
+[00:33:50] compromise we came to you was that
+[00:33:51] things would be structured but you could
+[00:33:54] change the structure on the fly so for a
+[00:33:59] class of entries or something so this is
+[00:34:00] the structure for making comics which is
+[00:34:03] just a normal book it's a little ugly at
+[00:34:09] the moment but basically you get to say
+[00:34:11] oppor right now it's yo i is it spring
+[00:34:18] and the source is in here somewhere
+[00:34:22] doesn't make it less useful for
+[00:34:25] computers that are trying to access the
+[00:34:26] database because I can't predict what
+[00:34:29] author's name gets changed to name of
+[00:34:31] writers well so yeah the hope is that
+[00:34:33] people don't change the names of the
+[00:34:34] fields that they add new fields that
+[00:34:36] they you know put an asterisk next to
+[00:34:38] old fields and Sunday doesn't really
+[00:34:40] make sense here or right you take that
+[00:34:50] field out for that particular example
+[00:34:52] but yeah the hope is to you know make
+[00:34:55] this schema reconfigurable on the fly
+[00:34:56] and hope that's like tagging people come
+[00:34:58] to consensus about what the properties
+[00:34:59] are named but they can change what
+[00:35:01] properties they use in each particular
+[00:35:02] case based on what it is so for example
+[00:35:05] if you're categorizing Bach things
+[00:35:07] there's a special Bach number that only
+[00:35:08] makes sense for things written by Bach
+[00:35:10] and you want to be able to add that to
+[00:35:12] just that class of Records and similarly
+[00:35:14] for books by people with confusing
+[00:35:16] genders you might want to take out the
+[00:35:17] standard gender field
+[00:35:20] would there be any value merely
+[00:35:22] confusion you're solving the multiple
+[00:35:24] categorization scheme issue by accepting
+[00:35:27] them all or as many of library Congress
+[00:35:28] to the Gasman but it'd just be too
+[00:35:31] ridiculous to have when people cannot
+[00:35:34] decide [ __ ] to edit moreover metadata
+[00:35:38] to allow multiple metadata pages for an
+[00:35:42] entry I mean you know they can certainly
+[00:35:45] do that right we can't stop them from
+[00:35:47] creating new pages I don't I don't know
+[00:35:50] if that's the solution that people are
+[00:35:51] gonna be happy with it might be I wanna
+[00:35:56] ask greg crane question you did
+[00:36:02] something like this 25 years ago with a
+[00:36:04] fine corpus right if it was today what
+[00:36:08] would you do it this way well we're open
+[00:36:11] it up to the world that is the big
+[00:36:13] challenge we are working on we I think I
+[00:36:17] can claim responsibility for kicking the
+[00:36:18] OCA vigorously last year to open up this
+[00:36:21] books on demand scanning thing last
+[00:36:24] year's meeting and it's work extremely
+[00:36:27] well at Toronto I have to say so the
+[00:36:29] question is how do you get things out
+[00:36:31] there how do you allow people to pick
+[00:36:33] what they want to build as collections
+[00:36:35] and then how do you bring to bear the
+[00:36:37] specialized expertise that actually has
+[00:36:39] the real value because in fact nobody's
+[00:36:42] really interested folks there are
+[00:36:44] interests in the logical units which
+[00:36:45] happen to may sometimes overlap with
+[00:36:48] books but they want a chapter than what
+[00:36:50] a poem they want some thing which is
+[00:36:53] inside usually subsets from multiple
+[00:36:55] different sources at the same time but
+[00:36:58] most of the expertise in the world is
+[00:37:00] distributed so you know we're working on
+[00:37:03] Ferber ization then we're working on top
+[00:37:05] o of adding value to an open an OSI
+[00:37:08] a-type collection and integrative ending
+[00:37:10] with other structured materials and so
+[00:37:12] the big question is how effectively to
+[00:37:15] take advantage of this distributed labor
+[00:37:17] it's hard and it's a tricky question but
+[00:37:22] it's it is clearly a maybe from my
+[00:37:24] perspective as a scholar that's not just
+[00:37:28] the means it's an N we're doing is
+[00:37:29] redefining the relationship between what
+[00:37:31] you do in the Academy and
+[00:37:33] world so Wikipedia is the world the
+[00:37:35] Academy is that is that Wikipedia is the
+[00:37:37] dog the Academy is the tale how do you
+[00:37:40] get those how do you integrate
+[00:37:42] professional academics with this massive
+[00:37:45] populist movement and have a more
+[00:37:47] interesting balance but I agree with you
+[00:37:51] that it's not done by picking say
+[00:37:53] monographs or something that's done by
+[00:37:54] picking a genre whether it's yeah or a
+[00:37:59] science fiction or classics or the
+[00:38:01] classical world or something but you got
+[00:38:03] what you want you know books journal
+[00:38:06] articles photographs maps and gets into
+[00:38:11] the issue of it's not just books but
+[00:38:12] it's objects so we've been working on
+[00:38:14] the integration of Ferber o-o-or the
+[00:38:16] object-oriented version of Ferber with
+[00:38:19] the CI doc CRM which the European
+[00:38:21] ontology for dealing with museum
+[00:38:24] artifacts Assange and we have always had
+[00:38:26] for twenty years the problem having
+[00:38:27] museum objects and contextual objects in
+[00:38:30] the same environment and that's the
+[00:38:32] real-world problem reduces back to the
+[00:38:35] 19th century when you're doing one leave
+[00:38:37] the books in isolation so and you also
+[00:38:40] need a more powerful this is really cool
+[00:38:42] and that you can actually add systems
+[00:38:44] more powerful system so we have the
+[00:38:46] classes came up with what they call the
+[00:38:48] canonical text services protocol to
+[00:38:50] define you have chapter verse of the New
+[00:38:54] Testament for example we have it you may
+[00:38:56] have a enduring coordinate system
+[00:38:59] describe the contents of a potential
+[00:39:01] object that are the same from addition
+[00:39:03] to addition how do you describe that
+[00:39:05] because that actually describes the
+[00:39:07] logical structures what you want to work
+[00:39:08] on Shakespeare doesn't do that except
+[00:39:10] they have the globe Shakespeare semi
+[00:39:12] they have a few standards but there's
+[00:39:15] the general issue is how do you add more
+[00:39:17] structure within the book it looks like
+[00:39:20] you could probably do this within this
+[00:39:22] environment yeah it's the home and
+[00:39:24] that's certainly gonna come up a lot
+[00:39:25] with journal articles right because you
+[00:39:27] want to be able to structure them in
+[00:39:28] many different levels and similarly with
+[00:39:29] music you want to be able to point to
+[00:39:31] you like songs with an album within a
+[00:39:33] you know collection of works but right
+[00:39:36] now you know we have our hands full with
+[00:39:38] just picking up monographs so we've kind
+[00:39:41] of been planning about that but haven't
+[00:39:42] done it yet there's the problem we
+[00:39:44] actually had
+[00:39:46] we had you know obscure languages of a
+[00:39:48] feather you know so we put in Syriac we
+[00:39:51] put an Old Norse and put in Sanskrit and
+[00:39:52] put in Greek people in Latin I have the
+[00:39:54] OCA and of course you know one Sanskrit
+[00:39:57] guy from Brown said oh they got the
+[00:39:58] wrong Edition they got like I wanted the
+[00:40:01] funny--i the seven volume dictionary and
+[00:40:03] I got like the one volume addendum
+[00:40:05] they're idiots they don't know what
+[00:40:06] they're doing and how do they in and and
+[00:40:08] then we said well no you gotta fix this
+[00:40:10] but the mechanism was not in place and
+[00:40:14] there was some discussion among the
+[00:40:15] scholars as to how you would go about
+[00:40:16] actually adding the value that you need
+[00:40:19] you know to give you that precision
+[00:40:20] right and that's kind of at that of
+[00:40:24] course is your general issue anyway yeah
+[00:40:25] just viewed from the standpoint of
+[00:40:27] querulous academics who when given
+[00:40:29] things for free just complain like I've
+[00:40:34] been into these scanning centers it's
+[00:40:35] pretty clear people there don't read
+[00:40:37] Sanskrit you know like they basically
+[00:40:40] trucks of books come in all right they
+[00:40:42] do their best to figure out what the
+[00:40:43] hell book it is you know they scan it as
+[00:40:46] quickly as they can out and put it back
+[00:40:47] on the shelf what hope is that by
+[00:40:51] opening it up like this there are a lot
+[00:40:52] of really committed people like that
+[00:40:53] like scholars who will say know this you
+[00:40:55] know this edition has a different cover
+[00:40:57] and it's got this mark here and you know
+[00:40:59] it's completely different book and so
+[00:41:00] let's make got really clear on this web
+[00:41:02] page and we hope that by letting them
+[00:41:03] contribute that data to a public website
+[00:41:05] we'll be able to collect a lot of that
+[00:41:06] knowledge and book lovers and you know
+[00:41:09] book collector isn't you know academic
+[00:41:11] scholars that right now if you know send
+[00:41:13] an email to the OCA about it they're
+[00:41:15] just like well sorry what can we do you
+[00:41:18] know problem I'm happened before now
+[00:41:21] it's important to realize that he's my
+[00:41:23] experience the library community resists
+[00:41:25] community generated data and in fact
+[00:41:27] when I was well I argued that we should
+[00:41:29] have allow people to have you know have
+[00:41:32] a Kara little book card you know why'd
+[00:41:34] your library you drop a book you want to
+[00:41:36] have scanned it or whatever library on
+[00:41:37] the on the cart and they checked it a
+[00:41:39] Stephenson copyright or what and if it's
+[00:41:41] they can do what they scan it I was told
+[00:41:43] that was bad because only librarians
+[00:41:46] understood collection development I was
+[00:41:48] actually told that to my face and I
+[00:41:51] didn't understand how to go to
+[00:41:52] collection
+[00:41:53] and so you know it's similarly how do
+[00:41:56] you create your authority lists how you
+[00:41:58] create all this data so your does a
+[00:42:00] culture which has logical reasons behind
+[00:42:03] even if it seems pretty illogical
+[00:42:06] effects that you're that you have to
+[00:42:10] deal with you're doing that when you're
+[00:42:12] trying to get metadata you can't get it
+[00:42:13] right I mean right now we're just
+[00:42:15] working on getting it from a library is
+[00:42:16] like giving it back to the libraries in
+[00:42:18] a way that they'll accept it it seems
+[00:42:20] really hard I mean you know libraries
+[00:42:23] insist you follow like the
+[00:42:25] anglo-american catalog requirements
+[00:42:27] right it's like five hundred page book
+[00:42:28] about like how to properly capitalized
+[00:42:30] Thai names and every weird edge case you
+[00:42:33] can think of in you're just not gonna
+[00:42:34] get people on the Internet to do that
+[00:42:36] perfectly but here's the here's the
+[00:42:37] fundamental problem is that and even in
+[00:42:39] a professional eyes field white classic
+[00:42:40] there's a finite amount of material it
+[00:42:42] is all every Greek and Latin author even
+[00:42:45] a little fragment has been cataloged to
+[00:42:48] a high degree of precision but nobody
+[00:42:50] bothered to integrate that in with the
+[00:42:52] Library of Congress if the LC name
+[00:42:54] authority file so it's not Cicero comma
+[00:42:57] Marcus Tullius it's Marcus Tolia sister
+[00:42:59] or M Thalia Cicero and there's it's
+[00:43:02] there's no integration between two so
+[00:43:04] you have a broad system which covers
+[00:43:07] everything but at a thin level so only
+[00:43:09] the most popular authors and then you
+[00:43:10] have incredibly dense very powerful
+[00:43:13] knowledge base that covers everybody but
+[00:43:16] they don't interact and how do you go
+[00:43:18] about having marrying the two back
+[00:43:20] together well we're doing it I don't
+[00:43:21] know who's ever gonna take our records
+[00:43:23] but we're putting in metadata hopefully
+[00:43:25] somebody will upload into the system
+[00:43:26] there's no it's not clear what the
+[00:43:30] center of gravity is right and I mean
+[00:43:32] you know long term we'd love to be one
+[00:43:35] of those places that integrates that
+[00:43:36] data you know by having a consistent
+[00:43:38] identifier scheme and by letting anyone
+[00:43:39] contribute and type things you know it's
+[00:43:42] it's not going to be overnight right
+[00:43:44] it's gonna be decades of kind of
+[00:43:45] persuading people that the internet is
+[00:43:47] okay that you know letting people share
+[00:43:50] things is good but eventually I think
+[00:43:52] there is going to be some big
+[00:43:54] collaborative website and hopefully
+[00:43:55] it'll be this one where that kind of
+[00:43:57] stuff gets integrated not just for books
+[00:43:59] but for you know there's lots of areas
+[00:44:00] of science where all this specialized
+[00:44:02] knowledge is really distributed out I
+[00:44:04] think it's significant about your work
+[00:44:06] is the fact that he
+[00:44:07] open the idea that it is to be open and
+[00:44:09] editable and thus it doesn't have to be
+[00:44:11] yours right has to be you are your
+[00:44:13] principal unless you are exactly that
+[00:44:15] you are making available so we can go
+[00:44:16] morph any way it likes and that's what's
+[00:44:19] really important yeah I mean you know
+[00:44:20] the source code is up there the data is
+[00:44:22] up there if someone takes the site and
+[00:44:24] makes a new version under the same
+[00:44:26] principles that you know completely out
+[00:44:28] classes ours
+[00:44:29] I'll be happy because that means I can
+[00:44:30] go do something else my father's library
+[00:44:36] and I have a stack of unpublished books
+[00:44:38] they don't have ISBN numbers and you
+[00:44:39] know some papers that were kind of bound
+[00:44:41] together and I figure I want to scan
+[00:44:45] them and and upload their minute data
+[00:44:46] somewhere and I stick those in the open
+[00:44:48] library um yeah if you scan them you can
+[00:44:52] create a record and link to the scan and
+[00:44:54] we can I mean you know there's a bit of
+[00:44:57] a question about what stuff belongs in
+[00:44:59] the open library but right now you know
+[00:45:01] we're not gonna start kicking stuff out
+[00:45:03] I mean I you know it's a we have lots of
+[00:45:06] servers we don't have to start taking
+[00:45:08] things out can just you know if force
+[00:45:10] comes to worse we can start tagging
+[00:45:12] which people think are real books in
+[00:45:13] which people think are like you know any
+[00:45:15] script some documents and then hide hide
+[00:45:17] them from annoying people so that they
+[00:45:19] don't complain become a self publishing
+[00:45:22] mechanism you could you could put your
+[00:45:24] book in there and then then order copies
+[00:45:26] from your from your delivery system yeah
+[00:45:29] I mean some people have actually you
+[00:45:30] know wanted to do that right you upload
+[00:45:32] your book to the open library and then
+[00:45:33] you just link people to the page and
+[00:45:35] they order it through print on demand
+[00:45:36] right and long term I think you know I
+[00:45:40] think we'll start to see people do that
+[00:45:41] we're seeing more and more books
+[00:45:42] published only digitally in PDF files
+[00:45:44] and by having a one-stop solution for
+[00:45:47] getting them in the catalogue and
+[00:45:49] getting them printed out for people I
+[00:45:50] think that's going to become more
+[00:45:51] attractive and as soon as that happens
+[00:45:55] don't the pages get spammed migrate
+[00:45:58] Hamlet meets the internet everything
+[00:46:07] gets spent right you know and the thing
+[00:46:14] that comes with spam is like very
+[00:46:16] dedicated spam fighters we were just
+[00:46:18] incredibly pissed off by spammers
+[00:46:20] and you know that's worked very well for
+[00:46:22] Wikipedia a lot of people don't realize
+[00:46:23] this but the reason Wikipedia's pages or
+[00:46:25] spam free is because there's you know a
+[00:46:27] group of like 50 people who sit and
+[00:46:29] watch every headed to Wikipedia and say
+[00:46:31] spam or not spam like they have it as
+[00:46:33] their screensaver you know so yeah I
+[00:46:38] mean hopefully you know we're not gonna
+[00:46:40] have anywhere near the volume that
+[00:46:41] Wikipedia has any time soon you know
+[00:46:43] they have dozens of edits every second
+[00:46:47] but I think you know we'll have a fewer
+[00:46:50] number of edits fewer number of users
+[00:46:52] and we'll still have these vigilantes
+[00:46:53] who like we'll go out there and keep it
+[00:46:55] from being too commercial that's a
+[00:47:01] question of the librarians I've heard
+[00:47:03] from several of you but what do you
+[00:47:06] think and if you like it what what are
+[00:47:08] the opportunities for for helping with
+[00:47:10] this certainly talking the library field
+[00:47:28] more about sharing among ourselves and
+[00:47:30] also trying to integrate into this wider
+[00:47:33] world the library community is now
+[00:47:35] engaged and rewriting the anglo-american
+[00:47:38] cataloguing bill T has referred to
+[00:47:40] something else just hope to be more if
+[00:47:44] they're kind of way or more no able to
+[00:47:47] integrate with other metadata
+[00:47:48] communities how successful that's going
+[00:47:51] to be
+[00:47:53] desire is sort of maintaining that
+[00:47:55] legacy traditions and batter
+[00:47:59] and all that kind of stuff but we're
+[00:48:04] trying to figure out you know where the
+[00:48:05] future is taking us and this might be
+[00:48:07] one of the many directions who's going
+[00:48:16] I mean for bibliographic information I
+[00:48:19] we pay this send our data to OCLC we pay
+[00:48:24] OCLC
+[00:48:25] so I'm not paying anymore I don't
+[00:48:28] understand why they wouldn't give it to
+[00:48:32] you they've been cool yeah oclc work
+[00:48:35] leave it to us but if you wanted in a
+[00:48:37] certain format you won't be the
+[00:48:39] monograph we'll take whatever we can get
+[00:48:41] we're you know we have we have the
+[00:48:43] programmer is that whatever format we
+[00:48:45] can convert it into something useful we
+[00:48:46] just want the data and you know I mean
+[00:48:50] we'd be willing to pay I'm like we're
+[00:48:52] not going to charge anything obviously
+[00:48:53] we'd be willing to contribute time or
+[00:48:55] money or whatever it needs but it's just
+[00:48:57] getting through the library bureaucracy
+[00:48:59] has been impossible it's always oh you
+[00:49:02] know I think we need to check with legal
+[00:49:04] and it's too complicated and I mean I
+[00:49:09] just don't know what the trick is for so
+[00:49:11] you need to find the right yeah cuz I
+[00:49:15] mean it's better just to deal with OCLC
+[00:49:17] rather than I would be but well I mean
+[00:49:21] we've talked you know to OCLC at fairly
+[00:49:23] high levels and they just won't give us
+[00:49:25] the time of day anymore because you know
+[00:49:28] we're gonna be this open repository of
+[00:49:30] library records and they want to keep
+[00:49:32] control of that and they you know they
+[00:49:34] say well we're happy to you know send us
+[00:49:36] everything you have but we're not gonna
+[00:49:38] give anything back which is really too
+[00:49:41] bad since they are not-for-profit you
+[00:49:43] know we're supposed to be pursuing the
+[00:49:45] same mission we ever ivory records I
+[00:49:48] don't think gonna be catalogued anyone
+[00:49:49] copyright right they're not
+[00:49:51] copyrightable um OCLC has some
+[00:49:54] regulation like they get libraries to
+[00:49:56] sign contracts about how they can use
+[00:49:58] OCLC records before they give them to
+[00:50:00] them actually embracing that and I see
+[00:50:05] that the greatest thing about open
+[00:50:06] library is being that it is an OCLC
+[00:50:08] killer and that is the greatest thing it
+[00:50:12] is you can take the records down if you
+[00:50:14] get enough people putting the records up
+[00:50:15] then libraries won't be paying for their
+[00:50:17] catalog records we never should have
+[00:50:18] been in the first place and now I've
+[00:50:21] seen you talk about this in a way that
+[00:50:23] suggests you don't want to say that
+[00:50:25] outright right I am actually yeah bound
+[00:50:27] not to say that our goal is to kill
+[00:50:29] Google or O's
+[00:50:30] LCU sorry I didn't save him warhead but
+[00:50:34] but I mean one why not just explicitly
+[00:50:36] say look you know this the enormous
+[00:50:39] value here you know there's all these
+[00:50:41] libraries that are not gonna have to pay
+[00:50:42] for cataloging records most live
+[00:50:44] libraries don't actually care anyway
+[00:50:47] that much about the quality the record
+[00:50:49] there's lots of you know small libraries
+[00:50:50] in New Hampshire that aren't gonna pay
+[00:50:51] about the record yeah I mean they can't
+[00:50:54] afford a CLC ESPYs raised I mean like
+[00:50:56] you have to pay tens of thousands just
+[00:50:57] to be a member or something and by
+[00:51:00] having you go through a local consortium
+[00:51:05] but I mean we'd love to be a free source
+[00:51:08] for records everybody is trying to
+[00:51:21] figure out where to get them free well I
+[00:51:26] mean they have been created new books or
+[00:51:27] credit records are created by the
+[00:51:28] publishers by Library of Congress for
+[00:51:30] cataloguing and print they're created
+[00:51:34] you know by the libraries contributing
+[00:51:35] to WorldCat you know they're created by
+[00:51:38] librarians all over the place and it's
+[00:51:40] not like the librarians wanna lock these
+[00:51:42] records up or charge for them you know
+[00:51:43] the part of a public service mission to
+[00:51:45] get books more available and since it's
+[00:51:48] not copyright of all we don't have any
+[00:51:50] legal restrictions if we can get our
+[00:51:51] hands on the catalog records from be
+[00:51:53] distributing them they're just facts and
+[00:51:55] facts in the u.s. can't be copyrighted
+[00:51:57] so we don't think it'll be too hard to
+[00:52:00] use the data from if we just get a
+[00:52:02] couple of libraries to agree to
+[00:52:04] contribute their collections do those
+[00:52:15] intermediate steps it seems like those
+[00:52:17] kinds of steps including some culling
+[00:52:19] and some kind of things that the open
+[00:52:23] library is going to need wherever they
+[00:52:25] come from and framing the discussion as
+[00:52:28] how this really awesome cooperative can
+[00:52:32] become something different and better in
+[00:52:33] an Internet age it might might help it I
+[00:52:36] think that being an OCLC killer in the
+[00:52:38] sense of killing this this pretty cool
+[00:52:40] institution I like it sorry
+[00:52:41] is that that's wrong and betray me and
+[00:52:45] in terms of look a lot of things that
+[00:52:46] you've been doing you now get for free
+[00:52:48] and there are lots of new things that
+[00:52:49] people need to do and we need
+[00:52:50] experienced librarians who have exactly
+[00:52:53] the skill set that that your staff has
+[00:52:54] developed over the past decades that
+[00:52:58] could be pretty meat
+[00:52:59] so maybe the funding that they have is
+[00:53:02] is on a larger a much larger scale than
+[00:53:04] the kind of funding open librarians
+[00:53:05] getting from the resources yeah I'd like
+[00:53:08] to see that discussion in a public one
+[00:53:10] yeah I mean I'd love to you know discuss
+[00:53:14] this with the OCLC people more I I think
+[00:53:17] you know they're in an unfortunate
+[00:53:18] position their mission is the same as
+[00:53:19] ours but they've built you know this
+[00:53:21] huge office complex and hired lots of
+[00:53:23] people and started buying up companies
+[00:53:24] and you know other collections like rlg
+[00:53:28] because they have this enormous you know
+[00:53:31] revenue stream from the cataloging
+[00:53:33] records and they've kind of gotten away
+[00:53:35] from the public service mission I think
+[00:53:37] one of the things that's been valuable
+[00:53:39] is we've kind of pressured them to be
+[00:53:40] more open and since we announced you
+[00:53:42] know they have this new worldcat.org
+[00:53:43] where you can view OCLC records without
+[00:53:45] paying one of their exorbitant service
+[00:53:48] views and so we're hoping that we can
+[00:53:51] keep the pressure on to make them more
+[00:53:52] open but unfortunately there's just this
+[00:53:56] kind of you know shift in mindset
+[00:53:57] between the old generation of you know
+[00:54:00] you have a huge headquarters in Dublin
+[00:54:02] and you charge carefully to the
+[00:54:04] libraries we're in the club and the one
+[00:54:06] where you know everyone the one on the
+[00:54:07] web is not caring about this data and
+[00:54:09] wants to contribute the cataloging I
+[00:54:11] hope I hope we can work together
+[00:54:13] I still hope please yeah I'd really want
+[00:54:21] more what it's stopping you from putting
+[00:54:23] your hand on your heart saying we will
+[00:54:26] deliver our catalog records to open
+[00:54:29] library a and B what is standing what
+[00:54:32] would it take for for the vision of open
+[00:54:36] library to become the standard that is
+[00:54:39] move away from OCLC
+[00:54:40] what would open library have to be the
+[00:54:43] first question is obviously way more
+[00:54:44] urgent why not just hand over the armor
+[00:54:48] because a half the records I have in my
+[00:54:50] catalog
+[00:54:52] came from oclc and came under a license
+[00:54:54] arrangement so I can't give you those
+[00:54:57] because I took them from Colombia or
+[00:54:59] Switzerland or some other library not
+[00:55:07] easily yes well so so we've looked at
+[00:55:12] the OCLC contract and it has an
+[00:55:14] exemption for giving the records that
+[00:55:17] you own a copy of the book to another
+[00:55:19] library or a non-profit and we're both a
+[00:55:21] nonprofit a non-registered library so
+[00:55:25] according to the contract it seems like
+[00:55:27] we are we can legitimately get a copy
+[00:55:30] okay good so the loopholes yay loopholes
+[00:55:36] so it's a non-trivial undertaking to put
+[00:55:42] the records into some deliverable form
+[00:55:44] but could be done well I mean yeah you
+[00:55:51] can just point us at you know we see
+[00:55:55] what's in a cataloguing system at one
+[00:55:56] time feed you want yeah I mean regular
+[00:55:58] fee I'm mark just a dump of all the mark
+[00:56:00] records or something like that would be
+[00:56:02] great but the mark records I could a lot
+[00:56:04] of journals that that's fine we can on
+[00:56:07] book we can take care of that I mean
+[00:56:14] it'll come in useful you know why don't
+[00:56:15] we start tackling journals well I mean I
+[00:56:19] talk with big Harvard about it okay how
+[00:56:23] a big Harvard runs the catalogs or
+[00:56:29] but I'm not sure what you know what
+[00:56:32] where does it take us so you got a lot
+[00:56:35] more records so so with that you know
+[00:56:40] that's the second you have you have any
+[00:56:42] non copyrightable books in your system
+[00:56:46] i'm you're just showing us making comics
+[00:56:48] so far right yeah no we have we have a
+[00:56:50] lot of copyright books in about half a
+[00:56:52] million of them scan with full text I
+[00:56:58] mean I'm not particularly interested in
+[00:57:00] promoting so in print commercial books
+[00:57:06] you know I mean Amazon makes enough as
+[00:57:08] far as I'm concerned I agree
+[00:57:15] about the common law you have Oliver
+[00:57:18] Wendell Holmes I know that's free on the
+[00:57:22] web so excuse an example of a book that
+[00:57:26] unique skin and you put it in this
+[00:57:29] little flip book interface but yeah the
+[00:57:36] reason the reason we have you know books
+[00:57:38] from publishers is because the
+[00:57:40] publishers are happy handing over the
+[00:57:41] data sure the reason we don't have more
+[00:57:44] out of print books is because it's been
+[00:57:45] such a struggle getting you know getting
+[00:57:47] them from libraries we you know they all
+[00:57:52] the people at the project care more
+[00:57:53] about out of print books and in print
+[00:57:55] books and we want to wait the search
+[00:57:56] engines that those come up more we want
+[00:57:58] to bring those two more people the goal
+[00:58:00] is to pull people from you know the
+[00:58:02] latest hot thing to the older more
+[00:58:04] interesting things that have been hiding
+[00:58:06] on library shelves for what if the
+[00:58:07] libraries scanned and out of print book
+[00:58:11] why wouldn't you just link to it you
+[00:58:13] need to rescan the whole thing or do you
+[00:58:15] want no no we don't bother yeah we'd
+[00:58:17] love to files and we'd love a copy so
+[00:58:19] that we can archive it but we we were
+[00:58:21] linking so Stanford's scanned a bunch of
+[00:58:23] books and other people have scanned
+[00:58:24] books and we're linking to all the books
+[00:58:26] that have already been scanned you know
+[00:58:29] we don't want to duplicate effort on
+[00:58:31] scanning books at all we just again
+[00:58:35] that's another place where we need
+[00:58:36] records so that we know which books have
+[00:58:38] scanned copies there no I mean it's not
+[00:59:01] it's not against our contract those
+[00:59:08] he'll see
+[00:59:09] I mean the only thing I can think of is
+[00:59:13] that they're probably planning on doing
+[00:59:14] something like this themselves or maybe
+[00:59:17] thinking that they might be planning
+[00:59:20] hard to see hard to see them doing that
+[00:59:23] you tell me I don't know what the work
+[00:59:26] there was a weekend project but as far
+[00:59:28] as I know it's been we talked to them
+[00:59:30] and they sent us what they had so far
+[00:59:32] but yeah it's kind of done all through I
+[00:59:40] think they've all got different jobs I
+[00:59:42] think we tried talking to them in there
+[00:59:43] I mean that was the idea for them to
+[00:59:47] have some substitute their data that was
+[00:59:48] real readable and I mean if you want
+[00:59:53] really if you want bibliographic data
+[00:59:56] and you really want a big file and the
+[01:00:00] bigger the file cleaner the data has to
+[01:00:02] be or you just gets harder and harder
+[01:00:08] just search accurately
+[01:00:21] yeah we have some microphones games
+[01:00:32] you'll get the more larger than
+[01:00:38] yeah and that's why one of the things we
+[01:00:40] want to do is get like review indexes
+[01:00:42] and stuff to try and figure out you know
+[01:00:44] which which of the books people have
+[01:00:45] been talking about via history you know
+[01:00:47] which are the ones that got reviewed in
+[01:00:48] the New York Times and 1900s and wake
+[01:00:51] those more heavily than you know
+[01:00:53] agricultural deposits
+[01:00:55] you know also by getting library
+[01:00:58] catalogs we'll see which ones are more
+[01:01:00] widely held so that's another indication
+[01:01:02] of quality but you know we have we have
+[01:01:06] a lot of people working on this trying
+[01:01:07] to improve the quality the records
+[01:01:09] trying to scrub the records and trying
+[01:01:10] to improve the search engine and things
+[01:01:13] like that but the plan is to do that by
+[01:01:16] getting more data and integrating that
+[01:01:19] into our algorithms sorry they're the
+[01:01:42] standard ways of promoting websites you
+[01:01:44] know the various blogs and so on we want
+[01:01:47] to get ranked highly in Google and what
+[01:01:50] it one of the ways you know there's a
+[01:01:52] way to draw people in we're also talking
+[01:01:54] about a partnership with Wikipedia so
+[01:01:56] right now when Wikipedia cites a book
+[01:01:58] there's a very tedious way of typing in
+[01:02:00] the details of the book and noting it at
+[01:02:02] the bottom of the page to say that some
+[01:02:04] of the information in this Wikipedia
+[01:02:05] article came from this book we're
+[01:02:08] working with them on making open library
+[01:02:09] that system so that instead of typing in
+[01:02:12] the details of the book you search for
+[01:02:13] it on open library and then just link to
+[01:02:15] the open library record and I think
+[01:02:17] that's going to draw an enormous number
+[01:02:19] of people to the site
+[01:02:26] you will have resolved an age-old
+[01:02:28] problem which is where that little ISDN
+[01:02:31] shortcut goes yeah the current solution
+[01:02:35] is a bit absurd actually every video if
+[01:02:40] anyone here runs MediaWiki if you if you
+[01:02:43] do a little ISP in : and then a nice n
+[01:02:46] number that will automatically get
+[01:02:48] converted into a link to some special
+[01:02:49] book page which if you haven't set up on
+[01:02:52] your site doesn't do anything but maybe
+[01:02:54] you could even yeah that would be great
+[01:03:02] what's the we'll wrap up the minute
+[01:03:05] what's the what's the very short list of
+[01:03:07] things that you need in order to make
+[01:03:10] this project more data more people
+[01:03:17] contributing and using it and you know
+[01:03:18] book lovers Tim's built an amazing
+[01:03:21] community of book lovers that's been
+[01:03:22] very responsive to new features and new
+[01:03:25] ideas and we're hoping to have something
+[01:03:26] similar for open library and a few more
+[01:03:30] programmers wouldn't hurt either
+[01:03:37] yeah thanks everyone for I'll be around
+[01:03:44] to answer questions or talk to people if
+[01:03:46] people learn more thanks

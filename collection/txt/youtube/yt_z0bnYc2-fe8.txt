@@ -1,0 +1,1246 @@
+[00:00:01] hi everyone welcome to our digital
+[00:00:04] health speaker series for the month
+[00:00:07] before we start a few housekeeping
+[00:00:10] issues please be aware that our
+[00:00:12] luncheons are webcast and recorded and
+[00:00:15] will be on the website so this event is
+[00:00:20] part of a digital health at Harvard
+[00:00:22] which is co-sponsored by the Petrie
+[00:00:24] forum Center for health law policy
+[00:00:26] biotechnology bioethics and Berkman
+[00:00:28] Kline Center for Internet and Society
+[00:00:31] which is right across the street I
+[00:00:33] myself is Asha veena actually I manage a
+[00:00:36] project called global access in action
+[00:00:39] which promotes access to Center and it's
+[00:00:44] really interesting to and I'm happy to
+[00:00:47] have all of you here today so if you're
+[00:00:51] interested to be part of this
+[00:00:53] conversation on health tech please do
+[00:00:57] follow us or email us or grab hold of
+[00:00:59] myself or the teams who are here we
+[00:01:02] would be happy to enroll you on our
+[00:01:05] listserv but also to have you part of a
+[00:01:07] working group which would be looking
+[00:01:09] looking at specific issues over the next
+[00:01:12] year in one last thing we are happy if
+[00:01:17] you tweet it on this specific luncheon
+[00:01:20] series or if you tweet on and I hope
+[00:01:23] mark doesn't mine as well if you tag him
+[00:01:25] as well so do make sure that you relay
+[00:01:29] the conversation that's happening today
+[00:01:31] or your own perspective of the
+[00:01:33] discussion so it is my pleasure now to
+[00:01:37] welcome mark lippisch from the School of
+[00:01:40] Public Health this is a long outstanding
+[00:01:44] invitation and I'm very happy that he's
+[00:01:46] finally here so mark is a professor of
+[00:01:48] Epidemiology at the Harvard School of
+[00:01:50] Public Health with a joint appointment
+[00:01:53] at the Department of immunology and
+[00:01:55] infectious disease and the Department of
+[00:01:57] Epidemiology he also directs the Center
+[00:02:00] for communicable disease dynamics and is
+[00:02:04] this associate director of the
+[00:02:06] interdisciplinary concentration in
+[00:02:08] infectious disease epidemiology his
+[00:02:10] research concerns the effect of natural
+[00:02:13] aquired host immunity vaccine induced
+[00:02:15] immunity and other public health
+[00:02:17] interventions on population biology of
+[00:02:21] pathogens and the consequences of
+[00:02:23] changing pathogen population for human
+[00:02:25] health today specifically he's going to
+[00:02:28] talk about his work on computer
+[00:02:31] simulation on how to enhance vaccine
+[00:02:34] trials which I know is of interest to
+[00:02:38] many of us in the room so without
+[00:02:40] further delay mark welcome Thank You ash
+[00:02:48] and thanks to all of you for coming and
+[00:02:50] and Berkman Kline and Petrie Flom for
+[00:02:52] the invitation it's great to be here
+[00:02:55] it's a very different crowd from people
+[00:02:57] I usually talk to and I will say I am
+[00:02:59] not quite sure what will be of greatest
+[00:03:01] interest to this crowd so a few points
+[00:03:05] of framing one is to say this talk has
+[00:03:08] had various titles I was told it was too
+[00:03:10] long and so I shortened it this is the
+[00:03:12] shorter title there is the previous one
+[00:03:16] had some more kind of ethics and policy
+[00:03:19] aspect to it which I'll talk about a
+[00:03:21] little bit but I will focus on the on
+[00:03:23] the computational part the other thing
+[00:03:27] to say is that I've constructed the talk
+[00:03:31] to account for this uncertainty to some
+[00:03:34] extent by making it somewhat modular I
+[00:03:37] have sort of three main sections after
+[00:03:39] the introduction I'm happy to skip the
+[00:03:41] third one I think it's more technically
+[00:03:43] interesting but less maybe less
+[00:03:45] conceptually interesting for some of you
+[00:03:48] and so depending on where the discussion
+[00:03:50] goes please ask questions along the way
+[00:03:53] make comments along the way and I will
+[00:03:56] adjust as the time permits and the
+[00:03:58] interest permits and the last thing to
+[00:04:02] say is that I have I've put this
+[00:04:05] together at a fairly high level of
+[00:04:07] abstraction there are not a lot of
+[00:04:09] details of the methods I can provide
+[00:04:12] those if people are interested but but I
+[00:04:15] thought I would go broader rather than
+[00:04:17] deeper mostly because I don't know what
+[00:04:18] will particularly strike a chord but I'm
+[00:04:21] happy to get deeper if someone is
+[00:04:23] interested
+[00:04:25] so with all that is Prelude the the goal
+[00:04:30] that I want to talk about means towards
+[00:04:33] is the goal of providing safe effective
+[00:04:36] vaccines to those who need them and
+[00:04:38] doing so fast I'm going to focus most of
+[00:04:41] the talk on the first two examples on
+[00:04:44] mostly the setting of emergencies where
+[00:04:48] where there's a real source of urgency
+[00:04:51] and I'll talk about that in a minute
+[00:04:53] so fast is it especially important in
+[00:04:56] outbreak diseases and this is kind of
+[00:05:00] the pipeline very simplified of how
+[00:05:03] vaccines get to people starting from
+[00:05:08] basic research on the mechanisms of the
+[00:05:12] pathogen and its pathogenesis working
+[00:05:16] through development of candidate
+[00:05:18] vaccines testing and animals then that's
+[00:05:24] all the preclinical phases then the
+[00:05:26] first clinical phase is tests of the
+[00:05:29] safety of the vaccines of the candidate
+[00:05:32] vaccines and their immunogenicity or
+[00:05:34] ability to elicit a response that might
+[00:05:38] be protective against future infections
+[00:05:41] and then efficacy or effectiveness
+[00:05:45] trials to see whether they actually
+[00:05:47] protect people against infection and
+[00:05:50] then when those are successful licensure
+[00:05:52] and deployment all of the all of the
+[00:06:01] steps up to safety and immunogenicity
+[00:06:07] trials can be done in principle before
+[00:06:11] there is any disease present you can do
+[00:06:16] you can you can test in animals by
+[00:06:19] giving them the disease you can you can
+[00:06:22] test safety and immunogenicity in people
+[00:06:24] without without having the disease
+[00:06:27] present and then the last two phases
+[00:06:30] really require that the disease be
+[00:06:32] present which is a particular challenge
+[00:06:33] for diseases that are only sporadically
+[00:06:36] present or sporadically detect
+[00:06:38] and so in 2014 with the outbreak of
+[00:06:43] Ebola in West Africa
+[00:06:44] we were actually stuck at an earlier
+[00:06:47] phase we we had because of bio Defense
+[00:06:50] interest on the shelf several candidate
+[00:06:55] vaccines at different phases of of
+[00:06:58] preclinical testing up through animal
+[00:07:01] testing but very little human data on
+[00:07:04] these these have not been tested in
+[00:07:05] humans to a large extent even for those
+[00:07:08] things which you could do in principle
+[00:07:11] without the disease being present and
+[00:07:16] for many potential threats worried at
+[00:07:18] even earlier phases for the diseases
+[00:07:22] that we fear might cause outbreaks or
+[00:07:25] larger epidemics or pandemics were at
+[00:07:30] even earlier phases and even animal
+[00:07:32] testing hasn't happened and many of you
+[00:07:37] are very familiar with this development
+[00:07:41] that a couple of years ago an
+[00:07:44] organization called sepi Coalition for
+[00:07:46] epidemic preparedness innovations was
+[00:07:48] set up with about a billion dollars
+[00:07:51] aspirationally and much of that actually
+[00:07:54] actually pledged from foundations and
+[00:07:57] governments and it was established to do
+[00:07:59] two things one was to move candidate
+[00:08:01] vaccines against anticipated threats so
+[00:08:05] known potential threats known known
+[00:08:08] pathogens that might be outbreak threats
+[00:08:12] through testing for through the last
+[00:08:15] stage that you can do before the disease
+[00:08:17] is actually present and then secondly to
+[00:08:20] establish platform technologies to
+[00:08:21] rapidly produce vaccines against
+[00:08:23] unanticipated threats which is to say
+[00:08:27] viruses or other pathogens that we have
+[00:08:30] never seen or that we imagine like Zika
+[00:08:32] a few until a few years ago to be mild
+[00:08:36] and unimportant causes of disease that
+[00:08:40] we would never care to to make a vaccine
+[00:08:42] against
+[00:08:44] and so the idea is to to move from here
+[00:08:49] through the efforts of sepi and and
+[00:08:51] others but really led by sepi up to here
+[00:08:55] for as many potential threats as we can
+[00:08:57] think of plus platforms for those that
+[00:08:59] we can't think of and I mentioned that
+[00:09:04] that for outbreak prone diseases like
+[00:09:09] Ebola in in those three countries
+[00:09:11] there's a sense of urgency and the sense
+[00:09:16] of urgency really kind of has two parts
+[00:09:19] which all feel very urgent but they feel
+[00:09:22] urgent for different reasons so this is
+[00:09:25] an epidemic curve of the virus of the
+[00:09:28] cases in two countries two of the three
+[00:09:30] affected countries and it's labeled on
+[00:09:33] the left with the sources of urgency
+[00:09:35] during the the increasing phase of the
+[00:09:37] epidemic so there's near exponential
+[00:09:39] growth of the epidemic there's a feeling
+[00:09:43] that we need countermeasures to mitigate
+[00:09:46] this accelerating epidemic and incidence
+[00:09:50] is typically very patchy in space which
+[00:09:52] makes it very hard to figure out where
+[00:09:54] if we're gonna test some some
+[00:09:55] countermeasure where are we gonna do it
+[00:09:58] and infrastructure is not typically very
+[00:10:00] thick on the ground in places where this
+[00:10:03] might be needed so you have to set up
+[00:10:04] the infrastructure in anticipation of
+[00:10:06] using it but where to do that is it's
+[00:10:08] not obvious
+[00:10:31] sure the question is how typically is
+[00:10:34] this time scale of about a year from
+[00:10:37] from initiation to peak there's no
+[00:10:43] reason why it should be typical but it's
+[00:10:46] not a bad guess at the time scale so
+[00:10:49] influenza is not new so we anticipated
+[00:10:52] and will it'll be back again next year
+[00:10:53] so in some sense it's it's not the same
+[00:10:57] the same type of urgency but influenza
+[00:11:01] does typically rise over a couple of
+[00:11:03] months and fall over a couple of months
+[00:11:05] pandemics are a little bit different and
+[00:11:07] can be multi peaked polio is kind of
+[00:11:12] dribbling along and being pushed towards
+[00:11:15] eradication with periodic up surges but
+[00:11:20] there's no need for a new vaccine to be
+[00:11:21] tested so for for these kinds of
+[00:11:24] outbreak prone diseases it really
+[00:11:28] depends on the natural history of the
+[00:11:30] disease and on how seasonal the
+[00:11:33] transmission is so there's no real rule
+[00:11:35] about it but but epidemics of any size
+[00:11:40] typically take at least several months
+[00:11:42] to get going just because most things
+[00:11:45] don't transmit ultra-fast
+[00:11:52] how much does this depend on
+[00:11:54] communication patterns for example
+[00:11:55] plague during the Middle Ages would
+[00:11:59] spread based on communication patterns
+[00:12:03] and things like that over a period of
+[00:12:05] years is this within one geographical
+[00:12:07] area or is this worldwide so the again
+[00:12:13] it's very disease specific most of the
+[00:12:16] diseases that that we can worry about
+[00:12:17] outbreaks of transmitted through close
+[00:12:21] contact so locally people are around
+[00:12:25] people and and you can get a rapid
+[00:12:27] exponential growth at some rate that's
+[00:12:30] not so determined by by global
+[00:12:34] transmission their global movement
+[00:12:35] patterns at
+[00:12:37] the next level up though as you begin to
+[00:12:41] look outside of a local area then the
+[00:12:45] degree of connectedness matters a lot so
+[00:12:48] so the early part of this could have
+[00:12:50] happened in any century but the and and
+[00:12:54] the and the connections were not so
+[00:12:57] great in these countries but but the big
+[00:13:03] worry during this early phase for
+[00:13:05] example was that it would get into Lagos
+[00:13:07] Nigeria because it had crossed the board
+[00:13:09] did cross the border into Nigeria and
+[00:13:11] was fortunately contained very quickly
+[00:13:12] so had it gotten into a big city then
+[00:13:16] the potential would have been to infect
+[00:13:19] a large portion of that city so it I
+[00:13:22] guess the key point is that most
+[00:13:25] connections between people are local but
+[00:13:29] that that can saturate if if there
+[00:13:30] aren't also longer distance connections
+[00:13:32] and and it depends on how fast it can
+[00:13:35] get out of that area but these were it
+[00:13:38] most of the parts of most of all three
+[00:13:40] of these countries were affected
+[00:13:41] bordering countries were affected but
+[00:13:44] but in particular Nigeria contained it
+[00:13:47] very quickly so there was this feeling
+[00:13:55] of urgency and and at the in 2014
+[00:14:01] public health experts were saying we may
+[00:14:03] not be able to contain this without a
+[00:14:04] vaccine and so that was and we're
+[00:14:06] projecting very very large numbers and
+[00:14:09] so that was a real incentive to try to
+[00:14:11] get a vaccine going fortunately they
+[00:14:15] were wrong in about that pessimistic
+[00:14:18] prediction and it did begin to turn over
+[00:14:21] around the end of 2014 of course you
+[00:14:24] never know when it's turning over and
+[00:14:25] when it's just a temporary downturn
+[00:14:27] until until it's really turned over so
+[00:14:30] at the time you don't know what to say
+[00:14:32] but you but at least it was beginning to
+[00:14:35] turn over and then by 2015 it was it was
+[00:14:39] declining fairly dramatically due to
+[00:14:41] basic public health measures changes in
+[00:14:44] burial practices changes in movement
+[00:14:47] restriction of movement and all sorts of
+[00:14:49] other things
+[00:14:50] to your to your question so then the
+[00:14:52] challenge is if we don't test this
+[00:14:54] vaccine now we may have no cases not
+[00:14:56] enough cases around to test it until the
+[00:14:59] next outbreak and so we'll be in the
+[00:15:00] same position we were in back at the
+[00:15:03] beginning of 2014 but in the next
+[00:15:05] outbreak which is whose timing is
+[00:15:07] unpredictable so there the end game was
+[00:15:10] a big rush to try to figure out can we
+[00:15:13] can we test a vaccine maybe not for the
+[00:15:18] purposes of ending at this outbreak but
+[00:15:19] for the purposes of having something
+[00:15:21] next time and of course that vaccine was
+[00:15:24] tested that was tested has been used in
+[00:15:28] subsequent subsequently in the
+[00:15:30] Democratic Republic of Congo where there
+[00:15:32] is an ongoing outbreak of Ebola virus
+[00:15:37] disease complicated by conflict and
+[00:15:41] unsafe conditions for the medical
+[00:15:43] workers as well as the residents so
+[00:15:50] spurred on by this experience and a
+[00:15:52] little bit of participation in that
+[00:15:56] Ebola trial as a member of the advisory
+[00:15:59] group to the Ebola vaccine trial we've
+[00:16:02] got to develop a research agenda that
+[00:16:04] basically consists of trying to figure
+[00:16:07] out ways of doing new approaches to
+[00:16:10] these clinical trials of vaccines and
+[00:16:14] understanding the properties of the
+[00:16:16] existing ones as they would be
+[00:16:17] implemented in emergencies secondly and
+[00:16:21] this was the part that fell out of the
+[00:16:23] title when I shortened it and I'll just
+[00:16:25] mention a little bit is I think there's
+[00:16:28] a big so far has been a big disconnect
+[00:16:30] between the ethical debate and the and
+[00:16:34] the methodological debate which has
+[00:16:36] often pitted methodologists against
+[00:16:38] ethicists as myth Methos statistician
+[00:16:41] saying you can only get answers from a
+[00:16:43] very pure trial and ethicist saying
+[00:16:45] that's using people as guinea pigs and a
+[00:16:48] lot of not very productive discussion
+[00:16:51] and there are various reasons for that
+[00:16:53] but I think bringing some of these
+[00:16:55] quantitative understandings into the
+[00:16:57] ethical discussion can only sharpen it
+[00:17:00] and that's something we've begun to do
+[00:17:02] and worked at all just briefly mentioned
+[00:17:05] and we've talked about but haven't yet
+[00:17:08] begun wh o has actually begun this in a
+[00:17:12] way to try to compile what we know at
+[00:17:15] the moment into a sort of playbook that
+[00:17:17] allows people to think about trial
+[00:17:20] designs in advance and in a systematic
+[00:17:23] way and ideally that would be dynamic
+[00:17:25] and updatable so as the technology for
+[00:17:27] for by which I mean that the techniques
+[00:17:30] for developing these trials improve they
+[00:17:33] can be incorporated and last year with
+[00:17:38] near al who's a bioethicists we had a
+[00:17:41] paper in science that that tried to look
+[00:17:44] in look at some of these issues but but
+[00:17:49] what I want to talk about today is kind
+[00:17:51] of a subset of that which is which is an
+[00:17:54] idea that a number of people have had
+[00:17:57] and we had a little meeting of it a
+[00:17:59] couple of years ago in Seattle which is
+[00:18:04] the idea that simulations computer
+[00:18:07] simulations are part of the of the
+[00:18:09] toolkit for improving our vaccine trials
+[00:18:12] in other words simulating the trial can
+[00:18:15] be part of the process of planning it
+[00:18:18] and both the design and the analysis of
+[00:18:21] of that trial and in in different
+[00:18:26] audiences I have a long discourse on why
+[00:18:29] that should be necessary because that
+[00:18:31] hasn't been done very much in the past
+[00:18:33] but the summary of that is that with
+[00:18:35] standard clinical trials of
+[00:18:37] non-communicable outcomes like heart
+[00:18:40] attacks or strokes or whatever the
+[00:18:45] theory is pretty well understood for how
+[00:18:48] you design a trial and it's you can
+[00:18:52] write down elegant equations and and
+[00:18:54] there's very little need to simulate it
+[00:18:57] similarly for very simple vaccine trials
+[00:19:01] that can often be the case you can just
+[00:19:04] use basic theory that you learn in in
+[00:19:07] clinical trials classes and there's not
+[00:19:11] much need to simulate it
+[00:19:12] the real reason to try to
+[00:19:15] bring computational approaches in is
+[00:19:18] really when the existence of the trial
+[00:19:21] itself is interfering with the disease
+[00:19:23] transmission process hopefully by
+[00:19:26] reducing it which is good for the people
+[00:19:28] in the trial and bad for the power of
+[00:19:31] the trial because more cases mean you
+[00:19:33] can study something better so if the
+[00:19:35] existence of the trial itself is
+[00:19:37] changing the process of transmission
+[00:19:39] then the assumptions that go into
+[00:19:42] standard methods are no longer really
+[00:19:44] valid and sometimes it's useful to to
+[00:19:49] write down and execute simulations of
+[00:19:52] the trial and I say write down because
+[00:19:55] in my experience doing this so far
+[00:19:58] actually the the process of just trying
+[00:20:01] to say what are all the steps that will
+[00:20:04] happen in a trial when you have
+[00:20:06] transmission and where the individual
+[00:20:08] cases are the sources of other cases
+[00:20:09] just that process of writing down the
+[00:20:13] code or even the sort of box diagram for
+[00:20:15] the code is as informative and generates
+[00:20:19] probably the more important insights
+[00:20:21] than running the code itself so it's
+[00:20:23] it's really a matter of formalizing your
+[00:20:26] thought process as much as it is of
+[00:20:29] computing complicated numbers and so an
+[00:20:33] example of that is the ring vaccination
+[00:20:35] trial that was used for the Ebola
+[00:20:39] vaccine in Guinea
+[00:20:41] this was the merck manufactured our vs v
+[00:20:45] vaccine and it's the one on which I
+[00:20:50] served on the Technical Advisory Board
+[00:20:52] and that in thereby got interested in
+[00:20:56] trying to think about what could go
+[00:20:57] wrong what are the what are the
+[00:20:59] potential pitfalls of this trial how can
+[00:21:02] I provide helpful advice some of which
+[00:21:05] was more appreciated than others but but
+[00:21:09] what was extraordinary about this trial
+[00:21:12] was that essentially the the technique
+[00:21:14] was invented on the fly ring vaccination
+[00:21:16] had been used as a way of controlling
+[00:21:19] small pox and ring vaccination simply
+[00:21:21] means you find cases and around those
+[00:21:24] cases you vaccinate people and exactly
+[00:21:26] what you mean by around can vary by the
+[00:21:28] situation
+[00:21:29] but you you target your vaccinations
+[00:21:31] around cases in order to sort of prevent
+[00:21:34] to produce firebreaks around those cases
+[00:21:37] so for known useful vaccines like the
+[00:21:40] smallpox vaccine this was a
+[00:21:41] well-established
+[00:21:42] approach but it had never been used as a
+[00:21:45] trial method in other words though it
+[00:21:47] was it had never been used to try to
+[00:21:49] figure out does this vaccine do anything
+[00:21:51] at all beneficial or or is it useless
+[00:21:55] which is what a phase 3 efficacy trial
+[00:22:01] is supposed to do and so what was
+[00:22:04] extraordinary was that a team of people
+[00:22:06] invented this as a means of evaluating
+[00:22:10] vaccines on the fly and created the
+[00:22:14] trial and ran the trial all during that
+[00:22:16] chaotic period that I showed the curve
+[00:22:18] of a minute ago and the basic design was
+[00:22:23] to find cases to to then create a ring
+[00:22:32] around each of those cases to find as
+[00:22:34] the contacts of those cases and the
+[00:22:36] contacts of their contacts then once
+[00:22:40] that ring was identified to randomize
+[00:22:43] the ring to be either to receive either
+[00:22:46] vaccination as soon as possible or
+[00:22:48] vaccination of three weeks later and to
+[00:22:53] compare the rings that had been
+[00:22:55] vaccinated immediately to those that had
+[00:22:58] been vaccinated with a delay with the
+[00:23:00] expectation that an effective vaccine
+[00:23:01] would produce lower incidents in the
+[00:23:04] rings that were immediately vaccinated
+[00:23:06] and higher incidents in the rings that
+[00:23:08] were delayed and so these were two of
+[00:23:16] the two of the papers the first two
+[00:23:18] papers that came out on that trial and
+[00:23:21] our goal was a little bit to think about
+[00:23:24] that trial but by the time we were we
+[00:23:27] were doing simulations we were really
+[00:23:30] trying to address a more general
+[00:23:32] question which is people were saying
+[00:23:35] once this trial proved to be effective
+[00:23:39] in testing the vaccine or reasonably
+[00:23:42] effect
+[00:23:43] in testing it wasn't perfect that this
+[00:23:46] might be the new standard for how we try
+[00:23:48] test vaccines and emergencies and so we
+[00:23:51] wanted to try to ask the question is
+[00:23:53] what what are the conditions under which
+[00:23:55] is this is a good design and this is the
+[00:23:58] paper that was a part of the doctoral
+[00:24:02] thesis of Matt Hitchings and done in
+[00:24:05] collaboration with Rebecca grace of Epis
+[00:24:07] altra which is the national frontier
+[00:24:11] Research Center in Paris so so to do
+[00:24:17] this we abstract from the reality and we
+[00:24:19] create a model of the disease dynamics
+[00:24:22] and so I'll tell you a little bit about
+[00:24:25] how we did that we assumed that there
+[00:24:28] was a small homogeneous ring of people
+[00:24:32] with of about 50 people typically around
+[00:24:37] a case and we used what's known as an
+[00:24:41] sei R or susceptible exposed infectious
+[00:24:44] and recovered compartmental model which
+[00:24:47] is just tracks the stage of illness or
+[00:24:50] infection for for the people in the ring
+[00:24:53] we've allowed people to be vaccinated at
+[00:24:56] a certain time and we also allowed
+[00:24:58] people to be to be hospitalized at a
+[00:25:00] certain time which meant that they were
+[00:25:03] detected with their symptoms and their
+[00:25:05] symptoms and and thereby isolated and
+[00:25:09] put in the hospital and and that was the
+[00:25:14] basic pieces of the model this is a
+[00:25:16] graphical picture of it and I guess all
+[00:25:20] pictures are graphical this is a picture
+[00:25:21] of it and the the when I say that
+[00:25:28] writing down this model was actually the
+[00:25:30] one of the biggest sources of insight
+[00:25:33] what I mean by that is when you write
+[00:25:36] down a model and you have compartments
+[00:25:38] that somebody has to always be in one
+[00:25:41] exactly one of so they're either
+[00:25:43] susceptible or they're susceptible and
+[00:25:45] vaccinated or they're exposed meaning
+[00:25:47] they've become infected but are not yet
+[00:25:49] sick or they're infectious and infected
+[00:25:53] infectious and symptomatic or they're
+[00:25:55] hospitalized or they're recovered
+[00:25:56] or dead and which is not shown here the
+[00:26:02] you have to figure out where do people
+[00:26:04] go and how do they how do they
+[00:26:06] contribute to the to the infectious
+[00:26:09] process and in the process of doing that
+[00:26:11] it occurred to me that once somebody's
+[00:26:14] hospitalized they should be isolated and
+[00:26:16] no longer contributing to transmission
+[00:26:18] and in a well-run trial that should
+[00:26:21] certainly be the case but it it then
+[00:26:24] occurred to me and I'll show this as one
+[00:26:26] of the results that that the faster you
+[00:26:30] detect your cases the better your trial
+[00:26:33] is set up to detect the outcome it's
+[00:26:36] supposed to detect the fewer cases
+[00:26:38] you're going to get because these people
+[00:26:40] are no longer contributing to
+[00:26:41] transmission so a very well functioning
+[00:26:43] trial in one sense is going to it risks
+[00:26:46] being an underpowered trial in another
+[00:26:48] sense because every time you ascertain a
+[00:26:51] case you make them no longer a source of
+[00:26:53] infection and that's an example of the
+[00:26:58] kind of thing that doesn't go into
+[00:26:59] standard power calculations for a trial
+[00:27:02] but could be potentially very important
+[00:27:05] so we simulated this trial and I won't
+[00:27:10] go through all these bullet points
+[00:27:14] that's basically says what I just
+[00:27:16] mentioned and we estimated the incidence
+[00:27:21] rates in in each of these rings and then
+[00:27:25] use that to estimate how many rings
+[00:27:27] would we need in order to be able to
+[00:27:29] tell that the vaccine was effective
+[00:27:30] assuming that it was effective with a
+[00:27:33] certain level of effect and so when you
+[00:27:41] run this computer simulation which is
+[00:27:44] quite straightforward to do what you
+[00:27:47] find is that the incidence rate in rings
+[00:27:52] that are immediately vaccinated goes up
+[00:27:58] right after they're vaccinated because
+[00:28:00] the vaccine takes time to to take effect
+[00:28:04] and also because people have already
+[00:28:07] been infected
+[00:28:09] at the time you vaccinate them some of
+[00:28:12] them and so you but they aren't yet sick
+[00:28:14] and so those people by assumption the
+[00:28:16] vaccine doesn't help with so you start
+[00:28:18] you start with an increase in the in the
+[00:28:20] number of cases per capita but that
+[00:28:23] starts to decline and it declines
+[00:28:27] especially in the group that got
+[00:28:29] immediately vaccinated because the
+[00:28:31] contacts of the people who were
+[00:28:34] transmitting during that vaccination
+[00:28:36] campaign are now protected after a
+[00:28:39] certain delay and then in the in the
+[00:28:43] delayed arm this whole process is
+[00:28:47] postponed by about about the by about
+[00:28:52] the amount of time that they're delayed
+[00:28:57] so so the idea is then you create the
+[00:29:02] this trial you run it with the size that
+[00:29:06] your your calculations tell you you need
+[00:29:08] in order to get a high probability of
+[00:29:12] seeing a statistically significant
+[00:29:15] result if there is a real protective
+[00:29:18] efficacy and by assumption in this in
+[00:29:23] this simulation the effect of the
+[00:29:25] vaccine was to be 75 percent protective
+[00:29:30] 70 percent protective in our base case
+[00:29:36] which is shown in red and what this
+[00:29:39] shows is that what this Left graph shows
+[00:29:42] is that the efficacy that you measure
+[00:29:46] varies it goes up if you have a more
+[00:29:48] effective vaccine and it goes down if
+[00:29:50] you have a less effective vaccine but it
+[00:29:53] doesn't do that linearly and so if you
+[00:29:56] have a hundred percent effective vaccine
+[00:29:57] you you find about eighty percent
+[00:30:00] benefit if you have a fifty percent
+[00:30:04] effective vaccine you find about sixty
+[00:30:06] percent almost 55 percent effective
+[00:30:12] and the the reasons for that are things
+[00:30:17] that come out of than analyzing the
+[00:30:20] results you get this attenuation because
+[00:30:22] some people who were protected get their
+[00:30:26] disease sorry some people the the period
+[00:30:32] of observation that you use to decide
+[00:30:34] whether someone is a case or not has to
+[00:30:38] be defined based on the the period of
+[00:30:41] time before someone gets symptoms and
+[00:30:44] and the time the vaccine takes to to
+[00:30:48] confer protection but that varies from
+[00:30:51] person to person so you misclassify some
+[00:30:53] people and that attenuates your efficacy
+[00:30:58] on the on the other side and you're not
+[00:31:04] just measuring the effect of the vaccine
+[00:31:06] on the person who gets it but also the
+[00:31:07] effect of the vaccine in although that
+[00:31:09] person's contacts in the ring on them
+[00:31:12] and so you get some of the indirect
+[00:31:14] benefits measured in this in this way
+[00:31:18] when when you set the vaccine efficacy
+[00:31:20] to 70 percent as it happens what comes
+[00:31:23] out is exactly 70 percent on average
+[00:31:25] with some variation between between runs
+[00:31:28] but but looking at other parameter
+[00:31:32] values shows you that that's kind of a
+[00:31:33] coincidence that where these two effects
+[00:31:35] just happened to balance and then you
+[00:31:38] can also use this for trying to figure
+[00:31:40] out how many sample how many rings you
+[00:31:42] need to sample and as you would expect
+[00:31:45] the more effective the vaccine is the
+[00:31:47] easier it is to see that effect and the
+[00:31:49] fewer rings you need to do it and then
+[00:31:55] you can ask about some of the other
+[00:31:57] parameters and I mentioned this
+[00:31:58] probability of detection so a well-run
+[00:32:04] trial will have a very high probability
+[00:32:06] that if someone is a case they'll be
+[00:32:07] detected and detected fast and a
+[00:32:10] well-functioning public health system
+[00:32:11] will isolate that person as quickly as
+[00:32:13] possible so when you have a
+[00:32:22] when you have a daily probability of
+[00:32:26] detection and these numbers are kind of
+[00:32:28] just guessed at as being reasonable
+[00:32:31] because because those were not reported
+[00:32:33] in the trial but if you if it takes on
+[00:32:36] average five days so it's 20% chance per
+[00:32:39] day of being the cases are detected then
+[00:32:42] you get this estimate of efficacy that's
+[00:32:45] about 70% if you if you detect less well
+[00:32:51] you're actually able to see more
+[00:32:54] efficacy because you see more in cases
+[00:32:58] and those cases are better prevented by
+[00:33:02] the vaccine due to its indirect effects
+[00:33:05] and if you do very good case detection
+[00:33:07] it actually makes a vaccine look a
+[00:33:09] little bit worse so it's a case where
+[00:33:11] one aspect of good trial running leads
+[00:33:13] to attenuation of the of the effect of
+[00:33:18] the observed effect and the daily
+[00:33:22] probability of detection also has
+[00:33:24] strange effects on the sample size
+[00:33:26] that's required again because if you
+[00:33:28] shut down transmission by detecting
+[00:33:30] cases well then you need to have a lot
+[00:33:32] more rings to get the same number of
+[00:33:34] cases to see in effect so these are the
+[00:33:36] kinds of trade-offs and we can play
+[00:33:38] these games with with other parameters
+[00:33:42] and and maybe since this is maybe I'll
+[00:33:48] just skip through some of that because
+[00:33:54] I'm talking more than I anticipated
+[00:33:56] on each slide so I'll summarize the the
+[00:34:01] findings from this that the sample size
+[00:34:04] and the estimate are sensitive to
+[00:34:06] various parameters of how you run the
+[00:34:08] trial of how the rings are setup and of
+[00:34:12] of the proportion of infections that
+[00:34:15] come from outside the ring so the
+[00:34:17] premise of designing a trial like this
+[00:34:19] is that most infections come from within
+[00:34:23] the ring and that's why setting up your
+[00:34:27] trial around a case is actually an
+[00:34:29] effective thing to do but
+[00:34:31] but if you deviate from that it actually
+[00:34:35] becomes easier to do the trial in some
+[00:34:37] sense because you're not interfering
+[00:34:39] with the transmission by doing the
+[00:34:41] vaccination itself so there's actually
+[00:34:44] more more transmission to to stop so so
+[00:34:54] the purpose of doing all of this is is
+[00:34:58] to really ask the question all right is
+[00:35:00] this the best trial design for all
+[00:35:01] settings probably not it's clearly a
+[00:35:05] good trial to design in the setting
+[00:35:07] where happened where transmission is
+[00:35:10] local and very focused and also
+[00:35:14] declining so that you really need to
+[00:35:17] focus your your efforts right around
+[00:35:19] cases because otherwise you you'll need
+[00:35:22] to vaccinate way too many people but so
+[00:35:29] those those are the settings in which a
+[00:35:30] design like this could be it could be
+[00:35:34] well-suited it doesn't measure the
+[00:35:37] quantity that it purports to measure
+[00:35:39] notwithstanding the way it was described
+[00:35:42] in the publication's it measures a
+[00:35:43] composite of the efficacy on the person
+[00:35:48] who was being vaccinated and the and the
+[00:35:52] indirect protection of of their contacts
+[00:35:56] and efficient case detection turns out
+[00:36:00] to be a double-edged sword it's
+[00:36:01] obviously good for the person for the
+[00:36:03] individuals it's also good for knowing
+[00:36:06] that you have cases which is important
+[00:36:08] for the trial but it also shut on the
+[00:36:11] other hand it shuts down some of the
+[00:36:12] transmissions and so the idea of having
+[00:36:17] a simulation machine like this which is
+[00:36:20] just a short bit of our code actually
+[00:36:22] it's not not very complicated is that if
+[00:36:25] you have a new disease and you want to
+[00:36:28] run a trial like this in a different
+[00:36:30] population with different sizes of rings
+[00:36:32] or different sizes of are different
+[00:36:35] types of natural history you can very
+[00:36:37] lightly modify it and and ask these same
+[00:36:40] questions and try to see what would the
+[00:36:43] what would the predictions be so it's a
+[00:36:46] design tool second example I went talk
+[00:36:54] about is is work that that Rebecca Kahn
+[00:37:02] now a PhD student did as part of her
+[00:37:05] master's thesis and and just was
+[00:37:06] published and the question there is what
+[00:37:10] if you have asymptomatic infections in a
+[00:37:12] vaccine trial and you might think well
+[00:37:16] who cares if you have an asymptomatic
+[00:37:17] infection and maybe we don't care about
+[00:37:19] preventing it maybe it's not that
+[00:37:21] interesting but in fact it turns out
+[00:37:24] that almost all of the big big
+[00:37:29] infections on the sepi list including
+[00:37:32] Zika know Zika is not on their list but
+[00:37:34] but NEPA Lassa arguably Ebola and and a
+[00:37:39] number of others have a proportion of
+[00:37:41] infections that are asymptomatic or
+[00:37:44] subclinical so you would be very
+[00:37:46] hard-pressed to detect them without very
+[00:37:48] intensive surveillance and even with
+[00:37:52] very intensive surveillance probably you
+[00:37:54] would miss a number of infections
+[00:37:56] without unless you tested people for
+[00:37:59] antibodies after the fact but these
+[00:38:05] infections can be important for at least
+[00:38:07] two reasons one is they can serve as
+[00:38:09] sources of transmission to others and
+[00:38:11] second is that they can have sequelae
+[00:38:14] such as gambar a syndrome for Zika so
+[00:38:17] you can have a Zika infection that does
+[00:38:19] nothing that you can detect at the
+[00:38:21] moment but that leaves you with a
+[00:38:23] neurological syndrome afterwards
+[00:38:26] sometime afterwards and so preventing
+[00:38:30] that a previously asymptomatic case
+[00:38:32] would have been important so we would
+[00:38:35] like to measure Africa see against that
+[00:38:37] and standard approaches don't work and I
+[00:38:43] think the easiest way to see this is
+[00:38:47] with a diagram so in a vaccine trial
+[00:38:51] you're studying people some of them are
+[00:38:53] at risk
+[00:38:54] say you have whatever that number of
+[00:38:56] circles that is about 10 people in the
+[00:38:59] vaccine arm and 10 people in the control
+[00:39:01] arm and proportion of them get infected
+[00:39:05] but a smaller proportion in the vaccine
+[00:39:07] arm because you have an effective
+[00:39:10] vaccine so if that's true then the
+[00:39:15] people at risk will be the ones in pink
+[00:39:17] they're fewer people at risk in the
+[00:39:20] control arm because they've already been
+[00:39:23] infected but what you observe if there
+[00:39:27] are if some of those are asymptomatic is
+[00:39:29] that a few of those people have
+[00:39:31] symptomatic infections and what you
+[00:39:34] think if you don't know that there are
+[00:39:36] asymptomatic infections is that there
+[00:39:38] are a lot more people at risk and
+[00:39:41] especially if you compare here the the
+[00:39:45] people you think are at risk in the
+[00:39:47] control arm to the ones who are actually
+[00:39:50] at risk you've gotten it very wrong
+[00:39:52] whereas in the vaccine arm you've gotten
+[00:39:55] it less wrong because most people
+[00:39:56] haven't gotten infected your vaccine
+[00:39:58] protected most of them sieve them you've
+[00:40:01] overestimated the number of people at
+[00:40:03] risk especially in the in the arm that
+[00:40:07] got control and when you do that you get
+[00:40:12] an estimate of how well the vaccine did
+[00:40:14] that is bias towards being ineffective
+[00:40:18] biases your estimate towards the
+[00:40:21] estimate that the vaccine didn't do
+[00:40:22] anything because you think there are all
+[00:40:24] these people at risk and most of them
+[00:40:26] aren't getting infected yet anymore in
+[00:40:29] the control arm because they were
+[00:40:30] already infected you just didn't see and
+[00:40:32] this is a pretty well known problem but
+[00:40:37] what hadn't been done was to try to
+[00:40:39] figure out how to solve it so one way
+[00:40:42] you could solve it would be you just
+[00:40:44] test people every week to detect
+[00:40:49] asymptomatic infections and you could do
+[00:40:50] that by testing for the virus if you did
+[00:40:52] it very intensively or by testing for
+[00:40:55] antibodies to the virus we
+[00:40:57] persist so you can be a little bit more
+[00:41:02] you don't have to do it as frequently
+[00:41:05] but these are challenging because
+[00:41:07] they're expensive the serology the the
+[00:41:10] antibody tests are not very good
+[00:41:11] especially for something like Zika it's
+[00:41:15] often hard to tell whether they had the
+[00:41:18] vaccine or they or the infection they're
+[00:41:20] a bunch of challenges so what we
+[00:41:24] wondered was can we test can we figure
+[00:41:27] out a way to test people efficiently for
+[00:41:29] example only test people in some of the
+[00:41:32] of the stamp study and use what you
+[00:41:35] learn about them to inform estimates for
+[00:41:37] the other people and you do that by a
+[00:41:40] technique called imputation which I
+[00:41:42] won't dwell on so again what we did to
+[00:41:46] test these ideas was to simulate a trial
+[00:41:49] we simulated with various levels of
+[00:41:54] transmission various trial lengths these
+[00:41:59] are the base case numbers but we tried
+[00:42:01] various variations on these and and what
+[00:42:06] we did to just focus on was initially to
+[00:42:11] look at a vaccine that was 60% effective
+[00:42:13] against all infections and people who
+[00:42:16] were infected were equally likely to be
+[00:42:18] symptomatic with they were vaccinated or
+[00:42:19] not but they were just less likely to
+[00:42:21] become infected and so these are the
+[00:42:25] results the results are that if you
+[00:42:28] could have perfect knowledge so test
+[00:42:30] people essentially continuously have a
+[00:42:32] have a port in their arm and if as soon
+[00:42:34] as the virus got to them you wouldn't
+[00:42:36] know it then you get the right answer
+[00:42:38] which is which we've labeled impractical
+[00:42:44] you can with low effort the the labels
+[00:42:49] on here refer to the level of effort
+[00:42:51] with low effort if you just note the
+[00:42:55] symptomatic people and do various
+[00:42:58] analyses that that you could do with
+[00:43:00] just asymptomatic infections you get an
+[00:43:03] underestimate you think the vaccine is
+[00:43:04] about 40 to 45 percent effective and
+[00:43:07] it's actually 60% of
+[00:43:09] active and then there are various ways
+[00:43:14] if you test people at the end of the
+[00:43:17] trial either at the end of the trial or
+[00:43:21] over three times and beginning middle
+[00:43:25] and end you can with considerable effort
+[00:43:32] meaning you're testing and every
+[00:43:34] individual in the trial you can get
+[00:43:36] essentially the right answer but what
+[00:43:39] was the main contribution of this this
+[00:43:42] work was to show that if you test only
+[00:43:45] 10% of the people in the trial and then
+[00:43:47] you use those people to the results from
+[00:43:50] those people to figure out what is the
+[00:43:52] ratio of symptomatic to asymptomatic
+[00:43:54] cases and extrapolate that through
+[00:43:56] imputation to the other people in the
+[00:43:58] trial you can get you can get the right
+[00:44:02] answer with essentially far fewer
+[00:44:05] resources than it would take to test
+[00:44:06] everyone in the trial so that's a
+[00:44:13] shorter example but but here the idea is
+[00:44:15] really it doesn't so much matter what
+[00:44:18] kind of trial you're doing the point is
+[00:44:20] that there are ways of economizing on on
+[00:44:23] the tests which are expensive to do
+[00:44:26] accurately and you can you can
+[00:44:29] nonetheless get the right answer to
+[00:44:32] figure out if your vaccine is working so
+[00:44:36] in the last couple of minutes before
+[00:44:38] opening up for discussion I just want to
+[00:44:40] mention a couple of sort of ongoing
+[00:44:45] areas and some questions that we're
+[00:44:50] thinking about and maybe these will
+[00:44:52] spark some discussion so I mentioned I
+[00:44:54] think there's a connection between these
+[00:44:56] questions of quantitative issue of
+[00:44:58] quantitating vaccine health vaccine
+[00:45:01] trials work and and research ethics and
+[00:45:06] we've begun to explore those mostly we
+[00:45:09] being mostly near Al and I and Rebecca
+[00:45:12] Khan the student who's is becoming
+[00:45:15] the ethical issues as well and a net rid
+[00:45:18] another bioethicists and we've been
+[00:45:22] trying to think about questions like our
+[00:45:24] randomised trials needed in emergencies
+[00:45:26] are they ethical even if you want to use
+[00:45:28] placebo and can we use them to maximize
+[00:45:31] public health benefit in case the the
+[00:45:35] vaccine proves effective and this is
+[00:45:37] their various thoughts ideas about this
+[00:45:40] another interesting project that I was
+[00:45:44] not involved in but now collaborating
+[00:45:46] with some of these people was a study by
+[00:45:50] guy Harling and colleagues that tried to
+[00:45:53] figure out designs that were where that
+[00:45:56] was an explicit goal but we actually
+[00:45:58] took a more simple view and just pointed
+[00:46:03] out that when you do an individually
+[00:46:07] randomized trial which some people have
+[00:46:08] ethical concerns about one of the
+[00:46:11] benefits of doing that is that it
+[00:46:13] happens faster you get the answer faster
+[00:46:17] than you would in a cluster randomized
+[00:46:20] trial such as a stepped wedge trial
+[00:46:21] which is one where you roll it out roll
+[00:46:23] out the vaccine to different communities
+[00:46:25] in some randomized order and compare the
+[00:46:29] incidents in vaccinated communities to
+[00:46:31] ones that have not yet gotten a vaccine
+[00:46:33] some people prefer this because this
+[00:46:35] upper one because it's it gives
+[00:46:37] everybody the vaccine so I don't know
+[00:46:42] how to classify this as ethics or just
+[00:46:43] sort of common sense or quantitative or
+[00:46:46] what but but but what we pointed out was
+[00:46:49] that if you're really anxious to give
+[00:46:52] everyone the vaccine as soon as possible
+[00:46:54] because you imagine that it's likely to
+[00:46:56] be beneficial then doing an individually
+[00:46:59] randomized trial and then immediately
+[00:47:02] giving the vaccine
+[00:47:04] to those in the control arm still allows
+[00:47:07] you to vaccinate everyone and in
+[00:47:09] particular the least advantaged if you
+[00:47:11] have equity considerations the least
+[00:47:14] advantage who get it last get it earlier
+[00:47:17] in this setting than they would in the
+[00:47:19] setting of this what some people
+[00:47:22] consider to be an ethically preferable
+[00:47:25] study design so we we think that by
+[00:47:27] being a little bit creative in terms of
+[00:47:29] the way you set up the trial you can
+[00:47:33] address many of the ethical concerns
+[00:47:39] another sort of broad policy question
+[00:47:42] which I would love to think harder about
+[00:47:44] and just have not really had time to
+[00:47:45] focus on but maybe will be in the
+[00:47:48] interests of some of the people here
+[00:47:50] excuse me is are there circumstances
+[00:47:53] where we would forego randomized trials
+[00:47:56] to test whether a vaccine works because
+[00:47:59] rolling out a vaccine is so urgent and I
+[00:48:03] think we start with a strong presumption
+[00:48:05] in favor of requiring that we test
+[00:48:08] vaccines as we do for all ordinary
+[00:48:11] vaccines before we roll them out there
+[00:48:13] are economic reasons to do that nobody
+[00:48:15] wants to make a vaccine that they in
+[00:48:17] large quantity that they can be sure is
+[00:48:20] actually any good there are regulatory
+[00:48:22] reasons the FDA exists to make sure this
+[00:48:24] kind of thing happens among other
+[00:48:26] reasons there are ethical reasons giving
+[00:48:28] people an unproven vaccine is arguably
+[00:48:31] not a good thing and there historic
+[00:48:34] reasons in that there are examples of
+[00:48:36] really promising looking vaccines that
+[00:48:38] actually did harm when they were used to
+[00:48:40] noting efficacy trials those were not
+[00:48:42] licensed those are not the vaccines that
+[00:48:44] we use now those are vaccines that were
+[00:48:46] appropriately stopped by the regulatory
+[00:48:49] or the clinical trials process but you
+[00:48:52] could imagine a scenario but very very
+[00:48:55] fast-moving very deadly disease where it
+[00:49:00] was so dire that some kind of
+[00:49:02] observational rollout rather than a
+[00:49:04] trial could be desirable and I think it
+[00:49:08] would be valuable to have those
+[00:49:09] conversations and discussions before
+[00:49:13] such a thing happens so if people are
+[00:49:15] interested in that I'd be happy to
+[00:49:16] discuss further and then the last area
+[00:49:20] that I'll mention that we are working on
+[00:49:23] that's that's now Rebecca Kahn's main
+[00:49:26] research area is to try to incorporate
+[00:49:29] pathogen sequence data into vaccine
+[00:49:32] trials where you can estimate who
+[00:49:35] affected who who infected whom and
+[00:49:37] thereby enhance the inference of what
+[00:49:39] the vaccine is done so most of the time
+[00:49:42] when you do a trial you know if someone
+[00:49:44] was vaccinated and whether they got
+[00:49:45] infected but you don't know if they
+[00:49:47] infected anybody else or who infected
+[00:49:49] the people that did get infected with
+[00:49:52] pathogen DNA or RNA sequences you can
+[00:49:55] estimate make estimates of who infected
+[00:49:58] whom and therefore you can tell how
+[00:50:01] infectious someone was as well as
+[00:50:03] whether they were as well as how how
+[00:50:06] susceptible they were and tell what the
+[00:50:09] vaccine did to that so what we're doing
+[00:50:13] now with a with a grant from maybe a
+[00:50:16] grant that's been started in April and
+[00:50:18] we haven't gotten the money yet so
+[00:50:19] hopefully a grant from the from the UK
+[00:50:22] government is to try to figure out how
+[00:50:25] you can enhance trials in that way so
+[00:50:28] just to close I think simulations can
+[00:50:32] aid in the design and analysis of trials
+[00:50:35] for infectious diseases we think it's
+[00:50:39] really valuable to do this work and
+[00:50:42] studying these properties of these
+[00:50:44] designs before the emergency comes as I
+[00:50:50] briefly talked about I think the ethics
+[00:50:52] are really entangled with the
+[00:50:53] methodology and we should try to discuss
+[00:50:55] both of these during peace time between
+[00:50:58] epidemics
+[00:51:01] I think ring vaccination is a promising
+[00:51:03] design for the end of an epidemic but
+[00:51:06] with some caveats that I discussed and
+[00:51:09] we think we've found a way to study
+[00:51:12] efficacy against asymptomatic infections
+[00:51:15] in a way that is economically feasible
+[00:51:18] or more feasible and so I will skip the
+[00:51:22] last example as I promised he didn't get
+[00:51:25] a choice it just skipped
+[00:51:26] and just end with a list of
+[00:51:29] collaborators and thank you for your
+[00:51:31] attention and take questions are there
+[00:51:43] any burning question or can I have used
+[00:51:49] my moderator prerogative to distort the
+[00:51:52] discussions whatever ban what sure Oh
+[00:51:58] early on you were talking about
+[00:52:02] hospitals as isolation mechanisms how
+[00:52:08] realistic is that and how necessary is
+[00:52:11] that tear analysis if hospitals weren't
+[00:52:15] yeah so if they if they weren't you
+[00:52:20] could imagine two thing the two
+[00:52:21] possibilities one is they don't change
+[00:52:23] your risk of infecting others which
+[00:52:25] would be kind of odd because it's a big
+[00:52:28] behavioral change and the other is that
+[00:52:29] they increase it and so for example in
+[00:52:32] the the outbreaks of MERS in both the
+[00:52:35] Middle East and and especially in South
+[00:52:38] Korea have been largely focused in
+[00:52:41] hospitals so the hospital is itself the
+[00:52:43] venue for transmission so and so that is
+[00:52:47] actually encouraged us to think about
+[00:52:48] are there trial designs for something
+[00:52:51] like a MERS vaccine that would use that
+[00:52:54] fact that it seems like hospitals are
+[00:52:57] are the settings where the transmission
+[00:52:59] is most likely so it's not that we're
+[00:53:01] positing this as a universal fact it was
+[00:53:05] a reasonably reasonable approximation of
+[00:53:08] a fact at that stage of the Ebola
+[00:53:10] outbreak not at all stages because in
+[00:53:15] places that used that have funeral
+[00:53:18] rituals that involved washing the body
+[00:53:20] and touching the body you know the
+[00:53:22] hospital was not the end of the story
+[00:53:24] there was still an opportunity for
+[00:53:25] transmission afterwards so it's not we
+[00:53:27] don't mean that as a as a sort of
+[00:53:31] assumed fact about everything it's just
+[00:53:33] that in this case it probably was and
+[00:53:36] and if the trial was working well it was
+[00:53:45] so talking about the Ebola right now we
+[00:53:48] are starting it to test the multi drugs
+[00:53:51] in DRC and I was wondering whether how
+[00:53:55] does the the ring vaccination of my
+[00:53:57] particular contacts given what we know
+[00:54:00] now in DRC and the fact that you
+[00:54:03] mentioned that thinks it's worth it you
+[00:54:04] say that's good case study yeah I
+[00:54:12] probably not in the sense that the drugs
+[00:54:16] at least for the moment the purpose of
+[00:54:18] the drugs is not to affect transmission
+[00:54:20] but to affect clinical course so you
+[00:54:23] can't really give them until you have a
+[00:54:25] case and then you give them to the case
+[00:54:26] not to the contacts you could imagine
+[00:54:28] testing drugs prophylactically but but
+[00:54:31] probably way down the line and probably
+[00:54:34] not anytime soon I do think that the
+[00:54:39] ethical questions that come up are very
+[00:54:43] closely related
+[00:54:45] especially the question of whether to
+[00:54:47] use placebo or some some symbol to
+[00:54:49] something similar to placebo and there's
+[00:54:53] a kind of simmering debate about that in
+[00:54:56] the literature and whether that so we've
+[00:54:59] really limited our focus to vaccines
+[00:55:02] because I think the the issues are more
+[00:55:05] clear-cut in vaccines and it's better to
+[00:55:07] solve easy problems first and then hard
+[00:55:09] ones but but I think some of what's been
+[00:55:12] written recently for example by Alex
+[00:55:14] London on the ethics of unproven
+[00:55:18] interventions I think applies equally
+[00:55:21] well to vaccine I mean to drugs to
+[00:55:24] treatments and that there's a good case
+[00:55:29] to be made that that's some sting some
+[00:55:33] standard of care plus placebo or
+[00:55:34] standard of care that does not include
+[00:55:38] the experimental drugs is what you
+[00:55:44] should use as a comparator but that
+[00:55:47] would be controversial with many people
+[00:55:50] although I think that argument is
+[00:55:52] starting to hold some sway
+[00:55:57] any more questions
+[00:56:10] a few a few weeks ago a Harvard had this
+[00:56:14] special week on contagion where they
+[00:56:16] were talking about outbreaks of new
+[00:56:18] diseases how realistic is how applicable
+[00:56:23] is this kind of study to planning for
+[00:56:25] something like that I think many of the
+[00:56:30] things they were talking about were
+[00:56:31] things like Ebola and Zika it was more
+[00:56:34] focused on flu but but I think the only
+[00:56:40] way that any disease gets to be global
+[00:56:42] is that we fail to contain it locally no
+[00:56:46] diseases sort of pop up in many places
+[00:56:48] at once
+[00:56:50] spontaneously because they're
+[00:56:52] transmitted by infectious agents and
+[00:56:55] I've tried to make the case in a number
+[00:57:01] of ways that dealing with something like
+[00:57:05] Ebola and a bowl outbreak or a Zika
+[00:57:07] outbreak is at the small level is the
+[00:57:11] way to to prevent large-scale
+[00:57:13] catastrophes it is true that the chance
+[00:57:17] that a bola becomes global without bit
+[00:57:21] barring some biological change in the
+[00:57:23] virus is not very great because because
+[00:57:26] we can handle it in resource-rich places
+[00:57:30] and or or barring a massive attack in
+[00:57:34] which it was distributed to lots of
+[00:57:36] people simultaneously but a trickle of
+[00:57:39] cases is something we can handle if
+[00:57:41] chris Christie and his friends would get
+[00:57:43] out of the way but but putting aside and
+[00:57:48] politics we can handle a trickle of
+[00:57:50] cases which is how it would begin in in
+[00:57:53] rich countries the respiratory
+[00:57:56] transmitted viruses like like influenza
+[00:58:00] and some of the corona viruses are of
+[00:58:04] greater concern because they are it's
+[00:58:07] much harder to prevent transmission and
+[00:58:10] so but those to start small and get
+[00:58:14] bigger so I think I think finding ways
+[00:58:18] to contain smallish outbreaks is by by
+[00:58:22] vaccines or other
+[00:58:23] other things other measures is the way
+[00:58:26] to is a way to prevent large-scale
+[00:58:30] outbreaks influenza is a special case in
+[00:58:34] that it will travel very very fast and
+[00:58:37] will be in many places at once
+[00:58:39] but but with that exception there really
+[00:58:42] aren't a lot of cases where where you
+[00:58:45] get beyond this phase very quickly how
+[00:58:49] does that answer your question well one
+[00:58:52] of the worries that some people have
+[00:58:53] been speculating about lately and is
+[00:58:56] some kind of bioterrorism manufactured
+[00:59:00] synthetic new disease or some of the
+[00:59:02] characteristics of the Marburg type
+[00:59:07] diseases are combined with some of the
+[00:59:09] transmission capabilities the
+[00:59:12] respiratory diseases and have the
+[00:59:15] ability to react quickly to that it's
+[00:59:20] also communication patterns a lot of the
+[00:59:24] isolation mechanisms and traditional
+[00:59:26] societies for example in Africa and the
+[00:59:28] villages would just block the path
+[00:59:30] wastes isolate themselves in epidemics
+[00:59:32] in the past or as of something
+[00:59:34] materialized let's say during some kind
+[00:59:37] of an emergency in a large city it would
+[00:59:40] be much more difficult yeah well I think
+[00:59:44] that's where this this issue that I
+[00:59:47] raised toward the end on under what
+[00:59:50] circumstances would we sort of dispense
+[00:59:53] with the formalities of testing
+[00:59:55] something properly and roll out a
+[00:59:59] countermeasure of course we have to have
+[01:00:01] the countermeasure to roll out I think
+[01:00:04] those sort of nightmare scenarios whose
+[01:00:06] probability I don't know how to estimate
+[01:00:08] any better than than anyone else except
+[01:00:12] to say that we don't know of such in the
+[01:00:15] public domain there is no evidence that
+[01:00:17] such viruses exist I think those
+[01:00:22] nightmare scenarios are the ones where
+[01:00:25] you have to think about what you would
+[01:00:27] do
+[01:00:28] in terms of trying to roll out and test
+[01:00:31] a countermeasure simultaneously you
+[01:00:36] still look like I'm not answering your
+[01:00:50] something and how do you protect
+[01:00:52] patients as well so the setting up of
+[01:00:54] the Compensation Fund is something
+[01:00:57] that's being actively discussed at the
+[01:00:59] World Health Organization and how do we
+[01:01:02] handle it if there is a state of
+[01:01:04] emergency and we do have to test or to
+[01:01:07] use a vaccine without having gone
+[01:01:09] through the full clinical trial so if
+[01:01:11] you're interested job we can chat later
+[01:01:13] on one last question
+[01:01:15] oh thank you very much mark that was a
+[01:01:23] very interesting we hope that the ring
+[01:01:26] vaccination trial gets more conclusive
+[01:01:28] as progress and you get your NIH grant
+[01:01:31] soon thank you everyone and in January
+[01:01:36] [Applause]

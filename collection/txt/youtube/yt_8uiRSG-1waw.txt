@@ -1,0 +1,1317 @@
+[00:00:08] Hi, all, and welcome to this virtual Berkman Klein talk
+[00:00:17] series.
+[00:00:19] And I still see some participants joining,
+[00:00:23] so I'll take it slowly here.
+[00:00:26] But, first of all, welcome all to this series
+[00:00:30] and this kind of like unusual setting, at least
+[00:00:32] for the Berkman Klein Center in these very unusual times.
+[00:00:37] On your screen, you can see some of the house rules
+[00:00:39] that we have.
+[00:00:41] Most notably, audio and video have been turned off for you,
+[00:00:45] so you will only be able to see the slides as well
+[00:00:48] as the presenters, that is, Adrian and me.
+[00:00:51] If you've got questions during the talk,
+[00:00:54] submit them through our--
+[00:00:56] through Zoom's Q&A tool, and we'll basically
+[00:01:00] go through those questions and answer them after the talk.
+[00:01:06] And after the talk, as well, the public chat will be enabled.
+[00:01:09] So, right now, you can't be--
+[00:01:11] you know, you can't chat with other folks.
+[00:01:13] But once the talk is over, you'll
+[00:01:15] be able to do that more interactively,
+[00:01:18] as we've kind of like learned in the past
+[00:01:20] that this can be a little distracting if the public chat
+[00:01:23] will be enabled throughout.
+[00:01:25] And, finally, a word of caution.
+[00:01:28] As usual, with these talks for Berkman,
+[00:01:31] the webinar will be recorded.
+[00:01:34] And so, you know, like, if your questions are being asked,
+[00:01:37] and we might mention your name, so keep that in mind.
+[00:01:42] Or, you know, if you don't want your name mentioned,
+[00:01:45] just add that to your question, please.
+[00:01:48] With that having said, I'll now share my screen with you.
+[00:01:57] And hello, all, in this virtual environment.
+[00:02:03] Today, Adrian and I will talk about our research on bot
+[00:02:08] detection or, more specifically, on the issues of bot detection.
+[00:02:15] And so this talk, as follows, is structured in a way
+[00:02:19] that, first, I will guide you through kind
+[00:02:22] of like our thoughts and how we kind of like structured
+[00:02:26] our paper, what kind of like the situation
+[00:02:29] is that we're in right now when it comes to bot detection,
+[00:02:33] and then Adrian will guide you through our results
+[00:02:36] and give you kind of like some thoughts on what we think
+[00:02:40] can be done and maybe should be done.
+[00:02:43] But, first and foremost, we are just
+[00:02:45] very happy that you chose to join us online.
+[00:02:49] And, you know, like these times are
+[00:02:53] quite stressful and uncertain, and we're
+[00:02:56] very thankful that you're participating here.
+[00:02:58] And I hope you all are safe out there.
+[00:03:04] So when it comes to, you know-- and this is a very abrupt
+[00:03:07] change-- but when it comes to bot detection, which
+[00:03:09] is a very more like abstract topic,
+[00:03:14] we kind of like have to take a step back and think
+[00:03:17] about the public interest, or worry, really, in bots
+[00:03:20] and how this has increased over time.
+[00:03:22] You can see the plot on the right.
+[00:03:24] That is from Media Cloud.
+[00:03:26] So this is just media attention in the US media between January
+[00:03:29] 2015 and April 2020 for bots and fake news, misinformation,
+[00:03:34] or disinformation.
+[00:03:36] And this kind of like just shows you that, really,
+[00:03:38] after fall 2016, so after the presidential election
+[00:03:42] in the US, the public attention and probably worry about bots
+[00:03:48] and kind of like misinformation really, really skyrocketed.
+[00:03:53] And this is not only true for kind
+[00:03:55] of like the public and the media interest,
+[00:03:57] but really also for academic research.
+[00:03:59] So Google Scholar has 18,900 hits for me
+[00:04:03] when I search for bots and Twitter since 2016.
+[00:04:07] I couldn't use Scopus because, as many of you are,
+[00:04:10] I'm working remotely, and so I had
+[00:04:14] to take Google Scholar as my database of reference.
+[00:04:20] And so this just shows you kind of like
+[00:04:22] that this field of bot research and kind of
+[00:04:24] like what-- what's the role of bots in our public discourse,
+[00:04:28] it's an urgent one.
+[00:04:29] Right?
+[00:04:29] I think no one is disputing that we all
+[00:04:31] would love to know kind of like how many automated
+[00:04:34] accounts that spread political messages, or other messages,
+[00:04:38] are really out there.
+[00:04:39] You know, like we all want to know
+[00:04:40] if we debate with someone online,
+[00:04:42] whether that person is a person or really a bot.
+[00:04:45] Right?
+[00:04:45] So there is a need and an urgency for that.
+[00:04:50] And, indeed, you know, like there
+[00:04:51] have been studies in recent years and articles about this.
+[00:04:54] So this was, for example, a Pew study from 2018
+[00:04:58] called "Bots in the Twittersphere,"
+[00:05:00] and where they say an estimated 2/3 of tweeted links
+[00:05:03] to popular websites are posted by automated accounts, not
+[00:05:06] human beings.
+[00:05:08] Another study that was covered by The Guardian, this year,
+[00:05:12] had the headline, "Revealed Quarter of All Tweets About
+[00:05:16] Climate Crisis Produced by Bots."
+[00:05:20] This, I think it was by Gizmodo.
+[00:05:22] This is an op ed which says, "Social media bots are
+[00:05:25] damaging our democracy.
+[00:05:26] On the internet, nobody knows you're a natural language
+[00:05:28] processing system."
+[00:05:30] So, again, or really, you know, like it's not a worry--
+[00:05:33] it's not only a worry, it's also--
+[00:05:34] it might be really bad for our democracy.
+[00:05:37] Right?
+[00:05:38] And finally, you know, like all different kinds of things,
+[00:05:41] "Tweets About Cannabis' Health Benefits Are
+[00:05:43] Full of Mistruths."
+[00:05:45] This was I believe on The Conversation about a Twitter
+[00:05:47] analysis that some academics have done.
+[00:05:50] And this is kind of like the interface
+[00:05:52] that we're kind of like looking at, between academics doing
+[00:05:55] research and kind of like looking at discourses
+[00:05:58] on Twitter and being like, OK, how can we measure this?
+[00:06:02] What's happening there?
+[00:06:04] Then writing a study, and then kind of like this,
+[00:06:07] getting out into the media and the public
+[00:06:09] discussing about this.
+[00:06:10] Right?
+[00:06:11] And so the importance of the rigor of the academic research
+[00:06:15] is, you know, warranted in that regard
+[00:06:18] because, often, kind of like academic discussions
+[00:06:20] and studies are usually staying within academia here.
+[00:06:25] It's not only in academia.
+[00:06:26] It's also out in the world and out in the media.
+[00:06:30] So when we talk about bots, we kind of
+[00:06:32] like have to think about the terminology, and we
+[00:06:35] just, like, have some definitions here, for example,
+[00:06:38] by Chu et al who say bots are automated programs,
+[00:06:41] but they kind of like also differentiate
+[00:06:43] between bots and cyborgs, that is, bot-assisted humans
+[00:06:47] or human-assisted bots.
+[00:06:48] That is kind of like, think of a Twitter program,
+[00:06:51] and sometimes a human will also write tweets on that account.
+[00:06:55] But this is only one of many definitions
+[00:06:57] that you'll find out there when you kind of like
+[00:06:58] look in the literature.
+[00:06:59] Another is by Kollanyi, Howard, and Woolley, from the OAI,
+[00:07:04] back then, at least, who defined bots as, "automated interaction
+[00:07:08] with other users."
+[00:07:11] So this is already kind like it's
+[00:07:12] about the interaction with other users.
+[00:07:14] It's not only like, you know, like that they send messages
+[00:07:16] into the vortex.
+[00:07:19] Third, it's from Bessi and Ferrara,
+[00:07:21] who not talk about bots, but about social bots, who,
+[00:07:25] "emulate the activity of human users
+[00:07:27] but operate at a much higher pace, while successfully
+[00:07:30] keeping the artificial identity undisclosed."
+[00:07:33] This, again, is a different definition,
+[00:07:35] and you kind of like can see that from definition
+[00:07:38] to definition, the line and the lines of what is a bot
+[00:07:41] and what's not a bot beginning to blur.
+[00:07:45] And, finally, Bot Sentinel is a website out there that came up
+[00:07:49] with the term trollbot, which they define as, "troll-like
+[00:07:52] behavior with a repetitive bot-like nature
+[00:07:54] of their trolling," where, you know,
+[00:07:58] like it's really unclear if that's even a bot or not.
+[00:08:01] And, you know, like, in that kind of sense,
+[00:08:04] does it even matter if it's a bot or not?
+[00:08:06] And so it, kind of like you see that definition, right,
+[00:08:08] so you kind of like have a broad feel.
+[00:08:10] And so we believe that it's kind of like important to,
+[00:08:12] you know, take a step back and say, for us,
+[00:08:15] bots are fully automated accounts.
+[00:08:17] And that's, for us, it's the end of it,
+[00:08:20] not because we do not account and believe
+[00:08:23] that there are different ways, out there,
+[00:08:26] that bots are being used, but rather because we don't believe
+[00:08:30] that, like this, all these terminologies help us
+[00:08:34] kind of like figuring out what we want to study.
+[00:08:36] That is, you know, how many bots can we identify on Twitter?
+[00:08:41] And we, when I talk about bots, you
+[00:08:43] know, like there are some very obvious bots out there
+[00:08:46] like the Museum Bot or the Soviet Art Bot often accounts,
+[00:08:50] you know, like that have their engineer in the description
+[00:08:54] and a link to the GitHub repo.
+[00:08:57] So how do you identify bots?
+[00:08:59] Or how have scholars and journalists and researchers
+[00:09:03] thought about going about this?
+[00:09:06] There are different ways.
+[00:09:07] There is the frequentist approach, which is really
+[00:09:09] just saying, you know, every account
+[00:09:12] that tweets more than 50 times a day is a bot.
+[00:09:15] There is a network analysis approach,
+[00:09:17] where we kind of like look at the follower communities.
+[00:09:20] There is a machine learning algorithm, where you say,
+[00:09:22] OK, we know these accounts are bots,
+[00:09:24] and these accounts are humans.
+[00:09:26] And we train this algorithm so that it will detect these,
+[00:09:29] going forward.
+[00:09:31] There's digital forensics, which is
+[00:09:32] kind of like a mixture of human inspection
+[00:09:35] and these other tools.
+[00:09:36] And, finally, human inspection, where it's really just,
+[00:09:39] you look at the account and you look at what they tweet,
+[00:09:41] and you kind of like try to make sense.
+[00:09:43] You know, like does the image fit, et cetera?
+[00:09:48] So here, in our talk, we focus on machine learning algorithms,
+[00:09:51] most namely Botometer, which can be understood
+[00:09:55] as the gold standard in social science research
+[00:09:58] to identify bots on Twitter.
+[00:10:00] Indeed, if you kind of like look through the literature,
+[00:10:03] you'll find several hundred studies
+[00:10:06] that have used Botometer, including
+[00:10:09] and kind of like communication journals like Political
+[00:10:11] Communication, but also, for example,
+[00:10:14] in general science journals like Science.
+[00:10:16] And so, you know, Botometer is, by far, the most used tool
+[00:10:20] in that regard.
+[00:10:21] And so we believe it's valid kind of like to ask,
+[00:10:24] you know, how good is the Botometer?
+[00:10:27] And I went through Botometer with these two bots
+[00:10:30] that I just showed you, and the Botometer score, here,
+[00:10:34] is 2.4 and 2.3.
+[00:10:36] So, you know, it's in the middle.
+[00:10:37] Like, Botometer is kind of like saying, you know, it depends.
+[00:10:41] The whole left, like blue, is not a bot.
+[00:10:44] Red is bot.
+[00:10:46] So it's right in the middle.
+[00:10:48] If you're wondering, and if you've never
+[00:10:49] used Botometer, how it works, this is the web interface.
+[00:10:53] And you log in with your Twitter credentials,
+[00:10:56] and then you can just check users.
+[00:10:58] And what you'll get to see, here,
+[00:11:00] is what I've done yesterday.
+[00:11:01] And I checked Adrian's and my account.
+[00:11:06] And apparently, Adrian is a little [? bottier ?] than me.
+[00:11:09] But, still, I think we're both relatively in the clear
+[00:11:12] and tend not to be a bot, according to Botometer.
+[00:11:16] So what you see, here, are the universal scores.
+[00:11:20] You can see this also on the next slide,
+[00:11:22] where I looked at Adrian's account
+[00:11:25] and where we can get two important values.
+[00:11:29] That is the Complete Automation Probability, which is 1%,
+[00:11:34] and the universal score.
+[00:11:36] These are the two main values that you will also
+[00:11:38] get from the Botometer API, and with--
+[00:11:42] and those are the values with which researchers usually work.
+[00:11:47] Most prominently, however, researchers
+[00:11:49] will take the universal score which is then
+[00:11:53] resampled to zero to one, where zero is not a bot, one is bot,
+[00:11:58] and they will choose thresholds.
+[00:12:01] And above or below those thresholds,
+[00:12:04] it will either be a bot or not a bot.
+[00:12:06] So Pew, for example, had a threshold of around
+[00:12:08] like, I think, 0.43.
+[00:12:10] And everything below 0.43 was not a bot,
+[00:12:13] and everything above 0.43 was a bot.
+[00:12:16] And that is the universal score in that context.
+[00:12:20] And if you talk about these classifiers--
+[00:12:22] and Botometer is a classifier, right--
+[00:12:24] we talk about pitfalls and what can go wrong.
+[00:12:29] And we see this currently, actually,
+[00:12:30] with the coronavirus and testing,
+[00:12:33] where it's really important how good is the test.
+[00:12:36] Right?
+[00:12:37] And this is very similar with classifiers.
+[00:12:39] Like how good is this, actually?
+[00:12:41] And so if we have a sample of 50% bots and 50% human users,
+[00:12:45] the question is what pitfalls can there happen?
+[00:12:49] Generally speaking, you know, you
+[00:12:51] will have a classified data set.
+[00:12:54] And within that classified data set,
+[00:12:56] you will have true positives-- that is, in our case,
+[00:12:59] the bots that we identified are bots--
+[00:13:01] and you will have false positives.
+[00:13:02] That is, you will have humans that have been classified
+[00:13:06] as bots, but obviously aren't.
+[00:13:09] And usually, you know, like, this is something
+[00:13:11] that you will never really like get rid of.
+[00:13:13] But, obviously, kind of like we want
+[00:13:14] to reduce the false positives and have
+[00:13:17] a high true-positive rate.
+[00:13:19] However, an issue arises, here.
+[00:13:21] That is, that is not the only pitfall
+[00:13:24] that you have because true positives and false positives
+[00:13:26] only tell parts of the story.
+[00:13:28] Indeed, it's also a precision.
+[00:13:31] That is, from the poll, the accounts
+[00:13:34] that got classified, the question is,
+[00:13:36] how many of these classifieds were actually
+[00:13:38] correctly classified?
+[00:13:38] Like, how many bots were selected within the classified
+[00:13:41] data.
+[00:13:41] That is precision.
+[00:13:44] And we have got the recall.
+[00:13:45] So how many bots were actually selected,
+[00:13:47] correctly selected, from all the bots that we have in our data
+[00:13:50] set?
+[00:13:51] So when we think, and going forward for this talk,
+[00:13:53] it's important to differentiate between true positives,
+[00:13:56] false positives, precision, and recall.
+[00:13:59] And you'll find out later why that is
+[00:14:01] and why we can like talk about this.
+[00:14:03] But, more specifically, because there is an issue if
+[00:14:06] we only look at true positives and false positives.
+[00:14:09] Namely, that this data set doesn't really
+[00:14:13] happen on Twitter because it rather
+[00:14:15] looks like this where we have about 15% of all users,
+[00:14:20] according to Twitter, are bots, and the rest are humans.
+[00:14:24] And so this is not really being accounted for,
+[00:14:27] and you'll see the impact of that.
+[00:14:29] So this is all theory, and this is kind of like all the aspects
+[00:14:33] that we thought about in the last one and a half years
+[00:14:35] while doing this project, just coming up,
+[00:14:38] really, with this question.
+[00:14:39] Like, how precise is this tool in detecting bots?
+[00:14:45] And we've got four bigger questions and then
+[00:14:48] a smaller question in that regard, I think.
+[00:14:50] That is, how good is the diagnostic ability
+[00:14:52] of Botometer when used for five distinct sets of Twitter
+[00:14:55] accounts?
+[00:14:56] How good is the precision at the recall of Botometer scores
+[00:14:59] when used for five distinct sets of Twitter
+[00:15:01] accounts presenting the bot-human ratio
+[00:15:03] and the general Twitter population.
+[00:15:05] So not only in our data sets, but also
+[00:15:08] when we resample this for the general Twitter
+[00:15:10] population, which is kind of like what we're
+[00:15:12] really interested in, right.
+[00:15:15] But, also, what's the difference between the languages here?
+[00:15:18] We know roughly that there is a difference
+[00:15:20] between how good, for example, Botometer
+[00:15:23] works in English and Swedish, based on other studies.
+[00:15:27] And finally, how stable is Botometer over time?
+[00:15:30] Because usually how studies go about it is they
+[00:15:33] collect their data, they run their data
+[00:15:35] through the Botometer API, and one time,
+[00:15:38] and then they have the results.
+[00:15:39] And that's usually it.
+[00:15:41] And we're kind of like also interested in,
+[00:15:43] how do these values change over time?
+[00:15:47] So what we did is we constructed a data set
+[00:15:50] of five different data sets.
+[00:15:52] Namely, we had clear humans, clear bots, and a training
+[00:15:57] set from Botometer.
+[00:15:58] The humans were US politicians.
+[00:16:00] So here's some examples, here, usually verified.
+[00:16:03] We have German politicians, mostly verified.
+[00:16:06] But all, you know, like all accounts that were clearly
+[00:16:09] humans and the media would notify the public
+[00:16:12] if something really weird and fishy
+[00:16:14] would go on, that is, automation in one or the other regard.
+[00:16:18] And, finally, we also looked at bots, right.
+[00:16:21] We went to a wiki that has Twitter bots on them.
+[00:16:25] Those are usually, you know, very transparent Twitter bots.
+[00:16:28] So if we were to do a human inspection,
+[00:16:30] we would all be like, oh, yeah, that's a bot.
+[00:16:32] Now, and we did this for new bot,
+[00:16:34] for new English language bots as well as German bots.
+[00:16:38] And then, as I said, the bots that
+[00:16:40] were used to train Botometer initially.
+[00:16:43] We had, then, this data set of 400--
+[00:16:47] or 4,000-something accounts that we then queried Botometer with.
+[00:16:51] And we queried Botometer for three months.
+[00:16:52] So we kind of like wanted to really
+[00:16:54] have like a lot of reference scores
+[00:16:57] to then calculate our scores.
+[00:17:00] And, with that, I'll now let Adrian guide you
+[00:17:03] through the results.
+[00:17:06] All right.
+[00:17:08] Many thanks, Jonas.
+[00:17:10] So let me start with the five different data sets that we
+[00:17:14] have created for our analysis.
+[00:17:16] Because Jonas has already introduced
+[00:17:18] the single data sets, and to really test
+[00:17:21] a classifier, a binary classifier,
+[00:17:24] we have to, of course, use data sets that have
+[00:17:28] both bots and human accounts.
+[00:17:30] So the first data set we used is like just all the accounts
+[00:17:35] we have identified together.
+[00:17:36] That's here, red, the all.
+[00:17:39] Then we combined the German politicians
+[00:17:42] and the German bots, but we only had identified
+[00:17:46] very few German bots.
+[00:17:48] That's why we created, also, like a third combined
+[00:17:51] data set with the German politicians
+[00:17:54] together with the English bots.
+[00:17:56] And then we have a fourth data set, the US politicians
+[00:17:59] together with the English-language bots.
+[00:18:02] And then, as a fifth data set, we
+[00:18:05] used the data set created by the first--
+[00:18:12] that was used for the--
+[00:18:13] to kind of like train the classifier
+[00:18:16] by the creators of Botometer.
+[00:18:18] So usually when you want to report or analyze
+[00:18:24] the diagnostic ability of a classifier,
+[00:18:26] you report something called the ROC curve, which
+[00:18:31] stands for Receiver Operating Characteristics,
+[00:18:35] and then you calculate the area under the curve.
+[00:18:38] So this means like the area that is covered by the curve, what
+[00:18:42] follows under it.
+[00:18:43] So the larger that area, the better, actually,
+[00:18:46] the classifier.
+[00:18:47] So let me start.
+[00:18:48] What you usually plot, it's like for every single threshold.
+[00:18:52] And, for us, the Botometer score goes from zero to one.
+[00:18:58] So we start on the right-hand side
+[00:19:00] with a Botometer threshold of zero.
+[00:19:04] So if you say your threshold is zero, and every account that
+[00:19:09] gets a score above zero, you classify as a bot,
+[00:19:14] you get a perfect true positive rate.
+[00:19:17] This means that you will identify
+[00:19:19] all bots within your data set.
+[00:19:22] But at the same time, of course, every single human user
+[00:19:25] in your data set will also be classified wrongly
+[00:19:28] as a bot, which means you get a perfect false positive rate
+[00:19:33] of one.
+[00:19:34] That's why you start on the right-hand side,
+[00:19:37] in the upper corner, with these visualizations.
+[00:19:41] Then, on the other hand, if you move up with the threshold,
+[00:19:45] you increase the threshold, then eventually, of course,
+[00:19:48] you can use the highest possible threshold of just below one,
+[00:19:54] maybe.
+[00:19:55] And then what you get is actually
+[00:19:57] a true positive rate that maybe includes only one bot,
+[00:20:00] so below even 1%.
+[00:20:03] But at the same time, you also reduce,
+[00:20:06] of course, the false positive rate
+[00:20:08] because no human account will be classified as a bot, wrongly
+[00:20:14] classified as a bot.
+[00:20:15] But at the same time, you won't really identify, also,
+[00:20:19] any of the bots in your data.
+[00:20:22] So we compare, here, in this visualization,
+[00:20:25] the different data sets.
+[00:20:28] And we used, actually, the mean over the three months.
+[00:20:31] So, everyday, we measured once the score for every account.
+[00:20:37] And for this part of the analysis,
+[00:20:39] we just took the mean, the average score,
+[00:20:43] that an account received over the three months.
+[00:20:47] And what you can see here already
+[00:20:49] that the US politicians and bots curve,
+[00:20:53] the ROC curve for that data set, is
+[00:20:58] better than the other curves.
+[00:21:01] As you can see, the German politicians and bots as well as
+[00:21:04] the German politicians and German bots,
+[00:21:07] they are a little bit worse.
+[00:21:10] The area under the curve is actually smaller,
+[00:21:13] and you see that here as a summary.
+[00:21:15] This is usually what is also recorded in studies and also
+[00:21:18] the Botometer creator report, the ROC in their paper,
+[00:21:22] and it's pretty high, actually, in their original paper.
+[00:21:24] And, here, you see the US politicians and bots, they
+[00:21:27] really receive the highest ROC area under the curve score,
+[00:21:34] whereas the German bots and the German politicians
+[00:21:37] and the German politicians with the English-language bots
+[00:21:40] together get a rather low overall ROC-AUC
+[00:21:45] score of 0.76 and 0.77.
+[00:21:50] So the problem is, like with the ROC-AUC approach,
+[00:21:55] you get like relative values.
+[00:21:57] You get a percentage, basically, for a single part
+[00:22:01] of the data set.
+[00:22:02] Like, people get once measurement for the bots,
+[00:22:07] and you get another one only based on the human accounts.
+[00:22:12] So Jonas has already mentioned it.
+[00:22:14] When we use this classifier, our target population
+[00:22:19] is not our training data set or an artificial data
+[00:22:22] set that is balanced.
+[00:22:24] In reality, actually, we want to analyze the Twitter population.
+[00:22:28] And within the Twitter population, we can assume--
+[00:22:31] I think we all can agree on that-- that we have
+[00:22:33] less bots than human users.
+[00:22:35] And, of course, there is no clear number for that,
+[00:22:37] but we find numbers like 15 percent
+[00:22:40] of the accounts active on Twitter are actually bots.
+[00:22:44] So we try to create a new data set that
+[00:22:49] has this kind of imbalance, because that imbalanced data
+[00:22:53] set is what you will actually see in the real world
+[00:22:58] when we analyze Twitter outside of your experimental setting
+[00:23:03] or test setting.
+[00:23:05] So we created a new random sample with replacement,
+[00:23:08] with 100,000.
+[00:23:11] Each data set, we created a new version of it
+[00:23:15] with like 100,000 accounts, but we adjusted the probability
+[00:23:20] weights during the sampling process that, in the end,
+[00:23:23] we get basically a data set with 15,000 bots and 85,000
+[00:23:32] human accounts.
+[00:23:33] But I told you already, before, the ROC approach actually
+[00:23:37] gives you relative values.
+[00:23:38] So no matter how imbalanced the data set is, as long as you
+[00:23:42] use more or less the same population or the same kind
+[00:23:46] of accounts, you will actually get the same ROC-AUC score.
+[00:23:50] Here, on the left-hand side, we see the original one
+[00:23:53] based on the training or our data sets.
+[00:23:56] Most of them are actually balanced.
+[00:23:58] And then, on the right-hand side,
+[00:24:00] here, which is like labeled as sample,
+[00:24:03] you see the new data sets we created with the imbalance,
+[00:24:08] with only 15% as bots.
+[00:24:10] So the scores, here, are overall the same.
+[00:24:12] However, if you use as a measurement,
+[00:24:15] actually, the precision which analyzes-- like, it shows here
+[00:24:20] with the imbalanced one-- it analyzes
+[00:24:22] like from all the identified accounts
+[00:24:25] that are above the threshold.
+[00:24:26] How many of them are actually bots, in our case, right?
+[00:24:31] And if it's imbalanced data set, even a very small
+[00:24:35] false-positive rate or overall false-positive rate
+[00:24:39] will lead to a high absolute number
+[00:24:43] of wrongly classified human accounts that are suddenly
+[00:24:48] classified as bots.
+[00:24:51] And the number of bots is actually smaller
+[00:24:54] within this identified part.
+[00:24:59] So what does it mean for the PR, the Precision Recall, area
+[00:25:05] under the curve?
+[00:25:06] On the left-hand side, you see the PR scores
+[00:25:10] for the original data sets which, of course,
+[00:25:14] in most cases, is better because the data actually
+[00:25:17] is more balanced.
+[00:25:19] And then, in contrast to that, on the right-hand side,
+[00:25:22] you see the PR score for our newly created imbalanced data
+[00:25:29] sets.
+[00:25:30] The only value that actually increases,
+[00:25:32] what you can see here, is the German politicians
+[00:25:34] and German bots.
+[00:25:35] The PR score, here, is smaller for the original one
+[00:25:41] because we had very few German bots.
+[00:25:44] So we had less than 15% overall in that data set, so when
+[00:25:50] we created a new data set, actually
+[00:25:53] the score increased because we had to add more bots.
+[00:25:58] But for all the other values, actually it gets worse.
+[00:26:02] So let me show you, visually, what that means.
+[00:26:06] So if we compare the two PR curves,
+[00:26:10] the one for the original data sets
+[00:26:13] and the other one for the resample, for the even newly
+[00:26:16] created imbalanced data set, then
+[00:26:18] you can see, here, for example, for the data set All,
+[00:26:22] the curve gets pushed down.
+[00:26:24] So the precision, that's really the value we're interested in,
+[00:26:29] gets worse action.
+[00:26:30] The curves look more or less the same
+[00:26:32] because we sampled from the same population.
+[00:26:35] And the recall, of course, stays the same.
+[00:26:40] But you see, here, for the German politicians and the bots
+[00:26:42] on the right-hand side that it really pushed down this curve.
+[00:26:48] I will, now, explain what it really means
+[00:26:51] and how you can interpret these curves on the next slide, here.
+[00:26:56] So these curves read a little bit differently
+[00:26:58] than the ROC curves.
+[00:27:00] You started, really, on the right-hand side
+[00:27:02] with the Botometer threshold of zero
+[00:27:04] and, on the left-hand side, you plot, actually, the thresholds
+[00:27:09] that are the highest.
+[00:27:11] So from zero, on the right-hand side, up to the left-hand side,
+[00:27:16] with a threshold of one.
+[00:27:18] So, again, if we take the lowest possible threshold,
+[00:27:22] and we say like, every account that
+[00:27:24] gets the bottom score of at least above zero,
+[00:27:29] right, we will classify that account as a bot.
+[00:27:34] We actually get the proportion of the population.
+[00:27:38] And as I have told you before, now,
+[00:27:39] in our newly created data set, we
+[00:27:41] have 15% bots and 85% human users.
+[00:27:48] So the precision is exactly 15% because we get all the bots.
+[00:27:53] But, at the same time, we also get all the humans,
+[00:27:55] so we have 85% actually wrongly classified accounts.
+[00:28:01] So we plotted, also, into this visualization,
+[00:28:07] points that show you thresholds that were used
+[00:28:11] in already-published studies.
+[00:28:13] So the ones more in the middle are actually the points.
+[00:28:19] These points show you the threshold of 0.43.
+[00:28:24] That's the threshold that Jonas has already mentioned
+[00:28:26] before for the Pew study.
+[00:28:29] And if you take, for example, the data set All,
+[00:28:33] you can see, actually, the precision is not that great.
+[00:28:37] It's actually 0.5.
+[00:28:39] So if you say, all accounts that have a score higher than 0.43,
+[00:28:48] the identified accounts, 50% of them actually will be bots.
+[00:28:53] But the other 50% will be false positive, stable, human users.
+[00:28:59] If you do the same for the German politicians and bots
+[00:29:02] data set, as you can see, it performs a lot worse.
+[00:29:07] It's even less, actually.
+[00:29:08] It's more in the 30% range of like the number of spots
+[00:29:13] that you will identify, and more like over 60% are German users.
+[00:29:21] The points on the left-hand side are the thresholds for 0.76.
+[00:29:29] These were used in the German context
+[00:29:32] in a study that is published in Political Communication.
+[00:29:36] And, as you can see, there, it's a rather conservative
+[00:29:39] threshold.
+[00:29:40] Right, there's pretty high one, 0.76.
+[00:29:45] You still, you still get like a lot of, like,
+[00:29:50] wrongly classified human users into the data,
+[00:29:55] and only around 25% of the as-bot classified acounts
+[00:30:00] are really bots.
+[00:30:01] And at the same time-- and this is the recall, right,
+[00:30:05] that you can see here on the x-axis--
+[00:30:09] the recall is very low if we use a very conservative threshold.
+[00:30:15] So conservative, here, means a very high one
+[00:30:18] where you, of course, want to reduce the false positives.
+[00:30:21] But when you use a very high threshold, at the same time,
+[00:30:24] you will identify very few bots from the overall population
+[00:30:30] of bots within your data set.
+[00:30:32] So what this visualization also shows you,
+[00:30:36] there is, obviously, a visual difference between the quality
+[00:30:41] of classification between the English language, more
+[00:30:45] general corpus, versus the German corpus,
+[00:30:51] which is, here, a lot worse.
+[00:30:52] So here is a summary, all the scores,
+[00:30:55] and what is, here, interesting for us, actually,
+[00:30:58] is that last row with the PR scores.
+[00:31:03] And you can see the German data sets perform a lot worse
+[00:31:07] with Botometer, whereas the English-language data sets all
+[00:31:13] have a higher score for the ROC as well as the PR.
+[00:31:20] These differences are also significant.
+[00:31:22] You can read more about this in the paper.
+[00:31:25] So there's also a test to really check whether it's significant.
+[00:31:30] So as a last step, we also wanted
+[00:31:32] to find out whether Botometer gives stable scores,
+[00:31:37] whether there is like a low volatility
+[00:31:40] or a high volatility.
+[00:31:42] And we have like selected a few of the accounts.
+[00:31:45] So, here, we have a far-right politician
+[00:31:48] from the Alternative for Germany, Alice Weidel.
+[00:31:52] And you see, here, over the three months,
+[00:31:55] the scores plotted that we measured on every day,
+[00:31:59] and there's a lot of volatility.
+[00:32:01] And if you take the threshold from the Pew study, where
+[00:32:05] you say, like, every account that
+[00:32:07] gets a score higher than 0.43 is a bot,
+[00:32:10] actually, you're just at the end of March.
+[00:32:14] She would have-- she wouldn't have been in a bot.
+[00:32:18] Whereas, on other days, actually,
+[00:32:21] during these three months, she would
+[00:32:23] have been classified as a human, but there
+[00:32:26] is a lot of volatility.
+[00:32:28] So let's go to the next one.
+[00:32:29] This is like an interesting one.
+[00:32:30] And a US politician, actually, a Republican,
+[00:32:34] has a very low bot Botometer score in the beginning,
+[00:32:38] but then it increases.
+[00:32:40] And towards the end, also, again based on the Pew study
+[00:32:47] thresholds, he would have been classified as a bot.
+[00:32:53] And as a last one, we have, of course, chosen a bot.
+[00:32:55] This is-- Jonas has (LAUGHING) identified this one.
+[00:32:59] It's the Boston Snowbot, and as you can see, here, obviously,
+[00:33:02] the Boston Snowbot is tweeting when there is snow.
+[00:33:06] And it seems like, in March--
+[00:33:09] I don't know Boston well--
+[00:33:10] there was some snow.
+[00:33:11] But then towards the--
+[00:33:15] towards April, and then starting from April,
+[00:33:17] somehow, probably this bot wasn't really active anymore.
+[00:33:21] We think, here, also like Botometer captured probably
+[00:33:26] the activity level, and he was far more active in March
+[00:33:30] than in April, and maybe he even stopped in April.
+[00:33:34] So what we see here, with these very few cases already,
+[00:33:37] there is a lot of volatility.
+[00:33:39] And if you think about most bot studies,
+[00:33:42] they only measure the bot score once on a specific day,
+[00:33:46] and not like over time and try to take an average.
+[00:33:49] And this really can be an issue depending
+[00:33:52] on the day, on the count will be a bot with a certain threshold.
+[00:33:57] Then, on another day, he won't be a bot.
+[00:34:02] But we also have like a summary.
+[00:34:03] This one, you'll find, also, in the paper where we really
+[00:34:06] check over this, over the three months.
+[00:34:09] And for every single threshold, actually, whether an account
+[00:34:16] was at least once above and once below the threshold
+[00:34:21] with the score.
+[00:34:22] And if you take, here, for example on the left-hand side
+[00:34:25] with the threshold universal score, a threshold of 0.4,
+[00:34:29] which is very near, again, to the Pew study,
+[00:34:32] then you'll see over 55%--
+[00:34:36] this is the red line--
+[00:34:38] of the new bots, of the English-language bots
+[00:34:42] we identified, they had at least once, on a day,
+[00:34:48] a score above that threshold of 0.4
+[00:34:52] and, once, during the three months, at least once,
+[00:34:55] a score below the threshold.
+[00:34:59] So as you can see, the same holds true for the German bots.
+[00:35:02] With the human users, it really depends.
+[00:35:07] It's maybe less problematic, but still pretty high.
+[00:35:10] For example, you can see, here, the German politicians, again,
+[00:35:13] on the left-hand side.
+[00:35:14] If we take a threshold of 0.4, we still
+[00:35:20] get around 30% of the users that at least have, once,
+[00:35:26] a score above the threshold and, once,
+[00:35:28] a score below the threshold during these three months.
+[00:35:34] All right, then we're at the end.
+[00:35:36] And so what's the conclusion?
+[00:35:38] What are the learnings, here?
+[00:35:40] We should, of course, be very careful
+[00:35:42] when we're using Botometer because the scores are not
+[00:35:45] stable.
+[00:35:46] There are problems with the language.
+[00:35:48] Maybe it works with English.
+[00:35:49] It doesn't mean it works in other languages.
+[00:35:53] And then what we believe is really
+[00:35:56] our kind of like strongest message,
+[00:35:59] it's like we really should consider the even
+[00:36:02] balanced sample, right?
+[00:36:04] So the populations we're analyzing
+[00:36:06] with a classifier, the population maybe
+[00:36:09] is not as balanced as our training data.
+[00:36:12] And this is a general problem.
+[00:36:14] Also, if you read the literature about classifiers
+[00:36:17] in bioinformatics, there are a lot of discussions about that.
+[00:36:22] And if tests are developed and then used in a real population,
+[00:36:27] so you also have-- and this one we haven't mentioned before--
+[00:36:31] you have to consider what is more important
+[00:36:33] or what is more costly, false positives or false negatives?
+[00:36:39] But this is also something beyond our paper,
+[00:36:42] but definitely a question that every single researcher, when
+[00:36:46] he approaches the problem of bots, should answer.
+[00:36:51] So how should we go forward?
+[00:36:54] We recommend, of course, as communication scientists,
+[00:36:58] always do some manual validation.
+[00:37:00] Just because a classifier was validated in a prior study
+[00:37:04] doesn't mean it still works with the new data set
+[00:37:08] or new population.
+[00:37:10] So, for example, in the Swedish case,
+[00:37:12] some colleagues have tested Botometer.
+[00:37:14] They got very bad scores, so the decision
+[00:37:16] was that they created their own classifier
+[00:37:19] for their specific Swedish data set, and then it worked.
+[00:37:23] It got better ROC scores, but also better precision.
+[00:37:27] So you need, also, to validate over time.
+[00:37:30] This is something very general.
+[00:37:31] We think, also, in general, any kind of classifier that
+[00:37:35] analyzes Twitter data or Twitter accounts,
+[00:37:37] even maybe beyond just bots analysis,
+[00:37:42] they should consider that if it's not like stable over time,
+[00:37:47] then, of course, the validation in different languages
+[00:37:49] faces more from a, let's say, European or Asian perspective,
+[00:37:53] that it's, for us, may be obvious,
+[00:37:55] but for a lot of US researchers, it
+[00:37:57] may be less obvious when they create their classifier.
+[00:38:02] So, of course, if we, now, move forward
+[00:38:06] and say Botometer didn't work well,
+[00:38:09] we can just create a new classifier.
+[00:38:11] It's very easy, now, based on this data set to almost create
+[00:38:14] a perfect classifier.
+[00:38:16] I mean, I can just create an ad hoc classifier
+[00:38:18] where I check whether a bot is mentioned in the description
+[00:38:21] or in the username.
+[00:38:22] And then the classifier already works pretty well, actually.
+[00:38:28] But that is definitely not enough,
+[00:38:29] even when there will be a new classifier available that
+[00:38:33] maybe was validated when other researchers would use it.
+[00:38:37] In the future, they have to validate it again, like we say.
+[00:38:41] So if you're interested in that, please read our paper.
+[00:38:45] We explain that in more detail, how to move ahead,
+[00:38:51] but also all the technical parts are explained in more detail.
+[00:38:55] And, of course, what we also call
+[00:38:57] for, we say these kind of blackbox tools where
+[00:39:02] the code is not available and the full data set with all
+[00:39:05] the measurements that was used to create these classifiers,
+[00:39:09] if that one is not available, that's a problem.
+[00:39:12] Right, we cannot really reproduce, one-to-one,
+[00:39:16] exactly the same classifier.
+[00:39:19] And we need that to evaluate, actually,
+[00:39:21] the quality of the classifier, to really understand
+[00:39:24] where the classifier is biased.
+[00:39:26] We can now only, somehow, reverse
+[00:39:28] engineer it or do some guesswork based on single examples
+[00:39:32] where there is a bias.
+[00:39:34] So we also share, of course, maybe call
+[00:39:36] for more transparency.
+[00:39:38] We also share our data.
+[00:39:39] You find the code in the data, in that Harvard data words.
+[00:39:44] So that's it from my side.
+[00:39:46] Many thanks for joining.
+[00:39:49] Thank you so much, Adrian.
+[00:39:51] I'll now have the double function
+[00:39:53] of being both basically host and asking questions as well,
+[00:40:00] maybe answering some questions.
+[00:40:02] And also, a special thank you to Adrian
+[00:40:04] because he's in Taipei at National Taiwan University,
+[00:40:07] and it's, oh, 12:40 AM there, right now.
+[00:40:12] So thank you for staying up so late.
+[00:40:16] The first question, actually, reached us via email
+[00:40:18] before the event had even started,
+[00:40:20] so we want to give space for that, too.
+[00:40:24] And the question is, what do you think
+[00:40:26] are the prospects for passing federal regulation on bots
+[00:40:30] in the near future, and how do you view state laws on bots
+[00:40:33] being carried out?
+[00:40:34] And as Adrian is an expert in that regard,
+[00:40:38] I would want him to go first.
+[00:40:40] Expert?
+[00:40:42] It is a very interesting question
+[00:40:44] because, like, two years ago, before I came to Taipei, when
+[00:40:51] I was still back in Switzerland, a group
+[00:40:54] of Swiss Members of Parliament invited me to Bern,
+[00:40:58] and we had a kind of like a closed-door discussion
+[00:41:01] with some legal experts that have written, also,
+[00:41:04] papers about like bot regulation or potential bot regulation.
+[00:41:07] And they had this idea of, like, regulating bots
+[00:41:11] because they read all these stories in the media,
+[00:41:14] right, about like bots take over a democracy.
+[00:41:18] Or it's like the biggest threat to democracy.
+[00:41:21] And then we had this discussion and, even back then, I
+[00:41:23] was rather skeptical.
+[00:41:26] So let me start, now, based on our analysis, now.
+[00:41:29] We can say it's very difficult, first of all,
+[00:41:32] from a conceptual perspective.
+[00:41:33] Right?
+[00:41:34] And I'm not a legal scholar, but you
+[00:41:36] do need to be very clear what you mean by a bot,
+[00:41:39] if you want to regulate that one, right, object.
+[00:41:42] It's very difficult. Then, as a second point,
+[00:41:45] it's very difficult to kind of like identify bots,
+[00:41:48] like to measure it.
+[00:41:52] Often, it's not really clear who is a bot,
+[00:41:54] and there are like accounts that have
+[00:41:57] some, a certain degree of automation,
+[00:42:01] but then they also have humans behind it.
+[00:42:03] So it's very difficult to identify them
+[00:42:06] and also very difficult, at least at this point,
+[00:42:08] to define it.
+[00:42:11] However, and this was really the last point
+[00:42:14] that we were discussing there and, actually,
+[00:42:16] the legal experts back then, at least the Swiss ones,
+[00:42:19] they also agreed with me and other people
+[00:42:22] involved in this discussion that probably we
+[00:42:24] have to ask the question of, like, how big of a threat
+[00:42:30] are bots in comparison to other threats to democracy?
+[00:42:33] But also, like, what's the effect of these bots?
+[00:42:37] And what we can say, or a lot of political communication
+[00:42:41] scholars say, more traditional political communication
+[00:42:44] scholars, they say it's very difficult
+[00:42:45] to change the opinion of people, in general, even
+[00:42:48] like with strong campaign techniques.
+[00:42:50] So, of course, if at all there is an effect,
+[00:42:53] it will be a very small, probably a very small effect.
+[00:42:57] And at the same time, if we think
+[00:42:58] about foreign interference-- and, now,
+[00:43:00] I'm speaking more from a Swiss perspective,
+[00:43:02] but also I can speak from a Taiwanese perspective--
+[00:43:06] there was also this debate before the presidential
+[00:43:08] election here in January.
+[00:43:09] Like, the China threat, right, especially online warfare.
+[00:43:16] However, if you have a broader perspective,
+[00:43:19] I would say the biggest threats, actually, are offline.
+[00:43:24] So in the Taiwanese case, for example,
+[00:43:27] there's the discussion of direct proxies.
+[00:43:29] Probably that's far more effective.
+[00:43:31] So this means you go over organizations or persons
+[00:43:34] or even politicians.
+[00:43:36] Right?
+[00:43:36] Of course, that is happening, and if you
+[00:43:39] want to fight foreign interference,
+[00:43:41] you should start with the biggest issue
+[00:43:44] or where there is the biggest threat.
+[00:43:46] And I strongly believe bots are probably not
+[00:43:50] the biggest threat.
+[00:43:51] At the same time. of course-- and this was also
+[00:43:53] the conclusion in Bern, back then--
+[00:43:56] we should keep an eye on it.
+[00:43:57] Maybe the situation, of course, is changing.
+[00:44:00] There will be new developments, and maybe in the future,
+[00:44:03] in a certain context, bots might be a problem.
+[00:44:08] But, at the moment, it doesn't--
+[00:44:10] it's-- we were advising against regulation.
+[00:44:16] And I think the same, I would still say, today.
+[00:44:19] It's very difficult and I wonder how
+[00:44:23] it's possible to regulate it.
+[00:44:25] And then, at the same time, is it really
+[00:44:27] the biggest issue we will cope with at the moment?
+[00:44:32] Thank you.
+[00:44:33] And I think I don't really have much to add to that.
+[00:44:37] My intuition is before and after doing this study,
+[00:44:42] that if you do try to implement a regulation,
+[00:44:48] that the limits of the regulation, in the end,
+[00:44:50] will be so tight that you won't capture a lot of aspects, which
+[00:44:55] then, in turn, just like asks the question, how
+[00:44:59] effective will be the regulation, in the first place?
+[00:45:02] Plus, I don't-- you know, like I don't, in the end,
+[00:45:04] see bots as kind of like the biggest problem,
+[00:45:06] even when we think about misinformation.
+[00:45:12] A second question, then--
+[00:45:14] and this is maybe one for you, Adrian, as well--
+[00:45:19] is from Bao Bao, and she asked, "Could a classifier
+[00:45:22] like Botometer use Bayesian methods to take
+[00:45:25] into account the imbalance between bots
+[00:45:27] and real humans on Twitter?
+[00:45:29] They can use what's the latest breakdown of bots
+[00:45:31] versus humans as their prior."
+[00:45:36] Theoretically, yes, you can--
+[00:45:40] you can even-- if it's more about
+[00:45:42] like testing your classifier.
+[00:45:45] So during the validation phase, you
+[00:45:47] need to take that into consideration.
+[00:45:51] So if someone tells you, here, I have a new classifier.
+[00:45:54] It works perfectly well.
+[00:45:56] It has a very high oral C-score, over 0.9.
+[00:46:00] And then, you want to use it-- of course,
+[00:46:03] you should validate it.
+[00:46:04] So you could validate that new classifier with your own data
+[00:46:10] from the population.
+[00:46:12] And when you use a data set to, again,
+[00:46:14] validate it, then you need to be careful to not use
+[00:46:18] a balanced data set, where you have
+[00:46:21] like 50% bots and 50% human users.
+[00:46:26] You can use that to train the classifier,
+[00:46:28] to add more information, put more emphasis on one group.
+[00:46:33] But, to validate it, actually, in that one,
+[00:46:36] you have seen, now, in the presentation.
+[00:46:38] With the precision, you should take this imbalance
+[00:46:42] into account.
+[00:46:43] And then there, you have, of course, different methods how
+[00:46:48] to test it, right?
+[00:46:53] The Bayesian approach, itself, I'm
+[00:46:57] a big fan of Bayesian regression models or, in general,
+[00:47:01] of this paradigm or way of thinking.
+[00:47:05] But, ad hoc, I can't think of like how to use it.
+[00:47:10] Of course you should always--
+[00:47:11] this is your idea right?
+[00:47:14] Of course, the mindset is similar.
+[00:47:16] We take into account.
+[00:47:17] We have some priors, like we assume
+[00:47:19] the population is not balanced.
+[00:47:22] I would just say the validation gets better
+[00:47:24] if you use such an approach.
+[00:47:26] But if the classifier, then, itself is better, I don't know.
+[00:47:31] Awesome, thank you.
+[00:47:33] The next question-- and this is, we have several methods
+[00:47:36] questions and more general ones, and I'm just
+[00:47:39] going to switch between those.
+[00:47:40] And so the next one is from Rod, and he asks,
+[00:47:47] or he first says, "Thanks for that fantastic perspective.
+[00:47:50] Given that Oxford Internet Institutes
+[00:47:52] research points to the increasing disinformation
+[00:47:55] architecture of countries like India, Russia, and Iran.
+[00:47:59] Can you point to work, if any, being
+[00:48:00] done on multilingual sentiment analysis?"
+[00:48:05] Could I answer it?
+[00:48:07] Please, go ahead.
+[00:48:09] Very, again, it's exactly the same.
+[00:48:11] I would say, if you're talking about sentiment analysis--
+[00:48:15] and let's even roll all the conceptual discussion
+[00:48:18] about what is sentiment.
+[00:48:19] Let's say you can really measure sentiment, right,
+[00:48:22] and it works pretty well in one language.
+[00:48:25] If you want it with multi-language,
+[00:48:28] and you were interested in the comparative perspective, where
+[00:48:31] something is stronger or weaker, of course,
+[00:48:35] you'll need to validate it, not only in every single language.
+[00:48:38] You also have to check whether it's
+[00:48:41] similar in every different language, the scale, right,
+[00:48:45] and the strength of the sentiment.
+[00:48:46] Then I could start with the cultural question,
+[00:48:49] whether these kind of like sentiments
+[00:48:51] are really the same within a culture.
+[00:48:54] Maybe a strong sentiment in Taiwanese culture,
+[00:48:59] or expressed sentiment, is stronger
+[00:49:01] than just a strong sentiment in the US culture,
+[00:49:04] right, where it has to be even stronger
+[00:49:06] to be considered extremely strong, right?
+[00:49:09] But whereas, here in Taiwan, a strong sentiment
+[00:49:12] would be already considered as an extremely strong one.
+[00:49:15] Again, validate.
+[00:49:18] I also test, as always, with my students.
+[00:49:20] Don't just take these out-of-the-box solutions
+[00:49:25] without any validation.
+[00:49:27] Some of my colleagues in communication science
+[00:49:29] have tried to revalidate a lot of these word lists
+[00:49:35] that are used for sentiment analysis.
+[00:49:38] And, actually, if you don't do anything,
+[00:49:40] you don't change these--
+[00:49:42] word lists and you try to validate them in a new context,
+[00:49:47] they don't work at all.
+[00:49:48] So, as a baseline, usually-- and this comes more from
+[00:49:51] publications science again--
+[00:49:53] you need to set a gold standard.
+[00:49:54] The gold standard is usually the human coding,
+[00:49:56] and then you're matching whether the human coding is
+[00:50:00] the same as what's the sentiments
+[00:50:04] classify or the sentiment analysis
+[00:50:06] measures, whether there is like a strong overlap.
+[00:50:10] So between different languages, it's very difficult,
+[00:50:13] but what I can tell you, if you have
+[00:50:15] a list for a specific language, if you're just
+[00:50:18] within one language, you need to change the word
+[00:50:21] list for the specific context.
+[00:50:22] It can work quite well, actually.
+[00:50:25] But, again, you need to validate it.
+[00:50:27] If it's not validated, I would be very skeptical.
+[00:50:32] Thank you.
+[00:50:34] The next question is, really, I think like, what was it ,
+[00:50:37] like six minutes into the presentation?
+[00:50:39] It's like, unreal.
+[00:50:40] "We want to know if we are debating a person or a bot
+[00:50:43] issue.
+[00:50:44] Is it your sense that there are bots
+[00:50:46] that can pass that particular version of the Turing test?"
+[00:50:49] And I'm just going to take that question myself, first.
+[00:50:53] And I'm also excited to hear Adrian's opinion.
+[00:50:56] From everything I've seen on Twitter, I would say no.
+[00:51:00] I think a lot of these, you know,
+[00:51:02] like Twitter just debates, especially are usually short.
+[00:51:06] And so you don't have a lot of time,
+[00:51:07] and I would say, also, like in more heated discussions,
+[00:51:10] probably a lot of projection is going on.
+[00:51:14] And I haven't seen anything that would kind like point me
+[00:51:17] to a different opinion on that.
+[00:51:19] What do you think, Adrian?
+[00:51:22] Yes, I agree with you.
+[00:51:24] I can maybe add one more point from two German colleagues,
+[00:51:28] Pascal Jurgens and Simon Kruschinski.
+[00:51:30] They also analyzed astroturfing and automation on-- actually,
+[00:51:37] on Facebook.
+[00:51:38] And what they say, it is actually the other way around.
+[00:51:40] You will be surprised at how many human users use
+[00:51:46] very simple communication patterns that
+[00:51:50] could be interpreted, actually, as automation
+[00:51:53] or as like even like the text, it's
+[00:51:57] like automatically created.
+[00:51:59] They just use emoji.
+[00:52:00] Because the majority of people, actually,
+[00:52:02] on Facebook because they had a very large data
+[00:52:04] set of comments, and what they say, the majority of people
+[00:52:07] they are not communicating like academics on Twitter
+[00:52:11] when the have a debate.
+[00:52:12] Most users, they write very short sentences,
+[00:52:17] not even sentences, a combination of emoji,
+[00:52:20] or even like wrongly spelled words, single words.
+[00:52:25] And they are still human users.
+[00:52:26] So we need to be very careful, even the other way around,
+[00:52:31] to kind of like be careful to not label human users as kind
+[00:52:36] of like bots.
+[00:52:37] And, in reality, they're actually a human users.
+[00:52:39] And with regards to the Turing test and the bots,
+[00:52:43] as far as I know, there is not really a bot
+[00:52:46] who has like passed the test.
+[00:52:50] But maybe we will see, in the future, there will be a change
+[00:52:56] Thank you.
+[00:52:57] The next question is more of the methods side.
+[00:53:01] And the question is, what is the total sample size for each
+[00:53:04] of the groups that is the n?
+[00:53:07] I had that slide up in the middle of presentation.
+[00:53:11] Overall, there were 4,400-something accounts.
+[00:53:18] And I think the majority was 2,000-something accounts were
+[00:53:22] from the Botometer training set, and the rest was, I think,
+[00:53:25] roughly 50/50.
+[00:53:27] Or, like, I think they were a little over 1,000 humans
+[00:53:31] and, again, like a little over 1,000 bots.
+[00:53:34] And the second question, in that regard, is the size of--
+[00:53:37] Can I say one thing?
+[00:53:38] Yes.
+[00:53:39] Yeah, that's also a limitation we have to add.
+[00:53:41] Yes.
+[00:53:42] We have a very narrow data set, and we specifically
+[00:53:46] have chosen this one.
+[00:53:48] But at the same time, these very homogeneous groups
+[00:53:53] are also a problem, kind of like any mutation.
+[00:53:56] So maybe with other data sets, Botometer
+[00:54:00] will work differently.
+[00:54:03] Yes, I think that's important to note,
+[00:54:07] and also why you kind of like choose this data set was
+[00:54:10] because we really wanted to be sure what we have in our data
+[00:54:12] set, right, because otherwise it gets very like tricky.
+[00:54:16] And so the second part of the question
+[00:54:17] is, is the size of n more important than the level
+[00:54:20] of imbalance of the data set?
+[00:54:23] What is the impact of different values of n?
+[00:54:28] I mean, a too small n, of course, is this problematic.
+[00:54:33] And then, again, I would say like it's
+[00:54:36] more about like, is the general population homogeneous
+[00:54:40] or heterogeneous?
+[00:54:41] In which context do you want to use a classifier?
+[00:54:45] Again with typical traditional sampling theory,
+[00:54:50] but you can say the more heterogeneous your population
+[00:54:54] that you want to analyze, the larger the n, also
+[00:54:57] for your training data sets, to really gets a good classifier
+[00:55:02] if you have a very, very homogeneous data set.
+[00:55:07] Of course, you can even use a very small n
+[00:55:12] And you will get a very good classifier
+[00:55:16] Thank you.
+[00:55:17] The next question is from Maria, and she
+[00:55:20] asks, "How does this compare with the R package tweet,
+[00:55:23] bot or not.
+[00:55:28] Tweet, bot or not, which one is this one?
+[00:55:31] And I have to preface that answer with,
+[00:55:35] that we haven't checked specifically
+[00:55:37] other packages against this.
+[00:55:39] We know that there are--
+[00:55:41] you know, like other options of bot detection
+[00:55:46] out there, which all have their advantages and disadvantages.
+[00:55:53] We picked Botometer specifically,
+[00:55:55] since it's kind of like been used
+[00:55:56] for most, like in most studies.
+[00:55:58] And Adrian has pulled up, I believe, the R package,
+[00:56:01] right now.
+[00:56:03] Yeah, exactly.
+[00:56:04] No, I know now, which it is.
+[00:56:07] It really depends what Mike Kearney was
+[00:56:12] using to train his classifier.
+[00:56:15] And as far as I understand it, he used probably
+[00:56:19] even the same length, but he can maybe tell more about this
+[00:56:23] if you ask him.
+[00:56:24] I think he has chosen, also, like these obvious spots.
+[00:56:28] So, in that sense, I strongly believe
+[00:56:31] that package will probably have a better performance
+[00:56:35] than Botometer, if you use these accounts.
+[00:56:38] But you need to check, right?
+[00:56:40] If you use the accounts that were
+[00:56:41] used to train the classifier, of course,
+[00:56:44] you will get an excellent performance.
+[00:56:46] So, again, our recommendation is that even
+[00:56:49] if you get an almost perfect classification
+[00:56:53] with an artificial training data set, use it with the population
+[00:56:59] you want to analyze.
+[00:57:00] And then validate, really, once you
+[00:57:02] get the ear as like as spot-classified accounts.
+[00:57:06] And then we check how many of them are actually
+[00:57:08] false positives.
+[00:57:10] And then, at the same time, and this
+[00:57:11] is more difficult because usually
+[00:57:13] the majority of accounts will not be classified as false,
+[00:57:16] right?
+[00:57:17] You still need to check, and this
+[00:57:18] is a lot more difficult because then you have a very large data
+[00:57:21] set, right?
+[00:57:22] How many of the bots were wrongly classified,
+[00:57:26] or not identified and wrongly classified
+[00:57:28] as human accountants.
+[00:57:29] So you need this kind of manual classification anyway.
+[00:57:36] Awesome, thank you.
+[00:57:37] So we have seven more minutes, so we'll
+[00:57:39] try to keep our answers short to get through all the questions.
+[00:57:43] Because I was told we have until 1:05.
+[00:57:47] So Mason asks, "Are you aware of any use of bot classifiers
+[00:57:51] by platforms as part of their content management strategies?
+[00:57:54] And, if so, do you think these classifiers
+[00:57:57] are doing more harm than good?"
+[00:58:00] And I personally, you know, I haven't talked to anyone
+[00:58:05] within the social media platforms about that.
+[00:58:09] I would assume that they have classifiers
+[00:58:12] that they use amongst others for content management.
+[00:58:18] You know, like obviously platforms
+[00:58:20] don't want bots just like rampaging around
+[00:58:23] on their platforms.
+[00:58:26] And if, you know, I think if they don't invest also
+[00:58:30] heavily in human eyeballs that check
+[00:58:33] and validate the accounts that they're removing automatically,
+[00:58:36] I think there might be some harm being done along the way.
+[00:58:40] What do you think, Adrian?
+[00:58:42] Yeah, I totally agree with you.
+[00:58:44] I mean, obviously, they are--
+[00:58:46] they have probably their own classifier,
+[00:58:49] and they have like a lot more information available.
+[00:58:53] Right?
+[00:58:54] The only-- also, the creator of those platforms,
+[00:58:57] they only have the information available that you actually
+[00:59:00] see when you open a tweet or an account,
+[00:59:05] basically what the API returns.
+[00:59:08] Twitter, of course, they have all this backend data
+[00:59:11] when a user is logged in.
+[00:59:14] The IP addresses, right, at this information we actually lack,
+[00:59:19] and I think if you have that information,
+[00:59:22] it's easier to follow.
+[00:59:24] It's easier to create a good classifier.
+[00:59:27] But, again, probably what the platforms think about,
+[00:59:31] they really think about this false positive rate.
+[00:59:33] Right?
+[00:59:34] So, again, there is really a cost if the false positive rate
+[00:59:37] is too high, and you really say every account that
+[00:59:40] is above a certain threshold, you kind of block them, right?
+[00:59:43] And you block too many real users, of course,
+[00:59:46] it will have like consequences, and people become aware of it.
+[00:59:52] So I think they are, rather conservative with this.
+[00:59:57] What is your-- in your opinion, .
+[00:59:59] Jonas?
+[00:59:59] What do you think?
+[01:00:01] I Agree.
+[01:00:04] OK.
+[01:00:05] Paola asks, "Thank you, Jonas and Adrian.
+[01:00:08] Fantastic work.
+[01:00:09] It is clear that Botometer is not reliable to identify bots,
+[01:00:12] but what other methods you recommend?
+[01:00:14] I agree that bots are not the major problem,
+[01:00:17] but they still pollute the pollute the public sphere."
+[01:00:20] And I think the quick answer to that
+[01:00:23] is to kind like get to other questions
+[01:00:25] as well is do several methods at the same time.
+[01:00:30] Always manually validate, which is kind of like, you know,
+[01:00:33] annoying.
+[01:00:33] You kind of like do automation to get away from this
+[01:00:35] because it's just like time-intensive, but, you know,
+[01:00:40] like you have to do this.
+[01:00:41] And in any instance, I personally
+[01:00:44] like network method detection, like Network Detection,
+[01:00:48] but these are also very time-intensive.
+[01:00:50] And there, you do have to kind of like manually validate.
+[01:00:53] And so what do you think Adrian?
+[01:00:57] Yeah, I totally agree.
+[01:01:00] There are methods to identify them,
+[01:01:04] but maybe clearly about this really
+[01:01:06] means, like you need to look into the data
+[01:01:10] and do some data crunching.
+[01:01:13] And look at it from different perspectives,
+[01:01:15] but definitely not use a classifier in that process.
+[01:01:21] OK, Yen Ting from NTU, Adrian, asks, "Have you
+[01:01:25] already figured out that--
+[01:01:26] so since you have already figured out
+[01:01:28] that the diagnostic ability of Botometer
+[01:01:29] will differ because of languages.
+[01:01:31] But do you think that different social media would also
+[01:01:34] interfere with the precision of Botometer,
+[01:01:36] although all in English?"
+[01:01:40] Like, we use the same classifier for a different social media
+[01:01:45] platform.
+[01:01:45] Yeah, definitely.
+[01:01:47] If the same-- let's assume there's
+[01:01:49] another social media platform that
+[01:01:51] has exactly the same affordances,
+[01:01:53] has more or less, right.
+[01:01:54] What you get back is exactly the same
+[01:01:57] you have something like shares, which is a retweet.
+[01:02:00] You have replies.
+[01:02:01] You have mentions.
+[01:02:02] All the same exists.
+[01:02:04] I would say, of course, there are always
+[01:02:06] cultural differences.
+[01:02:08] We can even stay within Twitter, right?
+[01:02:11] Or we can move to another platform where
+[01:02:12] it may be even more obvious, not something like Instagram.
+[01:02:17] In some countries, for example, the kind of Comments section
+[01:02:22] is extremely important, right, and a lot of things
+[01:02:25] are happening there.
+[01:02:26] And in other cultures, maybe the Comments section
+[01:02:28] is not so important.
+[01:02:29] So if you create a classifier, and in one culture,
+[01:02:32] where the comments are not so important
+[01:02:35] you classify users that post a lot of comments
+[01:02:37] as kind of like bots because there is automation,
+[01:02:40] and then you use that classifier in the other culture.
+[01:02:43] It would probably kind of like identify a lot of your users
+[01:02:47] that really write comments as bots.
+[01:02:50] So we also need to be aware, not only
+[01:02:52] about like it's a different platform
+[01:02:54] with different affordances, we also
+[01:02:56] should consider within one platform, of course,
+[01:02:59] there are different cultural spheres in which social media
+[01:03:04] are used differently.
+[01:03:09] Awesome, thank you.
+[01:03:10] And so the final question of the day, or the night, for you,
+[01:03:14] it is, what is the ideal way to create gold standard data
+[01:03:18] sets for bot research?
+[01:03:20] Is it possible for humans to classify bots in the wild?
+[01:03:27] I think there are two parts.
+[01:03:29] Gold-standard within communication,
+[01:03:32] science, gold standard within computer science,
+[01:03:34] so let me, because we don't have enough time,
+[01:03:36] let me talk about the one in Communication Science.
+[01:03:41] So like I say with the sentiment analysis,
+[01:03:43] we assume we as human coders can identify the sentiment
+[01:03:47] if we read the text.
+[01:03:48] But we know, also, from content analysis,
+[01:03:51] sometimes there's a lot of ambiguity.
+[01:03:53] It's not that simple.
+[01:03:54] Right.
+[01:03:55] If we use the same for bots, we have
+[01:04:00] to assume that we, as humans, can recognize bots.
+[01:04:05] So the gold standard, in that sense, is like you, as a human,
+[01:04:10] take a sample from the population
+[01:04:12] and manually classify these accounts, where you can even
+[01:04:18] give a score, right?
+[01:04:20] For the bottiness, you could check that.
+[01:04:22] Right?
+[01:04:23] And then you compare the values you get with the values
+[01:04:28] that the automatic classifier gets.
+[01:04:30] So from a communications science perspective,
+[01:04:32] of course, the gold standard.
+[01:04:34] But I would say, or I think also most of my colleagues
+[01:04:38] would agree with this, I would read
+[01:04:40] as human coders are seeing.
+[01:04:43] And then you can even go further.
+[01:04:45] Actually, in communication science,
+[01:04:46] we say, like, it's not enough that just one coder, especially
+[01:04:49] with sentiment, that would say, it's not just enough
+[01:04:51] that I check it because if we just compare sentiment
+[01:04:54] analysis between what Jonas sees in a tweet
+[01:04:57] and what I see in the tweet, even
+[01:04:58] if we are from the same culture, probably there
+[01:05:00] is not like 100% overlap.
+[01:05:03] Right?
+[01:05:04] You would maybe even have to add more than one human coder,
+[01:05:08] and then you can compare the kind of like labels
+[01:05:13] that we give as human coders.
+[01:05:15] This is the gold standard, obviously, with the--
+[01:05:19] what the classifier gives.
+[01:05:21] So, in our case, we can test, in this case,
+[01:05:23] here, a Botometer because we took all these accounts.
+[01:05:26] Right?
+[01:05:27] It's very clear, these accounts we have selected,
+[01:05:29] tells you the bots or humans.
+[01:05:31] But I would say, in the general Twitter population,
+[01:05:34] there are also actually probably bots
+[01:05:37] that are not just labeled as bots.
+[01:05:38] And then you need, actually, a human,
+[01:05:40] who first has to identify them.
+[01:05:42] And that's like manual coding.
+[01:05:45] So the gold standard, again, to answer this question,
+[01:05:48] in my opinion, it's like the human coding, maybe even
+[01:05:51] more than one human coder.
+[01:05:52] What do you think, Jonas?
+[01:05:54] I think that sounds about right.
+[01:05:55] And, due to time, I will just refer
+[01:05:58] to Adrian's perfect answer.
+[01:06:01] And, with that, I think we all can wrap up this event.
+[01:06:05] Thank you so much for attending.
+[01:06:07] I hope, if you've got questions, please
+[01:06:08] feel free to reach out to us here in Twitter.
+[01:06:11] I think the chat is still open.
+[01:06:13] Yeah.
+[01:06:14] Yes, I believe we are.
+[01:06:15] Twitter, we are, you can also find us
+[01:06:18] on our institutions' websites.
+[01:06:20] I hope you all stay safe and healthy.
+[01:06:24] And we'll see each other with the next virtual event.
+[01:06:28] Thank you so much.
+[01:06:30] Thanks for joining.
+[01:06:31] Bye bye.
+[01:06:31] Bye.

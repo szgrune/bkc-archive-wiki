@@ -1,0 +1,623 @@
+[00:00:04] Hello and welcome, everybody.
+[00:00:06] My name is Dr. Rumman Chowdhury.
+[00:00:08] I'm a responsible AI fellow at the Berkman Klein Center
+[00:00:12] for Internet & Society at Harvard University
+[00:00:14] and I'm here with Reva Schwartz, Research Scientist at NIST.
+[00:00:17] Thank you for joining, Reva.
+[00:00:18] - Thanks for having me, Rumman.
+[00:00:21] - So we're here to spend what's going to be very exciting
+[00:00:24] and very fast moving half hour
+[00:00:26] to talk about generative AI and its harms.
+[00:00:29] And there is just so much to consider
+[00:00:31] and so much to discuss.
+[00:00:33] So I just wanna let the folks joining the call
+[00:00:35] know that we don't have a formal Q&A session at the end.
+[00:00:38] If you do have questions during the conversation,
+[00:00:41] please feel free to submit it on our Q&A forum,
+[00:00:44] and it'll be surfaced for us
+[00:00:46] and we will answer the questions,
+[00:00:48] you know, as we can get to them.
+[00:00:50] So just a heads up for folks,
+[00:00:52] and for people who are just joining, welcome.
+[00:00:55] And we're about to kick it off.
+[00:00:56] So, Reva, it's extremely exciting times in AI,
+[00:01:01] generative AI, responsible AI,
+[00:01:03] anything related to technology
+[00:01:04] and within like the nth degree of technology.
+[00:01:08] And this is playing a very central role in the US.
+[00:01:10] So, you know, just for the sake of our attendees
+[00:01:14] and for all of us, can you give us a bit of just grounding
+[00:01:16] and background on NIST and in specific its role
+[00:01:20] in the AI governance landscape?
+[00:01:24] - Sure.
+[00:01:25] Thank you for giving me the opportunity.
+[00:01:26] I'm excited to be here.
+[00:01:29] Yeah, I mean, we're kind of in this state right now with AI
+[00:01:32] where we're kind of lurching from one product
+[00:01:34] released to another.
+[00:01:37] So AI was already kind of this crazy ride.
+[00:01:39] And then the release of ChatGPT changed everybody's,
+[00:01:44] our schedule, and that's all we talk about and AI risks.
+[00:01:49] And AI risks is something that was kind of given to us
+[00:01:53] by Congress, we were mandated by the US Congress
+[00:01:56] in January, 2021 to develop a risk-based framework for AI.
+[00:02:03] There's a lot about the reasons why we were given this.
+[00:02:08] Some of this has to do with our work in other frameworks,
+[00:02:11] including the cybersecurity framework.
+[00:02:13] NIST is a non-regulatory non-enforcement agency
+[00:02:19] under the Department of Commerce.
+[00:02:21] Our mission is to promote innovation
+[00:02:23] and industrial competitiveness.
+[00:02:26] So as part of that framework being mandated to do it,
+[00:02:31] we undertook 18 months to hear from anyone and everyone.
+[00:02:38] In the end, we ended up hearing from 240 organizations
+[00:02:42] across private industry, academia, civil society,
+[00:02:46] and state, federal, local, foreign governments
+[00:02:49] and standards organizations,
+[00:02:50] so a huge array of stakeholders.
+[00:02:53] All of that material is open and available,
+[00:02:56] everything we do is open and transparent,
+[00:02:58] those comments, the list of people who we heard from
+[00:03:03] is all available on our website.
+[00:03:05] So the purpose of the framework
+[00:03:08] is not just about the technology itself,
+[00:03:11] but the organizations that that technology is built in.
+[00:03:14] We think that that environment matters,
+[00:03:18] and developing approaches for those organizations
+[00:03:22] to get better at governing their AI risks,
+[00:03:25] at mapping their AI risks,
+[00:03:27] which is coming together with a broad group of stakeholders,
+[00:03:31] both within the organization and outside of the organization
+[00:03:34] to consider risks from a much broader perspective
+[00:03:39] than the pipeline.
+[00:03:42] - So let's dig into that a bit.
+[00:03:43] So you mentioned that NIST is, you know,
+[00:03:45] non-regulatory, non-enforcement.
+[00:03:48] There are plenty of people that would say,
+[00:03:49] "So then what's the point?"
+[00:03:50] Like how does an organization
+[00:03:52] that can't do enforcement have value?
+[00:03:54] So what are your perspectives?
+[00:03:56] And you know, I was very intentional
+[00:03:57] to use the word governance, right?
+[00:03:59] So I think a lot of people, when they think governance,
+[00:04:01] they think the law.
+[00:04:03] Unless you are able to regulate it, what's the purpose?
+[00:04:05] So can we dig into that a little bit?
+[00:04:07] How have companies found value out of NIST?
+[00:04:10] How has society found value out of NIST, not just in AI,
+[00:04:13] but also in the other work NIST has done historically?
+[00:04:16] - Yeah, thank you.
+[00:04:18] Our work is in the area of standards.
+[00:04:21] We are not a standards development organization,
+[00:04:23] but we work with private industry
+[00:04:25] across the standards landscape to help develop,
+[00:04:30] contribute technical contributions
+[00:04:32] to enhance the measurement of whatever it is.
+[00:04:37] So whether we're talking peanut butter,
+[00:04:39] whether we're talking atomic clocks,
+[00:04:41] whether we're talking the kilometer
+[00:04:43] or whether we're talking AI,
+[00:04:46] technical contributions that are interoperable,
+[00:04:49] that are measurable, that are structured.
+[00:04:52] But in the case of AI, it's really more about flexibility.
+[00:04:56] And so the framework is purposefully general.
+[00:05:00] And when we talk about governance, that's important
+[00:05:03] because it gives organizations the opportunity
+[00:05:06] to develop governance, processes, policies, structures
+[00:05:10] that fit their specific use case and context and industry.
+[00:05:17] And I think we lost the train on that, the governance piece.
+[00:05:25] Yeah, I guess just that how they want to implement it
+[00:05:31] is going to be used within their org.
+[00:05:35] - And how does society then benefit?
+[00:05:37] I mean, one thing I noticed that you mentioned
+[00:05:39] is that all the contributions to NIST, et cetera,
+[00:05:43] it's all transparent and that's not something
+[00:05:45] we're gonna get from companies.
+[00:05:46] So how does this translate into not just more innovation
+[00:05:50] or more guidance, et cetera,
+[00:05:51] but how does that translate into value
+[00:05:54] for, you know, society for people?
+[00:05:56] 'Cause what we are seeing is we are seeing the direct impact
+[00:05:59] and everyone, and as I sort of jokingly said,
+[00:06:02] everyone in the nth degree of technology.
+[00:06:04] So we're talking about, you know, one of the reasons
+[00:06:07] the writer strikes' is happening
+[00:06:08] is people are protesting the use of these technologies.
+[00:06:10] So how does what you're building at NIST
+[00:06:13] in some way, shape, or form
+[00:06:15] help or transform the conversation happening
+[00:06:17] not just in companies, but with regular people?
+[00:06:19] - Yep, thank you.
+[00:06:20] Yeah, and I think, so we try and be on honest brokers.
+[00:06:24] I think this is why we're trusted across industry
+[00:06:30] and in the government.
+[00:06:31] But our goal and the reason why we were asked
+[00:06:34] to do the framework was while yes,
+[00:06:36] it is about managing risks,
+[00:06:37] ultimately it's about creating systems that are trustworthy
+[00:06:40] and enhancing trust in technology
+[00:06:44] without trust in technology,
+[00:06:48] we have a lot of societal challenges and problems.
+[00:06:51] And so our goal is trying to kind of maneuver in that space
+[00:06:56] to build systems that are trustworthy and enhance trust.
+[00:07:01] - Yeah, and we actually have a question from Urisa
+[00:07:04] and they ask "How does NIST validate processes
+[00:07:07] and use cases for bad actions in emerging tech
+[00:07:11] not yet commonplace in society?
+[00:07:13] Is there an advisory board or a forum?"
+[00:07:15] So basically how does somebody contribute to NIST?
+[00:07:17] And then how does this NIST
+[00:07:20] and we're about to get into this anyway,
+[00:07:21] how does the NIST risk management framework
+[00:07:23] build into this like validation
+[00:07:26] and proactive identification of harms?
+[00:07:29] - Yeah, so measurement
+[00:07:30] is kind of our bread and butter at NIST.
+[00:07:32] So a test evaluation, validation verification,
+[00:07:35] important to note that those are four distinct things
+[00:07:38] that require different sets of criteria and personnel.
+[00:07:45] We do not have kind of existing working groups
+[00:07:48] that people can participate in
+[00:07:51] and we are not a stamp of approval on existing practices.
+[00:07:57] We create and release technically,
+[00:08:00] sound scientifically valid contributions.
+[00:08:03] The framework was part of that, but we don't do that alone.
+[00:08:07] We don't think we have all the answers.
+[00:08:09] We would not exist and our contributions would not happen
+[00:08:15] without the feedback and input from the broader community.
+[00:08:18] So we convene extensively.
+[00:08:21] We have open, transparent, participatory approaches
+[00:08:25] that just kind of built into the way we work.
+[00:08:29] We used to, while we were still building the framework,
+[00:08:32] which is now out and was released in January
+[00:08:35] and is out for three to five years
+[00:08:36] before any changes will happen.
+[00:08:39] We used to ask people to send in their comments
+[00:08:42] for the framework.
+[00:08:43] That is now closed.
+[00:08:45] You can still though submit your comments on our playbook,
+[00:08:49] which is set to be updated every six months.
+[00:08:53] So if you have feedback for us about what you think
+[00:08:57] should be, you know, a recommendation or a suggestion
+[00:09:01] within the playbook,
+[00:09:03] we're happy to hear it and take it under advisement.
+[00:09:05] And we will also always continue with webinars
+[00:09:08] and workshops and things like that.
+[00:09:11] - So I love this idea of iteration
+[00:09:12] and kind of going back, right?
+[00:09:14] One of the critiques of the way US law works
+[00:09:16] is that, you know, you kind of write a law
+[00:09:18] and then the law is what it is and then now the courts
+[00:09:20] have to debate things and anything is new.
+[00:09:22] And you'd also mentioned early on that, you know,
+[00:09:24] the NIST risk management framework
+[00:09:27] was a process of 18 months.
+[00:09:29] So, you know, presumably,
+[00:09:31] it was developed in a pre-current generative AI landscape.
+[00:09:35] So is there anything new and different
+[00:09:38] or I'll ask the question a little bit differently.
+[00:09:40] How does the risk management framework
+[00:09:42] relate to generative AI?
+[00:09:43] Do you see there being a need to revisit,
+[00:09:46] like we saw with the EU AI Act?
+[00:09:47] Do you think that it is flexible enough
+[00:09:49] that it absorbs any changes?
+[00:09:51] What are your thoughts on how a company may use
+[00:09:54] the risk management framework
+[00:09:56] to understand the harms of generative AI?
+[00:09:59] - Yeah, so we heard that a lot,
+[00:10:00] you know, when we released the framework in January
+[00:10:02] that, oh well, now you guys have to go back to work
+[00:10:04] because it's already outdated
+[00:10:06] because it doesn't address generative AI.
+[00:10:08] But in fact, it does.
+[00:10:11] We don't define AI and the framework, we define AI system.
+[00:10:15] It's a lot easier to center around.
+[00:10:18] And in fact, that definition of AI system
+[00:10:20] may end up being the definition of AI system
+[00:10:23] in the EU AI Act.
+[00:10:25] And that definition allows for the outputs of generative AI,
+[00:10:32] so generative AI is squarely addressed within the framework.
+[00:10:36] We also address generative AI in the AI RMF Core,
+[00:10:42] which is our functions.
+[00:10:45] Specifically in the manage function,
+[00:10:46] we refer to how to manage pre-trained models
+[00:10:49] and models that come from, you know,
+[00:10:51] outside of the organization as third party models,
+[00:10:55] as third party training material.
+[00:10:57] We also referenced the generative AI
+[00:11:00] and the risks of generative AI
+[00:11:02] within our appendix that we have where we discussed
+[00:11:05] how risks from AI differ from traditional software.
+[00:11:09] And that in fact, up until the framework,
+[00:11:12] there was no approach for dealing with these kinds of harms.
+[00:11:17] And most of how the framework addresses
+[00:11:22] the risks generative AI is through trustworthiness,
+[00:11:26] building trustworthy systems
+[00:11:27] and responsible AI practices and governance.
+[00:11:30] So for example, we talk about validity and reliability,
+[00:11:35] not accuracy, bigger than accuracy, validity,
+[00:11:39] that for systems to be valid and reliable,
+[00:11:41] that can help address
+[00:11:43] things such as the confabulated content,
+[00:11:46] you know, an emergent behavior that we hear so much about
+[00:11:48] with generative AI.
+[00:11:51] - So I'm gonna dig into definitions a little bit
+[00:11:52] 'cause you and I kind of both smirked when you said
+[00:11:54] not accuracy, but you and I have had conversations
+[00:11:57] of our frustrations around sort of circling
+[00:11:59] around the term accuracy.
+[00:12:00] I'm gonna point to a question that Meg Mitchell has in here,
+[00:12:04] and thank you for it, Meg.
+[00:12:05] The question is, "How does NIST define
+[00:12:07] measurement versus evaluation?"
+[00:12:08] So there's a lot of very specific words
+[00:12:11] that you're using and all of those words
+[00:12:12] are very intentionally chosen.
+[00:12:14] So first, how do you define measurement versus evaluation?
+[00:12:17] And then next, can we go into this like accuracy
+[00:12:20] versus validity, aren't they the same thing?
+[00:12:22] What's the difference?
+[00:12:25] - Yeah, I'm gonna start with accuracy versus validity first
+[00:12:29] and then come back to the second one.
+[00:12:32] So if something is accurate,
+[00:12:35] there's this kind of notion that you have ground truth
+[00:12:40] and that it's really just, did it meet that,
+[00:12:42] you know, like an answer key?
+[00:12:44] Yes, it is accurate and it is.
+[00:12:47] But validity is bigger than that.
+[00:12:49] And the question is, is it doing
+[00:12:50] what you claim it to be doing?
+[00:12:52] So in the sense of construct validation
+[00:12:57] and the use of things like proxies
+[00:12:59] for something like higher ability or criminality,
+[00:13:02] yes, you may have a system that performs accurately
+[00:13:05] within that construct.
+[00:13:07] So yes, you have set up some criteria for what is hireable
+[00:13:11] and that you've given it training data that, you know,
+[00:13:16] can measure as act yes or no.
+[00:13:19] But is that construct valid?
+[00:13:21] It's a little bigger.
+[00:13:23] Is that actually measuring
+[00:13:25] what you claim it to be measuring?
+[00:13:27] And can you measure something that is unobservable,
+[00:13:30] like hireability or criminality?
+[00:13:32] So that's the bigger topic.
+[00:13:36] For measurement and evaluation,
+[00:13:38] so I think, I wanna talk a little bit about measurement
+[00:13:42] because we wanted to specifically normalize the idea
+[00:13:46] that measurement is so much more than qualitative,
+[00:13:50] excuse me, quantitative measurement
+[00:13:52] and normalize qualitative measurement.
+[00:13:55] This is because we have kind of,
+[00:13:59] it gets a little bit to the hype cycle of AI
+[00:14:02] and this notion that quantitative information
+[00:14:07] is more valuable, more reliable, more objective
+[00:14:10] than non-quantitative data or non-numerical information.
+[00:14:15] So measurement can be both qualitative and quantitative.
+[00:14:19] And for evaluation, we tend to think about, well,
+[00:14:25] I think I have a good definition
+[00:14:27] that we tend to use internally for evaluation
+[00:14:30] right on my desktop.
+[00:14:33] No, I don't. (laughs)
+[00:14:35] I was gonna try to pull out the actual definition.
+[00:14:38] (both laugh)
+[00:14:39] But yeah, I mean for us,
+[00:14:43] we define and we carry out evaluations
+[00:14:47] in a community-based perspective.
+[00:14:49] So what are the tasks that people are looking to perform
+[00:14:53] and how can you evaluate that from a broad set of factors?
+[00:15:00] - Amazing.
+[00:15:01] So I'm going to next try to merge like four questions
+[00:15:04] into one because they're all kind of hovering
+[00:15:06] around the same thing.
+[00:15:07] So kind of merging Soren, Shivangi, Cody and Mathias,
+[00:15:12] and everyone's kind of asking about the enforceability.
+[00:15:15] So in particular Cody's asking about the enforceability
+[00:15:20] at the local government level.
+[00:15:22] So rather than thinking about it at a higher level,
+[00:15:24] even the corporate level, can governments use this like,
+[00:15:27] like local and county governments, the NIST RMF?
+[00:15:31] Mathias' question is about just is it possible to even,
+[00:15:35] you know, making it obligatory as part of risk assessment?
+[00:15:38] So now we're seeing, for example, laws passing
+[00:15:40] that would mandate technical audits and risk assessment.
+[00:15:43] Is it fit for purpose or usable for that?
+[00:15:47] And then kind of the broader question that Shivangi asked
+[00:15:49] about whether or not these frameworks are validated
+[00:15:52] by governments and regulatory authorities
+[00:15:54] in becoming enforceable.
+[00:15:55] So basically like the general, you know,
+[00:15:57] field of questions
+[00:15:58] is something about can governments use this?
+[00:16:01] Can governments make these enforceable?
+[00:16:03] And then kind of at what level?
+[00:16:05] Like is it appropriate for a county and local level?
+[00:16:07] Would it be too onerous?
+[00:16:08] Would that not make sense?
+[00:16:10] Where does this live kind of in the vertical of governance
+[00:16:14] as it relates to specifically regulation and audit?
+[00:16:17] - Yeah, so as I noted,
+[00:16:19] when we were developing the framework,
+[00:16:22] this was not intended to be,
+[00:16:23] this is not intended to be legislation.
+[00:16:26] We were given a task of coming up
+[00:16:28] with a consensus-based set of technical contributions
+[00:16:33] that organizations can implement
+[00:16:34] to help them manage their risks.
+[00:16:37] I think since then, there has been interest
+[00:16:42] in pulling some pieces of the framework and the playbook
+[00:16:47] in various, or at least we hear about them.
+[00:16:49] We are not coordinating with those,
+[00:16:51] we don't have have anything to do with those.
+[00:16:52] But we do hear that California has instituted
+[00:16:57] some language around the framework.
+[00:16:59] I heard there might be other states and other localities
+[00:17:03] that have taken some of the contributions,
+[00:17:07] you know, inherent within the playbook.
+[00:17:09] There's discussion in the EU AI Act about that.
+[00:17:13] Like I said, we are not a stamp of approval.
+[00:17:15] We do not measure what other people's performance are.
+[00:17:19] We try and create measurement and evaluation processes
+[00:17:23] to help everybody to kind of lift all boats,
+[00:17:27] but we do not prescribe what a certain measure should be
+[00:17:30] or what a yeah, what a threshold is.
+[00:17:36] That's not what we do.
+[00:17:37] - So what do you think it is that's so appealing
+[00:17:40] about the RMF, right?
+[00:17:41] So we're hearing so much interest internationally,
+[00:17:44] locally, companies, governments, et cetera,
+[00:17:47] but like, just to speculate, what do you think it is
+[00:17:49] about the RMF that's kind of speaking to people?
+[00:17:51] What is the unsolved problem that it's helping us solve?
+[00:17:55] - I'm gonna go with practicality (laughs)
+[00:17:59] because for 18 months,
+[00:18:01] we could not get stuff out fast enough.
+[00:18:03] By the way, we released three draft versions
+[00:18:05] of the framework, we had three workshops,
+[00:18:08] untold, you know, meetings with people
+[00:18:11] and conversations like this and public remarks.
+[00:18:15] And people just, what can we do?
+[00:18:16] What can we do?
+[00:18:19] They want practical guidance.
+[00:18:20] So the framework is again, purposely designed to be general
+[00:18:24] because industry's gonna adopt it,
+[00:18:28] it's gonna be adopted in hiring,
+[00:18:29] it's gonna be adopted in healthcare, in finance.
+[00:18:34] How can they adapt the framework to their needs?
+[00:18:39] That's what the AI RMF profiles are for.
+[00:18:42] Those are things that from an industry vertical sense
+[00:18:45] that those organizations are in the driver's seat.
+[00:18:49] We don't have to be there at all,
+[00:18:50] but we'd love to be in the car with you all
+[00:18:52] as you think about how to apply the framework to hiring.
+[00:18:56] We had an events just a couple weeks ago
+[00:18:59] with Department of Labor who were adapting the framework
+[00:19:03] for use in Automated Employment Decision Tools,
+[00:19:06] specifically in consideration
+[00:19:10] of disability and accessibility.
+[00:19:13] Then there's the use of creation of profiles
+[00:19:17] across industry verticals,
+[00:19:20] so things like the use of generative AI,
+[00:19:23] how do we manage those risks?
+[00:19:24] Those are things that more likely
+[00:19:25] NIST is going to be in the driver's seat for.
+[00:19:29] Yeah.
+[00:19:31] - Great.
+[00:19:33] So like here's an interesting question.
+[00:19:34] Thank you, Alex, for the question.
+[00:19:36] So what Alex wants to know is what are some of the,
+[00:19:38] so you've mentioned that the process of creating
+[00:19:41] a lot of the RMF was consensus-based.
+[00:19:45] What were some of the biggest points of contention?
+[00:19:47] Where do you see people disagreeing?
+[00:19:51] - Contention.
+[00:19:53] Well, I will say that one of the top from the,
+[00:19:56] at the beginning it was more about why risk?
+[00:19:58] Why not something else?
+[00:20:00] And that was easily answered
+[00:20:02] and that's what we were told to do.
+[00:20:04] We also think that risk management
+[00:20:06] is an incredibly powerful tool.
+[00:20:09] The goal, the challenge of course is identifying the risks,
+[00:20:12] but we think that our map function
+[00:20:14] helps organizations get better at that.
+[00:20:18] I think that maybe not the most contentious
+[00:20:20] but probably the most discussed
+[00:20:22] throughout the entire framework until the very end
+[00:20:25] was how do we know when to use this framework?
+[00:20:28] When should we use it?
+[00:20:29] And our answer was always, it's not mandatory.
+[00:20:31] You can use it whenever you want.
+[00:20:33] And we think that instituting these practices
+[00:20:35] is just going to help you,
+[00:20:38] even in the absence of regulation
+[00:20:41] when, if regulation comes along,
+[00:20:43] there's no harm in having your governance practices
+[00:20:46] and your organizational practices improved.
+[00:20:50] - And what about, sorry, quick question
+[00:20:52] 'cause I'm building on a question that Genevieve says.
+[00:20:54] You mentioned the absence of regulation.
+[00:20:55] What about the absence of information?
+[00:20:57] What about things like procurement?
+[00:21:00] 'Cause now there's a lot of conversation about procurement
+[00:21:02] in particular government procurement of AI systems
+[00:21:05] and how to identify risks and harms.
+[00:21:07] Is that something you tackle?
+[00:21:10] - Yeah, so I think procurement practices
+[00:21:13] would be a use case or an AI RMF profile,
+[00:21:20] and you know, anybody can start that.
+[00:21:22] Anybody can start a procurement profile
+[00:21:24] and get things going,
+[00:21:27] how to use a framework to manage those risks.
+[00:21:30] - Amazing.
+[00:21:31] So I'm gonna switch gears.
+[00:21:32] I cannot believe we only have seven minutes left. (laughs)
+[00:21:35] We outlined like five things we wanted to talk about,
+[00:21:38] but honestly the questions have been amazing.
+[00:21:40] So I wanna switch gears
+[00:21:41] to last week's White House announcement.
+[00:21:43] It was a very, very big deal.
+[00:21:44] Like there has been, one might even speculate and say
+[00:21:47] there's a bit of an AI regulatory arms race happening
+[00:21:50] where everyone's, you know, definitely trying to catch up
+[00:21:53] or you know, see what kind of regulation and norms
+[00:21:56] can be put into place.
+[00:21:58] So can you talk a little bit about last week's announcement,
+[00:22:01] the White House in particular,
+[00:22:02] their investment in building out national AI centers
+[00:22:05] to do additional research?
+[00:22:07] How does that relate to this and the work you're doing?
+[00:22:10] - Yeah, well, we are extremely excited about that
+[00:22:12] 'cause we are one of those centers we are co-hosting
+[00:22:16] with the NSF, a five-year, a trustworthy institute.
+[00:22:21] Ours is called TRAILS.
+[00:22:23] And we are looking forward to working with those researchers
+[00:22:29] and trying to continue the how do we get actionable guidance
+[00:22:34] out that's scientifically valid and technically excellent.
+[00:22:39] So that's our main thing.
+[00:22:41] We're extremely excited about that.
+[00:22:43] We're also excited about the announcement
+[00:22:45] for the DEF CON event, and looking forward to that.
+[00:22:49] - Right, maybe we can take a minute, you know,
+[00:22:51] to talk about that 'cause you know, you are engaged
+[00:22:53] in that work happening.
+[00:22:56] So just for folks who are unfamiliar
+[00:23:00] at the biggest hacker conference in the world, DEF CON.
+[00:23:03] I am part of a group organizing
+[00:23:05] the largest ever generative AI LLM red teaming exercise,
+[00:23:09] meaning that basically all the major companies
+[00:23:12] who have built large language models
+[00:23:14] will be participating in a double blind competition
+[00:23:19] where anybody at DEF CON can come in
+[00:23:22] and hack the system for about an hour
+[00:23:23] and try to identify harms and make that happen.
+[00:23:26] And even you've been part of, you know,
+[00:23:28] some of the advisory on that.
+[00:23:30] What kind of value do you see this being?
+[00:23:32] I mean, you know, it's like a big splashy event,
+[00:23:34] that's cool, it's at DEF CON, right, thousands of people,
+[00:23:36] great media moment or whatever.
+[00:23:37] But there should be something more, right?
+[00:23:40] So how might these kinds of red teaming exercises
+[00:23:44] be part of a risk assessment program
+[00:23:47] or risk management program?
+[00:23:50] - Yeah, so we're very interested to see those outcomes.
+[00:23:52] I think there's a lot of question about how,
+[00:23:56] there's a lot of discussion about vulnerabilities,
+[00:23:58] but also how do, from a risk perspective,
+[00:24:01] which is what we think about,
+[00:24:02] how do risks connect to actual impacts?
+[00:24:06] And we mean impacts are different,
+[00:24:08] vulnerabilities are different.
+[00:24:09] How do they all relate to each other?
+[00:24:11] Because if we're trying to avoid certain impacts,
+[00:24:16] what are the risks
+[00:24:17] that are most likely to contribute to those?
+[00:24:19] That's a big area of interest of ours.
+[00:24:23] - Yeah, and to go back to TRAIL,
+[00:24:24] so as you've mentioned like
+[00:24:26] there is a significant investment
+[00:24:28] the US Government is putting
+[00:24:28] into this Trustworthy AI institute.
+[00:24:30] What do you hope to accomplish in the next few years?
+[00:24:33] And in particular, I wanna loop in a question by Mary Madden
+[00:24:36] about whether or not there are any parallel efforts,
+[00:24:39] either within NIST or other agencies
+[00:24:41] to translate this risk framework for the general public.
+[00:24:45] - Yes.
+[00:24:46] We hope within the next year or two
+[00:24:49] to develop materials that are useful for any audience,
+[00:24:54] not just technical audiences.
+[00:24:58] We're looking for a number of things out of TRAILS.
+[00:25:01] I am a social scientist and my area is looking at AI systems
+[00:25:07] from a socio-technical lens.
+[00:25:10] And we are hoping to understand, you know,
+[00:25:13] that that's really hard and often ignored
+[00:25:17] because it is hard.
+[00:25:18] How do we measure systems from that perspective?
+[00:25:20] How do we measure governance?
+[00:25:22] How do we think about best practices
+[00:25:25] for documentation and contestability?
+[00:25:29] There's so many questions to answer in AI,
+[00:25:33] so many places to build out guidance.
+[00:25:36] So we need all the help we can get,
+[00:25:38] including everybody who's here and TRAILS and DEF CON,
+[00:25:42] so yeah, we're happy to be part of the whole community.
+[00:25:46] - Amazing.
+[00:25:47] So in the last few minutes I wanted to ask,
+[00:25:50] you know, the purpose of the series is to talk
+[00:25:52] about this concept of accountability
+[00:25:54] and technical oversight.
+[00:25:55] And this is kind of where a lot of new regulation,
+[00:25:59] if you look at the EU,
+[00:26:00] we have the Digital Services Act
+[00:26:02] opening up access to researchers,
+[00:26:04] but also access to technical auditors for the first time.
+[00:26:07] In the US,
+[00:26:08] we have the Platform Accountability and Transparency Act,
+[00:26:10] similarly opening up access to researchers.
+[00:26:13] So, you know, within the realm of NIST
+[00:26:15] and the NIST risk management framework,
+[00:26:17] what does accountable, technical oversight mean to you
+[00:26:20] in this setting?
+[00:26:21] So specifically, like literally those three words,
+[00:26:23] accountable, technical and oversight?
+[00:26:26] - Yeah, so accountability and transparency
+[00:26:28] is one of our seven trustworthy characteristics,
+[00:26:31] but we talk about that is bigger than trustworthiness.
+[00:26:34] I think this gets back
+[00:26:36] to what we started the conversation about,
+[00:26:37] which is governance.
+[00:26:39] At the end of the day,
+[00:26:42] the proverbial end of the day in AI,
+[00:26:45] somebody should be held accountable within the organization.
+[00:26:49] So these are organizational structures
+[00:26:51] that are put into place, practices that are clear
+[00:26:54] that these risks are managed and addressed.
+[00:26:58] And yes, it is hard.
+[00:27:00] We know that we're looking at a landscape
+[00:27:03] of enormous amount of risks.
+[00:27:05] But if you, this gets to kind of calming down
+[00:27:08] some of this lurching back and forth with strong governance
+[00:27:12] that lowers the anxiety a bit within an organization
+[00:27:16] to have those structures in place
+[00:27:19] and accountability structures are top of the entire pyramid.
+[00:27:25] - In the one minute we have, I do wanna highlight
+[00:27:27] that you've mentioned a few times
+[00:27:28] that people can get started using
+[00:27:30] the NIST AI Risk Management Framework today.
+[00:27:33] How does somebody get started?
+[00:27:35] Who is the persona
+[00:27:36] that's supposed to start doing this thing?
+[00:27:39] - Yeah, thank you for asking that.
+[00:27:41] You can get started today.
+[00:27:42] You can look to the playbook.
+[00:27:44] Some of the like cheapest, dirtiest, quickest way to do it
+[00:27:48] is to empty out the table and start going
+[00:27:52] through the answers all by yourself with the AI RMF Core
+[00:27:56] and just answer them.
+[00:27:57] So the first one is, what are the legal
+[00:27:59] and regulatory requirements in your area?
+[00:28:01] Start filling it in.
+[00:28:02] You know, what do you need to know
+[00:28:04] about what your team looks like?
+[00:28:05] Start filling that in.
+[00:28:07] And we wanna hear about your lessons.
+[00:28:10] But hopefully soon, we'll have templates and practices
+[00:28:15] and other forms of material for everyone to use.
+[00:28:20] - Amazing.
+[00:28:20] And we are at time.
+[00:28:21] That was, as I said in the beginning,
+[00:28:23] it was gonna be an amazing 30 minutes.
+[00:28:26] And thank you, Reva, so much for your time
+[00:28:28] and thank you, our hundreds of attendees,
+[00:28:30] for your questions and if you have any insights
+[00:28:33] or anything further,
+[00:28:34] you can find us on the various social medias.
+[00:28:38] Thanks, Reva and thank you, everybody.
+[00:28:39] Just a reminder that we have another fireside chat next week
+[00:28:45] hosted by Sue Hendrickson,
+[00:28:46] so please register for that and we'll see you soon.
+[00:28:49] Thanks.

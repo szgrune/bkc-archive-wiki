@@ -1,0 +1,1331 @@
+[00:00:06] - Well, hello, I'm Jonathan Zittrain,
+[00:00:09] along with the illustrious and brilliant
+[00:00:13] physician and public health expert Margaret Bourdeaux,
+[00:00:17] together we host from
+[00:00:18] The Berkman Klein Center for Internet & Society
+[00:00:20] at Harvard University,
+[00:00:22] COVID State of Play, where we take up
+[00:00:24] on an occasional basis, our own snapshot
+[00:00:28] of what we're seeing and thinking about
+[00:00:32] the state of the global pandemic,
+[00:00:34] what ought to be done about it.
+[00:00:36] And we often, as we do today, have an invited guest or two,
+[00:00:41] to help lend an additional perspective on a given topic.
+[00:00:45] And today's topic is around health intelligence,
+[00:00:47] and I'll put it over to Margaret to introduce Tarah Wheeler.
+[00:00:52] - Thank you so much.
+[00:00:55] Yeah, so, I am so excited to introduce Tarah Wheeler,
+[00:00:58] who is a Harvard Belfer Cybersecurity Fellow this year,
+[00:01:04] an International Security Fellow at New America,
+[00:01:07] and 2021 US-UK Fulbright scholar in cybersecurity.
+[00:01:14] So,
+[00:01:16] what a mouthful!
+[00:01:18] Tarah, I was actually gonna start off by just saying,
+[00:01:23] do you remember when we first met the first conversation?
+[00:01:27] - Yes.
+[00:01:29] Yeah go ahead.
+[00:01:30] - Yeah, well, it was a very striking day,
+[00:01:34] because I think it was back in March or early April,
+[00:01:38] when things were just starting off with this pandemic.
+[00:01:45] And I talked to you because I think I was learning
+[00:01:47] that you were gonna come to Belfer
+[00:01:50] to be a fellow with me,
+[00:01:54] and really,
+[00:01:55] I hung up the phone and I was like,
+[00:01:57] "That is the most interesting 60 minutes
+[00:01:59] "I've spent in a very long time",
+[00:02:02] sort of thinking about cyber security,
+[00:02:05] and health, and health data.
+[00:02:07] And whether the collection of health data,
+[00:02:11] might be a problem, and might be a issue
+[00:02:15] in terms of whether other countries,
+[00:02:19] and countries that wanted to do the United States harm
+[00:02:23] would be interested in attacking our data systems
+[00:02:26] and our epidemiologic surveillance systems.
+[00:02:29] And you had a lot of really provocative things to say
+[00:02:35] about data and data systems, and whether they were secure,
+[00:02:40] could be made secure.
+[00:02:42] So, I hung up the phone with you,
+[00:02:45] and then actually later that day,
+[00:02:46] I was just confirming this as I was going back
+[00:02:49] and looking at my calendar.
+[00:02:50] I had one of the sort of saddest phone calls that I've had
+[00:02:55] over the course of this pandemic and pandemic response.
+[00:02:59] And it was from a friend of mine,
+[00:03:02] who's a pediatrician in Chelsea, Massachusetts,
+[00:03:06] who called to say, "Listen, Margaret,
+[00:03:08] "I don't know that you're totally clued in here
+[00:03:11] "about what's happening in Chelsea".
+[00:03:15] Chelsea is a community, 80% immigrants,
+[00:03:20] a large undocumented population,
+[00:03:24] mostly Hispanic in origin and people,
+[00:03:27] a lot of people working in the informal economy,
+[00:03:32] a lot of service workers.
+[00:03:34] And the other thing to know about Chelsea of course,
+[00:03:36] was that rents had become very high,
+[00:03:39] and so, a lot of people had been packing
+[00:03:41] into a smaller and smaller living quarters.
+[00:03:45] And she said, "What's happening is very...
+[00:03:51] "COVID has really hit Chelsea very hard.
+[00:03:54] She said, "I just got off the phone with the social worker
+[00:03:57] "from the hospital, who was telling me about
+[00:04:00] "two patients of mine,
+[00:04:01] "two children who are in the hospital".
+[00:04:04] I said, "Oh God, with, with COVID?"
+[00:04:06] And she said, "No, they don't have COVID,
+[00:04:09] "but both of their parents were deported
+[00:04:12] "in ICE raid six months ago, and so they were handed over
+[00:04:18] "to a neighbor to be a caregiver, an elderly neighbor,
+[00:04:22] "and the elderly neighbor just died of COVID.
+[00:04:26] "And now these two children are, essentially an effectively,
+[00:04:30] "orphaned and the community has nowhere to put them
+[00:04:33] "except for in the hospital".
+[00:04:35] And she was kind of going through how the community
+[00:04:37] was mobilizing.
+[00:04:38] There was a massive mobilization effort in Chelsea,
+[00:04:41] by the community, really pulled together to try to help,
+[00:04:46] the suffering that ensued from the pandemic.
+[00:04:48] But really what I thought at the time
+[00:04:50] after hanging up with her,
+[00:04:51] I really thought this is how things were gonna go.
+[00:04:54] I thought that the state of Massachusetts would sort of
+[00:04:56] swarm into Chelsea with a lot of COVID tests,
+[00:05:01] would go door to door and test people for the disease,
+[00:05:06] and help people who were found positive
+[00:05:08] to get the supports they needed to be in quarantine,
+[00:05:11] or if they were sick,
+[00:05:13] in isolation and get the medical care.
+[00:05:15] And within a 48 hour window, 72 hour window, maybe at most,
+[00:05:20] we would get our arms around the outbreak and Chelsea.
+[00:05:24] And of course that was incredibly naive idea.
+[00:05:28] And in fact, what happened was,
+[00:05:31] no such testing was forthcoming.
+[00:05:36] Even if the state had the capability to do that,
+[00:05:41] the tests that they did expect folks to yeah,
+[00:05:45] were really through their clinics,
+[00:05:47] through their medical homes, their doctor's offices.
+[00:05:50] And of course, many people in Chelsea
+[00:05:52] either were uninsured or under-insured,
+[00:05:54] didn't have a medical home, didn't have a clinic.
+[00:05:57] Even if they went to the clinic at the time,
+[00:05:59] the clinics didn't have the tests to give.
+[00:06:02] And the groups that really did have the tests
+[00:06:05] were at the hospitals and the hospitals were using them
+[00:06:08] to admit people who were sick.
+[00:06:12] So, even if they've gone to the hospitals, gotten a test,
+[00:06:15] then the hospitals didn't necessarily report at that time.
+[00:06:19] They didn't actually report that data
+[00:06:22] to the public health departments.
+[00:06:24] The public health department was struggling
+[00:06:27] in that very moment to try to expand its reporting database
+[00:06:30] of reportable diseases, and hospitals,
+[00:06:34] the rules around what hospitals had reported
+[00:06:36] in terms of testing results, was very limited,
+[00:06:40] and lots of hospitals didn't bother or didn't want
+[00:06:42] to report the negative tests they had done, for example.
+[00:06:46] So, the state really had no real capability to collect data
+[00:06:52] about who was infected, where they had gotten infected,
+[00:06:56] and whether any measures that we were doing were working.
+[00:07:01] And things have improved since that point, to some degree,
+[00:07:06] but still, Massachusetts and the United States does not have
+[00:07:12] that kind of capability, that kind of ability to see
+[00:07:16] who has been impacted, the context in which
+[00:07:19] they've been impacted, that has led them to be impacted
+[00:07:21] by any health threat, and whether
+[00:07:23] a public health intervention is working.
+[00:07:26] And as I've kind of sitting here in the dark days of 2020,
+[00:07:31] kind of reflecting over this year,
+[00:07:34] I have reflected here right now, I would say,
+[00:07:37] This is the best of times, it's the worst of times.
+[00:07:40] This is the best of times because we really do see
+[00:07:42] this vaccine coming, it's very exciting,
+[00:07:45] but it's the worst of times,
+[00:07:46] because we still don't really have a public health system
+[00:07:50] or capability that can respond to this disease,
+[00:07:53] in a way that limits the suffering from the fallout
+[00:07:59] of things like lockdowns, and social distancing,
+[00:08:01] and school closures, and things like that.
+[00:08:05] And so, as I'm kind of looking out in 2021,
+[00:08:09] I'm thinking a lot about this issue of how does this country
+[00:08:13] and the world, have what I've sort of started to think of
+[00:08:17] as public health intelligence,
+[00:08:19] public health intelligence capability.
+[00:08:22] That means the ability, again, to see who is being impacted,
+[00:08:26] why they're being impacted, and what we're doing is working.
+[00:08:30] And that seems to be a basic requirement
+[00:08:33] of a functioning society in 2021.
+[00:08:35] Because, I'm sorry but COVID
+[00:08:37] is not gonna be the last pandemic.
+[00:08:38] There are gonna be a lot of other epidemics, pandemics.
+[00:08:43] There's also gonna be a lot of other health threats.
+[00:08:46] We have an (indistinct)
+[00:08:51] that could make all of our antibiotics ineffective,
+[00:08:55] we have environmental hazards that are increasing in tempo
+[00:08:58] and devastation,
+[00:09:00] we have pollution that is impacting communities
+[00:09:02] in ways we don't even perceive,
+[00:09:04] because we're not collecting the kind of public health data
+[00:09:06] that we would need to be able to detect impact.
+[00:09:08] So, there's a whole lot of issues here around
+[00:09:11] how are we gonna collect data
+[00:09:13] and how are we going to be able to make it useful?
+[00:09:17] And that has really made me circle back to that conversation
+[00:09:20] we had in March, because, you kind of put
+[00:09:24] the fear of God in me about what can happen with data
+[00:09:29] and how it can be misused.
+[00:09:32] So, I find I'm in this very sort of
+[00:09:34] rock and tight place moment, where I'm like,
+[00:09:37] "Yep, I get it, it's really dangerous maybe,
+[00:09:41] "but we can't move forward without a better data".
+[00:09:47] And so, I'm stuck.
+[00:09:49] And so, I'm so glad that you have come in to join us,
+[00:09:52] because to maybe help me get unstuck or to say
+[00:09:57] no, no, no, you're you really are stuck,
+[00:10:00] and kind of how we're gonna proceed.
+[00:10:04] - That rock and a hard place is real.
+[00:10:06] And I remember that phone call too, if I recall correctly,
+[00:10:11] that was just very beginning of all of this.
+[00:10:14] It was right in the middle of March.
+[00:10:16] You were just starting to be called upon, and day by day,
+[00:10:21] every global health expert in the world
+[00:10:24] was just being slammed day by day.
+[00:10:25] And I was so grateful to have that conversation with you.
+[00:10:28] Because you're right,
+[00:10:29] you're between a rock and a hard place.
+[00:10:31] The problem is is that more people like you don't see that,
+[00:10:34] don't see the rock and hard place,
+[00:10:36] and that you're not going to choose one or the other.
+[00:10:39] You have to steer a course between them.
+[00:10:44] This is not an easy choice.
+[00:10:45] This is figuring out the course
+[00:10:46] between Scylla and Charybdis.
+[00:10:48] We're trying to steer that middle course
+[00:10:50] between not getting any data at all,
+[00:10:53] and "Oh my God, what just happened to all that data?"
+[00:10:55] And that's the challenge that we're facing.
+[00:10:57] So, I'm gonna grump today,
+[00:10:59] like a unixbird about security,
+[00:11:02] about how we're handling it in this country.
+[00:11:05] And that's because a lot of my morning
+[00:11:06] has been on the solar winds hack actually.
+[00:11:09] And about USG, the United States government
+[00:11:12] dealing with how we handle data security in this country,
+[00:11:16] and how we've been handling it.
+[00:11:18] So, I'm gonna grump about it.
+[00:11:19] But I want to recognize right at the moment that
+[00:11:23] the fact that you were even about it at the time,
+[00:11:26] means that you're someone
+[00:11:27] who's seeing this problem holistically.
+[00:11:29] The big issue with information security is that
+[00:11:32] most people see only a part of it.
+[00:11:34] I see, not only that, we need to figure out
+[00:11:36] a way to protect people's data, but also,
+[00:11:38] Margaret, I want you to win.
+[00:11:40] I really need you to win because COVID is not gonna be
+[00:11:42] the worst pandemic that we see in my lifetime.
+[00:11:44] And I really need you out there.
+[00:11:46] Cause I don't want to go get an MD.
+[00:11:48] I want you to have the MD,
+[00:11:49] and I want you to solve this problem.
+[00:11:51] I'll help you with data.
+[00:11:53] - Thank God, thank God you're here to help.
+[00:11:56] - Well, here to help.
+[00:11:57] Wanna live.
+[00:11:59] - I wonder...
+[00:12:03] I appreciate Margaret and your introduction.
+[00:12:04] I feel like you kind of managed to recapitulate
+[00:12:08] all prior sessions of our webcast,
+[00:12:11] which is great to have a kind of end of year summary,
+[00:12:15] especially as it feels a little bit
+[00:12:17] like maybe we're turning the corner,
+[00:12:18] but you're speaking to really fundamental problems,
+[00:12:22] and problems across the board.
+[00:12:25] In this case, I guess we wanna focus a little bit
+[00:12:29] on both the need for, and the dangers of building
+[00:12:34] the kinds of databases we think you need
+[00:12:37] for an infrastructure of so-called health intelligence.
+[00:12:42] And for that Tarah, I wonder, in the public health context,
+[00:12:46] is it helpful to distinguish between the kinds of data
+[00:12:51] that decision-makers need and experts like Margaret need,
+[00:12:55] for collective health decisions?
+[00:12:57] Where are their hotspots of COVID,
+[00:12:59] and where should we rush resources
+[00:13:01] or have differential application of public health measures
+[00:13:06] that might not require such granular individual data,
+[00:13:10] that if compromised would be a problem?
+[00:13:12] So, that's on the one hand, and I also think a little bit,
+[00:13:16] if we have a chance to speak to our colleagues,
+[00:13:19] Cynthia Dwork and others
+[00:13:20] who have invented differential privacy,
+[00:13:23] as a way of making databases that can be queried
+[00:13:26] for statistical epidemiological purposes,
+[00:13:30] but even if breached don't compromise reliably
+[00:13:33] individual data.
+[00:13:35] And on the other hand, it sounds like
+[00:13:37] there might also be a need,
+[00:13:39] maybe under the rubric of health intelligence,
+[00:13:41] to actually know what individual needs and problems are,
+[00:13:45] at which point you don't want aggregate data.
+[00:13:47] You need to know exactly who has COVID so you can help them,
+[00:13:51] which makes it a little more tight
+[00:13:53] between Scylla and Charybdis
+[00:13:54] on how to secure that kind of stuff.
+[00:13:58] - I think it's a great question to ask ourselves
+[00:14:01] how much data do you really need?
+[00:14:03] And the answer is, as someone who is not a physician,
+[00:14:08] but someone who has expertise in statistics
+[00:14:11] expected utility and securing data,
+[00:14:13] I know what I can give global health experts,
+[00:14:17] that is unlikely to cause a breach.
+[00:14:20] And at the same time, I think we're not being on enough
+[00:14:22] to do that kind of work.
+[00:14:24] Global health experts were getting called on instantly
+[00:14:26] in the beginning of the pandemic to start working
+[00:14:29] on the health implications of what was happening.
+[00:14:31] I think this next year, kind of my prediction for 2021,
+[00:14:34] is gonna be a mop-up job
+[00:14:36] for a lot of information security specialists
+[00:14:38] dealing with the cleaning up of the data
+[00:14:42] that was collected in individual locations,
+[00:14:44] that it was never audited, it was never secured properly.
+[00:14:49] And we're gonna see a massive increase
+[00:14:52] in the amount of interest in information security
+[00:14:55] in health practices.
+[00:14:57] That does not mean we don't need to create and provide
+[00:15:02] the access to the kind of data
+[00:15:03] that Margaret and other global health specialists need.
+[00:15:06] Because, again, this problem isn't going to go away.
+[00:15:11] The problem of needing access
+[00:15:13] to collective amounts of patient data
+[00:15:16] that is anonymized in some way, isn't going to go away,
+[00:15:18] It's just gonna become more important.
+[00:15:20] And yet I'm not honestly seeing the technical solutions
+[00:15:23] getting implemented right at the moment or any call for it.
+[00:15:26] - Let me just sharpen that a little bit.
+[00:15:28] Is it your view that in 2020,
+[00:15:32] there are sometimes elusive things called best practices,
+[00:15:38] and magically those building databases,
+[00:15:42] having custody of them, securing the networks
+[00:15:45] and everything,
+[00:15:45] were to adhere to best practices, a big if,
+[00:15:50] but if they were, we'd more or less be an okay shape,
+[00:15:54] or do you think that the problem runs deeper
+[00:15:57] than even if everything were done right,
+[00:16:00] it's more or less than inevitability
+[00:16:02] that you're gonna end up with data breaches
+[00:16:04] and we have to account for that?
+[00:16:09] - It is an absolute inevitability.
+[00:16:11] The data breaches are gonna occur at the highest levels.
+[00:16:15] That does not mean we do not need
+[00:16:16] to abide by best practices.
+[00:16:18] And it certainly doesn't mean
+[00:16:19] that we need to blame the people
+[00:16:20] who have become victims of these data breaches.
+[00:16:23] What it means is that we have to start understanding that
+[00:16:26] systems that operate on a computer and store human data,
+[00:16:30] are as flawed as the humans who created them,
+[00:16:33] and secured them, and set the rules for their access.
+[00:16:37] Health and patient data security is national security
+[00:16:42] at this point.
+[00:16:43] And the reason I say that is because,
+[00:16:45] it only takes one time
+[00:16:48] of losing a large database of health records
+[00:16:51] in order to permanently compromise the people
+[00:16:53] who experienced victimization in that data breach.
+[00:16:57] Does that mean we need to not engage in best practices?
+[00:17:00] Absolutely not.
+[00:17:01] What we need to start doing is recognizing not only
+[00:17:03] differential...
+[00:17:04] I love the differential privacy example that you gave.
+[00:17:06] The capacity to query statistically
+[00:17:10] for data that helps decision makers.
+[00:17:12] And at the same time, we have to recognize that
+[00:17:14] it's not a single step process,
+[00:17:16] either you fully anonymized someone's data
+[00:17:18] and it's safe for all time,
+[00:17:20] or you don't bother to do anything about it,
+[00:17:22] and you just try to keep it in one big bucket someplace,
+[00:17:26] and put lots of locks and chains around it,
+[00:17:27] and the Fort Knox of data.
+[00:17:30] What I think we're going to start seeing,
+[00:17:32] is that those best practices are going to involve
+[00:17:34] a series of gates with a series of anonymizations,
+[00:17:37] where it is respectively harder and harder to walk back
+[00:17:41] towards the individual patient's data
+[00:17:44] in order to identify that person.
+[00:17:45] Of course, more authorization, more qualifications,
+[00:17:48] more permissions from the patient.
+[00:17:50] And yet at the other end of that,
+[00:17:52] the data that is most accessible
+[00:17:53] to the most number of global health specialists,
+[00:17:56] to the institutions that need it,
+[00:17:58] that you're going to see a greater degree of anonymization.
+[00:18:01] It's not one or nothing
+[00:18:04] when it comes to securing a big database like that.
+[00:18:07] You can add multiple gates,
+[00:18:09] you can add security by design, and without any doubt,
+[00:18:13] we do need to have that access to that data.
+[00:18:17] But I am seeing people giving up
+[00:18:19] on the concept of best practices
+[00:18:20] out of just the sense of utility.
+[00:18:23] - Yeah, it's funny that...
+[00:18:25] My asking if best practices were sufficient, can so easily,
+[00:18:32] cause it's out there, end up a question about
+[00:18:34] whether they're even necessary.
+[00:18:36] And I meant them more as the sufficient question,
+[00:18:40] but maybe another way of rephrasing it is,
+[00:18:44] let's suppose you've got a generally enlightened,
+[00:18:49] well-meaning, and decently resource state policymaker,
+[00:18:55] trying to do the kind of stuff
+[00:18:58] that Margaret rues wasn't done in the early days
+[00:19:02] of the pandemic and may not even be done now,
+[00:19:04] with Massachusetts as the example.
+[00:19:07] Is securing whatever someone like Margaret
+[00:19:11] would recommend for data about people and their health,
+[00:19:16] and the transmission of the virus,
+[00:19:18] is securing it the kind of thing that a policymaker
+[00:19:21] can do by writing a large enough check
+[00:19:25] to some technology consultants or advisors or something.
+[00:19:31] The kind of way that's like,
+[00:19:32] I'm trying to build a building. I really need it.
+[00:19:34] Now I'm gonna house people in it.
+[00:19:36] I just need to make sure it won't fall over.
+[00:19:38] There are people that can do that,
+[00:19:41] or is it more somehow profound and fundamental
+[00:19:44] to the process of assembling that data?
+[00:19:48] Is there something more that those top policy makers
+[00:19:52] would have to be bearing in mind to do it right?
+[00:19:56] - I think in the beginning of the pandemic,
+[00:19:58] we saw an awful lot of blow up tents with camp cots in them
+[00:20:00] to house victims of COVID is what I think.
+[00:20:03] And I think that people were forgiving of the fact that
+[00:20:06] we needed to create and deal with emergency measures
+[00:20:09] in that moment.
+[00:20:09] I think over time, it's not acceptable
+[00:20:12] to simply write a check and hope that a third party vendor
+[00:20:14] can rapidly solve a problem.
+[00:20:16] You need the defense in depth of people
+[00:20:18] who actually understand
+[00:20:19] how to implement information security
+[00:20:22] and in depth to secure the kind of patient data
+[00:20:25] that you're talking about.
+[00:20:26] Is it enough for a policy maker to just write
+[00:20:29] a big enough check to secure this data?
+[00:20:31] No, it is not.
+[00:20:33] And it's because no one person, no one organization,
+[00:20:36] certainly no one third party vendor,
+[00:20:38] can solve this problem completely.
+[00:20:41] When I say defense in depth, I don't just mean that
+[00:20:43] we are putting enough gates
+[00:20:45] around one source of information.
+[00:20:48] I also mean that the kinds of best practices
+[00:20:50] that you've mentioned, are something
+[00:20:52] that every individual person in the chain of ownership
+[00:20:54] needs to take ownership of.
+[00:20:57] I spent a lot of time this morning explaining
+[00:20:59] the solar winds hack to people.
+[00:21:01] And I explained it, I don't know how adept
+[00:21:05] you want me to go into this,
+[00:21:06] but there's a trust element there.
+[00:21:07] I think on the part of people in this country
+[00:21:11] and around the world, when it comes to
+[00:21:13] government securing data.
+[00:21:15] And I think that one of the problems we have is that
+[00:21:19] we don't understand the difference between
+[00:21:22] an organization or agency getting hacked,
+[00:21:24] and where the flaw in the security actually was lying.
+[00:21:32] The solar winds hack this morning,
+[00:21:34] for those of you that are kind of tuned into this,
+[00:21:36] what happened basically was that,
+[00:21:38] what is speculated right now to be
+[00:21:40] a Russian nation state attack versus us government agencies
+[00:21:44] and information storing systems,
+[00:21:47] occurred through breaching a third-party vendor,
+[00:21:49] Solar winds, it's an it infrastructure provider,
+[00:21:51] the kind of company that Jonathan is talking about right now
+[00:21:54] about writing a big enough check to.
+[00:21:56] That company had a breached software update process,
+[00:22:02] where people downloading updates of their software
+[00:22:05] were also downloading a backdoor into the systems
+[00:22:08] that they were installing it on.
+[00:22:10] - Which has a certain irony
+[00:22:12] that they were trying-- - Exactly.
+[00:22:13] - To do it right and stay updated and patched,
+[00:22:17] and the very patch was the problem.
+[00:22:20] - This has a very good analogy to a vaccine.
+[00:22:23] Just because there's gonna be one or two people
+[00:22:26] that have a bad reaction to a vaccine,
+[00:22:28] does not mean that we do not need to mass vaccinate.
+[00:22:31] This is that moment where we see that
+[00:22:33] there's a couple of flaws in the system,
+[00:22:35] and statistically speaking, you cannot have a perfect 100%,
+[00:22:40] a working vaccine that has zero side effects.
+[00:22:43] I'm sure Margaret can tell you more about this,
+[00:22:44] but what I'm telling you is that this is the equivalent
+[00:22:47] in that moment of something like a vaccine.
+[00:22:49] You still need to have everybody doing the right thing
+[00:22:52] in that moment, just because one or two people,
+[00:22:54] statistically are gonna have a bad reaction to it,
+[00:22:57] just because several of the agencies
+[00:22:59] that were part of the 300,000 customers
+[00:23:02] of this third-party vendor were breached
+[00:23:05] as a result of trying to do the right thing,
+[00:23:07] doesn't mean we shouldn't also still
+[00:23:09] do the right and secure thing.
+[00:23:11] I actually, this is one of those moments
+[00:23:13] where we have this great analogy
+[00:23:14] between me and Margaret's work.
+[00:23:16] This is like a vaccine.
+[00:23:17] You still have to do it.
+[00:23:18] Yeah, there are gonna be some bad side effects,
+[00:23:20] and there is no such thing as perfection here,
+[00:23:22] only trying to do it better, more, over time.
+[00:23:25] - I mean, that's really an interesting analogy
+[00:23:29] to emphasize that you wouldn't want people
+[00:23:32] to take the lesson from this.
+[00:23:33] It's like, "Well, that's it, no more patches for me,
+[00:23:36] "I'm going with the tried and true vulnerabilities
+[00:23:38] "rather than the unknown new ones".
+[00:23:40] And that's important lesson.
+[00:23:42] Of course it might be a disanalogy
+[00:23:45] that the vulnerability is to everybody
+[00:23:49] who is staying patched.
+[00:23:50] It's not a kind of idiosyncratic one-off reaction.
+[00:23:53] It's that the election of the adversary, as they say,
+[00:23:57] as to who will pay the price for the vulnerability,
+[00:24:00] but this kind of gets to your...
+[00:24:03] If not inevitable, you can try to lock every door
+[00:24:07] and engage in every best practice,
+[00:24:09] and at some point you're still gonna have a problem.
+[00:24:13] Is there anything, if on the lists of hackys
+[00:24:18] were to be the hypothetical custodians of, again,
+[00:24:22] the kind of data Margaret would love to see gathered
+[00:24:26] for the purposes of public health?
+[00:24:29] Is there anything they could be doing to better...
+[00:24:34] I know it's almost like there's gonna be a flaming tree
+[00:24:37] falling on your house.
+[00:24:38] Is there a way to waterproof it or something?
+[00:24:40] I don't know what metaphor I'm looking for here,
+[00:24:42] but what would we do if we were trying
+[00:24:47] to wisely anticipate moments like these?
+[00:24:52] - This is a law of big numbers situation.
+[00:24:55] You don't prepare for your house
+[00:24:56] to get hit by a flaming tree.
+[00:24:58] Statistically speaking, 10, 15, people are gonna have
+[00:25:02] a flaming tree fall on their house this year.
+[00:25:04] What I prepare for, is making sure that
+[00:25:06] the lights are turned off when I leave,
+[00:25:08] that the doors are locked,
+[00:25:09] that I've got proper cameras around the place,
+[00:25:11] because I am maximizing for a general,
+[00:25:13] low level of threat and keeping my day to day
+[00:25:16] as safe as possible, while recognizing that
+[00:25:19] a tree could literally fall on my house at any moment.
+[00:25:21] In fact, two years ago, a big branch
+[00:25:23] from a tree near our house did in fact fall
+[00:25:26] in the middle of the night, in the middle of a cold snap,
+[00:25:28] woke me and my husband out of a dead sleep.
+[00:25:30] "What the hell was that?"
+[00:25:31] The there's a smashing sound.
+[00:25:34] And here's what I'm here to tell you.
+[00:25:37] I didn't take out an insurance policy the next day for,
+[00:25:39] "Oh crap. A branch fell on my house",
+[00:25:42] because it happened to my neighbor.
+[00:25:43] What I did was I kept locking the doors.
+[00:25:46] I kept not leaving the stove on
+[00:25:47] when I walked out of the house.
+[00:25:48] I mean, mostly I don't leave the stove on
+[00:25:50] when I walk out of the house.
+[00:25:51] I don't mostly leave the house right now,
+[00:25:53] but the idea is that we've got to prepare
+[00:25:56] and stay safe for the threats that are real every day.
+[00:25:59] I want people updating because I want people thinking about
+[00:26:02] heart disease, and cancer, and high blood pressure,
+[00:26:05] to again, live over in Margaret's world on this one.
+[00:26:07] We're not talking about dengue fever
+[00:26:10] in the middle of Illinois.
+[00:26:11] We're talking about something that everybody
+[00:26:13] has to worry about.
+[00:26:14] Statistically speaking, I'm still not gonna die of COVID.
+[00:26:18] So, I still do pushups every day.
+[00:26:20] I want people thinking about the general level of health
+[00:26:22] that they've got to deal with.
+[00:26:24] And that is the best practice every day.
+[00:26:26] It is not fun to do pushups.
+[00:26:28] And you know what?
+[00:26:29] I don't like broccoli deal with that.
+[00:26:31] I'm just not a fan.
+[00:26:32] I don't like spinach and kale,
+[00:26:34] Oh, but I'll eat apples.
+[00:26:38] I'm good with tofu.
+[00:26:40] I will make the best choices I can with my health.
+[00:26:43] And that's what I want people thinking about with security.
+[00:26:46] - So, maybe Margaret, it makes sense to go back to you,
+[00:26:50] if it's fair to ask, like what would the ingredients,
+[00:26:55] either hypothetically, or from what we know
+[00:26:57] from other places that appear
+[00:26:59] to have things a little more together,
+[00:27:02] what are the ingredients
+[00:27:03] of a public health intelligence apparatus?
+[00:27:09] What are the moving parts that you'd want people
+[00:27:12] to know about?
+[00:27:14] - So, yeah, so, two things I think are helpful
+[00:27:17] to kind of preface what I'll say.
+[00:27:20] The first is, over our time together, JZ,
+[00:27:24] I think one of the trends that we've seen is that
+[00:27:27] when data is collected, really, there's an emphasis
+[00:27:30] on trying to collect as little as possible,
+[00:27:34] with the hope of preserving privacy.
+[00:27:37] And I think one of the really unpleasant things to realize
+[00:27:41] is that in every case, that was basically a mistake.
+[00:27:44] So, the Apple, Google game framework
+[00:27:47] around digital contact tracing,
+[00:27:49] they took out the most important piece,
+[00:27:50] which was the location of where people were.
+[00:27:53] So--
+[00:27:54] - With great pride.
+[00:27:55] I mean, that's to this day
+[00:27:57] is trumpeted as yeah. - Exactly, exactly.
+[00:27:59] We really needed to understand the environments
+[00:28:03] in which transmission was happening,
+[00:28:05] and we needed to work with people to understand,
+[00:28:09] whether the quality of the risk that they had,
+[00:28:14] that they had actually been exposed,
+[00:28:16] that you just simply couldn't capture
+[00:28:18] with that kind of an approach.
+[00:28:20] I think the second example is from a mistake
+[00:28:24] we've made in the contact tracing program,
+[00:28:27] where we kept saying to people,
+[00:28:29] "Oh yeah, every time you talk to somebody who's infected,
+[00:28:31] "they're gonna want to tell you all about
+[00:28:33] "where they think they got it.
+[00:28:34] "Ignore that, cut them off there,
+[00:28:37] "just have them focus on telling you
+[00:28:40] "who they've been in contact with since they've had symptoms
+[00:28:42] "or a couple of days before they had symptoms",
+[00:28:44] when actually that, we were telling them to ignore
+[00:28:46] the most important thing,
+[00:28:48] which was where people think they got it from.
+[00:28:51] And once we started investigating that,
+[00:28:53] we started being able to do cluster analysis.
+[00:28:56] And that meant we started to understand,
+[00:28:58] "Oh, it's the locker room of the hockey rink
+[00:29:02] "that is causing the transmission, not on the hockey rink".
+[00:29:06] - What was the well-intentioned motive behind
+[00:29:09] "Don't let people say where they think it was",
+[00:29:11] was it that would get it wrong?
+[00:29:13] was it that as long as you write down everything,
+[00:29:15] it's probably in there somewhere, what was going on?
+[00:29:18] - No, it was because we didn't think we needed
+[00:29:20] health intelligence.
+[00:29:21] We thought, okay, we're in the here now,
+[00:29:23] all we're gonna do is use contact tracing to try to stop
+[00:29:27] the propagation of that particular line of transmission,
+[00:29:32] not use it as a way of understanding and characterizing
+[00:29:36] where, and the context in which people are getting sick.
+[00:29:39] And we didn't wanna do it because that was also,
+[00:29:41] we knew it'd be dicey.
+[00:29:44] We knew that it would be dicey
+[00:29:45] because somebody would say,
+[00:29:46] "Oh, I got it at the illegal club that's still running",
+[00:29:52] or, "I got it at that wedding"--
+[00:29:54] - Or, "The protest".
+[00:29:56] - Or, "The protest".
+[00:29:57] Or, "by the way, I was whatever, doing a drug deal
+[00:29:59] "with somebody and I've I've exposed them",
+[00:30:02] or whatever it was.
+[00:30:03] And so, the more information though, that we got,
+[00:30:08] the more personal, granular information
+[00:30:10] about where people had been and who they had been with,
+[00:30:14] the more valuable it was from a public health perspective.
+[00:30:19] And so, I think that that's one tension
+[00:30:22] that I've sort of seen out before.
+[00:30:24] The other thing I think is really important
+[00:30:26] to communicate, to cyber people
+[00:30:28] and people outside of the health system,
+[00:30:30] in fact, it's important to communicate to doctors is that,
+[00:30:35] in this country, there is a stovepipe separation
+[00:30:39] between our medical care system
+[00:30:41] and our public health system.
+[00:30:43] And the medical care system is where the,
+[00:30:48] "Well, that's your doctor, your clinics, your hospitals",
+[00:30:51] your public health system is a totally different system
+[00:30:55] that is orchestrated as a public sector function.
+[00:30:59] It's orchestrated at the local and state level,
+[00:31:01] and it is resource poor,
+[00:31:05] it has been stripped of resources, et cetera,
+[00:31:08] and its connection to the medical care system
+[00:31:10] is very tenuous.
+[00:31:11] There's only a couple of, only a couple of connections.
+[00:31:14] So, like one of the connections
+[00:31:17] people might be familiar with is a newborn screen.
+[00:31:20] If you have a baby, they take a little bit of blood
+[00:31:22] from the heel and they put all paper piece of paper,
+[00:31:24] and then they send it to the public health department
+[00:31:26] from the medical care hospital.
+[00:31:29] So, that's like one example of a program where,
+[00:31:31] that information is given to public health system.
+[00:31:34] - And what is that used for?
+[00:31:37] - Yeah, so they are using that to detect
+[00:31:41] genetic conditions that have a medical illnesses.
+[00:31:45] And so, the public health department
+[00:31:47] then runs the analysis says,
+[00:31:49] "Oh, that child, can't eat certain foods
+[00:31:54] "or else they'll have permanent brain damage".
+[00:31:56] And then they go out and they call the doctor,
+[00:31:58] and the doctor goes and tells the parent.
+[00:32:01] For whatever reason, we've housed that
+[00:32:03] in the public health domain.
+[00:32:05] But you could imagine that that's a program
+[00:32:08] that just would be run through every hospital,
+[00:32:10] they wouldn't necessarily need a public health lab
+[00:32:13] to do that test, but those tests are sort of specific,
+[00:32:16] and they're not something that every hospital lab
+[00:32:22] would love to sort of specialize in.
+[00:32:26] So, that's kind of a marriage of convenience connection.
+[00:32:30] There are others.
+[00:32:31] So, there are a set of diseases that have always been
+[00:32:35] sort of tracked, and diseases with communicable potential,
+[00:32:42] the plague, measles.
+[00:32:44] These are things that if your hospital tests you for,
+[00:32:48] if they can't rule it out,
+[00:32:50] then they send it to the public health laboratory.
+[00:32:52] And so, that's the other sort of connection.
+[00:32:56] But most day-to-day doctors working in a hospital,
+[00:32:59] they don't know anything about the public health department.
+[00:33:01] They don't know who's in charge
+[00:33:02] of the public health department,
+[00:33:03] they don't know who's in charge of the public health lab.
+[00:33:05] And that matters because the public health,,
+[00:33:10] the sort of where the...
+[00:33:12] I think the education around data security
+[00:33:16] is much more sophisticated in the medical care side
+[00:33:22] and not as much sophisticated on the public health side,
+[00:33:26] So, you had some education around hospitals
+[00:33:29] are very much worried about being hacked,
+[00:33:30] and medical data being stolen,
+[00:33:33] but the public health folks,
+[00:33:34] are maybe not as attuned to what could happen.
+[00:33:38] Now, part of that is because their information systems
+[00:33:41] are very primitive.
+[00:33:44] Most of our public health system
+[00:33:45] is being run off of a fax machine.
+[00:33:50] Countries like Afghanistan, if they're worried
+[00:33:52] they didn't have anywhere to bomb,
+[00:33:57] well, enemies don't have a lot of targets
+[00:34:00] in the United States.
+[00:34:02] And so, that's one thing that's maybe saving us
+[00:34:05] from big epidemiologic surveillance.
+[00:34:07] - I see how like the physical filing cabinet
+[00:34:10] is both secure in a digital kind of way,
+[00:34:13] and extremely limited in a digital kind of way.
+[00:34:16] So, I'm wondering is the picture you're painting,
+[00:34:19] that we're then gonna ask Tarah to take a look at,
+[00:34:22] and tell us where its vulnerabilities are.
+[00:34:24] Is the picture you're painting, one of...
+[00:34:29] There's a lot of tributaries of information
+[00:34:33] that might kind of come out of
+[00:34:36] the medical standard healthcare system?
+[00:34:40] Hospitals, urgent care centers, apps, Google queries,
+[00:34:45] who knows what.
+[00:34:46] Tributaries that go into a river that feeds into,
+[00:34:50] now, I'm gonna Hollywoodize it,
+[00:34:52] some kind of public health fusion center,
+[00:34:55] with crisply uniformed people looking at massive screens
+[00:35:00] that have dots appear where like,
+[00:35:02] "all right, we got another COVID in sector 12, four G",
+[00:35:06] or whatever it is, and then they can snap too,
+[00:35:10] but you don't need that many people in that fusion center,
+[00:35:13] and they can just issue the orders and say,
+[00:35:15] "All right, I need you to go do something stat".
+[00:35:19] Is that the kind of vision you're painting
+[00:35:21] for which then you need a sort of Fort Knox
+[00:35:24] where the data lives, but you don't need a ton of people
+[00:35:28] legitimately getting access to it all the time,
+[00:35:30] Just kind of the public health whizzes who can deal with it?
+[00:35:39] - Yeah.
+[00:35:40] So, I do think it is, in my mind's eye,
+[00:35:47] there is some system where people come into
+[00:35:52] their clinical home, their medical home,
+[00:35:55] and they get a test for COVID and that positive test
+[00:35:59] is funneled into, across the divide,
+[00:36:02] across the medical system,
+[00:36:03] into the department of public health,
+[00:36:07] that is collecting all the positive cases,
+[00:36:09] and then information about that patient
+[00:36:13] is accompanied with that positive result,
+[00:36:16] including where they might've gone, et cetera, et cetera.
+[00:36:18] The public health folks take it, they analyze it,
+[00:36:21] they anonymize it as much as they can,
+[00:36:24] and compile it to try to understand how effective it is,
+[00:36:35] and then vice versa.
+[00:36:36] That the public health system
+[00:36:38] is able to take information about emerging threats
+[00:36:43] or environmental conditions that should impact patient care,
+[00:36:48] and funnel that into the doctor's office,
+[00:36:51] so that the doctor can say,
+[00:36:52] "Oh, I see that you're living in an area
+[00:36:55] "where there might be higher levels of lead in your water,
+[00:36:58] "let me try to test your test you for lead".
+[00:37:04] And so, I think that that's the kind of feedback loop
+[00:37:08] that I think would be really helpful,
+[00:37:10] and in times of crisis, critical,
+[00:37:13] but I'm just not convinced that...
+[00:37:18] I just don't know how to do that.
+[00:37:21] I'm not exactly sure what the ramifications would be.
+[00:37:23] I mean, people are already reporting very sensitive things
+[00:37:27] to contact tracers at public health departments
+[00:37:29] that are collecting very sensitive data.
+[00:37:32] So, that is already happening to some degree.
+[00:37:36] And this would mean more of that,
+[00:37:42] and maybe so much more of it that would become
+[00:37:46] a much more valuable target for exploitation.
+[00:37:50] - Yeah.
+[00:37:51] So, Tarah, given the picture that Margaret's painting,
+[00:37:56] and the kind of desiderata of what would make for
+[00:37:59] useful stuff for the public health system to know,
+[00:38:05] I don't know, kind of, sort of threat surface
+[00:38:08] or attack surface, do you see that makes it different,
+[00:38:12] if at all, from all sorts of government databases
+[00:38:16] that have sensitive data about who's collecting benefits,
+[00:38:20] or tax returns, or you name it?
+[00:38:31] - The end state of all patient data is either that
+[00:38:37] it is eventually deleted or tried it away over time,
+[00:38:41] as patient data ages out, or hospitals go under,
+[00:38:43] or records get deleted, or it becomes fully public
+[00:38:47] and is in the hands of our enemies.
+[00:38:49] That is the end state of every single piece
+[00:38:52] of customer data, patient data.
+[00:38:55] You can tell what I've been talking about this morning,
+[00:38:56] Customer data, patient data, it doesn't matter who it is.
+[00:39:00] The end state of all data at all, is either gone completely,
+[00:39:04] or in the hands of somebody you don't want it in.
+[00:39:08] And when it becomes sensitive data like health data,
+[00:39:10] it becomes even more important to realize
+[00:39:13] that is the end of all of the data
+[00:39:15] that we're collecting here.
+[00:39:16] The best case scenario is that we expire the data
+[00:39:20] that Margaret's looking for in terms of
+[00:39:22] individual personal access to it, as fast as possible--
+[00:39:26] - Sounds like we might be able to, just on that one point,
+[00:39:31] probably thread that needle.
+[00:39:33] I mean, we could have basically crisis duration access
+[00:39:38] for a lot of the granular staff,
+[00:39:40] and the rest can be duly aggregated,
+[00:39:43] but it sounds like a lot of this is about acute response
+[00:39:47] rather than sort of,
+[00:39:49] "I need to keep 50 years worth of somebody's tax returns",
+[00:39:52] If I'm the IRS.
+[00:39:54] - This might be the way that we steer through this course,
+[00:39:57] because like I said, I want to see
+[00:40:00] a robust public health response,
+[00:40:02] with the information you need and not one bite more,
+[00:40:05] for any upcoming health emergencies.
+[00:40:09] And the best scenario that we have is an active response,
+[00:40:14] that deletes data as fast as it is humanly feasible.
+[00:40:19] The reason we wanna do that is because we know
+[00:40:21] that collecting data over time leads to either
+[00:40:25] its storage, use, and sale,
+[00:40:27] or it's released into the wild unintentionally.
+[00:40:30] If we were gonna steer a course here,
+[00:40:32] and I'm speculating, honestly,
+[00:40:33] because I've not seen this done very well
+[00:40:36] by very many people.
+[00:40:38] If we're gonna do this,
+[00:40:39] the data needs to expire faster
+[00:40:41] than most people would think reasonable.
+[00:40:45] The reason for that, let me just, so first of all,
+[00:40:47] right now, I know of somebody, and I'm furious about this,
+[00:40:50] I know of somebody who received information
+[00:40:54] that someone who was around people,
+[00:40:58] that they were around tested positive for COVID,
+[00:41:01] and very likely tested positive for COVID
+[00:41:04] and got the results back days after they were tested.
+[00:41:08] And also while they were waiting for results,
+[00:41:10] was around people that the person I know was around.
+[00:41:13] I'm furious.
+[00:41:14] I said, "I know a lady that I want to call right now
+[00:41:17] "and tell her all about this at a very angry,
+[00:41:19] "her name is Margaret, and I want a public health response
+[00:41:21] "to this immediately",
+[00:41:22] and there's no one to call.
+[00:41:24] That's the thing I think that we're trying to solve here.
+[00:41:26] There's no one to call,
+[00:41:27] because there's not this conflux of trust in a system,
+[00:41:31] and expert access to that system and that data,
+[00:41:34] in a way that lets us get a robust response,
+[00:41:37] while at the same time protecting individual rights.
+[00:41:40] And the reason in this moment that I don't...
+[00:41:43] I don't want to protect individual rights in this moment.
+[00:41:46] I wanna know the names of all the parties responsible
+[00:41:48] for the situation and that my friend
+[00:41:49] who was at second degree exposed to COVID,
+[00:41:51] very likely knowingly by the second degree person
+[00:41:55] who tested positive.
+[00:41:56] I wanna call the law.
+[00:41:58] And believe me, I really what I call the law.
+[00:42:01] I'm a security researcher
+[00:42:03] we have a tenuous relationship with people
+[00:42:05] who enforce the computer fraud and abuse act at best.
+[00:42:08] But the idea that we can find a way between this,
+[00:42:11] very likely looks like affirmative deletion of data,
+[00:42:16] confirmation that we've gotten rid
+[00:42:18] of personal information as fast as possible.
+[00:42:21] I think that might be the only way we can go about this.
+[00:42:23] And I cannot believe I am saying this,
+[00:42:25] and somebody on the internet
+[00:42:26] is gonna get so mad about this.
+[00:42:28] This might be one of the very few reasonable uses
+[00:42:31] of blockchain I've ever heard of.
+[00:42:34] I mean, blockchain is terrible.
+[00:42:35] It's not magic pixie cyber dust people.
+[00:42:38] But, there's a reason to use it
+[00:42:40] in cases where you want to, in a distributed fashion,
+[00:42:43] affirm that an action was taken
+[00:42:45] at a given point in time and place.
+[00:42:47] And that right there might involve the confirmed deletion
+[00:42:51] of medical records, not the records themselves.
+[00:42:53] Oh God, no.
+[00:42:54] But there might be a reason here in a way that we can use
+[00:42:57] some of the more interesting disruptive technologies
+[00:42:59] we've developed to really help the situation.
+[00:43:03] And I'd love to see that happen.
+[00:43:05] - What blockchain would be doing there,
+[00:43:06] that's different from the relevant organization,
+[00:43:09] putting a certificate on their website of pain of perjury,
+[00:43:12] "We deleted the data:, they're both just assertion.
+[00:43:14] - Oh it's different.
+[00:43:15] No, no, no, no.
+[00:43:16] See that's the difference.
+[00:43:18] There's a fundamental technical difference there,
+[00:43:20] and it's a mathematical one.
+[00:43:22] Anybody, this is a question of kind of
+[00:43:24] under penalty of perjury.
+[00:43:26] Well, the reason we have penalties for perjury
+[00:43:28] is cause people do that shit.
+[00:43:30] I've been in information security
+[00:43:31] and I've seen a lot of fraud, a lot of problems,
+[00:43:33] a lot of people attesting to things
+[00:43:34] they shouldn't be attesting to.
+[00:43:36] I haven't seen in a distributed system like this,
+[00:43:39] in contracts and ledgers, I haven't seen
+[00:43:42] without some pretty sophisticated technical attacks,
+[00:43:45] a way to fake whether or not a contract was
+[00:43:47] or wasn't signed at a given point in time.
+[00:43:49] That's something you're gonna get.
+[00:43:50] I think you might actually have some more technical leaders
+[00:43:53] behind that, possibly.
+[00:43:55] Because, even like me, who thinks this is a bad idea,
+[00:43:57] but we're gonna have to do it anyway.
+[00:43:59] - Yeah, I guess I'll have more reading to do.
+[00:44:00] I find myself completely confused
+[00:44:02] by this branch of our conversation, because,
+[00:44:06] put something on the blockchain,
+[00:44:08] all you're doing is saying that you have a private key
+[00:44:11] that hopefully hasn't itself been compromised,
+[00:44:14] that lets you flip some bits on the chain,
+[00:44:16] which is the same as flipping some bits on your website.
+[00:44:20] And I don't know if you're worried that somebody
+[00:44:22] would hijack the website and say something wrong.
+[00:44:25] I don't know, we're about to now get into like--
+[00:44:28] - We wondered too far. - The electoral college vote
+[00:44:29] and why the electoral vote should be recorded
+[00:44:31] on the blockchain rather than
+[00:44:33] sent by certified registered mail as they are--
+[00:44:38] - I want to keep having that conversation, but not now.
+[00:44:40] - But one thing coming loud and clear from this,
+[00:44:43] and absolutely let's have that conversation,
+[00:44:45] 'cause I am yet to be persuaded that
+[00:44:47] that's a good use of blockchain--
+[00:44:50] - Oh lord, I'm not either.
+[00:44:52] - But expiration is a clear clarion call,
+[00:44:58] and that's a great anchoring point
+[00:45:00] that people might not have in mind.
+[00:45:02] They're just like, "Build it
+[00:45:03] "and we'll deal with data expiration later".
+[00:45:06] But being able to build that in from the start,
+[00:45:08] seems like a great idea.
+[00:45:11] Are there commensurate sort of complimentary things
+[00:45:15] that you would say, of similar sort of gravity,
+[00:45:19] that you'd want to put alongside expiration,
+[00:45:22] as principles for kind of building
+[00:45:24] the kind of medical system,
+[00:45:26] as one of the questions in the question and answer
+[00:45:27] queue is saying.
+[00:45:28] If you could build this thing from scratch,
+[00:45:30] what would the framework look like?
+[00:45:32] Are there things alongside expiration?
+[00:45:36] - So, I think exploration is a great idea.
+[00:45:41] I mean, cause I think...
+[00:45:43] I don't think that collecting less data
+[00:45:46] is actually is a good idea because we need that data,
+[00:45:50] at least in the short term to really make progress.
+[00:45:54] I think this data will just deconstruct
+[00:45:58] five minutes or something.
+[00:45:59] It is a very interesting idea,
+[00:46:03] and certainly wanna use some research.
+[00:46:04] I think the thing that I get a lot,
+[00:46:06] I have to say, a lot of folks
+[00:46:08] that I get into conversations with
+[00:46:10] about data security in health,
+[00:46:11] and particularly health crises,
+[00:46:13] have kind of one of two reactions,
+[00:46:15] it's kind of schizophrenic,
+[00:46:16] and maybe it's a very American thing.
+[00:46:18] On one hand folks are like,
+[00:46:20] "Oh my gosh, I am not sharing anything with this government
+[00:46:24] "that's gonna come and arrest me in the middle of the night
+[00:46:27] "and do bad things to me.
+[00:46:29] "There's not one thing, I am very privacy oriented".
+[00:46:32] And then on the other hand is the opposite reaction,
+[00:46:35] which is, "Who cares if the Russians hacked my data?"
+[00:46:40] "Who cares if China knows what my mammogram said,
+[00:46:45] "I'm just not that interesting."
+[00:46:47] Or, "Who cares if they know I have COVID", or whatever.
+[00:46:51] So, the sort of--
+[00:46:53] - Yeah, that's a way of asking Tarah, like what's the...
+[00:46:57] All right, let's say an adversary,
+[00:46:59] and it's not any adversary,
+[00:47:01] It's gotta be one with sufficient resources.
+[00:47:03] So, it is like the government of a major nation state
+[00:47:07] that's into this stuff say, what would we see them doing,
+[00:47:11] that would be the most worrisome to us?
+[00:47:16] - We have seen this information used for blackmail purposes,
+[00:47:20] for deep fake purposes,
+[00:47:24] for the ability to recreate someone and their consent
+[00:47:28] or identity without their knowledge of it.
+[00:47:31] One of the things I've seen,
+[00:47:32] and I think Margaret probably have seen
+[00:47:34] a lot of this as well too during the pandemic.
+[00:47:36] I have seen, from the very beginning
+[00:47:38] that schools started to go online,
+[00:47:41] I started to see parents having to sign their kids in
+[00:47:43] every couple of minutes to online learning systems.
+[00:47:46] About halfway through the pandemic,
+[00:47:47] that flipped in every kid I know,
+[00:47:49] now has all their parent's passwords.
+[00:47:50] 'Cause every parent was like, "I can't handle this anymore".
+[00:47:53] Kids starting to sign in instead.
+[00:47:55] And so, what we're starting to see, I think--
+[00:47:57] - They're just a vector.
+[00:48:00] - They are absolutely both the vector
+[00:48:02] and the attack surface.
+[00:48:04] But the concept here for identity and access management is
+[00:48:07] that we're starting to see identity
+[00:48:09] is something that you own and operate,
+[00:48:11] instead of something that you are.
+[00:48:13] And when someone can grab a piece of that identity
+[00:48:15] and attest to it with things like valid medical records,
+[00:48:18] social security information, financial information,
+[00:48:20] combine the OPM leak, with the Equifax leak,
+[00:48:23] with a health care leak, with the recent solar winds leak,
+[00:48:25] combined all those things, and you've got
+[00:48:27] a real convincing government employee on paper.
+[00:48:30] That's what we see.
+[00:48:31] And it's a combination.
+[00:48:33] Instead of attrition over time of that data,
+[00:48:35] we see this accumulation, this creation of data
+[00:48:39] that starts to make it more feasible,
+[00:48:41] that you can attest to owning and operating
+[00:48:43] properly, someone else's identity.
+[00:48:45] That's a thing that only gets worse over time.
+[00:48:48] It doesn't get better because of the way biometrics work,
+[00:48:51] the way we conceive of computer security right now.
+[00:48:54] I can't change my face.
+[00:48:55] I mean I can, but it's expensive and I don't want to,
+[00:48:57] I like it.
+[00:48:58] I can't change my fingerprints,
+[00:49:00] I can't change a great deal of the things
+[00:49:02] that physically make me me,
+[00:49:04] and yet using those things to identify me,
+[00:49:06] and having a digital record of them that are taken,
+[00:49:09] makes it incredibly problematic for me
+[00:49:12] to prove I me, instead of someone else
+[00:49:14] who has all the same records.
+[00:49:16] So, that's the concern, I think you see many people
+[00:49:18] having with this.
+[00:49:19] The more sensitive the person,
+[00:49:21] the more important the person, the more that's a weapon.
+[00:49:24] And those are being conceived of as weapons
+[00:49:27] in a new kind of way.
+[00:49:29] We call it disinformation now,
+[00:49:30] we don't call it propaganda, we call it disinformation,
+[00:49:32] 'cause you can get a lot more grant money
+[00:49:34] right off studying this information than you can propaganda,
+[00:49:37] but these are all ways of attacking
+[00:49:38] people's conception of the world.
+[00:49:41] And that's what we see happening.
+[00:49:42] And I think people are already distrustful enough,
+[00:49:45] that the state of the world
+[00:49:47] that is being represented to them
+[00:49:48] is actually reality right now.
+[00:49:51] We're having a big conversation in this country about
+[00:49:53] whether or not what we see is what's actually happening.
+[00:49:55] And I'm here to tell you that everybody watching
+[00:49:57] any individual news channel is deeply convinced
+[00:49:59] that they know the truth,
+[00:50:01] and people watching a different media outlet aren't.
+[00:50:03] That's incredibly problematic,
+[00:50:05] not only for the kinds of health responses we need to see,
+[00:50:07] the kind of fear that Margaret was talking about,
+[00:50:09] like what do I do when the government gets all my data
+[00:50:12] and never gets rid of it?
+[00:50:14] Am I gonna even be helped by this
+[00:50:16] or the opposite side of it?
+[00:50:18] Why should I care if somebody has my information?
+[00:50:21] I think that becomes a different question.
+[00:50:25] Why should I care if someone has my data
+[00:50:27] becomes a different question in five years,
+[00:50:29] when you find out you can't get a job
+[00:50:30] because your credit's wrecked,
+[00:50:32] because your medical history has been exported elsewhere,
+[00:50:34] and you're no longer able
+[00:50:35] to qualify for a security clearance.
+[00:50:38] There's a longer term game happening here
+[00:50:42] with the collection and storing and creation
+[00:50:47] of human beings in their identities.
+[00:50:49] And that's what's happening.
+[00:50:51] But at the same time, it makes it more problematic
+[00:50:54] to be sure that what you're seeing
+[00:50:55] in micro ads on Facebook and Twitter and wherever,
+[00:50:58] are really what's happening,
+[00:50:59] it could be just targeted to you
+[00:51:02] to change your state of the world.
+[00:51:04] - It stands to reason, I would imagine,
+[00:51:07] even like, let's just take this current example,
+[00:51:09] if we wanted to have people quarantine for 14 days,
+[00:51:14] now it's now to 10, can you just hack
+[00:51:19] the exposure notification of system of Massachusetts,
+[00:51:23] and say, "You've been exposed,
+[00:51:24] "where we're expecting you to go,
+[00:51:26] "not go show up for work for 10 days,
+[00:51:29] "and if you don't comply, then you're fined $500 a day".
+[00:51:37] Right now we've taken such a very loosey goosey
+[00:51:40] kind of approach to the intervention
+[00:51:43] that people are not, really in forced into quarantine,
+[00:51:47] things like that.
+[00:51:49] But those things, they maybe coming down the line here,
+[00:51:54] and also with worse diseases that we are more scared of,
+[00:51:59] like, I dunno, Ebola or flu that kills you in three days
+[00:52:02] or two days, kills children, et cetera.
+[00:52:07] You can imagine that spoiling of data,
+[00:52:11] combined with the seriousness and the power
+[00:52:15] of public health law should it be used,
+[00:52:18] might be a really bad thing.
+[00:52:23] I can sort of start to imagine something like that now.
+[00:52:26] I think, it's less likely, like I said,
+[00:52:28] because we just don't have the systems in place
+[00:52:31] to be able to do that,
+[00:52:33] to be able to be attacked in that way.
+[00:52:35] But that does give me pause
+[00:52:37] as I sort of spin out a vision of what would be the ideal
+[00:52:41] public health intelligence kind of capability,
+[00:52:44] and what it would look like.
+[00:52:45] - And kind of the way in which I hear Tarah saying that
+[00:52:49] you can end up with a whole greater than the sum
+[00:52:52] of the parts in a bad way
+[00:52:54] for compromise of personal identity,
+[00:52:57] that any given fragment that's compromised
+[00:52:59] may not be such a big deal, but if it's becoming part of,
+[00:53:03] sort of the gray market dossier, that's not so hot.
+[00:53:08] And that there's kind of a one-way ratchet
+[00:53:11] that is more and more as compromised.
+[00:53:12] That's kind of what I'm taking from what Tarah is saying.
+[00:53:16] I realized as we're rounding the full hour,
+[00:53:20] we didn't open with our tradition of sort of the snapshot
+[00:53:25] of a word or three as you described
+[00:53:29] the state of the pandemic right now.
+[00:53:31] And I think Margaret, since we last convened,
+[00:53:34] the vaccines have been approved.
+[00:53:35] That had not happened when we were last talking I think.
+[00:53:39] And so, my recollection is that usually,
+[00:53:43] the assessments range from the horrible to the dire.
+[00:53:48] Can I just ask what your,
+[00:53:52] some of the state of play would be right now?
+[00:53:56] - Yeah, I mean,
+[00:53:57] I guess I gotta take the liberty of having two thoughts.
+[00:54:00] So, the first is the phrase,
+[00:54:02] "It was the best of times, It was the worst of times".
+[00:54:05] It seems to be how I would describe things.
+[00:54:08] I do think the vaccine is incredible.
+[00:54:10] And I sort of am sad that we had to prove
+[00:54:14] our scientific innovation prowess this way,
+[00:54:17] because, the worst of times,
+[00:54:20] where so many people are dying per day in the United States,
+[00:54:23] and basically we have completely run a mock,
+[00:54:26] as we come to the end of this year,
+[00:54:28] this is the other kind of reflection I shared
+[00:54:30] with some friends in the other show
+[00:54:33] that I do on question on quarantine,
+[00:54:35] is that, come to the end of the year,
+[00:54:37] we're facing a year that I think will be more hopeful,
+[00:54:40] but there's a need, I think,
+[00:54:43] to really pause and say that we failed,
+[00:54:48] like to admit failure is a very important part
+[00:54:51] of being able to do better in the future.
+[00:54:53] And I was saying, I love the movie "Moneyball",
+[00:54:56] and there's a scene in it where the coach, Billy Bean,
+[00:54:59] storms into the locker room after his team is lost,
+[00:55:03] and they're all, listening to music and kind of partying,
+[00:55:06] and he picks a baseball battery smashes the radio
+[00:55:10] and says in waits 10 seconds.
+[00:55:12] And he's like, "This is what losing sounds like".
+[00:55:16] And I do think at the bottom of the year,
+[00:55:17] here in this dark winter, I think we need to say like,
+[00:55:20] "This is what losing looks like",
+[00:55:22] 300,000 dead and a public health response
+[00:55:25] that is simply inadequate and unable
+[00:55:28] to really underwrite our security in the future.
+[00:55:32] But anyway, yes, I am more hopeful.
+[00:55:35] I mean, the light is there.
+[00:55:37] It is a dark tunnel, but there is a light.
+[00:55:39] And it's an incredible one,
+[00:55:41] a really incredible achievement these vaccines.
+[00:55:47] - Got it.
+[00:55:48] And Tarah, your sensibility?
+[00:55:52] - My sensibility is that I'm tired of with people
+[00:55:54] to stay in their houses and that the vaccines
+[00:55:56] are arriving fast.
+[00:55:59] And yet the level of disinformation
+[00:56:02] that's occurred over the course of this year ,
+[00:56:05] has created so much fatigue in people,
+[00:56:08] that I don't know how fast could have been fast enough.
+[00:56:12] I think that there is absolutely no doubt
+[00:56:13] that the faster we get people vaccinated,
+[00:56:16] the faster we're gonna be able to get a handle on this.
+[00:56:19] I think we're gonna see some incredible clashes
+[00:56:23] between people who...
+[00:56:26] We're in a privileged bubble in this conversation.
+[00:56:30] I don't know how many people I talk to on an everyday basis
+[00:56:34] understand that there is fundamentally
+[00:56:37] nearly half of this country right now
+[00:56:38] that doesn't believe anything we're saying,
+[00:56:40] isn't wearing a mask, and are going into hospital
+[00:56:43] still swearing COVID isn't real.
+[00:56:46] That's a problem I don't know if we know how to solve,
+[00:56:50] but I know that telling the truth as much as possible,
+[00:56:52] as fast as possible, as competently and simply as possible,
+[00:56:56] is what I think we're all trying to do here,
+[00:56:58] and the more people we have doing that,
+[00:57:00] engaging in that practice the better.
+[00:57:02] So, if you are somebody out there
+[00:57:03] who knows how to turn technology into a metaphor,
+[00:57:06] if you know how to explain that the operating system
+[00:57:10] that you're running right now,
+[00:57:11] how it's like a solar calculator,
+[00:57:13] if you know how to explain that something's like cooking,
+[00:57:15] If you know how to explain anything in technology
+[00:57:18] to someone and make them understand
+[00:57:19] the reality and the truth of it,
+[00:57:21] we need you right now in this moment.
+[00:57:23] Tell the truth as much as you can,
+[00:57:25] as simply and clearly as you can.
+[00:57:27] And tell people not just what this is,
+[00:57:29] because we know what it is,
+[00:57:29] but what it's like and what it's gonna do.
+[00:57:32] That's I think where I find myself on the pandemic.
+[00:57:35] Also filled with rage, genuinely and honestly.
+[00:57:38] We've been making these sacrifices all year long,
+[00:57:40] and I see so many people that don't.
+[00:57:42] And our holiday season is going to be darker and bleaker
+[00:57:45] because of the sacrifices we have been making this long.
+[00:57:49] And yet next year, I think it's gonna be a lot brighter.
+[00:57:53] We're gonna have to let some of that anger go.
+[00:57:55] I think, hang on.
+[00:57:56] I'm just gonna squeeze it a squishy ball here at my desk
+[00:57:58] for a while.
+[00:57:59] But I think that sense of frustration and anger
+[00:58:02] can be turned into something brighter next year,
+[00:58:03] and I'd love to see that.
+[00:58:05] - Well, thank you.
+[00:58:06] And for what it's worth,
+[00:58:07] I know among the pollers of public sentiment, the pollsters,
+[00:58:14] they are gonna be really interested it seems,
+[00:58:17] to find out how much of represented hesitation
+[00:58:21] about vaccines translates to actual hesitation
+[00:58:25] about vaccines.
+[00:58:26] Whether it's a snapshot of a moment now,
+[00:58:28] totally bound up in partisan declaration and advertisement
+[00:58:33] of feelings on either side, whether it's,
+[00:58:35] "I don't trust a vaccine that came about
+[00:58:36] "under the current administration",
+[00:58:40] or, "I'm on team 'don't take it seriously'
+[00:58:44] "because that's part of what America means to me",
+[00:58:48] that if it's that sort of thing,
+[00:58:50] it actually may not run so deep,
+[00:58:52] once there's something available at the local Walgreens.
+[00:58:55] But we'll find out,
+[00:58:56] I mean, this is gonna be running the experiment right now
+[00:59:01] to see how it's gonna work out.
+[00:59:03] And of course, Margaret has a lot to say,
+[00:59:06] perhaps in the next episode,
+[00:59:07] on vaccine distribution and allocation,
+[00:59:10] with its own issue and set of trade offs.
+[00:59:13] And I confess Margaret,
+[00:59:15] I wonder if all of the highly refined,
+[00:59:17] "Here's the ladder of people who will get it at what time",
+[00:59:20] it's gonna be like,
+[00:59:21] "It came off the truck, it's use it or lose it,
+[00:59:24] "pull out, anybody who wants to get in the lifeboat,
+[00:59:26] "get in the lifeboat".
+[00:59:28] - We have a lot to talk about there,
+[00:59:31] and I would say this as well, just to close it out.
+[00:59:35] I mean, people in the United States have not reacted
+[00:59:39] that differently than people in any epidemic
+[00:59:43] I've ever studied or been part of,
+[00:59:46] and it's almost hilarious how on script we are,
+[00:59:50] and the concerns, and the disbelief,
+[00:59:54] and the da da da da da, that's all very normal.
+[00:59:57] And I have a lot more faith
+[01:00:01] that people are gonna come around,
+[01:00:03] with consistent messaging,
+[01:00:05] and all the nudges, and all the incentives.
+[01:00:07] And then there are those that do not.
+[01:00:09] And I will say one thing my dad always said to me, he said,
+[01:00:12] "It's the person you can't reach",
+[01:00:14] he was a teacher.
+[01:00:15] He was talking about the kid you can't teach,
+[01:00:17] "For the kid you can't teach
+[01:00:18] "is actually the person that reaffirms humanity".
+[01:00:21] Because if you can teach every child,
+[01:00:23] then people would no longer be human.
+[01:00:25] There'd be completely, just manipulatable of automatons
+[01:00:28] that you could know what buttons to push
+[01:00:30] and leavers to pull and that would be that.
+[01:00:33] So, there always will be a reserve of people
+[01:00:35] who don't wanna play by the rules,
+[01:00:37] or don't want to do it,
+[01:00:38] and I try to lessen my anger by thinking
+[01:00:41] those are the people that are affirming humanity.
+[01:00:45] - It sounds like you're writing the script
+[01:00:47] for an Apple commercial circa 2012.
+[01:00:51] "Here's to the crazy ones".
+[01:00:52] - Oh.
+[01:00:55] - Indeed.
+[01:00:56] Well, it's at least as good to know that there appears
+[01:00:59] to be a kind of third act,
+[01:01:02] and then an end to this particular program, as it were,
+[01:01:06] not just COVID state of play, but COVID itself,
+[01:01:09] and possibly even heartening to know that
+[01:01:12] in the debates or what passed for them in Washington DC,
+[01:01:17] say about relief during this,
+[01:01:21] that now it's truly about stop-gap,
+[01:01:24] and we see an end point ahead for which,
+[01:01:27] "All right, let's just get ourselves there",
+[01:01:29] rather than we are in an indefinite situation,
+[01:01:32] and are we just gonna keep releasing money.
+[01:01:35] And that's where we're on the cusp of maybe
+[01:01:38] something getting past there.
+[01:01:39] Tarah, thank you so much for joining us today.
+[01:01:42] It's really great.
+[01:01:43] Thank you for sharing your knowledge and your rage,
+[01:01:46] and Margaret, a pleasure as always,
+[01:01:49] even the bleakness of the topic,
+[01:01:52] and of the reality of what this pandemic
+[01:01:56] has meant for so many people.
+[01:01:59] - Thank you so much.
+[01:02:00] - It's been a real honor.
+[01:02:01] Thank you so very much glad to be here with you guys.
+[01:02:05] - Indeed.
+[01:02:06] And we will catch you for the next episode.
+[01:02:09] - Bye bye.

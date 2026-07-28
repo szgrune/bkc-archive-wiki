@@ -1,0 +1,1984 @@
+[00:00:04] I made it
+[00:00:08] explicit no
+[00:00:10] you
+[00:00:13] started thank
+[00:00:16] you
+[00:00:18] on no you can't hear
+[00:00:24] me I could hear that but I couldn't hear
+[00:00:26] you all right well I'll speak a bit
+[00:00:28] louder then um thank you everyone in the
+[00:00:30] room and on Zoom uh for joining us for
+[00:00:32] today's RSM speaker series event um we
+[00:00:35] really cannot be more excited to welcome
+[00:00:37] Dave wner uh for a talk entitled
+[00:00:39] moderating Ai and moderating with AI I'm
+[00:00:43] sure everyone is excited to hear Dave so
+[00:00:44] I'll offer just the briefest note of
+[00:00:46] introduction um Dave was a member of
+[00:00:48] Facebook's original team of moderators
+[00:00:51] playing a key role writing its earliest
+[00:00:52] content policies and building the teams
+[00:00:55] and enforc them after leaving Facebook
+[00:00:57] he took on roles building the community
+[00:00:59] policy team and BNB and as head of trust
+[00:01:01] and safety at open Ai and he is now a
+[00:01:04] non-resident fellow in the program on
+[00:01:06] governance of emerging Technologies at
+[00:01:08] the Stanford cyber policy Center uh
+[00:01:10] Dave's experience in content moderation
+[00:01:12] and trust and safety expand almost the
+[00:01:14] entirety of their histories as Fields so
+[00:01:16] we're extremely lucky to welcome him
+[00:01:18] today to hear his thoughts on where the
+[00:01:20] space may be heading so that Dave
+[00:01:25] [Applause]
+[00:01:27] ler hi folks yeah um it's great to be
+[00:01:30] here just wanted to start by apologizing
+[00:01:32] as as uh was noted it's I've been doing
+[00:01:35] this the entire time and it is all my
+[00:01:37] fault so sorry about that um I wanted to
+[00:01:42] sort of make a case to all of you around
+[00:01:45] the use of AI and content moderation and
+[00:01:47] how I expect it to change things I have
+[00:01:50] come to think that how full Foundation
+[00:01:53] models are going to fundamentally
+[00:01:54] transform How We Do moderation um
+[00:01:57] there's been a lot of focus on the novel
+[00:01:59] risk that those models present um that's
+[00:02:03] that's fine those things are true I'm
+[00:02:04] not going to dwell on that today I think
+[00:02:06] it's been fairly well covered uh but the
+[00:02:08] models are also because of their unique
+[00:02:10] capabilities and ways of working going
+[00:02:12] to be very useful in solving problems
+[00:02:14] that have previously been intractable um
+[00:02:17] that's those sort of solutions are also
+[00:02:20] I think going to prove deeply
+[00:02:23] relevant to alignment questions in AI
+[00:02:26] itself because at least today our
+[00:02:28] current ways of controlling and steering
+[00:02:30] models are themselves Downstream of
+[00:02:33] techniques that actually have a lot of
+[00:02:35] shared DNA with how we do content
+[00:02:37] moderation at present so just to sort of
+[00:02:40] briefly recover who I am why you should
+[00:02:42] care to think about any of this I have
+[00:02:44] been working in this field for about 16
+[00:02:45] years at the Forefront of controlling
+[00:02:48] social technology first in social media
+[00:02:50] then in the sharing economy then in AI
+[00:02:53] um I've spent a lot of that time trying
+[00:02:56] to not just grapple with the problems of
+[00:02:59] emerging Tech technology but grapple
+[00:03:00] with using emerging technology to solve
+[00:03:03] the problems it creates so in addition
+[00:03:05] to working on policy itself um I spent a
+[00:03:08] lot of time at the intersection of
+[00:03:10] operations policy and tooling and
+[00:03:12] figuring out how we actually do the
+[00:03:15] rules that these platforms claim to have
+[00:03:18] um and I'm going to dwell a lot on that
+[00:03:20] that question of actual performance in
+[00:03:22] in the talk today currently I'm a fellow
+[00:03:24] of the Stan cyber policy Center I'm
+[00:03:26] spending a bunch of time on this subject
+[00:03:28] learning how to use use llms to do
+[00:03:30] content moderation uh with a guy named s
+[00:03:33] chakravati who's another fellow at the
+[00:03:35] center he ran Civic integrity at meta uh
+[00:03:38] from 2015 to 2021 we ended up doing the
+[00:03:41] same Fellowship sort of coincidentally
+[00:03:43] and we're having very similar thoughts
+[00:03:45] uh Beyond using off-the-shelf models
+[00:03:48] we're also doing some work trying to
+[00:03:50] train smaller large language models to
+[00:03:52] be good at this task specifically um
+[00:03:55] because we think that more efficient
+[00:03:57] models uh to be able to do this would be
+[00:03:59] help contribution to the space um I
+[00:04:02] bring all of that up just to make the
+[00:04:03] point that my perspective here is very
+[00:04:05] much a practitioner's perspective not an
+[00:04:07] academic perspective and I come to this
+[00:04:09] as someone just desperately trying to
+[00:04:11] solve these problems for the last nearly
+[00:04:13] 20 years um and very focused on what
+[00:04:16] practically works and how we use these
+[00:04:19] tools uh in practice not merely in
+[00:04:21] theory um so first to just sort of set
+[00:04:25] the table about why I have this strong
+[00:04:26] belief about about the importance of AI
+[00:04:28] in the future of content moderation I
+[00:04:30] want to do some grounding about how I
+[00:04:32] see content moderation today uh why it
+[00:04:35] works and and frankly why it doesn't
+[00:04:37] work very well um I think there's broads
+[00:04:40] spread agreement it doesn't work very
+[00:04:41] well it doesn't seem like controversial
+[00:04:43] to say here um bad things keep happening
+[00:04:46] to clearly innocent people watching
+[00:04:48] child safety hearings in the Senate
+[00:04:51] earlier this year is enough to sort of
+[00:04:52] demonstrate that to anyone there are
+[00:04:55] very serious social externalities that
+[00:04:56] are going on and this is naturally LED
+[00:05:00] a lot of public theorizing as to why
+[00:05:02] there's a lot of discourse in the
+[00:05:04] atmosphere about why social media uh
+[00:05:07] moderation doesn't work well and I've
+[00:05:10] come to think we're basically having a
+[00:05:11] problem of evil conversation about tech
+[00:05:15] Giants um the problem with evil is this
+[00:05:17] idea and theology that's concerned with
+[00:05:19] reconciling the existence of a
+[00:05:21] benevolent and omnipotent god with
+[00:05:23] suffering in the world and we're having
+[00:05:24] a problem of eval conversation about
+[00:05:26] marxer right if if uh mark Berg is good
+[00:05:30] and in full control of Facebook why do
+[00:05:32] bad things happen to people on his
+[00:05:35] platform um and a lot of the popular
+[00:05:37] explanations focus on this idea of
+[00:05:39] benevolence right there is either the
+[00:05:41] notion that they aren't trying that the
+[00:05:43] tech platforms don't care they're in
+[00:05:45] different uh there's the notion that
+[00:05:47] they're greedy that they sort of do care
+[00:05:49] but they don't want to spend the money
+[00:05:50] or there's the notion they're actively
+[00:05:52] malicious that they have bad values that
+[00:05:54] are that are antisocial and that we
+[00:05:55] don't want I those things may or may not
+[00:05:58] be true I don't think the root of the
+[00:06:00] problem the root of the problem is that
+[00:06:02] they're very far from omnipotent we're
+[00:06:04] put another way we're bad at content
+[00:06:06] moderation because we're bad at content
+[00:06:08] moderation we're not good at doing the
+[00:06:11] core activity and to understand why
+[00:06:14] we're bad at it it's important to take
+[00:06:16] apart moderation into a couple of
+[00:06:17] components values and the actual
+[00:06:21] classification task the values piece of
+[00:06:23] moderation receives a lot of attention
+[00:06:25] there's a lot of discussion about what
+[00:06:26] the rules should be um community
+[00:06:29] policies are primarily understood I
+[00:06:31] think as expressions of company's values
+[00:06:34] that's not
+[00:06:35] untrue but it is not the most
+[00:06:37] significant thing that those policies
+[00:06:39] Express I I've come to believe that the
+[00:06:43] focus on values is a form of bike
+[00:06:45] shedding bike shedding is this idea sort
+[00:06:47] of relies on a story sort of like
+[00:06:50] gaslighting uh that if we were all on
+[00:06:52] the board of a nuclear power reactor all
+[00:06:54] else equal we would spend more time
+[00:06:56] discussing the color of the new bike
+[00:06:57] shed of the reactor than would discuss
+[00:07:00] in nuclear safety because more of us can
+[00:07:02] have opinions about colors and bike
+[00:07:03] sheds that are qualified to have
+[00:07:05] opinions about nuclear safety values
+[00:07:07] function in that way in this discussion
+[00:07:09] everybody has values so it is easy to
+[00:07:11] have opinions about values uh the
+[00:07:13] reality is that the Sorting task
+[00:07:16] underneath the values the classification
+[00:07:18] task is the thing that we are very bad
+[00:07:20] at and that dominates any possible set
+[00:07:23] of values um to get into why sort of
+[00:07:26] classification matters it gives you some
+[00:07:28] examples of how that is the case
+[00:07:32] um there are lots of situations where
+[00:07:35] the value proposition that you want to
+[00:07:37] achieve is not particularly in dispute
+[00:07:39] or where the ability to do it is very
+[00:07:42] very hard um to give you some social
+[00:07:43] media examples reclaimed slurs are a
+[00:07:46] great example of this it's very
+[00:07:47] intuitive to say we want to allow people
+[00:07:49] who are members of community to use
+[00:07:51] certain language but actually doing that
+[00:07:53] requires you to know at scale who is a
+[00:07:56] member of that Community who they are
+[00:07:57] speaking to what the actual context the
+[00:07:59] conversation so doing the thing is hard
+[00:08:02] even if agreeing on whether or not the
+[00:08:03] thing is good or bad is hard um
+[00:08:07] similarly the controversies here often
+[00:08:09] make are often made worse by public
+[00:08:12] pressure um Facebook's breastfeeding
+[00:08:14] photos controversy back in 2009 2010 was
+[00:08:17] very much one of these problems of
+[00:08:19] classification the question of should
+[00:08:20] breastfeeding mothers be able to upload
+[00:08:22] photos of their children on Facebook is
+[00:08:25] not really that interesting of a policy
+[00:08:27] question getting a moderation system to
+[00:08:30] very consistently distinguish between
+[00:08:31] nudity where there's Babies involved and
+[00:08:33] counts as breastfeeding and nudity where
+[00:08:35] there's not is hard and flawed and so
+[00:08:37] the ability to execute on the policy is
+[00:08:39] challenging um the Napal girl incident
+[00:08:42] that happened in 2014 Napal girl is a
+[00:08:44] reference here to a photo that won a
+[00:08:46] Pulitzer Prize uh it's a photo of a girl
+[00:08:49] who' been attacked in Vietnam uh it's
+[00:08:52] very very intuitive to say all the pulit
+[00:08:53] surprise winning photos should be able
+[00:08:54] to be on Facebook but you have to know
+[00:08:57] what all the pits Sur priz winning
+[00:08:58] photos are and get everybody doing
+[00:09:00] moderation to know that too or you can't
+[00:09:02] actually achieve that policy goal
+[00:09:06] um so why are we bad at Large Scale
+[00:09:09] classification well we're bad at Large
+[00:09:10] Scale classification because
+[00:09:12] fundamentally we're trying to solve an
+[00:09:13] industrial scale problem with
+[00:09:16] pre-industrial Solutions um social media
+[00:09:19] is this Mass distribution machine that
+[00:09:21] requires no intervention for right it
+[00:09:23] allows billions of people to talk to
+[00:09:26] billions of other people nearly
+[00:09:28] instantaneously any direct human
+[00:09:30] intervention in the communication itself
+[00:09:32] is pure mass production of speech um but
+[00:09:36] we don't really have mass production
+[00:09:39] capability for the ability to moderate
+[00:09:41] speech we're still stuck in essentially
+[00:09:42] a peacework system uh peacework was a
+[00:09:45] was a way of manufacturing textiles and
+[00:09:48] and articles of clothing uh sort of in
+[00:09:50] the early Industrial Revolution when we
+[00:09:52] invented like the uh machines but hadn't
+[00:09:55] yet invented machines that could do sock
+[00:09:57] knitting um and so work would be
+[00:09:59] parceled out to people in their homes to
+[00:10:01] be done in an artisanal way to a
+[00:10:03] particular spec moderation today
+[00:10:05] essentially works exactly like that
+[00:10:07] right we have specific people sometimes
+[00:10:09] distributed sometimes in one place
+[00:10:11] working against a document that tells
+[00:10:13] them how to grade content as on an
+[00:10:16] artisanal level except they're doing it
+[00:10:18] on mass and systems like that have
+[00:10:21] trouble achieving very high degrees of
+[00:10:23] consistency we don't have Machinery to
+[00:10:26] do those core BL the process and I'm
+[00:10:28] going to sort of get into a little bit
+[00:10:30] why humans struggle so well so much to
+[00:10:32] do those processes well even where we do
+[00:10:35] have machinery for different parts of
+[00:10:36] this classification process the
+[00:10:38] Machinery itself mostly replicates the
+[00:10:41] problems that humans introduce into the
+[00:10:43] system as it exists today and then I
+[00:10:45] think finally the nature of language
+[00:10:47] itself uh probably caps how well we can
+[00:10:50] do this we're not you know making
+[00:10:51] machine parts here or or knitting fabric
+[00:10:54] we are ultimately dealing with
+[00:10:55] classification of language and culture
+[00:10:57] which is a fuzzy activity inherently
+[00:10:59] until so the upper boundary of
+[00:11:00] Excellence is probably fairly low um
+[00:11:04] that said until we make progress on at
+[00:11:06] least some of those human or machine
+[00:11:08] constraints we're not going to see
+[00:11:11] better moderation online um I think AI
+[00:11:14] is going to help with that because it
+[00:11:16] surpasses both human capability and the
+[00:11:18] capability of our current machines in a
+[00:11:20] number of very specific ways that I'm
+[00:11:22] going to get into after this after sort
+[00:11:24] of digging into specifically how humans
+[00:11:26] fail because the ways in which we're in
+[00:11:28] AC to these tasks are important
+[00:11:30] understanding the ways in which Els to
+[00:11:32] be helpful okay so why are human beings
+[00:11:36] bad at classification um we're better a
+[00:11:38] classification for a lot of physical
+[00:11:39] reasons our working memories are really
+[00:11:42] really small the length of the sort of
+[00:11:44] content policies you can feasibly write
+[00:11:46] as a policy writer are like maybe a few
+[00:11:48] pages maybe five maybe six that's not
+[00:11:50] because we couldn't write a much longer
+[00:11:52] treatment of what hate speech might be
+[00:11:55] or what how to tell whether a photo
+[00:11:57] contains nudity it's because most people
+[00:11:59] people can't actually use a 100 page
+[00:12:01] document about what hate speech might be
+[00:12:03] to make a thousand decisions a day um
+[00:12:06] particularly not if you want them to
+[00:12:07] stay up to dat on what that document
+[00:12:09] says and you're changing it all the time
+[00:12:12] um our long-term memories are also very
+[00:12:14] unreliable sort of alluded to this into
+[00:12:16] in a napon context but sort of Notions
+[00:12:19] of art which is again a thing I think we
+[00:12:22] all think is probably good and want to
+[00:12:23] have be on Facebook or Notions of what a
+[00:12:25] real name is are basically lookup
+[00:12:28] questions right there's no art pixels
+[00:12:31] artart is just all the stuff we've
+[00:12:32] decided as art as a society and so in
+[00:12:35] order to treat that stuff differently
+[00:12:37] you have to know what it is which means
+[00:12:38] you have to remember what it is and
+[00:12:40] people are not terribly good at
+[00:12:42] remembering huge amounts of very
+[00:12:44] specific facts about individual pieces
+[00:12:46] of content it can be done but that's
+[00:12:48] what getting a PhD is for it's not
+[00:12:50] something that you do as an hourly job
+[00:12:53] um we're quickly exhausted this work
+[00:12:55] gets coded as introductory level work as
+[00:12:58] entry level work
+[00:13:00] but focusing intently on content for
+[00:13:03] thousands of repetitions for 8 or 12
+[00:13:05] hours a day is intensely intensely
+[00:13:07] draining people get tired they make
+[00:13:09] mistakes they get bored uh which is
+[00:13:12] another sort of understated part of this
+[00:13:14] there's the trauma and emotional part of
+[00:13:16] the labor has been much discussed and
+[00:13:17] that is very much real but honestly a
+[00:13:19] lot of the time the work is dull uh many
+[00:13:23] of the things you're looking at are not
+[00:13:24] interesting to classify they're not
+[00:13:26] violating they're just kind of random
+[00:13:27] noise it's a little bit like staring at
+[00:13:29] like noise on a television screen and
+[00:13:31] waiting to see if something meaningful
+[00:13:33] shows up and it's very hard for people
+[00:13:35] to maintain Focus under those kind of
+[00:13:37] conditions um we rely on our own
+[00:13:40] internal models people don't really use
+[00:13:43] the rules to make these decisions they
+[00:13:45] read the rules once use them a couple of
+[00:13:47] times internalize some sort of
+[00:13:49] approximate model of whatever the rules
+[00:13:51] say well enough to not get in trouble
+[00:13:53] with their boss and then just keep doing
+[00:13:55] that until they get in trouble again and
+[00:13:56] so as these rules change uh people lag
+[00:14:00] in that change um we also typically
+[00:14:02] can't recall our reasoning um if you ask
+[00:14:05] a given moderator why they made a
+[00:14:07] particular decision when they made it
+[00:14:08] yesterday if they made a thousand
+[00:14:09] decisions they're almost certainly not
+[00:14:11] going to be able to tell you and so
+[00:14:13] while this is this human process which
+[00:14:15] sort of seems like it has meaning the
+[00:14:18] meaning is often not retrievable and
+[00:14:20] then finally and this one is often
+[00:14:21] hardest for folks to Grapple with we
+[00:14:24] really do not have any shared common
+[00:14:26] sense and and there's a couple of
+[00:14:29] specific examples that were really
+[00:14:30] important shaping my thinking so we and
+[00:14:33] warning upfront all of this is going to
+[00:14:34] get a little unpleasant from a Content
+[00:14:36] point of view um we were trying to
+[00:14:38] figure out how to classify cesan child
+[00:14:40] sexual uh abuse material at Facebook for
+[00:14:43] the purposes of creating the photo DNA
+[00:14:45] databases that today underly a lot of
+[00:14:47] the attempts to control that material
+[00:14:49] online we had 12 folks who' been doing
+[00:14:51] this for a year had been reporting
+[00:14:53] information to neck neck that entire
+[00:14:55] time these were full-time employees like
+[00:14:57] me these were kids who went to Stanford
+[00:14:59] har and when we asked them to classify
+[00:15:02] material that simply report to NE and
+[00:15:03] not report to NE without talking to each
+[00:15:05] other they could only agree about 40% of
+[00:15:07] the time and they've been doing this for
+[00:15:09] a year on what you would intuitively
+[00:15:12] think is the worst thing the easiest
+[00:15:14] thing to get consensus on no consensus
+[00:15:17] and most other areas are actually worse
+[00:15:19] than that um when we first tried to
+[00:15:21] Outsource nudity moderation to India we
+[00:15:24] we ran into a similar problem where we
+[00:15:26] had uh rules that it said also take down
+[00:15:28] anything that actually explicit Beyond a
+[00:15:30] bunch of particular things we listed and
+[00:15:33] immediately the moderator started taking
+[00:15:35] down photos of people kissing and
+[00:15:37] holding hands because what we meant and
+[00:15:40] what they understood those words to mean
+[00:15:41] were not the same because you just can't
+[00:15:44] assume share reference or shared values
+[00:15:47] um all of that is made worse by the
+[00:15:49] economic way we currently organize this
+[00:15:52] labor right so the work is very notably
+[00:15:54] poorly compensated I think some of that
+[00:15:56] is probably inevitable given both uh the
+[00:16:00] sort of scale of which it's done and a
+[00:16:02] bunch of the other things I'm going to
+[00:16:03] get into here um enforcing being sort of
+[00:16:07] forced into consistency is pretty
+[00:16:08] demoralizing it's an alienating form of
+[00:16:10] Labor particularly because this is labor
+[00:16:13] where people have strong moral feelings
+[00:16:15] about what they're being asked to do and
+[00:16:17] so it's unnatural to being to be asked
+[00:16:19] to put on a sort of another another
+[00:16:22] morality but putting on that other
+[00:16:24] morality to get everybody on the same
+[00:16:25] page is like the heart of the activity
+[00:16:28] so you kind of can't avoid that and that
+[00:16:30] is itself draining and not a ton of fun
+[00:16:33] um so people who have better options
+[00:16:34] leave right these are high turnover jobs
+[00:16:37] as a rule um in the context of this is
+[00:16:40] well known in the context of our
+[00:16:41] customer support but even for airbnb's
+[00:16:43] outsourced trust and safety teams the
+[00:16:45] average retention is about 9 months um
+[00:16:48] it's a very very short period of time
+[00:16:50] because when people have the ability to
+[00:16:51] do better work they go um that
+[00:16:53] undermines the approval of expertise it
+[00:16:56] also means that you have to invest a ton
+[00:16:58] in sort of training and updating the
+[00:17:00] system because you're constantly
+[00:17:02] teaching new people to do this stuff and
+[00:17:05] having to constantly reorient them as
+[00:17:07] you make changes so the entire system is
+[00:17:08] extremely cumbersome and doesn't need to
+[00:17:11] sort of update your ex results cool okay
+[00:17:14] I hopefully have convinced you at this
+[00:17:15] point people are not not good at sorting
+[00:17:17] things into piles um why is our
+[00:17:20] automation bad at this right our
+[00:17:23] existing automation is bad at this
+[00:17:24] because all it's really doing is
+[00:17:26] statistically copying what all those
+[00:17:28] people who are not good at this dip
+[00:17:31] right our our our most advanced
+[00:17:33] automation techniques our blackbox
+[00:17:34] machine learning is just predicting what
+[00:17:37] a human moderator would do if you ask
+[00:17:40] them to sort a piece of content
+[00:17:42] according to a policy it's just a
+[00:17:44] mathematical simulation of the result
+[00:17:47] you would get if you had bothered to ask
+[00:17:49] a person which is very useful to be
+[00:17:51] clear because a lot of the time it does
+[00:17:52] a pretty good job and it means you can
+[00:17:53] avoid asking people which is great
+[00:17:56] avoids trauma much faster has some real
+[00:17:59] sides but it also means that it inherits
+[00:18:01] the fuzziness and the unreliability and
+[00:18:03] the non-specificity that we bring to
+[00:18:05] that process um there are other forms of
+[00:18:09] automation but they're they're actually
+[00:18:12] even simpler right they're either
+[00:18:13] asserted if then rules exact word or
+[00:18:16] pattern matching they're all even less
+[00:18:18] nuanced they less capable we have no
+[00:18:21] automation that does the activity that
+[00:18:24] humans are actually doing as part of
+[00:18:26] this classification process we only have
+[00:18:28] automation that simulates the outcome of
+[00:18:31] the activity that they've been doing um
+[00:18:34] and actually the automation we have
+[00:18:36] today adds a bunch of other problems
+[00:18:37] their decisions are meaningless very
+[00:18:39] literally meaningless right they're not
+[00:18:42] making an argument about why a
+[00:18:43] particular piece of content fits or
+[00:18:45] doesn't fit a given policy they're
+[00:18:48] simply saying 95% this is shaped the
+[00:18:50] same way as other things you told me
+[00:18:51] violated this policy there's no meaning
+[00:18:54] to the decision which both makes it hard
+[00:18:56] to debug individual decisions and is
+[00:18:59] very disturbing for frankly people who
+[00:19:01] are subject to those decisions because
+[00:19:02] we want these things to have meaning uh
+[00:19:05] to be able to dispute them and to be
+[00:19:06] able to argue with them um updating the
+[00:19:09] models is also extremely cumbersome uh
+[00:19:11] training large machine models uh under
+[00:19:14] current circumstances needs thousands
+[00:19:16] tens of thousands of examples which
+[00:19:17] means every time you change your policy
+[00:19:19] not only are you having to update the
+[00:19:20] humans and wait for that to all phas in
+[00:19:22] you then have to wait for all those
+[00:19:22] humans tens of thousands of things to
+[00:19:24] then be able to gener your machine model
+[00:19:26] machine learning model so our automation
+[00:19:28] is also often very out of date to the
+[00:19:30] point where it's typically not fully
+[00:19:32] synchronized with whatever a given
+[00:19:33] platform's policy allegedly is at any
+[00:19:35] particular time which is confusing and
+[00:19:37] results in outcomes that are not so also
+[00:19:41] machine's not very good at
+[00:19:42] classification at least under current
+[00:19:43] circumstances and then on top of that I
+[00:19:46] I think the best we can ever hope for
+[00:19:48] here is significantly less precise than
+[00:19:53] what we can ever hope for in material
+[00:19:54] manufacturing right despite all of the
+[00:19:56] manufacturing analogies I've been making
+[00:19:58] we are not in fact making steel
+[00:20:00] cylinders with a metal frame lathe we
+[00:20:02] are playing around with words and words
+[00:20:04] are inherently vague um The Lang
+[00:20:08] language itself is just not terribly
+[00:20:09] precise and that's particularly true in
+[00:20:11] Mass scale social media where people
+[00:20:13] often write frankly fairly badly or
+[00:20:15] unclearly or approximately from a
+[00:20:18] jargony point of view
+[00:20:20] um everyday language is not meant to
+[00:20:24] convey precisely specific meanings it's
+[00:20:26] meant to be efficient in communicating
+[00:20:29] between people with are sharing context
+[00:20:31] and social media moderation doesn't
+[00:20:33] share that context it's a very radically
+[00:20:36] postmodern exercise all of the authors
+[00:20:38] might as well be dead there's only the
+[00:20:40] text you're sort of just staring at
+[00:20:42] these word boards after the fact and
+[00:20:44] that renders them very very difficult to
+[00:20:46] understand a version of this is the
+[00:20:49] conversation about cultural context that
+[00:20:51] comes up a lot um having more specific
+[00:20:53] cultural context is helpful here but
+[00:20:55] that's only a version of it and in a lot
+[00:20:57] of ways the easiest for verion to solve
+[00:20:59] right um local interpersonal context is
+[00:21:02] as big a part of this problem as broader
+[00:21:04] cultural context if I call you an
+[00:21:06] elephant am I calling you old wrinkly
+[00:21:09] gray fat wiser
+[00:21:11] Republic right there there's no there's
+[00:21:13] no way to know the answer to that
+[00:21:15] question outside of our specific
+[00:21:17] interpersonal relationship um and there
+[00:21:19] never will be and so we're sort of
+[00:21:21] tapped at the maximum here so that's the
+[00:21:23] the Doom part of this um as of aside all
+[00:21:27] of the problems outlined are also
+[00:21:29] problems for AI alignment under current
+[00:21:31] circumstances so our primary techniques
+[00:21:34] for AI alignment reinforcement
+[00:21:36] learning rely directly on curated data
+[00:21:40] sets of desirable behavior that we are
+[00:21:43] trying to get the machines to copy all
+[00:21:45] we're doing in RL is curating a set of
+[00:21:48] prompts and responses uh to the model
+[00:21:50] and from allegedly from the model that
+[00:21:52] we want the model to behave more like
+[00:21:54] and then doing a mathematical process to
+[00:21:56] get the model to ape that behavior
+[00:21:59] which means that ultimately what we are
+[00:22:01] aligning the model to do is dependent on
+[00:22:04] the same kind of content classification
+[00:22:06] has the same kind of content
+[00:22:07] classification problems that I've just
+[00:22:09] been talking about in the social media
+[00:22:11] context and you can see this in the two
+[00:22:13] kinds of reinforcement learning that get
+[00:22:15] talked about most frequently
+[00:22:16] reinforcement learning with human
+[00:22:18] feedback which is where we're having
+[00:22:20] humans do the classification and
+[00:22:21] reinforcement learning with AI feedback
+[00:22:23] which is where we're using AI to do the
+[00:22:25] classification like even in the activity
+[00:22:28] itself this is baked in there and then
+[00:22:30] all of our other techniques for
+[00:22:32] controlling the output of generative AI
+[00:22:33] today are just wrapping content
+[00:22:36] moderation techniques around either the
+[00:22:38] input prompts that people send to the
+[00:22:39] model or the outputs from the model in
+[00:22:42] response to inputs it's all the same
+[00:22:45] stuff and so thinking about how we can
+[00:22:47] do this core task better is relevant
+[00:22:50] both to social media but actually also
+[00:22:51] deeply relevant to conversations around
+[00:22:54] AI safety and you can see this in the
+[00:22:55] Google The Google Gemini blowup um which
+[00:22:59] was at least from my point of view
+[00:23:00] almost
+[00:23:01] certainly either some poorly thought
+[00:23:04] through alignment instructions or some
+[00:23:06] poorly thought through uh moderation of
+[00:23:09] the and moderation and modification of
+[00:23:10] the incoming problems to try to correct
+[00:23:13] for problems in the botel itself it's
+[00:23:15] simply failures of classification
+[00:23:16] technique and a lack of nuance in in
+[00:23:18] doing that task um as an example uh chat
+[00:23:22] GPT when we first launched it wouldn't
+[00:23:24] tell you facts about sharks because we
+[00:23:27] had taught the model that violence was
+[00:23:30] not good we didn't want it to help you
+[00:23:32] plan violence and we also didn't want it
+[00:23:33] to graphically describe violence and it
+[00:23:36] wildly over rotated and was like got it
+[00:23:38] bears are canceled no more bears we
+[00:23:40] can't talk about bears which is this
+[00:23:42] perfect example of this sort of
+[00:23:44] classification and over response of
+[00:23:45] these kind of
+[00:23:47] systems so setting all of that context
+[00:23:50] generative generative AI actually I
+[00:23:53] think going to be very helpful here um
+[00:23:55] used properly it is Poss possible to for
+[00:23:59] it to exceed both humans and machines
+[00:24:02] under existing real circumstances and by
+[00:24:05] used properly I mean a very specific
+[00:24:07] thing so the naming generative AI is in
+[00:24:10] a lot of ways I think distracting for
+[00:24:12] this purpose it's more important to
+[00:24:15] understand it as language parsing AI
+[00:24:17] reading AI it's we have machines now
+[00:24:20] that can do something that functionally
+[00:24:23] is equivalent to a human reading a
+[00:24:26] document and responding to it said which
+[00:24:29] means we have a machine that can
+[00:24:32] directly address the core activity that
+[00:24:35] a human moderator is doing instead of
+[00:24:37] merely producing the
+[00:24:40] result and I'm not speaking
+[00:24:42] theoretically here this already works
+[00:24:44] shockingly well uh one of the first
+[00:24:46] things we did internally with gp4 uh
+[00:24:49] when it became available to us in August
+[00:24:51] of a couple of years ago was try to
+[00:24:53] figure out how to use it to do content
+[00:24:55] moderation and within a week or two uh
+[00:24:59] me and a couple of other Engineers were
+[00:25:01] able to get to 90% plus consistency with
+[00:25:04] my decisions with the model reading a
+[00:25:07] document that you any of you could read
+[00:25:09] and following the instructions it
+[00:25:11] provided in order to classify content um
+[00:25:13] and things have only got me better from
+[00:25:15] there over I published a blog post about
+[00:25:16] this uh middle of last year about using
+[00:25:19] gbt for with content moderation there
+[00:25:21] are multiple startups pursuing this path
+[00:25:24] and it's something that I've continued
+[00:25:25] to work on at Stanford with lead who is
+[00:25:29] particularly interested in fine-tuning
+[00:25:31] smaller models to be able to do this
+[00:25:33] because the smaller you can make the
+[00:25:35] model the more broadly adoptable it will
+[00:25:37] be doing content moderation with gp4 is
+[00:25:39] a little bit like going to a grocery
+[00:25:41] store with in a Ferrari like you get
+[00:25:44] there it's very expensive and most
+[00:25:46] people don't have one and so building a
+[00:25:49] smaller more compact more usable more
+[00:25:51] broadly accessible system seems to us to
+[00:25:53] be pretty important when I say you can
+[00:25:56] in fact use these models to re policy
+[00:25:58] text follow it and classify content that
+[00:26:01] is not theory that is already happening
+[00:26:03] um and used in this way the llms
+[00:26:06] directly address a number of the
+[00:26:09] problems with human moderators right
+[00:26:11] their short-term memory is already
+[00:26:12] better than ours the largest models have
+[00:26:15] context lengths of hundreds of pages of
+[00:26:17] text and so you can load tons of
+[00:26:20] information into model from making a
+[00:26:21] specific decision their long-term memory
+[00:26:24] is or will be more reliable using things
+[00:26:27] like databases plung into a model to be
+[00:26:29] able to give very exact recall of large
+[00:26:31] amounts of
+[00:26:32] information they don't get bored they
+[00:26:34] don't get tired they don't lose focus
+[00:26:36] they don't seek better jobs they don't
+[00:26:38] experience trauma right which is is a
+[00:26:41] pretty important part of this there is
+[00:26:42] there's I think of no moral case to be
+[00:26:44] here as well um we can reasonably expect
+[00:26:47] them to record what they did and why
+[00:26:49] they did it according to the text as
+[00:26:51] they understood it at the time every
+[00:26:52] single time they make a decision and
+[00:26:54] store all of that information which
+[00:26:56] helps with things like the requirement
+[00:26:58] for explicability that is embedded in a
+[00:27:00] lot of recent European law um they're
+[00:27:02] also way way way way faster uh even the
+[00:27:05] largest models are much faster than
+[00:27:07] people even doing this very cumbersome
+[00:27:09] policy text driven process um and then
+[00:27:12] on the flip side the the llms are better
+[00:27:15] than existing Machinery because again
+[00:27:17] they're directly doing the task and so
+[00:27:21] they produce
+[00:27:22] responses that are scrutable are at
+[00:27:26] least feel meaningful right there's a
+[00:27:28] broader like philosophical question here
+[00:27:30] about whether or not they're really
+[00:27:32] reasoning honestly for these purposes I
+[00:27:34] don't think it matters um because they
+[00:27:37] are producing reason shaped answers in
+[00:27:41] language and those reason shaped answers
+[00:27:43] can be used to debug the decisions the
+[00:27:46] model made by changing the instructions
+[00:27:48] you gave it so when you have a model
+[00:27:51] make one of these decisions if you don't
+[00:27:53] agree with this decision you can simply
+[00:27:55] ask it why it will make a bunch of words
+[00:27:57] at you whatever you sort of think
+[00:27:59] metaphysically those words mean they are
+[00:28:01] useful for understanding how it was
+[00:28:04] functioning and you can incorporate that
+[00:28:06] feedback back into the policy text to
+[00:28:09] produce change behavior and this works
+[00:28:12] really really very well and so it's
+[00:28:14] functionally equivalent to an
+[00:28:16] explanation in the sense that it is a
+[00:28:18] word shaped response that helps you
+[00:28:20] understand what happened and why and do
+[00:28:22] something about it and so at least to me
+[00:28:25] a lot of the sort of hand ringing around
+[00:28:27] whether or not this is true reason is
+[00:28:29] irrelevant at least functionally for
+[00:28:31] this task in the short term that's not
+[00:28:33] me dismissing those concerns in a sort
+[00:28:35] of longer term more AGI focused way but
+[00:28:38] for this Purpose with something like
+[00:28:41] gp4 it it's neither here nor there to a
+[00:28:43] very great degree um I'd also point out
+[00:28:46] that when you're dealing with really any
+[00:28:48] people but certainly people in a mass
+[00:28:50] bureaucratic system you don't understand
+[00:28:52] why anybody does what they do either uh
+[00:28:55] and it's very very difficult to sort of
+[00:28:56] get that recall or get reasons that mean
+[00:28:58] anything out of the systems as we have
+[00:29:00] today so it's also not super clear to me
+[00:29:03] that the alternative is really well
+[00:29:05] thought out clearly described reasons
+[00:29:09] um I don't want to stand here and and
+[00:29:11] sort of make the case that this is
+[00:29:13] magically going to solve all of our
+[00:29:14] problems so please do not take me as
+[00:29:17] saying that so first the systems
+[00:29:18] themselves will have flaws um they're
+[00:29:20] going to make mistakes some of those
+[00:29:22] mistakes are Downstream of some of the
+[00:29:25] sort of language limits that I talked
+[00:29:27] about earlier but some of those mistakes
+[00:29:29] are simply going to be errors or
+[00:29:30] problems with the performance of the
+[00:29:32] model they're going to have biases
+[00:29:34] there's been a fair amount of reporting
+[00:29:35] about this already in the use of these
+[00:29:37] systems for things like uh hiring
+[00:29:40] decisions or other kinds of adjudication
+[00:29:42] decisions that's very real I'm not
+[00:29:44] minimizing that we need to work on those
+[00:29:46] problems but I would say that at least
+[00:29:49] those are static engineering shaped
+[00:29:52] problems instead of the situation we
+[00:29:54] have now where all of the individual
+[00:29:56] moderators also make mistakes and also
+[00:29:59] have
+[00:29:59] biases but who they are changes every n
+[00:30:02] months and so understanding correcting
+[00:30:05] for controlling those biases is
+[00:30:07] essentially I think impossible at
+[00:30:09] present because it is this sort of roing
+[00:30:11] mass of chaos simply pinning down the
+[00:30:14] biases to a single set of them such that
+[00:30:17] we can start to try to study understand
+[00:30:18] and engineer account for them feels
+[00:30:21] better and more tractable than where
+[00:30:23] we've been where there's this
+[00:30:25] essentially uh like ever turning
+[00:30:28] cauldron of biases that is never static
+[00:30:30] and therefore cannot be stabilized
+[00:30:33] um I also do think that this is going to
+[00:30:36] circling back around to my earlier point
+[00:30:38] that classification is more important
+[00:30:39] than values I weirdly think if I'm right
+[00:30:42] about this we're going to have more
+[00:30:43] fighting about values because we're
+[00:30:45] going to be better at doing the thing
+[00:30:47] and so what the values are is going to
+[00:30:49] start to matter more and I think you're
+[00:30:52] going I think you're already seeing
+[00:30:54] shadows of this in some of the sort of
+[00:30:56] woke AI culture more stuff that is
+[00:30:58] starting to creep into AI alignment
+[00:31:00] conversations and some of the reaction
+[00:31:02] of Gemini so oddly as we get better at
+[00:31:04] doing the activity we're just going to
+[00:31:07] fight more about values
+[00:31:09] um that said I I do think and I sort of
+[00:31:12] lampshaded this earlier I think it's
+[00:31:13] morally urgent that we figure out how to
+[00:31:15] do this even even given all of those
+[00:31:17] flaws having people continue to do this
+[00:31:20] work is is bad right and there's been a
+[00:31:23] lot of focus
+[00:31:25] on ways in which the work conditions can
+[00:31:28] be made better ways in which pay can be
+[00:31:30] more Equitable breaks can be given
+[00:31:32] preventative techniques for controlling
+[00:31:33] Wellness all those things are good given
+[00:31:35] no alternative uh but in a lot of ways
+[00:31:38] they seem to me to be questions of like
+[00:31:40] engineering a better radiation suit when
+[00:31:42] maybe we could just have a robot do it
+[00:31:44] instead and not worry so much about
+[00:31:45] radiation protection right like the
+[00:31:47] problem with radium girls making watch
+[00:31:49] faces wasn't just that they were licking
+[00:31:51] the radium it's that they were painting
+[00:31:53] watch faces with radioactive material
+[00:31:55] which is not a safe or good idea um and
+[00:31:58] I think getting to the point where we
+[00:32:01] can relieve the sort of direct coalface
+[00:32:04] labor here from humans is an actively
+[00:32:06] good thing even though it is Frau um I
+[00:32:10] think that's actually doubly true for
+[00:32:11] marginalized groups personally right
+[00:32:13] part of the sort of perverse shadow of
+[00:32:16] the request for more cultural context
+[00:32:18] being rejected into moderation is it's
+[00:32:20] essentially a call for the enlistment of
+[00:32:22] people who are victimized by speech in
+[00:32:25] the controlling of that speech to begin
+[00:32:27] with which is
+[00:32:28] perverse um when we think about it that
+[00:32:30] way um this will mean I think job losses
+[00:32:34] particularly at
+[00:32:35] bpos but again it's not clear to me the
+[00:32:38] job losses are per se bad if the jobs
+[00:32:40] themselves are dangerous toxic and not
+[00:32:42] conducent to human thriving I also think
+[00:32:44] it will mean more jobs overseeing these
+[00:32:46] systems on the on the CP side um so even
+[00:32:51] with all of those caveats this is a
+[00:32:52] really big deal if you accept the case I
+[00:32:55] have made to you not just because it's
+[00:32:58] not just going to mean we are going to
+[00:32:59] lift and drop AI in place of human
+[00:33:02] formline moderators right it will change
+[00:33:04] the kind of systems that are viable to
+[00:33:08] have um it opens up new new sort of like
+[00:33:11] possibilities of moderation um things
+[00:33:14] like super deeply personalized
+[00:33:16] moderation become more feasible ambient
+[00:33:18] moderation becomes more feasible I think
+[00:33:20] in the future llm powered systems are
+[00:33:22] going to allow things like Siri to
+[00:33:24] prevent your grandmother from being Pig
+[00:33:26] butchered over the phone which is an
+[00:33:28] like inconceivable thing to try to do
+[00:33:30] right now but seems very possible in
+[00:33:33] this sort of future in the same way that
+[00:33:36] deeply personalized moderation filters
+[00:33:38] seem possible um it is utterly
+[00:33:41] transformative of the policy drafting
+[00:33:42] process right now a lot of content
+[00:33:45] policy is basically astrology about how
+[00:33:47] moderators will work will react to the
+[00:33:49] words that you wrote uh you're sort of
+[00:33:51] guessing because the update time is so
+[00:33:52] long and retraining is so cumbersome
+[00:33:55] that you can't really do empirical
+[00:33:56] testing of the outcomes of your
+[00:33:59] decisions feasibly these systems respond
+[00:34:02] instantly to your word changes which
+[00:34:04] means you can actually test different
+[00:34:07] versions and approaches to things and
+[00:34:08] see how that produces different outcomes
+[00:34:11] which is revolutionary in terms of the
+[00:34:13] the policy process directly I think it
+[00:34:15] also is going to open up new policy
+[00:34:18] Vistas not just new processes right um
+[00:34:21] right now we have generally Global
+[00:34:23] moderation standards on the Social Web
+[00:34:25] um because frankly it's to cumber some
+[00:34:28] to do Nation by Nation moderation for
+[00:34:30] anything but the most sort of large
+[00:34:32] scale blocks that may no longer be true
+[00:34:36] right we could potentially start to
+[00:34:37] think about really localized or
+[00:34:39] regionalized moderation standards
+[00:34:42] um and then similarly like different
+[00:34:44] moderation philosophies that no one has
+[00:34:47] ever really to my knowledge seriously
+[00:34:49] tried to engage in at scale become
+[00:34:51] possible things like deeply
+[00:34:53] intersectional approaches to moderation
+[00:34:55] which no one has ever tried to do
+[00:34:57] because just like wildly comosum and
+[00:34:59] practical might become possible with
+[00:35:02] these sort of tools um a bunch of those
+[00:35:05] ideas are probably bad to be clear like
+[00:35:07] I'm not saying all of the things I just
+[00:35:08] said should happen I'm saying they're
+[00:35:11] now not impossible and there will be
+[00:35:13] other better ideas that are now not
+[00:35:15] impossible which is going to be very
+[00:35:17] interesting similarly changing the
+[00:35:19] cumbersomeness of our moderation
+[00:35:21] technology will change the kinds of
+[00:35:23] platform designs that are valuable
+[00:35:25] viable um there's been a lot of
+[00:35:27] discussion of network effects in social
+[00:35:29] media yes I think an underd discussed
+[00:35:32] aspect of the reason we've seen a lot of
+[00:35:34] centralization in social media is how
+[00:35:36] annoying moderation is to do at scale I
+[00:35:39] I have been very skeptical of Federated
+[00:35:41] Solutions simply because I did not
+[00:35:43] understand how that was going to work at
+[00:35:45] the level of Mastadon except scaled up
+[00:35:47] to Facebook size these sorts of systems
+[00:35:51] might actually provide the ability to
+[00:35:53] make that kind of a system work um just
+[00:35:56] as an example of this sort of cons
+[00:35:57] solidation I think you naturally see due
+[00:35:59] to moderation think about Reddit and the
+[00:36:01] power mod situation Reddit is
+[00:36:03] technically this sort of flat Federated
+[00:36:05] system but the reality is like a few
+[00:36:07] thousand people moderate half of Reddit
+[00:36:10] because it is in fact a full-time job
+[00:36:12] that has caused a bunch of concentration
+[00:36:13] in the sort of bureaucratic processes to
+[00:36:16] do that moderation even in a system that
+[00:36:18] is designed to become so I think that's
+[00:36:20] really really interesting push to the
+[00:36:22] extreme why are we even talking about
+[00:36:25] postul moderation at all if I'm right
+[00:36:27] this why aren't you ending up in
+[00:36:30] dialogue with the text box you're trying
+[00:36:32] to write in about whether or not what
+[00:36:34] you're saying is constructive again
+[00:36:36] maybe creepy maybe a bad idea but a
+[00:36:39] possible idea now and I think there will
+[00:36:41] be more versions of that um these
+[00:36:43] systems are also going to create new
+[00:36:45] kinds of abuse right ultimately this
+[00:36:47] technology is technology for sorting
+[00:36:50] things into piles regardless of what
+[00:36:51] your piles are and why you want to do
+[00:36:53] that um so it is going to be useful for
+[00:36:56] things like uh censorship and
+[00:36:58] surveillance it's going to be useful for
+[00:37:00] things like JW owning the virtuousness
+[00:37:02] of these tools is simply a product of
+[00:37:04] how they are used it's not a product of
+[00:37:06] the tools themselves I think we could
+[00:37:08] easily see the law start to try to
+[00:37:10] specify exactly what your content
+[00:37:12] moderation prompts and standards will be
+[00:37:15] um that is probably a bad idea but I
+[00:37:18] suspect we will see some folks attempt
+[00:37:20] it at some point as it becomes more and
+[00:37:22] more possible um all of that said though
+[00:37:25] I think this is coming you know matter
+[00:37:27] what I'm really quite sure that some
+[00:37:30] version of this is going to come to
+[00:37:32] fruition and so I think we all have an
+[00:37:34] obligation to sort of embrace it and try
+[00:37:36] to figure out how to use it well now so
+[00:37:39] that we're not left on the back foot uh
+[00:37:41] when it becomes increasingly prevalent
+[00:37:43] so with all that said a hope that was
+[00:37:46] convincing and B just want to leave you
+[00:37:48] with an even more provocative question
+[00:37:50] which is what would the internet look
+[00:37:53] like if we weren't terrible at content
+[00:37:56] moderation the internet has been assumed
+[00:37:58] to be a sort of semi anarchic space
+[00:38:01] there's been a lot of discourse about
+[00:38:02] how that has become less true over time
+[00:38:05] and some I think amount of listful
+[00:38:07] warning for a Freer version of the
+[00:38:09] internet among at least certain quarters
+[00:38:11] but really we're still pretty bad at
+[00:38:13] content moderation if I'm right about
+[00:38:15] this I think it might start to really
+[00:38:17] seriously change the Dynamics of how the
+[00:38:19] web even could work in ways that I think
+[00:38:23] are really hard to sort of get our heads
+[00:38:24] around maybe bad maybe good but
+[00:38:27] worth sort of noodling on in so far as
+[00:38:29] you accept case so that I'm done all
+[00:38:33] right thank you
+[00:38:39] Dave um I'm just going to start out with
+[00:38:41] a couple related questions from folks
+[00:38:43] online but if people have questions in
+[00:38:44] the room just flag down my colleague
+[00:38:46] we'll be running around the mic um the
+[00:38:48] first question um uh deals with you
+[00:38:52] mentioned sort of the ability to
+[00:38:53] retrieve the reasoning of LMS when
+[00:38:55] they're making these decisions yeah how
+[00:38:56] does that inter intersect and interact
+[00:38:58] with the possibility of hallucination
+[00:39:01] and then also um policy statements are
+[00:39:03] often intentionally kept high level and
+[00:39:05] Broad and how well can llms capture the
+[00:39:08] soci cultural context um from broadly or
+[00:39:11] that are relevant to implementing
+[00:39:13] broadly described policies and a related
+[00:39:15] question to that to that second Point um
+[00:39:19] uh words change or the meaning of words
+[00:39:21] change pretty rapidly and increasingly
+[00:39:23] so um especially with regional dialects
+[00:39:25] and how does that how is that address or
+[00:39:28] um how does that interact with the set
+[00:39:31] of problems that you're describing yeah
+[00:39:33] great question so on the sort of uh
+[00:39:35] recall of
+[00:39:37] reasoning really specifically what I'm
+[00:39:39] proposing there is asking the model to
+[00:39:41] actually print a reason that you then
+[00:39:43] store every time it makes a decision um
+[00:39:46] the hallucination question is a little
+[00:39:48] bit separate from that mechanically in
+[00:39:50] the context of how we've used these so
+[00:39:52] far you're actually feeding the model
+[00:39:54] the policy text every time as a prompt
+[00:39:57] and that is that sort of grounding in
+[00:40:00] the specific document you're using it to
+[00:40:01] make you're asking it to use to make a
+[00:40:03] decision is very helpful not perfect but
+[00:40:05] very very helpful in controlling
+[00:40:06] hallucination Hallucination is often
+[00:40:09] worse when you're asking the model to
+[00:40:10] sort of remember what it knows whereas
+[00:40:13] if you're asking it what does this
+[00:40:14] document say that is helpful in reducing
+[00:40:17] hallucination that is it is absolutely
+[00:40:19] an issue again though people also make
+[00:40:23] all kinds of really weird choices um and
+[00:40:25] so the question is not is is that an
+[00:40:27] issue or not it's is it better than the
+[00:40:29] status quo and will it continue to
+[00:40:31] improve um we have
+[00:40:33] spent you know nearly two decades and
+[00:40:36] billions of dollars trying to squeeze
+[00:40:38] more juice out of the human moderation
+[00:40:39] lemons and I I just don't think there's
+[00:40:41] any more juice in those lemons but we
+[00:40:43] have some new lemons and maybe there's
+[00:40:45] maybe there's juice there um you had two
+[00:40:48] other questions um the the changing
+[00:40:50] meaning of words over time and that's
+[00:40:52] that's happening rapidly these days yeah
+[00:40:54] so that that definitely is a problem uh
+[00:40:56] part of that is something you can
+[00:40:57] address with the sort of database and
+[00:40:59] long context uh stuff that I was talking
+[00:41:01] about where you simply tell the model
+[00:41:03] here is how you will understand words to
+[00:41:05] be understood for this task at any given
+[00:41:07] time um and so there is actually I think
+[00:41:10] in some ways more ability to direct
+[00:41:12] models there relative to people who
+[00:41:14] again also have that sort of freshness
+[00:41:16] problem um so there there are very
+[00:41:19] serious advantages about keeping
+[00:41:20] everything on this same
+[00:41:23] page any we have a question in the room
+[00:41:25] hey Dave hey back here um
+[00:41:27] so I'm gradu fell the B Client Center
+[00:41:29] this year uh and I used to work on
+[00:41:31] content moderation issues before I got
+[00:41:32] to law school um you know I think the
+[00:41:35] time Horizon for what what people were
+[00:41:38] concerned about with like social media
+[00:41:40] and content moderation I think like when
+[00:41:41] you were first starting like Facebook
+[00:41:43] way back in the day probably a lot of
+[00:41:46] folks in the hill in particular weren't
+[00:41:47] as concerned with content moderation
+[00:41:49] they weren't thinking about it as much I
+[00:41:50] think you fast forward to today like it
+[00:41:52] probably would be I don't know probably
+[00:41:55] most legislators folks he'll know a
+[00:41:57] little a little bit about SE at least
+[00:41:58] they've heard about right it seems that
+[00:42:00] time Horizon with like artificial
+[00:42:01] intelligence is specifically generative
+[00:42:03] AI is much shorter but the the fear and
+[00:42:06] like concern with it is also much
+[00:42:08] shorter too like the the the rise and
+[00:42:09] concern happen much faster than I think
+[00:42:11] the content moderation issues and I'm
+[00:42:13] wondering to the extent you're speaking
+[00:42:14] to like policy makers or Regulators what
+[00:42:17] do you what do you or if you have
+[00:42:18] thoughts for them what are you saying to
+[00:42:20] them about like things they should
+[00:42:21] actually be concerned about instead of
+[00:42:23] like maybe some of these like culture
+[00:42:25] War like Boogeyman type issues
+[00:42:27] yeah there's been a lot of focus in the
+[00:42:30] the sort of focus on AI around longer
+[00:42:33] term questions there's been a lot of
+[00:42:34] discussion around biorisk and similar
+[00:42:36] issues I actually think I'm not saying
+[00:42:38] those aren't important but I actually
+[00:42:40] think we sort of missed the boat a
+[00:42:41] little bit on some of the shorter term
+[00:42:43] content related issues um Less in the
+[00:42:45] text model space but in the image uh and
+[00:42:47] video model space uh open-source image
+[00:42:51] models are able to
+[00:42:53] generate uh large amounts of Cam and
+[00:42:56] it's really really difficult to control
+[00:42:57] those there's been some interesting work
+[00:42:59] from siio around this topic right now I
+[00:43:02] think Regulators are overfocused on the
+[00:43:05] long term versus some relatively
+[00:43:07] specific short-term problems that are
+[00:43:09] happening that honestly shouldn't be
+[00:43:11] super controversial from a cultural
+[00:43:12] point of view because they revolve
+[00:43:14] around some pretty core abuses that we
+[00:43:16] still do have social consensus
+[00:43:20] on and another question in the
+[00:43:24] room go ahead yeah I don't next okay
+[00:43:28] seems like one difference between the
+[00:43:30] internet that worked fairly well 20
+[00:43:32] years ago and the one that doesn't work
+[00:43:33] that well now is the scale that you've
+[00:43:37] talked about y but maybe the answer here
+[00:43:40] isn't to try to you know throw more AI
+[00:43:43] into the problem but to you know back
+[00:43:46] away from the large scale and back to a
+[00:43:49] time when you had many people on many
+[00:43:50] different platforms Each of which had
+[00:43:52] its own you know
+[00:43:54] idiosyncratic moderation policy and
+[00:43:57] people would just sort themselves into
+[00:43:58] the communities that they felt they
+[00:43:59] belonged
+[00:44:01] in
+[00:44:03] um yeah this is essentially the
+[00:44:05] Federation proposal as a solution I am
+[00:44:08] skeptical of federation as a solution
+[00:44:10] because it doesn't address the worst
+[00:44:12] kinds of harms um because some like
+[00:44:15] space owners are going to be bad actors
+[00:44:17] but in so far as we're dealing with
+[00:44:19] harms where the issue is I don't want to
+[00:44:21] be exposed to a particular kind of
+[00:44:23] content sorting is great and and we
+[00:44:25] should encourage it this isn't be saying
+[00:44:26] it's like a bad thing it doesn't deal
+[00:44:29] with the kinds of harms where the
+[00:44:30] problem is content that people see about
+[00:44:32] me right the problem in the context of
+[00:44:34] ncii non-consensual intimate intimate
+[00:44:37] imagery isn't that I saw my nudes it's
+[00:44:40] that you saw my nudes right um and so
+[00:44:43] there's no really great answer sort of
+[00:44:45] absent essential Authority for those
+[00:44:47] kinds of problems and those are in fact
+[00:44:49] the worst harms that happen in the
+[00:44:51] content space nearly universally in my
+[00:44:55] view the
+[00:44:59] from my name is Matilda from biion
+[00:45:02] business school I work with the UN on
+[00:45:05] online harms regulation particularly CA
+[00:45:08] and with MIT on AI biases so my question
+[00:45:12] to you is uh you have mentioned mechm
+[00:45:16] there are many developments currently
+[00:45:18] that are leading towards ENT to and
+[00:45:20] encryption and we know first what what
+[00:45:23] happened with the CM regulation after
+[00:45:26] what'sapp one in and encrypted how and
+[00:45:31] and now we are seeing the same with uh
+[00:45:34] Messenger right so how do you see these
+[00:45:36] uh these developments that are leading
+[00:45:38] towards uh anonymization or enter and
+[00:45:41] decryption and all of these other
+[00:45:43] similar uh developments affecting the
+[00:45:47] moderation thank you very much so this
+[00:45:50] is where the sort of like wild
+[00:45:51] possibility stuff gets really
+[00:45:53] interesting um and I I wish in a lot of
+[00:45:55] ways we had a healthier conversation
+[00:45:57] about the trade-offs between am I am I
+[00:46:00] done I wish in a lot of ways we had a
+[00:46:02] healthier conversation about the
+[00:46:03] trade-offs between privacy and safety
+[00:46:05] because I think they are real and
+[00:46:07] they're uncomfortable and that leads us
+[00:46:09] to sometimes try to dodge them um when I
+[00:46:13] say that I feel like when people say
+[00:46:15] that they often sort of steer into a and
+[00:46:18] we're overvaluing privacy versus safety
+[00:46:20] that's not necessarily what I'm saying
+[00:46:21] I'm more saying we need to be honest
+[00:46:24] with ourselves about difficult
+[00:46:25] trade-offs and the downsides that they
+[00:46:26] care carry in both directions um I also
+[00:46:30] think though that some of the stuff I'm
+[00:46:32] pointing to might have really
+[00:46:34] interesting implications about ways to
+[00:46:35] compromise um you could conceivably if
+[00:46:38] I'm right get an AI moderator to be
+[00:46:40] really really excellent at interdicting
+[00:46:42] certain kinds of super problematic
+[00:46:44] material and lock it inside of an
+[00:46:46] encrypted space such that it's never
+[00:46:47] doing reporting but it is doing
+[00:46:49] interception again maybe a bad and
+[00:46:51] creepy idea but a now not impossible
+[00:46:54] idea in a way that previously that was
+[00:46:56] sort of out side of the design space to
+[00:46:58] even consider so I think there's some
+[00:46:59] interesting implications for even that
+[00:47:01] tension of of some of this if I'm
+[00:47:03] correct about where it leads great just
+[00:47:06] a couple questions from online um one is
+[00:47:08] asking you about uh how the moderation
+[00:47:11] tuning and red teaming of LMS themselves
+[00:47:13] has parallels to and differences from
+[00:47:15] moderating social media have the G of AI
+[00:47:18] companies learn the lessons they should
+[00:47:19] have and then a couple related questions
+[00:47:22] about using um using generative AI in
+[00:47:25] linguistic and cultural Contex other
+[00:47:27] than English and outside of the minority
+[00:47:30] world yeah so um in terms of the
+[00:47:33] similarities and differences with social
+[00:47:35] media moderation so content is content
+[00:47:38] right at some level the products here
+[00:47:41] are not AI is not capable of making a
+[00:47:45] picture that a human could not make
+[00:47:47] conceivably it does it more quickly um
+[00:47:50] but you know we have Photoshop we have
+[00:47:51] been uploading billions of us have been
+[00:47:53] uploading things onto the internet for a
+[00:47:54] decade so functionally all of the photos
+[00:47:56] that can exist have been on social media
+[00:47:59] uh and so in that sense yes there there
+[00:48:01] very much our lessons to learn um and
+[00:48:03] there has been a movement of trust and
+[00:48:04] safety professionals with social media
+[00:48:06] backgrounds into the AI space I think
+[00:48:08] because the companies do do realize this
+[00:48:11] um there are other parts of that that
+[00:48:13] are unique and red teaming is actually
+[00:48:15] one of those areas where it's
+[00:48:16] particularly unique and that's because
+[00:48:18] the the question with red teaming which
+[00:48:20] is the the process of sort of prodding
+[00:48:22] the model to try to get it to do
+[00:48:24] something that it shouldn't do uh is a
+[00:48:26] multi- turn conversation it's not just
+[00:48:28] an interception or a singles or pass
+[00:48:31] question you're you're essentially
+[00:48:32] trying to convince SL bully a robot into
+[00:48:36] generating something for you that its
+[00:48:38] creators trying to teach it not to
+[00:48:39] create and that process is very
+[00:48:42] different than sort of testing social
+[00:48:44] media systems because there is evasion
+[00:48:47] in those systems but there isn't that
+[00:48:49] sort of convincing process in quite the
+[00:48:51] same way and that is is near interesting
+[00:48:54] I do think the AI companies
+[00:48:57] so it's hard to generalize about them
+[00:49:00] right Google is a very different thing
+[00:49:01] than open AI or anthropic as an
+[00:49:03] organization because it's a massive
+[00:49:05] Behemoth that directly owns a bunch of
+[00:49:07] social media open a andrc are both very
+[00:49:09] much startups and so have they learned
+[00:49:12] the lesss of social media is sort of a
+[00:49:14] weird question to ask about that group
+[00:49:16] but I do think that we are not starting
+[00:49:19] over in quite the same way there's still
+[00:49:21] an organizational capacity building
+[00:49:23] question particularly on the startup
+[00:49:24] side but there has been a lot of
+[00:49:26] learning from that uh in terms of low
+[00:49:29] resource languages it's actually a great
+[00:49:30] question that I skipped over in my notes
+[00:49:32] but um supporting low resource languages
+[00:49:35] and cultures with traditional moderation
+[00:49:37] Solutions is really hard there's there's
+[00:49:39] as many people in Massachusetts as there
+[00:49:41] are in Serbia and um that's difficult to
+[00:49:45] staff for and Serbia is frankly like a
+[00:49:47] fairly big example right as you get to
+[00:49:50] smaller minority languages that becomes
+[00:49:52] really really hard um llms aren't going
+[00:49:55] to magically solve that but I do think
+[00:49:57] that if we intentionally train for them
+[00:50:00] to be capable of it they will eventually
+[00:50:02] prove better at load balancing because
+[00:50:04] you can support the capacity to
+[00:50:07] understand those languages in detail
+[00:50:09] better than you can when you have to get
+[00:50:11] a group of humans where if you want 247
+[00:50:13] coverage 365 days a year you're talking
+[00:50:17] about at least 21 people to cover you
+[00:50:20] know like a decent a decent amount of of
+[00:50:23] uh a decent amount of content and so
+[00:50:25] that gets difficult to sort of
+[00:50:27] uh justify if you're not seeing enough
+[00:50:29] content in a particular language to
+[00:50:31] actually justify that many jobs so I I
+[00:50:33] think there's hope there as well but it
+[00:50:35] will require Focus it's not just going
+[00:50:36] to magically happen and just another
+[00:50:38] round of online questions and we'll move
+[00:50:40] back to the room um two about sort of
+[00:50:42] the commercial implications of what
+[00:50:43] you're describing um one question is
+[00:50:45] asking for your bull and be case for
+[00:50:47] when a company could Implement 100% a
+[00:50:50] power moderation that's fast cheap and
+[00:50:52] accurate and another question um is
+[00:50:55] asking about the way in which content
+[00:50:57] moderation has become a competitive
+[00:50:59] Advantage for some platforms and uh do
+[00:51:02] you think the development of AI
+[00:51:03] moderation models will commoditize
+[00:51:06] content moderation For Better or For
+[00:51:09] Worse um taking the second one first
+[00:51:11] it's already commoditized um in a lot of
+[00:51:14] ways the fact that it is a mass-produced
+[00:51:16] commodity is sort of the thing that I'm
+[00:51:18] pointing towards and I think a root of a
+[00:51:20] lot of our problems um I do think we are
+[00:51:23] going to see trust and safety as a feeli
+[00:51:26] and moderation as a part of that move in
+[00:51:28] a direction that is more similar to
+[00:51:30] cyber security over time where there are
+[00:51:31] more external vendors that are providing
+[00:51:33] Solutions instead of everything being
+[00:51:35] homegrown and Rule your own which is the
+[00:51:37] case at today's very largest
+[00:51:39] platforms mostly for historical reasons
+[00:51:41] because the external tooling and
+[00:51:43] solutions just like didn't exist so we
+[00:51:46] had to build them because there was no
+[00:51:47] one to buy them from I suspect that will
+[00:51:50] change over time and I think you're
+[00:51:51] already seeing some of that in terms of
+[00:51:53] the Bull and Bear case my my my bull
+[00:51:56] case is like now there are startups that
+[00:51:59] will do this for you and at least if you
+[00:52:01] are focused directly on text and you
+[00:52:03] have
+[00:52:04] a flexible definition with the or
+[00:52:07] flexible relationship with the
+[00:52:08] definition of cheap uh they can do this
+[00:52:11] pretty well with automation using llms
+[00:52:14] today um once you talk about sort of
+[00:52:16] images that is also possible but
+[00:52:19] probably not even any reasonable
+[00:52:21] definition of cheap um be it's less
+[00:52:25] about possibility actually
+[00:52:27] then adoption right bureaucracies are
+[00:52:29] slow to change the uptake of new
+[00:52:30] technologies into these sort of big
+[00:52:32] processes is slow it's always slower
+[00:52:35] than everybody thinks it's going to be
+[00:52:36] so I've been using five years as a
+[00:52:39] number but that's kind of because I
+[00:52:41] don't have any idea what the future is
+[00:52:42] going to look like more than five years
+[00:52:43] from now um not for any really good F
+[00:52:46] through
+[00:52:49] reason super interesting thank you um so
+[00:52:53] you said that you think that one of the
+[00:52:55] the problems with
+[00:52:57] these AIS is that they're relying on R
+[00:52:59] je and so there's kind of like a cap
+[00:53:01] which is the cap of the highest
+[00:53:02] performing cow workers right and then
+[00:53:04] many of the benefits that you talked
+[00:53:05] about for using generative I in this
+[00:53:07] context were more of like they don't
+[00:53:09] have the same problems of exhaustion and
+[00:53:11] lack of memory and stuff as humans y do
+[00:53:13] you think that the first set of problems
+[00:53:15] of the cap of like the best crowd
+[00:53:17] workers will also be removed such that
+[00:53:19] AI is able to exceed Human Performance
+[00:53:22] even in like the most focused and best
+[00:53:25] human context or will always remain we
+[00:53:27] only will see the the benefits from the
+[00:53:28] kind of soft replacement of the soft
+[00:53:30] weaknesses of hum um I suspect it's
+[00:53:33] going to exceed us for these kinds of
+[00:53:35] tasks even under our best conditions I
+[00:53:38] am positive it's going to exceed us
+[00:53:40] under the actual conditions um is I
+[00:53:42] think the way I I would think about that
+[00:53:45] um but that is mostly a statement about
+[00:53:47] how difficult and mediocre the actual
+[00:53:50] conditions are I I like I don't think
+[00:53:52] it's a super high Target let's put it
+[00:53:55] that way
+[00:53:59] another example I have had it change my
+[00:54:02] mind in working on policies with one of
+[00:54:05] these systems that I was using to label
+[00:54:06] content and asking it why it made a
+[00:54:08] choice that I thought was the wrong
+[00:54:09] choice I've had it respond to me with an
+[00:54:12] answer that was better grounded in the
+[00:54:13] policy text than the reasoning I was
+[00:54:15] using such that I was incorrect if
+[00:54:17] correct is defined as Fidelity to the
+[00:54:19] document
+[00:54:22] I hi um I'm from the University of Tonto
+[00:54:26] and I'm a law professor there I'm super
+[00:54:28] sympathetic to everything you're saying
+[00:54:30] um and some of my colleagues at U in the
+[00:54:32] text phas have been telling me how good
+[00:54:34] things like gb4 are at classifying um
+[00:54:37] content so um I sort of say that because
+[00:54:40] I want to kind of push a little bit on
+[00:54:43] on on some of what you're saying um not
+[00:54:46] to undermine kind of Direction you're
+[00:54:47] going but to maybe open up another
+[00:54:49] problem so you know you gave some
+[00:54:52] examples where people just like the the
+[00:54:54] amount of disagreement on human label
+[00:54:57] eras is huge um and that's a problem um
+[00:55:01] and you also talked about what we have
+[00:55:02] values in the policy but the problem is
+[00:55:03] that the implementation level and one of
+[00:55:05] the things that you know this proposal
+[00:55:07] does is it turns that implementation
+[00:55:09] into setad of this sort of human problem
+[00:55:11] into an engineering problem so here's a
+[00:55:13] perspective from law law we deal all the
+[00:55:15] time nowaday um we deal all the time
+[00:55:18] with these kind of broad policy like
+[00:55:20] statements rules whatever um and we have
+[00:55:23] to apply them in the real world and the
+[00:55:25] application is is deeply normative all
+[00:55:28] the way down right it's not there's
+[00:55:29] values and then there's implementation
+[00:55:31] implementation simply depends on do we
+[00:55:33] have enough information and other things
+[00:55:35] like that and so and we have these in in
+[00:55:38] law often like deeply contested so it's
+[00:55:42] not just that we can't agree and there's
+[00:55:44] some ground truth We can't agree and
+[00:55:47] it's normative all the way down so what
+[00:55:49] law does is it doesn't give you the
+[00:55:51] right answer it settles the matter for a
+[00:55:53] period of time right and that's open to
+[00:55:56] change and in settling the modifer
+[00:55:58] period of time we agree to that if we
+[00:56:02] agree that the process is legitimate and
+[00:56:04] and and once that trust goes away then
+[00:56:07] we've got lots of problems as we can all
+[00:56:08] know so what interests me about your
+[00:56:11] proposal is you know there's all these
+[00:56:13] problems with the human moderation we
+[00:56:14] can have a a technical model um and we
+[00:56:17] can learn how that model settles the
+[00:56:20] matter but there's no ground truth so we
+[00:56:23] still need to answer the question about
+[00:56:26] the legitimacy of that and so that seems
+[00:56:29] to open up kind of interesting
+[00:56:30] possibilities like how could we do that
+[00:56:34] um and I'm just kind of curious what
+[00:56:36] what what you think of that yeah and
+[00:56:39] actually this there was a question that
+[00:56:40] you had asked online that we skipped
+[00:56:42] when I ask you for recall around those
+[00:56:44] sort of policy standards being very
+[00:56:45] vague um that is true of the standards
+[00:56:48] that are p and I'm going to navigate
+[00:56:50] this and answering your question that
+[00:56:51] it's true of the public standards that
+[00:56:53] most
+[00:56:54] companies public
+[00:56:57] the actual written standards that are
+[00:56:58] being used to make these decisions those
+[00:57:00] things are basically like PR for what
+[00:57:02] the actual rules are the actual rules
+[00:57:04] are very very very very detailed because
+[00:57:07] they are trying to solve this problem of
+[00:57:08] interhuman coordination so they get
+[00:57:10] extremely explicit and exhaustive and
+[00:57:12] you do need to write in That explicit
+[00:57:14] and exhaustive not highlevel way to get
+[00:57:17] good performance out of these llos so
+[00:57:19] that it is a very sort of very very
+[00:57:22] concrete um writing process you're
+[00:57:24] totally right about uh
+[00:57:27] legitimacy I think there's some and this
+[00:57:29] is not an area where I'm an expert but
+[00:57:31] there's some really interesting
+[00:57:33] experiments going on around using the
+[00:57:36] models themselves to gather people's
+[00:57:37] preferences and help to sort of combine
+[00:57:40] them to create proposals for policies of
+[00:57:44] various kinds and prop has done some
+[00:57:45] interesting uh experimentation here of
+[00:57:47] using sort of an input process to figure
+[00:57:49] out what those rules should be and a lot
+[00:57:52] of what is cumbersome about and again an
+[00:57:55] a exper understanding but a lot of what
+[00:57:57] is coment about those kind of processes
+[00:57:59] today is because of how manual they are
+[00:58:01] and actually using sort of AI assistance
+[00:58:04] systems to sort of gather those things
+[00:58:05] more dialogue based way might actually
+[00:58:08] make doing them at scale more practical
+[00:58:10] which is really cool so there's some
+[00:58:12] there's some very interesting sort of
+[00:58:14] directions there where Gathering the
+[00:58:15] input as to what the r should even be as
+[00:58:17] a way of establishing legitimacy might
+[00:58:20] also become easier under this system not
+[00:58:22] my area of focus or expertise but I I
+[00:58:24] think it's a valid problem and I think a
+[00:58:26] really really interesting one um and
+[00:58:29] also your point is totally correct about
+[00:58:31] sort of there not being a full
+[00:58:32] difference between values and
+[00:58:34] implementation don't please don't read
+[00:58:36] me a saying there is it's more that the
+[00:58:39] act of Performing the instructions
+[00:58:42] whatever they happen to be has a
+[00:58:44] technocratic component which we can be
+[00:58:47] good or bad at and also there are these
+[00:58:50] values things intersecting with that and
+[00:58:52] our technocratic
+[00:58:54] inability um is a big part of the
+[00:58:58] problem as the system exists today
+[00:59:00] particularly because at least at the
+[00:59:03] mass scale we're talking about which I
+[00:59:05] can't figure a way for us to get out of
+[00:59:07] the sum of the processes that law uses
+[00:59:09] to make these decisions simply will not
+[00:59:11] scale up and so we're sort of stuck in
+[00:59:14] this more technocratic mode thus the
+[00:59:17] focus on improving the technocratic
+[00:59:21] mode just another question online but I
+[00:59:23] think we have a few more in the room as
+[00:59:24] well um one question is that you seem to
+[00:59:27] imply that as uh content moderation
+[00:59:29] improves the work of trust and safety
+[00:59:30] will be focused on updating content
+[00:59:32] policies what would be your guess about
+[00:59:34] who decides these policies so related to
+[00:59:36] what you were just saying will it be
+[00:59:37] platforms themselves the users of
+[00:59:39] platforms we were talking earlier about
+[00:59:41] platform assemblies or citizen
+[00:59:42] assemblies um so I guess the question
+[00:59:44] more broadly is about um mechanisms for
+[00:59:47] deciding those values as implementation
+[00:59:49] comes increasing the a potentially I
+[00:59:52] think it's going to depend on so so a
+[00:59:54] couple things one even even with more
+[00:59:56] automated implementation you're going to
+[00:59:57] need human oversight over these sort of
+[01:00:00] Frontline decision clouds decision-
+[01:00:03] making agent clouds to make sure they're
+[01:00:04] still dialed in um so there is very much
+[01:00:07] going to be work I think that work is
+[01:00:08] going to move from being Frontline
+[01:00:10] labeling work to sort of quality
+[01:00:12] oversight work in addition to the policy
+[01:00:14] work um I also in terms of who the
+[01:00:18] decides the values it's a really
+[01:00:20] interesting and difficult question
+[01:00:22] because this is an adversarial space
+[01:00:24] right so at a very high level it's it's
+[01:00:26] pretty easy to get like want to sort of
+[01:00:29] have buyin systems to create legitimacy
+[01:00:31] and we should do that and that's great
+[01:00:32] at the specific level of exactly which
+[01:00:34] things violate which rules and where do
+[01:00:36] we need to tweak language that becomes
+[01:00:38] harder to run consensus processes for
+[01:00:41] simply because the amount of stuff that
+[01:00:43] happens every day on our internet of
+[01:00:45] three and a half billion people means
+[01:00:47] that you are constantly responding to
+[01:00:48] attacks and you do need that sort of
+[01:00:50] flexibility so I think that's going to
+[01:00:52] remain contested I I mean I think the
+[01:00:54] obvious trend has been towards more
+[01:00:55] government intervention in this space
+[01:00:57] and I don't think that's going to change
+[01:01:00] because it's a site of of power and will
+[01:01:02] become more accessible um but I don't
+[01:01:05] think it's going to like settle to one
+[01:01:07] neat great resolution where everybody is
+[01:01:09] Happy on that point there's another
+[01:01:12] question from online about how the
+[01:01:13] regulatory space seems to be moving
+[01:01:15] towards requiring some sort of human in
+[01:01:17] the loop or human reason or or
+[01:01:19] explanation for Content decisions so the
+[01:01:21] question is about how your proposal or
+[01:01:23] what you see as the future how does that
+[01:01:26] intersect or interact with regulatory
+[01:01:28] movements yeah I I I think that this I
+[01:01:31] think the rise of gen problematizes a
+[01:01:33] bunch of the European moves here um
+[01:01:35] because they assume that a human answer
+[01:01:38] is going to be better more fulfilling
+[01:01:40] and more correct and my basic thesis is
+[01:01:42] that's wrong uh and that we are very
+[01:01:46] very quickly going to end up in a world
+[01:01:48] where some of these large model powered
+[01:01:50] systems produce better more fulfilling
+[01:01:53] feeling more detailed more accurate with
+[01:01:56] accurately consistent answers and
+[01:01:59] they'll probably have to change the law
+[01:02:00] or Europe will just have a weird version
+[01:02:02] of the internet probably some mix of
+[01:02:05] two like we' stop with weird version of
+[01:02:07] the internet have to gother um I have
+[01:02:10] one last question I thank you for your
+[01:02:11] time it's been super interesting um do
+[01:02:13] you have any concerns about the idea
+[01:02:15] that AI tools could also used to
+[01:02:16] generate images text or otherwise to
+[01:02:19] confuse the system or overwhelm it
+[01:02:20] simply for the purpose of moving the
+[01:02:22] needle and the norm so you can think
+[01:02:24] about it you could basically keep gaming
+[01:02:25] it until you push the norm to the place
+[01:02:27] that your particular thing you want to
+[01:02:28] say or way that you want to articulate
+[01:02:30] an idea or misinformation becomes
+[01:02:33] allowable if you know what the rules are
+[01:02:35] and test the system until it forces it
+[01:02:37] so I I guess I hate thinking yeah it's
+[01:02:39] faster but what happens if you also have
+[01:02:41] the creation of text that's faster
+[01:02:44] learning faster figuring out what's you
+[01:02:46] know what's being rejected and what's
+[01:02:47] acceptable keep moving the line of
+[01:02:49] what's acceptable to where they want to
+[01:02:50] go so a couple things one most of these
+[01:02:53] systems don't do online learning so
+[01:02:54] simply interacting with them isn't going
+[01:02:56] to change what they do and you can
+[01:02:59] decide as a system designer am I going
+[01:03:01] to allow that or not and you wouldn't
+[01:03:03] for for that reason the other thing
+[01:03:05] though is i' flip it around um they're
+[01:03:07] going to do that so we need to learn to
+[01:03:09] use the robots to help us because we're
+[01:03:11] not going to be able to do this quickly
+[01:03:13] enough give him the scale of what is
+[01:03:15] going to happen given the existence of
+[01:03:17] these technology so it's like less will
+[01:03:20] you create that arms race and more like
+[01:03:22] the arms RAC is upon us better start
+[01:03:24] building battleships that's never ended
+[01:03:25] badly what could go
+[01:03:29] wrong um a couple more from online we
+[01:03:32] have some more in the room as well we're
+[01:03:33] technically at time but I think da is
+[01:03:34] generally I'm not leaving till tomorrow
+[01:03:36] perfect yeah all right um well a couple
+[01:03:39] from online then um one is is anything
+[01:03:42] that you're saying um relevant to uh
+[01:03:45] data annotation and could it solve some
+[01:03:47] of the problems there yes yeah I mean
+[01:03:50] what I'm proposing is a text directable
+[01:03:52] classifier it's just the Sorting machine
+[01:03:55] for content
+[01:03:56] that sorts based on a document you wrote
+[01:03:59] at at rot so if you have a problem
+[01:04:01] that's about sorting content and you can
+[01:04:03] describe your feelings about how you
+[01:04:04] want it sorted as a set of instructions
+[01:04:07] this is useful to you um for a lot of
+[01:04:09] different activities in the same way
+[01:04:10] that it's applicable to both AI
+[01:04:12] alignment
+[01:04:13] account any question there so I have a
+[01:04:16] general question so what is the
+[01:04:18] difference between the mo the content
+[01:04:20] moderation and the content um censorship
+[01:04:23] because I think I'm a little bit you you
+[01:04:25] know confused with that do you have any
+[01:04:29] like dividing line technically speaking
+[01:04:31] or I don't think there's a I don't think
+[01:04:33] there's a technical dividing line to me
+[01:04:36] I think we are careless with our use of
+[01:04:38] the word censorship I think censorship
+[01:04:40] is when a government does it and maybe
+[01:04:43] we sometimes even think but sometimes
+[01:04:44] they overlap you know the the the the
+[01:04:46] issue they covered I think you know the
+[01:04:49] techniques the techniques overlap
+[01:04:51] because again it's just a question of of
+[01:04:53] sorting but Mark Zuckerberg does not any
+[01:04:56] prisons and has never put someone in
+[01:04:58] them and I think that is an important
+[01:04:59] distinction right so from a technique
+[01:05:02] point of view yeah I I sort of flaged at
+[01:05:03] the end of the talk that these
+[01:05:04] techniques are definitely usable for
+[01:05:07] malicious purposes by governments
+[01:05:09] whether well intended or ill intended
+[01:05:11] that is not disentangle from the
+[01:05:14] existence of the technology from a
+[01:05:15] technique point of view uh If you're
+[01:05:17] sort of hinting more towards jawboning
+[01:05:19] or the pressure that gets put on
+[01:05:20] companies by governments that will
+[01:05:23] remain a problem it's a problem today
+[01:05:25] and independent of the existence or
+[01:05:26] non-existence of these techniques and is
+[01:05:29] a thing we need to continue to to work
+[01:05:31] on as a
+[01:05:34] society um couple more questions online
+[01:05:37] um one is about the future uh of
+[01:05:40] volunteer content autog graders
+[01:05:42] potentially on places like Reddit um uh
+[01:05:45] do you think that those sorts of RS will
+[01:05:48] still remain those sorts of spaces will
+[01:05:49] continue to exist um with with the sort
+[01:05:51] of developments that you're describing I
+[01:05:53] think they'll change I think your role
+[01:05:55] will move from being the actual direct
+[01:05:57] content grader to being someone who is
+[01:05:59] dialing in and overseeing a version of
+[01:06:02] these systems maybe provided by Reddit
+[01:06:04] themselves to actually help you do this
+[01:06:06] such that you can scale that up with
+[01:06:07] Less Direct human labor which if you
+[01:06:10] want dispersion of power at who is
+[01:06:12] overseeing subredit is a good thing
+[01:06:13] actually because it'll allow normal
+[01:06:16] people in sort of their spare time to
+[01:06:20] viably moderate larger communities
+[01:06:22] without having to
+[01:06:24] professionalize I really like your uh
+[01:06:27] comparison between an development of
+[01:06:29] industrial machine versus an artisanal
+[01:06:32] machine in the case of content
+[01:06:34] moderation uh you've been in and out of
+[01:06:36] the of the uh the platforms and um of
+[01:06:40] the platform and I I would I is it safe
+[01:06:43] to assume that um these companies are
+[01:06:48] under spending on content moderation
+[01:06:51] based on uh the legitimacy question uh
+[01:06:54] proposed here
+[01:06:57] um I think that's a version of
+[01:07:01] the uh
+[01:07:03] benevolence thesis I sort of hit on up
+[01:07:06] front right like I I maybe some of them
+[01:07:10] are some of them aren't I don't I don't
+[01:07:13] think there is an amount of money you
+[01:07:15] could spend with prior technology that
+[01:07:17] would produce a result we all really
+[01:07:20] loved like that that's sort of the Crux
+[01:07:22] of what I'm trying to get across is like
+[01:07:24] we're bad at content model because we're
+[01:07:26] bad at content moderation not cuz we're
+[01:07:28] secretly good at content moderation and
+[01:07:30] mailing it in to be jerks like um also
+[01:07:34] yes probably there should be more
+[01:07:36] investment and I but I specifically
+[01:07:37] think more investment in learning how to
+[01:07:39] do what I'm talking about so we stop
+[01:07:40] being bad at content moderation is is
+[01:07:43] like important and there probably has
+[01:07:45] been an under response on that score
+[01:07:47] simply because a lot of the large
+[01:07:48] companies are giant bureaucracies that
+[01:07:50] change slowly and so I think a lot of
+[01:07:53] this will get figured out at startups
+[01:07:54] and smaller companies and then percolate
+[01:07:56] its way up uh or from like special Labs
+[01:08:00] within larger larger companies like I I
+[01:08:02] suspect you'll see interesting things in
+[01:08:03] this Vein from like jinsa within Google
+[01:08:06] how quickly that translates into all of
+[01:08:07] the giant processes Google runs is like
+[01:08:10] a bureaucratic question more than
+[01:08:11] anything else perhaps a fitting question
+[01:08:14] to end on um from online if if what
+[01:08:18] you're describing it becomes the Brave
+[01:08:19] New World of trust and safety and
+[01:08:21] content moderation what are the AI
+[01:08:23] skills you recommend someone interested
+[01:08:25] in entering the field develop or build
+[01:08:28] what sort of skill sets having a
+[01:08:30] schematic understanding of how these
+[01:08:32] models work so that you you don't have
+[01:08:34] to be able to build them but at least
+[01:08:36] being able to understand how they work
+[01:08:38] so you understand what their sort of
+[01:08:39] Tendencies and properties and leanings
+[01:08:41] are uh is really really important
+[01:08:44] understanding that they're still
+[01:08:45] ultimately just prediction machines but
+[01:08:46] they're predicting word outputs um is is
+[01:08:50] helpful honestly in the policy space the
+[01:08:53] same level of clarity of writing that is
+[01:08:55] helpful for writing for like 10,000 guys
+[01:08:57] at a B translates pretty well to writing
+[01:09:01] clearly for these sort of machines
+[01:09:04] because a lot of the places where policy
+[01:09:06] writing fails is when it moves into
+[01:09:09] questions that are not discernable to
+[01:09:12] the person who has to use the policy
+[01:09:14] right so moving into things like oh what
+[01:09:17] were their intentions when they uploaded
+[01:09:18] this which is like doesn't exist from
+[01:09:20] the point of view of a Content moderator
+[01:09:22] um so a lot of those skills actually
+[01:09:24] translate super
+[01:09:26] well all right well unless there's any
+[01:09:28] more questions in the room I hope
+[01:09:29] everyone will oh John you have a
+[01:09:31] question that's okay I will I will let's
+[01:09:32] squeeze it
+[01:09:34] up I'm literally not leaving till
+[01:09:36] tomorrow I also know that people want to
+[01:09:38] lunch um well I have uh questions about
+[01:09:41] some of
+[01:09:42] the let's see I have a few questions but
+[01:09:44] um I'll try to synthesize into one um if
+[01:09:48] you were well two um if you could
+[01:09:51] evaluate um the up and cominging
+[01:09:52] startups um that are entering this space
+[01:09:55] um how would you evaluate essentially um
+[01:09:58] the viability and pedagogy going forward
+[01:10:01] and then also um of those there are many
+[01:10:03] of these problems um and just to give
+[01:10:05] you background I also have 17 years of
+[01:10:07] experience working in trust and safety
+[01:10:08] and overseeing teams um I am uh yeah
+[01:10:12] concerned about some of the problems
+[01:10:13] that I don't think we should be applying
+[01:10:15] towards Ai and part of it is I worry
+[01:10:17] about some of the issues of bias and
+[01:10:19] inequity the calcification of the model
+[01:10:21] itself um and not adapting to the space
+[01:10:23] and so I'm curious from your perspective
+[01:10:25] what are the problems that you um think
+[01:10:28] we really shouldn't be applying AI
+[01:10:30] moderation to um or that we maybe need
+[01:10:32] to do an Adaptive hybrid approach where
+[01:10:35] like AI assisted but certainly not AI
+[01:10:37] deferred to um and and therefore also
+[01:10:41] then what should startups in the space
+[01:10:44] be avoiding um because they all say that
+[01:10:46] they're trying to solve it all and I
+[01:10:47] don't actually think that's um a a safe
+[01:10:51] way to progress yeah uh in terms of
+[01:10:54] evaluating startups I would evaluate
+[01:10:56] them the same way you evaluate a BVO
+[01:10:59] right I would actually ask them to do
+[01:11:00] the work and see whether or not they're
+[01:11:02] producing uh the outcomes that you want
+[01:11:05] and you should be thinking through how
+[01:11:07] you really put them through the paces in
+[01:11:08] terms of what the actual set of stuff
+[01:11:10] you send them is not just a random
+[01:11:11] sample but hard weird Edge casy kind of
+[01:11:14] stuff I prefer I would prefer personally
+[01:11:20] uh startups where they're giving you a
+[01:11:22] tool set for you to do it yourself not
+[01:11:24] saying like hey plug and will make all
+[01:11:25] the bad things go away because that
+[01:11:27] feels like very much giving away your
+[01:11:29] your sort of control whereas a lot of
+[01:11:31] the better ones aren't they don't do
+[01:11:34] anything on their own they're like
+[01:11:35] here's a way to write a document and
+[01:11:37] we'll fire this at the llm for you in a
+[01:11:39] structured way and you can set up your
+[01:11:40] rules engine so it's a it's a system for
+[01:11:43] doing the trust and safety work within
+[01:11:45] not just like a plugged in thing that
+[01:11:47] solves all the problems which keeps you
+[01:11:49] in control of and able to assess whether
+[01:11:51] or not it's working well which is the
+[01:11:53] thing I would look for and would want as
+[01:11:55] an Insider in terms of where automation
+[01:11:58] becomes dangerous I there's an
+[01:11:59] interesting question that you sort of
+[01:12:01] got to in the second half of that around
+[01:12:02] how much this becomes pure substitution
+[01:12:05] versus like side by side working that's
+[01:12:08] actually what I I think that's an
+[01:12:09] interesting question from like does it
+[01:12:12] go to full replacement or does it go to
+[01:12:14] like the actual interface moderators are
+[01:12:16] working in just becomes profoundly
+[01:12:18] different and an AI enabled that could
+[01:12:20] be a direction it goes I suspect it's a
+[01:12:22] little of both right I suspect for some
+[01:12:25] percentage of decisions like we're
+[01:12:26] already in this world right where
+[01:12:28] classifiers make the very easy and very
+[01:12:30] hard decisions and then humans make the
+[01:12:32] middle decisions I supect like you're
+[01:12:34] going to get another band of the AI made
+[01:12:36] decisions and then the core is going to
+[01:12:37] be this AI assisted set of human
+[01:12:39] decisions I'm not proposing taking
+[01:12:41] humans out of the move entirely and I do
+[01:12:43] think human oversight over sort of the
+[01:12:45] instrumentation of the model decisions
+[01:12:48] you have going on will continue to be
+[01:12:50] important for any foreseeable future um
+[01:12:53] that's a little like in the Leeds for a
+[01:12:55] half an hour talk but I do think that's
+[01:12:57] pretty important I don't know that I
+[01:12:59] think there are any categories of
+[01:13:03] decision that should never be made by a
+[01:13:05] machine I think the question there is
+[01:13:08] who will achieve better results for the
+[01:13:12] people impacted by the potential harm um
+[01:13:15] and so I think bias is an obstacle there
+[01:13:17] that we need to account for right a very
+[01:13:19] important one but to me the question is
+[01:13:22] what is the most effective method that
+[01:13:24] create that both like intercepts the
+[01:13:26] harms we're trying to deal with and
+[01:13:27] creates the least amount of suffering
+[01:13:29] for the people who are part of the
+[01:13:31] process and if AI wins that AI wins that
+[01:13:34] and if there are situations where it
+[01:13:35] doesn't it doesn't and you should use
+[01:13:37] the thing that is best
+[01:13:40] personally all right well I hope
+[01:13:42] everyone will join me in thanking
+[01:13:49] Dave and uh we'll be back here next week
+[01:13:51] for another speaker series event so hope
+[01:13:54] people will join us either online or in
+[01:13:56] person but uh thank you again
+[01:13:58] everyone

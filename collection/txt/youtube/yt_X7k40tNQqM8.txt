@@ -1,0 +1,1071 @@
+[00:00:07] So again, welcome to the webinar.
+[00:00:12] My name's Todd Wallack.
+[00:00:14] I'm spending the year as a Berkman Klein Nieman
+[00:00:16] fellow at Harvard and I've been a data journalist at The Boston
+[00:00:22] Globe for about seven years, as well as
+[00:00:26] an investigative reporter working
+[00:00:29] both with the Boston Globe's Spotlight Team
+[00:00:32] and the rest of the newsroom.
+[00:00:34] Caroline Chen covers health care for ProPublica,
+[00:00:39] and she previously was a reporter at Bloomberg News.
+[00:00:44] Armand Emamdjomeh is a graphics assignment editor
+[00:00:49] for The Washington Post, and he was previously
+[00:00:52] a deputy director of data visualization
+[00:00:55] at The Los Angeles Times.
+[00:00:57] And I was excited to have this group of people
+[00:00:59] talk about the issues that journalists
+[00:01:02] face dealing with data because we all
+[00:01:04] have some different expertise.
+[00:01:06] I'm sort of a generalist looking at data trying to find,
+[00:01:11] mine it for all sorts of types of stories.
+[00:01:13] Caroline is more of a specialist in health care
+[00:01:16] and will have more expertise in health care data.
+[00:01:19] And Armand has lots of experience in visualizing data.
+[00:01:25] And it seems like there's been tons of interest and challenges
+[00:01:31] in looking at COVID-19 data.
+[00:01:36] People have been trying to track it by day and time
+[00:01:39] to see trends and whether it's getting worse or better, as
+[00:01:43] well as geographically.
+[00:01:46] But there also have been a lot of challenges,
+[00:01:48] such as obstacles trying to obtain the data.
+[00:01:53] So you've seen a lot of headlines about that,
+[00:01:55] particularly at a local level, or getting more details
+[00:01:59] on the data, such as on race or age
+[00:02:03] or other details about people affected.
+[00:02:05] And questions about the accuracy and reliability of the data.
+[00:02:10] ProPublica and The New York Times and others
+[00:02:13] have written a lot of stories raising questions
+[00:02:16] about the accuracy and the challenges
+[00:02:19] comparing one area to another because of difficult variances
+[00:02:23] in who's tested, how accurate the tests are,
+[00:02:26] how accurate death counts are, and other issues.
+[00:02:31] So I'm going to start by asking a number of questions,
+[00:02:36] and at about 12:35, will switch to questions from the audience.
+[00:02:44] So feel free to start tossing in questions as we speak.
+[00:02:48] And about halfway through, we'll start
+[00:02:50] going to audience questions and finish at 1:00.
+[00:02:58] OK.
+[00:02:59] I want to start off just by asking
+[00:03:03] Armand and Caroline, what data have you seen
+[00:03:07] readers most interested in?
+[00:03:13] Could I hop in here?
+[00:03:16] I think early on the questions were just where
+[00:03:20] is the disease spreading, right?
+[00:03:22] So I think obviously, especially in the US,
+[00:03:28] as the virus first started to hit,
+[00:03:30] everybody just wanted to know case counts.
+[00:03:33] And then I think that started to soon overlay
+[00:03:37] with a concern about deaths.
+[00:03:40] And so I think that continues to be of interest, cases
+[00:03:44] and deaths.
+[00:03:45] And then I would say where are the tests and testing
+[00:03:48] capabilities, testing capacities.
+[00:03:51] And I think now there's an understanding that there
+[00:03:54] are two types of tests.
+[00:03:55] There's the diagnostic tests.
+[00:03:57] Those are the PCR, the swab tests.
+[00:04:00] And now the new incoming antibody tests.
+[00:04:04] And I think the more sophisticated readers
+[00:04:07] are starting to gain an understanding of what
+[00:04:10] do the numbers mean as we're starting, just
+[00:04:15] like right now, this week, starting
+[00:04:16] to see studies come out with some numbers
+[00:04:20] around these antibody studies.
+[00:04:24] And there are already furious debates
+[00:04:25] around those study results and whether or not those
+[00:04:29] are meaningful.
+[00:04:30] So I see those as layering, right?
+[00:04:34] We continue to want to care about case counts.
+[00:04:37] And we continue to want to care a lot about death
+[00:04:40] and you know, segmentation of those.
+[00:04:43] So demographics and race and who are being affected.
+[00:04:49] And these are layering as we go.
+[00:04:54] And Armand, what have you seen?
+[00:04:56] Yeah, I completely agree, definitely
+[00:04:59] along the same lines of that pattern.
+[00:05:01] It has been case counts and where
+[00:05:06] there were reported cases and reported outbreaks, you know,
+[00:05:11] deaths.
+[00:05:13] And now, I think the one thing I can add to what Caroline said,
+[00:05:17] is there's been interest in the trends that are being reported
+[00:05:21] by states as well.
+[00:05:22] So we've made steps to show what does this data
+[00:05:27] look like over time, of course noting the caveats in the data
+[00:05:31] and how it's being reported and recorded by the states.
+[00:05:35] Oh, and I forgot to mention, of course,
+[00:05:37] there's the whole conversation around supplies,
+[00:05:40] PPE, ventilators.
+[00:05:44] It's obviously been very hard.
+[00:05:46] That's always a moving target depending on
+[00:05:48] whether you're talking a local level, national level.
+[00:05:53] You can never put a nail on how much PPE there
+[00:05:57] is at a given hospital, state, but there is always interest
+[00:06:02] in that question of supplies.
+[00:06:06] And I'm also curious about how easy or difficult
+[00:06:10] has it been to obtain all the data for your stories
+[00:06:14] and graphics?
+[00:06:17] I can talk about that.
+[00:06:18] I think, you know, the data at a national level
+[00:06:23] is basically nonexistent.
+[00:06:28] Most things are reported at the state level,
+[00:06:31] so that makes means know you have
+[00:06:33] to either rely on an aggregator or aggregate the data yourself,
+[00:06:37] you know, going to all these different state sites, figuring
+[00:06:40] out where they report it, how they report it, in what format.
+[00:06:45] Also noting that this data, what the states are reporting,
+[00:06:49] also changes over time and what platforms
+[00:06:52] they're using to report it.
+[00:06:54] I sent out a tweet a few days ago
+[00:06:57] that was like, what if you were reporting a live election,
+[00:07:00] but you were building your rig for reporting the results
+[00:07:05] as the election was happening?
+[00:07:07] And what everywhere was reporting
+[00:07:10] as the results was also changing,
+[00:07:12] and they were changing how they report it as well.
+[00:07:14] So it has been extraordinarily difficult in that sense,
+[00:07:20] to build things that don't constantly
+[00:07:23] break, and build data flows that are actually
+[00:07:25] kind of stable, given the fact that what is being reported
+[00:07:31] is moving under them as well.
+[00:07:34] Yeah, I would say that there are certain things that,
+[00:07:39] just by the nature of the pandemic,
+[00:07:42] are going to be constantly changing.
+[00:07:44] So for example, testing capacity.
+[00:07:47] I've done a lot of reporting around testing and testing
+[00:07:50] capacity.
+[00:07:51] And just by the nature of what's happening,
+[00:07:54] that is changing constantly.
+[00:07:55] So whether that's nationally, whether that's locally,
+[00:07:57] if you're trying to say what is the testing
+[00:08:00] capacity of my state, that number
+[00:08:02] is going to be constantly changing.
+[00:08:04] And it should be, right?
+[00:08:05] Because we have been constantly ramping up testing capacity.
+[00:08:08] So for any reporter to try to get a beat on that,
+[00:08:10] on trying to inform their local readers,
+[00:08:16] they'd have to constantly update that.
+[00:08:17] Is it possible to actually get an accurate
+[00:08:19] number at any point in time?
+[00:08:21] I think that is technically possible,
+[00:08:23] but your number's going to be outdated like within an hour,
+[00:08:28] even at a specific lab.
+[00:08:29] So I have, at certain points, been
+[00:08:31] able to be like, I nailed the number.
+[00:08:33] It's already old.
+[00:08:34] Is there any point in even doing that?
+[00:08:35] Yeah, I think there is.
+[00:08:37] It's a worthy exercise to try to get a ballpark
+[00:08:41] and to track trends for readers.
+[00:08:43] So there have been times where I've
+[00:08:44] tried to do that for specific stories,
+[00:08:47] but it is a frustrating exercise,
+[00:08:49] and I've really encouraged other reporters
+[00:08:50] to really try to explain to readers where
+[00:08:54] you got this number, what has gone into this number,
+[00:08:57] and how long of a shelf life the number will have, and really
+[00:09:01] try to show your work to your readers
+[00:09:03] more than I normally would.
+[00:09:06] So I think some of that is inherent.
+[00:09:08] There are other things, though, where you can only--
+[00:09:11] your information is only as good as where you get it from.
+[00:09:15] So for example, the WHO puts out daily situation reports.
+[00:09:20] That is the only way you can really
+[00:09:22] get a source for international case counts, right?
+[00:09:26] But the WHO's information is only as good as the countries
+[00:09:29] from which it comes from.
+[00:09:30] So I keep repeatedly explaining this to people,
+[00:09:32] that the WHO has a recommended way for what
+[00:09:36] they count as a positive case.
+[00:09:39] And they say that it is if you test
+[00:09:42] positive with a PCR based test.
+[00:09:46] For the longest time, China just decided that they were only
+[00:09:50] going to count as positive someone who had a positive PCR
+[00:09:54] test and symptoms.
+[00:09:56] They were not counting people who had a positive PCR
+[00:09:59] case but no symptoms.
+[00:10:00] So they weren't counting asymptomatic cases.
+[00:10:02] There's nothing the WHO can do about that.
+[00:10:03] There's nothing anybody can do about that.
+[00:10:05] And then after a while, trying to change that.
+[00:10:07] So you needed to know that about China.
+[00:10:11] And I mean, that's deeply frustrating.
+[00:10:13] You can't get everybody to report the same way.
+[00:10:16] And you need to have those caveats in your reporting.
+[00:10:20] And this also trickles down to like 50 states, or 56 states
+[00:10:26] and territories, all doing it in their same way as well.
+[00:10:29] Right.
+[00:10:30] That's got to make comparisons really tricky, when everyone
+[00:10:34] has a different way of reporting the data, tracking the data.
+[00:10:38] There are different rules on who gets tested
+[00:10:40] and what gets counted.
+[00:10:43] It sure does.
+[00:10:45] And again, I think you can only be
+[00:10:49] clear about the caveats of this is entirely
+[00:10:52] dependent on what's being reported
+[00:10:55] and how it's being reported.
+[00:10:57] Yeah, I've been very, very cautious about comparisons.
+[00:11:02] Got it.
+[00:11:03] And are there any other problems you've noted in the data
+[00:11:07] that people should be aware of?
+[00:11:12] I have been very careful--
+[00:11:15] or I've been encouraging reporters in my newsroom
+[00:11:19] and trying to explain to the public
+[00:11:22] just to be aware of what the definitions are of numbers
+[00:11:27] that get thrown around.
+[00:11:28] So one thing, for example, I've been
+[00:11:29] trying to explain a lot to lay readers is what actually
+[00:11:34] is the fatality rate, right?
+[00:11:36] And there's a big gap, I think, between what the public wants
+[00:11:40] to know, which is, you know, if I get infected will I die,
+[00:11:45] and what is reported as the case fatality rate, right?
+[00:11:49] So the case fatality rate is the number
+[00:11:51] of reported deaths divided by the number of lab confirmed
+[00:11:55] infections.
+[00:11:57] So everybody knows in the US, it had been really hard--
+[00:12:00] it continues to be really hard in many places--
+[00:12:02] to get tested in the first place.
+[00:12:03] And a lot of places are not testing unless you're
+[00:12:06] really, really sick.
+[00:12:07] So that denominator is going to be much smaller
+[00:12:11] than the actual number of infections.
+[00:12:13] So especially early on in the United States,
+[00:12:17] the case fatality rate was something like 10%.
+[00:12:21] Because we just weren't testing a lot of people.
+[00:12:23] And you think of it as an iceberg model.
+[00:12:26] Like, the deaths are usually the easiest
+[00:12:28] to find and count, especially early on in a pandemic.
+[00:12:32] This always happens in a pandemic.
+[00:12:34] And the people who are asymptomatically infected
+[00:12:37] are the hardest to find in the first place.
+[00:12:40] But again, the average lay reader,
+[00:12:43] they just want to know if I get infected, will I die?
+[00:12:45] And they're looking at that number that's
+[00:12:47] been reported in your headline, and they're just
+[00:12:50] looking at that and being like, if I get infected,
+[00:12:53] that's my chance of dying.
+[00:12:54] And we have such a huge responsibility as reporters
+[00:12:58] to explain that number and not just throw things around
+[00:13:00] in headlines.
+[00:13:02] So I think there are a lot of numbers like this.
+[00:13:04] As a science and health reporter,
+[00:13:08] I feel like we have a lot of responsibility
+[00:13:09] to explain to people, so that are not and are.
+[00:13:14] These are the rate of infection, the chance
+[00:13:19] you have of infecting other people,
+[00:13:22] the average number of people you'll infect.
+[00:13:24] It's a process of understanding, and this
+[00:13:27] is what I'm trying to get across to my readers.
+[00:13:29] There is so much we are still learning that we don't know
+[00:13:34] yet, and we cannot present this as set in stone.
+[00:13:38] And building on that, mentioning all cases
+[00:13:44] being kind of a difficult fraction to divide against.
+[00:13:47] Like, the deaths number also is slippery.
+[00:13:48] We've seen stories highlighting this in recent days,
+[00:13:52] and it's been something we've been
+[00:13:54] kind of saying for a while.
+[00:13:56] It's like not every death is being accurately
+[00:13:58] categorized too.
+[00:14:00] Recently New York City added some-- what was it?
+[00:14:02] Like 3,700?
+[00:14:04] I forget the exact number of deaths that were classified
+[00:14:07] as probably COVID-19.
+[00:14:13] And you know, if it's happening in New York City,
+[00:14:15] probably there is some fraction of cases
+[00:14:18] that's being categorized throughout or never
+[00:14:23] even recorded.
+[00:14:26] So that number is slippery as well.
+[00:14:28] And I think when talking about fatality rates and that kind
+[00:14:32] of thing, rather than just talking about one big number,
+[00:14:37] we've been trying to, when we have the data available,
+[00:14:42] to at least break it down a little bit better
+[00:14:44] into segments of the population or report
+[00:14:48] the comorbidities that studies have been reporting.
+[00:14:50] So it's not like a flat 3.2% or whatever it would be.
+[00:14:56] It depends on a lot of factors that
+[00:15:00] are related to the individual.
+[00:15:01] It definitely sounds challenging when
+[00:15:03] there are questions about and uncertainty
+[00:15:05] about both the numerator and the denominator
+[00:15:08] when you're trying to calculate rates.
+[00:15:11] My sense is that these are problems
+[00:15:15] that data journalists, and journalists in general,
+[00:15:18] encounter when trying to get data.
+[00:15:20] It's often hard to get one clean database
+[00:15:24] at a national level or global level,
+[00:15:26] where often aggregating it from lots of different places.
+[00:15:29] And each place might have different ways
+[00:15:31] of counting the numbers and reporting the numbers.
+[00:15:35] And the data can be messy.
+[00:15:39] Is there anything different that you're finding
+[00:15:42] in dealing with COVID-19 data?
+[00:15:44] Or does it reflect challenges you've faced
+[00:15:46] doing other types of stories?
+[00:15:48] This is more philosophical.
+[00:15:50] But you know, these numbers are being reported
+[00:15:54] by states and by countries and everywhere very precisely,
+[00:15:58] but in its nature, it's a very imprecise count.
+[00:16:03] So there is this weird situation.
+[00:16:06] You know, inaccurate but precise is one type
+[00:16:11] of data classification.
+[00:16:15] And I think that's where we are now.
+[00:16:16] It's like you're throwing--
+[00:16:18] you're taking shots at a dartboard,
+[00:16:21] and they're all landing in a very exact, same similar place,
+[00:16:25] but you're off somewhere.
+[00:16:27] You're not actually hitting the dartboard.
+[00:16:29] It's like somewhere off of the wall
+[00:16:30] because you're throwing the darts kind of blindfolded.
+[00:16:33] But we have very precise counts.
+[00:16:36] Yeah.
+[00:16:37] One thing I've seen, and I guess my--
+[00:16:41] I know this is a really hard thing
+[00:16:43] to do, especially if you have an editor that's pushing you,
+[00:16:48] is to resist the urge to write.
+[00:16:52] Because what I do see is that health departments,
+[00:16:55] as they release data, are refining as they go.
+[00:17:00] And I think this is because they are also figuring out
+[00:17:03] what they need to release.
+[00:17:05] So for example, to give a very specific example,
+[00:17:07] New York City started out by giving test--
+[00:17:13] they were only reporting by burrough.
+[00:17:15] And then a lot of people were like, well,
+[00:17:17] that's not enough information.
+[00:17:18] And they were getting a lot of criticism.
+[00:17:20] And then they started releasing--
+[00:17:23] it wasn't quite by neighborhood.
+[00:17:25] It was by this very strange not quite zip code, not quite
+[00:17:28] neighborhood.
+[00:17:32] It was percentage of positive, but they
+[00:17:36] didn't have any raw numbers.
+[00:17:38] There were no numerator, no denominator.
+[00:17:39] It was percentage.
+[00:17:41] And I was like, well, I can't do anything with that.
+[00:17:45] Because if you say that in this zone, it was 66% positive,
+[00:17:51] that could mean that you only did three tests there,
+[00:17:54] and two people tested positive.
+[00:17:57] That's meaningless.
+[00:17:58] But I did see some news organizations
+[00:18:02] write a story on that.
+[00:18:03] And I was like, that's a bit dangerous.
+[00:18:05] And then, I think like within a week,
+[00:18:07] they then re-released numbers, which were by zip code
+[00:18:10] and had numerator and denominator.
+[00:18:13] They had way more information.
+[00:18:15] And then you could write a more meaningful story.
+[00:18:17] And then New York City has continued
+[00:18:19] to update and iterate and give more
+[00:18:21] and more granular information.
+[00:18:23] So I do think that there is a benefit to kind of waiting.
+[00:18:27] Because I've seen, more than I've ever
+[00:18:30] seen before in any other outbreak I've covered,
+[00:18:33] sort of health departments iterate
+[00:18:36] as they go with the data that they're releasing.
+[00:18:38] And I actually see, because this is happening
+[00:18:41] across the country, actually reporters,
+[00:18:44] I think, be able to push health departments and be able to say,
+[00:18:47] hey, you know, Ohio released this information.
+[00:18:51] Florida, why aren't you releasing this information?
+[00:18:53] And be able to sort of push departments off of each other.
+[00:18:57] And I think in a similar theme, I
+[00:19:01] think it's really sometimes dangerous to write a story off
+[00:19:05] of a preprint.
+[00:19:07] I do think it's really great that scientists are,
+[00:19:11] researchers are moving quickly and sharing information
+[00:19:15] on MetaArchive and bioRxiv and not
+[00:19:18] waiting to go through that whole process.
+[00:19:20] But then it's not peer reviewed, right?
+[00:19:22] So this puts you in a really dangerous position
+[00:19:25] as a reporter to have to write a story off
+[00:19:27] of a non-peer reviewed study.
+[00:19:30] So I think one of my goals is to never let
+[00:19:35] a preprint walk alone, as in you don't
+[00:19:39] write a story on a preprint by itself.
+[00:19:40] You try to let it go in concert with other studies
+[00:19:46] and look for a trend.
+[00:19:47] Or at least let lots and lots and lots of people
+[00:19:50] comment on it, and don't just write a story on this.
+[00:19:53] So this is happening right now with all these antibody
+[00:19:56] studies, right?
+[00:19:57] Like, Stanford put out its preprint
+[00:20:01] on its antibody serosurvey.
+[00:20:04] And there were a lot of stories that
+[00:20:06] got written really quickly.
+[00:20:08] And then in the next day, there has been the critique wave
+[00:20:14] of like, was it a good survey?
+[00:20:16] Was it biased?
+[00:20:17] You know, all of that stuff.
+[00:20:18] And I just wish that a lot of reporters
+[00:20:20] might have waited a little bit.
+[00:20:22] And now there is the Los Angeles serosurvey.
+[00:20:26] And I think you could have maybe waited and collected
+[00:20:29] a bunch of these studies and maybe done
+[00:20:32] one thoughtful story in one go, or at least gotten
+[00:20:36] a lot more outside voices than you normally would
+[00:20:39] before writing that one story.
+[00:20:42] Because they aren't peer reviewed.
+[00:20:43] So you do have to treat preprints differently.
+[00:20:47] Right.
+[00:20:49] And interestingly, of course, none of our articles
+[00:20:51] are peer reviewed.
+[00:20:52] So I'm curious what process you go through
+[00:20:54] to make sure that your own interpretations and analysis
+[00:21:00] are sound before publishing.
+[00:21:03] I just run preprints by way, way more people
+[00:21:09] than I normally would.
+[00:21:12] If something's already published in a journal,
+[00:21:15] I know that it's gone through that peer review process.
+[00:21:17] If it hasn't been, I will run it by a lot more outside experts
+[00:21:21] than I normally would and just go that extra mile
+[00:21:24] and really ask myself, do I have to write this now?
+[00:21:27] Can I wait for it to go through that peer review process?
+[00:21:31] And you can ask the author.
+[00:21:32] Sometimes they'll say, oh yeah, this
+[00:21:34] has already been accepted by JAMA or The Lancet or whatever.
+[00:21:37] And that gives me an extra measure of confidence.
+[00:21:40] If that's the case, that's helpful to know.
+[00:21:43] And if not and it's like, this is such an important study
+[00:21:46] that I need to write about it right now,
+[00:21:48] then I get all those outside voices.
+[00:21:51] I try to get many independent outside voices that
+[00:21:53] are from a number of different institutions,
+[00:21:56] get all their critiques.
+[00:21:57] And if all of them are really, really negative,
+[00:22:01] then again, I have to ask, why am I
+[00:22:02] writing about this study in the first place?
+[00:22:04] The bar just gets so much higher if it's not in a journal
+[00:22:10] and hasn't gone through the peer review process.
+[00:22:13] And I assume, Caroline, even when
+[00:22:16] ProPublica or The Post or others are doing their own analysis,
+[00:22:20] we do the same thing.
+[00:22:21] We go to outside experts and say,
+[00:22:22] here are the numbers I'm calculating.
+[00:22:24] Does my methodology make sense?
+[00:22:27] Is there a good explanation for these conclusions?
+[00:22:30] Rather than just posting something on Twitter
+[00:22:32] or throwing it on our website, we first
+[00:22:36] normally talk to experts first.
+[00:22:39] Yeah, exactly.
+[00:22:41] And you know, there's a bit of self analysis in here too.
+[00:22:45] Like looking at what we call data smells.
+[00:22:48] Does what's in the data question your basic assumptions?
+[00:22:53] Does it show an opposite trend to what you're expecting?
+[00:22:56] Are there massive gaps or negative values
+[00:22:58] where there shouldn't be?
+[00:23:00] It's kind of like sanity checking the data as well.
+[00:23:05] And similarly, I know there are questions
+[00:23:07] about different models that organizations are using.
+[00:23:11] A lot of people are looking at the University of Washington
+[00:23:14] model.
+[00:23:15] It has a website that's very easy to use,
+[00:23:16] predicting when peaks are going to be for hospitalizations
+[00:23:20] and other issues.
+[00:23:22] But there are lots of other models it seems,
+[00:23:24] and there are questions about what
+[00:23:28] variables go into each model, how the numbers are calculated.
+[00:23:31] And they can produce conflicting results.
+[00:23:33] So that has to be challenging to deal with.
+[00:23:37] Yeah, so I did a whole column on forecasting and predictions
+[00:23:41] earlier on, which was partly for reporters and partly
+[00:23:46] for the public.
+[00:23:49] And I think, again, the question really
+[00:23:51] is, who is your audience?
+[00:23:53] And who are you writing for?
+[00:23:54] And I try to keep that at the back of my mind.
+[00:23:58] Because I think there's a difference here.
+[00:24:00] If you are writing for really a lay public, again,
+[00:24:05] you have to remind them, is this an estimation?
+[00:24:09] And I was talking to, for that particular column,
+[00:24:14] I was talking to an epidemiologist.
+[00:24:17] And I said, you know, I was reading this sentence
+[00:24:21] that somebody had written about their particular model.
+[00:24:23] And I said, it seemed awfully specific,
+[00:24:26] where they said that this means that in New York--
+[00:24:29] this was back in early March--
+[00:24:31] that last week there were, it was something like 1,583
+[00:24:38] to 2,000, blah blah blah.
+[00:24:40] It was like down to the digit number of people infected.
+[00:24:44] And I was like, I read that sentence
+[00:24:46] and I feel like it gives a lay audience this sense
+[00:24:52] that you can be that precise and calculate down
+[00:24:55] to a single digit how many people are infected.
+[00:24:58] And for me, as a writer, I would never
+[00:25:01] give that level of precision.
+[00:25:03] Because it signals something to a reader.
+[00:25:06] I would round and use the words "around."
+[00:25:11] And I said, what does this say to you as an epidemiologist?
+[00:25:14] And it was really interesting because she said,
+[00:25:16] I like seeing that sort of precision.
+[00:25:18] Because from one epidemiologist to another,
+[00:25:22] I can then go and redo his model and make sure
+[00:25:26] that our numbers match exactly.
+[00:25:28] So it's very useful from one researcher to another.
+[00:25:31] But I agree with you, for a lay audience, that's not
+[00:25:34] the message we want to send.
+[00:25:35] Because I said, what is the takeaway
+[00:25:37] you would want for a lay audience?
+[00:25:38] She said the takeaway I would want a lay audience to hear
+[00:25:41] is it's not 400 and it's not a million.
+[00:25:43] You're in the low thousands.
+[00:25:46] So really, that's kind of the question
+[00:25:48] that I always-- when I'm talking to someone who's
+[00:25:50] doing modeling, I say, what is the takeaway you
+[00:25:53] would want for a lay audience?
+[00:25:57] And really, she said with models,
+[00:26:00] you need to be thinking in orders of magnitude.
+[00:26:02] And I think that our responsibility as reporters
+[00:26:05] is to then say, OK, so I'm going to give an orders of magnitude
+[00:26:09] type of number to my readers.
+[00:26:15] Got it.
+[00:26:17] And I'm also curious, are there any mistakes
+[00:26:18] that you see lots of people repeatedly making that bug you?
+[00:26:23] One I see all the time is people say, oh, there
+[00:26:26] have been four million people tested, as if there's
+[00:26:28] been four million tests.
+[00:26:30] But some of the tests require multiple samples.
+[00:26:34] People could have been tested multiple times.
+[00:26:36] So there are different numbers.
+[00:26:38] I also see people say, oh, there are this many cases when
+[00:26:41] it's number of confirmed cases.
+[00:26:43] And there are other studies showing there are probably
+[00:26:45] many times more people who've been infected
+[00:26:48] but haven't been tested.
+[00:26:53] Yeah, the one that you just mentioned, Todd, I think
+[00:26:57] is the one that I've seen most often just
+[00:26:58] in talking with people and hearing that like, oh,
+[00:27:01] this place has only five cases.
+[00:27:04] It's like, well, no.
+[00:27:05] I mean, yes, but no.
+[00:27:08] That is just being what's reported
+[00:27:10] and what's being conveyed, being reported by the states.
+[00:27:15] And again, that comes back to what Caroline was just
+[00:27:17] saying about this precision, implying
+[00:27:19] that we know there are 526 cases in this county in Illinois
+[00:27:25] or something.
+[00:27:27] But maybe that's on us too.
+[00:27:31] I know the instinct is to try and report
+[00:27:34] the data to the granularity we have available.
+[00:27:38] But maybe there are better ways in that
+[00:27:40] we do report the data that implies
+[00:27:43] more of this imprecision about the data.
+[00:27:47] And that's something I think we can ask ourselves and address
+[00:27:50] as we try to put together these pages that
+[00:27:52] are tracking the spread of the disease or whatever.
+[00:27:58] Another one is just people being exposed
+[00:28:00] to types of scales and visuals that they're not
+[00:28:04] used to seeing.
+[00:28:05] So like, we're seeing a lot more logarithmic scales
+[00:28:09] than we're used to.
+[00:28:10] And they don't chart things--
+[00:28:12] you know, growth doesn't look the same way on a log scale
+[00:28:15] than a linear scale.
+[00:28:17] But if you're looking at it and think you're on a linear scale,
+[00:28:21] then you might think things are declining or flattening out
+[00:28:23] when actually, that is very much not the case.
+[00:28:29] Yeah, I think, Todd, you picked up on my biggest pet peeve,
+[00:28:34] which is people not paying attention to units, right?
+[00:28:37] And I've kind of been--
+[00:28:39] this has been my soapbox rant for the longest time.
+[00:28:42] It's like please, try to get your units in people.
+[00:28:45] Because I think, again, that is what readers care about, right?
+[00:28:52] They see a million tests, and they think
+[00:28:54] that that is a million people.
+[00:28:59] When you say, we're rolling out a million tests,
+[00:29:02] they will automatically think that is a million people who
+[00:29:05] can get tested.
+[00:29:06] And depending on the type of testing,
+[00:29:08] this is absolutely confusing.
+[00:29:11] Like the CDC test, you had to divide by two.
+[00:29:14] The Abbott test, the rapid test, it is one test per person.
+[00:29:19] So depending on which test you are doing,
+[00:29:21] it is a different equation.
+[00:29:23] And it really is a reporter's responsibility
+[00:29:25] to figure out what the heck is being said.
+[00:29:27] And it is a way for, frankly, for officials
+[00:29:31] to inflate numbers.
+[00:29:33] And it's the only way to really get
+[00:29:37] an apples to apples comparison, is if we get
+[00:29:40] a testing capacity in people.
+[00:29:45] And so I think that's a journalist's responsibility,
+[00:29:47] to always get the units in people.
+[00:29:49] That way, we can compare state by state, country by country.
+[00:29:54] So I do think that that is a mistake--
+[00:29:58] well, a mistake, or I think a confusion--
+[00:30:01] that annoys me when I see that.
+[00:30:05] And yeah, I think just not explaining
+[00:30:08] that everything should be like, this is a reported
+[00:30:12] number of deaths or reported number of cases
+[00:30:17] at this point in time, as Armand said.
+[00:30:18] I think those are really common.
+[00:30:21] I think also just--
+[00:30:23] this is more philosophical--
+[00:30:28] is just presuming we know things.
+[00:30:32] I mostly see this frankly on Twitter and on TV,
+[00:30:37] but just this air of we know what to do.
+[00:30:41] Like, if this state just did this,
+[00:30:44] then we would solve the crisis.
+[00:30:47] No.
+[00:30:48] Nobody knows what to do.
+[00:30:49] We have only known this, like humanity has only
+[00:30:52] known this virus since January.
+[00:30:54] Well, I mean, in China it was a little bit earlier than that.
+[00:30:57] But in the US, we haven't really known it that long.
+[00:30:59] And every time I dig into this, whether it
+[00:31:04] is on really understanding how it is transmitted,
+[00:31:08] or I recently was doing a lot of reporting on doctors struggling
+[00:31:12] to understand how best to use ventilators,
+[00:31:16] how to best treat critically ill patients.
+[00:31:19] Everybody is struggling to do their best by patients
+[00:31:24] and to really understand what to do.
+[00:31:27] And so I think there are no easy answers in this crisis.
+[00:31:30] And I think you can give--
+[00:31:33] I think this is a failure of communication
+[00:31:37] both by our officials and also actually,
+[00:31:40] by journalists, when we make it sound like there
+[00:31:44] is an obvious or easy answer, and failing
+[00:31:48] to acknowledge that, to some degree,
+[00:31:51] we are all still learning.
+[00:31:52] And so that irks me, whenever it comes across as like, well,
+[00:31:56] obviously.
+[00:32:01] That sounds good.
+[00:32:02] Why don't we go to--
+[00:32:04] questions from the audience are starting to pile up.
+[00:32:08] One that's been upvoted the most is from a Berkman fellow,
+[00:32:11] BaoBao Zhang, who wondered how you feel about non-experts
+[00:32:18] weighing in with their own analysis on Medium or Twitter
+[00:32:22] or elsewhere and non-journalists.
+[00:32:23] And not all of those people do what journalists do,
+[00:32:26] which is going to experts first to vet their conclusions.
+[00:32:32] I definitely feel like, you know, it's a free society.
+[00:32:36] And that's what platforms like Medium exist for.
+[00:32:40] So you're specifically citing Tomas Pueyo's "The Hammer
+[00:32:47] and the Dance."
+[00:32:49] I think it's fine if people want to publish,
+[00:32:53] and I think that they definitely find their own audiences.
+[00:32:55] I do think that things like that sometimes are--
+[00:33:00] I think they find their own audiences, basically.
+[00:33:02] I had a lot of people actually send me that specific post
+[00:33:05] and be like, I cannot understand this.
+[00:33:07] Can you write a version that handholds a little bit more?
+[00:33:13] Because I think the part where oftentimes,
+[00:33:17] experts who are experts in their field,
+[00:33:19] whether they're data scientists or--
+[00:33:20] I see this a lot, where like, a clinician or somebody
+[00:33:23] will be writing.
+[00:33:24] They tend to use a lot of jargon and don't break it
+[00:33:27] down to the degree that I tend to try to do.
+[00:33:31] And some people do it.
+[00:33:32] Some people are fantastic communicators naturally.
+[00:33:35] But I think that's a tendency.
+[00:33:36] I tend to see a lot of jargon.
+[00:33:38] And so I think there is a place for them,
+[00:33:44] and then I think sometimes, the shortcoming
+[00:33:47] is that I think they're not trained to be
+[00:33:49] able to use the language that helps them reach as many people
+[00:33:52] as they could and to give as much context as, I think,
+[00:33:56] a journalist would know how to do.
+[00:33:58] That's my off the top of my head answer.
+[00:34:02] That's good.
+[00:34:03] There's also a question about how
+[00:34:05] do we deal with issues where we publish an article based
+[00:34:09] on data, and then the data changes,
+[00:34:11] or the information changes.
+[00:34:13] This probably comes up all the time
+[00:34:15] with health care studies, Caroline,
+[00:34:17] where a new study comes that contradicts a past study.
+[00:34:20] Or a study's been retracted.
+[00:34:22] So how do we deal with this one?
+[00:34:24] People are still passing around the old article or chart
+[00:34:28] based on old, outdated data and information.
+[00:34:31] Yeah, oh.
+[00:34:33] What a nightmare it is right now with the situation.
+[00:34:37] So one thing that I am doing now, even more so
+[00:34:40] than I normally do, is I am aggressively
+[00:34:43] dating my information.
+[00:34:48] In my stories, on my sentence, I'll
+[00:34:49] say like, this fact, as of Wednesday afternoon,
+[00:34:56] according to the Association of Public Health Labs,
+[00:35:01] the US had a testing capacity of a million tests as of Wednesday
+[00:35:06] afternoon.
+[00:35:08] Because literally by Thursday morning, the number
+[00:35:09] is going to change.
+[00:35:10] So I try to tag as much of my information as possible.
+[00:35:14] I'm linking a lot more aggressively than I normally do
+[00:35:18] and also adding the date and time stamp.
+[00:35:20] So whenever whoever comes along to my articles
+[00:35:24] sees that information, they will know
+[00:35:27] as of when that information was true.
+[00:35:30] So unfortunately, some people are not
+[00:35:31] going to read that carefully.
+[00:35:33] But at least the time stamp will be next to that.
+[00:35:36] So I cannot go back and update my articles constantly.
+[00:35:40] But at least the information that somebody reads
+[00:35:42] will have a time stamp next to that.
+[00:35:44] So I think that's probably the best thing you can do.
+[00:35:46] And then yes, update as you go.
+[00:35:51] And I think, again, this is where
+[00:35:54] the language that you use at the time you write also
+[00:35:58] helps you write.
+[00:35:59] Because I also say use language like, at this time,
+[00:36:02] scientists understand this to be x.
+[00:36:05] So when I was working on a column
+[00:36:08] about asymptomatic transmission, there
+[00:36:10] was a lot of language I had in there
+[00:36:12] which was like, as of now, scientists
+[00:36:14] understand that whatever.
+[00:36:16] So again, there's a date at the top of my article.
+[00:36:19] I'm using a lot of language that indicates
+[00:36:21] I'm giving you the best of understanding at this time.
+[00:36:24] And then I'm also linking to studies
+[00:36:26] and putting language in that's like,
+[00:36:29] as of this interview that I did on this date,
+[00:36:32] this is what I was told.
+[00:36:33] So I think all of that in combination, hopefully,
+[00:36:36] even if a reader comes along later,
+[00:36:38] will know that that was information
+[00:36:40] that was current at the time that I wrote that article in.
+[00:36:42] And I think that's the best you can do.
+[00:36:44] Yeah.
+[00:36:45] And from a data standpoint, we can either
+[00:36:47] build our pages and apps to plug into live data
+[00:36:51] that updates, so that you are seeing updated data as
+[00:36:56] of the times stamp at the top of the page or right on the chart
+[00:37:00] or whatever.
+[00:37:01] Again, we try to be transparent about when
+[00:37:03] that data is updating.
+[00:37:05] Or like Caroline says, we can build it statically,
+[00:37:09] with like Illustrator, or just save it as the static SVG
+[00:37:13] and have to make very clear that this is data as of x.
+[00:37:19] Otherwise, we've been in situations
+[00:37:22] when we're trying to publish a story,
+[00:37:24] and we just have to keep updating the charts like five
+[00:37:28] times because the data keeps changing
+[00:37:30] as we're writing the story.
+[00:37:32] Yeah, and other more subtle things.
+[00:37:36] So ProPublica normally does really long,
+[00:37:40] sort of deep dive investigations.
+[00:37:42] And actually, our social folks are
+[00:37:46] used to just retweeting our stories forever.
+[00:37:51] Because we often are doing such long, retrospective
+[00:37:54] investigations that you could retweet our stories
+[00:37:57] like two years from now, and there's
+[00:38:00] no reason why somebody couldn't read them again later.
+[00:38:03] And we've completely reconfigured that.
+[00:38:05] So they no longer will retweet a story
+[00:38:10] because they know the information could
+[00:38:12] be totally old.
+[00:38:13] So even thinking about that, like your social strategy.
+[00:38:17] They will check in and be like, can I still tweet this story
+[00:38:20] from our main account?
+[00:38:21] Is that information still new?
+[00:38:23] Like, thinking about that kind of thing.
+[00:38:25] And then obviously, if there's some really
+[00:38:27] major new information.
+[00:38:29] Like for example, if I had written a whole column
+[00:38:32] on asymptomatic transmission, and there's
+[00:38:33] some really major information that's really relevant to know,
+[00:38:36] I will put an update at the top of that story.
+[00:38:39] So being selective.
+[00:38:43] Both good points.
+[00:38:45] Next question is from Eva Wolfangel, who's
+[00:38:48] a Knight Science Journalism fellow, who asks about the fact
+[00:38:51] that researchers often try to communicate uncertainty,
+[00:38:57] and I guess there are two challenges journalists face.
+[00:39:00] One is how to communicate that same uncertainty.
+[00:39:03] And then there's also the question,
+[00:39:05] do we undercut our own stories and reporting and data when we
+[00:39:09] communicate that uncertainty?
+[00:39:11] Or are people just going to say, oh, it's an estimate.
+[00:39:15] It has such a wide range.
+[00:39:16] It has a margin of error.
+[00:39:17] You can't really rely on it.
+[00:39:19] So how do you deal with those challenges?
+[00:39:26] I mean, I try to convey that in describing
+[00:39:30] the process of science, right?
+[00:39:32] So just to give a very specific example,
+[00:39:38] in the column I was working on on asymptomatic transmission,
+[00:39:41] there was a part where I talked about how new studies have
+[00:39:45] shown that viral load is actually
+[00:39:48] higher at the start of the disease, course of disease
+[00:39:52] for COVID-19, which means that you could be more contagious
+[00:39:59] even before symptoms started.
+[00:40:00] But I went out of my way to explain how this is unexpected
+[00:40:04] because for COVID-19's close cousins,
+[00:40:08] the coronavirus cousins SARS and MERS,
+[00:40:12] you were most contagious, you are the highest
+[00:40:14] viral load, in the middle of the course of disease,
+[00:40:19] when your symptoms were highest.
+[00:40:21] And I think just explaining that,
+[00:40:23] which would be why your natural presumption would be--
+[00:40:27] the original presumption was that COVID-19
+[00:40:29] would behave the same way.
+[00:40:30] It's something that any reader can understand,
+[00:40:32] that naturally, you'd look at historic models,
+[00:40:35] and you'd expect it to behave the same way.
+[00:40:37] And I think trying to explain the process of science helps,
+[00:40:44] and I feel like I just over explain.
+[00:40:48] And I think showing that uncertainty,
+[00:40:49] or even just saying things like--
+[00:40:53] I just was working on a story about ventilator use,
+[00:40:56] and I had a clinician give me a number.
+[00:41:00] And then he called me back and was like,
+[00:41:02] you know that number I gave you?
+[00:41:04] I know you hate this, journalists hate this,
+[00:41:07] but it might change.
+[00:41:10] And I was like, no, no, no.
+[00:41:11] That's fine.
+[00:41:12] That's fine, and I appreciate that you
+[00:41:14] wanted to clarify that.
+[00:41:15] So then I just added a line, a very short line,
+[00:41:17] saying he added that it's early days,
+[00:41:20] and more information will be gathered.
+[00:41:22] And I think that's fine and a good indicator to readers
+[00:41:26] that more studies are going to happen.
+[00:41:28] So I definitely feel like there are
+[00:41:31] ways for writers to indicate that for their readers.
+[00:41:36] And from a visual standpoint, in terms
+[00:41:40] of how to communicate uncertainty,
+[00:41:43] look to the annual discussion every hurricane season
+[00:41:47] about how to chart the likely path of a hurricane.
+[00:41:52] It's like visuals.
+[00:41:54] You want to give somebody something
+[00:41:56] to look at that tries to convey the data as best as possible.
+[00:42:02] And I think in the case of this outbreak, the best we can do
+[00:42:08] is work that into the chatter and the headline
+[00:42:14] around the chart, the annotations.
+[00:42:15] Say that it's reported cases or confirmed
+[00:42:18] cases or reported deaths.
+[00:42:20] Try and convey the uncertainty in what's
+[00:42:22] around the chart, rather than the numbers, which
+[00:42:24] are what's actually being reported
+[00:42:26] and what we actually have to chart.
+[00:42:31] Got it.
+[00:42:32] And I want to take on a question by Saul Tannenbaum, who
+[00:42:36] asks about questions raised by COVID skeptics, who will often
+[00:42:43] point out when we report deaths, argue that they're over counted
+[00:42:48] or there are no COVID deaths, in extreme cases,
+[00:42:52] and say, well, they're really dying from a heart attack.
+[00:42:55] Or they're really dying from pneumonia.
+[00:42:56] Or they're dying from some other cause.
+[00:42:58] And yes, they tested positive for COVID,
+[00:43:00] but that wasn't necessarily what caused their death.
+[00:43:05] How do you deal with those types of questions?
+[00:43:14] That's interesting.
+[00:43:15] I think that--
+[00:43:20] I don't know that that's a useful debate right now, right?
+[00:43:24] I think all you can do-- because I think you can
+[00:43:26] have that debate at either end.
+[00:43:28] Because then you get into the debates on the people who
+[00:43:32] are dying at home.
+[00:43:34] Did they die of COVID?
+[00:43:35] Did they die of not COVID?
+[00:43:36] How do you then count the people who
+[00:43:41] are the excess impact from COVID because they
+[00:43:46] died at home because they didn't want to go in for help.
+[00:43:50] You know, I think there are so many swirling questions
+[00:43:54] around deaths related to COVID that are going
+[00:43:58] to be so hard to untangle.
+[00:44:00] And I think as journalists, the only thing you can really
+[00:44:03] do is just be really straight and really flat and be like,
+[00:44:06] here are the number of people who died
+[00:44:08] with a positive COVID test.
+[00:44:13] And just leave it at that.
+[00:44:16] And then here are the number of people who died at home,
+[00:44:18] and here is how it compares to the number of people
+[00:44:21] who died at home last year at the same time.
+[00:44:24] And show that gap if you are able to get
+[00:44:27] that number from your state.
+[00:44:28] I just don't know that those debates are
+[00:44:33] really helpful or getting into those weeds
+[00:44:35] and trying to parse that is going
+[00:44:37] to get anywhere at this point.
+[00:44:39] Because you can have that same debate about the flu.
+[00:44:41] Like, so and so had a positive flu test,
+[00:44:45] but did they die of their underlying condition?
+[00:44:49] Their pneumonia came from the flu,
+[00:44:51] but they also had diabetes.
+[00:44:53] What does that mean?
+[00:44:54] I just don't know where you'll get with that.
+[00:45:00] And it reminds me of after Hurricane Maria,
+[00:45:03] when they went and did studies of what
+[00:45:07] did the excess mortality rate look at in Puerto
+[00:45:11] Rico after Hurricane Maria?
+[00:45:13] I worked on the homicide report at The LA Times
+[00:45:16] for several years.
+[00:45:17] And the LA county coroner, if somebody was shot and then died
+[00:45:25] like, say, 10 years later of complications from that gunshot
+[00:45:28] wound, like eventual health impacts,
+[00:45:31] it's still ruled a homicide because they
+[00:45:37] died because of complications from that gunshot wound.
+[00:45:40] So this is not just solely restricted
+[00:45:43] to a COVID 19 debate.
+[00:45:44] It's just mortality statistics in general.
+[00:45:50] Right.
+[00:45:51] Another question that came up is,
+[00:45:56] what is the most reliable source for COVID-19 data?
+[00:46:01] I think there are at least a half a dozen sources
+[00:46:04] of aggregated national data and a couple
+[00:46:09] sources with global data.
+[00:46:13] Armand, go ahead.
+[00:46:14] Yeah, most reliable is the key.
+[00:46:17] I mean, Johns Hopkins has really been putting tons of work
+[00:46:23] into aggregating as much data as possible.
+[00:46:27] You can take a scroll through their issues list on GitHub
+[00:46:30] just to kind of get an idea of the volume of requests
+[00:46:35] this has generated.
+[00:46:42] Of course, the World Health Organization and then
+[00:46:49] I think a number of media organizations,
+[00:46:51] including us, are also trying to aggregate at the US level,
+[00:46:54] like state data and county data.
+[00:46:57] I can't tell you which is the most accurate.
+[00:47:00] I would say just for US case counts,
+[00:47:02] we mainly use Johns Hopkins data.
+[00:47:06] We long ago gave up on the CDC, which is very unfortunate
+[00:47:11] to have to say that.
+[00:47:12] But they don't update on weekends,
+[00:47:13] and they are like 24 hours behind on their weekday
+[00:47:17] updates.
+[00:47:19] So we use Johns Hopkins for just our daily case counts.
+[00:47:23] In terms of testing capacity, we mostly
+[00:47:25] point to The COVID Tracking Project.
+[00:47:31] International, sometimes, depending
+[00:47:34] on what it is, WHO or JHU.
+[00:47:40] But again, it really depends on exactly what
+[00:47:42] you're trying to get at.
+[00:47:45] Got it.
+[00:47:46] And of course, sometimes for very local stories,
+[00:47:48] there may be only one possible source
+[00:47:50] of data coming from a county or coming
+[00:47:54] from a hospital or somewhere.
+[00:47:56] And actually, going to your local health department
+[00:47:59] directly is probably going to be the most up to date
+[00:48:01] information, which will be even faster and more up
+[00:48:03] to date than going to a site like JHU, frankly.
+[00:48:07] want to try to clarify.
+[00:48:08] There Is also a question from [? magna ?] Cheney, whose
+[00:48:12] a Nieman affiliate, asking about the best practice for archiving
+[00:48:17] stories.
+[00:48:18] So Caroline, you mentioned having
+[00:48:21] a date stamp can be one way.
+[00:48:26] Yeah.
+[00:48:27] The Guardian does this thing where
+[00:48:29] they have a warning up really high, where they say like,
+[00:48:33] warning, this story is like more than a year old.
+[00:48:36] Or they have some sort of very visible warning
+[00:48:39] up high, which I always appreciate whenever I see that.
+[00:48:43] So that could be one way to do it.
+[00:48:46] OK.
+[00:48:48] Michelle O'Neill asks, what can we
+[00:48:50] report that's meaningful without having the basic data
+[00:48:53] that we want?
+[00:48:55] And I guess that comes up with when we want to say, you know,
+[00:48:57] what states?
+[00:48:58] Where are the hot spots?
+[00:49:00] Or how is the US doing versus other countries
+[00:49:02] when there are all these questions that we've brought up
+[00:49:05] about how many people are actually infected given
+[00:49:08] the differences in testing, and how many people have died
+[00:49:11] given differences and counting.
+[00:49:13] And because of all these uncertainties with numbers,
+[00:49:15] it must be really challenging to figure out what we can really
+[00:49:19] say with confidence.
+[00:49:22] Yeah, agreed.
+[00:49:24] I think we need to make basic assumptions or adjustments when
+[00:49:28] we can, you know, for denominators that don't exist
+[00:49:31] or for other things that we don't consider reliable.
+[00:49:35] Like on our pages that show the data that we know about cases
+[00:49:42] and deaths throughout the country,
+[00:49:44] instead of normalizing, we're looking
+[00:49:49] at like known cases per population of the state,
+[00:49:57] per population of the area.
+[00:50:01] But again, we have to be clear that this is all just
+[00:50:05] based on what's being reported.
+[00:50:09] OK.
+[00:50:10] There was also a question with, what
+[00:50:12] do you do when you don't have data or information,
+[00:50:15] or you have conflicting data, so you can't be sure?
+[00:50:18] Do you just avoid writing about it?
+[00:50:21] Or do you write about it as best you can?
+[00:50:24] It's certainly difficult to make charts
+[00:50:26] when you don't have data.
+[00:50:29] Well, I do think that there is value
+[00:50:34] to writing about the lack of information, especially
+[00:50:36] when you feel like, say, your local health department is
+[00:50:40] withholding information that should be public, right?
+[00:50:42] So I think that there was, early on,
+[00:50:45] a lot of good journalism being done
+[00:50:47] about the need for demographic information,
+[00:50:51] about who was being infected, right?
+[00:50:53] And now we're getting a lot more of that information,
+[00:50:56] which is pointing out big problems in who
+[00:50:59] is being infected.
+[00:51:01] So I would not dismiss that as a possibility
+[00:51:05] for where you start reporting on just
+[00:51:08] the lack of good information, which can actually
+[00:51:11] spur change and get you the information that you then want.
+[00:51:16] Great.
+[00:51:18] So I think we just have time for one last question.
+[00:51:22] Gina Pavone notes that there's talk of using
+[00:51:27] an app for contact tracing.
+[00:51:30] There's a project at MIT for that.
+[00:51:33] And there's also been stories based on cell phone data that's
+[00:51:38] been released.
+[00:51:39] And Gina wonders how journalists deal
+[00:51:45] with aspects of privacy or reporting
+[00:51:52] on the challenges of releasing that data
+[00:51:55] and using that type of sensitive data
+[00:51:59] and making the topic accessible to a mass audience?
+[00:52:06] Yeah, I mean, I think this is a hot topic
+[00:52:10] across a lot of different countries,
+[00:52:13] a lot of different localities.
+[00:52:16] And I think one, really understanding
+[00:52:20] the nitty gritty of how it's going to be used is important.
+[00:52:25] I think there are a lot of think pieces about these apps
+[00:52:30] right now that I'm seeing, which ask
+[00:52:31] a lot of philosophical and hypothetical questions.
+[00:52:35] But I see way fewer stories that actually
+[00:52:38] get into the innards of how they're going to be used,
+[00:52:41] which would actually help answer some of these think pieces.
+[00:52:43] So I think that would be useful journalism to be done.
+[00:52:47] It's much easier to be like, well, what about privacy?
+[00:52:49] But then you don't actually know what's going to happen.
+[00:52:52] I think the other question though,
+[00:52:55] which was raised with me, was some public health experts
+[00:52:57] that asked, how is this going to actually intersect
+[00:53:00] with the existing public health infrastructure?
+[00:53:03] Because if there are a bunch of people who have downloaded
+[00:53:06] an app and it's not talking to public health officials
+[00:53:11] and not helping them do their actual work,
+[00:53:13] that's also useless.
+[00:53:15] So this needs to fit into the existing public health
+[00:53:19] ecosystem.
+[00:53:20] So I think there's a lot of good reporting
+[00:53:21] that can be done around that.
+[00:53:23] And then again, this needs to fit into existing testing
+[00:53:26] capacity.
+[00:53:27] There's no point in having a great contact tracing app
+[00:53:29] if you then can't test people and find out
+[00:53:32] who is sick in the first place.
+[00:53:33] So there's a lot of questions about
+[00:53:37] do we have a very shiny looking object
+[00:53:41] that doesn't mesh with the actual realities of needs?
+[00:53:47] And I think helping people understand, your readers,
+[00:53:50] actually understand how this app needs
+[00:53:52] to fit into the actual workflow of continuing the virus.
+[00:53:57] All of those things can be helpful to your readers.
+[00:54:02] And then ultimately, also just like
+[00:54:04] the mathematics of how many people would actually
+[00:54:07] need to download the app for this
+[00:54:08] to be useful in achieving what it needs to do.
+[00:54:13] Because there is a minimum number
+[00:54:14] of people who need to have the app for a contact tracing
+[00:54:18] app to work.
+[00:54:20] Got it.
+[00:54:21] Thank you so much.
+[00:54:23] Thanks for the panelists.
+[00:54:24] And for everyone who tuned in, there
+[00:54:27] will be a recording available in a couple days on the Berkman
+[00:54:32] Klein Center event page.
+[00:54:34] And there's also going to be a quick poll
+[00:54:39] survey at the very end.
+[00:54:41] So thanks again for Armand and Caroline,
+[00:54:46] and thanks for everybody who is watching.

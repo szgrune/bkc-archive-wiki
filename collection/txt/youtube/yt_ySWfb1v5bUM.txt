@@ -1,0 +1,1459 @@
+[00:00:05] CARRIE ANDERSON: Hi, folks.
+[00:00:06] My name is Carrie Anderson.
+[00:00:07] I'm going to start us off today by saying
+[00:00:10] that this is the final luncheon for the academic year.
+[00:00:14] We'll start back up in September,
+[00:00:16] and I just want to thank a few folks that
+[00:00:18] have been really instrumental in making sure these happen for us
+[00:00:21] every week.
+[00:00:23] We would not be able to do this without the space on HLS
+[00:00:26] campus, without the support of the HLS media services team,
+[00:00:30] without the help of the events and facilities offices,
+[00:00:33] specifically Rhiannon and McCarthy who
+[00:00:35] does all of our event organizing,
+[00:00:37] without the support of Restaurant Associates,
+[00:00:40] the team there, including Andrea and Stephanie
+[00:00:43] have been wonderful this year to us,
+[00:00:47] and really the entire team at BKC, so our events
+[00:00:50] team, our communications team, and our ITS team.
+[00:00:53] Ellen and our IT team has been here every week.
+[00:00:56] Victoria and Dan who are on our comms team,
+[00:00:59] and Rubin who basically manages all of these
+[00:01:01] and puts this together for us every week after week.
+[00:01:04] So just wanted to quickly give them
+[00:01:06] a round of applause for all of the support
+[00:01:08] throughout the year.
+[00:01:09] [APPLAUSE]
+[00:01:13] And I'm going to turn this over now to [? Amar ?] [? Asha. ?]
+[00:01:17] [? AMAR ASHA: ?] There was one more person
+[00:01:19] that we forgot to thank, which was Carrie herself.
+[00:01:22] So thank you, Carrie, who is totally instrumental in being
+[00:01:29] the orchestra leader of all these lunches,
+[00:01:32] interacting with all the guests and all the people that
+[00:01:34] are helping to put that these wonderful talks together.
+[00:01:37] So thank you to all the teams that
+[00:01:40] really do such a wonderful job.
+[00:01:43] And Thank you to our guests, and I'm excited today
+[00:01:45] to introduce Christo Wilson, who is a professor of computer
+[00:01:49] science at Northeastern.
+[00:01:51] I think one of the people doing some of the most exciting work
+[00:01:54] in algorithmic studies, and probably one of the people
+[00:01:57] building out the field of algorithmic studies.
+[00:01:59] So it's a real treat that we have him today.
+[00:02:02] Christo is also the head of the undergraduate bachelor's
+[00:02:06] in computer science for cybersecurity at Northeastern.
+[00:02:09] He is involved in so many different things,
+[00:02:12] and you're going to hear just one piece of his work related
+[00:02:15] to algorithmic auditing today.
+[00:02:17] But there's so much that he's done
+[00:02:19] in terms of looking at personalization
+[00:02:21] and looking at all the ways that algorithms influence
+[00:02:24] our lives online.
+[00:02:27] Christo was also involved in Christian Sandvig's lawsuit
+[00:02:31] with the ACLU that is essentially
+[00:02:34] looking at and examining the CFA and challenging the provision
+[00:02:39] in that law that says that breaking the terms of service
+[00:02:43] constitutes a federal crime.
+[00:02:44] Because as you'll see in today's presentation,
+[00:02:47] doing research and breaking terms of service
+[00:02:49] maybe not necessarily in this instance
+[00:02:51] but perhaps what we can talk about it,
+[00:02:53] is something that's really important
+[00:02:55] to research communities like the Burkean Klein Center
+[00:02:57] and like universities all over the country
+[00:03:00] and all over the world.
+[00:03:01] So it's a really important issue within this own community.
+[00:03:04] Christo is part of that effort and he's
+[00:03:07] doing some really exciting work there.
+[00:03:09] And I'm going to hand it over to him
+[00:03:10] now to talk to us about bias and search engines.
+[00:03:22] And two other things I'll just quickly mention
+[00:03:24] before you start, one we're being webcast so
+[00:03:26] please just be aware of that.
+[00:03:28] Two, Christo definitely welcomes questions,
+[00:03:31] and if you are going to ask a question,
+[00:03:33] please just identify yourself so we can have some context.
+[00:03:35] Great.
+[00:03:36] Thanks.
+[00:03:37] CHRISTO WILSON: Well, thank you all very, very much
+[00:03:39] for being here.
+[00:03:41] It's an honor to be speaking in Harvard where Latanya Sweeney
+[00:03:44] arguably invented this idea of algorithmic auditing
+[00:03:47] when she looked at racial discrimination
+[00:03:49] in online advertising.
+[00:03:52] So as Omar said, I'm a computer scientist.
+[00:03:54] So take everything, I say, with a grain of salt.
+[00:03:57] Outside of nitty gritty technical details,
+[00:03:59] I have no idea what I'm talking about most of the time.
+[00:04:01] So please feel free to ask me questions, challenge me
+[00:04:05] in any way.
+[00:04:07] And at the end, I have some interesting sort of discussion
+[00:04:09] prompts to kick us off.
+[00:04:11] So today I would like to talk about one particular piece
+[00:04:14] of work we did looking at gender bias in online resume search
+[00:04:19] engines.
+[00:04:20] This is the kind of search engine
+[00:04:21] that a recruiter would use to go and find
+[00:04:23] potential candidates to bring them in for reviewing
+[00:04:27] and possibly hiring.
+[00:04:30] So before we get to that, I'd like
+[00:04:31] to take a few moments just sort of set the stage.
+[00:04:35] We're increasingly finding that the social and sort
+[00:04:39] of structural biases that exist in society
+[00:04:43] are embedded in the data that's being collected by companies
+[00:04:47] and by governments.
+[00:04:49] And then the unfortunate thing is
+[00:04:50] that that data is then used to build various kinds of systems.
+[00:04:56] We can use that to train machine learning algorithms
+[00:04:59] or we can use it for simpler tasks.
+[00:05:01] But what that often ends up doing
+[00:05:03] is it takes these social biases and either reflects them
+[00:05:07] or amplifies them.
+[00:05:08] You end up with a machine that reflects a social bias.
+[00:05:14] This isn't necessarily intentional on the part
+[00:05:16] of the engineers who built the system,
+[00:05:18] or it's just a consequence of the fact
+[00:05:20] that the data has a problem.
+[00:05:22] And you've used it uncritically in some other context.
+[00:05:27] So increasingly we hear about this sort of thing in the news.
+[00:05:31] Academics have been interested in this for a long time now
+[00:05:35] looking at sort of uncritical uses of data,
+[00:05:38] but you also see this in the news.
+[00:05:41] People find examples of systems like predictive policing
+[00:05:44] algorithms, let's say.
+[00:05:46] Where you have a historic system with a historical bias issue
+[00:05:51] that ends up in the data, and now you
+[00:05:53] have tools being used by police that
+[00:05:54] are reflecting and reinforcing those social biases.
+[00:05:59] So the question that I'm interested in is,
+[00:06:01] how do we actually measure and understand
+[00:06:03] these kinds of systems?
+[00:06:05] It's one thing to say, we think this is bad,
+[00:06:08] and engineers should do more, they should clean the data
+[00:06:12] or they should train systems that
+[00:06:13] are fair by design or maybe we need
+[00:06:15] to pass laws or regulations that prohibit these kinds of uses
+[00:06:18] of data.
+[00:06:20] But at the end of the day, we still
+[00:06:21] don't really know what's going on out there
+[00:06:24] in the real world in practice.
+[00:06:26] Algorithms or trade secrets companies
+[00:06:28] are typically divulging the secrets
+[00:06:30] of what's going on inside these black boxes.
+[00:06:33] Even if you mandated that the source code, let's say be,
+[00:06:36] transparent, that's not enough, because you also need the data.
+[00:06:41] The data is what's ultimately driving the system as well.
+[00:06:44] And if we mandate transparency of all data,
+[00:06:47] there's huge privacy implications for that.
+[00:06:49] Yes.
+[00:06:51] AUDIENCE: I'm [INAUDIBLE] I'm a fellow for the [INAUDIBLE]
+[00:06:53] Center.
+[00:06:54] We often hear people talk about the data being
+[00:06:58] and it's better to have the algorithm up there as well.
+[00:07:04] Can you share from your experience and perspective ways
+[00:07:07] that algorithms reproduce and entrenched
+[00:07:09] the biases from the data?
+[00:07:11] CHRISTO WILSON: Yeah so there's many sort of examples
+[00:07:15] of this that got trotted out during every one
+[00:07:17] of these conversations.
+[00:07:18] So what is predictive policing, like ProPublica
+[00:07:21] has done incredible work looking at the compass algorithm
+[00:07:25] in Broward County, Florida, showing
+[00:07:27] that it was more likely to send African-American defendants
+[00:07:30] to jail than white defendants.
+[00:07:34] Latanya Sweeney's work looking at racial bias in advertising.
+[00:07:40] So her work showed if you did a search
+[00:07:42] for an African-American name, you
+[00:07:44] were likely to see ads saying this person may
+[00:07:46] have been convicted of a crime.
+[00:07:48] Do a background check on them.
+[00:07:51] AUDIENCE: So some people argue, that's just the data.
+[00:07:54] CHRISTO WILSON: Yeah.
+[00:07:55] AUDIENCE: If you just had good data
+[00:07:57] then there's nothing wrong with the algorithm is totally fine.
+[00:08:00] So can you take it a step further and from
+[00:08:02] and talk about, I guess, more technical part
+[00:08:05] of why it's the algorithm.
+[00:08:08] CHRISTO WILSON: Yeah.
+[00:08:09] Frankly I hate this argument.
+[00:08:11] Some of the machine learning people
+[00:08:12] really like to say that the data is
+[00:08:15] the only issue, the algorithm itself
+[00:08:17] is neutral and beautiful.
+[00:08:19] And I don't really buy that in the sense
+[00:08:21] that someone is making a decision to implement a system.
+[00:08:26] And you can imagine using machine learning
+[00:08:29] or not using machine learning.
+[00:08:30] There's a variety of tools in the toolbox.
+[00:08:33] And to say that machine learning itself is inherently neutral
+[00:08:36] and it's purely a data issue ignores the autonomy
+[00:08:39] of the engineer and design decisions
+[00:08:41] that go into building these systems.
+[00:08:45] This also gets into other issues like how data is being
+[00:08:48] collected and dark patterns.
+[00:08:49] Are you soliciting information from people
+[00:08:52] to then use it against them essentially?
+[00:08:54] There's a lot of decision making that
+[00:08:56] goes into every aspect of this from the upfront user interface
+[00:08:59] to the back end processing of data.
+[00:09:02] Those are all decisions being made by people
+[00:09:04] and implemented in code.
+[00:09:07] So to say, well, it's just a data issue.
+[00:09:09] It's too short sighted in my opinion.
+[00:09:13] But I'm happy to be challenged on that.
+[00:09:17] AUDIENCE: Do they apply this algorithm
+[00:09:19] for all kinds of jobs?
+[00:09:22] AUDIENCE: Hold on one second.
+[00:09:30] AUDIENCE: I'm just wondering whether they
+[00:09:32] apply this algorithm for any kind of job
+[00:09:34] or do they stop at medium level and intermediary?
+[00:09:37] CHRISTO WILSON: So this--
+[00:09:40] I'm going to be focusing on all kinds of jobs,
+[00:09:43] low and high level.
+[00:09:50] So in order to try to understand what these systems are doing,
+[00:09:54] there's kind of this emerging field
+[00:09:55] that I like to call algorithm auditing.
+[00:09:57] I consider myself to be an algorithm auditor.
+[00:10:00] And what that means, essentially,
+[00:10:02] is that I go and find systems of interest, things where
+[00:10:06] it's high impact, where I believe
+[00:10:07] it impacts many people's lives.
+[00:10:09] And I go and try to figure out how it works.
+[00:10:11] So what data is being collected?
+[00:10:13] How is that data being used?
+[00:10:15] And ultimately, what is the impact
+[00:10:18] of these systems on people?
+[00:10:21] Because that's ultimately what we really care about.
+[00:10:23] So I'm a bit of a reverse engineer
+[00:10:25] as a simple, straightforward way to think about this.
+[00:10:30] So today in particular, I want to talk about hiring websites.
+[00:10:34] So you've probably heard of many of these like Monster,
+[00:10:37] LinkedIn, Glassdoor.
+[00:10:39] These are platforms used by millions of people
+[00:10:41] to find employment.
+[00:10:43] So you may have used one of these platforms
+[00:10:45] probably from the perspective of a job seeker.
+[00:10:48] You went and created a profile and uploaded a resume.
+[00:10:51] And then you could search for open jobs and apply to that.
+[00:10:55] But there's another facet to these tools.
+[00:10:58] They're also used by recruiters to do active recruiting.
+[00:11:01] They can search the database of all resumes
+[00:11:04] to try and identify potential employees
+[00:11:06] to go reach out to them.
+[00:11:08] Say it is like head hunting--
+[00:11:10] I think you'd be great for this job, come in for an interview.
+[00:11:14] So I would argue these systems are systemically important.
+[00:11:17] Millions of people rely on this as a way to find employment.
+[00:11:20] And this is a context where we know
+[00:11:23] there is social and historical biases that regulation
+[00:11:27] has tried to deal with over the years.
+[00:11:31] So how these systems play into that I think
+[00:11:33] is very interesting and consequential.
+[00:11:36] So to give you an idea of what the system looks
+[00:11:38] like from a recruiter's perspective,
+[00:11:40] it really just looks like a search engine.
+[00:11:42] So here's an example from Indeed.
+[00:11:45] I'm searching for a software engineer
+[00:11:47] located in the New York region.
+[00:11:50] In the left hand rail, you have your filters--
+[00:11:52] how far away, specific skills, years
+[00:11:56] of experience, that kind of thing, to refine the people
+[00:11:58] you're interested in.
+[00:12:01] And then you're given a ranked list of people.
+[00:12:04] These are people who have created a profile
+[00:12:06] and uploaded a resume that match your criteria,
+[00:12:10] the same way that you might search for something on Google.
+[00:12:15] So this is very interesting but also
+[00:12:18] troubling to think of this as a people search engine.
+[00:12:21] And if you think about Google and how important
+[00:12:24] being number one is in the rank, the same logic applies here.
+[00:12:28] These people at the top of the ranking are privileged.
+[00:12:32] They're the ones who are likely to be seen and headhunted
+[00:12:35] by recruiters.
+[00:12:36] So being ranked highly in this system matters.
+[00:12:40] It directly impacts your ability to get recruited and find
+[00:12:44] employment.
+[00:12:48] Now, the ranking metric that is used in these systems
+[00:12:52] is opaque.
+[00:12:53] It just says we rank them by relevance.
+[00:12:56] But nobody really has any idea what that means.
+[00:12:58] That's up to the engineers of this company.
+[00:13:02] The other thing that you'll notice
+[00:13:03] is that there is essentially no demographic information
+[00:13:06] available here.
+[00:13:08] It doesn't say whether these are men or women,
+[00:13:10] if they're black or white.
+[00:13:12] And that's intentional.
+[00:13:13] When you sign up for the service,
+[00:13:14] the companies don't ask for that information.
+[00:13:17] They don't want to know your demographics because
+[00:13:20] at the end of the day, they would
+[00:13:21] like decisions to be made not based on demographics.
+[00:13:24] That would be discriminatory.
+[00:13:26] So to the greatest extent possible,
+[00:13:29] they try not to collect that and they try not to show it.
+[00:13:35] So on one hand, this seems good.
+[00:13:38] You have a system that's not collecting demographics,
+[00:13:41] not showing demographics.
+[00:13:43] And that seems like it would create a system that
+[00:13:47] is demographically blind.
+[00:13:49] It should be neutral to all these different categories
+[00:13:52] and that should do something to help eliminate bias.
+[00:13:57] If you're a recruiter and you're looking at this
+[00:13:59] and you can't tell people's demographics,
+[00:14:01] then it prohibits me as an individual from bringing up
+[00:14:05] my internal biases.
+[00:14:07] You can think of this as like a blind audition
+[00:14:10] for an orchestra.
+[00:14:11] Historically orchestras were incredibly biased,
+[00:14:14] it was primarily men.
+[00:14:16] They instituted a system of blind auditioning
+[00:14:19] where you play behind a curtain, no one
+[00:14:21] can see if you're a man or a woman or black and white.
+[00:14:24] And this had the net effect of dramatically increasing
+[00:14:27] diversity in orchestras.
+[00:14:29] It eliminated demographics from the decision making.
+[00:14:34] But here's the problem.
+[00:14:36] Demographics aren't really gone, they're just buried.
+[00:14:41] Ultimately, there is a ranking algorithm here.
+[00:14:43] And it's looking at things like where
+[00:14:45] did you go to college, how many years of experience
+[00:14:48] do you have, what's your current level of seniority
+[00:14:51] in your company.
+[00:14:52] And those are all things that are linked to demographics.
+[00:14:56] Different people have different levels of opportunity,
+[00:14:58] there are things like glass ceilings.
+[00:15:01] And all of those systematic biases
+[00:15:04] end up being embedded in the data.
+[00:15:07] So if the ranking algorithm is using those things as features
+[00:15:10] to decide who is relevant, who is
+[00:15:12] best, that could in turn just reflect
+[00:15:18] these social inequities.
+[00:15:20] Remember, everyone showing up at the top of the page
+[00:15:24] is privileged.
+[00:15:25] So if the ranking algorithm is taking these things
+[00:15:28] into account and systematically moving some people lower,
+[00:15:32] that's directly impacting their ability to find employment.
+[00:15:34] Yes.
+[00:15:36] AUDIENCE: I just had a question about the previous slide.
+[00:15:39] How could it be that with the search
+[00:15:42] being software engineer in New York New York
+[00:15:44] that you only returned New Jersey, people
+[00:15:47] who are living in New Jersey?
+[00:15:49] CHRISTO WILSON: So it was a 25-mile radius around New York.
+[00:15:52] AUDIENCE: But as far as wouldn't it be privileging New York New
+[00:15:56] York as a factor?
+[00:15:59] CHRISTO WILSON: It should.
+[00:16:01] It's interesting that the top candidates
+[00:16:02] happened to be coming from New Jersey in that case.
+[00:16:05] I'm not exactly sure what that signifies.
+[00:16:07] Something about the prices of real estate in Manhattan.
+[00:16:11] Even for software engineers.
+[00:16:15] So this idea that bias can creep into these kinds of hiring
+[00:16:20] systems it's not hypothetical.
+[00:16:22] So at one point, we ran a study looking at gig-economy services
+[00:16:25] like TaskRabbit-- so if you've never used this,
+[00:16:28] it's the kind of service where you can go and search
+[00:16:30] for someone to walk your dog or mow your lawn.
+[00:16:34] So we were interested in whether there were demographic biases
+[00:16:38] on this service.
+[00:16:40] And the important thing that our study found is that there were.
+[00:16:44] They come from the ratings from the users.
+[00:16:48] Users hire these workers to do things
+[00:16:50] and then they could leave feedback.
+[00:16:52] Well, that feedback, it turns out is biased.
+[00:16:55] We found that women and people of color
+[00:16:58] systematically received lower ratings than white men.
+[00:17:02] What that also ultimately meant was that the search engine
+[00:17:05] produced biased results because it ranked people
+[00:17:08] based on their ratings.
+[00:17:10] You have a bunch of people who will
+[00:17:12] walk dogs who should be the top person
+[00:17:14] or it's the person with five stars.
+[00:17:17] But they failed to consider the fact
+[00:17:18] that the star ratings embed this bias from people generating
+[00:17:23] the data.
+[00:17:26] Another case that was in the news.
+[00:17:28] Amazon built an AI system to try and screen hiring applicants.
+[00:17:32] And unfortunately, this was trained
+[00:17:34] based on their prior data from hiring,
+[00:17:36] which had a systematic bias in favor of men, specifically
+[00:17:40] male engineers.
+[00:17:41] And lo and behold, they ended up with a system
+[00:17:44] that systematically discriminated against women.
+[00:17:47] And so it's not at all hypothetical
+[00:17:50] that a system like this could have a bias.
+[00:17:53] The question is, does it?
+[00:17:55] So in particular for this study, we're
+[00:17:57] going to be looking at three search engines--
+[00:17:58] Indeed, Monster, and CareerBuilder.
+[00:18:00] And we're going to be focusing on gender bias.
+[00:18:03] So are these resumes search engines
+[00:18:05] systematically reducing the rank of women or vise versa?
+[00:18:09] Is there some kind of gender bias
+[00:18:10] inherent in the ranking algorithm?
+[00:18:13] We're going to be looking at this from two
+[00:18:15] different perspectives.
+[00:18:16] So these are essentially two different kinds of fairness.
+[00:18:21] First, we're going to talk about individual fairness, which
+[00:18:23] you can think of as equal opportunity.
+[00:18:26] Two people with the same skills, the same qualifications
+[00:18:29] should essentially be appearing at the same rank
+[00:18:32] once we've ignored gender.
+[00:18:34] Same skills means same rank, equal opportunity.
+[00:18:39] However, there's another way to conceptualize fairness,
+[00:18:41] which is group fairness.
+[00:18:43] What that means is that overall, the average rank
+[00:18:47] of men and women should be the same.
+[00:18:49] Regardless of skills, regardless of qualifications, on average,
+[00:18:54] we should all be the same regardless of gender.
+[00:18:57] And you can think of this as roughly
+[00:18:58] being equivalent to disparate impact,
+[00:19:00] is one group systematically different than the other group?
+[00:19:07] If we find that the system isn't fair with respect to gender,
+[00:19:12] then we have a separate question,
+[00:19:14] which is was this intentional?
+[00:19:16] Was the system designed to use gender?
+[00:19:19] Is there direct discrimination, or is this just
+[00:19:23] an artifact of the data?
+[00:19:25] It's something that's embedded in it
+[00:19:27] and there's proxies surfacing that is causing this.
+[00:19:32] So I'll go through a little bit of our data collection,
+[00:19:35] how did I get all this data.
+[00:19:37] I'll talk specifically about how we
+[00:19:39] analyzed individual fairness.
+[00:19:42] We'll answer the question, was there or was there
+[00:19:44] not direct discrimination going on here.
+[00:19:46] And I'll briefly conclude and then we can discuss,
+[00:19:48] and you can rip apart my study.
+[00:19:51] Any questions so far?
+[00:19:55] Cool.
+[00:19:57] OK, so this is an algorithm audit,
+[00:20:00] which means that my subjects are algorithms.
+[00:20:04] That's a weird thing to say.
+[00:20:05] But that's essentially the framing here.
+[00:20:07] So my subjects are the search engines of Indeed, Monster,
+[00:20:10] and CareerBuilder.
+[00:20:11] And we chose these because they're extremely popular.
+[00:20:14] As you'll see, we get hundreds of thousands
+[00:20:16] of candidates from these search engines.
+[00:20:18] And this is just a subset of the cities that they operate in.
+[00:20:21] They have millions of people.
+[00:20:23] We would have like to do more like LinkedIn,
+[00:20:26] but LinkedIn is very expensive and very litigious.
+[00:20:28] So we decided not to look at them.
+[00:20:32] So on Monster and CareerBuilder, the candidate data
+[00:20:35] is not public.
+[00:20:35] You have to sign up as a recruiter,
+[00:20:37] so we did that where you pay a couple hundred dollars
+[00:20:40] and you get access to the recruiter tools.
+[00:20:42] That required some light bending of the truth.
+[00:20:47] And on Indeed, this is all public.
+[00:20:49] Anyone can go and look at the recruiter tools.
+[00:20:51] There's no getting involved.
+[00:20:54] So with respect to my data needs, essentially
+[00:20:57] what I have to have are search results, millions
+[00:21:00] and millions of search results so that I can analyze them all
+[00:21:03] to figure out, are there systematic differences
+[00:21:05] between men and women who appear in the rankings.
+[00:21:10] So we ran a lot of different queries.
+[00:21:13] So we chose 20 different cities to run queries in.
+[00:21:16] And these were chosen for diversity.
+[00:21:18] We want big cities.
+[00:21:19] We want small cities.
+[00:21:20] We want cities that are demographically
+[00:21:22] representative of the US.
+[00:21:24] We want cities that are majority, minority.
+[00:21:26] We need diversity here.
+[00:21:29] So in every one of the 20 cities,
+[00:21:31] we ran searches for 35 different job titles.
+[00:21:34] And these were split between high and low skilled positions.
+[00:21:38] So the high-skill jobs are things like software engineers,
+[00:21:41] accountants, registered nurses, things
+[00:21:45] that require accreditation.
+[00:21:47] And the low-skilled jobs are things like mail carrier,
+[00:21:49] or taxi driver, or customer service, things
+[00:21:52] that you could get with, let's say, a high school diploma.
+[00:21:55] And again, we do this for diversity.
+[00:21:57] We want things that require college education, that don't
+[00:22:00] require college education.
+[00:22:06] So we run all these searches on these recruiting tools.
+[00:22:11] What is the actual data that we're getting back from them?
+[00:22:14] So we're getting search results that look like this.
+[00:22:17] So right off the bat, you get things like the candidates
+[00:22:20] current job title and position, so are they a software
+[00:22:24] engineer, or are they a senior software engineer,
+[00:22:27] those kinds of things.
+[00:22:28] You get their experience and education.
+[00:22:30] Do they have a college degree, high school degree,
+[00:22:32] a doctorate?
+[00:22:34] And then on Indeed, specifically we also got full resumes.
+[00:22:38] For the people and Indeed, we actually
+[00:22:40] have much, much richer data.
+[00:22:42] Unfortunately we couldn't get that
+[00:22:43] from Monster and CareerBuilder.
+[00:22:47] So in total, on Indeed and Monster,
+[00:22:49] we had 13 different variables per candidate.
+[00:22:53] And on CareerBuilder we only had six.
+[00:22:55] You'll see this is a theme--
+[00:22:56] CareerBuilder is the weakest of the three platforms
+[00:22:59] that we studied.
+[00:23:02] So this is good but I'm missing one critical thing.
+[00:23:05] This is a study about gender discrimination.
+[00:23:08] Where are my genders coming from?
+[00:23:12] So what we did is we inferred people's gender
+[00:23:15] based on their name.
+[00:23:17] So fortunately, we're running this in a Western society
+[00:23:20] where first names are heavily gendered.
+[00:23:23] So you can go and get the US baby name data set.
+[00:23:26] So this is the names and genders of everyone born in the United
+[00:23:29] States for the last n years.
+[00:23:31] You can use that to calculate, for a given first name, what
+[00:23:35] is the likelihood that it is a man or a woman.
+[00:23:37] Is it a male name or a female name?
+[00:23:40] So essentially what we do is we assign
+[00:23:42] a probability of being masculine to every candidate
+[00:23:45] in the search results.
+[00:23:48] So I have three lines here, one for each of the services.
+[00:23:51] I have the probability of masculine on the x-axis with 1
+[00:23:54] meaning I'm really, really certain that you're a man,
+[00:23:58] and a 0 meaning I'm really, really
+[00:23:59] certain that you're a woman.
+[00:24:02] And you can see that the distribution
+[00:24:03] is essentially bimodal.
+[00:24:05] For most of the candidates, like 45-ish%
+[00:24:10] their name is heavily gendered.
+[00:24:11] This is someone with a name like Michelle.
+[00:24:15] It's highly unlikely that this is a man.
+[00:24:18] Right on the other end of the spectrum,
+[00:24:19] you have someone with a name like Christopher.
+[00:24:24] What's that?
+[00:24:25] AUDIENCE: Does it means that they don't have Chinese people.
+[00:24:29] CHRISTO WILSON: Yep, so Chinese names
+[00:24:31] are a huge problem because they're not
+[00:24:33] inherently gendered.
+[00:24:35] So this weird artifact in the center, These
+[00:24:38] are essentially foreign names or names that just never appeared
+[00:24:41] in the US baby name data set.
+[00:24:43] So around 8% of the population I don't
+[00:24:46] know what their gender is.
+[00:24:48] So that's something to just keep in the back of your mind
+[00:24:50] when I'm running the analysis.
+[00:24:51] There's 8% sort of uncertainty here
+[00:24:54] for some of the candidates.
+[00:24:57] But by and large, I'm pretty confident in our labeling here.
+[00:25:04] So the summary of the data set is as follows.
+[00:25:06] 35 job titles, each queried in 20 different American cities.
+[00:25:10] For each one of those, we collect
+[00:25:12] all of the search results.
+[00:25:14] So this is around 1,000 candidates per search.
+[00:25:17] And this was all collected in 2016.
+[00:25:20] So in total, we had around 500,000 job seekers on Indeed,
+[00:25:25] 260,000 on Monster, and 68,000 on CareerBuilder.
+[00:25:29] So we have tens to hundreds of thousands of individuals
+[00:25:32] to try to put into the models and understand what's going on.
+[00:25:37] So now let's go back to our research questions.
+[00:25:40] First, we're going to talk about individual fairness.
+[00:25:43] And this is essentially equal opportunity.
+[00:25:45] Do two people with the same qualifications
+[00:25:48] essentially show up at the same rank regardless of gender?
+[00:25:52] Then we'll get into the group fairness.
+[00:25:55] So is this men and women, on average, have the same rank
+[00:25:59] or is there something like disparate impact going on?
+[00:26:02] A systematic difference in men as a group
+[00:26:05] versus women as a group.
+[00:26:07] And then we'll get to the third question,
+[00:26:09] which is was this intentional?
+[00:26:12] So already that you have sort of a preview,
+[00:26:14] I must have found something or I wouldn't even
+[00:26:16] be asking questions three.
+[00:26:19] So we'll start with individual fairness.
+[00:26:22] So the idea here again is that if you
+[00:26:24] have the same kinds of features, the same experience,
+[00:26:27] the same education, the same kind of current job position,
+[00:26:30] you should be showing up at the same rank.
+[00:26:35] So to analyze this we're going to use regressions.
+[00:26:40] The dependent variable in my model
+[00:26:41] is going to be rank because that's what I care about.
+[00:26:44] Is the rank between these candidates roughly the same?
+[00:26:49] And to do the modeling, we're going
+[00:26:50] to use a mixed linear model without getting into sort
+[00:26:53] of the details, the reason we do this
+[00:26:56] is because as you go across job titles or across cities,
+[00:27:00] there are just variances in the skill sets.
+[00:27:03] Like if I'm comparing software engineers in Mobile, Alabama,
+[00:27:07] versus software engineers in New York City,
+[00:27:10] they're just systematically different.
+[00:27:12] They're different locations.
+[00:27:14] So this kind of a model takes that into account.
+[00:27:16] It makes the comparisons across jobs
+[00:27:18] and across places more fair.
+[00:27:22] OK, so jumping right into what we found.
+[00:27:25] We did find a statistically significant difference
+[00:27:28] between the ranks of male candidates
+[00:27:31] and female candidates.
+[00:27:33] So I'm confident that what I found is a real effect.
+[00:27:37] But we have to ask ourselves, what the effect size is.
+[00:27:42] Just because I found something that's real
+[00:27:44] doesn't mean it is actually important in the real world.
+[00:27:49] So what I'm showing you on this graph
+[00:27:50] is the difference in rank, essentially the amount
+[00:27:55] that the ranks increase for male candidates
+[00:27:58] as you go down the list of results.
+[00:28:01] So if we're only considering, let's say,
+[00:28:03] the top 20 candidates that come back in the search results,
+[00:28:07] what is the advantage being conferred
+[00:28:09] to male candidates, versus say if you go down
+[00:28:13] to rank 100 what is the relative advantage being converted
+[00:28:16] to male candidates?
+[00:28:19] So if we focus on just the top ranks,
+[00:28:22] there is an advantage to men but it's so small
+[00:28:26] that it's almost imperceptible.
+[00:28:28] If we're just talking about the top 10 results,
+[00:28:31] men get a slight advantage but it's less than one rank.
+[00:28:37] So essentially it's meaningless.
+[00:28:41] This difference only becomes meaningful
+[00:28:42] when you get deeper and deeper into the results.
+[00:28:45] By the time you get to, let's say, result 50,
+[00:28:48] if there's a man and a woman with the same qualifications,
+[00:28:52] the tie will be broken in favor of the man
+[00:28:53] and they will get a higher rank.
+[00:28:55] And this continues to grow as you get farther and farther
+[00:28:58] down.
+[00:29:00] AUDIENCE: Good question.
+[00:29:01] So did you take into account any differences in proportion
+[00:29:06] of men and women on this list.
+[00:29:08] Because if you had 10% women then
+[00:29:10] it would be expected that they have lower rank on average.
+[00:29:13] CHRISTO WILSON: Yeah.
+[00:29:14] So we have to.
+[00:29:14] Because for software engineers, it's
+[00:29:17] hugely imbalanced in terms of the population.
+[00:29:19] So this is all normalized to the relative proportions
+[00:29:23] in the population.
+[00:29:26] So this is sort of a mixed bag.
+[00:29:28] Yes, on one hand, my models say that there
+[00:29:31] is a systematic advantage being conferred to male candidates
+[00:29:34] here.
+[00:29:35] That sounds like discrimination but the effect size
+[00:29:39] is very small.
+[00:29:41] So whether this is actually a problem in the real world,
+[00:29:43] we don't know, because we don't know
+[00:29:45] how people use this system.
+[00:29:47] Does a recruiter only ever look at the top 10 results?
+[00:29:51] Maybe this doesn't matter.
+[00:29:53] But if recruiters look deeper in the lists,
+[00:29:55] they look at 50 people or 100 people,
+[00:29:57] then I would argue this is very much matters.
+[00:29:59] And this is something we should take very seriously.
+[00:30:03] So this is individual fairness, we're
+[00:30:06] considering people's qualifications.
+[00:30:09] What if we switch gears a little bit
+[00:30:10] and talk about group fairness?
+[00:30:12] So just in general, are men and women are treated the same?
+[00:30:17] So for this, all we're looking at
+[00:30:18] is just the distribution of ranks for men and women
+[00:30:21] and we're comparing them directly.
+[00:30:23] And what we found is that in most cases,
+[00:30:26] the results are group fair.
+[00:30:28] The average rank of men in the average rank of women
+[00:30:30] is the same for most of the job titles that we searched,
+[00:30:33] but not all.
+[00:30:35] There were a couple cases where there
+[00:30:36] were systematic differences, and most of these unfortunately
+[00:30:40] occurred in engineering fields.
+[00:30:42] So for things like software engineer,
+[00:30:44] mechanical engineer, network engineer,
+[00:30:48] somewhere between 8 and 13% of the queries we ran,
+[00:30:53] men appeared on average at higher ranks than women,
+[00:30:56] even taking into account that women were just a smaller
+[00:30:58] fraction of the population.
+[00:31:00] In all of these cases, the unfairness
+[00:31:03] favored male candidates.
+[00:31:04] We didn't see a single case where there
+[00:31:06] was unfair in favor of women.
+[00:31:10] So.
+[00:31:10] This is pretty concerning I'm a computer scientist
+[00:31:13] and I cringe when I see this.
+[00:31:15] We know we have these huge inequities in the tech sector
+[00:31:19] and you just see it like being reflected right back at you
+[00:31:22] by the system.
+[00:31:25] So this is pretty unfortunate, in my opinion.
+[00:31:29] So our final question is, is this intentional or not?
+[00:31:34] Does the ranking algorithm use gender as a feature explicitly,
+[00:31:39] or is this something that's just coming up naturally because
+[00:31:41] of biases embedded in the data?
+[00:31:45] So the way we're going to attest to this
+[00:31:46] is through controlled experiments.
+[00:31:48] So we made it accounts for job seekers
+[00:31:51] and we uploaded resumes to see how they would rank.
+[00:31:55] And then we would change their attributes
+[00:31:57] to see if it would change the ranking.
+[00:32:00] So here's a quick example.
+[00:32:01] Let's say that these are the original search results,
+[00:32:04] so that's the top person, that's the bottom person.
+[00:32:06] I upload to resumes from Joe and Bob and I record their rank.
+[00:32:12] This is the order that they appear in.
+[00:32:14] Then I go back and change Bob's name to Amy.
+[00:32:19] I essentially flip his gender.
+[00:32:21] What I'm looking to see is does that cause the ranks to switch.
+[00:32:26] If the algorithm is considering gender
+[00:32:29] this is what you would expect to happen,
+[00:32:31] because that's the only thing I've changed.
+[00:32:33] All I've done is change their name.
+[00:32:36] So we ran a lot of controlled experiments
+[00:32:39] on a bunch of different variables.
+[00:32:41] We tried doing things like changing
+[00:32:42] the length of your resume, we changed how many
+[00:32:44] keywords, or skills you had, we changed
+[00:32:47] where you went to school.
+[00:32:50] And the results were all over the place.
+[00:32:53] On Indeed, none of the tests mattered, nothing
+[00:32:56] impacted the rank.
+[00:32:58] On Monster, two of the tests actually mattered.
+[00:33:03] So if we changed where you went to school,
+[00:33:05] it did flip the rank.
+[00:33:08] Similarly, if we said, I'm currently employed
+[00:33:10] or I'm not currently employed, that also flipped the rank.
+[00:33:14] On CareerBuilder, there were also
+[00:33:16] two features that mattered-- whether you
+[00:33:18] were currently employed and how much job churn had.
+[00:33:21] Have you been in a position for 10 years or you
+[00:33:23] have had 10 jobs in 10 years?
+[00:33:26] But the most important thing is this top row.
+[00:33:29] When we changed the person's name to change their gender
+[00:33:33] it didn't impact the rank at all.
+[00:33:36] So what this demonstrates is that the algorithms are not
+[00:33:39] trying to infer your gender and re-rank you based on it.
+[00:33:44] So it does not appear that there is direct discrimination here.
+[00:33:48] There's no attempt to determine who you are and then re-rank
+[00:33:51] you based on your demographics.
+[00:33:55] OK, so just to quickly wrap up.
+[00:33:58] There are some serious limitations to this study.
+[00:34:01] We are using inferred gender based
+[00:34:03] on name that is not the same thing as someone's true gender.
+[00:34:07] So that impacts our analysis.
+[00:34:09] Also we have a very simplistic view of gender.
+[00:34:12] We're just treating it as binary,
+[00:34:14] which of course is not great.
+[00:34:16] There's questions here about ecological validity.
+[00:34:18] We can get into the details of whether I modeled this
+[00:34:20] correctly.
+[00:34:21] We can also get into arguments about whether these results
+[00:34:24] matter.
+[00:34:25] Do recruiters actually use the tools in the way
+[00:34:29] that I've kind of assumed in my analysis?
+[00:34:31] We don't know because no one's ever studied their behavior.
+[00:34:36] One unsatisfying thing about this work and algorithm
+[00:34:40] auditing in general is that you can't really
+[00:34:41] do a lot of causal explanations here.
+[00:34:44] I showed that there's no direct discrimination based
+[00:34:47] on gender going on but I don't have a satisfying
+[00:34:50] explanation for you of why there was unfairness.
+[00:34:54] It's there and it's likely being caused
+[00:34:57] by some kind of proxy embedded in the data
+[00:35:00] but we don't know what or why.
+[00:35:03] And then the last thing, we did these controlled experiments
+[00:35:06] but I can't possibly argue that these are comprehensive.
+[00:35:09] We tested seven or eight different variables.
+[00:35:11] But there could be tens or hundreds more that we just
+[00:35:13] haven't thought of.
+[00:35:17] So to conclude, I would like to just reemphasize
+[00:35:19] that we don't see these companies doing anything
+[00:35:21] intentionally discriminatory.
+[00:35:24] So don't start filing your lawsuit.
+[00:35:28] That said, there is individual unfairness here
+[00:35:32] systematically in favor of men against female candidates.
+[00:35:37] But the effect size is very small.
+[00:35:39] Whether this has any kind of practical impact
+[00:35:41] on the real world is unclear.
+[00:35:44] With respect to group fairness, again, we
+[00:35:47] saw problems primarily in technical positions.
+[00:35:50] But this is again, an emergent characteristic
+[00:35:53] of the data not an intentional decision
+[00:35:55] to rank people based on demographics.
+[00:35:58] So this is the reason I have the glass half full here.
+[00:36:01] This is very much a mixed bag set of results.
+[00:36:07] So I'll stop there.
+[00:36:09] I would love to have a chat about all these things--
+[00:36:12] a couple of interesting questions.
+[00:36:14] So one is, should hiring systems, or even just
+[00:36:17] algorithms more broadly, do more to combat these kind
+[00:36:21] of pre-existing social biases?
+[00:36:23] If we take it that there's problems with data,
+[00:36:26] is it a responsibility for companies
+[00:36:28] to take that into account when they engineer their systems?
+[00:36:32] If so, what kind of fairness should they be going for?
+[00:36:36] There's very elegant results saying that in most cases
+[00:36:39] you can't have individual and group
+[00:36:41] fairness at the same time.
+[00:36:43] That means you have to make it normative choices.
+[00:36:45] Who should make those choices?
+[00:36:48] Another really interesting thing is
+[00:36:50] that in order to make these systems fair,
+[00:36:52] you have to control for demographics.
+[00:36:54] If I know your gender and your race
+[00:36:57] and your religion and your political affiliation
+[00:36:59] and blah, blah, blah, blah, blah, I can control for them
+[00:37:01] and normalize it and build a fair system for you.
+[00:37:04] But that requires people to change their behavior.
+[00:37:06] And they have to be willing to tell us
+[00:37:08] those attributes so that we can put them into the system
+[00:37:11] and do the normalization.
+[00:37:13] Are people going to do that?
+[00:37:15] Would you be willing to give all that sensitive data to a resume
+[00:37:18] search engine or a bank under the promise
+[00:37:21] that they're going to use it to make things fair
+[00:37:23] and not just use it to discriminate?
+[00:37:27] AUDIENCE: But what of the name you supported you have--
+[00:37:33] CHRISTO WILSON: Not as much as you'd think.
+[00:37:36] So originally this was conceived as both a gender and race
+[00:37:39] study, and the inferring race from name
+[00:37:41] actually was terrible.
+[00:37:43] It was really bad.
+[00:37:47] So it works in some obvious verticals
+[00:37:51] but like African-Americans it doesn't really work.
+[00:37:56] So the whole thing was to sort of bankrupt.
+[00:37:58] AUDIENCE: I heard about--
+[00:38:00] CHRISTO WILSON: Yeah.
+[00:38:04] And then are questions about me.
+[00:38:06] I'm an algorithm auditor and I think this is necessary.
+[00:38:09] I think people should be held accountable.
+[00:38:11] I think there should be transparency.
+[00:38:13] But there's debates about whether this is a thing.
+[00:38:17] Should I be allowed to do this in violation of someone's terms
+[00:38:20] of service?
+[00:38:20] What gives me the right?
+[00:38:23] So with that, I will shut up.
+[00:38:25] [? AMAR ASHA: ?] Thank you so much, Christo.
+[00:38:32] So just to keep some order here, maybe people
+[00:38:34] can raise their hands and we've got
+[00:38:36] a couple of different mic runners
+[00:38:37] and we'll go around the room.
+[00:38:39] And just raise your hand so that we can keep an eye on you.
+[00:38:44] CHRISTO WILSON: You've got the mic first.
+[00:38:46] MOMIN MALIK: Hey, over here.
+[00:38:49] Quick question.
+[00:38:51] Oh, yeah, I'm Momin Malik.
+[00:38:53] I think we've met ICM, Wilson.
+[00:38:54] CHRISTO WILSON: It's good to see you.
+[00:38:55] MOMIN MALIK: Good to see you too.
+[00:38:56] I'm a fellow here at Berkman Klein.
+[00:38:59] If you didn't control for the base rate, then
+[00:39:03] how much does that affect?
+[00:39:04] I mean, we're looking at controlling for that
+[00:39:06] but if we looked at the, quote unquote, "pipeline problem"
+[00:39:09] then how much worse is it?
+[00:39:11] CHRISTO WILSON: Yeah, so our baseline here
+[00:39:14] is just everything we saw, so like first let's
+[00:39:17] say it's all for engineers.
+[00:39:18] We look at all those search results for software engineers
+[00:39:21] and we use that to estimate what the true population of software
+[00:39:24] engineers is.
+[00:39:26] But as you said, we have no idea how reflective that is.
+[00:39:28] We don't know who uses these services.
+[00:39:30] We don't know what's coming out of the pipeline.
+[00:39:34] I mean, the short answer is I just don't know.
+[00:39:38] And maybe you can use something like the SES data
+[00:39:41] to try and get a better baseline.
+[00:39:44] But I really don't know.
+[00:39:45] I mean, we're starting to get into like very narrow verticals
+[00:39:48] here.
+[00:39:57] AUDIENCE: My question is, how about in your opinion of all
+[00:40:04] the work that you've done, would you recommend to a woman
+[00:40:08] to change her name to get an advantage, or at least, well,
+[00:40:13] how about using initials?
+[00:40:15] Is that assumed that to be a woman.
+[00:40:18] And also presumably the other way around,
+[00:40:21] you wouldn't want to have a boy named Sue.
+[00:40:25] CHRISTO WILSON: So this is a fascinating question.
+[00:40:27] Before I started this work, I had never
+[00:40:29] heard of resume whitening before.
+[00:40:32] But this is very much a thing.
+[00:40:33] If you are a person of color, you
+[00:40:35] will do things to make your resume seem more
+[00:40:37] like a white man or if you're Muhammad then your M-something,
+[00:40:42] you put your initials.
+[00:40:45] So I guess whether you want to do
+[00:40:47] this depends on who is your adversary, is it the algorithm
+[00:40:51] or is it a human recruiter?
+[00:40:54] So if your adversary is a human recruiter,
+[00:40:56] you're worried about human being social biases,
+[00:41:00] then I think whitening or masculine flying
+[00:41:04] or whatever you want to call it is probably a viable strategy
+[00:41:09] because we have a pretty good understanding
+[00:41:11] about the social biases of people.
+[00:41:17] With respect to-- if instead your adversary
+[00:41:19] is the algorithm, the algorithm doesn't really
+[00:41:22] care about your name or those things.
+[00:41:25] Instead it's looking at things like what college did you
+[00:41:27] go to?
+[00:41:28] So if you went to, let's say, a historically Black University,
+[00:41:33] a recruiter might miss that but the algorithm doesn't.
+[00:41:38] And now it's a question of, do you
+[00:41:39] lie about where you went to school or do you
+[00:41:41] just say I have a college degree without saying where?
+[00:41:45] It's harder to change a lot of those features
+[00:41:48] without systematically disadvantaging yourself
+[00:41:51] in other ways.
+[00:41:53] So this is a really complicated question
+[00:41:56] because the way that these individual attributes link up
+[00:42:01] to demographics are so complex.
+[00:42:04] Getting rid of them entirely, this is what machines do best.
+[00:42:08] They find these patterns.
+[00:42:16] PACHO: Hi.
+[00:42:16] You're to your left--
+[00:42:18] I am Pacho, and I'm a Harvard alum from decades ago.
+[00:42:23] Very interested in your project.
+[00:42:25] And I wanted just to say obviously because it hits me,
+[00:42:27] but more and more people are going
+[00:42:29] to be coming onto ranks of the older generations.
+[00:42:33] And if you go in this, if you keep going in this venue.
+[00:42:36] I wanted to ask you, how do you--
+[00:42:40] you talk about gender, race, sexual orientation,
+[00:42:42] what about age?
+[00:42:43] I mean, age is such an automatic thing
+[00:42:46] because just years of experience, year of graduation,
+[00:42:49] and it'll automatically be there.
+[00:42:51] How are you going to preempt, in other words,
+[00:42:54] this is going to be so difficult for you
+[00:42:57] to avoid this bias against all of the older who still want
+[00:43:03] to work.
+[00:43:03] Anyway, thank you.
+[00:43:04] CHRISTO WILSON: So this is an extremely cogent point.
+[00:43:06] There have already been lawsuits against these companies for age
+[00:43:10] discrimination because it's an obvious thing to do banking on
+[00:43:13] and it's obviously discriminatory.
+[00:43:17] So I mean, fortunately, because age is intrinsically
+[00:43:20] linked to years of experience, it's easier
+[00:43:23] to measure and control for.
+[00:43:26] So in that sense, you're a little bit better
+[00:43:28] off because it's a visible attribute
+[00:43:31] so it's easier to try and remove that kind of issue
+[00:43:34] from the data.
+[00:43:36] But then you run headlong into people's expectations
+[00:43:39] of the system.
+[00:43:40] I did the search, I kind of expect the most qualified
+[00:43:43] people to be at the top or whatever,
+[00:43:45] and now I'm explicitly trying to discount that in a way.
+[00:43:50] And now it's weird the results I'm getting are not
+[00:43:52] what I expect.
+[00:43:54] So you're running headlong into these interface design issues,
+[00:43:57] and we don't know how people will react.
+[00:44:03] But I agree.
+[00:44:03] I mean, this is a systemic problem.
+[00:44:07] [? AMAR ASHA: ?] We got one, two, and then three.
+[00:44:09] So why don't you pic the mic?
+[00:44:11] ROGER PARKER: Hi, I'm Roger Parker of Microsoft Research.
+[00:44:14] I had a question kind of relating
+[00:44:16] to what you mentioned earlier about how this is just one
+[00:44:19] step of the process and people interact with technologies
+[00:44:21] in various ways.
+[00:44:23] So for example, something I can imagine here
+[00:44:24] is if I'm a recruiter and I query this,
+[00:44:26] I can just ignore all the female names no matter
+[00:44:28] where the ranking is.
+[00:44:30] But obviously, you're very involved in the auditing
+[00:44:33] so you think it's valuables, I guess.
+[00:44:36] Two questions.
+[00:44:36] One is, what do you think is the value of doing this
+[00:44:39] from a technical perspective.
+[00:44:41] And what can we gain from purely your field
+[00:44:44] and the research you do?
+[00:44:45] And then two, is how do you think
+[00:44:46] computer scientists and other people
+[00:44:48] doing this work can work together with anthropologists
+[00:44:50] and other humans who study how people actually
+[00:44:52] use these technologies and what do you think is the best way
+[00:44:55] for that collaboration overall?
+[00:44:57] CHRISTO WILSON: Yeah, so with respect to the CAS stuff,
+[00:45:01] I mean, part of this work is just
+[00:45:03] about activism and awareness.
+[00:45:04] I do this because it's context that people haven't considered.
+[00:45:08] There's decision makers who aren't aware of these issues.
+[00:45:12] I keep hammering on this because I want everyone
+[00:45:14] to think about this and start implementing
+[00:45:16] like processes to deal with it.
+[00:45:20] Another interesting outcome of this
+[00:45:21] is just metrics for trying to measure things.
+[00:45:24] So actually I mean, I'll admit that I
+[00:45:26] was pretty unsatisfied with the methods we used in this study
+[00:45:30] to look at rank and we've developed now new methods.
+[00:45:34] We just published a paper on for doing
+[00:45:35] much better assessments of fairness
+[00:45:38] in these ranked contexts.
+[00:45:40] Those metrics didn't exist before.
+[00:45:43] Or I'm thinking of things like the ProPublica compass
+[00:45:45] data set where no one had thought about some
+[00:45:47] of these axes for disparity.
+[00:45:50] And now there's tons of machine learning
+[00:45:52] work that tries to equalize for error rates and things
+[00:45:54] like that.
+[00:45:56] So I think there's a lot to be said for just,
+[00:45:59] you do this expose issues and then
+[00:46:02] that then leads to a virtuous cycle of better
+[00:46:05] algorithms and better tools.
+[00:46:08] So then with respect to anthropologists, I mean,
+[00:46:11] this has to happen.
+[00:46:12] I'm an engineer, a low-level engineer by training.
+[00:46:16] This work just arrived to me.
+[00:46:20] I didn't set out to do this.
+[00:46:21] And frankly I'm not super well equipped to grapple
+[00:46:25] with these sociological issues.
+[00:46:29] So working with people outside of computer science
+[00:46:32] is super important.
+[00:46:33] And I think there's a huge appetite for it.
+[00:46:35] If the CAS people are willing to speak the language
+[00:46:40] and move it a little bit of a slower pace
+[00:46:42] and there's really fruitful collaborations
+[00:46:45] that happen there.
+[00:46:46] And I mean, frankly, the sociologists
+[00:46:48] and the anthropologists just know more about these issues.
+[00:46:55] SABELO MHLAMBI: Hi.
+[00:46:59] I'm Sabelo, and I'm a fellow at the Berkman Center as well.
+[00:47:03] I am wondering on how you selected those categories
+[00:47:06] to test for University education and so forth.
+[00:47:10] And I'm wondering, did you get the chance
+[00:47:14] to maybe look at the network request
+[00:47:16] and see how much time, like, what
+[00:47:18] are the variables that they're expecting that indeed
+[00:47:21] is collecting as you click on the service
+[00:47:23] and scroll down to add more categories that could
+[00:47:26] be used for determining rank?
+[00:47:28] CHRISTO WILSON: Yeah, so for our controlled tests,
+[00:47:32] the selection of those variables was entirely ad hoc.
+[00:47:34] And we basically just went through a couple of hundred
+[00:47:36] resumes and said, it looks like these
+[00:47:38] are kind of the common denominators
+[00:47:41] but this was not systematic in any way.
+[00:47:46] So with respect to the data they're collecting,
+[00:47:53] I don't think that they are doing online learning.
+[00:47:56] So in the sense that the click data is actively
+[00:47:58] driving the ranking algorithm.
+[00:48:00] So we controlled for that in our tests because we didn't know.
+[00:48:03] Everything was measured in sort of lock step
+[00:48:05] because I didn't want clicks to influence.
+[00:48:09] But that said, I have no idea if they've
+[00:48:11] taken a historical data set of clicks and use
+[00:48:14] that to train the algorithm.
+[00:48:15] Just because they're not learning right now
+[00:48:17] doesn't mean that that's not where the bias came
+[00:48:19] from originally, like you mentioned a recruiter just
+[00:48:23] ignoring the female names that could easily produce
+[00:48:26] this kind of an outcome.
+[00:48:28] And I don't know because I don't know
+[00:48:29] what their training data was.
+[00:48:32] But yeah, in terms of the nitty gritty,
+[00:48:33] there wasn't an awful lot of PII being collected.
+[00:48:37] There was nothing obvious like I'm
+[00:48:40] trying to infer an attribute about me
+[00:48:42] to then drive like personalization algorithm.
+[00:48:44] There's none of that.
+[00:48:45] None of these are that sophisticated.
+[00:48:50] AUDIENCE: You made a comment earlier that was, I think,
+[00:48:54] hold your lawsuits.
+[00:48:57] These algorithms are not intentionally
+[00:49:01] doing anything wrong.
+[00:49:05] So I guess, I'm curious what your thoughts on intent
+[00:49:07] or not if your system at the end of the day
+[00:49:10] has a certain result, should they be held accountable?
+[00:49:13] CHRISTO WILSON: So I absolutely think
+[00:49:15] they should be held accountable.
+[00:49:17] I guess my off the cuff hold your lawsuits argument was more
+[00:49:22] in the vein of like you could do it
+[00:49:25] but I think it would be a challenging argument
+[00:49:27] to construct.
+[00:49:29] Does what we found reach existing thresholds
+[00:49:33] like the 20% rule for disparate impact?
+[00:49:37] I don't think it quite does but that's just my opinion.
+[00:49:41] And that does not rule out novel legal constructions here.
+[00:49:46] But the other thing is I am absolutely
+[00:49:50] in favor of accountability.
+[00:49:53] But I'm also troubled by the--
+[00:50:02] I do a lot of accusing, I measure someone
+[00:50:05] and I say this is bad.
+[00:50:06] But I don't have a commensurate amount of tools on my side
+[00:50:08] to help people fix things.
+[00:50:10] We're starting to see more of that but it
+[00:50:13] is a little bit disingenuous frankly of me to be, like,
+[00:50:16] look at all these issues, and then it's like, OK, well,
+[00:50:19] how do I fix this data when I don't know people's gender?
+[00:50:22] Like, well, actually I don't know,
+[00:50:24] I don't know how you can fix it.
+[00:50:28] So there's a lot of things that have
+[00:50:30] to change to really eliminate these issues, some of which
+[00:50:35] may be lawsuits.
+[00:50:50] AUDIENCE: This is a question that will probably
+[00:50:52] expose my ignorance.
+[00:50:54] But if I understood what you said, in your analysis
+[00:50:58] there was no conscious gender bias.
+[00:51:02] But it's clear from your data that there
+[00:51:04] is an unconscious gender bias.
+[00:51:08] Now, is that what's in the data, which you can't get at?
+[00:51:11] That's the background to the algorithm?
+[00:51:13] CHRISTO WILSON: Yeah, that's the most likely explanation.
+[00:51:18] AUDIENCE: In which case if you can repeatedly
+[00:51:20] demonstrate this, why can't you make a case
+[00:51:25] for changing the data?
+[00:51:30] CHRISTO WILSON: So changing the data is complicated.
+[00:51:35] I mean, one avenue for doing that would
+[00:51:37] be changing people's behavior.
+[00:51:39] If the data is just a representation of society,
+[00:51:42] where people go to school and who
+[00:51:45] decides to hire men and women for technical roles,
+[00:51:48] let's say, changing the social processes that ultimately
+[00:51:54] produce this data is super hard.
+[00:51:56] We've been trying to eliminate discrimination from society
+[00:52:00] forever and it's not gone yet.
+[00:52:03] So really like attacking the root of the data
+[00:52:06] generation problem is equivalent to attacking the root
+[00:52:10] of discrimination in society.
+[00:52:13] Now, we can take a less ambitious take on it,
+[00:52:17] which is we know that society produces data that has biases.
+[00:52:21] But we can just take this pile of numbers and try to fix it.
+[00:52:26] But that requires having more data.
+[00:52:29] If I want to take that pile of data
+[00:52:30] and fix it with respect to gender
+[00:52:32] I have to know people's genders or if I
+[00:52:35] want to fix it with respect to sexual orientation.
+[00:52:38] But I have to know people's sexual orientation so I can
+[00:52:41] quantify it and control for it.
+[00:52:44] And I can do that.
+[00:52:45] I have the tools, but the question is,
+[00:52:47] are you willing to tell me those things?
+[00:52:49] Will you tell me your sexual orientation
+[00:52:51] or your gender or your race?
+[00:52:53] Are you willing to do that in a health care context?
+[00:52:55] Are you willing to do that in a banking context?
+[00:52:58] Are you willing to do that in a police enforcement context?
+[00:53:01] Because if you are, then I can fix things.
+[00:53:04] But if you're not, then I'm in a lurch.
+[00:53:09] So fixing the data is complicated.
+[00:53:16] You don't seem entirely convinced by my answer.
+[00:53:22] AUDIENCE: Hi.
+[00:53:22] AUDIENCE: I think what you're saying
+[00:53:24] is the data is reflective of societal.
+[00:53:30] And why the hell are you using quote or presenting
+[00:53:37] as a totally objective?
+[00:53:44] CHRISTO WILSON: Yeah, so that's a great question
+[00:53:47] for any company that's using data uncritically.
+[00:53:51] You get the sense in Silicon Valley
+[00:53:53] that data is assumed to be neutral,
+[00:53:55] the computation is assumed to be neutral.
+[00:53:58] And it is not.
+[00:53:59] It is inherently unfair.
+[00:54:03] So if you're choosing to use it, you
+[00:54:05] are choosing to buy into the status quo.
+[00:54:13] AUDIENCE: Hi.
+[00:54:16] I was struck by your comment about whitening the resume.
+[00:54:20] I think progressive corporations are certainly saying, look,
+[00:54:27] we are working within a global economy and we cannot afford
+[00:54:32] to have everybody in our workforce to be of that same
+[00:54:37] demographic paradigm that has existed for hundreds of years.
+[00:54:41] If we are going to sell and be progressive
+[00:54:44] and to be leaders in our market, we
+[00:54:46] have to recognize diversity and take the algorithm and search
+[00:54:51] for women and search for persons who are Chinese, Japanese,
+[00:54:56] Asian, African-American, and then
+[00:54:58] deliberately bring them into our workforce
+[00:55:01] because they can help us in our analysis of the market
+[00:55:05] as well as in our productivity and profitability.
+[00:55:08] CHRISTO WILSON: Yeah, so I think that's great.
+[00:55:11] And I applaud any company doing that.
+[00:55:14] So for example, I know LinkedIn has done a lot of work
+[00:55:16] to try and diversify their search results intentionally
+[00:55:20] by seizing on exactly what you just said.
+[00:55:25] But there's counterpoints.
+[00:55:26] So for example, on Monster, at least when
+[00:55:29] we looked, before you pay the money to get a recruiter
+[00:55:33] account, there's like a demo tool.
+[00:55:35] And the demo tool lets you do things like search
+[00:55:38] by diversity.
+[00:55:39] So if you're a recruiter, you can intentionally do that.
+[00:55:42] But when you actually pay the money and get the real tool,
+[00:55:45] that option isn't there anymore, which
+[00:55:49] was very surprising to us.
+[00:55:51] AUDIENCE: Nothing like going public and telling
+[00:55:53] those who are looking for jobs.
+[00:55:56] Monster allows us to bring on diverse employees.
+[00:55:59] But once we become a part of the organization,
+[00:56:03] they no longer give us that opportunity.
+[00:56:05] So I just don't think we should have
+[00:56:07] to hide who we are, because once you walk into that door
+[00:56:11] and they get to see that you are not tied
+[00:56:14] or that you're not W so-and-so last name, the face goes red,
+[00:56:19] and figure oh, my God, what have I brought into my office.
+[00:56:22] So I just think about being upfront and being
+[00:56:24] honest with people from the day one.
+[00:56:26] CHRISTO WILSON: Yeah, no I agree.
+[00:56:29] But I'm also--
+[00:56:30] I am not disadvantaged.
+[00:56:32] So I feel like it's not my place to say what
+[00:56:35] people should or shouldn't do.
+[00:56:39] But I mean, ultimately, I completely agree with you.
+[00:56:42] People can't hide.
+[00:56:43] That doesn't solve anything.
+[00:56:47] KATE COYER: Hi.
+[00:56:48] My name is Kate Coyer.
+[00:56:49] I'm an affiliate with the Berkman Klein Center.
+[00:56:51] And I'm actually asking a question for a colleague who
+[00:56:54] saw me on the video in the room and he's watching remotely.
+[00:56:57] So there's that.
+[00:56:59] But it's related-- it's a three-part question
+[00:57:02] but it's specifically related to the data collection.
+[00:57:05] I mean, one, as you know, the tech sector
+[00:57:07] is heavily recruiting immigrants from different countries.
+[00:57:11] And how do you take that into account
+[00:57:13] when you can't identify the genders in those names?
+[00:57:16] I think you mentioned the 8% of question
+[00:57:18] but the specific nature of that if you could address
+[00:57:22] if you account for that.
+[00:57:23] And then also did you collect your ranking data
+[00:57:28] on the same day because of the way companies
+[00:57:31] update the algorithms on a daily basis,
+[00:57:33] how do you control for that.
+[00:57:35] And then finally, how do you take into account
+[00:57:38] that the disproportionate gender in certain fields like computer
+[00:57:43] science versus say nursing, and how do you make
+[00:57:46] the comparative analysis there.
+[00:57:47] Thanks.
+[00:57:48] CHRISTO WILSON: Yeah, so with respect
+[00:57:49] to the foreign names that we can't classify.
+[00:57:54] So in the actual paper, we ran probably
+[00:57:57] a dozen different models, some of which
+[00:57:59] are a propensity score-matched.
+[00:58:01] So we're just looking at the people
+[00:58:02] who can be scored with high confidence
+[00:58:04] in may lone pairs, which addresses this issue that some
+[00:58:07] of the data has more unknowns.
+[00:58:10] And those models look exactly the same
+[00:58:12] as the models with all the data.
+[00:58:14] So I think we've addressed that.
+[00:58:18] With respect to the unequal base rates,
+[00:58:21] I think that was question three, so you're saying
+[00:58:23] there's just fewer women.
+[00:58:26] In all those cases, we're normalizing
+[00:58:28] by the population distribution.
+[00:58:31] So for example, in the group fairness case,
+[00:58:34] if there's 80% men and 20% women,
+[00:58:37] that's being taken into account.
+[00:58:39] We expect the overall distributions of the two
+[00:58:42] to be the same even though one of the distributions
+[00:58:44] is sparser because there's just fewer women.
+[00:58:49] Now, in some cases if there's way too few women,
+[00:58:51] you just can't get a statistically significant
+[00:58:53] result. But again, we're just in those cases,
+[00:58:57] we're throwing it out because we can't say anything.
+[00:59:01] And then with respect to the algorithm
+[00:59:02] changes, so that's question two, so
+[00:59:05] because of us trying to be kind to the services,
+[00:59:08] the data was collected over roughly two months
+[00:59:10] for each one.
+[00:59:11] So if there were changes happening,
+[00:59:13] that would be embedded in the data
+[00:59:15] and there's not a lot I can do about that.
+[00:59:18] I mean, I guess we could take the data
+[00:59:20] and stratify it by when it was collected
+[00:59:22] to see if there's a systematic difference between month
+[00:59:24] one and month two, or week one and week two.
+[00:59:29] If I was looking at LinkedIn, I would be a lot more concerned
+[00:59:32] about that because I have the preconceived notion that they
+[00:59:35] are a lot more technically sophisticated.
+[00:59:38] These companies are not--
+[00:59:40] Indeed might be technically sophisticated,
+[00:59:43] Monster and CareerBuilder are not technically sophisticated.
+[00:59:48] I really don't think they're doing a live algorithm updates.
+[00:59:58] SABELO MHLAMBI: Hi.
+[00:59:59] Another question.
+[01:00:00] I wanted to make a follow-up around
+[01:00:04] to a previous question that was raised over there.
+[01:00:09] Considering that systematic inequality is usually
+[01:00:13] due to a process of artificial inflation,
+[01:00:16] so where you have a system that prioritizes certain groups
+[01:00:20] at the expense of other groups.
+[01:00:21] So when there's a gap now or discrimination
+[01:00:25] which was caused by artificial inflation,
+[01:00:29] as a way forward, do you think that these ranking systems
+[01:00:32] or these companies should also artificially inflate
+[01:00:36] their results in order to make up for that gap that's
+[01:00:41] been caused?
+[01:00:42] CHRISTO WILSON: Yes, so I very much agree with that.
+[01:00:45] So in terms of individual versus group fairness,
+[01:00:47] I'm in favor of group fairness.
+[01:00:49] In the American parlance, this is affirmative action.
+[01:00:55] So yeah, I mean, that's exactly what you would do.
+[01:00:58] You would take the disadvantaged group
+[01:00:59] and you would inflate them or increase their ranks
+[01:01:02] systematically to compensate for this the social process that
+[01:01:06] systematically depressed them in the past.
+[01:01:09] I think that's what people should do.
+[01:01:11] I think that's the goal we should strive for.
+[01:01:14] But I'm just an ivory tower academic.
+[01:01:22] AUDIENCE: Could you elaborate a bit on that second point.
+[01:01:26] And why it is so difficult to increase
+[01:01:29] both individual and group awareness at the same time.
+[01:01:32] And what you picture by some point in between.
+[01:01:36] CHRISTO WILSON: Yeah, so depending
+[01:01:39] on the base rates of a given attribute in the population,
+[01:01:44] you can show that you can't have both.
+[01:01:48] So let's have a hypothetical example
+[01:01:50] or let's say, I don't know, all--
+[01:01:56] I'm trying to come up with something
+[01:01:58] that's not offensive--
+[01:02:00] all people who smoke cigarettes also go to community college.
+[01:02:06] And let's say that you want fairness between smokers
+[01:02:09] and non-smokers.
+[01:02:11] If the base rates of education between smokers and nonsmokers
+[01:02:15] are just systematically different,
+[01:02:17] like, bipolar, individual fairness
+[01:02:20] will say the nonsmokers always go to the bottom,
+[01:02:22] because they only have community college everyone else has
+[01:02:25] full college.
+[01:02:26] That's individually fair.
+[01:02:28] But if we say we want group fairness,
+[01:02:30] then the two things should be interleaved.
+[01:02:32] It should be a smoker or non-smoker, smoker
+[01:02:34] or non-smoker, smoker or non-smoker.
+[01:02:36] And that's incompatible with what I'm trying
+[01:02:39] to sort based on education.
+[01:02:41] So if you have this kind of situation
+[01:02:43] where just the base rates in the population diverge,
+[01:02:46] you can't have both.
+[01:02:50] So that gives you a knob.
+[01:02:53] We can say we want individual, we can say we want fair,
+[01:02:56] or it can be somewhere in between.
+[01:02:58] And what that means is unclear, because now it's not it's
+[01:03:03] not obvious what you're optimizing for.
+[01:03:06] Is it, I want to be group fair within some thresholds,
+[01:03:11] let's say like the disparate impact threshold in the law,
+[01:03:15] and then within that error range,
+[01:03:18] I can then resort people by individual fairness?
+[01:03:22] Or is it something else entirely?
+[01:03:24] Like, I'm optimizing for user experience
+[01:03:28] to match their expectations.
+[01:03:31] It's unclear.
+[01:03:33] That's an ill-defined point in the space.
+[01:03:40] MARTIN: Hi.
+[01:03:41] My name is Martin.
+[01:03:43] On at least three occasions that I can recall off
+[01:03:45] the top of my head, I attended public
+[01:03:47] and I'm a member of the public, sessions
+[01:03:51] here a couple of different Harvard institutions colleges.
+[01:03:55] And there were three references to a book
+[01:03:59] by the title of Weapons of Mass Destruction.
+[01:04:02] I later attended a talk by the author of the book,
+[01:04:05] actually at the Microsoft Nerve Center while he stepped out.
+[01:04:08] And during her talk, she referred to her publisher's
+[01:04:12] directions, you might say, marching orders,
+[01:04:16] were that there should be blood on every page.
+[01:04:21] One of the sessions that I attended,
+[01:04:23] what I believe a Harvard undergraduate,
+[01:04:26] his reference to the book was that it
+[01:04:29] is required reading at Harvard.
+[01:04:33] So I just you see where I'm going with this.
+[01:04:36] Your earlier answer to one of the questions
+[01:04:39] I think I heard you decide with a little bit of sort
+[01:04:42] of humility that we're just not there yet.
+[01:04:45] We maybe just don't know everything
+[01:04:48] about this technology and how to solve necessarily
+[01:04:53] every problem, every question.
+[01:04:56] But I would suggest that the author of Weapons
+[01:04:58] of Mass Destruction wrote a book that you might come away
+[01:05:04] from that book feeling like, you know what, if we can just
+[01:05:07] get these amoral engineers a little bit of morals,
+[01:05:11] we'll solve everything.
+[01:05:15] CHRISTO WILSON: So as an educator,
+[01:05:16] I can tell you there are plenty of amoral engineers coming out
+[01:05:19] of our institutions who could absolutely use some ethics
+[01:05:21] training, which is something I'm working on in my sabbatical
+[01:05:24] actually.
+[01:05:25] But yeah, I mean, your characterization
+[01:05:27] of Weapons of Mass Destruction is
+[01:05:29] similar to how I feel about Black Box Society
+[01:05:32] by Frank Pasquale.
+[01:05:33] I mean, it's very much gloom and doom.
+[01:05:37] But I see the need for that.
+[01:05:39] There's kind of an overturn window of the debate
+[01:05:42] around technology and society.
+[01:05:45] And I think we need people on one end really pushing
+[01:05:48] for these are the terrible things that could happen.
+[01:05:51] If we're talking about police adopting software
+[01:05:54] to determine bail and do predictive policing,
+[01:05:57] I mean, the social consequences are so pernicious.
+[01:06:00] I feel like somebody has to go out in front of that.
+[01:06:02] Even if the worst case doesn't happen, just
+[01:06:06] elucidating like the worst case could happen,
+[01:06:10] I think that's really important.
+[01:06:11] That serves a really important function.
+[01:06:13] So in terms of making weapons of mass destruction required
+[01:06:16] reading, I think it's important.
+[01:06:20] Even if it is a little hyperbolic
+[01:06:23] just to say like these terrible things could happen,
+[01:06:26] and you're going to go out in the world
+[01:06:28] and build systems and use data and collect data
+[01:06:30] and you have to have this on the back of your mind,
+[01:06:33] I think that serves an incredibly important function.
+[01:06:35] AUDIENCE: Is it one or we use only one of them?
+[01:06:38] CHRISTO WILSON: Kathy's is probably
+[01:06:39] the best, in my opinion.
+[01:06:41] I mean, there's a lot now.
+[01:06:43] Meredith Whitaker has one, Safiya Noble.
+[01:06:48] I mean, there's a bunch and they all
+[01:06:50] have slightly different angles.
+[01:06:52] And I think they're all valuable.
+[01:06:53] But I would say Kathy was there first and I like her a lot.
+[01:06:58] [? AMAR ASHA: ?] I think we have time for one last question,
+[01:07:00] if there's one last burning question.
+[01:07:03] If not, I'll ask a question, which
+[01:07:05] is the methodology that you've talked about auditing systems I
+[01:07:09] think is really interesting applied
+[01:07:11] in this particular context.
+[01:07:12] But if you were to abstract it to other areas, which you have
+[01:07:15] done, how should we think about auditing algorithms
+[01:07:19] as a research community?
+[01:07:20] And what do you think people should
+[01:07:21] be doing more of in terms of interrogating
+[01:07:23] these types of black box systems and ways
+[01:07:26] that we can do that from being outside the companies.
+[01:07:29] CHRISTO WILSON: Yeah, so there's a bunch of things.
+[01:07:32] Right now the auditing community is small.
+[01:07:34] It's very academic and our tools are garbage, frankly.
+[01:07:37] We build these things on the fly.
+[01:07:39] I think there needs to be a more sustained effort
+[01:07:42] across academia and investigative journalists
+[01:07:45] foundations to build auditing infrastructure.
+[01:07:48] And part of that has to be enfranchising people.
+[01:07:51] It can't just be me tinkering with JavaScript
+[01:07:54] and my students giving people tool
+[01:07:56] that they can record data, donate data.
+[01:07:59] See the results of data.
+[01:08:01] Give them little knobs to tune where
+[01:08:03] it's like here's the news feed algorithm yesterday
+[01:08:06] and here's it today right.
+[01:08:07] What are the differences?
+[01:08:08] Do you care about those differences?
+[01:08:10] I think that's really important.
+[01:08:13] The complexity of the systems and the speed
+[01:08:15] at which the systems change has to be
+[01:08:16] matched by an equivalent auditing infrastructure
+[01:08:19] and building that's going to be a monumental effort.
+[01:08:23] The other reason that needs to happen
+[01:08:24] is eventually NSF support for auditing will run out.
+[01:08:29] Right now there's new science here,
+[01:08:31] how do you measure things.
+[01:08:32] But eventually, that's not going to sustain the work.
+[01:08:35] It has to be sustained from outside.
+[01:08:38] There's also a lot that has to be done on the policy realm.
+[01:08:41] Companies don't love this and there's
+[01:08:43] potential legal implications to this, which is discouraging
+[01:08:47] in any number of ways.
+[01:08:49] So normalizing this as a practice and the way
+[01:08:51] that security and white hat hacking
+[01:08:54] have been more or less normalized,
+[01:08:56] I think that's really important.
+[01:08:58] So whether that's just changing corporate culture,
+[01:09:01] changing policy, changing law, I think
+[01:09:05] there's potential remedies in all these realms.
+[01:09:09] [? AMAR ASHA: ?] Great.
+[01:09:10] So thank you once again, Christo.
+[01:09:12] [APPLAUSE]

@@ -1,7 +1,7 @@
 ---
 type: topic
 title: AI Chatbots, Companions & Mental Health
-item_count: 12
+item_count: 13
 related: [content-moderation-and-speech, ai-and-democracy, ai-safety-and-agents, ai-copyright-and-knowledge]
 ---
 # AI Chatbots, Companions & Mental Health
@@ -30,6 +30,7 @@ for. The Harvard Law School "chatbot may be the friend that isn't" item is tagge
 - [[16612938-chatbots-and-deepfakes-are-eroding-our-shared-reality|Chatbots and deepfakes are eroding our shared reality]] — 2025-10-31 · prospectmagazine.co.uk
 - [[17098385-year-in-review-2025-hari-kunzru-on-ai-slop-and-censorship|Hari Kunzru on AI slop and censorship]] — 2025-12-08 · artforum.com
 - [[14936546-when-elon-musks-chatbot-goes-full-on-nazi-dw-news-youtube|When Elon Musk's chatbot goes full-on Nazi]] — 2025-07-29 · youtube.com
+- [[yt_1_K_63wNkSY-unwired-gaining-control-over-addictive-technologies|Unwired: Gaining Control over Addictive Technologies]] — 2023-05-18 · youtube — a 2023 predecessor concern (tech-design addiction, pre-dating the chatbot-specific 2025 harms above)
 
 ## Related
 [[content-moderation-and-speech]] · [[ai-and-democracy]] · [[ai-safety-and-agents]] · [[ai-copyright-and-knowledge]] · [[ai-governance-and-regulation]]

@@ -1,0 +1,113 @@
+name: Fetch YouTube captions (Data API)
+
+# Daily, quota-budgeted caption fetch via the official YouTube Data API v3 —
+# the ToS-compliant alternative to scripts/fetch_youtube.py's scraping
+# approach. Runs on GitHub's infrastructure (not a laptop), stays under the
+# free 10,000 units/day quota, and commits new captions back to the repo.
+#
+# Every run also folds any newly-fetched videos into raw/archive.json (via
+# scripts/merge_youtube_into_archive.py), so YouTube items get item stubs the
+# next time someone runs `node scripts/build.mjs`, without a separate manual
+# step. See AGENTS.md §1/§2 for why archive.json can have an automated writer
+# for this one path (it stays lightweight — no transcript text inlined, just
+# a pointer to the .txt already written under collection/).
+#
+# Needs channel-owner OAuth credentials as repo secrets before it does
+# anything:
+#   YT_OAUTH_CLIENT_ID
+#   YT_OAUTH_CLIENT_SECRET
+#   YT_OAUTH_REFRESH_TOKEN
+# See the docstring in scripts/fetch_youtube_api.py for how to mint these.
+# Until they're set, this workflow no-ops daily instead of failing (see the
+# "Check OAuth credentials" step below) so it doesn't spam failure notifications.
+#
+# Side effect worth knowing: a commit here pushes to main, which triggers
+# deploy.yml (site rebuild) — so new captions show up on the published wiki
+# the same day they're fetched (once item stubs are built from archive.json).
+
+on:
+  schedule:
+    - cron: "17 6 * * *"  # once daily; avoids the top-of-hour Actions rush
+  workflow_dispatch:
+    inputs:
+      quota_budget:
+        description: "Max Data API units to spend this run"
+        default: "9750"
+      limit:
+        description: "Cap on number of new videos to process (blank = no cap)"
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-youtube-captions
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # GitHub Actions doesn't allow `secrets.*` directly in `if:` conditions,
+      # so check presence here (via env, never printed) and branch on the
+      # step output instead.
+      - name: Check OAuth credentials
+        id: creds
+        env:
+          YT_OAUTH_REFRESH_TOKEN: ${{ secrets.YT_OAUTH_REFRESH_TOKEN }}
+        run: |
+          if [ -n "$YT_OAUTH_REFRESH_TOKEN" ]; then
+            echo "configured=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Skip notice (OAuth not configured yet)
+        if: steps.creds.outputs.configured == 'false'
+        run: |
+          echo "::notice::YT_OAUTH_REFRESH_TOKEN is not set — skipping this run. \
+          Configure YT_OAUTH_CLIENT_ID / YT_OAUTH_CLIENT_SECRET / YT_OAUTH_REFRESH_TOKEN \
+          as repo secrets to enable the daily caption fetch (see scripts/fetch_youtube_api.py)."
+
+      - name: Setup Python
+        if: steps.creds.outputs.configured == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        if: steps.creds.outputs.configured == 'true'
+        run: pip install requests
+
+      - name: Fetch captions
+        if: steps.creds.outputs.configured == 'true'
+        env:
+          YT_OAUTH_CLIENT_ID: ${{ secrets.YT_OAUTH_CLIENT_ID }}
+          YT_OAUTH_CLIENT_SECRET: ${{ secrets.YT_OAUTH_CLIENT_SECRET }}
+          YT_OAUTH_REFRESH_TOKEN: ${{ secrets.YT_OAUTH_REFRESH_TOKEN }}
+        run: |
+          ARGS="--quota-budget ${{ github.event.inputs.quota_budget || '9750' }}"
+          if [ -n "${{ github.event.inputs.limit }}" ]; then
+            ARGS="$ARGS --limit ${{ github.event.inputs.limit }}"
+          fi
+          python scripts/fetch_youtube_api.py $ARGS
+
+      - name: Merge new videos into archive.json
+        if: steps.creds.outputs.configured == 'true'
+        run: python scripts/merge_youtube_into_archive.py
+
+      - name: Commit and push new captions
+        if: steps.creds.outputs.configured == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain -- collection/ raw/archive.json)" ]; then
+            git add collection/ raw/archive.json
+            git commit -m "Automated YouTube caption fetch (Data API)"
+            git push
+          else
+            echo "No new captions this run — nothing to commit."
+          fi

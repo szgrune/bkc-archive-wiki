@@ -1,7 +1,7 @@
 ---
 type: topic
 title: Algorithms & Algorithmic Accountability
-item_count: 12
+item_count: 13
 related: [content-moderation-and-speech, ai-governance-and-regulation, misinformation-and-elections, ai-labor-and-economy]
 ---
 # Algorithms & Algorithmic Accountability
@@ -32,6 +32,7 @@ methodological substrate beneath [[content-moderation-and-speech]],
 - [[12869643-thinking-of-algorithms-as-institutions-communications-of-the|Thinking of Algorithms as Institutions]] — 2024-12-18 · cacm.acm.org
 - [[12689627-algorithms-are-coming-for-democracy-but-its-not-all-bad-wire|Algorithms Are Coming for Democracy—but It's Not All Bad]] — 2024-11-26 · wired.com
 - [[18267748-new-public-after-the-feed|New_ Public: After the Feed]] — 2026-05-12 · newpublic.org
+- [[yt_jD39q8Uw39k-algorithmic-discrimination-and-fairness-reducing-the-gap-bet|Algorithmic Discrimination & Fairness: Reducing the Gap Between the Legal & Technical?]] — 2022-12-13 · youtube
 
 ## Related
 [[content-moderation-and-speech]] · [[ai-governance-and-regulation]] · [[misinformation-and-elections]] · [[ai-labor-and-economy]] · [[princeton-citp]]

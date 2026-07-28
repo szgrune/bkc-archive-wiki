@@ -1,0 +1,699 @@
+[00:00:07] Great. Well, thank you everyone for joining.
+[00:00:09] I know we're still gonna have people joining,
+[00:00:11] but given that we only have 30 minutes today,
+[00:00:14] I'm gonna go ahead and kick things off.
+[00:00:17] Thank you for joining us.
+[00:00:17] This is our second in Berkman Klein Center's series
+[00:00:21] on accountable technical oversight of generative AI.
+[00:00:24] I'm Sue Hendrickson.
+[00:00:25] I'm the Executive Director at the Berkman Klein Center.
+[00:00:28] Last week we started this series
+[00:00:29] with BKC responsible AI fellow Dr. Rumman Chowdhury
+[00:00:33] and Reva Schwartz from NIST
+[00:00:35] on the landscape of generative AI harms.
+[00:00:38] And today we're gonna focus on a new tension
+[00:00:39] on balancing security and transparency
+[00:00:42] in the quest for accountability and open research
+[00:00:45] regarding generative AI.
+[00:00:47] Legislative efforts, such as the DSA,
+[00:00:49] are providing new regulatory routes
+[00:00:51] for increased transparency and access.
+[00:00:53] Yet how best to accomplish that
+[00:00:55] in the rapidly evolving landscape of generative AI
+[00:00:57] has not yet resolved.
+[00:00:59] Today we're looking to tease out
+[00:01:01] what constitutes meaningful transparency
+[00:01:03] and wrestle both with the security risks
+[00:01:06] that may come from sharing training data or code
+[00:01:08] and the societal and other risks
+[00:01:09] that may come from not sharing.
+[00:01:11] I have with me today for this discussion and fireside chat,
+[00:01:14] I'm thrilled to have Bruce Schneier,
+[00:01:17] internationally renowned security technologist,
+[00:01:19] also known as a security guru.
+[00:01:22] Bruce is also, I'm pleased to say,
+[00:01:24] a long-term affiliate and long-term fellow
+[00:01:26] at the Berkman Klein Center,
+[00:01:27] a lecturer at the Harvard Kennedy School
+[00:01:29] and a bestselling author of 14 books
+[00:01:32] and literally hundreds of articles,
+[00:01:33] essays and academic papers.
+[00:01:35] His influential newsletter, The Cryptogram,
+[00:01:37] and blog, Schneier on Security,
+[00:01:39] are read by over 250,000 people.
+[00:01:42] He's a thought leader that I and many others consult with
+[00:01:45] to understand the nuances and challenges
+[00:01:46] of the digital security landscape.
+[00:01:48] Welcome, Bruce. Thanks for joining.
+[00:01:51] Time is short,
+[00:01:52] so we're gonna dive right into questions on this.
+[00:01:55] Also, for our virtual audience,
+[00:01:58] please add your questions into the chat box.
+[00:02:00] We're hoping to make this a iterative discussion
+[00:02:02] and we'll try to read in your questions into the discussion
+[00:02:06] as we're going through.
+[00:02:10] Okay, Bruce, starting us off here,
+[00:02:13] I'm looking forward to thinking about the lessons
+[00:02:16] that we can learn from the security landscape
+[00:02:17] as we tackle generative AI.
+[00:02:20] How should we consider the trade-offs,
+[00:02:22] and even if there are trade-offs,
+[00:02:23] between transparency and security in releasing,
+[00:02:26] how should companies think about this,
+[00:02:27] in releasing their models
+[00:02:28] and underlying training information?
+[00:02:32] - So, it's interesting,
+[00:02:32] I tend not to like the trade-off metaphor, right?
+[00:02:36] Transparency is something you trade off with.
+[00:02:37] Security transparency is one of the ways to get security.
+[00:02:42] So, these are all gonna be
+[00:02:44] security versus security discussions.
+[00:02:46] One type of security versus another type of security.
+[00:02:49] In the software space,
+[00:02:52] we have been dealing with transparency issues
+[00:02:56] really since the beginning.
+[00:02:58] Transparency isn't a goal,
+[00:03:00] it is a method of achieving a goal.
+[00:03:03] You might wanna know that an algorithm is fair,
+[00:03:06] you might wanna know that software is secure,
+[00:03:08] you might wanna know something
+[00:03:11] about the systems you're using.
+[00:03:12] And one of the ways to get that is via transparency.
+[00:03:16] The open source movement was built on this notion
+[00:03:20] that if the software is public,
+[00:03:22] many eyes can look at it,
+[00:03:24] and vulnerabilities, bugs are found,
+[00:03:27] and your software is more reliable, more secure.
+[00:03:30] Now, we can argue whether that's true or not,
+[00:03:32] but that is the conceit.
+[00:03:36] There are other times when transparency
+[00:03:38] might be a competitive problem, right?
+[00:03:40] Google's gonna say,
+[00:03:42] we don't wanna release how our search algorithms work.
+[00:03:48] Even though that is transparency,
+[00:03:50] then people will be able to game them.
+[00:03:52] And if you know how it works,
+[00:03:54] you'll be able to optimize your page to rise in the rankings
+[00:03:57] and that would be an insecurity.
+[00:04:00] And so there are ways that transparency affects security,
+[00:04:03] both good and bad.
+[00:04:04] And the question is always,
+[00:04:06] what are we trying to optimize for?
+[00:04:08] Whose interests are we serving?
+[00:04:11] And what are the ways to get that?
+[00:04:15] Think about, again, open source,
+[00:04:18] transparency doesn't give you security.
+[00:04:19] I mean, Linux is more secure because it's transparent,
+[00:04:23] doesn't make sense.
+[00:04:24] Linux is secure because people are looking at it.
+[00:04:28] And so there's a lot of open source software that is public,
+[00:04:31] but it's obscure and no one looks at it.
+[00:04:34] So you don't get the benefit of the analysis.
+[00:04:36] So, the value is analysis.
+[00:04:39] Then, how do you get it.
+[00:04:42] - Right, so I mean, that's actually a great topic,
+[00:04:45] 'cause many of us saw the leaked memo
+[00:04:47] by senior engineer at Google around 'no moat'.
+[00:04:49] And this trend we're seeing right now in generative AI
+[00:04:52] towards these smaller, cheaper versions
+[00:04:55] of kind of best in class AI models
+[00:04:57] is clear with the proliferation
+[00:04:59] of these open source ones,
+[00:05:01] from Hugging Face's alternative to ChatGPT,
+[00:05:03] to Alpaca from Stanford, Dall-E, Stable,
+[00:05:08] to Kuna and others.
+[00:05:10] I like the way you framed that
+[00:05:12] and I agree with you on that,
+[00:05:14] that transparency isn't the goal.
+[00:05:15] It's a method of it.
+[00:05:16] How do we think about it in the context
+[00:05:18] of these open source models
+[00:05:19] that are being released and widely tested?
+[00:05:21] Are they posing security risks?
+[00:05:23] Are there things,
+[00:05:25] how should we tackle those differently
+[00:05:26] as we look at these proliferation of open source models?
+[00:05:29] - There are security risks of giving everyone
+[00:05:32] that powerful technology.
+[00:05:33] I mean, you think about what's happening with Chat GPT
+[00:05:37] and there'll be ways people will use prompt injection
+[00:05:39] to get it to do things that the company didn't want.
+[00:05:42] And they put in controls so it couldn't.
+[00:05:45] As you get these models in the hands of everybody,
+[00:05:47] a very international hobbyist community,
+[00:05:53] you're not gonna be able to put in those controls.
+[00:05:56] If you have an art model, you can tell it,
+[00:05:59] do not create fake IDs,
+[00:06:02] and as long as the big company's running it,
+[00:06:03] you'll be able to do that.
+[00:06:05] Once that guard starts being diffused,
+[00:06:07] you lose the ability to do that.
+[00:06:09] So we are gonna have models
+[00:06:11] that will be racist and hateful
+[00:06:14] just because those controls won't be there.
+[00:06:17] This isn't about transparency,
+[00:06:19] this is really about how the technology diffuses.
+[00:06:22] I think there's a kind of enormous value
+[00:06:25] in having this democratization.
+[00:06:27] I think we're gonna see a lot more innovation,
+[00:06:31] a lot more new ideas,
+[00:06:33] a lot more ways these things will work.
+[00:06:34] And they're not gonna be under control
+[00:06:36] of these massive for-profit monopolies,
+[00:06:39] which is a good thing,
+[00:06:40] but it also has issues.
+[00:06:43] This isn't a transparency problem.
+[00:06:45] And transparency, if you think about what we might want,
+[00:06:48] an AI is doing a thing, it is making a decision,
+[00:06:51] and we wanna know why.
+[00:06:53] But I say, I want this model to be transparent,
+[00:06:56] it's kind of, I wanna know why it makes decisions it makes.
+[00:07:00] There's a bunch of ways I can learn that.
+[00:07:03] Maybe I can learn that by seeing the insides,
+[00:07:06] but maybe I can't,
+[00:07:06] maybe that's not gonna tell me anything.
+[00:07:08] Maybe I can learn it by being able
+[00:07:10] to audit the model, right?
+[00:07:12] Am I allowed to query the model a million times
+[00:07:16] and learn what its contours are, right?
+[00:07:18] Is it gonna make up, these up higher decisions?
+[00:07:22] I want to query it with counter-factuals.
+[00:07:25] We submit the same resume
+[00:07:27] with different parameters tweaked,
+[00:07:29] maybe racial, ethnic,
+[00:07:31] the kind of things we might be concerned about,
+[00:07:33] and see what the difference is.
+[00:07:35] And these are forms of transparency
+[00:07:38] that aren't releasing the details of the thing,
+[00:07:42] but might give us the information we want.
+[00:07:46] So again, what is our goal?
+[00:07:49] Releasing the full details of the AI model
+[00:07:54] might be beneficial and might not.
+[00:07:57] A lot of these things non-reductionable in their complexity,
+[00:08:03] so that seeing all the parameters doesn't tell us anything.
+[00:08:07] The ability to actually interact with it does.
+[00:08:11] - Right, I mean that seems to be
+[00:08:12] one of the real challenges here,
+[00:08:13] is figuring out kind of what actually would provide
+[00:08:16] that kind of meaningful transparency
+[00:08:18] that people are looking for in this context,
+[00:08:21] as to whether, as you said,
+[00:08:24] will releasing it actually accomplish what the goals are
+[00:08:27] of kind of providing transparency,
+[00:08:29] and are there ways to achieve those goals
+[00:08:33] through that release?
+[00:08:34] Like, what techniques would actually let you do that
+[00:08:36] from these models?
+[00:08:38] - Yeah, I mean,
+[00:08:39] people like Cathy O'Neil have talked a lot about
+[00:08:41] the ability to do algorithm audits.
+[00:08:44] And I think there, that's real important.
+[00:08:47] Susan Benesch talks about the same thing.
+[00:08:49] You know, these systems,
+[00:08:51] whether they're AI or not,
+[00:08:53] are making these enormously important decisions.
+[00:08:57] And we have no ability to audit them,
+[00:09:00] to understand what they're doing.
+[00:09:03] In a sense, I don't care why.
+[00:09:06] If an algorithm is racist, I don't care why.
+[00:09:08] I just want it not to be racist.
+[00:09:10] So then, I'll think about human systems.
+[00:09:13] If a human system of humans is racist,
+[00:09:16] in a sense I don't care why,
+[00:09:18] I can't open the people's brains and look at the parameters
+[00:09:21] and understand how they made their decisions.
+[00:09:24] But we as society want them to make more fair decisions
+[00:09:30] by whatever that means.
+[00:09:34] I worry a lot that transparency
+[00:09:36] is not gonna give us what we want.
+[00:09:39] It's sort of chasing the wrong tactic for the goal.
+[00:09:43] Now I do like open source,
+[00:09:45] I'm glad they're open source models,
+[00:09:48] but I don't think we're going to get what we want
+[00:09:50] by forcing, in our companies like Google or OpenAI,
+[00:09:54] to open up their models so we can evaluate them.
+[00:09:57] Because that's not how we're gonna evaluate them.
+[00:09:59] We're gonna need access to them. We need to understand them.
+[00:10:03] Maybe we're gonna need some access to their training data,
+[00:10:07] but we might need that for a lot of other reasons
+[00:10:08] besides security.
+[00:10:09] I mean, to know if they're violating copyright,
+[00:10:11] or anybody else's rights, right?
+[00:10:14] Or unduly taking the labor of millions of people
+[00:10:18] and not compensating it.
+[00:10:19] So, we have a lot going on here.
+[00:10:23] - Right, I mean, do you see any of those
+[00:10:26] as particularly security-related risks
+[00:10:29] or is it the broader collection of risks
+[00:10:32] that we worry about when we're kind of seeking this?
+[00:10:35] And you teed up perfectly our next session on this,
+[00:10:38] which will be related to audits
+[00:10:39] and accountability mechanisms in this context.
+[00:10:42] Because I agree with you fully
+[00:10:44] that that is one of the things
+[00:10:45] that we need to figure out how we're managing here
+[00:10:47] with respect to it.
+[00:10:49] - I mean, the security risks kind of look like this.
+[00:10:52] And this will be the anti-open source argument.
+[00:10:54] If we give people the source code,
+[00:10:56] the bad guys will be able to comb through it
+[00:10:59] and find vulnerabilities and exploit them.
+[00:11:02] That is what Microsoft will say.
+[00:11:04] We're not gonna release our source code. Are you crazy?
+[00:11:08] Then all the bad guys will figure out exploits.
+[00:11:11] Now, that is a thing.
+[00:11:14] We know from decades of security
+[00:11:17] that that isn't a real worry.
+[00:11:19] That in fact there are more good guys than bad guys
+[00:11:21] and the good guys find things and we fix them.
+[00:11:24] So it generally is a good thing to make your code public,
+[00:11:27] and for security, not a bad thing.
+[00:11:31] But there are these instances,
+[00:11:32] like Google's search algorithm,
+[00:11:34] where you don't want people gaming it, right?
+[00:11:37] Where if you have an algorithm,
+[00:11:38] I'm gonna make this up,
+[00:11:39] for admission into college,
+[00:11:42] and we make it public,
+[00:11:43] now every high schooler knows the exact GPA
+[00:11:46] and the exact type of extracurricular activities,
+[00:11:49] kind of making this up.
+[00:11:50] I mean, the exact ways to game the algorithm.
+[00:11:53] And we don't want that.
+[00:11:55] - Right.
+[00:11:56] And we've heard increased calls
+[00:11:57] from kind of some of the large language model providers too,
+[00:11:59] to pull back from the kind of openness
+[00:12:02] that's been provided on these security grounds,
+[00:12:04] which is one of the reasons that we kind of wanted
+[00:12:06] to tease this out some and think about
+[00:12:09] whether that's real in a tension
+[00:12:11] with the open source community,
+[00:12:12] or whether that's-
+[00:12:14] - And that's always been a tension.
+[00:12:16] I mean, that's Microsoft versus Linux.
+[00:12:19] I mean, that's the exact tension.
+[00:12:20] We can do both things.
+[00:12:22] We don't have to choose one or the other.
+[00:12:24] We can do both.
+[00:12:26] Different companies will make different decisions,
+[00:12:29] and I think that's okay.
+[00:12:32] I mean the one isn't necessarily more secure than the other.
+[00:12:34] The risks for one aren't necessarily
+[00:12:36] the risks for the other.
+[00:12:38] And Microsoft keeps their source code proprietary.
+[00:12:40] But we know pretty well that countries like China
+[00:12:43] have gone and stolen pieces of it.
+[00:12:45] So, are we getting the value?
+[00:12:48] - Right, are we getting the value of that?
+[00:12:51] - Right, and the benefit of open source
+[00:12:53] is that we in the community get to look at it
+[00:12:55] and play with it.
+[00:12:56] Now, what you said earlier,
+[00:12:57] there are open source models out there,
+[00:13:00] and there are several,
+[00:13:02] and the innovation has been phenomenal.
+[00:13:04] And we're learning a lot
+[00:13:06] that you don't need months of computation,
+[00:13:09] that these smaller, nimbler,
+[00:13:10] we're gonna update them every day,
+[00:13:12] they run on a high-end laptop.
+[00:13:15] I think that's gonna be the future.
+[00:13:17] And it sounds pretty good,
+[00:13:20] but yes, I mean, there are security worries.
+[00:13:22] There are security worries in, the authentication,
+[00:13:26] the voice authentication now no longer works.
+[00:13:29] Video authentication now no longer works.
+[00:13:32] - Right, the authentication-
+[00:13:33] - You have to send Facebook a scan of your driver's license.
+[00:13:37] Who thought that was a good idea?
+[00:13:39] Well, now it's gonna be a terrible idea.
+[00:13:41] All of these sort of security measures
+[00:13:44] that kind of just barely worked, now won't.
+[00:13:47] I'm sure ChatGPT can guess the answer
+[00:13:50] to your secret questions.
+[00:13:52] Right?
+[00:13:53] But these have always been like half-
+[00:13:55] - So, my secret questions, my identity, the authentication,
+[00:13:57] it's all out there now.
+[00:13:58] What do we do?
+[00:13:59] Is there a solution to pull back
+[00:14:01] any of this kind of security
+[00:14:03] in a world where we're not gonna be able
+[00:14:05] to have this kind of authentication anymore?
+[00:14:07] - We have to rely on other things, right?
+[00:14:09] So, if you think about your phone,
+[00:14:11] when you call me,
+[00:14:13] I recognize you because of your voice.
+[00:14:15] Voice and shared history,
+[00:14:17] that we're gonna talk about things,
+[00:14:18] that we know that we know each other.
+[00:14:21] Caller ID also exists.
+[00:14:23] But it's kind of not secure.
+[00:14:25] It doesn't work very well.
+[00:14:26] But if I can't trust your voice,
+[00:14:28] maybe I have to rely more on caller ID,
+[00:14:30] which means maybe caller ID needs to be more robust.
+[00:14:34] Maybe things like the phone company
+[00:14:36] needs to do more to prevent SIM swapping
+[00:14:38] because now the other mechanisms are failing.
+[00:14:41] So, I think there's gonna be a rejiggering of security
+[00:14:44] and I'm just trying to think about this.
+[00:14:47] We've been using these informal methods
+[00:14:51] because they worked most of the time,
+[00:14:54] and they worked pretty well.
+[00:14:56] And we might have to make some different decisions
+[00:14:59] given the ease of which you can fake data at a distance.
+[00:15:04] So, voice or video or photographs of documents,
+[00:15:08] sort of all of those things no longer work.
+[00:15:12] They kind of never worked, but they worked okay.
+[00:15:15] And now they're really not gonna work.
+[00:15:18] So, I think there are gonna be some bumps.
+[00:15:22] And I think SIM swapping is a good example of this.
+[00:15:24] So this is, a problem where,,
+[00:15:28] when a hacker calls your phone company
+[00:15:30] and convinces them to switch your phone number
+[00:15:32] onto their phone,
+[00:15:33] and it's actually surprisingly easy to do.
+[00:15:35] And the reason it's easy
+[00:15:37] is because the phone companies
+[00:15:38] are not optimizing for security.
+[00:15:40] They're optimizing for,
+[00:15:41] I lost my phone and I bought a new one,
+[00:15:44] and I need to move by account.
+[00:15:46] They're optimizing for ease of use and customer service.
+[00:15:50] And that makes the attack possible.
+[00:15:53] - Right, you're making me realize
+[00:15:54] that we're gonna need quite a bit of security innovation
+[00:15:56] around these issues in order to kind of tackle
+[00:16:00] some of the authentication challenges and stuff.
+[00:16:02] - And even worse, business innovation, which is even harder.
+[00:16:06] I mean, businesses like to be easy.
+[00:16:09] They don't like security.
+[00:16:11] I don't think this is we need new tech,
+[00:16:13] we're gonna need phone companies to say,
+[00:16:15] hey, we need to make caller ID actually good
+[00:16:19] and not accept crappy caller ID.
+[00:16:22] We might have to do authentication
+[00:16:23] from the phone to the tower.
+[00:16:25] Which we never did because we never wanted to
+[00:16:27] and didn't have to.
+[00:16:29] so, it's gonna be the processes.
+[00:16:33] I mean, in this space, I'm a big fan of regulation.
+[00:16:36] I think the market actually won't solve this very well.
+[00:16:39] But, a lot of our assumptions are changing,
+[00:16:42] and that's what's going on.
+[00:16:44] And then, what do we do to get that?
+[00:16:46] And I think transparency's going to be part of that.
+[00:16:49] There's going to be a lot of other parts
+[00:16:51] of making security work in this new era
+[00:16:55] when things that we thought were hard
+[00:16:56] turned out to be easier.
+[00:16:58] - Yep, well it's interesting when you say,
+[00:17:01] kind of a fan of regulation,
+[00:17:02] I wanna turn to one of the questions that we received.
+[00:17:05] Because it's a good link to it.
+[00:17:07] So question from Adam Holland.
+[00:17:09] If we imagine some sort of mandatory transparency
+[00:17:11] in the mode of the DSA's soon to come database,
+[00:17:14] it's not clear what that would actually look like
+[00:17:16] practically.
+[00:17:17] One difference seems to be that in the case of the DSA,
+[00:17:19] we have sapient parties making requests regarding content.
+[00:17:23] In the case of generative AI, we have what?
+[00:17:25] There's a huge difference between looking under the hood
+[00:17:27] and seeing what material is or is not
+[00:17:29] in a library's collection, so to speak.
+[00:17:32] How do we think about this?
+[00:17:33] How do we think about whether
+[00:17:36] that kind of mandatory transparency
+[00:17:39] is gonna be able to accomplish
+[00:17:40] the goals that we're looking for,
+[00:17:41] and in the generative AI context?
+[00:17:44] - I mean, I think that's a really good way of framing it.
+[00:17:47] And in a lot of cases, it doesn't.
+[00:17:49] So, I'm gonna demand transparency.
+[00:17:51] Do I want to see the model?
+[00:17:53] Do I want to see the training set?
+[00:17:55] Like the data that goes into it?
+[00:18:00] If it iterates, do I have to see each version?
+[00:18:03] And I don't know.
+[00:18:04] I mean, I don't think it gets us what we want.
+[00:18:07] Which again, I think what I want,
+[00:18:09] is I want to know why the model did the thing it did.
+[00:18:15] And really, how can I stop it
+[00:18:17] from doing the exact same thing next time?
+[00:18:19] Whether it's making a mistake,
+[00:18:21] or acting in some biased manner,
+[00:18:24] either illegal or unethical,
+[00:18:28] or we just don't want.
+[00:18:30] Or it makes a decision that affects me that's important.
+[00:18:33] And I want to know why.
+[00:18:36] Like, why did it deny me this benefit, this loan?
+[00:18:40] Why did it make this discrimination?
+[00:18:43] Put me in one pile versus another?
+[00:18:45] - Right, so a kind of knowledge and explanation.
+[00:18:48] - I mean, the transparency I want is,
+[00:18:51] submit my stuff 10 times
+[00:18:56] with 10 different parameters changed,
+[00:18:58] and tell me when I get different results.
+[00:19:01] And that's what I kind of mean
+[00:19:03] by an explanation there,
+[00:19:05] of why it did the thing.
+[00:19:07] - Exactly, why the decisions and stuff are being made.
+[00:19:11] One thing that's been kind of teed up
+[00:19:13] is the idea of benchmarks
+[00:19:15] for acceptable levels of security risks
+[00:19:18] and what that might look like in this space.
+[00:19:21] Can you just speak to that for a bit,
+[00:19:23] as to whether there's actually
+[00:19:25] a kind of benchmarking process
+[00:19:26] that could go on here with respect to that?
+[00:19:28] And then, I mean, I guess we get to the question of kind of,
+[00:19:31] how would we think about what was
+[00:19:32] an acceptable security risk and who would decide that?
+[00:19:35] - Yeah, that's really hard to do
+[00:19:36] without knowing how it's gonna be used.
+[00:19:40] I mean, the AI doesn't exist in a vacuum.
+[00:19:43] It's doing a thing.
+[00:19:46] A chatbot's engaging, it's generating human text.
+[00:19:49] Some decision-making systems making a decision.
+[00:19:52] Or it's affecting the world in direct physical manner.
+[00:19:56] I don't think you can have security benchmarks
+[00:20:00] without knowing what it's doing.
+[00:20:02] I mean, what would it look like given an AI system
+[00:20:06] that is there without knowing what it-
+[00:20:13] I don't see it, I don't see even how to begin
+[00:20:17] to have a security benchmark.
+[00:20:20] Because there's gonna be some level of risk.
+[00:20:22] What's the risk that this will make a bad decision?
+[00:20:25] I mean, let's take a driverless car.
+[00:20:27] Like, what's the risk it will accelerate instead of brake?
+[00:20:31] That is a pretty reasonable question to ask.
+[00:20:32] And so that we can talk about.
+[00:20:35] As soon as we instantiate it in that type of decision,
+[00:20:38] we can develop security benchmarks for what that means,
+[00:20:42] which now, is really safety.
+[00:20:45] - Exactly. It's going to safety. Yeah.
+[00:20:46] - But, safety, to me,
+[00:20:49] my difference is that safety is against the environment.
+[00:20:53] So, safety is road conditions, and day versus night,
+[00:20:57] and traffic, and people walking around.
+[00:21:00] Security is an adversarial environment.
+[00:21:02] Security is the stickers you put on stop signs
+[00:21:05] to make the AI think it says 55 miles an hour speed limit.
+[00:21:10] It's a very different way of looking at the AI,
+[00:21:15] an adversarial way.
+[00:21:16] Does it survive a malicious, intelligent, adaptive adversary
+[00:21:20] versus does it survive all sorts
+[00:21:22] of random weather conditions?
+[00:21:23] They're very different. - Right, it's an important,
+[00:21:25] it's a really, really important distinction and stuff.
+[00:21:28] I want to add in, we got a interesting question
+[00:21:30] from Jonathan Poritz for you that I'd like to tee up,
+[00:21:33] which is,
+[00:21:34] is there anything qualitatively different
+[00:21:36] for LLM's in previous statistical models
+[00:21:39] in that we had a good, well understood,
+[00:21:41] at least by people with enough of a mathematical background,
+[00:21:44] theory that explained what the old models did and why?
+[00:21:47] Whereas LLM's, we don't have such a theory?
+[00:21:50] No human really understands
+[00:21:51] why they work as well as they do.
+[00:21:53] Is this maybe why you talk more
+[00:21:55] about getting Oracle access to a model
+[00:21:57] than just seeing the source code?
+[00:21:59] - I think that's part of it.
+[00:22:01] I mean, so they're approaching humans, right?
+[00:22:03] We have no way to understand why they do what they do.
+[00:22:07] And we know there's some psychology,
+[00:22:08] human explanations are basically justifications,
+[00:22:11] they're not explanations.
+[00:22:12] They are generated after the fact,
+[00:22:15] after people make a decision.
+[00:22:17] So, we're getting to these models that are so opaque
+[00:22:21] they're irreproducible, that see-
+[00:22:23] Why did it make the decision?
+[00:22:24] Here are the 2 billion parameters. That's why.
+[00:22:27] That's not a useful answer.
+[00:22:29] And explanations are very much a human shortcut.
+[00:22:32] They really represent the way we humans make decisions,
+[00:22:36] not how these LLMs make decisions.
+[00:22:40] So I don't think we can usefully open up the insides
+[00:22:46] and see what they've done.
+[00:22:47] Just like we can't usually open up human brains.
+[00:22:49] So now we are-
+[00:22:52] stuck's a bad word.
+[00:22:53] We have to use what we can see.
+[00:22:57] Like, what is the output?
+[00:22:59] So we're looking at the class,
+[00:23:03] incoming class of a certain university,
+[00:23:05] and we see a racial bias.
+[00:23:09] And we say, look, I don't care how that happened.
+[00:23:12] You can't have that.
+[00:23:14] Did you use people? Did you use an AI?
+[00:23:15] Did you use a mix?
+[00:23:16] We don't actually care.
+[00:23:19] And I think in that case we have the tools already
+[00:23:25] to go after that kind of bias, you know?
+[00:23:28] And there are places where that is already illegal,
+[00:23:30] and there probably should be more.
+[00:23:33] - Right.
+[00:23:34] And with thanks to also Akarsha Surendar
+[00:23:37] for another question.
+[00:23:39] If not through mandatory transparency,
+[00:23:40] which it sounds like we're moving away from,
+[00:23:42] is the responsibility to reduce these risks
+[00:23:44] then left to the developers of these models?
+[00:23:47] And if so, what incentive to do so,
+[00:23:50] if it slows down improving the capabilities of these models?
+[00:23:52] - Well, this is where regulation
+[00:23:55] has to do it's work. - Yeah. Back to regulation.
+[00:23:55] - I mean, back to where we are.
+[00:23:58] Because you're right, the incentive of the companies
+[00:23:59] is to make a lot of money.
+[00:24:01] Not to be fair, not to be just, not to be equitable,
+[00:24:04] not to do any of those things, right?
+[00:24:06] If we expect, whatever,
+[00:24:10] pajamas not to catch on fire,
+[00:24:13] chimney sweep company's got to hire
+[00:24:14] five-year-olds to climb them, whatever,
+[00:24:17] all of these things, we have to pass laws.
+[00:24:19] So yes, it's gonna be incumbent on the companies
+[00:24:21] to make sure these models are fair
+[00:24:24] and it's incumbent on government to force the companies
+[00:24:27] to make sure these models are fair.
+[00:24:29] Then it's incumbent on government to check,
+[00:24:31] to make sure the companies have actually done
+[00:24:33] what they said they'd do.
+[00:24:34] I mean, we're not gonna rely on the market for this
+[00:24:37] because the market is not set up to do this.
+[00:24:43] This is larger than AI.
+[00:24:46] I always think of the market as a game
+[00:24:49] playing on a field that government defines.
+[00:24:54] Like, we define what is the viable playing field
+[00:24:58] in which competition happens.
+[00:25:01] And we have lots of laws that talk about,
+[00:25:04] and whether they are safety laws,
+[00:25:06] or child labor laws,
+[00:25:07] or fair practice laws,
+[00:25:09] or truth in advertising laws,
+[00:25:11] all of these laws determine how companies can operate.
+[00:25:16] And these have to be more of them.
+[00:25:18] We have no other way of doing that.
+[00:25:20] - Although that's, I think,
+[00:25:21] one of the challenges that we're wrestling with
+[00:25:23] is to try to figure out both how we can do that
+[00:25:26] on a global basis with respect to it.
+[00:25:28] We're seeing a proliferation of regulation right now
+[00:25:31] in different spaces figuring out how to harmonize that,
+[00:25:33] and then how we can actually make that kind of regulation
+[00:25:37] effective given the kinds of challenges
+[00:25:38] that we were talking about beforehand.
+[00:25:42] - What I think is an interesting dynamic at play
+[00:25:46] that because of the way,
+[00:25:48] I mean, not in AI, in computer security.
+[00:25:51] California has an internet of things security law.
+[00:25:54] It's not that great,
+[00:25:54] but one of the things that it mandates
+[00:25:56] is no default passwords.
+[00:25:57] So if you sell an IoT anything in California right now,
+[00:26:00] you can't have a default password.
+[00:26:02] I guarantee you that no company has two thermostats,
+[00:26:06] one for California, one for the rest of the country, right?
+[00:26:08] They fix a default password and sell it everywhere.
+[00:26:12] A good regulation and a big enough jurisdiction
+[00:26:15] moves the planet.
+[00:26:16] So you look at Europe, you look at their new AI law.
+[00:26:20] - Right, they're driving a lot of change.
+[00:26:22] - The stuff they're gonna require
+[00:26:24] is going to benefit the whole world.
+[00:26:28] So, even though the United States is really dysfunctional,
+[00:26:30] and is not gonna pass anything here,
+[00:26:34] the EU,
+[00:26:35] who I think of as the regulatory superpower on the planet,
+[00:26:39] will do things that benefit us.
+[00:26:41] So, I'm okay with the regulations not harmonized.
+[00:26:44] I'm okay with different regulations
+[00:26:46] and different jurisdictions.
+[00:26:49] - Yeah. We're almost at time.
+[00:26:50] So I just wanna ask one quick kind of question for you,
+[00:26:54] and thanks to David Harris.
+[00:26:57] Do you think it was responsible of Meta
+[00:26:58] to release Llama to "researchers"
+[00:27:01] with such a seemingly low barrier to entry
+[00:27:04] that it then leaked?
+[00:27:05] - Interesting question. I'm glad they did.
+[00:27:08] And I think the fact that it leaked,
+[00:27:10] I mean, we've learned an enormous amount
+[00:27:13] from basically the community.
+[00:27:16] And these companies never understand open source.
+[00:27:18] They're always blindsided by it.
+[00:27:20] It's been true for decades.
+[00:27:24] I think it's good.
+[00:27:24] I think the democratization is really valuable.
+[00:27:26] I think getting it in the hands of people
+[00:27:28] who don't have a profit motive is phenomenal.
+[00:27:30] I think these smaller, nimbler models are great.
+[00:27:33] I think they're being, we're learning a lot,
+[00:27:36] that we would not have learned otherwise.
+[00:27:38] You know, I never thought the responsible question.
+[00:27:42] I don't think it's irresponsible that they did it.
+[00:27:46] So, I guess I do think it's responsible.
+[00:27:48] I'm glad they did it.
+[00:27:49] I think we in the world are benefiting enormously from it
+[00:27:53] and now it's done.
+[00:27:54] I mean, you can't put it back in the box.
+[00:27:58] - The innovation has been incredible.
+[00:28:00] - And other open source models are coming.
+[00:28:02] So I guess even if they decided not to,
+[00:28:06] it would just be a few months delay
+[00:28:08] before some of these other ones are coming online.
+[00:28:10] You listed a few of them in the beginning.
+[00:28:13] A lot of them are based on Llama
+[00:28:14] and some of them aren't.
+[00:28:15] I guess all the ones that are other-
+[00:28:17] What was it, Alpaca and Vicuna,
+[00:28:20] and I guess Guanaco is the next one.
+[00:28:22] - Yeah.
+[00:28:24] Well Bruce, thank you very much for joining.
+[00:28:27] We are at time, so I need to cut this off.
+[00:28:29] I could continue to talk about this with you for hours,
+[00:28:32] and it goes back for me on this,
+[00:28:35] of trying to figure out how we deal with
+[00:28:37] some of these authentication and security challenges
+[00:28:40] in this world now where it's gonna be much more-
+[00:28:44] Where we can't put the genie back in the bottle.
+[00:28:46] But, just for everybody else who's listening,
+[00:28:49] please join us next week for our third workshop on enabling.
+[00:28:52] Bruce teed it up a little bit on audits,
+[00:28:54] but enabling meaningful technical oversight
+[00:28:56] of generative AI.
+[00:28:57] We'll have speaking Dr. Rumman Chowdhury,
+[00:29:00] tech journalist, Julia Angwin,
+[00:29:02] and CrowdTangle Co-Founder, Brandon Silverman.
+[00:29:05] - That's a great lineup.
+[00:29:07] - Yep. We're looking forward to it.
+[00:29:09] And thank you again for joining.
+[00:29:10] And Bruce, thank you for your words today.
+[00:29:13] - Thanks, all.

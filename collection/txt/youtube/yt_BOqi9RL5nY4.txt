@@ -1,0 +1,1278 @@
+[00:00:10] [Music]
+[00:00:17] all right we're going to get started um
+[00:00:19] thank you everyone who's joining in
+[00:00:20] person and online for the first uh RSM
+[00:00:23] speaker series installment of the
+[00:00:25] semester um we're really excited to
+[00:00:27] welcome John Lucas frini from Boston
+[00:00:30] University um but before John LCA takes
+[00:00:32] the floor uh he's going to be introduced
+[00:00:34] by Joe Walter one of our visiting
+[00:00:36] Scholars this term uh Joe is the Berlin
+[00:00:39] presidential chair in technology and
+[00:00:40] Society at ucsv uh he's also a
+[00:00:43] distinguished professor of communication
+[00:00:44] and the former director of the center
+[00:00:46] for information technology and Society
+[00:00:48] um and with that
+[00:00:50] [Applause]
+[00:00:53] Joe thank you Nick and thank you also ni
+[00:00:57] for arranging this speaker series and uh
+[00:01:00] providing me for John LCA to come today
+[00:01:04] um I I'm I'm a fan of John Luca Kini he
+[00:01:08] he does U he does computer science work
+[00:01:11] that I can understand and that's saying
+[00:01:13] a lot uh but um donuk and his colleagu
+[00:01:18] they've been looking at a lot of the
+[00:01:20] things that concern Us online in terms
+[00:01:22] of hate speech Miss information
+[00:01:24] conspiracies and so forth and and you
+[00:01:27] know it's it's not hard to find an
+[00:01:29] instant of any of these things but Luke
+[00:01:33] and his colleagues have uncovered the
+[00:01:35] process of this how how the actors
+[00:01:38] responsible for this move across domains
+[00:01:41] and a move across platforms and and what
+[00:01:44] some of the content is that that they
+[00:01:45] move and coordinate in their work when I
+[00:01:48] discovered uh uh their work it it blew
+[00:01:51] my mind it was really nice solid evident
+[00:01:55] Illustrated in really fascinating ways
+[00:01:57] in the papers that they write to uh just
+[00:02:00] help blow open some of the social
+[00:02:02] dynamics uh that that otherwise are only
+[00:02:05] represented by Static instances of hate
+[00:02:08] messages and so forth so I I'm I'm
+[00:02:11] impressed and a big fan of his work and
+[00:02:16] then I asked John Luka for his VA now I
+[00:02:20] don't like him anymore because I'm
+[00:02:21] jealous um he has uh a recently Ted as
+[00:02:25] an associate professor he has scads of
+[00:02:29] publication
+[00:02:30] uh uh conference proceedings and
+[00:02:32] articles he has millions and millions of
+[00:02:35] dollars in Grants he's done anything
+[00:02:37] that you would ever want an academic uh
+[00:02:40] to do um but beyond that as I said his
+[00:02:44] work is Meaningful and exciting and
+[00:02:46] detailed and precise and tells us a
+[00:02:48] whole lot so thanks for coming today and
+[00:02:50] thanks John LCA for joining us to tell
+[00:02:53] us about your research thank you thanks
+[00:02:56] Jo thank you so much for the for the
+[00:02:59] kind introduction and uh well good
+[00:03:01] morning or good afternoon everybody it's
+[00:03:04] uh it's great to be here so as as Joe
+[00:03:07] said I'm a computer scientist so uh what
+[00:03:10] I do I develop computational techniques
+[00:03:13] to better identify and understand
+[00:03:15] malicious online activity so I started
+[00:03:18] looking at uh malware online fraud spam
+[00:03:21] this kind of
+[00:03:23] automated uh bad activities that we are
+[00:03:25] all familiar with more recently I was
+[00:03:29] drawn into this uh rabbit hole if you
+[00:03:32] like of online hate and conspiracy
+[00:03:35] theories and misinformation and so on so
+[00:03:38] today I want to give you an overview of
+[00:03:39] some work I've been doing with my
+[00:03:42] students and my collaborators on you
+[00:03:44] know better un covering uh what's going
+[00:03:46] on out
+[00:03:48] there uh and to start I want to give you
+[00:03:51] an example of something that happened to
+[00:03:53] me um a couple of years ago now so one
+[00:03:56] day um I was sitting in my office and I
+[00:03:59] started receiving receiving weird emails
+[00:04:01] that uh you know look completely random
+[00:04:03] so the first one uh was this email where
+[00:04:08] uh uh somebody was asking me for advice
+[00:04:11] uh on how to cope with a recent wave of
+[00:04:15] you know hate and bigotry and
+[00:04:17] anti-Semitism and all of that this was
+[00:04:20] uh um early 2017 just to put it in um
+[00:04:25] into
+[00:04:27] context uh okay you know uh kind of
+[00:04:31] random but I I had published some papers
+[00:04:34] on the topic so you know might make
+[00:04:36] sense then I started receiving other
+[00:04:39] emails so this one was asking me about
+[00:04:41] help on some class project for a class
+[00:04:44] called Community studies project 12
+[00:04:47] which I had no idea what it was uh okay
+[00:04:52] weird uh and then I started receiving
+[00:04:55] you know uh hate emails uh wishing me
+[00:04:59] all the you
+[00:05:01] know all sorts of bad things and so on
+[00:05:05] and this was in a in a short uh time
+[00:05:08] frame so what was going on here uh well
+[00:05:12] later on I discovered that someone
+[00:05:15] posted this screenshot on uh on fortune
+[00:05:18] on the political incorrect board on
+[00:05:21] Fortune uh and this was
+[00:05:23] uh you know an anonymized a blurred out
+[00:05:27] uh screenshot of a class assignment
+[00:05:29] where a professor was asking students to
+[00:05:31] go on the community and start posting
+[00:05:34] about controversial topics you know uh
+[00:05:37] gender issues lgbtq issues women's
+[00:05:39] rights all these kind of things and if
+[00:05:41] you are at all familiar with the
+[00:05:42] community you know that's a very much
+[00:05:45] alright uh community so they were not
+[00:05:48] pleased with
+[00:05:50] this and uh they also po you know they
+[00:05:54] posted this screenshot they blurred out
+[00:05:56] the email address down there uh
+[00:06:00] but they didn't blur it out completely
+[00:06:01] so you can see G at.edu
+[00:06:04] so they interpolated it in the thread
+[00:06:07] and they got convinced that it was me
+[00:06:10] for whatever reason so they found an old
+[00:06:11] email address of mine that sort of fit
+[00:06:13] in there they mped it but uh that
+[00:06:16] doesn't matter and so they decided to go
+[00:06:19] and uh and
+[00:06:20] attack so you know they put out some of
+[00:06:24] my public
+[00:06:25] information uh they called for attacks
+[00:06:29] and they started posting templates of
+[00:06:31] emails to send me so this was the email
+[00:06:33] that I received the first email I showed
+[00:06:35] was posted as an example on on fortun
+[00:06:39] and I later received the same exact
+[00:06:41] email eventually they figured out it
+[00:06:44] wasn't me uh and they stopped
+[00:06:48] okay uh but this gives you an idea of
+[00:06:51] what this coordinated harassment attacks
+[00:06:54] look like and what we call a raid and uh
+[00:06:58] you know as you can imagine if I receive
+[00:07:00] this kind of attack um you know as a
+[00:07:02] white male Professor whatever you can
+[00:07:04] imagine how much um other types of
+[00:07:08] demographics might be affected by this
+[00:07:10] and after that you know this kind of
+[00:07:12] blew up now we hear about it um every
+[00:07:15] day we hear about you know uh
+[00:07:17] celebrities and uh um Gamers all sorts
+[00:07:22] of people being uh uh been attacked
+[00:07:25] online and so we start to study this uh
+[00:07:28] this phenomenon in our in our
+[00:07:31] work and we found that it's uh it's
+[00:07:34] quite common so in our limited view of
+[00:07:37] you know the politically incorrect board
+[00:07:39] we looked at attacks targeted against
+[00:07:41] YouTube specifically YouTube videos we
+[00:07:44] find that it happens about two to five
+[00:07:45] times a day which you know it's uh it's
+[00:07:48] quite a lot given that it's only one
+[00:07:50] Community it's fairly small
+[00:07:52] comparatively speaking to you know other
+[00:07:55] platforms and so on and so
+[00:07:58] forth
+[00:08:00] so what are we going to see uh today I
+[00:08:02] want to give you an overview of four uh
+[00:08:05] projects that I did so the first one is
+[00:08:08] this coordinated attacks against YouTube
+[00:08:11] videos so somebody posts a link to a
+[00:08:14] YouTube video but for whatever reason
+[00:08:16] they don't like you know it might be
+[00:08:17] against what they believe they might
+[00:08:19] want to harass the person and so on and
+[00:08:22] basically they invite people to storm
+[00:08:24] and disrupt the video in the in the
+[00:08:28] comments the second one is about Zoom
+[00:08:30] bombing so that's a similar threat that
+[00:08:33] kind of emerged during the coid 19 uh
+[00:08:36] pandemic and these are people who go and
+[00:08:38] disrupt Zoom meetings like the one with
+[00:08:41] I mean you know hopefully since then uh
+[00:08:44] some mitigations have been developed to
+[00:08:46] sort of make it more
+[00:08:50] difficult uh and then I'll talk about
+[00:08:52] some other work I did on automatically
+[00:08:54] identifying um uh online risks in
+[00:08:59] private conversations online so uh cyber
+[00:09:02] bullying and sexual solicitation and uh
+[00:09:06] things like that and finally I will
+[00:09:09] conclude with the work that we did in
+[00:09:11] looking at what happens after
+[00:09:14] communities got the platform because the
+[00:09:17] most natural uh way of dealing with
+[00:09:20] online hate and the conspiracy theories
+[00:09:23] and whatever is just suspending those
+[00:09:25] accounts suspending those communities
+[00:09:27] and so on um but the are real people so
+[00:09:30] they will move somewhere else and what
+[00:09:32] happens then that's something that we
+[00:09:33] need to keep in
+[00:09:37] mind so to begin uh understanding what
+[00:09:40] we are talking about um let me tell you
+[00:09:43] a little bit about Fortune uh which is
+[00:09:45] the first community that we studied so
+[00:09:48] Fortune is uh an image board and so
+[00:09:51] people can post an image that starts a
+[00:09:54] thread and then they can discuss it it's
+[00:09:58] organized under a bunch of topics
+[00:10:03] uh various levels of weirdness and
+[00:10:06] toxicity and so on what we focus is the
+[00:10:08] political incorrect
+[00:10:10] board uh which is one of the most
+[00:10:12] popular communities that uh you know
+[00:10:15] creates havoc on the internet they did
+[00:10:18] things like uh you know turning
+[00:10:20] Microsoft chatbot T racist a few years
+[00:10:23] ago they organized all sorts of raids
+[00:10:26] they try to they claim that they sort of
+[00:10:30] were extremely influential in getting
+[00:10:31] president Trump elected through these
+[00:10:33] kind of meme Wars and so on and so
+[00:10:37] forth uh what's interesting about fortun
+[00:10:40] compared to other communities out there
+[00:10:43] is that at any point in time there can
+[00:10:46] be only a certain number of threads
+[00:10:49] active and so every time a new thread is
+[00:10:51] created uh a thread has to die basically
+[00:10:54] it's
+[00:10:55] archived and after it's archived it goes
+[00:10:59] goes into this archive for a week and
+[00:11:01] then it's deleted so content is also eal
+[00:11:05] and as you and
+[00:11:06] also users are Anonymous there are no
+[00:11:08] accounts so anybody can post and there
+[00:11:10] is no way of telling who's posting what
+[00:11:13] and as you can imagine this combination
+[00:11:16] of anonymity and ephemerality sort of
+[00:11:18] encourages all sorts of bad behavior
+[00:11:20] especially when there is no
+[00:11:22] moderation uh from the administrators
+[00:11:25] and so on so just to give you a sense we
+[00:11:27] find that the medium medium lifetime of
+[00:11:30] a thread on fortun is 47 minutes so they
+[00:11:33] are fairly short
+[00:11:36] lived and uh we uh started collecting
+[00:11:40] data from from Fort and we're still
+[00:11:42] collecting it so um this is from a
+[00:11:45] couple of years ago we had uh over 134
+[00:11:48] million posts so it's fairly large not
+[00:11:51] as large as you know Twitter or Facebook
+[00:11:53] or Instagram or whatever but it's still
+[00:11:56] fairly large we're still collecting uh
+[00:11:59] this kind of
+[00:12:01] data and then we decided to focus on
+[00:12:04] this coordinated uh hate or harassment
+[00:12:07] campaigns and the way this works as the
+[00:12:10] example I showed you at the beginning
+[00:12:11] you know somebody will post a thread
+[00:12:13] calling for an attack and then people
+[00:12:16] will get together and carry out the
+[00:12:18] attack so they what they might do is uh
+[00:12:21] you know doxing the person showing
+[00:12:23] finding more information about them you
+[00:12:25] know social media handles or you know
+[00:12:27] even worse private information and so
+[00:12:30] on uh and then they will go and execute
+[00:12:32] the attack so they will post hate speech
+[00:12:35] and all sorts of bad content and so on
+[00:12:38] and ultimately cause harm and in this
+[00:12:41] process you know many Dynamics uh emerge
+[00:12:44] so you know they will uh post evidence
+[00:12:47] of what they did they will say did you
+[00:12:49] see that did you see how they reacted
+[00:12:51] they will uh congratulate each other and
+[00:12:54] so on and so
+[00:12:57] forth so how do we automatically trace
+[00:13:01] this so we decided to focus on YouTube
+[00:13:03] videos because we found that uh it was
+[00:13:06] the most popular domain linked on the
+[00:13:09] platform that's true for any social
+[00:13:11] media probably YouTube is the most
+[00:13:13] popular content out there and we found
+[00:13:17] examples of
+[00:13:18] attacks called against YouTube videos so
+[00:13:21] they will post a link to the video and
+[00:13:23] then people are supposed to go and uh
+[00:13:26] you know attack the poster in the
+[00:13:28] comments
+[00:13:30] and if you remember threads on Fortune
+[00:13:33] are ephemeral so they have a lifetime so
+[00:13:35] what we were interested in understanding
+[00:13:37] first was uh can we see an effect on the
+[00:13:41] YouTube
+[00:13:43] comments uh after a link is posted on
+[00:13:47] Fortune so if a link is posted posted on
+[00:13:49] Fortune we expect people to click on it
+[00:13:51] Go and comment on the YouTube video and
+[00:13:54] since the thread is Emeral that makes
+[00:13:55] our life somewhat easier because we can
+[00:13:57] sort of see you know between 0 and one
+[00:13:59] that's the lifetime of the thread how
+[00:14:01] many comments do we see do we see a
+[00:14:03] spiking
+[00:14:04] comments and we
+[00:14:07] do uh but that's not telling us much
+[00:14:10] because that's what we expect to see in
+[00:14:12] any social media platform right once
+[00:14:14] somebody posts a link somewhere we
+[00:14:17] expect you know the reason why they're
+[00:14:19] posting it is for people to go and visit
+[00:14:21] it uh and engage with it and so on and
+[00:14:23] so forth so we needed something uh
+[00:14:27] slightly more sophis icated and so we
+[00:14:30] resorted to uh signal processing
+[00:14:35] essentially so the idea there is that
+[00:14:38] how can we simply model this behavior of
+[00:14:42] uh having a synchronization thread where
+[00:14:45] people coordinate and then the YouTube
+[00:14:48] video where we're actually posting
+[00:14:50] comments and uh crosscorrelation is this
+[00:14:54] metric that is used to identif to uh
+[00:14:58] model how synchronized two signals
+[00:15:01] are so what we did we modeled the
+[00:15:05] comments on Fortune and the comments on
+[00:15:08] YouTube as signals as a you know train
+[00:15:10] of impulses and whatever and then we use
+[00:15:13] this mathematical technique to find out
+[00:15:14] how synchronized they are
+[00:15:18] ideally somebody will post a hateful
+[00:15:21] comment on YouTube and then immediately
+[00:15:22] go back and report on the thread this is
+[00:15:25] what I did uh and this is what happened
+[00:15:28] in reality it's a little lesser than
+[00:15:30] that but you get the
+[00:15:32] idea and this is interesting because it
+[00:15:36] gives us a number which is the lag
+[00:15:38] between the two signals but then we can
+[00:15:39] use later on to automatically identify
+[00:15:42] videos that We believe We
+[00:15:46] R and what you see in this plot is
+[00:15:50] basically uh we have a synchronization
+[00:15:52] here so zero indicates perfect
+[00:15:56] synchronization and then we look at hate
+[00:15:58] comment so we um ran the comments
+[00:16:02] through the hate base API which is
+[00:16:06] um an API to identify hate
+[00:16:09] speech and so the dots in red contain
+[00:16:13] hate the ones in blue do not contain
+[00:16:16] eight and what you can see is that
+[00:16:18] basically the smaller the leg the more
+[00:16:21] synchronized the fortun thread and the
+[00:16:23] YouTube comments are the more hate we
+[00:16:25] see and if if there is really no
+[00:16:27] synchronization
+[00:16:29] there is really not much hate so that
+[00:16:32] allows us to extract a set of videos
+[00:16:36] that have been uh targeted just by
+[00:16:39] looking at this number we don't really
+[00:16:40] even need to look at the comments we
+[00:16:42] don't need to um you know whatever train
+[00:16:46] classifiers or larg language models
+[00:16:48] these days uh to identify what's hateful
+[00:16:52] and what's not and so on and so forth so
+[00:16:54] that's fairly accurate and quick to
+[00:16:57] do and then by looking at this set of
+[00:17:00] videos uh well we made some observations
+[00:17:03] so we find that
+[00:17:06] uh as I said people like to report back
+[00:17:09] so they will talk about what they did
+[00:17:11] they will talk about what happened in
+[00:17:13] the attack potentially how it affected
+[00:17:16] the victim so some of these videos were
+[00:17:18] actually live streams so this could be
+[00:17:20] done you know in in real time instead of
+[00:17:22] just being um uh a video posted there uh
+[00:17:25] to be to be watched later
+[00:17:29] we see that they overwhelmingly Target U
+[00:17:33] vulnerable demographic so we see attacks
+[00:17:36] called you know against women against
+[00:17:39] members of the lgbtq community against
+[00:17:41] minorities and so on and so
+[00:17:45] forth
+[00:17:47] um and then in some cases we see that
+[00:17:49] even if the attack does
+[00:17:52] not uh start as targeted so it's not
+[00:17:55] calling for an attack against a specific
+[00:17:58] specific demographics and so on the
+[00:18:01] commenters will go after other
+[00:18:03] commenters who may be part of uh certain
+[00:18:08] minorities so sort of the attack becomes
+[00:18:09] targeted as it as it goes in in an
+[00:18:13] opportunistic way if you if you
+[00:18:17] like we see a lot of concern trolling
+[00:18:20] which is sort of interesting so these
+[00:18:23] would be attackers who pretend to be
+[00:18:27] real concerned citiz
+[00:18:29] about you know uh sort of what what what
+[00:18:32] I showed at the beginning you know when
+[00:18:34] the person pretended to be to be
+[00:18:36] concerned about racism and so on and so
+[00:18:39] forth and uh they try to get uh the
+[00:18:43] victim into um you know
+[00:18:46] either uh contradicting themselves or
+[00:18:49] saying something uh uh controversial or
+[00:18:52] whatever or just waste their
+[00:18:55] time and why is that interesting because
+[00:18:59] it's very difficult for moderators to
+[00:19:00] identify this kind of behavior it looks
+[00:19:02] legitimate it's just uh it's just not
+[00:19:05] and what do we do about it you know it's
+[00:19:07] not necessarily against the terms of
+[00:19:10] service it's not hate
+[00:19:12] speech uh actually probably it's uh it
+[00:19:16] looks exactly like real people being
+[00:19:18] concerned about about an issue at least
+[00:19:21] on the
+[00:19:23] surface and then we also find that you
+[00:19:25] know this is a trolling community so
+[00:19:27] people troll each other all the time so
+[00:19:29] often times they don't act upon uh these
+[00:19:33] threats they say you
+[00:19:34] know you know we are not your personal
+[00:19:37] Army nypa is something you often see so
+[00:19:40] we don't want to participate into this
+[00:19:41] attack go away and so on so it's kind of
+[00:19:45] a multifaceted
+[00:19:47] um uh
+[00:19:53] landscape and then we want to understand
+[00:19:56] what can we do about it so we have this
+[00:19:59] set of videos that were
+[00:20:01] attacked and clearly YouTube has a hard
+[00:20:05] time moderating them because we all know
+[00:20:08] that you know content moderators are a
+[00:20:10] scar resource they're overwhelmed there
+[00:20:12] is so much content being generated all
+[00:20:14] the time that you know where where do
+[00:20:15] you even
+[00:20:17] start so we developed a system that
+[00:20:21] basically given a video extracts
+[00:20:23] information about the video and so this
+[00:20:25] would be uh you know the title of the
+[00:20:29] video um how how long is it what are the
+[00:20:33] tags you know we look at specific
+[00:20:36] keywords you know cops woman whatever we
+[00:20:39] look at images so we look at the
+[00:20:41] thumbnail of the video so we have a uh
+[00:20:44] deep learning model that can tell us
+[00:20:45] what is in the
+[00:20:47] thumbnail and then we extract the audio
+[00:20:51] and we we look for keywords in the audio
+[00:20:53] as well and the idea is can we take all
+[00:20:56] the all these signals and combine them
+[00:20:58] them to
+[00:21:00] identify uh videos that are likely to be
+[00:21:02] moderated to to be attacked
+[00:21:05] sorry and so if that works that could be
+[00:21:08] an additional signal for for YouTube or
+[00:21:10] whichever platform we want to uh to
+[00:21:13] protect telling content moderators you
+[00:21:16] know this is a video that you should pay
+[00:21:18] particular attention to because it's
+[00:21:19] likely to be attacked in in the future
+[00:21:23] so this could be a
+[00:21:25] prioritization uh system that could be
+[00:21:28] used by content moderators and it works
+[00:21:31] uh reasonably
+[00:21:36] well any questions so far yep on the
+[00:21:40] previous slide um the bottom statistic
+[00:21:42] about the AC of .94 yeah have you
+[00:21:46] applied that forward looking and then
+[00:21:49] seeing if the videos you predict would
+[00:21:51] be rated R rated or is that purely
+[00:21:53] retrospective uh this was purely
+[00:21:55] retrospective yes because it was wasn't
+[00:21:58] easy to extract uh this ground truth of
+[00:22:01] videos that will be attacked yeah but
+[00:22:03] that's a good point
+[00:22:05] yes uh also it might overfit so it might
+[00:22:09] be
+[00:22:09] biased uh on videos that were attacked
+[00:22:13] by that specific community so there
+[00:22:15] might be other communities that Target
+[00:22:17] other types of videos the second
+[00:22:19] question can we predict which videos we
+[00:22:22] have an
+[00:22:25] example whatever is on the on the screen
+[00:22:29] is theoretical hypothetical do you have
+[00:22:31] a specific example I'm shouting so much
+[00:22:34] no it's just that people there are
+[00:22:36] people online and they can hear it even
+[00:22:38] if you
+[00:22:39] don't so any uh yes yes yes we have
+[00:22:42] examples of videos so this would be uh
+[00:22:46] typically uh videos about uh social
+[00:22:50] justice or related topics that would get
+[00:22:53] specifically you giving only
+[00:22:54] hypothetical just give just give a very
+[00:22:58] specific example where in the YouTube
+[00:23:01] removed the particular item oh where
+[00:23:04] they removed they don't remove the
+[00:23:06] particular item but they would remove
+[00:23:08] the hate
+[00:23:09] speech so what we are looking at is
+[00:23:12] really hate speech in the comments so do
+[00:23:15] you again I keep asking the same thing
+[00:23:18] do you have a particular
+[00:23:20] example yes yes yeah so the I don't have
+[00:23:23] it on the slides but what the what the
+[00:23:26] attackers would do they would go and
+[00:23:28] attack the the creator of the video with
+[00:23:31] all sorts of slurs and hate speech and
+[00:23:34] uh and so
+[00:23:36] on
+[00:23:40] yeah no
+[00:23:41] okay I have a quick question yeah my
+[00:23:44] question is related to the uh maybe
+[00:23:46] we'll enter this in a later stage of the
+[00:23:48] talk with the higher strategy of the
+[00:23:50] prioritization of the content itself and
+[00:23:53] not necessarily the the H the the attack
+[00:23:58] uh does that is that because of the
+[00:24:00] space in which the hate and harm happens
+[00:24:03] that the dis prioritization is is
+[00:24:05] particularly useful so that moderators
+[00:24:07] are more uh out in the look but what but
+[00:24:11] it seems that it's kind of like a
+[00:24:13] remediative strategy instead of a
+[00:24:15] preventive run
+[00:24:17] right it would be a a remediative
+[00:24:20] strategy but it would allow moderators
+[00:24:22] to look at
+[00:24:25] uh at the risky comments uh in a more
+[00:24:29] timely fashion right because the problem
+[00:24:32] is that the problem with content
+[00:24:34] moderation is that there is so much
+[00:24:36] content out there that uh uh it takes a
+[00:24:41] while to act upon bad content and
+[00:24:43] especially with online harassment and so
+[00:24:45] on you know once something is posted if
+[00:24:47] you don't get it very quickly the harm
+[00:24:49] is done so you know sure YouTube goes
+[00:24:51] back and removes these comments but if
+[00:24:54] they do it you know days later they you
+[00:24:56] know it's it's not really very helpful
+[00:25:01] yeah so uh then I wanted to talk about
+[00:25:05] oh
+[00:25:08] yeah I have a question about scale yeah
+[00:25:11] um have you looked at the breath of this
+[00:25:16] trolling raid activity from forchan to
+[00:25:20] YouTube relative to the entire sort of
+[00:25:24] uh
+[00:25:24] interplatform type of practices that are
+[00:25:27] going on across the breath of foren and
+[00:25:30] also relative to any I wouldn't say
+[00:25:34] non-normative kind of inter
+[00:25:36] crossplatform behaviors but maybe even
+[00:25:39] Pro social kind of behavior so is
+[00:25:43] relative to the whole scale of
+[00:25:46] crossplatform activity and the
+[00:25:49] pro-social side of cross platform
+[00:25:51] activity how does this sort of trolling
+[00:25:54] raade like Behavior scale is uh uh it is
+[00:25:59] a minority I want to say uh among all
+[00:26:04] the videos we saw on uh on
+[00:26:09] forun um it would be in the order of 1%
+[00:26:13] or something the ones that are actually
+[00:26:14] attacked so most videos are posted for
+[00:26:16] you know whatever this is a funny video
+[00:26:18] or whatever it might be uh most of the
+[00:26:20] interpr activity is uh is news so people
+[00:26:24] will post news articles um
+[00:26:28] and then you know there is some
+[00:26:29] interplatform activity because people
+[00:26:31] will go and post uh comments we did some
+[00:26:34] work staring the hateful comments on
+[00:26:37] news articles we find that often news
+[00:26:39] articles are taken out of context uh and
+[00:26:42] just posted on on forun to make a point
+[00:26:47] uh you know especially for you know
+[00:26:49] immigration issues or or things like
+[00:26:51] that
+[00:26:56] yeah
+[00:26:58] so now besides the management of YouTube
+[00:27:02] or Facebook even government agencies
+[00:27:06] they try to keep track of such issues
+[00:27:09] right yeah and again even for them it
+[00:27:11] should be a very major task may not be
+[00:27:14] able to fully solve the problem yes
+[00:27:18] especially if you're doing it in a
+[00:27:19] crossplatform fashion there is so much
+[00:27:21] data and uh you know using this kind of
+[00:27:24] techniques that just look at
+[00:27:26] synchronization might be
+[00:27:28] more robust than looking at text that
+[00:27:30] people can try and you know change the
+[00:27:31] way they speak to avoid being detected
+[00:27:34] and so on but it's it's a huge problem
+[00:27:36] yeah
+[00:27:38] definitely
+[00:27:39] um so yeah then after doing this work we
+[00:27:42] realized that a similar problem was
+[00:27:45] happening on uh on Zoom so we saw you
+[00:27:49] know news reports and so on or even you
+[00:27:51] know in our own online classes they
+[00:27:53] would get disrupted by
+[00:27:56] trolls and we found a
+[00:27:58] similar uh pattern of you know these
+[00:28:01] Zoom links being posted on Fortune we
+[00:28:03] also looked at Twitter so they will be
+[00:28:05] posted on Twitter as well with an
+[00:28:07] invitation of going and disrupting the
+[00:28:09] meeting okay and the difference there
+[00:28:12] compared to what I talk
+[00:28:14] before um was that these are you know
+[00:28:17] realtime events so you know you cannot
+[00:28:19] attack a zoom meeting after the zoom
+[00:28:21] meeting has ended and uh uh you cannot
+[00:28:25] um um yeah so it has a smaller window of
+[00:28:31] opportunity and the other thing is that
+[00:28:33] we can see links being posted on
+[00:28:37] fortun uh or on Twitter for Zoom
+[00:28:40] meetings but we cannot really see what's
+[00:28:42] going on on the zoom meeting while on
+[00:28:44] YouTube we could go and check the
+[00:28:46] comments so we applied a slightly
+[00:28:49] different um uh technique here so we had
+[00:28:53] basically
+[00:28:55] um multiple annotators going and check
+[00:28:57] the threads to tell if it was a call for
+[00:28:59] an attack or not so that then we could
+[00:29:03] characterize what was going on there and
+[00:29:06] we found 134 calls for Zoom bombing over
+[00:29:09] a period of a month if I remember
+[00:29:12] correctly so it was you know that was
+[00:29:13] the beginning of the pandemic so it was
+[00:29:15] a problem that was kind of
+[00:29:18] surging and what did we find here uh
+[00:29:22] well we found that the huge majority of
+[00:29:26] uh class of attacks here are calling to
+[00:29:28] disrupt online classes online lectures
+[00:29:31] so this would be uh High School classes
+[00:29:34] or college classes you know everybody
+[00:29:36] went online so it was uh you know very
+[00:29:41] common and uh nobody knew how to secure
+[00:29:44] these
+[00:29:46] things the second interesting thing we
+[00:29:48] found that 70% of these attacks uh were
+[00:29:51] called by insiders so it would be
+[00:29:54] legitimate students in the class asking
+[00:29:57] strangers to you know disrupt their own
+[00:30:00] classes because they were
+[00:30:03] bored and then we also found that most
+[00:30:05] of them are targeting meetings that are
+[00:30:07] happening in real time so it's you know
+[00:30:09] there was wording in the thread saying
+[00:30:11] you know my class is happening right now
+[00:30:12] come and uh and disrupted so these were
+[00:30:15] not really planned uh ahead of
+[00:30:19] time and all these are interesting
+[00:30:23] because
+[00:30:24] uh when defenses for Zoom meting things
+[00:30:27] were developed they were assuming a
+[00:30:29] completely different threat model so
+[00:30:31] they were assuming that somebody from
+[00:30:32] outside would come and this Dr the
+[00:30:35] meeting so they would tell you you know
+[00:30:37] set up
+[00:30:39] passwords but if your attacker is an
+[00:30:41] Insider they can just give the password
+[00:30:43] to someone else they would tell us you
+[00:30:45] know set up a waiting room so that you
+[00:30:47] can tell who's real and who's not and
+[00:30:50] you know kick out attackers but actually
+[00:30:53] we found many instances of students
+[00:30:54] saying oh here is a list of the names in
+[00:30:57] the class so you should adopt you know
+[00:31:00] the name of some other student so that
+[00:31:01] the teacher wouldn't be able to tell
+[00:31:04] who's an attacker or who's not we see
+[00:31:06] that often times the attackers are ad
+[00:31:08] are taking the name of the host so that
+[00:31:11] the participants are confused they don't
+[00:31:13] know what's going on uh and so on and so
+[00:31:17] forth so after a while Services started
+[00:31:21] developing like you know one time unique
+[00:31:23] links for each participants but this is
+[00:31:25] not very common
+[00:31:27] uh and it's also typically a paid uh
+[00:31:30] option that they offer so I don't know
+[00:31:33] if it's still the case but for Zoom you
+[00:31:34] could only do that if you had an
+[00:31:36] Enterprise um account and so that
+[00:31:39] wouldn't protect you know later on we
+[00:31:41] talk to many
+[00:31:43] um you know uh people from volunteering
+[00:31:47] organizations so would have you know uh
+[00:31:50] volunteer run uh Zoom meetings or
+[00:31:53] seminars and so on it wouldn't be an
+[00:31:54] option for them to adopt this this kind
+[00:31:57] of this kind of
+[00:32:03] defenses and other area that I looked at
+[00:32:06] which is sort of similar in spirit so we
+[00:32:09] were looking
+[00:32:10] at private conversations on Instagram so
+[00:32:13] everything I I talked about so far uh
+[00:32:15] well not the zoom bombing but the
+[00:32:17] YouTube stuff happens in public so we
+[00:32:20] wanted to understand what happens in uh
+[00:32:24] the private space what kind of risks and
+[00:32:27] malicious activity are users uh victims
+[00:32:31] of and so here this is part of a large
+[00:32:35] NSF project uh with uh uh several other
+[00:32:39] institutions so what we did we set up a
+[00:32:42] data donation for Instagram so our
+[00:32:45] participants in particular uh teenagers
+[00:32:49] and young adults could donate their data
+[00:32:51] to
+[00:32:53] us and they could also label the data
+[00:32:56] that themselves among what did they
+[00:32:59] think was safe what did they think was
+[00:33:02] unsafe uh what made them feel uncomfort
+[00:33:04] uncomfortable and so on um which was
+[00:33:08] interesting because there is a lot of
+[00:33:09] research showing that if you ask
+[00:33:11] external
+[00:33:12] participants or external annotators who
+[00:33:14] are not the victims themselves or are
+[00:33:17] not in the loop uh you know what they
+[00:33:19] end up labeling doesn't really match the
+[00:33:21] experience of of the
+[00:33:23] victims and so we had over 28,000 chats
+[00:33:27] with millions of messages some of these
+[00:33:31] chats were labeled as safe or unsafe so
+[00:33:34] we wanted to
+[00:33:35] understand what do unsafe conversations
+[00:33:38] look
+[00:33:39] like and so the first thing we found is
+[00:33:43] that just by looking at again metadata
+[00:33:46] timing um information and so
+[00:33:49] on we can tell with fairly high accuracy
+[00:33:53] whether a conversation is going to be
+[00:33:55] risky or not and why because the
+[00:33:59] participants tend to disengage so if I
+[00:34:01] start being bullied or I start you know
+[00:34:03] receiving solicitation or what something
+[00:34:05] that they don't like they will stop
+[00:34:08] responding if they are being bullied by
+[00:34:10] multiple people in in group chats there
+[00:34:14] will be this sort of one way stream of
+[00:34:19] messages and why is that interesting
+[00:34:22] because that potentially allows us to
+[00:34:25] develop uh the protection systems that
+[00:34:27] don't really go and look into the
+[00:34:30] content of conversation so they are more
+[00:34:32] privacy friendly they could be applied
+[00:34:35] when there is you know end to end
+[00:34:37] encryption so we cannot see the content
+[00:34:39] but we still want to do something to uh
+[00:34:42] to protect
+[00:34:46] participants and so we developed
+[00:34:49] um uh again a set of classifi so we
+[00:34:52] looked at metadata so everything I said
+[00:34:55] that doesn't look look into content and
+[00:34:58] then we also looked at text and we look
+[00:35:00] at images and so
+[00:35:04] on and what we found is that as I said
+[00:35:07] the metadata classifier is fairly
+[00:35:08] accurate by itself so potentially it
+[00:35:11] could be used at least as a strong
+[00:35:13] indicator that something wrong is going
+[00:35:16] on then obviously using all classifiers
+[00:35:20] looking into text and so on uh is more
+[00:35:24] accurate and then we also found that if
+[00:35:26] you wanted to identify the specific type
+[00:35:28] of risk so we have several types uh in
+[00:35:31] our work in our bullying sexual
+[00:35:32] solicitation hate
+[00:35:34] speech uh we also look at spam and
+[00:35:37] things like that then we need to look at
+[00:35:40] content yes what sort of metadata were
+[00:35:42] you looking at of so it would be um uh
+[00:35:47] timing of the messages it would be the
+[00:35:49] length of the conversation uh sometimes
+[00:35:52] the participants will specify the
+[00:35:54] relationship with the other party if it
+[00:35:56] was a stranger a friend an acquaintance
+[00:35:58] a partner or whatever so information
+[00:36:01] like
+[00:36:05] that um so yeah if you want to look at
+[00:36:08] the type of uh risk we need to look at
+[00:36:11] all of that but this sort of gives us a
+[00:36:14] direction to look into you know maybe
+[00:36:15] this
+[00:36:16] metadata uh features are uh promising to
+[00:36:21] be adopted in a scenario when we want to
+[00:36:23] guarantee more privacy to the parties
+[00:36:26] which is what you know uh we all agree
+[00:36:28] is good and uh uh most messaging
+[00:36:32] platforms are going in that direction so
+[00:36:34] we have end to end encryption and uh and
+[00:36:36] so
+[00:36:38] on finally I want to conclude with this
+[00:36:43] uh uh other project in which we looked
+[00:36:45] at these challenges uh that deal with
+[00:36:49] the platforming specifically so coming
+[00:36:51] from computer security you know we used
+[00:36:54] to work on anti spam and anti fraud anti
+[00:36:57] malare whatever and so the solution was
+[00:37:00] always block content delete content uh
+[00:37:03] and the problem will go
+[00:37:06] away in these cases it's different
+[00:37:09] because we're are not dealing with
+[00:37:10] automated programs we're dealing with
+[00:37:11] real people who can you know reorganize
+[00:37:14] go somewhere else uh potentially go
+[00:37:17] somewhere else out of sight and so there
+[00:37:19] can be you know they can get radicalized
+[00:37:22] more those communities are not moderated
+[00:37:23] and so on and so
+[00:37:25] forth so we looked at two communities
+[00:37:28] that were the platforms from redit at
+[00:37:31] different points in time one was the
+[00:37:35] Donald uh which became Infamous for
+[00:37:38] sharing uh conspiracy theories and all
+[00:37:40] sorts of disinformation and so on at
+[00:37:44] some point in time in 2019 it was
+[00:37:47] quarantined so people could still access
+[00:37:49] it but they would receive a warning and
+[00:37:52] so that's what uh you know set the
+[00:37:54] administrators off saying oh they after
+[00:37:56] after us they're going to ban us let's
+[00:37:58] create our own
+[00:37:59] Community the donald.win on their own
+[00:38:03] website and let's migrate there and then
+[00:38:06] later on the community was actually
+[00:38:08] banned on Reddit and so people moved to
+[00:38:10] this new
+[00:38:12] community and the second one is our
+[00:38:14] incels um who are you know the
+[00:38:17] involuntary celibates who've been linked
+[00:38:20] to um misogyny and acts of violence and
+[00:38:24] uh you know mass shootings and whatnot
+[00:38:26] they were also banned and they moved to
+[00:38:28] their own
+[00:38:30] Forum so we wanted to understand what
+[00:38:32] happens to these new communities that
+[00:38:34] are now somewhere else and they're not
+[00:38:36] on a mainstream website uh so there are
+[00:38:40] uh you know there's probably no
+[00:38:41] moderation or very LX moderation and
+[00:38:47] so so yes if they
+[00:38:55] not
+[00:38:57] you know in case they're not on the
+[00:38:59] mainstream website then their effect
+[00:39:03] will be not that significant right
+[00:39:05] because for people like me I'm not going
+[00:39:08] to find that in general yes but they
+[00:39:10] could coordinate and come back to to
+[00:39:13] YouTube for example uh to mount attacks
+[00:39:16] or they could uh uh you know if there is
+[00:39:19] a link between online hate and offline
+[00:39:22] violence they could organize you know
+[00:39:24] acts of violence offline so they
+[00:39:27] themselves interact yes and then they
+[00:39:29] can go you know if they're building a
+[00:39:31] conspiracy theory that they can go and
+[00:39:33] push it to other communities because I
+[00:39:36] was comparing the situation with manyy
+[00:39:39] swinders you know a company cheats yeah
+[00:39:42] people of money then when they shut down
+[00:39:46] then they go somewhere else with another
+[00:39:49] name yes yes yes yes yes but here you
+[00:39:51] know the web is all interconnected so
+[00:39:53] they can they can still come back in
+[00:39:55] other forms
+[00:39:58] so what we did we did a regression
+[00:40:00] discontinuity analysis so um this is an
+[00:40:03] example from from the Donald we have the
+[00:40:06] same thing uh happening on incels so the
+[00:40:09] line in the middle is when the migration
+[00:40:14] happen and uh what we find first of all
+[00:40:18] not everybody
+[00:40:19] migrates so the number of users on the
+[00:40:22] new community
+[00:40:24] decreases and why is that well likely
+[00:40:27] because Reddit is a general purpose
+[00:40:29] Community they have so many subreddits
+[00:40:31] and people can have you know very
+[00:40:33] various interests so they might be
+[00:40:35] tangentially interested in whatever the
+[00:40:37] Donald is talking about but not enough
+[00:40:39] to you know create a new account or
+[00:40:41] another Community or go and check it and
+[00:40:44] so on so only the people who are really
+[00:40:46] committed would
+[00:40:48] go but among these people we find that
+[00:40:51] in general their activity increases so
+[00:40:53] they become more active yes
+[00:40:58] hi I'm my name is Lynn um so this part
+[00:41:01] where you said the othering is it
+[00:41:02] through alcal content analysis looking
+[00:41:04] at words like they and them things like
+[00:41:06] that uh yes yes so I was get to that we
+[00:41:10] find that we start talking about we a
+[00:41:12] lot more about them and so on we find
+[00:41:14] that hate speech in general
+[00:41:17] increases so yeah not only their
+[00:41:19] activity increases but potentially the
+[00:41:23] community becomes more insular and you
+[00:41:25] know gets even more polarized because
+[00:41:28] now there is only the people who are you
+[00:41:30] know like-minded there is no content
+[00:41:31] moderation and so on and so forth yes uh
+[00:41:34] yeah I have a question about um so could
+[00:41:37] we assume that people who choose to
+[00:41:39] migrate are not like exactly comparable
+[00:41:43] to those who stay then could we assume
+[00:41:47] their trend is continuous that enable us
+[00:41:49] to use
+[00:41:52] rdd to use rdd yeah cuz I assume that
+[00:41:56] people who are uh migrate who choose to
+[00:41:59] migrate they are more dedicated to this
+[00:42:01] topic or more polarized so are they can
+[00:42:04] they really qualify as a
+[00:42:06] counterfactual of other uh well not
+[00:42:10] necessarily but what we wanted to
+[00:42:12] understand here is how does the
+[00:42:14] community uh change right so now the
+[00:42:17] community will only be made of extreme
+[00:42:20] people or committed people and will be
+[00:42:23] outside of the moderation capabilities
+[00:42:25] of of red in this case so what we wanted
+[00:42:29] to understand here is you know what
+[00:42:31] happens next and you know this opens
+[00:42:34] up many resarch directions on
+[00:42:37] understanding you know is the
+[00:42:39] platforming of these communities in this
+[00:42:41] uh shape and form the right way uh to go
+[00:42:45] you know probably the toxicity and redit
+[00:42:47] decreased overall so if that was the
+[00:42:50] goal of reddit's
+[00:42:52] um administrators you know they
+[00:42:55] succeeded but overall as a society these
+[00:42:58] people didn't go away you know they just
+[00:42:59] move out of sight so that's what we need
+[00:43:02] to to keep in
+[00:43:05] mind uh so to conclude you know I showed
+[00:43:08] you a number of examples where
+[00:43:09] computational methods can help study and
+[00:43:12] identify coordinated online
+[00:43:14] aggressions um and I pointed a few
+[00:43:18] directions in which you know these kind
+[00:43:20] of techniques could help platforms
+[00:43:23] develop better mitigations but once do
+[00:43:26] that we should also keep in mind these
+[00:43:28] potential unintended consequences of you
+[00:43:31] know just if you ban people or remove
+[00:43:34] content it doesn't necessarily go away
+[00:43:35] it just goes somewhere
+[00:43:37] else uh and with this I thank you and
+[00:43:40] I'm open to
+[00:43:41] [Music]
+[00:43:48] questions thanks very much my name's
+[00:43:51] Adam um pretty tall white guy wearing a
+[00:43:53] blue striped shirt I have a question
+[00:43:55] about the Instagram private messages
+[00:43:57] piece of your research and I appreciate
+[00:44:00] you providing all the detail about where
+[00:44:02] where you derived your initial data
+[00:44:05] set but given that it's explicitly about
+[00:44:09] a tool you've developed to work on
+[00:44:11] private
+[00:44:12] messaging what do you see as the use
+[00:44:17] case for whatever it is you've developed
+[00:44:20] I mean I I can spin it out but I would
+[00:44:22] love to hear what you think because it's
+[00:44:24] not like Facebook can use it to
+[00:44:26] monitor they could we don't want them to
+[00:44:29] private messages you know so where where
+[00:44:31] does that better prediction come into
+[00:44:34] any sort of utilitarian
+[00:44:36] play
+[00:44:38] uh yeah that's a good point uh I think
+[00:44:43] um
+[00:44:46] uh yeah I I think in general there is
+[00:44:48] always um attention and a discussion
+[00:44:51] whether platforms should read your
+[00:44:53] private messages and look for illegal
+[00:44:55] content or whatever or protect their
+[00:44:57] users and so on um and in general
+[00:45:00] privacy is a obviously it's it's a big
+[00:45:03] concern so that's that's why people are
+[00:45:05] advocating to move to end to end
+[00:45:07] encryption and so on so what we wanted
+[00:45:09] to understand there is can there still
+[00:45:12] be some indicators that can be
+[00:45:14] used without looking into uh you know
+[00:45:18] what is being said or even who who we
+[00:45:20] are talking to and so
+[00:45:23] on right okay
+[00:45:28] yeah so in the data collection piece for
+[00:45:30] the same study I know you had users
+[00:45:32] volunteer the private messages and you
+[00:45:34] did that analysis was there a strategy
+[00:45:36] in approaching the platforms to see if
+[00:45:39] they would give you some of the data
+[00:45:40] that you would need to do this research
+[00:45:41] or was this more
+[00:45:44] uh yes so what's their response on it's
+[00:45:48] uh it's it's always tricky and in
+[00:45:51] general getting data from getting user
+[00:45:54] data from platforms especially if it's
+[00:45:55] not public data um it's something they
+[00:45:58] will not do um and that's that's one of
+[00:46:02] the reasons why we had this volunteer
+[00:46:05] based
+[00:46:06] uh approach uh in addition to the fact
+[00:46:10] that we could you know they could label
+[00:46:12] their content and tell us you know what
+[00:46:14] was risky and what wasn't because if we
+[00:46:16] did it ourselves probably we would end
+[00:46:17] up with a very different uh definition
+[00:46:20] and you know then maybe whatever we
+[00:46:22] developed wouldn't really
+[00:46:24] work yeah
+[00:46:26] so I wanted to um look at
+[00:46:30] the discourse raised here in your
+[00:46:32] conclusion to ask a few questions by
+[00:46:34] effective mitigations are you only
+[00:46:37] interested around the content moderation
+[00:46:40] practices because there is an argument
+[00:46:42] that has been made that that there could
+[00:46:44] be another form of mitigation around
+[00:46:46] amplification and incentivization yeah
+[00:46:49] but that would then mean looking at
+[00:46:51] different sets of practices that may be
+[00:46:53] more positive or more social have you
+[00:46:57] considered any of that type of so once
+[00:46:59] you identify this content you can do uh
+[00:47:03] various things so I have work that looks
+[00:47:05] at in the this information space that
+[00:47:07] looks at soft
+[00:47:08] moderation so you don't remove the
+[00:47:10] content but you add a warning label
+[00:47:12] right so that is one thing uh there are
+[00:47:15] these you know uh Shadow Banning or
+[00:47:18] demoting content you know not showing it
+[00:47:20] in um uh in recommendations and so on
+[00:47:24] that's something that could be plug
+[00:47:26] plugged in uh into this kind of uh of
+[00:47:29] systems right so instead of deleting the
+[00:47:32] content or removing the content you just
+[00:47:34] don't show it to to somebody or you use
+[00:47:37] it as an input to your recommendation
+[00:47:39] algorithm and suddenly that content is
+[00:47:41] not recommended anymore
+[00:47:43] Etc sorry just to follow up I'm just
+[00:47:46] wondering if there's any means with
+[00:47:48] which there are other ways to
+[00:47:50] incentivize platforms around
+[00:47:53] doing non
+[00:47:57] less negative less bullying
+[00:48:00] less
+[00:48:02] umal
+[00:48:03] work um yeah that would be that would be
+[00:48:07] great um it's
+[00:48:12] um yeah it's very difficult to get
+[00:48:15] feedback from them and also see you know
+[00:48:17] what you know what happened with uh with
+[00:48:19] Twitter in the last few months basically
+[00:48:22] uh any content moderation went away kind
+[00:48:25] of or at least from what we can
+[00:48:27] see
+[00:48:29] um and so yeah you know obviously it it
+[00:48:32] would be great to have a more civil and
+[00:48:34] a safer uh environment um you know I'm
+[00:48:39] not sure where the priorities lie really
+[00:48:42] for for different stakeholders and so on
+[00:48:45] we have a question from a guest online
+[00:48:47] um did you study the growth of these of
+[00:48:49] the new communities over time in
+[00:48:51] particular active recruiting on
+[00:48:53] mainstream platforms with Linkin YouTube
+[00:48:55] video comments Etc and if they grew did
+[00:48:58] they stay more toxic or have more
+[00:49:01] othering uh we didn't look into that
+[00:49:05] specifically
+[00:49:06] um for this study uh those communities
+[00:49:10] grew uh in
+[00:49:13] general uh in the sense that you know
+[00:49:15] that dowin type of community uh it sort
+[00:49:19] of attracted more the platform
+[00:49:21] communities so it sort of became a
+[00:49:24] conglomerate of of community instead of
+[00:49:26] just being uh you know the Donal so that
+[00:49:29] we we observe
+[00:49:36] yes interesting that you um can you hear
+[00:49:39] me okay yeah the you Twitter I was
+[00:49:41] actually one of the council members on
+[00:49:43] Twitter uh since it's funding and then I
+[00:49:45] resigned and uh M actually instigated a
+[00:49:47] harassment against me and the two women
+[00:49:49] that did then he fight everybody else um
+[00:49:52] so this this thing too for me I I I like
+[00:49:55] what you're doing here and also I'm
+[00:49:56] working at some similar methods um I
+[00:49:58] feel that a lot because we're in the US
+[00:50:00] and it's very us Centric the
+[00:50:01] technologies that we always looking at
+[00:50:03] the content so you know I like some of
+[00:50:05] the work that has been done elsewhere
+[00:50:07] where it's like actors behavior and
+[00:50:08] content ABC and the focus is
+[00:50:10] overwhelmingly on content and my what
+[00:50:12] was really looking at say in the
+[00:50:14] literature is known as amplifiers like
+[00:50:16] influences right and so the categories
+[00:50:18] of actors and and how we detect who they
+[00:50:20] are and whether they impact like for
+[00:50:23] example swarming and what does it mean
+[00:50:24] and so I like have a discussion
+[00:50:26] afterwards too about actors and
+[00:50:28] behaviors because I feel that that needs
+[00:50:30] to be looked at more and then the impact
+[00:50:32] in terms of the First Amendment and what
+[00:50:33] we can do about it yes and because we're
+[00:50:35] at a law school I've been looking at
+[00:50:36] lence lassic what and what he was saying
+[00:50:39] about replicant behavior and and what
+[00:50:42] how that pertains to the First Amendment
+[00:50:44] he was saying that if technology changes
+[00:50:46] so much and impacts democracy then we
+[00:50:48] should do something about it and so for
+[00:50:49] me this is the missing bit of the
+[00:50:52] conversation I feel it's a societal
+[00:50:54] effect but is so Silo that actually we
+[00:50:57] not look at it in a very integrated
+[00:50:59] way yeah
+[00:51:04] thanks
+[00:51:08] questions
+[00:51:09] than do have a couple of questions the
+[00:51:13] first is on the slide that you showed us
+[00:51:16] that showed uh various stages of of an
+[00:51:20] attack over on the far right you have uh
+[00:51:23] one individual who who was M and your
+[00:51:27] examples about when you yourself were
+[00:51:29] victimized that that was personal and
+[00:51:32] individual yeah when when these YouTube
+[00:51:36] attacks this YouTube raids take place
+[00:51:39] then these are these are more or less
+[00:51:41] public postings rather than private
+[00:51:43] postings correct so I wonder if you have
+[00:51:47] a sense um a sense of proportion about
+[00:51:50] that I mean are the raids typically for
+[00:51:53] posting in public spaces or they uh
+[00:51:56] frequently involved the doxing and and
+[00:51:59] finding a way to disrupt the individual
+[00:52:02] with you know within their own private
+[00:52:04] communication space I think uh I think
+[00:52:07] the public ones are more common because
+[00:52:09] they're easier to carry out uh it's
+[00:52:12] easier to find public information about
+[00:52:13] people it's easier to get traction it's
+[00:52:16] easier to show that you know you did
+[00:52:18] something because it's out there
+[00:52:20] now uh so you know they both happen but
+[00:52:24] if I had to I I don't have hard numbers
+[00:52:27] but if I had to guess the public ones
+[00:52:28] are know happen more often
+[00:52:31] yes it takes more preparation and more
+[00:52:33] orchestration to you know truly dog
+[00:52:36] someone and go after their private
+[00:52:37] Communications and so on thank you one
+[00:52:41] more question please you you've
+[00:52:42] mentioned um when you've spoken before
+[00:52:45] particularly in regard to zoom boming
+[00:52:48] that um what of the comments that the
+[00:52:50] zoom bomber post tend to be racist they
+[00:52:53] tend to be misogynistic but it was your
+[00:52:57] impression that that those covenants
+[00:52:59] were not born out of uh Prejudice and
+[00:53:03] and enmity but uh were rather the most
+[00:53:06] disruptive things that somebody could
+[00:53:08] come up with to say it would yes wonder
+[00:53:12] if you could elaborate on that and yeah
+[00:53:14] so we had uh we had some followup work
+[00:53:17] that's not published yet but we spoke
+[00:53:18] with victims of Zoom bombing uh and
+[00:53:21] several people told us that you know
+[00:53:23] they're feel you obviously they're not
+[00:53:24] in the of these attackers but their
+[00:53:27] feeling was that they just joined to
+[00:53:29] disrupt the meeting and then they found
+[00:53:32] um you know the most the low hanging
+[00:53:35] fruits so they started harassing you
+[00:53:38] know people of color or if the speaker
+[00:53:40] was a woman whatever they could find but
+[00:53:43] that was not the original uh goal of the
+[00:53:48] attack they didn't they didn't Target
+[00:53:49] the meeting
+[00:53:50] because the you know the speaker was uh
+[00:53:55] certain person or anything like that
+[00:53:56] yeah turning back to the YouTube RS then
+[00:54:00] which you said for example is a social
+[00:54:03] justice video is a likely Target do do
+[00:54:07] you think it's the same the same
+[00:54:08] activity going on in other words you
+[00:54:11] think the culture war is really being
+[00:54:13] fought on on YouTube in these raids that
+[00:54:16] that people who are very opposed um uh
+[00:54:19] very
+[00:54:20] ideologically opposite what's in these
+[00:54:22] videos are are doing these attacks or
+[00:54:25] are they just really easy sitting ducks
+[00:54:28] for major
+[00:54:29] disruption and so do you think they have
+[00:54:32] a different character in other words
+[00:54:34] than the zoo
+[00:54:37] problem
+[00:54:40] I I think so I think that
+[00:54:45] um at least the the way we saw it the
+[00:54:49] the for the videos they typically would
+[00:54:51] talk about what the video is about so
+[00:54:53] there would be a more targeted the uh
+[00:54:56] purpose for the zoom bombing it was just
+[00:54:58] that all these high schoolers were bored
+[00:55:01] at least early in the pandemic and they
+[00:55:02] wanted uh you know some thr
+[00:55:07] yeah thank
+[00:55:08] you I think we have time for one last
+[00:55:12] question I was just a comment of Joe's
+[00:55:14] uh question the last question on the
+[00:55:16] YouTube race versus the the zoom bombing
+[00:55:18] I assume what you just said too because
+[00:55:20] during Co it was boredom on on the
+[00:55:22] behalf of those people taking part in
+[00:55:24] Zoom uh sessions MBE high schoolers but
+[00:55:27] also more than that too right but
+[00:55:28] YouTube race I think will be
+[00:55:30] characterized by by presence of
+[00:55:32] amplifiers influencers who are then
+[00:55:34] coordinating it by doing a mop video
+[00:55:36] where they say this is the video this is
+[00:55:38] my mop video I'm mocking you I'm using
+[00:55:40] Code language and my Fells were then
+[00:55:41] going to harass you so I think there is
+[00:55:43] a another link there that there is
+[00:55:45] someone who's openly then mocking a
+[00:55:48] video to do to make that actually happen
+[00:55:50] whereas Z is more like everybody and
+[00:55:53] then do it together there's no that one
+[00:55:55] hit something like that you yeah yeah
+[00:55:57] that's a good point um on on fortun
+[00:56:01] specifically since everybody's Anonymous
+[00:56:03] uh there is sort of this you know High
+[00:56:06] mind or whatever of these attacks but
+[00:56:08] the you know the same raid can happen in
+[00:56:10] in a number of platforms yes so there
+[00:56:11] could be the influencer
+[00:56:13] directing their followers to to harass
+[00:56:17] someone and you know yeah that happens
+[00:56:19] too all right well thank you everybody
+[00:56:21] and one last round of applause for John
+[00:56:22] LCA thank you
+[00:56:26] thank you for those who joined online
+[00:56:29] and uh there's more food outside if
+[00:56:30] people want to help themselves some more
+[00:56:32] lunch uh but thank you
+[00:56:36] [Music]
+[00:56:40] everybody

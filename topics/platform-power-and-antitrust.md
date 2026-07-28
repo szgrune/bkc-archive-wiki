@@ -1,7 +1,7 @@
 ---
 type: topic
 title: Platform Power & Antitrust
-item_count: 11
+item_count: 12
 related: [ai-governance-and-regulation, ai-labor-and-economy, digital-colonialism-and-global-south, content-moderation-and-speech]
 ---
 # Platform Power & Antitrust
@@ -28,6 +28,7 @@ linking concentration to the labor and value-capture concerns in
 - [[16898214-ai-may-fatally-wound-webs-ad-model-warns-tim-berners-lee|AI may fatally wound web's ad model, warns Tim Berners-Lee]] — 2025-11-18 · ft.com
 - [[13495190-world-eaters-how-venture-capital-is-cannibalizing-the-econom|World Eaters: How Venture Capital is Cannibalizing the Economy]] — 2025-04-01 · events.newamerica.org
 - [[13129430-tech-bro-power-play-zuckerberg-vs-global-tech-justice-techpo|Tech Bro Power Play: Zuckerberg vs. Global Tech Justice]] — 2025-01-15 · techpolicy.press
+- [[yt_984b_ob0Dd8-the-tower-and-the-park-structural-misalignments-of-social-me|The Tower and the Park: Structural Misalignments of Social Media]] — 2022-07-07 · youtube — Joanne Cheung on platform financialization
 
 ## Related
 [[ai-governance-and-regulation]] · [[ai-labor-and-economy]] · [[digital-colonialism-and-global-south]] · [[content-moderation-and-speech]] · [[tim-wu]] · [[lawfare]]

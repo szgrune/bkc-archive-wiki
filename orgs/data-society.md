@@ -27,6 +27,7 @@ and its "Source Hacking" work is a foundational reference in
 - [[13829251-data-and-society-scam-gpt|Scam GPT]] — 2025-05-21 · datasociety.net
 - [[16599782-data-and-society-algorithmic-impact-methods-lab-toolkit|Algorithmic Impact Methods Lab toolkit]] — 2025-10-30 · datasociety.net
 - [[17172435-data-and-society-one-year-later-what-weve-learned-about-trum|One Year Later: What We've Learned About Trump's AI Agenda]] — 2026-01-07 · datasociety.net
+- [[yt_o190r3SLT20-security-by-spectacle|Security by Spectacle]] — 2022-02-07 · youtube — Gabriella Coleman & Matt Goerzen's "Wearing Many Hats" report on hacker culture's path to cybersecurity legitimacy
 
 ## Related
 [[ai-labor-and-economy]] · [[misinformation-and-elections]] · [[ai-safety-and-agents]] · [[privacy-and-surveillance]] · [[berkman-klein-center]] · [[danah-boyd]]

@@ -1,0 +1,1841 @@
+[00:00:01] DANIEL JONES: Good evening, everyone.
+[00:00:06] Welcome to the Berkman Klein Center event series.
+[00:00:11] My name is Dan Jones.
+[00:00:12] I'm with the Berkman Klein Center.
+[00:00:14] And before we get started, I just wanted to flag
+[00:00:16] a couple upcoming events.
+[00:00:19] Next week is the wrap up of our 2018, 2019 event series.
+[00:00:25] On Monday we're helping with the book launch for David Kaye's
+[00:00:29] book, Speech Police, that will be at the Cambridge
+[00:00:32] public library, on Monday night.
+[00:00:34] The next day we have Christo Wilson speaking about auditing
+[00:00:37] for bias and resume search engines,
+[00:00:40] right here at lunchtime, on Tuesday.
+[00:00:42] And then that evening we'll be helping
+[00:00:44] with the launch of Mary Gray's new book, Ghost Work, that will
+[00:00:48] be at the Harvard bookstore.
+[00:00:50] You can find out more about all those events and RSVP
+[00:00:53] on our website, cyber.harvard.edu
+[00:00:54] and we hope to see you at some of those events.
+[00:00:59] I'll mention one more thing for housekeeping.
+[00:01:01] This event is being live-streamed and archived
+[00:01:05] on video and audio, so be aware that your voice and visage will
+[00:01:10] be retained for posterity on the internet,
+[00:01:13] especially when we get to question time.
+[00:01:16] Without further ado, I wanted to turn over
+[00:01:19] to David Weinberger and Joi Ito.
+[00:01:21] Thank you.
+[00:01:41] JOI ITO: So I'll start with--
+[00:01:43] David and I go way back to the early days of blogging when
+[00:01:47] most of the bloggers knew each other and we would link
+[00:01:51] and we were coming up with trackbacks.
+[00:01:53] And then-- it was mostly America--
+[00:01:57] corporate America figured it out and started
+[00:01:59] to try to turn the blogosphere into a corporate marketing
+[00:02:03] machine.
+[00:02:04] And David and a few of his pals got together
+[00:02:07] and wrote this thing, called The Cluetrain Manifesto, which
+[00:02:10] was a bunch of the bloggers trying
+[00:02:12] to explain to these marketing people
+[00:02:13] that this thing was about conversations,
+[00:02:16] it wasn't about marketing, it wasn't
+[00:02:18] about any of these paradigms that they had before.
+[00:02:21] It had a huge impact on me and, I think, the blogosphere.
+[00:02:23] And it was a very prescient document
+[00:02:26] that, even when I go back today, I
+[00:02:28] wish that more people had adhered to that.
+[00:02:31] And then he wrote another great book,
+[00:02:34] called Small Pieces Loosely Joined.
+[00:02:36] You will start to see that his book
+[00:02:38] titles start to become really great images on themselves.
+[00:02:44] A lot of people just read the book title
+[00:02:46] and figure that that's all they need to read,
+[00:02:48] but actually the book goes on to--
+[00:02:50] Small Pieces Loosely Joined is how I imagined the web.
+[00:02:53] But the book is really about how the web is a weird place
+[00:02:55] and why do we feel comfortable there.
+[00:02:59] The next book, which was also a wonderful book, is Everything
+[00:03:02] Is Miscellaneous, which again, a very great title.
+[00:03:05] You can be reductionist and, OK, I get that what that means.
+[00:03:08] But it actually was a lot more about how the world gets--
+[00:03:11] once it's knocked in a bazillion pieces,
+[00:03:14] how do we think about how to order that.
+[00:03:17] And then Too Big To Know-- again,
+[00:03:19] another book where, oh, OK, I get what that book probably
+[00:03:22] means, but it was really about how knowledge is
+[00:03:25] moving from books to networks.
+[00:03:26] And I think-- did you do this when you were at the library?
+[00:03:29] Yeah, so this is really, I think,
+[00:03:30] inspired by some of the work at the library.
+[00:03:32] And I think Everyday Chaos is also
+[00:03:34] inspired by some of the open library work that David did.
+[00:03:37] And I'm not going to give this one away,
+[00:03:39] because he's going to talk about Everyday Chaos.
+[00:03:42] And again, Everyday Chaos sounds a little bit pedestrian,
+[00:03:45] but it's far from pedestrian and it's quite deep and maybe
+[00:03:49] controversial to some.
+[00:03:50] So I'll let David present some of his views
+[00:03:54] and then we'll have a conversation.
+[00:04:05] DAVID WEINBERGER: Thanks, Joi.
+[00:04:06] That was actually a remarkably good, incredibly brief
+[00:04:10] summation of the series of books, so thank you.
+[00:04:15] So first of all, I have a question--
+[00:04:18] first, I have a statement-- thank
+[00:04:19] you very much for coming out.
+[00:04:21] The question is-- nothing is going on, this is a sense
+[00:04:24] of the room, that's all--
+[00:04:25] how many of you, one way or another,
+[00:04:28] are machine learning researchers,
+[00:04:30] or are in some way in that field?
+[00:04:35] Smattering.
+[00:04:37] When in doubt, you probably should raise your hand
+[00:04:39] for that.
+[00:04:41] And among the rest of you, how many of you
+[00:04:45] feel like you have at least some sense of machine learning,
+[00:04:48] you've been following some of what's going on?
+[00:04:50] Raise your hands there.
+[00:04:51] That's at least half, and I suspect that a bunch of you are
+[00:04:54] not putting up your hands because you're afraid I'm going
+[00:04:56] to cold call you and ask you to prove it,
+[00:04:58] which I was contemplating, to tell you the truth,
+[00:05:01] but I won't.
+[00:05:06] This is the first time I'm giving this book talk.
+[00:05:08] It means a lot to me that it's being
+[00:05:09] done at the Berkman Center--
+[00:05:13] I'm showing my age, the Berkman Klein Center,
+[00:05:16] where I've been a fellow, or something, for about 15 years,
+[00:05:20] and feels very much like my intellectual home.
+[00:05:28] I'm going to tell you about the book,
+[00:05:30] basically as quickly as I can, but it's
+[00:05:32] going to be longer than you want.
+[00:05:33] So that Joi and I can talk and then we all can talk.
+[00:05:39] So I want to begin with a warning.
+[00:05:40] The warning is that I am actually
+[00:05:43] going to say positive things about the internet and positive
+[00:05:48] things about AI.
+[00:05:50] I understand that there are some negative things going
+[00:05:53] on the net and that there are deep and important issues
+[00:05:58] around bias, and fairness, and other such really crucial
+[00:06:01] things when it comes to AI.
+[00:06:04] The book talks about, especially,
+[00:06:06] the issues around AI.
+[00:06:08] It tries to make sure that readers
+[00:06:10] know that these are really real and pressing problems,
+[00:06:12] but it's not about those issues.
+[00:06:15] And so what I'm going to talk about tonight is,
+[00:06:19] I think, overall, quite positive,
+[00:06:22] even though it's unusual, I think,
+[00:06:25] these days to be positive about AI, much less the internet.
+[00:06:29] So the book isn't about those problems.
+[00:06:32] There are wonderful books and research
+[00:06:34] being done at the Berkman Center,
+[00:06:36] at the media, MIT Media Lab, which Joi is the head of,
+[00:06:39] and other places.
+[00:06:41] The book has an hypothesis, which
+[00:06:45] is the future has changed, by which I do not
+[00:06:48] mean that the things of the future are changing,
+[00:06:51] because that's always the case-- this
+[00:06:53] is the Hyperloop as of 1912.
+[00:06:56] --but rather, the book wants to explore the idea
+[00:07:01] that our idea about how the future happens
+[00:07:04] has changed, not the content, but the way
+[00:07:07] that the future works.
+[00:07:09] There are seats if you want to if you want to sit down,
+[00:07:12] or you can stand.
+[00:07:13] That's really up to you.
+[00:07:14] Really none of my business when you come right down to it.
+[00:07:18] So this is the premise of the book--
+[00:07:21] how we think the future happens has changed.
+[00:07:24] And one of the ways of thinking about our idea of the future,
+[00:07:28] in an informal way--
+[00:07:30] and this by the way, the domain is in the West--
+[00:07:33] is that we sometimes think about the future as this broad field
+[00:07:36] of possibilities.
+[00:07:39] It's our job, we think, to figure out which
+[00:07:42] of those possibilities we want.
+[00:07:44] And then we know that as those possibilities come towards,
+[00:07:47] us as a future comes towards us, that the possibilities start
+[00:07:51] falling away until there's only one left.
+[00:07:53] And if you've done things right, then you win.
+[00:07:56] You get the possibility that you wanted.
+[00:07:58] But the basic motion of the future
+[00:08:00] is that of narrowing of possibilities.
+[00:08:03] And so our basic strategy has been
+[00:08:05] to anticipate those changes and to prepare for them,
+[00:08:09] to try to move the future in our direction,
+[00:08:11] and this obviously works very well.
+[00:08:13] There's a tremendous price that we pay for the anticipate
+[00:08:16] and prepare strategy, but we don't notice it
+[00:08:19] because we've been doing it literally since Paleolithic,
+[00:08:22] since the first time we started flinting an axe in preparation
+[00:08:26] for the next day, anticipating that we would need it
+[00:08:29] the next day.
+[00:08:30] So we've been doing this a long time.
+[00:08:32] The costs of this strategy are enormous.
+[00:08:36] We end up overpreparing, mispreparing, underpreparing,
+[00:08:39] and we take that for granted, because that's just the way
+[00:08:42] it is.
+[00:08:44] We will continue doing this, the book, and I,
+[00:08:46] am not arguing that we're going to give up
+[00:08:48] on anticipating the future.
+[00:08:49] Because if you did that, the next bus
+[00:08:51] would hit you because you wouldn't look both ways
+[00:08:53] before crossing the street.
+[00:08:54] So absolutely, we were going to continue doing this.
+[00:08:57] But we are also now doing other things
+[00:08:59] that may be shaping our fundamental idea of how
+[00:09:04] the future works.
+[00:09:05] So I want to look at two big segments,
+[00:09:11] as the book does, and one is things that are happening
+[00:09:13] on the net that, I believe, have already conditioned us
+[00:09:16] to accept that the future happens far more
+[00:09:20] chaotically than we used to think.
+[00:09:22] And second of all-- that AI has come along
+[00:09:25] and is now giving us-- now that we've
+[00:09:26] gotten used to this chaos, AI is giving us
+[00:09:29] a model by which we can start to understand it.
+[00:09:32] There are still seats.
+[00:09:33] I feel bad watching you stand.
+[00:09:35] But you can if you want to, of course.
+[00:09:38] OK, so that's the basic structure of the book and also
+[00:09:43] very much so of this talk.
+[00:09:45] So let's start with the net--
+[00:09:46] I'm going to try to go as fast as I can
+[00:09:48] because, one way or another, you are Berkman Klein
+[00:09:51] compatible people and I don't want to assume that--
+[00:09:55] I'm certain that most of you are very well versed
+[00:09:57] in what's going on, on the net.
+[00:10:00] So the net is letting us succeed in a chaotic environment.
+[00:10:05] And for all the problems of the net, we still go on the net,
+[00:10:07] we still get stuff done.
+[00:10:08] I think we all would acknowledge that it's transformed
+[00:10:11] almost every aspect of our lives,
+[00:10:12] mainly for the better, but in some ways horribly, as well.
+[00:10:16] We are basically succeeding with chaos on the internet.
+[00:10:19] And so we end up in this chaotic, weird environment
+[00:10:23] that is the internet, doing weird things
+[00:10:25] that we don't even notice or weird anymore because we've
+[00:10:28] gotten used to them.
+[00:10:29] But I think there's a thread connecting
+[00:10:31] a whole bunch of them.
+[00:10:32] And so I'm going to point to two connected threads
+[00:10:35] here and give you just one example, really briefly,
+[00:10:38] of each of them.
+[00:10:39] So the first example is the minimum viable product.
+[00:10:41] How many of you are familiar--
+[00:10:42] I'm not going to call on you-- familiar with the concept
+[00:10:45] of the MVP?
+[00:10:46] About half, OK.
+[00:10:48] So, you are all probably using something
+[00:10:51] that started out as an MVP.
+[00:10:53] An MVP is a product that gets launched on the net,
+[00:10:57] almost always, that provides only
+[00:11:00] the barest minimum of functionality
+[00:11:02] that people will pay for.
+[00:11:03] So if it's Dropbox, you can use your files anywhere.
+[00:11:07] That's pretty important functionality,
+[00:11:08] but that's all that it started with, basically.
+[00:11:11] And then over time you watch what users actually
+[00:11:14] do with your product, what they complain about,
+[00:11:17] what they're talking with one another about, what
+[00:11:19] they want from it.
+[00:11:20] You measure, when you can, how they're actually using it,
+[00:11:23] and that gives you a really solid sense of what
+[00:11:26] they want and need and you start building up the features.
+[00:11:29] This is a very successful strategy,
+[00:11:31] it is a very new strategy, and it's
+[00:11:33] an entirely antithetical to the most basic assumptions we've
+[00:11:37] had about product design, which is you get the design
+[00:11:39] and product and launch it once.
+[00:11:41] And that's it, and so you better get it right.
+[00:11:43] And the prototype of this is the Model T, from Henry Ford,
+[00:11:46] in 1908, that they sold 15 million copies--
+[00:11:50] we don't say copies, that's an online thing--
+[00:11:53] 15 million of these Model Ts over the course of 19 years,
+[00:11:56] with basically making no changes to it,
+[00:11:58] because Henry Ford anticipated user's needs so well that they
+[00:12:04] didn't have to make any changes.
+[00:12:06] That is the model of design by anticipation.
+[00:12:10] Minimum viable product is an example of something
+[00:12:13] thoroughly different.
+[00:12:14] It purposely holds off from anticipating
+[00:12:17] what people will want from the product
+[00:12:19] and do with the product.
+[00:12:20] It is holding possibilities open,
+[00:12:24] rather than trying to select the one right path.
+[00:12:27] And it's not just MVPs, there's a whole range of things,
+[00:12:31] agile development, on demand-- from even
+[00:12:34] before the rise of the internet-- on demand
+[00:12:36] manufacturing, unconferences, which some of you
+[00:12:39] are familiar with, but where the agenda is not
+[00:12:42] written before the conference, the agenda
+[00:12:43] is written by the people who are attending it
+[00:12:45] when they get there, no anticipation of what people are
+[00:12:48] going to want to talk about.
+[00:12:49] Unconferences are awesome, by the way.
+[00:12:53] So these are all examples.
+[00:12:54] They're thoroughly weird, we take them for granted,
+[00:12:56] they are all ways of holding off from anticipating
+[00:13:00] and holding possibilities open.
+[00:13:02] Second example, it's like change from that theme,
+[00:13:07] are open platforms or open APIs, application programming
+[00:13:10] interfaces, which is when a company has
+[00:13:14] a product they're selling it the way they sell products.
+[00:13:17] They may well also, these days, open up
+[00:13:20] a platform that enables any developer who
+[00:13:23] has access to the web to use some of the functionality built
+[00:13:26] into that product, maybe even some of the data--
+[00:13:28] we hope carefully anonymized and privacy is preserved--
+[00:13:32] to build extensions to that product that
+[00:13:34] change the way that it works so it
+[00:13:35] suits their needs or the needs of users,
+[00:13:38] to integrate it into other products into their workflow.
+[00:13:42] The company purposefully holds back.
+[00:13:43] The company builds the product that they think is going to be
+[00:13:46] successful and they add onto it over time,
+[00:13:49] but they also open up these platforms because they
+[00:13:51] recognize, the company recognizes,
+[00:13:53] that it cannot anticipate all the uses to which this product
+[00:13:57] might be put, all of the niche uses, for example,
+[00:14:01] which even if they recognize, they couldn't afford to build.
+[00:14:05] Slack, which is a well known messaging app,
+[00:14:08] is just one example of this.
+[00:14:09] It's a little noteworthy, because they actually
+[00:14:13] created an $80 million fund to actively encourage
+[00:14:16] people to build these applications that integrate
+[00:14:19] Slack into other products so that it
+[00:14:21] becomes part of the workflow.
+[00:14:23] Open platforms-- excuse me-- they don't just
+[00:14:26] hold open possibilities, they make more possibilities
+[00:14:29] possible.
+[00:14:30] You can do more things, and companies
+[00:14:32] go to some expense to do this.
+[00:14:34] And it's not just in open platforms, it's also games.
+[00:14:38] Computer games have been doing this since the early 1980s.
+[00:14:42] Open source, open access, these are
+[00:14:45] all ways of enabling more possibilities to be made.
+[00:14:50] And I want to call out one particular way of doing this,
+[00:14:55] which is interoperability.
+[00:14:56] Those two people wrote a pretty good book about it--
+[00:14:59] they are Berkman Klein folks--
+[00:15:01] a book called Interop.
+[00:15:03] Interoperability is when a part of a system designed
+[00:15:08] for that system is also capable of being
+[00:15:10] used in other systems in unanticipated ways.
+[00:15:15] This makes every piece of what you build generative, that
+[00:15:21] is it can create new stuff, it can be
+[00:15:22] used to put together new stuff.
+[00:15:24] You also wrote a pretty good book
+[00:15:25] that talks about generativity, The Future of the Internet
+[00:15:32] and How to Stop It, sorry--
+[00:15:34] thank you, Joi--
+[00:15:36] Jonathan Zittrain, who is also Berkman Klein connected,
+[00:15:40] I believe.
+[00:15:41] So interoperability is especially important,
+[00:15:43] because not only is it generative,
+[00:15:47] but it is at the very heart and essence of the internet, which
+[00:15:52] if nothing else, is a way of making information
+[00:15:54] interoperable.
+[00:15:55] You can send it anywhere and do anything you want with it.
+[00:15:58] The internet is an interoperable system.
+[00:16:02] So all these things-- far from anticipating and trying
+[00:16:05] to narrow the possibilities, both of these types of things
+[00:16:10] try to make more possibilities.
+[00:16:13] The fact is that anticipation is not just Paleolithic,
+[00:16:17] it's actually also reductive, it's
+[00:16:19] a way of reducing the possibilities.
+[00:16:22] This guy has written a really important essay, and now
+[00:16:25] a book, called Resisting Reduction.
+[00:16:31] This is the move away from anticipation
+[00:16:34] as a form of narrowing.
+[00:16:37] I think we're moving-- in many ways,
+[00:16:39] we have already moved to various forms of unanticipation,
+[00:16:42] purposely holding back our expectations for the future
+[00:16:47] and trying to open up more of them.
+[00:16:49] In fact, one could say that it seems that for the past 25
+[00:16:53] years the globe has been involved in a worldwide attempt
+[00:16:59] to make the world more and more unpredictable,
+[00:17:03] as if that was on purpose.
+[00:17:05] And I think it absolutely was on purpose, it is on purpose.
+[00:17:08] I think this is exactly what we've
+[00:17:09] been doing for 25 years, everything
+[00:17:12] we can to make the world more unpredictable,
+[00:17:15] which means we are in effect reversing
+[00:17:18] the flow of the future.
+[00:17:19] It's not time travel, but rather than seeing it as a narrowing,
+[00:17:22] we now also frequently bend our efforts in order to open it up.
+[00:17:26] And so one might say that the imperative has become
+[00:17:32] in companies and other organizations,
+[00:17:34] in our individual lives, in our social groups
+[00:17:37] to make more future.
+[00:17:40] So that's part 1.
+[00:17:41] If the internet has changed our practice
+[00:17:45] in ways that affect how we think the future works,
+[00:17:48] then AI is reframing it, and this
+[00:17:52] is the hypothesis of the book.
+[00:17:55] And when I say AI, I mean, as I think
+[00:17:58] many people do these days, they actually mean machine learning.
+[00:18:02] So I'm going to try to explain machine learning in a moment.
+[00:18:09] But let me tell you one of the premises going forward, which
+[00:18:12] is if it is the case that we understand ourselves
+[00:18:15] through our technology, and we have done this historically,
+[00:18:18] and I think pretty clearly, it has--
+[00:18:19] so we only started feeling under pressure
+[00:18:23] and like we need to let off steam during the steam age.
+[00:18:26] And very rapidly, in the 1950s, at the beginning
+[00:18:29] of the information age, we suddenly felt,
+[00:18:32] we experienced information overload.
+[00:18:34] We could feel the information tingling through us
+[00:18:37] and feeling made dizzy by it, we worried about it,
+[00:18:40] it was a thing.
+[00:18:42] We think of ourselves-- we get stuck
+[00:18:45] and we say, well, I'm processing,
+[00:18:47] as if your brain were a computer.
+[00:18:49] We understand ourselves through our tools, especially the tools
+[00:18:52] that we name an age after, like the age of information
+[00:18:56] or the steam age.
+[00:18:58] I don't make predictions, but I think I'm about to.
+[00:19:04] It seems pretty clear to me that we
+[00:19:06] are now at the beginning of the age of AI,
+[00:19:08] or maybe the age of machine learning.
+[00:19:10] I don't know what it's going to be called,
+[00:19:12] but this is an epical technology, machine learning.
+[00:19:17] If that's going to be the dominant technology,
+[00:19:20] and if it's the case that we understand ourselves
+[00:19:22] through our dominant technology, then
+[00:19:23] maybe we can start to ask, OK, well, then what will the world
+[00:19:27] or what does, already, the world begin
+[00:19:29] to look like if we start understanding
+[00:19:31] ourselves and our world through the model of machine learning,
+[00:19:36] just as we have with information,
+[00:19:37] and with steam, and with clockworks, et cetera?
+[00:19:41] And that's actually what's behind much of this book.
+[00:19:45] So I'm going to try to give you the world's fastest explanation
+[00:19:48] of machine learning.
+[00:19:49] Those of you who are in the field,
+[00:19:51] please refrain from catcalling.
+[00:19:55] I know I'm getting this wrong.
+[00:19:57] I am not a computer scientist, I'm a writer,
+[00:19:59] so I am certainly going to get this wrong.
+[00:20:01] So traditionally, and including in traditional programming--
+[00:20:08] so let's take traditional programming--
+[00:20:10] we like to start with conceptual models.
+[00:20:12] So if you are working on a program for predicting sales
+[00:20:17] for your business, you will first
+[00:20:19] think about what are the factors that affect sales
+[00:20:22] and then what are the relationships among those.
+[00:20:24] So certainly, the number of sales people very likely
+[00:20:26] affect sales.
+[00:20:27] More salespeople maybe more sales,
+[00:20:29] but that also has an effect on costs.
+[00:20:31] And it's going to drive up maybe the cost of your customer
+[00:20:35] support, and do you have enough leads, what's
+[00:20:37] the relationship there, and maybe you
+[00:20:39] need to increase marketing, get more leads, et cetera.
+[00:20:42] So you have the factors that affect it
+[00:20:44] and how they interact and then that's the conceptual model,
+[00:20:47] then you write up a working model in software
+[00:20:50] that instantiates that.
+[00:20:51] And if what I just described sounds like a spreadsheet,
+[00:20:54] absolutely-- that's what a spreadsheet is,
+[00:20:55] it's a really easy way of programming a computer
+[00:20:57] and that's exactly what you do, here are the factors,
+[00:21:00] here are the relationships, the formulas, the equations
+[00:21:02] that connect them.
+[00:21:03] And obviously, this works really well.
+[00:21:05] Machine learning doesn't do that.
+[00:21:08] Machine learning takes the data but throws out, largely
+[00:21:13] throws out, the set of relationships among the pieces
+[00:21:17] that we humans think are there.
+[00:21:20] You take the data, you strip all meaning--
+[00:21:23] sorry, I should say we like it when
+[00:21:25] our conceptual model and our working model are the same.
+[00:21:29] In our history, we don't always achieve that.
+[00:21:30] But when we do, we really like it for, I think, good reasons.
+[00:21:34] This is the case in machine learning, where we just
+[00:21:37] throw out the conceptual model, and throw out is too strong.
+[00:21:40] You can argue-- but basically, we
+[00:21:42] throw out a conceptual model, we take the data,
+[00:21:44] we take the categories that we're in,
+[00:21:46] we put them into these buckets, and then
+[00:21:48] we let the machine do its statistical magic work,
+[00:21:51] iterate, and iterate, and iterate,
+[00:21:53] finding statistical relationship,
+[00:21:55] correlations among the pieces of data
+[00:21:58] without having any idea about how things go together
+[00:22:01] and which things are causal and all of that,
+[00:22:02] just here are correlations among what can be millions
+[00:22:05] of data points connected multiply, 1 to 1,000,
+[00:22:09] more or less, depending on the sort of neural network
+[00:22:12] that you're building.
+[00:22:14] And those relationships that the machine is drawing--
+[00:22:17] excuse me--
+[00:22:18] have weights.
+[00:22:23] The predictability of the--
+[00:22:25] likelihood of those weights, those relationships actually--
+[00:22:29] doesn't matter.
+[00:22:30] Relationships have weights.
+[00:22:32] You get this enormously complex network which does not
+[00:22:35] look anything like this.
+[00:22:37] This is a artist conceptualization of it
+[00:22:40] in which lots and lots of particular points
+[00:22:42] are connected to lots and lots of particular points.
+[00:22:44] And these things, when you put in the data,
+[00:22:46] you want to know, OK, fine, let me
+[00:22:48] see what the sales projections are
+[00:22:50] going to be, you put in the data, and out comes results.
+[00:22:53] And we use these-- they don't always work--
+[00:22:56] but we use them because often they do work.
+[00:22:58] They give us more accurate predictions,
+[00:23:00] or faster predictions, or better classifications, more accurate
+[00:23:05] than we could do.
+[00:23:05] They're doing things either faster, better, or cheaper
+[00:23:08] than we can.
+[00:23:08] And these things are things that we think
+[00:23:10] of as cognitive activities.
+[00:23:13] Every day, I mean, literally every day, there
+[00:23:16] are new applications of this technology.
+[00:23:20] Many of them weird and surprising, but they work.
+[00:23:23] And many of them at least initially,
+[00:23:24] we don't know why they work.
+[00:23:26] There are too many connections.
+[00:23:27] If you sat down and you tried to figure out
+[00:23:30] where the different points connect to,
+[00:23:32] you would spend years following meaningless data points,
+[00:23:35] and you would come out of it still
+[00:23:37] not knowing how it worked.
+[00:23:38] In some instances, you certainly get their generalizations,
+[00:23:41] and you can begin to see how it works.
+[00:23:43] And there's lots and lots of great work
+[00:23:45] being done in order to make these systems more explicable.
+[00:23:48] But as it stands right now, we use systems--
+[00:23:51] not all of them, but some of the systems that we use,
+[00:23:54] we simply cannot understand.
+[00:23:57] And people look at them, and examine them,
+[00:23:59] and they're just I don't see why I don't get it.
+[00:24:04] But they work.
+[00:24:09] That's a surprise in our history.
+[00:24:13] We have these things work.
+[00:24:15] We use them.
+[00:24:16] We're getting tremendous benefit.
+[00:24:17] We are at the beginning of a spurt of innovation.
+[00:24:21] But it comes at a price.
+[00:24:23] It's a wrenching change.
+[00:24:24] It is giving us a new model of models,
+[00:24:27] which for me and for the book is the important and interesting
+[00:24:31] thing.
+[00:24:31] The types of models that it builds
+[00:24:33] are different from the sorts of models
+[00:24:35] that we build for ourselves.
+[00:24:37] The sorts of models that we traditionally
+[00:24:39] build for ourselves are old meaning now.
+[00:24:43] We like it when we have general principles.
+[00:24:45] And we can say, OK, here's the general principle about how
+[00:24:47] a business works, or how anything that we're modelling
+[00:24:50] works.
+[00:24:51] Here are the general principles.
+[00:24:52] We can apply particulars to it.
+[00:24:54] We can explain particulars by looking
+[00:24:56] at the general principles.
+[00:24:58] We can predict on that basis.
+[00:24:59] Those general principles are understandable.
+[00:25:02] We understand them.
+[00:25:03] That's how we use them.
+[00:25:06] And at least a part of us says it's a general principle.
+[00:25:10] That's where the truth is.
+[00:25:12] That's the truth.
+[00:25:12] The rest of it is just sort of data is transient
+[00:25:14] and you feed it in.
+[00:25:15] The permanent truth, that's in the principles.
+[00:25:19] In these new models, it's really not like that.
+[00:25:23] It's a connection of particulars.
+[00:25:25] These particulars are connected complexly and densely
+[00:25:29] and delicately.
+[00:25:30] So a small change in one of them can
+[00:25:31] cause a gigantic change, a ripple effect, a butterfly
+[00:25:35] effect if you will.
+[00:25:37] And at least some of them we don't understand.
+[00:25:43] And there's controversy about whether we can get to the point
+[00:25:47] where we will always understand these.
+[00:25:50] Right now, we're not.
+[00:25:52] So I want to look at some things that change.
+[00:25:55] I would warn you this is very speculative.
+[00:25:58] But if that's the case, if we're going
+[00:26:01] to start understanding ourselves in terms of those models,
+[00:26:04] here are maybe some things that will change or are already
+[00:26:09] changing.
+[00:26:10] We can begin to see the change already.
+[00:26:12] And the first is strategy.
+[00:26:13] And so strategy is pretty new thing in the world,
+[00:26:15] in the way that we think about it.
+[00:26:17] It's a military strategy.
+[00:26:18] Is really a 19th century invention and business
+[00:26:20] strategy.
+[00:26:21] You're talking decades here.
+[00:26:25] In order to have an idea of military strategy,
+[00:26:28] and be able to write books about it
+[00:26:30] and teach it and fight battles using it,
+[00:26:33] you have to have an idea that it's a fairly stable system.
+[00:26:35] Stable enough that there are some general laws.
+[00:26:37] And they're not as stable as Newton's laws of gravity.
+[00:26:41] But nevertheless, there are some general principles
+[00:26:43] we can start to know and educate ourselves on.
+[00:26:45] That are stable in law-like, and we can understand them.
+[00:26:50] Our experience on the net says, well, life maybe
+[00:26:53] isn't quite like that.
+[00:26:54] In the past 10 or 15 years, the idea
+[00:26:56] of business strategy, which as I say
+[00:26:58] is already a pretty new idea has come
+[00:27:01] under very potent and heavy fire criticism.
+[00:27:06] So a book like The Black Swan by Nassim Nicholas Taleb,
+[00:27:10] very important book.
+[00:27:11] Basically says that your strategy
+[00:27:15] is very likely can be disrupted at any moment
+[00:27:17] by things beyond your control.
+[00:27:18] Black swan shows up, falls on your head,
+[00:27:21] and crushes your business, crushes your supply chain.
+[00:27:24] You never know.
+[00:27:26] The strategy is not as stable as we thought.
+[00:27:28] The only thing that's surprising to me
+[00:27:30] is that we needed to hear this because it seems--
+[00:27:33] but we did.
+[00:27:34] And it's happening this book is a very important business book
+[00:27:37] within the world of business.
+[00:27:38] And likewise, Rita Gunther McGrath
+[00:27:41] is among the people who is saying,
+[00:27:43] aah, be careful of committing to large-scale strategies
+[00:27:48] because there's so much change.
+[00:27:49] If you pay attention to the small changes around you,
+[00:27:53] look for opportunities and risks,
+[00:27:55] try to address them early.
+[00:28:00] Some people have started calling this type of approach
+[00:28:04] being wary of big thunderous strategies,
+[00:28:09] minimum viable strategy.
+[00:28:11] I actually thought I invented that and then I googled it.
+[00:28:14] And I did not invent that term.
+[00:28:17] But I like it.
+[00:28:19] This also I think helps explain why
+[00:28:21] we hear such ridiculous terms from the valley
+[00:28:24] that we all find ridiculous, like disruption and pivoting
+[00:28:28] and run fast and break things.
+[00:28:31] So I'm not advocating for the language.
+[00:28:34] Nevertheless, the fact that this is the language of the valley,
+[00:28:36] tells us something about the nature of strategy.
+[00:28:38] That it has changed.
+[00:28:39] That these things can be talked about as a strategy,
+[00:28:42] is really, really weird.
+[00:28:45] And indicates perhaps that we are moving away
+[00:28:48] from this a little bit.
+[00:28:49] I just want-- this is inessential
+[00:28:52] but I'm going to say it anyway.
+[00:28:54] So Plato is the first one who explicitly distinguishes
+[00:28:57] strategy from tactics.
+[00:28:58] And what he means by tactics is what we pretty much
+[00:29:01] would call logistics.
+[00:29:03] What he means by strategy, the go
+[00:29:05] to example, the analogy that he uses in order
+[00:29:08] to explain this in the first instance
+[00:29:10] are musicians who are making up tunes, improvisation.
+[00:29:14] Not exactly our idea of strategy,
+[00:29:17] but I think we're seeing indications
+[00:29:19] that we actually are going back to that notion of strategy.
+[00:29:24] So the second thing that maybe changes, that we may already
+[00:29:28] see changing is decision-making where our image has been
+[00:29:32] while you're at a crossroads.
+[00:29:33] You got two choices to make, which is hugely reductive,
+[00:29:36] or maybe it's five or you have 10 options,
+[00:29:38] but you've already done the work of narrowing your future down
+[00:29:42] to a literal handful of options.
+[00:29:45] And then, in a large environment,
+[00:29:46] the person at the top makes a decision.
+[00:29:49] And we consider that activity to be fairly, to be quite heroic.
+[00:29:52] There are no spoilers here, OK?
+[00:29:54] It's just Jon Snow.
+[00:29:56] No comment, but it's heroic activity.
+[00:30:00] We know that corporate hierarchies
+[00:30:02] in the middle of the 19th century were invented.
+[00:30:05] One of the explicit reasons they were invented
+[00:30:07] was to limit the flow of information
+[00:30:09] because the person at the top of a large corporation
+[00:30:11] can't know everything.
+[00:30:12] And so you need a set of lieutenants
+[00:30:13] who will reduce at each step the amount of information.
+[00:30:16] And they're competent, and they reduce it
+[00:30:18] to what one person can decide.
+[00:30:20] And that works if you think that decisions are best
+[00:30:26] made by reducing and throwing out as much information
+[00:30:29] as you possibly can.
+[00:30:32] These days, when the web started and people
+[00:30:36] were worried about information overload,
+[00:30:39] I mean, that was the topic for like 15
+[00:30:42] years from the middle of the 1990s
+[00:30:46] to at least the beginnings, the early 2000s.
+[00:30:50] This was the topic, "information overload
+[00:30:51] is going to destroy us."
+[00:30:52] And I don't know about you.
+[00:30:54] I have not heard anybody complain
+[00:30:56] about information overload.
+[00:30:57] And I'm going to say a few years I hear other complaints all
+[00:31:00] the time about information, that people
+[00:31:03] aren't getting the right information, there's fake news.
+[00:31:05] These are serious issues of course.
+[00:31:08] But the desire that I see all around me
+[00:31:10] is people who feel like they're not getting enough information.
+[00:31:13] I think we have gotten acculturated to what
+[00:31:17] we used to think of as information overload, which I'm
+[00:31:20] going to say I think has an effect,
+[00:31:22] and is actually a healthy thing.
+[00:31:24] So if you want to make--
+[00:31:27] if it's the case that we need as much information as we can
+[00:31:31] so that we can make smaller scale decisions,
+[00:31:34] strategic decisions, then the same
+[00:31:36] is true for decision-making.
+[00:31:38] Well, in fact, I was just redundant.
+[00:31:40] So we see people who organizations
+[00:31:43] that are moving consciously towards distributed
+[00:31:46] decision-making, where the local expert gets
+[00:31:49] to make the decision because she's
+[00:31:50] the one who knows the most.
+[00:31:52] That's what makes her the local expert.
+[00:31:53] And if a local expert can't decide, then you escalate it.
+[00:31:57] And you keep escalating it if you have
+[00:31:58] to until you get to the top.
+[00:32:01] And so this is very much the Wikipedia model.
+[00:32:03] So I'll use the founder as the example.
+[00:32:08] Where did he go?
+[00:32:08] OK, there he is.
+[00:32:10] Jimmy Wales, who has said that by the time
+[00:32:12] a decision gets to him, if it works
+[00:32:14] that way, its way up the Wikipedia hierarchy--
+[00:32:16] Wikipedia absolutely has a hierarchy-- then
+[00:32:19] that means the entire community was unable to resolve
+[00:32:24] this question.
+[00:32:25] And if that community unable to resolve it,
+[00:32:28] it's very likely because it's not a resolvable question.
+[00:32:30] The two sides, the pro and con are equally balanced.
+[00:32:35] And so Wales says that most instances when it gets to him
+[00:32:38] it means his job is simply to toss a coin
+[00:32:40] because he is not a local expert.
+[00:32:42] He does not know as much about 18th century French literature
+[00:32:46] as a local expert does.
+[00:32:47] So by the time it gets to him, coin toss.
+[00:32:50] And this guy has said something very similar,
+[00:32:53] that often when the decision gets to him,
+[00:32:55] it's gone up through an administration of experts.
+[00:32:59] Very likely there's no way to decide,
+[00:33:02] so that's not always the case.
+[00:33:05] I'm sorry, I don't mean to say presidents always
+[00:33:07] flip the coin.
+[00:33:08] Sometimes wish that was the case because then
+[00:33:10] 50% of the time we'd be getting good results.
+[00:33:12] But sometimes that is the case.
+[00:33:14] And it takes a certain modesty as a leader to say that.
+[00:33:18] It's not heroic to be the coin flipper,
+[00:33:22] even though that's exactly in some instance what
+[00:33:24] you should be.
+[00:33:25] OK, next thing that changes are explanation.
+[00:33:27] So let's say you are on a back road.
+[00:33:29] You're driving.
+[00:33:30] You get a flat.
+[00:33:30] You want to know what happened.
+[00:33:32] You look, and yep, OK, there it is, nail.
+[00:33:35] That's a really good explanation of a flat.
+[00:33:37] But it's a particular type of explanation.
+[00:33:40] It's a very common type, which is
+[00:33:41] a sine qua non, which is there.
+[00:33:43] But except for the nail, you wouldn't have gotten the flat.
+[00:33:48] Perfectly good explanation.
+[00:33:50] I'm not arguing against it.
+[00:33:51] All I want to say is it's not the only sine qua
+[00:33:54] non in this situation because you were on that road
+[00:33:57] because you were late and it was a shortcut.
+[00:33:59] If you hadn't been late, you wouldn't have hit the nail.
+[00:34:01] If you hadn't swerved to miss the bunny,
+[00:34:03] you wouldn't have gotten hit the nail.
+[00:34:04] If metal were softer than rubber,
+[00:34:06] you wouldn't have gotten a flat.
+[00:34:07] If pointy things didn't penetrate better,
+[00:34:10] you wouldn't have gotten the flat.
+[00:34:12] If we didn't care about going places fast,
+[00:34:14] you wouldn't have gotten it.
+[00:34:15] If we didn't care about this in an economy,
+[00:34:17] a capitalist economy, which will serve
+[00:34:19] our needs a particular way, we wouldn't have gotten the flat.
+[00:34:21] If gravity weren't in effect, you
+[00:34:23] would not have gotten the flat.
+[00:34:24] And if space aliens had finally arrived and vacuumed up
+[00:34:29] all of the surface metal because they
+[00:34:30] are a rust-based metabolism, you would not have gotten the flat.
+[00:34:34] All of these are sine qua nons.
+[00:34:36] Everything is a sine qua non.
+[00:34:37] Everything had to happen for you to get that flat.
+[00:34:40] But we look at the nail, and we say, that's the explanation.
+[00:34:44] Why?
+[00:34:45] It's a really simple answer.
+[00:34:47] There's a really good answer to this as well.
+[00:34:49] The nail is the explanation because in that scenario,
+[00:34:52] it's the only thing you can change.
+[00:34:54] You can't get rid of gravity.
+[00:34:56] You can't go back in time and say, OK, I'm
+[00:34:58] going to run over the bunny and not get the flat.
+[00:35:01] You can't do those things nor should you.
+[00:35:03] But you can take the nail out.
+[00:35:06] And so that becomes the explanation.
+[00:35:08] But it's good.
+[00:35:09] I'm not arguing.
+[00:35:09] Of course, I'm not arguing against this.
+[00:35:11] All I'm saying is that explanations are tools.
+[00:35:13] They are not always the best tool despite what
+[00:35:16] some regulators seem to think.
+[00:35:20] And they always hide more than they reveal.
+[00:35:23] And I'm going to--
+[00:35:24] I'm pretty sure I'm going to regret saying always
+[00:35:26] because you should always regret saying always.
+[00:35:30] But I'm going to stick with it.
+[00:35:33] This type of explanation hides more than it reveals.
+[00:35:36] It's fine.
+[00:35:37] It's a tool.
+[00:35:38] It's what we need from it.
+[00:35:39] But if we are now in a position--
+[00:35:43] thanks to the new sorts of models that we're experiencing.
+[00:35:46] Thanks to our life on the internet where we are
+[00:35:49] in this chaotic environment.
+[00:35:50] If we are coming to accept inexplicability
+[00:35:55] not as an exception, and that is a flaw,
+[00:35:57] but it's a part of the landscape.
+[00:36:00] And it's not a failure to understand.
+[00:36:02] We understand through explanations that
+[00:36:04] hide more than they make clear.
+[00:36:08] If we get used to inexplicability
+[00:36:10] as a part of the landscape, then we
+[00:36:14] are headed for disruption on a Copernican scale
+[00:36:19] as I think we are.
+[00:36:20] Because Western culture-- and you remember
+[00:36:23] I scoped this only to the West.
+[00:36:25] Western culture begins with a covenant.
+[00:36:28] A covenant that says, humans are the special creatures
+[00:36:31] that are able to understand their world to some degree.
+[00:36:36] In one tradition, it's that God made us in his, sorry his--
+[00:36:40] I'll talk about that later--
+[00:36:42] in his image by which nobody means
+[00:36:46] God looks like a person, but rather that
+[00:36:48] we were made as creatures who are
+[00:36:50] able to understand and appreciate
+[00:36:53] some of God's creation.
+[00:36:55] In the Greek tradition, the same word that names the order
+[00:37:01] and the beauty of the cosmos, logos
+[00:37:04] is the word for the human ability
+[00:37:05] to apprehend that beauty and order.
+[00:37:11] This has been fundamental to sell our idea of who we are
+[00:37:16] and why we're here.
+[00:37:19] I mean, there's no point in being the rational animals
+[00:37:23] if the world isn't rational.
+[00:37:26] But our experience of the internet, our increasing
+[00:37:30] reliance on inexplicable models, are
+[00:37:33] models that don't rely upon general principles that
+[00:37:36] connect particulars to particulars,
+[00:37:37] and may not yield general principles,
+[00:37:39] or may not yield general principles that humans
+[00:37:42] can understand.
+[00:37:44] That breaks the covenant.
+[00:37:46] It says that this technology is thinking.
+[00:37:51] It doesn't think at all, right?
+[00:37:53] So had the air quotes on this.
+[00:37:54] But it is thinking about the world differently than we are.
+[00:37:56] And we're using it because it is thinking better
+[00:38:00] at least in those instances for those purposes than we are.
+[00:38:05] Maybe our thinking is a tool.
+[00:38:09] We've known this for a long time.
+[00:38:13] This is not news, but it's coming to prominence
+[00:38:16] because now our machines are letting us
+[00:38:18] succeed with inexplicability.
+[00:38:21] It's at the heart in some way.
+[00:38:23] I don't want to say that because I'll get in trouble.
+[00:38:25] But the complexity of these models, their particularity
+[00:38:28] is at the heart of the model.
+[00:38:30] And those two things do not yield themselves easily
+[00:38:34] to human thought.
+[00:38:36] It may be that the world is more chaotic than we had thought.
+[00:38:38] And now we can see that because we succeeded at it on the net,
+[00:38:41] and because we have technology that
+[00:38:43] enables us to make predictions and classify and do stuff
+[00:38:46] like that.
+[00:38:47] But it's maybe less like our understanding than we thought.
+[00:38:51] The universe does not owe us an explanation.
+[00:38:53] And if it did, that gave us one we couldn't understand it.
+[00:38:58] We may be less at home in the universe
+[00:39:00] than we were able to acknowledge before.
+[00:39:03] And that is, I think it's a scary prospect,
+[00:39:06] and it has dangers for sure.
+[00:39:09] But I also in my heart, I think it's an evolutionary step.
+[00:39:12] I think it's a step forward for us.
+[00:39:15] It's a step towards maturity as a species
+[00:39:18] to be able to recognize that it's very painful.
+[00:39:22] There's a painful transition for sure,
+[00:39:25] and a dangerous one because we are going wrong in many ways
+[00:39:28] and will continue to.
+[00:39:31] We're just at the beginning of it though.
+[00:39:34] And I think that it is actually a way closer to truth,
+[00:39:39] and to the humility that comes with all.
+[00:39:43] Thanks.
+[00:39:44] [APPLAUSE]
+[00:39:49] JOI ITO: Thank you David.
+[00:39:51] DAVID WEINBERGER: So that was my 20 minute talk.
+[00:39:55] JOI ITO: So this morning as I was thinking about this talk,
+[00:39:58] I was Googling around, and I read a paper called Explanation
+[00:40:01] As Orgasm by Alison Gopnik.
+[00:40:04] And for those of you who haven't read it,
+[00:40:07] basically, she's a developmental psychologist neuroscientist.
+[00:40:10] And she says that, as we have orgasms
+[00:40:14] to induce us to reproduce, we have
+[00:40:17] this orgasmic love of epiphanies of explanation
+[00:40:23] that induces us to learn.
+[00:40:24] And so the reason why little babies
+[00:40:27] have joy when they have something unexpected happen
+[00:40:31] in life is just because it forces us.
+[00:40:34] It's a hard-wiring to induce us to learn,
+[00:40:37] and it's the desire for explanation at the level
+[00:40:40] that we desire reproduction.
+[00:40:42] And it's hardwired.
+[00:40:45] So either your explanation has to give us
+[00:40:48] a lifetime's worth of orgasmic epiphany
+[00:40:51] that we will never have explanations,
+[00:40:53] or you are going to deprive us of orgasmic explanations.
+[00:40:58] But to turn this into a question--
+[00:40:59] DAVID WEINBERGER: That is an awesome choice.
+[00:41:01] I need to think about it.
+[00:41:03] JOI ITO: But I think we've talked
+[00:41:05] about sort of different responses of people.
+[00:41:09] So in my book, I had this principle practice over theory,
+[00:41:13] and my faculty peers hated it.
+[00:41:15] They said, no, that should be the opposite theory
+[00:41:17] or practice.
+[00:41:18] Are you calling for the end of theory?
+[00:41:21] DAVID WEINBERGER: No, just the end of orgasms.
+[00:41:23] [LAUGHTER]
+[00:41:23] So--
+[00:41:24] [INTERPOSING VOICES]
+[00:41:25] JOI ITO: Are you OK?
+[00:41:26] DAVID WEINBERGER: No.
+[00:41:27] And before I respond at that--
+[00:41:29] SPEAKER 2 : You can respond the first one too.
+[00:41:31] Yeah, if you want.
+[00:41:31] [INTERPOSING VOICES]
+[00:41:33] DAVID WEINBERGER: There's a connection
+[00:41:34] between explanations and humor.
+[00:41:36] And the joy of both of that is ripe for exploration.
+[00:41:40] I have not read.
+[00:41:41] So I haven't read the orgasm piece.
+[00:41:42] I don't want to comment on in any serious way,
+[00:41:46] so just sort of cheap shots expressing my discomfort
+[00:41:49] with the entire concept.
+[00:41:50] JOI ITO: Yeah.
+[00:41:51] DAVID WEINBERGER: Although I think it sounds pretty good.
+[00:41:53] So no, I'm not calling for the end of theory.
+[00:41:55] I like science.
+[00:41:57] All antibacterials raise your hand and then leave.
+[00:42:02] I like science.
+[00:42:04] And I want more of it.
+[00:42:06] And I want evidence-based argument.
+[00:42:09] But so it's kind of we live in a world that is--
+[00:42:20] we think we live in rule-based universe.
+[00:42:23] And we do.
+[00:42:23] I'm not going to--
+[00:42:24] no intention of arguing with Newton or any other people
+[00:42:29] proposing well documented universal laws.
+[00:42:34] So we think about the world as consisting of the reality
+[00:42:38] as in those principles, but then we get up and we go to work.
+[00:42:41] And we cross the street.
+[00:42:43] And there is even in this rule-based world,
+[00:42:46] we have no way of knowing that there's
+[00:42:48] going to be a candy bar wrapper over here,
+[00:42:50] and somebody's wearing a Beyonce T-shirt over there,
+[00:42:53] and that there's a red car with one light out,
+[00:42:56] and we're going to miss the light.
+[00:42:57] And we're going to get to work.
+[00:42:58] And the cop is going to be warm or hot or cold,
+[00:43:00] or the canister is broken or our coworkers borrowed up
+[00:43:04] and forgot to wash it.
+[00:43:05] And she's wearing mismatched socks and/or whatever.
+[00:43:08] Everything in our lives, everything in this room
+[00:43:11] is an accident in that regard.
+[00:43:13] JOI ITO: But that's not necessarily new, right?
+[00:43:15] DAVID WEINBERGER: No , it's not.
+[00:43:16] JOI ITO: It's not new, OK.
+[00:43:17] DAVID WEINBERGER: We have invested.
+[00:43:18] So I'll get to the new part, right?
+[00:43:20] No, you're absolutely right.
+[00:43:21] We have in the West sort of metaphysically
+[00:43:25] invested reality in what's permanent and real, which
+[00:43:28] the universal laws that we are remarkably able to discover.
+[00:43:33] Those are the real things.
+[00:43:35] All that I'm suggesting is that if our experience
+[00:43:40] on the net of succeeding with chaos and cherishing chaos,
+[00:43:43] and if we now have a model that in some way
+[00:43:46] instantiates that, it doesn't start with rules that may not
+[00:43:49] yield rules but it takes individual pieces
+[00:43:52] and connects them in statistically useful ways
+[00:43:55] we hope.
+[00:43:57] If that becomes the model of how the world works
+[00:43:59] and how the future happens, then maybe we can
+[00:44:03] instead of saying mere accidents, real laws,
+[00:44:07] mere accidents-- nobody ever says mere laws,
+[00:44:09] mere universal-- laws there's a value judgment.
+[00:44:11] There's a metaphysical value judgment
+[00:44:13] where we have preferred the eternal and the permanent
+[00:44:17] and the laws over the experience of our own lives.
+[00:44:21] And if these changes enable us to change
+[00:44:26] that waiting some, not disinvesting
+[00:44:29] from the importance of universal laws of when we can find them,
+[00:44:31] that's fantastic, but give more validity
+[00:44:35] and importance to the accidents, the contingencies,
+[00:44:39] the dust of our own lives, then that's a change.
+[00:44:42] JOI ITO: So I do buy the importance of accidents.
+[00:44:44] There's a number of scholarly studies about innovation
+[00:44:50] discovery that the majority of interesting things
+[00:44:52] are discovered about looking for something else.
+[00:44:54] So I think serendipity makes sense.
+[00:44:57] But sort of getting back to how we live our lives,
+[00:45:02] and this gets back to the orgasm thing which is--
+[00:45:05] I have a two-year-old.
+[00:45:06] And another thing that Alison describes
+[00:45:09] is that the number of hypotheses tested per minute by a infant
+[00:45:14] is higher than research scientists.
+[00:45:17] And so what's interesting is our lives are continuously
+[00:45:21] hypothesize, test, learn.
+[00:45:23] And that loop happens because of the love of epiphany.
+[00:45:27] But you're not saying to give up on that.
+[00:45:29] A/B testing, in a way, is that.
+[00:45:30] Right?
+[00:45:32] DAVID WEINBERGER: Yes.
+[00:45:33] JOI ITO: And our addiction with causal explanations,
+[00:45:36] although you kind of tease the causal part,
+[00:45:39] is it about the timeline and the grandeur
+[00:45:43] of the stuff that becomes-- because at a micro level
+[00:45:46] you agree that learning-- or do you
+[00:45:49] agree that learning comes from testing causal hypotheses?
+[00:45:53] DAVID WEINBERGER: That's certainly a big part of it.
+[00:45:55] JOI ITO: Yeah.
+[00:45:57] DAVID WEINBERGER: Keep going.
+[00:45:58] JOI ITO: Yeah.
+[00:45:59] And so I guess, is it a time scale thing
+[00:46:02] because I think strategy, even, if it's very short, like minute
+[00:46:10] by minute, and that's what a lot of Silicon Valley
+[00:46:12] is it's still strategic, but it's strategic it's
+[00:46:14] a much more fast clock speed.
+[00:46:19] Or is that not the way you would frame it?
+[00:46:20] DAVID WEINBERGER: Well, let's come back to that
+[00:46:22] because that's an important point, too.
+[00:46:32] So there may well be--
+[00:46:34] I assume there are reasons why the patterns that machine
+[00:46:36] learning discovers are patterns.
+[00:46:38] And it's certainly the case that the confetti that
+[00:46:40] falls on the Thanksgiving day parade, each piece
+[00:46:42] is governed by causal laws.
+[00:46:48] The testing of-- the reason why I sort of shrunk for a moment
+[00:46:52] on the testing of causal hypotheses,
+[00:46:53] although that's fine, is that there's been a line of thought
+[00:47:02] over the past few decades that, let's think about--
+[00:47:05] at least the past decade-- let's assume that human thinking,
+[00:47:09] human reason is not, A, the truth but [INAUDIBLE]
+[00:47:11] evolutionary objectives, that we are optimized, so to speak,
+[00:47:15] not for discovering truths but for surviving,
+[00:47:18] for having lots of kids who then will--
+[00:47:21] so the fact that a kid is testing lots of hypotheses
+[00:47:25] doesn't necessarily mean that she's
+[00:47:30] developing-- she's developing statistical patterns about how
+[00:47:34] things interoperate the language itself.
+[00:47:37] So there's a mix here.
+[00:47:38] Language itself, words are generalizations.
+[00:47:41] Words are a single thing that cover
+[00:47:43] instances in every case that are different, one way or another.
+[00:47:47] We can't survive without words.
+[00:47:49] I am not suggesting that we go non-linguistically.
+[00:47:52] Rather, I am suggesting that we may
+[00:47:54] be in for an epical change in the broad strokes of how
+[00:47:58] we think about how the world works.
+[00:48:00] Certainly, universal laws, we certainly
+[00:48:02] want science to continue.
+[00:48:04] I'm sorry.
+[00:48:04] Did I terminally offend any antivaxxers?
+[00:48:08] We certainly want science to continue.
+[00:48:11] We want more funding for it.
+[00:48:13] But what do we think that it's doing?
+[00:48:16] What do we think that we are doing?
+[00:48:21] I think Newton certainly knew this.
+[00:48:23] I think all scientists do, except the ones who are going
+[00:48:27] to disagree with me, I guess.
+[00:48:29] They're universal laws.
+[00:48:30] The data is incredibly complex.
+[00:48:32] Applying those universal laws to each little tiny piece
+[00:48:35] of dust and piece of confetti is impossible.
+[00:48:40] We take that for granted.
+[00:48:41] That's our condition.
+[00:48:44] I'm not disagreeing with that.
+[00:48:45] I'm suggesting that we take that more seriously,
+[00:48:48] that we take more seriously--
+[00:48:52] we say that, and then we turn our attention back
+[00:48:54] to the universal laws and say, that's what's real.
+[00:48:56] [INAUDIBLE] say, yeah, they're real,
+[00:48:57] but so is the dust and the confetti.
+[00:48:59] JOI ITO: So is it like the miscellaneous thing
+[00:49:01] where we focus on the stuff that we understand,
+[00:49:05] but the majority of important stuff is unexplainable?
+[00:49:08] Is that the way you would [INAUDIBLE]
+[00:49:10] it's a distribution?
+[00:49:12] DAVID WEINBERGER: Yeah.
+[00:49:13] JOI ITO: And I guess to put sort of my machine learning
+[00:49:17] tussle hat on, my personal opinion is that there's
+[00:49:21] an interesting battle going on, I think,
+[00:49:23] between the statistical correlation machine learning
+[00:49:27] people and the emerging causal people,
+[00:49:30] like Judea Pearl's Why book, where
+[00:49:33] there's a famous statistician--
+[00:49:34] DAVID WEINBERGER: The Book of Why.
+[00:49:35] JOI ITO: The Book of Why.
+[00:49:36] There's a famous statistician [INAUDIBLE]
+[00:49:38] named Burke who said, if sunspots and shoe size
+[00:49:41] correlate with crime, we should use that data.
+[00:49:43] And there's definitely a fairness issue.
+[00:49:46] And then there is, is correlation
+[00:49:52] equivalent to cause?
+[00:49:54] And should we use correlation--
+[00:49:57] I think the thing is that you get lazy,
+[00:49:59] and I think machine learning is very good at making predictions
+[00:50:02] based on correlation.
+[00:50:03] And a lot of humans then stop because it's
+[00:50:07] difficult to ask causal questions.
+[00:50:08] And I think you deal with causality a lot, sine qua nons,
+[00:50:13] in your book.
+[00:50:15] Are you saying that--
+[00:50:16] I guess it's a sort of a nuance.
+[00:50:17] And by the way, when you asked me to do this,
+[00:50:19] you knew that I wasn't going to throw you softballs, right?
+[00:50:24] So are you saying that we should give up?
+[00:50:27] Are you saying that it's going to be harder?
+[00:50:29] Are you saying that we should try?
+[00:50:31] Where are you on this kind of causal and counterfactual
+[00:50:35] thing?
+[00:50:36] What are you telling us as a community to--
+[00:50:42] how should we deal with causality?
+[00:50:45] DAVID WEINBERGER: A simple little question.
+[00:50:47] So first of all, I, like I think every other at least
+[00:50:53] Westerner believes, that underneath all of this,
+[00:50:56] there's causality.
+[00:50:57] If there are correlations that keep
+[00:51:01] holding and holding and holding [? and are ?] sort of more
+[00:51:03] rigorously tested, then maybe there's some causality
+[00:51:07] we don't understand.
+[00:51:08] It may be very indirect between sunspots, shoe size, and crime.
+[00:51:12] That seems pretty unlikely, but yeah.
+[00:51:15] I am not a computer scientist.
+[00:51:16] From what little I know, it sounds
+[00:51:20] like, including the Pearl book, it
+[00:51:21] sounds like there are good reasons
+[00:51:23] to incorporate what we know about causality
+[00:51:26] into machine learning systems when it makes sense.
+[00:51:29] I mean, why throw all of that out,
+[00:51:33] except that you can doing so can turn up correlations
+[00:51:37] that strictly causal analysis would miss.
+[00:51:42] JOI ITO: So you're saying and.
+[00:51:44] DAVID WEINBERGER: Yeah.
+[00:51:45] JOI ITO: Don't throw away the unexplainable,
+[00:51:48] but not give up [INAUDIBLE].
+[00:51:50] DAVID WEINBERGER: Yes.
+[00:51:51] And you inserted quickly the fact
+[00:51:54] that there are some ethical issues here as well.
+[00:51:56] And I know that you know this very well,
+[00:51:59] as many people in the room do.
+[00:52:00] Those are really, really serious.
+[00:52:04] When you are arresting people of color
+[00:52:07] because there is a statistical relationship
+[00:52:09] between the sneakers they wear and whatever,
+[00:52:13] you really have to do some careful thinking.
+[00:52:17] And in fact, you have to stop doing that.
+[00:52:18] That's pretty clear.
+[00:52:20] So the ethical issues that ring this
+[00:52:22] are actually central to how we apply this stuff.
+[00:52:27] It has to be very, very careful.
+[00:52:30] JOI ITO: I would point out that there's an interesting--
+[00:52:35] I think it's-- I'm trying to remember his name now--
+[00:52:40] Timothy Morton, a philosopher like you.
+[00:52:42] DAVID WEINBERGER: I'm not a philosopher.
+[00:52:44] JOI ITO: [INAUDIBLE] Once a philosopher, always
+[00:52:46] a philosopher.
+[00:52:47] But he has this thing called object-oriented ontologies,
+[00:52:50] and he's working with Indigenous communities
+[00:52:52] because I think one of the interesting things
+[00:52:54] is that a lot of climate-related issues
+[00:52:57] come from a very reductionist approach and understanding
+[00:53:00] of climate.
+[00:53:01] And Indigenous communities tend to have a more nuanced
+[00:53:04] and a belief system where unexplainable but intuitively
+[00:53:07] understood things are practiced.
+[00:53:09] And there's, I think, an interesting movement to try
+[00:53:11] to incorporate, whether it's talking about Eastern medicine
+[00:53:14] or talking about the understanding of the climate
+[00:53:16] by Indigenous communities.
+[00:53:17] So I think there's an interesting,
+[00:53:20] among anthropologists and philosophers,
+[00:53:24] approach to trying to bring the unexplainable in into context.
+[00:53:29] And I wonder, have you thought about and is it connected to--
+[00:53:37] because let me back up.
+[00:53:38] I think that we've had a very reductionist period
+[00:53:41] through the Industrial Revolution, where we wanted all
+[00:53:43] the Model Ts to look the same.
+[00:53:44] We wanted organized, we wanted order.
+[00:53:47] And now machine learning and internet
+[00:53:50] has shown that the world is chaotic.
+[00:53:52] But I think a lot of history and with nature, actually,
+[00:53:56] once you start to connect with it, or even just society,
+[00:53:59] it turns out to be messy.
+[00:54:00] And I think it was actually the engineers
+[00:54:02] and the economists who kind of wanted to quantify everything.
+[00:54:06] And if you think if you talk to the humanities
+[00:54:08] and the social scientists, they might
+[00:54:10] argue that it's [INAUDIBLE].
+[00:54:10] And the philosophers are often in service
+[00:54:12] of the economists and the engineers,
+[00:54:14] helping them justify with platitudes the reduction.
+[00:54:17] Sorry.
+[00:54:18] I'm going off on my own little tangent.
+[00:54:20] But I guess, do you think this is a new thing with computers
+[00:54:24] and internet?
+[00:54:24] Or is it just really understanding something
+[00:54:28] that may have been around before we
+[00:54:30] got into this sort of engineering mode?
+[00:54:34] DAVID WEINBERGER: When are the softball questions coming?
+[00:54:37] Jeez.
+[00:54:37] JOI ITO: Those will come when I open it up.
+[00:54:39] No, they're not going [INAUDIBLE]..
+[00:54:40] DAVID WEINBERGER: So there has been
+[00:54:42] a tension for a long time between these two approaches.
+[00:54:46] One is what today we would call statistical,
+[00:54:48] but even before you would note correlations between things
+[00:54:51] and [INAUDIBLE] because of no correlation.
+[00:54:55] So the Dog Star appears and you know that the Nile River
+[00:54:58] banks are going to overflow.
+[00:54:59] And you have no idea.
+[00:55:00] You don't understand about gravity and why,
+[00:55:03] what causes the tug of gravity causing the overflow.
+[00:55:07] But there's correlation and it's turns out
+[00:55:10] to be causal underneath it, and we accept it.
+[00:55:12] It's sort of a simple statistical one.
+[00:55:15] The founding fathers of the US, a bunch of them,
+[00:55:18] used to track the weather every day,
+[00:55:20] keep a weather log without any theory
+[00:55:22] about whether an early frost was foretold
+[00:55:27] by the withering of the chrysanthemums or whatever.
+[00:55:30] I'm pretty much making this up.
+[00:55:32] But they would note this and then try to find correlations,
+[00:55:35] going on for hundreds of years.
+[00:55:37] It's only right at the beginning of the 20th century
+[00:55:40] that a model of the weather was formulated.
+[00:55:49] A guy whose name I never remember, [INAUDIBLE],, I think.
+[00:55:52] Anybody know?
+[00:55:55] You can Google it later and correct me.
+[00:55:58] He said, OK, you know what?
+[00:56:00] Weather, atmosphere, it works on Newtonian principles,
+[00:56:04] which we can understand.
+[00:56:05] There are seven factors.
+[00:56:06] There's moisture, speed, heat, whatever, seven factors.
+[00:56:09] We can use this.
+[00:56:10] And he came up with a model that was law-based,
+[00:56:13] reductive in its--
+[00:56:16] and eventually worked, initially not so much.
+[00:56:19] And the early computers took a full day,
+[00:56:22] over a day to calculate result, at the same time
+[00:56:26] that there were statistical models getting increasingly
+[00:56:28] sophisticated.
+[00:56:29] So this tension between the two has
+[00:56:31] been going on for a long time under different names.
+[00:56:35] It's only now that we have machines that are capable--
+[00:56:38] so everything on the surface of the Earth
+[00:56:40] affects weather a little bit.
+[00:56:42] Most of you don't care about, but it affects it.
+[00:56:46] Only now do we have the sensors that
+[00:56:48] are able to gather enough data and the machines are
+[00:56:50] able to not just process the data,
+[00:56:52] but to process it in it's relatively chaotic form,
+[00:56:56] looking for correlations that the seven principles, which now
+[00:56:59] are more, of course, would miss entirely,
+[00:57:02] that we're getting results that you all know that your weather
+[00:57:06] reports have gotten far more accurate and precise and longer
+[00:57:10] term in the past few years than they
+[00:57:12] have for hundreds of years.
+[00:57:14] Well, for 100 years.
+[00:57:16] There's been amazing progress in weather forecasting
+[00:57:18] because it's machine learning now.
+[00:57:20] We now have machines are able to calculate and compute
+[00:57:23] and connect more and more stuff in ways that we cannot
+[00:57:28] understand, frequently, that are giving us better results.
+[00:57:31] We are living in this world.
+[00:57:33] Every time you use your phone--
+[00:57:36] reading your email, the spam is machine learning.
+[00:57:39] The suggestions on your music system,
+[00:57:43] the type ahead when you type, it's all machine-- the routes
+[00:57:49] that it's drawing for you, it's all machine learning.
+[00:57:51] And in some instances, we don't know exactly how it's working,
+[00:57:54] but it's working really well, well enough that we're not
+[00:57:57] using the old tools.
+[00:57:58] As this begins to sink in and we say, yeah, no, it's fine.
+[00:58:02] We don't understand.
+[00:58:03] We don't need-- routing's working fine.
+[00:58:06] It doesn't matter if we don't know how it works.
+[00:58:08] Spam filters are amazing.
+[00:58:10] I don't know why it's picking out the word "beyond"
+[00:58:12] in connection with that, but who cares?
+[00:58:15] It's working.
+[00:58:15] As this becomes-- and is our medical--
+[00:58:17] we going for medical treatment, then [INAUDIBLE]
+[00:58:19] not very far away at all from the doctor telling you,
+[00:58:23] well, you look pretty good.
+[00:58:24] Everything's fine, except the machine learning system
+[00:58:27] says that you're at risk of developing type 2
+[00:58:30] diabetes in five years.
+[00:58:31] What you want to do about it?
+[00:58:33] 62% chance.
+[00:58:33] And you say, what?
+[00:58:35] I exercise, I don't eat carbs.
+[00:58:38] Doctor says, well, it's machine learning.
+[00:58:41] We can't tell you exactly in this case, but we do know,
+[00:58:46] it says 62.
+[00:58:47] It's a 62% chance.
+[00:58:48] And you're going to do something about it or not.
+[00:58:51] And we're going to be faced with this over
+[00:58:52] and over and over again until--
+[00:58:54] and we are going to be constantly reminded, properly,
+[00:58:56] about ways in which inexplicability
+[00:58:59] is unacceptable, that in the judicial system, for example,
+[00:59:02] I think a strong case to say we do not
+[00:59:04] want inexplicable systems.
+[00:59:07] There are going to be accidents.
+[00:59:08] Uber is going to run over another pedestrian.
+[00:59:10] And we sort of know why that one happened in Arizona,
+[00:59:14] but we don't know.
+[00:59:14] It's too complex.
+[00:59:16] But we're going to get back in the car
+[00:59:17] and let it drive us because fatalities have dropped.
+[00:59:21] The standard thing to say is 90%.
+[00:59:23] They drop 50%, we're going to be in the car.
+[00:59:26] The planes land using computers.
+[00:59:29] It's fine until they don't.
+[00:59:31] So every time the fact that these things are inexplicable,
+[00:59:35] because they screwed up perhaps or because they're
+[00:59:38] creating injustice, it's just going
+[00:59:39] to drive home to us that, oh, we're
+[00:59:40] living with and benefiting from machines that we
+[00:59:42] don't understand.
+[00:59:43] That's going to further convince us that the world is chaotic
+[00:59:49] because we can benefit from that level of particularity,
+[00:59:53] of refraining when necessary from formulating
+[00:59:56] general principles.
+[00:59:57] It's great when you can.
+[00:59:58] But if you can't, it's OK.
+[00:59:59] The stuff is working.
+[01:00:00] I think it may change our attitude
+[01:00:03] towards not just those predictions,
+[01:00:05] but our understanding of how complex life is.
+[01:00:10] Starting in the early '60s, I guess late '50s, Silent Spring,
+[01:00:15] we started to understand that there are ecosystems.
+[01:00:17] This was a new notion.
+[01:00:19] The word just goes back a couple of decades before that,
+[01:00:22] but ecosystem, what an interesting idea.
+[01:00:25] And the notion that everything is connected we now
+[01:00:28] live in, we all accept that.
+[01:00:29] We understand it.
+[01:00:30] We take it for granted.
+[01:00:33] That's being driven down a level now by this--
+[01:00:35] it's not just the broad sweeps of the course of the rivers.
+[01:00:38] It's the falling of ash.
+[01:00:41] It's the way a leaf skitters down a driveway.
+[01:00:45] These are now all examples of a different world.
+[01:00:49] JOI ITO: I'm going to ask one last question then open it up,
+[01:00:51] and this will be an easier one.
+[01:00:55] So you said that the leader just flips a coin,
+[01:00:58] and if everybody tells the truth, [INAUDIBLE]..
+[01:01:01] I think, at least in my organization, everybody hides
+[01:01:04] a little bit of the truth.
+[01:01:05] And by the time it gets to me, there's no truth left.
+[01:01:07] But either way, either zero truth or absolute truth,
+[01:01:12] is leadership overrated?
+[01:01:13] Do we need them anymore?
+[01:01:14] Should we just replace them with a coin flipper?
+[01:01:18] Is that what you're saying?
+[01:01:19] DAVID WEINBERGER: That's exactly what I'm saying.
+[01:01:21] No, it's not what I'm saying.
+[01:01:27] It is absolutely overrated.
+[01:01:30] It's toxic in many instances.
+[01:01:32] The gender politics of it by itself should make that clear.
+[01:01:38] And the reaction against leadership
+[01:01:40] has been going on now for a long time.
+[01:01:43] And we can certainly trace it back to the hippie era,
+[01:01:46] but we can go back further and it has a long history.
+[01:01:51] We both admire and love our leaders
+[01:01:53] and are very, very skeptical and worried about them.
+[01:01:56] So my point is, [? no, ?] all decisions
+[01:01:58] ought to be a coin toss.
+[01:02:01] It's that decisions should be made--
+[01:02:03] we need more information than ever.
+[01:02:05] So rather than reducing, let's see
+[01:02:07] if we can make decisions that take advantage of as
+[01:02:11] much information as we can.
+[01:02:13] And there's another part I didn't talk about,
+[01:02:15] but I can be very brief about, which
+[01:02:16] is behind the idea of strategy-- do the phrase,
+[01:02:19] we're going to put all the wood behind the arrow?
+[01:02:21] This is from-- what's his name--
+[01:02:24] Scott McNealy, who was CEO of Sun Microsystems, which
+[01:02:27] is a computer company before most of you were born.
+[01:02:29] Oh my God.
+[01:02:31] And he, just talking about strategy,
+[01:02:33] he said, we're going to put all the wood
+[01:02:34] behind the arrow, which is a phrase that sort of caught on
+[01:02:36] because it is manly and it's phallic, and it's just great.
+[01:02:40] So we begin with orgasms and end with fallacies, you and me.
+[01:02:45] Sorry.
+[01:02:45] That really didn't come out right.
+[01:02:50] It's a phrase that assumes that strategies--
+[01:02:55] it's a zero sum game, and you have
+[01:02:57] to put all of your resources behind the one thing
+[01:02:59] that you choose, which makes it very high risk, of course,
+[01:03:02] but sounds very impressive and doing everything possible.
+[01:03:05] And this whole image, the military image
+[01:03:07] of decision making, is generally entirely inappropriate
+[01:03:11] anywhere, except in the military and maybe not even there.
+[01:03:14] I don't know.
+[01:03:15] There's actually really interesting stuff
+[01:03:16] going on in the military around leadership, which
+[01:03:18] has been really one of the most enlightened groups when
+[01:03:22] it comes to leadership.
+[01:03:25] And it's based upon this zero sum idea
+[01:03:27] that you only get to choose one direction.
+[01:03:30] Well, yeah, often that's the case.
+[01:03:32] We've got to make those decisions.
+[01:03:33] But also, increasingly now, you can go in multiple cases.
+[01:03:36] You can set up an open platform and pursue many possibilities
+[01:03:42] or let the world pursue the possibilities that you can't.
+[01:03:46] You can make more future.
+[01:03:47] And in that situation, leadership
+[01:03:49] is not what we used to think it was.
+[01:03:53] It is far more generative.
+[01:03:54] It is more about enabling thriving, enabling growth
+[01:04:00] and nourishing.
+[01:04:01] And I'm going to say the sorts of things
+[01:04:03] that you actually do as head of the Media Lab,
+[01:04:05] where you enable more possibilities.
+[01:04:07] You also do a budget, which requires getting all the wood
+[01:04:10] behind a few arrows.
+[01:04:11] JOI ITO: I'm considering changing my title to custodian.
+[01:04:14] That's, I think, actually what I do.
+[01:04:15] DAVID WEINBERGER: You're a gardener.
+[01:04:17] JOI ITO: I am a gardener.
+[01:04:18] DAVID WEINBERGER: Nothing wrong with being a custodian, though.
+[01:04:20] JOI ITO: Right.
+[01:04:21] So I want to-- thank you.
+[01:04:23] I want to open it up now.
+[01:04:27] We have about only about 10 minutes left.
+[01:04:29] Does somebody have a microphone?
+[01:04:31] DAVID WEINBERGER: Does somebody have an easy question?
+[01:04:32] Way more important.
+[01:04:33] JOI ITO: So the person with the microphone picks [INAUDIBLE]..
+[01:04:36] AUDIENCE: And I have a microphone.
+[01:04:38] Is it on?
+[01:04:41] JOI ITO: Yeah, I think it's on.
+[01:04:44] AUDIENCE: My question is sort of a comment,
+[01:04:48] and I want a response to it.
+[01:04:50] And that is that all this data that we're looking at
+[01:04:54] is not reality.
+[01:04:57] It's a measurement of reality, and so it's always incomplete.
+[01:05:03] And so making decisions on incomplete data
+[01:05:06] is always probabilistic.
+[01:05:12] So I think a lot of what we're dealing with
+[01:05:15] is, as life gets more complex, it
+[01:05:18] becomes more probabilistic than deterministic.
+[01:05:22] So there is a determinism in it, but it's not absolute.
+[01:05:27] And one of the things I see with chaos and accepting chaos is
+[01:05:32] that some people accept it and a lot of people don't.
+[01:05:37] Maybe a comparable amount, maybe more, and maybe we
+[01:05:41] end up with people who run countries, who don't really
+[01:05:47] believe in chaos but believe in things that
+[01:05:49] aren't necessarily fact based.
+[01:05:51] DAVID WEINBERGER: That would never happen.
+[01:05:52] AUDIENCE: Right.
+[01:05:53] So I just wondered--
+[01:05:57] I'm just saying it's maybe more complicated than--
+[01:06:02] I'm just saying there's still a reality underneath it.
+[01:06:05] I'm a scientist.
+[01:06:06] I'm going to admit that at first.
+[01:06:08] I expect there--
+[01:06:09] I have this faith.
+[01:06:10] I've thought about this a lot, too,
+[01:06:11] because I'm a little bit spiritual about it.
+[01:06:13] But scientists have faith that there's an explanation
+[01:06:16] underneath everything.
+[01:06:18] And they don't necessarily need to have that explanation
+[01:06:21] all the time.
+[01:06:23] And I've thought about this in the context of religion
+[01:06:28] and what you talked about, about Indigenous peoples'
+[01:06:31] beliefs, which are based on their data that they have
+[01:06:36] and their sorting it together.
+[01:06:38] But they don't know what's behind it,
+[01:06:40] so it works over a certain timescale,
+[01:06:43] but not necessarily over a different time scale.
+[01:06:46] And I think there's-- so there's problems with this moving
+[01:06:49] forward.
+[01:06:50] And it's not straightforward.
+[01:06:53] We're not we're not really dealing with it correctly yet.
+[01:06:56] And it's not clear when we think we are, we're probably wrong.
+[01:07:04] DAVID WEINBERGER: So I'm going to hold off--
+[01:07:06] I'm going to hold back on talking about spirituality.
+[01:07:09] I'll let Joey do that if you want.
+[01:07:13] But I want to thoroughly endorse the rest
+[01:07:15] of what you were saying.
+[01:07:16] I don't disagree with this, but OK.
+[01:07:20] So I'm going to annoy computer scientists, I think,
+[01:07:22] but data is a construct.
+[01:07:25] We decide what we want to measure
+[01:07:28] because we think it matters.
+[01:07:29] And we determine how we're going to measure it
+[01:07:32] and what units and how accurate we need it to be.
+[01:07:35] From my point of view, and I think
+[01:07:36] I mean [? this ?] pretty much literally information--
+[01:07:40] information is what we read off the dials
+[01:07:42] that we've created to measure the stuff that we care about.
+[01:07:45] And then we go to a machine learning system
+[01:07:47] and we put in the data that we think is relevant.
+[01:07:50] So there's human touch all around machine learning.
+[01:07:53] It is not just looking out over the universe
+[01:07:57] and gathering data and making its pronouncements.
+[01:07:59] If it's diagnostic software, we're feeding in the stuff
+[01:08:03] that we think matters.
+[01:08:05] And so that's likely to be the normal sorts of stuff that
+[01:08:07] shows up in a hospital record, a medical record,
+[01:08:09] and that seems pretty reasonable.
+[01:08:10] And it very well may not be the local environmental conditions
+[01:08:14] in your community, which may turn out
+[01:08:16] to be absolutely really, really important.
+[01:08:20] These are systems-- and then we decide
+[01:08:22] what we want to optimize these systems for.
+[01:08:24] And that's a human decision.
+[01:08:26] How accurate do we insist they be?
+[01:08:28] When are we going to take their advice?
+[01:08:31] Who is going to decide what the things should be optimized for?
+[01:08:35] Who's going to decide this is a useful set of data
+[01:08:39] and this is a set of data that we think probably
+[01:08:41] doesn't obviously contain hideous biases, the hideous
+[01:08:44] biases that human society is heir to.
+[01:08:48] These systems are thoroughly drenched in the human.
+[01:08:52] And so the results that we get are
+[01:08:55] affected by that, negatively because we're
+[01:08:57] going to miss some stuff because we
+[01:08:59] didn't realize that some factors affecting, that sneaker shoe
+[01:09:04] size does affect health or whatever.
+[01:09:07] There's going to be factors we're going to miss.
+[01:09:10] You have to wonder about this for weather, for example.
+[01:09:14] And they're going to be factors that throw things off.
+[01:09:17] These are always more human than I have made them out to be.
+[01:09:22] So I'm really glad you made your comment.
+[01:09:25] These are probabilistic systems, absolutely.
+[01:09:28] And machine learning computer scientists,
+[01:09:32] that's all they deal in is probabilities.
+[01:09:34] That's what they want out of it.
+[01:09:36] Every answer is probabilistic.
+[01:09:38] 62% chance you're going to get type 2 diabetes
+[01:09:41] in the next five years.
+[01:09:42] I think that is a huge step forward for us, though.
+[01:09:45] If we are able to start thinking,
+[01:09:49] asserting with every proposition what
+[01:09:52] we think the probability is, maybe not numerically, of it,
+[01:09:56] then we maybe can talk together better, make more sense out
+[01:10:00] of things together because if you don't, you just
+[01:10:02] end up asserting at each other.
+[01:10:04] So I actually really like the probabilistic nature of it.
+[01:10:10] AUDIENCE: My profession is one that you just identified
+[01:10:12] as a perverter [? or ?] a philosopher's.
+[01:10:15] I'm an econometrician.
+[01:10:16] DAVID WEINBERGER: That was him.
+[01:10:19] AUDIENCE: And I worry about just the machine learning that
+[01:10:23] is so based in correlation.
+[01:10:26] Very simple example, there was an outbreak of flu
+[01:10:31] and a bad epidemic in Russia.
+[01:10:34] And the peasants did a correlation
+[01:10:36] and they found that the outbreak was the worst where
+[01:10:39] they were the most doctors because they had been
+[01:10:41] sent by the central authority.
+[01:10:43] They killed all the doctors as a way of curing the influenza.
+[01:10:49] So we teach our students that, yes,
+[01:10:53] if you merely want to forecast in the short run,
+[01:10:57] throw everything in, and you get your correlation.
+[01:11:01] But you do not know causality.
+[01:11:03] You do not know how to change what's going to happen.
+[01:11:07] So without theory, mere causality is useless.
+[01:11:12] And I remember one professors teaching me,
+[01:11:15] knowledge without confidence is futile,
+[01:11:18] but confidence without knowledge is fatal.
+[01:11:23] So I do worry.
+[01:11:25] You can cause chaos by depending on correlation.
+[01:11:30] DAVID WEINBERGER: So that's a really important point.
+[01:11:32] And I don't think there's any gain saying it,
+[01:11:35] so I don't mean to gainsay what I'm about to say, which is,
+[01:11:39] absolutely.
+[01:11:40] But machine learning is not generally
+[01:11:42] is not doing those simple correlations.
+[01:11:44] And so it's taking a huge amount of data,
+[01:11:47] not the five things that we think
+[01:11:48] might affect each other, like doctors and measles.
+[01:11:52] It's taking-- so there's a system called [? Deep ?]
+[01:11:56] Patient that Mount Sinai Hospital did in, I think, 2015,
+[01:12:00] some deep learning, machine learning thing where they took
+[01:12:03] 700,000 patient records, each of which
+[01:12:05] had 500 data points, about, and threw them into a mix.
+[01:12:09] It's deep learning, which means that it was just numbers.
+[01:12:12] And it found correlations among the numbers
+[01:12:14] without being told ahead of time, these are doctors,
+[01:12:16] these are patients, these are symptoms, these are illnesses,
+[01:12:20] these are medicines, just numbers.
+[01:12:22] It's just numbers.
+[01:12:23] And it found correlations among these millions of data points
+[01:12:28] that enable it to make better, more accurate predictions
+[01:12:31] for some diseases than humans do and be able to predict with
+[01:12:35] some degree, always with some degree of accuracy,
+[01:12:38] the onset of diseases that humans simply cannot yet
+[01:12:40] predict.
+[01:12:41] And we don't know why.
+[01:12:43] In some of these instances, we don't know why it thinks,
+[01:12:47] but it turns out statistically it's probabilistically correct.
+[01:12:52] That's not a case where there's a simple correlation
+[01:12:54] between doctors and measles and go
+[01:12:56] do the stupid horrible thing.
+[01:12:58] This is a case in which there is so much data,
+[01:13:00] so many data points that can't be fathomed,
+[01:13:03] but the result is a more likely outcome.
+[01:13:06] JOI ITO: But I think those edges of explainability
+[01:13:08] is where science will now go to try
+[01:13:11] to create those understandings.
+[01:13:13] So I think as an exploratory tool,
+[01:13:15] it's actually quite exciting, and I wouldn't want to give up
+[01:13:19] looking for the causes.
+[01:13:21] DAVID WEINBERGER: I do not want to give up--
+[01:13:23] so any progress we can make inexplicability is good.
+[01:13:27] JOI ITO: Yeah.
+[01:13:28] I don't think you were saying that,
+[01:13:30] but I was just reinforcing that edge is very interesting.
+[01:13:34] And then please pass the mic to somebody raising their hand,
+[01:13:37] if you have-- oh, you have the mic.
+[01:13:39] DAVID WEINBERGER: Please keep the mic
+[01:13:40] and ask your question [INAUDIBLE]..
+[01:13:42] AUDIENCE: Thank you so much.
+[01:13:43] You had mentioned about complexity.
+[01:13:46] And I think you were suggesting that by having open systems
+[01:13:50] you can sort of deal with complexity
+[01:13:52] because [INAUDIBLE] prescribing something in advance.
+[01:13:55] And I wanted to sort of talk about--
+[01:14:02] is it possible to explain something which has no cause?
+[01:14:05] So machine learning is using correlation.
+[01:14:07] Are we trying to solve the wrong problem,
+[01:14:09] trying to explain something which
+[01:14:11] is directly using correlation?
+[01:14:13] And also, to what extent should we seek causality?
+[01:14:18] And so you gave the example of the [? nail, ?]
+[01:14:22] and you say it could be the gravity,
+[01:14:23] it could have been avoiding the rabbit.
+[01:14:27] In a machine learning system, you
+[01:14:29] would have to sort of collect all that information.
+[01:14:31] And I'm wondering, does trying to find
+[01:14:33] a cause require machine learning to collect so much data?
+[01:14:37] And what would the implications be
+[01:14:40] of over collecting information in order to find a cause,
+[01:14:43] if a cause can be found?
+[01:14:47] DAVID WEINBERGER: That is another--
+[01:14:48] I was asking for softball questions,
+[01:14:50] and you have let me down.
+[01:15:02] So I think that we-- so if explanations are a tool--
+[01:15:07] and by the way, I sort of said this too quickly in the talk,
+[01:15:10] but they're not always tools.
+[01:15:11] But a very common sort of explanation is a tool.
+[01:15:14] And if the explanation is, somebody
+[01:15:17] says, why do you do this thing, and you say, well,
+[01:15:21] because every time I do it, every time I do this,
+[01:15:25] another thing happens and it works, and that's right,
+[01:15:28] then you've given an explanation.
+[01:15:31] That's the tool the person needed.
+[01:15:32] Why were you doing it?
+[01:15:33] Because in my experience, I don't have a theory,
+[01:15:35] perhaps, maybe I'm a child.
+[01:15:41] JOI ITO: Just make sure that we clarify the causality piece
+[01:15:46] with the sine qua non, the counterfactual,
+[01:15:48] they're slightly different.
+[01:15:50] I think the counterfactual is an explanation.
+[01:15:52] So in the example of the diabetes case,
+[01:15:55] so Sandra [? Wagner ?] has a great paper
+[01:15:56] about counterfactuals.
+[01:15:58] But what would be to your point with the nail, what
+[01:16:01] you want to know is, what was the smallest
+[01:16:03] thing you could change to help change the outcome.
+[01:16:06] So if you are diagnosed with 62% chance of diabetes,
+[01:16:09] what you want to know is what small thing
+[01:16:12] can I change to lower that?
+[01:16:14] So if it said, if you weighed 10% less,
+[01:16:19] your likelihood of diabetes would
+[01:16:21] go below 50%, that's what you want to know.
+[01:16:23] And so I think counterfactual explanations are helpful.
+[01:16:26] They don't explain the underlying theory or even maybe
+[01:16:29] the cause, but they may be able to explain
+[01:16:32] something you can do about it.
+[01:16:33] So I think that's slightly different from cause.
+[01:16:37] And I think we called the shortest distance.
+[01:16:39] So if you've got all these variables, what you're
+[01:16:41] looking for is for this person, what
+[01:16:43] is the shortest distance change they
+[01:16:45] can do to help change the outcome?
+[01:16:46] And I think that's a category of explainability
+[01:16:48] that some computer scientists are pushing, especially in law
+[01:16:52] and automated decision making.
+[01:16:53] I think that's--
+[01:16:54] DAVID WEINBERGER: Yes.
+[01:16:55] And so I'll make a silly example because drop 10 pounds,
+[01:16:59] we already have a theory about if that's really the relation
+[01:17:02] of weight to diabetes.
+[01:17:04] So let's say it's actually eat three cornflakes a day.
+[01:17:10] We don't know why, but people who
+[01:17:12] eat a half bowl of cornflakes, we don't know why.
+[01:17:16] And it's got to be Post, not Kellogg's.
+[01:17:19] JOI ITO: If you're only born Japanese.
+[01:17:21] That's not helpful because you can't change it.
+[01:17:24] DAVID WEINBERGER: So it may be that eating
+[01:17:26] three raisins a day, three cornflakes a day works.
+[01:17:33] It's not exactly-- and that's fine.
+[01:17:35] Do that.
+[01:17:35] That's a really good thing to know.
+[01:17:37] But it's not exactly what normally we
+[01:17:39] would mean by an explanation.
+[01:17:41] [INTERPOSING VOICES]
+[01:17:43] DAVID WEINBERGER: Yeah, I understand.
+[01:17:46] And that's fine.
+[01:17:46] Then don't eat the cornflakes, but we still
+[01:17:49] don't know exactly why.
+[01:17:50] And it may be that the reason we don't--
+[01:17:52] I'm sorry.
+[01:17:52] I'll give you a harder example in a minute.
+[01:17:54] The reason we don't know why is that the cause of this thing,
+[01:17:57] in this case diabetes, is so enormously complex,
+[01:18:01] it's like asking what the cause of a war is.
+[01:18:04] And so, typically, you get some type of sine qua non,
+[01:18:06] like the Archduke was assassinated.
+[01:18:09] But so many other things had to be in place.
+[01:18:13] Without them, you just have a dead Archduke.
+[01:18:14] You don't have World War I.
+[01:18:17] That it's not exactly--
+[01:18:18] in that case, we think of it as an explanation.
+[01:18:20] We're told in our schools that is--
+[01:18:23] no, really, really not.
+[01:18:26] We need the economists to help us and everybody.
+[01:18:30] We need the geologists to help us.
+[01:18:32] Some things are so deeply caused that even though you
+[01:18:36] can find a sine qua non, a shortest distance thing to do,
+[01:18:39] eat the cornflakes, it's not really an explanation.
+[01:18:41] And so to make this really hard is one of the, as you know
+[01:18:45] and I think many people here may know,
+[01:18:47] there's a couple of important papers
+[01:18:49] that say, the counterfactual case, if you
+[01:18:51] want to know if the system discriminates against women
+[01:18:54] and you didn't get the job because the machine learning
+[01:18:57] know discarded you, or you didn't
+[01:18:59] get the loan or whatever, then rerun the application
+[01:19:01] and change just one thing.
+[01:19:03] Change your gender.
+[01:19:04] And if it comes out differently, then the system is biased.
+[01:19:07] That seems like a pretty good test.
+[01:19:12] It's not exactly.
+[01:19:14] It's not exactly an explanation.
+[01:19:17] If you really wanted to know why it did that, the fact
+[01:19:19] that that one thing change is the thing we need to know.
+[01:19:22] It's the nail in the tire.
+[01:19:24] But it's not an explanation of why did that happen.
+[01:19:30] And it may be a far more complex than the simple cause.
+[01:19:33] You fixed it, but explanations often are about fixing
+[01:19:38] a problem. .
+[01:19:38] That's what they're there for and if you
+[01:19:40] can do that with three cornflakes, if you can do it
+[01:19:43] with a correlation that you don't understand
+[01:19:45] but seems to work, in much of life, we've done that.
+[01:19:52] AUDIENCE: Does machine learning have
+[01:19:54] to be decentralized by law, lest it sort of--
+[01:20:00] is the alternative too horrible to think of?
+[01:20:04] DAVID WEINBERGER: So centralized machine learning
+[01:20:06] would be one entity in the world that
+[01:20:09] has all the machine learning?
+[01:20:10] Or Google has too much, Facebook has too much,
+[01:20:13] Amazon has too much?
+[01:20:13] OK.
+[01:20:18] So I work part time for Google, disclosure.
+[01:20:22] I'm a writer in residence for a while in the machine learning
+[01:20:25] research group.
+[01:20:27] And I do not speak for Google, next disclaimer.
+[01:20:32] So there's a case made outside of politics,
+[01:20:38] which is what you're--
+[01:20:39] political effects and social effects,
+[01:20:41] which is what you're asking about-- that
+[01:20:42] says if you can get machine learning systems to share
+[01:20:46] their results and even perhaps share their models,
+[01:20:54] you can knit together systems that could give you
+[01:20:56] a better prediction.
+[01:20:57] So we have weather systems that have
+[01:20:59] what we think are weather data, but they may not,
+[01:21:00] I don't know, they may not be connected
+[01:21:02] to industrial information or et cetera, et cetera.
+[01:21:06] And maybe if you did, you would get better predictions.
+[01:21:08] I don't know enough to be able to tell you
+[01:21:11] what the dangers are of doing that type of--
+[01:21:14] it's distributed but it's federated systems.
+[01:21:19] I am not entitled to have an opinion.
+[01:21:24] I think I would worry more about how
+[01:21:27] any of these centralized [? own ?] systems are used.
+[01:21:31] Who's making the decisions at--
+[01:21:33] I'll take Google.
+[01:21:34] Why not?
+[01:21:35] Who's making decisions about what machine learning
+[01:21:38] systems should be optimized for in the YouTube recommendation
+[01:21:43] engine, which could be optimized simply to get more people
+[01:21:48] to click and watch more things longer, in which case
+[01:21:50] it's very likely to recommend horrible, soul-destroying stuff
+[01:21:55] that is addictive eye candy, just as with Facebook,
+[01:21:59] it's not if it's optimized for maximum clicks,
+[01:22:01] as it seems to be because they get their ad money,
+[01:22:03] then that seems to have some pretty bad social effects.
+[01:22:07] For autonomous cars, do we want them optimized to for comfort,
+[01:22:11] to save energy, for faster speed, shorter travel times?
+[01:22:16] There are conflicts between these different goals.
+[01:22:18] Who gets to decide.
+[01:22:19] And I'm not going to say anything novel when
+[01:22:22] I say I agree with those who say that decisions need
+[01:22:25] to be informed by the people who are affected by them, all
+[01:22:29] of the stakeholders, which is a very large group of people,
+[01:22:31] that those decisions have such large social effects that they
+[01:22:35] should not be made at least entirely
+[01:22:38] by commercial entities.
+[01:22:39] I mean, that seems really clear to me.
+[01:22:44] I do not want the autonomous vehicle makers deciding
+[01:22:47] what their cars are optimized for because, for example, they
+[01:22:50] will be very inclined to optimize them
+[01:22:52] to save the lives of the passengers in their car
+[01:22:56] at any expense.
+[01:22:57] And then you get a system that does not
+[01:22:59] minimize the number of fatalities,
+[01:23:00] it just minimizes the number the fatalities
+[01:23:02] of people who can afford BMWs.
+[01:23:04] So I think there's lots of room for regulation and for making
+[01:23:09] sure that the decisions are made with the input of the people
+[01:23:14] who are affected and made with societal interests in mind.
+[01:23:20] I don't have great ideas about how you do that,
+[01:23:22] but I'm really glad that there are
+[01:23:24] lots of people working on this.
+[01:23:26] How much trouble and I am for this, for saying that?
+[01:23:28] JOI ITO: Well, I'll take that part
+[01:23:30] and send it to Larry and to Elon.
+[01:23:33] But I think we're out of time.
+[01:23:35] But thank you for being a good sport and the great answers
+[01:23:38] [INAUDIBLE].
+[01:23:39] DAVID WEINBERGER: Thank you [INAUDIBLE]..
+[01:23:40] Thank you for the wonderful questions [INAUDIBLE]..

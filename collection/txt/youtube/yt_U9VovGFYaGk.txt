@@ -1,0 +1,256 @@
+[00:00:08] B CAVELLO: All right.
+[00:00:09] Thank you all so much.
+[00:00:10] So you've been hearing a lot about the Navy SEAL,
+[00:00:12] and I just want to say that that is not me.
+[00:00:16] So our team is interesting.
+[00:00:19] Well Peaks unfortunately, couldn't be with us here
+[00:00:21] tonight.
+[00:00:22] But we're a small team, although the image here
+[00:00:25] might mislead you.
+[00:00:27] We are small in part because we're
+[00:00:28] working on a pretty controversial topic
+[00:00:30] and that is the topic of algorithmic warfare.
+[00:00:33] That's what brought us together.
+[00:00:35] And in particular, when people hear that term,
+[00:00:37] they think of a lot of different things.
+[00:00:39] They may think of this guy, the Terminator Skynet.
+[00:00:43] Thinking about robots and here in, Cambridge, Boston Dynamics.
+[00:00:48] But we actually wanted to challenge
+[00:00:50] that paradigm a little bit.
+[00:00:51] When we began this project, we were
+[00:00:53] looking into what is the role of AI in warfare,
+[00:00:57] what is algorithmic warfare.
+[00:00:59] And we came to the conclusion that there's
+[00:01:02] kind of this interesting misunderstanding.
+[00:01:04] So there's a really big effort underway
+[00:01:08] to address the dangers of these kinds of robotics
+[00:01:12] and it's real, right?
+[00:01:14] That's a valid effort.
+[00:01:15] But there's also this very real threat that a lot of people
+[00:01:19] overlook, which is that at the end of the day,
+[00:01:22] it doesn't actually necessarily rely
+[00:01:25] on a robot being the delivery mechanism of violence
+[00:01:28] if you're still being targeted.
+[00:01:30] And so that's really what inspired this project.
+[00:01:33] We wanted to look at how surveillance,
+[00:01:35] how these algorithmic decision-making systems
+[00:01:38] and surveillance systems feed into this targeting decision
+[00:01:42] making.
+[00:01:42] And in particular, what we're going to talk about today
+[00:01:45] is the role of the AI research community.
+[00:01:48] How that research ends up in the real world being used
+[00:01:51] with real world consequences.
+[00:01:52] And then talk a little bit about what
+[00:01:54] we found in our investigation of the space.
+[00:01:56] And what we invite you all to join us
+[00:01:58] and doing as we move forward.
+[00:02:00] So to take a step back, there's a pretty diverse crowd here.
+[00:02:03] So I just want to contextualize a little bit
+[00:02:06] about what we're talking about when
+[00:02:07] we're talking about this kind of algorithmic surveillance.
+[00:02:10] Here you're seeing depicted a video surveillance
+[00:02:14] system that has image recognition technology.
+[00:02:17] So it's identifying.
+[00:02:18] It's putting boxes around various people and vehicles
+[00:02:21] and so on.
+[00:02:22] So we're looking at a couple of different types of systems
+[00:02:25] here, computer vision system.
+[00:02:26] Systems that can listen to voice or audio as well as systems
+[00:02:31] that may look at social networks or things
+[00:02:33] that we post on social media to come to conclusions about
+[00:02:36] whether or not we fall into a certain group.
+[00:02:39] Now in this project, in particular,
+[00:02:41] we're talking about an incredibly
+[00:02:43] rich and interrelated system.
+[00:02:44] And I'll talk a little bit about this data visualization
+[00:02:47] in a second.
+[00:02:48] But I want to first just contextualize
+[00:02:50] that when we're talking about this research community,
+[00:02:52] we're talking about a lot of different players
+[00:02:55] in a global ecosystem.
+[00:02:57] And as researchers we want to share.
+[00:02:59] We want to collaborate, and that's a beautiful thing.
+[00:03:02] But what can be challenging about this space
+[00:03:04] is that these threads of connection
+[00:03:06] can lead to places that we didn't originally intend,
+[00:03:09] and we may as researchers not have even been aware.
+[00:03:12] And so our work in particular is exploring
+[00:03:14] how some of those outcomes, how some of the end
+[00:03:17] uses of research that may be done with the thought of being
+[00:03:21] theoretical or benign can actually
+[00:03:24] have real harm in our world.
+[00:03:25] So that, I'm going to turn it over to Carl.
+[00:03:29] CARL GOVERNALE: I'm Carl.
+[00:03:30] I'm the one they've been talking about,
+[00:03:34] and I'm going to teach you how to hunt people.
+[00:03:38] So many practitioners in this space
+[00:03:41] will often say that the technology it just
+[00:03:43] isn't mature enough to be a true threat.
+[00:03:45] You couldn't use facial recognition alone
+[00:03:48] to build this target deck.
+[00:03:50] And I promise you that grossly undermines the threat.
+[00:03:54] How you hunt people is actually with a series of overlays.
+[00:03:57] You don't use one individual technology.s
+[00:04:00] you use them to hone in and find the corollaries to build
+[00:04:04] a smaller list until you have your approved target deck.
+[00:04:08] So if I wanted to identify all of the protesters in Hong Kong
+[00:04:13] yesterday, I wouldn't just use facial recognition
+[00:04:16] of CCTV camera footage.
+[00:04:18] I would take that and put that on an overlay
+[00:04:21] of metro cards used in the subway system in Hong Kong.
+[00:04:25] And that might give me a more accurate deck
+[00:04:26] to begin our interrogations.
+[00:04:29] So jumping off of that short example, quick deep dive.
+[00:04:35] So not exhaustive but if you're not familiar with the Uyghur
+[00:04:38] crisis in Shenzhen, China, I'll give you
+[00:04:42] just a couple of sound bites.
+[00:04:44] So since 2014, the Chinese People's war on terror
+[00:04:49] has been a systemic or systematic effort
+[00:04:52] to oppress the Uyghur population, which
+[00:04:54] is an ethnic minority in China that practices Islam,
+[00:04:57] roughly 10 million individuals.
+[00:04:59] So 1.5% of the Chinese population.
+[00:05:03] But also does account for 20% of all arrests in China.
+[00:05:07] Consequently there are over 1 million Uyghurs
+[00:05:10] currently assessed to be interned in Xinjiang province
+[00:05:15] in reeducation camps.
+[00:05:17] These are the camps of Holocaust law
+[00:05:20] where there's killing, torture.
+[00:05:25] Primarily this method of assimilation via submission.
+[00:05:30] It's a heavy workload.
+[00:05:31] Genocide is tough.
+[00:05:32] So the People's Liberation Army has leveraged the tech
+[00:05:37] industry.
+[00:05:37] So this region, this small province and cross-section
+[00:05:40] of society accounts for about $7.5 billion
+[00:05:44] of the security industrial complex in China.
+[00:05:49] And they leverage both facial recognition, voice recognition
+[00:05:52] and other forms of AI to apply lists of people who are either
+[00:05:58] demonstrating Islamic practice or they
+[00:06:01] demonstrate phenotypic features of this ethnic minority.
+[00:06:07] Now, where you stand depends on where you sit
+[00:06:10] and in the interest of position positionally,
+[00:06:12] we're going to bring this home to an MIT.
+[00:06:17] Bunch of institutions in America here
+[00:06:19] serve as key nodes in the surveillance supply chain.
+[00:06:23] But here at MIT, through our research,
+[00:06:27] we found that there's about 15 projects ongoing in some way,
+[00:06:31] shape, or fashion for surveillance
+[00:06:34] type of technology.
+[00:06:38] So this, the nature of this ecosystem
+[00:06:41] lends itself to this really complex interdependence.
+[00:06:45] So the research ongoing here at MIT
+[00:06:49] is done in affiliation with or with funding
+[00:06:51] from both private and public institutions.
+[00:06:54] So a private institution would be NEC is a Japanese based
+[00:06:58] security firm that's--
+[00:07:00] basically their product is predictive policing.
+[00:07:03] We use it here in the States.
+[00:07:04] It's used in the UK.
+[00:07:06] Other companies that have contributed funds
+[00:07:08] to this type of research at MIT include Sense Time and iFlyTek.
+[00:07:13] Those two companies are both implicated
+[00:07:15] in the provision of services in Xinjiang province.
+[00:07:20] Also, one fantastic supplier, if you can use that term,
+[00:07:25] funding for this type of research is the US government.
+[00:07:28] So these same researchers that are linked to these companies
+[00:07:32] are also receiving funding from DARPA, Office
+[00:07:36] of Naval Research, Marine Corps Warfighting
+[00:07:37] Lab and Army Research Lab.
+[00:07:41] Occasionally they actually appear
+[00:07:43] on these same publications in the acknowledgments section.
+[00:07:50] B CAVELLO: So we wanted to present this
+[00:07:52] and for some folks in the room it's probably new information,
+[00:07:56] but we are not the first people to talk about this issue.
+[00:08:00] The issue of surveillance tech is really important
+[00:08:03] and it's been an emerging and burgeoning
+[00:08:06] conversation here in the United States
+[00:08:07] as well as around the world.
+[00:08:09] There are actually folks in the room here
+[00:08:10] who are experts in the topic.
+[00:08:12] But really there's this common theme here,
+[00:08:15] which is that researchers and product teams have
+[00:08:18] an important role to play in actually helping
+[00:08:22] to think about how this technology is used
+[00:08:25] or prevent it from being used irresponsibly.
+[00:08:28] And in particular, I wanted to talk a little bit about what
+[00:08:30] we've covered so far.
+[00:08:32] So we've looked at in reality thousands of different projects
+[00:08:36] and contracts from the US government or journal
+[00:08:38] publishings.
+[00:08:39] We honed that into a couple list of surveillance tech specific.
+[00:08:45] And then we ultimately came down to about 65 research
+[00:08:48] institutions here in the United States
+[00:08:50] with 49 funders as Carl said, ranging
+[00:08:53] from Chinese surveillance tech companies
+[00:08:56] to US surveillance tech companies
+[00:08:58] to our own US government.
+[00:09:00] And they covered a broad breadth of different types
+[00:09:05] of surveillance research, including facial recognition,
+[00:09:10] social network analysis and personal identification,
+[00:09:14] which for me was a new phrase, which is a little bit like what
+[00:09:17] Carl was talking about at the beginning of the presentation
+[00:09:19] here.
+[00:09:20] So what we've been doing is putting together
+[00:09:22] all of this information and really
+[00:09:24] trying to literally visualize it.
+[00:09:26] So I know this kind of looks like scribbles on the screen
+[00:09:28] here, but this is a data visualization
+[00:09:30] we've been putting together, representing
+[00:09:31] all of those different connected nodes.
+[00:09:34] And ultimately what we would like to do
+[00:09:35] is to be able to move forward on a project that
+[00:09:38] has a better understanding of the reality of what's
+[00:09:40] on the ground.
+[00:09:41] We want to know is this data reliable?
+[00:09:43] Can we get access to more information?
+[00:09:46] For instance, today we were only using public sources.
+[00:09:49] And we also want to really involve
+[00:09:50] the voices of the people who are developing these tools.
+[00:09:53] One of the common themes in the work that we
+[00:09:55] were doing to research this project
+[00:09:57] is that we found that a lot of the people involved actually
+[00:10:00] didn't know how their work was being used in the world.
+[00:10:04] And that is both concerning, but also
+[00:10:06] a really exciting opportunity for us
+[00:10:08] to educate and do better.
+[00:10:10] But ultimately, there are also a couple of things
+[00:10:12] that even if you're not a machine learning researcher,
+[00:10:15] even if you're not in this surveillance tech space,
+[00:10:18] there are a couple of key points that we would really
+[00:10:20] like you to push on as you're having conversations
+[00:10:23] with your representatives about what we
+[00:10:25] can do about surveillance tech, at least here
+[00:10:27] in the United States.
+[00:10:31] CARL GOVERNALE: So this is where we go from fact to opinion.
+[00:10:33] So the opinions here are not representative of the US
+[00:10:36] government, but they are ours.
+[00:10:39] So call to action.
+[00:10:41] Two points that through our research
+[00:10:43] we feel like we can apply some leverage to this problem
+[00:10:47] and ideally make a difference rather than admire
+[00:10:50] this problem.
+[00:10:52] First is Department of Commerce.
+[00:10:56] That's the office that holds the export administration
+[00:10:59] regulations.
+[00:11:00] So these are essentially regulations
+[00:11:02] that govern the export of commodities
+[00:11:04] to include dual use technologies and software.
+[00:11:07] So in adding facial recognition and surveillance technologies
+[00:11:10] to that list, it would be a forcing function for anybody
+[00:11:14] that's in this complex ecosystem to have
+[00:11:17] to apply some level of risk mitigation and threat
+[00:11:20] modeling to their decision calculus.
+[00:11:22] And then finally, we should probably
+[00:11:26] call for a moratorium on US government funding
+[00:11:28] for the research of these technologies.
+[00:11:31] Not saying that the requirements are not
+[00:11:32] going to be fulfilled by the US government.
+[00:11:34] But the acquisition of this technology
+[00:11:37] should probably happen in a highly regulated
+[00:11:39] commercial market, as opposed to being directly funded.
+[00:11:42] Because the complexity and the low density of these skill
+[00:11:46] sets just don't lend themselves to ethically
+[00:11:50] sound and transparent funding profiles.
+[00:11:53] So let's take that basic research funding
+[00:11:55] and put it somewhere else Thank you.

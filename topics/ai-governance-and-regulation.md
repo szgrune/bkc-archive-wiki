@@ -1,12 +1,16 @@
 ---
 type: topic
 title: AI Governance & Regulation
-item_count: 12
+item_count: 24
 related: [ai-and-democracy, platform-power-and-antitrust, ai-safety-and-agents, ai-labor-and-economy]
 ---
 # AI Governance & Regulation
 
-The archive's single largest 2025 thread. The dominant US story is a fight over
+The archive's single largest 2025 thread, though a 2021–2023 YouTube layer now
+supplies an earlier accountability-and-rights prehistory: BKC panels on regulating AI
+systems "across a spectrum" (ex-ante vs. ex-post monitoring, technical oversight
+beyond legislation) and Haochen Sun's argument for a **human right to technology**,
+predating the 2025 state-vs-federal fight by several years. The dominant US story is a fight over
 **who gets to regulate AI** — a proposed federal moratorium on state-level rules
 versus California's **SB 53** transparency law — set against a Trump administration
 pushing deregulation and a leaked AI executive order framed by critics as a "Big Tech
@@ -29,6 +33,19 @@ reallocates corporate power.
 - [[16920145-digital-omnibus-is-a-major-rollback-of-eu-digital-protection|Digital Omnibus is a major rollback of EU digital protections]] — 2025-11-19 · edri.org
 - [[15710664-scaling-laws-contrasting-and-conflicting-efforts-to-regulate|Scaling Laws: Conflicting Efforts to Regulate Big Tech — EU v. U.S.]] — 2025-09-05 · lawfaremedia.org
 - [[13198745-deregulating-ai-labor-deportation-by-any-other-name-berkman|Deregulating AI Labor: Deportation by Any Other Name]] — 2025-02-10 · cyber.harvard.edu — BKC event
+- [[yt_biIvlZb2_3M-protecting-and-promoting-ai-innovation-part-1|Protecting and Promoting AI Innovation | Part 1]] — 2021-10-26 · youtube
+- [[yt_IfhQG_1k_24-accounting-for-ai-a-comparison-of-methods|Accounting for AI — a Comparison of Methods]] — 2021-11-09 · youtube — Finale Doshi-Velez & Mason Kortz on ex-ante vs. ex-post AI accountability
+- [[yt_BTioXGx2CsM-technology-and-the-public-interest|Technology and the Public Interest]] — 2023-05-10 · youtube — Haochen Sun's case for a human right to technology
+- [[yt_4ysa4SxtUCA-the-challenge-of-next-generation-ai|The Challenge of Next Generation AI]] — 2023-05-18 · youtube
+- [[yt_XMFHHCegDQw-ai-ethics-and-governance-an-industry-perspective-rsm-speaker|AI Ethics and Governance: An Industry Perspective]] — 2023-11-08 · youtube — [[institute-for-rebooting-social-media|RSM Speaker Series]]
+- [[yt_vMvvNjBtaJI-the-labs-inaugural-sprints-generative-ai-political-polarizat|The Lab's Inaugural Sprints: Generative AI, Political Polarization, and More]] — 2023-10-30 · youtube — [[2023-future-of-the-internet-summit|Future of the Internet Summit]]
+- [[yt_5dIasUpm_AY-how-is-generative-ai-changing-the-landscape-of-ai-harms|How is Generative AI changing the landscape of AI harms?]] — 2023 · youtube — [[2023-rsm-genai-oversight-fireside-series|RSM fireside series]] pt.1
+- [[yt__Oc8jA9vRDQ-balancing-transparency-and-security-in-open-research-on-gene|Balancing Transparency and Security in Open Research on Generative AI]] — 2023 · youtube — fireside pt.2
+- [[yt_yrTtYruGmTk-enabling-accountable-technical-oversight-of-generative-ai|Enabling Accountable Technical Oversight of Generative AI]] — 2023 · youtube — fireside pt.3, Julia Angwin & Brandon Silverman
+- [[pub_node-100108-a-layered-model-for-ai-governance|A Layered Model for AI Governance]] — 2017-11-20 · pub — Urs Gasser & Virgilio Almeida — an early framework, predating the 2025 US/EU fight by 8 years
+- [[pub_2017-11-aiexplanation-accountability-of-ai-under-the-law-the-role-of-explanation|Accountability of AI Under the Law: The Role of Explanation]] — 2017-11-27 · pub — Finale Doshi-Velez
+- [[pub_2017-11-openletter-an-open-letter-to-the-members-of-the-massachusetts-legislatu|An Open Letter to the Members of the Massachusetts Legislature Regarding the Adoption of Actuarial Risk Assessment Tools]] — 2017-11-09 · pub — [[jonathan-zittrain]] et al.
+- [[pub_2023-vectors-ai-governance-vectors-of-ai-governance|Vectors of AI Governance]] — 2023-06-22 · pub — Urs Gasser
 
 ## Related
-[[ai-and-democracy]] · [[platform-power-and-antitrust]] · [[ai-safety-and-agents]] · [[ai-labor-and-economy]] · [[berkman-klein-center]] · [[techpolicy-press]]
+[[ai-and-democracy]] · [[platform-power-and-antitrust]] · [[ai-safety-and-agents]] · [[ai-labor-and-economy]] · [[berkman-klein-center]] · [[techpolicy-press]] · [[2023-rsm-genai-oversight-fireside-series]]

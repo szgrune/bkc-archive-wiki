@@ -1,0 +1,73 @@
+name: Fetch BKC publications
+
+# Daily sync of BKC's own publications index
+# (https://cyber.harvard.edu/publications) into raw/archive.json — NOT SSRN
+# directly. See scripts/fetch_publications.py's docstring for why: no single
+# SSRN eJournal aggregates BKC's output, and SSRN itself sends explicit
+# anti-automation signals (robots.txt blocks AI crawlers by name, Cloudflare
+# bot-challenge, a TDM-reservation header). BKC's own publications page
+# already links out to SSRN/DASH per entry, so "links to SSRN" happens via
+# BKC's own citation, without ever scraping SSRN's site.
+#
+# Runs after fetch-tagteam-items.yml (47 6) and before synthesize-wiki.yml
+# (15 7, currently paused) so today's new publications are available for
+# that day's synthesis run once it's turned back on.
+#
+# No credentials needed — this is a public page with no API key required.
+# Commits straight to main, matching the other deterministic fetch pipelines
+# (structured extraction, not authored judgment-call content).
+#
+# First real run will be slow (~15-20 min): 0 pub_ items exist yet, so it
+# walks the full ~16-page backlog rather than stopping early. Normal daily
+# runs after that are fast (usually 0-1 pages).
+
+on:
+  schedule:
+    - cron: "05 7 * * *"
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Cap on number of new publications to process (blank = no cap)"
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-publications
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Fetch publications
+        run: |
+          ARGS=""
+          if [ -n "${{ github.event.inputs.limit }}" ]; then
+            ARGS="--limit ${{ github.event.inputs.limit }}"
+          fi
+          python scripts/fetch_publications.py $ARGS
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain -- raw/archive.json)" ]; then
+            git add raw/archive.json
+            git commit -m "Automated BKC publications fetch"
+            git push
+          else
+            echo "No new publications this run — nothing to commit."
+          fi

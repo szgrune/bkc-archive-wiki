@@ -1,0 +1,1418 @@
+[00:00:03] great so welcome everybody and a special
+[00:00:05] welcome to Rebecca Rebecca is one of our
+[00:00:07] new burkman fellows this year part of
+[00:00:09] the uh new class for 2014 2015 in
+[00:00:12] addition to that uh she's also an
+[00:00:14] assistant professor at the Harvard
+[00:00:15] Medical School and the faculty director
+[00:00:17] of the global Health delivery project of
+[00:00:19] which we have a couple staff members
+[00:00:20] here in addition to uh many other
+[00:00:22] accomplishments and uh titles but uh
+[00:00:26] we're so pleased to welcome Rebecca and
+[00:00:27] take you thank you excellent thank you
+[00:00:30] um I actually asked to be one of the
+[00:00:32] first contenders here and caveat Gretch
+[00:00:35] and I went to college together uh w w
+[00:00:38] way back and gr said why did you decide
+[00:00:39] to go first and actually the reason why
+[00:00:41] I wanted to go first is because I
+[00:00:42] actually desperately need your help so
+[00:00:44] I'm an outlier in the system and I'm
+[00:00:46] learning all this new vocabulary I
+[00:00:48] didn't know what link rot meant I didn't
+[00:00:49] know what an Sni was server name
+[00:00:51] indication and I'm like cataloging all
+[00:00:54] the new vocabulary that I'm getting from
+[00:00:56] being part of the Berkman Community I'm
+[00:00:57] hoping I'll have a new a few new
+[00:00:59] vocabulary words for some of you uh who
+[00:01:01] may not be healthcare related um and so
+[00:01:03] what I'm hoping to do is spend about 12
+[00:01:05] minutes on our Central prod uh problem
+[00:01:08] and three different products that we've
+[00:01:09] developed at the global Health delivery
+[00:01:10] project and then actually my main
+[00:01:12] question for you all today is how do we
+[00:01:14] design digital badges for healthcare
+[00:01:16] implementers and understanding that
+[00:01:18] ecosystem which I think many of you are
+[00:01:19] within are in proximity to how best we
+[00:01:22] incentivize our Healthcare Professionals
+[00:01:24] for continuous
+[00:01:26] learning so this is whom we're going to
+[00:01:28] be serving today so this is my my friend
+[00:01:30] Lorenzo dor he's um a 50-year-old
+[00:01:33] physician assistant in Liberia he has
+[00:01:35] four children and a grandchild and he
+[00:01:38] just left the capital movia Liberia the
+[00:01:40] western African country to move to a
+[00:01:42] rural area where they've identified one
+[00:01:45] case of Ebola he's now the only healthc
+[00:01:48] care provider for 300,000 people he was
+[00:01:51] actually also our student in
+[00:01:53] 2012 and we gave him an introduction to
+[00:01:56] management strategy supply chain and he
+[00:02:00] is now in a sense responsible for
+[00:02:01] containing this virus I think many of
+[00:02:04] you may know this is what ebola looks
+[00:02:06] like or seen it yourself you need a PCR
+[00:02:09] to actually identify and there's two PCR
+[00:02:11] machines in the entire country of
+[00:02:14] Liberia um the New England Journal has
+[00:02:16] been doing an extensive series that's
+[00:02:18] all posted online Ebola and estu of fear
+[00:02:22] and I just highlighted here quarantine
+[00:02:24] so this is the new technology we're
+[00:02:25] using to contain this virus quarantine
+[00:02:28] the words from Italian anyone knows what
+[00:02:30] it's what when it was
+[00:02:33] developed no so if it's for the plague
+[00:02:37] in the 17th century that when people
+[00:02:39] came off a ship they needed to wait for
+[00:02:41] 40 days before they could actually be
+[00:02:43] released on land and we're using
+[00:02:44] basically the same technology that we're
+[00:02:46] using from the
+[00:02:48] plague so my first question for us all
+[00:02:51] to think about is how can we contain a
+[00:02:55] virus you can see some the answers below
+[00:02:58] so I'm an easy teacher here so vaccines
+[00:03:02] a PCR machine how we diagnose software
+[00:03:05] right which we'll talk about Healthcare
+[00:03:07] professionals and then all of the above
+[00:03:10] and I think youall can see some of the
+[00:03:12] metaphors here okay so our Central
+[00:03:15] problem of the global heivy project is
+[00:03:17] what we call the implementation
+[00:03:18] bottleneck that we know Upstream there's
+[00:03:20] been tremendous investment in the
+[00:03:22] discovery the basic science of disease
+[00:03:24] development the new tools so the
+[00:03:26] products the Diagnostics as well as the
+[00:03:28] Therapeutics needed for healthcare
+[00:03:29] delivery
+[00:03:30] but less investment in the gritty
+[00:03:31] business of delivering those products
+[00:03:33] and services to change the health
+[00:03:35] outcomes of populations and that sounds
+[00:03:38] like a grand Theory but that's actually
+[00:03:40] the ROI the return on investment that
+[00:03:41] most people assume these products have
+[00:03:44] and there's been massive investment
+[00:03:45] right on that second piece the
+[00:03:46] development of new
+[00:03:47] products this list here that I've listed
+[00:03:50] microbicides malaria and TB Diagnostics
+[00:03:52] checklist the major new funer in the
+[00:03:54] space has been the Gates Foundation and
+[00:03:56] so they're now questioning after 20
+[00:03:58] years of investment what has the in a
+[00:04:00] sense what has been the change in the
+[00:04:02] health outcome of populations so our
+[00:04:05] team's um argument here is that the lens
+[00:04:08] on Healthcare delivery has been in a
+[00:04:10] sense too narrow and with Michael
+[00:04:12] Porter's advice at Harvard Business
+[00:04:14] School and his mentorship we've taken
+[00:04:17] taken about um this notion of value
+[00:04:19] based Healthcare delivery and value is
+[00:04:21] defined as health outcome over cost and
+[00:04:23] that should Encompass the discussions
+[00:04:25] that are having about access to
+[00:04:26] healthare equity and Quality Healthcare
+[00:04:30] so one of our suggestions um that we
+[00:04:32] began about seven years ago is how do we
+[00:04:34] create a pedagogy in value-based healthc
+[00:04:36] care delivery and we kind of leaned on
+[00:04:38] Mike Porter at this point who had
+[00:04:40] developed this for microeconomics of
+[00:04:41] competition he had created a series of
+[00:04:44] curricula for advanced Healthcare
+[00:04:46] economies that we followed him suit and
+[00:04:47] we created a series of um Harvard
+[00:04:50] Business School case studies there's now
+[00:04:51] over 30 they're at no cost uh to the
+[00:04:54] users both The Faculty members and the
+[00:04:57] students and we iterate and teach them
+[00:04:59] in our classroom here um the reason why
+[00:05:01] I kind of show you the site is I
+[00:05:02] actually hope you all will go and
+[00:05:03] download and if you're interested in
+[00:05:04] read some of the cases as well as the
+[00:05:06] teaching notes behind it but on the
+[00:05:08] reason why I'm showing you this at the
+[00:05:09] burkman center is when we actually put
+[00:05:10] the cases up we broke Harvard Business
+[00:05:12] publishing's website for 24 hours I'm
+[00:05:14] pleased to say because you put something
+[00:05:16] in the shopping cart at harbard business
+[00:05:18] publishing and the price is zero it
+[00:05:20] didn't work AKA is the first time right
+[00:05:23] this academic Publishing House had given
+[00:05:25] something away for free that took
+[00:05:27] probably longer than writing some of the
+[00:05:28] cases right
+[00:05:30] so the second uh product L me do is
+[00:05:32] courseware so we offer our courses um
+[00:05:34] both during the Academic Year as well as
+[00:05:36] the summer we have a midlevel management
+[00:05:38] course called the global Health delivery
+[00:05:40] summer intensive um where we have
+[00:05:42] students from about 40 countries join us
+[00:05:44] we've also used our case studies in an
+[00:05:45] edex version called Global Health case
+[00:05:47] studies from a biosocial perspective
+[00:05:49] that went up uh earlier this spring um
+[00:05:52] and I think in this room I know there's
+[00:05:53] been many discussions about mukes and
+[00:05:55] evaluating and monitoring the mukes we
+[00:05:57] also had that significant drop off after
+[00:05:59] the first month um and they're thinking
+[00:06:01] through how Unison create continuous
+[00:06:03] learning on an online
+[00:06:06] platform the last piece of kind of our
+[00:06:08] product line that I want to just end
+[00:06:10] here for a moment is we created
+[00:06:11] Frameworks how do we inform
+[00:06:13] professionals today to generate value
+[00:06:15] based Healthcare delivery and for any of
+[00:06:17] those who are interested and pleased to
+[00:06:18] walk you through this Theory we connect
+[00:06:20] the theory to our case examples so that
+[00:06:23] the new professional can actually
+[00:06:24] understand how to deliver value based
+[00:06:26] Healthcare but as an academic I can tell
+[00:06:28] you that this is insufficient this is
+[00:06:30] retrospective work that doesn't help you
+[00:06:32] anticipate the problems ahead nor does
+[00:06:34] actually help Lorenzo as he's trying to
+[00:06:36] contain Ebola
+[00:06:39] today so our team thought through the
+[00:06:42] types of questions our Healthcare
+[00:06:43] professionals have and as we've
+[00:06:45] discussed I think in this room the fire
+[00:06:47] hose effect of information that has
+[00:06:48] created this complex Maze and we watch
+[00:06:51] our healthc Care Professionals put into
+[00:06:53] Google antiretrovial therapy or
+[00:06:57] resistance um or I need to a new
+[00:06:59] diagnostic for tuberculos and get
+[00:07:01] millions of hits and so we thought
+[00:07:03] through how could we be that navigation
+[00:07:05] through this
+[00:07:07] maze so we launched uh almost seven
+[00:07:09] years ago now ghg online.org uh it's a
+[00:07:12] series of professional virtual
+[00:07:14] communities and our team decided that
+[00:07:16] they needed to leverage wisdom of the
+[00:07:18] crowds with these four characteristics
+[00:07:20] diversity of opinion independence of
+[00:07:22] thought decentralized and then we needed
+[00:07:25] to aggregate this in some way that could
+[00:07:27] make this consumable for the newcomer to
+[00:07:29] GH online.org
+[00:07:32] so this is where we ended up um in the
+[00:07:36] aims of the communities first they would
+[00:07:38] clearly have a Global Perspective to
+[00:07:40] healthcare delivery there'd be
+[00:07:41] crowdsource insights we would actually
+[00:07:44] have the discussions be moderated and
+[00:07:46] this related to the quality of the
+[00:07:47] content that we hope to in a sense um
+[00:07:49] transmit to our users and then the
+[00:07:51] archives needed to be searchable so this
+[00:07:53] is seven years ago and deca helped um
+[00:07:56] create us create the backend for our
+[00:07:57] search and this was in a sense a
+[00:07:59] relatively new phenomena especially for
+[00:08:00] our Global Health colleagues and today
+[00:08:03] this is kind where we at I don't like to
+[00:08:05] necessarily show quantitative numbers
+[00:08:07] because it doesn't necessarily show the
+[00:08:08] depth of conversation um but we have had
+[00:08:10] a daily post for the last two years
+[00:08:13] every day someone has posted something
+[00:08:16] and I think that shows actually virology
+[00:08:18] in some ways going back to a good form
+[00:08:20] of virus not all not all viruses are bad
+[00:08:23] um the 182 countries is pretty
+[00:08:26] significant we don't know how we got
+[00:08:27] there so those of you who like to m out
+[00:08:29] connections and understand networks we
+[00:08:31] would love your help um there's been no
+[00:08:33] marketing scheme there's no emblems no
+[00:08:36] one's getting
+[00:08:37] paid aka the users and there's no
+[00:08:39] subscription feed to
+[00:08:41] join um just to mention and aside so
+[00:08:44] this is a series of photographs of our
+[00:08:45] moderator some of you may notice Paul
+[00:08:47] English here um from kayak and now blade
+[00:08:50] um was a tremendous inspiration for us
+[00:08:52] in the beginning of ghd online and what
+[00:08:54] we do in many ways is not only bring
+[00:08:56] academics and implementers but we
+[00:08:58] actually try and attract our users who
+[00:09:00] become super users to serve as
+[00:09:02] moderators over time and help build that
+[00:09:05] capacity and that capital in country we
+[00:09:07] have 40 expert moderators to date 42 um
+[00:09:11] 30 are from advanced economies and 12
+[00:09:13] are from research limited settings here
+[00:09:17] just to give you a sense of kind of the
+[00:09:18] communities that we actually host um a
+[00:09:22] significant number are in the private IE
+[00:09:24] you need to be invited by the moderator
+[00:09:26] to join those communities and the rest
+[00:09:28] you can see are within in the public
+[00:09:30] realm our first four communities were
+[00:09:32] tuberculosis infection control I just
+[00:09:34] want to highlight that for a moment so
+[00:09:35] this is a community of Engineers
+[00:09:37] Architects tuberculosis docs who are
+[00:09:39] trying to understand how to decrease the
+[00:09:41] transmission of tuberculosis in both a
+[00:09:44] hospital and the communitybased setting
+[00:09:46] so this includes the vendors for your
+[00:09:48] lighting right the masks that you need
+[00:09:50] to decrease the transmission and clearly
+[00:09:53] when new healthcare providers are seeing
+[00:09:55] not only multi-drug resistant
+[00:09:57] tuberculosis but xdr rtb extremely drug
+[00:10:00] resistant tuberculosis there are
+[00:10:02] technical features of what you should be
+[00:10:03] wearing and how you should in sense both
+[00:10:06] identify that um first case and then
+[00:10:08] contain the resistance if
+[00:10:11] possible so as we are building all these
+[00:10:14] communities we realized we were in a
+[00:10:15] sense unfortunately reproducing what we
+[00:10:17] do in Academia all the time is cre silos
+[00:10:20] of knowledge and information um and
+[00:10:22] sitting in a academic Hub at the medical
+[00:10:24] school I see I don't even know some of
+[00:10:26] my colleagues at the medical school
+[00:10:28] because we're not necessar sitting in
+[00:10:29] the same department or s or seeing
+[00:10:31] patients on the same floor of the
+[00:10:33] hospital and so we clearly wanted to
+[00:10:35] create some bridges across these
+[00:10:36] communities because we knew these
+[00:10:37] professionals not only did not know each
+[00:10:39] other in person nor did they know each
+[00:10:40] other virtually so our team experimented
+[00:10:44] on the notion of an expert panel which
+[00:10:45] is an asynchronous conference that runs
+[00:10:47] for four business days and they're
+[00:10:50] moderated by panelists who bring a new
+[00:10:52] expertise into these panelists across
+[00:10:54] several of the communities so an example
+[00:10:56] here is one on connected Health um and
+[00:10:58] there's two communities involved we then
+[00:11:00] summarize them into what we call
+[00:11:03] discussion briefs which are two page
+[00:11:04] PDFs that all members can download
+[00:11:07] another example here is about point of
+[00:11:09] care Diagnostics so there's a group um
+[00:11:11] that received a large ground to Think
+[00:11:12] Through point of care diagnostics for
+[00:11:14] Cancer Care and Control and they wanted
+[00:11:16] to learn how this was done for HIV right
+[00:11:19] the test um the CD4 test and then we
+[00:11:22] actually went back and in this
+[00:11:23] discussion we actually talk about the
+[00:11:24] pregnancy test and some of the ethics of
+[00:11:26] the development of the pregnancy test
+[00:11:27] and obviously the manufactur distrib
+[00:11:29] distribution of the pregnancy test uh
+[00:11:31] within the home
+[00:11:34] setting we've also tried to look at how
+[00:11:37] we create a global community and this is
+[00:11:39] something else we would love your help
+[00:11:41] with um this is one visualization that
+[00:11:43] we try and understand who Begins the
+[00:11:45] discussion on ghd online who's answering
+[00:11:47] the discussion and if we can find some
+[00:11:50] of our Bridge professionals which I know
+[00:11:51] zuckerman's um spoken about within these
+[00:11:55] uh countries so for example here in
+[00:11:57] Chile all the orange these SE are the
+[00:11:59] outward lines this is someone starting a
+[00:12:00] discussion in Chile and if they're
+[00:12:02] answering it um a US question and a
+[00:12:05] Chilean is answering it then the colors
+[00:12:07] is responding there so there's a very
+[00:12:09] active exchange and dialogue happening
+[00:12:11] with our Chilean colleagues and then
+[00:12:13] there's several of our colleagues who we
+[00:12:14] realize are only asking or generating a
+[00:12:16] discussion and are less maybe willing or
+[00:12:19] able um to answer so a lot to dive in
+[00:12:22] here and interesting data if anyone's
+[00:12:23] interested we'd love your
+[00:12:26] help um okay so let's go back to Lorenzo
+[00:12:28] because he's on my mind on a daily daily
+[00:12:31] basis so right now if you think of the
+[00:12:33] trajectory of Ebola in March the first
+[00:12:36] case was identified in Guinea and people
+[00:12:37] thought this is going to be an isolated
+[00:12:40] epidemic and that has happened
+[00:12:42] previously that we've had other
+[00:12:43] outbreaks um in the Congo and Sierra
+[00:12:46] Leon and they've been able to be
+[00:12:47] contained and now I think many of you
+[00:12:49] know there's a use case in Nigeria in
+[00:12:50] the capital of Nigeria there are two
+[00:12:52] Americans arac to the United States and
+[00:12:54] given some serum this is a very
+[00:12:56] complicated International discussion and
+[00:12:59] why people are now projecting that there
+[00:13:00] will be 20 to
+[00:13:03] 25,000 cases of Ebola within this
+[00:13:05] calendar year that is we're on the wrong
+[00:13:08] part of the exponential curve right now
+[00:13:11] and Lorenzo is struggling how do I
+[00:13:12] manage to contain this virus as a
+[00:13:15] physician assistant and how can we get
+[00:13:17] him some of those answers in that Brain
+[00:13:19] Trust that we we have access to so
+[00:13:22] here's Lorenzo just wanted to show you
+[00:13:24] this is he is with us in 2012 wearing
+[00:13:26] his librarian Garb every day an avid
+[00:13:29] learner he needed to learn how to use
+[00:13:31] word excel PowerPoint all the rest of
+[00:13:35] while he was sitting with us and now is
+[00:13:36] quite uh quite active and we need to in
+[00:13:39] a sense maintain his sense of continuous
+[00:13:41] Lear learning even in the midst of this
+[00:13:42] emergency so this is kind of the
+[00:13:44] question uh for today is what are the
+[00:13:47] right carrots to set up for lorenza in
+[00:13:49] not only in the midst of this emergency
+[00:13:50] right but over the course of his career
+[00:13:52] that we're struggling with and what we
+[00:13:54] see for many of our colleagues in
+[00:13:56] resource limited settings there aren't
+[00:13:58] the carrots that we have have an
+[00:13:59] advanced economies where I am required
+[00:14:01] as a physician to maintain continuing
+[00:14:03] medical education points and my nursing
+[00:14:05] colleagues maintain their continuing
+[00:14:06] nursing Ed that you're actually paid and
+[00:14:08] you are responsible for maintaining a
+[00:14:11] portfolio in addition we find for many
+[00:14:13] of our clinicians they are now in roles
+[00:14:15] as managers they are managing people
+[00:14:17] products and money with no training in
+[00:14:20] how to do this and how can we Leverage
+[00:14:21] The expertise we have within our own
+[00:14:23] Brain Trust here as well as our
+[00:14:25] colleagues on ghd online to ensure that
+[00:14:27] they are prepared their roles
+[00:14:30] ahead so our premise that we'd love to
+[00:14:33] get your ideas on how do we create this
+[00:14:35] digital badge that is on Lorenzo's portf
+[00:14:38] um profile on ghd online so you can see
+[00:14:40] this is where how many times he's
+[00:14:42] contributed the communities that he's
+[00:14:43] contributed in and we'd love to start
+[00:14:45] seeing him stack his badges on his ghd
+[00:14:48] online
+[00:14:50] profile just to take a step back what
+[00:14:52] our team did was look back on how other
+[00:14:54] badges were developed both for products
+[00:14:56] for buildings and for professionals and
+[00:14:59] if there's also anyone in this space who
+[00:15:00] has expertise this is really why we're
+[00:15:02] coming to the Berkman Center to
+[00:15:04] understand how to do this
+[00:15:05] well um I think many of you probably
+[00:15:08] drank a cup of Fair Trade coffee this
+[00:15:10] morning I don't know if there's any DEA
+[00:15:11] agents in the room but kind of
+[00:15:13] intimidating when someone puts out their
+[00:15:15] DEA badge when I'm in when the when I'm
+[00:15:18] in the hospital I have to wear my badge
+[00:15:19] right here right so all the patients
+[00:15:21] know who I am what my role is who whom
+[00:15:24] I'm taking care of and how can we do
+[00:15:26] this for our healthcare providers so
+[00:15:29] this is kind of what our team is
+[00:15:30] thinking through and breaking down if if
+[00:15:32] we took on the role being the issuer of
+[00:15:35] this badge and the earner was Lorenzo
+[00:15:37] and our colleagues on ghd online we'd
+[00:15:40] hope the consumer would be governments
+[00:15:42] and multilaterals that the global fund
+[00:15:44] for AIDS to be in malaria would say I
+[00:15:46] want 10,000 managers in every country
+[00:15:49] badged at level blue for example and
+[00:15:51] that they would generate the demand the
+[00:15:53] value of the credential would have to be
+[00:15:54] set by a group um which I think we could
+[00:15:57] actually collaborate with and then the
+[00:15:59] stackability portability issue would be
+[00:16:01] is this would actually be not only on
+[00:16:02] your LinkedIn profile but also within
+[00:16:05] the ministry of Health's requirements
+[00:16:07] for professional education and this is
+[00:16:09] where we've in a sense generated some
+[00:16:11] demand that we have new Ministers of
+[00:16:13] Health interested in this idea they want
+[00:16:15] to say this is part of the
+[00:16:16] responsibility of healthcare providers
+[00:16:18] but we need to figure out how to build
+[00:16:19] it
+[00:16:20] right so our hope is that Lorenzo will
+[00:16:23] not only been a student and a
+[00:16:25] collaborator with us but now he will be
+[00:16:26] a recognized professional
+[00:16:30] so my question kind of to lead to start
+[00:16:32] the discussion off here is how can we
+[00:16:34] optimize skill-based credentialing and a
+[00:16:36] few easy answers that I could come up
+[00:16:38] with but I need your help for the others
+[00:16:41] is what I do every year is I in a sense
+[00:16:43] attend CME so I go to a session I get a
+[00:16:45] CME credit I also do this online with um
+[00:16:49] an evidence-based body called upto-date
+[00:16:51] I don't read the New England Journal
+[00:16:53] cover to cover I read my New Yorker
+[00:16:54] cover to
+[00:16:56] cover um earning digital Badges and then
+[00:16:59] things I'm trying to keep up with is
+[00:17:00] read all the posts on our list serve um
+[00:17:03] I don't know if anyone else is keeping
+[00:17:04] up here uh but the massive you know fire
+[00:17:07] hose effect of being part of a community
+[00:17:10] and how can we sort this through uh so
+[00:17:13] I'm going to leave us with that and just
+[00:17:14] um last point so um Julio Frank I don't
+[00:17:17] know if anyone follows but he was the
+[00:17:18] previous minister of Health in Mexico
+[00:17:20] he's serving as Dean he's a wonderful
+[00:17:22] mentor to us um at the at the project
+[00:17:25] and this is why he thinks this is the
+[00:17:27] work of us and this is interdisciplinary
+[00:17:29] effort to think about health Improvement
+[00:17:30] and Health Systems so in our turbulent
+[00:17:33] World Health Improvement can be a bridge
+[00:17:34] to peace and prosperity an antidote to
+[00:17:36] intolerance and a source of shared
+[00:17:41] security so I just want to acknowledge
+[00:17:43] this is the efforts of many including
+[00:17:45] Abby and Angie and our massive team uh
+[00:17:48] of community members on ghd online and
+[00:17:50] our advisers and hoping to start the
+[00:17:53] discussion to fuel our efforts thank
+[00:17:57] you
+[00:18:02] maybe I'll go back to this if anyone
+[00:18:03] wants anyone has an easy answer to
+[00:18:11] this to people education field I work um
+[00:18:16] I'm amung and I um I'm a fellow here but
+[00:18:20] I also work for uh ntia Department of
+[00:18:23] Commerce and we funded um curriculum
+[00:18:26] development in um New York City high
+[00:18:29] schools which basically built a platform
+[00:18:32] for badging to be used with high school
+[00:18:36] so the incentive was not was not only
+[00:18:39] sort of not a replacement for grades but
+[00:18:42] just sort of this like um continual kind
+[00:18:45] of reward for and recognition for
+[00:18:48] learning skills so skills included
+[00:18:50] things like posting on a Blog um
+[00:18:53] contributing to a forum that sort of
+[00:18:55] thing so it wasn't so much necessarily
+[00:18:57] formalized as as well as some people are
+[00:18:59] using it to go get through a a online
+[00:19:02] class or something like that so it just
+[00:19:04] seems like there's a a good parallel
+[00:19:06] between the education space that would
+[00:19:09] love an instuction okay that' be
+[00:19:15] tremendous I have similar ideas to to
+[00:19:18] what you just said that you have two
+[00:19:20] orthogonal sets of skills there are the
+[00:19:22] skills you need to do your task and then
+[00:19:24] the skills you need to get the
+[00:19:26] information you need to do your task and
+[00:19:30] it feels almost like language
+[00:19:31] acquisition grammar versus vocabulary
+[00:19:33] that that you having one helps you get
+[00:19:35] the other and then there sort of a
+[00:19:38] ladder an interesting way of of you know
+[00:19:41] we almost take for granted the tools we
+[00:19:43] need to get the information because it's
+[00:19:45] we're so fluent in them yeah absolutely
+[00:19:48] so an analogy I've been just thinking
+[00:19:49] about so um I have a second grader at
+[00:19:55] home and he has a spelling test every
+[00:19:58] every week and on Mondays he gets a
+[00:20:01] preest where the teacher dictates a set
+[00:20:03] of words then he has to self-correct he
+[00:20:06] can see the list on Wednesday he has to
+[00:20:08] write a sentence for every word and on
+[00:20:11] Friday is the spelling test and very Sim
+[00:20:15] I mean I think his notion of actually
+[00:20:17] even also being able to self-correct is
+[00:20:18] something quite powerful um and I'm
+[00:20:20] trying to think of this second grader
+[00:20:22] than doing this second grade teacher
+[00:20:23] been doing this about 45
+[00:20:25] years a lot more experience than I do in
+[00:20:27] pedagogy actually yes yeah that's what
+[00:20:29] we've noticed as well
+[00:20:33] yes um but I'm glad petition has been on
+[00:20:35] on the list well American Elms are dying
+[00:20:37] so that's yes that's what other people
+[00:20:39] yes yes um but this type of expertise is
+[00:20:43] I think definitely one element that
+[00:20:44] we're looking for um and obviously the
+[00:20:46] internet literacy and be able to
+[00:20:47] participate um because we see many of
+[00:20:49] the people that we want to be completing
+[00:20:52] the moo right are unable to participate
+[00:20:54] for some of the I would say prerequisite
+[00:20:56] reasons you may need to be consumed
+[00:20:59] the
+[00:21:03] platform really grateful to have you
+[00:21:05] here and
+[00:21:06] and collaborators as well um this is by
+[00:21:11] way of context I think an important
+[00:21:13] moment also for the bment center so we
+[00:21:15] may not have all the answers that that
+[00:21:18] you hope we would have uh but I think
+[00:21:21] it's a very important uh moment for us
+[00:21:24] to as a community really build these
+[00:21:26] Bridges as so many areas and health
+[00:21:29] being a core area of course are
+[00:21:32] embracing digital technology to solve
+[00:21:35] very hard problems as you described it
+[00:21:38] and that itself seems to be a very
+[00:21:40] important effort um I think burkman has
+[00:21:43] for many years focused on on digital and
+[00:21:46] and internet and online stuff but
+[00:21:48] obviously what you're describing here is
+[00:21:51] is an environment where where is that is
+[00:21:54] still pre-digital or where we don't
+[00:21:56] immediately think about you know
+[00:21:58] Broadband or Facebook um but where the
+[00:22:01] tools are becoming part of a of a a
+[00:22:04] solution for Global problems so um I'm
+[00:22:08] very excited that we can um uh start
+[00:22:10] this conversation in many respects um
+[00:22:14] one of the things I hope we can offer as
+[00:22:16] a
+[00:22:17] community uh is to to think about some
+[00:22:20] of the lessons learned we've seen uh in
+[00:22:23] in what we've been studying in the O
+[00:22:26] online context over the past uh decade
+[00:22:29] or so and there are a couple of things
+[00:22:32] that come to mind so um the first that
+[00:22:36] perhaps comes to mind is how incentives
+[00:22:39] have been uh what we what we've learned
+[00:22:43] in terms of incentives creating
+[00:22:46] incentives for for collaboration in
+[00:22:48] large groups uh so for instance if you
+[00:22:51] look at open source software um there's
+[00:22:54] been a there's a lot of research
+[00:22:56] actually um how how that has created
+[00:23:01] incentive structures for people to
+[00:23:03] participate and contribute code to a
+[00:23:05] shared pool of knowledge and if you go
+[00:23:07] back to your wonderful slide with the
+[00:23:09] chenian participants right you you may
+[00:23:13] may see some similarities of okay who
+[00:23:16] are power contributors and and how can
+[00:23:18] we motivate them for instance by them
+[00:23:21] becoming uh uh building reputation
+[00:23:24] within a community and how can we
+[00:23:26] leverage such reputation effects to
+[00:23:29] maintain um uh incentives to be a
+[00:23:33] collaborator listener and and and
+[00:23:36] contributor right so that's kind of I
+[00:23:38] think one possible angle where we can
+[00:23:41] contribute to the conversation a second
+[00:23:44] one that uh comes to mind um is of
+[00:23:47] course around the question of skills so
+[00:23:51] um as as we already heard this is a
+[00:23:54] interesting blend of multiple types of
+[00:23:56] skills required
+[00:23:58] um you told the story of your of your
+[00:24:01] friend right who had first to learn the
+[00:24:03] basic computer literacy in like how do
+[00:24:06] you use PowerPoint or word do so there's
+[00:24:09] definitely what you're building here has
+[00:24:12] some sort of requirements of at the
+[00:24:15] first level that you can use the tool
+[00:24:18] right and so we've been engaged um in
+[00:24:21] effort how do we think about digital
+[00:24:24] literacy and and these kind of basic
+[00:24:26] skills um that are required that you can
+[00:24:29] use the tools later on so that's one
+[00:24:32] level and then of course you have the
+[00:24:34] medical skills and and all the higher
+[00:24:36] level skills that um that you hope to
+[00:24:39] get across so building on Bruce comments
+[00:24:41] but so at this deeper level I think we
+[00:24:43] have some some ideas and then uh further
+[00:24:47] up the stack um the third area where we
+[00:24:50] hopefully have connection points and
+[00:24:51] they hope Paulina can weigh in we're
+[00:24:53] thinking about this batching question a
+[00:24:55] lot we think about that more in the
+[00:24:58] digital skills context but there is a
+[00:25:01] very rich discussion and and Paulina is
+[00:25:03] is a ed school graduate I may have ideas
+[00:25:07] too uh what we can take away and
+[00:25:09] potentially translate so this is a bit a
+[00:25:12] longer statement but I wanted to make
+[00:25:14] sure that we get the framing right here
+[00:25:17] uh as you volunteer to present early on
+[00:25:19] so there are a number of things I think
+[00:25:21] we can can connect yeah and I'm excited
+[00:25:26] about have a question and sorry I came a
+[00:25:29] little late if you answered it um what
+[00:25:31] is the motivation or your main
+[00:25:33] motivation behind the badging is it a a
+[00:25:37] to motivate people to do things or is it
+[00:25:40] more of a being able to see on the
+[00:25:43] network who has expertise on what topic
+[00:25:47] so which or are they both or what's more
+[00:25:50] important right um so I've learned from
+[00:25:53] my dear friend Abby Campbell to set a
+[00:25:55] goal and set some Metric so she we did
+[00:25:57] did
+[00:25:58] 1,776
+[00:26:00] push-ups from June 1st to July 4th I
+[00:26:03] never would have done them unless Abby
+[00:26:05] had been tracking us doing 50 push-ups a
+[00:26:07] day and so there's something about
+[00:26:09] breaking down a task right and being
+[00:26:11] monitored for it and if you want having
+[00:26:13] that peer-to-peer relationship that I
+[00:26:15] knew Abby had done her push-ups and not
+[00:26:17] we do this in medicine all the time
+[00:26:19] right I'm actually comparing I know I
+[00:26:21] need to have 100 points for my CME at
+[00:26:23] the end of the year we don't compare
+[00:26:25] necessarily physician to physician but
+[00:26:27] it's something I need to submit and for
+[00:26:31] our for many of our providers nurses
+[00:26:34] midwives physician assistants physicians
+[00:26:37] in the settings that we're talking about
+[00:26:38] there is no continuation of their
+[00:26:41] graduate medical education after three
+[00:26:43] and this is an undergraduate degree in
+[00:26:46] nursing or medicine so this tends to be
+[00:26:48] someone in their early 20s who then in a
+[00:26:51] sense is not having that continuous Ark
+[00:26:54] of how do I develop as a
+[00:26:56] professional
+[00:27:02] so first of all anybody here who's
+[00:27:05] interested in this and this was really
+[00:27:06] interesting and um I certainly agree
+[00:27:09] with s about the importance of it this
+[00:27:11] Friday at 12:30 there is a
+[00:27:14] open sort of semi unconference on um
+[00:27:19] using social media as a way of
+[00:27:22] disseminating um good information to
+[00:27:25] affect Healthcare outcomes especially in
+[00:27:27] developing world and disseminating is
+[00:27:29] not even the right world word since it's
+[00:27:31] intended also to include conversational
+[00:27:33] interactions so if you're interested in
+[00:27:35] this topic you should be coming to that
+[00:27:37] and this would be fantastic to raise
+[00:27:39] there this is so um okay so the plug
+[00:27:43] aside
+[00:27:45] um in the sort of badging that I can if
+[00:27:48] I think of badging the sorts of things
+[00:27:49] that I think of are pre- straight
+[00:27:51] forward and yours is not unfortunately
+[00:27:53] uh pretty straightforward often because
+[00:27:55] the consequences of the badging or way
+[00:27:57] more trivial um much less depends on
+[00:28:00] them and because it's being done
+[00:28:01] primarily within the online world where
+[00:28:04] the um the achievements the metrics can
+[00:28:08] be the achievements can be accomplished
+[00:28:10] online and thus the badging is automatic
+[00:28:13] so to what extent um do you intend do
+[00:28:17] you think that your badging system can
+[00:28:19] be uh to what extent does it have to
+[00:28:23] involve off um offline activities which
+[00:28:27] will make it more complicated but not
+[00:28:29] you know but perhaps way more useful and
+[00:28:31] important right I mean excellent
+[00:28:32] question I think what we're hoping is
+[00:28:34] some of the early um capacities that we
+[00:28:37] could build are actually ones that are
+[00:28:39] the quantitative side so Supply Chain
+[00:28:41] management Finance and Accounting HR how
+[00:28:44] do those sorry how do those get measured
+[00:28:47] by online activity or by somebody online
+[00:28:50] activity the second element that we'd
+[00:28:52] like to incorporate in which we use on
+[00:28:54] the clinical side this is to be in
+[00:28:55] parallel with your clinical medicine is
+[00:28:57] we use a simulator in medicine all the
+[00:28:59] time so I practice running a code on a
+[00:29:01] patient and there's a video watching me
+[00:29:04] my temperature increases my heart rate
+[00:29:07] goes up right my saliva and then I'm wa
+[00:29:10] I rewatch that video and review the
+[00:29:12] mistakes that I made with my residents
+[00:29:15] and my fellows there so they're actually
+[00:29:16] learning as I am managing that code
+[00:29:20] follow with the first part the second
+[00:29:22] part it seems easier because you have
+[00:29:23] the data right so that's that really
+[00:29:25] helps um uh Supply Chain management yes
+[00:29:29] um how is Lorenzo how are you going to
+[00:29:31] know that he's mastered that right so
+[00:29:34] that or is that what you're asking us
+[00:29:35] yeah that's what I'm asking you so we've
+[00:29:37] been trying to talk to folks who build
+[00:29:38] question Banks right how to frame the
+[00:29:40] right questions so we know for example
+[00:29:43] if we give a community health worker 40
+[00:29:45] different products that they may have
+[00:29:47] difficult to figure out which product to
+[00:29:48] get to which patient but for loreno's
+[00:29:50] side we need to know that he has the
+[00:29:51] skills to understand how to project
+[00:29:53] which products will go out of stock
+[00:29:55] right to understand his population size
+[00:29:57] his burden of disease the shelf life for
+[00:30:00] example the co the complexity of the
+[00:30:02] cold chain and so we actually have a
+[00:30:04] simulator where he puts in those numbers
+[00:30:06] and can he create the right
+[00:30:07] projections um but a lot of work to do
+[00:30:10] in that foray but that's actually almost
+[00:30:12] the easier side I'd say the harder side
+[00:30:14] with all things in healthcare is the
+[00:30:15] human resources side it's how do you
+[00:30:17] develop human capacity in a group of
+[00:30:19] individuals organized to deliver care to
+[00:30:21] patients that is I agree with you a side
+[00:30:24] that needs that you can award badge
+[00:30:27] meaningful right that will be quite
+[00:30:29] difficult and that is the question
+[00:30:30] you're asking us yes well I'm asking
+[00:30:32] really the first is how at least do we
+[00:30:34] do the first part well so I'd say the
+[00:30:36] non-clinical piece of healthcare
+[00:30:38] delivery which is the management of
+[00:30:39] people so actually job descriptions in
+[00:30:42] general um HR 101 accounting Finance
+[00:30:46] Logistics uh and how to design that
+[00:30:48] pedagogy
+[00:30:52] well this follows up on Amy's question
+[00:30:55] about what actually you're training
+[00:30:58] people for but it it looked uh what I
+[00:31:01] was hearing was that underlying all of
+[00:31:03] this you're trying to build trust in in
+[00:31:06] Lorenzo and
+[00:31:09] others and uh
+[00:31:12] that's we've learned through bad
+[00:31:15] experiences quite hard to
+[00:31:17] do uh the bad experiences I have some
+[00:31:21] familiarity with her in the online
+[00:31:24] e-commerce
+[00:31:25] space um
+[00:31:29] what one
+[00:31:30] plans what one sets up to do to build
+[00:31:34] trust
+[00:31:37] frequently doesn't work for a whole
+[00:31:40] variety of of reasons so uh all I I this
+[00:31:45] looks pretty straightforward in some
+[00:31:47] sense I don't know why you would find
+[00:31:48] Bad actors in this context
+[00:31:52] shameful uh on the other hand I think
+[00:31:55] it's when you're building trust it's
+[00:31:57] it's it's something to keep track of
+[00:31:59] because you can lose trust with one one
+[00:32:03] bad
+[00:32:11] actor build those courses I I mean I
+[00:32:13] would assume that there's some online
+[00:32:15] courses and resources for those sorts of
+[00:32:18] things that very big excellent point no
+[00:32:20] what we'd rather actually build is the
+[00:32:23] preest Choose Your Own Adventure
+[00:32:25] algorithm right and then the way in
+[00:32:28] which we certify and we in a sense
+[00:32:29] Leverage The expertise and a bit of the
+[00:32:31] brand that we actually have here at
+[00:32:33] Harvard um to do that but I agree we
+[00:32:34] have actually have a list there's
+[00:32:36] hundreds of courses out there already we
+[00:32:39] need to review and ensure that they're
+[00:32:41] decent and then figure out how to create
+[00:32:42] that question bank and so we've been
+[00:32:44] even looking into the pedagogy of what
+[00:32:45] does testing do to prime your knowledge
+[00:32:49] acquisition that's why I go back to my
+[00:32:50] second grader spelling test is that we
+[00:32:53] realize even in the act of testing and
+[00:32:55] obviously if you even read your why your
+[00:32:57] answers were wrong even better it
+[00:32:59] actually reinforces the Learning Cycle
+[00:33:01] um so anyone who has colleagues this is
+[00:33:03] really in the Ed School Arena um we'd
+[00:33:06] love to meet with them to get a sense of
+[00:33:07] how to even structure these multiple
+[00:33:09] choic easy when I give you guys the
+[00:33:10] answer interesting when I flip the
+[00:33:13] answers people focus a little bit better
+[00:33:16] or if you misspell one of the answers
+[00:33:17] people actually think that that one is
+[00:33:19] wrong I mean these are all kind of
+[00:33:20] tricks people are using in the pedagogy
+[00:33:22] um and we find especially for adults to
+[00:33:24] maintain your attention when doing an
+[00:33:26] online question Bank which is utterly
+[00:33:27] boring um there some of these tricks um
+[00:33:31] may be helpful um to ensure completion
+[00:33:34] examp if you're accounting I mean there
+[00:33:36] there has to be tons I me and there are
+[00:33:38] tons of like very basic courses that
+[00:33:41] have you know those you don't even have
+[00:33:44] to figure out the I mean that they have
+[00:33:46] the did you complete it and all that
+[00:33:48] stuff built in so yes the exercises may
+[00:33:51] need to be healthcare related okay uh in
+[00:33:54] the end but absolutely so that's what we
+[00:34:06] yeah
+[00:34:08] so the araville community has recently
+[00:34:12] uh constructed its own certificate
+[00:34:14] system uh for a digital archive
+[00:34:16] specialist a series of online courses
+[00:34:19] and and go from there and we faced a
+[00:34:22] kind of chicken and egg situation is
+[00:34:24] that um people are doing this in part
+[00:34:27] because they want to um they think it'll
+[00:34:30] make them more employable get higher
+[00:34:31] salaries things like have the the
+[00:34:34] employers um support it and yet until
+[00:34:37] it's established and and uh they're
+[00:34:40] aware about it um what's doing it one of
+[00:34:42] the things that surprised me is that
+[00:34:44] there is um has been a tremendous take
+[00:34:47] up just on the part of indiv the
+[00:34:49] individuals have a desire to learn and
+[00:34:52] establish their credentials and I think
+[00:34:54] you've done a re having the the badge is
+[00:34:57] a really neat idea we've we've seen this
+[00:34:59] in so many areas the Wikipedia editors
+[00:35:02] who like to be the Super editors and and
+[00:35:04] other people and so that you've got
+[00:35:06] really done really well there but what
+[00:35:08] about on the flip side the idea of
+[00:35:10] sitting down and saying Lorenzo is going
+[00:35:12] to get more money because he's gotten
+[00:35:15] your certification and um and and the
+[00:35:20] badge carries some weight with it um
+[00:35:23] administratively yes no absolutely I
+[00:35:25] think our team internally thinks that is
+[00:35:26] our job to actually sell this to the
+[00:35:28] Ministers of Health that we can ensure
+[00:35:31] you that x% of your managers will have
+[00:35:33] the capacity to manage people products
+[00:35:35] and money and that they should then and
+[00:35:37] sense their salary should be upgraded
+[00:35:40] likely I think we'll need to have a
+[00:35:41] third party payer into that realm so
+[00:35:44] it's the multilateral generating that
+[00:35:46] demand um maybe pep are the present's
+[00:35:49] emergency plan for AIDS relief for the
+[00:35:51] president H initiative saying I want
+[00:35:53] this many managers at this level and I
+[00:35:55] think we can all understand if we have
+[00:35:57] one stock out and you're using one set
+[00:35:58] of emergency funds so you're needing
+[00:36:00] $200 million of extra dollars to get the
+[00:36:02] malaria bed nets there on time obviously
+[00:36:05] the ROI of training managers uh is there
+[00:36:08] so everyone understands the expense of
+[00:36:10] having people not trained um at this
+[00:36:12] well but the expectation that Physicians
+[00:36:14] and nurses and midwives know how to
+[00:36:16] manage um especially products for
+[00:36:19] example um is is not what's taught in
+[00:36:22] medical school or nursing
+[00:36:25] school you imagining these badges to be
+[00:36:28] like is the bad just going to
+[00:36:31] be resource management or are they going
+[00:36:33] to be like smaller badges within it
+[00:36:37] right I think that's so you're a few
+[00:36:39] levels I think we'll probably start in
+[00:36:41] one Arena and then see if we think of
+[00:36:43] someone who's going to end up running a
+[00:36:45] district level Hospital how far along
+[00:36:47] the Continuum but yes I think it'll have
+[00:36:48] to be multiple stages because we some
+[00:36:50] folks who are managing 100 community
+[00:36:52] health workers some people are managing
+[00:36:54] a community health center and then the
+[00:36:56] District level hospital is you're
+[00:36:57] managing a catchman area of 300,000
+[00:37:00] people it's a different set of
+[00:37:03] skills those
+[00:37:07] levels have you thought about having
+[00:37:09] this may be a bad idea but have you
+[00:37:11] thought about having two categories of
+[00:37:12] badges ones that are more like play the
+[00:37:16] role of a certificate U be taken more
+[00:37:18] seriously there's been
+[00:37:19] some excuse me and then to accomplish
+[00:37:21] some of the other aim which um I forget
+[00:37:24] who said Can is can be too
+[00:37:27] provide an incentive as well as uh uh so
+[00:37:31] heavy participation blogged you know
+[00:37:34] Champion blogger blog five times a month
+[00:37:36] or this many connections or answer that
+[00:37:38] many questions um those also that be a
+[00:37:41] separate category so that the
+[00:37:43] certificate ones have more weight right
+[00:37:45] no we definitely we just don't we're not
+[00:37:46] sure how to do this well so we want
+[00:37:48] people to be encouraged we have an
+[00:37:49] engagement period of tracking our
+[00:37:51] members and we don't want to encourage
+[00:37:53] people just to write four or five words
+[00:37:55] right we want there to be quality
+[00:37:57] content so we have a recommendation
+[00:37:58] button and all the things that people
+[00:38:00] are using ways of of tuning tuning that
+[00:38:03] so it's not merely
+[00:38:04] posting yeah posted that got comments or
+[00:38:08] got picked up or whatever the metric is
+[00:38:10] but I I was trying to make a distinction
+[00:38:12] between in fact why not take the badges
+[00:38:14] that are the more serious ones where
+[00:38:16] there's a set of qualifying things you
+[00:38:17] need to do and call them
+[00:38:20] certificates or something since you want
+[00:38:23] them to have a lot of weight and badging
+[00:38:26] shows up primarily in my experience
+[00:38:28] primarily as or often anyway as a as an
+[00:38:32] incentive and as a
+[00:38:35] um it's like a badge I mean that's you
+[00:38:38] know it's like you kid give a kid a
+[00:38:40] badge um good in school today or yeah
+[00:38:43] it's a yeah it's a it's a starring
+[00:38:45] system um whereas you I think want at
+[00:38:49] least some of these to be not just Yay
+[00:38:52] good job but right you can trust this
+[00:38:55] person for the skill skill set that she
+[00:38:57] he has that's excellent point about
+[00:38:59] participation versus expertise and where
+[00:39:01] testing will be needed to the knowledge
+[00:39:04] has been
+[00:39:06] acquired what about the connectivity
+[00:39:09] issues are you assuming that everyone
+[00:39:11] has uh internet access is this a phone
+[00:39:15] um right a mobile phone um people ask us
+[00:39:19] this so five years ago I would not have
+[00:39:21] said I wouldn't be this confident but
+[00:39:23] now to be honest I mean we see how our
+[00:39:25] Healthcare most most people who are
+[00:39:26] graduating from medical school around
+[00:39:28] the globe the first thing that they want
+[00:39:30] is a smartphone 10 years ago they wanted
+[00:39:32] a motorbike 20 years ago they wanted a
+[00:39:35] leather
+[00:39:36] jacket and they don't even want a motorb
+[00:39:38] they don't even care they actually just
+[00:39:39] want a connected smartphone um and
+[00:39:42] honestly many of our providers are
+[00:39:44] actually much more used to moving mobile
+[00:39:45] money for example minutes are very
+[00:39:48] important to them we have Nathan Eagle a
+[00:39:49] close colleague um starting through that
+[00:39:51] whole market so I'm actually much less
+[00:39:54] worried about the hardware at this point
+[00:39:56] because people are very used to hacking
+[00:39:58] systems to get the video that they want
+[00:40:00] um and so I think people will get used
+[00:40:02] to participating even if the hardware is
+[00:40:04] more limited uh in the beginning the
+[00:40:07] second piece I think that we're seeing
+[00:40:08] is so much of Health Care the equipment
+[00:40:10] is coming with it so the fourth
+[00:40:12] principal of value-based healthcare
+[00:40:13] delivery is as people are investing in
+[00:40:15] healthcare infrastructure which is both
+[00:40:17] water electricity and the internet they
+[00:40:20] are stimulating economies uh in this
+[00:40:22] area so I do think that will come with
+[00:40:24] the aid that is coming to many of these
+[00:40:26] regions not as fast as I'd like but I'm
+[00:40:28] much more optimistic than I was five
+[00:40:30] years
+[00:40:32] ago assumption that the curriculum and
+[00:40:34] the things that you put out the training
+[00:40:37] modules will be you'll be able to do on
+[00:40:40] a phone
+[00:40:41] basically um well some may be on a phone
+[00:40:45] some may need to be at a kiosk some of
+[00:40:47] the hardware actually the the laptops
+[00:40:49] and the desktops are coming to the
+[00:40:50] healthare center so in the same way when
+[00:40:53] I'm on call for 24 hours I have a couple
+[00:40:55] hours where I'm
+[00:40:57] not doing as much right I could actually
+[00:40:59] do my Contin medical education during
+[00:41:00] that time on a hospital computer or a
+[00:41:03] clinic computer Soo has access to an
+[00:41:06] Lorenzo has access to a computer to to a
+[00:41:08] computer
+[00:41:13] interesting might be as good as your
+[00:41:15] computer well that's good um at um
+[00:41:19] Cornell we ran the teal started the teal
+[00:41:22] project which was agricultural
+[00:41:24] literature that was sent to um third
+[00:41:27] world countries primarily African on CDs
+[00:41:31] on the assumption that U most people
+[00:41:34] didn't have internet access and it's now
+[00:41:37] gone to the uh an online version and uh
+[00:41:41] has joined hanari and um o and the
+[00:41:44] research for Life initiative um but
+[00:41:47] there's still demand for the um uh the
+[00:41:51] CD version as well so uh I'm uh you you
+[00:41:56] know and that you we hear all the time
+[00:41:58] about places that uh where you can't
+[00:42:00] guarantee 4 hours of electricity a day
+[00:42:02] not to mention internet yes uh so it I'm
+[00:42:06] glad to hear that at least the medical
+[00:42:08] community is more connected it's it
+[00:42:11] while it goes on and off if you can cach
+[00:42:13] it in a local area um it's not perfect
+[00:42:17] but it's much
+[00:42:22] better any uh cultural differences in
+[00:42:25] some of the
+[00:42:27] things you're aiming at I mean it's
+[00:42:29] occurred to me when to talk about
+[00:42:30] certificates and
+[00:42:32] badges and
+[00:42:34] stars um recently I was told
+[00:42:39] that you look at reputation websites in
+[00:42:41] the United States that use Stars
+[00:42:44] Americans always want five stars British
+[00:42:47] are satisfied with four
+[00:42:50] stars uh but badge means almost nothing
+[00:42:54] to me certificate means a lot to me
+[00:42:56] me um definitely have to do some testing
+[00:42:59] with our users of what and obviously if
+[00:43:02] things get translated what we've seen I
+[00:43:04] agree with you with our students so they
+[00:43:05] come from 40 different countries is they
+[00:43:07] want a printed out certificate which
+[00:43:09] Abby creates for them with the dean
+[00:43:11] signing it at the end of our summer
+[00:43:13] course and we know and the people have
+[00:43:15] taken pictures that they frame these
+[00:43:16] certificates and it's up on the wall of
+[00:43:17] their office and it has the Harvard
+[00:43:20] emblem on it um by you know we have
+[00:43:23] permission from the Provost and the dean
+[00:43:25] to do that and that has tremendous
+[00:43:27] meaning um I don't necessarily if I
+[00:43:29] believe in the brand and that means
+[00:43:31] you're actually well qualified but yes I
+[00:43:33] think culturally we're seeing you're
+[00:43:35] right that that is quite important the P
+[00:43:36] there's something to the paper document
+[00:43:38] and does that mean you've in a sense
+[00:43:39] accured X number of both badges in a
+[00:43:42] certificate that we send you a print out
+[00:43:45] um um we'll have to deduce but excellent
+[00:43:48] there's definitely some cultural norms
+[00:43:50] here that that we need to
+[00:43:52] do say along those lines too because I'm
+[00:43:54] the one responsible for the cicat um is
+[00:43:57] that many of the students do their
+[00:43:58] employers ask and require it that if
+[00:44:01] they're gone they leave their their
+[00:44:02] position their post for a month to come
+[00:44:04] to Boston and learn from us if they want
+[00:44:06] to see that and the employers often will
+[00:44:08] subsidize or pay for completely their
+[00:44:10] tuition which isn't cheap unfortunately
+[00:44:13] um for credit of the school public house
+[00:44:15] and so it is a big piece um it's a
+[00:44:19] simple piece of paper but it for a lot
+[00:44:21] of people means they get their tuition
+[00:44:23] paid they can come back they can take a
+[00:44:24] month of haven't seen anyone anyone
+[00:44:27] being sell on eBay yet so
+[00:44:30] here then I'll know we made
+[00:44:32] it yes participants from your summer
+[00:44:35] course become Champions within this
+[00:44:36] community yes absolutely so we have over
+[00:44:38] 200 graduates this is our we'll be at
+[00:44:40] our seventh summer of running the summer
+[00:44:42] course at this point and so absolutely
+[00:44:44] we've written cases with our summer
+[00:44:46] mid-level managers one of our mid-level
+[00:44:48] managers became the head of the national
+[00:44:49] AIDS program in Kenya for example we
+[00:44:51] wrote a case about him and his
+[00:44:53] experience and they actually helped
+[00:44:55] bring student bring their colleagues um
+[00:44:58] from their settings and show the why
+[00:44:59] it's worthwhile absolutely so I think
+[00:45:01] it's because we're doing both right we
+[00:45:02] have kind of this virtuous cycle that we
+[00:45:04] have this touch point in person we have
+[00:45:05] a virtual communication and way to
+[00:45:07] maintain that um and now kind of our how
+[00:45:10] do we ensure all these early ad doctors
+[00:45:12] are in sense incentivized to both
+[00:45:14] participate and learn with
+[00:45:16] us find out about your program about
+[00:45:20] their home Community how they yes I mean
+[00:45:23] I think of some vitology that I haven't
+[00:45:25] mapped out necess we have a relationship
+[00:45:27] we're also um developing cours Weare for
+[00:45:29] new Ministers of Health um with Dean
+[00:45:31] Frank so if you're a minister of health
+[00:45:34] so Earth becom you're you're actually
+[00:45:35] miserable 18 months and so you are a
+[00:45:38] very high level physician typically in
+[00:45:40] your country you have no management
+[00:45:42] expertise but maybe your family is
+[00:45:43] politically connected and so Dean Frank
+[00:45:46] and others train you here at Harvard if
+[00:45:48] you'd like um and so we get to meet
+[00:45:50] those Ministers of Health as well but I
+[00:45:52] think most of it's honestly personto
+[00:45:53] person we get people recommended um
+[00:45:55] there's a group within the Harvard
+[00:45:57] community that helps us um get the word
+[00:46:03] out the plan be to also integrate some
+[00:46:05] of these badges into your summer course
+[00:46:08] yes exactly so you could ACR that's what
+[00:46:10] we'd love to be able to do for this
+[00:46:11] summer is that you'd actually in a sense
+[00:46:13] achieve some of that badge level in the
+[00:46:15] summer course right to show it
+[00:46:17] stackability over time um and so the
+[00:46:20] course that I run management Global
+[00:46:22] Health delivery could do that for
+[00:46:23] example for Supply Chain management we
+[00:46:25] do those simul ation within
+[00:46:32] theare well I like putting out these
+[00:46:34] messy hairy problems they don't
+[00:46:36] necessarily find I think two pieces that
+[00:46:38] I've just pulled out is both um the
+[00:46:40] Lexicon and i' say the digital literacy
+[00:46:43] piece of where our Global Health
+[00:46:44] implementers need to learn and how we
+[00:46:46] can learn from this community where to
+[00:46:47] get the best training of that and then
+[00:46:49] in the sense how do we ensure the
+[00:46:51] incentives are leading to True
+[00:46:53] certificates right that the certificate
+[00:46:55] has meaning over time um so those are
+[00:46:58] two pieces yes there the other piece I
+[00:47:01] think that's also obviously very much a
+[00:47:02] conversation that currently happens at
+[00:47:05] the proost level um with Peter B the
+[00:47:09] question as you know Harvard offers more
+[00:47:11] and more courses
+[00:47:13] online what's our comfort Comfort level
+[00:47:17] to give out certificates which is very
+[00:47:19] political for obvious reasons so I think
+[00:47:22] there is a lot of thinking and also a
+[00:47:24] lot of research happen there and to tap
+[00:47:27] into these conversations if you haven't
+[00:47:30] done so already I would encourage you to
+[00:47:32] do that and I know you guys are very
+[00:47:34] plugged in so what that to me is is
+[00:47:37] perhaps the the right venue also to get
+[00:47:40] some of the latest thinking not only
+[00:47:43] institutionally but they're also looking
+[00:47:45] what competitors are
+[00:47:47] doing so that that to me seems L I was
+[00:47:50] just kind of I I'm personally I'm less
+[00:47:53] interested in the batches me personally
+[00:47:55] but I'm very interested what I see on
+[00:47:57] this chart so um you because that's kind
+[00:48:00] of you could see that's the new
+[00:48:01] Wikipedia for for medicine on a global
+[00:48:04] scale that that's what this picture is
+[00:48:07] about so David Blumenthal who's the
+[00:48:08] president of the Commonwealth fund
+[00:48:10] thinks that we are crowdsourcing the
+[00:48:12] healthcare Wikipedia exactly sure and
+[00:48:14] how to keep doing that well and
+[00:48:16] incentivize people right is to ensure
+[00:48:18] that the content is quality so that
+[00:48:19] you're learning the right content and
+[00:48:22] it's not static content it's even
+[00:48:23] weirder because you you're dealing with
+[00:48:25] all levels at once cuz access to
+[00:48:27] resources is going to be so all over the
+[00:48:30] map so you need the answer for every
+[00:48:33] Century up to now right what's the best
+[00:48:36] answer with 15th century technology yeah
+[00:48:39] quarantine quarantine that's why I
+[00:48:41] brought up quarantine right so um well
+[00:48:43] two things one our colleagues at hinari
+[00:48:45] have done just a tremendous job this is
+[00:48:47] the who affiliation for um the major
+[00:48:49] Publications that that are made
+[00:48:51] available um and a good friend of our
+[00:48:54] archival community um is is running that
+[00:48:56] and then the second is we have a um
+[00:48:58] long-standing partnership for 5 years
+[00:48:59] with up-to-date which is the Premier
+[00:49:02] evidence-based uh clinical um EV um
+[00:49:05] evidence source and so 160 is that right
+[00:49:09] I'm trying to think how many of our
+[00:49:10] providers have it about 10,000 providers
+[00:49:12] from our g l have free access to up
+[00:49:14] toate so we've been able to convince the
+[00:49:16] commercial Enterprise to participate in
+[00:49:18] this and now actually I have another
+[00:49:20] project if anyone's interested is that
+[00:49:22] up to date is willing to donate
+[00:49:25] subscriptions to every single African
+[00:49:27] medical school we want to do Africa
+[00:49:30] first that every dean of every medical
+[00:49:32] school in Africa has access to up to
+[00:49:33] date I need now a Salesforce to figure
+[00:49:35] out how to generate that demand and i'
+[00:49:38] love to get your take on this because
+[00:49:40] the um analogy I use which I don't know
+[00:49:42] if it's right but it's Lexus Nexus that
+[00:49:44] law students decided that this is such a
+[00:49:47] important tool that they knocked in the
+[00:49:49] doors of Partners and said I need this I
+[00:49:51] can't do my work I will not work a 100
+[00:49:53] hours a week without it and partners are
+[00:49:56] like what's this is this important and
+[00:49:57] then they started buying it and
+[00:49:59] obviously Lex NEX saturated the market
+[00:50:01] well similar to up to date there is no
+[00:50:03] resident or medical student especially
+[00:50:04] in the Boston area and in this country
+[00:50:06] it's saturated uh about 93% of the
+[00:50:08] American Market that doesn't use up to
+[00:50:10] date on a daily basis and so software
+[00:50:13] it's scalable it's free you can use
+[00:50:15] Alexus nex's business case to explain
+[00:50:18] this to African Medical School Deans I
+[00:50:21] think would be just transformational for
+[00:50:22] this
+[00:50:24] generation
+[00:50:29] it's free you said ah so no it's very
+[00:50:32] expensive it's
+[00:50:33] about so it is free if you're in a
+[00:50:36] resource limit setting you can apply for
+[00:50:37] free subscription through ghd online we
+[00:50:40] assure that you're from a resource
+[00:50:41] limited setting and then they give you
+[00:50:42] free access but if I was paying for my
+[00:50:44] own individual subscription per per year
+[00:50:46] it' be $1,000 per year likely for me as
+[00:50:49] a Subs individual subscriber but isn't
+[00:50:51] what you're building here to your open
+[00:50:53] source version of it um um so I would
+[00:50:56] say this is in parallel so up to date is
+[00:50:58] there's 40,000 randomized control trials
+[00:51:01] that come out every year and they are
+[00:51:03] ensuring every six months that every
+[00:51:05] form of pathophysiology is updated
+[00:51:08] versus we're doing the non-clinical side
+[00:51:10] the management of disease the management
+[00:51:13] of systems which there isn't an up to-
+[00:51:15] date for I think our points here about
+[00:51:18] the importance of having a resource
+[00:51:19] limited setting button is that the
+[00:51:20] randomized control trials are based on
+[00:51:22] being able to run a clinical trial
+[00:51:23] having that level of human res sources
+[00:51:26] products right and the Healthcare System
+[00:51:27] around it and to how you then inform
+[00:51:29] those who have one antibiotic not 100 or
+[00:51:33] one form of a cast for a patient not
+[00:51:36] seven as so and the discussions are
+[00:51:39] mostly centered around these managerial
+[00:51:41] issues so to speak or or is it a blend
+[00:51:44] also then it's a blend it's mainly the
+[00:51:46] management of multi resistant
+[00:51:48] tuberculosis not how do I clinically
+[00:51:50] diagnose it so once I have the PCR
+[00:51:53] machine how do I train people to use the
+[00:51:55] PCR machine and don't ensure I have the
+[00:51:57] right
+[00:52:06] supplies well this has been tremendous
+[00:52:08] for us and I appreciate because I know
+[00:52:09] as um with the lecture series many
+[00:52:12] people are thinking things on a very
+[00:52:13] Meta Meta scale as I was watching some
+[00:52:15] of them from last year and I think on a
+[00:52:17] daily basis we think about our users um
+[00:52:20] and it's so it's Lorenzo who keeps me up
+[00:52:22] at night it's our medical students in
+[00:52:24] these countries that we know in a sense
+[00:52:26] are trying to prepare themselves and
+[00:52:27] contain this disease and I think if you
+[00:52:30] are interested in following the Ebola
+[00:52:32] response this is so emblematic of what's
+[00:52:34] happening in our industry of global
+[00:52:36] health is that people are shipping the
+[00:52:38] product they're being airlifted and sent
+[00:52:40] in with no Human Resources no
+[00:52:42] understanding of how to use these
+[00:52:43] products and we're still use systems
+[00:52:45] from the 17th century to quarantine
+[00:52:48] patients so I'm hoping unfortunately
+[00:52:50] though it's such an acute situation that
+[00:52:52] this will bring about some of these
+[00:52:53] issues and we'll have a more Global
+[00:52:54] conversation how to combat Ebola and be
+[00:52:56] prepared for the next
+[00:52:58] epidemic I know that that was a very
+[00:53:00] nice sort of uh wrap up and I still want
+[00:53:03] to ask a question
+[00:53:05] though be a r question of you're screw
+[00:53:07] yeah well a little bit
+[00:53:11] um uh either now or perhaps on Friday at
+[00:53:16] Friday is meeting um these discussions
+[00:53:18] are among healthc Care Professionals or
+[00:53:22] nonprofessional but dedicated you know
+[00:53:24] people
+[00:53:26] um are there do you think about ways
+[00:53:29] have you tried or would you like to
+[00:53:31] discuss now or on Friday um ways in
+[00:53:34] which this can be expanded out so the
+[00:53:36] information that's developed here can
+[00:53:37] reach out to uh counter some of the
+[00:53:39] misinformation for example about ebola
+[00:53:41] is that something that's you are already
+[00:53:43] doing because this is fantastically we
+[00:53:46] love to connect and we'll definitely
+[00:53:47] participate on on Friday we started an
+[00:53:50] ebola response Community which is mainly
+[00:53:52] for people trying to figure out who
+[00:53:53] wants to volunteer and what resources
+[00:53:55] you need prior to volunteering for
+[00:53:57] example um and some of the clinical
+[00:53:59] issues uh to prepare nurses um and
+[00:54:02] Physicians who are going into the field
+[00:54:05] um but absolutely I mean I think we're
+[00:54:06] all understanding that all the data
+[00:54:07] that's out there is not necessarily good
+[00:54:09] and that leads to fear um um but ese for
+[00:54:13] in this situation we're trying to how do
+[00:54:15] we attract Healthcare Workforce who want
+[00:54:17] to volunteer to get there and be
+[00:54:19] properly funded and and
+[00:54:21] resourced excellent yeah thank you thank
+[00:54:24] you everyone
+[00:54:28] you

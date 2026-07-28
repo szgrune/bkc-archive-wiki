@@ -1,0 +1,1347 @@
+[00:00:00] welcome to the Berkman Center my name is
+[00:00:02] Mary Grey I'm a fellow here at the
+[00:00:03] Berkman Center and a senior researcher
+[00:00:05] at Microsoft Research and I have the
+[00:00:07] great pleasure of introducing our guest
+[00:00:09] today Nathan Matthias is a third-year
+[00:00:13] fellow here the berkman and a PhD
+[00:00:15] student at the MIT Media Lab and the
+[00:00:18] Center for civic media he's going to
+[00:00:21] talk with us about some work that he's
+[00:00:23] been doing ongoing work both
+[00:00:26] collaborative work but also some work
+[00:00:27] that he did with Microsoft Research New
+[00:00:30] England over the summer looking at
+[00:00:33] reddit editors and their their labor
+[00:00:36] around moderation so just a couple of
+[00:00:39] reminders this will be webcasted so if
+[00:00:41] you ask a question or have a comment at
+[00:00:43] the end if you could say your name for
+[00:00:46] posterity and just know that this is
+[00:00:48] being recorded we won't do round robins
+[00:00:50] of introductions but for the webcast
+[00:00:54] please make sure to identify yourself so
+[00:00:56] we'll know who to badger later for
+[00:00:59] follow-up and and without further ado
+[00:01:02] let me ask us all to welcome Nathan
+[00:01:09] thanks Mary and thank you everyone for
+[00:01:12] coming and those of you watching on the
+[00:01:14] Internet before we start I should note
+[00:01:17] that there will be some things in this
+[00:01:19] talk that people might find difficult
+[00:01:22] and if you see this slide you know that
+[00:01:26] the next slide after it might be
+[00:01:28] something you might choose not to look
+[00:01:30] at I'll let you know so 20 years ago
+[00:01:34] John Perry Barlow declared the
+[00:01:37] independence of cyberspace and he
+[00:01:39] imagined a world where we would
+[00:01:42] restructure human relations and
+[00:01:45] institutions in such a way that we might
+[00:01:48] be able to create a more humane world
+[00:01:51] and he thought about the different
+[00:01:54] approaches the governance that that
+[00:01:56] might bring about but 20 years later we
+[00:01:59] have very real concerns that these new
+[00:02:01] online structures might perpetuate and
+[00:02:04] even extend our capacities for
+[00:02:07] discrimination harassment and other
+[00:02:10] kinds of social harms my goal today
+[00:02:13] is to firstly to introduce those issues
+[00:02:17] of discrimination and harassment and how
+[00:02:19] they play out online and secondly to
+[00:02:23] offer a map of the different ways that
+[00:02:25] citizens are responding to take on the
+[00:02:28] challenge of these problems to start I
+[00:02:31] want to be clear that oppression as the
+[00:02:35] aorta collective puts it this is an anti
+[00:02:37] oppression group based in California is
+[00:02:40] a huge problem and it includes both
+[00:02:43] conscious and unconscious momentum on
+[00:02:45] multiple fronts on individual fronts
+[00:02:48] within ourselves at a systemic level and
+[00:02:51] at a cultural level and when we think
+[00:02:53] about oppression we're thinking about
+[00:02:55] ongoing patterns of unfairness and
+[00:02:59] mistreatment that play out over time
+[00:03:02] beyond just individual incidents and if
+[00:03:05] we put barlow's ideas on this particular
+[00:03:08] map he's thinking about the ways that
+[00:03:10] may be restructuring systems might
+[00:03:13] change this a set of challenges we have
+[00:03:18] as humanity but I think that actually
+[00:03:23] we've seen online all sorts of ways that
+[00:03:26] these cultural and individual these
+[00:03:29] conscious and unconscious challenges
+[00:03:31] continue to resurface and shape how
+[00:03:34] things work for everyday people on the
+[00:03:36] internet and here are some examples so
+[00:03:39] for example we talked about racial
+[00:03:41] discrimination online there are all
+[00:03:42] sorts of studies that show that although
+[00:03:44] online markets like local classifieds or
+[00:03:49] even things like Airbnb are
+[00:03:50] restructuring how we are economically
+[00:03:53] relating to each other that prejudice
+[00:03:55] still exists and those prejudices within
+[00:03:58] ourselves in our societies result in
+[00:04:01] situations where black people get fewer
+[00:04:03] offers their trusted less and they
+[00:04:05] actually get less money when they
+[00:04:07] participate in online markets and there
+[00:04:09] are ways that the design of our systems
+[00:04:12] can activate that prejudice the research
+[00:04:15] by Jason Radford has shown that on the
+[00:04:18] website donors choose that allows people
+[00:04:21] to do this incredibly pro-social thing
+[00:04:24] of donating resources in matera
+[00:04:26] to schools who need them simply adding
+[00:04:29] information about the marital status of
+[00:04:32] a teacher activates people's prejudices
+[00:04:36] and has led to a dramatic difference
+[00:04:40] between how women receive donations and
+[00:04:43] how male teachers receive donations and
+[00:04:47] on top of that we've seen similar cases
+[00:04:52] in the case of algorithms where our own
+[00:04:57] prejudices systems of discrimination can
+[00:05:00] start training the algorithms that
+[00:05:03] further structure our interactions
+[00:05:06] online this research by Latonya Sweeney
+[00:05:08] points to the possibility at least that
+[00:05:10] algorithms may be learning
+[00:05:12] discrimination as well and furthermore
+[00:05:15] there's the possibility that even as we
+[00:05:18] create alternatives to traditional
+[00:05:20] institutions we might be creating
+[00:05:23] entirely new avenues for discrimination
+[00:05:25] early work by Hannah Wallach and I
+[00:05:29] looking looked at the role of
+[00:05:32] discrimination by online audiences in
+[00:05:35] who gets heard in society as we rely
+[00:05:39] less on editors to decide what goes on
+[00:05:42] to the front page and more on what each
+[00:05:44] other share online we're seeing possible
+[00:05:48] evidence of cases where online audiences
+[00:05:52] are engaging in discriminatory behavior
+[00:05:54] in whose articles they're sharing in
+[00:05:59] this particular case showing that
+[00:06:02] articles by women were receiving fewer
+[00:06:04] shares on social media than articles by
+[00:06:08] men so if discrimination is one of the
+[00:06:11] challenges that we continue to struggle
+[00:06:13] with online despite so many
+[00:06:16] restructurings of how we relate
+[00:06:18] harassment is also another major issue
+[00:06:21] and i'll be showing in just a second
+[00:06:24] examples of just some of the harassment
+[00:06:26] that public intellectual and games
+[00:06:30] critic anita sarkeesian has received in
+[00:06:33] the past few years if you'd find this
+[00:06:35] uncomfortable it's totally fine to look
+[00:06:38] away for a moment I'll like
+[00:06:39] you know in the slide has passed so
+[00:06:42] these are the kinds of things that many
+[00:06:45] people online face every day people who
+[00:06:49] use their voices in the public sphere
+[00:06:51] have become targets of large-scale
+[00:06:55] harassment in some cases that's enabled
+[00:06:57] by the Internet I'm moving on from the
+[00:07:01] slide now but it's not simply a case of
+[00:07:05] words attacking people just in the last
+[00:07:09] few weeks our own representative
+[00:07:10] Katherine Clark was a victim of a
+[00:07:15] swatting attacked where someone
+[00:07:17] anonymously called a SWAT team on her
+[00:07:20] home and many of these SWAT hangs are
+[00:07:23] coordinated online when people release
+[00:07:26] the address of someone who is who they
+[00:07:29] hope would then become the victim of
+[00:07:31] something like this and there are other
+[00:07:33] ongoing issues that people face that
+[00:07:37] Jesse Daniels has documented in her work
+[00:07:39] on cyber racism and Sarah Jong has
+[00:07:41] dedicated a substantial part of her book
+[00:07:44] to thinking about the connections
+[00:07:46] between online harassment and domestic
+[00:07:49] violence it's not solely something that
+[00:07:51] people face from anonymous people
+[00:07:54] they've never met these are issues that
+[00:07:56] are linked with other historical
+[00:07:59] problems of oppression and it's not just
+[00:08:01] women and minorities in this research by
+[00:08:05] pew led by Maeve Duggan we actually see
+[00:08:08] many cases where a larger proportion of
+[00:08:10] men than women report experiencing very
+[00:08:14] serious problems like sustained
+[00:08:16] harassment and physical threats online
+[00:08:18] even as women experience greater /
+[00:08:21] stalking and sexual harassment in
+[00:08:23] greater proportions than men in the
+[00:08:26] United States and it's an international
+[00:08:28] problem groups like take back the tech
+[00:08:30] have have started to document
+[00:08:33] international cases of harassment that
+[00:08:36] people are experiencing online and if
+[00:08:38] you're interested in exploring further
+[00:08:40] scholarship on these issues a number of
+[00:08:43] people in Berkman Center have
+[00:08:45] coordinated to create a resource guide
+[00:08:49] and other lit reviews on these kinds of
+[00:08:51] problems
+[00:08:52] but let's come back to this question of
+[00:08:55] the iceberg of oppression I hope I've
+[00:08:57] been able to show that even though the
+[00:09:00] internet may be transforming some things
+[00:09:02] about the systems that shape our
+[00:09:04] collective action and the institutions
+[00:09:07] in our lives we still struggle with
+[00:09:10] these individual cultural conscious and
+[00:09:12] unconscious forms of oppression every
+[00:09:16] day as Cape miltner and Sarah Bennett
+[00:09:19] wiser put in their recent paper on
+[00:09:22] network misogyny when we focus solely on
+[00:09:26] the technical and legal elements these
+[00:09:27] structural issues we can fail to
+[00:09:30] recognize this wider cultural I suppose
+[00:09:35] this wider set of cultural oppressions
+[00:09:37] that are going on these battles over
+[00:09:40] cultural norms these challenges and
+[00:09:43] contestations over what it means to be a
+[00:09:46] person with dignity who has full rights
+[00:09:49] and opportunities in our world and
+[00:09:51] normally when we think about these
+[00:09:53] problems we turn to the verbs of
+[00:09:56] responding to social problem but Jake
+[00:09:58] James Berlin calls the kind of
+[00:10:00] interventions that we can take but in
+[00:10:03] the second part what I want to ask is
+[00:10:04] actually who is doing the work who are
+[00:10:07] the people who are responding to these
+[00:10:09] problems certainly there's an important
+[00:10:11] role that government has to play and
+[00:10:13] Danielle Pete's citroen has leveraged an
+[00:10:17] incredibly powerful argument for the
+[00:10:19] role of governments to play some role
+[00:10:20] and certainly there's a huge role for
+[00:10:23] technology platforms to play and in fact
+[00:10:28] there's very little known about the
+[00:10:30] potentially hundreds of thousands of
+[00:10:32] click workers who are doing the work of
+[00:10:37] responding to these things when platform
+[00:10:39] set policies but there's also a sense in
+[00:10:42] which for the last 40 years or more
+[00:10:44] everyday citizens have been burying the
+[00:10:47] the greatest amount of work and labor
+[00:10:51] associated with this and in the second
+[00:10:53] part I'd like to outline four different
+[00:10:55] ways that everyday citizens do take
+[00:10:58] action to intervene and make sense of
+[00:11:02] these social problems that we experience
+[00:11:04] online
+[00:11:06] to start we can talk about mutual aid in
+[00:11:09] 2011 prominent atheist blogger rabbits
+[00:11:12] rebecca watson faced huge amounts of
+[00:11:15] online harassment after speaking up
+[00:11:17] about sexual harassment within atheist
+[00:11:20] communities and in conferences and as a
+[00:11:23] result a number of feminist atheists
+[00:11:26] created a forum called atheism plus
+[00:11:28] where they could have their own content
+[00:11:31] moderators to defend each other from
+[00:11:34] racism sexism and harassment on their
+[00:11:37] community they were able to use this
+[00:11:39] moderation to like defend themselves on
+[00:11:42] that platform but their attackers
+[00:11:46] realized that many of those same people
+[00:11:48] also had a council on Twitter where the
+[00:11:52] affordances for moderation are not quite
+[00:11:55] so protective and that left them open to
+[00:11:59] mass harassment campaigns in response in
+[00:12:03] 2013 those groups started thinking about
+[00:12:07] ways that block lists which can be used
+[00:12:11] for an individual Twitter account to
+[00:12:14] prevent them from receiving tweets from
+[00:12:18] someone they've identified that they
+[00:12:20] don't want to hear from ways that those
+[00:12:22] block lists could be extended so that a
+[00:12:25] single block lish could be shared across
+[00:12:27] multiple people who have a common set of
+[00:12:29] rules and processes for deciding who's
+[00:12:31] on that list it was off that list and
+[00:12:34] how to keep people safe on Twitter that
+[00:12:37] was the first example on Twitter at
+[00:12:40] least a block list which go all the way
+[00:12:42] back to the well and very early online
+[00:12:46] communities as Seward Geiger has you
+[00:12:50] know very aptly put it these block BOTS
+[00:12:52] I make responding to harassment a more
+[00:12:55] visible and communal practice where you
+[00:12:57] actually have people who volunteer to go
+[00:13:00] through claims of harassment and decide
+[00:13:03] who's on that list and field inquiries
+[00:13:06] about whether someone should be taken
+[00:13:07] off that list and that's prompted a wide
+[00:13:10] range of peer support and mutual aid
+[00:13:13] responses like block together which is a
+[00:13:16] technical platform that supports people
+[00:13:18] to create their own
+[00:13:20] oculus sharing systems and the more
+[00:13:22] recent project called the heart mob by
+[00:13:24] hollaback which organizes peer support
+[00:13:27] for people who are experiencing online
+[00:13:29] harassment this just launched in the
+[00:13:31] last few weeks and it's designed to be a
+[00:13:34] system where someone who's experiencing
+[00:13:36] harassment maybe for the first time can
+[00:13:38] go to get advice and support and help
+[00:13:40] documenting and responding to the
+[00:13:42] problem so in this sense mutual aid is
+[00:13:45] like a shield it's a situation where
+[00:13:48] people are organizing to protect each
+[00:13:50] other in an emerging situation but
+[00:13:53] there's another model that I see
+[00:13:55] emerging online and it's this model of
+[00:13:58] advocacy care and like mutual aid people
+[00:14:02] engaging in this advocacy care are still
+[00:14:04] dedicated to supporting people who are
+[00:14:06] experiencing these problems they're also
+[00:14:08] dedicated to research and advocacy to
+[00:14:12] try to make change at this structural
+[00:14:13] level one example is something I was
+[00:14:15] privileged to be part of and in our
+[00:14:17] discussion we can talk about it further
+[00:14:19] I believe Amy Johnson who was co
+[00:14:22] architect of this study's main findings
+[00:14:24] is also in the room so she'll I'm sure
+[00:14:25] have plenty of things to say this was a
+[00:14:28] project led by an NGO called women
+[00:14:30] action in the media who were
+[00:14:32] particularly interested to support and
+[00:14:36] better understand problems of online
+[00:14:38] harassment on Twitter and they ended up
+[00:14:40] with a unique arrangement with Twitter
+[00:14:43] where they were able to receive reports
+[00:14:45] of harassment and forward them on to the
+[00:14:48] company so they were able to help people
+[00:14:50] walk through the process of reporting
+[00:14:52] harassment to the company and there's a
+[00:14:54] larger process that that kicked off for
+[00:14:57] the volunteers who supported people
+[00:14:59] through wham and Amy and I and a whole
+[00:15:03] cast of others many affiliated with
+[00:15:05] brookman were then asked to help them
+[00:15:07] study the data they collected with
+[00:15:09] consent in that process to better
+[00:15:11] understand things about what it's like
+[00:15:14] to receive and report to respond to
+[00:15:17] harassment as well so we're able to
+[00:15:19] generate findings on who's reporting
+[00:15:21] harassment findings on the kinds of
+[00:15:24] harassment that people were reporting
+[00:15:27] and also we were able to do statistical
+[00:15:29] analyses on what kinds of harassment
+[00:15:31] Twitter was more
+[00:15:33] or less likely to respond to in this
+[00:15:35] particular case at that time we found
+[00:15:39] that Twitter was not very likely to
+[00:15:43] respond to these cases of daxing these
+[00:15:46] moments where people are publishing
+[00:15:49] personal addresses and other vectors of
+[00:15:51] attack online so those are some of the
+[00:15:55] kinds of research that we're able to do
+[00:15:57] that happy to go into further detail
+[00:16:01] later on and this isn't the only example
+[00:16:04] of that kind of advocacy care there is
+[00:16:06] the online censorship dot org initiative
+[00:16:08] which supports people whose content has
+[00:16:12] been removed from sites and they're
+[00:16:14] advocating on behalf of people who feel
+[00:16:17] like they've experienced censorship
+[00:16:18] there are also groups like global voices
+[00:16:20] advocacy to do great amount of this kind
+[00:16:23] of work online and there are some
+[00:16:25] benefits to this you're able to advocate
+[00:16:26] directly to platforms on those things
+[00:16:29] where platforms actually have a perv you
+[00:16:31] to act better understand the context and
+[00:16:34] support people around their unique
+[00:16:36] situations you're able to do research
+[00:16:38] and then use that knowledge to
+[00:16:39] springboard public policy advocacy but
+[00:16:43] there are also some risks are there
+[00:16:44] unstable relationships with platforms
+[00:16:46] maybe they decide they want to stop
+[00:16:50] working with you it's hard to know how
+[00:16:52] that relationship will play out there's
+[00:16:54] variation quality of support lambs
+[00:16:57] volunteers were volunteers and there are
+[00:17:01] real questions to be asked about whether
+[00:17:05] the kind of people who are doing this
+[00:17:07] kind of advocacy care have the training
+[00:17:11] or indeed the training and support to
+[00:17:15] protect themselves because there are
+[00:17:18] substantial labour and mental health
+[00:17:19] costs in our study on when we found that
+[00:17:22] actually one of the volunteers
+[00:17:24] experienced substantial amounts of PTSD
+[00:17:27] and had to drop out of the process so
+[00:17:29] this is a risky endeavor in some cases
+[00:17:33] for the people who engage in it but it
+[00:17:36] does extend this mutual aid model into
+[00:17:40] an approach that allows you to start to
+[00:17:43] address these systemic issues
+[00:17:47] there's another approach that I spent my
+[00:17:50] summer at microsoft research studying
+[00:17:52] and it's this approach of governance
+[00:17:54] wherever we've seen online platforms
+[00:17:57] emerged over the last 40 years platforms
+[00:18:00] that support wide ranges of cultures and
+[00:18:02] communities we've often seen people in
+[00:18:05] the middle moderators community leaders
+[00:18:07] people who fill in the cracks of our
+[00:18:10] online relationships solve problems and
+[00:18:13] keep communities going you know they
+[00:18:17] could be conference house on the well
+[00:18:18] moderators on slashdot admins on on
+[00:18:22] facebook there is even something on xbox
+[00:18:25] called enforcement United or volunteers
+[00:18:28] well like contribute their time to help
+[00:18:31] people facing problems and on reddit
+[00:18:34] there moderators now right it is an
+[00:18:38] incredibly diverse cited it is a social
+[00:18:42] news site officially where people share
+[00:18:45] links and have conversations but there's
+[00:18:47] an incredibly diverse set of cultures
+[00:18:49] and communities on the site everything
+[00:18:50] from book clubs to places where people
+[00:18:54] look for jobs to communities where
+[00:18:57] people share images to communities like
+[00:19:03] am i the [ __ ] where people post
+[00:19:05] pseudonymous posts about their own
+[00:19:09] behavior and ask other pseudonymous
+[00:19:11] people did I behave appropriately in
+[00:19:14] this conversation and redditors will
+[00:19:17] tell them if they think they were the
+[00:19:20] [ __ ] in that conversation or not
+[00:19:21] there's an incredibly wide ranging set
+[00:19:23] of cultures from porn to books to
+[00:19:27] science to politics and each of these
+[00:19:30] communities has a moderation team which
+[00:19:33] can reign from two people to a thousand
+[00:19:35] these are the founders the organizers
+[00:19:37] the promoters architects maintain errs
+[00:19:39] legislators and enforcers of their
+[00:19:43] communities and a lot of them work
+[00:19:45] together across communities in this
+[00:19:48] particular network graph I've mapped out
+[00:19:50] the ties of common moderation between
+[00:19:55] subreddits in a population of 52,000
+[00:19:59] subreddits where these lines
+[00:20:00] mark communities that have shared
+[00:20:02] moderation teams in my qualitative
+[00:20:07] research with moderators I've heard from
+[00:20:09] moderators who spend hours a day
+[00:20:11] moderating I've learned about the
+[00:20:14] different scheduling and organizing
+[00:20:15] efforts that moderators engage in to
+[00:20:18] keep up with the efforts of defending
+[00:20:21] their communities from spam hate speech
+[00:20:23] and other problems and I've learned
+[00:20:27] about subreddit networks where
+[00:20:30] communities band together to have shared
+[00:20:32] rules and governance and spread the load
+[00:20:35] and I've also studied ways that
+[00:20:37] moderators are pressured to be
+[00:20:41] transparent about their work about the
+[00:20:44] governance that they do when they delete
+[00:20:46] people's comments or when they otherwise
+[00:20:48] engage in governance work in this case
+[00:20:50] just a few weeks ago the science
+[00:20:53] subreddit started publishing a
+[00:20:54] transparency report to allay concerns
+[00:20:59] from the subscribers that they have that
+[00:21:02] they were abusing their power and I've
+[00:21:05] also studied what happens when
+[00:21:07] moderators pool their energy and voice
+[00:21:10] to pressure platforms to change how they
+[00:21:14] work in the case of the reddit blackout
+[00:21:16] we're over 2,000 communities shut down
+[00:21:20] in order to collectively bargain with
+[00:21:22] the company and force the company to
+[00:21:24] improve the moderation tools that they
+[00:21:27] provide to these communities so this
+[00:21:30] governance role is one that definitely
+[00:21:34] has cultural and systemic implications
+[00:21:37] it's one that also involves defending
+[00:21:39] and supporting a particular community
+[00:21:42] there's also another angle that we need
+[00:21:45] to be thinking about when we think about
+[00:21:46] citizen responses and it's this angle of
+[00:21:49] social change and here are a few
+[00:21:51] examples of and especially looking at
+[00:21:54] the this iceberg of impression when we
+[00:21:56] think about changing the cultural or the
+[00:21:59] personal ways that we in our own
+[00:22:02] behavior and our in societies behave in
+[00:22:05] unjust ways that's where we start
+[00:22:08] talking about social change and here are
+[00:22:10] a few ways that people have tried to do
+[00:22:12] that here is a chart for example
+[00:22:14] of estimated by Jason Radford of
+[00:22:18] participation in Wikipedia by men and
+[00:22:20] women men on the Left women on the right
+[00:22:22] on this chart that he estimated in 2015
+[00:22:28] and in the case of Wikipedia it's not
+[00:22:31] going to be enough simply to try to
+[00:22:33] change the norms social change also
+[00:22:35] involves expanding participation and
+[00:22:38] jason has plotted out different the kind
+[00:22:41] of projections for different strategies
+[00:22:44] that you might take one strategy might
+[00:22:46] be to for Wikipedia to do better at
+[00:22:50] retaining female editors which is if it
+[00:22:52] does that it might reach gender parity
+[00:22:55] by 2050 26 another might be to recruit
+[00:23:01] more women and there has been a huge
+[00:23:03] amount of work within wikipedia around a
+[00:23:06] variety of strategies for expanding
+[00:23:08] representation on the site some of which
+[00:23:10] has been my own but as amanda making and
+[00:23:13] ingrid erickson rightly point out
+[00:23:17] bridging these gaps is more than just
+[00:23:20] getting people in the room it's about
+[00:23:22] addressing these wider cultural and
+[00:23:24] social issues another strategy in
+[00:23:27] addition to participation is to think
+[00:23:29] about our own biases in our own
+[00:23:31] discrimination in our own behavior this
+[00:23:34] is research early stage research that
+[00:23:36] I'm doing an ongoing basis on
+[00:23:38] discrimination by journalists on Twitter
+[00:23:42] and who they pay attention to and
+[00:23:44] respond to this is a chart of the
+[00:23:49] average percent per journalist
+[00:23:52] percentage of women followed across 66
+[00:23:55] different publications in the United
+[00:23:57] States and the UK and we see here that
+[00:24:00] most journalists on twitter follow
+[00:24:02] mostly men so even as we think about
+[00:24:05] Twitter and social media as an
+[00:24:07] incredibly valuable way to expand who
+[00:24:10] gets hurt in society we still have these
+[00:24:13] personal behaviors of awfully and bias
+[00:24:16] that shape who we interact with and in
+[00:24:19] work in collaboration with celibates
+[00:24:21] I've been trying to understand the
+[00:24:24] factors that lead to this personal
+[00:24:26] factors factors having to do
+[00:24:28] social norms and the groups that were
+[00:24:30] part of and to look at whether there are
+[00:24:34] transparency initiatives that we can
+[00:24:36] introduce that could shift a personal
+[00:24:40] behavior and group behavior on this
+[00:24:42] particular kind of discrimination this
+[00:24:45] is the followed by a system that we're
+[00:24:46] testing right now to see if exposing
+[00:24:49] people to information about who they
+[00:24:50] interact with on Twitter could have an
+[00:24:53] effect but it's also important to think
+[00:24:55] about group level norms and the values
+[00:24:59] that persist within a particular
+[00:25:00] community this is newly published work
+[00:25:03] by Betsy levy palak testing
+[00:25:06] anti-bullying interventions within
+[00:25:09] schools across 56 schools in New Jersey
+[00:25:13] accounting for factors at the individual
+[00:25:15] level group level norms and the social
+[00:25:18] networks this is a study I think is a
+[00:25:21] very breakthrough study particularly
+[00:25:23] because it supported young people to
+[00:25:27] design their own interventions to reduce
+[00:25:31] bullying and social problems in their
+[00:25:33] schools often anti-bullying initiatives
+[00:25:36] are top down they're driven by the
+[00:25:40] priorities and values of adults but this
+[00:25:43] particular study said we believe that
+[00:25:45] young people have a role not only in
+[00:25:48] reducing these problems but in defining
+[00:25:51] the goals and values and interventions
+[00:25:54] that are important coming back to this
+[00:25:57] value of citizen power in shaping the
+[00:26:01] problems and responding the problems
+[00:26:03] that they face and they found that
+[00:26:06] supporting young people to design their
+[00:26:08] own anti-bullying initiatives was
+[00:26:12] associated with a but had a large effect
+[00:26:15] on disciplinary reports and that there
+[00:26:20] the physician of those young people in
+[00:26:23] their social network how popular or
+[00:26:25] central to that Network they were was
+[00:26:28] also important for predicting the effect
+[00:26:30] of that particular intervention and in
+[00:26:33] if you want to learn more about this
+[00:26:35] betsy is actually going to be giving a
+[00:26:37] talk this week this wednesday here at
+[00:26:40] Harvard
+[00:26:41] so that's the social change angle on
+[00:26:44] addressing these things if the other
+[00:26:47] three are often very concerned with
+[00:26:50] protecting people and communities it's
+[00:26:52] also important to see a role that
+[00:26:55] citizens play in addressing these wider
+[00:26:58] issues of social change now you might
+[00:27:01] have noticed in this last part the verbs
+[00:27:04] have come back in we've started to ask
+[00:27:07] questions about the effect we started to
+[00:27:09] talk about change and as I move from the
+[00:27:15] work that I've traditionally done to
+[00:27:17] document problems of harassment and
+[00:27:19] discrimination and study the work of
+[00:27:21] people who are fighting them online I
+[00:27:24] found myself thinking more and more
+[00:27:26] about causal questions especially
+[00:27:29] because the interventions that we
+[00:27:31] imagine to address social problems
+[00:27:34] online can sometimes backfire and my gif
+[00:27:39] is not playing there it is yay for
+[00:27:45] example like here's a study by justin
+[00:27:47] chang on the effect of downvoting across
+[00:27:51] four different political news sites he
+[00:27:53] found that the people whose comments are
+[00:27:58] most downloaded come back and contribute
+[00:28:00] more that their future posts are of
+[00:28:03] lower quality as perceived by the
+[00:28:05] community and they go on to downvote
+[00:28:08] other people very badly increasing the
+[00:28:12] levels of acrimony in those communities
+[00:28:13] so here's a case where we think that
+[00:28:16] this intervention of pooling our time to
+[00:28:20] downvote people could make our
+[00:28:22] communities better but in these
+[00:28:24] particular communities the effect was
+[00:28:27] actually the opposite and so as I move
+[00:28:30] into the last year and a half of my
+[00:28:31] dissertation I've been thinking about
+[00:28:33] ways that we can support citizens to run
+[00:28:37] their own experiments to estimate the
+[00:28:40] effects of their efforts to address
+[00:28:42] these problems and there are huge
+[00:28:44] challenges in terms of thinking about
+[00:28:46] the research ethics of this and also
+[00:28:49] methodological challenges about finding
+[00:28:52] ways to meaningfully support people to
+[00:28:53] run
+[00:28:54] experiments that they can involve in
+[00:28:57] helpful and meaningful conversations
+[00:28:58] about what they want to do as a
+[00:29:00] community and those are the challenges
+[00:29:02] that I'm hoping to tackle in my upcoming
+[00:29:05] PhD so to sum up I hope that I've been
+[00:29:09] able to show some ways that simply
+[00:29:11] addressing or changing the systems of
+[00:29:15] governance that we have and changing how
+[00:29:17] people collaborate and relate to each
+[00:29:19] other online hasn't necessarily created
+[00:29:22] this more humane world but that there
+[00:29:24] are some patterns emerging as Barlow
+[00:29:27] hooked for that illustrate ways that
+[00:29:32] even as governments and platforms debate
+[00:29:35] how best to respond citizens are also
+[00:29:38] bearing a huge amount of the work and
+[00:29:42] innovating in remarkable ways to find
+[00:29:46] ways to address these longer-term
+[00:29:48] oppressions that we face together as a
+[00:29:51] society thank you and I think we have
+[00:30:03] time for questions and I'm hoping that
+[00:30:05] we'll have a discussion rich discussion
+[00:30:12] there's a computer illiterate I probably
+[00:30:16] ought not to be here or asking this
+[00:30:18] question but of course you're you
+[00:30:25] largely excluded to exclude from your
+[00:30:28] talk what platforms and government
+[00:30:31] agencies can do to deal with this
+[00:30:36] problem am I right in thinking that if
+[00:30:44] the internet is going to operate in the
+[00:30:48] many beneficial ways it does that to a
+[00:30:54] certain extent these bad things are
+[00:30:57] going to have to be put up with up with
+[00:30:58] and we can't we are not going to
+[00:31:03] completely eliminate them that is a
+[00:31:06] question
+[00:31:09] yeah I think there are a number of
+[00:31:11] things that governments are and
+[00:31:13] platforms are doing so one area where
+[00:31:17] there has been a lot of legal activity
+[00:31:19] as child pornography and that's one
+[00:31:22] thing where many governments and many
+[00:31:24] platforms and citizens have agreed that
+[00:31:27] this is so bad and the harms are like so
+[00:31:31] bad around that that it merits special
+[00:31:35] legal and technical considerations I
+[00:31:37] think platforms have developed a wide
+[00:31:42] range of responses using machine
+[00:31:46] learning using flagging systems using
+[00:31:51] like human labor in various ways to try
+[00:31:54] to respond to these problems and those
+[00:31:57] boundaries of like what is acceptable
+[00:31:59] what is not acceptable what will we put
+[00:32:04] into law what will we leave two
+[00:32:06] platforms and citizens to decide for
+[00:32:09] themselves those boundaries are under
+[00:32:12] intense negotiation an ongoing way and I
+[00:32:17] think there are scholars studying and
+[00:32:22] advocating for various angles so people
+[00:32:25] like Daniel citron one one person who's
+[00:32:28] thought deeply about this and there are
+[00:32:30] also scholars who are looking directly
+[00:32:32] at that kind of negotiation process
+[00:32:36] people like Tarleton Gillespie whose
+[00:32:38] thought about the ways that platform
+[00:32:40] policies allow platforms to position
+[00:32:44] themselves as supporting all of the good
+[00:32:48] things that they want people to
+[00:32:50] recognize them as bringing to the world
+[00:32:54] while dis claiming responsibility for
+[00:32:57] the bad things that we might not want to
+[00:33:01] see and those are very live and ongoing
+[00:33:03] conversations and that we might and I
+[00:33:07] guess as we look and see things like the
+[00:33:11] new Twitter trust and safety council
+[00:33:13] we're seeing examples of new
+[00:33:15] arrangements and approaches that people
+[00:33:17] are coming up with to try to work
+[00:33:19] through those questions
+[00:33:21] I hope you don't consider it the same
+[00:33:25] question asked again but what you
+[00:33:27] consider just I probably don't in vice
+[00:33:29] versa how do you draw the lines or a
+[00:33:32] what what's right just that's one and
+[00:33:36] the other one is um I certainly should
+[00:33:39] be allowed to start the group in my
+[00:33:41] house that consider women not as good
+[00:33:45] enough shouldn't I be able to start a
+[00:33:48] new twitter or any other app or site of
+[00:33:52] only four people who consider that women
+[00:33:54] not as good in math so this this
+[00:33:59] question of where the lines are and
+[00:34:02] whose conversations are acceptable has
+[00:34:06] been a major point of contention for one
+[00:34:11] of the platforms that I've spent
+[00:34:12] substantial time studying which is read
+[00:34:15] it who on one hand have had typically an
+[00:34:21] approach that is more along the lines of
+[00:34:24] anything goes they want to support a
+[00:34:28] wide range of communities to have a wide
+[00:34:30] range of conversations and so for
+[00:34:32] example for the longest time
+[00:34:35] conversations that distributed
+[00:34:38] non-consensual photography and different
+[00:34:44] hate speech groups different neo-nazi
+[00:34:47] groups were permitted and thrived on the
+[00:34:51] platform and this past year the company
+[00:34:55] started to change their policies under
+[00:34:57] pressure from their other consumers and
+[00:35:00] users and board members and the public
+[00:35:02] where they started to make rules that
+[00:35:07] would instead of saying there are
+[00:35:10] certain kinds of speech that they want
+[00:35:12] to prohibit they decided to say that
+[00:35:14] they would not allow certain kinds of
+[00:35:17] behavior and on that basis they removed
+[00:35:23] several communities entirely from the
+[00:35:26] site and banned all users who are
+[00:35:29] moderators of those communities which
+[00:35:32] prompted a great backlash so I think
+[00:35:34] we're seeing people wrestle with the
+[00:35:37] fundamental categories through which
+[00:35:40] they think about these questions are we
+[00:35:42] to think about these things as a speech
+[00:35:44] issue and an intellectual freedom issue
+[00:35:47] are we to think about these as issues of
+[00:35:50] behavior and harms and I think as we see
+[00:35:54] companies evolved in their policy making
+[00:35:56] as we see legislators come to terms with
+[00:36:00] this i think this this discussion around
+[00:36:02] behavior is going to be even more
+[00:36:05] central um Nathan thank you so much for
+[00:36:10] your talk and I'm always really grateful
+[00:36:12] about how wonderful you are at crediting
+[00:36:14] people and really thinking deliberately
+[00:36:17] about how to talk about other people's
+[00:36:18] work so with that in mind I wanted to
+[00:36:20] ask I know you've read probably more of
+[00:36:23] this literature than maybe any other
+[00:36:24] human but certainly than me um and I was
+[00:36:27] wondering what kinds of things would you
+[00:36:29] like people to study like what kinds of
+[00:36:31] things do you wish people were looking
+[00:36:32] at more um just with an eye towards sort
+[00:36:34] of understanding better what's not known
+[00:36:36] about the field because you've done such
+[00:36:37] a great job of providing an overview
+[00:36:39] thanks Kendra I think there's been a lot
+[00:36:43] of focus on trying to understand what is
+[00:36:46] online harassment and who are the people
+[00:36:49] who do it and there's clearly a huge
+[00:36:51] amount of work to be done there still
+[00:36:53] because our struggle with definitions as
+[00:36:57] we've just been discussing is one of the
+[00:37:00] fundamental struggles how we define
+[00:37:03] these things where we draw these lines
+[00:37:05] determine whether we see them as like
+[00:37:08] legal questions or otherwise in parallel
+[00:37:13] with parallel with that I think we've
+[00:37:15] had far too little research on the
+[00:37:18] effects of online harassment and the
+[00:37:21] effects of our efforts to deal with them
+[00:37:23] so for example many of our conversations
+[00:37:27] about why online harassment matters are
+[00:37:32] based on the assumption that it's a risk
+[00:37:37] to people's exercise of their speech
+[00:37:39] rights so we we have this assumption
+[00:37:42] which is well grounded in qualitative
+[00:37:44] evidence and the experiences that people
+[00:37:46] face every day
+[00:37:47] that receiving online harassment has the
+[00:37:50] effect of pushing people out of
+[00:37:52] participating in our democracies and
+[00:37:55] although that's a compelling argument we
+[00:37:58] do really don't have quantitative
+[00:38:00] evidence to show that this kind of thing
+[00:38:03] is happening on average and that's one
+[00:38:06] area just documenting these effects on
+[00:38:09] people's lives whether pushing people
+[00:38:11] out of the public sphere or the effect
+[00:38:14] that it has on their own person and
+[00:38:17] emotions our areas where I think there's
+[00:38:19] a lot of work to be done and then also I
+[00:38:22] think there's a great need to understand
+[00:38:25] the effects of our efforts to respond
+[00:38:28] both our efforts of care for people who
+[00:38:32] experiencing these things as well as the
+[00:38:36] effects for the people who offer that
+[00:38:38] care who might themselves face mental
+[00:38:40] health challenges and also the effects
+[00:38:43] on the wider cultures and strict
+[00:38:45] structures and systems and norms that
+[00:38:48] support and propagate these things so as
+[00:38:50] I move forward with my research I'm
+[00:38:52] hoping to focus more in those areas and
+[00:38:55] then I guess finally there's a great
+[00:38:57] need for people working on these things
+[00:38:58] to talk to each other more in our lit
+[00:39:02] reviews we've found so many different
+[00:39:04] communities where scholars have done
+[00:39:06] great work but haven't necessarily been
+[00:39:09] aware of each other's work so that's
+[00:39:11] another thing I'm hoping to dedicate
+[00:39:13] time to in the coming years I'm Eric
+[00:39:19] here at the law school my question
+[00:39:21] relates to some of these questions in
+[00:39:22] that it seems like a la vez that you
+[00:39:24] presented today is either us focused or
+[00:39:26] maybe anglo-american I'm curious about
+[00:39:28] maybe the kind of international
+[00:39:31] perspective or different approaches in
+[00:39:33] different countries or if you've looked
+[00:39:34] at all it at cultures like the united
+[00:39:37] states that are very free speech
+[00:39:38] oriented and almost anything goes versus
+[00:39:41] maybe something like a european model
+[00:39:43] where it's a little bit more restrictive
+[00:39:44] where there's a lot more respect or
+[00:39:46] something's very restrictive like a
+[00:39:48] chinese model or something like that any
+[00:39:50] thoughts on that about how different
+[00:39:52] countries or different governments
+[00:39:56] respond to how they they approach this
+[00:39:58] and whether there might be lessons there
+[00:40:00] a little bit more universal and
+[00:40:02] character so my own work has focused
+[00:40:06] mostly on the US and the UK there are
+[00:40:08] scholars who are doing great work on and
+[00:40:13] really trying to build case studies on
+[00:40:15] these international dimensions here at
+[00:40:17] the Berkman Center we have people like
+[00:40:18] Susan Bennish in the dangerous speech
+[00:40:20] project that's trying to document those
+[00:40:23] things and I mentioned the work of take
+[00:40:24] back the tech is also trying to think
+[00:40:27] about these questions internationally
+[00:40:29] unfortunately that's a bit out of my
+[00:40:31] purview one of the challenges for
+[00:40:34] someone like me who's a more of an
+[00:40:36] engineer and a social scientists is that
+[00:40:42] often my research is limited by the
+[00:40:46] reach of a particular platform or
+[00:40:48] community that I'm working with and
+[00:40:50] there are some some platforms like the
+[00:40:54] Facebook's of the world the wikipedias
+[00:40:56] of the world into some degree the
+[00:40:57] reddits where it will increasingly be
+[00:41:00] possible to do these comparative studies
+[00:41:03] but account for cultural differences
+[00:41:05] between languages and cultures and I'm
+[00:41:08] really excited to explore those kinds of
+[00:41:10] studies as they become more technically
+[00:41:13] possible in the future thanks thanks
+[00:41:17] Nathan for a really interesting talk I
+[00:41:18] had a question about sort of the
+[00:41:22] underlying grouping you have for actors
+[00:41:25] so you you had governments and platforms
+[00:41:29] and citizens and governments and
+[00:41:31] platforms in very obvious actor
+[00:41:32] categories but I'm wondering about
+[00:41:34] citizens and why you chose the word
+[00:41:36] citizen because you could have chosen
+[00:41:39] user and talked about sort of the
+[00:41:42] commercial and private corporate
+[00:41:44] relationship that's going on here but I
+[00:41:46] think you're making a larger argument
+[00:41:47] and I'm wondering if it's connected back
+[00:41:49] to that Barlow quote that you started
+[00:41:50] with or how it all fits in so if you
+[00:41:52] could talk a little bit about that that
+[00:41:54] would be great thanks Amy I've been
+[00:41:57] really inspired by other movements in
+[00:42:01] Western history in particular where
+[00:42:04] people have responded to kind of rapid
+[00:42:06] technology change through citizen
+[00:42:10] efforts to up both support each other
+[00:42:13] and
+[00:42:14] work for larger structural change and a
+[00:42:16] lot of this comes from inspiration in
+[00:42:19] the work of Elinor Ostrom on the citizen
+[00:42:22] governance and the role for citizens in
+[00:42:24] governing environmental in case of
+[00:42:29] environmental harms and there are also
+[00:42:32] other histories like the histories
+[00:42:35] around the formation of the FDA in the
+[00:42:39] United States and UK where you have
+[00:42:41] place vast expansion of productive
+[00:42:45] capacities I think I have a slide
+[00:42:47] somewhere here of the poison squads in
+[00:42:50] ah here's here's the poison squads in
+[00:42:54] early 20th century the United States of
+[00:42:57] citizens who volunteered to eat
+[00:43:00] adulterated food partly to help
+[00:43:04] researchers understand the effects of
+[00:43:07] food with borax and alum and
+[00:43:09] formaldehyde in it but also partly so
+[00:43:13] that they could advocate both the
+[00:43:17] advocate for the creation of things like
+[00:43:19] the FDA and you have these fascinating
+[00:43:22] movements like a microscope in every
+[00:43:25] home around finding efforts that ways
+[00:43:29] that citizens can better understand and
+[00:43:32] respond to problems that are emerging
+[00:43:35] that people are trying to make sense of
+[00:43:37] that government hasn't yet figured out
+[00:43:39] how to properly govern and so I draw
+[00:43:43] great inspiration from that and also I
+[00:43:46] in my own qualitative work as I've
+[00:43:48] talked to people who do this work I've
+[00:43:52] been struck by both certainly the labor
+[00:43:55] that goes into it that supports these
+[00:43:58] platform but also the way in which they
+[00:44:03] bring the same kind of attitudes and
+[00:44:05] passions that someone might bring to
+[00:44:07] being a border crossing guard for their
+[00:44:09] school or being on the school board and
+[00:44:11] the ways that they come under the same
+[00:44:14] kind of pressures as someone who has
+[00:44:16] that plays that civic role in their
+[00:44:18] communities so as I do my fieldwork
+[00:44:20] especially in work I'm trying to write
+[00:44:22] up now on the work of Reddit moderators
+[00:44:25] I've been struck by
+[00:44:26] that while they're doing certainly this
+[00:44:29] this labor they're also in this very
+[00:44:33] civic role in their communities is this
+[00:44:40] all yeah you can hear me um thanks for
+[00:44:42] your talk mate it's it's I'm so grateful
+[00:44:45] for your comprehensive all-embracing
+[00:44:47] vision on these things and my question
+[00:44:49] maybe is kind of a quirky certainly less
+[00:44:52] formed follow-up to Amy's I'm curious
+[00:44:55] about the role of moderation in these
+[00:45:01] situations and you know as you were
+[00:45:04] talking I just wondered if there's like
+[00:45:06] a sort of nascent political theory of
+[00:45:08] moderation a kind of political
+[00:45:10] anthropology of moderation from you know
+[00:45:12] the reddit community model to the cliq
+[00:45:16] workers and I just wondered maybe if you
+[00:45:18] could talk some more about about about
+[00:45:21] moderation and and you know where where
+[00:45:24] it comes from where it's going and the
+[00:45:26] diversity of approaches to that that
+[00:45:28] crucial political fulcrum what a great
+[00:45:32] question i'll try to keep it short oh so
+[00:45:36] you know we have had people in these
+[00:45:38] kinds of roles for as long as we've had
+[00:45:41] people relating to each other online and
+[00:45:44] i think a few places i think i'll share
+[00:45:50] maybe a few places to turn rather than
+[00:45:52] give you the comprehensive
+[00:45:53] all-encompassing answer uh there's
+[00:45:56] there's work by brian butler and then
+[00:46:00] the 1990s where he looked at mailing
+[00:46:02] list moderators and the different work
+[00:46:05] that people put in in mailing lists and
+[00:46:07] newsgroups which is where i draw that
+[00:46:11] like rich taxonomy of work the founders
+[00:46:15] promoters the legislature and more
+[00:46:19] recently there's been a lot of interest
+[00:46:21] in governance on sites like wikipedia
+[00:46:24] and folks like Darius who's in the room
+[00:46:28] here and then to making looking at like
+[00:46:31] emotional labor of that we've heard here
+[00:46:34] at Berkman just two weeks ago from Aaron
+[00:46:37] huffaker who's looked at the way that
+[00:46:39] automated sister world
+[00:46:40] automated systems play in that and I
+[00:46:43] think that that role for automated
+[00:46:45] systems is something that we need
+[00:46:48] especially pay attention to kind of
+[00:46:50] getting to grips with and there's great
+[00:46:54] work by Stuart Geiger who I already
+[00:46:56] mentioned on the role of bots and the
+[00:46:58] ways that we use code to understand how
+[00:47:04] things are playing out in our online
+[00:47:05] communities many of the subreddits have
+[00:47:09] millions and millions of participants
+[00:47:11] and it's frankly impossible for any
+[00:47:13] single person to really understand
+[00:47:15] what's happening in them so the
+[00:47:17] moderators who engage in that work
+[00:47:19] sometimes in the thousands for a single
+[00:47:23] community really rely on automated
+[00:47:26] systems of various kinds both to
+[00:47:27] understand how things are playing out in
+[00:47:29] their community and also to do the work
+[00:47:33] of moderation and my small piece of that
+[00:47:37] in in my research that I'm still
+[00:47:39] wrestling with and trying to write about
+[00:47:42] focuses on this this way that moderators
+[00:47:49] are definitely positioning their work in
+[00:47:52] terms of the platform and trying to
+[00:47:54] maintain a good relation the ways that
+[00:47:57] they're trying to relate well to their
+[00:48:01] communities who in many cases they're
+[00:48:03] accountable to and also the ways that
+[00:48:06] relationships between moderators shape
+[00:48:08] how people become moderators how they
+[00:48:11] stay as moderators and how their idea of
+[00:48:14] what it means to be a moderator evolves
+[00:48:16] over time so those are questions that
+[00:48:18] I'm actively asking in my research hi
+[00:48:23] I'm I'm around Newman I happened to be a
+[00:48:25] volunteer moderator for a local live
+[00:48:27] general community and somehow we managed
+[00:48:30] somehow I think at least we managed to
+[00:48:31] avoid most the problems that have been
+[00:48:33] outlined here although I'm not quite
+[00:48:34] sure how we got lucky but my question is
+[00:48:38] about you mentioned a perverse a
+[00:48:41] perverse effect that downloading which
+[00:48:44] to me is essentially crowd-sourced
+[00:48:45] moderation you know can you encourage
+[00:48:49] bad behavior instead of instead of
+[00:48:52] hiding it and making it disappear
+[00:48:54] Oh why do you think that is and what
+[00:48:56] could be done about that that's a really
+[00:48:59] important question that needs more
+[00:49:02] research um and death and you don't even
+[00:49:07] see it anymore because randy said this
+[00:49:10] is this is worthless 100 goes away yeah
+[00:49:12] absolutely so one of one of the most
+[00:49:15] fascinating findings in the world of
+[00:49:18] research on these questions comes from
+[00:49:20] Mara Burke from 2008 she's now at
+[00:49:24] Facebook and she did a study on how I
+[00:49:29] completely forget which platform but she
+[00:49:32] wanted to see if posts that were more
+[00:49:36] positive received more comments on them
+[00:49:39] or whether posts that were more negative
+[00:49:41] received more comments and she did
+[00:49:44] analysis over hundreds of different
+[00:49:46] online communities and the answer was it
+[00:49:49] depends that there's all sorts of
+[00:49:52] cultural variation between how different
+[00:49:55] communities work who's in them and what
+[00:49:57] their norms are and so when we look at
+[00:50:00] findings like Chang's on the
+[00:50:02] effectiveness of downvoting it's hard
+[00:50:04] really to know how well that generalizes
+[00:50:06] does that mean that all down in voting
+[00:50:08] systems work that sway or is there
+[00:50:10] something about those for particular
+[00:50:12] like politically polarized communities
+[00:50:15] that meant that that's how it played out
+[00:50:19] there and there a variety of ways that
+[00:50:23] that we might start to explore that and
+[00:50:26] that's one reason why I'm especially
+[00:50:27] interested in supporting communities to
+[00:50:31] do their own research and potentially
+[00:50:33] pool their findings with other
+[00:50:36] communities so that we could start to
+[00:50:37] get a sense for what are the differences
+[00:50:40] between communities that lead to such
+[00:50:43] different outcomes for the same kind of
+[00:50:47] intervention
+[00:50:59] I've never been able to understand that
+[00:51:02] I've thought about it quite a bit what
+[00:51:04] is it exactly about this in the cloud or
+[00:51:08] online or digital communication that dis
+[00:51:11] inhibits people that promise femme
+[00:51:13] enables them to say things that they
+[00:51:15] would never say in their sort of analog
+[00:51:17] existence I mean is it the relative
+[00:51:19] anonymity is the fact that they're not
+[00:51:21] as identifiable they're not as
+[00:51:23] localizable or is it just the absence of
+[00:51:25] eye to eye face to face contact with
+[00:51:28] anybody who's reading what they have to
+[00:51:30] say I think it's extremely important to
+[00:51:32] get at this because it may be possible
+[00:51:33] to correct one or another of the reasons
+[00:51:36] for this absence of civility without
+[00:51:41] necessarily travelling people's
+[00:51:42] expensive and expressive and rights my
+[00:51:50] response so this is a live and ongoing
+[00:51:52] debate whether things about the design
+[00:51:55] of our online communications are
+[00:51:58] prompting the kind of a like a unique
+[00:52:02] kind of like harassment or in civility
+[00:52:04] up and I think I would turn back to this
+[00:52:08] iceberg of pressure of oppression for
+[00:52:10] helping make sense of this and also to
+[00:52:13] that wonderful article by Bennett wiser
+[00:52:18] and miltner even as there are certainly
+[00:52:23] some cases where we've been able to
+[00:52:24] document things about the design of a
+[00:52:26] system that have effects on
+[00:52:29] discrimination we have to acknowledge
+[00:52:31] that we don't live in a world where
+[00:52:34] people are civil to each other and
+[00:52:36] behave in just ways we live in a world
+[00:52:39] that's full of like all sorts of racism
+[00:52:43] intergroup conflict sexism and we are
+[00:52:47] struggling with these things as a
+[00:52:48] society an ongoing way and that
+[00:52:51] certainly a great deal of what we see
+[00:52:53] online is simply people behaving like
+[00:52:56] they always behave and we are seeing it
+[00:53:01] online and so I would I guess
+[00:53:06] agree that it's important to find those
+[00:53:09] spaces where maybe the design choices
+[00:53:12] we're making our activating or
+[00:53:16] furthering those kinds of problems but I
+[00:53:20] think we also need to acknowledge that
+[00:53:23] really to address these problems we need
+[00:53:25] to be thinking in terms of social change
+[00:53:28] well I'm so glad you had that response
+[00:53:31] to anything because I was thinking was
+[00:53:33] we often don't think about how what's
+[00:53:36] enabled here is the visibility of the
+[00:53:39] kind of vitriol that's often directed at
+[00:53:41] individuals that unless you're the
+[00:53:43] target of that you just don't feel and
+[00:53:45] see in here so it's it's a you know for
+[00:53:48] better and for worse I feel like to your
+[00:53:50] point it really renders visible the kind
+[00:53:54] of tensions that we often navigate in a
+[00:53:58] day-to-day way my question is around a
+[00:54:00] comment earlier you made about wanting
+[00:54:05] to also be able to provide opportunities
+[00:54:07] for for posting material that's been
+[00:54:11] taken down and what kinds of rubrics
+[00:54:15] logics you use in more of the the
+[00:54:20] advocacy care work of balancing and I
+[00:54:23] don't even know if that's the right
+[00:54:24] paradigm for it but but making sense of
+[00:54:27] how to provide opportunities for
+[00:54:30] speaking in a kind of lock in you know
+[00:54:33] freedom to with the capacity of blocking
+[00:54:38] and freedom from something that might be
+[00:54:41] hurtful so you're asking about like how
+[00:54:46] you judge in between like block systems
+[00:54:48] and ideas of say the public sphere yeah
+[00:54:52] and I mean I know I don't know if you
+[00:54:54] have a specific example of something
+[00:54:56] that you've been actively working to
+[00:54:59] make visible that's been taken down and
+[00:55:02] how to make sense of that as a as a an
+[00:55:06] act of a particular kind of liberation
+[00:55:10] to speak and I wanted to ground it in
+[00:55:15] some specific case if you have something
+[00:55:17] where you've had to negotiate that
+[00:55:19] not you know we can probably think of
+[00:55:22] back and forth between individuals as
+[00:55:24] those cases where that's getting
+[00:55:26] negotiated but when you're participating
+[00:55:28] with a group of people trying to care
+[00:55:30] for a conversation how does that play
+[00:55:34] out like how to work with that if that I
+[00:55:37] don't know if I'm still being too
+[00:55:38] abstract I can give an answer I think I
+[00:55:42] think I made we could maybe talk later
+[00:55:45] to like narrow down that question I
+[00:55:48] think there are definitely critiques
+[00:55:53] against say the work that lamb did that
+[00:55:58] by offering support to people who were
+[00:56:01] reporting online harassment they
+[00:56:04] represented a threat to freedom of
+[00:56:06] speech in America and around the world
+[00:56:09] and I think it's very easy for people to
+[00:56:16] maybe conflate but this comes back to
+[00:56:19] that need for better definitions that a
+[00:56:22] better understanding of the kinds of
+[00:56:24] things that people experience in in our
+[00:56:28] work once we publish the report from the
+[00:56:32] work that whim had done we actually had
+[00:56:35] a fair number of people come to us and
+[00:56:39] say oh now we understand what they were
+[00:56:43] trying to do and we recognize that our
+[00:56:47] peers that you were a threat to speech
+[00:56:50] rights are actually not a well-grounded
+[00:56:54] we now see that like a lot of what when
+[00:56:56] was doing was supporting people who had
+[00:56:59] like ongoing issues of harassment or it
+[00:57:02] was connected with someone that they
+[00:57:04] already had a tie to in their life I
+[00:57:07] think there are concerns around whether
+[00:57:11] blocking technologies in particular
+[00:57:13] might lead to like a world of very
+[00:57:17] carefully crafted filter bubbles of
+[00:57:20] people not being able to hear other
+[00:57:23] viewpoints and and steward Geiger has a
+[00:57:27] talk from the Association internet
+[00:57:30] researchers conference where he kind of
+[00:57:32] angles some of those questions more
+[00:57:34] eloquently than then I can but I think
+[00:57:38] my answer typically to those things is
+[00:57:41] to urge people to look at the specifics
+[00:57:45] of what people are blocking and why
+[00:57:48] they're doing it and then secondly to
+[00:57:51] look at the mechanisms that they do or
+[00:57:53] do not have in place for dealing with
+[00:57:58] cases where they may have made mistakes
+[00:58:01] in the case of the block back block
+[00:58:03] bought they have an appeals process in
+[00:58:05] the case of many subreddits they have
+[00:58:08] appeals processes and that's very
+[00:58:10] different from how most online platforms
+[00:58:13] work most online platforms don't tell
+[00:58:15] you why they removed your content they
+[00:58:19] don't give you a chance to appeal and
+[00:58:20] they certainly don't give you a chance
+[00:58:22] for that appeal to be considered by
+[00:58:25] collection of peers who deliberate over
+[00:58:27] that and in many cases whether it's
+[00:58:29] Wikipedia or many communities on reddit
+[00:58:32] or things like the block bought those
+[00:58:35] processes of accountability are either
+[00:58:40] in place or being put in place as more
+[00:58:43] and more users advocate for them um okay
+[00:58:51] there I have a question about the the
+[00:58:54] way I'm study you mentioned during it
+[00:58:57] that you said with consent and there's
+[00:59:00] some question as to what consent means
+[00:59:02] in social media research um I sort I i
+[00:59:07] was wonder what the consent a model is
+[00:59:09] for that homes whose consent you get and
+[00:59:11] I asked that kind of because I'm really
+[00:59:13] curious what the response of attackers
+[00:59:17] is to being researched so i guess the
+[00:59:23] Ouija question and the fall yeah so in
+[00:59:26] the case of the web project which which
+[00:59:29] I should note was entirely designed and
+[00:59:31] implemented by wham and our team of
+[00:59:34] researchers came in part way through
+[00:59:38] they asked for firstly they advertise
+[00:59:42] that they were doing research and then
+[00:59:44] secondly they
+[00:59:46] did ask for consent from people who were
+[00:59:50] reporting harassment no as researchers
+[00:59:53] we knew that these were merely
+[00:59:57] allegations of harassment so it was
+[00:59:59] incredibly important for us to treat
+[01:00:02] that data with the utmost security and
+[01:00:08] protection for people who were alleged
+[01:00:11] harasser zeeeee because there could be
+[01:00:13] grave consequences if that data would be
+[01:00:16] released and this is one of the core
+[01:00:19] challenges that has faced anyone trying
+[01:00:23] to do evidence-based research especially
+[01:00:25] large data set evidence-based research
+[01:00:28] in this space and a question that Brian
+[01:00:31] Keegan and I have been exploring in our
+[01:00:33] work on the ethics of particularly
+[01:00:36] causal research on problems of online
+[01:00:39] harassment and other moderation
+[01:00:40] questions and communities some
+[01:00:42] researchers not the majority but some
+[01:00:45] researchers studying like hate groups
+[01:00:48] and you know alleged like neo-nazi
+[01:00:50] groups claim that they're justified in
+[01:00:53] doing covert research on those groups
+[01:00:55] without asking consent others take
+[01:01:00] different lines and there's still a very
+[01:01:03] live conversation to be had about just
+[01:01:06] how to balance the risks and benefits to
+[01:01:12] people who are in a conflict online and
+[01:01:16] that's a question that I'm actively
+[01:01:20] pursuing as I try to figure out how best
+[01:01:23] to proceed with my own research
+[01:01:42] thanks for the provocative and
+[01:01:44] fascinating and feels I encyclopedic
+[01:01:47] talk which is a good thing so platforms
+[01:01:54] have tools and automated systems to deal
+[01:01:56] with these issues and call it the
+[01:02:00] advance guard of you know citizen self
+[01:02:03] care whether I mean the reddit
+[01:02:04] moderators vid moderators a big
+[01:02:07] subreddit you have automated tools
+[01:02:13] what's the equivalent of a microscope in
+[01:02:16] every home and you know should we move
+[01:02:19] there and move towards that and what
+[01:02:23] would that actually look like yeah I
+[01:02:27] think things like these mutual aid
+[01:02:31] systems and those kind of mutual aid
+[01:02:35] advocacy approaches I think are the
+[01:02:38] closest parallel I can think of for that
+[01:02:41] kind of thing where with something like
+[01:02:43] a block block list just a group of two
+[01:02:47] or three people could use one of those
+[01:02:50] tools to protect themselves from
+[01:02:52] particular kinds of harassment but we're
+[01:02:58] very much at an early stage and much as
+[01:03:04] much as people in the mid-nineteenth
+[01:03:07] century we're debating whether you
+[01:03:09] needed to use chemistry or microscopes
+[01:03:12] or other kinds of technology to observe
+[01:03:18] adulteration of food people are still
+[01:03:22] trying to figure out what ways are there
+[01:03:27] to detect and observe and even describe
+[01:03:32] like when we think about technologies
+[01:03:33] description language like simply having
+[01:03:36] the language to talk about it is itself
+[01:03:39] one of the most powerful things simply
+[01:03:42] having a form that people fill out a
+[01:03:47] is an incredibly powerful tool and one
+[01:03:49] that is hotly debated for pretty much
+[01:03:53] every form that any organization or
+[01:03:55] platform puts out and and I'd say that
+[01:03:59] that's that question is probably the one
+[01:04:02] that has most captivated many of the
+[01:04:06] computer scientists that I know who are
+[01:04:10] trying to work on this question for
+[01:04:12] example there's um oh anyways we could
+[01:04:17] talk about up three or four universities
+[01:04:20] who have recently started initiatives to
+[01:04:22] think about that question after the talk
+[01:04:26] well thank you everyone I really
+[01:04:28] appreciate your question
+[01:04:42] you

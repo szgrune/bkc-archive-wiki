@@ -1,0 +1,865 @@
+[00:00:00] Hi, everyone, and welcome to our third and final series on meaningful
+[00:00:05] technical oversight of generative AI.
+[00:00:07] So just as a reminder, our first conversation was around what are
+[00:00:11] the new harms that generative AI is introducing, if any, or are we just
+[00:00:15] seeing old harms and new outfits, and that was with Reva Schwartz of NIST.
+[00:00:20] Our second fireside was with, um, Bruce Schneier about balancing
+[00:00:25] transparency and security.
+[00:00:27] And today we have our third conversation with two guests,
+[00:00:31] Julia Angwin and Brandon Silverman.
+[00:00:32] So Julia Angwin, uh, has a very long and amazing resume and we could not
+[00:00:38] go through it all, but I suppose your most recent, um, you know, thing that
+[00:00:43] you're working on is, you know, you are New York Times opinion writer
+[00:00:46] and you're working on a new book.
+[00:00:48] So Julia, thanks for joining.
+[00:00:50] It'll be here.
+[00:00:51] Uh, and Brandon Silverman, so formerly CEO of CrowdTangle and
+[00:00:54] now transparency policy expert.
+[00:00:56] So Brandon, you've been really advocating for increased access to data for
+[00:01:00] journalists, um, and for other folks.
+[00:01:03] So, you know, a good way to lead into what we're talking about today, um, is this
+[00:01:07] concept of meaningful technical oversight.
+[00:01:10] So, um, before we hop in, just a reminder to folks uh who are joined
+[00:01:16] and joining that you please put your questions in the QnA panel
+[00:01:21] on the bottom of your zoom screen.
+[00:01:23] We won't be taking questions at the end of this because 45 minutes
+[00:01:26] is going to go immensely fast, especially with this illustrious group.
+[00:01:31] Um, so I will do my best to take questions that are relevant in real time.
+[00:01:35] So please feel free to hop in, you know, put your questions in and then I'll,
+[00:01:40] I'll raise them during the discussion.
+[00:01:42] So today's conversation is on meaningful technical oversight, and I'm really
+[00:01:46] excited for this one because the policy world is exploding right now.
+[00:01:50] Last week, we had Sam Altman and other folks in front of Congress, and there
+[00:01:57] were some, you know, big Things kind of dropped to this idea of licensing,
+[00:02:03] this idea of some sort of a regulatory body for AI in the United States and
+[00:02:08] everyone, all eyes seem to be on policy.
+[00:02:10] So the Digital Services Act, the EU AI Act, etc.
+[00:02:13] And, you know, I want to talk about governance and other forms.
+[00:02:17] I think there is this knee jerk reaction.
+[00:02:19] We say governance or oversight to immediately think about the law.
+[00:02:22] But the people I have here today are not policymakers, right?
+[00:02:24] You're not people who write laws and are regulators, etc.
+[00:02:28] Even if you may advise or work with regulators.
+[00:02:30] But you operate in a different kind of, uh, technical accountability
+[00:02:34] and technical oversight.
+[00:02:36] Um, so, Julia, I'll, I'll start with you.
+[00:02:38] Um, so you were basically responsible for, in part, creating
+[00:02:42] the field of data journalism.
+[00:02:43] So, you know, this is kind of, I know, reaching back into your, into your
+[00:02:47] career a bit, but I kind of wanted to start from that end, because I find,
+[00:02:51] you know, data journalism to be really fascinating, because here we are, people
+[00:02:54] have, with a profession that one would not think would be technical in nature.
+[00:02:58] And you created for public a markup like these institutions that are known for deep
+[00:03:04] diving into the data and reporting on it.
+[00:03:06] So, you know, kind of what inspired that?
+[00:03:09] And why do you think journalists?
+[00:03:10] For the people to do this,
+[00:03:13] um, well, it's great to be here.
+[00:03:14] Thank you.
+[00:03:14] And, um, I really can't take credit for all of data journalism, but I think what
+[00:03:18] I can, um, take credit for is really, um, bringing developers and engineers
+[00:03:24] into the investigative reporting process.
+[00:03:26] Um, basically as somebody who grew up in Silicon Valley and was programming
+[00:03:31] since, um, elementary school, I grew up in the early days of the computer
+[00:03:36] revolution and my parents were sort of in the software business.
+[00:03:39] And so I just always saw it as really natural.
+[00:03:42] Um, I rebelled against it, went into journalism, but then what I realized
+[00:03:45] was that journalists were so outgunned.
+[00:03:47] We have, there's like, I think, six PR people for every
+[00:03:51] journalist in, um, America.
+[00:03:53] And, and so we don't, and also, as you may have heard, the revenues
+[00:03:57] of the industry are collapsing.
+[00:03:58] So I basically thought, okay, I know computation, automation can
+[00:04:03] sort of super power your work.
+[00:04:05] And so essentially, I felt like.
+[00:04:07] Especially when you're confronted with these opaque algorithmic systems that the
+[00:04:12] only way to try to sort of understand them from a journalistic perspective was to try
+[00:04:16] to do some sort of reverse engineering.
+[00:04:17] And so I brought in engineers to help me do that developers, and
+[00:04:22] that's sort of what I've been doing for the past decade or so.
+[00:04:25] And I would say that is really important work, because what we're seeing,
+[00:04:28] especially with generative AI is that.
+[00:04:30] These types of systems are really hard to monitor, especially when
+[00:04:35] they have different outputs every time you encounter them, right?
+[00:04:38] So the dynamic nature of them means that any story that you write as a
+[00:04:42] journalist, like that's a one anecdote story, like it happened this one
+[00:04:46] time, the companies can dismiss it.
+[00:04:48] They can say, Oh, that was just one off.
+[00:04:49] Right.
+[00:04:50] And so you kind of need a bigger data set in order to prove systemic harm.
+[00:04:54] And so I believe that data journalism and building these types of data
+[00:04:57] sets is going to be the only way we're going to hold these types of
+[00:05:00] systems accountable in the future.
+[00:05:03] And Brandon, you know, what I love about this talk, and I was messaging
+[00:05:06] you both about this, I feel like I'm.
+[00:05:07] You're like mirror images of each other, right?
+[00:05:10] So, Brandon, you were the CEO of CrowdTangle.
+[00:05:13] And again, this is like digging back a bit and, you know, related
+[00:05:16] to what you're doing today, but not what you're doing today.
+[00:05:18] Um, can you talk a bit about for people who may be unfamiliar with CrowdTangle,
+[00:05:22] what CrowdTangle did and, you know, how it relates to journalists and journalism?
+[00:05:28] Yeah, we were, um, first of all, it's great to be here.
+[00:05:31] Um, so thank you for having me.
+[00:05:33] Um, So yeah, I was the CEO and co founder of CrowdTangle.
+[00:05:36] So when we got started, we were essentially kind of like a social
+[00:05:39] analytics tool that focused on, uh, in the beginning, Facebook, um, over the
+[00:05:44] years, we sucked in data from other social media platforms, but what we
+[00:05:47] did essentially was make it really easy for newsrooms in the beginning.
+[00:05:51] It was mostly newsrooms to be able to just have a better sense of
+[00:05:54] what was happening on social media.
+[00:05:56] Um, and starting around 2012, 2013 newsrooms began getting so much
+[00:06:01] traffic from social platforms.
+[00:06:04] That suddenly this data was not only becoming really important to just
+[00:06:08] understanding their own business and their audiences that were flooding
+[00:06:11] in at levels they'd never seen before, but also increasingly a lot
+[00:06:15] of political and civic discourse was happening on these platforms.
+[00:06:17] And so even if they just wanted to do their jobs, it was really helpful
+[00:06:21] to have a way to make it easy to see inside these systems, um, that otherwise
+[00:06:26] were kind of functional black boxes.
+[00:06:28] Um, so we got started with just a tool that made it easy
+[00:06:30] to look inside social media.
+[00:06:31] We were acquired by meta in 2016 and for four years, uh, we kind of continue
+[00:06:38] to do that work from inside Facebook.
+[00:06:39] But instead of just focusing on newsrooms, we took on a broader mandate
+[00:06:43] of helping Facebook be transparent with actually a really wide swath of
+[00:06:47] civil society, uh, with kind of the same set of solutions and products.
+[00:06:53] Yeah.
+[00:06:53] So let's, let's maybe talk about this, this expanded universe of people, right?
+[00:06:57] So again, when people talk about technical oversight, you think
+[00:07:00] about like data scientists and people have this formal training.
+[00:07:03] I find it really interesting because last week this idea
+[00:07:05] of licensing came up, right?
+[00:07:07] So Sam Altman brought it up in the context of licensing for companies, but also we
+[00:07:12] have seen this idea of licensing for data scientists or people who are going to be
+[00:07:17] building these models, um, you know, sort of open question for, for either of you.
+[00:07:22] Yeah.
+[00:07:22] First, how do you feel about the idea of licensing, whether for
+[00:07:26] companies or for individuals?
+[00:07:28] And then second is, how do you think that would impact You're the
+[00:07:31] communities that you work with.
+[00:07:32] So civil society, journalists, et cetera, people who are not your
+[00:07:35] traditional tech people going through technical degree programs.
+[00:07:39] Um, Julia, I can start with you.
+[00:07:41] Um, sure.
+[00:07:42] You know, this is a question.
+[00:07:44] This is something that comes up a lot is, um, this idea of, okay, journalists
+[00:07:49] should get access to the platforms through some sort of license or an API and.
+[00:07:55] Generally, um, a lot of times the requirements that are set for
+[00:08:00] the type of access are not things that journalists can comply with.
+[00:08:03] So, you know, oftentimes they might want to know exactly what type of
+[00:08:07] stories you're going to do or vet your methodologies, um, or you have to
+[00:08:12] agree to not use it for certain things or for keep the results confidential.
+[00:08:16] So almost every kind of scheme like that really doesn't work for journalists,
+[00:08:20] which is why I've been a real advocate.
+[00:08:22] for what I call adversarial testing, which is basically just looking
+[00:08:25] at these systems from the outside.
+[00:08:27] And that is risky because we don't have a legal regime in the U.
+[00:08:30] S.
+[00:08:30] that really supports, um, that, the, that type of work
+[00:08:34] that's in the public interest.
+[00:08:35] And we need some amendments to the law to really make that
+[00:08:39] less risky for journalists.
+[00:08:40] But, you know, honestly, most of, uh, a lot of journalists are
+[00:08:43] still doing it with like, um, strong, like, lawyers behind them.
+[00:08:47] Um, but I just, I personally believe that when there's, it's great to have all
+[00:08:52] those types of schemes, but ultimately journalists are sort of that last backstop
+[00:08:55] where we're just on behalf of the public.
+[00:08:58] We need to be incredibly independent, and so our testing needs to be
+[00:09:02] outside of most of those regimes.
+[00:09:05] Um, and Julia, then how do you feel about this idea of even like, almost like a
+[00:09:10] harsher license in that, like something like akin to a medical license or like
+[00:09:13] a, like a license to practice law.
+[00:09:15] So do you think, or how would you feel about even more formalizing the practice
+[00:09:20] of even being able to handle data or work with machine learning and AI models?
+[00:09:25] Um, I mean, I think that's an interesting, um, idea for the
+[00:09:29] people in the industry, right?
+[00:09:30] I've always wondered why.
+[00:09:32] There wasn't sort of a, you know, um, a code of ethics that, um,
+[00:09:36] programmers and developers signed on to.
+[00:09:39] And I know there's been some movements here and there to install those,
+[00:09:42] you know, just the way that other professionals have some commitments
+[00:09:47] outside of their actual job.
+[00:09:48] Where they're like, you know what, I can't go do this thing
+[00:09:50] because it's outside of my ethics.
+[00:09:52] And I think that, um, as...
+[00:09:54] these systems that are being built, the AI systems, the social media
+[00:09:58] systems control so much of our world.
+[00:10:01] I do think it's incumbent upon the people who work on them to maybe start
+[00:10:04] thinking about what are their ethics and what are the higher principles
+[00:10:08] that they need to be called to.
+[00:10:10] And so I think that's an important thing.
+[00:10:12] I think journalists already have that kind of, uh, ethics amongst our community.
+[00:10:16] Um, and we do ascribe to them, although, you know, we don't have a licensing
+[00:10:20] regime because we, um, we don't believe in sort of getting government
+[00:10:24] handing out licenses to journalists.
+[00:10:26] But I do think that there are some really clear standards about what
+[00:10:31] constitutes journalism and like
+[00:10:33] in most that, at least in the US and other places that have been there are places
+[00:10:38] that are trying to codify through like the trust initiative and stuff like that.
+[00:10:40] Mm-hmm.
+[00:10:41] , I'm gonna put a pin in that last part of what you said and then go over to Brandon
+[00:10:45] first because I think it's a really interesting point that you say, you know,
+[00:10:47] the government handing out licenses.
+[00:10:49] I'm gonna put a pin in that and then go over to, to Brandon.
+[00:10:51] So, you know, let's say if these licenses existed when you were forming CrowdTangle.
+[00:10:56] Everybody at CrowdTangle, including you, would have to go get some sort
+[00:10:58] of a license or you'd have to pay every year to have your license
+[00:11:02] to have CrowdTangle, renewed.
+[00:11:04] Um, and one of the critiques has been, oh, this is just these companies
+[00:11:08] trying to build a moat because famously was it two weeks ago?
+[00:11:11] I don't know.
+[00:11:12] Time moves so fast.
+[00:11:12] It seems like it's been six months, but two days.
+[00:11:15] I think it was two weeks ago.
+[00:11:16] The now infamous Google memo that there is no moat memo dropped.
+[00:11:20] Um, and one of the critiques of this idea of licensing is, oh, it's it's
+[00:11:24] the people who are already in power trying to build this moat around them.
+[00:11:29] Yeah.
+[00:11:29] So my, um, one of, I think my first principles at this point when it comes
+[00:11:35] to, uh, transparency and data sharing, different things is, is I have like
+[00:11:39] a "yes" "and" to essentially like all the different mechanisms, um,
+[00:11:44] that I think there are real, there are genuine and really important,
+[00:11:47] like privacy and in some cases like trade secret risks and other things.
+[00:11:52] For which some sort of like vetted licensing thing could play a role and be
+[00:11:57] helpful and important, but it shouldn't be at the expense of other types.
+[00:12:01] There's no single solution to this stuff, uh, where we should not put all,
+[00:12:04] all of our eggs in a single basket.
+[00:12:06] Every one of these sort of slightly different stakeholders has slightly
+[00:12:09] different outcomes, has slightly different risks and benefits, et cetera.
+[00:12:12] And so I very much always have like a "yes"  "and sure" licensing.
+[00:12:15] Great.
+[00:12:15] But like, let's get into the weeds on what that looks like.
+[00:12:17] Cause they're real ways in which it can be done poorly, including just with like the
+[00:12:21] wrong incentives of the private companies are the ones deciding gets it, et cetera.
+[00:12:26] Um, but I also in that entire yes and spectrum, you need some mechanisms to
+[00:12:31] also allow and enable yeah adversarial.
+[00:12:34] And, um, transparency where people who are not in have any conflicting
+[00:12:39] conflict of interest or incentives also have the ability to go in because
+[00:12:43] these systems are so powerful and they become so important to, like our body
+[00:12:46] polytech, body politic, that mm-hmm.
+[00:12:48] , they need to be scrutinized and they need to be scrutinized very aggressively.
+[00:12:52] Um, and we need to make sure those methods are also available.
+[00:12:54] Um, So, uh, so yeah, I, I believe in a yes, and all this stuff, um,
+[00:12:59] but especially making sure that we're engaging a diverse group
+[00:13:04] of outsiders and civil society.
+[00:13:06] And for me, especially journalists, I just fundamentally think in liberal
+[00:13:09] societies and liberal democracies, the role of journalism to hold the
+[00:13:12] power to hold powerful to account is, is especially important now when
+[00:13:17] we see so many of these platforms.
+[00:13:19] Kind of being owned and managed by a tiny handful of companies in very
+[00:13:23] heavily consolidated markets and touching so many different parts
+[00:13:26] of, you know, the world we live in.
+[00:13:28] So, yeah, that's that's how I when I first read about that was my first instinct.
+[00:13:32] So, um,
+[00:13:33] so let's let's let's pull that thread a little bit, right?
+[00:13:35] This idea of licensing and even the yes.
+[00:13:38] And right.
+[00:13:38] So who would be this licensing body?
+[00:13:41] So Julia, understandably, you're like, well, you know, maybe there
+[00:13:43] shouldn't be governments because if we expand this model around the
+[00:13:47] world and not just us, and maybe even the US under a different regime,
+[00:13:52] um, This may look a particular way.
+[00:13:55] So one of the things as a data scientist, one of the things that attracted me to
+[00:13:59] the field is actually the complete lack of centralization of authority, right?
+[00:14:04] There is no one degree program.
+[00:14:06] There is no Harvard of data science, really.
+[00:14:08] There is no, uh, you know, like one place we get degrees from, we learn online.
+[00:14:14] So like, you know, essentially, like who would put the bell on the cat?
+[00:14:18] Um, any thoughts who that might be or who that shouldn't be, I suppose
+[00:14:24] I mean, I guess I'm not even sure if I'm a yes and, so like, I think I might be a
+[00:14:28] no and here, um, so, um, I mean, I just am not sure that the history provides
+[00:14:37] any support for the idea that We will know in advance who is going to come
+[00:14:43] up with the best uses of technology.
+[00:14:45] Right?
+[00:14:45] And that's what licensing really suggests.
+[00:14:47] Right?
+[00:14:47] Like, I mean, I definitely want my doctors to be licensed because it's
+[00:14:51] clear to me that there's a huge body of knowledge that they need to have before.
+[00:14:54] I want them anywhere near my body.
+[00:14:56] Right?
+[00:14:57] But like, technology is actually a very different field
+[00:15:00] where we don't yet know what
+[00:15:02] lessons we've learned.
+[00:15:04] We haven't codified them yet.
+[00:15:05] And we also don't know where the great innovations are going to come from.
+[00:15:09] And so licensing would feels to me a little bit like trying to
+[00:15:13] establish a priesthood really early on where only certain people get
+[00:15:17] access to these powerful tools.
+[00:15:19] And those people are granted special privileges.
+[00:15:22] I mean, let's be real.
+[00:15:23] We already have such a priesthood, right?
+[00:15:25] Like, there is actually already, um, this power that AI, of AI, is totally in the
+[00:15:31] hands of a few corporate, um, entities, and in a sense, they already have the
+[00:15:36] ability to give it to whoever they want.
+[00:15:38] And so, I don't know why we'd want to enable that further when in fact, I
+[00:15:43] think the question we should be asking is, how can we make sure that this new
+[00:15:46] technology is being used for public good?
+[00:15:48] And what are the incentives we need to put to make sure that happens?
+[00:15:51] And what are we doing to mitigate harm?
+[00:15:54] Right?
+[00:15:54] And I would say I'm probably in the mitigate harm camp because that's
+[00:15:57] what I view my role as a journalist.
+[00:15:59] But I think there is a role for government, for civil society to...
+[00:16:04] To figure out the uses of good and I wouldn't want them to have
+[00:16:07] to go beg the billionaires for to prove in advance that they're going
+[00:16:10] to find something good with it.
+[00:16:11] These guys, by the way, did not prove in advance that they were
+[00:16:14] going to do anything good with it.
+[00:16:15] You know,
+[00:16:17] that's, that's fair.
+[00:16:17] I mean, just going back up the chain, like, who has to
+[00:16:20] prove value to what and whom?
+[00:16:22] I find it very, interesting that all of these companies are chasing
+[00:16:27] this idea of building artificial general intelligence when actually
+[00:16:29] nobody has any idea what artificial intelligence, general intelligence
+[00:16:32] is, uh, what it might look like.
+[00:16:35] And, you know, literally billions of dollars are being poured into companies
+[00:16:39] to chase something we can't even define.
+[00:16:41] Uh, so to your point, I do find that part really interesting.
+[00:16:44] Um, we actually have a really good question.
+[00:16:46] Thank you, David.
+[00:16:47] And it kind of is a good segue into the next thing I want to talk about, which is
+[00:16:51] this idea of the Brussels effect, right?
+[00:16:52] So like absent.
+[00:16:54] So let's take it up a level from the US into the global arena and
+[00:16:58] kind of there is increasingly this conversation around global governance,
+[00:17:04] what global governance might look like.
+[00:17:06] It is that anything attempting that would be a geopolitical quagmire, right?
+[00:17:12] No country.
+[00:17:13] And this isn't about like China or Russia or a quote malicious actor like no country
+[00:17:17] in the US wants to give up sovereignty over regulating technology on their own.
+[00:17:21] So, you know, the idea of doing this is tough, but there is a risk.
+[00:17:26] And so David asked in his question, is there a risk that national
+[00:17:29] regulatory regimes in a connected web just ends up leading to location
+[00:17:33] of certain functions offshore.
+[00:17:35] So sometimes it's called regulatory arbitrage or Innovation arbitrage.
+[00:17:39] Um, another name for it's like humanization.
+[00:17:41] The fact that a lot of companies will test their models in countries with weaker
+[00:17:45] privacy, security laws and protections in order to then, you know, figure
+[00:17:50] like work out the kinks and then, you know, launch it to a public at large.
+[00:17:53] So, um, I suppose it's sort of like let's think through this like what
+[00:17:58] happens if and when countries do have like certain countries have stricter
+[00:18:04] regimes than others or maybe even bring it back to the US, we're kind of
+[00:18:07] already seeing this with Privacy and increasingly with surveillance and ethics.
+[00:18:12] We have different laws in different states.
+[00:18:14] So can we talk about that a bit?
+[00:18:16] You know what?
+[00:18:16] What does that look like?
+[00:18:18] Um, in the current policy environment that we're in, whether nationally or globally.
+[00:18:26] Oh, yeah.
+[00:18:28] Please go ahead.
+[00:18:29] Sure.
+[00:18:29] Brandon,
+[00:18:30] you want to go?
+[00:18:31] Go for it.
+[00:18:32] I'll jump in after you.
+[00:18:33] Um, I was just going to say, like, um, I think that there's absolutely no
+[00:18:37] question that that is already happening.
+[00:18:39] Right?
+[00:18:39] So if you think about how GDPR was enforced, essentially,
+[00:18:43] Ireland was the communization.
+[00:18:45] Like, so everybody set up shop in Ireland, knowing that the enforcer there, um,
+[00:18:50] is, is not going to be incentivized to, to be strict against these companies.
+[00:18:54] And that's why in part, right?
+[00:18:56] The EU had to step in and build their own regulatory regime and pass new
+[00:18:59] laws to try to regulate the tech giant.
+[00:19:02] So we have.
+[00:19:03] Okay.
+[00:19:03] Seen that, um, the U.
+[00:19:05] S.
+[00:19:05] of course has chosen not to regulate them at all, in that, um, I guess
+[00:19:08] keeping our Cayman option afloat.
+[00:19:11] So, um, but I, I guess my feeling is that like, yes, that's going
+[00:19:15] to happen, but that's not an argument for not doing anything.
+[00:19:18] I would say that like one of the arguments that people I've heard
+[00:19:22] in the tech industry say is like, oh, you shouldn't do any regulation
+[00:19:26] because you'll lead to this, like bad actors going over to bad places.
+[00:19:31] And.
+[00:19:32] I think that that's just not true.
+[00:19:33] That's not how law enforcement works.
+[00:19:35] Like we do extradite people from other countries.
+[00:19:37] Like we have rules and I think we do still want to live in a
+[00:19:42] world where we have rule of law.
+[00:19:44] And so if we want to live in that world, then we have to
+[00:19:46] make laws that we all agree on.
+[00:19:48] And then if people leave the country to try to escape them, we
+[00:19:51] have to decide whether it's worth.
+[00:19:53] Our effort to go get them.
+[00:19:54] And so I guess I'm still a believer that like, we have to, um, believe
+[00:20:00] in legal regimes, even if they are flawed and inconsistent.
+[00:20:04] You know, just to butt in first, like, Sam Bankman Fried comes to mind, right?
+[00:20:08] Yeah, we did
+[00:20:09] manage to get the guy out of the Bahamas or whatever, right?
+[00:20:12] Like, now he's in his home in Palo Alto.
+[00:20:14] Well,
+[00:20:16] Brandon, any thoughts?
+[00:20:18] Yeah, no, I mean, we're already seeing this play out.
+[00:20:20] I mean, I think the other way I feel like I've been thinking about this
+[00:20:24] recently is to what degree are some of these, uh, locally specific versions
+[00:20:29] of regulations technically feasible.
+[00:20:32] And do they even make sense sometimes.
+[00:20:33] Secondly, they seem to skirt some of the jurisdictional issues around
+[00:20:36] data rights, which I think is going to increasingly be coming up.
+[00:20:40] Um, and then third, I mean, you know, I do worry about what happened in the U.
+[00:20:44] S.
+[00:20:45] We're seeing this where, like, the federal government is doing anything.
+[00:20:47] And so states are now starting to write their own laws.
+[00:20:50] And I think one of the really unfortunate things that happened with that is it
+[00:20:54] completely screwed up the ability to, like, at a political level to pass.
+[00:20:57] a federal privacy law.
+[00:20:59] And so like California jumped in and did it.
+[00:21:01] And now it's essentially, there's a standoff between California legislators
+[00:21:05] who believe that they've written the right version of this and a more, you
+[00:21:09] know, a more politically compromised one, because not like just because you
+[00:21:13] had literally have compromise at the federal level that they won't sign on to.
+[00:21:16] And so now, because we had, because we were forced to pass
+[00:21:19] something in California, I don't know where to stand still federal.
+[00:21:21] And I think that's, that's a real cost to those of us who
+[00:21:25] like, uh, believe in this stuff.
+[00:21:27] Um, and, uh, and then I think, you know, I think when it comes to AI, I have been
+[00:21:33] very convinced, I think Rumman in part on some of your writings, but I think
+[00:21:36] other people, um, and also what I've been seeing personally through some data
+[00:21:39] access on social media in Europe about the idea of trying to get to a point
+[00:21:44] where we can have some international transnational cooperation around some
+[00:21:49] of these issues and so that we can try and head off some of the challenges
+[00:21:54] potentially of like the balkanization, but also build, uh, regimes that are
+[00:21:59] more standardized across the whole world.
+[00:22:01] Hopefully encourage countries maybe haven't passed some to get
+[00:22:04] voluntary compliance and they're where they are as well, et cetera.
+[00:22:07] So I think if we can think about international, uh, solutions,
+[00:22:11] some of the space, I think there's a lot of promise there.
+[00:22:13] Yeah.
+[00:22:14] And I appreciate your kind of weaving through and kind of navigating
+[00:22:17] this like there are these laws and regulations that are, you know, sticks.
+[00:22:22] And then there's this aspect of law that could be Hey, let's open
+[00:22:26] up access to this wider range of, you know, governance partners.
+[00:22:31] So more than just lawmakers, regulators, policymakers, like, how do we do this?
+[00:22:35] And of course, there's the Platform Accountability and Transparency Act in
+[00:22:38] the US and then the Digital Services Act.
+[00:22:41] Um, so I want to open it to either of you.,you know, to how do you feel about
+[00:22:47] the Digital Services Act, especially, you know, because that's going to be
+[00:22:49] the first one that comes into play, allowing for access, there's been a
+[00:22:53] lot of really interesting conversation.
+[00:22:57] You know, and I appreciate both like positive views as well as cynical views.
+[00:23:01] And in disclosure I've been working with the ECAT team so I know a little
+[00:23:04] bit about you know what they're trying to do and Brandon I think you're.
+[00:23:07] You know, you've talked to them a few times as well.
+[00:23:09] And Julia, I don't know if you have, but I would be surprised if they
+[00:23:11] hadn't reached out to you already.
+[00:23:13] It's because we're all kind of navigating this together, right?
+[00:23:16] This, this is an unprecedented level of access.
+[00:23:19] And as more than one person put it in some of the workshops, like
+[00:23:22] companies will push back and sometimes rightfully so on protections of, uh,
+[00:23:27] you know, IP security and privacy.
+[00:23:30] So first question is like, how do feel about that, you know, about opening up
+[00:23:34] this data, how might it be meaningful?
+[00:23:37] Uh, where and where might be some of the pitfalls you've seen?
+[00:23:40] Um, Julie, I'll start with you.
+[00:23:42] Um, well, it's funny.
+[00:23:44] I was just writing my comment this morning to the EU Commission on data
+[00:23:48] access, um, advocating for them to consider journalists and journalist
+[00:23:51] access, um, as they consider some of the, um, fine print that they're writing
+[00:23:57] up about how to implement these laws.
+[00:24:00] Um, but I would say that, like, it's an incredible I feel like generally the DSA
+[00:24:04] is such an incredible um, moment, right?
+[00:24:07] It just, if you think about it, these are these global platforms they have there.
+[00:24:11] I think up until this moment, it felt like they were too big
+[00:24:15] for any government to regulate.
+[00:24:16] Right?
+[00:24:17] I mean, and basically nations that tried to, uh, didn't succeed.
+[00:24:22] Right?
+[00:24:22] Um, and so the EU getting together and passing these laws really,
+[00:24:28] um, thoughtfully in a way that attempts to mitigate the risk.
+[00:24:32] But without without with while trying to allow for flexibility for the
+[00:24:36] fact that these systems are dynamic, um, is really, really exciting.
+[00:24:41] And I think it's really, um, what I'm worried about is if it
+[00:24:44] doesn't work, people will say they're just too big to regulate.
+[00:24:47] Right?
+[00:24:47] And so I feel like the stakes are really high because if, if this doesn't
+[00:24:51] work and like them hiring hundreds of technologists and you, Rumman, I think
+[00:24:55] to like, help, like, organize how to do this, uh, auditing work, if, if it doesn't
+[00:25:00] work, then I think people might feel like, oh, well, then it's just no hope.
+[00:25:04] And I, I would want there to be hope because, um, if you have global
+[00:25:09] platforms that regulate speech.
+[00:25:11] Around the world and are not regulatable by the government, which
+[00:25:15] is, by the way, in most cases, a proxy for the people who live there.
+[00:25:19] Um, that's a really scary thing, right?
+[00:25:21] They really can flip a switch and just say, we want the whole world.
+[00:25:25] We want this person to win this election and that one.
+[00:25:27] And, and, and that.
+[00:25:29] Is a terrifying idea.
+[00:25:31] And so I do think we want to see the DSA succeed.
+[00:25:34] Um, I think it's an open question, right?
+[00:25:37] It's a hard
+[00:25:38] task and Brandon.
+[00:25:40] I know this has been your passion, uh, very, you know, recently, and
+[00:25:44] what you've really been working on.
+[00:25:45] So platform accountability, transparency act as well as DSA.
+[00:25:49] So, um, any thoughts on how it can be successful.
+[00:25:53] Um, yes, many, many thoughts.
+[00:25:56] Um, I'll do quick DSA and then pivot to Pat.
+[00:25:58] I would say, yeah, I mean, I agree with Julia.
+[00:25:59] I mean, I think it has the opportunity, the chance to be a generational
+[00:26:03] improvements in the internet.
+[00:26:06] Um, but there's also still a lot of challenges in getting it right.
+[00:26:09] Uh, there's just so much of this work is new.
+[00:26:12] There's so many, um, details that have to be worked out and figure out.
+[00:26:16] I'm still negotiating between civil society.
+[00:26:18] I think the European commission itself has, there's not enough
+[00:26:21] technical experts out there who are willing to help with this stuff.
+[00:26:24] Um, uh, so I, there's a lot of, there's a lot of hard work in some ways that
+[00:26:29] I feel like the hard work is kind of just beginning to get it right.
+[00:26:32] Um, and I absolutely agree with Julia that on this specific data sharing
+[00:26:35] stuff, um, there's some nuances to how it's written that worry me a little bit.
+[00:26:39] And I think I, uh, some of us are trying to help with one.
+[00:26:42] I think it's how broad are the audiences it's being made available to?
+[00:26:45] And does that include journalists?
+[00:26:47] Um, if not, I think that's just a huge miss in how the amount
+[00:26:51] of impact it's going to have.
+[00:26:52] But then secondly, like, you know, Europe also, they're very, you
+[00:26:56] know, they, they believe a lot in their regulators and their agencies.
+[00:27:00] And so the DSA gives a lot of power and authority to them, I think
+[00:27:04] in a way that is, Um, you know, we have seen go wrong in other
+[00:27:08] countries in different circumstances.
+[00:27:09] And so also making sure the work itself doesn't get overly politicized because
+[00:27:14] it sits inside the government body.
+[00:27:15] Um, but I think on PATA, you know, I think For the platform and
+[00:27:19] accountability Transparency Act, which is kind of a similar esque approach.
+[00:27:24] Um, uh, in the U.
+[00:27:26] S.
+[00:27:27] I mean, the number one first challenge is getting it passed.
+[00:27:29] Um, it's, uh, it is going to be reintroduced, um, in the next few
+[00:27:34] weeks with some more prominence, uh, bipartisan senators, which is exciting.
+[00:27:39] Um, and I think a few improvements to the bill that I think are gonna
+[00:27:43] be meaningful for continuing to kind of build a bipartisan coalition
+[00:27:47] here in the US at the Senate.
+[00:27:49] Um, I think it's very unclear how the house is leadership
+[00:27:52] is going to feel about it.
+[00:27:54] Um, uh, but, you know, I think every, I think these terms are, these things
+[00:27:59] are sometimes long term projects and every additional, uh, elected
+[00:28:02] official who comes out to support it is important and meaningful.
+[00:28:05] Um, and that each kind of step we go and writing a better bill also is meaningful.
+[00:28:11] Um, so I think first step is getting it passed.
+[00:28:13] And then I think the second step would be a lot of the same work that have been
+[00:28:16] done with DSA, which is there's still a lot of details to be fleshed out, even
+[00:28:20] in PATA, and some of that is technical.
+[00:28:22] Other parts of it are, like, figuring out what the right trade offs are.
+[00:28:27] Um, and so there would be a lot of work in getting it right after,
+[00:28:30] if it, even if it did get passed.
+[00:28:32] So a good, a good segue into a question by Spathi, and, and also bringing it
+[00:28:36] back to, you know, last week's Congress hearings and People having mixed reactions
+[00:28:41] to industry in general and in this case obviously Sam Altman specifically
+[00:28:45] saying we want a regulator we want to be regulated the cynical view being well of
+[00:28:49] course you do because again that helps create your moat but it also moves the
+[00:28:53] conversation into an arena where companies have a lot of power, especially in the
+[00:28:58] United States, where they spend hundreds of millions of dollars on lobbying.
+[00:29:01] You know, uh, you know, Julia, the, you know, journalists don't
+[00:29:04] go and have hundreds of millions of dollars of lobbyists to go
+[00:29:08] influence, uh, policymakers.
+[00:29:10] You know, you do well in the court of public opinion.
+[00:29:13] Companies don't do well in the court of public opinion, right?
+[00:29:16] So what's what these question is, is that these technical standard
+[00:29:19] setting bodies or standard setting bodies in general are not neutral.
+[00:29:22] How can these bodies be made to be more accountable?
+[00:29:25] And, and maybe this also sort of brings in the Brussels defect notion, right?
+[00:29:29] This idea that absent, there's like a vacuum of global governance.
+[00:29:32] And, you know, first with GDPR and, you know, now with, uh, both DSA and EU AI
+[00:29:37] act there, there actually is the European.
+[00:29:40] Uh, standard setting of values.
+[00:29:42] Um, so how can these bodies be more accountable?
+[00:29:52] Julie, I'll start with you.
+[00:29:53] Oh, okay.
+[00:29:54] Sorry.
+[00:29:56] Yeah, I mean, it's a really hard question because, you know, as you
+[00:30:00] mentioned, the most wonderful thing about the Internet is that no one runs it.
+[00:30:05] That's actually what makes it great.
+[00:30:06] And so the decentralized nature of it is amazing.
+[00:30:10] And.
+[00:30:10] And when I first started covering the internet, you know, the, the
+[00:30:13] technical standards bodies really were just like the engineers, um, at
+[00:30:17] universities and, um, even if they were at a company, they were really
+[00:30:21] more devoted to the internet than they were to their like corporate practices.
+[00:30:26] And so it was a different time.
+[00:30:29] And now those.
+[00:30:30] bodies have been gamed, just like everything, right?
+[00:30:33] So companies realize that they can set standards in a way that, um,
+[00:30:38] that advantages them and they try.
+[00:30:40] And so that is a really sad thing.
+[00:30:44] And it's also worth noting that like, Civil society is just underfunded.
+[00:30:48] Right?
+[00:30:48] Like there's, um, not enough money being spent on people like, you know, I wish
+[00:30:54] there was, uh, someone who was doing what, you know, the Federalist Society
+[00:30:58] guy is doing, which is like hundreds of millions of dollars to like support
+[00:31:02] engineers to go to the standards bodies and to set up like technical institutes
+[00:31:08] and to honestly save journalism, which is falling into the ocean.
+[00:31:11] Um, so I, I think that, but.
+[00:31:14] Yeah.
+[00:31:14] But that said, the alternative to these diners bodies is probably worse, right?
+[00:31:21] So this is like where I don't know what a better, I don't really want like Sam
+[00:31:26] Altman in charge of it personally, just cause, you know, and so I, and I don't
+[00:31:29] think the government, any particular government should be in charge of it.
+[00:31:32] So I, I feel like.
+[00:31:34] The answer is maybe just make this sort of somewhat flawed system slightly better.
+[00:31:41] Yeah, I, I was going to agree with that.
+[00:31:43] I mean, for any of this, any solution you're going to propose, you have
+[00:31:46] to ask who's going to fund it and there's essentially, I mean, 3 and a
+[00:31:50] half reasonable sources of funding.
+[00:31:51] There's either industry.
+[00:31:53] Uh, government or philanthropy slash people, I guess.
+[00:31:57] Um, but the problem is, you know, I think on the philanthropic side is very unclear
+[00:32:00] at the moment, if that money is meaningful is available in any meaningful way I
+[00:32:03] think it's a lot of us in Europe right now don't feel like it's available in Europe.
+[00:32:08] It feels like there's more of a possibility of it here in the US, but
+[00:32:11] it's still that spaces very nascent at the moment, and it's unclear if it, um, could
+[00:32:17] meet the needs of this sort of thing.
+[00:32:18] And so are you willing to take the tradeoffs that would come with trying
+[00:32:22] to build some sort of independent, you know, trusted, effective body
+[00:32:28] that gets any either government or, uh, or industry funding at all?
+[00:32:32] Is that even possible, etc.
+[00:32:33] So I, I agree with you.
+[00:32:34] I think there's not, we're choosing among probably are not ideal
+[00:32:38] options, um, and trying to Do the best you can in that space.
+[00:32:43] Um, and you know, I will say, I think on the cynical side, you know, watching
+[00:32:48] Sam Altman's testimony, you know, it, it sounded, I just felt like we were
+[00:32:52] playing the same record all over again from like the last 15 years of this stuff.
+[00:32:57] Um, and I think If there are there open AI, say what you will about them.
+[00:33:02] They're, you know, they're not dumb.
+[00:33:04] And I think they can read the tea leaves better than anybody else that
+[00:33:06] nothing is getting through the federal government anytime soon on anything.
+[00:33:10] And so I think there is something a little disingenuous about
+[00:33:12] going and calling for this stuff.
+[00:33:14] It's just, I think Ben Thompson calls like a strategy credit.
+[00:33:16] It's very easy to go and try and take credit for doing this thing, but knowing
+[00:33:20] it's never, it's not going to happen.
+[00:33:22] Um, and meanwhile, they probably get some credit for it seeming for hyping up how.
+[00:33:27] World changing of a technology.
+[00:33:30] It is that it desperately needs regulation.
+[00:33:33] Um, so I think there's a lot of benefits to I think what I think
+[00:33:36] there's a lot of marketing benefits to the testimony, in my opinion.
+[00:33:39] Um, and, uh, but I think, you know, this question of where the regulations
+[00:33:43] actually going to come from is.
+[00:33:45] Um, yes, it's probably gonna be Europe or setting up some sort of
+[00:33:48] international transnational bodies getting administration to join.
+[00:33:52] Um, uh, or, you know, I, uh, Julie is probably gonna kill me for this, but
+[00:33:56] like, I, I do think public pressure does still work on these platforms.
+[00:34:00] I think there's this notion sometimes that they just, they, they've had so
+[00:34:05] much bad articles written about them.
+[00:34:07] They just, you know, they just write it off from my brief tenure inside.
+[00:34:11] I actually saw that oftentimes it felt the opposite.
+[00:34:14] Yeah.
+[00:34:14] That they were bouncing around trying to figure out what to do from a lot
+[00:34:18] of this criticism and it actually really did impact a lot of decisions
+[00:34:22] and in some places too often.
+[00:34:25] And so I think you know on some cases that is clearly not true, and it is
+[00:34:28] not like in some cases I think they have planted their flag and they
+[00:34:31] don't care how much criticism they get around X, they won't change.
+[00:34:35] But I do think public pressure can change other behavior and I think
+[00:34:39] it's still an important thing to kind of to keep up as we move forward.
+[00:34:45] Oh, I just want to say
+[00:34:45] I heavily agree with you, Brandon, on that front.
+[00:34:47] Okay.
+[00:34:49] In fact, sometimes I just think that, like, I'm like, I'm
+[00:34:52] like, I'm a shame regulator.
+[00:34:53] Like, I'm just, I regulate through shame.
+[00:34:57] Well, and in the sort of risk analysis way of looking at things in companies,
+[00:35:02] that's reputational risk, right?
+[00:35:03] Like.
+[00:35:04] A name like yours or Brandon's, you know, pointing the finger at a company carries
+[00:35:07] a lot of reputational risk for companies.
+[00:35:10] Um, so a good, a good segue into a question from Jahau and it does come
+[00:35:13] up a couple of times, this idea of the imbalance of expertise, right?
+[00:35:16] We lack enough trained auditors.
+[00:35:18] We lack enough people with sort of these critical thinking skills
+[00:35:22] or data and analytic skills.
+[00:35:24] And both of you have actually worked to improve that.
+[00:35:27] So it's hard to be like, what can be done?
+[00:35:31] Right.
+[00:35:31] But like, we can't live in this world forever.
+[00:35:34] Um, you know, so what What, what can be done, you know, like just
+[00:35:40] a minor question, like should you know, maybe I'll put it more
+[00:35:43] specifically should, um, foundations be putting their money differently?
+[00:35:48] Should governments be funding things?
+[00:35:50] you know the the White House announced 140 million dollars into various national
+[00:35:54] AI centers, which sounds like a drop in the bucket to the 10 billion that,
+[00:35:58] openAI, you know, so then, you know, like all of these places and y'all pointed
+[00:36:03] out amazing people in Europe, amazing people in the U S trying to work on this
+[00:36:07] and then, you know, contest that with a salary at a tech company, which would be
+[00:36:12] significantly more and frankly, the work, you know, having worked on both sides, I
+[00:36:16] would say the work is easier in many ways.
+[00:36:19] Not that the work is easy, but it is.
+[00:36:22] You don't have so many frustrations, right?
+[00:36:25] There's lots of wins.
+[00:36:26] Uh, what can be done?
+[00:36:29] Yeah, I'll jump in.
+[00:36:30] So I have lots of thoughts on this one.
+[00:36:32] So I'll say one really, really concrete one is, um, there's a program in the U.
+[00:36:36] S.
+[00:36:36] called Tech Fellows.
+[00:36:37] Where they place highly technical staff in Hill offices in DC.
+[00:36:43] It's an incredible program.
+[00:36:44] Like there's this notion sometimes that like DC doesn't get tech or something.
+[00:36:48] I have like met a lot of the Hill staff, like working both on, on, on in
+[00:36:53] elected officials offices, but also on committees who are like working on this
+[00:36:55] stuff and some of them are incredible, like, and know this stuff insanely well.
+[00:37:00] Europe needs a tech fellows program, like desperately.
+[00:37:03] So if there is like philanthropists out there thinking about this stuff, like.
+[00:37:06] tech tech.
+[00:37:06] We need a European version of tech fellows.
+[00:37:09] Um, and by the way, if it does exist, I apologize.
+[00:37:11] But like I, they, they need more of this talent and a version of that.
+[00:37:14] And I've been to Brussels a few times and I, I haven't heard of one, but I
+[00:37:16] think that's like a very concrete thing.
+[00:37:18] Second is, um, I do think that the Silicon Valley will always be able to pay more
+[00:37:24] than like public sector, et cetera.
+[00:37:26] But like, I think the days Of like insane compensation, insane campuses.
+[00:37:32] Like there was a bloated era that I think is coming back down to earth.
+[00:37:36] And I hope that a little bit more balance will make it easier for some
+[00:37:40] people to choose between private and public sector opportunities.
+[00:37:44] I think literally just the number of layoffs that have these companies have put
+[00:37:47] out a lot of talented technical people.
+[00:37:50] Uh, just in like the last nine months.
+[00:37:52] And, um, part of what you're seeing is I think the beginning of like a
+[00:37:56] building of a like trust and safety like integrity industry that now
+[00:38:01] exists outside of the platforms.
+[00:38:03] And that is resulting in things like trade associations being created like the
+[00:38:07] Trust and Safety Professional Association, Digital Trust Safety Association or the
+[00:38:11] Integrity Institute or things like that.
+[00:38:13] And then you're also seeing.
+[00:38:14] A dedicated academic journal journals, just focus on this.
+[00:38:18] I think like what you're, you're seeing new for profits, new nonprofits.
+[00:38:21] I think like my bullish self is like, there's a, that that space is growing
+[00:38:25] now and will hopefully be become a kind of like personnel infrastructure of the
+[00:38:30] internet going forward in a way that it wasn't just people who were like.
+[00:38:35] used to work on the ads team and got asked to help with, you know, you
+[00:38:39] know, impersonation and suddenly we're like the leading, you know, integrity
+[00:38:43] person on spam on the internet.
+[00:38:44] But now there's going to be a new industry of like a lot of talented technical people
+[00:38:48] who hopefully will be moving between those spaces a lot more going forward.
+[00:38:52] Um, so yeah, but I'll, I'll pass
+[00:38:54] it.
+[00:38:54] Yeah.
+[00:38:54] And Julia, like your career, a big part of your career has been literally in
+[00:38:58] cultivating that expertise and people who are not working at tech companies.
+[00:39:02] What are your thoughts?
+[00:39:03] Well, the thing that I experience is that, um, there are so many people
+[00:39:08] with technical skills who don't want to work at those companies and want
+[00:39:11] to do something more mission driven.
+[00:39:13] If, um, if I had all the money, um, I could hire so many of them, right?
+[00:39:18] Because that is the only barrier.
+[00:39:20] They're willing to work for half a quarter, you know, they're,
+[00:39:23] they're actually really excited about doing meaningful work.
+[00:39:26] And the reality is that a lot of the work you have to do in those
+[00:39:30] companies is not that joyful, right?
+[00:39:32] Like optimizing ad.
+[00:39:33] You know, algorithms or whatever.
+[00:39:35] And so, um, I, I think there's a huge, um, group of people.
+[00:39:40] I have never had any problems recruiting.
+[00:39:42] I, I think what the challenge is that, um, I'm in a field where
+[00:39:47] revenues globally have gone from 100 billion worldwide 20 years ago to 30.
+[00:39:52] Billion.
+[00:39:53] So I'm in a collapsing industry.
+[00:39:56] And, you know, there's only so much nonprofit philanthropy can do, right?
+[00:40:01] It's just like they're trying to also there's a lot of other
+[00:40:03] urgent questions in the world.
+[00:40:05] And so I feel like the amount of journalism that needs to get done,
+[00:40:09] especially technically precise, you know, methodologically driven
+[00:40:14] journalism, the kind that I like to do, which is expensive is something that
+[00:40:19] is is hard to get funded and is, um, is hard is difficult to keep running.
+[00:40:27] Um, gosh, we have five minutes and so many good questions in the Q and a,
+[00:40:30] um, well, it's what will tear point then in, uh, sort of these pathways
+[00:40:36] in, um, Do you have any thoughts on this is a question by Hector.
+[00:40:41] He wonders about any thoughts on protecting people who highlight ethical
+[00:40:44] and social harms from retaliation.
+[00:40:46] So this idea of whistleblower protection.
+[00:40:48] I know that's actually something that folks have been working on.
+[00:40:51] These protections may not extend to ethics or tech impacts concerns in general.
+[00:40:56] Is this something you'd support is something you're seeing some noise being
+[00:40:59] made about And, you know, into your point, both of the points that you're making is
+[00:41:02] there is a huge audience people who don't want to work for tech companies, but also
+[00:41:06] there are people working at tech companies who go in and they realize actually want
+[00:41:09] to be doing something a little bit more meaningful, or I have seen these terrible
+[00:41:13] things I'm afraid to speak out because we have seen, you know, the massive amount
+[00:41:17] of pain that they can send your way.
+[00:41:20] Um, You know, and anything on whistleblower protections.
+[00:41:23] Uh, are you in support?
+[00:41:25] Is this something you've seen?
+[00:41:25] Have you seen any noise about it?
+[00:41:27] Um, Brandon, I'll start with you.
+[00:41:28] Oh, Julia.
+[00:41:29] Sorry.
+[00:41:29] It looked like you, you had, I mean, I would just
+[00:41:31] say like whistleblowers are, um, we do have, I mean, not great whistleblower
+[00:41:38] protections, but actually there are somewhat decent whistleblower
+[00:41:40] protections for corporate employees.
+[00:41:42] Um, and, uh, the problem is that The law just isn't enough, right?
+[00:41:48] Like, companies can make your life hell, regardless of what the legal structure
+[00:41:53] for whistleblower protection says.
+[00:41:55] And so ultimately, you see that whistleblowers like Frances Haugen, for
+[00:41:59] instance, leave, rather than deal with the consequences of what it would be like
+[00:42:04] to work there after having just And so I, I think there's, um, that whistleblowers
+[00:42:11] are just people that we need to protect, um, but I think realistically the idea
+[00:42:16] that they're going to be able to keep their jobs, I think it's, is unrealistic.
+[00:42:20] I think, especially given that we're not a, we're a nation where
+[00:42:23] people move jobs all the time.
+[00:42:24] And so I guess I'm really hopeful because there's two new legal entities
+[00:42:29] now that protect whistleblowers.
+[00:42:31] And I feel like that didn't used to exist.
+[00:42:33] So I actually feel like things are on the upswing for whistleblowers.
+[00:42:39] Yeah, you know, I, I know less about, um, kind of the legal to
+[00:42:43] bar for whistle for whistleblowing.
+[00:42:44] So I probably won't speak to it.
+[00:42:45] But what I will say is like, I think, you know, one of the reasons I'm so passionate
+[00:42:48] about data access and transparency is that for a long time, getting any
+[00:42:52] window into a lot of these questions.
+[00:42:56] Required somebody to leak the documents.
+[00:42:58] And if we had a world in which there was much more accountability
+[00:43:02] and much more ability to audit and study and monitor these platforms.
+[00:43:07] Ideally, like, you would have to rely on whistleblowers less because the
+[00:43:11] public would already know so much more.
+[00:43:14] Perfect.
+[00:43:15] So in the two minutes we have left, um, you know, the one law that is
+[00:43:19] happening is Digital Services Act, right?
+[00:43:21] And we talked a little bit about, uh, article 40, which allows
+[00:43:24] openness and transparency and access.
+[00:43:26] Um, but we've all expressed like, oh, this is either gonna be great or terrible,
+[00:43:30] and there's kind of no in between.
+[00:43:32] Uh, so in, yeah, in the two minutes we have left, so I'll go with you
+[00:43:35] first julia, what is the one, what is the one thing that lawmakers in,
+[00:43:40] in the EU should be focusing on?
+[00:43:42] to make article 40 a success.
+[00:43:45] Oh,
+[00:43:46] thank you for asking me that question.
+[00:43:48] Um, I really think that journalists need to have some access to platform data.
+[00:43:55] We have been on the front lines of providing accountability
+[00:43:57] to these platforms.
+[00:43:58] And if they really want these companies reigned, and we
+[00:44:03] are the ones doing the work.
+[00:44:04] And so, um, there is sort of a provision in there that seems to protect, um,
+[00:44:09] that right for journalists to scrape.
+[00:44:11] And I think that should be codified.
+[00:44:13] So it's clear that we can go in and work in the public interest on these platforms.
+[00:44:19] Uh, I totally agree.
+[00:44:20] There is a version of the current article 40.
+[00:44:23] 4 and 40.
+[00:44:24] 12 that could be read in such a way where 3, 4 years from now, when it's all
+[00:44:29] said and done, all we have is regulators picking and choosing from among a very
+[00:44:35] small handful of academic researchers.
+[00:44:38] Whose projects may or may not even be technically feasible by the time
+[00:44:41] they go to the platforms and ask for the data, which may or may not exist,
+[00:44:44] and they may or may not have funding after they may or may not get the data.
+[00:44:49] So there's a world in which if you read this stuff very narrowly, it's
+[00:44:53] a very, it's essentially moving from one walled garden to another, and from
+[00:44:56] moving from real time monitoring of these spaces to constantly looking
+[00:45:00] back three to five years later in a space that changes insanely quickly.
+[00:45:04] So, can we craft the details in such a way that they allow tiers of different access
+[00:45:09] and tiers of different data, including one that makes room for a real time monitoring
+[00:45:14] of what is happening on the platforms.
+[00:45:16] Um, Julia, Brandon, thank you so much.
+[00:45:18] If the comments in chat had any indicator, this conversation could
+[00:45:21] have gone on for hours and everybody would have been glued to their screen.
+[00:45:24] So thank you both for your insights.
+[00:45:26] Uh, and thank you to the folks who've joined us, um, and stay tuned.
+[00:45:30] Uh, we'll be, we'll be posting this fireside chat, uh, as
+[00:45:34] well as reaching out again.
+[00:45:35] So thanks everybody.
+[00:45:37] Thank you.

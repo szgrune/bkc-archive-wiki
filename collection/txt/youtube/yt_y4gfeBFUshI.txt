@@ -1,0 +1,1826 @@
+[00:00:05] all right um welcome everyone uh thank
+[00:00:08] you for joining us today for our third
+[00:00:10] RSM speaker series event of the semester
+[00:00:14] um we're really lucky to have Rob gorwa
+[00:00:16] and Michael ve joining us via zoom and
+[00:00:18] I'll just quickly introduce our guests
+[00:00:20] uh Rob is a post-doctoral research
+[00:00:22] fellow at the wzb Berlin social science
+[00:00:25] center a fellow at the center for
+[00:00:27] democracy and technology and the center
+[00:00:29] for intern National governance
+[00:00:31] Innovation as well as a co-founder of
+[00:00:33] the platform governance research network
+[00:00:35] uh and his first book the politics of
+[00:00:37] platform regulation is forthcoming with
+[00:00:39] Oxford University press uh and Michael
+[00:00:42] is associate professor in digital rights
+[00:00:44] and Regulation and vice Dean for
+[00:00:45] educational Innovation at University
+[00:00:47] College London's faculty of laws his
+[00:00:50] research focuses on how to understand
+[00:00:52] and address challenges of power and
+[00:00:53] Justice that digital Technologies and
+[00:00:55] the users create and exacerbate in areas
+[00:00:58] such as privacy enhancing Technologies
+[00:01:00] in machine learning um and they're here
+[00:01:02] today to discuss their work on the
+[00:01:03] emerging governance challenges posed by
+[00:01:05] AI model marketplaces uh and other
+[00:01:08] intermediaries in the AI ecosystem um
+[00:01:10] we'll be sure to leave some time for
+[00:01:12] questions so please put them into the
+[00:01:13] chat and the Q&A function um but with
+[00:01:16] that I'll turn it over to Rob and
+[00:01:17] Michael
+[00:01:20] welcome hi I think I'll I'll get started
+[00:01:23] uh it's really great to be here um we'll
+[00:01:25] we'll dig right in um to this paper
+[00:01:28] which is uh forthcoming it's available
+[00:01:30] online but we'll be running through some
+[00:01:31] of the main points together um so what
+[00:01:36] we're talking about today is about
+[00:01:38] intermediaries in AI we often hear of AI
+[00:01:40] talked about like a blackbox or an
+[00:01:43] algorithm or something like this but in
+[00:01:44] practice it's a lot more like
+[00:01:45] traditional internet regulation and
+[00:01:47] challenges within it because just like
+[00:01:49] the internet is made up of uh often tens
+[00:01:52] hundreds of intermediaries that work
+[00:01:53] together to deliver the services
+[00:01:55] functionality that you see uh so you
+[00:01:58] could say that AI is more about
+[00:01:59] intermediate is and artificial
+[00:02:00] intelligence in a way and we can feel
+[00:02:02] that there we can just see some of them
+[00:02:04] familiar faces and they'll recur again
+[00:02:06] and again the training data centers AWS
+[00:02:09] Nvidia providing the chips or aure uh
+[00:02:11] teaming up with a lot of the nent AI
+[00:02:13] companies you find that uh important
+[00:02:16] data sources and those who maintain and
+[00:02:18] manage them are key as well uh lion
+[00:02:21] common crawl for um images and text um
+[00:02:24] and Microsoft also run something called
+[00:02:25] Coco common objects and context just a
+[00:02:27] fraction of some of these uh training
+[00:02:29] data sets that we see uh of course
+[00:02:32] famous Foundation model developers
+[00:02:34] building large models using large
+[00:02:35] amounts of compute that others build
+[00:02:37] upon and doing so using other
+[00:02:39] intermediaries that themselves are also
+[00:02:41] uh digital labor platforms like or
+[00:02:44] Mechanical Turk labeling this data
+[00:02:46] cleaning refining it further providers
+[00:02:49] such as vertex AI from Google or Amazon
+[00:02:51] Sage maker offer people the ability to
+[00:02:54] tweak and fine-tune some of those
+[00:02:55] Foundation models using their own data
+[00:02:57] which may in turn come from those
+[00:02:58] labeling services
+[00:03:00] uh and use the compute Services above so
+[00:03:02] you can start to see that
+[00:03:03] intertwined you also find that the
+[00:03:06] devices that query the models
+[00:03:08] themselves um are involved and on
+[00:03:10] consumer devices for example uh Apple
+[00:03:13] and Google being key actors here um and
+[00:03:17] The Operators that host these models
+[00:03:19] like hugging face and GitHub which we'll
+[00:03:21] be talking about today with the open
+[00:03:22] source they'll be placed on these
+[00:03:23] hosting
+[00:03:25] intermediaries uh services like chat GPT
+[00:03:28] uh and so on provide users as feedback
+[00:03:30] providers and act as services to
+[00:03:32] intermediate between these whole
+[00:03:33] technology
+[00:03:35] stacks and you have firms that integrate
+[00:03:37] all of this together to sell it as a
+[00:03:38] bundled product and to resell it uh and
+[00:03:41] to make all these links together for
+[00:03:42] people so all of these just indicate a
+[00:03:45] world of intermediaries that activate
+[00:03:46] not always in the same way not always in
+[00:03:48] the same configuration um and not always
+[00:03:50] with knowledge of each other in a single
+[00:03:53] process so when we talk about regulating
+[00:03:55] or governing AI we have a lot of
+[00:03:57] intervention points here just like we do
+[00:03:59] uh on other kinds of Network
+[00:04:01] Technologies um and that is the focus of
+[00:04:04] this a research agenda that Rob and I
+[00:04:05] are are working on along with many other
+[00:04:07] people um to feel about this area and to
+[00:04:12] work out where interventions look like
+[00:04:14] so a pastor Rob to talk about so Focus
+[00:04:16] for
+[00:04:17] today yeah so the paper that we want to
+[00:04:20] talk about um is about something that we
+[00:04:23] call model marketplaces which is our
+[00:04:26] alliterative little term uh for AI
+[00:04:28] hosting inter medaries again these are
+[00:04:31] interesting platforms that have emerged
+[00:04:33] in the AI intermediary and development
+[00:04:36] ecosystem in the last couple years um
+[00:04:39] and they've started to attract more
+[00:04:41] journalistic attention but not actually
+[00:04:43] that much from academics so far so
+[00:04:45] anyway we just started getting
+[00:04:46] interested in these different
+[00:04:48] platforms which at their core are online
+[00:04:51] services that allow users to upload or
+[00:04:54] create custom models um and what I think
+[00:04:58] differentiates a Model Market
+[00:04:59] Marketplace from all of the other
+[00:05:01] services that are bundling um you know
+[00:05:04] access to AI models or building business
+[00:05:06] models around I guess the ability to
+[00:05:08] query and interact with AI models is
+[00:05:10] that this basically uh is serving as
+[00:05:13] like a kind of new type of user
+[00:05:15] generated content platform uh where
+[00:05:17] people can upload different models or
+[00:05:19] more commonly tuned version of models
+[00:05:22] and then interact with them in various
+[00:05:23] ways such as downloading them or maybe
+[00:05:26] cering them um via a structured web
+[00:05:28] interface
+[00:05:30] so these are often characterized as part
+[00:05:31] of the open- source AI ecosystem um
+[00:05:34] there's a bunch of different services
+[00:05:36] and business models involved here that
+[00:05:38] we'll overview in a little bit and in
+[00:05:40] the paper we really dive in on kind of
+[00:05:42] two broad categories of these model
+[00:05:45] marketplaces um many of you I'm sure
+[00:05:47] will have heard of hugging face a French
+[00:05:50] startup a French American based New York
+[00:05:53] startup that Brands itself as a kind of
+[00:05:56] GitHub for machine learning these are
+[00:05:59] General purpose online platforms that
+[00:06:02] allow people to upload models um as well
+[00:06:05] as data sets um and weights and other
+[00:06:09] kind of things that might be useful for
+[00:06:11] people doing machine learning work uh
+[00:06:13] either as individuals or organizations
+[00:06:15] and these models are across a whole wide
+[00:06:18] range of topics from translation to
+[00:06:20] image classification feature extraction
+[00:06:22] and there are also some kind of quote
+[00:06:24] unquote generative models like uh major
+[00:06:27] open large language models are available
+[00:06:30] via these
+[00:06:31] platforms the second broad category that
+[00:06:34] we focus on in the paper are generative
+[00:06:36] model marketplaces um especially in the
+[00:06:39] image generation context so we'll also
+[00:06:42] talk about some platforms that are
+[00:06:44] emerging uh specifically kind of in the
+[00:06:47] amateur art community which specialize
+[00:06:50] often in one broad category of model so
+[00:06:53] you're not going to find translation
+[00:06:54] models here it's going to be image
+[00:06:56] generation models uh and sometimes even
+[00:06:58] you know specialize in specific um sub
+[00:07:02] models or specific kind of uh image
+[00:07:05] generation models like stable diffusion
+[00:07:07] um by stability
+[00:07:09] a
+[00:07:11] so I'm sure uh many of you and I wish I
+[00:07:15] could you know we can't see your faces
+[00:07:16] today because it's online and if if we
+[00:07:18] were in a room together I'd maybe ask
+[00:07:20] for a show of hands to ask how many of
+[00:07:22] you have um been on hugging face are
+[00:07:24] aware of hugging face have interacted
+[00:07:26] with it but this is basically the front
+[00:07:28] page um of the website and just to point
+[00:07:32] out a few things here this is um it's
+[00:07:35] really interesting because a you can see
+[00:07:38] this the sheer kind of popularity of
+[00:07:40] these platforms as theyve emerged
+[00:07:42] especially hug andace in particular so I
+[00:07:44] don't know exactly when you took the
+[00:07:45] screenshot Michael but uh today as of as
+[00:07:49] of today there's more than 500,000
+[00:07:51] different models available here and you
+[00:07:53] can easily search them with all of these
+[00:07:56] kind of tags that are on the left uh
+[00:07:58] hand of the screen
+[00:07:59] and one thing that's really important to
+[00:08:01] notice is that a mix of basically big
+[00:08:05] research labs and organizations so you
+[00:08:08] know for example Google brain Google
+[00:08:10] research uh Facebook AI
+[00:08:12] researcha uh stability AI all of these
+[00:08:15] kind of major major research
+[00:08:17] organizations are uploading their models
+[00:08:20] U making them widely available here um
+[00:08:23] you know some of these are very popular
+[00:08:25] uh you can't see it here but one of the
+[00:08:27] major stability AA AI models has four or
+[00:08:31] five million downloads or queries uh in
+[00:08:33] the last couple months as well as a kind
+[00:08:36] of mix of um I guess you know hobbyists
+[00:08:40] um so right at the bottom left column
+[00:08:43] you can see a model called Moon dream
+[00:08:45] which was just published by uh an
+[00:08:48] individual um and this is what was it it
+[00:08:51] was a it was a LM designed exactly so
+[00:08:56] again you can see that there are some
+[00:08:58] content discovery mechanisms that are
+[00:08:59] being integrated here they have a
+[00:09:01] trending models function that one was
+[00:09:03] just uploaded a day ago and has 3,000
+[00:09:05] downloads so anyway this is hugging
+[00:09:08] face so very briefly in the paper I
+[00:09:11] guess what we were trying to do was uh
+[00:09:13] explore this kind of weird space that is
+[00:09:15] emerging and just do a little bit of a
+[00:09:17] preliminary mapping of the different
+[00:09:19] platforms and companies that are
+[00:09:21] existing in the space and as we'll get
+[00:09:23] into kind of uh how they are dealing
+[00:09:27] with content governance problems uh and
+[00:09:29] we'll get into this as to why this is
+[00:09:31] the interest of our paper um and why we
+[00:09:33] think it poses some particularly
+[00:09:35] interesting challenges for internet
+[00:09:36] regulation so anyway without going too
+[00:09:39] far into depth of this um it's all
+[00:09:41] available in the paper online but you
+[00:09:43] can see that there's a bunch of
+[00:09:44] different services that we found um they
+[00:09:47] have kind of different valences there's
+[00:09:48] a lot of image generation ones there's
+[00:09:51] some generic ones even though hug and
+[00:09:53] face is the most popular and I guess um
+[00:09:55] just to reiterate the kind of first
+[00:09:57] point I made the key key thing that we
+[00:10:00] consider to be I guess the necessary
+[00:10:02] condition of a model Marketplace is that
+[00:10:04] it allows third-party user upload of
+[00:10:06] models so there are many other services
+[00:10:09] that provide intermediation functions
+[00:10:11] that for example allow you to interact
+[00:10:13] with maybe stable diffusion uh via an
+[00:10:15] iPhone app um there are other services
+[00:10:18] for image generation like mid Journey
+[00:10:20] For example which are really popular uh
+[00:10:22] but you cannot upload models to Mid
+[00:10:24] Journey or kind of directly um uh tamper
+[00:10:28] or or play with the models um you have
+[00:10:31] to interact with them with a structured
+[00:10:33] interface I think in the case of mid
+[00:10:35] Journey it's a largely VI Discord um so
+[00:10:38] this is the kind of uh breakdown of the
+[00:10:40] different models in the space uh and we
+[00:10:43] looked at whether they had content
+[00:10:44] policies and um how they develop those
+[00:10:48] policies but we'll get into that okay so
+[00:10:51] kind of bringing us to the meat of this
+[00:10:53] paper was the realization that model
+[00:10:57] marketplaces um which we think are
+[00:11:00] interesting and increasingly important
+[00:11:02] intermediaries in the kind of AI supply
+[00:11:04] chain and the AI stack are increasingly
+[00:11:07] facing moderation issues so one public
+[00:11:10] Scandal which uh didn't get a huge
+[00:11:13] amount of attention but caught some
+[00:11:14] Traction in the machine Learning
+[00:11:15] Community happened in 2021
+[00:11:19] 2022 uh where a Swiss machine learn
+[00:11:21] learning researcher who's also a
+[00:11:24] YouTuber took two um popular well he he
+[00:11:28] took took a popular open- Source large
+[00:11:30] language model and then tuned it using a
+[00:11:33] data set um that a group of researchers
+[00:11:36] had collected which was basically um a
+[00:11:40] collection of all of the posts that were
+[00:11:43] posted on the 4chan Politically
+[00:11:45] Incorrect Forum um in the last few years
+[00:11:48] and using this um the YouTuber
+[00:11:51] researcher kind of said it was a bit of
+[00:11:52] a prank uh he created a model that he
+[00:11:55] called GPT 4chan uh in effect a kind of
+[00:11:59] large language model for hate speech and
+[00:12:01] harassment that he said he released uh
+[00:12:03] for research purposes putting the code
+[00:12:05] on GitHub and then the model up on
+[00:12:08] hugging
+[00:12:10] face so this kicked um the hugging face
+[00:12:13] staff directly into gear and Michael's
+[00:12:15] going to briefly talk about how and what
+[00:12:18] they did yeah so here you see um this is
+[00:12:21] like the community discussion page is
+[00:12:23] where some of the content moderation
+[00:12:24] Action Now happens on hugging face them
+[00:12:26] not really having an exact venue for it
+[00:12:29] initially when it was set up it didn't
+[00:12:31] really have a clear content moderation
+[00:12:32] policy in its early days um and here you
+[00:12:35] see um some people concerned about it
+[00:12:37] you see that someone says they tried out
+[00:12:39] the demo model of a tool four times
+[00:12:41] using some benign text uh the first
+[00:12:43] response was just the nword and the
+[00:12:45] second uh the second was a sentence
+[00:12:47] about climate change which led to a
+[00:12:49] conspiracy theory about the Rothchilds
+[00:12:51] and Jews being behind it and you kind of
+[00:12:53] get an idea of what this model is doing
+[00:12:55] so um Wade's in the content moderation
+[00:12:57] staff of hugging face and the content
+[00:12:58] moderation staff is actually the CEO so
+[00:13:01] we go quite straight to the top when we
+[00:13:02] do content moderation uh In This Very
+[00:13:04] Hands-On platform and this is only a
+[00:13:06] couple of years ago AIT less than that
+[00:13:08] now um
+[00:13:09] even um where Clon delang asks comes in
+[00:13:14] and says okay we had an internal debate
+[00:13:16] around this you know clearly not having
+[00:13:18] Consolidated a policy previously and we
+[00:13:20] think it should stay up although we
+[00:13:22] think it should be clearer about his
+[00:13:23] limitations but that only lasted for a
+[00:13:25] few days because within about a week um
+[00:13:28] hugging face stuff changed their mind
+[00:13:29] and said we will after all disable this
+[00:13:31] model so what's happening here well
+[00:13:34] one one thing that's happening is just a
+[00:13:37] discussion about the sheer difficulty of
+[00:13:39] moderating these kinds of uh models here
+[00:13:43] and one of the reasons it's so difficult
+[00:13:45] um is because we have three different
+[00:13:48] ways in which we might think that models
+[00:13:50] as tools um can be understood as being
+[00:13:53] harmful or risky or so on we have their
+[00:13:56] intended
+[00:13:57] uses uh we have the idea that uh you
+[00:14:00] could say this is a model designed to
+[00:14:03] troll people on on forchan um and
+[00:14:05] therefore you could have a policy about
+[00:14:07] that you could put it in a model card um
+[00:14:09] which is a metadata for models that's
+[00:14:11] been popularized following the model
+[00:14:14] cards for model reporting
+[00:14:16] paper um that's pretty easy to moderate
+[00:14:19] right because it's just comparing
+[00:14:21] intention against a list of policies um
+[00:14:24] pretty simple but you have two areas
+[00:14:26] which are then harder to deal with at
+[00:14:28] this point you have the realized uses
+[00:14:30] empirically has a model been used in a
+[00:14:32] certain way and you have the potential
+[00:14:34] uses does a model have affordances or
+[00:14:37] does it have the the the actual
+[00:14:39] capabilities to be used to do this the
+[00:14:42] first requires empirical evidence and
+[00:14:43] the second requires analytic evidence
+[00:14:46] neither of which are cheap or indeed
+[00:14:49] self-evident we can see that the hardest
+[00:14:52] one maybe from this is the
+[00:14:53] potential um because suddenly you have
+[00:14:56] to uh look into a model really red team
+[00:14:59] it or put it in you know a lot of
+[00:15:01] different um situations and imagine how
+[00:15:04] it can be used using a variety of say
+[00:15:06] technolog assessment
+[00:15:08] methodologies um as well as some uh
+[00:15:10] actual formal analysis of what's what
+[00:15:13] cap what its capabilities are but
+[00:15:15] legislation in many jurisdictions
+[00:15:17] already forces platforms to moderate
+[00:15:19] models for their potential use so a
+[00:15:22] context here to start with is that we're
+[00:15:23] looking at jurisdictions um that are not
+[00:15:25] the United States because the United
+[00:15:26] States is a global outlier in in the way
+[00:15:29] that section 23 does not require takeown
+[00:15:32] under any
+[00:15:33] circumstances that's not quite true
+[00:15:34] there are specific circumstances but
+[00:15:36] we're not going to get into the
+[00:15:38] Amendments of that um almost every other
+[00:15:41] jurisdiction in the world operates uh
+[00:15:43] for most of their illegality a bit like
+[00:15:45] the dmca does with a notice and takedown
+[00:15:47] process um so that's the norm and it
+[00:15:50] means that when I submit a complaint of
+[00:15:52] illegality a a corporation can lose at
+[00:15:54] least that level of shielding uh if they
+[00:15:56] don't take down uh the the the the
+[00:15:59] content and the complaint was well
+[00:16:01] founded the notification was clearly
+[00:16:03] pointing to Illegal content on that
+[00:16:05] platform there may be other layers of
+[00:16:07] shielding below like you don't
+[00:16:08] automatically become liable the laws
+[00:16:10] themselves determine that uh the law
+[00:16:12] that renders the whole thing illegal in
+[00:16:13] the first
+[00:16:14] place so that's the context so let's
+[00:16:17] look at some of these potential
+[00:16:19] legislation well looking at the UK uh
+[00:16:23] models that produce information that are
+[00:16:25] useful to a person preparing a terrorist
+[00:16:27] act are likely illegal like the
+[00:16:29] Anarchist Cookbook if the model
+[00:16:31] regurgitates this um this is likely to
+[00:16:34] be full foul of the terrorism act 2000
+[00:16:37] it can be transformed into say bomb
+[00:16:38] instructions or so on and that's about
+[00:16:40] potential information there models that
+[00:16:44] have the potential to be converted into
+[00:16:46] indecent images of children are
+[00:16:48] considered indecent images of children
+[00:16:49] whether they're virtual or not uh and
+[00:16:52] that's effectively they called a pseudo
+[00:16:54] photograph in the law um and some of the
+[00:16:56] logic is you can't passw protected zip
+[00:16:58] file and say well I put the other bit of
+[00:17:00] information you need to unlock it over
+[00:17:02] here therefore the zip file itself is
+[00:17:04] not illegal or contains is not trigger
+[00:17:06] any liability similarly a model itself
+[00:17:09] that is just one prompt away uh whether
+[00:17:12] it's carefully crafted or not from
+[00:17:14] producing indecent images of children uh
+[00:17:16] would full foul of this uh
+[00:17:19] regime models that leak private data we
+[00:17:22] know that that happens we know that
+[00:17:23] models memorize credit card numbers
+[00:17:24] natural Security numbers Social Security
+[00:17:26] numbers other bits of information
+[00:17:29] and it's not just private information
+[00:17:31] actually it can be biographical
+[00:17:32] information that is considered personal
+[00:17:34] data well they can attract liability
+[00:17:36] doesn't necessarily mean they're illegal
+[00:17:37] but it's something that can be
+[00:17:38] considered from their potential it's
+[00:17:40] just like a data set that can be
+[00:17:42] potentially uh released and more
+[00:17:45] controversially copyrighted content and
+[00:17:47] we're not going to go into that but of
+[00:17:48] course there are ongoing court cases
+[00:17:49] about this that you can you many people
+[00:17:51] in the audience will know about so just
+[00:17:53] to give a flavor these things point to
+[00:17:55] potential so it already drags platforms
+[00:17:57] into having to respond to the hardest of
+[00:18:00] these three categories or arguably the
+[00:18:02] hardest so they don't have a choice just
+[00:18:04] to look at the intended use uh they are
+[00:18:08] often going to be dragged into making
+[00:18:09] decisions about the potential
+[00:18:12] use and this is compounded by the fact
+[00:18:14] that some of the model marketplaces we
+[00:18:15] looked at like civi which uh since we
+[00:18:18] wrote this paper uh has has actually
+[00:18:20] become fairly well known in this area um
+[00:18:24] we put the paper out last November or so
+[00:18:26] initially or last October
+[00:18:29] um we we found that you know Cai is is
+[00:18:33] itself it's it's working on the basis of
+[00:18:36] illegality uh pretty much oops it was
+[00:18:39] going forward I'm back here um uh we're
+[00:18:41] work it's working on the basis of of uh
+[00:18:43] consent consensual and non-consensual AI
+[00:18:46] porn in many cases and therefore it's
+[00:18:48] not surprising that we get um liability
+[00:18:52] that occr from that um and we find that
+[00:18:56] in that liability there's pressure
+[00:18:59] the pressure of um other infrastructural
+[00:19:02] providers other supply chain actors that
+[00:19:04] place content moderation pressures on
+[00:19:06] other parts of this algorithmic supply
+[00:19:08] chain this is not uncommon we've seen
+[00:19:10] this say payment providers obviously
+[00:19:12] pressuring content moderation uh on say
+[00:19:14] Tumblr or only fans relating to uh
+[00:19:17] Mastercard or PayPal uh providing
+[00:19:19] pressure it's classic internet
+[00:19:20] regulation here um octoml which was used
+[00:19:23] by civi to power some of its image
+[00:19:25] generation that was happening on the
+[00:19:27] platform it's self was very concerned
+[00:19:29] around child sexual abuse imagery being
+[00:19:31] used and demanded certain moderation
+[00:19:33] undertook certain scanning itself and
+[00:19:35] eventually cut off its relationship with
+[00:19:37] Civ ti so we see those all things as
+[00:19:39] causing pressure for for the platforms
+[00:19:41] to moderate both in uh jurisdictions
+[00:19:44] around the world but in this case also
+[00:19:46] in the US despite section
+[00:19:49] 230 so yeah so really oh thank you thank
+[00:19:54] you Michael yeah there was just a
+[00:19:56] interesting question in the chat or
+[00:19:58] comment noting at the the kind of
+[00:20:00] prevalence of different social features
+[00:20:02] that are being integrated um and just in
+[00:20:05] interest of time we had a few more
+[00:20:07] slides that were walking through the
+[00:20:08] interface of civii and some of these
+[00:20:10] other platforms uh which we cut
+[00:20:12] unfortunately but they do have some
+[00:20:14] really interesting affordances um
+[00:20:17] relating to the kind of generation of
+[00:20:19] some of these problematic forms of
+[00:20:21] material um that we're going to get into
+[00:20:24] and that's things like the ability to
+[00:20:25] combine different models on the platform
+[00:20:28] um the ability to uh yeah easily deploy
+[00:20:31] models on the platform to interact with
+[00:20:33] them and there is like more fundamental
+[00:20:36] business model questions around how they
+[00:20:38] are making money and who their user base
+[00:20:40] is so we'll get all into all of that uh
+[00:20:42] in a second so first um this question of
+[00:20:46] our model Marketplace is actually
+[00:20:48] responding to this so the first half of
+[00:20:50] the paper I guess sets out this context
+[00:20:53] and deals with some of the policy um the
+[00:20:55] challenges and also I guess the existing
+[00:20:59] kind of background and context under
+[00:21:01] extent law as Michael mentioned and then
+[00:21:04] we moved to a say a set of policy case
+[00:21:07] studies um of three major uh model
+[00:21:11] marketplaces as part of writing or I
+[00:21:13] could say maybe two model marketplaces
+[00:21:16] um and one kind of Legacy software
+[00:21:20] repository software hosting intermediary
+[00:21:22] that has U model Marketplace ex valences
+[00:21:27] so how are these companies responding
+[00:21:29] one of the first major things we're
+[00:21:30] seeing is I guess also through a fairly
+[00:21:34] classic um Dynamic of content governance
+[00:21:38] and content moderation in um in in ways
+[00:21:42] that I guess is inspired by some of the
+[00:21:44] tradition in social media and user
+[00:21:47] generated content regulation um so
+[00:21:49] filtering uh and also trying to limit
+[00:21:52] model visibility and adct in in various
+[00:21:54] ways so we're seeing that some platforms
+[00:21:58] um under pressure from cant stakeholders
+[00:22:00] Michael will get into this um it's not
+[00:22:02] just journalists and the public but also
+[00:22:04] increasingly some government actors that
+[00:22:06] are requesting uh the takeown of certain
+[00:22:09] models um but because the business model
+[00:22:12] of a lot of these marketplaces is
+[00:22:14] predicated on removing friction on
+[00:22:17] making the ability to deploy models
+[00:22:19] easier for Lay users uh and for
+[00:22:21] organizations um you know things like
+[00:22:24] hugging faces inference Ed points um
+[00:22:26] which can be query and and used to play
+[00:22:29] with all sorts of different kinds of
+[00:22:30] models in in the development pipeline um
+[00:22:33] as well as I guess various online
+[00:22:36] features that just make the
+[00:22:37] discoverability of different models
+[00:22:39] easier um there's some simple
+[00:22:41] interventions that companies can take
+[00:22:43] and are taking to um add some of that
+[00:22:46] friction back so for example uh if you
+[00:22:48] go on hugging face and you look at the
+[00:22:51] main model repository Pages most of them
+[00:22:54] have a little widget where you can
+[00:22:56] directly interact with um a toy version
+[00:22:59] of the model um and that is something
+[00:23:02] that the hugging face team in the case
+[00:23:04] of uh GPT 4chan for example initially
+[00:23:07] limited uh as part of their kind of
+[00:23:09] moderation interventions into that um
+[00:23:12] they can make it harder for users to
+[00:23:14] download for example putting it behind a
+[00:23:16] logging wall so it's not just fully
+[00:23:18] public um and they could remove it from
+[00:23:21] you know major Discovery mechanisms like
+[00:23:23] the trending section and the front page
+[00:23:26] um and something we're seeing incre ly
+[00:23:28] with uh new kind of hped model releases
+[00:23:32] is that some of these um some of these
+[00:23:35] models are requiring users to actually
+[00:23:37] identify themselves and sign some kind
+[00:23:39] of uh contract uh or license before
+[00:23:42] being able to
+[00:23:44] download another thing we're saying is
+[00:23:46] something that we call in the paper uh
+[00:23:48] bolting on mitigation features or
+[00:23:50] basically uh different types of
+[00:23:52] automated filtering um for I guess
+[00:23:56] safety for trust and safety and there
+[00:23:58] are two broad categories of this um
+[00:24:00] we're seeing some developers actually
+[00:24:02] try to bundle these into their models
+[00:24:05] and again this is a a potentially
+[00:24:07] important intervention but it's hard to
+[00:24:09] make the stick especially for more Savvy
+[00:24:11] users who can um who can remove it
+[00:24:14] locally and uh a focus of our paper I
+[00:24:17] guess is on Marketplace filters um so
+[00:24:20] the model marketplaces themselves are
+[00:24:22] starting to apply both input and output
+[00:24:25] filters so for example doing keywords
+[00:24:29] searches that block for example certain
+[00:24:31] types of queries again users are working
+[00:24:34] around this so it's a bit of an arms
+[00:24:35] race uh as well as kind of output
+[00:24:38] filters so uh what civi was doing for
+[00:24:40] instance was taking a off-the-shelf
+[00:24:43] computer vision offering like Amazon
+[00:24:45] recognition trying to get it to uh
+[00:24:48] detect nudity and then running um all
+[00:24:51] kind of outputs that are being Creed
+[00:24:53] directly or being being um created
+[00:24:56] directly via the civi platform form and
+[00:24:58] their Partners like octom MML those are
+[00:25:00] getting scanned um and potentially
+[00:25:02] flagged as not safe for work or even
+[00:25:05] removed
+[00:25:07] so what's the second thing that we're
+[00:25:09] seeing in this space as well yeah so uh
+[00:25:12] we're looking one one thing that was was
+[00:25:15] moving down to some points I think that
+[00:25:16] are a bit kind of Novel and curious that
+[00:25:19] we were discovering and wanted to
+[00:25:20] analyze as part of this this paper one
+[00:25:22] is the Outsourcing of moderation
+[00:25:24] standards um themselves uh and that's
+[00:25:27] unusual thing we don't really see this
+[00:25:29] very often what's happening here when we
+[00:25:30] look at hugging face is that hugging
+[00:25:32] face is spending quite a lot of effort
+[00:25:33] and energy including in academic spaces
+[00:25:36] um pushing something they call
+[00:25:37] behavioral use licenses these are like
+[00:25:40] the evolution of copy left licenses
+[00:25:42] where the uh Distribution on use of Ip
+[00:25:45] protected material is conditional on the
+[00:25:48] behavior of the
+[00:25:51] leny so the main one is open rail that's
+[00:25:55] open responsible AI license um but there
+[00:25:57] are many many others that are being used
+[00:25:59] including specific ones being generated
+[00:26:01] by developers themselves it's not
+[00:26:04] entirely new Json the JavaScript object
+[00:26:07] notation language actually has a don't
+[00:26:09] don't be evil license uh don't don't
+[00:26:11] don't use for evil only use for good so
+[00:26:13] you can't use Json for evil but I think
+[00:26:15] that's probably not very enforcable um
+[00:26:17] and there's the uh the not really famous
+[00:26:19] I'd say but it's one the things tempting
+[00:26:20] to say it's famous uh the anyone but
+[00:26:23] Richard storman license which is uh was
+[00:26:26] sort of maybe one of these joke lies
+[00:26:28] that exist that say anyone can use this
+[00:26:29] for anything unless you are Richard
+[00:26:30] storman in which case you cannot use it
+[00:26:32] for anything at all so there there are
+[00:26:34] world of specific licenses that have
+[00:26:36] existed before um oops What's Happening
+[00:26:39] Here umang go um there um
+[00:26:43] however however um
+[00:26:47] the uh what's happened here is that um
+[00:26:51] hugging face doesn't just uh respond to
+[00:26:55] the actual license s or their agent
+[00:26:57] saying hey we see something on on your
+[00:26:59] platform that is say a version of our
+[00:27:01] model that has been used in a terms for
+[00:27:04] say medical use or to um to create harm
+[00:27:06] to people or in a discriminatory way or
+[00:27:08] to be used by police or something like
+[00:27:10] this uh that someone's posted on your
+[00:27:11] platform please take it down they
+[00:27:13] actually respond to third parties
+[00:27:15] pointing out these license uh these
+[00:27:17] license terms have been breached so they
+[00:27:19] someone says hey you this model actually
+[00:27:21] breaches the terms of the Upstream model
+[00:27:23] that were written in a very open-ended
+[00:27:25] way and so hugging face ends up
+[00:27:27] enforcing by the looks of what they're
+[00:27:29] doing right now and this may change in
+[00:27:30] the future um and looking to a world
+[00:27:34] where they're enforcing uh rules that
+[00:27:35] are written by other people um this is a
+[00:27:38] problem because you should be very
+[00:27:39] careful with the rules you write into
+[00:27:41] your content moderation uh guidelines
+[00:27:44] Community standards and similar because
+[00:27:45] some things are very difficult to
+[00:27:47] operationalize um and we'll see some of
+[00:27:50] these here so if we look at the open
+[00:27:51] rail license which is the most popular
+[00:27:54] of the behavioral use licenses on the
+[00:27:56] platform
+[00:27:58] uh will we see that uh you you can not
+[00:28:01] use models to disseminate verifiably
+[00:28:03] false information you can't disseminate
+[00:28:06] personal information that can be used to
+[00:28:08] harm an individual or to generate it at
+[00:28:10] all um you can't disparage somebody
+[00:28:14] using a model we're not sure what that
+[00:28:16] would mean in this case uh you can't
+[00:28:17] violate any applicable national federal
+[00:28:19] state local or even international law uh
+[00:28:22] using this model which will depend on
+[00:28:24] your jurisdiction is very unclear how
+[00:28:26] that would work um and you can't have uh
+[00:28:29] indirect discrimination or disperate
+[00:28:31] impact using a model which is also
+[00:28:32] difficult to prove we're not saying any
+[00:28:34] of these things are bad terms in
+[00:28:36] principle but they're very hard to
+[00:28:37] operationalize in practice they're very
+[00:28:40] hard to operationalize in the classic
+[00:28:41] content moderation landscape um of uh
+[00:28:45] outsourced or fast decisions that are
+[00:28:47] being made ideally not by the CEO every
+[00:28:50] single
+[00:28:51] time and we saw this as an example that
+[00:28:54] we draw upon in the paper um and thanks
+[00:28:56] to for media for the picture when they
+[00:28:58] covered our paper they made some
+[00:28:59] beautiful images so we are going to just
+[00:29:01] borrow these now with much thanks the
+[00:29:03] reporting please go and subscribe to
+[00:29:04] that fantastic journalistic uh Endeavor
+[00:29:08] um in 2022 and 2023 hugging face removed
+[00:29:11] models of Xi Jinping singing and they
+[00:29:14] removed it because a complaint was made
+[00:29:15] it was redacted we don't know who made
+[00:29:17] this complaint but it was very similar
+[00:29:19] to complaints made on GitHub by the
+[00:29:21] Chinese Network Authority which is part
+[00:29:23] of the Chinese government that uh does
+[00:29:25] take these kind of requests on the of
+[00:29:27] Chinese law and take down
+[00:29:29] requests and they said please remove
+[00:29:32] this model because hugging face did
+[00:29:35] remove it we I can't see the exact
+[00:29:36] request but hugging face removed it
+[00:29:37] saying we remove it because it is not in
+[00:29:40] adance with the Upstream model's license
+[00:29:43] the Upstream model which creates singing
+[00:29:45] voices or whoever you want to upload and
+[00:29:47] fine-tune the model to do um was hosted
+[00:29:50] on GitHub and someone had placed the the
+[00:29:54] lense or had placed a license saying no
+[00:29:56] political use allowed for this model and
+[00:29:59] so immediately you weighed into saying
+[00:30:01] this is political and that is the reason
+[00:30:03] why you couldn't do it and a hugging
+[00:30:05] face did afterwards when pressed by 404
+[00:30:06] say it's also impersonation and that's
+[00:30:09] not part of our community standards at
+[00:30:10] which point uh 404 asked why they hadn't
+[00:30:13] take down taken down all these Biden
+[00:30:14] singing generators um that were on
+[00:30:17] hugging face and apparently there was no
+[00:30:19] response forthcoming at that point so
+[00:30:21] you can see this is a very thorny area
+[00:30:23] and we're not pointing the finger at
+[00:30:25] hugging face for doing anything or
+[00:30:27] unethical in fact we quite like them as
+[00:30:29] an organization um the point is that
+[00:30:31] they can't put their hand up and say we
+[00:30:33] will solve all these problems or we will
+[00:30:34] be the intervention point or the Arbiter
+[00:30:36] for all of these issues or indeed the
+[00:30:38] Arbiter of other people's rules it is
+[00:30:40] not a job you want it is not a job you
+[00:30:42] should be volunteering for and we need
+[00:30:44] to have some careful consideration about
+[00:30:46] how this whole ecosystem is going to
+[00:30:48] work in terms of moderation for it not
+[00:30:50] to go a bit
+[00:30:52] wrong one lesson that we did see that is
+[00:30:55] a very interesting trajectory and
+[00:30:57] something that we think could hold
+[00:30:58] promise for the future although it's not
+[00:31:00] perfect was on GitHub now GitHub isn't
+[00:31:03] strictly a model Marketplace at least
+[00:31:05] not primarily it's a software uh
+[00:31:07] repository and one thing that Rob and I
+[00:31:09] found when writing this paper is it is
+[00:31:11] astounding that nobody in scholarship as
+[00:31:14] we're aware of has written about
+[00:31:15] github's content moderation policies we
+[00:31:17] tried to look if you know anything
+[00:31:18] please do send us a postcard um uh there
+[00:31:21] was no literature we could find that was
+[00:31:22] really doing analysis of software
+[00:31:24] moderation on GitHub surprising there
+[00:31:27] been lots of research on all kinds of
+[00:31:28] platforms but um so we had to do quite a
+[00:31:31] lot of primary work digging through uh
+[00:31:33] threads and um and and blogs and posts
+[00:31:37] and forums and all these kind of things
+[00:31:38] and Reddit threads and all these kind of
+[00:31:40] things to find out some interesting
+[00:31:42] juicy tales for you folk and here's a
+[00:31:45] juicy tale that we discovered which was
+[00:31:47] that in
+[00:31:49] 2020 and some of you may know this it
+[00:31:51] was reported lightly at the time uh
+[00:31:53] GitHub removed YouTube DL which was a
+[00:31:55] tool probably many people have used it
+[00:31:56] in chat I'd imagine um it's a command
+[00:31:59] line tool where you can put in a YouTube
+[00:32:02] uh URL and it will give you a copy of
+[00:32:04] the video very handy the Beloved
+[00:32:07] recording industry of America uh sent a
+[00:32:09] takeown request under dmca Section 1201
+[00:32:12] which is the anti- circumvention um
+[00:32:14] section and that relates to software
+[00:32:16] that can go around digital Rights
+[00:32:18] Management um long being pointed as
+[00:32:20] problematic as a as a clause by people
+[00:32:23] like Pamela Samuelson for many many
+[00:32:26] years
+[00:32:27] but it's a difficult one to deal with
+[00:32:29] and so GitHub did take it down then
+[00:32:31] there was public outcry GitHub then
+[00:32:32] commissioned legal analysis and they
+[00:32:36] looked at this and they actually in the
+[00:32:37] end said look it's not really removing
+[00:32:39] protections the rights holders are put
+[00:32:40] on it's just getting the HTML video out
+[00:32:44] it's not kind of cracking some specific
+[00:32:45] rights holder protected uh file so we
+[00:32:48] don't believe it falls under the
+[00:32:50] anti-circumvention rules and GitHub
+[00:32:52] reinstated it in the process GitHub in
+[00:32:55] our view from from our reading of this
+[00:32:58] clearly realize that this is
+[00:32:59] unsustainable they cannot go and
+[00:33:01] commission legal analysis in a detailed
+[00:33:03] way and reason in this slow expensive
+[00:33:05] way about every anti- circumvention tool
+[00:33:08] takeown
+[00:33:09] request and so what they did was very
+[00:33:12] interesting they put up a $1 million
+[00:33:14] fund and they said you can use this fund
+[00:33:17] you can apply to it if we take down your
+[00:33:19] anti circumvention potential anti
+[00:33:20] circumvention uh uh uh tool or your
+[00:33:24] potential circumvention tool rather um
+[00:33:27] which we'll do fairly liberally now like
+[00:33:29] we will take them down if we get
+[00:33:30] requests as long as they look
+[00:33:32] plausible you can apply to us for money
+[00:33:35] you can use that money and you can hire
+[00:33:37] some lawyers or an analysts whatever
+[00:33:39] whatever you need to write a dmca
+[00:33:43] counter
+[00:33:44] notice which uh the Geeks in the
+[00:33:46] audience will be will be loving because
+[00:33:48] DMC counter notices are a um a very
+[00:33:50] interesting tool they're they're not
+[00:33:52] exactly great at solving all the
+[00:33:53] problems of the world um they require
+[00:33:55] the um person whose content has been
+[00:33:57] removed to submit uh under threat of
+[00:34:00] perjury a good uh a good faith statement
+[00:34:03] that they're they believed it to be
+[00:34:05] actually legal to have that content on
+[00:34:07] the platform uh and that effectively
+[00:34:10] triggers the reinstatement of the
+[00:34:12] content on the platform and it moves the
+[00:34:14] dispute to between the rights holder and
+[00:34:16] the uploader so the content can go up
+[00:34:19] and the dispute is then moved elsewhere
+[00:34:20] and then the conclusion of that plays
+[00:34:21] out um we don't know how much has been
+[00:34:25] taken up but we do know that it's been
+[00:34:26] offered many many times because we have
+[00:34:27] that data from GitHub and what's
+[00:34:30] Happening Here is an
+[00:34:31] externalization of analytic capacity so
+[00:34:35] while hugging face was doing a lot of um
+[00:34:39] uh analysis inhouse it seems and maybe
+[00:34:41] moving to a world where they're going to
+[00:34:43] have to do more and more of this and
+[00:34:44] it's going to get very burdensome to
+[00:34:46] think about that potential GitHub says
+[00:34:49] in their previous non-machine learning
+[00:34:50] model but software dual software related
+[00:34:53] um story says actually we need to put
+[00:34:56] this outside put a limit on the money
+[00:34:58] we'll pay we need to make other people
+[00:34:59] do that work and give us better
+[00:35:01] information or get it moved get these
+[00:35:03] disputes moved elsewhere um so this
+[00:35:06] could be a way forwards or at least a
+[00:35:07] flavor of a way forwards um because we
+[00:35:10] don't believe that these model
+[00:35:11] marketplaces will be capable of being
+[00:35:14] everything to everyone and having all
+[00:35:16] this capacity themselves even though
+[00:35:17] they will have to play an important role
+[00:35:21] nonetheless so what's next um we've
+[00:35:24] already been talking for more than 30
+[00:35:26] minutes so we'll start wrapping up and
+[00:35:29] yeah please do check out the paper if
+[00:35:30] you're interested in any of this um it's
+[00:35:33] I don't know about you Michael it's my
+[00:35:35] longest paper I think it clocked in at
+[00:35:37] like 18 or 19,000 words um as Michael
+[00:35:40] said we were you know really diving into
+[00:35:43] some of the earlier software studies
+[00:35:45] work on GitHub we were trying to find
+[00:35:47] work on content governance um in the
+[00:35:50] GitHub context having a hard time and
+[00:35:52] just also trying to do a lot of you know
+[00:35:54] background mapping analysis of different
+[00:35:56] business models emerging as well as a
+[00:35:58] policy analysis and some case studies so
+[00:36:01] yeah we were we were having a hard time
+[00:36:03] finding a venue that would take such a
+[00:36:05] monster paper maybe we should have split
+[00:36:07] it and done like a part one part two but
+[00:36:09] anyway for us Law Journal with like a
+[00:36:11] million pages and one two inch margins
+[00:36:13] oh man with the with the US Law Journal
+[00:36:15] footnotes this would have been would
+[00:36:17] have been off the chain um but I just
+[00:36:20] want to kind of wrap up um with with a
+[00:36:24] short note on some of the layers of
+[00:36:26] challenges
+[00:36:27] that we think are interesting here and
+[00:36:29] my background is as a as a platform
+[00:36:31] governance as a Content moderation
+[00:36:34] policy researcher um so I really came
+[00:36:36] out this from the from the angle of
+[00:36:38] trying to I guess think about the stuff
+[00:36:40] I know and I guess think about what is
+[00:36:44] new and different and interesting here
+[00:36:45] in terms of different affordances and
+[00:36:47] Dynamics and um yeah different kind of
+[00:36:50] policy features so I think we're seeing
+[00:36:53] at least a different types uh a few
+[00:36:55] different types of problems emerge
+[00:36:56] through these case studies that we've
+[00:36:58] done which again are available in the
+[00:36:59] paper um and some of these are not new
+[00:37:02] challenges for internet regulation right
+[00:37:05] uh so something like a bad actor problem
+[00:37:08] where already and we didn't give it um
+[00:37:11] you know that much time here but some of
+[00:37:13] the model marketplaces that are being
+[00:37:15] really popular uh are doing stuff um and
+[00:37:20] maybe are aware of their liabilities uh
+[00:37:23] under extent law or maybe not uh we were
+[00:37:26] through the civii Reddit forums and
+[00:37:29] there was a beautiful post um where
+[00:37:31] actually users told them that they need
+[00:37:33] to have bmca uh copyright takedown forms
+[00:37:36] and they said oh yeah good idea never
+[00:37:38] heard of it none of us are lawyers um
+[00:37:42] but as they've been kind of taking this
+[00:37:43] stuff more seriously um there's a
+[00:37:45] question to what extent um they actually
+[00:37:48] can or wish to deal with this problem
+[00:37:51] they've had a super adversarial
+[00:37:53] relationship with uh creators in the
+[00:37:55] copyright space especially um there was
+[00:37:58] this incredible open letter that they
+[00:38:00] published themselves on their Reddit
+[00:38:02] where a artist complained that many
+[00:38:05] users were making models designed to
+[00:38:07] specifically impersonate his art and
+[00:38:10] they sent him an email which basically
+[00:38:11] said hey guess what have you heard of
+[00:38:14] The Strand effect you idiot we've
+[00:38:16] created a contest where now you know
+[00:38:19] dozens of people are trying to make the
+[00:38:21] best Sam does Arts impersonation model
+[00:38:24] um so you know uh how do you feel about
+[00:38:27] that pal and it kind of reminds me I
+[00:38:29] mean that's like an extreme example
+[00:38:31] screenshot the of this by the way yeah
+[00:38:34] and I don't I don't I don't think
+[00:38:35] they're um you know as I guess Le far um
+[00:38:39] or as yeah just just completely um
+[00:38:43] candid about these things with areas
+[00:38:45] like child sexual abuse imagery pseudo
+[00:38:48] child sexual abuse imagery which is a
+[00:38:49] huge issue for them as well as
+[00:38:52] non-consensual intimate image abuse
+[00:38:54] imagery which is uh also I guess you
+[00:38:58] know something that they do have
+[00:38:59] policies against um but two just quick
+[00:39:02] things here it reminds me of that old
+[00:39:04] saying where it's very hard to make
+[00:39:06] someone understand something when their
+[00:39:08] livelihood depends on them not
+[00:39:10] understanding it the case certainly
+[00:39:12] isn't helped when certain Platforms in
+[00:39:13] the space are being funded by VCS that
+[00:39:16] consider trust and safety and content
+[00:39:18] moderation to be an enemy of progress um
+[00:39:21] just a mere kind of speed bump to be
+[00:39:23] blasted over in the race for AI
+[00:39:26] supremacy of whatever sort they're
+[00:39:28] envisioning um so again this is just an
+[00:39:31] issue if companies are really hesitant
+[00:39:34] even if they're headquartered in a
+[00:39:36] jurisdiction where they're accessible
+[00:39:38] like civii which I believe isn't Boise
+[00:39:40] um you know there's always a question of
+[00:39:43] of actual compliance uh and foot
+[00:39:45] dragging and even there that isn't the
+[00:39:48] worst that we've seen I think um you
+[00:39:50] know there's a there's a comment in the
+[00:39:51] chat about some of the the new services
+[00:39:54] that are emerging which again are have
+[00:39:56] some freaky affordances already we've
+[00:39:58] seen a service called shoggoth emerge
+[00:40:02] online which is branding itself as a
+[00:40:04] regulation proof peer-to-peer model
+[00:40:06] Marketplace that's based on the bit
+[00:40:08] torrent protocol so again what does that
+[00:40:11] mean for the ability of regulators with
+[00:40:14] differential levels of regulatory
+[00:40:16] capacity to be able to competently uh
+[00:40:18] and confidently intervene in this area I
+[00:40:21] think that's a problem relatedly there's
+[00:40:23] a capacity problem um here we're just
+[00:40:25] focusing on the model marketplaces not
+[00:40:27] just on Regulators but particularly for
+[00:40:30] these companies as Michael I think
+[00:40:33] showed really well once you're under
+[00:40:35] Fire from uh government stakeholders and
+[00:40:38] the stakes are high or you're
+[00:40:40] increasingly getting publish public push
+[00:40:43] back or push back from NOS uh child
+[00:40:45] safety groups there's a lot of pressure
+[00:40:47] to do something um but in this
+[00:40:49] particular case we think that moderation
+[00:40:52] is really difficult uh and it's just
+[00:40:54] inherently expensive and difficult
+[00:40:57] um hard to Outsource uh I don't think
+[00:40:59] that long-term just simply bolting on
+[00:41:02] some output filters as a sustainable um
+[00:41:05] is a sustainable I guess policy response
+[00:41:08] here and again we don't really have
+[00:41:10] evidence on the actual efficacy of these
+[00:41:12] types of filters on pseudo content but
+[00:41:15] again that's developing so moderation um
+[00:41:18] there's a lot of pressure to do it and I
+[00:41:20] will add like the stakes are high so
+[00:41:22] obviously in the traditional user
+[00:41:24] generated content um context content
+[00:41:27] moderators platforms you know have to
+[00:41:29] deal with incredibly um difficult
+[00:41:33] traumatic uh polarizing I mean you know
+[00:41:36] pick your adjective of choice um content
+[00:41:39] that really can potentially uh have have
+[00:41:42] harmful impacts on people but here I
+[00:41:44] think the scale is just way harder
+[00:41:47] because again these are tools that can
+[00:41:48] be used in very very uh powerful and
+[00:41:51] even potentially kind of unforeseen
+[00:41:53] generative ways Downstream by people uh
+[00:41:56] and once the cat is out of the bag in
+[00:41:58] the time that a platform hasn't
+[00:42:00] responded yet and again remember that a
+[00:42:02] big platform like hugging face is
+[00:42:04] getting hundreds of models uploaded
+[00:42:06] daily by lay users they have 500 plus
+[00:42:09] thousand models um again we have a real
+[00:42:12] capacity problem
+[00:42:14] here and then I guess there's just a
+[00:42:16] inherent structural problem and I've
+[00:42:18] already alluded to this I'm getting
+[00:42:19] ahead of myself um but basically I guess
+[00:42:22] about the the way that models can be
+[00:42:24] mixed and tweaked off platform
+[00:42:26] platforms are a regulatory leverage
+[00:42:28] Point both informal and formal through
+[00:42:31] actual livability um but again like I
+[00:42:34] said um It's relatively easy for L for
+[00:42:37] for sophisticated users to take these U
+[00:42:40] to try to bypass these different
+[00:42:42] filtering mechanisms uh take models off
+[00:42:44] platform run them locally Etc and uh
+[00:42:48] yeah the safeguards that different
+[00:42:50] actors are trying to embed into their
+[00:42:51] platforms and even into the models
+[00:42:53] themselves might not be that sticky um
+[00:42:56] and
+[00:42:56] yeah to what extent is it possible I
+[00:42:59] guess for for uh platforms to be really
+[00:43:03] actively and comprehensively um auditing
+[00:43:06] these different models at scale uh
+[00:43:08] without I guess doing some major changes
+[00:43:10] to their business model like starting to
+[00:43:12] do manual review of different models in
+[00:43:14] the way that an app store um does um for
+[00:43:17] developers so again uh interesting
+[00:43:20] valences um on this interesting platform
+[00:43:23] so what do we do about it I guess there
+[00:43:25] are three broad you know these are just
+[00:43:28] some of the problems that we pin out in
+[00:43:29] this paper um and I know that Michael
+[00:43:32] has some ideas um of how we might kind
+[00:43:34] of reply to this capacity problem in the
+[00:43:37] very least yeah so the last thing I
+[00:43:40] would to say I think just to wrap up
+[00:43:41] here sort of we leave the work going
+[00:43:43] forwards for some things we're working
+[00:43:45] on right now as well um uh maybe it's
+[00:43:48] the legal geek problem but uh when you
+[00:43:51] submit a takeown request to a platform
+[00:43:54] alleging that the this PL this violates
+[00:43:57] either a law or a standard or a license
+[00:43:59] or something like this the platform has
+[00:44:02] to adjudicate on this we know this
+[00:44:04] platform governance is the way it works
+[00:44:07] however um legally thinking of
+[00:44:09] jurisdictions that are not section 230
+[00:44:11] St jurisdictions and maybe ones that are
+[00:44:13] more dmca still but including the dmca
+[00:44:15] as well given all the behavioral use
+[00:44:17] licensing intermediary liability
+[00:44:19] shielding is lost if a in EU and UK at
+[00:44:24] least if um if a firm is given specific
+[00:44:27] actual knowledge or made aware of
+[00:44:29] infringing content such that a diligent
+[00:44:32] economic operator should be able to know
+[00:44:34] that legality the point of having this
+[00:44:36] is a fairly high standard rather than
+[00:44:38] just someone saying hey you know eBay
+[00:44:39] it's full of counterfeits aren't you
+[00:44:41] aware like your eBay you should know but
+[00:44:43] saying no no this was a counterfeit bag
+[00:44:45] specifically here's the evidence here
+[00:44:47] you here's the legal we have the rights
+[00:44:48] for that please take it down um is is
+[00:44:51] kind of how it works more uh in those
+[00:44:53] jurisdictions it's designed so that the
+[00:44:56] platform doesn't have to do detailed
+[00:44:57] legal analysis and therefore it can
+[00:44:59] operate fairly smoothly and
+[00:45:01] cheaply however AI infringement in this
+[00:45:04] say in this place is not about legal
+[00:45:06] Clarity at least not alone it's about
+[00:45:09] empirical it's an empirical question
+[00:45:11] content moderation on an platform like
+[00:45:13] hugging face or GitHub or Civ Tai can
+[00:45:16] become a research project each and every
+[00:45:18] time if you say can this can this model
+[00:45:21] generate terrorist content can this
+[00:45:23] model generate cesam is it possible know
+[00:45:26] is it but likely you know under what
+[00:45:28] conditions well this these are questions
+[00:45:30] that you actually have to ask with
+[00:45:31] people who can do this kind of probing
+[00:45:34] there's no automatic tools and the
+[00:45:35] problems are so open-ended that it
+[00:45:37] doesn't seem like any automated toolbox
+[00:45:39] is going to give you an easy way out of
+[00:45:41] this
+[00:45:42] challenge so we propose that we do need
+[00:45:45] to develop evidence packs for um for
+[00:45:49] model
+[00:45:51] flagging um these are just implicit or
+[00:45:53] explicit
+[00:45:54] standards um uh for for this area so you
+[00:45:58] have to think about um uh the the what
+[00:46:03] kind of evidence would actually lead you
+[00:46:04] to take this down and it's a balancing
+[00:46:06] test between evidence that the platform
+[00:46:08] can look over and kind of verify without
+[00:46:10] doing their own
+[00:46:11] research but not also being so big and
+[00:46:15] detailed that the um uh that the
+[00:46:18] platform itself has to then verify like
+[00:46:20] a huge document and and and analyze it
+[00:46:23] itself so this balance is going to have
+[00:46:25] to come out implicitly anyway as this is
+[00:46:27] figured out and we argue it should come
+[00:46:28] out more explicitly and we have to do
+[00:46:30] work on what this should look
+[00:46:32] like um yeah so with that uh that's just
+[00:46:36] sort of the next steps um and the paper
+[00:46:38] is there apologies for uh running over
+[00:46:40] we have time for questions and I believe
+[00:46:41] we can also go over a bit if um if if we
+[00:46:44] need to to answer questions for those of
+[00:46:46] you around but please do put them in the
+[00:46:48] chat please do put them in the question
+[00:46:50] answer thing we'll go through them all
+[00:46:51] we've seen some already thanks
+[00:46:54] everyone
+[00:46:58] uh wonderful thank you guys so much um I
+[00:47:00] I'm happy to just pick out a couple of
+[00:47:01] the questions that are coming in through
+[00:47:03] the chat um but a first one um from
+[00:47:05] Chris quarrel do you think that
+[00:47:07] moderation in AI is easier or harder to
+[00:47:10] do effectively than traditional content
+[00:47:12] moderation um so yeah any any
+[00:47:15] discontinuities or continuities that
+[00:47:16] pose unique challenges in this space
+[00:47:18] compared to uh content moderation in the
+[00:47:20] social media
+[00:47:22] context I very quickly research go go go
+[00:47:25] exactly no that's what I was going to
+[00:47:27] say so I think that that kind of ties in
+[00:47:29] nicely to Michael's last point which is
+[00:47:31] basically that yeah you need to you know
+[00:47:34] this is not a context where you can
+[00:47:36] imagine someone spending 10 minute 10
+[00:47:38] seconds you know per model to review it
+[00:47:42] as you know a Content an outsourced
+[00:47:44] contractor uh in the social media
+[00:47:46] moderation supply chain does um for you
+[00:47:50] know major companies like Instagram or
+[00:47:52] Facebook or Twitter um I guess the the
+[00:47:55] one one thing which I also just had as a
+[00:47:59] kind of gut reaction when I was starting
+[00:48:01] to wait into the space uh with Michael
+[00:48:03] last year was a concern also that just
+[00:48:07] some of the easy wins and some of the
+[00:48:10] lessons of basically the last 15 years
+[00:48:14] of social media content moderation of
+[00:48:16] platform governance haven't really been
+[00:48:18] applied here yet uh and maybe that's
+[00:48:21] just because of resourcing or incentives
+[00:48:23] and all these things we've discussed but
+[00:48:25] again I think there's a lot more that
+[00:48:27] companies could do um especially the
+[00:48:30] major ones that have big valuations and
+[00:48:32] are widely used um so you know having
+[00:48:35] staff that are actively kind of red
+[00:48:37] teaming the platform and just looking
+[00:48:39] out um for for stuff that is really
+[00:48:42] problematic doing this research again
+[00:48:44] they could be doing it proactively um
+[00:48:46] especially if the stakes for harm are
+[00:48:48] High um they could be doing some kind of
+[00:48:51] you know trusted developer program or
+[00:48:53] some kind of model review for unverified
+[00:48:54] us again there's there's many many
+[00:48:56] different things that they could be
+[00:48:57] doing um to kind of govern visibility
+[00:49:01] especially for for new content um and
+[00:49:05] again as far as we know this is a fast
+[00:49:06] moving space um the people at
+[00:49:08] huggingface especially you know seem
+[00:49:10] really motivated um so there's probably
+[00:49:12] a lot of change that is happening um you
+[00:49:14] know every day um but I think there's
+[00:49:17] there's clearly some some things that we
+[00:49:19] could see um in the space at least from
+[00:49:22] the actors that are really well
+[00:49:23] motivated and want to tackle this
+[00:49:25] problem
+[00:49:27] great and there was a question earlier
+[00:49:29] in the chat about liability in some of
+[00:49:32] these cases and I guess I would just add
+[00:49:33] to that by I know in the paper you go in
+[00:49:35] depth about the way that the DSA and the
+[00:49:38] EU AI act are pretty silent on the role
+[00:49:41] that these model marketplaces and
+[00:49:42] intermediaries play in this space I'm
+[00:49:44] just curious if um anything related to
+[00:49:47] the the proposed um revised product
+[00:49:50] liability directive would change that at
+[00:49:53] all I know you have in a footnote
+[00:49:54] somewhere in the paper that that
+[00:49:56] products can still be considered user
+[00:49:58] generated content in online Platforms in
+[00:50:00] the EU um but curious about that
+[00:50:02] additional sort of regulatory thing that
+[00:50:04] may be coming down the road and it also
+[00:50:06] Segways a little bit with a question
+[00:50:08] from Jonathan bellac um about whether or
+[00:50:10] not model should be viewed as a
+[00:50:12] fundamentally different class of
+[00:50:13] technology or content with distinct
+[00:50:15] distribution rules almost like armaments
+[00:50:18] um and whether it it's worth thinking
+[00:50:21] about models as a different subcategory
+[00:50:24] um within this regulatory
+[00:50:28] space yeah certainly um there are
+[00:50:33] um I believe in terms of products we're
+[00:50:36] thinking about not just product
+[00:50:37] liability but also the EU AI act for
+[00:50:40] this Zone because product liability is
+[00:50:41] more about taught harm when something
+[00:50:44] happens rather than the hosting of a
+[00:50:45] model unless the hosting caused harm
+[00:50:47] then you're probably not going to get a
+[00:50:48] liability claim on that directly um but
+[00:50:51] you can get products taken down and
+[00:50:53] platforms do get take down requests from
+[00:50:55] from uh product regulators and that's
+[00:50:57] allowed um within various legal
+[00:51:00] regimes the AI act actually in the
+[00:51:02] Digital Services act in the EU into play
+[00:51:05] in such a way that you don't get um I
+[00:51:09] don't think you get AI act related
+[00:51:10] takeown requests um I think that's
+[00:51:12] that's actually foreclosed by the
+[00:51:14] combination of those two regimes um but
+[00:51:16] they can be asked order to be taken down
+[00:51:18] by uh by by by Regulators themselves so
+[00:51:23] you do have some parts of the law where
+[00:51:24] you think about ability of
+[00:51:25] intermediaries around AI but I guess
+[00:51:27] what we're trying to say here is that
+[00:51:28] this is about National Law uh if it's
+[00:51:31] about liability much more than it's
+[00:51:33] about sort of European law if we look at
+[00:51:35] Europe um and the whole hodg pod of
+[00:51:37] national law which is exactly the bread
+[00:51:39] and butter of content moderation having
+[00:51:40] to deal with well do this model you know
+[00:51:42] does this model regularly blaspheme the
+[00:51:44] taii king is of course like the kind of
+[00:51:46] kind of classic example in in Ko so uh I
+[00:51:51] think that's where we start to see this
+[00:51:52] and the idea that platforms may have to
+[00:51:55] get to grips with some of these regimes
+[00:51:58] um particularly if we don't want
+[00:51:59] platforms just to take down content
+[00:52:02] arbitrarily and and we don't really know
+[00:52:03] how many of these regimes deal with
+[00:52:05] these open-ended models so in other work
+[00:52:07] with Noel galman um I've been
+[00:52:10] illustrating how many jurisdictions uh
+[00:52:12] there are laws that forbid ESS Mills and
+[00:52:15] contract cheating um including in US
+[00:52:17] states but there some of them bit
+[00:52:18] narrowly scoped um uh which actually
+[00:52:22] kind of by accident likely prohibit
+[00:52:24] generative AI services
+[00:52:26] um because they're so broadly framed
+[00:52:27] without knowledge and intent
+[00:52:28] requirements sort of paper that we have
+[00:52:30] as a forthcoming but is a preprint
+[00:52:31] online now um
+[00:52:35] and that's just an example of laws that
+[00:52:37] have these unintended effects that
+[00:52:38] interact with these broad Technologies
+[00:52:40] so the problem with this is that these
+[00:52:43] are some really tricky legal questions
+[00:52:45] right where laws exist and they look
+[00:52:47] like they actually quite over Brad or
+[00:52:49] they cover things they would not envis
+[00:52:50] to cover but it's not a court deciding
+[00:52:53] this it's a platform so the platform is
+[00:52:56] faced with the yeah the CEO of the plat
+[00:52:58] at least it's the CEO you know but the
+[00:53:00] platform is then faced with not just a
+[00:53:03] like a tricky problem like one of the
+[00:53:05] problems where a court would be like oh
+[00:53:07] this is a very hard thing and we may
+[00:53:08] have to make a whole new interpretation
+[00:53:10] of the law to deal with how we squar
+[00:53:12] this circle um certainly not something
+[00:53:14] that any of the platforms that we talked
+[00:53:17] about are equipped to do or probably
+[00:53:20] have the legitimacy to
+[00:53:22] do just can I two finger really quickly
+[00:53:24] I mean that comment is really
+[00:53:26] interesting um you know classic I guess
+[00:53:30] defaming the monarchy question or um
+[00:53:34] other attempt by certain jurisdictions
+[00:53:37] to enforce their National laws um
+[00:53:40] connecting to your slides earlier
+[00:53:43] Michael which are touching on the open
+[00:53:44] rail licenses right if you know how many
+[00:53:48] of the major models uh including ones
+[00:53:50] released by big research labs are being
+[00:53:52] released under open rail by a plat form
+[00:53:55] like hug andace and open rail says that
+[00:53:58] uh a takedown is Justified if it
+[00:54:01] violates any national law right I mean
+[00:54:04] I'm just I'm just interested to see how
+[00:54:05] this is going to play out in the coming
+[00:54:07] years and if we'll see some cheeky
+[00:54:09] jurisdictions trying to remove major
+[00:54:11] models um just to see if they can and I
+[00:54:14] think part of what we're I guess arguing
+[00:54:16] for and saying here is that I don't
+[00:54:18] think companies are really prepared for
+[00:54:20] that um and prepared to make those kinds
+[00:54:22] of decisions in a robust way although
+[00:54:25] bear in mind with this that legally it's
+[00:54:28] only if the license s
+[00:54:32] complains so if the foundation model
+[00:54:35] developer says you broke the terms of my
+[00:54:37] license or an agent of them says that
+[00:54:39] there is a takedown obligation but we're
+[00:54:42] seeing hugging face and proposing a
+[00:54:43] solution here which is different so you
+[00:54:45] know legally we might have some
+[00:54:46] different different challenges there but
+[00:54:48] that's that's the interesting tension
+[00:54:49] which is more just saying their path
+[00:54:51] through this is a very weird and messy
+[00:54:52] one that we think is not going to go
+[00:54:54] anywhere
+[00:54:55] um and is mostly going to be theatrical
+[00:54:58] more than anything but certainly we do
+[00:55:00] see that already in normal terms of
+[00:55:02] service right where they say if you're
+[00:55:03] breaching any law you know that's
+[00:55:06] shouldn't publish content that's
+[00:55:07] breaching any law on our platform it's a
+[00:55:09] common thing don't put legal content on
+[00:55:11] a platform it's a common wording and we
+[00:55:13] do see also legal regimes like the
+[00:55:15] Digital Services act that say you have
+[00:55:16] to enforce your terms and conditions
+[00:55:18] proportionately so we actually do see
+[00:55:20] legal obligations to follow these terms
+[00:55:22] of service through uh and those do apply
+[00:55:24] to model Market
+[00:55:26] places amazing um and we have a another
+[00:55:29] question coming in which I think is
+[00:55:31] especially timely in light of the uh net
+[00:55:33] choice or arguments that happened last
+[00:55:35] week in the United States I know you
+[00:55:36] guys were sort of setting aside the
+[00:55:37] American legal context here um but the
+[00:55:40] question is about the seeming broad
+[00:55:42] societal consensus that certain kinds of
+[00:55:44] social media content moderation or the
+[00:55:47] the consensus that that was necessary
+[00:55:49] which seems to now be fracturing um how
+[00:55:51] do you see this how do you see reversing
+[00:55:52] this trend for model marketplaces
+[00:55:55] especially when the economic incentives
+[00:55:56] point in different directions and I
+[00:55:58] guess that question just also highlights
+[00:56:00] the the danger that a sort of common
+[00:56:02] Carriage Theory uh would pose for model
+[00:56:05] marketplaces where they couldn't take
+[00:56:06] down the chat forchan or the the chat
+[00:56:09] gbt forchan or whatever else but curious
+[00:56:11] for your thoughts about about that
+[00:56:13] question it's probably a rub question to
+[00:56:15] start with that say yeah I mean I've
+[00:56:17] I've got a couple of thoughts I think
+[00:56:19] it's and and it's interesting that you
+[00:56:20] linked it to the net Choice cases and
+[00:56:23] what's going on in the US I think I mean
+[00:56:26] I have two immediate reactions so one is
+[00:56:29] that you know a lot of the time when I
+[00:56:31] was writing and researching this with
+[00:56:32] Michael I kind of felt like um we're
+[00:56:36] back in like 2008 or 2009 in platform
+[00:56:39] governance land in that you know it's
+[00:56:41] still very small scale it's happening
+[00:56:43] organically you have the literal you
+[00:56:46] know you have high level companies even
+[00:56:48] CEOs um jumping in and making moderation
+[00:56:51] decisions and they haven't really
+[00:56:53] staffed up uh infrastructurally
+[00:56:56] bureaucratically in terms of kind of
+[00:56:58] policy development um to actually deal
+[00:57:00] with this yet so I think in one hand um
+[00:57:03] it's kind of interesting connecting to
+[00:57:05] that question like maybe this is just
+[00:57:07] kind of the this is before the backlash
+[00:57:10] um and we will maybe see an increase in
+[00:57:12] resourcing in this area uh and then
+[00:57:15] again maybe you know once that gets
+[00:57:16] politicized and there's push back um
+[00:57:19] things could change that's like one kind
+[00:57:20] of reaction but I guess the second
+[00:57:23] reaction um
+[00:57:25] you know is more basically that um oh
+[00:57:29] and now I've actually lost my train of
+[00:57:31] thought so I don't know if you have you
+[00:57:32] have something to jump in there Michael
+[00:57:34] and maybe I'll come back to it it's late
+[00:57:37] here and I'm hungry yeah I'd say that
+[00:57:39] this is interesting because you I'm not
+[00:57:41] sure that the trust and safety world
+[00:57:44] then Maps super well onto the AI
+[00:57:46] intermediaries world at least the way
+[00:57:47] it's it's sort of been constructed and
+[00:57:49] of course it looks the same but it's a
+[00:57:51] bit different and the Logics then are
+[00:57:54] kind of different because we're still
+[00:57:55] wondering where in this supply chain you
+[00:57:57] intervene whereas social media it's
+[00:57:59] pretty obvious we don't really think
+[00:58:00] it's a good idea to intervene at the DNS
+[00:58:02] level or like the ISP level and we don't
+[00:58:04] really think it's a great idea to
+[00:58:05] intervene at like client side scanning
+[00:58:07] level and like have everything done on
+[00:58:09] the device and so in general like it's
+[00:58:11] pretty clear who does this although
+[00:58:13] there's Community moderation and sort of
+[00:58:14] the actors within that space But for the
+[00:58:16] AI space really not sure do you just
+[00:58:18] stop these things being created do you
+[00:58:19] stop them being deployed by users who
+[00:58:21] are like really at the very very end or
+[00:58:22] do you put some like intervention in the
+[00:58:24] middle to stop being distributed um and
+[00:58:28] uh you know the actors like hugging face
+[00:58:29] that are saying hey please pick us pick
+[00:58:31] us it would be a nice idea that we would
+[00:58:33] we would moderate for this that's um
+[00:58:36] that's a bit a bit tricky I'd say um I'd
+[00:58:38] also spend this moment to go back in the
+[00:58:40] chat just to the questions about Lumen
+[00:58:42] and to just to indicate that that yeah
+[00:58:44] Lumen will be a great thing to have this
+[00:58:45] uploaded to but interestingly GitHub and
+[00:58:48] hugging face both without being asked
+[00:58:51] have already create um repositories of
+[00:58:53] all of their takedown requests and
+[00:58:55] publish them that almost no one ever
+[00:58:56] looks at we would we couldn't find
+[00:58:57] anyone who look at these things other
+[00:58:58] than us you know in any scholarship um
+[00:59:01] and so I'm redacts H redact some of it
+[00:59:04] yeah exactly yeah but that is a best
+[00:59:06] practice for due process and
+[00:59:07] transparency I just I just picked up my
+[00:59:10] thread sorry um long day what I what I
+[00:59:13] basically was gonna was going to add
+[00:59:15] which I think makes this particularly
+[00:59:17] interesting maybe for the US context um
+[00:59:20] and I I hate to do it but um to plug the
+[00:59:23] the book that I've been working on for
+[00:59:25] the last five or six years which is
+[00:59:27] really I guess about the political
+[00:59:29] drivers and mechanisms driving um
+[00:59:33] government efforts to shape how
+[00:59:35] companies do content moderation so the
+[00:59:37] politics of platform regulation if we
+[00:59:39] think a little bit about that in this
+[00:59:41] context what I think is interesting is
+[00:59:44] that actually a lot of The Cutting Edge
+[00:59:47] issues here especially for some of the
+[00:59:49] potential Bad actors that we mention um
+[00:59:52] might actually not be as problematic
+[00:59:57] from like a regulatory demand
+[00:59:58] perspective in the US context and I
+[01:00:00] think part of that is because these are
+[01:00:02] issues where you know I mean the hate
+[01:00:06] speech generating chat bot is one thing
+[01:00:09] um but you know revenge porn uh child
+[01:00:12] abuse imagery these are things where
+[01:00:14] even in the US we see bipartisan support
+[01:00:16] and you know that's that's in that
+[01:00:18] little Vin diagram where you could
+[01:00:20] imagine congressional action for example
+[01:00:23] happening and you know wouldn't just
+[01:00:24] point to net net choice I'd point to uh
+[01:00:27] kosa and and other kind of related bills
+[01:00:30] around child safety so I think on one
+[01:00:32] hand obviously you know the techlash
+[01:00:34] absent flows and there has been um a
+[01:00:37] wave of investment from companies which
+[01:00:40] also now has subsided in certain uh
+[01:00:43] instances where some companies think
+[01:00:45] that actually you know Regulatory
+[01:00:47] Compliance or or um I guess good faith
+[01:00:51] efforts to do trust and safety aren't
+[01:00:53] really worth it anymore um but I think
+[01:00:55] you know still um yeah I guess like in
+[01:00:59] in the medium term it's feasible to
+[01:01:01] imagine more government pressure
+[01:01:04] especially on the informal side not just
+[01:01:06] from Civil Society groups that are
+[01:01:07] really motivated in spaces like child
+[01:01:09] safety but also you know um government
+[01:01:12] actors that want model marketplaces to
+[01:01:15] take this stuff more seriously because I
+[01:01:17] think there's a real history especially
+[01:01:18] in the US but also in the EU and other
+[01:01:20] places of this kind of informal
+[01:01:22] regulation being a major way through
+[01:01:24] which uh platforms basically change
+[01:01:26] their policies and practices over
+[01:01:29] time right and I guess if we could
+[01:01:31] squeeze in one last question from the
+[01:01:33] chat I know it's uh late across the pond
+[01:01:36] and I appreciate you guys sticking with
+[01:01:37] us um but the question um concerns
+[01:01:41] examples of community governed
+[01:01:42] marketplaces and Federated marketplaces
+[01:01:45] um and how you see AI governance uh or
+[01:01:48] how do you see it taking shape and
+[01:01:50] looking like in these spaces I know you
+[01:01:51] make the distinction in the paper
+[01:01:53] between uh commercial
+[01:01:55] um and Community sort of um content
+[01:01:58] moderation policies and that in that
+[01:01:59] sort of binary so curious for your
+[01:02:01] thoughts here yeah so there's two two a
+[01:02:04] few things that go on so we we don't see
+[01:02:05] any examples of what you would say
+[01:02:08] community governed Federated
+[01:02:09] marketplaces yet we see we mentioned
+[01:02:12] Shug Off Systems we see kind of
+[01:02:14] Federated marketplaces as being a
+[01:02:16] response to content moderation to say we
+[01:02:18] need to develop stuff with no moderation
+[01:02:20] whatsoever we do see and we outlin the
+[01:02:22] paper we didn't give it much time in the
+[01:02:24] talk we see Community governance a bit
+[01:02:27] stronger in software regulation and we
+[01:02:30] particularly see that on GitHub and
+[01:02:31] hugging face where well to some extent
+[01:02:34] on Civ given the the people who run it
+[01:02:38] the customers are telling them to maybe
+[01:02:39] have a dmca process but the um uh the
+[01:02:42] the on GitHub we we look at times when
+[01:02:48] um where software for security
+[01:02:51] researchers is causes controversy in
+[01:02:53] particular
+[01:02:55] toolkits for pen testing uh where GitHub
+[01:02:59] actually took down or prevented a
+[01:03:00] toolkit that had Microsoft exploits in
+[01:03:04] um where I just after they've been
+[01:03:06] bought by Microsoft and people found
+[01:03:07] that quite controversial and then um
+[01:03:10] there was a backlash and they GitHub
+[01:03:12] sort of felt like they had to put
+[01:03:13] multiple versions of this policy out to
+[01:03:15] the community and they did actually edit
+[01:03:16] them in response to this and they had a
+[01:03:18] you know a version that was quite
+[01:03:19] different at the end um hugging face I
+[01:03:21] think also by relying heavily on the
+[01:03:23] community talk page
+[01:03:25] to have like open discussions about
+[01:03:26] content moderation we see this is a new
+[01:03:28] thing um not wholly new obviously in the
+[01:03:30] whole internet but it's a new thing for
+[01:03:32] a kind of commodity platform I think to
+[01:03:35] have that kind of open thread discussion
+[01:03:37] that's kind of outside in or inside out
+[01:03:40] rather you know um the moment at least
+[01:03:44] so I think we see that um we may go and
+[01:03:46] see more Federated governance but in
+[01:03:49] practice we're not talking about speech
+[01:03:50] and like hugely different standards here
+[01:03:52] the difference is that you know the
+[01:03:54] problem with the tool is that that
+[01:03:56] speech you can just close your ears to
+[01:03:58] and say Hey you know in our Federated
+[01:03:59] Zone we talk like this in your Federated
+[01:04:01] Zone we talk like this um and the harm
+[01:04:04] is like pretty localized you'd say of
+[01:04:06] course there's lots of complexity on top
+[01:04:07] of that but a tool is like I'm selling a
+[01:04:09] gun over here and like I'm not selling a
+[01:04:12] gun over here but you can just download
+[01:04:13] the gun here and then move and shoot the
+[01:04:14] person over there like it's very
+[01:04:16] different than than a normal expression
+[01:04:18] based different standards so we don't
+[01:04:21] you know that's why the laws that we
+[01:04:22] talk about are much more extreme about
+[01:04:24] you know generation of cesam generation
+[01:04:25] of terrorist contented instructions and
+[01:04:27] so on and so if you do have Federated
+[01:04:29] marketplaces the small ones are going to
+[01:04:31] get hit by a legal Hammer that's the
+[01:04:32] size of the Moon and that's not exactly
+[01:04:35] the same if you say actually Federation
+[01:04:37] helps us um balance different expression
+[01:04:39] standards without having to have a
+[01:04:41] homogeneous one siiz fits all thing it's
+[01:04:42] like well you maybe do need that if
+[01:04:44] someone is selling like malware llms
+[01:04:47] over here that are affecting the entire
+[01:04:49] world that's different than a than a
+[01:04:51] traditional speech harm at least at
+[01:04:53] least in Europe where we don't see
+[01:04:54] everything as
+[01:04:58] speech yeah I mean there's just a
+[01:05:00] question of I guess the ability of
+[01:05:03] certain types of communities to
+[01:05:05] effectively govern in the in the public
+[01:05:07] interests unfortunately right and
+[01:05:10] already we didn't mention it here um but
+[01:05:12] someone brought it up in the chat that a
+[01:05:14] lot of these uh communities especially
+[01:05:17] in the image generation space have a lot
+[01:05:19] of community features so they're maybe
+[01:05:21] not fully Community governed they're
+[01:05:23] still doing quote unquote commercial
+[01:05:25] content moderation or rather um you know
+[01:05:28] Community oriented moderation where all
+[01:05:30] the mods are hugging faces uh staff or
+[01:05:34] citize small staff um but they're
+[01:05:37] actually trying to exploit the community
+[01:05:40] um for monetization purposes right um so
+[01:05:44] civii really uh relies on donations and
+[01:05:47] is active and trying to grow its user
+[01:05:49] base its whole kind of value ad is being
+[01:05:52] easier to use
+[01:05:54] um easier to interact with models easier
+[01:05:56] to see what models look like than
+[01:05:58] something like hug so uh a lot of models
+[01:06:01] are multihomed and are posted on
+[01:06:03] multiple platforms and you know we see
+[01:06:05] in the talk pages on civi that people
+[01:06:07] are talking about um uh talking about
+[01:06:10] this and where they keep their different
+[01:06:12] stuff as a almost Insurance strategy in
+[01:06:14] case stuff is getting moderated um but
+[01:06:17] uh the feature um that they have uh
+[01:06:21] rolled out to much journalistic fanfare
+[01:06:23] from our friend at 44 media is uh
+[01:06:26] something that they call bounties and
+[01:06:28] that's their first attempt to monetize
+[01:06:31] uh some of the community on their
+[01:06:33] platform where basically um they've
+[01:06:35] developed an auction system where any
+[01:06:38] user can request a model that produces
+[01:06:42] certain types of content so for example
+[01:06:44] a model that um is tuned to create the
+[01:06:47] likeness of X celebrity um or you know
+[01:06:51] and and or or or of a create like art
+[01:06:55] that kind of looks like a certain
+[01:06:56] photographer or a curtain current a
+[01:06:59] painter that you like and again um their
+[01:07:01] policies explicitly say that this cannot
+[01:07:04] be a porn model um that is impersonating
+[01:07:07] someone and again how fast are they
+[01:07:09] actually in terms of um you know acting
+[01:07:12] on these types of uh models when they
+[01:07:14] post that's something that would be
+[01:07:15] interesting to research empirically but
+[01:07:17] again because of the features we
+[01:07:19] mentioned it's very trivial to take the
+[01:07:22] impersonating Michael ve model and
+[01:07:24] combine it with a porn model um either
+[01:07:27] on cotai potentially or off platform and
+[01:07:31] the thing that the journalists at 404 uh
+[01:07:34] found which I found slightly freaky um
+[01:07:37] is that you know it's not just big
+[01:07:40] picket artists and celebrities that are
+[01:07:42] being targeted through these bounties
+[01:07:44] and and sorry I didn't fully explain but
+[01:07:46] the idea is that you have an auction
+[01:07:48] multiple people submit impersonating
+[01:07:50] models and then the person that created
+[01:07:52] the bounty um gets to decide which one
+[01:07:55] is their favorite and then there's some
+[01:07:57] kind of financial compensation to the
+[01:07:59] winner of this contest um and we're also
+[01:08:01] seeing this being used for micro
+[01:08:03] celebrities twitch streamers influencers
+[01:08:06] and frequently um for or for found like
+[01:08:09] some apparent randos so people are just
+[01:08:12] posting here's an IG handle can you
+[01:08:14] skirt the public photos of my ex or
+[01:08:18] something of some random person uh again
+[01:08:20] this stuff is very gendered um and say
+[01:08:23] hey
+[01:08:24] um you know create me an impersonation
+[01:08:26] model so again um that I guess is this
+[01:08:29] tricky question of like to what extent
+[01:08:31] do community violences actually help you
+[01:08:33] govern more
+[01:08:36] responsibly amazing well uh hope
+[01:08:39] everyone can join me and thaning Michael
+[01:08:41] and Rob we've seen the the sun go down
+[01:08:44] behind each of your uh office windows so
+[01:08:46] really appreciate you joining us at what
+[01:08:48] I know is a bit more of an inconvenient
+[01:08:49] time than those of us based here in the
+[01:08:51] US but um yeah thank you again and um
+[01:08:54] looking forward to seeing how this
+[01:08:56] really exciting uh research area
+[01:08:57] develops and all your your subsequent
+[01:08:59] work but um yeah appreciate the talk and
+[01:09:02] and the generous contributions from the
+[01:09:03] folks in the chat as well and we hope to
+[01:09:05] see you in two weeks for an event with
+[01:09:07] Dave Wilner on moderating AI and
+[01:09:09] moderating with AI so looking at how
+[01:09:12] large multi multimodal models and large
+[01:09:14] language models can help solve some
+[01:09:16] intractable problems in more traditional
+[01:09:19] content moderation so um a nice sort of
+[01:09:22] followup to this event and we hope to
+[01:09:23] see you guys there thanks
+[01:09:26] everyone thanks all for having us so
+[01:09:28] much thanks for having
+[01:09:30] us

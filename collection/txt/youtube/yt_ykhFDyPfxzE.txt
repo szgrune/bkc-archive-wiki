@@ -1,0 +1,1463 @@
+[00:00:02] so thank you for coming for those who
+[00:00:04] who don't know uh this is being uh taped
+[00:00:07] and webcast so anything you say can and
+[00:00:10] will be used against you in
+[00:00:12] court so so just be aware of that uh so
+[00:00:16] welcome uh we start Jim G G to give a
+[00:00:18] talk about embedded systems I met Jim uh
+[00:00:21] in January spring at the RSA conference
+[00:00:25] this year uh but he's been I iotf last
+[00:00:28] summer what's okay that's right we
+[00:00:31] actually sat down at RSA no we sat down
+[00:00:34] here last
+[00:00:35] fall sometime in the past
+[00:00:38] I and some day to
+[00:00:41] be and and uh talking a lot about these
+[00:00:44] issues which is really why I I wanted to
+[00:00:46] to bring him here he's actually been
+[00:00:48] around for for way longer than that he
+[00:00:50] sent me his bio and I'll just mention
+[00:00:52] some highlights uh formerly from Bell
+[00:00:55] Labs uh VP of software for the one
+[00:00:58] laptop or child project
+[00:01:00] uh one of the developers of x windows
+[00:01:03] when he was an MIT uh worked at the
+[00:01:07] w3c editor of uh HTTP 1.1 which was a
+[00:01:11] long time
+[00:01:12] ago and been working in systems and
+[00:01:16] embedded systems and computer systems I
+[00:01:19] think since since they were in invented
+[00:01:22] uh recently more recently which is how I
+[00:01:24] got to know looking at uh drivers and
+[00:01:28] buffers and not the computers you're
+[00:01:31] using but the computers all around the
+[00:01:33] computers you're using and and that's
+[00:01:35] what he's going to talk about today and
+[00:01:38] I'm I'm excited about
+[00:01:39] this okay um uh thanks Bruce um one
+[00:01:44] other thing I worked on was was sort of
+[00:01:47] a direct ancestor of these things we
+[00:01:48] carry around some some of you may
+[00:01:50] remember the ipac handhelds way back
+[00:01:53] when and that's where I got my feet wet
+[00:01:57] with embedded systems in fact they're
+[00:02:00] very internally they're not much
+[00:02:01] different than what's in a your home
+[00:02:03] router today in terms of amount of
+[00:02:05] memory and stuff like that
+[00:02:09] um this is a bunch of things I I need to
+[00:02:11] sort of make a gauge of the of the of
+[00:02:14] the audience here the first two of these
+[00:02:16] I instigated deliberately so the article
+[00:02:19] that Bruce wrote that came out in
+[00:02:21] January um and wired he did a wonderful
+[00:02:24] job at um uh it's called The Internet of
+[00:02:27] Things as wildly insecure and then it
+[00:02:29] goes on and on in terms of a title um
+[00:02:32] also Dan gear who some of you who deal
+[00:02:34] with security Know Dan Dan's an old
+[00:02:36] friend from Project Athena days um so he
+[00:02:39] he also wrote about this problem in May
+[00:02:42] um it's in the law fair blog I recommend
+[00:02:46] those of you who who are interested in
+[00:02:48] this problem go go look at this there's
+[00:02:51] also a recent one which is quite amusing
+[00:02:53] but unfortunately the nightmares are
+[00:02:56] much worse than this called Nightmare on
+[00:02:58] connected Home Street
+[00:03:00] by Matt Honan unwired last uh uh like
+[00:03:03] this
+[00:03:04] month
+[00:03:06] um uh how many of you uh got familiar
+[00:03:09] with what the our friends at the NSA
+[00:03:13] were doing in
+[00:03:15] 2008 um in terms of
+[00:03:18] doing interesting things to to devices
+[00:03:22] of All Sorts including
+[00:03:24] writers um remember that's
+[00:03:28] 2008 there are many other people out
+[00:03:31] there than them and they've had a long
+[00:03:33] time since then take that to
+[00:03:37] heart um and then there's a final
+[00:03:39] article which I've a final pointer which
+[00:03:43] is a paper that that I was quite
+[00:03:46] surprised when I gave a presentation at
+[00:03:48] the MIT uh security um seminar was not
+[00:03:54] understood by anybody in the audience um
+[00:03:57] it's called familiarity breeds contempt
+[00:03:58] uh the honeymoon of effect in something
+[00:04:00] or other and I'll talk some more
+[00:04:02] specifically about that because I think
+[00:04:04] the results of that are pretty profound
+[00:04:06] and need to affect how we think about
+[00:04:09] engineering software in the long term
+[00:04:13] find yeah there are links in the slide
+[00:04:16] in the PDFs that I believe are
+[00:04:19] online
+[00:04:21] um we're used to throwing computers away
+[00:04:25] okay um your phone it often breaks
+[00:04:28] before you know before it really stops
+[00:04:31] being useful um your laptop um you know
+[00:04:35] maybe last slightly longer um your
+[00:04:37] desktops tend to last yet longer still
+[00:04:40] but we still basically throw them away
+[00:04:42] we've learned through very great pain
+[00:04:44] over the last several decades that we
+[00:04:46] have to keep them up to
+[00:04:48] date um but now we're building these
+[00:04:51] very long live systems anywhere from our
+[00:04:53] house to automobiles to the network
+[00:04:58] inside your house
+[00:05:00] um you know and we're embedding these
+[00:05:04] devices these computers into these
+[00:05:06] things uh and the installation costs or
+[00:05:10] replacement costs of these it's often
+[00:05:12] the labor dominates the cost by far the
+[00:05:16] Box itself might be a 10 20 $50 box
+[00:05:20] right um but to get someone capable of
+[00:05:23] plugging it in and making sure it works
+[00:05:24] for somebody May involved with truck
+[00:05:26] roll and Andor service calls that you
+[00:05:29] spend hundreds of dollars for so so it's
+[00:05:32] really a fundamentally different game
+[00:05:33] these things are no longer easily easily
+[00:05:37] replaceable okay they're built into into
+[00:05:39] our
+[00:05:40] environment okay and some of these now
+[00:05:43] the potential lifetimes are decades I
+[00:05:45] mean I have two Nest thermostats in my
+[00:05:47] house what am I supposed to do if and
+[00:05:50] when Google stops issuing updates for
+[00:05:53] them okay um my my I installed new new
+[00:05:59] heating equipment about 5 years ago that
+[00:06:01] probably has a 30-year
+[00:06:04] lifetime okay I had to rewire things to
+[00:06:07] get it to plug
+[00:06:08] in
+[00:06:10] um these time scales are long relative
+[00:06:13] to human
+[00:06:15] organizations that is fundamental here
+[00:06:17] what this means is you can't presume
+[00:06:19] sometime later that what you'll need
+[00:06:22] will even be possible to do anymore okay
+[00:06:26] uh whether it's the engineering groups
+[00:06:27] dissolved the company may not even exist
+[00:06:29] anymore what do you do okay and we've
+[00:06:33] presumed that we can just forget about
+[00:06:36] these
+[00:06:37] boxes is this safe how many of you know
+[00:06:40] what the acronym
+[00:06:42] scatter means well some of you know that
+[00:06:45] that's a huge disaster that a certain
+[00:06:47] certain uh Industries uh are going
+[00:06:50] through right now this is a much bigger
+[00:06:53] mess and much more
+[00:06:55] widespread that's just one instance of a
+[00:06:58] much more generic problem
+[00:07:01] okay okay so I just about you know
+[00:07:06] hugged Sandy and Matt Blaze when they
+[00:07:08] told me about this
+[00:07:10] paper um uh it's it's called familiarity
+[00:07:14] breeds contempt it's a honeymoon effect
+[00:07:16] in the role of Legacy code in zero day
+[00:07:19] vulnerabilities um it was published in
+[00:07:21] 2010 but doesn't seem to have gotten
+[00:07:23] much
+[00:07:24] coverage um this is figure one out of
+[00:07:27] that paper seems to be solid as as far
+[00:07:29] as I can tell certainly some of the
+[00:07:31] people involved are very well respected
+[00:07:33] in the security area Bruce can can speak
+[00:07:35] to that better than I can the left of
+[00:07:37] these is the sort of classic mythical
+[00:07:40] man month that we expect to discover
+[00:07:43] general purpose bugs and the reason why
+[00:07:46] it tends to go back up after a bit is is
+[00:07:49] that you started to ship product and so
+[00:07:51] now there's 10 or 100 times or a th you
+[00:07:53] know 10,000 times as many people poking
+[00:07:55] at us so you see some some additional
+[00:07:57] bugs and at some point you sort of have
+[00:07:59] discovered most of the things out
+[00:08:01] there however vulnerabilities don't work
+[00:08:04] this
+[00:08:05] way they studied like I think it's three
+[00:08:08] or 400 different P software packages
+[00:08:10] both open and and closed Source about
+[00:08:12] when vulnerabilities are discovered it
+[00:08:15] turns out there's this honeymoon period
+[00:08:17] when typically
+[00:08:18] people don't discover anything evil in
+[00:08:22] them but once you start finding one
+[00:08:25] unfortunately the radi of
+[00:08:27] increases okay this leaves me with some
+[00:08:31] interesting takeaways
+[00:08:33] that yeah if for those of us who read
+[00:08:36] the mythical man month about software
+[00:08:38] engineering we've missed something
+[00:08:40] entirely fundamental here which is
+[00:08:42] there's a really cruel Master here that
+[00:08:46] if this is true and I believe it is
+[00:08:48] about software engineering um then you
+[00:08:52] can't leave software and devices
+[00:08:55] unmaintained that updates are
+[00:08:58] fundamental for for the life of these
+[00:09:00] things you don't know when these are
+[00:09:03] very complex systems you know a a five
+[00:09:05] or $10 part can have embedded in an
+[00:09:08] entire operating systems and user spaces
+[00:09:10] on it on top of it there are millions of
+[00:09:12] lines of code we don't know how to make
+[00:09:15] bug-free software okay that's just
+[00:09:17] fundamentally true um so fundamentally
+[00:09:21] we have to for anything which is at
+[00:09:23] least Network
+[00:09:25] connected um or indirectly connected via
+[00:09:30] you know people dropping dropping um uh
+[00:09:34] USB sticks and parking lots um You' got
+[00:09:37] to have secure update for the life of
+[00:09:40] these devices and we don't ubiquitously
+[00:09:43] we do for our end
+[00:09:45] systems okay though of course Microsoft
+[00:09:48] would like to stop having to maintain
+[00:09:50] Windows
+[00:09:52] XP uh they actually still maintain that
+[00:09:54] for embedded use only they
+[00:09:56] claim um but this has some very
+[00:09:59] interesting consequences if you don't
+[00:10:01] want to if you're somebody Building
+[00:10:02] Systems like this you better be
+[00:10:05] selecting components that can be
+[00:10:06] maintained and if you're if you're
+[00:10:09] buying stuff you want to really worry
+[00:10:11] about whether these products can be
+[00:10:14] maintained and that brings up a whole
+[00:10:15] another kle of
+[00:10:17] fish um and the owner's got to have
+[00:10:20] ultimate control okay you've got to be
+[00:10:23] able to fix these things even when the
+[00:10:24] Network's
+[00:10:26] busted okay many people are locking
+[00:10:29] these systems down I think Google got it
+[00:10:31] right with the Androids where where at
+[00:10:33] least the Nexus devices you can unlock
+[00:10:35] them okay uh and do what you will with
+[00:10:38] them because in there are two reasons
+[00:10:40] for this in an emergency you need to be
+[00:10:43] able to take action yourself and you
+[00:10:45] need to have the community of people
+[00:10:47] maintaining and fixing code around it
+[00:10:49] and if if if new code isn't able to be
+[00:10:52] easily tested on these devices you don't
+[00:10:54] have a community of of alternative
+[00:10:56] software you can run in these devices so
+[00:10:58] it's very important important that
+[00:11:00] despite the fact that I'm saying you've
+[00:11:02] got to have a secure you know firmware
+[00:11:04] and the like as you also have to be able
+[00:11:06] to unlock the
+[00:11:09] things so you know how long are these
+[00:11:12] things going to be in an ecosystem I
+[00:11:14] mean often home routers often sit in
+[00:11:16] people's houses now for you know seven
+[00:11:19] 10 years or more there's no reason often
+[00:11:21] to to touch them uh they're often the
+[00:11:24] you know us Geeks tend to throw them
+[00:11:25] away quickly right but your grandmother
+[00:11:28] doesn't
+[00:11:29] you know
+[00:11:32] um now this brings up also an issue of
+[00:11:35] trust who do you trust think about this
+[00:11:37] from a a Humanity side thing and think
+[00:11:41] about the Tao catalog of deliberate
+[00:11:43] people deliberately putting in them why
+[00:11:45] should the Chinese trust firmware that
+[00:11:48] comes from the United States and vice
+[00:11:51] versa
+[00:11:54] okay um why should I trust my isps
+[00:11:57] firmware they don't understand security
+[00:11:59] either British Telecom is a great
+[00:12:02] example of this okay um and Bruce is no
+[00:12:06] longer at BT um uh but as some of you
+[00:12:10] may know they put a back door into each
+[00:12:12] and every home router that they gave to
+[00:12:14] each and every one of their customers
+[00:12:16] that means if you break that if you
+[00:12:18] break their management Network you've
+[00:12:19] broken all of the
+[00:12:23] routers doesn't matter there are so many
+[00:12:25] other ways to get in it doesn't matter
+[00:12:27] they just made it particularly easy
+[00:12:32] um but over these long time scales
+[00:12:36] Community maintenance might possibly
+[00:12:38] succeed the X window system which Ron
+[00:12:41] and I worked on you know 30 were working
+[00:12:43] on 30 years ago we celebrated the 30th
+[00:12:45] Anniversary last week okay for the last
+[00:12:48] 25 years it's actually been upward
+[00:12:50] compatible and maintained so there are
+[00:12:52] software artifacts that have been
+[00:12:54] maintained over over human lifetime
+[00:12:57] scale things but as far as I know
+[00:12:59] they're pretty much all just open source
+[00:13:01] artifacts okay um but if you've got a
+[00:13:08] what yeah there are a very small number
+[00:13:10] of such systems out there but you know
+[00:13:13] but the number of you probably number
+[00:13:15] them
+[00:13:15] on yeah non-op Source ones you could
+[00:13:18] probably number on on you know fingers
+[00:13:21] of one hand maybe but here's a
+[00:13:24] problem binary blobs may leave you
+[00:13:27] helpless helpless and vulnerable forever
+[00:13:30] you can have vulnerabilities in those
+[00:13:32] too okay and you don't have control of
+[00:13:36] those
+[00:13:36] bits can't rebuild
+[00:13:39] them boy you got a
+[00:13:42] problem um I've Focus mostly on home
+[00:13:45] routers and modems that most of what I'm
+[00:13:47] saying is true for all of these embedded
+[00:13:49] systems most of them are now Linux boxes
+[00:13:52] um uh so we have close to a monoculture
+[00:13:55] there uh I focus mostly on home routers
+[00:13:58] and modems both because I was I'm
+[00:14:00] worrying about fixing buffer blo so I
+[00:14:02] was interested in understanding how long
+[00:14:03] would it take for me to get fixes for
+[00:14:07] buffer bloat into your hands so about
+[00:14:09] three years ago I did a thought
+[00:14:12] experiment which was how long is it
+[00:14:14] going to take I could foresee that maybe
+[00:14:17] someday we'd have fixes for it from the
+[00:14:19] time we get it into Linux how long can
+[00:14:21] you guys go and buy this stuff at Amazon
+[00:14:23] or Best Buy or wherever and I was pretty
+[00:14:26] horrified to discover three years ago
+[00:14:29] that these devices start out with
+[00:14:31] fouryear old code on day one on a brand
+[00:14:33] new device about a year a year and a
+[00:14:36] half might be what you might consider
+[00:14:39] optimal but no it's much older than that
+[00:14:42] in fact it's on day one almost uh these
+[00:14:46] devices are on the last stable
+[00:14:48] maintained kernel um that that
+[00:14:53] kernel.org publishes so they will just
+[00:14:55] sit and they just rot in your house
+[00:14:57] thereafter okay there's no maintenance
+[00:14:59] on that or any of the other pieces of it
+[00:15:02] okay what's more if somebody patches the
+[00:15:04] patches almost certainly can't get
+[00:15:06] merged Upstream because they're so far
+[00:15:08] out of date that they won't apply on the
+[00:15:10] on the new thing so any work that
+[00:15:12] somebody does to maintain it Downstream
+[00:15:14] is this is why you pay pay red hat and a
+[00:15:16] like big bucks for the Enterprise
+[00:15:19] systems
+[00:15:21] um most embeded devices you know are no
+[00:15:24] different than routers except they're
+[00:15:25] not on your path to the rest of the
+[00:15:26] world which is the most critical thing
+[00:15:29] right and we're now more and more of us
+[00:15:32] are depending on internet service in
+[00:15:34] fact it's only a matter of when the the
+[00:15:36] conventional pots copper system gets
+[00:15:40] turned off its economic model is is is
+[00:15:44] so far gone it's not funny they have to
+[00:15:46] unplug it because they can't afford to
+[00:15:48] keep it running
+[00:15:50] okay this means that your phone service
+[00:15:53] is coming in over that internet service
+[00:15:55] too okay Andor these guys now these have
+[00:15:58] much the same problems but we replace
+[00:16:00] them every n years but these guys have
+[00:16:02] binary blobs too despite being either um
+[00:16:05] uh uh Linux based I.E Android or iOS um
+[00:16:10] as well uh usually in the communications
+[00:16:12] drivers they're actually a similar
+[00:16:13] problem shorter lifetime Hardware but
+[00:16:17] this will break and so
+[00:16:18] on
+[00:16:20] um okay so there have been a number of
+[00:16:23] wakeup calls which have mostly gone
+[00:16:26] ignored um there's been a number of
+[00:16:29] different researchers uh Defcon and
+[00:16:31] elsewhere showing signal vulnerabilities
+[00:16:33] that have done things like you know half
+[00:16:36] the of the home routers they happen to
+[00:16:38] test right um DNS changer was also some
+[00:16:42] of you may remember that uh was also
+[00:16:44] attacking home routers as well as host
+[00:16:47] um usually just because the password
+[00:16:49] security and these things is sort of not
+[00:16:51] often non-existent there's 4 and a half
+[00:16:53] million DSL routers in Brazil which are
+[00:16:57] people are doing Financial fraud on okay
+[00:17:00] not in this country but the scale is
+[00:17:02] beginning to get interesting um this
+[00:17:05] spring uh there was this interesting
+[00:17:08] worm called the moon there should be a
+[00:17:10] space in it I guess I guess that the
+[00:17:12] Sands folks looked into um it's mostly
+[00:17:17] benign except that it doesn't leave you
+[00:17:19] with a warm and fuzzy feeling what it's
+[00:17:21] doing is going around looking for other
+[00:17:23] vulnerable home
+[00:17:25] routers it's using home routers to to
+[00:17:27] determine other vulnerable home rers and
+[00:17:30] it's most of the lynxis rers you're
+[00:17:32] probably familiar with with heart bed if
+[00:17:34] you aren't you should be um it's really
+[00:17:37] a matter of when rather than if we have
+[00:17:39] a really big problem in fact we probably
+[00:17:42] already have it and don't know about it
+[00:17:43] yet and somebody's just waiting
+[00:17:46] okay
+[00:17:48] um so um there's this recent amusing uh
+[00:17:53] Nightmare on connected Home Street uh
+[00:17:56] but it's really only a minor bad dream
+[00:17:57] from my point of view the real nightmare
+[00:18:00] just as likely as the author of this is
+[00:18:04] that things just stop working one day
+[00:18:06] okay not just necessarily yours but but
+[00:18:09] everybody nearby or whatever scale you
+[00:18:12] care to name um you end up with no
+[00:18:16] internet at all you can't access bits to
+[00:18:20] you if the bits were available or became
+[00:18:22] available you'd have no way of getting
+[00:18:24] them um you might even need to replace
+[00:18:27] the devices
+[00:18:30] uh I've lived this nightmare or
+[00:18:32] something close to it I've looked over
+[00:18:33] the abyss into the abyss in our
+[00:18:36] particular case and I'm not going to say
+[00:18:38] much more than I say have on this Slide
+[00:18:40] the root cause was a binary blob in
+[00:18:43] other non- upgradable devices that were
+[00:18:45] all over the
+[00:18:46] place um it doesn't matter whether these
+[00:18:49] are bugs in fact I still think even
+[00:18:51] after the Tao catalog was published that
+[00:18:53] what I saw or what we saw was a bug um
+[00:18:59] uh it doesn't matter whether this is an
+[00:19:01] implant or malware or a bug it's still a
+[00:19:03] disaster and I've already looked into
+[00:19:05] that Abyss you don't we don't want to go
+[00:19:07] there guys okay unfortunately there are
+[00:19:09] people who have motives who wouldn't
+[00:19:11] mind
+[00:19:13] it there are a lot of hysterical causes
+[00:19:16] for this um none of them great the first
+[00:19:20] slash file system for Linux happened to
+[00:19:22] Allied the user and group
+[00:19:24] IDs this means that on most of these
+[00:19:26] devices these things are all every
+[00:19:28] running as root which which radically
+[00:19:31] increases the number of vulnerabilities
+[00:19:33] that are are
+[00:19:36] serious
+[00:19:37] um so uh a simple matter of
+[00:19:41] configuration to fix this problem but
+[00:19:42] somebody's got to do it right in the in
+[00:19:46] the code bases from which these vendors
+[00:19:49] derive their
+[00:19:50] code um for at the time at the time for
+[00:19:55] example the ipac which was year 2000
+[00:19:57] came along we didn't have much flash or
+[00:20:01] Ram space we had you know 16 megabytes
+[00:20:03] of flash these most of these devices
+[00:20:05] today still only have four or eight
+[00:20:07] megabytes of
+[00:20:08] flash so so they were way too small to
+[00:20:12] use conventional Linux distributions
+[00:20:13] from which you would find an update
+[00:20:15] stream okay they've usually been using
+[00:20:20] um uh some distribution of Linux um and
+[00:20:24] stuff on top occasionally BSD but it's
+[00:20:26] almost all Linux um uh at some point the
+[00:20:31] chip cost will get so cheap that it just
+[00:20:34] there'll be a crossover in the fact that
+[00:20:35] the much bigger chips are at volume um
+[00:20:39] much higher volumes than the old flash
+[00:20:41] chips means that there won't be any
+[00:20:42] savings on the B on the build of
+[00:20:44] materials but you know then we have the
+[00:20:47] economic disconnect I'll talk more about
+[00:20:49] this between the costs of things and the
+[00:20:51] benefit and who gets the benefit of the
+[00:20:53] work
+[00:20:55] um the bomb cost drove the boot loader
+[00:20:58] to unprotected flash
+[00:21:01] typically okay uh and then we've got the
+[00:21:04] binary blob disaster which I my next
+[00:21:07] topic okay you have to understand how
+[00:21:11] the this ecosystem Works which you've
+[00:21:13] got are a bunch of very big companies
+[00:21:15] that are building silicon who shop their
+[00:21:18] silicon around okay and um uh they
+[00:21:23] typically have have taken some random
+[00:21:25] set of set of bits um and freeze on that
+[00:21:29] while they're developing that silicon
+[00:21:31] debug a pretty bad device driver into
+[00:21:33] existence and then shop their their
+[00:21:36] their sample design around to to the
+[00:21:39] so-called original device manufacturers
+[00:21:42] or
+[00:21:43] odms um those things are often usually a
+[00:21:47] binary blob in certain cases uh
+[00:21:50] Communications devices are one gpus or
+[00:21:53] another um uh you sometimes others uh it
+[00:21:58] doesn't happen on servers for lots of
+[00:22:00] reasons but but um on this these markets
+[00:22:03] it's it's not um not happened sometimes
+[00:22:07] these chips and modules have their own
+[00:22:09] processor which means they have their
+[00:22:12] own code okay you have another binary
+[00:22:15] blob this is Turtles all the way down
+[00:22:18] okay um and one of the hardest problems
+[00:22:21] we had to debug at OPC was in fact the
+[00:22:25] boot loader for the Marvel Wireless
+[00:22:27] module which was an arm9 processor and
+[00:22:30] there was a bug in that so so we were
+[00:22:33] having about one in 10 upgrades fail so
+[00:22:35] we couldn't even upgrade the module
+[00:22:37] unless we fixed
+[00:22:39] it okay and that one caused me to lose a
+[00:22:41] lot of sleep um and only got fixed
+[00:22:45] because someone was able to look through
+[00:22:46] over somebody else's shoulder and find
+[00:22:50] the the line of code um after like six
+[00:22:53] months of struggling it got fixed in 5
+[00:22:56] minutes once the code was is
+[00:22:58] visible um so odm's take this pile of
+[00:23:03] Linux and applications ship this stuff
+[00:23:06] with this these binary blobs and they
+[00:23:09] have no incentive for updates they've
+[00:23:11] made their sale when that is when they
+[00:23:14] made the design win uh they've locked
+[00:23:17] that that odm into that chip okay so
+[00:23:20] their incentive is to do nothing okay um
+[00:23:26] anything more just cost the money
+[00:23:28] so there's no update stream and there's
+[00:23:31] a frozen ecosystem the odms can't do
+[00:23:34] anything about this they're stuck with
+[00:23:36] the cheapest often the cheapest chips
+[00:23:38] having these binary blobs attached um so
+[00:23:43] you don't see a culture of yes we will
+[00:23:46] upgrade this thing over time the way you
+[00:23:48] typically do um uh yeah as we've learned
+[00:23:52] the hard way we have to do with with
+[00:23:54] conventional
+[00:23:55] machines um and these poor odms have no
+[00:23:59] real Financial incentive to update
+[00:24:01] either because they've made their money
+[00:24:03] once you've bought it okay and so if you
+[00:24:06] know you having problems is another
+[00:24:08] potential sale not a you know it might
+[00:24:11] might affect who you buy the next
+[00:24:13] time the suppliers well you know and
+[00:24:16] again the
+[00:24:17] vulnerabilities remember when the
+[00:24:19] vulnerabilities occur much much later so
+[00:24:22] the Silicon provider doesn't see the
+[00:24:24] vulnerabilities the odms don't see the
+[00:24:27] the uh vulnerabilities um the odms might
+[00:24:30] give you new firmware for a v or a year
+[00:24:33] um usually just to to fish crash bugs
+[00:24:35] okay because they don't have to take the
+[00:24:37] service calls okay um and the returns
+[00:24:41] from upset
+[00:24:42] customers um they really don't have the
+[00:24:45] expertise anyway okay um they aren't
+[00:24:48] able to develop the
+[00:24:50] expertise
+[00:24:51] they they don't pull their effort um uh
+[00:24:55] the the code whatever fixes as they do
+[00:24:58] do is too old to possibly get integrated
+[00:25:01] into the Upstream maintained versions of
+[00:25:04] of
+[00:25:05] software um so and then most of these
+[00:25:08] devices are still manual updates by end
+[00:25:12] users which means it doesn't happen
+[00:25:13] unless it
+[00:25:15] crashes
+[00:25:16] okay um so we have a fundamental problem
+[00:25:21] here um
+[00:25:25] the you know the consumers of these are
+[00:25:27] you are on your behalf your
+[00:25:29] ISP um the ISP sometimes buy these boxes
+[00:25:33] sometimes they don't uh they have no
+[00:25:35] real competence in this kind of security
+[00:25:37] either um certainly not in how embedded
+[00:25:40] systems get put together
+[00:25:42] um you guys don't have viable Choice out
+[00:25:47] there because in fact there's there's at
+[00:25:50] least one such binary blob and nearly
+[00:25:52] every one of these devices currently on
+[00:25:53] the market so when we're working on
+[00:25:56] Buffer bloat the number of different
+[00:25:57] routers we could run our code on was
+[00:25:59] very small because we knew we needed to
+[00:26:01] go some nearly anywhere and deliberately
+[00:26:05] selected a device for which we didn't
+[00:26:07] have except with one slight exception
+[00:26:09] any binary blobs to contend with okay so
+[00:26:13] how you can't differentiate it there's
+[00:26:16] nothing seriously differentiable except
+[00:26:19] for bandwidth in the market right now so
+[00:26:21] what do you do if this is a entirely
+[00:26:23] eras to the bottom how cheap can you
+[00:26:26] make something work
+[00:26:29] um these things have no place to stand
+[00:26:31] for security um the devices even those
+[00:26:35] which so-called lock the boot loaders
+[00:26:37] turns out that usually the flash chips
+[00:26:39] can be unlocked if you know what
+[00:26:41] register to go poke you can usually do
+[00:26:43] that if you just get root which is easy
+[00:26:44] to do
+[00:26:46] um so doing it properly depending upon
+[00:26:50] whether you can are willing to trust the
+[00:26:53] flash chips which apparently a friend of
+[00:26:55] mine who looked into these couldn't find
+[00:26:56] any flash chips that actually had a
+[00:26:58] one-way lock um on flash sectors uh
+[00:27:02] should could be zero but it's 28 cents
+[00:27:04] to do right if you have to do it with
+[00:27:06] explicitly a def flop and a separate
+[00:27:09] serial
+[00:27:10] flash um we have courtesy the old PC a
+[00:27:16] um a boot loader which actually does all
+[00:27:18] the real crypto and and does secure
+[00:27:21] update even does it in a multicast
+[00:27:23] fashion so I once upgraded with one
+[00:27:26] other person helping me over 100 PCS
+[00:27:29] over um a
+[00:27:31] 80211 um G channel in an hour um with a
+[00:27:35] gigabyte per each so that's that was 100
+[00:27:37] gigabytes updated um on
+[00:27:41] that so what do we got to
+[00:27:44] do we have to forklift upgrade the edge
+[00:27:47] of the
+[00:27:49] internet these devices are all bad the
+[00:27:52] only question is how bad they are um I'm
+[00:27:56] talking about the commercial devices uh
+[00:27:59] open word which is an open source router
+[00:28:01] is actually pretty secure and pretty up
+[00:28:03] to dat uh even yet doesn't have
+[00:28:06] everything we need but it's a starting
+[00:28:08] point uh we have to secure the boot
+[00:28:12] loader um there's a bunch of existing
+[00:28:16] technologies that are straightforward to
+[00:28:17] apply in Linux um uh this is a not a
+[00:28:21] highly technical audience so I will stay
+[00:28:23] away from them but none of them are
+[00:28:25] being used even user and group IDs which
+[00:28:27] some of you will understand aren't there
+[00:28:29] in most of these devices um we could
+[00:28:33] have a disaster in the meanwhile but if
+[00:28:35] we don't change our business and
+[00:28:37] software engineering practices it won't
+[00:28:39] matter we can do it once and we'll just
+[00:28:40] have to do it again
+[00:28:43] um this problem is a really hard problem
+[00:28:47] this ecosystem and how we think about
+[00:28:50] building software over the long term
+[00:28:52] needs to change that's what the
+[00:28:54] honeymoon effect paper at least tells me
+[00:28:58] um uh we have a tragedy of the commons
+[00:29:02] problem going on here okay um how do we
+[00:29:06] there's lots of
+[00:29:08] money you pay every month for your your
+[00:29:11] your internet service but the money
+[00:29:13] doesn't go to the right place nor do
+[00:29:15] even those intermediaries know how to
+[00:29:18] function where the software comes from
+[00:29:21] um so how do we get the funding model
+[00:29:24] the organizations in place we have some
+[00:29:27] decent Upstream stuff like open word but
+[00:29:30] there's this gulf in the middle and that
+[00:29:32] Gulf has been caused by their binary
+[00:29:34] blob
+[00:29:36] disaster
+[00:29:38] um so and how do we avoid
+[00:29:41] monoculture okay um Linux has become
+[00:29:45] close to a monoculture for embedded
+[00:29:48] systems this is not safe I'm a Linux
+[00:29:50] bigot I like it very much I like its
+[00:29:53] development style but it doesn't make me
+[00:29:55] sleep at night to know that so much much
+[00:29:57] of this of these embedded devices are
+[00:30:00] all running the same
+[00:30:02] code um how do we change this
+[00:30:06] proprietary information mindset and deal
+[00:30:09] with a binary blob problem some very big
+[00:30:12] clue bats have to be applied they are
+[00:30:14] technically in already in copyright
+[00:30:16] violation
+[00:30:17] usually okay um it's not a battle that
+[00:30:21] Linux Community has been willing to
+[00:30:22] fight nor is it is it
+[00:30:25] really you know um and and and legal
+[00:30:29] fights are not the way to really
+[00:30:30] probably get this solved right but how
+[00:30:33] do we get this stuff out because if if
+[00:30:36] that code for that piece of silicon that
+[00:30:40] that has there's a hundred million of
+[00:30:41] them all over the world isn't available
+[00:30:44] 10 years from now when you need to
+[00:30:46] rebuild it what you going to do and who
+[00:30:49] do you trust to do that there are lots
+[00:30:52] of reasons why you may not be willing to
+[00:30:53] trust the manufacturer the you the ISP
+[00:30:57] there need needs you don't want a
+[00:30:59] monoculture in even the builds of this
+[00:31:03] for those of you who are computer
+[00:31:05] scientists who uh read untrusting trust
+[00:31:08] by Ken Thompson and their the touring
+[00:31:11] award lecture you know that we probably
+[00:31:14] ought to have multiple builds from
+[00:31:16] multiple
+[00:31:18] locations how do we do this how do we
+[00:31:20] organize ourselves worldwide to face
+[00:31:23] this problem we have not been thinking
+[00:31:25] about software in the right way
+[00:31:29] um I'm quite surprised to find myself
+[00:31:31] now closer to Richard stalman than I
+[00:31:34] could possibly
+[00:31:36] imagine um because the irony of this is
+[00:31:39] the MIT license was defined for the X
+[00:31:42] Windows system and it's sort of the
+[00:31:44] prototypical do anything you like with
+[00:31:46] this code now I'm not sure this is
+[00:31:48] really properly enforceable by legal
+[00:31:51] copyright means but but Richard also
+[00:31:55] missed the fact that our lives now
+[00:31:57] depend upon this it isn't just Liberty
+[00:31:59] in the pursuit of happiness which is
+[00:32:01] where he's come from this is life stuff
+[00:32:04] if your home network stops
+[00:32:07] working you know we're very close to
+[00:32:10] having human lives actually some people
+[00:32:12] probably already are in this position
+[00:32:14] where they depend upon that continuing
+[00:32:16] to function we will certainly be there
+[00:32:18] in the next five or 10 years where
+[00:32:20] people will die
+[00:32:22] immediately
+[00:32:23] okay um you know so I'm quite surprised
+[00:32:28] to be close to Richard these days is
+[00:32:31] there hope I don't want to be too verify
+[00:32:34] you too much um Linux Foundation has has
+[00:32:39] various efforts and embedded systems of
+[00:32:40] various sorts um as does the Debian
+[00:32:43] project has a thing called Edan um I'm
+[00:32:47] we're very fond of of open wrt which is
+[00:32:50] a um a u Linux distribution for for more
+[00:32:54] than 150 different models of of Home
+[00:32:57] routers uh there are various other
+[00:32:59] community efforts too numerous to do
+[00:33:01] this but these are all currently Limited
+[00:33:04] in terms of what they can run on and the
+[00:33:06] like and and how much Synergy they can
+[00:33:08] have among themselves by these stupid
+[00:33:11] binary blobs which come back to bite
+[00:33:13] people um you may have noticed that the
+[00:33:16] first of the Google Nexus phones went
+[00:33:18] out of support um I believe the Clause
+[00:33:22] was the graphics driver was the the the
+[00:33:25] chip vendor decided that they weren't
+[00:33:27] going to be in the cell phone business
+[00:33:29] and and you know basically blew up the
+[00:33:31] Development Group uh who could maintain
+[00:33:33] who was maintaining the driver so a
+[00:33:35] small amount of of egg on Google's face
+[00:33:38] from that this is a generic problem
+[00:33:41] there are some isps who are aware of
+[00:33:44] just how badly served this Market is is
+[00:33:46] to them they get they get the phone
+[00:33:48] calls when things don't work well okay
+[00:33:51] cost them 10 or 15 bucks just to pick up
+[00:33:53] a phone they have to roll a truck it
+[00:33:55] must be more than 100 bucks you know you
+[00:33:57] know it's directly out of their bottom
+[00:33:58] line when these things
+[00:34:01] malfunction um so um open word is is uh
+[00:34:08] the is the most interesting of the open
+[00:34:11] source router projects from my
+[00:34:13] perspective at least because they try to
+[00:34:14] keep up to date okay um that doesn't
+[00:34:18] mean that there aren't lots of things
+[00:34:19] that need to be done but this is
+[00:34:20] actually seriously interesting software
+[00:34:23] that that all the community networking
+[00:34:24] groups in Europe at least are using um
+[00:34:27] and is being used commercially on uh a
+[00:34:31] number of the vendors but they're
+[00:34:33] typically having to freeze on the old
+[00:34:35] versions again because of the binary
+[00:34:37] blobs if they are open work based okay
+[00:34:40] they can't maintain it and upgrade it
+[00:34:43] typically um so it's roughly four years
+[00:34:46] in advance of what you can see
+[00:34:48] commercially so I you know my home
+[00:34:50] router has real IPv6 support and and
+[00:34:53] support for M networking and other good
+[00:34:55] stuff uh DNS sec in it and you know
+[00:34:58] things like that in the home router I
+[00:35:01] run but the soonest you can hope for
+[00:35:04] something like that right now is about
+[00:35:05] four years not
+[00:35:09] good there's a bunch of policy questions
+[00:35:11] I'm mostly just going to let you read
+[00:35:13] through these and then leave it for
+[00:35:16] questions okay but I want to provoke
+[00:35:20] people to think about what does this
+[00:35:22] mean in terms of policy because I know
+[00:35:24] that's what the burkeman center is about
+[00:35:26] in large part if this as I believe means
+[00:35:29] we should be really thinking how do we
+[00:35:32] develop software right over the long
+[00:35:36] haul you remembering that we now have
+[00:35:39] real issues with with Windows XP as an
+[00:35:42] example in the commercial side of how we
+[00:35:44] do this right um I'll point out that
+[00:35:47] code without a community is worthless
+[00:35:50] okay this is why I'm fun when arguing
+[00:35:53] with Dan gear I think his ideas about
+[00:35:55] you know code escro or or aband you know
+[00:35:58] any abandoned code should go open isn't
+[00:36:00] doesn't go far enough because you don't
+[00:36:03] have the community able to maintain the
+[00:36:05] code at that point what you've got is
+[00:36:08] abandoned wear that there's nobody
+[00:36:09] around who probably even understands how
+[00:36:11] to build it anymore uh this is not a
+[00:36:13] good situation uh so I don't believe in
+[00:36:16] code escrow and stuff like this I mean
+[00:36:18] how do you even know you got it all or
+[00:36:19] what version you've got um you know
+[00:36:22] again this this is because a lot of
+[00:36:24] software has lifetime much longer than
+[00:36:27] than human
+[00:36:28] organizations
+[00:36:31] okay um monocultures are really
+[00:36:34] dangerous okay as anybody who studied
+[00:36:36] biology Dan gear is you know has a a
+[00:36:39] biology background um is aware of um but
+[00:36:43] this is true for a pile of Linux is just
+[00:36:45] the operating system kernel we have a
+[00:36:47] bunch of stuff on top of this uh it
+[00:36:49] turns out op SSL was which we all are
+[00:36:51] very aware of with heart bleed um uh
+[00:36:55] wasn't was actually a multiple different
+[00:36:57] alternatives for it too um but it was
+[00:37:01] painful enough as only being a partial
+[00:37:03] monoculture you know a problem can be a
+[00:37:06] problem if it's even on just a good
+[00:37:08] fraction um how do we encourage
+[00:37:10] alternatives to Linux okay again the
+[00:37:13] poor BSD guys have been fighting the
+[00:37:15] everything's got to be completely open
+[00:37:18] uh for years um and often they can't run
+[00:37:20] on the hardware because of a binary blob
+[00:37:23] someplace okay so how are they ever
+[00:37:26] going to achieve critical mass to
+[00:37:29] compete with Linux really tough um think
+[00:37:33] about after market upgrades okay should
+[00:37:37] the fact that you've bought something
+[00:37:38] mean that that vendor who may not even
+[00:37:41] be there in five or 10 years like you
+[00:37:43] know who knows if Tesla will be here in
+[00:37:45] 10 years and you buy one of their cars
+[00:37:47] you're going to be able to update that
+[00:37:49] wonderful computer and user interface
+[00:37:51] that's now built into the car that's
+[00:37:53] even capable of adjusting the height at
+[00:37:55] which the car goes
+[00:37:59] okay yeah we're all we're all thinking
+[00:38:01] about shiny and new but now let's think
+[00:38:03] a little bit further Downstream um
+[00:38:06] should that whole computer be
+[00:38:08] replaceable by whom
+[00:38:10] right um maybe we have to take a
+[00:38:13] position that the in internal interfaces
+[00:38:15] should be open so there can be
+[00:38:16] competition in the computer that's on
+[00:38:19] that so in the long term you can buy a
+[00:38:21] replacement in 10 years out because
+[00:38:23] that's better than having to to stay
+[00:38:24] with the the old Hardware
+[00:38:28] um how do we solve this tragedy of the
+[00:38:30] commons problem that heart bleed made
+[00:38:32] obvious with just one of a pile of of
+[00:38:36] projects out there that are much more
+[00:38:38] important than people have appreciated
+[00:38:41] okay how do I get how do I get proper
+[00:38:43] support for the open word guys okay if
+[00:38:46] you want to have a a somewhat secure
+[00:38:48] router today that's where I'll point you
+[00:38:51] and and they've been starving for
+[00:38:53] decades you know not decades their
+[00:38:56] projects only about 10 years of order 10
+[00:38:57] years old but the point is that that
+[00:38:59] even the vendors don't throw money they
+[00:39:02] don't feed the Penguins they don't they
+[00:39:04] they have not been supporting that
+[00:39:05] project properly now Linux on servers
+[00:39:08] has organized itself so that ecosystem
+[00:39:11] exists but in this embedded space it
+[00:39:13] does not exist vendors do not often
+[00:39:16] they're working on very tight margins
+[00:39:18] and but other people get most of the
+[00:39:20] revenue like the ISP how how how do we
+[00:39:24] make this happen um
+[00:39:27] yeah critical infrastructure is any
+[00:39:29] hardware or software that's widely used
+[00:39:31] in large quantity okay
+[00:39:34] um you can't know in advance what's
+[00:39:37] going to become critical
+[00:39:39] infrastructure okay this is part of why
+[00:39:42] code escro doesn't work right you know
+[00:39:44] oh that one actually got shipped in 100
+[00:39:46] million now I care well if if you can't
+[00:39:50] regenerate that blob you're too late you
+[00:39:52] know what role do should we have what
+[00:39:55] role should government have in in
+[00:39:58] pushing this Market into a safer
+[00:40:00] Direction okay without stifling a market
+[00:40:03] because that's not good
+[00:40:05] either um yeah so so I will I will
+[00:40:09] mostly close with the meme to spread
+[00:40:11] friends don't let friends run factory
+[00:40:13] firmware okay um and remember those
+[00:40:18] devices unfortunately you probably can't
+[00:40:20] change your modem to open source but at
+[00:40:22] least the router you can't it's got that
+[00:40:24] radio it can listen to anything you
+[00:40:26] anything nearby right and it's between
+[00:40:28] you and the rest of the
+[00:40:30] world
+[00:40:32] wonderful
+[00:40:33] right um you so so um that's pretty much
+[00:40:40] all you know I'd like to to yeah yeah
+[00:40:44] it's really now time for for
+[00:40:47] questions I want to ask the first
+[00:40:49] question so I think this is so let's say
+[00:40:51] you're giving this talk to a company
+[00:40:53] like semantic who says this is fantastic
+[00:40:55] it's an opportunity
+[00:40:56] we can sell every home uh
+[00:41:00] blah make it what can a third party do
+[00:41:05] in general for this problem this is
+[00:41:09] tough um there's no Mar there's very
+[00:41:13] little margin in the
+[00:41:14] hardware these are all commod commodity
+[00:41:17] components that are being made in
+[00:41:19] millions but I'm assuming that Samantha
+[00:41:21] can sell a $100 every home needs a
+[00:41:24] security thing that we're going to
+[00:41:25] install on your Network and it'll
+[00:41:26] magically fix the problem is there
+[00:41:28] something a third party can do without
+[00:41:30] anybody else's help approval how do they
+[00:41:33] get that's your router that's your box
+[00:41:36] to the rest of the world you have the
+[00:41:38] problem until that's the your man in the
+[00:41:40] middle until you've replace that man in
+[00:41:42] the middle you are
+[00:41:44] vulnerable you got to you got to replace
+[00:41:46] I remember you got to replace these
+[00:41:48] things these are a for at least one
+[00:41:51] forklift upgrade to get out of this
+[00:41:54] mess no you know of of the thing on your
+[00:41:57] network path think of this from your
+[00:41:58] network path um that's why that's why I
+[00:42:01] focused I mean I started worrying about
+[00:42:03] the routers because that's where buffer
+[00:42:05] blo was but but in terms of ability to
+[00:42:08] manage I there are 14 different devices
+[00:42:09] in my house at this point okay if my
+[00:42:12] network doesn't work I can't update any
+[00:42:14] of them right so so so the reality is
+[00:42:18] the network connection matters the most
+[00:42:21] for lots of reasons but the the general
+[00:42:24] problems are are and mic and among the
+[00:42:28] this in this market do you want a few
+[00:42:30] the questions or should I how you feel
+[00:42:32] you want me do it all right David um so
+[00:42:36] the carbon monoxide detector in my
+[00:42:38] apartment has an explicit seven-year
+[00:42:40] lifespan and after those seven years are
+[00:42:43] up it not only stops working but it keep
+[00:42:45] keeps making annoying beeping noises so
+[00:42:47] you know that it needs to be placed and
+[00:42:49] you have to buy another one do you think
+[00:42:51] this is a possible model
+[00:42:53] for that's certainly one of Dan Gear's
+[00:42:56] opinions but I don't think that's always
+[00:42:58] feasible in particular to make it stop
+[00:43:01] working entirely may make your network
+[00:43:03] stop working yeah you say you can't do
+[00:43:06] that for anything which is actually
+[00:43:08] involved in the network itself because
+[00:43:11] then you've you've made it impossible to
+[00:43:14] update things but then you beg a whole
+[00:43:16] lot of other security issues like how
+[00:43:18] does it beep I
+[00:43:20] mean you don't have to upgrade it you
+[00:43:22] just buy another one and the company
+[00:43:23] makes money so they have an incentive
+[00:43:26] well and and these things are now
+[00:43:29] getting so cheap they're getting built
+[00:43:31] into physical devices like you know
+[00:43:33] probably your furnace and so on who
+[00:43:35] knows so yeah um uh yeah and will those
+[00:43:40] be available in you know 10 or 20 years
+[00:43:43] I mean the question is what's the
+[00:43:44] lifetime of these things that that's why
+[00:43:46] if you want there to be an aftermarket
+[00:43:48] and to protect yourself against a vendor
+[00:43:50] going out of business it needs to be
+[00:43:52] possible for other people to to build
+[00:43:56] the those things to plug to be built
+[00:44:00] into those other devices
+[00:44:02] later so how do we enable an aftermarket
+[00:44:05] that's why I had that up as a question
+[00:44:08] there as a yeah issue related question
+[00:44:11] how would it be to say I was thinking
+[00:44:13] Kickstart or you know some form of
+[00:44:15] community organized just let's build a
+[00:44:17] router that can actually be um you know
+[00:44:20] built with no open binary blobs from the
+[00:44:22] start I think you could sell that for
+[00:44:24] 100 bucks if you could get Buy problem
+[00:44:26] we probably could we've certainly been
+[00:44:28] considering doing that
+[00:44:31] um so uh Dave tot who runs the serart
+[00:44:36] project which is this um Advanced build
+[00:44:38] of open word is way to think about what
+[00:44:40] serart is where we've been doing the
+[00:44:41] buffer BL work among other things
+[00:44:46] um we've been looking
+[00:44:49] for the next platform so we found one
+[00:44:53] which was satisfactorily open for the
+[00:44:55] previous generation the wmdr 3800 the
+[00:44:59] problem is that all the the um chipsets
+[00:45:03] or chips for the the
+[00:45:05] 80211 AC have binary blobs in them and
+[00:45:10] or E either in at a minimum in firmware
+[00:45:13] that they
+[00:45:14] run uh but often also the device drivers
+[00:45:18] again so it's even
+[00:45:21] identifying even one of those okay okay
+[00:45:25] is a problem right now uh for the last
+[00:45:29] generation uh the atheros 9k series of
+[00:45:33] chips had only a tiny B binary blob
+[00:45:36] whose whose Source was available to the
+[00:45:38] Linux device driver maintainer Who and
+[00:45:41] the driver was open so we knew that
+[00:45:43] there was code everywhere even though
+[00:45:45] there was still um a minor minor blob
+[00:45:48] that we couldn't be um distributed in
+[00:45:50] Source form so the these par you know
+[00:45:55] these ton vendors have caused this Freez
+[00:45:58] in the
+[00:45:59] ecosystem to the point where it's been
+[00:46:02] it's really tough right now to even
+[00:46:03] identify Hardware to do exactly that
+[00:46:07] step for AC which is coming into the
+[00:46:10] market now at this
+[00:46:13] point um where does the discussion about
+[00:46:16] redundancy fit this is redundancy a
+[00:46:18] possibility
+[00:46:20] to
+[00:46:21] compon of manufactur that a way toate
+[00:46:27] well it always is but the redundancy is
+[00:46:30] sometimes much harder to come by than
+[00:46:32] you naively think so um broadcom for
+[00:46:36] example has a near Monopoly like 70 80%
+[00:46:40] I'm told of DSL chips so most of the DSL
+[00:46:44] routers out there um will have a
+[00:46:49] particular device driver and finding
+[00:46:52] something else isn't obvious from the
+[00:46:54] outside how can you do that
+[00:46:58] redundancy right um you can have hidden
+[00:47:02] monocultures you didn't know that
+[00:47:04] monoculture
+[00:47:06] existed or near monoculture I mean it's
+[00:47:09] it's close enough that it from a a
+[00:47:11] biological point of view it might it's a
+[00:47:13] monoculture or or near near to one
+[00:47:16] right um I think you're overlooking uh
+[00:47:20] the role of the
+[00:47:21] professions uh by jumping straight from
+[00:47:23] vendors to communities uh um the
+[00:47:26] perspective from healthc care is that uh
+[00:47:30] the profession that's supposed to be
+[00:47:33] watching over this Drift from open
+[00:47:37] source to Binary blobs controlled by
+[00:47:40] vendors is a sleep at the
+[00:47:42] switch and uh though this your Talk's
+[00:47:46] not primarily about things like the
+[00:47:48] devices that I've talked to Richard
+[00:47:49] about that are embedded in you know that
+[00:47:52] he's worried about uh the same thing I
+[00:47:55] think could apply to the routers and to
+[00:47:58] the more fundamental things we
+[00:48:00] traditionally used to have a
+[00:48:02] professional class to mediate the
+[00:48:04] community issu I understand that's you
+[00:48:06] know I've started talking with people
+[00:48:08] like Vin surf because I believe very
+[00:48:10] much that that there is an educational
+[00:48:12] component to the um to the profession
+[00:48:17] about these problems um we've been
+[00:48:19] asleep with the switch in essence okay
+[00:48:23] and and and so
+[00:48:26] so part of why I'm giving this talk and
+[00:48:28] we'll be giving another one on Thursday
+[00:48:29] with a slightly different bent is is to
+[00:48:32] begin to raise awareness if you're
+[00:48:33] designing one of these things try very
+[00:48:35] hard to avoid those blobs not only are
+[00:48:38] there biggest schedule risks but
+[00:48:40] Downstream there the disaster no company
+[00:48:43] wants to face where where you need to
+[00:48:46] recall them all or things like that okay
+[00:48:50] um you said I think that retrospectively
+[00:48:53] the MIT license was a mistake I did not
+[00:48:56] say that okay I I said I'm not sure that
+[00:48:59] it's that the that the issue is
+[00:49:01] enforceable by the GPL anyway history
+[00:49:04] has that it hasn't succeeded in this
+[00:49:06] area um uh I understand you know
+[00:49:11] Richard's point of view with that I'm
+[00:49:12] saying there are more fundamental
+[00:49:14] reasons than the license why you should
+[00:49:16] care a lot about there being Source
+[00:49:18] available for these things okay
+[00:49:21] okay I mean there are also consequences
+[00:49:24] of the GPL around patents and so on that
+[00:49:26] may be unacceptable and and make it
+[00:49:28] harder for people to to go so I I'm not
+[00:49:30] saying the MIT license is a mistake per
+[00:49:32] se I'm saying that that it's um uh it's
+[00:49:36] not the really big reason for the code
+[00:49:40] being open in the first place and
+[00:49:42] Richard didn't realize it either that
+[00:49:44] that you know this whole thing about
+[00:49:46] vulnerability is occurring way
+[00:49:49] Downstream okay that that piece of
+[00:49:51] information is is really a a a new
+[00:49:56] result as far as I'm concerned that
+[00:49:58] seems to have slipped by since its
+[00:50:00] publication but you know it's an
+[00:50:03] important
+[00:50:06] one I I I think I want to draw the
+[00:50:09] distinction between social and uh social
+[00:50:13] issues and legal issues versus technical
+[00:50:15] issues and I'm wondering if there's a
+[00:50:17] purely technical solution or whether you
+[00:50:20] need to have something and based either
+[00:50:23] on government regulations or standards
+[00:50:25] organizations and one idea is we
+[00:50:28] currently have benchmarks for
+[00:50:29] performance and database World TPC
+[00:50:32] whatever should we also have database
+[00:50:35] sorry some kind of Benchmark standards
+[00:50:38] for maintainability and security and
+[00:50:41] with that help and with some role of
+[00:50:43] standard organizations in uh
+[00:50:47] enforcing some degree of
+[00:50:50] openness
+[00:50:54] um
+[00:50:56] I think this is a very multifaceted
+[00:50:58] problem and so the answer would be of
+[00:51:01] course there's lots of roles for that
+[00:51:03] how do you know if I mean having
+[00:51:05] something where you know that the
+[00:51:07] insides of this device might be source
+[00:51:10] code might be available to you in the
+[00:51:11] future indefinitely is you know I'd like
+[00:51:15] to know that when I go in and buy this
+[00:51:16] physical box right but that needs a
+[00:51:19] certification Mark okay uh that's done
+[00:51:22] by various kinds of standards
+[00:51:24] organizations
+[00:51:26] and or government right so yeah I think
+[00:51:29] there's a role for that sort of thing uh
+[00:51:32] sometimes it can be as much sometimes
+[00:51:35] doesn't work out all for the positive
+[00:51:37] but at the moment we're just in a bad
+[00:51:41] place can you think of other industries
+[00:51:44] that have had to reckon with similar
+[00:51:45] problems where you have technological
+[00:51:47] complexity that be safe and maintainable
+[00:51:51] for a longer period of time obviously
+[00:51:53] probably at a smaller scale one that
+[00:51:55] comes to mind for me car industry for
+[00:51:58] all its faults
+[00:52:00] but is there any lesson that can
+[00:52:06] beor I
+[00:52:08] mean yeah who is liable for this it's an
+[00:52:12] interesting
+[00:52:13] question
+[00:52:14] um and you know yeah I'm sure there are
+[00:52:17] some things that can be learned but um
+[00:52:21] it's not an area I've dabbled in so I'm
+[00:52:24] not sure I'm best person to to to answer
+[00:52:28] your
+[00:52:29] question um
+[00:52:32] yeah uh and and see we also don't want
+[00:52:35] to stifle Innovation as a piece of this
+[00:52:38] and the the real the the really
+[00:52:40] interesting observation from my point of
+[00:52:42] view is we don't know in advance what's
+[00:52:44] going to become critical what really is
+[00:52:46] happening here is it's critical only
+[00:52:48] when it reaches High scale nothing
+[00:52:50] matter nothing bad happens if a tenth of
+[00:52:52] one percent or 100th of one perc of
+[00:52:54] Something's goes bad when we have the
+[00:52:56] same vulnerability all over the place
+[00:52:59] that's when it's a big deal and we can't
+[00:53:01] predict in advance what that is so so
+[00:53:04] I'm not sure that I'm not sure that a
+[00:53:07] lot of the typical reactions the way
+[00:53:10] people have thought about quality
+[00:53:11] necessarily apply to that situation um
+[00:53:15] but it does imply
+[00:53:18] responsibilities um of how we engineer
+[00:53:21] these systems so that in the downstream
+[00:53:24] for the things that succeed we are able
+[00:53:26] to maintain
+[00:53:33] them it's amazing um I have I guess two
+[00:53:37] comments and I wish um uh the first
+[00:53:41] comment is has to do with the fact that
+[00:53:43] we see an asymmetry we will see systems
+[00:53:45] that are very heavily maintained and
+[00:53:47] very expensive on the one side and then
+[00:53:50] uh the the price pressures will uh push
+[00:53:53] systems that are not maintained in the
+[00:53:55] end and what I read in your talk is that
+[00:53:57] the community needs to be active and
+[00:54:00] support the system so people have to
+[00:54:03] self organized to support their property
+[00:54:06] basically so those are the two Comics
+[00:54:08] this are simly and I don't see any easy
+[00:54:11] way to getting away from that I very
+[00:54:14] much encourage the comment of uh setting
+[00:54:17] some standards there on basically having
+[00:54:20] the code with you so my wish would be
+[00:54:23] May the source be with you
+[00:54:27] thank you s yeah I just want to push
+[00:54:30] back a little bit on the premise that
+[00:54:33] these things are landing in the home and
+[00:54:36] rotting um example of the nest is
+[00:54:39] something that is actually connected and
+[00:54:42] has I know it is getting updated I so I
+[00:54:46] think there we are moving towards uh a
+[00:54:50] standard of devices some of these
+[00:54:52] devices are not are way better than
+[00:54:55] others in this but the point I want to
+[00:54:57] make are things like I just took the the
+[00:55:02] audio you receiver that I bought in
+[00:55:04] college to the
+[00:55:06] dump okay and you know this is 30y year
+[00:55:10] or more
+[00:55:12] lifetime um what do we do is you know
+[00:55:15] how do you make sure that that a device
+[00:55:18] like that can't cause a problem 30 until
+[00:55:21] it broke it was perfectly usable we're
+[00:55:24] now beginning to engineer devices that
+[00:55:25] have very long lifetimes there's nothing
+[00:55:28] inherent about these processors you know
+[00:55:31] having a processor in them to to shorten
+[00:55:33] their lifetime these are silicon devices
+[00:55:34] they can last a very long
+[00:55:37] time so so um and we've already seen the
+[00:55:41] example of Google having gotten bit on
+[00:55:44] their on their Google phone very quickly
+[00:55:48] the first Nexus phone unsupported again
+[00:55:51] if there hadn't been a binary blob that
+[00:55:53] they had no control over they probably
+[00:55:55] would have continued to issue updates
+[00:55:57] for it for at least a while
+[00:55:59] longer okay so this goes back to this
+[00:56:02] Nexus of of blobs not under your control
+[00:56:06] even if you even if you don't worry
+[00:56:08] about the NSA or whomever doing bad
+[00:56:11] things in there um and as embedded
+[00:56:14] devices go in Nest thermostat's pretty
+[00:56:16] expensive right that's what it's $100
+[00:56:17] that's $200 device right so it's not
+[00:56:20] it's not a not A50 15 or 10 or
+[00:56:23] right
+[00:56:25] so it's more so get more along lines of
+[00:56:27] a cell phone than a yeah it also might
+[00:56:30] be sold with your house so that you know
+[00:56:32] the person who now has it didn't even my
+[00:56:34] expectation is it should probably
+[00:56:36] continue to work for the next n years
+[00:56:38] right my my I expect my my heating
+[00:56:43] system to to last a
+[00:56:46] while and these things are now getting
+[00:56:48] built in inside of these things people
+[00:56:50] you know want to be able to turn dampers
+[00:56:52] on and off and that might as well the
+[00:56:54] only way to do that easily and if you
+[00:56:56] look at what's happening with the zigg
+[00:56:57] guys they're trying to get networking
+[00:56:59] into all sorts of places um inside the
+[00:57:02] home to be able to control things like
+[00:57:04] that what can that be modular last year
+[00:57:07] I had to replace the entire motherboard
+[00:57:09] of my refrigerator I had no idea we had
+[00:57:10] one but we did and I mean it just pulled
+[00:57:12] out the the board and stuck in a new one
+[00:57:14] could so you know the device lasts but
+[00:57:18] the computerization that's right and
+[00:57:20] that's obviously the probably the thing
+[00:57:22] to do with the car the frustration with
+[00:57:26] with cars has always been that I'm going
+[00:57:28] to want a better you know I I buy new
+[00:57:30] cars every 15 years or so and and I buy
+[00:57:33] them new and I would like to be able to
+[00:57:35] update them occasionally but the the
+[00:57:37] vendors the car vendors have not been
+[00:57:39] willing to encourage a viable
+[00:57:43] aftermarket for for these things maybe
+[00:57:45] we should because that's a way to to
+[00:57:48] help this problem so we don't have to
+[00:57:50] maintain that code base
+[00:57:53] forever
+[00:57:56] any other
+[00:58:00] questions so there are things you can do
+[00:58:03] yeah okay um so Sero work's a version of
+[00:58:08] open work that we um that we work on for
+[00:58:11] buffer bloat um and it has real IPv6
+[00:58:14] support which by the way our friends at
+[00:58:16] Comcast have turned on in the Boston
+[00:58:18] area so you can have native dual stack
+[00:58:20] IPv6 these days um Ser word differs from
+[00:58:23] what you're used to because of routes
+[00:58:25] rather than Bridges um uh and you know
+[00:58:29] up to date um more or less um so goodies
+[00:58:34] like that um you know help out the open
+[00:58:38] work guys um in general I mean that
+[00:58:40] we're part of in that sense we're part
+[00:58:42] of the open Word Community just a a sort
+[00:58:44] of bleeding edge build on particular
+[00:58:46] Hardware what about this Firefox and E
+[00:58:49] router project to uh uh share open
+[00:58:53] connections cely um there are a number
+[00:58:57] of different such projects um they don't
+[00:59:00] communicate as well as they
+[00:59:02] should uh in fact the the most
+[00:59:05] interesting stuff I've seen is often
+[00:59:08] going on in Europe in the community
+[00:59:09] networking area there but I'm a little
+[00:59:12] bit aware of the eff project um for
+[00:59:15] various reasons I haven't been able to
+[00:59:16] pay much attention to it recently so um
+[00:59:21] yeah it's going to be around the edge
+[00:59:22] it's like one particular piece of
+[00:59:24] hardware one particular configuration is
+[00:59:25] not it's very
+[00:59:27] non-general so it'll be a nice marginal
+[00:59:30] thing but it's really just a marginal
+[00:59:32] thing well you know if we can get going
+[00:59:34] in open work you know that sort of
+[00:59:36] behavior just out of the box by the way
+[00:59:38] you you really won't need to fix buffer
+[00:59:40] blow properly to do that because you
+[00:59:41] don't want the other guy to screw your
+[00:59:43] performance and right now buffer blow's
+[00:59:45] got you badly if you haven't fixed that
+[00:59:48] then sharing your connection is not
+[00:59:49] something you often want you often don't
+[00:59:51] want
+[00:59:52] to um so so the um you know it's very
+[00:59:56] much the case that one could um you
+[01:00:00] these projects I mean this is again
+[01:00:02] support so there isn't a good the
+[01:00:05] closest thing to a community meeting for
+[01:00:09] um uh people working in this area is the
+[01:00:13] is the one that Sasha minrath um does
+[01:00:16] right um in uh in Europe which brings
+[01:00:19] the community networking people together
+[01:00:21] um but again that funding would help
+[01:00:23] there are more people people who can't
+[01:00:25] afford these are often poor starving
+[01:00:28] student types how do you how do we get
+[01:00:30] the right people to those meetings right
+[01:00:33] even though they're very inexpensive
+[01:00:34] I've been they have this meeting uh
+[01:00:36] called battl mesh every year where they
+[01:00:37] test out um uh mesh networks in Europe
+[01:00:41] and I've been to been to to one of those
+[01:00:45] and but how do you get the right people
+[01:00:46] there this this whole thing is not
+[01:00:48] properly supported there's no margin and
+[01:00:51] the vendors are clueless so they don't
+[01:00:53] understand they should be supporting
+[01:00:55] that that work the way it should
+[01:00:58] be right I this is back to the tragedy
+[01:01:00] of the commons the server guys have tons
+[01:01:02] of money relatively tends to be less
+[01:01:05] starvation
+[01:01:07] there any last
+[01:01:11] questions uh some companies for example
+[01:01:14] Microsoft have been pushing software as
+[01:01:16] a service do you think we're being
+[01:01:18] pushed into that we seem to have two
+[01:01:21] possible directions to go one open
+[01:01:23] source more more prevalent and the other
+[01:01:26] more vendors forcing users into software
+[01:01:29] as a service and maybe even Hardware as
+[01:01:31] a service where they're essentially
+[01:01:33] instead of buying something outright
+[01:01:35] paying a licensing feed to have it kept
+[01:01:38] working now to begin with we have to
+[01:01:40] have the network working in the first
+[01:01:41] place so we have to solve this problem
+[01:01:44] but that's the isp's
+[01:01:47] responsibity it's inside your
+[01:01:50] house arguably your responsibility if
+[01:01:53] bits coming out of the
+[01:01:55] spigot how do those bits get
+[01:01:58] maintained okay how do you get your bits
+[01:02:01] around the
+[01:02:03] house um so I don't I also don't think
+[01:02:08] the
+[01:02:08] centralization thing is a good idea once
+[01:02:11] you've properly secured devices like
+[01:02:14] this I'd much prefer to have my
+[01:02:16] email coming to my server than to Google
+[01:02:21] I send have my mail go to Google right
+[01:02:22] now because I know I'm incompetent
+[01:02:25] to keep to keep a mail
+[01:02:28] server secure and and up to date given
+[01:02:30] the situation with
+[01:02:33] Spam okay I'd like to have a box where
+[01:02:36] where that just worked and under my
+[01:02:39] control and if if the Upstream source
+[01:02:43] for those bits stopped doing a good job
+[01:02:45] I could switch it to somebody else who
+[01:02:47] is I'd be willing to pay a service for
+[01:02:50] that but you got to secure that device
+[01:02:53] we have to have a place to stand in the
+[01:02:54] home that's a logical place for for most
+[01:02:58] people security
+[01:02:59] certificates in a box like that but it's
+[01:03:02] got to be secured and they're not
+[01:03:06] today well thank you all for
+[01:03:09] coming thank
+[01:03:12] you we that last comment a lot of people
+[01:03:15] are moving more things to the cloud yeah
+[01:03:18] uh a lot of vulnerabilities involved
+[01:03:20] with that and the wisdom of that is
+[01:03:22] subject to a long discussion
+[01:03:25] I

@@ -1,0 +1,1379 @@
+[00:00:00] right I'm Dylan malvin I'm a
+[00:00:02] postdoctoral researcher at Microsoft
+[00:00:04] research where I work with Tarleton and
+[00:00:07] I also collaborate with Merrell thank
+[00:00:10] you so much for being here thanks for
+[00:00:11] spending your lunch time with me and
+[00:00:13] thanks to Carrie and Dan especially for
+[00:00:16] helping get this set up
+[00:00:18] um I'm gonna just start by taking you
+[00:00:21] back to 1999 when there was excitement
+[00:00:24] in the air and people were wondering
+[00:00:27] would airplanes fall out of the sky
+[00:00:29] would bank accounts suddenly dissolve
+[00:00:32] into dust with nuclear missiles
+[00:00:35] self-launch
+[00:00:37] all right wood Wired Magazine run an
+[00:00:39] image of the angel of History totally
+[00:00:41] naked on its December cover the answers
+[00:00:44] of course were no no no no and yes
+[00:00:48] uh so I'm going to spend about the next
+[00:00:50] 20 minutes or so talking about the Y2K
+[00:00:53] crisis and why I think it's a
+[00:00:55] potentially Rich episode in the history
+[00:00:57] of computing and technology and really
+[00:01:01] gives us possibly some important lessons
+[00:01:03] for thinking about the management of
+[00:01:06] Crisis and how we talk to people in the
+[00:01:09] face of vulnerability and especially in
+[00:01:11] the face of vulnerable vulnerability
+[00:01:14] that's a result of technological
+[00:01:16] precarity so I'm going to introduce you
+[00:01:19] to some of the ingredients that are a
+[00:01:21] part of this project but it is a work in
+[00:01:23] progress and I've tried to make this
+[00:01:26] slide presentation out of only objects
+[00:01:29] and text that were available prior to
+[00:01:32] um
+[00:01:33] February 1st 2000 I didn't use a slide
+[00:01:37] software from that period but you'll
+[00:01:40] you'll have to forgive that
+[00:01:42] so today I want to argue that the Y2K
+[00:01:45] bug is a crucial chapter in the history
+[00:01:48] of the public pedagogy surrounding
+[00:01:50] Computing right key moment in other
+[00:01:52] words of um how we kind of calibrated a
+[00:01:57] way for talking to the public about how
+[00:01:59] computers work it was also a moment for
+[00:02:02] teaching people how their lives were
+[00:02:05] already
+[00:02:06] captured in data right whether or not
+[00:02:08] they recognized it
+[00:02:10] and that things like infrastructure and
+[00:02:13] Computing could put them and their data
+[00:02:15] at risk and something as simple or
+[00:02:18] seemingly simple as the representation
+[00:02:21] of the calendar in computer code could
+[00:02:24] bring everything to a crashing halt
+[00:02:28] so the agenda for today is pretty brief
+[00:02:31] I'm going to start with some background
+[00:02:33] on Y2K for those of you who weren't
+[00:02:35] actively working on this remediation
+[00:02:38] um and for any teenagers who are here
+[00:02:40] who have no idea what happened uh and
+[00:02:43] here I'll detail some of the technical
+[00:02:45] Origins and it's it's a pretty broad
+[00:02:47] gloss given the short time period we
+[00:02:49] have and some of the concerns about
+[00:02:52] computer literacy in the 1990s this will
+[00:02:55] introduce my Y2K archive such as it is
+[00:02:58] and some of the documents and sources
+[00:03:01] that I'm drawing on to to try to compile
+[00:03:03] this history and finally in the last
+[00:03:06] section I'm going to talk briefly about
+[00:03:07] the labor of repair and how people were
+[00:03:10] talking about the labor of repair in
+[00:03:13] this period and kind of contesting
+[00:03:15] narratives about who was doing the work
+[00:03:17] and what that work looked like
+[00:03:19] so let's start with some background as
+[00:03:22] you remember the main problem that
+[00:03:24] people imagined was driving the Y2K
+[00:03:26] crisis was something called the century
+[00:03:28] digits problem or representing a date in
+[00:03:33] six digits instead of 10.
+[00:03:36] and this was an especially dangerous
+[00:03:38] problem because the two year the
+[00:03:41] two-digit year format was used in a
+[00:03:44] bunch of different computer languages
+[00:03:45] mostly from the 1950s and 1960s but one
+[00:03:48] language in particular called Cobalt and
+[00:03:50] we'll come to it later gets kind of
+[00:03:52] singled out as a problematic language
+[00:03:54] especially because it was used in
+[00:03:57] financial and banking systems and things
+[00:03:59] like waste treatment facilities so why
+[00:04:03] would you choose to code digits in six
+[00:04:06] years instead of been six six digits
+[00:04:09] instead of uh eight sorry I think I said
+[00:04:13] 10 earlier
+[00:04:15] um so anybody who remembers that period
+[00:04:17] why was that choice made yeah save space
+[00:04:20] to save space you know right so the main
+[00:04:23] reason was compression right there was
+[00:04:26] limited computer memory in the late
+[00:04:27] 1950s and early 1960s so you had to make
+[00:04:31] hard decisions about what kind of
+[00:04:32] information was crucial to include and
+[00:04:35] actually excluding one and nine is a
+[00:04:37] pretty easy choice because most of the
+[00:04:39] information that you were coding would
+[00:04:41] eventually be printed out right if you
+[00:04:43] had to use it you could print it out and
+[00:04:45] you could pre-print a template form that
+[00:04:47] had one and nine on it if you had a
+[00:04:49] checkbook in the 1990s you'll remember
+[00:04:51] it always said one nine so that you
+[00:04:54] wouldn't have to you know go through the
+[00:04:55] laborious Act of writing out those two
+[00:04:58] digits
+[00:05:00] um and there was some thinking right
+[00:05:02] maybe this these programs and these
+[00:05:04] applications will last 10 15 20 25 years
+[00:05:08] right really optimistically maybe
+[00:05:10] they'll last into the 1980s but very few
+[00:05:13] people though there were exceptions but
+[00:05:14] very few people were imagining that they
+[00:05:16] would last 40 years and if we think
+[00:05:19] today about the kinds of temporalities
+[00:05:21] that are imagined for the applications
+[00:05:22] that are being written
+[00:05:24] still hardly anyone is thinking in a
+[00:05:27] 40-year timeline if they're even
+[00:05:28] thinking one or five years ahead
+[00:05:32] so those two digits that you erased from
+[00:05:36] uh the year were pretty minor memory
+[00:05:38] savings if you were just creating an
+[00:05:40] Excel spreadsheet of your friends
+[00:05:42] birthdays let's say or not Excel but a
+[00:05:44] spreadsheet but if you were trying to
+[00:05:47] manage a database for a financial firm
+[00:05:49] or an Insurance Corporation or
+[00:05:51] government agency say the Social
+[00:05:53] Security Administration
+[00:05:55] those memory savings were significant
+[00:05:57] because of Hardware costs and the labor
+[00:06:00] costs of keeping up that Hardware so
+[00:06:03] what was Cobalt which I'm going to kind
+[00:06:05] of focus on as a problematic language
+[00:06:08] well Cobalt stands for the common
+[00:06:10] business oriented language and it
+[00:06:13] emerged from something that's referred
+[00:06:14] to as the software turmoil of the 1950s
+[00:06:18] and early 1960s and here I'm really
+[00:06:21] indebted to Paul sarutzi and Nathan
+[00:06:24] ensmanger's histories of this period
+[00:06:26] And this is from Nathan's book which is
+[00:06:30] the cover of the communications of the
+[00:06:32] ACM from 1961 and you'll notice oh it's
+[00:06:36] not that clear so I'll describe it to
+[00:06:38] you this is from January 1961. these are
+[00:06:40] all of the available languages and
+[00:06:42] they're you know dozens and dozens and
+[00:06:44] dozens of different programming
+[00:06:45] languages Spire spiraling upwards in the
+[00:06:48] shape of the Tower of Babel and this
+[00:06:51] represents the kind of question that
+[00:06:52] period is like what language should we
+[00:06:54] use and different Hardware manufacturers
+[00:06:56] had different proprietary languages and
+[00:06:58] different applications at different
+[00:06:59] languages and there wasn't a shared
+[00:07:02] lingua Franca for getting things done so
+[00:07:06] the government and the military staff
+[00:07:08] Captain this is all in the United States
+[00:07:10] to say we need a compromise right we
+[00:07:12] need a shared language that can work
+[00:07:13] across hardware and across applications
+[00:07:16] and Cobalt was one attempt to create
+[00:07:19] that compromise
+[00:07:22] um so there are a few criteria right it
+[00:07:24] had to be readable by novices
+[00:07:26] in particular a managerial class that
+[00:07:29] wouldn't necessarily be coding literate
+[00:07:31] had to be able to read or roughly grok
+[00:07:34] what it said and what the purpose of a
+[00:07:36] of a line of code would be it had to be
+[00:07:40] free of proprietary control and it had
+[00:07:43] to be used for a wide range of
+[00:07:45] applications all of that meant that it
+[00:07:47] was uh inelegant right it's super ugly
+[00:07:50] uh it was super easy to read which made
+[00:07:54] it like less specialized and less
+[00:07:55] interesting as a language to learn
+[00:07:58] but in 1960 the US government announced
+[00:08:01] that they would not purchase or lease
+[00:08:03] any equipment that couldn't run Cobalt
+[00:08:07] which basically sealed it as a lingua
+[00:08:10] Franca for the short period going
+[00:08:12] forward
+[00:08:13] so despite all of that a tiny number of
+[00:08:16] people learned Cobalt and this is going
+[00:08:18] to come up again as we talk about the
+[00:08:20] labor of repair if you can see this
+[00:08:23] picture this is the quote unquote 21st
+[00:08:26] 25th anniversary celebration uh for
+[00:08:30] Cobalt and you can see Grace Hopper in
+[00:08:32] the front there who had and what you
+[00:08:33] can't see is that that's a cake in the
+[00:08:35] shape of a tombstone uh that says Cobalt
+[00:08:38] on it because this is some of the people
+[00:08:41] responsible for creating it
+[00:08:43] um and and imagining that it's kind of
+[00:08:45] Heyday was fading and this was of course
+[00:08:47] still 15 years prior to the Y2K crisis
+[00:08:51] so we have a kind of contradiction here
+[00:08:54] by the late 1990s Cobalt was by most
+[00:08:58] measures the most widely used
+[00:09:00] programming language in existence that
+[00:09:02] was used in 80 percent of all business
+[00:09:05] operations
+[00:09:07] um but had some of the fewest
+[00:09:09] practitioners right and all this has
+[00:09:11] everything to do with cultural
+[00:09:13] distinction and the politics of prestige
+[00:09:16] right so it was Cobalt was day class A
+[00:09:19] it was designed to be readable Again by
+[00:09:21] managers right not necessarily people
+[00:09:24] doing the programming and it was
+[00:09:26] referred to as a trade school language
+[00:09:30] so those are sort of the first
+[00:09:31] ingredients of this project a problem
+[00:09:33] that was created out of compromise out
+[00:09:36] of a desire to save on hardware and to
+[00:09:39] make an easily readable language and
+[00:09:42] already you can kind of see the
+[00:09:43] foreshadowing considerations of literacy
+[00:09:46] and pedagogy and teaching new kinds of
+[00:09:49] people to read code
+[00:09:54] sometimes this slide just makes my
+[00:09:56] computer shut down so I might have to
+[00:09:58] get through it kind of quickly
+[00:10:01] but there are other aspects of of the of
+[00:10:04] the Y2K crisis and how it was sort of
+[00:10:06] constructed in the late 1990s that are
+[00:10:08] that are really important but first I
+[00:10:10] have to say there's still of course
+[00:10:12] mystery and widespread disagreement over
+[00:10:16] whether or not the Y2K crisis was real
+[00:10:20] or whether or not it was a false alarm
+[00:10:22] but I want to say that uh
+[00:10:25] whether or not Y2K was a true threat
+[00:10:28] right the it instigated massive programs
+[00:10:32] of um remediation and public education
+[00:10:35] in the lead-up to the year 2000
+[00:10:37] estimates of its uh of reaching
+[00:10:39] compliancy and the cost of reaching
+[00:10:41] compliancy range from 300 billion US
+[00:10:44] dollars to 600 billion US Dollars and
+[00:10:46] that's a pretty big range but no matter
+[00:10:49] what a massive amount of money in the
+[00:10:51] United States compliancy is estimated at
+[00:10:54] having cost uh a hundred billion dollars
+[00:10:56] right so in in terms of disasters would
+[00:11:00] be one of the most expensive disasters
+[00:11:02] of all time
+[00:11:03] uh and it didn't actually cause a
+[00:11:05] disaster so in other words the
+[00:11:08] legitimacy of this threat historically
+[00:11:10] speaking is pretty secondary to the
+[00:11:12] effects that the perceived threat had
+[00:11:15] since the changes that it engendered
+[00:11:17] were real and this I call a kind of
+[00:11:19] Crisis pragmatics right a crisis that is
+[00:11:23] felt to be real is real in its effects
+[00:11:25] to tweak the sort of Thomas theorem of
+[00:11:28] of sociology
+[00:11:30] and I think that the pragmatics of this
+[00:11:33] crisis were tied entirely to the
+[00:11:35] structure of the problem that there was
+[00:11:37] a precise moment at which you could you
+[00:11:41] could point to and say that's when
+[00:11:42] everything's going to go Haywire that's
+[00:11:44] when planes are going to fall out of the
+[00:11:46] sky and there were of course these there
+[00:11:48] were these lags and these kind of
+[00:11:50] strange temporalities
+[00:11:52] to the crisis you know credit cards some
+[00:11:54] credit cards stopped working in 1998 if
+[00:11:56] their expiration date was for the year
+[00:11:58] 2000 but there was a sort of imagined
+[00:12:01] moment that when we flipped from 1999 to
+[00:12:03] 2000 everything's just going to explode
+[00:12:06] right so unlike a hurricane or an
+[00:12:09] earthquake or even climate change which
+[00:12:12] have these hazy timelines for unfolding
+[00:12:15] you know something's going to happen but
+[00:12:17] you don't know exactly when I Y2K was
+[00:12:21] sort of perfect for creating fear and
+[00:12:24] compelling action
+[00:12:28] the next thing that's important is
+[00:12:30] um competing Notions of literacy and
+[00:12:33] numeracy so first was a concern with how
+[00:12:36] computers would read or count numbers
+[00:12:40] right and and fear about ambiguous
+[00:12:43] numbers that 99 would be com confused
+[00:12:47] with 19 or the year 2000 would be
+[00:12:49] confused with the year 1900 or some
+[00:12:52] other unknown date we might call this a
+[00:12:54] kind of machinic numeracy or innumeracy
+[00:12:59] um I'm more concerned with
+[00:13:02] um a second kind of literacy that we
+[00:13:04] more often think of when we say computer
+[00:13:06] literacy which is efforts to uh
+[00:13:10] uh trained non-specialists in
+[00:13:14] understanding how computers work
+[00:13:18] and specifically what the risks of
+[00:13:21] something like old code or a legacy
+[00:13:23] system would be or what a calendrical
+[00:13:26] error would mean for something like
+[00:13:29] um infrastructure
+[00:13:31] and there are enormous hurdles to
+[00:13:33] getting people to understand these risks
+[00:13:34] and to appreciate these risks and to
+[00:13:37] balance that out with just straight up
+[00:13:38] fear-mongering
+[00:13:40] right and it wasn't just like normal
+[00:13:42] folks who had to be confused convinced
+[00:13:45] in late 1998 the New York Times was
+[00:13:48] still writing about the Y2K crisis as a
+[00:13:51] problem for quote-unquote computer users
+[00:13:53] right unable to imagine that in 1998
+[00:13:56] everyone was a computer user whether or
+[00:13:58] not they sat at a keyboard or used a
+[00:14:00] gray box right if they weren't actively
+[00:14:03] using computers their lives were being
+[00:14:05] used by computers and structuring the
+[00:14:08] mundane and everyday aspects of their
+[00:14:11] existence
+[00:14:13] another aspect of getting over
+[00:14:15] um this sort of barrier to understanding
+[00:14:18] is a strong potent sense of betrayal
+[00:14:20] right Ellen Allman writing in wired in
+[00:14:24] April 1999 said
+[00:14:26] I think puts it really well she said
+[00:14:29] after being told for years that
+[00:14:31] technology is the path to a highly
+[00:14:33] evolved future it's come as something of
+[00:14:35] a shock to discover that a computer
+[00:14:38] system is not a shining City on a Hill
+[00:14:41] perfect and ever new but something more
+[00:14:44] akin to an old farmhouse built bit by
+[00:14:46] bit over decades by non-union Carpenters
+[00:14:51] so in other words the chances of
+[00:14:53] successful literacy campaigning depended
+[00:14:55] on teaching people that they were
+[00:14:57] already entwined in digital Technologies
+[00:15:00] and all that
+[00:15:01] then the technology always involves
+[00:15:04] constant upkeep and repair right that
+[00:15:07] it's not just a finished perfect product
+[00:15:09] that works or doesn't work that it
+[00:15:11] requires attention right and and people
+[00:15:14] to work on it and to keep it going and
+[00:15:16] it might not go the ways that you expect
+[00:15:19] and you can sort of see in this quote
+[00:15:21] some of the issues again of repair that
+[00:15:24] are going to come up and labor
+[00:15:27] all of this brings me to my archive so
+[00:15:30] as a historian the Y2K crisis offers a
+[00:15:34] really challenging problem how do you
+[00:15:37] write a history of something that may or
+[00:15:39] may not have happened
+[00:15:41] and one way to do that would be to go
+[00:15:45] out and interview people and weigh their
+[00:15:47] opinions against other people's opinions
+[00:15:48] and then compare the evidence and decide
+[00:15:51] whether or not it would have happened
+[00:15:52] that's not what I'm doing uh instead I'm
+[00:15:55] trying to focus on what did happen right
+[00:15:57] that pragmatic response to the fear that
+[00:15:59] something was going to happen
+[00:16:02] this creates another problem which is
+[00:16:04] because it didn't happen because Y2K
+[00:16:07] appears as a kind of
+[00:16:09] um punch line to the joke that was the
+[00:16:12] 1990s uh its archive is really spotty
+[00:16:16] and Y2K played out in newspapers and
+[00:16:19] network news but it also played out in
+[00:16:21] pamphlets and paraphernalia and
+[00:16:23] memorabilia if you were alive then
+[00:16:25] you'll remember just the amount of stuff
+[00:16:28] that was branded with Y2K and
+[00:16:32] uh it played out on the web on websites
+[00:16:35] that nobody pays the server costs for
+[00:16:37] now in 2017. so some of it's captured by
+[00:16:40] the internet archive but actually very
+[00:16:42] little of it is is captured
+[00:16:45] there is an archive however in the
+[00:16:48] classical sense and the Charles Babbage
+[00:16:50] Institute has some of the papers related
+[00:16:52] to a couple of organizations and I've
+[00:16:54] been there and I've looked at them and
+[00:16:55] I'm going to tell you a little bit more
+[00:16:57] about them the two organizations that
+[00:17:00] the CBI has are the center for Y2K and
+[00:17:04] Society does anybody know or remember
+[00:17:06] this organization
+[00:17:07] that would be you uh no so the center
+[00:17:11] for Y2K in society it was an independent
+[00:17:13] organization run by concerned citizens
+[00:17:16] who believed
+[00:17:18] um that the government was downplaying
+[00:17:19] the risks of Y2K so they were on the far
+[00:17:23] end of the Chicken Little spectrum and
+[00:17:26] I'll tell you a little bit more about
+[00:17:27] their collections in a minute but the
+[00:17:29] other organization that CBI has is the
+[00:17:31] papers of the international Y2K
+[00:17:33] cooperation Center which was paid for by
+[00:17:37] the World Bank and backed by the UN and
+[00:17:40] headed up by a guy named Bruce McConnell
+[00:17:42] who was a high-ranking bureaucrat within
+[00:17:44] the White House so looking at their two
+[00:17:47] approaches we can kind of see differing
+[00:17:49] Styles in teaching people and approach
+[00:17:53] approaching vulnerable populations in
+[00:17:55] the face of technological precarity
+[00:17:58] so the center for Y2K in society or CYS
+[00:18:02] is fascinating and one of the most
+[00:18:04] fascinating things is their record
+[00:18:05] keeping so as far as I can tell
+[00:18:08] everything the CYS ever read or looked
+[00:18:10] at is printed out
+[00:18:12] and it's printed out and kind of thrown
+[00:18:14] into a box in Minnesota and
+[00:18:18] it makes sense right if you're an
+[00:18:19] organization devoted to the idea that
+[00:18:23] Society is about to collapse and in
+[00:18:26] particular computer Technologies are
+[00:18:28] about to collapse you can't house your
+[00:18:30] records or your documentation online or
+[00:18:33] on computer hardware you have to print
+[00:18:35] it out
+[00:18:36] so there the document the documentary
+[00:18:39] evidence that they leave behind shows
+[00:18:41] this build up of the kind of
+[00:18:43] um ballast of paranoia right and
+[00:18:47] everything that they have is an email
+[00:18:49] forwards press clippings are all
+[00:18:51] organized and annotated to support the
+[00:18:53] theory that some sort of systemic
+[00:18:55] collapse is imminent here I have you
+[00:18:58] know there are just millions of examples
+[00:18:59] but here's one where somebody else's
+[00:19:02] um
+[00:19:03] has produced a pretty mild risk
+[00:19:05] assessment and they've printed it out
+[00:19:07] and the person has just written nothing
+[00:19:09] new here right unremarkable because it's
+[00:19:11] a mild risk assessment and other things
+[00:19:13] that are less mild right they'll have
+[00:19:15] more exclamatory annotations and then
+[00:19:18] that's been filed away
+[00:19:22] uh the most significant thing they did
+[00:19:24] though was circulate supposedly 20 000
+[00:19:27] copies of this thing which is called the
+[00:19:30] Y2K Community report card and they sent
+[00:19:34] it across the country trying to get
+[00:19:36] different organizations to respond and
+[00:19:39] speak to their preparedness for Y2K and
+[00:19:42] then they compiled the results and
+[00:19:44] here's an image of the questionnaire
+[00:19:45] which you can't really make out but
+[00:19:48] um
+[00:19:49] the results of their survey confirmed
+[00:19:51] their worst fears they it seemed to show
+[00:19:53] that things like waste treatment
+[00:19:54] facilities weren't ready that vulnerable
+[00:19:57] institutions like nursing homes were
+[00:19:59] totally woefully in uninformed and that
+[00:20:03] America was doomed
+[00:20:05] um their Holdings also really capture
+[00:20:08] the long tail of the Y2K crisis and as I
+[00:20:12] mentioned a minute ago the many
+[00:20:13] commercial opportunities that uh that it
+[00:20:16] seemed to present to kind of shill
+[00:20:18] survivalist materials so here's
+[00:20:21] um
+[00:20:22] instructions for ordering something
+[00:20:24] called the Y2K kitchen which was a set
+[00:20:27] of resources for cooking with canned and
+[00:20:29] dried foods this is a role-playing game
+[00:20:32] called countdown to Y2K
+[00:20:36] this is a book called Y2K for women how
+[00:20:39] to protect your home and family in the
+[00:20:41] coming crisis
+[00:20:42] and I think what and there's just many
+[00:20:44] many more that show that no opportunity
+[00:20:47] was lost to process you know stereotypes
+[00:20:51] and cultural affinities and cultural
+[00:20:53] norms through a kind of paranoid
+[00:20:55] template that Y2K provided
+[00:20:59] the second organization so if the center
+[00:21:01] for Y2K in society was devoted to this
+[00:21:04] kind of Grassroots fear-mongering then
+[00:21:06] the international Y2K cooperation Center
+[00:21:09] was devoted to sort of top-down fear
+[00:21:11] assuaging everything will be okay
+[00:21:14] and the materials from their archive
+[00:21:16] include professionally organized news
+[00:21:18] clippings like by day and subject a
+[00:21:21] script for a 1-800 number that anyone
+[00:21:23] could call and you know it would sort of
+[00:21:25] tell you everything was going to be okay
+[00:21:27] with an automated voice and if you could
+[00:21:28] make it through the phone tree you might
+[00:21:29] actually talk to a human who would tell
+[00:21:31] you everything was going to be okay
+[00:21:32] especially if you were responsible for
+[00:21:35] an institution that had a computer
+[00:21:37] system that you thought needed to be
+[00:21:39] remediated
+[00:21:41] um and it also includes details on
+[00:21:43] something that was called the Y2K expert
+[00:21:46] service core which was a quote
+[00:21:48] International network of Y2K experts who
+[00:21:51] have volunteered their time and
+[00:21:53] expertise to make available advice
+[00:21:55] intellectual capital and information
+[00:21:59] it also includes this very extensive
+[00:22:01] project called the Y2K Community
+[00:22:03] conversations campaign and these
+[00:22:07] conversations were promoted as
+[00:22:09] opportunities for Business Leaders and
+[00:22:12] institutions to share their Y2K
+[00:22:14] preparations with locals so come and
+[00:22:16] hear how your local business or your
+[00:22:19] state business is actually totally ready
+[00:22:21] for Y2K so this in this case it wasn't
+[00:22:23] about explaining
+[00:22:25] um how things are going to be okay or
+[00:22:26] helping people prepare for disaster but
+[00:22:29] just saying like don't worry we're ready
+[00:22:31] it was also an opportunity to kind of
+[00:22:33] demystify computer Technologies
+[00:22:37] so whereas some government agencies in
+[00:22:40] this period were focused on risk
+[00:22:42] assessment and Remediation the
+[00:22:44] cooperation Center was also trying its
+[00:22:47] hand at Community organizing with
+[00:22:49] developing a kind of pedagogy of
+[00:22:51] preparedness
+[00:22:53] and I think what the collections of both
+[00:22:55] of these organizations show was an
+[00:22:58] attempt in this period right in the late
+[00:23:00] 1990s to educate diverse populations in
+[00:23:03] the realities of technological precarity
+[00:23:06] right and the realities of what it means
+[00:23:10] to use old code and old systems and
+[00:23:12] Legacy systems
+[00:23:14] it was an attempt to kind of collapse
+[00:23:16] any division between Computing and
+[00:23:19] everyday life
+[00:23:20] by educating people about the many daily
+[00:23:22] activities uh that were dependent on
+[00:23:25] computers and they lodged their
+[00:23:27] explanations at multiple registers at
+[00:23:29] the local right what your Pharmacy is
+[00:23:33] doing what your uh school is doing and
+[00:23:36] the mundane right how your credit card
+[00:23:38] may or may not be at risk how your
+[00:23:41] Social Security checks may or may not be
+[00:23:43] at risks and then also the catastrophic
+[00:23:46] right so one organization devoted more
+[00:23:48] uh emphatically to the catastrophic and
+[00:23:51] the other one to downplaying those risks
+[00:23:54] the last part of the archive is press
+[00:23:57] coverage
+[00:23:58] and specifically I'm looking here at how
+[00:24:01] labor was talked about in this period
+[00:24:05] and who was being described as
+[00:24:07] responsible for repairing Y2K errors so
+[00:24:11] you'll remember from the beginning of
+[00:24:13] this talk that Cobalt's widespread
+[00:24:15] popularity was in concert total
+[00:24:17] contradiction to the number of people
+[00:24:19] who were fluent in in Cobalt and out of
+[00:24:23] this you get these stories
+[00:24:26] about old programmers being taken off of
+[00:24:29] golf courses and brought back to work on
+[00:24:31] programs that they had worked on their
+[00:24:32] entire careers that they hadn't been
+[00:24:34] paid very well for they no one had
+[00:24:37] appreciated them for and and being paid
+[00:24:39] lots and lots of money to come back and
+[00:24:41] fix them this is one story from the
+[00:24:43] Washington Post but there's an LA time
+[00:24:46] story that I think really captures these
+[00:24:49] Dynamics so here's an excerpt once
+[00:24:53] considered the dinosaurs of the
+[00:24:54] technological Revolution and mind the
+[00:24:56] metaphors a Cobalt programmers have
+[00:24:58] become a hot commodity precisely because
+[00:25:01] they stayed in the high-tech Jurassic
+[00:25:03] era
+[00:25:05] like priests who dutifully maintain
+[00:25:07] Dusty heaps of Scrolls they are being
+[00:25:10] recalled from seclusion to recover the
+[00:25:13] ancient knowledge of cobalt
+[00:25:16] okay so if Cobalt is the ancient
+[00:25:19] knowledge kept by priests who weren't
+[00:25:21] appreciated in their time then Y2K was
+[00:25:23] the sort of
+[00:25:24] um
+[00:25:26] secret code that lay dormant in the text
+[00:25:28] right
+[00:25:30] and this is funny except I think it's
+[00:25:32] entirely typical of the actual active
+[00:25:35] mystification that was happening about
+[00:25:37] technology at this time so on the one
+[00:25:39] hand you had very active efforts to
+[00:25:42] demystify technology to explain how
+[00:25:44] things are actually fit together and how
+[00:25:46] you're at risk and not at risk at the
+[00:25:48] same time very strange ways of talking
+[00:25:51] about the labor of fixing computer code
+[00:25:55] and we know this because the Y2K crisis
+[00:25:57] also led to one of the first massive
+[00:26:00] hiring of I.T Indian I.T workers and the
+[00:26:04] first wave of body shopping where
+[00:26:06] hundreds of thousands of workers in
+[00:26:09] Hyderabad and Sydney were employed to
+[00:26:12] fix Y2K errors and nowhere in the
+[00:26:15] coverage of the remediation effort is
+[00:26:17] this talked about
+[00:26:20] and of course this wave of body shopping
+[00:26:22] was a part of ongoing changes
+[00:26:26] as a result of globalization and shifts
+[00:26:29] in labor markets that Mary Gray can tell
+[00:26:31] you a whole lot more about
+[00:26:34] but instead you get these stories of
+[00:26:36] underappreciated coders who were ignored
+[00:26:39] in their time being called back for one
+[00:26:42] last job right
+[00:26:46] so this is where I'm at uh maybe the
+[00:26:48] threat of Y2K was real
+[00:26:50] right or maybe it was a 600 billion
+[00:26:53] dollar pragmatic response to an imagined
+[00:26:56] disaster but in either case it was one
+[00:26:59] of the world's largest attempts at basic
+[00:27:02] technological remediation
+[00:27:04] there are kind of two stories that can
+[00:27:06] be told here right one is what looks
+[00:27:09] like a punch line what Louis menand
+[00:27:11] recently called a Nutty cocktail of
+[00:27:13] Luddite millennialism and digital
+[00:27:16] overthink
+[00:27:17] right but from another perspective this
+[00:27:20] is a hugely significant episode in
+[00:27:23] crisis planning and management and a
+[00:27:25] population-wide attempt at basic
+[00:27:28] computer literacy campaigning
+[00:27:31] I think that the reality is probably
+[00:27:32] somewhere between these two
+[00:27:35] and that the kind of interest and focus
+[00:27:38] on technological vulnerability on
+[00:27:41] relationships of interdependency and
+[00:27:44] that Y2K surfaced in this period make it
+[00:27:47] a really rich site for talking about
+[00:27:50] literacy building and the acts of care
+[00:27:52] that we we undertake at particular
+[00:27:55] moment and just how we talk to people
+[00:27:57] about how computers work
+[00:27:59] so thank you for your time and I'm
+[00:28:02] really looking forward to our discussion
+[00:28:06] [Applause]
+[00:28:13] Merrell
+[00:28:17] um I'm wondering how America how U.S
+[00:28:20] Centric this was considering you are
+[00:28:24] from Canada
+[00:28:25] and if there if there was a sort of U.S
+[00:28:31] isolationist or some kind of response
+[00:28:34] that and and that position in the US in
+[00:28:36] a particular way uh in relation to the
+[00:28:39] rest of the world when it came to
+[00:28:41] managing this
+[00:28:43] um but also if there were like Canadian
+[00:28:45] if there are like Canadian archives of
+[00:28:47] of this too or yeah I guess two
+[00:28:51] characters
+[00:28:52] um I mean I can answer a little bit of
+[00:28:54] that from the Canadian perspective but
+[00:28:56] does anybody else want to comment on
+[00:28:57] what they perceive as the U.S Centric
+[00:29:00] nature of
+[00:29:02] um the crisis
+[00:29:04] I mean Sheriff you were you were talking
+[00:29:06] yesterday about the UK it was places a
+[00:29:10] bug that was one thing I wanted to ask
+[00:29:11] you yeah
+[00:29:14] the terminology so in the UK definitely
+[00:29:17] um
+[00:29:23] some of what you were saying would
+[00:29:24] absolutely map over I don't remember
+[00:29:28] the the survivalist Instinct I think the
+[00:29:31] North America perhaps has their own has
+[00:29:33] their Monopoly on
+[00:29:35] uh narrative but
+[00:29:38] um
+[00:29:40] it was it was very much about finance
+[00:29:42] that because of the city of London so
+[00:29:44] the city of London being seen as this
+[00:29:46] kind of great you know um we had the big
+[00:29:48] bang and the way in which the stock
+[00:29:49] exchange was kind of electrified and
+[00:29:51] stuff so it was very much around around
+[00:29:54] that so we didn't have the didn't have
+[00:29:57] as much of the community
+[00:29:59] um effort um from what I remember from
+[00:30:01] what I remember yeah
+[00:30:03] uh so it was there but it came out
+[00:30:05] differently
+[00:30:10] uh us is also different in that we do
+[00:30:14] the year instead of uh a month year and
+[00:30:18] so
+[00:30:20] how did that fit in uh was this code
+[00:30:23] used in other countries where that
+[00:30:25] format already had to be rearranged
+[00:30:28] that's a really good question
+[00:30:30] again because Meryl gave me off as a
+[00:30:33] Canadian of course that like ruins my
+[00:30:35] life
+[00:30:37] um especially because my wife's birthday
+[00:30:39] is March 10th and my daughter's birthday
+[00:30:41] is October 3rd and so it's like it's
+[00:30:43] impossible
+[00:30:46] um
+[00:30:48] infrastructure so we're different
+[00:30:51] countries have dealt with like would
+[00:30:52] would Cobalt or certain kinds of
+[00:30:54] instantiations
+[00:30:56] would this problem not have shown up in
+[00:30:58] countries where the financial
+[00:30:59] infrastructure was newer so a newer
+[00:31:02] language was set up with different
+[00:31:03] choices were made or there was more
+[00:31:04] storage to certain kinds of I don't know
+[00:31:08] so I can give you a few responses one is
+[00:31:10] that
+[00:31:11] um
+[00:31:12] there's always a center in periphery
+[00:31:14] problem which is so the way it played
+[00:31:16] out in Canada was as a an American
+[00:31:19] problem
+[00:31:20] that we also have to deal with right
+[00:31:23] because our computer software comes from
+[00:31:25] the United States our banking software
+[00:31:27] comes from the United States and we're
+[00:31:28] interdependent with the United States so
+[00:31:30] anything that affects you will affect us
+[00:31:34] right so there's no there's no idea that
+[00:31:38] we could somehow uh throw up a border
+[00:31:40] and be isolated from the Y2K crisis
+[00:31:44] in the United States and in some of the
+[00:31:46] ways that it was talked about there's
+[00:31:47] also a totally xenophobic discussion
+[00:31:50] which was an idea that okay we're going
+[00:31:53] to spend 100 billion dollars to reach
+[00:31:55] compliancy we're gonna we're gonna
+[00:31:57] introduce new regulations that are going
+[00:31:59] to limit our exposure to this problem
+[00:32:03] um what we can't predict is what all of
+[00:32:07] the countries who stole our software are
+[00:32:09] going to do right and I'm not going to
+[00:32:12] name the countries that they named but
+[00:32:13] you know they named very particular
+[00:32:15] countries that had stolen our software
+[00:32:17] and used it in their infrastructural
+[00:32:19] projects and we can't guarantee
+[00:32:22] compliancy in that case
+[00:32:25] the large some of the largest most
+[00:32:28] populated countries in the world right
+[00:32:33] yeah so
+[00:32:35] but again you know that's a question
+[00:32:36] about right Empire and its stretch and
+[00:32:40] the ways in which it you know uh gets
+[00:32:43] taken up either intentionally or
+[00:32:45] unintentionally there's another element
+[00:32:47] to this and were you the one who worked
+[00:32:49] with insurance companies it was you so
+[00:32:53] we can we talk a lot about that which is
+[00:32:55] you know the efforts to limit liability
+[00:32:57] within the United States and exposure to
+[00:32:59] lawsuits if there were disasters so
+[00:33:02] that's a big part of this question too
+[00:33:04] and other countries just don't have that
+[00:33:07] structure of of litigation so in Canada
+[00:33:09] there was no there was no fear that
+[00:33:13] um lawsuits as a result of Y2K would
+[00:33:15] bring down the economy as there was in
+[00:33:17] the United States that that fear
+[00:33:21] um because uh you can't sue people that
+[00:33:23] easily in Canada in part because uh you
+[00:33:25] have to pay their legal fees if you if
+[00:33:27] you um if you try to
+[00:33:30] all right
+[00:33:31] so there are yeah all sorts of different
+[00:33:33] ways that they play out but
+[00:33:35] um certainly it's a U.S Focus problem
+[00:33:37] because that's where the hardware and
+[00:33:39] the software came from
+[00:33:41] yeah I think it's I definitely agree
+[00:33:44] that the the litigation
+[00:33:48] risk of of avoidance was something that
+[00:33:53] certainly drove a lot of the headlines
+[00:33:55] yeah
+[00:33:56] um I think it's also interesting to map
+[00:34:00] this crisis with the growth of uh
+[00:34:06] piece the the beginning of you know PCS
+[00:34:10] being sold because For the First Time
+[00:34:13] you know I I can't remember when IBM
+[00:34:15] sold its first PC but it what 95 oh much
+[00:34:19] earlier earlier okay what was it was
+[00:34:22] that much
+[00:34:23] in any event the Boom in PC sales taking
+[00:34:27] off meant that there was a lot more mind
+[00:34:30] share penetration in the general
+[00:34:33] population and which goes to that that
+[00:34:37] wires
+[00:34:38] quote sense of betrayal yeah you know
+[00:34:41] that that could be experienced by a lot
+[00:34:44] more people
+[00:34:46] um as opposed to it's just being an
+[00:34:48] expensive business problem right you
+[00:34:50] know and for the most part PCS weren't
+[00:34:53] at risk no but but if you had one you'd
+[00:34:58] probably worry about unknown notes I'm
+[00:35:00] sure and sure enough if you bought a
+[00:35:02] computer in 97 through 99 you most
+[00:35:05] likely bought it with a sticker on it
+[00:35:07] that said Y2K compliant
+[00:35:10] yeah
+[00:35:12] um so Hugh Robin is a Canadian out
+[00:35:14] myself as somebody who once wrote a
+[00:35:16] Cobalt program
+[00:35:18] the high priest
+[00:35:21] that was a disgusting Dirty Work you
+[00:35:25] know of dealing with you know money and
+[00:35:27] you know by the you know late 1990s if
+[00:35:30] you're doing stuff on the web I mean
+[00:35:31] there were no web services written call
+[00:35:33] home right um but
+[00:35:36] I mean this is a really rich talk and
+[00:35:39] there's so many threads to pursue
+[00:35:41] um I want to ask about a different kind
+[00:35:45] of Labor
+[00:35:47] um because one you know one of my
+[00:35:50] Recollections of this is sort of call it
+[00:35:54] the performative aspects of the Y2K
+[00:35:56] crisis
+[00:35:57] um at the time I worked for
+[00:36:00] Cubs University and it was very
+[00:36:02] important to the university you know
+[00:36:04] that we hire
+[00:36:06] um
+[00:36:07] a famous consultant it wasn't phrased
+[00:36:10] like that but you know that was the
+[00:36:12] signal that we were taking it seriously
+[00:36:15] that we had you know a guy who had
+[00:36:17] written columns about
+[00:36:19] Y2K coming and talked to us every week
+[00:36:22] um and it was you know it functionally
+[00:36:25] useless
+[00:36:27] um because there was you know it made
+[00:36:29] more stories
+[00:36:30] um great
+[00:36:32] you know call that prospective disaster
+[00:36:34] porn
+[00:36:35] um you know how how would Society
+[00:36:37] collapse
+[00:36:38] Etc
+[00:36:40] um complete waste of time but there was
+[00:36:42] just so much of that
+[00:36:44] um you know which speaks to sort of the
+[00:36:46] crisis mongering
+[00:36:48] Etc I mean have you followed those
+[00:36:49] threads
+[00:36:51] um and sort of the rise of this sort of
+[00:36:55] you know
+[00:36:56] high-priced consultant
+[00:36:59] fear-mongering
+[00:37:01] yeah I haven't followed that through I
+[00:37:03] don't know how I would follow that
+[00:37:05] threat except by so in the in the
+[00:37:07] largest version of this project
+[00:37:10] um I would do something that I think is
+[00:37:12] partly happening in this room which is
+[00:37:14] ask people where they were for Y2K
+[00:37:17] um and how they prepared for it or if
+[00:37:19] they were responsible for an
+[00:37:20] organization or a part of an
+[00:37:22] organization you know what was imagined
+[00:37:23] talking to somebody who was a professor
+[00:37:25] in 1999 and happened to be the chair of
+[00:37:27] a department and his university asked
+[00:37:31] him to you know sit in the sort of
+[00:37:34] server room with all the other
+[00:37:36] departmental chairs on New Year's Eve
+[00:37:38] 1999 to just like stare at the computers
+[00:37:40] and he said no
+[00:37:43] um but you know so those sorts of I
+[00:37:44] think oral history would be the only
+[00:37:46] real way of recovering that aspect of it
+[00:37:51] um and it would be really difficult to
+[00:37:53] parse you know how much of that was
+[00:37:54] theatrical and how much of that was
+[00:37:56] necessary and what we really actually
+[00:37:58] think of as unnecessary right that it
+[00:38:01] might actually be important to bring in
+[00:38:03] high-priced consultants if it assuages
+[00:38:06] fears and allows people to just do their
+[00:38:09] job that might actually be a kind of
+[00:38:10] minor cost
+[00:38:12] or it's just a total boondoggle right
+[00:38:14] it's really difficult to draw those
+[00:38:17] lines but it's an interesting historical
+[00:38:19] question yeah are you going to go
+[00:38:21] through all this again in 2038 well I
+[00:38:23] think uh it seems it depends on if the
+[00:38:26] world exists in 2038 but it seems it
+[00:38:28] seems like do you want to explain to
+[00:38:30] everyone why um
+[00:38:31] there is a a counter for I think it's
+[00:38:35] number of seconds there's a number of
+[00:38:36] microsec I can't remember microseconds
+[00:38:39] uh in Unix the traditional 32-bit Unix
+[00:38:42] which is sort of you know gradually
+[00:38:44] being replaced by 64 but 30-bit Unix uh
+[00:38:48] the last date that can be represented in
+[00:38:51] that format is somewhere in 2038 unless
+[00:38:54] you change it to an unsigned in which
+[00:38:55] case you get you get it longer but then
+[00:38:57] you cut off earlier dates yeah so some
+[00:38:59] version of this problem might exist
+[00:39:01] again in 2038 to the extent that people
+[00:39:04] are still using 32-bit Unix systems
+[00:39:06] especially embedded systems that might
+[00:39:08] not be replaced for 30 or 40 years yeah
+[00:39:11] okay so it's entirely possible and it
+[00:39:14] will be a question if it plays out the
+[00:39:16] same or if it plays out differently
+[00:39:18] because we went through this in 1999 and
+[00:39:20] it seemed like a false alarm right and
+[00:39:22] what the social costs are to apparent
+[00:39:24] false alarms
+[00:39:27] maybe the moment's going to be around
+[00:39:29] then so yeah
+[00:39:32] so um Bruce lewinstein that Cornell had
+[00:39:35] an NSF Grant to document the Y2K public
+[00:39:39] perceptions about the Y2K problem and
+[00:39:42] I'm curious as if you worked with it and
+[00:39:44] uh if it the idea of trying to document
+[00:39:48] as you go along is successful or not
+[00:39:51] right
+[00:39:52] um and I've looked a little bit at his
+[00:39:55] his research and it's actually in the
+[00:39:57] archive as well I think possibly both
+[00:39:59] organizations noted it
+[00:40:03] um and what for me has been important
+[00:40:05] about that research so far is the kind
+[00:40:07] of Arc of fear that seemed to Peak
+[00:40:09] around
+[00:40:11] um ape now I can't remember if it's
+[00:40:12] April 1998 or April 1999 and then by
+[00:40:15] December uh 1999
+[00:40:18] um fear had really sort of dropped off
+[00:40:20] in cynicism had peaked right which is
+[00:40:24] again funny except that um when we're
+[00:40:26] talking about the management of Crisis
+[00:40:28] really important to balance those things
+[00:40:30] out that you can't if you have too much
+[00:40:31] cynicism you can't prompt Collective
+[00:40:34] action and if you have too much fear uh
+[00:40:37] you can't prompt you know responsible
+[00:40:39] action
+[00:40:40] one of the end of
+[00:40:43] The Innovation and as they figured out a
+[00:40:45] way to capture television references
+[00:40:48] from the major broadcast networks
+[00:40:51] um relating to Y2K including Jay Leno
+[00:40:55] and you know any anything else and you'd
+[00:40:57] be able to track that that way um I
+[00:41:01] think really strongly yeah
+[00:41:07] yeah still in this is such a rich
+[00:41:09] project and I appreciate the archival
+[00:41:11] dimension of it in particular but I'm
+[00:41:13] wondering a little bit about
+[00:41:14] what the postmortem of all of this was I
+[00:41:17] mean I'm thinking in particular about a
+[00:41:19] lot of SDS scholarship that's looked at
+[00:41:21] the breakdown of large Technical Systems
+[00:41:24] the Challenger disaster right and one
+[00:41:25] that comes most immediately to mind the
+[00:41:28] way that these large bureaucracies sort
+[00:41:30] of knit the world back together after
+[00:41:32] this happens and this seems like it
+[00:41:34] would be an interesting comparison with
+[00:41:36] some of those I think also of the hook
+[00:41:38] and mouth outbreaks of the UK that we're
+[00:41:40] going to bio lab breakdown protocol
+[00:41:43] breakdowns
+[00:41:44] um so I'm just curious about what you
+[00:41:46] know did the James glykes and public
+[00:41:48] intellectuals and journalists
+[00:41:50] um undertake any post-hoc analysis or
+[00:41:54] did we just kind of move on so it comes
+[00:41:56] up a little bit in SCS scholarship
+[00:41:58] there's this
+[00:41:59] um pretty important piece about repair
+[00:42:01] by Thrift and Graham that talks about
+[00:42:04] Y2K but mostly in the valence of
+[00:42:08] perceived disasters that didn't happen
+[00:42:10] right and so it gets totally Rewritten
+[00:42:13] as this punch line as the Louis Manon
+[00:42:16] line as a kind of joke
+[00:42:19] um and uh as like a you know person
+[00:42:23] committed to self sabotage I often seek
+[00:42:25] out these jokes and then try to make
+[00:42:27] them serious and see like oh what really
+[00:42:30] happened there and
+[00:42:31] um you know if we did a different kind
+[00:42:34] of post-mortem on that that wasn't just
+[00:42:36] like oh okay we we blew it right we were
+[00:42:40] too cons we didn't understand computers
+[00:42:42] well enough to reasonably assess what
+[00:42:45] kind of danger they presented
+[00:42:47] that being said I'm working on a kind of
+[00:42:49] long-term project with a colleague who
+[00:42:51] does histories of the AIDS movement in
+[00:42:54] the 1990s and its relationship to
+[00:42:55] technology and Community internet
+[00:42:57] provision and
+[00:42:59] um it's so the project compared to this
+[00:43:02] one which we just kind of call bugs
+[00:43:05] looks at uh these two things as kind of
+[00:43:08] mirror images right a crisis in which
+[00:43:10] everyone was paying attention but
+[00:43:12] nothing happened and a crisis in which
+[00:43:14] uh a lot of people died and no one was
+[00:43:17] paying attention and when we started as
+[00:43:19] when we started on the project we were
+[00:43:21] thinking of them as these sort of mirror
+[00:43:23] images and they would offer an
+[00:43:24] opportunity to kind of provoke and
+[00:43:27] understand the others from a different
+[00:43:30] angle but we what we also started to
+[00:43:32] find was just tons of references in the
+[00:43:34] Y2K literature about HIV and AIDS right
+[00:43:37] about the spread of harm through
+[00:43:40] networks through um through vulnerable
+[00:43:44] systems and vulnerable people and even
+[00:43:45] in Manuel castell's work
+[00:43:48] um and the network Society he often
+[00:43:49] returns to HIV and AIDS as a way of
+[00:43:52] mapping networks and especially networks
+[00:43:55] of sort of
+[00:43:56] compounded harm
+[00:43:58] and there's an online resource for
+[00:44:02] people living with HIV and AIDS called
+[00:44:04] the body some people might be aware of
+[00:44:08] and on the body you get columns in 97 98
+[00:44:12] 99 about the other Millennial crisis
+[00:44:16] right and
+[00:44:18] um
+[00:44:19] Tony kushner's angels in America
+[00:44:21] subtitled Millennium approaches right
+[00:44:23] and so you actually have these kind of
+[00:44:25] twin crises of the the 90s that play out
+[00:44:30] in in different ways better than
+[00:44:32] refracted in each other and so part of
+[00:44:35] looking at this project is looking at
+[00:44:37] the understanding of Crisis not just now
+[00:44:40] and doing a postmortem but in the 1990s
+[00:44:42] and the ways that these sort of
+[00:44:44] relationships were being thought through
+[00:44:48] yeah yeah
+[00:44:49] other than the 2038
+[00:44:52] problem uh have you looked into
+[00:44:55] possibilities for other such disasters
+[00:44:58] looming like internet addresses
+[00:45:01] etc etc which I think are pretty well
+[00:45:03] under under control but I don't know
+[00:45:05] there might be a number of other things
+[00:45:07] the next 50 years it could happen
+[00:45:11] um I I mean I haven't actively sought to
+[00:45:14] compare this to the internet addresses
+[00:45:17] problem or to the 2038 problem
+[00:45:20] um because there's no shortage of
+[00:45:22] impending disasters and it's a kind of
+[00:45:25] question of I mean this goes back to the
+[00:45:28] thing I just said right there are no
+[00:45:30] there is no shortage of disasters and
+[00:45:32] crises and People In Harm's Way and
+[00:45:36] people who need help and who are
+[00:45:37] vulnerable and what's interesting about
+[00:45:40] this crisis and this is why I pointed to
+[00:45:41] is I think it had pretty special
+[00:45:43] structure that it was a switch from
+[00:45:45] nines to zeros you know and all of the
+[00:45:47] sorts of
+[00:45:49] um Millennial uh fear building that come
+[00:45:51] with this turnover of any century and I
+[00:45:54] know it's not the century but whatever
+[00:45:56] um
+[00:45:58] that it's a question of like which
+[00:46:00] crisis actually emerges as the one that
+[00:46:02] needs attention paid to it right so it
+[00:46:05] would be it would be remiss of me to
+[00:46:07] look forward and say well that crisis is
+[00:46:09] going to play out this way or that way
+[00:46:10] but we have to look backwards sometimes
+[00:46:13] and see like oh it's strange that that
+[00:46:15] one is the one that got the attention
+[00:46:18] I think the point about the sheep of the
+[00:46:21] crisis is really interesting this idea
+[00:46:22] of like it hasn't happened yet but we
+[00:46:24] all kind of know the date right which is
+[00:46:26] a very unusual one it was making me
+[00:46:28] think about this as an exact comparison
+[00:46:30] but I was thinking about if part of your
+[00:46:32] story is how how do people have to learn
+[00:46:34] that infrastructure that they count on
+[00:46:36] as vulnerable right in ways that they
+[00:46:39] have otherwise not wanted to think about
+[00:46:40] I mean you know if melanoma is right
+[00:46:42] like encouraged not to think about this
+[00:46:44] thing it's perfect it's seamless it
+[00:46:45] works great and then suddenly to have to
+[00:46:47] discover and then have to act upon I was
+[00:46:50] thinking about things like
+[00:46:52] um you know when there were major
+[00:46:53] commitments to retrofit Bridges because
+[00:46:55] the science you know sometimes it's
+[00:46:56] because you know the Tacoma Narrows
+[00:46:58] collapses or there's some striking
+[00:47:00] disaster sometimes it's moments where
+[00:47:02] the science develops an argument that
+[00:47:05] says what we thought was was sturdy
+[00:47:07] could be vulnerable in certain
+[00:47:08] circumstances and when you said that
+[00:47:10] this was one of the most expensive kind
+[00:47:12] of remediations I was wondering if
+[00:47:14] if we counted those things like if
+[00:47:17] they're sort of like Bridge retrofit as
+[00:47:19] a like widespread that's a network that
+[00:47:22] you know has certain kinds of
+[00:47:24] invisible vulnerabilities yeah
+[00:47:27] um I don't know what the numerical I
+[00:47:29] don't know how you amass that number but
+[00:47:30] it's another one where you sort of like
+[00:47:31] you want to count on the idea that roads
+[00:47:33] stay where roads are put and bridges
+[00:47:35] carry cars and those things you know if
+[00:47:38] the Wind Blows the wrong way they don't
+[00:47:39] twist themselves there was one bridge in
+[00:47:41] Minnesota that triggered a lot of this
+[00:47:43] right right so there's one shape of like
+[00:47:45] there's an incident that then makes
+[00:47:46] other things well not just that bridge
+[00:47:48] but every bridge but there's also things
+[00:47:50] like um uh discoveries about
+[00:47:54] infrastructure that then have to raise
+[00:47:56] questions
+[00:47:57] yeah so I brought this up
+[00:48:00] rudely uh this is a you know Google
+[00:48:04] engrams aren't perfect things but this
+[00:48:06] is a Google engram of the term
+[00:48:07] infrastructure crisis
+[00:48:10] um and infrastructure crisis is really
+[00:48:12] interesting to me because it seems to be
+[00:48:14] one of the only problems that we
+[00:48:17] currently have uh that has sort of trans
+[00:48:20] partisan agreement that it's a that
+[00:48:23] infrastructure is a virtuous thing that
+[00:48:25] needs in need of repair and treating you
+[00:48:28] know and Trump's acceptance speech on
+[00:48:31] the uh the night of the election you
+[00:48:33] know he talked about the infrastructure
+[00:48:34] crisis so you can see from this that it
+[00:48:37] kind of uh took off in the mid to late
+[00:48:40] 1980s that's where the term really start
+[00:48:43] being used and um uh I have another one
+[00:48:47] that goes to 2007 but it really Peaks
+[00:48:49] around the year 2000 and it's extremely
+[00:48:52] it is the highest popularity in the
+[00:48:54] 1990s which is interesting to remember
+[00:48:56] because it seems to also be very current
+[00:48:57] presently
+[00:49:00] so one answer to that question is there
+[00:49:02] are these moments in which certain
+[00:49:04] things seem to be in crisis and now
+[00:49:06] we're talking about infrastructure being
+[00:49:08] in a 30-year period of Crisis and how
+[00:49:12] that actually works as a kind of engine
+[00:49:14] for for promoting whether it's like
+[00:49:17] scientific investigation or social
+[00:49:20] scientific investigation
+[00:49:22] and the kinds of questions that we have
+[00:49:24] to ask like okay so are we concerned
+[00:49:26] about bridges or roads or computer
+[00:49:28] infrastructure or Internet Security or
+[00:49:32] nuclear safety or um but the
+[00:49:35] infrastructure crisis just becomes a a
+[00:49:37] kind of pen for holding those things in
+[00:49:40] right we can kind of lump those things
+[00:49:41] in there that being said
+[00:49:44] in the late 1990s uh
+[00:49:47] few people were talking about computers
+[00:49:49] as infrastructure right even within
+[00:49:52] Science and Technology studies Paul
+[00:49:54] Edwards writes like computers as
+[00:49:55] infrastructure in 1997 I think right so
+[00:49:59] convincing the very field that I think
+[00:50:02] would most Embrace that concept right
+[00:50:05] contemporaneously with this crisis
+[00:50:09] um
+[00:50:10] and I'm not sure that if you ask
+[00:50:12] politicians when they think of an
+[00:50:13] infrastructure crisis if they're
+[00:50:15] thinking about old computer codes and
+[00:50:17] the risks that it poses
+[00:50:20] um I don't know if that partly answers
+[00:50:23] your question
+[00:50:25] yeah
+[00:50:27] two provocations I'd like you to respond
+[00:50:29] to I mean if you view this as a sort of
+[00:50:34] calendaring software
+[00:50:37] um provoke crisis
+[00:50:39] then you'd think one of the responses is
+[00:50:42] okay you know time is important we need
+[00:50:44] to get this right in our systems yet you
+[00:50:48] know it seems like every leap year every
+[00:50:50] Leap second
+[00:50:53] um
+[00:50:53] Etc you know there's a news story about
+[00:50:55] some major system that could not COPE in
+[00:50:59] um you know did something wrong
+[00:51:02] the other way to look at this crisis is
+[00:51:04] that it wasn't
+[00:51:06] um
+[00:51:07] you know the the white UK was the
+[00:51:11] trigger but this was really about
+[00:51:15] um misunderstanding the longevity of
+[00:51:18] software
+[00:51:20] um you know I mean those of us who wrote
+[00:51:22] some of these programs I mean knew we
+[00:51:24] were doing a terrible job and simply
+[00:51:26] assumed that they would be thrown away
+[00:51:27] right
+[00:51:28] um right you know and that would have
+[00:51:30] been the responsible thing to do and oh
+[00:51:31] my God they're running 20 years later of
+[00:51:33] course they're not white UK compliant
+[00:51:35] you know we're you know we were lucky
+[00:51:36] that they were 1990 compliant and there
+[00:51:39] was there were actually 1990 problems as
+[00:51:41] well
+[00:51:43] um
+[00:51:44] um but then you see something
+[00:51:46] like the Amazon S3 problem
+[00:51:51] last week or familiar yeah
+[00:51:55] um
+[00:51:55] um you know a typo you know in some
+[00:51:58] command line takes out systems
+[00:52:00] but it turns out they've never rebooted
+[00:52:02] this stuff
+[00:52:03] um you know and that's sort of like one
+[00:52:05] of the maintenance lessons out of Y2K
+[00:52:07] yes of course you're going to have to
+[00:52:09] there will come a point where you will
+[00:52:11] have to restart these things and you
+[00:52:13] really want to know how that stuff works
+[00:52:15] so we have you know we haven't actually
+[00:52:16] learned the longevity reasons
+[00:52:20] you know longevity lessons either yeah
+[00:52:25] I guess if I turn that into a question
+[00:52:26] it's like are we doomed
+[00:52:28] no I mean I think your provocation
+[00:52:31] captures I think with kind of the
+[00:52:34] tension of this this
+[00:52:36] of this history and and the way that the
+[00:52:38] problem is described is it an easy
+[00:52:41] problem to fix like okay we just need to
+[00:52:43] do a better job of X in this case
+[00:52:44] representing the calendar right and yeah
+[00:52:47] those problems come up all the time
+[00:52:48] there was that thing last year that
+[00:52:50] 4chan somebody on 4chan made an image
+[00:52:52] that said like oh set your iPhone to the
+[00:52:55] date January 1st 1970 and reboot it and
+[00:52:58] we've introduced a cool thing that will
+[00:53:00] make it seem like apple in the 1970s
+[00:53:02] right it'll be a blast from the past of
+[00:53:03] course it bricked your phone because if
+[00:53:05] you're west of GMT that's not that date
+[00:53:08] doesn't exist in you next time right and
+[00:53:11] so that like the Y2K crisis exposes the
+[00:53:15] fact that info that calendars are
+[00:53:17] infrastructural and they're actually
+[00:53:19] pretty easy to tweak and the ways that
+[00:53:21] they're integrated with other forms of
+[00:53:22] technology are easy to tweak
+[00:53:25] so yes that is certainly an aspect of it
+[00:53:28] and you have to be careful about the
+[00:53:30] representation of time and Technology
+[00:53:33] but also it was a trigger right it was a
+[00:53:37] a way of saying yes we need to be more
+[00:53:39] responsible about the longevity of our
+[00:53:41] software and if anything we're less
+[00:53:43] responsible about the longevity of our
+[00:53:44] software as we were in 1999. so
+[00:53:48] if there was one lesson that came out of
+[00:53:50] it it was that uh uh very few people
+[00:53:54] will be held responsible
+[00:53:56] or accountable
+[00:53:58] for techno for decisions and design
+[00:54:00] choices that were made at one point and
+[00:54:03] how they played out in the future
+[00:54:05] um and if there's another lesson is that
+[00:54:07] like you have to be really careful with
+[00:54:09] the Public's Trust
+[00:54:10] right so either you're saying I'm sorry
+[00:54:14] we made a decision in 1960 and now it's
+[00:54:17] having this impact
+[00:54:19] right I'm sorry but here's what you need
+[00:54:21] to do to prepare yourself
+[00:54:23] but then you have the the after effect
+[00:54:25] which is I'm sorry we told you that that
+[00:54:27] was maybe going to be a disaster it
+[00:54:29] probably was but we fixed it right
+[00:54:32] either that's an opportunity to build
+[00:54:34] trust and say like okay we're telling
+[00:54:36] you we're telling you that we screwed up
+[00:54:38] or it's an opportunity to lose trust but
+[00:54:42] it was also at that point imagined as a
+[00:54:44] chance to make computer Engineers more
+[00:54:47] responsible right and so I I just
+[00:54:50] there's another article from the 1990s
+[00:54:52] about well this is an opportunity to
+[00:54:54] start certifying all computer Engineers
+[00:54:56] right this is this is finally the call
+[00:54:58] like we need to have a Professional
+[00:54:59] Organization nobody can be a software
+[00:55:01] engineer unless they're certified
+[00:55:03] software engineer and there's this quote
+[00:55:05] 1998 John R speed who was the executive
+[00:55:08] director of the Texas Board of
+[00:55:09] Professional Engineers right he says
+[00:55:12] uh many have called themselves software
+[00:55:15] Engineers wrong they're the local music
+[00:55:17] dropout
+[00:55:19] who chooses to use that title right and
+[00:55:22] so this is actually a kind of incredible
+[00:55:24] moment in which this division of kinds
+[00:55:27] of engineer was still sort of animating
+[00:55:29] the ways people viewed this problem it's
+[00:55:31] like this is a result of people who
+[00:55:33] aren't Engineers who made engineering
+[00:55:35] choices and now we're having to pay for
+[00:55:37] the consequences
+[00:55:40] if Engineers built buildings the way
+[00:55:45] programmers wrote programs the first
+[00:55:48] woodpecker would end civilization yeah I
+[00:55:51] remember that that's a great name
+[00:55:54] yeah thanks everyone
+[00:56:00] what was the 1990 problem I didn't I
+[00:56:02] never I remember hearing about that I I
+[00:56:04] mean it was a widespread but the same
+[00:56:06] thing

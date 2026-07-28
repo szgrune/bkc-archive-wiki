@@ -1,0 +1,1262 @@
+[00:00:08] Hello, everyone.
+[00:00:10] I'm very pleased to welcome Ben Adida, the executive director
+[00:00:12] of VotingWorks, today.
+[00:00:14] We're very lucky to have Ben here today.
+[00:00:16] Ben is the executive director of VotingWorks, as I said.
+[00:00:19] Ben has been working in the Bay Area.
+[00:00:21] He was previously the VP of engineering at Clever,
+[00:00:26] the director of engineering at Square,
+[00:00:28] and the director of engineering at Mozilla.
+[00:00:30] These Silicon Valley experiences bring a strong background
+[00:00:34] in product to his work.
+[00:00:37] But in addition to that, he's worked
+[00:00:39] for many years in the context of elections, privacy,
+[00:00:42] and free software.
+[00:00:44] Ben received his PhD from MIT's Cryptography and Information
+[00:00:47] Security Group, and he is a board member
+[00:00:49] at Creative Commons.
+[00:00:51] And we are looking forward to him cutting through some
+[00:00:54] of the noise on elections.
+[00:00:55] And from now, from here, I'm going to turn it over to Ben.
+[00:01:00] Well, thanks so much for having me, Berkman folks.
+[00:01:05] I'm happy to be back.
+[00:01:07] I was a fellow many years ago, and--
+[00:01:13] or an associate, rather, I think, many years ago.
+[00:01:16] All right.
+[00:01:17] So thank you so much for having me, everyone.
+[00:01:21] I am excited to be talking about building better voting systems.
+[00:01:26] And as Liz mentioned, I'm the executive director
+[00:01:30] of VotingWorks.
+[00:01:31] And I am thankful to Berkman for giving me the chance
+[00:01:36] to put on a nice jacket today, which is not something
+[00:01:39] I've been doing recently.
+[00:01:41] So here we go.
+[00:01:49] So today's talk, I want to tell you
+[00:01:51] a little bit about me and VotingWorks.
+[00:01:53] And I want to immediately tell you
+[00:01:56] that this talk is going to be a little bit
+[00:01:57] US-centric because that's where most of my work is happening
+[00:02:02] and because elections in the US tend
+[00:02:05] to have some complexities that are pretty peculiar to the US.
+[00:02:09] But of course, the principles of what I'm talking about
+[00:02:12] apply to any democracy.
+[00:02:14] I want to talk about what's so hard about voting.
+[00:02:16] And spoiler alert, it's the secret ballot.
+[00:02:18] And I'll tell you why.
+[00:02:20] I want to talk about how we need computers to vote,
+[00:02:22] but we shouldn't trust them, and how
+[00:02:24] that leads us to paper ballots and risk-limiting audits.
+[00:02:27] And if you don't know what risk-limiting audits are, don't
+[00:02:30] worry, I will gladly explain.
+[00:02:33] I want to touch on vote by mail--
+[00:02:34] how it increases turnout, how it is cheaper,
+[00:02:37] how there is not much fraud with it,
+[00:02:40] and how it is surprisingly nonpartisan.
+[00:02:42] I also want to mention some concerns that exist with it.
+[00:02:45] No system is perfect.
+[00:02:46] No election is perfect.
+[00:02:48] But on the whole, my message is going to be that vote by mail
+[00:02:52] is a pretty good solution, especially going into 2020
+[00:02:57] with the COVID-19 pandemic.
+[00:03:00] And I want to talk about how, in 2020, we're
+[00:03:02] going to need a lot more vote by mail so that we can reduce
+[00:03:05] the in-person voting and make it safer
+[00:03:09] so that the election can run well.
+[00:03:10] I'm going to try to move fairly quickly through all of this
+[00:03:13] because I want to make sure I get to any questions
+[00:03:15] that you have.
+[00:03:16] And I want to try to just keep it moving.
+[00:03:22] So if we were up on the stage, if we were in person,
+[00:03:26] I would tell you, this slide tells you
+[00:03:28] everything you need to know, you can now go home.
+[00:03:32] You already are home, so why don't we
+[00:03:33] spend a little time digging in?
+[00:03:35] A little bit about me and VotingWorks.
+[00:03:36] Liz already mentioned a number of things about me,
+[00:03:39] so I'll fly through this.
+[00:03:40] My work on voting started in 1998
+[00:03:42] with a system called EVOX, which helped
+[00:03:44] to run the MIT undergrad elections when I
+[00:03:46] was an undergrad there myself.
+[00:03:49] In 2006, I got my PhD at MIT on voting systems.
+[00:03:52] And then while I was at Harvard's CRC, just next door,
+[00:03:57] and while I was an associate at Berkman,
+[00:03:59] I created a system called Helios that
+[00:04:01] was an end-to-end verifiable voting system on the web.
+[00:04:04] And in the last 12 years, it's run more than 25,000 elections,
+[00:04:08] including one election to elect the president
+[00:04:14] of a Belgian university back in 2009,
+[00:04:19] and a whole bunch of other elections.
+[00:04:21] Like all online voting systems--
+[00:04:23] I want to caveat this right there--
+[00:04:24] it is great for small elections and private elections.
+[00:04:28] Online voting systems, even as verifiable as Helios is,
+[00:04:32] are not good for public elections.
+[00:04:34] And I'll talk a little bit about that today.
+[00:04:38] After 2008, I took a break from voting
+[00:04:40] and spent a bunch of time before that and after that building
+[00:04:43] software at scale, leading product engineering teams.
+[00:04:46] And then around summer 2018, I took a look back at voting.
+[00:04:49] I think a lot of folks were starting
+[00:04:51] to think about how they could apply their skills to bridging
+[00:04:55] what is probably the biggest political divide
+[00:04:58] of my generation in this country.
+[00:05:01] And that led me to take another look at the space of voting
+[00:05:04] equipment, realizing that a lot of the work that
+[00:05:07] had been done in the early 2000s simply
+[00:05:10] had not made its way to industry,
+[00:05:12] had not made its way to actual vendors of voting equipment,
+[00:05:15] and decided to try something completely new,
+[00:05:17] and co-founded VotingWorks in late 2018.
+[00:05:21] VotingWorks, we are a nonpartisan nonprofit.
+[00:05:24] We're a 501(c)(3) here in the US.
+[00:05:27] Our mission is to make US elections
+[00:05:29] secure for all voters.
+[00:05:32] Now, security, if you just have an election that's
+[00:05:34] super secure and nothing else, it's
+[00:05:36] not an interesting election because you
+[00:05:39] don't have the participation that you need.
+[00:05:41] For a US election, for any election
+[00:05:43] to be representative of the people,
+[00:05:47] it needs to be simple to run.
+[00:05:49] It needs to be affordable.
+[00:05:50] This is a key point that folks often forget.
+[00:05:53] You have election officials across the country that
+[00:05:57] can afford to buy equipment maybe every 10 years, sometimes
+[00:06:00] every 15 years.
+[00:06:02] So you're using equipment that is fundamentally flawed and out
+[00:06:06] of date, which is a problem.
+[00:06:09] And it needs to be accessible to voters, including
+[00:06:12] voters with disabilities.
+[00:06:14] So at VotingWorks, we do two things.
+[00:06:16] One, we make voting machines, and two,
+[00:06:18] we help run risk-limiting audits.
+[00:06:21] On the voting machine front, the way that we do what we do
+[00:06:25] is we use off-the-shelf hardware.
+[00:06:27] We leverage all of the amazing security and reliability work
+[00:06:32] that the multibillion-dollar technology
+[00:06:34] companies put into their hardware, and we leverage that.
+[00:06:40] And we use open source software.
+[00:06:42] We also produce open source software.
+[00:06:43] Everything we write, everything we build is open source.
+[00:06:49] All that's allowed us to design, build, and deploy our voting
+[00:06:52] machines in under a year.
+[00:06:54] And we were able to, in that time, bring paper ballots back
+[00:06:58] to one county in Mississippi, when most of Mississippi
+[00:07:02] hasn't seen paper ballots in more than 15 years.
+[00:07:07] Because we leverage a lot of existing technology,
+[00:07:10] we're able to build machines that
+[00:07:12] are a third the price of other systems.
+[00:07:14] That's not a third off, it's 2/3 off.
+[00:07:17] It's 1/3 the price of other systems, which completely
+[00:07:20] changes the game, especially in places like Mississippi,
+[00:07:24] which, frankly, don't have big budgets.
+[00:07:26] But one of the things that's less well understood
+[00:07:30] is that county clerks across the country don't have big budgets.
+[00:07:35] Counties don't have budgets to buy fancy equipment.
+[00:07:39] So again, making equipment that's more affordable
+[00:07:41] is critical.
+[00:07:43] And then we help run these risk-limiting audits,
+[00:07:44] in particular with this piece of software that's also open
+[00:07:47] source called Arlo.
+[00:07:49] You can find it on GitHub at our GitHub repo at VotingWorks.
+[00:07:54] Our software is going to power five
+[00:07:56] to eight statewide audits in 2020.
+[00:07:58] And I'll tell you what those are.
+[00:07:59] The word audit is boring, let's be clear,
+[00:08:03] but the impact of risk-limiting audits is incredibly important.
+[00:08:07] And I'll dig into that.
+[00:08:09] So that's more about me and more about VotingWorks.
+[00:08:12] Let's talk about-- oh, let's give you
+[00:08:14] a little bit of an actual visual here.
+[00:08:18] This is the first voting machine that we deployed in the field,
+[00:08:21] in Mississippi.
+[00:08:23] There were 10 of them running in one precinct, and it worked OK.
+[00:08:28] It got the job done, but we learned a lot from it,
+[00:08:30] in particular that it was too heavy and not sufficiently
+[00:08:33] portable.
+[00:08:34] So this is what the system looks like now.
+[00:08:36] Much more portable, easy to pack up.
+[00:08:40] That middle piece there in the briefcase
+[00:08:44] is 15 pounds, 1-5, when you fold it up and carry it.
+[00:08:50] We built this to be easy to set up and easy to transport
+[00:08:54] and easy to use.
+[00:08:55] And of course, always with a paper ballot
+[00:08:56] you see the printer at the end there.
+[00:08:59] This is what it looks like when we deployed it in a pilot
+[00:09:02] election in Wisconsin, and this is
+[00:09:04] what it looks like in the smallest precinct
+[00:09:07] I've ever seen, in Mississippi.
+[00:09:10] This is a shed that's only used for voting.
+[00:09:13] And if you were there in person, you
+[00:09:15] would be shocked at how they managed
+[00:09:16] to fit that many people in it, because this is obviously
+[00:09:21] a wide-angle shot.
+[00:09:23] And those are our machines that were
+[00:09:24] used to run the election in that county
+[00:09:27] in the presidential primary that happened
+[00:09:29] at the beginning of March.
+[00:09:31] This is a quick snapshot of Arlo, the software that we
+[00:09:34] make available for auditing.
+[00:09:36] And again, I'll talk about that in a little bit.
+[00:09:39] OK, so let's dig in, because the world obviously
+[00:09:42] is broader than VotingWorks.
+[00:09:43] So what's so hard about voting?
+[00:09:47] I want to start with something that I
+[00:09:48] think most folks who talk about voting
+[00:09:50] don't spend enough time on.
+[00:09:52] And that is that I think voting is magical.
+[00:09:55] If you think about the kinds of things we do as humans,
+[00:10:00] this notion that we come together
+[00:10:03] and we agree that we are going to select
+[00:10:06] our leaders by the will of the people
+[00:10:09] is a fairly unique human activity.
+[00:10:13] And there's something really deeply inspiring
+[00:10:16] about that to me.
+[00:10:17] And it's what drives me in this space,
+[00:10:18] and I think drives most people who are in this space.
+[00:10:21] But because we don't talk about it enough,
+[00:10:25] I think sometimes too much cynicism gets into the space.
+[00:10:28] We start getting worried about how certain equipment might
+[00:10:32] be flawed, or we start getting worried
+[00:10:34] about how certain election officials might not
+[00:10:36] be doing as good a job as we want them to.
+[00:10:40] My sense from working with election officials
+[00:10:43] across the country is that they have one of the hardest jobs
+[00:10:47] imaginable, and the amount of effort
+[00:10:50] that goes in to the foundational layer
+[00:10:53] of our democracy, election administration,
+[00:10:56] is really inspiring.
+[00:10:57] And so before we really get into any of the details,
+[00:11:01] the biggest thing I want to leave you with
+[00:11:03] is, if you haven't helped out in running an election,
+[00:11:07] if you haven't actually participated in that process,
+[00:11:12] try.
+[00:11:12] Do it.
+[00:11:14] It's really inspiring, and there's just so much
+[00:11:16] to learn from watching election officials do their thing.
+[00:11:21] Voting, to me, is really magical.
+[00:11:22] And I think the person who puts it best is Gloria Steinem.
+[00:11:25] This is a quote I love to use.
+[00:11:27] I use it in almost every talk I give now.
+[00:11:29] "The voting booth is the only place
+[00:11:31] that a pauper equals a billionaire
+[00:11:33] and any woman equals a man."
+[00:11:36] Now, that's true.
+[00:11:38] That magic and this equality--
+[00:11:41] we all know, by the way, that this is aspirational.
+[00:11:45] It's not always perfect, right?
+[00:11:47] But that's what we want.
+[00:11:48] We want the voting booth to be the only place
+[00:11:50] that a pauper equals a billionaire and any woman
+[00:11:53] equals a man.
+[00:11:54] But that is only true if we have a secret ballot.
+[00:11:59] And I want to lean into that to really explain what that means.
+[00:12:04] What does a secret ballot mean?
+[00:12:06] It means your vote should be secret from the government,
+[00:12:09] of course, from your employer, from your neighbor,
+[00:12:11] from your spouse, even if you would actually like
+[00:12:15] them to know how you voted.
+[00:12:17] What does that mean?
+[00:12:18] Of course, you can tell your spouse how you voted.
+[00:12:20] Hey, honey, I voted for so-and-so.
+[00:12:23] But the point of the secret ballot
+[00:12:25] is that you should be able to lie about that in a way that's
+[00:12:29] believable, right?
+[00:12:30] So a specific use case for voting
+[00:12:33] is you should be able to be a closet Republican in a deeply
+[00:12:41] Democratic family or employer or neighborhood,
+[00:12:46] and you should be able to vote the way you want
+[00:12:49] to vote without feeling pressure to vote
+[00:12:53] another way, while being able to claim to all these folks
+[00:12:58] that you voted differently, because if that's not the case,
+[00:13:05] then you might be able to sell your vote.
+[00:13:08] And when I say sell your vote, you
+[00:13:10] might be able to do it willingly,
+[00:13:13] or somebody might coerce you into selling your vote,
+[00:13:15] might pay you money or threaten you to vote one way or another.
+[00:13:19] And if you can prove to them how you voted--
+[00:13:22] in other words, if you don't have a truly secret ballot--
+[00:13:25] then selling your vote becomes possible.
+[00:13:27] And if selling your vote is possible,
+[00:13:30] we don't really have a democracy.
+[00:13:33] This is such a critical point about voting,
+[00:13:36] and the critical thing that makes voting so hard,
+[00:13:38] that it's really important to spend some time with it
+[00:13:41] and understand what it means.
+[00:13:42] It's when you walk into that voting booth,
+[00:13:44] it's just you and the ballot, and nobody else.
+[00:13:49] And you should be able to vote your conscience in that space,
+[00:13:52] without answering to anyone else.
+[00:13:55] Even if you want to sell your vote, you shouldn't be able to.
+[00:14:02] You have to understand that this is a vastly more
+[00:14:04] stringent requirement than health records security, which
+[00:14:08] is often how you hear arguments out there saying,
+[00:14:11] oh, well, I can get my medical record online,
+[00:14:14] why can't I vote online?
+[00:14:16] Well, think about it.
+[00:14:17] Your doctor knows your medical info.
+[00:14:19] That's kind of the point, right, of digital health records,
+[00:14:22] is that your doctors should know your data.
+[00:14:25] Again, completely different from voting, right?
+[00:14:28] In voting, no one should know how you voted.
+[00:14:31] In health care, the security requirements
+[00:14:33] are to secure the channel between you and the doctor.
+[00:14:36] Much easier.
+[00:14:38] Even though it's actually already pretty hard,
+[00:14:39] it's much easier than voting.
+[00:14:41] It's also vastly more stringent than banking security.
+[00:14:44] Again, your bank knows all your books.
+[00:14:46] That's the point, right?
+[00:14:49] So whenever you hear comparisons of voting security
+[00:14:52] to these other fields, you have to remember
+[00:14:55] a secret ballot is a dramatically different and way
+[00:14:58] more stringent requirement than anything else.
+[00:15:01] So we need your individual vote to be secret from everyone.
+[00:15:08] That's a level of secrecy that no other system has.
+[00:15:12] But we also need the election result
+[00:15:14] to be trusted by all citizens, which
+[00:15:17] is a level of public auditability
+[00:15:19] that is also stricter than any other system.
+[00:15:23] And it's that tension between the individual ballot secrecy
+[00:15:27] and the public auditability of the system that makes it so
+[00:15:30] hard to run an election well.
+[00:15:33] It's a pretty unique set of requirements.
+[00:15:35] And that's why it's hard, and that's
+[00:15:36] why we get into trouble sometimes trying
+[00:15:40] to implement these systems.
+[00:15:42] OK, hopefully I've convinced you that that's what
+[00:15:44] makes voting so difficult. Whenever you talk to somebody
+[00:15:47] after this, if the only thing you remember is to say,
+[00:15:49] well, voting is hard because of the secret ballot,
+[00:15:52] I've done my job.
+[00:15:53] That's a pretty good outcome.
+[00:15:55] So let's remember that one.
+[00:15:58] Now, I'm going to keep cruising.
+[00:16:03] Liz, if there are any questions now, I'm happy to take them,
+[00:16:05] but I'm also happy to keep cruising.
+[00:16:10] Let's cruise, yeah.
+[00:16:11] Let's cruise.
+[00:16:12] Great.
+[00:16:13] So the next point I want to make is
+[00:16:15] we need computers to vote, at least in the US,
+[00:16:18] but we shouldn't trust them with our votes.
+[00:16:20] What do I mean by that?
+[00:16:22] Well, the point I made previously
+[00:16:23] is that the secret ballot is critical,
+[00:16:26] and the next point I want to make
+[00:16:27] is that, to actually implement the secret ballot,
+[00:16:29] we need a paper ballot.
+[00:16:31] And the reason for that is that, if there
+[00:16:33] is anything sitting between you, the voter, and your ballot,
+[00:16:37] anything at all--
+[00:16:39] a machine, an electronic machine or a mechanical machine
+[00:16:45] that mediates between you and the representation
+[00:16:47] of your ballot--
+[00:16:49] could be a lever machine, where you
+[00:16:50] don't see the recording of your ballot,
+[00:16:52] it could be a phone where you're tapping your vote
+[00:16:55] and it gets recorded on a server-- anything
+[00:16:57] that mediates between you and the recording of your vote
+[00:17:02] is something you have to trust because it is telling you
+[00:17:06] how-- it is confirming to you how you voted.
+[00:17:09] And so by trusting it, we either break some amount
+[00:17:14] of auditability-- we don't really
+[00:17:15] know if it did its job correctly--
+[00:17:17] or we put the secret ballot at risk because you have somebody
+[00:17:21] else or another party that is looking at how you voted
+[00:17:25] and potentially taking that into account.
+[00:17:27] So the only medium we know that most voters can verify
+[00:17:31] privately in a booth is paper.
+[00:17:36] That is the ultimate reason why we need a paper ballot.
+[00:17:39] For the secret ballot, for the confidence that your vote was
+[00:17:42] recorded correctly, without any mediation
+[00:17:45] of that verification act.
+[00:17:49] OK, however, how are we going to count that paper?
+[00:17:52] And in the US-- this may not be true in other countries,
+[00:17:55] but in the US, the notion that you're
+[00:17:57] going to hand count that paper, it's not going to work.
+[00:18:00] It's not going to work at scale at all.
+[00:18:01] Because you might think in your mind,
+[00:18:03] OK, well, ballots kind of look like the thing on the left
+[00:18:06] here, right?
+[00:18:07] This ballot that has one question, five options,
+[00:18:09] you pick one, you make piles at the end, you count the piles,
+[00:18:13] and off you go.
+[00:18:14] And by the way, there's a number of countries,
+[00:18:15] a number of democracies where that's how elections work.
+[00:18:18] And that's great.
+[00:18:19] But in the US, ballots look like the thing on the right.
+[00:18:23] That's a San Francisco ballot.
+[00:18:24] Four sheets of paper double-sided, so eight pages,
+[00:18:28] and 20, 30, sometimes 40 contests.
+[00:18:31] Apparently, there was an election in Texas
+[00:18:33] that had 90 contests in 2016.
+[00:18:36] There's a lot of contests in US elections because
+[00:18:40] of the federal structure.
+[00:18:41] With the federal positions, the state positions,
+[00:18:43] the local positions, the county positions,
+[00:18:45] and the propositions, there's a whole bunch of contests
+[00:18:48] that you have to account for.
+[00:18:50] And that is the critical reason why counting by hand
+[00:18:54] is not going to work, because one,
+[00:18:56] you're going to have a lot of errors
+[00:18:57] if you count by hand with such a complex ballot, and two,
+[00:19:01] it's going to take forever.
+[00:19:03] So we need computers here because what
+[00:19:06] we want is a scanner, a high-speed scanner that's
+[00:19:09] going to be fast, it's going to have fewer errors than hand
+[00:19:12] counting, and it's going to get you election results really
+[00:19:14] fast.
+[00:19:16] We need that computer to lower the error rate
+[00:19:18] and to get those results really fast.
+[00:19:20] However, we shouldn't trust it, because the scanner is just
+[00:19:25] another computer.
+[00:19:26] And the computer could have code errors in it,
+[00:19:31] or it could be malicious.
+[00:19:33] And we need the computer for speed and the ability
+[00:19:37] to not make human errors, but we can't fully trust it.
+[00:19:41] And the way we do that is we spot-check it with statistics.
+[00:19:45] Basically, after the scanner has done its job,
+[00:19:48] we randomly sample some of the ballots.
+[00:19:50] We check that those ballots were scanned properly.
+[00:19:52] And you plug that into some formulas, you get a risk limit,
+[00:19:57] and off you go.
+[00:19:58] That's called a risk-limiting audit.
+[00:20:00] And the critical thing you should
+[00:20:01] know about risk-limiting audits is
+[00:20:03] they were defined in 2007 by Philip Stark and Mark Lindeman.
+[00:20:08] They, until this year, have only been used at scale in Colorado.
+[00:20:13] Colorado was at the forefront of this.
+[00:20:15] They've been doing it for a few years.
+[00:20:17] But up until this year, in US elections,
+[00:20:22] we take a whole bunch of paper ballots,
+[00:20:24] because that part it seems we've adopted pretty widely now.
+[00:20:27] There are paper ballots everywhere.
+[00:20:29] We then put them through scanners,
+[00:20:30] and we simply trust what the scanner tells us.
+[00:20:34] That's something that we need to address,
+[00:20:36] and it's one of the things that we're working on at VotingWorks
+[00:20:38] and other folks are working on, too,
+[00:20:40] to help run risk-limiting audits in as many states as possible
+[00:20:44] so that we can use the scanners for speed
+[00:20:47] but we don't have to trust them.
+[00:20:48] So once again, we need the computers,
+[00:20:51] but we shouldn't trust them.
+[00:20:52] Oh, I'm sorry about that.
+[00:20:53] Let's see if I can silence--
+[00:20:55] I thought I had silenced everything, but.
+[00:20:58] Ah, good.
+[00:21:00] The risks of doing this from home.
+[00:21:03] That's what happens.
+[00:21:07] All right.
+[00:21:08] So if you're really in the know on this topic,
+[00:21:12] you know that there is a question around, OK,
+[00:21:14] if you have a paper ballot, should it be marked by hand
+[00:21:18] or should it be marked by a machine?
+[00:21:19] And as you saw the pictures of our machines at VotingWorks,
+[00:21:23] you know that we have what's called a ballot marking device,
+[00:21:25] which is a machine that you use a nice touchscreen
+[00:21:28] interface with, and at the end, it prints a ballot
+[00:21:31] that you verify and cast.
+[00:21:32] There is a significant debate between those two approaches,
+[00:21:36] hand marking and machine marking.
+[00:21:38] It's not what I want to focus on right now because we have a lot
+[00:21:40] to talk about, but if we have time at the end,
+[00:21:43] I'm happy to say more.
+[00:21:44] I'm just trying to manage our time
+[00:21:45] and get through a lot of material here.
+[00:21:47] But just know that that is a topic of significant debate
+[00:21:50] right now, and it's not an easy debate.
+[00:21:54] There's lots of issues on both sides.
+[00:21:58] OK, let's talk about vote by mail.
+[00:22:01] Vote by mail, we now know, with plenty of research,
+[00:22:04] increases turnout.
+[00:22:05] Probably not as much as you might think,
+[00:22:07] but it does increase turnout.
+[00:22:09] It's cheaper, there isn't that much fraud, and probably
+[00:22:13] most surprising is that it is quite nonpartisan,
+[00:22:17] at least in the US.
+[00:22:19] This is some late-breaking research that is linked
+[00:22:25] to an op-ed in the New York Times,
+[00:22:26] but it's a research paper that's linked here at the bottom--
+[00:22:29] and I will gladly share my slides afterwards with all
+[00:22:31] the links--
+[00:22:33] that talks about the increase in turnout across all age
+[00:22:36] groups in Colorado when Colorado implemented all vote by mail.
+[00:22:41] So this is not the only study that
+[00:22:42] points that out, it's just the most
+[00:22:44] recent one, a significant increase in turnout from vote
+[00:22:47] by mail.
+[00:22:48] An increase in turnout is a really good thing
+[00:22:50] for a more representative democracy.
+[00:22:53] Not that much fraud.
+[00:22:55] You hear a lot of press talk about the fraud of vote
+[00:22:57] by mail, et cetera.
+[00:22:58] There has not been that much fraud documented.
+[00:23:01] The fraud that we would be talking about here
+[00:23:03] would be voter fraud, where people
+[00:23:05] are impersonating others.
+[00:23:06] These things do happen occasionally,
+[00:23:09] but they happen incredibly rarely,
+[00:23:11] including with vote by mail.
+[00:23:12] Now of course, when they happen, they get a lot of press.
+[00:23:15] There was such an event in North Carolina pretty recently,
+[00:23:19] and of course we should prosecute those
+[00:23:21] and go after the people who try to defraud an election.
+[00:23:25] But the impact is generally very low,
+[00:23:28] and it is not-- it is something we should pursue,
+[00:23:31] but it's not something that really
+[00:23:33] should be a significant concern in vote by mail.
+[00:23:38] The part that's less well-understood
+[00:23:40] is vote by mail is nonpartisan.
+[00:23:43] Let's be very clear-- if you listen to the press,
+[00:23:45] if you listen to the politicians,
+[00:23:49] there is this impression that vote by mail
+[00:23:51] simply benefits Democrats.
+[00:23:54] It's not true.
+[00:23:55] There is now a number of studies,
+[00:23:57] including this more recent one from April of this year--
+[00:24:01] also the link, happy to share--
+[00:24:03] that shows that, although there is an increase in turnout,
+[00:24:06] there is no discernible effect on either the party vote
+[00:24:08] share or the partisan share of the electorate.
+[00:24:10] And that's really important, because if we're
+[00:24:12] going to change how we vote in any way,
+[00:24:15] especially in light of COVID-19, we
+[00:24:17] need to be mindful that the changes we make
+[00:24:20] are not partisan, that they increase the representation,
+[00:24:23] but that they are not unduly benefiting
+[00:24:27] one party over the other, because otherwise they
+[00:24:29] won't succeed, right?
+[00:24:32] The good news is, again, there are politicians
+[00:24:34] talking about this either way.
+[00:24:35] This is late breaking reporting from this morning.
+[00:24:38] So you know my slides are fresh because I literally
+[00:24:40] got this in an hour ago.
+[00:24:43] A wonderful article in ProPublica by Jessica Guzman
+[00:24:45] and Mike Spies, or Spies, I don't know
+[00:24:49] how to pronounce his last name.
+[00:24:51] I apologize, Mike.
+[00:24:54] Even know there are politicians talking about this,
+[00:24:56] across the board, the secretaries of state,
+[00:24:58] be they Republican or Democrats, are expanding vote by mail
+[00:25:03] this year.
+[00:25:04] The folks on the ground realize this is not a--
+[00:25:09] this is not an issue that is partisan.
+[00:25:12] It's an issue of voter safety, which
+[00:25:15] leads us right into the last point I want to make,
+[00:25:18] which is that in 2020, we simply need more
+[00:25:21] vote by mail, because if we increase vote by mail,
+[00:25:25] we can reduce the amount of in-person voting
+[00:25:27] and make it safer, and ultimately, we
+[00:25:29] have to do that this year.
+[00:25:31] We have to run an election.
+[00:25:33] That's just how it goes.
+[00:25:34] We have to do it.
+[00:25:35] We've done elections in wartime before.
+[00:25:37] We've done elections during the flu pandemic of 1918.
+[00:25:40] We need to run this election, but we need to do so safely.
+[00:25:44] And so whatever quibbles we may have with vote by mail,
+[00:25:47] and I certainly don't think it's a perfect system.
+[00:25:50] It's clearly the thing we need to expand in 2020,
+[00:25:53] so we still need to maintain some in-person options.
+[00:25:57] Whoops.
+[00:25:58] Sorry for skipping that too quickly.
+[00:25:59] We need to expand some--
+[00:26:01] we need to maintain in-person options.
+[00:26:04] But first, we start with an increase in vote by mail.
+[00:26:08] Some data.
+[00:26:09] This is the absentee voting.
+[00:26:10] So some states call vote by mail absentee voting, right?
+[00:26:14] Vote by mail has this connotation that it becomes
+[00:26:16] more of a default. There is also all vote by mail,
+[00:26:19] there is excuse absentee, no excuse absentee,
+[00:26:21] all of these terms refer to some version of vote by mail.
+[00:26:25] If you look specifically at April 2016 in Wisconsin,
+[00:26:29] you had 10% absentee voting rate.
+[00:26:32] And you look at April 2020, this latest election,
+[00:26:34] which was right at the very beginning of the COVID crisis
+[00:26:38] as far as the public knew in the US.
+[00:26:40] The election was April 7th, with 71% absentee voting.
+[00:26:45] That's crazy, and that's with very little time for people
+[00:26:49] to adjust.
+[00:26:50] There was, as you may know, a lot of controversy
+[00:26:51] around late breaking changes in the rules,
+[00:26:55] but that's an increase we should expect
+[00:26:57] to see in a whole bunch of states that don't have vote
+[00:27:00] by mail in the US, and other than the Western states,
+[00:27:04] most states in the US do not have more than 15% or 20% vote
+[00:27:09] by mail.
+[00:27:11] Some states have a lot less, so there is a significant increase
+[00:27:13] in vote by mail coming.
+[00:27:14] It's coming whether we like it or not.
+[00:27:16] The voters are going to demand it.
+[00:27:18] The courts will almost certainly overwhelmingly allow COVID-19
+[00:27:22] as an excuse for states that require an excuse.
+[00:27:25] It's happening, and it's the right thing
+[00:27:27] to keep election safe this year.
+[00:27:30] So vote by mail is necessary, but also, it's not sufficient.
+[00:27:34] We have to keep in mind that voters make
+[00:27:35] mistakes on ballots, right?
+[00:27:37] They might fill out the wrong bubble,
+[00:27:38] or sometimes, ballots are not received.
+[00:27:40] It happens.
+[00:27:41] The USPS is not perfect, and we also
+[00:27:44] have to consider the voters with disabilities,
+[00:27:46] for whom vote by mail is not really an option,
+[00:27:52] or at least, it's not a very good option.
+[00:27:54] So we'll also need safe in-person voting.
+[00:27:56] An increase in vote by mail, a maintaining of in-person voting
+[00:28:00] and making it safe.
+[00:28:01] We definitely need that for 2020.
+[00:28:05] So because of this need for vote by mail,
+[00:28:08] one of the things we've been thinking about at VotingWorks
+[00:28:11] is, how do we help?
+[00:28:13] Because the one thing we should be worried about
+[00:28:15] is the providers of voting equipment and voting
+[00:28:19] technology.
+[00:28:21] It's not easy for them to adapt that quickly to the demand,
+[00:28:27] right?
+[00:28:28] This year, the demand is moving incredibly quickly.
+[00:28:30] So one of things we're working on-- actually,
+[00:28:32] the main thing we're working on other than auditing this year
+[00:28:35] is a new product called the VxMail.
+[00:28:37] And what I want to give you is a sneak preview demo
+[00:28:41] of our system, which again, uses completely
+[00:28:44] off the shelf hardware and open source software,
+[00:28:47] inexpensive for ballot preparation and ballot marking
+[00:28:53] and ballot scanning.
+[00:28:54] and ballot scanning.
+[00:28:54] And I'm going to try to play this and skip the part that
+[00:29:00] is me yapping because you've already heard that
+[00:29:05] and go straight to the demo.
+[00:29:07] So in the system, we use smart cards to configure all devices.
+[00:29:13] What you have is an election definition that's
+[00:29:14] getting loaded onto this system, and from it,
+[00:29:18] we automatically lay out ballots using best practices
+[00:29:21] so that you can have the right design for a hand marked paper
+[00:29:27] ballot, and this is actually pretty tricky.
+[00:29:29] There's a number of cases documented in history, where
+[00:29:33] you have a ballot that's poorly laid out, and as a result,
+[00:29:36] voters don't know how to--
+[00:29:38] might miss a contest, right?
+[00:29:39] So here is-- we use an election definition for the election
+[00:29:43] coming up in Texas in November.
+[00:29:45] These are the real questions, but to be clear,
+[00:29:48] Texas has not committed to using the system yet.
+[00:29:52] And we're just demoing how marking this
+[00:29:54] like any normal ballots, again, this
+[00:29:57] is a ballot that's printed on an off-the-shelf printer.
+[00:30:00] It's a $200 printer using standard paper,
+[00:30:05] and then just marked with anything
+[00:30:06] that darkens the bubble.
+[00:30:08] You don't need a number two pencil or anything like that.
+[00:30:10] In this demo, this was--
+[00:30:11] I guess you'll have to just trust me.
+[00:30:13] This was done live.
+[00:30:14] We weren't testing any predetermined candidates,
+[00:30:17] we were just filling out the ballot as is,
+[00:30:20] and ideally, you look at this, and none of this
+[00:30:24] looks that shocking.
+[00:30:25] It looks really very straightforward.
+[00:30:29] Yes, this is a ballot.
+[00:30:30] It's not a big deal.
+[00:30:31] If you voted in the US, it makes sense,
+[00:30:34] and then it goes into a standard scanner,
+[00:30:37] and we're just going to do a one at a time to show you,
+[00:30:40] and this is our software running the scanner that
+[00:30:42] processes this and automatically interprets it.
+[00:30:50] And you can see the last ballot, and you
+[00:30:52] can see the read of the ballot is exactly what I marked there.
+[00:30:59] Again, none of this should be shocking,
+[00:31:01] but you should know that this is all
+[00:31:03] running on off-the-shelf hardware
+[00:31:04] using software that is fully open source
+[00:31:06] and available on our GitHub.
+[00:31:08] That's the key thing.
+[00:31:09] We're going to be showing over the next few weeks
+[00:31:11] how we integrate this into an actual mail management system
+[00:31:16] to actually mail and-- print and mail ballots directly
+[00:31:18] to voters.
+[00:31:20] So that's it.
+[00:31:21] I wanted to talk to you about a little bit about me
+[00:31:23] and VotingWorks, tell you what's so hard about voting,
+[00:31:25] and tell you that we need computers to vote,
+[00:31:28] but we shouldn't trust them.
+[00:31:30] That's why we need paper ballots and risk limiting audits,
+[00:31:33] and I told you a little bit by vote by mail.
+[00:31:35] The most important thing to take away,
+[00:31:37] it is surprisingly nonpartisan, no matter what
+[00:31:39] the politicians say.
+[00:31:41] And in 2020, we clearly are going
+[00:31:44] to need more vote by mail so that we
+[00:31:46] can make in-person voting a little more rare and safer,
+[00:31:51] We have some great questions, Ben.
+[00:31:52] First of all, thank you for that great talk
+[00:31:55] and for the overview both on your work and some
+[00:31:55] and for the overview both on your work and some
+[00:31:58] of your thoughts on voting and ballots in general.
+[00:32:01] I'm going to start a little bit at the end of what you're
+[00:32:04] saying, because we got a lot of questions about ballots,
+[00:32:09] and so here's two.
+[00:32:12] How do you reconcile--
+[00:32:14] they're related.
+[00:32:15] How do you reconcile your argument for paper ballots
+[00:32:17] with voter accessibility, examples, oversea voters where
+[00:32:21] airmail might be slow, flying voters who live alone but need
+[00:32:25] to vote absentee, and then--
+[00:32:30] why don't you go ahead with that one, and then
+[00:32:32] I'll do some related ones.
+[00:32:34] Yeah, so these are really great questions.
+[00:32:37] I need to chop them up in a couple of different--
+[00:32:41] couple of different ways.
+[00:32:42] The main reason why we at VotingWorks are building
+[00:32:47] a ballot marking device-- have built a ballot marking device--
+[00:32:50] is because we want to allow any voter, including
+[00:32:54] the voters with disabilities, including voters
+[00:32:56] with mild disabilities, and this is the segment of voters
+[00:33:00] that I'm particularly worried about.
+[00:33:02] We always talk about voters with disabilities,
+[00:33:04] and we think, oh, there's just a handful of them, right?
+[00:33:07] But we sometimes forget that ability is a spectrum, right?
+[00:33:13] It's a continuum, and there are a lot of folks
+[00:33:16] that have visual impairments.
+[00:33:17] Millions of American voters have visual impairments,
+[00:33:20] and there's many aging voters that
+[00:33:22] have visual impairments as they get older, of course.
+[00:33:25] So one of the main arguments for machines marking paper ballots
+[00:33:31] is exactly this.
+[00:33:32] It's the ability for voters with any level of ability,
+[00:33:36] any potential impairment to still
+[00:33:39] have a secret ballot, because this is a thing that's poorly
+[00:33:43] understood about the touch screen voting machines
+[00:33:47] of the early 2000s that got such a bad rap
+[00:33:51] and for good reason, because again, they don't they
+[00:33:54] don't have a paper ballot, so there's no real verification.
+[00:33:58] But the one thing we have to know and have
+[00:33:59] to understand and have to really internalize
+[00:34:02] is that 2000, when those machines were first deployed,
+[00:34:06] was the first year that blind voters got to secret about.
+[00:34:10] Before that, blind voters had to depend on somebody else
+[00:34:14] to vote on their behalf.
+[00:34:16] And that is shocking, at least to me.
+[00:34:21] So one of the main arguments for ballot marking devices and one
+[00:34:25] of the reasons why we've invested so much in them
+[00:34:27] is because it's the main way to provide that paper
+[00:34:29] verifiability with accessibility.
+[00:34:32] Now, how does a blind voter benefit from the paper?
+[00:34:35] That's a good question.
+[00:34:37] In 2020, the good news is, a lot of blind voters
+[00:34:40] have smartphones that can read paper to them,
+[00:34:43] and that technology has gotten surprisingly good.
+[00:34:46] So that's one of the ways that we want this to happen.
+[00:34:48] A paper ballot is printed, and a voter
+[00:34:50] that is unable to read that ballot
+[00:34:53] it can use their personal device to make sure that the paper
+[00:34:55] ballot reflects their choice.
+[00:34:58] Now, how do you do that with vote by mail?
+[00:34:59] Another excellent question.
+[00:35:01] Vote by mail tends to disenfranchise voters
+[00:35:03] with disabilities, and the main way
+[00:35:05] that we can solve that is with something
+[00:35:08] called electronic ballot delivery, which
+[00:35:10] we haven't invested in yet, but it's something
+[00:35:12] that we are going to consider looking at,
+[00:35:14] depending on the needs of various states.
+[00:35:16] And that is basically a web page that leads you
+[00:35:19] through the ballot with all the accessibility features
+[00:35:22] including an audio track, and then when you're done,
+[00:35:24] it lets you print your ballot at home and then mail it.
+[00:35:28] That's how he would do it.
+[00:35:29] And of course, the in-person option
+[00:35:31] is for people who don't have printers or anything like that.
+[00:35:36] I think the question also includes
+[00:35:38] something about overseas voters, and that
+[00:35:41] is a really tricky one.
+[00:35:42] I think electronic ballot delivery is also
+[00:35:44] the best way to do that.
+[00:35:47] It does require mailing that ballots.
+[00:35:49] I know there are folks who argue for potentially doing
+[00:35:53] online voting in those limited cases,
+[00:35:56] and I think in those cases it might be worth considering,
+[00:35:59] but it has to be considered in the context
+[00:36:01] of the tremendous amount of risk that we take once we enable
+[00:36:06] any kind of internet voting.
+[00:36:10] So it's not a great answer to that one
+[00:36:12] because I think that one is really, really hard.
+[00:36:15] It's just, I don't think we can set aside the dramatic security
+[00:36:18] concerns and scalability of attack
+[00:36:21] against internet voting systems.
+[00:36:24] Great.
+[00:36:25] Great.
+[00:36:26] All right, so I'm going to go through a little bit more
+[00:36:29] down the vote by mail questions.
+[00:36:32] So doesn't vote my mail make it possible to show someone else
+[00:36:37] how you're voting?
+[00:36:38] It seems to contradict the first part of your talk.
+[00:36:41] Yeah, it does.
+[00:36:42] That's exactly right, and so I mentioned this briefly
+[00:36:45] that one of the concerns that election security
+[00:36:47] folks, including myself, have is that the vote by mail
+[00:36:51] does erode the secret ballot.
+[00:36:53] It does allow you to prove to your spouse how you voted,
+[00:36:59] and I have long talked about the concerns
+[00:37:02] I have with vote by mail, but that I call subtle coercion.
+[00:37:08] Subtle, only in the sense that nobody's
+[00:37:10] holding a gun to your head, but still it's pretty bad.
+[00:37:14] So subtle coercion looks like what?
+[00:37:16] Subtle coercion looks like a couple sitting at the kitchen
+[00:37:19] table and filling out their ballots
+[00:37:21] and maybe they have a relationship
+[00:37:23] where one member of the couple tells
+[00:37:29] the other member of the couple how to live, how to do things,
+[00:37:34] is the boss, right?
+[00:37:36] And what happens if when they're sitting there at the kitchen
+[00:37:42] table filling out their ballot.
+[00:37:44] Is the less dominant member of the couple
+[00:37:51] going to speak up and say, yeah, I want to vote for so-and-so,
+[00:37:54] or are they just going to say you know what?
+[00:37:56] I got the kids to take care of, I got dinner to cook,
+[00:38:01] I'm going to fight this fight.
+[00:38:03] I'll just vote the way my partner wants me to.
+[00:38:08] I'm worried about that.
+[00:38:09] I'm very worried about that, and I
+[00:38:10] don't know how we measure that.
+[00:38:12] I don't even know how we build an experiment to test
+[00:38:14] for that, right?
+[00:38:15] There are very few experiments that test the secret ballot.
+[00:38:18] The only one that I found in almost 20 years of doing this
+[00:38:22] is one related to the country of Chile,
+[00:38:25] where the secret ballot was implemented
+[00:38:28] for the first time in 1958.
+[00:38:30] So they went from a non-secret ballot to a secret ballot
+[00:38:33] and the outcome was a dramatic sea change.
+[00:38:36] Almost overnight in the makeup of the government.
+[00:38:40] So I'm worried about this, and I'm
+[00:38:42] worried about how vote by mail does enable
+[00:38:44] this level of subtle coercion.
+[00:38:47] That's why I don't think it's the perfect solution.
+[00:38:49] That's why I think we should be a little bit wary of it.
+[00:38:52] There are ways to solve it by letting people
+[00:38:54] override their vote in person, which
+[00:38:55] some states allow you to do.
+[00:38:57] So you can mail your ballot and then
+[00:38:58] you can go and invalidate in person and change it.
+[00:39:03] Those are some defenses against that,
+[00:39:06] but that's imperfect, too.
+[00:39:07] So the key take away when you've been in elections for 20 years
+[00:39:10] is there's no perfect system.
+[00:39:12] That doesn't mean you shouldn't strive to do better,
+[00:39:15] but it definitely means you shouldn't walk into any system
+[00:39:18] and ignore the downsides.
+[00:39:19] When we think about vote by mail,
+[00:39:20] it's clearly the solution for 2020,
+[00:39:23] but I'm not an advocate for necessarily making
+[00:39:25] it the default forever, because I
+[00:39:28] think we should look at the pros and cons.
+[00:39:32] Well, if anyone in our very smart crowd
+[00:39:35] has ideas for Ben on how to actually run
+[00:39:38] an experiment on how to make sure our vote by mail
+[00:39:43] is secure at home and in other locations,
+[00:39:45] feel free to either put it in the Q&A,
+[00:39:47] or I'm sure Ben reaches Twitter so that's a good way
+[00:39:51] to get in touch.
+[00:39:52] Yeah, I would love that.
+[00:39:53] I think it's something that I've found has been--
+[00:39:57] it's a tricky topic to engage on,
+[00:39:59] because it either clicks with people
+[00:40:01] and they see, oh, yes, I see the threat, or they go to,
+[00:40:05] I have no evidence of that, right?
+[00:40:07] And the problem with security issues
+[00:40:08] is that you have no evidence of a problem
+[00:40:10] until the problem is blatant, right?
+[00:40:12] And so it's a tough one.
+[00:40:15] If you have a great--
+[00:40:16] I think it would be a groundbreaking paper
+[00:40:18] if you could show either way that vote by mail
+[00:40:23] does or does not change--
+[00:40:25] is or is not an avenue for subtle coercion.
+[00:40:29] Either way, it would be groundbreaking.
+[00:40:31] So if you're interested in that, I'd
+[00:40:33] love to know how we can figure that out.
+[00:40:36] Cool.
+[00:40:37] We've got some sort of activists, how do I help?
+[00:40:41] How do we do it kind of questions.
+[00:40:43] So one question is, how do community organizers
+[00:40:47] and civic groups do get out the vote?
+[00:40:50] They can't go door to door, and how can we--
+[00:40:54] they-- help voters adjust to vote by mail.
+[00:40:57] I'm particularly interested in mobilizing
+[00:40:59] young voters who tend to vote at lower rates compared
+[00:41:02] to older voters.
+[00:41:03] Yeah, so the organizing and get out the vote is--
+[00:41:07] so one, I see a question also, how do you help contribute?
+[00:41:10] I would say, it's one of the things we haven't quite
+[00:41:13] been able to figure out yet at VotingWorks, because there's
+[00:41:16] so much context required to really help in this area,
+[00:41:20] and we don't have a community manager yet.
+[00:41:21] We probably should figure out how to do that.
+[00:41:23] If you have any ideas, and if you want to help,
+[00:41:26] just reach out to us at hello@voting.works,
+[00:41:31] or you can find me on Twitter and I'm happy to do that too.
+[00:41:36] Now, the other stuff about organizing for
+[00:41:38] get out the vote and whatnot, I honestly
+[00:41:40] I'm not the expert on that.
+[00:41:41] I focus mostly on election administration.
+[00:41:44] Get out the vote efforts are not my--
+[00:41:46] I don't have any special knowledge,
+[00:41:48] so I don't think I can give you a good answer.
+[00:41:51] It obviously seems like a pretty big challenge this year
+[00:41:53] to figure out how you do get out the vote from home,
+[00:41:56] but I don't have anything more than the same thoughts I'm
+[00:42:00] sure you all can come up with.
+[00:42:01] I think there's some interesting questions
+[00:42:04] about risk limiting audits.
+[00:42:05] Yeah.
+[00:42:06] What are the-- yeah.
+[00:42:07] So how expensive are they?
+[00:42:09] What are the biggest impediments to having
+[00:42:12] them more widely used, and I'll add
+[00:42:17] to that, how do you think about ways to expand it,
+[00:42:21] whether not only from your point of view,
+[00:42:23] but from more a governmental point of view,
+[00:42:25] and if there are ways that people
+[00:42:28] like us can advocate, what are the things
+[00:42:31] to be advocating for?
+[00:42:33] Those are great questions.
+[00:42:34] So I didn't have time to dig into them too much,
+[00:42:37] but I am in love with risk limiting audits.
+[00:42:39] They are probably the biggest policy and technical success
+[00:42:44] in election administration in the last decade.
+[00:42:47] Paper ballots being, I would say, the number one
+[00:42:50] in the last 20 years, and risk limiting audits
+[00:42:52] being the number two and the number one of the last 10
+[00:42:55] years, because, well just because of timing.
+[00:42:57] So I want to tell you a little bit more
+[00:43:00] about them to understand how powerful they are.
+[00:43:06] To run a risk limiting audit, how powerful they are
+[00:43:09] and what you need to run them.
+[00:43:10] To run a risk limiting audit, what does it look like?
+[00:43:12] It looks like you put a--
+[00:43:14] the county's tabulate their votes, you get a result,
+[00:43:17] and then you want a sampling process
+[00:43:20] that's going to randomly sample a certain number of them
+[00:43:22] to go check and see that the scanner did
+[00:43:25] a good job on scanning those ballots,
+[00:43:27] and then you get a certain confidence level
+[00:43:29] that the scanner is not cheating, which is great.
+[00:43:31] You get the speed and--
+[00:43:33] its speed and trust, which is really fantastic.
+[00:43:37] So how much work is it?
+[00:43:39] What's really interesting about this
+[00:43:41] is that if you think through the probabilities in the sampling
+[00:43:45] process, it turns out that the number
+[00:43:48] of ballots you have to look at depends mostly
+[00:43:52] on the margin of victory.
+[00:43:54] So if it's a tight margin, you need to look at more ballots
+[00:43:57] to make sure that that tight margin is correct,
+[00:44:00] and if you want a higher level of confidence,
+[00:44:02] you need to look at more ballots.
+[00:44:04] What you don't-- what it doesn't depend on, surprisingly,
+[00:44:07] is how many total ballots were cost--
+[00:44:09] were cast, sorry.
+[00:44:11] So if you have 100,000 ballot election or a 10 million
+[00:44:17] ballot election, the number of ballots you need to look at
+[00:44:21] doesn't change.
+[00:44:23] It depends only on the margin of victory and the confidence
+[00:44:26] level you have, which tells you that the right way
+[00:44:28] to run these audits efficiently is to run them at the largest
+[00:44:31] possible scale you have.
+[00:44:33] If you run them at the county level,
+[00:44:36] you're going to have to do the same amount of work
+[00:44:38] for every county, but if you run them at the state level,
+[00:44:41] you have to do that same amount of work you
+[00:44:43] have to do for one county, you have
+[00:44:44] to do it just once at the state level,
+[00:44:46] so clearly you should be running these at the state level,
+[00:44:49] right?
+[00:44:50] It's so much more efficient to amortize the costs
+[00:44:52] over the whole state.
+[00:44:54] However, there's a challenge.
+[00:44:56] If you sample and run this at the state level,
+[00:44:59] you have to consider the fact that the paper ballots are
+[00:45:01] stored at the county level or at the township level sometimes,
+[00:45:06] which now means you have this complicated workflow
+[00:45:09] and dance you need to manage between the states and all
+[00:45:12] the counties, and that's why you need software to help, right?
+[00:45:17] You need the software to coordinate that workflow,
+[00:45:19] and that's what Arlo is.
+[00:45:20] The software that we have created and that is--
+[00:45:23] I forgot to mention, actually is being
+[00:45:24] used as we speak right now in Michigan to run a risk limiting
+[00:45:29] audit for their presidential primary,
+[00:45:31] which is the first time that there is a statewide audit that
+[00:45:36] was not in Colorado.
+[00:45:37] So we're really, really proud of that
+[00:45:38] and that's really critical, and we
+[00:45:40] have a number of other states that are lined up to do it.
+[00:45:42] The really good news about getting risk
+[00:45:44] limiting audits done is that there's
+[00:45:46] widespread bipartisan agreement that this
+[00:45:47] is a really good thing.
+[00:45:49] It's something that doesn't require
+[00:45:50] voters to do anything more.
+[00:45:52] It can be entirely managed by election officials
+[00:45:54] in a public process, and one of the main blockers
+[00:45:57] is having the software to do it, so we're really, really proud
+[00:46:00] that our vote is going to be unblocking a lot of that,
+[00:46:04] and again, it's open source software.
+[00:46:06] If you want to get it done, just whenever you're
+[00:46:09] talking to election officials, ask them
+[00:46:11] what's the progress on risk limiting audits?
+[00:46:13] Have you heard about Arlo?
+[00:46:14] It's free software you can use, and VotingWorks will help,
+[00:46:18] but we're not the only ones that will help you run one.
+[00:46:23] There is an element of, you do have to work out
+[00:46:26] what's called the custody, the paper ballot custody
+[00:46:29] process that you have, you have to have a really clean process
+[00:46:33] for that.
+[00:46:34] You have to know where your batches of ballots
+[00:46:36] are stored, you have to know how to find them,
+[00:46:37] because the process literally involves
+[00:46:40] county officials getting together on an audit day,
+[00:46:44] uploading their manifest information about how
+[00:46:46] many ballot batches they have and how many ballots exist,
+[00:46:49] and then getting audit orders from the states and then saying
+[00:46:53] please go fetch ballot 32 in batches 17
+[00:46:56] and enter it into the system so that we
+[00:46:58] can make sure it matches the records that are there.
+[00:47:01] So you need to know where to find batch 17,
+[00:47:03] and you need to know-- have a process for looking at that
+[00:47:05] and have a process for a bipartisan audit board looking
+[00:47:09] at that.
+[00:47:10] So there's a little bit of training
+[00:47:11] and a little bit of workflow and a little bit of process that
+[00:47:13] needs to be implemented, but that's pretty well defined now,
+[00:47:17] and we've got the methods down and folks can be trained.
+[00:47:21] So this is ready for deployment.
+[00:47:26] There's a follow up risk auditing-- risk
+[00:47:28] limiting audit question that I think is a good one.
+[00:47:32] I understand that the developer of the risk limiting audit
+[00:47:36] says it is not incompatible with ballot marking devices
+[00:47:39] because voters can not actually verify that a ballot marking
+[00:47:43] device marked their ballot.
+[00:47:45] How do you address that?
+[00:47:46] Yeah, so what this is addressing.
+[00:47:51] So this gets into the ballot marking device controversy.
+[00:47:55] The debate is this.
+[00:47:57] If you have a machine that prints out your ballot.
+[00:48:00] So first, I'll tell you what this is not about, OK?
+[00:48:03] There is a lot of noise around--
+[00:48:06] let me backup.
+[00:48:08] You use a computer, a touch screen, a nice little UI.
+[00:48:11] It prints out a ballot, you look at it, you cast it.
+[00:48:14] That's the model of ballot marking devices, right?
+[00:48:17] To make it easier to scan, most ballot marking devices,
+[00:48:21] in fact, almost all of them and certainly ours uses a QR code
+[00:48:26] on the ballot that is a copy of what's
+[00:48:29] printed on the paper ballot.
+[00:48:30] So there's a human readable text and there's a QR code,
+[00:48:34] and there are a lot of folks that
+[00:48:37] are worried about the possibility
+[00:48:38] that the QR code might not match what's printed on the ballot.
+[00:48:44] It's true.
+[00:48:45] There could be bugs in the software,
+[00:48:46] there could be malicious software.
+[00:48:47] That means that it prints one candidate
+[00:48:49] but encodes another in the QR code.
+[00:48:52] So there's a lot--
+[00:48:54] there is some folks that are worried about that,
+[00:48:56] and that then say, well, this is why
+[00:48:58] you can't use these machines.
+[00:49:01] I'm going to be very opinionated and very clear on this,
+[00:49:04] I think that argument doesn't hold water.
+[00:49:06] The reason the argument doesn't hold water
+[00:49:08] is because it is very easy to audit this after the fact.
+[00:49:12] If you have paper ballots that have a mismatch between what's
+[00:49:15] printed on the text and encoded in the QR code,
+[00:49:18] you can go figure out what happened,
+[00:49:19] and of course, you should default
+[00:49:21] to whatever is the human readable text in those cases.
+[00:49:24] The beauty of it is that when you run an RLA,
+[00:49:28] you're inherently checking that, because when
+[00:49:31] you go fetch the paper ballot to go check what's on the paper,
+[00:49:34] you're not reading the QR code, you're reading the text, right?
+[00:49:38] So by running RLA, you bypass that entire problem of QR codes
+[00:49:43] that are on the ballot.
+[00:49:44] You're actually auditing that altogether.
+[00:49:46] So if you hear that argument, you
+[00:49:50] can absolutely quote me in saying
+[00:49:51] I dismiss it out of hand.
+[00:49:52] I think it is fear mongering, I don't think
+[00:49:54] it's helpful to the debate.
+[00:49:56] Now, there's a second argument that I think is valid,
+[00:50:01] and I think it's worth continued debate,
+[00:50:03] and that is the question of do voters even
+[00:50:06] look at the text on the ballot before they put it
+[00:50:09] in the ballot box, right?
+[00:50:11] Because if they don't, if they print a ballot
+[00:50:13] and they look at it and they don't look at it
+[00:50:15] and they just put it in there, then
+[00:50:17] is that paper ballot a valid--
+[00:50:20] is there a real act of verification,
+[00:50:22] or are we just trusting machines, right?
+[00:50:25] Now, even if that were the case, I
+[00:50:28] don't think it's quite as bad as if you had paperless voting
+[00:50:31] machines, because once the paper is printed,
+[00:50:34] there is no longer an opportunity
+[00:50:35] to cheat the system, but there is still an opportunity
+[00:50:38] if voters are not checking.
+[00:50:41] So there's a furious debate right now going on
+[00:50:43] as to how do you get voters to check, can you
+[00:50:46] get enough voters to check, can you get evidence
+[00:50:49] that voters checked.
+[00:50:50] This is a very, very long debate on this,
+[00:50:52] and I'm happy to talk about it some more.
+[00:50:55] I think we've run out of time, but that, I think,
+[00:50:58] is a valid debate.
+[00:50:59] That, I think, we should engage on it, we should understand it,
+[00:51:02] we should work to make sure that the ballot marking devices that
+[00:51:05] are built for reasons of accessibility,
+[00:51:08] for reasons of ease of managing an election,
+[00:51:13] because the other reason ballot marking devices
+[00:51:15] are really useful is as we move to a world that has vote
+[00:51:18] by mail and what we call vote centers, which
+[00:51:21] are these centers that are the aggregate of many precincts,
+[00:51:24] and thus, voters having ballots of many different styles.
+[00:51:29] Depending on where they live, they
+[00:51:30] might have different questions on the ballot,
+[00:51:32] and the ballots may be in different languages.
+[00:51:35] LA County, for example, has to support 12 different languages
+[00:51:39] on their ballots.
+[00:51:41] It's much easier to administer an election
+[00:51:43] with a ballot marking device, so that's an advantage of it.
+[00:51:46] And the disadvantage is are voters
+[00:51:48] actually checking the ballot, which, I think,
+[00:51:50] is a critical question.
+[00:51:51] There's some research out of the University
+[00:51:53] of Michigan, a paper by lead author Matt
+[00:51:58] Bernhard under professor Alex Haldeman at the University
+[00:52:02] of Michigan that, interestingly, can
+[00:52:05] be interpreted in two different ways,
+[00:52:07] depending on how you read it.
+[00:52:09] One way to read it is, oh, my god.
+[00:52:10] People are not looking at their ballots
+[00:52:13] and that's a problem produced by ballot marking devices.
+[00:52:16] The other way to read it is, actually
+[00:52:18] if you nudge voters to look at their ballot,
+[00:52:23] if you find the right nudge, they do,
+[00:52:25] and they do find errors.
+[00:52:27] And so you can read the paper, and you'll
+[00:52:29] see there's both ways of interpreting it.
+[00:52:32] That second part to me is very interesting.
+[00:52:34] It says that if you can find the right nudge,
+[00:52:37] voters are absolutely capable of finding errors that might
+[00:52:40] be introduced on their ballot.
+[00:52:42] So the question is, how do you find the right nudge?
+[00:52:44] One of the things we're working on and VotingWorks is you
+[00:52:48] may have seen the picture of our system.
+[00:52:50] We actually separate the place where
+[00:52:52] you mark the ballot on the screen
+[00:52:54] and where it gets printed.
+[00:52:55] You have to walk over 20 feet between the first device
+[00:52:59] and the device where your ballot is printed,
+[00:53:01] and one of the reasons for that is
+[00:53:03] to create a forcing function, where the voter is
+[00:53:07] no longer thinking they're just printing something
+[00:53:10] at a computer.
+[00:53:11] They're actually using a different computer,
+[00:53:13] and we've noticed--
+[00:53:14] anecdotally-- that, oh, if you've walked 20 feet and you
+[00:53:17] have no screen confirming your ballot,
+[00:53:19] you have a higher chance of actually looking at your ballot
+[00:53:21] and checking--
+[00:53:22] and checking it.
+[00:53:24] That doesn't mean that I think the problem is solved,
+[00:53:25] but hopefully, I've given you an honest status of the debate
+[00:53:29] right now, right?
+[00:53:31] Ballot marking devices are significantly easier when
+[00:53:34] they're built well to administer an election,
+[00:53:36] but there is this trust question of,
+[00:53:38] are voters actually verifying the paper ballot,
+[00:53:40] and we need to further investigate that.
+[00:53:42] And I'll say it one more time, the question
+[00:53:44] of the QR code-- in my mind-- is totally bogus,
+[00:53:46] and I'm sure I'll get flamed on Twitter for it,
+[00:53:48] but you just got to go out there and say what you think, so.
+[00:53:55] All right, we only have a couple minutes left.
+[00:53:58] I want to try to do one more.
+[00:54:00] So we have someone who first asked
+[00:54:03] on the Election Assistance Commission certification.
+[00:54:06] Are you are you certified?
+[00:54:08] Great.
+[00:54:08] Good question.
+[00:54:10] And then and then it gets even more interesting in that it
+[00:54:12] says, this seems to be a problem with machine manufacturers have
+[00:54:17] to choose between security and the certification,
+[00:54:19] since the certification process takes so long,
+[00:54:22] and you need to recertify once you do it regular software
+[00:54:26] patch to the system.
+[00:54:27] Yes.
+[00:54:29] How do you think we--
+[00:54:30] are you certified?
+[00:54:31] How do you address this issue?
+[00:54:33] Great question.
+[00:54:34] We are not yet certified.
+[00:54:35] The EAC certification is a federal certification process.
+[00:54:38] We've started in locations like Mississippi,
+[00:54:40] where the federal certification is not
+[00:54:42] required, because we wanted to build a system that was first
+[00:54:46] for users, voters, and election administrators,
+[00:54:49] and then once we find the right product, then get it certified,
+[00:54:53] because whoever asked the question is correct.
+[00:54:56] Once you certify a system, it's much harder
+[00:54:58] to make changes to it.
+[00:54:59] We were able to make dozens of improvements to our machine
+[00:55:03] in a matter of three months because we got feedback
+[00:55:05] from voters in a realistic setting, and, of course
+[00:55:08] we met a minimum bar before we went out there.
+[00:55:11] All the elections we've run have run well,
+[00:55:13] but the latest one ran much better than the first one
+[00:55:16] because we were able to get a lot of feedback
+[00:55:19] and improve our product.
+[00:55:21] I think we basically found a loophole in the federal system
+[00:55:27] that allows us to do this.
+[00:55:28] I think the loophole should be standardized
+[00:55:31] as an approach that makes sense for developing new systems.
+[00:55:36] The bar for deploying system in a single precinct
+[00:55:39] should be low.
+[00:55:41] The risk is low.
+[00:55:42] You want to be able to try new, more affordable, more
+[00:55:45] secure technologies without having to lock it in
+[00:55:48] and no ability to change it later, right?
+[00:55:51] And the bar should rise as your deployment rises.
+[00:55:54] That's how I hope that the system can be improved.
+[00:55:57] Now, I want to give credit to the folks at the EAC.
+[00:55:59] This is a very difficult problem, right?
+[00:56:01] The question of how do you certify but stay nimble
+[00:56:04] and allow security patches and all that is legitimately
+[00:56:07] difficult, right?
+[00:56:08] You want voting systems to have a certain quality and security
+[00:56:10] bar, so you have to implement a process,
+[00:56:15] the process is going to slow you down.
+[00:56:17] I'm very optimistic about the newest version of the standard,
+[00:56:20] the Voluntary Voting Systems Guideline
+[00:56:22] 2.0, which are currently being debated, which, I think,
+[00:56:26] will make updates easier, will allow you to certify modules
+[00:56:30] in a system in a modular way, instead of having to certify
+[00:56:33] a complete system, and I hope--
+[00:56:37] I don't know if we'll get it in 2.0,
+[00:56:39] but I do hope that this ratcheting up of the bar
+[00:56:43] can be implemented at some point, where the bar is
+[00:56:45] just lower for small less risky deployments and then
+[00:56:49] just scales up as your deployments scale up.
+[00:56:53] Well, thanks, Ben.
+[00:56:54] This has been absolutely fascinating.
+[00:56:56] A pleasure to have you here, and we really appreciate the time.
+[00:56:59] Wow.
+[00:57:00] Thank you so much, and if you want
+[00:57:02] to ask more questions on Twitter,
+[00:57:03] I will answer as many as I can.
+[00:57:05] So thanks to everybody.
