@@ -84,6 +84,9 @@ archive-wiki/
 │   ├── collection.json   ingestion manifest (id, defaults, sources)
 │   ├── json/youtube.json metadata catalog — 1 entry/video + transcript pointer
 │   └── txt/youtube/yt_<id>.txt   one plain-text transcript per video
+├── inbox/
+│   └── conversations/<date>-<slug>.md   unreviewed drafts filed via the API   [API]
+├── api/               HTTP API over the wiki (see api/README.md)    [code]
 └── scripts/
     ├── build.mjs          the wiki generator                        [code]
     ├── fetch_youtube.py       @BKCHarvard scraper → collection/      [code]
@@ -535,6 +538,17 @@ drafts the actual updated/new page content for everything touched.
 Read `index.md` → open the relevant topic/entity pages → drill into linked item
 stubs → answer **with `[[…]]` citations**. **File good answers back** as a new page
 (a `topics/` page, a comparison, an analysis) so explorations compound. Log it.
+
+### Review the inbox (curate API-filed drafts)
+`inbox/conversations/` holds conversation drafts filed by LLM engines via the
+API (`POST /v1/conversations` — frontmatter `type: conversation`,
+`status: draft`, plus title/date/source/participants/related_topics). For each
+draft: read it; if it adds durable value, **promote** it — rewrite/trim into a
+proper page (usually a `topics/` addition or a new analysis page), link it from
+the relevant synthesis pages, delete the draft, and append a
+`## [date] query | promoted inbox draft <slug> → <page>` log entry. If not,
+delete it (optionally log why). Drafts are never linked from synthesis pages
+and never published as-is.
 
 ### Lint (health-check)
 Look for: orphan topics (no inbound links), stale claims newer items supersede,
