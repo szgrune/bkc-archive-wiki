@@ -45,6 +45,7 @@ Operational notes:
 - **The search index is built once at startup**, in memory. After the wiki
   content changes (a `git pull`, a `scripts/build.mjs` run), either restart the
   process or `curl -X POST localhost:4000/v1/reindex` to pick the changes up.
+  This is not a rare event — see "Keeping content fresh" below.
 - **`GET /v1/health`** is unauthenticated and returns index stats — use it as
   the process manager / load balancer health check.
 - The process needs **write permission on `inbox/conversations/`**; that is the
@@ -67,6 +68,37 @@ Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target
+```
+
+### Keeping content fresh
+
+The wiki is **not static** — three GitHub Actions commit new items to `main`
+every day (`fetch-youtube-captions.yml` 06:17, `fetch-tagteam-items.yml` 06:47,
+`fetch-publications.yml` 07:05, all UTC), and `synthesize-wiki.yml` adds pages
+when enabled. A long-running deployment therefore serves a **stale search
+index** within a day of starting unless it pulls and reindexes. Direct page and
+item reads come off disk per request and stay correct; it's search that drifts.
+
+Pull after the last daily job, then reindex in place — no restart, no dropped
+requests:
+
+```cron
+# user crontab. One line — cron has no line continuation. Note the schedules
+# above are UTC (GitHub Actions); cron here runs in the server's timezone.
+ARCHIVE_API_TOKEN=<same token as the service>
+30 7 * * * cd /srv/archive-wiki && git pull --ff-only && curl -fsS -X POST -H "Authorization: Bearer $ARCHIVE_API_TOKEN" localhost:4000/v1/reindex
+```
+
+> **Do not `git clean -fd` or `git reset --hard` in a deploy script.** The API
+> writes conversation drafts into `inbox/conversations/` in this same checkout,
+> and they are untracked until a curator commits them — a clean would delete
+> unreviewed drafts. `git pull --ff-only` is safe: nothing upstream creates
+> those paths.
+
+Confirm a reindex took effect with the `builtAt` timestamp:
+
+```bash
+curl -s localhost:4000/v1/health   # {"index":{"pages":…,"items":…,"builtAt":…}}
 ```
 
 ### Connecting llm_engine
