@@ -1,0 +1,1830 @@
+[00:00:00] so turning to takas and Andre so um
+[00:00:02] Andres Monroy Hernandez is a postdoc
+[00:00:05] researcher at Microsoft research and um
+[00:00:09] Takis metoxys is a professor of computer
+[00:00:11] science and founder of the media arts
+[00:00:12] and science program at Welsley college
+[00:00:15] and we have the privilege of having them
+[00:00:17] um speak to us about a paper that they
+[00:00:19] have co-authored um that they have been
+[00:00:22] presenting on narro tweets and the um
+[00:00:24] use of social media in the Mexican drug
+[00:00:26] war and so we're um excited to welcome
+[00:00:28] them both I believe that they're open to
+[00:00:31] questions throughout the presentation so
+[00:00:33] uh please feel free to interrupt we want
+[00:00:34] to make this a really discussion
+[00:00:36] oriented uh conversation as they share
+[00:00:38] our work with us and lead a discussion
+[00:00:41] um and the hashtag so if you want to
+[00:00:43] tweet about it is hashtag narot tweets
+[00:00:46] welcome than thank you thanks well
+[00:00:48] thanks everyone um don't have to clap
+[00:00:51] yet um so uh the topic of today is going
+[00:00:54] to be uh this um we we're analyzing how
+[00:00:57] people are using social media in um
+[00:00:59] moments of crisis in particular uh
+[00:01:01] during war time and we focus on the case
+[00:01:03] of Mexico uh so I just wanted to say
+[00:01:06] that this is uh both uh working progress
+[00:01:08] and publish work so Takis and I and and
+[00:01:11] our collaborators at Welsley and
+[00:01:13] Microsoft research uh we recently
+[00:01:15] published this an a conference called
+[00:01:17] icwsm but it's also part part of this
+[00:01:19] work is uh coming out in uh future
+[00:01:21] venues as well actually two papers yeah
+[00:01:23] two papers yeah uh so first of all I
+[00:01:26] just wanted to kind of set the tone of
+[00:01:27] this conversation and you know there's
+[00:01:29] been a lot of debate about the role of
+[00:01:31] social media in uh promoting or
+[00:01:33] supporting Civic engagement so as you
+[00:01:35] may remember uh when the Arab Spring was
+[00:01:37] in full speed uh you know Klay shirki
+[00:01:40] and uh and Malcolm glad got into this
+[00:01:42] debate about you know what what was the
+[00:01:44] role of social media and so on so our
+[00:01:46] hope is that this could add to this
+[00:01:48] discussion um so I'm just going to give
+[00:01:50] an outline of our presentation so first
+[00:01:52] we're going to you know provide context
+[00:01:53] of what is the phenomena that we are
+[00:01:55] observing and then we're going to go
+[00:01:57] we're going to dive deeper into the
+[00:01:58] different analysis that we we did of the
+[00:02:00] Twitter sphere in Mexico um so first uh
+[00:02:04] the Mexican drug war so first of all I
+[00:02:06] just wanted to say you know that the the
+[00:02:08] drug war in Mexico is a slightly it's a
+[00:02:11] slightly different concept than what we
+[00:02:12] think of the drug war here it's not just
+[00:02:14] a policy it's also an actual War it's an
+[00:02:16] armed conflict uh so this conflict
+[00:02:18] started around 2006 um and uh and some
+[00:02:22] people you know they they they they some
+[00:02:24] people some researchers have said that
+[00:02:25] the drug work should not be considered a
+[00:02:27] domestic Insurgency uh that should be
+[00:02:29] instead classify as a non- international
+[00:02:32] armor conflict um so again trying to set
+[00:02:35] the context of this which is actually
+[00:02:37] we're talking actually about an armed
+[00:02:38] conflict happening in primarily urban
+[00:02:40] areas in Mexico um so again to give some
+[00:02:44] context uh the numbers of people who
+[00:02:46] have died in the drug war are contested
+[00:02:48] as you can imagine but these are some
+[00:02:49] numbers that were released at the end of
+[00:02:51] last year uh so there were there are
+[00:02:53] about 60,000 people that have been
+[00:02:55] killed there are about 230,000 people
+[00:02:57] that have been displaced uh because of
+[00:02:59] the violence
+[00:03:00] and you can see here in this in this
+[00:03:02] chart uh you know how the violence
+[00:03:04] started to pick up around 2006 which is
+[00:03:06] when uh president Calderon took office
+[00:03:08] and you know he changed the policies and
+[00:03:10] then the the way he was going to fight
+[00:03:12] uh the the the drug war so you can see
+[00:03:14] this is the the um rate of homicides uh
+[00:03:18] per per month actually so you can see
+[00:03:20] how it kind of continues to go up and
+[00:03:23] and worris some rate um now just to give
+[00:03:26] you an idea of what this looks like uh
+[00:03:28] you know crisis in in in Mexico in many
+[00:03:30] cities of Mexico are part of everyday
+[00:03:31] life there are shootings there are
+[00:03:33] grenade attacks there are car bombs all
+[00:03:35] sorts of things that are you know
+[00:03:36] happening uh in people's neighborhoods
+[00:03:39] in the streets Etc uh it's not just uh
+[00:03:41] in some areas of the city generalized in
+[00:03:44] many different areas of of the the
+[00:03:46] cities that have this this problem um so
+[00:03:48] again crisis are part of everyday life
+[00:03:50] uh and now you know the war is not just
+[00:03:52] a war of you know bullets is also a war
+[00:03:54] of information uh and you know there's a
+[00:03:57] lot of um tension around you know what
+[00:03:59] kind of information can and should be
+[00:04:01] released uh typically when there are
+[00:04:03] emergencies in a country like the US you
+[00:04:05] have situations like this you know if
+[00:04:07] there's a shooting or if there is a
+[00:04:08] natural disaster there is a government
+[00:04:11] uh there uh and this is a role typically
+[00:04:14] known as the public information officer
+[00:04:16] and these are people who are you know
+[00:04:18] part of the government and part of the
+[00:04:19] kind of Emergency Response Team that
+[00:04:21] tries to talk to the media uh so we have
+[00:04:24] these two kind of elements of the
+[00:04:26] information flow during crisis in in in
+[00:04:28] places that are uh not at work
+[00:04:30] uh however in Mexico as we see in this
+[00:04:33] report on the Washington Post uh
+[00:04:35] journalist the media is not able to to
+[00:04:37] do the job and here I'm going to quote
+[00:04:39] it says feing for their lives and safety
+[00:04:42] of their families journalists are
+[00:04:43] adhering to a near complete news
+[00:04:45] blackout on the restrict orders of drug
+[00:04:47] sming smuggling organizations and their
+[00:04:50] enforces uh who dictate via uh daily
+[00:04:52] telephone calls emails and news releases
+[00:04:54] what can and cannot be printed or air so
+[00:04:57] again you know the challenge here is
+[00:04:59] that the journalists cannot do their job
+[00:05:00] because they're being threatened by by
+[00:05:03] uh by the cartels and sometimes even by
+[00:05:04] the government uh similarly the
+[00:05:07] government itself also is a victim of
+[00:05:09] this um of this news blackout and here
+[00:05:12] I'm going to quote again uh he says the
+[00:05:14] news blackout extends to government
+[00:05:15] officials then they mentioned the case
+[00:05:17] of no Laredo uh in in the city of no
+[00:05:19] Laredo the major mysteriously disappears
+[00:05:22] for days and refuses to discuss drug
+[00:05:24] violence uh the military General who uh
+[00:05:27] presides over the soldiers patrolling
+[00:05:28] the city does not hold news conferences
+[00:05:31] issue statements or answer questions
+[00:05:32] from the media so this is kind of the
+[00:05:34] the environment in which uh this is
+[00:05:36] happening so if you think of uh the the
+[00:05:38] image that I show before where you have
+[00:05:39] the government and the media you can see
+[00:05:41] that both of these entities both of
+[00:05:43] these institutions are weakened by by
+[00:05:45] the war um now uh social media has
+[00:05:49] played an important role in this
+[00:05:50] information War as we called it uh and
+[00:05:52] I'm going to describe uh why uh first of
+[00:05:55] all uh internet penetration in Mexico
+[00:05:57] has increased uh dramatically in the
+[00:05:59] past past few years um so now you can
+[00:06:01] find internet and tacos at the same time
+[00:06:04] uh the number of users uh in Mexico uh
+[00:06:07] Grew From 177% of the population to 34%
+[00:06:10] of the population in 2010 and now you
+[00:06:12] can imagine it's a lot more um now in
+[00:06:15] terms of social media use uh 61% of
+[00:06:18] those internet users are users of social
+[00:06:21] media sites from Facebook to Twitter to
+[00:06:22] YouTube Etc um of those people who use
+[00:06:25] social media about 20% are active
+[00:06:28] participants on Twitter
+[00:06:30] um and in fact I just saw a report from
+[00:06:32] the Oxford intern Institute uh from last
+[00:06:34] week that show that Mexico is the fifth
+[00:06:36] largest country in terms of Twitter
+[00:06:38] production of knowledge um so that's the
+[00:06:41] the environment and so when you have uh
+[00:06:43] this intersection of you know weaken
+[00:06:45] institutions you know the media and the
+[00:06:46] government you have uh increased
+[00:06:49] violence and you have uh an increased
+[00:06:51] adoption of social media what you have
+[00:06:53] is the
+[00:06:54] following um you know we started to see
+[00:06:57] tweets like this one uh I'm going to
+[00:06:59] translate this to Spanish to English um
+[00:07:03] so very the Tweet says you know caution
+[00:07:05] on Lazaro cardas Avenue around Del Paso
+[00:07:07] uh people report a recent risky
+[00:07:09] situation which is a euphemism for a
+[00:07:11] shooting or a grenade attack uh and then
+[00:07:13] they add these hashtags like mty follow
+[00:07:15] mty is the uh code for the airport of
+[00:07:18] the city of Monterey and then follow
+[00:07:20] kind of an invitation to follow this
+[00:07:22] hashtag and then also risk montere and
+[00:07:24] then a time stamp that some people add
+[00:07:26] to their tweets so so what we are seeing
+[00:07:28] is that people are using Twitter as a
+[00:07:30] way of alerting other people of which
+[00:07:33] areas of the city to avoid uh what is
+[00:07:35] happening in the city is because the
+[00:07:37] media either is not reporting this or
+[00:07:39] when they do report it they report it at
+[00:07:41] such a slow pace and they wait for so
+[00:07:43] for for for many hours or even days that
+[00:07:46] it's no longer useful information what a
+[00:07:48] lot of people do a lot of the people
+[00:07:49] that I know in in some of the cities in
+[00:07:50] Mexico is for example before they leave
+[00:07:52] home or before they leave their office
+[00:07:54] they check on Twitter on which areas of
+[00:07:57] the city to avoid kind of like a traffic
+[00:07:59] report um so so that's that's what we
+[00:08:01] are seeing and I just want to make make
+[00:08:03] sure that uh we understand that Twitter
+[00:08:05] is just part of an Ecology of uh
+[00:08:07] different information system it's not
+[00:08:09] the only one it's the one we studied in
+[00:08:10] this case but there is YouTube there is
+[00:08:12] email there is Facebook and there is
+[00:08:14] also traditional uh medium uh like you
+[00:08:16] know the cell phone even face to-face
+[00:08:18] communication as well as the media
+[00:08:20] despite the fact that it's being you
+[00:08:22] know threatened there's still a lot of
+[00:08:23] journalists who are doing their job or
+[00:08:25] at least try to do their job uh so just
+[00:08:27] want to make uh sure that's uh what
+[00:08:29] we're studying but it's also part of an
+[00:08:31] ecology now what we we did is uh we
+[00:08:34] looked at four different cities in
+[00:08:36] Mexico where uh this intersection of uh
+[00:08:39] High violence High internet penetration
+[00:08:42] and uh and weak institutions uh happen
+[00:08:45] to converge so the first one is Monterey
+[00:08:47] it's a city of the size of uh the
+[00:08:49] greater metropolitan area of Boston is 4
+[00:08:51] million people uh then the the city of
+[00:08:54] Rosa which is a border city um then the
+[00:08:57] city of verac Cruz a city in the the
+[00:08:59] Gulf of Mexico and the City of saltio uh
+[00:09:02] which is uh very close to Monterey uh so
+[00:09:04] just to give you an idea the the city of
+[00:09:06] Boston just the city of Boston is about
+[00:09:08] 600,000 people the Greater Boston area
+[00:09:10] is uh 4.5 million people so just to uh
+[00:09:13] set the the dimensions um in your head
+[00:09:16] um this is where the cities are located
+[00:09:18] you know uh number one is Monteray two
+[00:09:20] saltio three Rosa and four verac Cruz so
+[00:09:24] what we did is we looked at first of all
+[00:09:26] we wanted to understand you know how
+[00:09:26] many tweets are there you know we've
+[00:09:28] been hearting and and seeing on Twitter
+[00:09:30] that there are people doing this but we
+[00:09:32] wanted to get a sense of how many of
+[00:09:33] these tweets there were um so we looked
+[00:09:37] at all the tweets that were uh posted uh
+[00:09:40] from August 2010 until uh November 2011
+[00:09:44] and there were about uh 600,000 tweets
+[00:09:47] uh posted with particular hashtags uh so
+[00:09:49] each city has organically developed
+[00:09:52] hashtags that are used to report the
+[00:09:55] violence uh so we look only at one of
+[00:09:57] those hashtags per City and this is the
+[00:09:59] numbers that we got uh there are more
+[00:10:01] hashtags that emerge and you know people
+[00:10:03] compete for attention different hashtags
+[00:10:05] but just to make the the analysis
+[00:10:06] simpler we looked at one hashtag per
+[00:10:07] City uh so again Monterey Rosa saltio
+[00:10:10] and verac Cruz these are the hashtags
+[00:10:12] and the number of tweets you can see
+[00:10:14] kind of corresponds to the size of of
+[00:10:16] the city um you can see also the number
+[00:10:18] of of unique users who are contributing
+[00:10:20] to these to these uh kind of communities
+[00:10:23] of practice around the the hashtag um
+[00:10:26] now we also wanted to know what kind of
+[00:10:27] tweets we have um um so you know as if
+[00:10:31] you use Twitter there are kind of
+[00:10:32] different kinds of interaction there is
+[00:10:33] like something called retweet which is
+[00:10:35] like spreading a tweet uh uh to your to
+[00:10:38] the people that you follow that follow
+[00:10:39] you there is also this thing called
+[00:10:41] mentions which kind of is mentioning
+[00:10:42] somebody else in a tweet uh and there
+[00:10:44] are like you know the noo or original
+[00:10:46] tweets so we wanted to see you know what
+[00:10:48] is the the rate of you know
+[00:10:49] dissemination via retweets and uh
+[00:10:52] interaction via uh dimensions and and
+[00:10:55] one thing we saw is that for most of the
+[00:10:57] Cities uh the retweets the dissemination
+[00:11:00] are the primary mode of intera or of
+[00:11:02] participation on these hashtags which
+[00:11:05] kind of if you look back at the tweet
+[00:11:06] that I show you that tweet will be
+[00:11:08] posted by someone who perhaps is in the
+[00:11:10] scene or who heard from someone that
+[00:11:12] something happened and everybody else
+[00:11:13] kind of uh retweets that and and they
+[00:11:15] retweet a lot uh just as a point of
+[00:11:17] comparison although this is kind of
+[00:11:19] almost comparing apples and oranges um
+[00:11:21] we looked at uh at tweets from the city
+[00:11:23] of Seattle for example and the numbers
+[00:11:25] reverse so we didn't look at has we
+[00:11:27] looked at all the tweets posted by
+[00:11:29] people that said that they're from
+[00:11:30] Seattle and there were about 50% of them
+[00:11:32] were mentions uh and 15% were retweets
+[00:11:36] so kind of the opposite type of uh
+[00:11:38] interaction again we need to do a little
+[00:11:39] more analysis into you know looking at
+[00:11:41] you know uh comparing something similar
+[00:11:43] which will be perhaps the comparing the
+[00:11:45] the number of Tweets in the cities
+[00:11:47] against the number of tweets with the
+[00:11:48] hashtag but just to give you an idea
+[00:11:50] that's what we're seeing um now you know
+[00:11:53] how often do people tweet uh so what we
+[00:11:55] did is that over the course of these uh
+[00:11:57] 15 months that we looked at uh we kind
+[00:11:59] of try to quantify the number of tweets
+[00:12:02] uh per day and this is what we found uh
+[00:12:05] so the top is Rosa then monter saltio
+[00:12:07] and verac Cruz and you can see that
+[00:12:10] there are spikes and the spikes are you
+[00:12:12] know uh they match with what we are
+[00:12:14] seeing are you know major events so for
+[00:12:17] example one of the biggest spikes in
+[00:12:18] Rosa uh corresponds to some clashes that
+[00:12:22] kill 47 people in one single day uh in
+[00:12:25] Monteray the biggest [ __ ] corresponds to
+[00:12:27] a massacre that happened in a Casino
+[00:12:29] where 52 people were killed in a fire uh
+[00:12:32] that some drug cartels uh kind of
+[00:12:35] started so you can see that this matches
+[00:12:37] somewhat uh well to to some of the the
+[00:12:39] big events one of the issues with
+[00:12:41] studying this this phenomena is that it
+[00:12:43] is really hard to find the ground truth
+[00:12:44] as I was saying you know if you look at
+[00:12:46] the media you don't see the totality of
+[00:12:49] what's happening if you look at Twitter
+[00:12:50] well you might also see some tweets that
+[00:12:52] might not be true so it's really hard to
+[00:12:54] to know what is true but you know if you
+[00:12:56] look at each one of these spikes and you
+[00:12:57] look kind of manually at the tweets that
+[00:12:59] people are reporting primarily they're
+[00:13:01] reporting the same event and then you
+[00:13:02] sometimes that matches to what you see
+[00:13:04] on the media uh one other thing that we
+[00:13:06] see here is uh this kind of stagger
+[00:13:08] adoption and uh you can see that the
+[00:13:11] kind of the volume of tweets uh starts
+[00:13:14] shifting or starts kind of uh moving uh
+[00:13:17] in this direction and and this kind of
+[00:13:18] corresponds to the way the violence
+[00:13:20] spread uh geographically in this city so
+[00:13:23] we actually saw that you know the
+[00:13:25] violence in Rosa if you look at you know
+[00:13:27] uh the numbers the official numbers kind
+[00:13:29] of started before montere and and so on
+[00:13:32] so you can see that this practice of
+[00:13:34] using Twitter and using it in this way
+[00:13:36] through hash Texs and so on it spreads
+[00:13:38] as the violence spreads now we wanted to
+[00:13:40] see also what are people tweeting uh so
+[00:13:43] we took a snapshot of all the tweets
+[00:13:45] from one of the cities and we looked at
+[00:13:47] you know just the typical uh word cloud
+[00:13:49] where we wanted to see what are the most
+[00:13:50] common words mentioned so you see the
+[00:13:52] biggest word there is the word balacera
+[00:13:54] which means shooting in Spanish uh and
+[00:13:56] then there are words like reportan which
+[00:13:58] is report precaution uh Theon which is
+[00:14:02] like blasts and then also names of uh of
+[00:14:05] parts of the city like Gara is a common
+[00:14:08] uh last name in in the city which also
+[00:14:10] corresponds to a big Street in in the
+[00:14:12] city of Monterey uh and Guadalupe which
+[00:14:14] is a one of the municipalities in the
+[00:14:16] city so you can see that there is a lot
+[00:14:18] of um of wars that refer to events as
+[00:14:21] well as location of those events um so
+[00:14:26] what again kind of putting this into a
+[00:14:27] different uh format
+[00:14:29] we kind of looked at the most common
+[00:14:31] words and we kind of looked at the
+[00:14:33] frequency of those words and you can see
+[00:14:35] the order of these words primarily what
+[00:14:37] we see is descriptions of places uh then
+[00:14:40] uh references to violence shootings in
+[00:14:43] particular uh then references to some
+[00:14:46] version of the word report in Spanish
+[00:14:48] and then references to people um that we
+[00:14:51] also that we also see in in this in this
+[00:14:54] uh Corpus of of
+[00:14:56] data now uh one of the things that we
+[00:14:58] also want wanted to see is you know who
+[00:14:59] is tweeting all this um is it you know
+[00:15:02] 10 per 10 people or or you know is it
+[00:15:04] like who are these people um so what we
+[00:15:07] did uh we looked at all of each one of
+[00:15:10] these cities and we mapped the number of
+[00:15:13] tweets and the number of followers that
+[00:15:15] each one of the people tweeting uh kind
+[00:15:17] of reports so each one of the the dots
+[00:15:20] is a person uh so for example uh you
+[00:15:23] know if we look at this person you know
+[00:15:26] you will see that they have like 10 to
+[00:15:27] the I think it's
+[00:15:29] 10 to the three which is like a thousand
+[00:15:31] uh tweets and then 10 to the four about
+[00:15:34] like 10,000 followers so you can see
+[00:15:37] that this is basically what we try to
+[00:15:39] identify is different groups of people
+[00:15:40] uh so these are people for example that
+[00:15:42] tweet very little but have a lot of
+[00:15:44] followers and this is important because
+[00:15:46] it helps us identify different kind of
+[00:15:48] groups of people so you know again this
+[00:15:51] is the the group of people who tweet
+[00:15:52] very little but have a lot of followers
+[00:15:55] and this is a group of people who kind
+[00:15:56] of tweet an average number of tweets and
+[00:15:58] don't have that many followers you know
+[00:16:00] the average citizen and these are the
+[00:16:02] people who uh are tweeting a lot and
+[00:16:05] also have a lot of followers so when we
+[00:16:07] looked at uh trying to identify some of
+[00:16:08] these people for example one of the
+[00:16:10] accounts there is CNN in Spanish so they
+[00:16:13] when when they were reporting the casino
+[00:16:15] Massacre they use the hashtag mty follow
+[00:16:18] and and that kind of U said was you know
+[00:16:21] represented here uh we grab the number
+[00:16:23] of tweets at the end of our kind of uh
+[00:16:26] computation and also the number of
+[00:16:27] followers at the end of the kind of the
+[00:16:30] sample that we did so it's possible that
+[00:16:31] some of these people started with you
+[00:16:32] know zero followers and then at the end
+[00:16:34] they had many
+[00:16:35] followers uh then these are the average
+[00:16:37] citizens and then what we call the
+[00:16:39] curators and basically what the curators
+[00:16:42] are doing they are spending a lot of
+[00:16:44] time on Twitter they're browsing through
+[00:16:46] all the tweets that they read with the
+[00:16:48] hashtag of their city and they when they
+[00:16:51] recognize that multiple people are
+[00:16:52] reporting the same thing they broadcast
+[00:16:54] this this event to their followers so
+[00:16:56] these people gain a lot of reputation
+[00:16:57] for doing this and as you can can see
+[00:16:59] they have a lot of followers uh some
+[00:17:01] some of them have like more than 100,000
+[00:17:02] followers and so on so they're very
+[00:17:04] influential or very powerful people in
+[00:17:06] the tour sphere in their City they have
+[00:17:09] wide reach and also people kind of trust
+[00:17:11] them uh through their their follows um
+[00:17:15] so we try to you know Identify some of
+[00:17:17] these people and it's really hard to
+[00:17:19] talk to them as you can imagine uh you
+[00:17:20] know uh this the situation in Mexico is
+[00:17:23] quite complicated and and uh there's
+[00:17:25] been some attacks on on on people who
+[00:17:27] are on social media so they they're very
+[00:17:29] careful of who they talk to and what
+[00:17:31] they talk about so we were we reached to
+[00:17:33] a couple of them uh and not many reply
+[00:17:36] but three of them uh rep and they
+[00:17:38] accepted to be interviewed uh I
+[00:17:40] interviewed them over Skype so one of
+[00:17:42] them over Skype the other one over kind
+[00:17:44] of a chat live chat and the other one
+[00:17:46] through email so I'm going to focus on
+[00:17:49] two interviews that I did one with
+[00:17:51] Angela uh this is a fake name obviously
+[00:17:53] and the other one with Claudia also a
+[00:17:55] fake name a fake photograph uh and um so
+[00:18:00] so basically um Angela in this case is a
+[00:18:03] is a woman who well at least
+[00:18:04] self-reports as a woman um who has
+[00:18:07] 25,000 followers she has twied 35,000
+[00:18:10] times she spends according to her about
+[00:18:12] 15 hours per day on Twitter which is
+[00:18:14] quite a lot uh she's in her early 20s um
+[00:18:18] and then Claudia uh she has about 30,000
+[00:18:21] followers uh she has twied about 60,000
+[00:18:23] times a lot more uh and she when when I
+[00:18:26] ask her how much time do you spend on
+[00:18:28] Twitter she said many hours she didn't
+[00:18:29] say exactly how much and she didn't say
+[00:18:31] what her age was um one of the
+[00:18:33] interesting things is that a lot of the
+[00:18:35] people that are in this kind of curator
+[00:18:37] category are uh women uh I didn't kind
+[00:18:40] of examine that in a lot of detail but I
+[00:18:42] thought it was interesting that a lot of
+[00:18:44] them are at least self-report as
+[00:18:46] women um I all the interviews were
+[00:18:48] conducted in Spanish and I'm going to
+[00:18:49] present to you the translations of this
+[00:18:51] so if there are any mistakes this is my
+[00:18:52] own mistake uh so first of all I asked
+[00:18:55] them you know how did you get started
+[00:18:56] with Twitter um
+[00:18:58] so Angela for example she said you know
+[00:19:01] it was through a friend and then she
+[00:19:03] said her friend said you have to uh go
+[00:19:05] to Twitter it's so cool uh she joined
+[00:19:07] around 2009 uh for Claud I was a little
+[00:19:10] different she said I joined by chance I
+[00:19:13] heard on the radio about how celebrities
+[00:19:15] will interact with their fans uh and she
+[00:19:17] also joined around 2009 uh you can see
+[00:19:19] the power of Justin Bieber perhaps uh
+[00:19:21] being uh place here um then I asked how
+[00:19:25] will you describe your role uh and
+[00:19:28] Angela said you know I'm a journalist
+[00:19:31] and then she says it is as if I was a
+[00:19:33] war correspondent on social networks of
+[00:19:35] the war we are living in Mexico I
+[00:19:37] thought it was a kind of nice quote she
+[00:19:39] she calls herself a war correspondent uh
+[00:19:42] for Claudia she kind of uh insist a lot
+[00:19:44] on like her role is that of another
+[00:19:47] citizen she kind of tries to not be or
+[00:19:50] at least during the interview tries to
+[00:19:51] not be kind of protagonist that she said
+[00:19:53] I'm just another citizen but also she
+[00:19:55] says that people tell her that she's
+[00:19:57] like their angel for looking after them
+[00:19:59] so a lot of our followers you know they
+[00:20:01] ask her I'm living work is this street
+[00:20:03] safe or not or you know they they have
+[00:20:05] this established relationship over the
+[00:20:07] course of several weeks or months that
+[00:20:08] they kind of interact um I also wanted
+[00:20:11] to learn about their motivations so the
+[00:20:13] the motivations kind of did came uh not
+[00:20:15] out of a particular question but out of
+[00:20:17] the whole discussion that we had uh so
+[00:20:19] for Angela for example she says uh I
+[00:20:22] consider this as a community service
+[00:20:24] even though people might laugh about it
+[00:20:25] and she kept insisting on this like it's
+[00:20:27] something really serious but at the same
+[00:20:29] time you know maybe my friends are
+[00:20:30] making fun of this or you know even
+[00:20:32] though you might not think it's serious
+[00:20:33] enough it is actually serious and I
+[00:20:35] think of it as as a altruistic kind of
+[00:20:37] participation and for Claudia she
+[00:20:39] actually referred to the word altruism
+[00:20:40] she said tweeting is an altruistic
+[00:20:42] Community Service uh so kind of you can
+[00:20:44] see the similarities in in the
+[00:20:47] responses uh and then I also asked her
+[00:20:49] what are their sources I really wanted
+[00:20:50] to know where they get their information
+[00:20:53] uh so for
+[00:20:55] Angela uh she says not all the
+[00:20:57] information comes from Twitter uh there
+[00:20:59] is a lot of people who know what I do
+[00:21:02] they have my number and they call me
+[00:21:04] they're 100% citizens and then she
+[00:21:05] explained how uh you know people in the
+[00:21:07] city know her at least some people and
+[00:21:10] that uh you know she has contacts with
+[00:21:12] people uh in the police department or
+[00:21:14] the fire department or friends who live
+[00:21:16] across the city so when she hears a
+[00:21:18] report either on on on Twitter or that
+[00:21:20] somebody calls her she often tries to do
+[00:21:22] some kind of triangulation so she will
+[00:21:23] call a friend of a friend whose
+[00:21:24] grandmother lives by that neighborhood
+[00:21:26] and says you know are you are you
+[00:21:27] hearing any blast or anything so that's
+[00:21:30] kind of the way she tries to to confirm
+[00:21:32] that the information is true or not uh
+[00:21:34] for Claudia uh she says most of the
+[00:21:36] information comes from Los twitteros
+[00:21:38] which is a common term people use in
+[00:21:40] Mexico to refer to the to the Twitter
+[00:21:41] sphere uh and and uh so she says my
+[00:21:44] followers are the ones who send me the
+[00:21:46] information and then interestingly
+[00:21:47] enough she says in other cases it's the
+[00:21:49] reporters on TV or the local news so you
+[00:21:52] can see that despite the fact that yes
+[00:21:55] uh institutions are weak the media is
+[00:21:56] weak they still play a role in this kind
+[00:21:58] of information ecosystem and and a lot
+[00:22:00] of the the tweets and retweets that
+[00:22:02] people send are links to articles or or
+[00:22:05] links to news reports uh one of the
+[00:22:07] things that uh actually I think this
+[00:22:09] comes in later um one of the things that
+[00:22:12] I asked them uh was also you know what
+[00:22:13] are your opinions on mainstream media so
+[00:22:15] Angela said for example sorry for
+[00:22:17] Claudia she said you know when I started
+[00:22:20] the news media the journalist and the
+[00:22:22] government were
+[00:22:23] non-existent they did not report they
+[00:22:25] did not inform what was happening on the
+[00:22:27] streets so that was kind of a complaint
+[00:22:29] that I also heard from Angela she says
+[00:22:30] you know the media they forgot they have
+[00:22:33] an obligation with the people they
+[00:22:34] started hiding information then Society
+[00:22:37] started demanding information and this
+[00:22:38] is when social networks took cover uh so
+[00:22:42] we start seeing this this similar uh
+[00:22:45] articulation of you know why they they
+[00:22:47] are doing what they do and the way they
+[00:22:49] see the mainstream media now I asked
+[00:22:51] them also what are your opinions in
+[00:22:52] social media um so Angela says you know
+[00:22:55] social media is more pure uh so so for
+[00:22:58] example she say when a piece uh of news
+[00:23:00] gets to TV or newspaper it gets
+[00:23:02] mishandled as she often talked about how
+[00:23:05] she sees events and people reportings
+[00:23:07] and then by the time these events are
+[00:23:09] reported in the media they get changed
+[00:23:11] so much that they're not truthful to
+[00:23:13] what actually happen um so social media
+[00:23:16] she claims is is pure uh similarly uh
+[00:23:19] Claudia says you know social media is
+[00:23:20] very important because of the speed at
+[00:23:22] which uh one can reach people and the
+[00:23:24] veracity and because it's altruistic so
+[00:23:27] again kind of P the purity of social
+[00:23:29] media in a way kind of Express in these
+[00:23:31] in these quotes uh so one of the things
+[00:23:33] to to note here is also that they do
+[00:23:35] acknowledge that the media reports
+[00:23:38] things as as I was saying but um they
+[00:23:41] they there are two challenges within
+[00:23:43] mainstream media one is the speed and
+[00:23:45] the other one is you know the how
+[00:23:46] truthful it is um last uh one of the
+[00:23:50] things that I asked him you know what
+[00:23:51] will you change of this system what will
+[00:23:53] change of Twitter or social media in
+[00:23:55] general what are the challenges that you
+[00:23:56] see um so as a designer of technology I
+[00:23:59] was really interested in this in this
+[00:24:00] question uh to see what we could do uh
+[00:24:03] so one of the things that Angela said is
+[00:24:05] that uh she's worried about people uh
+[00:24:08] stealing her tweets so she says it
+[00:24:10] sounds silly uh but it's just that I am
+[00:24:12] against uh the stealing of tweets so I
+[00:24:15] thought it was interesting uh because
+[00:24:16] I've been doing a lot of work on
+[00:24:17] intellectual property in a completely
+[00:24:19] different setting and I thought it was
+[00:24:20] interesting to see this also happening
+[00:24:22] in this in this space for Claudia also
+[00:24:24] she says you know I do not like that
+[00:24:26] people often do not Credit in my
+[00:24:28] retweets of my tweets so from what they
+[00:24:31] told me is that often times somebody
+[00:24:32] reads their tweets and then they kind of
+[00:24:34] copy paste them and then put them with a
+[00:24:36] different timestamp on the Tweet not on
+[00:24:39] the kind of official timestamp so often
+[00:24:41] times what people do is that they report
+[00:24:43] some event and they add a time stamp on
+[00:24:46] what what time that event happened so
+[00:24:48] it's not necessarily when you're
+[00:24:49] tweeting that but when that event
+[00:24:50] happened and then apparently people
+[00:24:51] sometimes change that to claim that they
+[00:24:53] knew about this event earlier uh so you
+[00:24:55] can see that there is a lot of tension
+[00:24:57] around the the ownership of this
+[00:24:58] information and despite the fact that
+[00:25:00] these people are you know altruistic and
+[00:25:01] doing this for for the greater good they
+[00:25:04] still want to get credit for their work
+[00:25:05] they still want to be recognized there
+[00:25:07] were two other issues around ethics and
+[00:25:09] morality that they mentioned the first
+[00:25:11] one that Angela mentioned is that you
+[00:25:12] know Twitter verifies accounts that harm
+[00:25:15] Society so I asked her more about this
+[00:25:17] and what she said is that you know she
+[00:25:19] sees that a lot of the Twitter accounts
+[00:25:21] that are verified by Twitter are from
+[00:25:23] mainstream media a lot of media that she
+[00:25:24] recognizes as you know harmful for
+[00:25:27] society and she kind of gets upset that
+[00:25:28] Twitter is endorsing this now if you ask
+[00:25:31] Twitter they will say that verification
+[00:25:33] is not endorsement it's just you know a
+[00:25:34] way of avoiding um duplicity or people
+[00:25:38] claiming to be somebody else who they
+[00:25:40] are not uh but from the eyes of these
+[00:25:41] people at least this person uh the
+[00:25:44] verification is actually a seal of
+[00:25:46] endorsement similarly for Claudia she
+[00:25:49] complains about the quality of the
+[00:25:50] hashtags of the trending topics and she
+[00:25:53] says that uh the ones that are promoted
+[00:25:54] are often insulting and she says how
+[00:25:56] some of them are the meaning to people
+[00:25:58] or racist or whatever and again if you
+[00:26:00] ask Twitter they will say you know
+[00:26:01] trending topics are completely an
+[00:26:02] automated process is an algorithm that
+[00:26:04] does this uh however these people are
+[00:26:06] seeing this is a kind of some sort of
+[00:26:08] endorsement um now one of the
+[00:26:10] interesting things about the curators is
+[00:26:12] that you know there these are just two
+[00:26:14] of them uh is that this phenomena
+[00:26:16] started to be recognized in the
+[00:26:17] community outside Twitter uh so there is
+[00:26:20] a group of people in in one of the
+[00:26:22] cities that we looked at that started a
+[00:26:23] nonprofit organization uh called the
+[00:26:25] center of citizen integration or uh
+[00:26:29] aggregation and basically what they did
+[00:26:31] is they tried to replicate what the
+[00:26:32] curators are doing in a more official
+[00:26:34] way so they have offices they have phone
+[00:26:37] numbers uh they're public about who they
+[00:26:39] are and they basically are trying to
+[00:26:41] aggregate all the information from
+[00:26:42] Twitter uh from even short messages to
+[00:26:45] phone calls Etc and put them on a map
+[00:26:48] using this system called ushahidi that
+[00:26:49] was developed in in Kenya uh so this is
+[00:26:52] a really interesting development where
+[00:26:54] now kind of people are taking this kind
+[00:26:56] of user Innovation that they they seen
+[00:26:58] on Twitter and kind of implementing it
+[00:27:00] into a more formal uh process uh and
+[00:27:02] then we start seeing this spreading to
+[00:27:04] other places as well uh so now I'm going
+[00:27:06] to uh let Takis explore and explain to
+[00:27:09] you some of the analysis that we did of
+[00:27:11] the ret networks of of some of these
+[00:27:12] skute errors thank you y uh good
+[00:27:15] afternoon everybody um so uh I am a
+[00:27:19] computer scientist and uh I knew about
+[00:27:21] the drug war in Mexico but I did not
+[00:27:23] have a particular interest in diving
+[00:27:26] into it and trying to find out what was
+[00:27:28] going on however I have an interest in
+[00:27:31] um another issue that has to do with
+[00:27:33] trustworthiness of information we
+[00:27:35] receive how do you know what you know
+[00:27:38] how do you verify the information you're
+[00:27:40] getting and I've done some work looking
+[00:27:43] at uh uh the way that the discussion
+[00:27:46] about politics in the United States is
+[00:27:48] being shaped so when um uh andr last
+[00:27:52] year uh told me about the collection of
+[00:27:54] tweets that he was getting from there I
+[00:27:56] jumped into TW I said I would like to
+[00:27:58] see it but he says well they are
+[00:28:00] Anonymous which made me even more
+[00:28:01] Curious can Anonymous accounts actually
+[00:28:04] get any trustworthiness any traction and
+[00:28:07] why on Earth would you ever trust
+[00:28:10] somebody anonymously in particular when
+[00:28:12] it comes to um have your life depending
+[00:28:16] on the information you receive so that
+[00:28:19] that was kind of mindboggling so we
+[00:28:21] started analyzing and so I I had two
+[00:28:25] problems first that was the collection
+[00:28:27] that uh we got was huge was in the
+[00:28:30] hundreds of thousands of tweets I don't
+[00:28:33] want to read that many tweets number two
+[00:28:35] I don't speak Spanish that was a serious
+[00:28:38] problem of course so I thought well as a
+[00:28:40] computer scientist maybe we have some
+[00:28:41] tools that would like to to see so I
+[00:28:43] started looking at them as um a computer
+[00:28:47] scientist what you see here is a graph
+[00:28:50] and this graph represents the mutual
+[00:28:53] friendships between members of a
+[00:28:56] particular particular group in a
+[00:28:58] particular City that we will call
+[00:29:00] Greenville uh it was a thankfully very
+[00:29:03] early decision that we made to use
+[00:29:05] anonymity as well in everything we were
+[00:29:08] doing that U the question was that yes
+[00:29:11] these accounts are Anonymous that we're
+[00:29:12] dealing with but if at some point
+[00:29:14] somebody finds out about some of those
+[00:29:17] they can be exposed they can be in
+[00:29:18] danger so let's go with Anonymous so we
+[00:29:21] did that now this graph interestingly
+[00:29:23] enough I did not you know do it in
+[00:29:25] purpose to look like a human brain it
+[00:29:28] does uh with uh you know five regions
+[00:29:31] colored I will explain there are three
+[00:29:32] different parameters drawn here the
+[00:29:35] first parameter is the proximity of the
+[00:29:37] nodes uh how this algorithm works well
+[00:29:41] it uh it is looking as I said at Mutual
+[00:29:43] friendships on Twitter how many of you
+[00:29:45] are familiar with
+[00:29:47] Twitter so not everybody in Twitter is
+[00:29:50] not exactly like Facebook in which the
+[00:29:51] moment you become a friend of somebody
+[00:29:53] else they become friend of you but but
+[00:29:55] it is you can follow somebody
+[00:29:58] and only if they follow you you have
+[00:30:00] kind of closer relationship all right so
+[00:30:02] mutual following means a greater degree
+[00:30:06] of uh friendship so we looked at that
+[00:30:10] particular City's um twitterers um and
+[00:30:14] and and see how much friendship Mutual
+[00:30:18] uh following that is was among them
+[00:30:20] whenever you see to notes close by means
+[00:30:23] that they are connected by many other
+[00:30:26] friends and when you see them far apart
+[00:30:28] they are not connected by that many
+[00:30:30] friends so that was the proximity is one
+[00:30:33] of the parameter the second is the color
+[00:30:37] and the color is given by a different
+[00:30:38] algorithm this is an algorithm that
+[00:30:40] tries to find sub
+[00:30:42] regions which happen to have more often
+[00:30:46] connections between them than outside of
+[00:30:49] the sub region for example for all of us
+[00:30:52] here if we were to draw a similar graph
+[00:30:55] those of you who happen to work on the
+[00:30:56] same project and and you get to see
+[00:30:57] everybody every day you will eventually
+[00:31:00] get the same color versus others who are
+[00:31:03] working on different projects so in this
+[00:31:05] one it seems like we have like five
+[00:31:07] different at least uh subgroups
+[00:31:11] connecting uh actually we do not draw in
+[00:31:13] this graph every friendship but only
+[00:31:15] those that they have at least 75 mutual
+[00:31:18] friends and the third parameter is the
+[00:31:21] size of the node a node has a larger
+[00:31:24] size if it has more friends with others
+[00:31:27] so you can see here that in this green
+[00:31:29] sub uh area these nodes are having more
+[00:31:33] friends than others so again you get
+[00:31:35] this and you do not know anything yet
+[00:31:38] about what they're talking but you say
+[00:31:40] well I can see communities in there I
+[00:31:43] can see that the communities are
+[00:31:44] actually cooperating they have these
+[00:31:46] kind of friendships that you can do to
+[00:31:48] compare these against let's say the
+[00:31:50] friendship you could find in the US of
+[00:31:54] people tweeting about political issues
+[00:31:57] you will not see anything like that you
+[00:31:58] will actually see at least two different
+[00:32:01] groups of people uh kind of tweeting as
+[00:32:05] a matter of fact we have drawn that in
+[00:32:06] another place and actually you can see
+[00:32:08] you know the Democrats here the
+[00:32:10] Republicans here all the Liberals and
+[00:32:11] conservatives and if you were to color
+[00:32:14] them within the conservatives for
+[00:32:16] example you would see a subgroup which
+[00:32:18] would be say the Tea Party and all of
+[00:32:22] this you could essentially extrapolate
+[00:32:23] just by by looking at the way they
+[00:32:26] behave so that was one interesting thing
+[00:32:28] made us look even further into that the
+[00:32:32] second thing that we looked at is the
+[00:32:35] pattern of their Communication in
+[00:32:36] particular the retweeting for those of
+[00:32:39] you not familiar with Twitter retweeting
+[00:32:41] is when you are
+[00:32:43] transmitting the very same information
+[00:32:46] without changing an Iota you just get a
+[00:32:49] message and you send it to your
+[00:32:52] followers to those who are listening to
+[00:32:54] you and this is not yours this is an act
+[00:32:58] of trust in the information you're
+[00:33:01] receiving in some sense somehow you want
+[00:33:03] to inform others that you are believing
+[00:33:04] that this has some value it's not
+[00:33:07] happening 100% of the times but most of
+[00:33:09] the time that's what happens again if
+[00:33:11] you were see the the political system
+[00:33:13] you would see something similar so here
+[00:33:15] is what we see there are some clusters
+[00:33:17] far away from the
+[00:33:19] others these are clusters we found out
+[00:33:22] when we look closer to that that they're
+[00:33:23] referring to events like um um uh
+[00:33:27] musicals or some kind of uh a cultural
+[00:33:31] event that people were talking about or
+[00:33:33] you know uh famous personalities on TV
+[00:33:36] and stuff like that however by and large
+[00:33:39] there is a very strong cluster in the in
+[00:33:41] the SEC in in the middle and the size
+[00:33:43] again means who is being retweeted so
+[00:33:47] think of that as the page rank algorithm
+[00:33:49] that works on on Google whenever you do
+[00:33:52] a search on Google the first few things
+[00:33:55] that will come up on your web page
+[00:33:57] are likely the ones that Google believes
+[00:33:59] are the most important we are drawing
+[00:34:02] the very same thing here and one of
+[00:34:05] these nodes becomes particularly large
+[00:34:08] means that these node is being retweeted
+[00:34:10] like crazy and we have some smaller ones
+[00:34:13] 13 that they're kind of larger than the
+[00:34:15] group but some of them they're quite
+[00:34:17] larger this is the picture throughout
+[00:34:20] the period we are observing all right a
+[00:34:25] project that we currently work is how
+[00:34:27] the shape of this communication is
+[00:34:30] shaped over time where always people
+[00:34:32] retweeting this node all the time or not
+[00:34:36] so that's the kind of thing that we got
+[00:34:38] and again we have not read anything uh
+[00:34:40] of the tweets however these big nodes
+[00:34:44] attracted our attention you know why on
+[00:34:45] Earth people tweet these nodes so much
+[00:34:48] all right so we decided let's take a
+[00:34:50] closer look at this note um oh yes I
+[00:34:53] supposed to show you this when I was
+[00:34:55] talking so here is what I was talking
+[00:34:56] about
+[00:34:58] all right we started looking at this
+[00:35:00] particular Tweeter we call this person
+[00:35:03] Alex we have no idea if it is a male or
+[00:35:05] a female we do not have any idea who's
+[00:35:07] the real name of this person we call
+[00:35:09] this Alex and so we show here in red the
+[00:35:14] tweets of this very person and in blue
+[00:35:18] the tweets of the community that they
+[00:35:19] mention this person so it's not
+[00:35:22] surprising that the blue lines are much
+[00:35:24] larger because you know the community
+[00:35:26] essentially is referring to Alex much
+[00:35:28] more often than Alex can you know do it
+[00:35:31] by himself make sense and
+[00:35:34] so a little uh investigation here is
+[00:35:38] important you know you see a graph like
+[00:35:40] that what does it tell me well first you
+[00:35:43] see the spikes you wonder why you have
+[00:35:46] the spikes that's a curiosity you need
+[00:35:48] to dig deeper however you also find that
+[00:35:51] there is a correspondence between the
+[00:35:52] spikes of Alex and the spikes of the
+[00:35:54] followers so somehow the community is
+[00:35:57] following or is in sync with Alex
+[00:36:00] whatever it's doing however there is
+[00:36:02] another pattern that we notice that we
+[00:36:03] find particularly interesting if you
+[00:36:05] look overall how much Alex is talking
+[00:36:09] about in this first period versus later
+[00:36:13] on you will see that Alex is becoming
+[00:36:16] kind of more quiet down the road he is
+[00:36:19] talking less which is weird
+[00:36:23] um the sampling we have gotten is always
+[00:36:26] the same means so it does not explain
+[00:36:28] why at some point Alex starts talking
+[00:36:30] less his followers also start talking
+[00:36:33] about Alex less as time goes and
+[00:36:36] interestingly enough the separation
+[00:36:39] between the two regions comes with a
+[00:36:41] huge Spike for
+[00:36:43] Alex so we look at this and we say wait
+[00:36:45] a minute something we're we're told
+[00:36:47] something here something is going
+[00:36:50] on because Alex changes attitude and the
+[00:36:54] community changes attitude and that
+[00:36:56] happens after the community has a huge
+[00:36:58] interest in Alex all right the deficit
+[00:37:02] of not speaking Spanish it gets you know
+[00:37:04] more and more severe there um but we
+[00:37:08] thought maybe it has to do with
+[00:37:10] particular events that are happening so
+[00:37:11] in particular as Andre said balacera
+[00:37:14] this is about shooting let's see how
+[00:37:16] what people are talking about
+[00:37:19] corresponds to shooting Events maybe
+[00:37:22] that explains everything and here is the
+[00:37:24] interesting thing we have divided the
+[00:37:26] people who on Twitter in three groups
+[00:37:28] those who will talk only rarely they
+[00:37:30] have all together less than five tweets
+[00:37:33] this is the first picture you see here
+[00:37:36] in
+[00:37:37] blue and next to it we have the tweets
+[00:37:41] refer to balacera in
+[00:37:43] purple and an interesting observation
+[00:37:46] right there between these two is that
+[00:37:48] blue and purple
+[00:37:50] are quite correlated you know when one
+[00:37:54] goes up the other goes up when one goes
+[00:37:56] down the other goes down so these people
+[00:37:58] who rarely talk by and large they might
+[00:38:01] be talking about shootings that's
+[00:38:03] interesting now we go into the next
+[00:38:05] group this is the green Group which is
+[00:38:08] the group that's talking a bit these are
+[00:38:11] people that they had five to 100
+[00:38:13] tweets and indeed we see that in the
+[00:38:16] beginning this group The Green group
+[00:38:18] follows what balacera is doing but from
+[00:38:22] a point later on they're talking more
+[00:38:25] and does not always follow follow s the
+[00:38:27] spikes in balacera so this group
+[00:38:29] actually is interested in something else
+[00:38:31] after that and to make things even more
+[00:38:34] you know suspenseful those who are
+[00:38:36] talking a lot they have 100 or more
+[00:38:38] which is the blue which you see them
+[00:38:40] very low in the beginning here are
+[00:38:43] talking a
+[00:38:45] lot and the other observation is that
+[00:38:48] the change by the way this deep is just
+[00:38:51] meaning really that we don't have data
+[00:38:54] for that particular date it's not if you
+[00:38:56] were to just follow the lines you would
+[00:38:57] you know see that the transition is
+[00:38:59] smooth it's not like things are going
+[00:39:00] suddenly dead and then going up
+[00:39:04] so the dates that we see here correspond
+[00:39:09] to the dates that uh our friend Alex was
+[00:39:12] talking before and after so the whole
+[00:39:15] thing becomes really darn interesting
+[00:39:18] and we realize that something is
+[00:39:19] happening in the community around that
+[00:39:22] time those talkative people talk even
+[00:39:25] more there is an interest in
+[00:39:29] Alex and after that you know the
+[00:39:32] interest in Alex persist for a while the
+[00:39:36] interest of the community persist for a
+[00:39:38] while but Alex is not participating in
+[00:39:40] that this is where we give in and we
+[00:39:42] start hiring students who speak Spanish
+[00:39:44] and we start saying okay here is this
+[00:39:46] time you know this 10 12 tweets tell us
+[00:39:50] what they say and so on so forth so
+[00:39:52] instead of trying to read everything we
+[00:39:53] just focus on those that they have
+[00:39:55] something interesting to to say and here
+[00:39:57] is what we find here is what we find
+[00:40:00] here's the picture I showed you before
+[00:40:02] it turns out
+[00:40:03] that in the beginning of the data
+[00:40:05] collection we have we find out that our
+[00:40:08] curator's account is being hacked it's
+[00:40:11] one of the three accounts actually our
+[00:40:12] curator is using so this is what's
+[00:40:15] happening right there um why somebody
+[00:40:18] would want to actually hack the account
+[00:40:20] of that it could happen accidentally but
+[00:40:23] from the twitch we realize did not
+[00:40:25] happen accidentally we actually Beyond
+[00:40:28] this data we started going back and we
+[00:40:30] find several repositories of tweets and
+[00:40:32] we start sampling there we find out that
+[00:40:35] the tag that actually created all of
+[00:40:37] these data was created about eight
+[00:40:40] months before these
+[00:40:41] events and it happened from a random
+[00:40:44] person somebody who cared about the
+[00:40:46] community but Alex started getting um
+[00:40:50] using a lot of these hashtags in a very
+[00:40:53] effective way that is people appreciated
+[00:40:56] the the way he was using it and he
+[00:40:58] becomes prominent suddenly he gets into
+[00:40:59] the tens of thousands of followers so
+[00:41:02] people suddenly start Following start
+[00:41:05] following Alex so we're thinking maybe
+[00:41:07] there is some kind of animosity or
+[00:41:09] jealousy towards Alex we'll see what's
+[00:41:11] going on it turns out also that Alex is
+[00:41:13] trying actually is a is a rather
+[00:41:15] idealistic person because he's trying
+[00:41:17] actually to create a larger event behind
+[00:41:21] all of these things he's trying actually
+[00:41:22] to say as Mexicans as a big Community we
+[00:41:25] have to do something about the Narco
+[00:41:28] War later on we find that actually the
+[00:41:31] attacks of Alex do not end there is a
+[00:41:33] fake Alex that starts
+[00:41:35] ridiculing this guy and start ridiculing
+[00:41:39] we find however that within a few weeks
+[00:41:42] period this account is being shut down
+[00:41:45] by Twitter because the
+[00:41:47] community starts reporting this fake
+[00:41:50] account as spam to Twitter and Twitter
+[00:41:53] you know has this kind of automatic
+[00:41:55] algorithms that if a lot of people
+[00:41:56] complain about a particular uh Behavior
+[00:41:59] then they will sh them down so here you
+[00:42:01] have a community actually rallying
+[00:42:03] around Alex to try to shut down this
+[00:42:06] fake account pretty
+[00:42:08] interesting well what happened in
+[00:42:10] between we we were looking essentially
+[00:42:11] at the um eight top picks here to see
+[00:42:15] what people were talking about instead
+[00:42:16] of trying you know just going with a
+[00:42:18] surgical accuracy and you say what they
+[00:42:20] were talking that day what they were
+[00:42:21] talking about that other day
+[00:42:25] um if turns out that halfway in between
+[00:42:28] some major events were happening in
+[00:42:30] Greenville a lot of slaughtering is
+[00:42:33] happening and people are really getting
+[00:42:35] really upset in between um so it turns
+[00:42:39] out that Alex actually tries to do
+[00:42:41] something about that and it's doing
+[00:42:42] something really major he's trying to
+[00:42:44] organize in a very um formal way a group
+[00:42:49] of informants we found actually a large
+[00:42:53] number you know into the um
+[00:42:57] tens in the dozens of accounts that they
+[00:42:59] were created on the call apparently of
+[00:43:02] Alex trying to give information so all
+[00:43:05] of this explains the uh you know the
+[00:43:09] role that Alex is playing explains what
+[00:43:11] he's doing how he is doing
+[00:43:13] it there is however a major event that
+[00:43:16] happens just before this Spike Alex is
+[00:43:19] been accused as actually working for one
+[00:43:22] of the
+[00:43:24] cartels and you can just imagine the the
+[00:43:28] um response of the society in the
+[00:43:31] beginning they would not want to think
+[00:43:35] of that but after a while Alex stays
+[00:43:37] quiet for reasons we do not know and
+[00:43:41] eventually those who are retracting
+[00:43:43] credibility for Alex are winning
+[00:43:46] out I'm a little
+[00:43:49] confused is one account yes which has
+[00:43:53] beened no it it was one of three
+[00:43:56] accounts that was hacked and that has
+[00:43:58] been resolved I should have mentioned
+[00:44:00] that that this issue was resolved here
+[00:44:02] this account was account was abandon at
+[00:44:04] that time so he Alex had three accounts
+[00:44:07] so the red is three
+[00:44:10] accounts again I did not describe it no
+[00:44:12] it is one account but we know that it is
+[00:44:14] referred Alex said you know that's my
+[00:44:15] account has been hacked okay yeah so
+[00:44:18] what it shows is an attempt by somebody
+[00:44:22] or actually a collection of different
+[00:44:24] people we believe actually they are
+[00:44:25] multip players they are trying to harm
+[00:44:28] Alex uh because of the way they behave
+[00:44:31] because of the way they're giving the
+[00:44:32] messages
+[00:44:34] so we're continuing as uh uh Andre said
+[00:44:38] this is you know part of what we're
+[00:44:39] doing but we already have developed a
+[00:44:42] clear a clear a uh story about what we
+[00:44:45] observe right here um at that time I
+[00:44:49] think we should draw the summary and
+[00:44:53] maybe we could get together and start
+[00:44:55] are talking about the different things
+[00:44:57] that we learn from from this
+[00:45:01] experience I yeah let's uh well so try
+[00:45:05] to Plate uh first of all you know just
+[00:45:07] to sum up uh what we seen is an increase
+[00:45:09] of violence uh combined with a weaken
+[00:45:12] institutions uh combined with adoption
+[00:45:14] of high adoption of social media led to
+[00:45:16] this kind of form of uh Civic engagement
+[00:45:19] on on social media um and one thing that
+[00:45:22] we also talked about was you know how
+[00:45:24] citizens uh form these kind of alert
+[00:45:27] networks almost like reminds me of like
+[00:45:28] birds you know like some birds are
+[00:45:30] shping and then the rest kind of um
+[00:45:32] follows uh and then we also presented
+[00:45:34] how this practice spreads geographically
+[00:45:37] um as the violence Start Spreading and
+[00:45:40] then you know how this represents a new
+[00:45:41] element in this kind of uh information
+[00:45:44] ecosystem uh and then we also presented
+[00:45:47] this uh phenomena of what we call the
+[00:45:49] curator citizen cators uh who are
+[00:45:51] aggregating information kind of like
+[00:45:53] operators receiving lots of information
+[00:45:55] and then broadcasting these alarms to
+[00:45:58] everybody and and these curators are
+[00:46:00] Anonymous they manage to get prominence
+[00:46:03] and they manage also to get harmed it's
+[00:46:05] a very interesting play here that we are
+[00:46:07] observing how you know an anonymous can
+[00:46:10] come up to some prominence and being
+[00:46:12] harmed because anonymity is not always
+[00:46:14] helping you although I must say that uh
+[00:46:16] for for the interview the people that I
+[00:46:17] interview one of them uh it's actually
+[00:46:20] not Anon she actually uh puts her name
+[00:46:23] out and her photo and she what when I
+[00:46:25] ask her if she's worried or not uh she
+[00:46:27] said that she's not worried because what
+[00:46:28] she's reporting is kind of like factual
+[00:46:31] information uh you know things that if
+[00:46:33] there's a shooting outside in the street
+[00:46:34] here you know lots of people will know
+[00:46:36] it so reporting that she considers it's
+[00:46:38] not not a problem while the other people
+[00:46:40] are very Anonymous and they try to be
+[00:46:41] you know they they they try to hide
+[00:46:43] their their real information but I bet
+[00:46:45] it's not Alex
+[00:46:46] no um uh and then you know one of other
+[00:46:50] things that we wanted to to put forward
+[00:46:52] the idea that these people at least one
+[00:46:54] of them kind of phrase it this way that
+[00:46:56] they consider themselves as uh new war
+[00:46:59] correspondents uh they spend countless
+[00:47:01] hours on uh Twitter working
+[00:47:03] altruistically uh but also they want
+[00:47:05] recognition for their
+[00:47:07] work um they also challenged the
+[00:47:10] assumption that technology is neutral as
+[00:47:12] we saw with the mentioning of the uh
+[00:47:15] trending topics and Twitter verification
+[00:47:17] accounts uh and also this cares uh uh uh
+[00:47:21] you know we can identify them uh just
+[00:47:23] like the people living in the cities
+[00:47:25] through the vault of contributions as
+[00:47:27] well as through the reputation signals
+[00:47:28] that they accumulate via retweets or uh
+[00:47:32] follow uh numbers um but this reputation
+[00:47:36] as Takis was saying is fragile and you
+[00:47:38] know can be challenged uh by
+[00:47:41] others yeah so with that uh think
+[00:47:44] something that's it uh we just want to
+[00:47:46] thank some of our uh sponsors uh
+[00:47:48] Microsoft also is uh been a lot of our
+[00:47:51] collaborators have Microsoft and Welsley
+[00:47:52] and um we have gotten a major fund from
+[00:47:55] NSF and I should mention also the great
+[00:47:59] help of my colleague an Mustafar at
+[00:48:01] Welsley who has been instrumental in
+[00:48:03] doing a lot of this work thank
+[00:48:12] you so we're open for questions if we
+[00:48:15] have time
+[00:48:20] what to what extent do the cartels and
+[00:48:23] their members participate in these
+[00:48:25] social networks either openly or not
+[00:48:28] openly that's a great question um so
+[00:48:31] they are very open on one particular
+[00:48:34] website which is YouTube uh and I mean
+[00:48:37] as with anything that I presented here
+[00:48:38] that we talked about it's really hard to
+[00:48:40] know who is behind anything that you see
+[00:48:41] online right uh but what we' seen a lot
+[00:48:44] uh independent of the research is that a
+[00:48:47] lot of the cartels for example they
+[00:48:49] kidnap one of their opponents and they
+[00:48:51] interrogate them uh in front of the
+[00:48:54] camera and then they kill them but but
+[00:48:55] the interrogation is film and they this
+[00:48:58] video is posted on YouTube often times
+[00:49:00] the video includes the beheading or the
+[00:49:02] killing of the person and obviously
+[00:49:04] YouTube terms of use uh don't don't
+[00:49:06] allow that so the video gets taken down
+[00:49:08] uh so oftentimes these videos get
+[00:49:09] reposted on this uh website called VK is
+[00:49:12] like a Russian Facebook uh where there
+[00:49:14] is apparently less uh moderation uh so
+[00:49:17] you can still see some of this so I will
+[00:49:19] say that the the cartels are probably
+[00:49:21] primarily trying to use uh social media
+[00:49:23] as a way of broadcasting their message
+[00:49:26] uh it used to be early on in the drug
+[00:49:28] war that they will leak some of these
+[00:49:29] videos to the major news organizations
+[00:49:31] in Mexico and they and they will play it
+[00:49:34] uh that no longer happens uh so now
+[00:49:36] they're using uh YouTube for this
+[00:49:38] purpose uh it's unclear on how much they
+[00:49:40] are on things like uh Twitter and so on
+[00:49:42] there's a lot of debate and a lot of
+[00:49:44] speculation but that's been a lot harder
+[00:49:47] to identify there has been however some
+[00:49:49] major accusation that they try very
+[00:49:52] actively to infiltrate this kind of
+[00:49:54] sister uh uh citizen networks and they
+[00:49:58] um it's one of the accusations that
+[00:50:01] happens from time to time in the tweets
+[00:50:02] we read in which somebody's been accused
+[00:50:04] that they work for this cartel and they
+[00:50:06] work for the other within the community
+[00:50:08] I think also some cartels within
+[00:50:10] different communities some cartels have
+[00:50:11] kind of a better reputation than others
+[00:50:14] uh there there is one particular cartel
+[00:50:16] which is kind of the CH the champion of
+[00:50:19] hatred I guess they are being hated by
+[00:50:22] everybody more so it is it's interesting
+[00:50:25] how even the government of Calderon in
+[00:50:28] some reporting that was I read a couple
+[00:50:30] of weeks ago in New York uh New Yorker I
+[00:50:32] think was accused in quotes accused that
+[00:50:36] he was trying to attack other cartels
+[00:50:40] living one in charge so that eventually
+[00:50:42] will be an easier Target and others say
+[00:50:45] no they're actually collaborating and so
+[00:50:46] on so forth these news actually also
+[00:50:50] appearing in the
+[00:50:53] tweets yes Mary
+[00:51:01] thanks for the presentation the question
+[00:51:03] I had I'm it's incredibly provocative
+[00:51:05] and persuasive for me to think of a
+[00:51:07] community of actors who are are really
+[00:51:09] looking out for each other and then the
+[00:51:11] kogin in me wants to be a bit more
+[00:51:13] cautious and tentative about calling the
+[00:51:16] calling them a community and
+[00:51:17] particularly in terms of interpreting
+[00:51:18] retweets as a um as a reflection of of
+[00:51:22] community and and notoriety within that
+[00:51:25] commity or recognition within that
+[00:51:26] community so could you just talk a
+[00:51:28] little bit more about how you came to
+[00:51:30] think of it so coherently or cohesively
+[00:51:32] as Community yeah I can I can take that
+[00:51:34] so it is um the the term communities
+[00:51:37] actually is a technical term when we are
+[00:51:39] recognizing these kind of graphs and it
+[00:51:41] comes from recognizing a behavior in a
+[00:51:46] sub Group which is more consistent
+[00:51:49] within the group than
+[00:51:50] outside given that all of these
+[00:51:52] Anonymous people it's very unlikely that
+[00:51:54] they know know you know the vast
+[00:51:56] majority of their in person plus we're
+[00:51:59] talking about uh networks that they have
+[00:52:01] uh you know 50 60 100,000 uh you know
+[00:52:05] followers it's unlikely humanly unlikely
+[00:52:08] that you know that many people right or
+[00:52:09] even remember their their their faces so
+[00:52:12] it has to do more we recognize
+[00:52:15] communities more on the way they behave
+[00:52:17] that is when willingly they're using the
+[00:52:19] same hashtag to report you know if you
+[00:52:22] want to report something you don't
+[00:52:23] necessarily have to use a hashtag you a
+[00:52:25] hashtag when you want to say everybody
+[00:52:27] who's fed this hashtag I want you to
+[00:52:29] know what I'm saying and that's that's
+[00:52:32] how it's through their behavior it's not
+[00:52:34] a community the same way you know that
+[00:52:36] you're getting outside in you know uh
+[00:52:39] Cambridge and you're thinking in
+[00:52:40] addition to that I feel like uh one at
+[00:52:42] least to me one signal of uh identifying
+[00:52:45] a community is when members of a group
+[00:52:47] identif identify themselves with certain
+[00:52:49] name that everybody agrees on so I feel
+[00:52:52] like this term of Los toos to me in some
+[00:52:54] way sign this sense of collective uh
+[00:52:58] group that they they try to or they feel
+[00:53:00] like they're they're part of um I mean
+[00:53:02] that's kind of not universally used and
+[00:53:05] but but I feel like it kind of signals
+[00:53:06] this sense of like we are part of
+[00:53:08] something as a group outside the rest of
+[00:53:10] the people who are not
+[00:53:12] here
+[00:53:18] yeah last summer there was
+[00:53:21] uh from my understanding antiviolence
+[00:53:24] movement throughout Mexico that was
+[00:53:28] triggered by social
+[00:53:30] media and I'm wondering if you studied
+[00:53:33] any of that in relationship to the
+[00:53:36] Twitter sphere I've been aware of that
+[00:53:38] movement of course uh I have not studied
+[00:53:41] uh quantitatively or qualitatively as
+[00:53:42] much as this one um that movement was
+[00:53:45] primarily uh driven by this poet whose
+[00:53:47] son was killed and was kidnapped and
+[00:53:50] killed and so there was a big effort
+[00:53:52] around these kind of uh call like
+[00:53:55] basically people who Who had who had
+[00:53:57] been victims of the War uh they came
+[00:53:59] together and they formed this no more
+[00:54:01] violence kind of movement they went
+[00:54:03] around the country you know talking to
+[00:54:05] victims and so on uh so I think social
+[00:54:07] media play an important role in in
+[00:54:09] making this movement more visible but I
+[00:54:10] think the kind of face to-face
+[00:54:12] interactions and and the kind of uh you
+[00:54:15] know the fact that they are part of the
+[00:54:17] same uh they victims of the same crimes
+[00:54:20] they they brought them together much
+[00:54:22] more than social media will do but I
+[00:54:23] think social media play a role in in
+[00:54:25] kind of making this a lot more visible
+[00:54:27] in you know outside Twitter um so I I I
+[00:54:30] will I don't I don't know how much you
+[00:54:32] can claim that social media caused that
+[00:54:35] movement as much as you can say that the
+[00:54:37] the movement was helped by social media
+[00:54:40] was there was there any reflection of
+[00:54:42] that in the tweets that you stud well so
+[00:54:45] actually yeah so for example Alex the
+[00:54:47] the that that uh T is looked at uh this
+[00:54:51] person started a website that is all
+[00:54:53] about you know bringing Mexicans
+[00:54:55] together against violence and so on so
+[00:54:57] there is a lot of rhetoric in all the
+[00:54:59] tweets that we've seen of this idea of
+[00:55:01] like not only reporting things but also
+[00:55:03] complaining about violence often times
+[00:55:04] the complaints go uh you know people who
+[00:55:07] are complaining about their governor or
+[00:55:09] the president or sometimes there people
+[00:55:11] are saying things like you know we
+[00:55:12] should stop waiting for the government
+[00:55:14] to do something and we should organize
+[00:55:16] ourselves and do something uh it's
+[00:55:18] really hard to to you know to achieve
+[00:55:21] much just on on on social media and
+[00:55:23] actually one of the interesting things
+[00:55:24] is that I I think part of what we're
+[00:55:25] seeing in the past few weeks in Mexico
+[00:55:27] during the election uh this movement
+[00:55:29] organized primarily by students on
+[00:55:30] social media trying to fight what they
+[00:55:32] perceive as an electoral fraud I think
+[00:55:34] part of that kind of drives on the
+[00:55:36] similar practices that we start seeing
+[00:55:38] that we saw in these different cities
+[00:55:40] around violence so they see kind of a
+[00:55:43] the usefulness of social media to bring
+[00:55:44] their message to the
+[00:55:50] Forefront um so the the work's really
+[00:55:53] extensive and there's a lot of good like
+[00:55:55] mixed analysis and the qualitative uh
+[00:55:57] interviews is great but there's one
+[00:55:59] thing that I think is missing that would
+[00:56:01] add a lot of validity to the research
+[00:56:02] which is uh looking at geography and
+[00:56:05] looking at it in sort of like maybe
+[00:56:07] doing geocoding maybe looking at
+[00:56:09] geocoded users to really get an idea of
+[00:56:12] the extent to which these people are
+[00:56:13] actually physically located in Mexico
+[00:56:15] the extent to which they're located in
+[00:56:16] these Metro regions and and sort of you
+[00:56:18] know assert that this is actually the
+[00:56:20] case because you see Arab Spring stuff
+[00:56:22] and you know it's mostly Western
+[00:56:23] audiences looking at looking to them
+[00:56:26] rather than like these people on the
+[00:56:27] ground and same thing happened in Iran
+[00:56:29] so I actually started from there because
+[00:56:32] I could tell and I could write a program
+[00:56:34] that would determine the names of the
+[00:56:36] streets um in uh you know that
+[00:56:38] particular City and then connecting with
+[00:56:40] Google Maps I could check to see for
+[00:56:42] example this street and this streets
+[00:56:44] actually meet um you know is it is it
+[00:56:47] fictitious or it is the all of these
+[00:56:51] accounts the by and large do not report
+[00:56:53] location a few that reports give you
+[00:56:56] location the middle of the Atlantic
+[00:56:58] Ocean or Norway or you know the North
+[00:57:00] Pole or things like that they do not you
+[00:57:03] know have their geil location on however
+[00:57:06] I stopped doing that because I never
+[00:57:09] found in the beginning
+[00:57:11] any
+[00:57:13] fictitious um U location in the cities
+[00:57:16] we were seeing so it seems like they
+[00:57:19] were reporting about the cities then
+[00:57:21] very often they would also post a
+[00:57:23] picture
+[00:57:25] and then I could take a look at the
+[00:57:27] picture and you know see who else was
+[00:57:30] reporting when you have many people
+[00:57:32] retweeting the same information about a
+[00:57:34] location and about a city it's very
+[00:57:37] unlikely that this is not there yeah I
+[00:57:40] will add to that that there are a couple
+[00:57:42] of signals that you can identify as kind
+[00:57:44] of being that represent that these
+[00:57:46] people are actually in this places one
+[00:57:48] again is like the language the locations
+[00:57:49] as they mention like unless you live in
+[00:57:51] the cities which I have a lot of
+[00:57:52] familiarity with the cities I know that
+[00:57:54] these locations exist um but I I agree
+[00:57:57] that there's there's a need for a more
+[00:57:58] systematic analysis of how much of these
+[00:58:01] uh tweets how many of these tweets
+[00:58:02] actually come from Mexico uh but from
+[00:58:04] just kind of anecdotal evidence that
+[00:58:06] we've collected through Reading tons and
+[00:58:07] tons of tweets it does seem like the
+[00:58:09] majority are actually from Mexico and
+[00:58:11] one of the the challenges T is mentioned
+[00:58:13] is that it's really hard to find
+[00:58:15] location on tweet so first of all the
+[00:58:16] number of geolocated tweets uh overall
+[00:58:19] on Twitter is like less than 0.1% it's
+[00:58:22] like really really small uh the other
+[00:58:24] thing is that
+[00:58:25] the again the location that people set
+[00:58:26] on their profile um often times it's not
+[00:58:29] the real location or sometimes they use
+[00:58:31] a different version of that location so
+[00:58:32] for example Justin bers heart is one of
+[00:58:34] the most popular locations uh on Twitter
+[00:58:36] so uh it's really hard to identify that
+[00:58:38] but you know you can you can use
+[00:58:45] googi and but not for our group not for
+[00:58:49] our group our group is not reporting we
+[00:58:51] were looking we were looking at the case
+[00:58:52] of T1 at one point and get getting
+[00:58:55] upwards at that but we can talk about
+[00:58:57] that later I mean if if you have some
+[00:59:00] suggestion would love to
+[00:59:08] take I have question regarding Anonymous
+[00:59:11] sources and as you said Anonymous
+[00:59:15] sources in this situation became very
+[00:59:18] INF influ
+[00:59:19] influential and had a really high impact
+[00:59:22] but we are aware of many concerns
+[00:59:25] regarding Anonymous
+[00:59:26] sources so there could be many problems
+[00:59:31] with with them so do you have any
+[00:59:33] conclusion regarding the regulation of
+[00:59:36] anonymous sources uh in general in this
+[00:59:39] situation and how do we keep the quality
+[00:59:42] of anonymous sources and can you see any
+[00:59:44] perspective of use of anonymous sources
+[00:59:47] in future can we believe that we will
+[00:59:50] have Anonymous opinion makers in future
+[00:59:55] based on this
+[00:59:57] example yeah I can take that so um for
+[01:00:01] the anonymous sources it's different
+[01:00:03] when you're looking at your own Twitter
+[01:00:05] account and you receive an email a tweet
+[01:00:08] from some Anonymous person and different
+[01:00:11] when uh hundreds of thousands of people
+[01:00:14] or maybe you know thousands of people
+[01:00:15] actually look at the same thing and they
+[01:00:18] decide to rebroadcast this information
+[01:00:20] the chances are that the more you throw
+[01:00:23] this kind of crowd sourcing principle on
+[01:00:26] the problem the more human eyes look at
+[01:00:29] this information and decide to broadcast
+[01:00:32] it or not the more likely you are that
+[01:00:35] there is some validity with the
+[01:00:36] information you are getting the person
+[01:00:39] who's giving the information the
+[01:00:40] anonymous source itself slowly
+[01:00:45] gains um reputation it's not that if you
+[01:00:48] you know start an account right now and
+[01:00:51] you start tweeting about say Narco Wars
+[01:00:54] in you know pretending you are in Mexico
+[01:00:55] you will have an audience right away
+[01:00:57] it's very unlikely that you will have
+[01:00:59] very quickly somehow the community and
+[01:01:02] I'm using it you know in the previous
+[01:01:04] term has to accept that you have
+[01:01:07] something valuable to say and report
+[01:01:10] your
+[01:01:11] information so one of the things that we
+[01:01:14] found is that we did not we we find
+[01:01:17] things about confirmations and non-c
+[01:01:19] confirmations you know somebody says
+[01:01:21] yeah I confirmed that there is this
+[01:01:23] thing happening right there and I do not
+[01:01:25] confirm we do not find too many of the
+[01:01:27] non-confirmed in there so for cases like
+[01:01:32] that you will never be 100% sure in in a
+[01:01:34] few cases as I said we try to verify as
+[01:01:36] much as possible with the surrounding
+[01:01:38] information with the surrounding you
+[01:01:40] know location or description or the
+[01:01:41] picture stuff like that but it seems
+[01:01:43] that when thousands of people think that
+[01:01:47] this is worth
+[01:01:48] rebroadcasting and they're not robots
+[01:01:51] it's not like somebody wrote a program
+[01:01:52] to just broadcast like that I have many
+[01:01:55] reasons to believe that then you have
+[01:01:57] some validity that's my short answer but
+[01:02:01] kind going back to the question of
+[01:02:02] Regulation this this has been a very
+[01:02:04] debated Topic in Mexico about this so
+[01:02:06] one of the states uh the state of verac
+[01:02:07] Cruz which is one of the cities that we
+[01:02:09] looked at um there was a case where
+[01:02:12] people on social media were claiming
+[01:02:13] that kids were being kidnapped from
+[01:02:15] schools at the end it turned out to be
+[01:02:16] not true or at least seems like most
+[01:02:19] most things indicated was not true but
+[01:02:20] the news spread on social media really
+[01:02:22] quickly and so what happened is that the
+[01:02:24] parents when they read this they left
+[01:02:26] work early and then they went to pick up
+[01:02:27] their kids and so on so the government
+[01:02:29] was really upset and primarily the go
+[01:02:31] the governor actually has a Twitter
+[01:02:32] account and despite the fact that he was
+[01:02:34] tweeting saying this is not true people
+[01:02:35] didn't believe him partly because he
+[01:02:37] hadn't built a reputation through a long
+[01:02:40] period of time where he engaged in this
+[01:02:42] kind of uh practice of tweeting and
+[01:02:43] being part of this kind of community of
+[01:02:45] practice um part of that made it kind of
+[01:02:48] not trust a not trusted Source despite
+[01:02:50] the fact that he's the governor he was
+[01:02:52] very upset about it as you can imagine
+[01:02:53] and and what they did is that they went
+[01:02:54] after some of these accounts so they
+[01:02:56] identify like 17 accounts that
+[01:02:58] apparently were retweeting or tweeting
+[01:02:59] about this that were the source and they
+[01:03:01] send them to jail on the charges of
+[01:03:03] terrorism and not only that but they
+[01:03:05] kind of changed the law so that you know
+[01:03:07] it will be uh illegal to spread
+[01:03:09] misinformation on social media and again
+[01:03:11] in this environment where you don't know
+[01:03:13] what's misinformation what's not
+[01:03:14] misinformation it's really complicated
+[01:03:15] so uh in general I say will say that you
+[01:03:18] know the approach of looking at
+[01:03:19] regulation or using the law as a way to
+[01:03:22] to kind of uh control the flow of
+[01:03:23] information here doesn't seem like the
+[01:03:25] best approach uh and this is compared to
+[01:03:27] other cities where the government has
+[01:03:29] taken a more active approach and they
+[01:03:31] have a longstanding you know engagement
+[01:03:34] with this uh Twitter sphere uh where
+[01:03:36] their tweets and retweets are considered
+[01:03:38] a lot more trusted um so I guess just in
+[01:03:41] terms of Regulation I will I will kind
+[01:03:43] of uh raise the concern that that
+[01:03:45] doesn't necessarily will
+[01:03:47] work there is another thing that we did
+[01:03:50] not talk about at all though it it's
+[01:03:52] because you were still looking at it and
+[01:03:53] it's it's also important for your
+[01:03:55] question it has to do with the fact that
+[01:03:56] let's imagine that you are actually
+[01:03:57] working for a cartel and you are um you
+[01:04:00] know having your own Twitter account and
+[01:04:01] you can follow by seeing what people are
+[01:04:05] reporting you could get information
+[01:04:07] about where it is safe for you also and
+[01:04:10] your cartel members to move and where
+[01:04:12] not to move so you could have this kind
+[01:04:15] of Dual
+[01:04:16] Purpose citizens are using it to save
+[01:04:19] themselves and cartels are using it to
+[01:04:22] actually uh find out about the movements
+[01:04:25] of their opponents or the
+[01:04:27] police this is one you know heavily
+[01:04:30] debated argument in this to its
+[01:04:33] environment and what we find at the end
+[01:04:36] you remember the the brain like
+[01:04:37] structure I showed you one of the
+[01:04:39] reasons that you have these kind of
+[01:04:40] connections is that these groups don't
+[01:04:44] exactly uh agree or trust completely the
+[01:04:48] other friends in the other group you
+[01:04:49] know you may have some common
+[01:04:51] connections but they don't and from time
+[01:04:53] to time they start spreading rumors
+[01:04:55] about the other group we do not know at
+[01:04:58] the end who is telling the truth all we
+[01:05:00] know is that they're not on the same
+[01:05:01] board and this is you know the thing
+[01:05:05] that if we could figure out if you could
+[01:05:07] start you know binding you know finding
+[01:05:10] the ground Truth for some of these
+[01:05:12] groups then you might be able to find
+[01:05:13] for the
+[01:05:16] rest y hi so last year uh it was it
+[01:05:20] became public that there were some
+[01:05:22] threats to the people doing Narco blogs
+[01:05:25] in Mexico and they became public I guess
+[01:05:28] mostly when the few Narco blogs still
+[01:05:31] covering these things or the few
+[01:05:32] mainstream media covering they started
+[01:05:34] posting the pictures of these couple of
+[01:05:36] bloggers that were killed and put on a
+[01:05:39] bridge because of their engagement on
+[01:05:41] blogs uh but looking at it I mean just
+[01:05:43] from the inside on Twitter I hav ne
+[01:05:46] never found like threats posted at least
+[01:05:49] publicly to people like these curators
+[01:05:52] or people who are influential
+[01:05:54] in on Twitter and I was wondering
+[01:05:56] through your analysis or even through
+[01:05:58] the through the interviews done with
+[01:06:00] with these curators like did any
+[01:06:02] information on threads they have
+[01:06:04] received appear so I think there are two
+[01:06:06] issues here one is that um the kind of
+[01:06:10] things that we're looking at are reports
+[01:06:12] of events that are public uh the the
+[01:06:16] claims that people have been killed for
+[01:06:18] twitting or for using social media have
+[01:06:20] actually been related to the use of
+[01:06:22] other websites not not T in particular
+[01:06:24] to pinpoint the hidden locations of the
+[01:06:27] cartels so I just I just I'm trying to
+[01:06:30] make sure that we separate those two
+[01:06:31] practices and the one that we're looking
+[01:06:32] at is the practice of reporting events
+[01:06:35] and violence and so on and that's a lot
+[01:06:36] less uh in some ways dangerous than
+[01:06:39] actually reporting where the cartels are
+[01:06:40] hiding um and that actually is not as
+[01:06:43] active on Twitter so the fact that you
+[01:06:44] haven't seen it on Twitter as much is
+[01:06:46] because that doesn't happen as much on
+[01:06:47] Twitter as it happens on other side so
+[01:06:49] that particular case in val where they
+[01:06:51] killed two bloggers was because they
+[01:06:53] actually created a separate website
+[01:06:55] where they kind of had a Google match up
+[01:06:57] uh of the Google Maps uh API and they
+[01:07:00] kind of help people pinpoint the
+[01:07:01] location of the cartels and the claim is
+[01:07:04] that some of these people were killed
+[01:07:06] and but even that is being contested you
+[01:07:07] know there were two bodies found next to
+[01:07:09] the bodies that was a sign that said you
+[01:07:11] know these people are killed for what
+[01:07:12] they're doing online uh some people say
+[01:07:14] that perhaps they they were not actually
+[01:07:15] the people involved in the blog that
+[01:07:17] they were just random people that they
+[01:07:18] killed and they were trying to kind of
+[01:07:19] demonstrate their power so it's very
+[01:07:21] murky and it's really hard to know
+[01:07:22] what's true or what's not true
+[01:07:24] um but in general I will kind of
+[01:07:26] separate these two phenomena the one
+[01:07:27] reporting you know violence that is
+[01:07:29] public and the other one reporting the
+[01:07:31] hidden kind of information and that's
+[01:07:33] something that I'm personally not as
+[01:07:34] interested in looking at just because
+[01:07:35] it's you know a lot more dangerous and
+[01:07:37] more uh uh you know it's a lot harder to
+[01:07:39] to analyze because it's just a lot more
+[01:07:42] hidden yeah I
+[01:07:44] agree thank you for your really
+[01:07:46] interesting presentation on your really
+[01:07:48] interesting research and I know you said
+[01:07:50] that your research doesn't cover this
+[01:07:51] but I was wondering if you might
+[01:07:52] consider uh talking a little bit about
+[01:07:54] what you saw as the people who were
+[01:07:56] curators presenting themselves as female
+[01:07:59] uh I don't know how news operates in in
+[01:08:01] Mexico but I know in the US it's pretty
+[01:08:03] uncommon to have investigative
+[01:08:05] journalists be female particularly War
+[01:08:07] correspondents be female but um females
+[01:08:09] have historically uh been people
+[01:08:12] concerned with kinship and and Civic uh
+[01:08:15] and Welfare of community so I'm
+[01:08:16] wondering if you could kind of talk to
+[01:08:18] how social media might be involved in
+[01:08:19] that yeah actually when I asked one of
+[01:08:20] the cators why do you think that a lot
+[01:08:22] of these people are women and she said
+[01:08:24] what you were saying that you know women
+[01:08:25] are more Civic or more you know
+[01:08:28] pro-social in some ways that's what she
+[01:08:30] said um and when I ask this same
+[01:08:32] question to other people also they say
+[01:08:34] that well they claim to be wom women
+[01:08:36] just to gain uh status and trust but
+[01:08:38] they might not be women so I think there
+[01:08:40] is this play with gender there that is
+[01:08:43] really interesting and that I think will
+[01:08:44] be really interesting to dive more
+[01:08:46] deeper into that yeah yeah we're
+[01:08:48] thinking exactly of the same thing
+[01:08:49] because the overwhelming kind of fake
+[01:08:52] names that you see there are women's
+[01:08:53] names and you wonder are they really
+[01:08:55] women but I guess one reason is that
+[01:08:58] women naturally might care more about
+[01:08:59] that the other is that if you're a man
+[01:09:01] you want to muddle the waters you say
+[01:09:03] you're a
+[01:09:04] woman well thank you very much thank you
+[01:09:06] very much
+[01:09:08] [Applause]
+[01:09:11] thanks
