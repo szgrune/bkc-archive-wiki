@@ -1,0 +1,2102 @@
+[00:00:11] welcome everybody uh Mike anony is here
+[00:00:13] today to chat with us about um press
+[00:00:16] freedom and network journalism Mike is a
+[00:00:18] postto at Microsoft research um until
+[00:00:21] late June a fellow at the burkman center
+[00:00:23] and he will be joining the University of
+[00:00:26] Southern
+[00:00:26] California um in August as assistant
+[00:00:30] professor so welcome mik thanks thanks
+[00:00:33] everyone I'm going to stand if it's a
+[00:00:35] little easier so I can actually see
+[00:00:36] everybody when I'm talking um but yeah
+[00:00:40] thanks very much for the invitation to
+[00:00:42] talk today um what I wanted to do is
+[00:00:44] actually describe a project that I've
+[00:00:46] been working on for a couple of years
+[00:00:48] and it's around this idea of what press
+[00:00:51] Freedom might mean in an era of network
+[00:00:53] journalism so a quick way to think about
+[00:00:56] this is there's a you know a very
+[00:00:58] different landscape of production of
+[00:01:00] speech online especially um so one of
+[00:01:02] the starting points is is there a
+[00:01:04] meaning of press Freedom that we can
+[00:01:07] think about being present in all the
+[00:01:09] journalistic network practices and what
+[00:01:11] what my press freedom mean in this sense
+[00:01:13] is there a difference between the speech
+[00:01:14] clause and the Press Clause today is
+[00:01:16] there a different identity for the Press
+[00:01:18] um as distinct from uh people who are
+[00:01:21] speaking online so what I want to do is
+[00:01:24] ask you to just hold on to those ideas a
+[00:01:26] little bit as this idea of press Freedom
+[00:01:28] this idea of network journalism and walk
+[00:01:31] with me through this idea of what it
+[00:01:32] might mean so just to set the context a
+[00:01:34] little bit and I'm sorry maybe a little
+[00:01:36] hard to see with the with the lights but
+[00:01:38] um I mean this is not surprising or new
+[00:01:40] to anybody in this room but just this
+[00:01:42] idea that these are steps from the Pew
+[00:01:43] Center for um uh state of the media
+[00:01:46] report basically online is just
+[00:01:48] dominating the growth of news right we
+[00:01:51] see generally a decline in newspapers
+[00:01:53] many other sources are Flatline and
+[00:01:54] online is the place where we we see this
+[00:01:56] growing it's something I think we all
+[00:01:58] sort of know intuitively um but there's
+[00:02:00] there's stats on it the other thing I
+[00:02:02] wanted to start with in terms of context
+[00:02:04] is sort of there's a lot of talk or or
+[00:02:06] consternation right now about the
+[00:02:07] meaning of social media and news and at
+[00:02:10] least what what Pew found recently is
+[00:02:12] that social media is not yet a huge
+[00:02:14] driver of traffic to news sites we see
+[00:02:17] most people going directly to news
+[00:02:19] websites or their apps uh finding
+[00:02:21] stories or finding news sites through
+[00:02:23] search um or through um websites that
+[00:02:26] are particularly created by news
+[00:02:27] organizations so with with at through
+[00:02:30] Facebook and Twitter as being a
+[00:02:31] relatively small amount of traffic yes
+[00:02:34] read that you tell us what it says I'm
+[00:02:37] sorry yeah sure um so basically we have
+[00:02:40] about uh a little over a third of people
+[00:02:42] going directly to news websites it's
+[00:02:44] just sort of showing where do traffic
+[00:02:45] two news websites come from and we see a
+[00:02:48] really small set of them coming through
+[00:02:50] Twitter and Facebook recommendations
+[00:02:51] that's the only takeaway from that so
+[00:02:53] don't worry about the the details on on
+[00:02:55] that okay no it's a good question though
+[00:02:58] and then if we do dive into social media
+[00:03:00] a little bit we actually see that
+[00:03:01] friends and family especially on
+[00:03:03] Facebook are a dominant source of uh
+[00:03:06] referrals to news sites so actually with
+[00:03:09] journalists and news organizations
+[00:03:10] playing a relatively small role right
+[00:03:12] now on Facebook so again the details of
+[00:03:15] this is not super important but what I
+[00:03:16] just want you to take away is this idea
+[00:03:18] that we have this Confluence of
+[00:03:19] different actors we have news
+[00:03:20] organizations social media companies
+[00:03:23] friends and family social relations
+[00:03:25] search companies that are driving
+[00:03:27] traffic and there's a there's sort of a
+[00:03:28] big mess here a big mix of trying to
+[00:03:30] understand how News traffic flows so
+[00:03:32] that's one piece of context that I just
+[00:03:34] want you to keep in mind the other piece
+[00:03:36] of context I want you to keep in mind is
+[00:03:38] a story and again don't don't pay
+[00:03:40] attention to the details too much it's
+[00:03:42] this dip that in the graph that I think
+[00:03:43] you can see that's the main
+[00:03:45] point there was a case that happened in
+[00:03:48] 2008 where if you went to the Google
+[00:03:50] News search engine and typed United
+[00:03:52] Airlines the first hit that you got back
+[00:03:55] was a story about United Airlines filing
+[00:03:57] for bankruptcy in 2008 only problem was
+[00:04:00] that that was a story from 2002 United
+[00:04:03] Airlines filed for bankruptcy in 2002
+[00:04:05] not 2008 Google really quickly corrected
+[00:04:08] the error and it actually has a really
+[00:04:10] nice review of how where that error came
+[00:04:12] about and it was basically to do with
+[00:04:14] the search engine crawling the Sun
+[00:04:16] Sentinel um which posted the story from
+[00:04:18] 2002 the Sun Sentinel posting a story in
+[00:04:21] a way that was just difficult for the
+[00:04:22] news crawler to parse up and parse to
+[00:04:24] not so Google had a really nice response
+[00:04:26] it was sort of this learning moment
+[00:04:28] where we saw what was the inter action
+[00:04:30] between a news crawler and the uh
+[00:04:32] stories that were posted on a website
+[00:04:34] but not before the United uh stock price
+[00:04:36] took a rather large tumble um and it you
+[00:04:40] know gradually recovered but there was
+[00:04:42] sort of this moment where again
+[00:04:44] Confluence of actors Sun Sentinel
+[00:04:46] published the story a long time ago
+[00:04:48] posted on their website Google News
+[00:04:49] crawler crawling that site making some
+[00:04:51] sophisticated but in this case ill
+[00:04:53] informed guesses about what constituted
+[00:04:56] timeliness and then some real world
+[00:04:58] material consequences in terms of United
+[00:05:00] um stock price and the last one uh last
+[00:05:04] piece of context that I want to provide
+[00:05:05] this is actually a set of cases that
+[00:05:07] people in this room from the the digital
+[00:05:09] media law project uh worked on there was
+[00:05:11] a case where enterline actually sued the
+[00:05:13] Pocono Med medical center in pencilvania
+[00:05:16] uh for a sexual harassment case turns
+[00:05:18] out the Pocono Record had written a
+[00:05:20] story on that case and enterline decided
+[00:05:24] they wanted to actually gain access to
+[00:05:25] the commenters who had written under the
+[00:05:27] story so not the actual story itself but
+[00:05:30] people had written in the comments and
+[00:05:32] because they thought there was valuable
+[00:05:33] information and they wanted to know from
+[00:05:35] the Pocono Record who are these
+[00:05:36] commenters uh they wanted to contact
+[00:05:38] them directly um and this is a state
+[00:05:41] level decision but the state basically
+[00:05:42] found and said no the Pocono Record did
+[00:05:45] not have to reveal the identity of those
+[00:05:47] commenters the the logic is a little bit
+[00:05:49] narrow in the terms of it said that
+[00:05:50] information was available other places
+[00:05:52] anyway but the end result was this sort
+[00:05:54] of finding at this again at the state
+[00:05:56] level that the Press can actually
+[00:05:57] protect the anonymous commenters of
+[00:05:59] people who are posting under its site so
+[00:06:01] we start to see this sort of broadening
+[00:06:03] of what's considered maybe a reporter's
+[00:06:05] privilege or Shield law at a state level
+[00:06:07] to include comments underneath the story
+[00:06:10] we find the exact opposite finding where
+[00:06:12] the illino uh state of Illinois imp
+[00:06:14] panel the grand jury that actually um
+[00:06:17] subpoena comments from the Alton
+[00:06:19] Telegraph around a case where they
+[00:06:21] basically wanted to know the again the
+[00:06:23] identity the IP addresses the names uh
+[00:06:25] the dates the times when the commenters
+[00:06:27] had posted stories posted comments
+[00:06:30] underneath a particular story that the
+[00:06:32] telegraph had run but we actually found
+[00:06:34] the exact opposite uh ruling in this
+[00:06:36] case that said commenters are not
+[00:06:38] considered sources it's not considered
+[00:06:39] under this umbrella of what we consider
+[00:06:41] the press or journalism to be and there
+[00:06:43] is no protection so I offer these three
+[00:06:45] starting points this this broad notion
+[00:06:48] of what kind of stats we're dealing with
+[00:06:50] in terms of social media and and
+[00:06:51] Facebook and Twitter and how News
+[00:06:53] traffic is flowing and also this case of
+[00:06:56] a uh search engine crawler in
+[00:06:59] interacting with a news story making
+[00:07:00] some sophisticated guesses about what
+[00:07:02] constitutes timeliness and then the
+[00:07:04] Court's decision about what constitutes
+[00:07:06] a new story what I want to argue is that
+[00:07:08] these are all in a way stories of press
+[00:07:10] Freedom these are all stories about
+[00:07:12] moments when the press in its in a r
+[00:07:15] traditional form is interacting with
+[00:07:17] some new actors and we have some
+[00:07:19] confusion about what constitutes
+[00:07:21] journalism what doesn't constitute
+[00:07:22] journalism and these are socio what I
+[00:07:25] want to argue is that these are soot
+[00:07:27] technical moments if we want to
+[00:07:28] understand what press Freedom means in
+[00:07:30] each of these cases and some others I'm
+[00:07:32] going to get to we have to understand
+[00:07:34] how code is generated how it's
+[00:07:36] understood but also how the professional
+[00:07:38] practices of the press are understanding
+[00:07:41] their relationship to different
+[00:07:42] Technologies and what I what I the main
+[00:07:44] point I want to leave you with is this
+[00:07:46] idea that press Freedom actually lives
+[00:07:48] in what I call this network materiality
+[00:07:50] so it lives in this space where people
+[00:07:52] are coming together and then a lot of
+[00:07:54] our old assumptions about what
+[00:07:55] constitutes journalism or press need to
+[00:07:57] be updated in terms of this
+[00:08:00] but if I want to back up just a minute I
+[00:08:01] actually want to argue something uh
+[00:08:03] slightly different to start with and
+[00:08:05] that's as soon as you use words like
+[00:08:07] press Freedom or press autonomy it kind
+[00:08:09] of begs some questions about what do you
+[00:08:11] mean by Freedom right and I think uh in
+[00:08:13] this country especially we've seen sort
+[00:08:15] of this dominance of free market Logics
+[00:08:18] as constituting what Free Speech means
+[00:08:20] so this idea you send out information
+[00:08:22] into the marketplace of ideas somehow
+[00:08:24] the marketplace sorts it out truth
+[00:08:26] emerges it does this Democratic work and
+[00:08:28] people are able make decisions about how
+[00:08:30] to be citizens that's sort of the
+[00:08:32] general model but what I want to argue
+[00:08:33] actually and there's this thread of both
+[00:08:36] uh legal Theory but also sort of
+[00:08:37] philosophical theory around what Freedom
+[00:08:39] means in in a democracy autonomy
+[00:08:42] actually means more than freedom from
+[00:08:44] something right it means more than my
+[00:08:46] right not to be interfered with by you
+[00:08:49] it means something actually positive
+[00:08:51] there's an affirmative notion such that
+[00:08:53] for me to actually have autonomy for me
+[00:08:55] to realize myself for me to do these
+[00:08:57] things discover truths direct my own
+[00:08:59] action understand consequences
+[00:09:01] understand what it means to participate
+[00:09:02] in a public sphere I actually need you
+[00:09:05] all to do something as well it's I I
+[00:09:07] need you to participate I need you to
+[00:09:09] actually say things that I can hear so
+[00:09:11] there's a there's a sort of this is the
+[00:09:13] basis of a social contract that is the
+[00:09:15] underpinning of what we mean by
+[00:09:16] Democratic Freedom so it means what I
+[00:09:20] assert here and I can argue is that
+[00:09:21] freedom requires more than hearing just
+[00:09:24] What markets or self-interest or your
+[00:09:27] friends and I put in Brackets here our
+[00:09:29] algorithms might tell you there might be
+[00:09:31] a different conception of what
+[00:09:34] constitutes Freedom that can underpin
+[00:09:36] what we mean by press autonomy or press
+[00:09:39] Freedom so that's especially in a US
+[00:09:41] context sometimes that's a bit of a a
+[00:09:43] radical departure from this idea that
+[00:09:44] we're all individuals floating around
+[00:09:46] completely uh formed without the need to
+[00:09:50] actually interact and depend upon others
+[00:09:52] but we actually think that that's a
+[00:09:54] different thing so the second premise of
+[00:09:56] this argument is to say that Free Press
+[00:09:58] it's actually part of this system of
+[00:09:59] freedom of expression right if the Press
+[00:10:01] is not something that just happens to
+[00:10:03] have been uh constructed through a bunch
+[00:10:05] of different voices speaking but maybe
+[00:10:08] and this is the open question of this
+[00:10:09] project maybe there's something that the
+[00:10:11] Press does that's in that entails or
+[00:10:14] engenders this Freedom uh this positive
+[00:10:17] Freedom that I was mentioning earlier so
+[00:10:20] this is the starting point is to think
+[00:10:21] about the Press freedom is something
+[00:10:23] that's about the Press separating itself
+[00:10:25] from others about saying No this is a
+[00:10:27] moment where we are the Press we can
+[00:10:28] think about the issue of the comments uh
+[00:10:31] under the news stories as a moment where
+[00:10:32] the Press said we're going to carve this
+[00:10:34] out as a reporter's privilege area this
+[00:10:36] is the this is a press function but we
+[00:10:38] also have these moments where the Press
+[00:10:40] depends upon different institutions the
+[00:10:42] P press depends upon search engines and
+[00:10:45] Facebook and different institutions to
+[00:10:47] drive traffic through it so the Press
+[00:10:49] cannot be this completely separate
+[00:10:51] institution the Press has to be in this
+[00:10:53] constant negotiation of what it means to
+[00:10:55] both be the press and not be the Press
+[00:10:58] so
+[00:11:00] this is the B this is a rather again
+[00:11:01] sort of inflammatory quote for sometimes
+[00:11:03] when I give this talk in the US but
+[00:11:05] Alexander Mel John was sort of one of
+[00:11:06] the early theorists of this idea um in a
+[00:11:09] in a a legal philosophical thought and
+[00:11:12] what he said is that in talking about
+[00:11:14] the press as a institution of free
+[00:11:17] speech he said the point of ultimate
+[00:11:18] interest here is not the words of the
+[00:11:20] speakers but the minds of the hearers
+[00:11:22] the Press ensures not that everyone
+[00:11:24] shall speak but that everything worth
+[00:11:26] saying shall be said and this should
+[00:11:28] raise some Flags here because it should
+[00:11:30] say well how do we know what it means
+[00:11:33] for everything worth saying shall be
+[00:11:35] said what are the criteria by which
+[00:11:37] that's going to be judged and what are
+[00:11:39] the structural conditions that might
+[00:11:41] entail the things that are being said or
+[00:11:44] worth hearing are being said and that
+[00:11:46] we're all having a likelihood of
+[00:11:47] encountering them so that's that's sort
+[00:11:49] of the starting point is saying these
+[00:11:51] are these are not easy questions and I I
+[00:11:53] don't mean this in terms of government
+[00:11:54] censorship or in terms of preventing
+[00:11:56] people from speaking I actually mean the
+[00:11:58] opposite I mean the light likelihood
+[00:11:59] that you're going to encounter ideas
+[00:12:01] that are different from your own that
+[00:12:03] you haven't sought out to to hear which
+[00:12:06] brings me to this idea that press
+[00:12:07] freedom is this problem of networked
+[00:12:11] institutionalism so I want to give a
+[00:12:14] brief history of US press Freedom um
+[00:12:17] it's always dangerous to do this on one
+[00:12:18] slide but what I want to argue actually
+[00:12:20] here is that this problem is not new
+[00:12:23] right this idea of the press having to
+[00:12:25] separate itself from other people the
+[00:12:27] Press having to carve out moments when
+[00:12:28] it's Unique but also the Press having to
+[00:12:30] depend upon other people to uh to
+[00:12:34] perform its actions and actually achieve
+[00:12:35] its goals this is not really a new
+[00:12:37] problem and we see it again um so
+[00:12:39] Supreme Court actually it's almost it
+[00:12:41] actually is kind of easy to summarize
+[00:12:42] the Supreme Court's view on the Press
+[00:12:44] Clause um in one slide because the
+[00:12:46] Supreme Court is actually really shied
+[00:12:48] away from making decisions based on
+[00:12:50] press Clause logic okay we don't
+[00:12:52] actually see a huge case law history
+[00:12:54] here we see a lot of invocations of
+[00:12:56] speech clause and a lot of talk about
+[00:12:58] what constitutes speech but the the
+[00:13:00] court in this country the Supreme Court
+[00:13:01] in this country at least has tended to
+[00:13:04] shy away from defining what the Press is
+[00:13:07] and this makes sense in a way we don't
+[00:13:08] want to have sort of a two-tiered
+[00:13:09] constitution where we say if you are a
+[00:13:11] member of the press and you you have a
+[00:13:13] press pass or you're employed by news
+[00:13:15] organization we actually we kind of
+[00:13:16] don't want to create a situation where
+[00:13:18] those people have more freedoms than
+[00:13:19] somebody else because that's that's a
+[00:13:21] it's a dangerous moment when the
+[00:13:22] Constitution starts being uh fragmented
+[00:13:24] in a way so the the court has tended to
+[00:13:26] do it and we found that um in its
+[00:13:28] finding so there's no federal Shield law
+[00:13:29] for instance there's no right of
+[00:13:30] reporters privilege to you know not be
+[00:13:32] compelled to testify in front of a grand
+[00:13:34] jury at a federal level there are at
+[00:13:36] State levels but not at a federal level
+[00:13:38] um for a time there was this right of uh
+[00:13:41] reply and this notion of a fairness
+[00:13:42] Doctrine uh at a federal court and we
+[00:13:44] see that through cases like red lion or
+[00:13:46] or um Miami heral versus torillo but it
+[00:13:49] was a slightly different finding but we
+[00:13:51] saw that actually sort of slowly erode
+[00:13:53] especially in the ' 80s through a lot of
+[00:13:54] FCC decision- making such that today we
+[00:13:57] don't really have that same kind of
+[00:13:58] logic but for a time in sort of the 60s
+[00:14:01] and 70s this was this notion of fairness
+[00:14:04] Doctrine applied but again we saw the
+[00:14:05] court sort of shying away from this idea
+[00:14:07] of press Freedom another set of
+[00:14:10] histories really here to talk about
+[00:14:12] press freedom is actually more in the
+[00:14:14] sociology of the profession of the press
+[00:14:16] itself and what we've seen especially in
+[00:14:18] this country since sort of the 1920s is
+[00:14:20] this idea that journalism has really
+[00:14:22] struggled with whether whether it's what
+[00:14:24] James KY calls an interpretive
+[00:14:26] profession or whether it's called a
+[00:14:27] scientized or objective profession
+[00:14:29] are they is the Press about going out
+[00:14:31] and telling and repor the truth and
+[00:14:32] objective news or is it about making
+[00:14:34] interpretations and that's that's sort
+[00:14:36] of an age debate in journalism but we
+[00:14:38] see the Press constantly struggl
+[00:14:40] struggling with that um for instance
+[00:14:42] Daniel Howen calls this the scientized
+[00:14:44] view of Journalism where journalists
+[00:14:45] have this sort of physics Envy where
+[00:14:47] they want to go out into the world and
+[00:14:49] report on experiments and and claim a
+[00:14:51] truth value of what they've done and
+[00:14:53] that's traditionally not really worked
+[00:14:54] very well for a host of reasons about
+[00:14:57] the social construction of knowledge
+[00:15:00] but we also see in the history of
+[00:15:01] Journalism this idea of Rise of
+[00:15:03] professional organizations schools we
+[00:15:05] see schools of Journalism starting to
+[00:15:06] arise in sort of the 1920s and 30s which
+[00:15:08] are different from schools of speech
+[00:15:10] communication and different from schools
+[00:15:11] of English where journalists are
+[00:15:13] starting to rely upon sort of tricks of
+[00:15:15] the trade including using polling data
+[00:15:17] for the first time in sort of the 1930s
+[00:15:19] as a way of distancing itself from publs
+[00:15:21] and saying it's not me that's reporting
+[00:15:23] this story it's the poll that's
+[00:15:25] reporting the story this is not me as a
+[00:15:27] journalist entering into having a
+[00:15:29] relationship with my sources this is me
+[00:15:31] relying upon statistical data so again
+[00:15:33] we see this sort of this dance between
+[00:15:35] journalists and the world as they're
+[00:15:37] separating themselves and one of my my
+[00:15:38] last sort of um examples here is a neat
+[00:15:41] one there's a bunch of really great
+[00:15:42] studies showing that even journalists in
+[00:15:44] their use of language within stories do
+[00:15:46] these very subtle um sort of
+[00:15:49] interpretations of the sources and of
+[00:15:51] the events that they're reporting on we
+[00:15:52] see use of irony actually in a lot of
+[00:15:54] journalist stories so um they will sort
+[00:15:57] of report there's a great case of Luke
+[00:15:59] Hannon reporting upon rean went to South
+[00:16:02] Africa and uh sudden in the 80s and said
+[00:16:05] there was no such thing as a partti and
+[00:16:07] was sort of you know and Luke Canon you
+[00:16:09] know this is the words of the president
+[00:16:10] you have to report on this in some way
+[00:16:11] but Luke Canon as a journalist knows
+[00:16:13] that there is a partti there how do you
+[00:16:15] possibly do that so he frames these
+[00:16:16] whole stories in this ironic fashion
+[00:16:18] saying well I guess Reagan thinks
+[00:16:20] there's no part and it's it's thick the
+[00:16:22] language is thick with irony in these
+[00:16:24] moments and we also see journalists
+[00:16:25] using even adverbial phrases so
+[00:16:27] obviously or sudden l or actually or
+[00:16:30] these little moments of sort of using
+[00:16:32] language to signal to the interested
+[00:16:33] reader that you know wink wink I really
+[00:16:36] have an idea of what's going on here I'm
+[00:16:37] not an objective reporter so we see the
+[00:16:39] Press sort of doing that lots of moments
+[00:16:41] and finally the last thing we see is
+[00:16:43] these sort of organizational routines in
+[00:16:45] the Press so we see these ways of news
+[00:16:47] organizations uh organizing a beat
+[00:16:49] structure so you always go to you know
+[00:16:51] the city hall the fire department the uh
+[00:16:53] police department you always go to White
+[00:16:54] House you always go to Congress this is
+[00:16:56] where stories happen and we see the news
+[00:16:58] organization
+[00:16:59] structuring itself in a way that it can
+[00:17:01] reliably interact with these places
+[00:17:03] that's where news happens so we don't
+[00:17:05] see the Press necessarily in the history
+[00:17:07] sort of creating new beats all of a
+[00:17:09] sudden so for there's you know there's a
+[00:17:11] automobile section and a real estate
+[00:17:13] section to most newspapers there's often
+[00:17:14] no labor section to a newspaper you know
+[00:17:17] why why not um this is a moment when
+[00:17:19] reporters do this um another kind of
+[00:17:22] neat finding in the history of
+[00:17:23] Journalism here is that we often find
+[00:17:25] when you ask reporters um there's this
+[00:17:27] ideal you know oh you must write for the
+[00:17:29] and you must have this public service
+[00:17:30] and this public interest and a lot of
+[00:17:31] them reliably say are you kidding me
+[00:17:34] that's incredibly nerve-wracking I don't
+[00:17:36] want to write for an like an
+[00:17:37] undifferentiated public I write for my
+[00:17:39] friends and my family and my editors so
+[00:17:42] in sort of the press's negotiation of
+[00:17:44] its relationship with the public we we
+[00:17:46] see this incredible incredible
+[00:17:48] personalization of of Journalism such
+[00:17:50] that actually even when um the idiom of
+[00:17:53] insanity there you can see even when
+[00:17:54] news uh organization professionals talk
+[00:17:57] about what do you think of the people
+[00:17:58] people who write in on your stories what
+[00:18:00] do you think of the commenters or the
+[00:18:01] letters to the editor a lot of them
+[00:18:03] report those people are crazy I don't
+[00:18:05] want anything to do with them I don't
+[00:18:06] ask me to engage with them I just I I
+[00:18:09] want to go do my stuff and I actually
+[00:18:10] don't want to be touched by this public
+[00:18:12] so I offer these sort of as a as a
+[00:18:15] little bit of a landscape of saying that
+[00:18:16] this idea of press freedom is is
+[00:18:18] constant negotiation of reporters and
+[00:18:21] journalists separating themselves from
+[00:18:23] public in a number of different ways but
+[00:18:25] also simultaneously relying upon the
+[00:18:27] public both for for sort of cultural and
+[00:18:30] monetary value so what I want to say
+[00:18:32] today so if if if that's sort of you
+[00:18:34] know the end of of part two in a sense
+[00:18:37] today I think we're actually seeing this
+[00:18:38] notion of press Freedom being worked out
+[00:18:40] in a bunch of new sites and what I want
+[00:18:43] to do is rather quickly go through some
+[00:18:44] examples to give you a sense of where
+[00:18:46] I'm seeing press Freedom being worked
+[00:18:48] out these are again these locations
+[00:18:50] these tensions where this separation and
+[00:18:52] dependency between the press and others
+[00:18:54] is being worked out and the first one is
+[00:18:56] just you know quite quite honestly sort
+[00:18:58] of press econom where we see online
+[00:19:00] Revenue being a fraction of print
+[00:19:01] Revenue so there's this idea of trying
+[00:19:03] to create a revenue stream that can
+[00:19:04] support quality journalism this unstable
+[00:19:07] relationship to aggregators trying to
+[00:19:09] figure out either whether it's with uh
+[00:19:11] Google news or or Yahoo news or um
+[00:19:14] different kinds of aggregators or
+[00:19:15] Facebook or Twitter trying to figure out
+[00:19:17] what it means to exist in relation to
+[00:19:18] these aggregators uh philanthropic
+[00:19:20] funding being increasingly a source the
+[00:19:23] LA Times just uh received a large Grant
+[00:19:25] to fund its reporting and uh finally
+[00:19:28] some calls for State sponsorship or
+[00:19:30] taxing uh spectrum allocation so there's
+[00:19:32] this moment where the Press is really I
+[00:19:34] think uh quite creatively and quite
+[00:19:36] robustly now trying to figure out how it
+[00:19:38] recreates its economic footing um but we
+[00:19:41] also see these this idea of press
+[00:19:43] Freedom or again this distinction this
+[00:19:45] difference and separation um in the form
+[00:19:47] of user generated content I mean cnni
+[00:19:49] report is an old uh sort of example and
+[00:19:51] a well trodden one where we see this
+[00:19:53] branding of content sometimes it's CNN
+[00:19:55] content sometimes it's I report content
+[00:19:58] sometimes content flows from one side to
+[00:20:00] another side but that's an editorial
+[00:20:01] decision those are moments little
+[00:20:03] moments when the Press says you as
+[00:20:05] public we're going to invite you into
+[00:20:07] our branding or our moment um we see it
+[00:20:10] also in terms of commenting systems a
+[00:20:12] wide I think variety and a diverse set
+[00:20:14] of commenting systems The Huffington
+[00:20:15] Post has a badging system so you can you
+[00:20:18] can become uh a more well-respected
+[00:20:20] commenter on the Huffington Post you can
+[00:20:22] be again invited in through a gradation
+[00:20:24] of systems where the more you perform
+[00:20:27] and the better you are as a comment you
+[00:20:28] can um be promoted through the
+[00:20:30] Huffington posts levels um New York
+[00:20:34] Times has a similar verified commenter
+[00:20:36] uh label that you can get so you can be
+[00:20:39] uh moderated far less heavily if you
+[00:20:41] sort of pass the New York times's test
+[00:20:43] to be a verified commenter um that test
+[00:20:46] curiously relies upon confirming your
+[00:20:49] identity through Facebook so that's one
+[00:20:50] of the things so again we see this
+[00:20:52] moment where um you know your your
+[00:20:56] participation in the system of the New
+[00:20:58] York Times and I understand why the
+[00:20:59] times is doing it it's actually not a
+[00:21:00] criticism at all there's this ideal this
+[00:21:03] need to from the times perspective to
+[00:21:05] verify identity but again here's this
+[00:21:07] moment where we're relying upon a third
+[00:21:09] party to do that so we have to ask about
+[00:21:11] constituency and finally just the uh the
+[00:21:13] last one here is this Washington Post
+[00:21:14] the one of the examples of a social
+[00:21:16] reader that have sort of uh tanked a lot
+[00:21:18] in terms of usage patterns in the last
+[00:21:20] sort of month or two um but again this
+[00:21:22] moment where the post says you want to
+[00:21:24] read this story go through the Facebook
+[00:21:26] app that is going to for us and I think
+[00:21:30] um many of us probably had that moment
+[00:21:32] like oh man really I just wanted to read
+[00:21:33] that story I didn't want to actually
+[00:21:35] enter into this rather complex
+[00:21:37] relationship um with it but that's sort
+[00:21:39] of again this moment where we see this
+[00:21:40] press Freedom being being
+[00:21:42] negotiated no I mean it's a it's a and I
+[00:21:45] think that's actually why you see you've
+[00:21:46] seen this dramatic drop off in the usage
+[00:21:48] of that you know another sort of reading
+[00:21:50] participation is this idea of
+[00:21:51] crowdsource funding uh I think a lot of
+[00:21:53] people in this room probably know David
+[00:21:54] Cohen this spot. us this idea of
+[00:21:56] crowdsourcing funding for a story so you
+[00:21:58] put up a story say ah it's going to cost
+[00:22:00] me 400 bucks to do this story who wants
+[00:22:02] to add a little bit sort of Kickstarter
+[00:22:03] for news in a way so people add you know
+[00:22:05] 20 bucks and then gradually it gets to
+[00:22:07] the this threshold a student of mine at
+[00:22:09] Stanford uh got one of her stories
+[00:22:12] funded for the times the Giant pool of
+[00:22:14] garbage if people saw that was sort of a
+[00:22:16] a story that was popular in the times a
+[00:22:17] few years ago she got it funded through
+[00:22:19] spot. and it's this again this moment of
+[00:22:21] sort of you know relying upon or
+[00:22:23] interacting with publ a different
+[00:22:24] version of that is AOL seed which is
+[00:22:26] currently undergoing a little bit of rev
+[00:22:27] Vision so it's it's not it's not exactly
+[00:22:30] the story right now cuz they're re
+[00:22:31] rejigging it um but it was basically the
+[00:22:35] system that would go out and pay
+[00:22:36] attention to search queries and say what
+[00:22:38] are popular search queries that are
+[00:22:39] happening right now and then AOL had a
+[00:22:41] pool of stringers that it could rely
+[00:22:42] upon and say hey it seems like we need
+[00:22:44] some stories or some content around this
+[00:22:47] particular topic because it seems to be
+[00:22:48] really hot on a search engine so again
+[00:22:50] this is a you know journalism by demand
+[00:22:52] almost that's generating stories based
+[00:22:54] on search engine traffic and I think we
+[00:22:56] we similarly see this in terms of
+[00:22:58] professional practices there's this
+[00:22:59] another source of pressure here on this
+[00:23:01] idea of press Freedom where journalists
+[00:23:03] report actually saying they feel like
+[00:23:05] they're under pressure to produce
+[00:23:06] stories faster they feel like they're
+[00:23:08] under pressure to have a Viewpoint
+[00:23:10] within their stories more than they had
+[00:23:11] felt before and to engage with their
+[00:23:13] readers directly so this is a moment
+[00:23:15] where we're asking journalists again to
+[00:23:17] not just go out and do you know Daniel
+[00:23:18] howland's 1920s 30s scientized view of
+[00:23:21] Journalism as going out and discovering
+[00:23:22] news and reporting news in an objective
+[00:23:24] way but we're actually asking them to be
+[00:23:26] more like conveners of conversations we
+[00:23:28] asking them to do more than we've asked
+[00:23:30] them to do before and that's um
+[00:23:33] yeah trend for data data directed
+[00:23:37] journalism where you know where people
+[00:23:39] are actually relying on large data sets
+[00:23:42] absolutely I'm going to get to that
+[00:23:43] later but yeah no good excellent point
+[00:23:45] um so um again just another one here we
+[00:23:48] see is this social media being used it's
+[00:23:50] this I I did a little study on social
+[00:23:52] media policies and social media usage
+[00:23:53] within newsrooms and we see this sort of
+[00:23:56] real confusion right now about what
+[00:23:58] journalist should do uh with their
+[00:24:00] social media accounts whether they're
+[00:24:01] journalists first first or uh
+[00:24:03] independent social media users second
+[00:24:05] what that overflow looks like who gets a
+[00:24:07] story first does their news organization
+[00:24:09] get it first do they get it first how do
+[00:24:11] you Source online if you don't you can't
+[00:24:13] verify the identity um we see a sort of
+[00:24:16] confusion happening there and similarly
+[00:24:18] we see this explosion of new roles even
+[00:24:20] in terms of news organizations where we
+[00:24:22] the old om Ombudsman um role is being
+[00:24:26] sort of recreated and reproduced with a
+[00:24:28] bunch of new roles whether it's social
+[00:24:29] media editor engagement editor again
+[00:24:31] this sort of this moment of struggle
+[00:24:32] with news organizations I think trying
+[00:24:34] to figure out what this means and uh
+[00:24:37] second to last we see this again another
+[00:24:39] site I think we see this negotiation of
+[00:24:42] press Freedom happening is in some of
+[00:24:43] the intellectual property and the
+[00:24:45] organizational systems that news
+[00:24:46] organizations are starting to create so
+[00:24:49] the uh Associated press's ap3 pie system
+[00:24:52] is one of the ones that's gotten sort of
+[00:24:53] the the most attention lately but
+[00:24:55] essentially this idea of trying to
+[00:24:57] create a little digital watermark within
+[00:24:58] AP stories that you can then track
+[00:25:00] stories as they flow across the web and
+[00:25:02] have it be kind of like a Content
+[00:25:03] management system such that the AP can
+[00:25:05] both track but also um uh shut down uses
+[00:25:09] of its content in different places so
+[00:25:12] again we see the AP responding and
+[00:25:13] saying we know our content's going to
+[00:25:15] get out there we're going to try a sort
+[00:25:16] of a technological Solution that's going
+[00:25:18] to encode some you know rather stringent
+[00:25:21] views on IP that we have within our
+[00:25:23] system and we're going to create this
+[00:25:25] Watermark system this was a a little um
+[00:25:27] document that actually the the Neiman
+[00:25:28] lab circulated from an internal AP
+[00:25:31] confidential memo describing the system
+[00:25:33] and the the goals I didn't take it you
+[00:25:35] can blame blame the nean folks for that
+[00:25:37] or thank the nean folks for that um
+[00:25:39] either way um The Guardian similarly
+[00:25:42] again in this in this theme is doing a
+[00:25:43] really cool thing with their open news
+[00:25:44] list system so they're actually saying
+[00:25:46] those old processes where stories would
+[00:25:48] get assigned within news organizations
+[00:25:50] in a rather opaque way where we didn't
+[00:25:52] necessarily know why one reporter was
+[00:25:54] working on something or not or how many
+[00:25:55] stories they're working on the guardian
+[00:25:57] basically just published published is a
+[00:25:58] a Google doc that says who's working on
+[00:26:00] what story where it is in the particular
+[00:26:02] state of development so that you as
+[00:26:04] reader anyone can go and sort of see
+[00:26:06] this internal baking of news that's
+[00:26:08] happening in the guardian this again you
+[00:26:10] know I a lot of these are real
+[00:26:12] double-edged swords right because again
+[00:26:14] this is this moment where the Guardians
+[00:26:15] saying come on in public we're going to
+[00:26:17] show you you know how the sausage gets
+[00:26:18] made we're going to invite you in and
+[00:26:20] see the stories that we're producing um
+[00:26:23] but at the same time this can be an
+[00:26:24] incredible starting point for uh
+[00:26:26] influencing a particular journalist who
+[00:26:28] might be working on a story if you are a
+[00:26:29] source within it or you want to be a
+[00:26:31] source within it you now have an
+[00:26:32] incredible Avenue in potentially to
+[00:26:35] figuring that out so we're asking
+[00:26:36] journalists now to you know be open and
+[00:26:38] be public and be different kinds of
+[00:26:39] ethical figures as they're producing
+[00:26:41] their stories um and finally we see this
+[00:26:43] sort of notion of what I call this
+[00:26:45] distributed human machine intelligence
+[00:26:47] where these are these moments especially
+[00:26:49] and this is I think sort of the most
+[00:26:50] exciting place and it gets to to that
+[00:26:51] gentleman's question is these are places
+[00:26:54] where data and human decision-making are
+[00:26:56] interacting to produce journalism and to
+[00:26:59] produce news but it's it's very very
+[00:27:01] unclear what press Freedom means in this
+[00:27:03] context so Authority from aggregation
+[00:27:05] Google News being a standard example
+[00:27:07] techar being one of the older ones but
+[00:27:09] then things like trending articles um
+[00:27:11] this was uh last night for me apparently
+[00:27:13] on Facebook on my phone uh Mark
+[00:27:15] Zuckerberg's uh wedding is is a trending
+[00:27:17] article for me so these are algorithmic
+[00:27:18] determinations of stories that I should
+[00:27:20] be paying attention to um that are that
+[00:27:23] are done through an algorithmic process
+[00:27:26] on the flip side we see this algorithmic
+[00:27:28] and and uh consuming of news so some uh
+[00:27:31] Folks at Northwestern a narrative
+[00:27:34] science group that uh that grew out of
+[00:27:35] there did a a neat project called stats
+[00:27:37] monkey where they actually said you know
+[00:27:39] little leue game games don't get
+[00:27:40] reported on really but we've got all
+[00:27:42] these stats out there we've got all
+[00:27:43] these and baseball is this incredibly
+[00:27:45] sort of formulaic and structured game
+[00:27:48] that we can generate news stories pretty
+[00:27:49] easily so they actually are generating
+[00:27:51] stories that look an awful lot like
+[00:27:53] sports stories um based on stats from
+[00:27:56] Little League games and again you sort
+[00:27:57] of think wow that's that's great cuz
+[00:27:59] little e games are you know
+[00:28:00] traditionally underreported you're not
+[00:28:01] necessarily going to have a bunch of
+[00:28:02] reporters going out there and doing it
+[00:28:04] but we have this moment of relying upon
+[00:28:06] data to generate these stories and you
+[00:28:08] have to ask about what does that
+[00:28:09] intertial the intermediary layer look
+[00:28:11] like of how the algorithm is actually
+[00:28:13] constructing narrative in the way you
+[00:28:15] know think back to the my examples I
+[00:28:16] gave of you know journalist subtle use
+[00:28:18] of irony or um adverbial phrases to sort
+[00:28:22] of do this very subtle Framing and
+[00:28:23] subtle distinction where does that
+[00:28:25] subtlety exist in an algorithmic uh
+[00:28:27] constru struction of news it's not to
+[00:28:29] say it's not there but it's to say what
+[00:28:31] kind of news are we creating in those
+[00:28:33] systems and then finally as last one is
+[00:28:34] Thompson uh news uh Thompson reuter's
+[00:28:36] news scope where you can actually make
+[00:28:38] investment decisions based on Thompson
+[00:28:41] reuter's uh analysis of news stories of
+[00:28:45] particular companies so you can sort of
+[00:28:47] hand over your portfolio and say please
+[00:28:48] go analyze the news make Buy sell
+[00:28:50] decisions for me based on the news feed
+[00:28:54] that Thompson Reuters is is
+[00:28:55] algorithmically processing so again it's
+[00:28:57] this uh in almost a sense there's no
+[00:28:59] need for a reader in that case right
+[00:29:01] there's no need for actually somebody to
+[00:29:03] consume a story that's been produced we
+[00:29:04] can have algorithms talking directly to
+[00:29:06] algorithms um this is a University of
+[00:29:09] Tokyo again I'm going further further
+[00:29:11] farther a field here University of Tokyo
+[00:29:14] had this uh journalistic robot this is a
+[00:29:16] robot that was trained to actually go
+[00:29:17] into a room uh build a visual image of
+[00:29:20] that room and then go in the next day or
+[00:29:22] periodically afterwards and recognize
+[00:29:23] what's new in the room and generate a
+[00:29:26] new story based on what it encounters as
+[00:29:28] new it's a very narrow version of what
+[00:29:30] news means in terms of sort of
+[00:29:32] difference and Timeless but again it's
+[00:29:34] this notion of algorithmically
+[00:29:35] implanting a notion of news value into
+[00:29:38] uh a story and then drone journalism and
+[00:29:40] there's some really nice Folks at
+[00:29:41] University of Nebraska that're doing
+[00:29:42] some work on this to say this is sort of
+[00:29:44] a big data generation problem for or
+[00:29:47] news organizations to say now instead of
+[00:29:49] going out and trying to get access to a
+[00:29:51] bunch of uh news feeds and news sites
+[00:29:53] maybe we as news uh organizations or
+[00:29:55] news professionals can actually generate
+[00:29:57] our own data but it raises this question
+[00:29:58] of what we do with all that data so what
+[00:30:01] I want to argue is that all of those
+[00:30:03] sites all of those places and I I went
+[00:30:05] through them kind of quickly but what I
+[00:30:06] wanted to do is give you a um a wide
+[00:30:08] sort of view these are things that I'm
+[00:30:11] calling news wear in a sense and the
+[00:30:13] reason I sort of introduce this term
+[00:30:14] news wear is to say I think we need some
+[00:30:18] sort of structured approach to
+[00:30:20] understanding or to viewing what press
+[00:30:22] Freedom might be in all of these soci
+[00:30:24] technical spaces so it's not just
+[00:30:27] looking at code it's not just looking at
+[00:30:28] what journalists are producing now but
+[00:30:30] it's looking at this middle ground this
+[00:30:32] Confluence of journalists and
+[00:30:34] Technologies working together and I I
+[00:30:37] import here from for people who study
+[00:30:39] science technology and Society studies
+[00:30:41] this notion of infrastructure and
+[00:30:43] infrastructure sounds like sort of a
+[00:30:45] boring word but I think what's really
+[00:30:47] great about this as a as a theoretical
+[00:30:49] framework is infrastructure is all this
+[00:30:51] stuff that's kind of invisible in the
+[00:30:52] world it's stuff that we don't see it's
+[00:30:54] stuff that we use and encounter every
+[00:30:56] day but we don't think about where this
+[00:30:58] infrastructure comes from we often don't
+[00:31:00] notice it until it breaks down um one
+[00:31:03] person's infrastructure is another
+[00:31:05] person's application if you if you talk
+[00:31:06] to someone who works for a railroad that
+[00:31:08] railroad line is not just you know
+[00:31:11] invisible infrastructure that you you
+[00:31:13] ride upon as you're on a train but that
+[00:31:14] is the end goal that's that person's job
+[00:31:17] to maintain that and to do it and what I
+[00:31:18] want to argue here is in news whereare
+[00:31:20] the reason I think infrastructure is a
+[00:31:22] good analogy or a good metaphor to use
+[00:31:24] is that we can enter into this
+[00:31:25] conversation at many points along the
+[00:31:27] way we can enter into it from you know
+[00:31:28] the Drone journalists we can ask how
+[00:31:30] that data is gathered but we can also
+[00:31:31] enter into it from a news story process
+[00:31:33] and say you know where was that notion
+[00:31:35] of of irony or or journalistic
+[00:31:37] interpretation in the algorithmic
+[00:31:39] construction of news um so this is
+[00:31:42] largely what I already said but
+[00:31:44] conceptually these are these sort of
+[00:31:45] shared and embedded but largely
+[00:31:47] invisible kinds of Logics that I think
+[00:31:49] are structuring these relationships
+[00:31:51] between presses and publics and when I
+[00:31:54] you know make this move then to say well
+[00:31:55] operate like what is it that you're
+[00:31:57] actually studying like this is sort of a
+[00:31:59] an abstract notion of what news Weare
+[00:32:00] might be but this is the moment then to
+[00:32:02] look at sort of the algorithms the
+[00:32:03] interfaces the practices Capital flows
+[00:32:06] how advertising Revenue flows and ask at
+[00:32:08] each step along the way um where this
+[00:32:10] idea of a right to hear or whether a
+[00:32:12] freedom to hear exists in this
+[00:32:14] Confluence of of Technology um so I
+[00:32:17] think I'm just going to skip because I
+[00:32:18] already said that so I want to shift now
+[00:32:20] the last the last bit of this is a study
+[00:32:23] that I did of one particular piece of
+[00:32:24] news Weare so if I've given you this
+[00:32:26] sort of overview of what I mean by press
+[00:32:28] freedom and I've asked you to sort of
+[00:32:29] buy onto my um sort of you know quasi
+[00:32:33] socialist view of us depending upon each
+[00:32:35] other for Freedom um I'm Canadian by the
+[00:32:38] way I should admit that in the moment so
+[00:32:40] um I've asked you to sort of buy into
+[00:32:42] that that notion of that philosophy of
+[00:32:44] freedom and I've given you a little
+[00:32:45] history of where press Freedom has been
+[00:32:48] worked out and how this isn't really
+[00:32:49] that new a problem and then giving you a
+[00:32:51] little bit of a runthrough of these
+[00:32:52] places that we see it being worked out
+[00:32:54] in network technology today what I want
+[00:32:56] to do now is just dive a little deeper
+[00:32:58] into one particular kind of news Weare
+[00:33:00] and it's one that's um a little bit
+[00:33:03] understudied these days but that's it's
+[00:33:04] a notion of an application programming
+[00:33:06] interface or an API and this is
+[00:33:09] something that's kind of new that news
+[00:33:11] organizations are doing as they're
+[00:33:12] starting to create application
+[00:33:14] programming interfaces or apis into
+[00:33:16] their systems so for those in the room
+[00:33:19] or those in the crowd who you know
+[00:33:20] haven't heard of what an API is or don't
+[00:33:22] really know what I mean by an
+[00:33:23] application programming interface I
+[00:33:25] think there's actually for me anyway
+[00:33:27] sort of a a relatively straightforward
+[00:33:29] way of thinking about this so I want you
+[00:33:30] to pause for a second and think about
+[00:33:32] your experiences at the post office
+[00:33:34] because what I want to argue is that the
+[00:33:35] post office is a kind of API right I go
+[00:33:38] into the post office and I if I put a
+[00:33:41] stamp on an envelope if I address it the
+[00:33:43] right way if I put you know the two in
+[00:33:44] the center and the from and E on the
+[00:33:46] back or in the top left corner and I
+[00:33:48] know that I do it and I plan ahead maybe
+[00:33:50] a couple days although given post office
+[00:33:53] um the US Post Office uh interactions
+[00:33:56] lately I hope this doesn't become a
+[00:33:57] historic example for the post office but
+[00:34:00] I know how to behave in relation to the
+[00:34:02] post office right I know how to behave
+[00:34:05] in order to get something done I can get
+[00:34:06] my letter across the country or across
+[00:34:08] the world as long as I know how to
+[00:34:10] follow the rules of the post office what
+[00:34:12] I don't need to know is how the post
+[00:34:13] office works right I don't need to delve
+[00:34:16] into the details of how that letter is
+[00:34:18] actually read whether the uh stamp is
+[00:34:20] read to be the correct amount of postage
+[00:34:22] or not I don't need to do that the post
+[00:34:24] office is this way that we've all
+[00:34:25] learned to interact with um and this is
+[00:34:29] this notion for again for the programs
+[00:34:30] in the world the idea of application
+[00:34:32] programming interface is sort of a
+[00:34:33] tablecloth it conceals complexity it's
+[00:34:36] something that says I don't want to
+[00:34:39] invite you into the the guts and the
+[00:34:40] details of my system but I'm going to
+[00:34:42] help you figure out how to relate to a
+[00:34:44] system so this is what news
+[00:34:45] organizations are starting to do and you
+[00:34:47] should think about this in relation to
+[00:34:49] some of the stuff I said earlier about
+[00:34:51] how the Press distances itself from
+[00:34:54] Publix but also relies upon Publix at
+[00:34:56] the same time so this idea that freedom
+[00:34:58] is something that sort of requires
+[00:35:00] dependency but it also requires
+[00:35:02] separation this is the Press struggling
+[00:35:04] with with an identity in a moment this
+[00:35:05] is an identity crisis the API is one
+[00:35:08] place to see it so what the API is in a
+[00:35:10] news organization sense is it's it's
+[00:35:11] kind of a software toolkit so you can go
+[00:35:15] to um well this is actually what it is
+[00:35:17] it's a system of rules and associations
+[00:35:19] it's this software toolkit that lets you
+[00:35:22] actually use news organization data in a
+[00:35:24] way that you wouldn't have used that
+[00:35:26] before and this is for programmers
+[00:35:27] mostly although there's some inroads to
+[00:35:29] letting non-programmers or people
+[00:35:31] without technical abilities use it but
+[00:35:33] these are sort of the rules and
+[00:35:35] associations by which news organizations
+[00:35:37] let you into their content so I did a
+[00:35:40] study of three different news
+[00:35:41] organizations apis this is the guardian
+[00:35:43] the NPR and the New York Times and these
+[00:35:45] are sort of three leading USA Today also
+[00:35:47] has one um mashery uh has a whole set of
+[00:35:50] apis that actually uses but these are
+[00:35:52] sort of the three leading API news
+[00:35:55] organizations that hide apis and what
+[00:35:57] you do do with these apis is you
+[00:35:58] basically as a programmer you say you
+[00:36:01] have a bunch of data within your news
+[00:36:03] organization I want to build an app with
+[00:36:05] that data I want to rely upon it I want
+[00:36:08] to repackage it I want to visualize it
+[00:36:10] in some way I want to actually make
+[00:36:11] something new with that data we have a
+[00:36:13] few different examples here uh this is
+[00:36:15] one built with the guardian that
+[00:36:16] actually the guardian has a whole bunch
+[00:36:17] of data on uh where nuclear warheads are
+[00:36:20] pointed in the world and actually you
+[00:36:21] can so put in your uh City and Country
+[00:36:24] and see the number of nuclear warheads
+[00:36:25] that are pointed at you if you want to
+[00:36:28] do that that's that's kind of a thing um
+[00:36:32] NPR had a really nice one Reverb has a
+[00:36:34] really nice one where it actually takes
+[00:36:35] NPR uh headlines and pays attention to
+[00:36:38] the metadata and then replots it on a
+[00:36:39] globe of the world and you can actually
+[00:36:41] see sort of more of a geospatial sense
+[00:36:43] of where stories are coming from and
+[00:36:44] what stories are about so it's again
+[00:36:46] it's a different way of taking a news
+[00:36:48] feed that NPR is providing and letting
+[00:36:51] you create a different view on that
+[00:36:52] Newsfeed um and then similarly this is
+[00:36:54] the New York Times had a a public
+[00:36:56] financing API we had actually tracked uh
+[00:36:59] where electoral campaign uh
+[00:37:01] contributions were coming from in the
+[00:37:02] country and then plotted them according
+[00:37:04] to Republican and Democrat and was able
+[00:37:06] to let this was an app that was uh
+[00:37:08] letting you see where money was coming
+[00:37:11] from and going to um again these are all
+[00:37:14] sort of very simple examples but it's a
+[00:37:15] case where the news organizations
+[00:37:18] through their apis they're making this
+[00:37:20] toolkit and saying here's a bunch of
+[00:37:22] hooks and levies that you can levers
+[00:37:23] that you can use uh to access our data
+[00:37:26] you can make something new with it so
+[00:37:29] what I did was I I personally built um
+[00:37:32] one app with with the NPR API but
+[00:37:35] experimented with all three of the apps
+[00:37:37] um did an analysis of of several hundred
+[00:37:39] public documents and speeches and um
+[00:37:41] stories about the apps um and then did a
+[00:37:44] review of of systems that were built
+[00:37:46] with these apps and what I again my goal
+[00:37:49] here was to read again go back to this
+[00:37:51] word infrastructure for a second was to
+[00:37:52] read these infrastructures and say where
+[00:37:55] is press Freedom being worked out in
+[00:37:56] this infrastructure this API is a place
+[00:37:59] where the Press is distinguishing itself
+[00:38:01] from other people so I did this one task
+[00:38:03] here which was
+[00:38:05] um with the NPR API I said all I want to
+[00:38:08] do I want to pick a two-e period this is
+[00:38:10] at the end of September being of October
+[00:38:12] of the previous year and I want to build
+[00:38:14] a news feed of NPR's HealthCare coverage
+[00:38:17] it's all I want to do I just want to you
+[00:38:19] know something that I could put on my
+[00:38:20] site that I could say here was you know
+[00:38:22] twoe period of what NPR HealthCare
+[00:38:23] coverage meant let me do this to sort of
+[00:38:26] experiment with what this looks like me
+[00:38:28] as as programmer public I have some
+[00:38:30] programming skills I'm not the best
+[00:38:31] programmer in the world at all and I
+[00:38:33] also made a purposeful decision to try
+[00:38:35] to use the publicly available uh there's
+[00:38:37] an interface where you can actually it's
+[00:38:39] just checkboxes and you can build a
+[00:38:40] query of an API uh based on clicking
+[00:38:43] some checkboxes it's not a very heavy
+[00:38:45] programming activity if that didn't make
+[00:38:47] any sense don't don't worry about it um
+[00:38:49] but what I want to do is I had this goal
+[00:38:50] right this goal is to start to use this
+[00:38:52] to figure out what it was like the first
+[00:38:54] thing I did was actually just uh build a
+[00:38:55] query based on Healthcare and the these
+[00:38:57] are just two key words I did to search
+[00:38:59] Healthcare in the US um again the
+[00:39:01] details of those boxes do not matter but
+[00:39:03] they're just showing the out the output
+[00:39:04] of what I what I found I found that I
+[00:39:06] actually got too few results I actually
+[00:39:08] only got eight results from this this is
+[00:39:10] a twoe period this was the height of a
+[00:39:11] healthcare debate in this country um and
+[00:39:14] I got eight results from searching on
+[00:39:16] Healthcare and the US um seemed kind of
+[00:39:18] strange so what I did was I ended up
+[00:39:20] taking out the us because you know I
+[00:39:21] thought I'd broaden the the search a
+[00:39:23] little bit and find out what I ended up
+[00:39:25] getting was that um a lot of the stories
+[00:39:28] that resulted out of this had a US Focus
+[00:39:30] to them but I actually lost some of the
+[00:39:32] stories that I had had in the first
+[00:39:34] query so there was this weird sort of uh
+[00:39:37] finding or this weird result where it
+[00:39:39] seemed like stories were being sort of
+[00:39:40] metadata indexed uh partly through uh us
+[00:39:44] metadata partly through Healthcare data
+[00:39:46] but there was this strange I would have
+[00:39:47] expected you know to get more results
+[00:39:50] but not radically different results um
+[00:39:53] from what I did so the next step was
+[00:39:55] actually to say well I want to actually
+[00:39:57] understand this category of healthcare
+[00:39:59] um and the us because it seemed like
+[00:40:01] that was the difference between step one
+[00:40:02] and step two was there's something about
+[00:40:04] indexing uh us Healthcare stories that's
+[00:40:07] different so I I combined it with the
+[00:40:09] world instead and to sort of say well
+[00:40:11] maybe NPR is organizing its stories in
+[00:40:13] this way that they're indexing them uh
+[00:40:15] through international coverage more than
+[00:40:16] us coverage I'm not sure I got one story
+[00:40:19] returned in that time over 2 we period
+[00:40:22] and it was a story about uh the US was
+[00:40:24] found to have inflicted uh syphilis in
+[00:40:27] on Guatemalans in the
+[00:40:29] 1940s it was I was really in two weeks
+[00:40:32] this was the only thing that I got it
+[00:40:33] was a very sort of strange result and
+[00:40:36] and it was actually inconsistent with
+[00:40:37] the previous results so I then actually
+[00:40:39] discovered there's this other category
+[00:40:40] called World Health which is somehow
+[00:40:42] different from Healthcare Plus World and
+[00:40:45] ended up only getting three stories this
+[00:40:46] is still not getting me in my my goal
+[00:40:48] here of making a making a a Newsfeed I
+[00:40:51] then also discovered that you can
+[00:40:53] actually split it up by world and health
+[00:40:55] which is somehow different from World
+[00:40:56] Health as a key word got a completely
+[00:40:59] different set of stories then that were
+[00:41:02] not related so you know these stories
+[00:41:04] were not related to these stories at all
+[00:41:07] um and at that point I stopped because I
+[00:41:08] really was discovering that there was
+[00:41:10] this real challenge in trying to use the
+[00:41:13] API so again you have to understand here
+[00:41:15] the NPR is actually opening up its whole
+[00:41:16] data source to you and it says you can
+[00:41:18] build a tool you can do whatever you
+[00:41:19] want with it um but the actual Act of
+[00:41:22] building this app was an incredibly sort
+[00:41:25] of complex ontological one yeah if I
+[00:41:29] went through stuff you just went through
+[00:41:30] my conclusion would be that their API
+[00:41:32] was very buggy or that NPR didn't
+[00:41:34] understand bullon operations well so
+[00:41:37] keep that point actually so findings
+[00:41:39] great um inconsistent category
+[00:41:41] interactions great good point so we have
+[00:41:44] these again so me as news programmer now
+[00:41:47] trying to interact with news system
+[00:41:49] right this is this this new moment of of
+[00:41:51] press public relationships we have some
+[00:41:53] inconsistent category interactions going
+[00:41:55] on between World Health Healthcare World
+[00:41:57] Health us can't recreate something that
+[00:42:00] makes sense at least to me and uh to
+[00:42:02] your point exactly um what I wanted as
+[00:42:05] an ideal here so Boolean logic wasn't
+[00:42:08] built into the system for for
+[00:42:09] programmers it's not a big deal you can
+[00:42:11] rebuild the Boolean logic it's it's not
+[00:42:13] a huge deal to do with the data source
+[00:42:15] but it wasn't available through the the
+[00:42:17] public tool that supposedly anybody can
+[00:42:19] go and and use and interact with this
+[00:42:21] and that that wasn't being interpreted
+[00:42:23] as a bullant and no no or or whatever so
+[00:42:27] there's something here and this is this
+[00:42:28] led to this last conclusion is that I as
+[00:42:32] member of public trying to interact with
+[00:42:34] this system I kind of reached this what
+[00:42:36] I was calling an ontological Black Box I
+[00:42:38] was kind of reaching this moment where I
+[00:42:40] actually couldn't look inside the
+[00:42:43] categories that NPR was using to create
+[00:42:46] its news stories and I couldn't I
+[00:42:48] couldn't ask questions I couldn't debate
+[00:42:49] them I couldn't say I think I want to
+[00:42:51] relabel it like this or I think that I
+[00:42:53] want to actually do some hand editing it
+[00:42:54] was a difficult API to work with and I I
+[00:42:57] do not fault NPR for this at all because
+[00:42:59] I think this is actually an incredibly
+[00:43:01] challenging moment to actually take
+[00:43:03] internally uh consistent Logics that you
+[00:43:06] know people have a tacid understanding
+[00:43:07] of how to work with over years of being
+[00:43:09] employees there and figuring out how to
+[00:43:10] work with metadata the New York Times
+[00:43:12] has had a department since the late
+[00:43:14] 1800s exactly on dealing with metadata
+[00:43:16] in their news story so this is a this is
+[00:43:18] a long-standing problem in news
+[00:43:20] organizations but I I use it to point
+[00:43:22] out this idea that um if you are a you
+[00:43:25] know citizen programmer uh for
+[00:43:27] programming public trying to do this
+[00:43:29] you're going to run into some real I
+[00:43:31] would argue sort of ideological moments
+[00:43:33] where the Press is going to say no
+[00:43:34] that's our job to manage the metadata
+[00:43:36] it's not your job it's our this is a
+[00:43:37] moment we're going to do the description
+[00:43:39] you can do the repackaging so what I
+[00:43:41] ended up finding was there's these
+[00:43:43] moments and I I in the interest of time
+[00:43:44] I want to um uh just uh blow through
+[00:43:47] these and and not not belinger on them
+[00:43:50] but so this not just this experiment
+[00:43:52] this is sort of one example of of one
+[00:43:54] that I did but looking over across all
+[00:43:55] the documents and across the other
+[00:43:57] experiments that I did what I found was
+[00:43:59] there are actually three different ways
+[00:44:00] I would argue that news organizations
+[00:44:03] are uh mediating or regulating these
+[00:44:05] press public interactions there's three
+[00:44:08] ways that the Press is distancing itself
+[00:44:10] today from Publix and we can look at
+[00:44:13] each one of these places to see whether
+[00:44:15] or not we think our ideal of a press
+[00:44:17] Freedom or freedom to hear is being
+[00:44:19] instantiated so the one is just this UD
+[00:44:21] of Regulation so this is uh tiered
+[00:44:23] levels of access for instance so uh the
+[00:44:25] Guardians API actually you can get
+[00:44:27] different levels of access to it
+[00:44:28] depending on whether you want to pay um
+[00:44:32] pay the guardian directly to use it
+[00:44:33] whether you want to let the guardian put
+[00:44:35] ads uh on the site that you might create
+[00:44:37] with the
+[00:44:38] API um and what kinds of ads that you're
+[00:44:41] willing to accept on the on the site so
+[00:44:44] this is not sort of a an open um
+[00:44:48] completely Equitable use of the API we
+[00:44:50] have a a a moment of differentiation
+[00:44:52] here where if you pay you get a
+[00:44:54] different experience with the API that's
+[00:44:56] a decision that the guard made NPR for
+[00:44:58] instance doesn't do that so this is
+[00:45:00] again a differentiation moment um limits
+[00:45:02] on Revenue generation this is actually
+[00:45:04] just this moment where um if you put ads
+[00:45:07] on your site for instance with the
+[00:45:08] guardian you have to engage in this
+[00:45:10] Revenue sharing uh arrangement with the
+[00:45:12] guardian because again one of the ideas
+[00:45:14] is news organizations want to drive
+[00:45:16] traffic back to their sites right this
+[00:45:17] is totally makes sense that they would
+[00:45:19] offer apis to let people build apps with
+[00:45:21] them but the tacit deal that you're
+[00:45:23] making is that you're also going to
+[00:45:25] engage in some kind of Revenue sharing
+[00:45:27] based on the traffic that's being driven
+[00:45:28] back to the news organization sites um
+[00:45:31] and the last one we see is this idea of
+[00:45:33] there's a Prohibition on archiving so
+[00:45:34] you have to go back to the API it's it's
+[00:45:37] different in different systems but uh
+[00:45:39] once a day to actually get new copies of
+[00:45:41] the story so again this should be
+[00:45:43] another little moment where we say so me
+[00:45:45] as citizen programmer um I don't
+[00:45:48] actually get to say I think maybe this
+[00:45:50] story is done on my news feed I don't
+[00:45:53] get to say I want to Archive this story
+[00:45:55] do a comparison between this story in
+[00:45:57] the story that came after it I'm
+[00:45:59] contractually obligated to go back to
+[00:46:01] the news organization and refresh my
+[00:46:03] story constantly and again I get why
+[00:46:05] news organizations would do this right
+[00:46:07] there it can be really messy to have
+[00:46:08] multiple versions of a story floating
+[00:46:10] around but this is a moment where um the
+[00:46:13] Press is again asserting itself it's
+[00:46:14] sort of saying no we're going to keep
+[00:46:17] track of what the version of the story
+[00:46:19] is in this moment um that's not for you
+[00:46:21] to do you can republish for us again it
+[00:46:23] makes sense but it's if we want to ask
+[00:46:25] this question about what press Freedom
+[00:46:26] means that's where it is um second this
+[00:46:28] idea of architecture so the first one is
+[00:46:30] regulation sort of the terms of service
+[00:46:32] and the kinds of agreements that you
+[00:46:33] enter into when you use these apis the
+[00:46:35] second is sort of the code AS regulator
+[00:46:37] um so for people following Professor
+[00:46:39] Les's work this should be really
+[00:46:41] familiar this idea that the code is
+[00:46:42] doing architectural work it's regulating
+[00:46:44] the kind of access um and the one you
+[00:46:47] know it's a it's a rather simple point
+[00:46:49] is this idea of key control and personal
+[00:46:51] information so when I use an API I have
+[00:46:53] to release a certain amount of personal
+[00:46:54] information I issued a code or a key
+[00:46:56] that key is my access into the API at
+[00:46:59] any point my access can be revoked
+[00:47:02] through the key if I'm breaking terms of
+[00:47:04] service or I'm doing something that's
+[00:47:05] not you know not not good or not open um
+[00:47:09] it's it's a moment where the code can
+[00:47:11] actually be be a regulator and again
+[00:47:13] this should raise a little bit of flags
+[00:47:14] here when we think about who owns the
+[00:47:16] stories that are produced by a news
+[00:47:18] organization you know think back to the
+[00:47:20] idea that there's at least in theory or
+[00:47:22] ideal there's there's a notion of a
+[00:47:24] constitutional protection here for the
+[00:47:25] News That's generating
+[00:47:27] um here's a moment where a news
+[00:47:29] organization can say well we're going to
+[00:47:31] let you have it under some circumstances
+[00:47:32] but we're going to revoke that access if
+[00:47:35] you're not uh following the terms of
+[00:47:36] service
+[00:47:38] um the architecture Point here this
+[00:47:41] internal indexing and vetting systems um
+[00:47:43] this should raise flags with the NPR one
+[00:47:45] so basically there's a whole bunch of
+[00:47:46] ways that news organizations are
+[00:47:48] generating and organizing stories that
+[00:47:50] are not accessible to you as programmer
+[00:47:53] um finally this idea of API is organized
+[00:47:55] into beats remember one of the points
+[00:47:56] that that I had these historical things
+[00:47:58] where you know news organiz
+[00:47:59] organizations you know have real estate
+[00:48:02] sections and automobile sections and
+[00:48:04] house sections but uh no labor section
+[00:48:06] or you know often no environmental
+[00:48:07] section so we see this Recreation of
+[00:48:10] those Logics in the organization of the
+[00:48:12] apis it's it's up up to you to use the
+[00:48:16] the keywords to uh to recreate your
+[00:48:18] Beats if you want to but the news
+[00:48:19] organization is not going to do that for
+[00:48:21] you and finally um this idea of
+[00:48:23] community I think is this last one so
+[00:48:25] what I also did was I I attended and um
+[00:48:27] did analysis of several of the different
+[00:48:29] hack days and different kinds of places
+[00:48:31] where API programmers are coming
+[00:48:34] together with news organizations to
+[00:48:36] create new systems so the New York Times
+[00:48:37] runs one Guardian runs one um NPR has
+[00:48:40] done some smaller ones at sort of a
+[00:48:41] local level with these hack days where
+[00:48:42] you actually get together and you work
+[00:48:44] with other programmers and you make
+[00:48:45] something new with the apis and what
+[00:48:47] ended up happening there A lot of times
+[00:48:49] was so even though we have these
+[00:48:50] regulations and these architectures um
+[00:48:53] the reason I say this idea of personal
+[00:48:55] and informal relationships can circum
+[00:48:57] regulations tons of examples of people
+[00:48:59] uh at the news organization
+[00:49:01] saying I know you're only supposed to
+[00:49:03] access this thing like you're only
+[00:49:05] supposed to make 5,000 calls a day to an
+[00:49:07] API you're only supposed to you know
+[00:49:08] trade trade data with it 5,000 times and
+[00:49:10] you're supposed to go back and you're
+[00:49:11] supposed to uh refresh the story once a
+[00:49:14] day and you're supposed to do this
+[00:49:16] Revenue generating thing and you're
+[00:49:17] supposed to put these ads on here a lot
+[00:49:20] of that is there um true but if you're
+[00:49:22] doing something that's really really
+[00:49:23] cool that's driving a lot of traffic to
+[00:49:25] our site will talk you know and there's
+[00:49:28] this sort of this moment where some of
+[00:49:30] these these rules and regulations and
+[00:49:32] again totally make sense these are
+[00:49:33] humans these are people who are sort of
+[00:49:35] trying to create some system that has
+[00:49:37] economic uh robustness to it I get why
+[00:49:39] it's happening but again as member of
+[00:49:41] programming public you know you need to
+[00:49:43] understand that simply accessing the
+[00:49:45] apis is not giving you the same sort of
+[00:49:47] uh exposure to the exemption that you
+[00:49:49] might get if you get to know the guy who
+[00:49:51] runs the New York Times API really well
+[00:49:53] who's just going to sort of you know nod
+[00:49:54] and wink and you know look the other way
+[00:49:56] if you're doing something that breaks
+[00:49:57] the terms of service but that's really
+[00:49:59] cool um so that's this moment and so
+[00:50:02] finally one of the sort of key findings
+[00:50:03] from this work is this I think this
+[00:50:04] emergence of programming publics so
+[00:50:07] these are people and think about
+[00:50:09] theories of public sphere and theories
+[00:50:10] of publicness from uh people like John
+[00:50:12] dwey who talk about the public as this
+[00:50:14] shared set of constituents so we all
+[00:50:17] come together and we all need to we all
+[00:50:18] have to experience the same thing we
+[00:50:20] can't separate oursel out from public
+[00:50:22] goods I'd argue that actually we're
+[00:50:24] seeing some programming publics emerge
+[00:50:26] these are people who are creating the
+[00:50:28] conditions under which we're
+[00:50:29] experiencing news and I think these are
+[00:50:31] a different set of actors than just the
+[00:50:34] news organizations and just the social
+[00:50:36] media companies this is a set of hackers
+[00:50:38] and a set of uh I mean hackers in a good
+[00:50:41] MIT Way by any okay yeah um um good in
+[00:50:45] MIT yeah um yeah um but I mean that as a
+[00:50:48] sense of these are people who are
+[00:50:49] actually creating the conditions under
+[00:50:51] which you're experiencing news this I
+[00:50:53] think is a new place and an important
+[00:50:55] place to look at press Freedom this is a
+[00:50:57] place to look at and say what are these
+[00:50:59] people's conceptions of a public right
+[00:51:01] to hear versus an individual right to
+[00:51:03] speak what are these people's
+[00:51:05] conceptions of what constitutes hearing
+[00:51:07] diverse information in a timely fashion
+[00:51:09] these are a lot of programming types
+[00:51:11] decisions that get made um but that I
+[00:51:13] think have not been scrutinized uh in
+[00:51:16] terms of sort of a a journalistic uh
+[00:51:18] almost civil rights value so I think I
+[00:51:23] want to end here um I think this is what
+[00:51:25] I've been trying to do in this project
+[00:51:27] is one just provide this definition of
+[00:51:28] network press freedom to say that press
+[00:51:31] Freedom isn't this thing that Li lives
+[00:51:33] in any one news organization that we can
+[00:51:35] point to necessarily it's not a singular
+[00:51:38] solitary profession that's responsible
+[00:51:40] for press Freedom if the Press itself is
+[00:51:43] distributed and is existing in all these
+[00:51:45] different kinds of places then the
+[00:51:47] notion of press freedom is also
+[00:51:49] distributed and existing in multiple
+[00:51:51] places and the challenge is to sort of
+[00:51:52] trace an idea of press Freedom among
+[00:51:55] this really complex changing ecosystem
+[00:51:57] and figure out when do we encounter a
+[00:52:00] free press we we can't just look to a
+[00:52:02] news organization to find it we have to
+[00:52:04] look to this this ecosystem um and so
+[00:52:08] the yeah I I'll just skip to the end I
+[00:52:10] say there's been a lot of debates around
+[00:52:13] this issue of you know some of these old
+[00:52:14] tired debates around you know is a
+[00:52:15] blogger a journalist is a blogger not a
+[00:52:17] journalist and I think that some of
+[00:52:18] those things are you know boring and not
+[00:52:20] terribly interesting to engage with what
+[00:52:23] I would argue is actually you know
+[00:52:25] bumping it up a little bit in terms ter
+[00:52:26] of abstraction and saying when do we
+[00:52:28] encounter a press that we want when do
+[00:52:31] we encounter the press that exists with
+[00:52:34] the normative ideals or the values or
+[00:52:36] the ethics that we expect from a
+[00:52:38] democratic press questions of whether a
+[00:52:41] blogger is a journalist or not kind of
+[00:52:43] go away then because we don't worry
+[00:52:44] about it we say if we want to accept my
+[00:52:46] notion of democratic Freedom as this
+[00:52:48] thing that means freedom from and
+[00:52:50] freedom to if there's this positive
+[00:52:51] notion to it then we can I think look
+[00:52:53] across the press and say if it's aing
+[00:52:56] this public right to hear if it's
+[00:52:58] enabling a kind of listening that we
+[00:53:00] can't do as individuals then maybe we
+[00:53:02] don't worry about whether somebody's a
+[00:53:04] blogger or a journalist but we worry
+[00:53:05] about their role or their activity
+[00:53:07] within this news ecosystem so I'll stop
+[00:53:10] there because I think we'll then have 15
+[00:53:12] 20 minutes for your questions thank
+[00:53:17] you and I'm going to sit down because
+[00:53:19] I've been tiing
+[00:53:27] uh sorry yeah um I think I saw your hand
+[00:53:29] first but I'll I'll go around and get
+[00:53:31] the others after just on the question of
+[00:53:33] um API and uh searching searching is
+[00:53:37] very difficult has a lot to do with
+[00:53:38] taxonomy it's a very complicated thing
+[00:53:40] so I'm not surprised that even as
+[00:53:42] sophisticated news organization would
+[00:53:43] have trouble turning up things that you
+[00:53:45] search for I had trouble with the Boston
+[00:53:47] Globe the same way but there are some
+[00:53:49] systems that do very sophisticated
+[00:53:51] natural language processing wol from wol
+[00:53:54] from alpha which underly Siri and IBM
+[00:53:57] Watson which we all know from Jeopardy
+[00:53:59] and these things are actually quite
+[00:54:00] opaque they're proprietary and even if
+[00:54:02] they were opened up most of us could not
+[00:54:04] understand the algorithms so I just want
+[00:54:06] to throw that out to you as a yeah I
+[00:54:08] think it's a good point in that um so
+[00:54:10] the guardian especially has been moving
+[00:54:12] um because yeah another thing I didn't
+[00:54:14] really talk about was the the
+[00:54:16] proprietary or open source nature of the
+[00:54:18] software that these news organizations
+[00:54:20] are relying upon to build their
+[00:54:22] infrastructures so sometimes you're
+[00:54:25] right it is these proprietary systems
+[00:54:27] but other times and the guardian I think
+[00:54:28] has done a good job of this of making a
+[00:54:29] coned decision to try to use more and
+[00:54:33] move to an exclusively open source
+[00:54:35] infrastructure partly it is this
+[00:54:37] ideological decision where they're
+[00:54:38] saying we're a news organization who's
+[00:54:40] trying to be open in both um not just
+[00:54:43] what we publish but also how we build so
+[00:54:46] I I think it's a good critique to make
+[00:54:48] um of these systems is that I think I
+[00:54:50] saw your hand first and then um um I
+[00:54:54] thought this was a fascinating talk and
+[00:54:55] it's a it's a very interesting framework
+[00:54:57] to think about a whole host of issues oh
+[00:55:01] this was a fascinating talk and I mean a
+[00:55:03] framework to think about a whole host of
+[00:55:05] issues um one thing I I sort of kept
+[00:55:08] thinking about you know as as you
+[00:55:11] explained sort of the network
+[00:55:13] infrastructure um was Wikileaks which is
+[00:55:16] sort of you know our bloggers
+[00:55:18] journalists were Wikileaks journalist
+[00:55:20] and let let let's presume they are I
+[00:55:22] mean they ran they ran into a whole
+[00:55:24] other set of tensions which you didn't
+[00:55:26] really explore you know their hosting
+[00:55:29] service deciding they were Politically
+[00:55:30] Incorrect um their payment processor
+[00:55:33] deciding they were Politically Incorrect
+[00:55:35] Etc um do you have any thoughts on that
+[00:55:39] yeah no I think WK I've written a little
+[00:55:41] bit on Wikileaks in other uh context but
+[00:55:44] I think it is uh it's an example
+[00:55:47] of a moment where for me it depends on
+[00:55:50] what you what you want to mean by a free
+[00:55:52] press right so so instead of me taking a
+[00:55:56] stance on saying you know Wikileaks was
+[00:55:58] you know X or not X I actually see it as
+[00:56:00] a great moment where we saw coming to
+[00:56:02] the surface a whole bunch of different
+[00:56:04] conceptions of what press values are so
+[00:56:07] and I think for me that was the real
+[00:56:08] value of WikiLeaks is it's this moment
+[00:56:10] where we get to debate uh what is
+[00:56:12] privilege information who gets access to
+[00:56:13] privilege information um what is the
+[00:56:16] gatekeeping look like on that what are
+[00:56:18] the the background relian on you know
+[00:56:20] whether it's the credit card companies
+[00:56:21] or whether it's hosting services such
+[00:56:23] that those are the conditions under
+[00:56:24] which news is made and for each one of
+[00:56:26] those organizations they're kind of
+[00:56:28] getting sucked into this um I think
+[00:56:30] nicely sucked into this uh problem of
+[00:56:33] what do you mean by a free press and I
+[00:56:37] for me that was the value of WikiLeaks
+[00:56:38] was to say we just made that
+[00:56:40] conversation a lot more complicated and
+[00:56:42] that's wonderful that's great because it
+[00:56:44] actually brought to the surface a lot of
+[00:56:46] dependencies a lot of infrastructures
+[00:56:48] that's why I use the word
+[00:56:49] infrastructures it's that invisible
+[00:56:51] stuff that we don't get to see so a
+[00:56:53] Wikileaks moment is a moment of of
+[00:56:54] seeing it which is great yeah um sorry I
+[00:56:58] think the gentleman with the beard was
+[00:56:59] next and then I'm going to try to
+[00:57:00] remember but also please jump in if I've
+[00:57:03] forgotten three data points which may
+[00:57:06] have nothing to do with what you're
+[00:57:08] talking about um Marcy wheeler reported
+[00:57:12] on a press conference I believe with the
+[00:57:14] president but maybe with uh a national
+[00:57:17] security advisor or someone like that
+[00:57:19] basically speak up a little bit
+[00:57:21] basically saying that oh we don't need
+[00:57:24] to uh take
+[00:57:26] take uh reporters to grand juries to
+[00:57:28] find out their sources we already
+[00:57:31] monitor all electronic communications
+[00:57:33] and phones and and we already know that
+[00:57:36] information we're storing that at the
+[00:57:38] NSA right you know so that's one yeah
+[00:57:43] this the second is um what's H what's
+[00:57:47] happened in Chicago over the weekend
+[00:57:50] where we have people like Tim P who's
+[00:57:53] been live streaming
+[00:57:56] um occupy
+[00:57:59] stuff with two uh two uh cohorts Al also
+[00:58:03] citizen journalists being stopped
+[00:58:06] without warrants by the police and held
+[00:58:08] at gunpoint and interrogated at
+[00:58:10] gunpoint even though they knew that the
+[00:58:14] these guys were journalists or these
+[00:58:15] people were
+[00:58:16] journalists and the third is uh a recent
+[00:58:20] move within the
+[00:58:22] Congress I guess within a defense
+[00:58:24] authorization bill to say let's take
+[00:58:28] away the prohibitions against using
+[00:58:31] propaganda on the public the United
+[00:58:34] States public so here you have
+[00:58:37] three sort of
+[00:58:40] forces of the state coming
+[00:58:44] in you know and it's getting rid of all
+[00:58:48] that freedom from basically yeah so I no
+[00:58:53] I think it's a really great example of
+[00:58:54] how it is more comp and that's why I
+[00:58:57] don't I never want to argue the argue
+[00:59:01] that we don't need the freedom from part
+[00:59:03] of this at all I I I I absolutely keep
+[00:59:05] those um together and and hold them up
+[00:59:09] together so I agree with you you how do
+[00:59:13] you how do you see that dealing with the
+[00:59:15] freedom too the stuff that you've been
+[00:59:17] discussing here uh in those cases
+[00:59:20] exactly you mean well not necessarily
+[00:59:22] exactly but those Trends yeah yeah so I
+[00:59:25] mean one I think is this idea of again I
+[00:59:28] put it to sort of a structural question
+[00:59:30] so we sort of say it's not about in any
+[00:59:32] particular moment um making a decision
+[00:59:35] based on a freedom too but it might be
+[00:59:37] something like
+[00:59:39] um you know if if we're able to so for
+[00:59:42] instance there was a series of Supreme
+[00:59:44] Court decisions that actually you know
+[00:59:45] took away the fairness Doctrine the
+[00:59:46] right to reply thing because it said um
+[00:59:48] technologically this doesn't really
+[00:59:50] matter much anymore because it used to
+[00:59:51] be when spectrum allocation was was
+[00:59:54] limited and you can only then there was
+[00:59:55] a reason there was a logic for uh having
+[00:59:58] a wrer of reply but there was a series
+[01:00:00] of cases that said um for instance in
+[01:00:02] the cable industry there was a judgment
+[01:00:05] that said well cable is this sort of
+[01:00:07] infinite thing so there's no
+[01:00:09] technological rationale for uh why we
+[01:00:12] might have a right to reply there um so
+[01:00:14] we saw Justice is sort of doing um we
+[01:00:16] only saw Justice Kennedy who actually
+[01:00:18] said well but there might if there's an
+[01:00:19] economic Monopoly that's created then
+[01:00:22] maybe that's a scarcity issue so we
+[01:00:25] might want to regulate that because um
+[01:00:28] even though it's technologically endless
+[01:00:30] um maybe there's a market issue and I
+[01:00:32] would so I the way I would add to this
+[01:00:34] actually is more of an attention um
+[01:00:35] based one so I think I think attention
+[01:00:38] is actually sort of this scarce resource
+[01:00:41] that um hasn't made its way into a lot
+[01:00:44] of these structural conversations for
+[01:00:46] Freedom too so on a really sort of you
+[01:00:50] know basic level um if you know as those
+[01:00:53] stats are showing if we're increasingly
+[01:00:54] going to start encountering a lot of our
+[01:00:56] news through what friends and family
+[01:00:57] show us on Facebook for instance if
+[01:00:59] that's if that's a major site if we
+[01:01:02] start to see that happening
+[01:01:04] um I think there could be a case to sort
+[01:01:07] of make some structural changes to what
+[01:01:10] kinds of information I attend to or
+[01:01:12] don't attend to and maybe maybe it's a
+[01:01:14] design decision to say you know you've
+[01:01:16] kind of been paying attention to these
+[01:01:17] people an awful lot here's a a moment
+[01:01:20] where I'm going to inter interact or
+[01:01:22] interject as as Facebook or as Twitter
+[01:01:24] or or somebody else in a journalist like
+[01:01:26] way and say um we're going to give you
+[01:01:28] something different than what you had
+[01:01:30] had had before um I don't know I don't
+[01:01:32] think that really answers your question
+[01:01:34] I'm sorry but it's um that's how
+[01:01:35] questions not answer okay those are the
+[01:01:38] best kind to try to answer then yeah I I
+[01:01:41] think there was one more here and then
+[01:01:42] and then you were there yeah yeah going
+[01:01:44] back to the history public relations Is
+[01:01:46] Not journalism but journalism is public
+[01:01:49] relations
+[01:01:50] correct uh I wouldn't I would say it
+[01:01:54] depends
+[01:01:56] public the president of the public
+[01:01:57] relations firm that I worked for you
+[01:02:00] know 11 years ago would that's what he
+[01:02:02] would say Okay so the real question is
+[01:02:04] like what is the relationship now
+[01:02:06] because I know that it's you know it's
+[01:02:07] rock solid in some places and Rock Solid
+[01:02:10] at certain times yeah and with the gross
+[01:02:12] of growth of interest in business and
+[01:02:14] finance reporting that was a big you
+[01:02:17] know and as well as technology called
+[01:02:20] that right uh was a big you know Boon
+[01:02:23] for public relations people what is the
+[01:02:26] in this meu what is the what is what
+[01:02:29] what the what do the relationships look
+[01:02:31] like or is it all behind curtain yeah
+[01:02:34] it's a good question I I honestly I
+[01:02:36] haven't thought a ton about PR in the
+[01:02:38] sense I mean I the most experience I
+[01:02:40] have with studying PR is mostly in this
+[01:02:42] historical sense where um one of the
+[01:02:44] reasons for instance there's a you know
+[01:02:46] one of the reasons the Columbia
+[01:02:47] journalism program was uh was founded
+[01:02:49] was this desire to distinguish
+[01:02:50] journalists from public relations
+[01:02:52] officials and that was the or
+[01:02:53] professionals and that was this moment
+[01:02:55] that was that was made there was another
+[01:02:56] moment in history when uh opinion
+[01:02:59] polling was sort of this increasingly
+[01:03:01] used thing where uh opinion polls were
+[01:03:04] coming from both market research
+[01:03:05] organizations and political opinion
+[01:03:08] polling organizations and yeah and
+[01:03:11] there's a sometimes there's a desire to
+[01:03:13] distinguish between those different
+[01:03:14] types of polling and on part of
+[01:03:16] journalists to report on those polling
+[01:03:18] uh differently because one um but I I
+[01:03:20] don't I don't have a lot of great
+[01:03:21] insights into contemporary Public
+[01:03:23] Relation stuff but my I would again sort
+[01:03:26] of put it through this framework of not
+[01:03:29] to take a stance to say public relations
+[01:03:30] people you know are or are not
+[01:03:32] journalists but to say it it probably
+[01:03:34] depends in a particular moment of what's
+[01:03:37] driving their production or what's
+[01:03:38] driving their their
+[01:03:40] participation definitely had an effect
+[01:03:42] over the behavior of yeah I probably
+[01:03:46] right for good or bad yeah yeah you're
+[01:03:49] probably right uh yes at the end um so I
+[01:03:51] have a couple questions we sort of
+[01:03:53] tieing together so first of all it
+[01:03:54] sounds like you had not just
+[01:03:56] a question not of open data but open
+[01:03:58] metadata question of how to so have you
+[01:04:01] considered using uh sort of third party
+[01:04:02] apps like semantic tools like say Cay
+[01:04:04] open Cay for for journalism in order to
+[01:04:07] uh more more meaningfully categorize
+[01:04:09] these stories yeah sure so I mean in
+[01:04:12] this case though I was relying upon the
+[01:04:15] metadata of the news organization so I I
+[01:04:18] I think that would almost be more of a
+[01:04:19] question for them to say how are they
+[01:04:21] internally generating the metadata that
+[01:04:23] is then used to describe the story
+[01:04:26] um but I think that would be you know
+[01:04:28] that would be an interesting move for
+[01:04:30] them to make but it also then is this
+[01:04:32] Reliance on another piece of software
+[01:04:35] another piece of technology that's doing
+[01:04:37] some of that logical work as well so I I
+[01:04:40] would want to see more about how those
+[01:04:42] pieces of software are making decisions
+[01:04:44] around metadata and I my hunch is that
+[01:04:46] news organizations are not going to want
+[01:04:48] to sort of completely give over their
+[01:04:53] metadata uh generation and mainten I
+[01:04:56] know so New York New York Times has this
+[01:04:58] you know incredibly complex set of
+[01:05:00] heuristics and set of rules around
+[01:05:02] metadata uh NP has this inest system
+[01:05:05] which is doing this really complex work
+[01:05:07] of trying to make sense of what uh
+[01:05:09] member stations are sending it so uh if
+[01:05:12] you go to npr.org um some of those
+[01:05:14] stories are coming from you know WB or
+[01:05:16] KQED there sort of a lot of this data is
+[01:05:19] flowing in and there's this thing called
+[01:05:20] the inest system that's trying to make
+[01:05:21] sense of all this data and trying to
+[01:05:23] square up the metadata that's there um
+[01:05:26] and that that depends highly on how
+[01:05:27] different member organizations are doing
+[01:05:29] it and that's a that's a hard piece of
+[01:05:30] work so I would I would honestly doubt
+[01:05:32] that they would be willing to sort of
+[01:05:34] give that over but I think it's a it's
+[01:05:36] an interesting question to ask of them
+[01:05:37] sure second question was um whether you
+[01:05:40] sort of feel like we talk about the
+[01:05:41] freedom of the press not just freedom
+[01:05:43] from but freedom to but also the freedom
+[01:05:45] of the consumer so something one thing I
+[01:05:47] could sort of see worrying about is like
+[01:05:49] when you try all these searches and you
+[01:05:50] find wildly different results that
+[01:05:52] you're sort of getting maybe like force
+[01:05:54] fed into stories that you may not
+[01:05:55] necessarily want to read if you want to
+[01:05:57] so it's sort of my question do does the
+[01:05:59] consumer have a right for a meaningful
+[01:06:01] search or for Meaningful uh for
+[01:06:05] Meaningful topics that they articles
+[01:06:07] that they read and not being like you
+[01:06:08] know sort of uh pulled into something
+[01:06:10] that they may not have been looking for
+[01:06:12] totally yeah so I understand it I think
+[01:06:14] um so I think there's two things to
+[01:06:17] tease apart there one is the generation
+[01:06:19] of the stories that appear in the search
+[01:06:22] and then the other is the logic driving
+[01:06:25] the search sech or structuring the
+[01:06:26] search and I think that those are both
+[01:06:28] places to ask around what uh what
+[01:06:31] consumer Choice means I think that this
+[01:06:33] so the the sort of the philosophical
+[01:06:34] theory that I presented um there's a lot
+[01:06:37] more detail about even the the illusion
+[01:06:40] of consumer choice in a sense or what it
+[01:06:42] is that you may or may not want has also
+[01:06:44] been rather conditioned and structured
+[01:06:47] upon uh what you've encountered
+[01:06:48] previously and so this is why it's kind
+[01:06:51] of it's a normative departur to say
+[01:06:54] there is a difference between the news
+[01:06:56] you might need versus the news you might
+[01:06:59] want and that's why it's a it's a
+[01:07:01] structural question it's not about me
+[01:07:02] you know preventing you from seeing
+[01:07:03] something or giving you bad search
+[01:07:05] results it's actually about me having a
+[01:07:07] different value that goes into both the
+[01:07:10] construction of the stories and the
+[01:07:12] structuring of the search that
+[01:07:15] says I'm not it's not just about
+[01:07:18] fulfilling your
+[01:07:20] consumer desire and I know that that's a
+[01:07:22] really controversial sort of thing to
+[01:07:25] say because you might be unhappy I
+[01:07:28] totally get that but you might be yeah
+[01:07:33] yes I think of you and then you I bet
+[01:07:34] I'm wait sorry you already asked sorry
+[01:07:38] so um kind of building on what he was
+[01:07:40] saying um it feels like from the
+[01:07:43] fairness Doctrine and the wrer reply we
+[01:07:45] sort of did a shift from uh like
+[01:07:47] government oversight of what the media's
+[01:07:50] responsibility is to the public to
+[01:07:53] almost a commercial oversight where you
+[01:07:54] see like in Wikileaks where the ISP
+[01:07:57] decides what goes out and what doesn't
+[01:07:59] go out and so like the commercial role
+[01:08:02] within or media presentation or
+[01:08:05] availability has gone sort of from like
+[01:08:07] a s signal booster to a potential signal
+[01:08:10] squasher MH um and so I'm wondering if
+[01:08:13] if you see like a potential for uh
+[01:08:16] another way that government could be
+[01:08:18] involved going forward or it would have
+[01:08:19] to come from a totally different quarter
+[01:08:21] so you you briefly talked about like
+[01:08:23] attention as a scarce resource I don't
+[01:08:25] think anyone really wants government
+[01:08:28] mandated attention so that would you
+[01:08:31] know like it couldn't be the same kind
+[01:08:33] of thing as like you know amfm dial
+[01:08:36] resources being allocated but um I'm
+[01:08:39] wondering maybe it's like a like the
+[01:08:41] best thing would to like more of a NGO
+[01:08:44] kind of um a role well I think so one
+[01:08:47] place I look is there's a lot of um so
+[01:08:49] even tax law stuff around you know
+[01:08:51] funding or not funding but um calling
+[01:08:55] news organizations as nonprofits and
+[01:08:57] there's sort of you know there's been in
+[01:08:58] the last probably six months some really
+[01:09:00] nice stories and documentation around
+[01:09:02] how difficult it is sometimes for news
+[01:09:04] organizations to get themselves
+[01:09:05] classified as nonprofits and and folks
+[01:09:07] and that I'm sure you guys can talk a
+[01:09:09] lot about that or what the challenges
+[01:09:11] are around that um so there's a case of
+[01:09:14] you know through the tax code there
+[01:09:16] could be a government role for
+[01:09:19] supporting journalism but that's that's
+[01:09:21] not so there's a bunch of things to
+[01:09:22] separate out here there's not I'm not
+[01:09:23] talking about government having V voice
+[01:09:25] so I'm not talking about um creating a
+[01:09:29] you know State News Channel that has to
+[01:09:31] get your attention that's
+[01:09:34] not they're okay right yeah so I think
+[01:09:37] that it's um so it's not about giving
+[01:09:39] government a voice and as Owen fist has
+[01:09:40] a really nice piece actually if
+[01:09:41] anybody's interested on um different
+[01:09:43] types of State roles that can be uh in a
+[01:09:46] um in a media system and the idea of
+[01:09:49] government speaking is actually a sort
+[01:09:50] of a small one that's not really a lot
+[01:09:52] of it's about structural stuff in terms
+[01:09:53] of um you know tax code
+[01:09:56] or instead of instead of it being
+[01:09:58] Comcast like you know as as much as I me
+[01:10:01] just trust government to be involved in
+[01:10:03] detailed ways in certain ways I trust
+[01:10:05] Comcast less because I can't really
+[01:10:07] outvote Comcast even you know that's
+[01:10:10] even more impossible than you know like
+[01:10:14] I'm on the phone longer waiting for
+[01:10:15] Comcast than I am for my
+[01:10:17] congressman yes I can totally yeah I can
+[01:10:20] totally see that yeah yeah it's more
+[01:10:22] arbitr not as voice yeah yeah not as
+[01:10:25] voice I I totally agree and the other
+[01:10:27] thing is the
+[01:10:28] um I think one thing you know the state
+[01:10:32] can do as well is sort of um provide
+[01:10:34] either an investigative role or provide
+[01:10:36] um a role of orienting people to even
+[01:10:39] the problem existing as well so it's not
+[01:10:40] necessarily that you know the state is
+[01:10:42] going to fund some news organizations
+[01:10:44] and not others um or have a voice but
+[01:10:47] it's going to say maybe there's a
+[01:10:48] problem here um that could be addressed
+[01:10:51] through through private markets through
+[01:10:52] Civil Society through lots of different
+[01:10:54] kinds of things yeah uh sorry one more
+[01:10:57] okay you guys you both spoke before and
+[01:10:59] you both have your hands up and I don't
+[01:11:00] know what to do can we combine them can
+[01:11:01] we combine them comment not a question
+[01:11:03] okay then can we question yours was a
+[01:11:06] question okay let's do the question
+[01:11:07] first a comment it seems like a a
+[01:11:09] proprietary API is only as good as the
+[01:11:11] organ the organization's willingness to
+[01:11:14] support and ability to support it when
+[01:11:16] you encountered it you know when you
+[01:11:17] were totally baffled by NPR's uh idea of
+[01:11:21] bul and logic was there anybody at the
+[01:11:23] other end who could tell you you know
+[01:11:24] what either what you were doing wrong or
+[01:11:26] what they might have been doing wrong
+[01:11:27] that was causing these problems yeah so
+[01:11:29] um so so the short answer is no exactly
+[01:11:34] but there is a really nice sort of uh
+[01:11:37] user community of people who are trying
+[01:11:39] to build with NPR and this this is true
+[01:11:41] for um for the New York Times and for
+[01:11:44] the guardian as well so one of the but I
+[01:11:47] think those user communities are are
+[01:11:49] they're doing really great work but
+[01:11:51] they're often sort of small and you know
+[01:11:53] this is relying on people sort of
+[01:11:54] volunteer labor do
+[01:11:56] this of the blackx um yeah but NPR is
+[01:11:59] actually I think really good about
+[01:12:01] they're really good about saying they
+[01:12:02] want to support this uh infrastructure I
+[01:12:06] so everything I'm saying is not a
+[01:12:07] criticism in PR because it's actually I
+[01:12:08] mean what they're doing I think is
+[01:12:10] really incredible with the small set of
+[01:12:11] scarce resources and people are doing
+[01:12:15] it baffling that doesn't make sense to
+[01:12:17] me what I mean I'm on a bunch of the
+[01:12:18] mailing lists and there are people who
+[01:12:19] will chime in and and help you out with
+[01:12:21] that so it's it's there but it also
+[01:12:23] requires you know some way to ask that
+[01:12:26] question yeah sorry then
+[01:12:29] yes to the comment about the user's
+[01:12:32] right to a you know Fair search I think
+[01:12:35] it's interesting that Google has started
+[01:12:38] to assert that the results of its search
+[01:12:42] protected speech in and of itself that
+[01:12:44] it represents you know it its opinion
+[01:12:48] about the various
+[01:12:50] sources yeah I mean I saw that article I
+[01:12:52] think that's a really
+[01:12:55] it's a really tricky notion of free
+[01:12:58] speech that it's no First Amendment
+[01:13:00] right for them to assert their opinion
+[01:13:02] that this is you know the most important
+[01:13:04] site in the world about Google yeah no I
+[01:13:07] think that's true I'm getting a look
+[01:13:08] from mrr that I think we're uh we're
+[01:13:10] running out of time but thank you very
+[01:13:12] much thanks
