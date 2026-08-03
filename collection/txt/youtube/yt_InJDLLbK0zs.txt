@@ -1,0 +1,2183 @@
+[00:00:00] it is my honor today to um introduce a
+[00:00:02] liberan Aiden Aiden liberman and and
+[00:00:05] John Baptist Michelle who will be
+[00:00:07] discussing with us today um all the
+[00:00:09] exciting work that they've done in in
+[00:00:10] culture roix an exciting New Field that
+[00:00:13] uh they've helped uh found um I will
+[00:00:16] keep this short but one uh story I would
+[00:00:17] relay is that at the engineering school
+[00:00:19] at ceas um these guys are known as the
+[00:00:22] uh the pan disciplinary guys because the
+[00:00:24] word interdisplinary was used so often
+[00:00:26] in all the website and all the brochures
+[00:00:27] and the materials as I'm sure many of
+[00:00:29] you know um but there was some concern
+[00:00:31] that no one is really truly
+[00:00:32] interdisplinary in their work AZ and and
+[00:00:35] JB as it goes um is actually completely
+[00:00:39] defies that stereotype and if you look
+[00:00:41] at um at the New York Times story that
+[00:00:43] broke two months ago with uh their
+[00:00:45] leading um science paper um that uh they
+[00:00:48] they have managed to um include Google
+[00:00:51] MIT uh HMS the engineering school and
+[00:00:53] almost every every Institute at Harvard
+[00:00:55] in their work and I think that is
+[00:00:57] exactly why we want them here today and
+[00:00:59] why what they are doing is so is so
+[00:01:00] exciting is because they are truly
+[00:01:02] breaking down barriers and helping
+[00:01:04] especially the humanities um do exciting
+[00:01:06] research um and explain to the other
+[00:01:08] sides of the academic aisles um why why
+[00:01:11] Humanities matters and so with that I'm
+[00:01:13] going to give it to you guys and uh one
+[00:01:15] reminder is to please turn off all your
+[00:01:17] cell phones if you can it's important
+[00:01:19] there's so many electronics in the room
+[00:01:21] we don't want any interference and then
+[00:01:22] finally uh this talk will be recorded
+[00:01:25] and so your questions will be saved for
+[00:01:27] posterity on the internet so um so so
+[00:01:30] bear that in mind um um Amar from the
+[00:01:32] brokman center might interject um at the
+[00:01:35] end during the Q&A with questions from
+[00:01:37] Twitter but otherwise uh please um write
+[00:01:39] down all your questions and at the end
+[00:01:40] we'll have some time for those okay so
+[00:01:42] thank you very much guys and take it
+[00:01:45] away hey it's a tremendous uh tremendous
+[00:01:48] pleasure to be here thank you guys so
+[00:01:49] much for inviting us uh we're here to
+[00:01:51] talk about culturomics uh quantitative
+[00:01:53] uh analysis of culture uh using in this
+[00:01:56] part particular case millions of
+[00:01:58] digitized books and liberman Aiden who
+[00:02:01] my collaborator John Baptist Michelle uh
+[00:02:03] and we represent all kinds of
+[00:02:05] organizations that tolerate us
+[00:02:08] um let me kind of give you a bit of an
+[00:02:12] overview there's all kinds of things
+[00:02:14] that you can do uh at the Harvard
+[00:02:17] Library in fact there are certain things
+[00:02:18] that undergraduates are required to do
+[00:02:20] at the library um that perhaps uh is a
+[00:02:24] little bit odd but anyway the
+[00:02:25] traditional thing when you're not doing
+[00:02:27] that is to read a few books very very
+[00:02:28] carefully you find some books that you
+[00:02:30] are interested in uh and you read them
+[00:02:32] very very carefully um that's that's a
+[00:02:35] pretty good method you'll never get
+[00:02:37] through the whole library that way um
+[00:02:40] you might find
+[00:02:42] distressing well here's another approach
+[00:02:44] uh you could read all the books uh but
+[00:02:47] do it very very not
+[00:02:50] carefully is there some benefit to doing
+[00:02:53] that well that's really the question
+[00:02:55] that we're going to tackle in this talk
+[00:02:57] uh and more precisely the question that
+[00:02:58] we're going to tackle is can we use
+[00:03:00] computational methods to get a
+[00:03:01] macroscopic view of an entire
+[00:03:04] Civilization by reading all books very
+[00:03:07] very not careful all right so we're
+[00:03:09] going to give you a Qui principle a very
+[00:03:11] quick principle of why that can be an
+[00:03:13] interesting method because it's true
+[00:03:15] that one might really wonder if you're
+[00:03:17] not reading books what are you doing so
+[00:03:19] um we're going to start with the English
+[00:03:20] language uh there's a very nice thing
+[00:03:22] about English verbs is that they're very
+[00:03:24] regular so this so to express the past
+[00:03:26] just add a little protal to the present
+[00:03:29] like this disting with professor over
+[00:03:30] there would say um today I still
+[00:03:33] yesterday I still very easy now of
+[00:03:36] course that doesn't hold in the most
+[00:03:38] important of the cases when you're for
+[00:03:39] instance chased by a big rock you'd say
+[00:03:41] that rock almost got me not geted me so
+[00:03:45] U some of the verbs in the English
+[00:03:46] language are not regular they do not
+[00:03:48] conform to this regular equation those
+[00:03:50] are the irregular verbs now the nice
+[00:03:53] thing about irregular verbs from uh our
+[00:03:55] standpoint as mathematicians interested
+[00:03:57] in cultural evolution is that they tend
+[00:03:59] to become regular with time like for
+[00:04:01] instance this is a cartoon that's uh
+[00:04:04] that was described during the past
+[00:04:05] financial crisis remember money you were
+[00:04:07] saving for a rainy day it's Shunk so in
+[00:04:10] the future this will certainly be uh in
+[00:04:12] strength because RS become regular so
+[00:04:15] that's a very nice feature for us
+[00:04:17] mathematicians and wanted to quantify
+[00:04:18] that to say let's take this evolving
+[00:04:21] feature of language and let's look at
+[00:04:23] how it change over
+[00:04:25] time so here is our plan uh there's lots
+[00:04:29] of lots of stuff that's been written in
+[00:04:31] the English language over time it looks
+[00:04:33] kind of like this uh so we would take an
+[00:04:37] regular verb that we're interested in
+[00:04:38] for instance the verb to see uh and uh
+[00:04:42] we would take all of the forms of to see
+[00:04:45] and and we would just write down
+[00:04:46] whenever any of them occur in this text
+[00:04:48] I mean of course uh we're not going to
+[00:04:50] do this right um but if if we found a th
+[00:04:54] undergrads right then we could deploy
+[00:04:57] essentially all of these undergrads to
+[00:04:59] go through all these text and write down
+[00:05:00] all the regular verbs um and so that
+[00:05:02] seemed like a pretty reasonable plan to
+[00:05:04] us uh you know so Flyers went up
+[00:05:07] undergrads were informed and one showed
+[00:05:11] up but she's a very very good undergrad
+[00:05:13] so she makes up from a thousand yeah
+[00:05:16] she's a a Wonder grad if you will why is
+[00:05:20] she so uh wonderful well so the plan was
+[00:05:23] look we can't read all the primary
+[00:05:25] sources uh so why don't we read some
+[00:05:28] secondary sources we'll take 11 grammar
+[00:05:30] textbooks spanning Old English and
+[00:05:32] Middle English and uh use them to
+[00:05:35] compile a list of irregular verbs in Old
+[00:05:37] English which are still in the language
+[00:05:39] today and try to figure out what
+[00:05:40] happened to them turns out that for for
+[00:05:43] these 177 Old English irregular verbs
+[00:05:45] 145 were still irregular in Middle
+[00:05:48] English and 98 of them are still
+[00:05:50] irregular today the rest of them have
+[00:05:52] all
+[00:05:53] regularized so now you can arrange these
+[00:05:56] verbs because we like to make charts we
+[00:05:57] mathematicians so we put them in a big
+[00:06:00] so these are the 177 verbs that were
+[00:06:02] irregular 1200 years ago now the verbs
+[00:06:05] that are most frequent we put at the top
+[00:06:07] of the table to be and to have to come
+[00:06:09] do and find the verbs that are very rare
+[00:06:11] come to the bottom of the table to delve
+[00:06:13] to B to spam now we colored these verbs
+[00:06:17] as a function of whether they are now
+[00:06:19] still irregular or whether they have
+[00:06:21] become regular with time so as you can
+[00:06:24] see the verb to be and to have are
+[00:06:26] irregular verbs in Black the verb to
+[00:06:28] starve are the verb to melt are regular
+[00:06:31] they conform to the regular equation
+[00:06:32] they are in red now if you notice as you
+[00:06:35] go down this table it becomes more and
+[00:06:37] more rare So this exemplifies the fact
+[00:06:40] that when verbs are more rare they
+[00:06:42] regularize faster this Mires the very
+[00:06:45] simple thing if you're not reminded of
+[00:06:47] stuff you will forget about them so here
+[00:06:49] at this level of society if you're not
+[00:06:51] remember if you're not reminded enough
+[00:06:52] that these vers are exceptions to a rule
+[00:06:55] you will just use the rule to conjugate
+[00:06:57] those exceptions and they will disappear
+[00:06:59] from the exceptions and they will become
+[00:07:00] regular and this is what we observe
+[00:07:03] here now there's a very simple
+[00:07:05] mathematical feature which is if a verb
+[00:07:08] is 100 times less frequent than another
+[00:07:10] it regularizes 10 times as fast this
+[00:07:13] just emerges from the table that I've
+[00:07:14] shown you before and uh you know it's a
+[00:07:16] we have a nice equation here that
+[00:07:18] relates the half Ty of an irregular verb
+[00:07:20] to the square root of its usage
+[00:07:22] frequency which is really neat for us um
+[00:07:25] this is something that whatever model
+[00:07:29] you have of evolution in the English
+[00:07:31] language the model must confir to this
+[00:07:33] this is an experimental feature an
+[00:07:35] empirical feature that shows how this
+[00:07:38] particular grammatical rule has been
+[00:07:39] evolving over 12 centuries so if you
+[00:07:42] come up with a way in your mind of how
+[00:07:43] English should evolve it must reproduce
+[00:07:46] that so that's something that could not
+[00:07:48] have been known if you hadn't looked at
+[00:07:51] uh language the way we did so this is
+[00:07:54] one example of why it's useful to this
+[00:07:56] type of computational large scale
+[00:07:58] analysis of language and culture at
+[00:08:00] large now in addition you can actually
+[00:08:02] make very nice pictures with that which
+[00:08:04] is always nice so here's the friend of
+[00:08:05] mine J austi when we told him about this
+[00:08:08] results he said uh well that's really
+[00:08:10] nice because uh here's what happened at
+[00:08:12] the beginning of time somebody took the
+[00:08:13] English language and he put it at the
+[00:08:14] top of an Hour Glass right there all the
+[00:08:16] verbs are irregular to have to think to
+[00:08:18] drive that's all irregular then at times
+[00:08:21] goes by those verbs fall through the
+[00:08:22] opening of the hour by doing so they
+[00:08:24] gain this little Ed particle so they
+[00:08:26] become regular of course some verbs are
+[00:08:29] more use than others so they're much
+[00:08:30] bigger like to have think so it takes
+[00:08:33] them much more time to go through the
+[00:08:35] opening of the hour that explains the
+[00:08:37] result and uh so we sent when we send
+[00:08:40] the paper to Nature and we were very
+[00:08:41] lucky to have it accepted we also send
+[00:08:43] them the picture and they thought that
+[00:08:44] the picture was so as they had to put it
+[00:08:46] on their cover so that they really made
+[00:08:48] our
+[00:08:50] day cool so that's a proof of principle
+[00:08:53] that you can try to do this kind of
+[00:08:55] thing for several years and not
+[00:08:56] immediately end your scientific career
+[00:08:58] um so so thus duly encouraged we uh we
+[00:09:03] set out to do this better uh let's
+[00:09:07] review what we've learned the best thing
+[00:09:10] you could possibly do if you wanted to
+[00:09:13] quantify history if you wanted to get
+[00:09:14] some sense of historical Trends is to
+[00:09:17] read absolutely everything record it
+[00:09:18] write it down make a very very beautiful
+[00:09:20] table right let's just get a thousand
+[00:09:22] undergrads million undergrads and write
+[00:09:24] this down and if there were a y AIS for
+[00:09:27] awesome this is about the most awesome
+[00:09:29] thing you could
+[00:09:31] do the problem is that if there were an
+[00:09:34] xais for
+[00:09:36] practical not a very practical approach
+[00:09:39] so what we did was the far less awesome
+[00:09:42] but far more practical approach of using
+[00:09:44] secondary sources still we have always
+[00:09:47] dreamed of getting over there into the
+[00:09:50] upper right quadrant now why is it that
+[00:09:54] uh it's so impractical to be there um
+[00:09:58] well yes the reason it's so practical to
+[00:10:00] be there is that we're just two guys
+[00:10:03] right so us doing it would take a very
+[00:10:05] long time but of course if you could
+[00:10:08] find somebody else to do it why that
+[00:10:10] would be very practical
+[00:10:12] indeed turns out in Google since 2004
+[00:10:16] has been very very very rapidly
+[00:10:18] digitizing uh every book they can
+[00:10:20] possibly get their hands on so suddenly
+[00:10:23] you have this option which is both
+[00:10:26] extremely awesome you've got all the
+[00:10:27] books you've got all the words
+[00:10:28] everything written but also
+[00:10:31] practical so now we went to Google and
+[00:10:34] we told them about this idea and they
+[00:10:35] said okay let's give it a shot so what
+[00:10:37] we wanted to do really is to make a tool
+[00:10:40] that anybody could use we're not really
+[00:10:42] interested in reproducing our study and
+[00:10:44] just publishing but we're interested in
+[00:10:45] making something that anybody could use
+[00:10:47] so a measurement tool for uh history or
+[00:10:49] cultural Trends now that means you need
+[00:10:52] to release data because if you just do
+[00:10:54] everything behind a firewall nobody
+[00:10:55] knows what's going on and there's no
+[00:10:57] producibility so there's no real sence
+[00:10:59] there so we need to release data now
+[00:11:01] Google has digitized millions of books
+[00:11:04] uh the ideal data release is to take
+[00:11:06] those full text of the millions of books
+[00:11:07] and to release them in the wild so now
+[00:11:10] of course there there's a y axis for how
+[00:11:12] awesome that is it's very very very high
+[00:11:14] but um we're taught um very simple
+[00:11:17] principle which is that if you have 5
+[00:11:19] million authors say 5 million books is 5
+[00:11:21] million authors 5 million authors is 5
+[00:11:23] million ples so if you release that you
+[00:11:27] got a massive lawsuit and of course for
+[00:11:29] us young scientist it's not so great not
+[00:11:31] so practical so that solution we did not
+[00:11:34] re now of course as we always do we try
+[00:11:36] to go for the more practical thing still
+[00:11:38] a bit awesome but not that much and uh
+[00:11:40] so we thought well okay we have these
+[00:11:42] millions of books we cannot read the
+[00:11:43] full text what can we say about them
+[00:11:44] maybe you can relase some statistics
+[00:11:45] that are useful it will never be as
+[00:11:47] useful as the full text but it might
+[00:11:48] still be quite useful so here the
+[00:11:50] statistics that we have decided to to
+[00:11:52] release are what we call engrams so a
+[00:11:55] gram is a word a two G is a two word
+[00:11:58] like a table is a 2 G and a 5 G is five
+[00:12:01] words the United States of America so n
+[00:12:03] g by extension is n words so we decided
+[00:12:05] to take to count the number of times and
+[00:12:07] grams appeared so there's an example for
+[00:12:09] instance in this uh image here there's
+[00:12:11] the four gr aim of Happiness so what we
+[00:12:14] do is we take this program and we ask
+[00:12:16] how many times it appears in books that
+[00:12:18] were published in the year 1800 in books
+[00:12:20] that were published in the year 1801
+[00:12:21] 1802 1803 1804 and so on until 2008 so
+[00:12:25] that that gives us a trajectory of how
+[00:12:27] much this particular program was used
+[00:12:30] and we do that for all the five GRS that
+[00:12:32] appear in the books that we have been
+[00:12:34] looking at which amount to 5 million
+[00:12:35] books total so that gives us a table
+[00:12:38] that is about 2 billion lines long about
+[00:12:40] 500 columns wide that tells us things
+[00:12:43] about the way uh phrases words and
+[00:12:45] sentences have been evolving over the
+[00:12:47] course of the last few centuries and
+[00:12:49] that's what we have
+[00:12:51] released now um let's just give you a
+[00:12:54] general overview of uh where all of this
+[00:12:57] uh data is com from so for centuries now
+[00:13:01] since the invention of the printing
+[00:13:02] press people have been writing books uh
+[00:13:04] many of them havei faces depicted in the
+[00:13:06] top row uh on once they got their books
+[00:13:08] where did those books go some of them
+[00:13:10] were retained actually in publishing
+[00:13:11] houses uh the vast majority of them that
+[00:13:13] we still uh keep track of uh live in
+[00:13:16] libraries um and Google has been taking
+[00:13:19] those books from the libraries and
+[00:13:20] Publishing houses and digitizing them so
+[00:13:22] we approached Google and we said hey
+[00:13:24] you've got all these digitized books why
+[00:13:26] don't we work together try to create
+[00:13:27] some kind of Corpus uh massive
+[00:13:29] collection of texts that we think is
+[00:13:31] reliable enough for the types of studies
+[00:13:33] that we want to do now it turns out that
+[00:13:35] of the 12 million was the public number
+[00:13:37] when this figure was made now it's 18
+[00:13:39] million uh of the books that had been
+[00:13:41] scanned um not all of them were suitable
+[00:13:44] for use there's two major reasons that
+[00:13:46] we couldn't use a book one is we didn't
+[00:13:49] think the metadata was good enough for
+[00:13:50] instance the book you know claims to
+[00:13:52] have been written in 1703 but we don't
+[00:13:54] necessarily believe it the other is the
+[00:13:56] scan isn't necessarily good enough so
+[00:13:59] somehow we don't have a good uh sense of
+[00:14:02] what the words are in that book the
+[00:14:03] pictures aren't good enough or the
+[00:14:05] algorithm that recognizes uh those
+[00:14:07] characters the OCR optical character
+[00:14:08] recognition algorithm somehow said hey
+[00:14:11] this book doesn't look terribly good so
+[00:14:13] we had to throw lots and lots of things
+[00:14:15] out in fact we threw out about 2third of
+[00:14:16] the database what we were left with is 5
+[00:14:19] million books to analyze and uh as JB
+[00:14:24] just described what we did is create
+[00:14:26] this table using those 5 million books
+[00:14:28] where we trust trusted the data and
+[00:14:30] trusted uh the metadata made this table
+[00:14:32] shown the frequency of words and of
+[00:14:35] phrases over time and here we're
+[00:14:37] enormously indebted to Yan Shen uh Matt
+[00:14:40] Gray and John orwan our collaborators in
+[00:14:43] making that that
+[00:14:45] possible so now uh when we when we got
+[00:14:48] this data we did a lot of analysis with
+[00:14:50] it that we're going to show you in a
+[00:14:51] second and um and we published it in in
+[00:14:54] the Journal of science which is right
+[00:14:55] there and again somebody had made a nice
+[00:14:56] picture that we could send them again
+[00:14:58] put them on their cover again it was a
+[00:15:00] great day this particular picture
+[00:15:01] represents it's it's it's actually an
+[00:15:03] image it's not a digital picture it's an
+[00:15:04] image from a sculpture this is Artic
+[00:15:06] artist called M Ken who makes sculptures
+[00:15:09] with thousands of books tens of
+[00:15:10] thousands of books and here he did kind
+[00:15:12] of like did a very big um Tower with it
+[00:15:15] which is not as tall as as as it looks
+[00:15:17] because there are mirrors inside it so
+[00:15:19] that when you look into it you see the
+[00:15:21] reflection to to the infinity and now
+[00:15:23] the interesting thing is that if you try
+[00:15:24] to count the books you see in this
+[00:15:26] particular picture you see I think
+[00:15:27] around 100,000 books right so this is
+[00:15:29] still 50 times smaller than all the
+[00:15:32] books that that we could analyze in this
+[00:15:33] study it's still far more than uh the
+[00:15:36] number of books you could read but you
+[00:15:38] know it's far less that we can read when
+[00:15:40] we're not careful so point is with this
+[00:15:43] data we can start uh doing very nice
+[00:15:45] things with cultural Evolution so here's
+[00:15:48] the state-ofthe-art as of 6 months ago
+[00:15:51] about irregular verbs so if you're
+[00:15:53] interested in knowing about the verb to
+[00:15:55] Prim you go to a leading scholar
+[00:15:57] contemporary scholar Steven binker with
+[00:15:59] amazing hair and you'd ask Steve so how
+[00:16:02] about the verb to stbe how how should I
+[00:16:04] conjugate tell you know most people this
+[00:16:07] say Thrive I know a few however who
+[00:16:10] would say Thro they very few and then
+[00:16:12] you'd go 200 years ago and you'd ask
+[00:16:14] this other distinguish gentleman with
+[00:16:15] equally fantastic hair how about the
+[00:16:17] verb to thrive and he would tell you you
+[00:16:19] know in my days people throw just a few
+[00:16:22] of them thed that's pretty much
+[00:16:24] it and um and you actually not even know
+[00:16:27] where these points are you'd say it's
+[00:16:29] most be blue over here it's must be red
+[00:16:31] over there that's it and now with we're
+[00:16:34] going to show you two lines of this two
+[00:16:36] billion line long table that that we
+[00:16:38] have done the lines that correspond to
+[00:16:39] thve and Thro so this is uh real data
+[00:16:42] that should unfold
+[00:16:44] now so this shows you the trajectory
+[00:16:47] year by year since the year 1800 the
+[00:16:50] year 2000 of the word Thro and of the
+[00:16:53] word Thrive so you can see exactly when
+[00:16:56] the shift occurred how fast it occurred
+[00:16:58] you can see that people don't always
+[00:17:00] Thrive there's less thriving here than
+[00:17:02] there's thriving over there and uh so it
+[00:17:05] delivers a very quantitative picture of
+[00:17:07] grammatical evolution in fact nobody had
+[00:17:09] ever observed grammatical Evolution the
+[00:17:11] evolution of irregular verbs that way
+[00:17:13] this here we can capture the exact
+[00:17:14] moment when that occur and how how big
+[00:17:16] that was we knew that things evolved but
+[00:17:18] we had not seen it that's picture of it
+[00:17:21] and we have so that's two lines out of
+[00:17:22] the 2 billion so the you know this table
+[00:17:25] is at least one billion time more
+[00:17:26] awesome than this one picture here so I
+[00:17:29] want to show you a few of these
+[00:17:31] examples so there's two reasons uh
+[00:17:35] there's two ways that you can tell
+[00:17:36] yourself that what you're doing is not
+[00:17:38] nonsense um in a study like this the
+[00:17:40] first is you know sort of garbage in
+[00:17:42] garbage out if you include lots of books
+[00:17:45] that have bad data or bad metadata
+[00:17:47] you're going to get trajectories that
+[00:17:50] make absolutely no sense so we did our
+[00:17:51] best to make sure that wasn't the case
+[00:17:53] the other thing is that after you have
+[00:17:55] the database you can start doing sanity
+[00:17:57] checks you can say look I know that
+[00:17:59] certain things get big at certain times
+[00:18:01] I should be able to see that in my data
+[00:18:04] and here are two examples of that this
+[00:18:06] is from the English language Corpus so
+[00:18:07] it took 43 heads of state uh people who
+[00:18:11] became president of the United States uh
+[00:18:13] or some equivalent position in their
+[00:18:15] country now usually becoming head of
+[00:18:17] state is is pretty good in terms of
+[00:18:20] getting your name out there um so we
+[00:18:23] said okay well is it pretty good at
+[00:18:25] getting people's names out there uh in
+[00:18:27] our data so we lined everybody up so
+[00:18:29] that their zero year was the year in
+[00:18:30] which they ascended to power and then we
+[00:18:33] computed their average trajectory and
+[00:18:34] you can see very very very clearly that
+[00:18:37] there's this very dramatic rise uh for
+[00:18:40] these leaders at the time they ascend to
+[00:18:42] power similar thing uh we did with
+[00:18:45] treaties so if you take a treaty people
+[00:18:48] very very rarely talk about treaties
+[00:18:51] before the treaty is signed there are a
+[00:18:53] couple of exceptions but by and large
+[00:18:54] people don't really talk about treaties
+[00:18:55] before they're signed they said okay
+[00:18:57] let's take 124 treaties just a list of
+[00:18:59] treaties that we downloaded from
+[00:19:01] Wikipedia uh let's take all 124 treaties
+[00:19:04] and let's just plot their frequency over
+[00:19:06] time relative to the date of their
+[00:19:07] signing uh and again as you can see
+[00:19:10] there's this very very clear and
+[00:19:11] dramatic rise uh right after the treaty
+[00:19:14] signed so that tells us in some that not
+[00:19:16] only do we think we're putting pretty
+[00:19:18] good data in but to the extent that
+[00:19:20] there are phenomena where we know at a
+[00:19:22] certain time this should Spike at a
+[00:19:24] certain time this should exhibit this
+[00:19:25] feature we actually are seeing that in
+[00:19:28] our data we have some confidence that
+[00:19:30] when we're showing you all these kinds
+[00:19:31] of trajectories what we're showing you
+[00:19:32] is to some extent reflective of culture
+[00:19:35] at the time uh in the language that
+[00:19:37] we're interested
+[00:19:40] in so we like irregular verbs we've been
+[00:19:44] doing all this stuff on irregular verbs
+[00:19:45] going back many years so it's kind of
+[00:19:47] irresistible to uh say okay we've got
+[00:19:50] this microscope we can point it at
+[00:19:53] anything that we want let's look at the
+[00:19:55] irregular verbs yes can you talk a bit
+[00:19:57] about why you like irregular verbs
+[00:19:59] yes um yeah so so the reason that we
+[00:20:01] like irregular verbs is the following um
+[00:20:04] first they worked uh everything else
+[00:20:05] didn't um we talk about the things that
+[00:20:09] didn't work um anyway a perhaps more
+[00:20:15] suggestive uh answer in terms of why
+[00:20:17] they worked is the following so
+[00:20:17] irregular verbs have this unique
+[00:20:19] property uh people have been talking for
+[00:20:21] for some time so the irregular verbs
+[00:20:22] have ver very high frequencies high
+[00:20:23] frequency things tend to be regular
+[00:20:25] verbs uh low frequency stuff tend not to
+[00:20:28] be so why why is that why do the
+[00:20:30] irregular verbs have such high
+[00:20:31] frequencies and people have talked for
+[00:20:33] some time and and we expanded on this
+[00:20:34] earlier in the talk about the fact that
+[00:20:36] low frequency irregular verbs tend to
+[00:20:38] disappear so what you have is actually a
+[00:20:40] very very neat situation where with an
+[00:20:42] irregular verb on a kind of course path
+[00:20:44] you actually have a Boolean you have a
+[00:20:46] Boolean property is the verb regular or
+[00:20:48] is it irregular and you can just say one
+[00:20:49] or zero and you also have this other
+[00:20:52] property namely its usage frequency
+[00:20:53] which you can measure precisely and
+[00:20:55] which is continuous and which is related
+[00:20:58] in some monotonic way to its Fitness so
+[00:21:00] you actually have a neat situation where
+[00:21:02] you have a fairly measurable phenotype
+[00:21:04] and you have a fairly measurable
+[00:21:07] continuous Fitness function so it makes
+[00:21:10] for a good combination in terms of
+[00:21:12] trying to do an evolutionary study on
+[00:21:13] some cultural Phenom right I mean if you
+[00:21:15] look at tables right what's a table you
+[00:21:17] know how does table change over time
+[00:21:19] it's very very very hard to track how
+[00:21:20] often are people using tables I don't
+[00:21:22] know how many tables were made this year
+[00:21:23] who knows so irregular verbs solve a lot
+[00:21:26] of the problems that are really
+[00:21:27] difficult about traing culture it turns
+[00:21:29] out that actually you know now we now
+[00:21:31] we're playing with power so we're not
+[00:21:33] necessarily stuck stuck there anymore
+[00:21:35] but not because IR regular tell us
+[00:21:37] anything about our culture um it's not
+[00:21:41] it's not about meaning it's uh no it's
+[00:21:43] not about the meaning the the
+[00:21:44] interesting thing that people have been
+[00:21:45] talking about cultural Evolution for a
+[00:21:46] long time and there have been very very
+[00:21:48] very few uh measurements of what that
+[00:21:51] could be irregular verbs are a very nice
+[00:21:53] inance of that yeah the the other thing
+[00:21:56] that's neat about the regular vers is
+[00:21:57] what you're seeing is is really the
+[00:21:59] emergence of a rule the Ed thing is is a
+[00:22:02] rule uh is a grammatical rule it says
+[00:22:04] when you form with Past Times you add Ed
+[00:22:06] uh the irregular verbs are holdover of
+[00:22:07] dead rules so you have this really nice
+[00:22:09] phenomenon that you're studying which is
+[00:22:10] about the propagation of a rule in a
+[00:22:12] language so there's a a Nexus of
+[00:22:13] interesting things which have made uh
+[00:22:15] irregular verbs the object of study for
+[00:22:17] for decades I mean they just fascinated
+[00:22:19] people for a very very long time and
+[00:22:21] make them a really good object of study
+[00:22:22] here but I think you shouldn't get us
+[00:22:23] started too much on your regular verbs
+[00:22:25] because we can talk about them for a
+[00:22:26] long time so then many other interesting
+[00:22:29] things I want to show you
+[00:22:30] so but anyway since uh we are talking
+[00:22:34] about irregular verbs for a little bit
+[00:22:35] longer let's tell you let's tell you
+[00:22:37] about some regular vers uh this is
+[00:22:39] actually largely under reported in the
+[00:22:41] media but you should hear about the verb
+[00:22:44] chide it's the fastest verb on the
+[00:22:47] planet it's gone from a usage frequency
+[00:22:49] of about 10% in the regular form people
+[00:22:52] used to say CH 90% of the time now
+[00:22:54] people say chided 90% of the time in
+[00:22:56] only 200 years that's actually
+[00:22:58] incredibly fast for aular verb and it
+[00:23:00] makes us very excited whenever someone
+[00:23:02] says that they' ched someone else now of
+[00:23:05] course we tell you that IR regular verbs
+[00:23:07] disappear but sometimes not the case
+[00:23:08] like some sneak in the verb to sneak for
+[00:23:10] instance was actually a regular verb
+[00:23:12] that have become irregular in the last
+[00:23:14] 50 years so Ste Pinker who I think
+[00:23:16] pointed out that sneak snu in on the
+[00:23:20] pattern it's on the pattern of the r to
+[00:23:22] stick Snak Snak Snak snuck stick stuck I
+[00:23:25] think this is probably why this happened
+[00:23:27] um so and this is one of very the one
+[00:23:31] example that we know of things that have
+[00:23:33] become irregular um we can track
+[00:23:36] irregular verbs uh in different
+[00:23:38] countries so the United States there are
+[00:23:40] leading exporters of verbs leading
+[00:23:41] exports of many things and leading
+[00:23:43] exporters of regular verbs in particular
+[00:23:45] so here's the evolution of uh the verbs
+[00:23:47] at n in t burn burnt learn learned smell
+[00:23:50] smelt there's a class of these and they
+[00:23:52] have become regular much faster than the
+[00:23:54] others and in fact we can so in the
+[00:23:57] beginning 1800 both both the US and the
+[00:23:59] UK tended to use these verbs uh 25% of
+[00:24:02] the time in the regular way now the US
+[00:24:05] really took a lead on the UK very very
+[00:24:07] fast became regular in 1858 and the UK
+[00:24:10] only cut up in the late
+[00:24:12] 1950s so uh so it's interesting so the
+[00:24:15] way we did this by the way is that we
+[00:24:17] compared the usage frequencies in books
+[00:24:20] published in the US versus books
+[00:24:21] published in the UK so this is how we're
+[00:24:23] able to tell you something about Us
+[00:24:25] versus UK language of course does not
+[00:24:27] correspond to ex the American language
+[00:24:29] or exactly the British language but it
+[00:24:31] is definitely enriched for these for
+[00:24:33] these
+[00:24:34] languages so irregular vers are
+[00:24:37] something that's actually very very
+[00:24:38] measurable everyone kind of understands
+[00:24:40] them so that's cool um but what we
+[00:24:42] wanted to do is say okay we've got this
+[00:24:44] crazy microscope and we pointed at the
+[00:24:46] types of things that you couldn't dream
+[00:24:48] about measuring I mean if you were you
+[00:24:50] know a physicalist in the Vienna Circle
+[00:24:52] right you would take Concepts like
+[00:24:53] Collective memory and say that is you
+[00:24:55] know that doesn't mean anything and it
+[00:24:56] doesn't mean anything because you
+[00:24:57] obviously you could never measure
+[00:24:59] anything like that so we said okay let's
+[00:25:01] let's try to measure something really
+[00:25:03] really really really
+[00:25:05] vague uh so let me tell you the history
+[00:25:07] of the year
+[00:25:08] 1950 um pretty much no one gave a damn
+[00:25:12] about 1950 for most of recorded history
+[00:25:15] uh through the 17th century the 18th
+[00:25:16] century the 19th century no one cared
+[00:25:18] about 1950 in fact through 1910 1920
+[00:25:20] 1930 no one cared about 1950 only
+[00:25:23] starting sort of in the mid to late 40s
+[00:25:25] people realized hey 1950 is really going
+[00:25:28] to happen and we better get ready for it
+[00:25:31] started to be a little bit of a buzz
+[00:25:32] about 1950 but nothing made 1950
+[00:25:35] interesting like
+[00:25:38] 1950 during the year 1950 people were
+[00:25:41] just walking around obsessed they
+[00:25:44] couldn't talk about anything other than
+[00:25:45] things that were going to happen in 1950
+[00:25:47] things that had just happened in 1950
+[00:25:49] they were just totally fascinated by
+[00:25:51] 1950 and in fact this persisted for
+[00:25:53] years after the fact 1951 1952 1953
+[00:25:58] people were still kind of debriefing
+[00:26:00] gosh 1950 what a fascinating year so
+[00:26:03] much change and then as with all things
+[00:26:07] 1954 rolled around and people realized
+[00:26:10] hey 1950 is kind of p a let's just move
+[00:26:16] on and they have at rates that we can
+[00:26:19] measure and what's interesting about
+[00:26:21] this is that when you look at the
+[00:26:23] history of the year 1950 it looks
+[00:26:25] exactly like the history of 1910 more or
+[00:26:28] less and look more or less like the
+[00:26:29] history of 1883 or any other year that
+[00:26:31] we have on record and in particular what
+[00:26:33] we see are two very striking features um
+[00:26:37] one is that we we talk more about time
+[00:26:40] uh than we did before uh the other is
+[00:26:44] that there's actually two phases in this
+[00:26:46] process of forgetting there's this very
+[00:26:47] very rapid forgetting phase what we
+[00:26:48] might call our Collective shortterm
+[00:26:50] memory and there's this much longer uh
+[00:26:54] phase which we might call our Collective
+[00:26:56] long-term memory so we said okay that's
+[00:26:58] great let's test our memory let's figure
+[00:27:00] out what the halflife is of of the
+[00:27:03] collective short-term memory and so we
+[00:27:05] plotted that over time going back about
+[00:27:07] 150 years and what you can actually see
+[00:27:09] is that the rate at which that falls off
+[00:27:12] used to have a half life of somewhere in
+[00:27:14] the mid-30s now it's around 12 so the
+[00:27:18] extent to which we lose interest in the
+[00:27:19] past is getting faster and faster with
+[00:27:21] each passing
+[00:27:24] year right so of course we look at how
+[00:27:27] we forget about things but also learn
+[00:27:28] new things thank God so for instance
+[00:27:31] there's Technologies so if you look at
+[00:27:33] uh telephone for instance telephone was
+[00:27:34] invented around the year 18 1850 over
+[00:27:37] here um but it started being mentioned
+[00:27:40] in books only 25 to 30 years later
+[00:27:43] nobody talked about the telephone
+[00:27:44] presumably because there weren't really
+[00:27:45] wires and people really couldn't use the
+[00:27:47] telephone even though it was invented in
+[00:27:48] principle uh now the radio did not have
+[00:27:51] the same fith radio uh was broadcast
+[00:27:53] much much faster after it was invented
+[00:27:55] uh close to the year 1900 so there's
+[00:27:57] this idea here that for any invention we
+[00:27:59] can probably measure how fast it starts
+[00:28:01] entering culture Somehow Here we took
+[00:28:04] inventions invented in the first 40
+[00:28:07] Years of the 19th century the second the
+[00:28:09] following 40 years and the again
+[00:28:10] following 40 years and we ask we take
+[00:28:12] all these inventions and we ask when did
+[00:28:15] they when were they invented and we look
+[00:28:17] at the trajectories their aggregated
+[00:28:18] trajectories and we see here that
+[00:28:22] basically the inventions that were
+[00:28:23] invented in the early 19th century took
+[00:28:26] longer to really increase in the culture
+[00:28:30] than inventions invented closer to the
+[00:28:31] 20th century so you can see here that as
+[00:28:34] a function of time it looks like the
+[00:28:35] trajectories Of Inventions uh is just um
+[00:28:38] becoming faster inventions so new
+[00:28:41] technologies penetrate culture faster
+[00:28:43] than older technology there can be many
+[00:28:45] reasons for that which which are which
+[00:28:47] we don't know about there are many
+[00:28:49] hypothesis the fact is that this is data
+[00:28:51] about the way technology penetrates
+[00:28:53] culture data was pretty hard to measure
+[00:28:55] if you don't have these type of tools
+[00:28:57] now now the next thing about uh you know
+[00:29:00] new and old is that is Fame so we're old
+[00:29:03] people we we some some of us get famous
+[00:29:05] some of us don't and there's an
+[00:29:07] interesting question as to how that
+[00:29:08] happens who are the most famous people
+[00:29:10] of Any Given born in any given year and
+[00:29:13] what does their trajectory to fame look
+[00:29:14] like so what we did is we went back for
+[00:29:18] every single year in the last two
+[00:29:20] centuries we said who are the most
+[00:29:21] famous people born in that year the
+[00:29:24] class of 1850 the class of 1855 here
+[00:29:28] we're showing you the uh trajectories
+[00:29:30] for the 50 most famous people born in
+[00:29:33] 1871 the class of 1871 if you will and
+[00:29:35] we can learn a fair bit about Fame just
+[00:29:37] by looking at their names uh so Orville
+[00:29:40] Wright he was involved in Flames Ernest
+[00:29:42] rord Ernest Rutherford who won the Nobel
+[00:29:44] Prize for uh scattering experiments in
+[00:29:47] physics uh Marcel PR he wrote books so
+[00:29:51] there's an incredible array of different
+[00:29:52] ways in which people get famous but
+[00:29:55] what's interesting is if you kind of
+[00:29:57] look on the average at the class of
+[00:30:00] 1871 what you see is that it sort of
+[00:30:04] takes a while before anyone notices them
+[00:30:07] no one really cares about the class of
+[00:30:08] 1871 and 1883 because they're all kind
+[00:30:11] of 12-year-old punks you know yeah or
+[00:30:14] well that's really cute I'm sure someday
+[00:30:16] you'll fly um but then eventually they
+[00:30:19] sort of start to get noticed and what do
+[00:30:21] we mean by get noticed we mean that
+[00:30:22] their frequency crosses the fre
+[00:30:24] threshold about 10us 9th one part per
+[00:30:26] billion which is the frequency of the
+[00:30:28] lowest frequency words in the dictionary
+[00:30:30] by and large so if you're as commonly
+[00:30:31] used in the language as you know an
+[00:30:33] infrequent word in the dictionary and we
+[00:30:35] feel like you know if you should be in
+[00:30:37] the dictionary then you've made it
+[00:30:39] anyway but these people they don't just
+[00:30:40] uh they don't just make it right as soon
+[00:30:42] as they pass that threshold they start
+[00:30:44] this incredibly incredibly rapid Ascent
+[00:30:46] then they hit a peak and then this sort
+[00:30:48] of slow decline as we forget about them
+[00:30:52] that you can measure that pretty pretty
+[00:30:54] quantitatively so this story here that
+[00:30:55] there is just told is the story of any
+[00:30:57] class the class of 1871 the class of
+[00:30:59] 1865 the class of 1920 and um here so
+[00:31:03] for any given so this is the median
+[00:31:05] trajectory of the 50 most famous people
+[00:31:07] born in 1865 there's an age at which
+[00:31:10] they become famous this age for this was
+[00:31:12] 34 years old then there's how fast they
+[00:31:15] rise to fame it turns out it's an
+[00:31:16] exponential rise every four years in
+[00:31:18] this case their Fame double every four
+[00:31:20] years people talked about them twice as
+[00:31:21] much in books as they used to before
+[00:31:24] then he reached a plateau at the age of
+[00:31:26] 70 uh Peak sorry at the age of 70 and
+[00:31:28] then people start forgetting about you
+[00:31:30] of course um but they forget about you
+[00:31:33] much slower than they learn about you
+[00:31:35] pretty good news in any way by the time
+[00:31:38] anyway by the time this is actually you
+[00:31:40] know not as meaningful in you been a
+[00:31:42] long time that you're not here anymore
+[00:31:45] but the point is these parameters
+[00:31:47] although they capture each and every
+[00:31:49] trajectory they have changed a little
+[00:31:51] bit so the doubling time has become
+[00:31:54] faster we we now celebrities born in the
+[00:31:57] 1920s became uh uh famous much faster
+[00:32:00] their Fame Rose much faster than
+[00:32:02] celebrities born in the 1800 doubling
+[00:32:04] time went from 8 years to close to two
+[00:32:06] years every two years these people
+[00:32:08] become more and more famous twice as
+[00:32:10] famous this is very very big and of
+[00:32:12] course the age at which he became famous
+[00:32:14] is has become uh smaller so celebrities
+[00:32:18] born in the 1920s became famous before
+[00:32:20] the year there were 30 very uh striking
+[00:32:23] so who knows and this is this is a study
+[00:32:25] that was done uh on people that really
+[00:32:28] probably did not benefit from the
+[00:32:30] television television for instance so
+[00:32:32] now with the current media internet and
+[00:32:33] the television I'm it's one can only
+[00:32:35] wonder how fast this is changing again
+[00:32:38] when you say mentions doubled is that as
+[00:32:40] a percentage of all words in a given
+[00:32:42] year yeah right so all the everything
+[00:32:45] that we're showing you so everything
+[00:32:47] we're showing you is the so the
+[00:32:48] frequency of a word to us is the number
+[00:32:50] of time that word was seen that year
+[00:32:52] divided by the total number of words we
+[00:32:54] saw that year so everything is uh
+[00:32:56] normalized for the number of books that
+[00:32:58] year the number of words that
+[00:33:00] year how much we this increas in speed
+[00:33:07] the do you think that's just
+[00:33:10] reflecting technology in terms of being
+[00:33:12] to publish more quickly how much is
+[00:33:15] actually people becoming you know for
+[00:33:17] getting
+[00:33:20] faster so I think that I may be wrong
+[00:33:23] but I imagine that the Technologies
+[00:33:25] linked to the speed of publication do
+[00:33:27] not have an effect that that that would
+[00:33:30] change by Factor five the the half life
+[00:33:33] of of plan in this Cas I think Pro
+[00:33:35] probably the you know faster publish
+[00:33:37] Technologies would change by by two or
+[00:33:39] three years how how fast information
+[00:33:41] that have actually occurred penetrate
+[00:33:43] culture but I I doubt that they would
+[00:33:45] affect the speed at which they rise
+[00:33:47] afterwards ises that
+[00:33:49] thing so so there but but though you're
+[00:33:52] completely right that there is a lag
+[00:33:55] between when something occurs and what
+[00:33:56] it is recorded in the book record you
+[00:33:59] need to write about it and you need to
+[00:34:01] publish it this side seems to be as far
+[00:34:03] as we can tell from all these studies
+[00:34:04] two to three years let's maybe hold
+[00:34:07] additional questions and and just do
+[00:34:08] that at the end uh because the thing is
+[00:34:10] I feel like probably uh many of you the
+[00:34:12] audience are like oh this is very but
+[00:34:14] how does this relate to me but actually
+[00:34:15] there's good news uh which is that uh
+[00:34:17] many of you are actually uh quite young
+[00:34:20] um so uh so we wanted to give you some
+[00:34:23] some advice a a heart to heart with uh
+[00:34:27] with data
+[00:34:29] all right look you know what should you
+[00:34:30] do right people are interested in
+[00:34:31] getting famous right you should know
+[00:34:33] what are your uh what are your options
+[00:34:35] uh there's a whole bunch of different
+[00:34:36] strategies uh you can engage in to get
+[00:34:38] famous and so we looked at the 25 most
+[00:34:40] famous people who engag in different
+[00:34:41] strategies things like becoming a
+[00:34:43] political figure uh or you know becoming
+[00:34:46] an author becoming an actor becoming a
+[00:34:48] biologist Etc how does that work out
+[00:34:50] well it turns out that if you want to
+[00:34:51] get famous fast then you should become
+[00:34:53] an actor because actors become famous in
+[00:34:56] their mid to late 20s uh they kind of
+[00:34:58] become famous sort of pretty rapidly and
+[00:35:00] then kind of plateau now bear in mind
+[00:35:02] that these are old people who were born
+[00:35:03] between 1800 and 1920 so these actors
+[00:35:05] are not benefiting from the teligent age
+[00:35:07] anyway they at the age of about 40 or so
+[00:35:09] for kind of plateau um and that's it so
+[00:35:12] you're young you're famous uh that's
+[00:35:14] great but actually if you want to be
+[00:35:16] rather more famous you could wait a
+[00:35:18] little bit longer till your sort of
+[00:35:19] mid-30s uh and be a writer uh writers
+[00:35:23] after their mid-30s start to get more
+[00:35:24] and more and more famous but actually
+[00:35:25] can can Peak uh at much High levels than
+[00:35:28] actors and will persist for even longer
+[00:35:30] still if you really want to get famous
+[00:35:33] uh and you're really willing to uh delay
+[00:35:35] gratification then what you should do is
+[00:35:37] become a political figure because of
+[00:35:39] course our 25 uh most famous political
+[00:35:41] figures 11 of them became presidents of
+[00:35:43] the United States nine became heads of
+[00:35:45] state of other countries uh they had to
+[00:35:48] wait till around 50 or so to become
+[00:35:50] famous but when they became famous they
+[00:35:52] became more famous than any of the other
+[00:35:55] groups there are certain things that you
+[00:35:57] should not do uh if you would like to
+[00:36:00] become
+[00:36:03] famous I mean in principle you could
+[00:36:06] become a biologist an artist a physicist
+[00:36:08] or a chemist that's kind of like being
+[00:36:11] an actor uh you will get equally famous
+[00:36:14] but you'll have to wait till you're 65
+[00:36:16] or 70 to do it um that's kind of waste
+[00:36:20] of being famous while you're alive but
+[00:36:24] anyway it's kind of up to you uh the
+[00:36:26] thing is and this is this is really a
+[00:36:27] rookie mistake definitely don't do what
+[00:36:30] we
+[00:36:31] did do not under any circumstances get
+[00:36:35] tricked into becoming a mathematician
+[00:36:36] the problem with uh with with doing that
+[00:36:39] is that nobody notices U people say oh
+[00:36:42] mathematicians do their their best work
+[00:36:44] when they're young which I guess is
+[00:36:46] great to get all the work out of the way
+[00:36:47] but still nobody notices you until maybe
+[00:36:49] a tiny bit and you know when you're 80
+[00:36:52] uh and are not necessarily in position
+[00:36:53] to do much about
+[00:36:56] it now there are so there are many fun
+[00:36:59] things we're going to show you after and
+[00:37:00] this is not one of them this is uh the
+[00:37:02] effect of suppression and censorship on
+[00:37:05] the the cultural trory of these people
+[00:37:06] so here's a famous Jewish painter Mar
+[00:37:09] shagal so we're looking here at his
+[00:37:10] trory in the English books it rises at
+[00:37:13] some point and it continues Rising there
+[00:37:14] are some accidents along the way like
+[00:37:16] anybody else now let's look at the name
+[00:37:18] maral in books published in Germany this
+[00:37:21] is what happens uh the red trory here so
+[00:37:24] it becomes very famous and then then it
+[00:37:27] start starts decreasing it starts
+[00:37:28] decreasing here too that's fine but now
+[00:37:31] it reaches zero between somewhere
+[00:37:33] between 33 and 45 this is not something
+[00:37:35] that happens to famous people it's very
+[00:37:37] very rare it's uh surprisingly uh not
+[00:37:41] that surprisingly afterwards when you
+[00:37:42] realize what happened between 33 and 45
+[00:37:44] but between those during the Nazi regime
+[00:37:46] there was an enormous amount of
+[00:37:47] suppression and we see that very ctively
+[00:37:49] in those Trends it's so surprising
+[00:37:51] actually that um we have been able to to
+[00:37:54] find evidence of censorship in many
+[00:37:56] cultures so you can take the case of
+[00:37:58] Jesse Owens so Jesse Owens is a
+[00:38:00] remarkable uh figure in the history of
+[00:38:03] Athletics what did Jesse Owens do well
+[00:38:06] um he won four gold medals in track and
+[00:38:08] field in 1936 uh at the Olympics that's
+[00:38:11] great that made him very very famous
+[00:38:12] right in 1936 and you see that huge
+[00:38:14] Spike right in 1936 the English Corpus
+[00:38:17] that's interesting what that's much much
+[00:38:20] more interesting is where and how he did
+[00:38:22] this he did this in the 1936 Olympics in
+[00:38:25] Berlin and of course Berlin in 1936
+[00:38:28] Hitler is in charge there's this
+[00:38:30] ideology of the racial Supremacy the
+[00:38:32] Arian race the inferiority of other
+[00:38:35] races like the African race and the
+[00:38:37] track and field events these are the
+[00:38:39] most prestigious events of the Olympics
+[00:38:41] so Hitler wants to make an example here
+[00:38:43] of the superiority of all of his
+[00:38:45] athletes and be very public going to be
+[00:38:46] in Berlin trouble is that Jesse Owens
+[00:38:50] wins four gold medals I mean it's just
+[00:38:52] the most direct and public repudiation
+[00:38:54] of the Nazi ideology you could possibly
+[00:38:57] imagine
+[00:38:58] so it is interesting to see what the
+[00:39:01] German response was what the response is
+[00:39:03] that we see in the German Corpus and
+[00:39:05] basically you see that same surge in
+[00:39:08] interest in Jesse Owens but you don't
+[00:39:09] see it until
+[00:39:11] 1945 basically this gives us maybe some
+[00:39:14] sense of the sort of psychology of uh
+[00:39:17] what it is like to live under a
+[00:39:19] totalitarian regime that's controlling
+[00:39:20] information I mean we kind of laugh you
+[00:39:23] know when the Iraqi information Minister
+[00:39:25] says oh everything is completely normal
+[00:39:27] but you know there Abram's tanks rolling
+[00:39:29] in the background but in point of fact
+[00:39:31] you know in this case of Jesse Owens you
+[00:39:33] can see very clearly Illustrated that if
+[00:39:34] something happens no matter how public
+[00:39:36] uh that directly repudiates the dominant
+[00:39:39] ideology just pretend that it didn't and
+[00:39:42] that can actually work on the scale of
+[00:39:43] an entire civilization so we see that
+[00:39:45] happen in many many go so here's for
+[00:39:47] three Heroes of the Russian
+[00:39:49] revolutions and they're both very famous
+[00:39:53] before the staning did not like them
+[00:39:55] anymore and uh two of them were executed
+[00:39:58] one of them was assassinated now when
+[00:40:00] you're assassinated typically your Fame
+[00:40:02] tends to shoot up so here it drops and
+[00:40:05] it maintains it becomes suppressed for
+[00:40:07] the next 50 years this type of
+[00:40:09] suppression here this again this is
+[00:40:10] really uncommon you have to wait for the
+[00:40:12] perista for the memories of these people
+[00:40:14] to be restored in books written in
+[00:40:15] russan we see such examples not only
+[00:40:17] with people but with events too so here
+[00:40:19] in 10 square two big events occurred one
+[00:40:21] in 1976 and we can see here in English
+[00:40:24] books that we probably talk a little bit
+[00:40:26] about cam Square due to that event right
+[00:40:27] there in books WR in Chinese we talk a
+[00:40:29] lot about them now of course in our Wern
+[00:40:32] cultures what we remember most about CH
+[00:40:34] square is not what happened in 76 but
+[00:40:36] what happened in 89 indeed you do see a
+[00:40:38] sharp shoot up in the about mentions of
+[00:40:41] square in books in English we do not see
+[00:40:44] that in books with in Chinese very
+[00:40:46] likely this is the result of suppression
+[00:40:49] about this particular event now it's not
+[00:40:52] only uh totalitarian regimes or or other
+[00:40:55] types of regimes it's also here in the
+[00:40:56] US
+[00:40:57] uh during the second Red Scare in the US
+[00:41:00] these people were as so these were
+[00:41:02] Hollywood writers Hollywood directors
+[00:41:04] they are known as the Hollywood 10 they
+[00:41:06] were asked by the Congress to come
+[00:41:08] testify about their supposed links with
+[00:41:10] Communists they refused to go they said
+[00:41:13] no
+[00:41:14] ridicul um movie Executives gathered and
+[00:41:17] said these guys we're going to Blacklist
+[00:41:19] them in the sense that they're not going
+[00:41:20] to work for us anymore they're not going
+[00:41:21] to be credited in our movies anymore
+[00:41:23] they're out of the picture literally and
+[00:41:26] you can see that the tractor of these
+[00:41:28] people after 1947 when that occurs
+[00:41:30] dramatically goes down this is the
+[00:41:32] medion trory it goes down to 1960 it's
+[00:41:34] only 1960 that Donald Delton tro was
+[00:41:37] Creed in a movie called at named Exodus
+[00:41:40] in case um and you can see sometimes a
+[00:41:43] very uh heavy weight of of decisions in
+[00:41:46] this case yeah so here's here's a great
+[00:41:49] example so Albert Mal he's one of the
+[00:41:51] Hollywood 10 that JB was just telling
+[00:41:52] you about uh it's interesting to compare
+[00:41:54] him to the trajectory of Ilia Kazan uh
+[00:41:57] can you actually raise your hand if you
+[00:41:58] know who Albert maltz
+[00:42:00] is can you raise your hand if you've
+[00:42:02] ever heard of Helia
+[00:42:04] Kazan this is this is pretty striking
+[00:42:07] now why is it that you don't know who
+[00:42:09] Albert malz is but you know who elot
+[00:42:10] gazan is by and large because actually
+[00:42:12] elot gazan until 1947 was less famous
+[00:42:14] than Albert maltz Albert maltz was doing
+[00:42:16] pretty well uh but the thing is that
+[00:42:18] both of them get as testify before the
+[00:42:20] house on American Activities Committee
+[00:42:21] uh Albert malt stands on principle
+[00:42:23] refuses to name names uh IL is on does
+[00:42:27] not uh he says my career is not worth it
+[00:42:30] he names names and has you know forever
+[00:42:32] been associated with that faithful
+[00:42:34] decision uh but let's see how that
+[00:42:36] affected his life you can see that Elia
+[00:42:38] Kazan goes on to have a tremendously
+[00:42:41] successful career Albert M's career uh
+[00:42:44] really kind of Peters out uh after that
+[00:42:46] decision and suffers enormously in the
+[00:42:48] 13 years in which the Blacklist is en
+[00:42:50] forced so it's really interesting how
+[00:42:52] you can take this kind of data and use
+[00:42:54] it to give you a quantitative picture of
+[00:42:57] an ethical decision that individual
+[00:43:00] people made at individual moments in
+[00:43:02] time and the consequences that those
+[00:43:04] decisions had for their lives probably
+[00:43:07] if Albert maltz had decided to name
+[00:43:09] names and Ilia Kazan had decided not to
+[00:43:12] uh all those hand raises would have been
+[00:43:15] precisely inverted but half the time
+[00:43:17] kazan's getting mentioned as a spineless
+[00:43:19] thinging I mean his name is there in the
+[00:43:21] negative Contex it's true but half the
+[00:43:23] time he's also being mentioned for cat
+[00:43:24] Hot Tin Roof you know so actually we
+[00:43:26] don't know that we don't know that in
+[00:43:27] this case he's being mentioned in the
+[00:43:29] negative or POS that's my point you
+[00:43:30] don't know it just you just know his
+[00:43:32] names in a book yeah I mean it's
+[00:43:34] absolutely true that there are you know
+[00:43:36] when you look at these texts many of
+[00:43:38] them are negative um many of them are
+[00:43:40] positive many of them are neutral but
+[00:43:41] the thing is he's still around he's
+[00:43:43] still someone who people know about uh
+[00:43:45] Albert M is they spell his name
+[00:43:53] right so we wanted to take a closer look
+[00:43:57] at one of these uh phenomena um in
+[00:44:00] particular uh the Nazi censorship that
+[00:44:03] took place uh during the third right so
+[00:44:07] what we did is we started taking the
+[00:44:09] blacklists that the Nazis produced uh in
+[00:44:12] fact there's a Nazi Librarian Wolf Gang
+[00:44:14] Herman who created blacklists and they
+[00:44:16] were very very systematic about this as
+[00:44:19] with many other uh of you know the
+[00:44:21] horrifying things that they did and so
+[00:44:23] Wolf Gang Herman in his black lists
+[00:44:25] actually writes down all these names of
+[00:44:26] people people you know who should be
+[00:44:28] pulled out of libraries and uh and he
+[00:44:31] actually categorizes them he says oh you
+[00:44:33] know here are the philosophers who are
+[00:44:35] bad here are the people who are writing
+[00:44:36] about history uh who you know we
+[00:44:38] shouldn't have around here the people
+[00:44:40] are writing about religion which is very
+[00:44:41] very very systematic and in fact his
+[00:44:43] Blacklist formed the basis uh for the
+[00:44:46] 1933 uh book burnings in in Berlin and
+[00:44:49] and throughout Germany
+[00:44:53] um so we took those black lists and we
+[00:44:56] said well how how did the black lists
+[00:44:58] affect uh the you know lives uh and
+[00:45:02] mentions of people who were mentioned on
+[00:45:04] The Black List so there's four
+[00:45:05] blacklists there from Wolf G Herman his
+[00:45:07] politics literature history and his
+[00:45:09] philosophy and religion uh Blacklist we
+[00:45:11] also added one more which is the names
+[00:45:13] of all the artists in the degenerate art
+[00:45:16] exhibition uh the Nazis took artists
+[00:45:18] that they did not like uh and they
+[00:45:21] created instead of just getting rid of
+[00:45:23] their work uh they got rid of much of
+[00:45:24] their work but they also took some of
+[00:45:26] their work and put it in this sort of
+[00:45:28] mock exhibitions where they just made
+[00:45:29] fun of it they called it to generate art
+[00:45:32] it circulated all around Germany so we
+[00:45:34] took those five black lists uh and what
+[00:45:36] you can see is that for for each of the
+[00:45:38] Black List there's a decline then we
+[00:45:40] also compared them to a collection of
+[00:45:42] names of noxis and we actually measure
+[00:45:46] sort of get some sense of the
+[00:45:48] effectiveness of these sort of black
+[00:45:50] listing information control schemes in
+[00:45:53] the different groups so for instance the
+[00:45:54] artists decline on the whole by about a
+[00:45:57] factor of two um the philosophers we
+[00:46:00] writing about philosophy and religion
+[00:46:02] you see a decline about a factor of four
+[00:46:04] actually in terms of mentions of them
+[00:46:07] whereas if you were actually on their
+[00:46:08] history Black List It seems that the
+[00:46:10] suppression was somehow not as uh
+[00:46:12] complete as the fact that maybe that
+[00:46:13] wasn't as high of priority uh there's
+[00:46:15] only decline about 9% uh during the
+[00:46:17] third ride of course in contrast you
+[00:46:19] look the Nazis there's a 500% increase
+[00:46:22] uh in mentions of them so now what that
+[00:46:25] all tells us is that all the sign also
+[00:46:27] are so strong that we should be able to
+[00:46:29] detect censorship and detect suppression
+[00:46:31] without knowing about it without having
+[00:46:32] to know who was being suppressed so
+[00:46:35] let's case in point here is AR matis if
+[00:46:37] I knew nothing of matis during the Nazi
+[00:46:40] years I would say I know his Fame before
+[00:46:42] I know his Fame after over there now his
+[00:46:45] Fame during should be somewhere between
+[00:46:47] the two so I would say that his f is
+[00:46:49] over there but I know that that he's
+[00:46:52] being talked about as much as that so
+[00:46:54] now this the difference between those
+[00:46:55] two points are the the ratio between
+[00:46:57] those two points gives me an index for
+[00:46:59] suppression I can compute that number
+[00:47:01] for all 700,000 names that appear on
+[00:47:03] Wikipedia and then I can say if that
+[00:47:05] number is very very big maybe it's
+[00:47:07] suppression if that number is very very
+[00:47:08] large maybe it's propaganda if it's
+[00:47:10] nothing it should it should be pretty
+[00:47:12] much what I expect here's the
+[00:47:13] distribution of suppression indices for
+[00:47:16] um 5,000 names in English between 30 and
+[00:47:20] 45 there's nothing special that happened
+[00:47:22] in terms of censorship of people uh in
+[00:47:25] English books between 33 and 45 we know
+[00:47:27] of and indeed the distribution of
+[00:47:29] Separation indices is tightly centered
+[00:47:31] around one which means that what you
+[00:47:32] observe is pretty much what you expected
+[00:47:34] people are talk about as much as we we
+[00:47:36] talk now uh in German German books very
+[00:47:39] very different we have distribution is
+[00:47:42] whole shifted to the left which means
+[00:47:44] that it's a logarithmic scale here so
+[00:47:46] actually this this shift is quite
+[00:47:48] important people are talked about much
+[00:47:50] less than we would have thought they
+[00:47:52] should and more importantly the
+[00:47:54] distribution is much wider so it means
+[00:47:57] that there are many more people that are
+[00:47:59] being suppressed than we we would have
+[00:48:02] expected here Pablo Picasso is talked
+[00:48:04] about 10 times as less as as would have
+[00:48:07] predicted and there are also people at
+[00:48:09] the far right of this um in terms of su
+[00:48:12] index at the far right of this
+[00:48:13] distribution here which who had talked
+[00:48:15] about more than we' have thought this is
+[00:48:17] probably due to propag propaganda so now
+[00:48:20] we have actually um looked at these
+[00:48:23] names and we have compared these results
+[00:48:25] with annotate with the man annotation of
+[00:48:27] these names and we found really striking
+[00:48:29] results between this quantitative method
+[00:48:31] here and the results of a human
+[00:48:32] annotator what that is is that it tells
+[00:48:36] you um it's something if you're a
+[00:48:38] historian and you're thinking about nzi
+[00:48:40] censorship and you want to know who are
+[00:48:41] the people who have been censored by the
+[00:48:42] NIS how you going to find find this out
+[00:48:45] you can try to read all the books and
+[00:48:46] then see that as you go as you progress
+[00:48:48] Through The nzi Years there are some
+[00:48:49] things you used to see but you don't see
+[00:48:51] anymore so probably there were sensor
+[00:48:52] that's very very difficult you can use
+[00:48:54] this method to propose a list of people
+[00:48:57] probably were censored so you take all
+[00:49:00] the people here you give them to the
+[00:49:01] historian and the historian says okay so
+[00:49:03] these are candidates for suppression now
+[00:49:04] I'm going to go and check whether these
+[00:49:05] names were actually suppressed or not so
+[00:49:08] it's not something that replaces the
+[00:49:10] work of H something that completes
+[00:49:12] it in point of fact we actually took
+[00:49:14] many of these names from the extremes
+[00:49:16] sent them to a historian working at yah
+[00:49:18] Basham and said okay we're not telling
+[00:49:19] you which extreme they come from uh but
+[00:49:22] which do you think in point of fact
+[00:49:23] their qualitative assessment uh match
+[00:49:25] very very well with this sort of
+[00:49:27] quantitative algorithm in fact there's
+[00:49:30] uh you could take names like for
+[00:49:32] instance Hermon Moss who's at the
+[00:49:34] furthest extreme uh he's a Protestant
+[00:49:36] Minister who spoke out against what the
+[00:49:38] Nazis were doing he's one of the most
+[00:49:40] extreme values uh in our distribution he
+[00:49:42] was actually later recognized by yah
+[00:49:44] bashem for his activities during the
+[00:49:47] war so anyway so we had this sort of uh
+[00:49:52] you know ability to do this but it's
+[00:49:54] it's much less fun and you know it's
+[00:49:56] just like two people who can do this
+[00:49:58] kind of thing um so we said well we've
+[00:50:01] got to make this data available to
+[00:50:04] people and so a couple of weeks before
+[00:50:06] the paper came out you know we
+[00:50:09] approached our collaborators over at
+[00:50:10] Google and said hey we you know we've
+[00:50:11] really got to get you guys to take our
+[00:50:13] prototype and create a web- based
+[00:50:15] version of it and uh they did an amazing
+[00:50:18] job actually uh led by sort of John or
+[00:50:21] want to put together this tool in uh two
+[00:50:24] weeks flat uh which is really amazing
+[00:50:26] and gives you uh it gives you and then s
+[00:50:29] of the rest of the world the opportunity
+[00:50:30] to play with this kind of information so
+[00:50:33] let me tell you uh what what this is
+[00:50:35] this is a Google engrams viewer it lives
+[00:50:36] at
+[00:50:37] enr.com uh you can type in a word or a
+[00:50:41] phrase uh and you can see how frequently
+[00:50:43] it's used over time so in this
+[00:50:44] particular case uh people decided that
+[00:50:48] they were interested in whether the
+[00:50:49] United States uh is plural or not back
+[00:50:53] in in the early 1800s people used to
+[00:50:55] refer to the United States as a plural
+[00:50:57] the United States are strong and their
+[00:50:59] econom is doing very well or whatever
+[00:51:00] they might wanted wanted to say uh these
+[00:51:03] days we refer to the United States in
+[00:51:04] the singular the United States is so
+[00:51:07] people have been debating for decades
+[00:51:10] actually over a century how uh when did
+[00:51:13] that transition happen when did we start
+[00:51:15] thinking about the United States in the
+[00:51:17] singular and people have said all kinds
+[00:51:18] of things uh but they haven't been able
+[00:51:20] to just look so with this you can just
+[00:51:22] look it turns out that the transition
+[00:51:24] the 50/50 Point uh is around
+[00:51:27] 1876 um and in fact if you actually look
+[00:51:29] at inaugural inaug inaugural addresses
+[00:51:32] of uh president you can see that before
+[00:51:36] uh that period of time before the window
+[00:51:37] around the 1870s the inaugural addresses
+[00:51:40] tend to refer to the United States in
+[00:51:42] the plural pretty much exclusively uh
+[00:51:45] there's about a 30-year window of time
+[00:51:47] where they kind of do both and then
+[00:51:49] after that they're referring the United
+[00:51:51] States uh entirely in the singular the
+[00:51:54] interesting thing is that you don't have
+[00:51:55] to take out word for it you know this
+[00:51:57] number you can actually check it for
+[00:51:58] yourself in the sense that if you're
+[00:52:00] interested to see examples of the United
+[00:52:02] States are in context you can click
+[00:52:05] around here I think and you can that
+[00:52:07] will lead you to Google books that
+[00:52:09] contain this particular sentence and you
+[00:52:10] can actually see highlight the UN are
+[00:52:13] subject to the experience of heat and
+[00:52:14] cold this is still true today in Boston
+[00:52:17] and uh so so what that does to you what
+[00:52:20] that does is this is the front end for a
+[00:52:22] digital library so you have a library
+[00:52:24] with millions of books all over the
+[00:52:26] place how you going to browse through it
+[00:52:28] you can do the classic web which is kind
+[00:52:30] of with a card catalog or you can have a
+[00:52:32] web which is like that where you say I
+[00:52:34] know this term is interesting I'm not
+[00:52:35] necessarily sure what particular feature
+[00:52:38] of that pH or sentence is interesting I
+[00:52:40] see here that there's an abundance of
+[00:52:41] this term there I can click on it and
+[00:52:42] open it and so um and actually we're
+[00:52:45] working with the Harvard libraries to uh
+[00:52:47] develop such a browser for for them for
+[00:52:50] the Harvard libraries so this is a
+[00:52:52] pretty powerful way to browse uh digital
+[00:52:54] libraries now
+[00:52:57] so and just also wanted to um make
+[00:53:00] another point which is you know because
+[00:53:02] we've gotten very very used to this
+[00:53:04] whole kind of card catalog method and
+[00:53:06] especially as there are increasing
+[00:53:07] discussions about things like dpla
+[00:53:09] digital Public Library of America um
+[00:53:11] it's going to be important to start
+[00:53:12] thinking Beyond just sort of card
+[00:53:15] cataloges types of interfaces that we
+[00:53:16] have now to new types of interfaces
+[00:53:18] interfaces potentially you know like the
+[00:53:20] engram viewer and all all the types of
+[00:53:21] future ways in which we're going to be
+[00:53:22] able to visualize books on a global
+[00:53:24] scale uh in order to to think about what
+[00:53:29] what the interface really is going to be
+[00:53:30] for for the digital librar of the future
+[00:53:32] now after so I think we have like we
+[00:53:35] have to speed up because I think that
+[00:53:38] people want to ask questions but before
+[00:53:39] we do that we want to present to you the
+[00:53:42] endr the right so so so an important
+[00:53:46] thing to know right is we launched this
+[00:53:47] thing right and within 20 so nobody at
+[00:53:49] Google actually this would be useful
+[00:53:51] they were like oh but why should we do
+[00:53:52] this CU only like 100 professors will
+[00:53:53] use it um but then it turned out that
+[00:53:55] actually within the first 24 hours hour
+[00:53:56] or over a million queries run on the
+[00:53:58] engr viewers so it became became quite
+[00:54:01] quite the thing um and so of course
+[00:54:03] there are Oscars um and you know there
+[00:54:05] are uh you know for good movies and
+[00:54:08] there are Grammys for good music and so
+[00:54:11] we thought oh this is great we should
+[00:54:13] give uh Eng grams for uh for good
+[00:54:16] engrams and so the first one goes to uh
+[00:54:19] the best for ever so um so you know
+[00:54:23] today we want to do our best put our
+[00:54:25] best foot forward
+[00:54:26] and do everything as best we can well
+[00:54:29] this person here this is an example of a
+[00:54:30] query that was actually run on the first
+[00:54:32] day this person here looked at best and
+[00:54:34] and realized that actually in the late
+[00:54:36] 18th century nobody cared for doing
+[00:54:39] their best they were not interested in
+[00:54:40] putting their best forward rather they
+[00:54:42] wanted to do their best put their best
+[00:54:44] foot forward be the best they can
+[00:54:47] be what what's going on here and
+[00:54:49] actually there's a very very simple
+[00:54:51] explanation for that which is uh uh
+[00:54:53] character recognition error right so
+[00:54:55] this the this called the medial s which
+[00:54:57] is that uh you would like to there's a
+[00:54:59] different way of spelling the S here in
+[00:55:01] this case when it's in the middle of the
+[00:55:02] word um this was not Incorporated in
+[00:55:07] Google's optical character recognition
+[00:55:08] at the time we did the study and so they
+[00:55:10] recognized this as an S so that's why we
+[00:55:13] see so much things in the early of
+[00:55:16] course we did report this fact in the
+[00:55:18] very very extensive hundreds of page of
+[00:55:20] documentation uh all about you know this
+[00:55:22] paper and how to use it but nobody was
+[00:55:24] interested in reading that because it's
+[00:55:25] like if you have your fun new Gadget toy
+[00:55:27] Etc you know you're not going to read
+[00:55:29] the instructions and so that's actually
+[00:55:31] a really good sign that people were
+[00:55:32] enthusiastic about it uh here's another
+[00:55:35] interesting story so uh man goes into
+[00:55:37] his uh condo association meeting older
+[00:55:39] gentleman there he says you know said
+[00:55:41] some sentence uses the word fortnite
+[00:55:43] nobody knows what he's talking about he
+[00:55:44] gets very upset uh but our hero uh is uh
+[00:55:48] very resourceful so he boots up the engr
+[00:55:49] viewer and he says look you know
+[00:55:52] fortnite it's much less frequent uh than
+[00:55:54] it was many fortn nights ago uh he shows
+[00:55:57] it to this older gentleman who
+[00:55:58] understands uh and so tension is
+[00:56:03] diffused and so you know it's great that
+[00:56:05] among other things with the engram
+[00:56:07] viewer we we believe we are bringing
+[00:56:10] peace now we're also uh helping
+[00:56:13] marketing firms think out the you know
+[00:56:15] they want to incentivize so they can
+[00:56:17] strategize their Synergy in very go
+[00:56:20] oriented ways that is very suful at the
+[00:56:22] end of the 20th century so I think
+[00:56:24] that's a pretty important marketing
+[00:56:25] feature now
+[00:56:26] it's frustration frustration so this is
+[00:56:30] a study of a very specific kind of
+[00:56:31] frustration it's the one where you bump
+[00:56:33] your foot in the table go AR like this
+[00:56:35] this is a 2 a Arc you know very very
+[00:56:38] popular in the in 1982 there's a surge
+[00:56:40] of 2 a arcs of frustration there we
+[00:56:42] think this might have had
+[00:56:43] something we're not too sure we can't we
+[00:56:46] can't confirm nor infirm uh it turns out
+[00:56:49] that we can study the the the the Arc of
+[00:56:51] frustration until the 8 a Arc and you
+[00:56:53] should not look at what's going on there
+[00:56:55] very very often now it's not it's a very
+[00:56:57] different ARG than the ptic AR which is
+[00:56:59] with many ARS it's AR different than
+[00:57:01] this one just just making clear that you
+[00:57:04] not
+[00:57:05] confused so there's lots of other things
+[00:57:07] that people have actually done with the
+[00:57:09] raw data so not just running things on
+[00:57:11] because the entire two billion uh Ro
+[00:57:12] data set is available so for instance
+[00:57:13] the times of London uh created this
+[00:57:15] little app that tells you how big your
+[00:57:16] Twitter vocabulary is um and you know I
+[00:57:20] don't know how good this app is but it
+[00:57:22] certainly got really really popular
+[00:57:23] actually trended on uh Twitter which is
+[00:57:26] school um another cool thing uh that
+[00:57:29] that folks did this is a student working
+[00:57:30] with us as well as John Bohan and car
+[00:57:32] spond for science so science was rolling
+[00:57:33] out this paper they said let's do
+[00:57:34] something interesting uh with this data
+[00:57:36] and so they said well you know what
+[00:57:38] should we do with it that's interesting
+[00:57:40] and they thought hm uh you know wouldn't
+[00:57:42] it be great if we had a science Hall of
+[00:57:44] Fame now how do you usually generate a
+[00:57:46] Hall of Fame well usually you get a
+[00:57:47] whole bunch of kind of older people and
+[00:57:48] they all sit around in some room and
+[00:57:50] citate in unknown ways and decide who is
+[00:57:52] actually important of the football
+[00:57:53] players uh but of course in science I
+[00:57:55] guess there was some kind of shortage of
+[00:57:57] older people to citate which is kind of
+[00:57:59] hard to understand so anyways this
+[00:58:01] somehow never got done uh so we said oh
+[00:58:03] well we're scientists let's do this in a
+[00:58:04] scientific way and so they took all of
+[00:58:06] Wikipedia and they took all of the
+[00:58:08] scientists who are on Wikipedia and they
+[00:58:09] kind of algorithmically ran them through
+[00:58:10] the system to figure out who the most
+[00:58:11] famous folks were um and in fact they
+[00:58:14] also defined a unit of Fame they said
+[00:58:16] you know Charles Darwin he's really
+[00:58:17] really famous we'll call him one Darwin
+[00:58:20] um and then everybody else is usually
+[00:58:21] measured in Millie Darwin because it's
+[00:58:23] very very hard to be as famous as
+[00:58:24] Charles Darwin just to give you a sense
+[00:58:25] of things
+[00:58:26] Steven Pinker uh is in the 30s about 30
+[00:58:30] something darwins so it's very very hard
+[00:58:32] to be as famous as Darwin right so and
+[00:58:35] then uh people at Wikipedia thought that
+[00:58:37] they could actually take this gold
+[00:58:39] standard of Fame the mwin to to ask um
+[00:58:43] if when you're famous do you get a good
+[00:58:44] Wikipedia article so they have this uh
+[00:58:46] they have this internal measure of how
+[00:58:48] good the Wikipedia article is when it's
+[00:58:50] green it's uh it's good when it's red
+[00:58:52] over there it's not good now if you
+[00:58:53] notice uh there's something that happens
+[00:58:56] here if you rank the most famous man by
+[00:58:58] Fame J is very famous uh his ranking is
+[00:59:01] pretty good now if you rank the most
+[00:59:03] famous women by Fame you see that the
+[00:59:07] ranking of the article is not so this
+[00:59:09] not the most perfect way to see it but
+[00:59:11] but you do see when you control for fame
+[00:59:14] women tend to have articles of poorer
+[00:59:16] quality than men it's already known that
+[00:59:18] Wikipedia is written at 80 person by men
+[00:59:21] but uh does it really have to reflect on
+[00:59:23] the quality of the article for men and
+[00:59:25] women so that's so far an open question
+[00:59:28] but I think um want want to close here
+[00:59:32] our remarks which is so culture makes we
+[00:59:34] named it for genomics culturomic is the
+[00:59:36] application of high throughput methods
+[00:59:37] to the study of culture basically now we
+[00:59:40] start yeah like we start we start with
+[00:59:42] books we know full well that books do
+[00:59:44] not contain all of culture there's many
+[00:59:46] many many many other things that make up
+[00:59:48] culture there's newspapers uh there's uh
+[00:59:50] there's non textual sources also there's
+[00:59:52] manuscripts which are really hard to
+[00:59:53] decrypt but that go way back there's
+[00:59:55] Maps there's pictures and paintings and
+[00:59:57] sculptures and canoes and whatever you
+[00:59:59] want so um there's many things however
+[01:00:02] what's interesting about today is that
+[01:00:04] these things get more digital the
+[01:00:06] present is much more more and more
+[01:00:07] digital but so is the past Google and
+[01:00:10] many other companies and universities
+[01:00:12] and nations are digitizing these objects
+[01:00:15] of History they are digitizing the past
+[01:00:17] the past is becoming more and more
+[01:00:18] digital and when you have the ability to
+[01:00:21] have all these things to look at these
+[01:00:22] things from a computational standpoint
+[01:00:24] we argue and we have demonstrated in
+[01:00:25] part that it can be very useful to have
+[01:00:28] uh methods of looking at these objects
+[01:00:30] that are not as careful as the ones that
+[01:00:32] we currently have looking at these
+[01:00:34] objects in the MS so what the the last
+[01:00:37] very interesting thing about it is that
+[01:00:39] we don't need to wait for copyright laws
+[01:00:41] to change for that to be useful so the
+[01:00:43] books that we have studied most of them
+[01:00:45] are under copyright but by releasing the
+[01:00:47] data we did about them we didn't release
+[01:00:49] anything that was under copyright we
+[01:00:50] just read statistics and these
+[01:00:52] statistics hold some very interesting
+[01:00:54] information so even if today copyright
+[01:00:57] laws still hold us back in in the
+[01:00:59] research world uh we can still gather
+[01:01:01] millions of digital objects that are
+[01:01:03] under copyright and do interesting with
+[01:01:05] them that don't break up your account
+[01:01:06] and one of the things that's actually
+[01:01:07] really neat is that since this paper um
+[01:01:10] come out only a couple of months ago
+[01:01:11] people have thought oh this is this is
+[01:01:13] kind of cool and actually they built a
+[01:01:14] whole bunch of engram viewers uh on
+[01:01:16] their own so for instance you know
+[01:01:18] there's Google engram viewer but
+[01:01:20] Colombian newspaper said oh this is a
+[01:01:21] cool way of viewing our data so they put
+[01:01:23] up their own engrs view or someone said
+[01:01:25] took massive uh corpora of scores
+[01:01:28] musical scores and said oh let's do a
+[01:01:29] engram viewer for scores so you can plot
+[01:01:31] you can say okay I'm interested in the
+[01:01:33] following note how frequently was used
+[01:01:34] over time so I think that what we're
+[01:01:36] seeing is that we need to learn new
+[01:01:38] languages of sort of multiple types we
+[01:01:40] need to figure out how to digitize all
+[01:01:41] of these uh repositories but we also
+[01:01:44] have got to figure out clever ways of
+[01:01:47] representing the data uh ways that are
+[01:01:49] engaging um so we have that sort of
+[01:01:51] vocabulary um as these repositories
+[01:01:54] begin to come online so wanted to just
+[01:01:56] thank uh all the people who were
+[01:01:57] involved in this study uh many many many
+[01:02:00] many people in fact hundreds of people
+[01:02:02] on gole books team especially John Oran
+[01:02:05] Matt gra Peter nor and Dan Clancy at
+[01:02:07] Google um student of erors Adrien verish
+[01:02:10] collaborator Yan Shen my wife of Eva who
+[01:02:12] came up with a great idea uh about
+[01:02:15] studying censorship um Martin Novac and
+[01:02:17] St kinker for advice Joseph picket
+[01:02:19] executive editor of the American
+[01:02:21] Heritage dictionary for his input on
+[01:02:23] Words and Dale hyber the editor in Chie
+[01:02:26] the enyclopedia ban as well as all of
+[01:02:27] the people us thanks very
+[01:02:37] much so uh thank you very much I think
+[01:02:40] we want to do many questions and if you
+[01:02:41] can identify yourself briefly your
+[01:02:43] affiliation and then State a question
+[01:02:45] with a question mark and then if we can
+[01:02:47] couple them sorry but it happens
+[01:02:49] sometimes and if we can couple them two
+[01:02:50] or three questions at a time to batch
+[01:02:52] process them for res JP that would be
+[01:02:54] fantastic um who would like to start us
+[01:02:58] off Courtney I'm Law Library I just have
+[01:03:01] a question about maybe forecasting so I
+[01:03:03] read a sence b called Foundation a
+[01:03:05] teenager talk about using math equations
+[01:03:09] stud culture
+[01:03:11] hisory so can you you think you can use
+[01:03:14] this dat sorry thank you to project
+[01:03:18] culture I mean because you're projecting
+[01:03:20] Fame you're projecting how long it'll
+[01:03:22] take for the decline of you know
+[01:03:25] mathematicians Scholars scientists Etc I
+[01:03:27] mean I think you have to be careful with
+[01:03:29] this kind of thing but but it's
+[01:03:30] absolutely the case that um one want to
+[01:03:34] be able to make some sorts of
+[01:03:36] predictions with this I me again you
+[01:03:37] have to be really careful most basic
+[01:03:39] level the simplest prediction in the
+[01:03:40] world is that anytime you see a linear
+[01:03:42] Trend anywhere in all scientific Fields
+[01:03:44] right that the trend should continue uh
+[01:03:47] because most things continue to be the
+[01:03:48] way they are like first derivatives uh
+[01:03:50] and so that's going to apply to a lot of
+[01:03:52] the types of trends that we've shown but
+[01:03:54] it's not going to apply to to many of as
+[01:03:55] well and so I think one of the things we
+[01:03:57] need to learn is you know push our
+[01:03:59] boundaries and and learn what our
+[01:04:00] boundaries are in terms of doing things
+[01:04:02] like that effectively like we can have
+[01:04:03] pretty interesting numbers for
+[01:04:05] Aggregates so when you take you know the
+[01:04:07] most the 50 most people or all the IR
+[01:04:09] regular verbs things like that we we
+[01:04:11] could say with confidence that the trend
+[01:04:12] will continue now for an individual
+[01:04:14] query an individual word an individual
+[01:04:16] person that that's much much
+[01:04:18] harder Andy McAfee from MIT have you
+[01:04:21] come across any examples of small n
+[01:04:24] historians as opposed to to what you all
+[01:04:26] do getting something
+[01:04:30] wrong the thing is you know small end
+[01:04:33] historians as a collective um often uh
+[01:04:36] have a wide variety of opinions so
+[01:04:40] usually you were in the minority opinion
+[01:04:42] turned out to be we actually we actually
+[01:04:45] have looked spent a little bit of time
+[01:04:46] looking for that not that much and we
+[01:04:48] have not found this yet but we're hoping
+[01:04:51] that as as this progresses this can be a
+[01:04:53] tool that the way we think this interes
+[01:04:55] with history is
+[01:04:57] first it can give his ear hypothesis on
+[01:04:59] which to build so oh I didn't know about
+[01:05:01] this thing what why is it so it's
+[01:05:03] starting points for Discovery and maybe
+[01:05:04] in some cases uh it can also prove or
+[01:05:07] disprove prove or disprove some
+[01:05:08] hypothesis the key thing is that these
+[01:05:10] hypothesis need to be formulated in
+[01:05:12] quantitative ways yeah this is currently
+[01:05:14] like by quantitative I mean large scale
+[01:05:15] quantitative and this is currently not
+[01:05:17] the case in most parts of of of what
+[01:05:20] concern I mean there definitely are kind
+[01:05:22] of one-off remarks that people say sort
+[01:05:24] of without thinking those was never
+[01:05:25] check where people said oh you nobody
+[01:05:27] talked about cabbage until the 30s you
+[01:05:29] know when you see you know reports of
+[01:05:31] cabbage in the Congressional records
+[01:05:33] like that you know so there are
+[01:05:34] occasionally run into sort of oneoff
+[01:05:36] things like that which you can check
+[01:05:37] here and we you know that people are
+[01:05:38] wrong you know sometimes people say
+[01:05:40] things that are dramatic right but did
+[01:05:41] they really mean it right so there's an
+[01:05:43] incredibly inspired piece of you know
+[01:05:45] Civil War history that says oh yes you
+[01:05:47] know before the Civil War everyone said
+[01:05:49] you know the United States are after the
+[01:05:51] Civil War everyone said the United
+[01:05:52] States is you know like so whether you
+[01:05:55] know was a singular a past tense was
+[01:05:57] exactly what the war was being fought
+[01:05:58] over and this is a great beautiful
+[01:06:00] interpretation of state rights uh Etc
+[01:06:02] and it's I was deeply inspired when I
+[01:06:04] read it I mean it's kind of wrong
+[01:06:05] strictly speaking um but no less
+[01:06:07] inspiring for that reason I don't know
+[01:06:09] if you know the person who's writing it
+[01:06:10] you know many decades ago I don't know
+[01:06:12] you know what they what they meant by it
+[01:06:15] uh to to to some extent so it's uh it's
+[01:06:19] definitely something I that we're
+[01:06:20] learning in terms of how to map
+[01:06:21] qualitative historical claims onto
+[01:06:24] quantitative claims and make each other
+[01:06:27] uh George blakley Lesley University uh
+[01:06:29] it'd be interesting with the
+[01:06:30] presidential campaigns about to kick off
+[01:06:32] to test the prediction concept with your
+[01:06:35] Fame Trend analysis tool and watch the
+[01:06:37] trends as they go to see if you could
+[01:06:39] determine who the winner might be yes
+[01:06:41] then then again I think this will
+[01:06:43] particularly relevant in newspaper
+[01:06:45] record in the Twitter record in like
+[01:06:47] much more instantaneous media here all
+[01:06:50] these things again are really true in
+[01:06:52] books we think they might apply to some
+[01:06:53] extent to other media but there specific
+[01:06:56] one should
+[01:06:57] really that
+[01:07:00] one another question there somebody in
+[01:07:02] the
+[01:07:03] back uh you uh focus on text and books
+[01:07:08] uh I would like to know voice data and
+[01:07:10] uh for example sound and voice data as
+[01:07:15] the classical music and music yes that
+[01:07:18] is a very important data you can
+[01:07:20] consider about that yeah so there so
+[01:07:22] we've definitely thought about these
+[01:07:24] sorts of issues there are are um pluses
+[01:07:27] uh about it there's also minuses uh one
+[01:07:30] of the minuses is for instance copyright
+[01:07:32] law that you have to deal with uh says
+[01:07:34] that if somebody transcribes a score
+[01:07:37] they now have a copyright on that
+[01:07:38] transcription um so that means that you
+[01:07:41] all of a sudden have a digital world
+[01:07:43] that is loaded with an incredible array
+[01:07:45] of people uh who have claims navigating
+[01:07:48] that is is very very challenging uh
+[01:07:51] another challenge is that if a single
+[01:07:52] note is off in a score it's actually
+[01:07:54] much harder to detect then for instance
+[01:07:56] a single letter is often a word because
+[01:07:59] if you take a word and you change one
+[01:08:01] letter like if you change even Pinker to
+[01:08:04] I don't know Punk or you know make the I
+[01:08:06] into an L that kind of seems very
+[01:08:08] obviously wrong um or at least you know
+[01:08:11] kind of very foreign um and and
+[01:08:13] therefore low likelihood that that kind
+[01:08:15] of Correction is much harder to do in
+[01:08:17] the case of music so there's a lot of uh
+[01:08:19] new challenges it's obviously an
+[01:08:21] incredibly important uh area and as uh
+[01:08:24] we mentioned earlier there is is
+[01:08:25] actually currently a musical engram
+[01:08:27] viewer it is run on a relatively small
+[01:08:29] data set but you can get a sense of how
+[01:08:31] that looks we started with text because
+[01:08:33] text is easy to interpret much easier
+[01:08:35] than music or or or a movie or or a
+[01:08:38] sculpture you know so we started with
+[01:08:40] that but we clearly things are going to
+[01:08:41] move to includ that direction part yeah
+[01:08:44] there are sound recordings that go back
+[01:08:46] about a century so one could do some of
+[01:08:49] this do you have the I'm Jason Kaufman
+[01:08:52] from the burkman center do you have
+[01:08:54] metadata to differentiate fiction from
+[01:08:55] non-fiction and different genres um we
+[01:08:58] do it turns out that uh so yeah the many
+[01:09:01] answers to that so at Google for
+[01:09:02] instance each book has metadata by
+[01:09:04] metadata they mean who's the author when
+[01:09:06] was the written what is it fiction non
+[01:09:07] fiction whatever um the way they do this
+[01:09:09] metadata is by aggregating it from many
+[01:09:11] content providers there are many many
+[01:09:13] many conflicts there it's tremendously
+[01:09:16] really difficult problem so for instance
+[01:09:17] we have done a fiction cor we took all
+[01:09:20] the books that were some somewhere in
+[01:09:21] the header that was fiction this is
+[01:09:23] enriched for what we mean by fiction
+[01:09:25] books but like something like a
+[01:09:27] scholarly study of Shakespeare's play
+[01:09:29] will be a fiction book because it's
+[01:09:31] about fiction so so there so in the data
+[01:09:33] set that we have produced it's not it's
+[01:09:35] not that c now at the Harvard level for
+[01:09:37] instance in the Harvard libraries they
+[01:09:38] have much they have much more uniform
+[01:09:41] meta data and so working with them we
+[01:09:43] might be able to have a much better
+[01:09:44] solution for them so uh we have time for
+[01:09:47] three more questions and I will throw in
+[01:09:49] one if I may um what are the
+[01:09:51] implications as as as people like you
+[01:09:53] and very enterprising companies digitize
+[01:09:55] more and more of the world what are the
+[01:09:57] implications for intellectual property
+[01:09:59] and copyright something that we think a
+[01:10:01] lot about at the Burman Center AL so I
+[01:10:03] think one of the important things to
+[01:10:05] think about um that that comes out of
+[01:10:07] this and I think this is a point that JB
+[01:10:09] made as
+[01:10:11] well the approach that's being taken now
+[01:10:14] I think in a large these many of these
+[01:10:16] digitization projects especially when
+[01:10:17] they're not happening in the private
+[01:10:19] sector is like oh we're we need to push
+[01:10:20] for copyright reform uh in order to make
+[01:10:23] these things possible and and I think
+[01:10:25] that's true to an extent but I think
+[01:10:28] tools like engram there's many many
+[01:10:30] books that you can't access in any form
+[01:10:32] in Google that Google has digitized but
+[01:10:34] for copyright reasons they cannot make
+[01:10:35] accessible in any form except through
+[01:10:36] engr skewer and if we can think of many
+[01:10:40] tools like this they might give us uh
+[01:10:42] enough of a case to make for ourselves
+[01:10:44] but we should digitize this stuff anyway
+[01:10:47] um and there's going to be tons of stuff
+[01:10:48] that we're going be able to do with it
+[01:10:50] and then once we have also the strength
+[01:10:52] that we're doing this stuff we've got
+[01:10:54] everything digitized then push for the
+[01:10:56] copyright as well because otherwise you
+[01:10:57] get into this difficult situation where
+[01:10:59] without the copyright reform there's not
+[01:11:01] much of a push to really to digitizing
+[01:11:03] without digitizing there's not as much
+[01:11:05] of a push to do the copyright
+[01:11:08] reform George MRE from the Central
+[01:11:10] Square last week I think I heard Ethan
+[01:11:13] zukerman mention about censorship in
+[01:11:16] China so that people can talk about
+[01:11:19] Egypt but it doesn't
+[01:11:22] Trend so the secondary data the metadata
+[01:11:25] doesn't it doesn't show up so people
+[01:11:27] don't know that other people are talking
+[01:11:28] about China and I'm wondering about that
+[01:11:31] in terms of what you're doing with with
+[01:11:33] sensorship what do you Trend um so that
+[01:11:37] if you look and see who what the topics
+[01:11:40] are the on Twitter on Twitter or
+[01:11:43] Facebook or or other things that are out
+[01:11:45] there in the digital world so you don't
+[01:11:47] know that other people are talking about
+[01:11:49] it so the the suppress the suppress
+[01:11:52] indicator that uh that's interesting
+[01:11:55] well yeah I don't think that has any for
+[01:11:58] our work I don't think that has any
+[01:12:00] consequences there right but uh but it's
+[01:12:02] uh there's one one word about it is that
+[01:12:04] if you suppress the indication that it
+[01:12:06] is trending it suppresses the
+[01:12:08] possibility of other people to see about
+[01:12:09] it and to keep keep it trending up so
+[01:12:12] there there might be from a
+[01:12:14] mathematician perspective there might be
+[01:12:15] an interesting thing going on from from
+[01:12:17] a public policy standpoint there
+[01:12:19] obvious yeah there's extremely strong
+[01:12:21] feedback loops in these types of things
+[01:12:23] and so if you cut those off that
+[01:12:25] certainly should have
+[01:12:27] consequences so you think that you could
+[01:12:29] if you looked at the data you could be
+[01:12:31] able to to to see that par it out well
+[01:12:34] you know it might not be impossible
+[01:12:35] maybe there's some features about how
+[01:12:37] FAS Rises or the nature of the rise that
+[01:12:39] might be in fact
+[01:12:41] depictable that's not impossible yeah
+[01:12:43] there's all kinds of subtle cues um for
+[01:12:46] for this sort of stuff like folks over
+[01:12:48] at archive uh so archive orders there
+[01:12:51] The Archives of physics uh you know
+[01:12:53] paper ePrint archive um and they always
+[01:12:56] every day send out all the new papers
+[01:12:58] and they order them uh and so they've
+[01:13:00] done really really careful studies that
+[01:13:01] have the order of those papers actually
+[01:13:03] can have a dramatic impact on long-term
+[01:13:06] citation statistics uh and you know if
+[01:13:09] something goes wrong on a particular day
+[01:13:10] and you randomly Punk something else in
+[01:13:12] that first slide it actually has
+[01:13:13] long-term consequences for all the
+[01:13:15] papers involved so those types of subtle
+[01:13:17] mechanisms actually can be really
+[01:13:19] important and really persistent that's a
+[01:13:21] very interesting
+[01:13:23] point there a question
+[01:13:26] hi um David Weinberger from the Harvard
+[01:13:30] Library Innovation lab um does the
+[01:13:32] Corpus have enough structural
+[01:13:34] information in it so that you know
+[01:13:35] what's in um uh words that are in
+[01:13:38] headlines subheads indices in tables
+[01:13:41] which are really interesting objects as
+[01:13:43] well so there are basic stuff that gets
+[01:13:45] cut off so things like things in the
+[01:13:46] header which often will just contain the
+[01:13:48] title over and over and over again you
+[01:13:49] don't want that that get cut off page
+[01:13:51] numbers get cut off um and so what
+[01:13:53] you're looking at is really the the me
+[01:13:55] of uh the text itself what the author
+[01:13:57] wrote at the front matter can the
+[01:13:59] indices get removed things like that you
+[01:14:01] know words that words in chapter sorry
+[01:14:04] words in chapter titles and captions is
+[01:14:06] that sort of structure marked up because
+[01:14:07] that can be very interesting and
+[01:14:09] valuable to knowe as a further level of
+[01:14:11] analysis words that are used in U
+[01:14:13] subheadings or so the Big Challenge here
+[01:14:16] is if you don't actually get this stuff
+[01:14:19] this stuff is not going to come through
+[01:14:21] an engrs type um structure we could in
+[01:14:24] principal a caption engram's Corpus you
+[01:14:27] can Mark you can mark it that like you
+[01:14:30] can say instead of looking at just the
+[01:14:31] word burn instance a burn plus
+[01:14:34] indication that it was actually in in a
+[01:14:36] quotation we can mark up the it's not
+[01:14:38] impossible that it ends up on an engram
+[01:14:40] the main problem though would be to be
+[01:14:42] sure that what you're saying is a header
+[01:14:44] is really a header like consider the
+[01:14:46] problems that we had just being sure
+[01:14:47] that the book was actually written in
+[01:14:48] the year where to it was written in so
+[01:14:51] now if you're talking about quotations
+[01:14:52] and headers with the volume of 5 million
+[01:14:55] books that come from many different
+[01:14:56] sources it's really a very difficult
+[01:14:57] problem it's a problem that might be
+[01:14:59] tractable at the level of a single
+[01:15:00] University Library today um yeah so two
+[01:15:04] last questions on the left here
+[01:15:08] then right uh so I just wanted to ask
+[01:15:11] quickly about how your methods of
+[01:15:13] analysis change versus stay the same
+[01:15:15] whenever you uh change your time scales
+[01:15:17] so like because you're looking at you
+[01:15:19] know orders of hundreds of years but but
+[01:15:21] if we do start looking at data sets like
+[01:15:23] Twitter and this sort of thing where the
+[01:15:24] time scale shift what is invariant and
+[01:15:27] what has to change so uh we really we're
+[01:15:29] empirical scientists so we we are really
+[01:15:31] driven by what is in the data so we tend
+[01:15:34] to in fact start with with this data we
+[01:15:36] we thought that you know we had many
+[01:15:38] ideas about trying to look at well the
+[01:15:40] questions that we wanted to look at were
+[01:15:41] not at all the most interesting and we
+[01:15:43] actually don't talk about them anymore
+[01:15:45] uh so we just look at the data and see
+[01:15:47] what is there and then try to understand
+[01:15:49] so I I suspect that uh if we had a
+[01:15:51] Twitter feed right now that's what we
+[01:15:53] would be doing we' be looking at the
+[01:15:54] data and try to adapt to it I don't I
+[01:15:56] don't think that we would necessarily um
+[01:15:59] transport directly some of these methods
+[01:16:01] there but there are some generic things
+[01:16:03] that one thinks about uh that probably
+[01:16:06] would lift over things like what's the
+[01:16:08] time resolution of your data how much
+[01:16:09] depth do you have at a given time
+[01:16:11] resolution uh so for instance if we want
+[01:16:14] to have one-ear resolution we can throw
+[01:16:16] less words into a one-year bin if we
+[01:16:18] want only 10e resolution decade by
+[01:16:20] decade resolution then we can afford to
+[01:16:23] have a lot more work for bin so we look
+[01:16:24] at the much rarer stuff with one decade
+[01:16:26] resolution with one Year resolution the
+[01:16:28] the things that's crucial is that every
+[01:16:29] medium is going to have kind of
+[01:16:31] characteristic lag times so for instance
+[01:16:33] books usually if something has happened
+[01:16:35] at time x there's a 2 to threee lag
+[01:16:38] before people write the books about it
+[01:16:41] um because publication just takes a very
+[01:16:43] long time Twitter is very different
+[01:16:45] right we're giving this talk now in
+[01:16:47] principle someone could be tweeting
+[01:16:48] something on Twitter right at this very
+[01:16:50] very moment uh and so there's
+[01:16:53] essentially zero lag so questions like
+[01:16:55] that about the lag of the medium um and
+[01:16:58] sort of how it works as an echo chamber
+[01:17:00] in that way uh can can definitely have
+[01:17:02] an effect on your thinking would
+[01:17:04] probably be things we would think
+[01:17:08] abouton University do you envisage that
+[01:17:11] going forward you could analyze the
+[01:17:14] opposite effect that is from words to
+[01:17:18] metatags by this I mean for instance if
+[01:17:20] you have CYO Sphinx and pyramid
+[01:17:24] obviously that article or that sentence
+[01:17:26] is about Egypt and the reason why I
+[01:17:28] mentioned that is Las
+[01:17:30] Vegas precisely or Las Vegas things
+[01:17:33] actually do screw you up when about
+[01:17:35] millions of books but yeah go go on and
+[01:17:37] that could also be relevant in terms of
+[01:17:39] censorship because sometimes you can
+[01:17:41] talk about somebody or something without
+[01:17:45] mentioning it so that artist that was
+[01:17:47] born in 1923 and so on and so forth
+[01:17:50] thank you yeah this is actually Michelle
+[01:17:52] Fuko makes this point about censorship
+[01:17:54] they says oh censorship creates much
+[01:17:56] more sort of discourses than than it
+[01:17:58] gets rid of um and there's a sense in
+[01:18:00] which when we talk about censorship here
+[01:18:02] we're we're talking about a very
+[01:18:03] particular discourse which is discourses
+[01:18:04] that involves a person's name as you
+[01:18:06] mentioned there's many other ways in
+[01:18:07] which that discourse can take place and
+[01:18:09] those are much much much harder to track
+[01:18:11] uh so that's that's absolutely an issue
+[01:18:14] that one must recognize an important
+[01:18:15] confound for these for these types of
+[01:18:18] studies as far as the statistical
+[01:18:20] classification um you're absolutely
+[01:18:23] right that type of classification of
+[01:18:25] determining the metadata from the data
+[01:18:27] is possible we've spent uh some time
+[01:18:29] looking at that and that's a very very
+[01:18:31] important direction thank you this is
+[01:18:33] called making a language model you can
+[01:18:34] say I'm I'm given a language and and I
+[01:18:36] make a model out of it so for instance
+[01:18:38] you could then say using that model oh
+[01:18:40] this is a book from the 1700 by looking
+[01:18:42] at how another book correspond to that
+[01:18:44] one so there yeah many people doing that
+[01:18:46] very well I think I want to say thank
+[01:18:49] you very much for an amazing
+[01:18:53] talk okay
