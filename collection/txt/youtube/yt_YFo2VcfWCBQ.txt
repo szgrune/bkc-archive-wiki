@@ -1,0 +1,1757 @@
+[00:00:10] feel free to interrupt me if you have
+[00:00:13] questions as i go i'm going to review
+[00:00:15] sort of the basics of mobility law I
+[00:00:18] realize everybody's not a lawyer here so
+[00:00:22] some of the definitions can get a little
+[00:00:24] labyrinthine and difficult slow me down
+[00:00:28] if I'm talking in too many acronyms and
+[00:00:31] asked me to explain I'm used to more of
+[00:00:34] a legal audience that I am a lay
+[00:00:36] audience so forgive me for being a
+[00:00:38] lawyer less than a not a public speaker
+[00:00:41] of for a wider audience I try but I
+[00:00:45] don't always succeed Chris's paranoia is
+[00:00:50] well-founded i have to say i love boston
+[00:00:53] i got a ride from the airport last night
+[00:00:55] with a cab driver who asked me what I
+[00:00:57] was doing here and I said I was coming
+[00:00:59] to to speak to the Berkman Center about
+[00:01:01] mobility and location law and he said
+[00:01:04] you know that's really interesting but I
+[00:01:06] don't know why anybody cares about that
+[00:01:07] because I know we all have chips
+[00:01:10] implanted when we're born and
+[00:01:11] everybody's tracking us anyway so just
+[00:01:15] so you know you can be a cab driver
+[00:01:16] after this job and probably make more
+[00:01:18] money at it too right yeah well you know
+[00:01:24] when he put the foil hat on I really
+[00:01:26] knew he was absolutely serious I'm going
+[00:01:29] to cover a couple of topics because we
+[00:01:31] don't have a lot of time to get get
+[00:01:33] really too deep into the weeds here but
+[00:01:35] I'm going to focus mostly on location
+[00:01:39] technology but it does overlap more with
+[00:01:42] surveillance law in general and some
+[00:01:44] constitutional law Fourth Amendment
+[00:01:46] issues I'm going to try to level set us
+[00:01:49] on the technology so we have a common
+[00:01:51] lexicon when we talk about mobility and
+[00:01:54] location information give you a little
+[00:01:57] bit of background on the history and how
+[00:01:59] we got to where we are and the current
+[00:02:01] debate and then give you some
+[00:02:02] perspective on the future at least as I
+[00:02:05] see it on and where law is going with
+[00:02:09] location I have a sort of a unique perch
+[00:02:12] I started representing macaw cellular in
+[00:02:18] the early 90s one of the very first cell
+[00:02:21] phone providers
+[00:02:24] and there's an old adage in baseball if
+[00:02:27] you're fine to feel the dreams it's
+[00:02:29] called and Craig macaw was fond of
+[00:02:32] quoting this if you build it they will
+[00:02:33] come and the surprise was that they
+[00:02:37] wasn't the customer it was the criminal
+[00:02:40] so the first customers they had were the
+[00:02:43] people who were stealing service and in
+[00:02:45] some markets it was as much as seventy
+[00:02:48] percent of the carriage was due to fraud
+[00:02:50] and this is the old analog world where
+[00:02:52] cell phones had no security built-in
+[00:02:54] where you could easily with a bearcat
+[00:02:57] scanner and timpson software you know
+[00:03:00] somebody shaking their head because they
+[00:03:01] have this on their laptop right now you
+[00:03:04] could just scan that information yeah
+[00:03:08] not as useful and you could reprogram a
+[00:03:10] phone and you could clone it basically
+[00:03:11] and pretend to be somebody else and a
+[00:03:14] lot of our early efforts at the company
+[00:03:17] were were dedicated towards combating
+[00:03:20] that kind of fraud so we would go out
+[00:03:23] and we would look for call cell
+[00:03:26] operations which basically was somebody
+[00:03:28] standing out a corner who had cloned a
+[00:03:30] phone and was selling service to make
+[00:03:33] long distance calls to foreign countries
+[00:03:35] for five bucks a minute to some poor guy
+[00:03:38] who wanted to walk up and didn't didn't
+[00:03:40] have a phone of their own and that was
+[00:03:42] huge business and it was obviously huge
+[00:03:45] revenue loss and so we developed tools
+[00:03:47] to find them we drive around lower
+[00:03:49] Manhattan with a cell site analyzer on
+[00:03:52] top of a van and look for these
+[00:03:54] operations triangulate the signals and
+[00:03:57] pull up call the police and have them
+[00:03:58] arrested the second day that would show
+[00:04:01] up once they understood the capabilities
+[00:04:04] we had were all the three-letter
+[00:04:05] agencies who wanted to learn the same
+[00:04:08] techniques and indeed employ those same
+[00:04:10] techniques so if all of you remember who
+[00:04:13] kevin Mitnick is famous hacker he was
+[00:04:16] actually caught through location-aware
+[00:04:19] technology he had a wireless modem he
+[00:04:22] was using to hack into carrier switches
+[00:04:26] and make his long-distance phone calls
+[00:04:29] and internet access and do his hacking
+[00:04:31] through that wireless modem he was
+[00:04:33] tracked with the cooperation of a
+[00:04:35] carrier and the FBI
+[00:04:37] to to the place where he ultimately was
+[00:04:40] arrested using a triggerfish device
+[00:04:43] which is a device that measures the
+[00:04:47] assists in measuring the various signals
+[00:04:50] from multiple points and a cellular
+[00:04:53] network and much like a divining rod
+[00:04:55] looking for water you can zero in on
+[00:04:58] where the signal is coming from from the
+[00:05:00] handset or wireless modem and so all of
+[00:05:03] this was really the the infancy of
+[00:05:05] location-aware technology for
+[00:05:07] surveillance in the 1990s well those
+[00:05:12] capabilities coupled with the migration
+[00:05:16] in the cellular networks from analog to
+[00:05:19] digital put law enforcement at a real
+[00:05:22] disadvantage they didn't have the
+[00:05:24] capabilities we did they wanted them we
+[00:05:27] said no because it costs too much money
+[00:05:30] to build in that kind of capability so
+[00:05:33] in 1994 they went to Congress and
+[00:05:36] demanded that Congress pass a lot
+[00:05:39] actually was 1993 was the first attempt
+[00:05:41] but in 1994 they succeeded in passing
+[00:05:44] the communications assistance for law
+[00:05:46] enforcement act which for the first time
+[00:05:49] ever required carriers not just wireless
+[00:05:51] but all carriers to bake in to their
+[00:05:55] equipment surveillance capable
+[00:05:58] technology so that no longer would you
+[00:06:02] need a pair of alligator clips in the
+[00:06:05] line outside the targets home to climb
+[00:06:07] up the telephone pole and hope those
+[00:06:09] alligator clips up or to go down into
+[00:06:12] the basement of the building in the
+[00:06:14] tried and true method that is far back
+[00:06:16] is is the phone was invented law
+[00:06:18] enforcement used you could now do it all
+[00:06:21] out of the central office of a carrier
+[00:06:23] with the flip of a switch so you send an
+[00:06:26] order in and say we need a wiretap
+[00:06:27] individual X and you will automatically
+[00:06:31] provide us the content of that
+[00:06:32] communication and the call identifying
+[00:06:35] information about that particular call
+[00:06:40] in those debates one of the serious
+[00:06:44] privacy issues raised in the testimony
+[00:06:47] before Congress was whether or not the
+[00:06:51] government
+[00:06:52] ought to have tracking capability for
+[00:06:55] wireless phones included an FBI director
+[00:06:59] Louis Freeh submitted his written
+[00:07:01] statements saying and in no way shape or
+[00:07:05] form does the government want tracking
+[00:07:07] it is a privacy red herring being you
+[00:07:10] know promulgated by a bunch of paranoid
+[00:07:12] zealots looking at Chris and the
+[00:07:19] statutory structure at the time and the
+[00:07:22] compromises made by law enforcement and
+[00:07:25] getting the legislation passed seemed to
+[00:07:28] support that conclusion first in Kalia
+[00:07:32] we separated basic subscriber
+[00:07:35] information that the government could
+[00:07:37] get on a mere subpoena your name your
+[00:07:41] address how long you have the service
+[00:07:43] and the types of service you had from
+[00:07:46] other network information like location
+[00:07:49] information which tower was serving your
+[00:07:52] call we put them into two different
+[00:07:55] buckets and for the first one the basic
+[00:07:57] stuff we said all law enforcement had to
+[00:07:59] do is come to you with a grand jury
+[00:08:00] subpoena which you know you know it's
+[00:08:03] like ordering a ham sandwich at a lunch
+[00:08:05] bar you simply walk in ask the clerk for
+[00:08:08] a subpoena and you go out and you serve
+[00:08:09] it no judicial review and instead for
+[00:08:14] this other category which included
+[00:08:16] location we said you need an independent
+[00:08:18] judge to review that that information is
+[00:08:22] needed and the standard the judge will
+[00:08:24] go by as a higher standard than a mere
+[00:08:26] pen register the standard will be
+[00:08:29] specific and articulable facts that the
+[00:08:32] information is relevant to an ongoing
+[00:08:34] investigation judge has to make an
+[00:08:37] independent determination based on an
+[00:08:39] affidavit from the requesting officer
+[00:08:42] and then in the second part of cali oh
+[00:08:44] we said that location information will
+[00:08:48] not be available solely on a pen
+[00:08:50] register order and that word solely is
+[00:08:53] important in the statute a pen register
+[00:08:56] is the dialing and signaling of you
+[00:08:59] making a phone call so when i dial your
+[00:09:02] phone number each one of those pulses
+[00:09:04] can be
+[00:09:05] shirred with a pen register in real time
+[00:09:08] automatically on a standard that is very
+[00:09:12] that is really low a magistrate must a
+[00:09:16] magistrate shall issue a pen register
+[00:09:18] order when the requesting officer shows
+[00:09:21] its material to an investigation
+[00:09:23] arguably no discretion the judge simply
+[00:09:27] issues the order tells the carrier put
+[00:09:30] the pen register up so coming out of
+[00:09:34] Kalia there was a general sense that
+[00:09:37] location information was not covered
+[00:09:42] prospectively for real-time surveillance
+[00:09:45] now all of that is interesting language
+[00:09:50] and sort of loaded I have a lot of terms
+[00:09:52] in there so I want to break it down into
+[00:09:54] kind of the network information when i
+[00:09:59] talk about location information and
+[00:10:01] network there are a number of various
+[00:10:04] sources for that information every time
+[00:10:07] you put your phone on right now if your
+[00:10:09] cell phone is on it's registering on a
+[00:10:12] tower and that tower is in the carrier's
+[00:10:16] back end authenticating you as a user
+[00:10:19] it's saying you're a legitimate customer
+[00:10:21] who can use my system and I know where
+[00:10:24] you are in order to route and deliver
+[00:10:25] the phone call that's recorded
+[00:10:29] automatically now you're not making a
+[00:10:31] call I just know and report your
+[00:10:34] availability on a particular cell tower
+[00:10:38] that information generally is ephemeral
+[00:10:41] it's only stored for a short period of
+[00:10:43] time in the carrier's home location
+[00:10:46] register now I make a phone call is
+[00:10:50] because of the history of how carrier
+[00:10:53] networks were created and licenses
+[00:10:56] granted the location information the
+[00:10:59] tower handling your call was
+[00:11:01] automatically recorded at the beginning
+[00:11:03] and end of that call why because if not
+[00:11:06] that I'm dating myself here but in the
+[00:11:08] early days of cell phones when they were
+[00:11:10] bricks he only had local service and you
+[00:11:13] were roaming in other carriers networks
+[00:11:15] in there was compensation paid in order
+[00:11:19] to be
+[00:11:19] and so to figure that out they
+[00:11:22] registered you on a particular tower and
+[00:11:24] looked at that information to determine
+[00:11:26] who paid who what so historically as
+[00:11:30] part of the Paul record of every call
+[00:11:33] you made we kept location information in
+[00:11:36] the system so that's still there and
+[00:11:39] it's still recorded what's more because
+[00:11:43] systems for billing our subject to
+[00:11:46] disaster and different problems and it
+[00:11:50] either a local level or a national
+[00:11:52] disaster carriers back up their switches
+[00:11:55] every day and so the raw data which
+[00:11:59] includes the registration information on
+[00:12:01] the tower is stored for whatever the
+[00:12:05] disaster recovery plan is for the
+[00:12:07] carrier some it's short or some it could
+[00:12:09] be indefinite now that's you mean the
+[00:12:16] information of every phone that's on
+[00:12:18] simply the towers awareness that that
+[00:12:21] phone is there and can potentially grab
+[00:12:22] traffic to recall details in combination
+[00:12:25] so when a call is made location
+[00:12:27] associated with a call so that
+[00:12:31] information stays historically there's a
+[00:12:35] second component outside what I'll just
+[00:12:37] now call that network information and
+[00:12:40] that's the information carriers have
+[00:12:42] developed for purposes of 911 many
+[00:12:45] carriers have gps capability built into
+[00:12:48] their systems that gps is not part of
+[00:12:51] their network infrastructure and as a
+[00:12:55] result of gps being built into phones
+[00:12:57] does everybody know what gps is right
+[00:12:59] pretty good sense of it as a result of
+[00:13:03] that being built in the phones now third
+[00:13:05] priority providers have come along and
+[00:13:07] leverage that information to make
+[00:13:09] location-based services aware if you're
+[00:13:11] a Google Maps user you can just call up
+[00:13:13] the map and it tells you where you are
+[00:13:15] that's because when you downloaded that
+[00:13:18] and you inquired for a map the
+[00:13:23] coordinates of where you were located is
+[00:13:26] captured by google along with a cell ID
+[00:13:29] that's serving you so Google makes a
+[00:13:31] database of all
+[00:13:33] of that information this is all well
+[00:13:35] described in how mobility works at
+[00:13:38] Google Maps you can just read this if
+[00:13:40] you care to know more technical detail
+[00:13:42] so now we have a third party who has all
+[00:13:45] of this historical information and of
+[00:13:48] course Google is not retaining logs of
+[00:13:51] that but nothing prevents a third-party
+[00:13:53] application provider from doing that so
+[00:13:57] there is a historical collection of
+[00:14:01] location information that's available
+[00:14:03] from various resources within carriers
+[00:14:06] and third-party application providers
+[00:14:08] then there's a second set of data that I
+[00:14:12] would describe as real-time data and
+[00:14:14] that simply is the fact that I know
+[00:14:16] you're on your present I know what tower
+[00:14:19] is serving you and even if you're not
+[00:14:22] making a call I can initiate a ping to
+[00:14:25] your phone if I'm a carrier or a third
+[00:14:27] party application provider and know
+[00:14:29] where you are precisely so a one-time
+[00:14:32] method of determining your present and
+[00:14:35] where you are and then there's a third
+[00:14:37] category that I would describe as
+[00:14:39] prospective and that is is the the
+[00:14:42] aggregate mapping of your movements and
+[00:14:45] you see this many Department of
+[00:14:48] Transportation czar experimenting with
+[00:14:50] this to determine speed and direction at
+[00:14:52] highways using cell phones as probes so
+[00:14:55] i can map where you are and where you're
+[00:14:58] going over a period of time so three
+[00:15:01] categories now back to Kalia Kalia only
+[00:15:05] dealt arguably with the historical
+[00:15:09] aspect of that Louis Freeh said no
+[00:15:11] tracking that what we're interested in
+[00:15:13] but the historical record arguably was
+[00:15:17] something that could be gotten as
+[00:15:19] transactional information under the
+[00:15:23] modification of the Electronic
+[00:15:25] Communications Privacy Act that I
+[00:15:27] described the lawyers that's 18 USC 2700
+[00:15:30] three is the section so what do we do
+[00:15:34] about prospective and real-time out of
+[00:15:40] Kalia carriers had to develop a
+[00:15:43] standardized means of delivering the
+[00:15:46] surveillance in
+[00:15:46] information Congress said you can
+[00:15:49] collectively as an industry get together
+[00:15:51] and develop how you're going to deliver
+[00:15:54] location and other information for
+[00:15:56] surveillance and if you comply with that
+[00:15:58] the government can't sue you for failing
+[00:16:01] to meet Callias requirements so industry
+[00:16:05] convened a would turn out to be a
+[00:16:08] four-year standards development process
+[00:16:10] where all of the manufacturers and
+[00:16:13] carriers got together with law
+[00:16:14] enforcement to create a standard for
+[00:16:18] delivery and it's important for law
+[00:16:19] enforcement because they had to buy
+[00:16:21] collection equipment to receive all of
+[00:16:24] that incoming stuff and so you want
+[00:16:26] what's sending and receiving obviously
+[00:16:27] to talk to each other location
+[00:16:30] information was a major debate in that
+[00:16:32] process for four years we SAT there we
+[00:16:35] had law enforcement and what one
+[00:16:38] occasion i'll never forget pull out a
+[00:16:40] weapon slam it on the desk and said
+[00:16:42] you're aiding terrorists if you don't
+[00:16:43] give us this prospectively and we said
+[00:16:45] you're entitled to it retrospectively
+[00:16:47] you're not entitled to it prospective ly
+[00:16:50] we didn't view kaliya is requiring us to
+[00:16:53] track in fact we thought that's what the
+[00:16:55] FBI said you didn't need or you didn't
+[00:16:58] want altima tlie that case the standard
+[00:17:03] was challenged both by law enforcement
+[00:17:05] and by privacy groups and in 2000 the
+[00:17:09] court determined that the way the
+[00:17:12] industry handled location was proper
+[00:17:14] although it didn't articulate what
+[00:17:17] standard was necessary to obtain
+[00:17:19] location so what do I mean by that
+[00:17:21] here's what we did in the compromise in
+[00:17:23] the standard setting process we agreed
+[00:17:26] that location would be given at the
+[00:17:29] beginning and end of a call as a
+[00:17:32] conditional parameter in the message set
+[00:17:36] for surveillance sent to law enforcement
+[00:17:37] on a pen register provided the
+[00:17:40] government met the proper legal standard
+[00:17:42] so if they came to us with the right
+[00:17:44] type of order you would flip a switch
+[00:17:47] and out would go location information as
+[00:17:50] part of the pen register at the
+[00:17:52] beginning and end of a call nothing else
+[00:17:54] not registration not prospective
+[00:17:57] tracking only location when the person
+[00:18:00] was making a call at the beginning and
+[00:18:02] end of that call notice I said not in
+[00:18:04] between because if a person is talking
+[00:18:06] and they go through multiple cell sites
+[00:18:08] and stuff we weren't going to give them
+[00:18:10] a map or tracking map either the court
+[00:18:13] said that's fine that's the appropriate
+[00:18:15] standard that the signaling information
+[00:18:19] obviously under the way Kalia was
+[00:18:21] written was intended to be provided to
+[00:18:24] them as part of that calling information
+[00:18:26] but the court punted on what the
+[00:18:29] appropriate legal standard was thank you
+[00:18:33] we know where you are who you are and if
+[00:18:36] you know I'll just flip the switch so we
+[00:18:38] can listen to the call it is being
+[00:18:40] recorded haha attended it's in your bag
+[00:18:52] yeah alright so where do we end up we
+[00:18:55] end up with a system of delivering
+[00:18:58] location baked into the wireless
+[00:19:01] carrier's network but uncertainty about
+[00:19:05] what legal standard is required to force
+[00:19:08] its disclosure we immediately started
+[00:19:14] receiving orders from federal agencies
+[00:19:18] as part of the pen register request and
+[00:19:22] for those of you haven't seen in order
+[00:19:24] it's nothing magical it basically says
+[00:19:28] carriers providing service to this
+[00:19:30] customer shall provide a pen register
+[00:19:32] and then they'll list other information
+[00:19:35] in the order it's it as I said nothing
+[00:19:37] magical it's a form yep yes pause me the
+[00:19:42] this standard that you would give a gift
+[00:19:45] okay Shin beginning end of the call is
+[00:19:48] that interpretation of the text and
+[00:19:50] Korea or something else is that yes so
+[00:19:54] it is language in Korea that points
+[00:19:57] towards this if not exposed to me to my
+[00:19:59] question is how explicit was kaliyah
+[00:20:01] about the standard so the standard was
+[00:20:05] to be developed by industry to meet the
+[00:20:08] assistance capabilities of clea the
+[00:20:11] assistance capabilities
+[00:20:13] teufel they're really for but only two
+[00:20:15] really matter here the ability to
+[00:20:17] intercept the content of a communication
+[00:20:20] and at the same time were immediately
+[00:20:24] thereafter the call identifying
+[00:20:27] information that explains the incoming
+[00:20:33] outgoing direction and redirection of a
+[00:20:35] call so essentially the routing of a
+[00:20:39] call that set of language that those
+[00:20:43] four elements were greatly disputed in
+[00:20:47] terms of what they mean and in terms of
+[00:20:49] attributes for an engineer to put into a
+[00:20:52] message set it was call start message
+[00:20:57] origination the number it was coming
+[00:20:59] from the number it was going to if it
+[00:21:03] was interrupted for a reason like a
+[00:21:05] hang-up if it was routed and forwarded
+[00:21:08] to another call station call forwarding
+[00:21:12] call termination in these various
+[00:21:14] elements the location piece of that was
+[00:21:18] not articulated very clearly in the
+[00:21:20] statute but the compromise developed by
+[00:21:24] the engineers and law enforcement after
+[00:21:26] four years of fighting was essentially
+[00:21:28] will include it as conditional in the
+[00:21:32] standard so lots of fight about that and
+[00:21:35] lots of hard feelings about that you
+[00:21:38] might imagine that in the road the court
+[00:21:41] ultimately upheld that and actually I
+[00:21:43] think it's the right answer the this the
+[00:21:46] what identifies a call and its beginning
+[00:21:49] and end includes the network node
+[00:21:52] handling that call and I think that's a
+[00:21:55] fair interpretation and nobody was
+[00:22:00] willing to go to the Supreme Court on
+[00:22:01] that issue okay um
+[00:22:07] so immediately after the passage of the
+[00:22:13] standard law enforcement started coming
+[00:22:15] to carriers with pen register orders and
+[00:22:17] carrier started saying well there was
+[00:22:19] this other provision in Kalia that said
+[00:22:21] you may not get locations solely on a
+[00:22:23] pen register and so the pen register
+[00:22:26] orders were rejected by the carriers and
+[00:22:28] law enforcement went to the Department
+[00:22:31] of Justice and ultimately they concluded
+[00:22:33] that that's right there needed to be an
+[00:22:35] additional authorization some other
+[00:22:37] statutory provision that permitted it
+[00:22:40] and so they looked in the stored
+[00:22:43] Communications Act if you remember the
+[00:22:46] second part of cali i mentioned is that
+[00:22:48] the stored Communications Act was
+[00:22:50] divided into two buckets basic
+[00:22:53] subscriber and then the other
+[00:22:54] information which included cell site
+[00:22:57] information and law enforcement said
+[00:23:00] well there there it is that's where our
+[00:23:02] statutory grant comes from so we'll
+[00:23:04] include the magic words of section 2703
+[00:23:08] in the pen register order so it won't be
+[00:23:11] solely pursuant to a pen register it
+[00:23:14] will be pursuant to these two provisions
+[00:23:17] in the law the only problem is that
+[00:23:20] provision is about stored records things
+[00:23:24] that already exist that are historical
+[00:23:26] as opposed to that we would be creating
+[00:23:30] in the future and reporting in real time
+[00:23:37] the structure of the law says if you
+[00:23:39] have immunity if you follow a court's
+[00:23:41] order you have immunity as a provider
+[00:23:44] the providers were really not willing to
+[00:23:47] take law enforcement on over that
+[00:23:50] formulation so orders routinely would
+[00:23:53] come in saying 2703 plus pen register
+[00:23:58] statute equals prospective location
+[00:24:01] information and it wasn't really until
+[00:24:05] two years ago almost three years ago
+[00:24:08] that a federal magistrate in New York
+[00:24:11] finally looked at these orders and said
+[00:24:14] I have a real problem with this I don't
+[00:24:17] understand this prospective cell site
+[00:24:20] stuff you're putting
+[00:24:21] in here and it looks to me like this is
+[00:24:24] really a Fourth Amendment search and
+[00:24:26] seizure probable cause issue if you want
+[00:24:30] to know where somebody's going I just
+[00:24:32] don't see the authority of the statute
+[00:24:34] for that how are you getting there and
+[00:24:36] that opinion started a magistrate's
+[00:24:39] revolt across the country magistrate
+[00:24:43] after magistrate has analyzed this issue
+[00:24:45] now and the government's only 12 of
+[00:24:49] these cases and about 30 have gone
+[00:24:52] against them and and here's the
+[00:24:55] reasoning and I hesitate to get to
+[00:24:57] legally technical about this but I have
+[00:25:00] to say on both sides of this equation it
+[00:25:04] is an Ipsy Dixit outcome both sides have
+[00:25:08] figured out where they wanted to go both
+[00:25:10] the privacy and and the law enforcement
+[00:25:13] community and if fashioned arguments
+[00:25:15] around statutes the personally I don't
+[00:25:17] think we're ever intended to cover the
+[00:25:19] prospective acquisition of location
+[00:25:21] information the magistrate that wanted
+[00:25:25] to quash these requests for prospective
+[00:25:27] information analyzed it this way they
+[00:25:31] said in 1986 when Congress passed the
+[00:25:35] Electronic Communications Privacy Act
+[00:25:37] they amended the definition of an
+[00:25:41] electronic communication or to exclude
+[00:25:47] information collected from a mobile
+[00:25:49] tracking device now why was that why
+[00:25:52] would we have a separate statute that
+[00:25:54] required probable cause or the then
+[00:25:59] would existed in the and the ordinary
+[00:26:01] course was to get a probable cause
+[00:26:03] warrant to track a bug that you'd
+[00:26:06] attached to a car or to a box where you
+[00:26:09] wanted to trace somebody going down a
+[00:26:11] public highway and I'm not going to go
+[00:26:13] into the case history of that but
+[00:26:15] everybody is familiar with the notion of
+[00:26:17] putting a bug on something and following
+[00:26:20] it through GPS that's how they
+[00:26:22] traditionally did it and thought about
+[00:26:23] it it in 1986 by excluding that from the
+[00:26:29] definition of an electronic
+[00:26:31] communication we did what for law
+[00:26:34] enforcement
+[00:26:34] we avoided them having to get a wiretap
+[00:26:36] order to obtain the electronic
+[00:26:39] communication because they can't
+[00:26:41] intercept an electronic communication
+[00:26:43] without going through very severe hoops
+[00:26:45] they're very difficult to do and besides
+[00:26:48] we're tracing something in the public
+[00:26:51] car driving down the highway what
+[00:26:53] privacy expectation can you have in the
+[00:26:55] public and that was the thinking that
+[00:26:57] went into this language to exclude from
+[00:27:00] signaling location information derived
+[00:27:04] from a mobile tracking device so the
+[00:27:07] magistrate's looked at that and said gee
+[00:27:09] under Kalia I can't imagine how you
+[00:27:13] would be able to treat tracking
+[00:27:17] information is a record of an electronic
+[00:27:19] communication because it's specifically
+[00:27:22] outside the definition of it and so
+[00:27:25] consequently 2703 doesn't apply and
+[00:27:29] that's not the other authority Congress
+[00:27:30] had in mind when they said you couldn't
+[00:27:32] get it solely pursuant to a pen register
+[00:27:34] they must have had something else in
+[00:27:36] mind and what I think they had in mind
+[00:27:38] was rule 41 of the criminal rules of
+[00:27:40] procedure which says get a probable
+[00:27:43] cause warrant if you want to track
+[00:27:44] something and that's what we think you
+[00:27:46] should do so those magistrates now are
+[00:27:50] the vast majority of decisions the
+[00:27:52] government forum shops they look for a
+[00:27:55] magistrate they know is leaning their
+[00:27:57] way when they want it because one
+[00:27:59] magistrate's decision is not binding on
+[00:28:02] another magistrate's decision in the in
+[00:28:07] the district how do I know that well
+[00:28:09] apart from case Authority which says
+[00:28:12] that I know that firsthand because when
+[00:28:15] judge Smith in the district court in
+[00:28:17] Texas issued his famous decision on this
+[00:28:20] which really was the first thorough
+[00:28:23] articulation of the magistrates revolt
+[00:28:25] the magistrate sitting in the room next
+[00:28:28] to him issued a prospective tracking
+[00:28:30] order which we objected to and moved to
+[00:28:33] quash and the judge in very simple terms
+[00:28:35] and I won't give the name of the judge
+[00:28:38] said this hearing will be short do you
+[00:28:40] wish to go to jail or do you wish to
+[00:28:42] implement the order easy answer I'm
+[00:28:46] sitting here today
+[00:28:47] the order was implemented so you see one
+[00:28:51] magistrate's decision doesn't bind
+[00:28:53] another and we have inconsistent
+[00:28:55] application of this now across the
+[00:28:58] country add to that the state
+[00:29:00] authorities the states likewise do
+[00:29:04] surveillance Kalia and the Electronic
+[00:29:07] Communications Privacy Act is the floor
+[00:29:10] and they can't have standards less than
+[00:29:13] that but what happens when one
+[00:29:16] magistrate in one state says one thing
+[00:29:18] and another magistrate says another and
+[00:29:20] the state disagrees with the one that
+[00:29:22] isn't favorable to its law enforcement
+[00:29:25] which magistrate do you follow for state
+[00:29:27] requests well the answer is the same
+[00:29:30] whichever judge is going to put you in
+[00:29:33] jail you would follow their order and
+[00:29:36] that's really where we are on state law
+[00:29:39] so this debate continues to rage we
+[00:29:44] don't know what the outcome will be
+[00:29:46] other than the fact that everybody needs
+[00:29:48] certainty and so we know looking forward
+[00:29:52] that legislation is on its way the
+[00:29:55] Department of Justice wants to change
+[00:29:56] and get a clear standard guess which
+[00:29:58] standard they want they want the lower
+[00:30:01] standard specific and articulable facts
+[00:30:03] and at least that's independent judicial
+[00:30:05] review right I mean at least that is a
+[00:30:08] judge looking at the basic facts and
+[00:30:10] making a decision whether it's relevant
+[00:30:13] carriers privacy groups on the other
+[00:30:16] side of course believe anything
+[00:30:18] prospective should require a probable
+[00:30:21] cause standard now it's very difficult
+[00:30:23] for law enforcement to obtain this
+[00:30:26] information on a probable cause standard
+[00:30:28] because of the delays that are inherent
+[00:30:30] in the process of getting a warrant
+[00:30:32] issued and oftentimes this is critical
+[00:30:35] in their investigations to get it very
+[00:30:38] quickly and I appreciate that but
+[00:30:42] nonetheless the privacy implications are
+[00:30:45] huge and let me explain a couple of
+[00:30:47] examples of where it comes in the types
+[00:30:50] of orders we see on a routine basis are
+[00:30:53] all individuals registered on a cell
+[00:30:56] site during a 10-minute period
+[00:31:00] if I'm looking for witnesses who
+[00:31:01] observed a particular drug transaction
+[00:31:04] or a murder or something else I asked
+[00:31:06] for all of those individuals on a cell
+[00:31:09] site and under today's standard it
+[00:31:11] appears they can easily get that
+[00:31:13] information even what is a historical
+[00:31:17] record is subject to some dispute over
+[00:31:19] when you can get location information
+[00:31:23] because if I'm only storing it as soon
+[00:31:26] as it hits the server how long does it
+[00:31:30] have to be stored before it can be
+[00:31:32] obtained on a lower standard and it's
+[00:31:35] the cosmic equivalent of when life
+[00:31:37] begins is how long storage must be and
+[00:31:39] that's a really open question now what
+[00:31:41] if I ask for that stored stuff every
+[00:31:43] five minutes we used to call this the
+[00:31:45] poor man's pen register because I go as
+[00:31:48] for call records every five minutes and
+[00:31:50] and determine when those calls were made
+[00:31:52] and it's the poor man's pen registers
+[00:31:54] same for location so do we need a
+[00:31:57] standard that's a higher standard
+[00:31:59] looking at historical records now when I
+[00:32:02] asked and this is I want to say a common
+[00:32:05] occurrence but it is an occurrence when
+[00:32:08] law enforcement asks for the historical
+[00:32:10] records on 15 individuals and then
+[00:32:13] compares and maps those individuals on
+[00:32:16] the location basis to determine their
+[00:32:18] proximity to each other during a
+[00:32:21] particular event you really start to
+[00:32:24] develop a map if you will of your life
+[00:32:27] this way now for third-party providers
+[00:32:30] who are not communications providers at
+[00:32:32] all what standard applies to them if
+[00:32:35] they are an electronic communications
+[00:32:38] service to the public they're not
+[00:32:40] covered by any of this and so is that a
+[00:32:43] mere subpoena for information in their
+[00:32:45] hands like Google Maps now many of you
+[00:32:48] may have seen last week that Google like
+[00:32:50] loopt a social networking application
+[00:32:53] for mobility declared that when one user
+[00:32:56] determines it to send their location to
+[00:32:59] another user so they know where they are
+[00:33:01] they treat that as content not location
+[00:33:06] information a communication I'm here
+[00:33:08] Here I am come and find me and they will
+[00:33:11] only respond to
+[00:33:13] search warrant or a title three requests
+[00:33:16] in real time for that for a wiretap so
+[00:33:18] service providers are pushing back out
+[00:33:21] of privacy perspective and they are not
+[00:33:23] generally logging this information now
+[00:33:26] for civil purposes for their
+[00:33:28] applications and other uses and
+[00:33:32] location-based services nothing prevents
+[00:33:35] them from doing it and there may well be
+[00:33:37] services where you'd want to know family
+[00:33:40] finder for your child if you want to
+[00:33:41] know they're in school and you want a
+[00:33:43] record of where they been and you as the
+[00:33:45] parent decides to do that and you decide
+[00:33:49] to keep the record now all of a sudden
+[00:33:51] we develop a location history and then
+[00:33:53] what standard do we get that under the
+[00:33:55] legislation has to address that how
+[00:33:57] about transparency future future
+[00:34:00] legislation should articulate how many
+[00:34:02] such requests are being made in my
+[00:34:05] personal experience it's about a hundred
+[00:34:07] a week at the major carriers a hundred a
+[00:34:11] week so thousands a year requesting
+[00:34:14] location there is no report on that like
+[00:34:17] we get for wiretaps where we know how
+[00:34:19] many wiretaps have been requested and
+[00:34:21] that hundred that each of those requests
+[00:34:23] can be for everyone everyone in 10
+[00:34:26] minutes and it's not nothing 100 people
+[00:34:27] 100 requests that's right and that
+[00:34:30] request can include multiple individuals
+[00:34:33] as well so it could be 10 phones 100
+[00:34:35] folks so the volume of requests is
+[00:34:39] enormous how long must that order be
+[00:34:41] implemented typically because if law
+[00:34:45] enforcement hybrid theory of the stored
+[00:34:48] Communications Act and the pen register
+[00:34:50] Act combined many of them have them run
+[00:34:53] the same duration so pen register can be
+[00:34:56] 60 days solo creates location tracking
+[00:34:58] for 60 days but there is no statute that
+[00:35:01] sends that says that so how long are we
+[00:35:03] willing to track them at what
+[00:35:05] periodicity it's one thing to say at the
+[00:35:08] beginning and end of a call only but
+[00:35:10] what about intermittently how about
+[00:35:13] every ten minutes you know I have a
+[00:35:15] great anecdote in with two minutes left
+[00:35:18] I'll tell you because you can disclose
+[00:35:21] location at an emergency basis when life
+[00:35:26] or limb
+[00:35:27] as at risk without legal process it
+[00:35:30] shouldn't be surprising that law
+[00:35:32] enforcement has gained that system and
+[00:35:34] they know in emergency cases that if
+[00:35:37] they call up and say someone's at risk
+[00:35:39] somebody's going to die no carrier is
+[00:35:41] going to withhold that information we do
+[00:35:44] it all the time and it's the right thing
+[00:35:45] to do because carriers are not in the
+[00:35:47] position of second-guessing but if we
+[00:35:50] had reporting on those requests and
+[00:35:53] oversight of those requests we'd know
+[00:35:55] which ones were and were not legitimate
+[00:35:58] an incoming request for location on a
+[00:36:01] missing child a teenager her teenage
+[00:36:04] girl and they demand that the phone be
+[00:36:07] pained every 15 minutes that takes a
+[00:36:10] person to sit there and manually ping a
+[00:36:12] phone every 15 minutes that request went
+[00:36:18] on for 24 hours that's a lot of pings
+[00:36:22] when the carrier complained about that
+[00:36:25] the law enforcement agent did the
+[00:36:27] typical thing this was a state agency
+[00:36:28] you're going to jail if you're not doing
+[00:36:30] it and we'd say the phone is off when
+[00:36:32] the phone comes back on will tell you no
+[00:36:35] ping at every 15 minutes it turns out is
+[00:36:38] we found out after complaining about
+[00:36:40] this it was the sheriff's daughter who
+[00:36:43] didn't come home from a date how subject
+[00:36:47] to abuse is this right and without any
+[00:36:49] oversight without any reporting without
+[00:36:52] any sunshine we have absolutely no way
+[00:36:56] as a public of knowing whether or not
+[00:36:59] these requests are legitimate now for
+[00:37:01] every one of those there are 20
+[00:37:03] legitimate requests so obviously in
+[00:37:06] kidnappings and child lost children
+[00:37:09] everybody remembers probably the family
+[00:37:11] that died in in Oregon in the mountains
+[00:37:14] the husband survived with his cell phone
+[00:37:16] as he was climbing out but the family
+[00:37:18] died in their car and in a snowstorm and
+[00:37:20] and couldn't get out you know to be able
+[00:37:23] to save at least one life it's a it's
+[00:37:27] obviously a great service that carriers
+[00:37:29] provide but it is also subject to abuse
+[00:37:31] without appropriate safeguards and
+[00:37:33] lastly there's a target versus associate
+[00:37:38] problem that has to be solved it's one
+[00:37:40] thing to say
+[00:37:41] I have an interest in you as the target
+[00:37:44] the subject of surveillance to know
+[00:37:46] where you are but what about all the
+[00:37:49] people that that target talks to it's
+[00:37:51] very current today to get the community
+[00:37:53] of interest records of everybody the
+[00:37:56] target talks to and that may be an
+[00:37:58] appropriate step for investigation to
+[00:38:01] understand who's involved but now they
+[00:38:03] routinely include location requests as
+[00:38:06] well so that's a very burdensome thing
+[00:38:09] to do and it's questionable how you
+[00:38:11] could ever know even on the specific and
+[00:38:13] articulable facts standard that somebody
+[00:38:16] in the future that somebody might call
+[00:38:18] is relevant to an investigation so the
+[00:38:21] standard doesn't quite meet the practice
+[00:38:23] today that needs to be fixed in any
+[00:38:25] legislation and lastly I'll just say two
+[00:38:30] things that apply both in criminal and
+[00:38:31] civil if the service provider is
+[00:38:34] offering these location-based services
+[00:38:38] can civil parties track somebody who's
+[00:38:43] using the service now I had an order
+[00:38:46] recently from a state court you'll love
+[00:38:49] it it is a hilarious case where the you
+[00:38:54] can be a private attorney general in
+[00:38:57] essence when you're looking for
+[00:38:58] counterfeit goods the statutes permit
+[00:39:00] you to go after somebody and exercise
+[00:39:03] much of the same authority that law
+[00:39:04] enforcement can have in making a
+[00:39:07] requesting information and an expedited
+[00:39:10] basis and the creative lawyer asked us
+[00:39:13] because a cell phone was found on the on
+[00:39:15] the premises of a seized cargo container
+[00:39:20] that contained yes counterfeit condoms
+[00:39:24] which I suppose could be a public
+[00:39:26] emergency to track that phone and all
+[00:39:30] the phone numbers that were obtained
+[00:39:33] related to who called it and we refuse
+[00:39:35] because we still think that's tracking
+[00:39:37] electronic surveillance that were only
+[00:39:39] the government could do but we don't
+[00:39:41] have a law that precisely states that so
+[00:39:43] who's taken up that bail bondsman but
+[00:39:46] get requests all the time for bail
+[00:39:48] bondsman to track individuals guess what
+[00:39:52] family law court it's very
+[00:39:55] my husband stole my kid didn't have the
+[00:39:59] kid back on time where is where are they
+[00:40:02] now I want the sheriff to go get them in
+[00:40:04] some states are looking for mandatory
+[00:40:06] disclosure of location information in
+[00:40:09] emergency situations which may well
+[00:40:12] include a child who wasn't brought back
+[00:40:14] on time from a shared parental oversight
+[00:40:20] so you know the risk is enormous that
+[00:40:24] location information will be abused miss
+[00:40:28] used both in civil in business and in
+[00:40:31] criminal cases and it's far from clear
+[00:40:34] what Congress will do with this hot
+[00:40:36] potato when it lands in their lap but we
+[00:40:38] do know it's coming and it is going to
+[00:40:41] be there the courts the development of
+[00:40:43] this law through the courts is very
+[00:40:46] inefficient and and it makes very little
+[00:40:49] sense for one user in a state to have
+[00:40:53] their privacy safeguarded at a higher
+[00:40:55] standard and another user or not and
+[00:40:57] indeed the same user perhaps subject to
+[00:41:00] two inconsistent standards depending on
+[00:41:02] which magistrate signed which order and
+[00:41:05] so your location may be provided on a
+[00:41:07] lower standard on one way or tap and hot
+[00:41:09] a higher standard on another so with
+[00:41:12] with that I'd like to open it up to
+[00:41:14] questions and explain anything I've said
+[00:41:18] I know that's a lot of information at a
+[00:41:20] short period of time but I hope but it
+[00:41:23] made some sense questions yes in the
+[00:41:31] difference between sort of specific
+[00:41:33] individual information which you're
+[00:41:34] talking about here in aggregate
+[00:41:36] information so you mentioned in passing
+[00:41:38] departments of transportation for
+[00:41:40] instance wanting essentially a wide
+[00:41:43] swath of information so they can
+[00:41:45] essentially determine the flow of
+[00:41:46] traffic what are the sort of privacy
+[00:41:49] implications associated with that if a
+[00:41:51] telco for instance is doing a high
+[00:41:53] degree of anonymizing what are the
+[00:41:55] concerns there and are there parties
+[00:41:59] other than government parties who could
+[00:42:02] request access for that information how
+[00:42:04] would how would you want to see that
+[00:42:05] handled
+[00:42:06] great question and for wireless carriers
+[00:42:11] we drafted and published last spring a
+[00:42:15] set of location-based services
+[00:42:18] guidelines you can find them on ctia a
+[00:42:20] website which explains the standards
+[00:42:23] that wireless carriers all signed up to
+[00:42:26] for third parties to get access to
+[00:42:29] individualized and aggregate location
+[00:42:32] information basically carriers want the
+[00:42:35] customers consent to disclose location
+[00:42:38] and you know that raises an interesting
+[00:42:41] question because who's the customer many
+[00:42:45] people buy five phones for their family
+[00:42:47] and there's one customer and five users
+[00:42:49] can the parent consent to track their
+[00:42:52] child sure can the husband provide the
+[00:42:55] service to their wife and watch where
+[00:42:57] she's going surreptitiously interesting
+[00:43:01] unclear but the customer must consent to
+[00:43:05] it for aggregate information the
+[00:43:07] carriers historically because of the
+[00:43:10] Telecommunications Act actually treats
+[00:43:13] location information derived from a
+[00:43:16] telephone call to be something called
+[00:43:18] cpni or customer proprietary network
+[00:43:21] information under 47 USC 222 it requires
+[00:43:26] the express consent of the user to
+[00:43:29] disclose except if you wish to make it
+[00:43:32] into aggregate information you may do so
+[00:43:36] without that consent so carriers
+[00:43:38] developed security procedures to
+[00:43:40] anonymize that information and then make
+[00:43:44] it available to service providers like
+[00:43:46] departments of transportation or
+[00:43:48] third-party aggregators to develop
+[00:43:51] applications so a mobile advertising
+[00:43:53] application could be based on all
+[00:43:56] individuals registered on a particular
+[00:43:58] cell tower at a time where you wouldn't
+[00:44:00] know who those individuals were but you
+[00:44:02] could broadcast an Amber Alert for
+[00:44:05] example to everybody that would be the
+[00:44:07] use of also of that get information um
+[00:44:12] because non-carriers are not covered by
+[00:44:14] that same prohibition in section 222
+[00:44:19] there are no standards that apply to
+[00:44:22] them for the creation of aggregate
+[00:44:24] information or the use of individualized
+[00:44:27] information so the google maps location
+[00:44:31] server could be licensed to third
+[00:44:34] parties for their applications now all
+[00:44:38] of those providers like google recognize
+[00:44:41] the extreme privacy sensitivity of it
+[00:44:44] and therefore want consent and clear
+[00:44:47] guidelines on the use of that
+[00:44:49] information that's a self-regulatory
+[00:44:51] imposed regime should it be a legal
+[00:44:55] standard a very good question because
+[00:44:58] the profiles created by these services
+[00:45:01] ultimately are extremely revealing and
+[00:45:05] insensitive because we are getting close
+[00:45:09] to the degree of accuracy that is much
+[00:45:14] more granular than a particular cell
+[00:45:18] tower server you which can cover seven
+[00:45:20] miles in some rural areas we're talking
+[00:45:22] about for 911 services and XYZ access
+[00:45:26] what floor in the building are you on so
+[00:45:30] if we're going to be that close and
+[00:45:31] we'll be able to put you on the steps of
+[00:45:33] an age treatment center or a mosque we
+[00:45:40] probably wish and should have a better
+[00:45:43] standard on the use of that kind of
+[00:45:44] granular information yes that is sort of
+[00:45:47] a follow-up the ckn i right now is
+[00:45:51] Buffalo about this yesterday you with
+[00:45:54] verizon it defaults to the user gives
+[00:45:57] permission and this is even though i'm
+[00:46:00] sure the carriers are following the
+[00:46:01] letter of the law nobody knows about
+[00:46:03] that it's buried on the page you have to
+[00:46:05] know what you're looking for they send
+[00:46:07] out a little legalistic form is to
+[00:46:09] default it's a it's a default that is
+[00:46:11] rarely going to be what do you thing
+[00:46:13] about that shouldn't we flip that yeah a
+[00:46:16] poor journalism is what I think about it
+[00:46:18] the the rules are actually much more
+[00:46:21] restrictive than the article explained
+[00:46:23] or
+[00:46:24] for people understood the opt-out notice
+[00:46:27] to cover so essentially for basic cpni
+[00:46:32] you're calling records the carrier can
+[00:46:34] use it for its own marketing purposes
+[00:46:36] its own marketing purposes but in order
+[00:46:40] to share it with a third party it
+[00:46:42] requires opt-in consent of the user the
+[00:46:45] opt-out consent that you get is is for
+[00:46:49] their use of it for their own marketing
+[00:46:51] purposes to tell you about their latest
+[00:46:53] new feature or phone not to give it to
+[00:46:56] an airline to market frequent flier
+[00:46:58] services to you or to give it to an
+[00:47:00] advertising company for their purposes
+[00:47:03] legal definition since they can share it
+[00:47:06] with their parent or affiliates what's
+[00:47:09] the legal definition of affiliate here
+[00:47:10] how protected our way from them saying
+[00:47:12] that some offender is affiliate that
+[00:47:16] that's correct so they can share it in
+[00:47:18] the family so Verizon could give it to
+[00:47:19] long distance and it's it's whoever you
+[00:47:21] owner control and of course telcos don't
+[00:47:26] own or control marketing companies for
+[00:47:29] example or billing companies at least
+[00:47:31] currently so within the family of
+[00:47:33] companies Oliver and I don't represent
+[00:47:35] verizon just as a disclaimer here within
+[00:47:39] the family of companies a carrier can
+[00:47:43] share information for marketing and you
+[00:47:46] have the option to opt out of receiving
+[00:47:48] a notice from verizon long distance or
+[00:47:51] their files service or broadband service
+[00:47:53] for example but they can't give it to an
+[00:47:55] independent contractor and they can't
+[00:47:58] for marketing purposes or a vendor for
+[00:48:02] that purpose and in in cpni has a higher
+[00:48:06] standard for location so in any event
+[00:48:08] that notice does not cover location
+[00:48:11] which requires your Express opt-in to
+[00:48:13] use I just wanted to try because this is
+[00:48:18] an incredibly good opportunity and so I
+[00:48:20] want to push the language least the
+[00:48:23] language that is given to mere end users
+[00:48:26] is it's for parent companies or
+[00:48:29] affiliates what is is their legal
+[00:48:33] definition of affiliate what is sure the
+[00:48:35] Federal Communication
+[00:48:37] Commission's rules contain a definition
+[00:48:40] of affiliate that is a entity which you
+[00:48:42] own or control and ownership or control
+[00:48:45] is a you know a legal concept of you
+[00:48:49] know 51-percent ownership or stock
+[00:48:51] control and it's kind of a historical
+[00:48:53] definition so it's within the family of
+[00:48:56] companies that are commonly owned or
+[00:48:58] controlled so that would exclude
+[00:49:01] independent contractors vendors third
+[00:49:04] parties that are not within the family
+[00:49:06] of ownership in you know verizon
+[00:49:09] obviously would do better to say all of
+[00:49:11] the verizon companies instead of to use
+[00:49:13] the legal term and those companies
+[00:49:16] because carriers are independently
+[00:49:18] incorporated in individualized states
+[00:49:20] that's what they're getting at so
+[00:49:22] verizon of New Mexico could obtain and
+[00:49:26] use the CP and I from Verizon Wireless
+[00:49:29] to offer you local service to offer you
+[00:49:33] local broadband service that would be
+[00:49:35] permitted thank you make sense yep you
+[00:49:39] too they just such that with the
+[00:49:41] technical aspects and also the privacy
+[00:49:44] laws so I you mentioned if I'm not
+[00:49:47] mistaken that Sorcha was put together a
+[00:49:49] while back of technical individuals from
+[00:49:51] some of the companies to help develop
+[00:49:52] the standards because this area
+[00:49:55] technically is constantly evolving is
+[00:49:57] there that consortium of technical
+[00:50:00] advisers does that remain current and is
+[00:50:02] it still actively advising on
+[00:50:04] developments yeah great question so the
+[00:50:07] industry standard was developed under TI
+[00:50:10] a the telecommunications industry
+[00:50:12] association and they produced joint
+[00:50:16] standard 25 which was the basic core
+[00:50:19] cellular and wireline standard they had
+[00:50:24] to meet again to do joint standard 25 a
+[00:50:27] which added what we described as the
+[00:50:29] punch list features after the court and
+[00:50:31] 2000 determined law enforcement was
+[00:50:33] entitled to a couple more things we put
+[00:50:36] those in we reconvened to do joint
+[00:50:38] standard 25b to address packet boat
+[00:50:42] communications when the FCC extended
+[00:50:46] kaliya to broadband internet access
+[00:50:49] so it isn't a standing committee in the
+[00:50:52] sense that they meet regularly to look
+[00:50:54] at network evolution but rather based on
+[00:50:57] new legal requirements that come out
+[00:51:00] they do meet and address those the
+[00:51:04] packet mode communications standard had
+[00:51:08] a particularly sordid history that
+[00:51:10] standard has been challenged by law
+[00:51:12] enforcement as insufficient to meet
+[00:51:15] their needs and currently is pending
+[00:51:17] before the FCC for decision it's been
+[00:51:21] there for three years so presently we
+[00:51:24] have no packet mode interception
+[00:51:26] standard in place essentially the
+[00:51:28] carrier's wanted to only provide
+[00:51:31] information about the user at the
+[00:51:33] beginning and end of a session law
+[00:51:35] enforcement wanted everything in between
+[00:51:37] so that's the Gulf that separates the
+[00:51:41] industry and law enforcement today the
+[00:51:45] downside of that is nothing prevents law
+[00:51:47] enforcement in the meantime from
+[00:51:49] bringing their equipment into the
+[00:51:50] premises to do their interception work
+[00:51:53] and that's a problem for many carriers
+[00:52:05] federal regulations of the California
+[00:52:08] regulations and it's kind of a growing
+[00:52:10] area where people are advising as well
+[00:52:14] unmask privacy laws in Massachusetts oh
+[00:52:17] yeah the data yeah yeah i love i love
+[00:52:22] how one state basically ratchets up you
+[00:52:26] know but but obviously it only applies
+[00:52:28] if you have massachusetts residents in
+[00:52:31] your database right so do companies
+[00:52:34] although it's so difficult to know if
+[00:52:35] you have massachusetts representing your
+[00:52:37] databases that it's been found that for
+[00:52:39] all practical purposes it can almost
+[00:52:41] apply to everybody in the united states
+[00:52:43] and also because of ways you can
+[00:52:45] interpret where that data is stored and
+[00:52:47] who owns it it may not be mass residents
+[00:52:49] but if you're using emc storage devices
+[00:52:51] that might be located in holliston are
+[00:52:53] you covered by mass data privacy laws it
+[00:52:55] can be interpreted to almost meet
+[00:52:57] everyone yeah and and of course it's not
+[00:53:02] limited to a telco or a service provider
+[00:53:04] is limited to anybody it's not limited
+[00:53:06] anybody that stores the data on a mass
+[00:53:09] record resident you know it's a lot like
+[00:53:14] the European privacy directive one can
+[00:53:17] pronounce all they want but if they
+[00:53:19] don't have jurisdiction over you at the
+[00:53:20] end of the day if you're not doing
+[00:53:22] business in that state if they don't
+[00:53:24] have enforcement over you then it's an
+[00:53:27] interesting pronouncement that in
+[00:53:29] practice will be compartmentalized and
+[00:53:31] routed around as opposed to implemented
+[00:53:33] I think that there's a lot of reaction
+[00:53:36] to it which is why it keeps getting
+[00:53:37] delayed time and again and revised time
+[00:53:40] and again the principles of it are
+[00:53:43] pretty good right I mean if we had
+[00:53:45] better security and encryption standards
+[00:53:49] and the like we'd all have more privacy
+[00:53:52] but I seriously doubt that Massachusetts
+[00:53:55] will be the rule at the end of the day
+[00:53:57] unlike California which really set the
+[00:54:00] standard for security breached notice
+[00:54:02] that now is in you know 44 states and
+[00:54:05] you know the basis of discussion for
+[00:54:09] federal
+[00:54:09] blonde yes you can say something about
+[00:54:14] how the user perceptions of privacy
+[00:54:17] might affect this in the future so for
+[00:54:19] example as more people elect to have
+[00:54:23] their location you know recognized by by
+[00:54:27] Google or Luke or any of these other
+[00:54:28] location where social systems those
+[00:54:32] their perceptions of rather their
+[00:54:34] expectations of privacy of course are
+[00:54:35] different as there is a personally
+[00:54:37] disclosing this stuff and I think about
+[00:54:38] something like you know Gmail that we're
+[00:54:42] somehow it's okay that that that Google
+[00:54:45] would sort of parse are our content any
+[00:54:48] as you say location is content to think
+[00:54:49] is very interesting that Google would
+[00:54:51] parse our content and then and in to
+[00:54:52] deliver us advertising well of course
+[00:54:54] that's a business model for things like
+[00:54:55] latitude and Luke eventually that sort
+[00:54:58] of Minority Report model of the world
+[00:55:01] that that back you know our location
+[00:55:03] will determine how we're being
+[00:55:04] advertised to so so at what point does
+[00:55:07] and I know that those are third parties
+[00:55:09] but at what point of those expectations
+[00:55:10] now interact with what your time you
+[00:55:15] know it's a great question and I have a
+[00:55:19] personal view and then an illegal view
+[00:55:21] as well in a case called us the war
+[00:55:25] Shack w AR s chak I think that is in the
+[00:55:30] Sixth Circuit Court of Appeals the
+[00:55:34] government argued that the Fourth
+[00:55:37] Amendment doesn't apply to users who've
+[00:55:40] agreed in the terms and conditions and
+[00:55:43] privacy policy of online sites to the
+[00:55:48] review access and use of their personal
+[00:55:52] information for advertising and other
+[00:55:55] purposes and so if there is no
+[00:55:59] reasonable expectation of privacy and
+[00:56:01] what everybody else is looking at and if
+[00:56:04] I give it to gmail or somebody else to
+[00:56:08] insert advertising then what the heck
+[00:56:11] how can you complain that it didn't say
+[00:56:14] that the Constitution protects me when
+[00:56:16] I'm letting a machine or some other
+[00:56:19] person look at it
+[00:56:21] the judge dismissed that notion in the
+[00:56:24] district court opinion and said this
+[00:56:27] doesn't apply to mechanical insertion of
+[00:56:29] ads review mechanically for spam and
+[00:56:33] viruses but you know intellectually it's
+[00:56:36] really hard to make that argument I
+[00:56:38] think so where the Fourth Amendment
+[00:56:43] might not apply and you may lose a
+[00:56:45] reasonable expectation of privacy
+[00:56:47] because you are the equivalent of a
+[00:56:50] digital skinflint and think everything
+[00:56:52] belongs on Facebook or anyone can look
+[00:56:55] at stuff to give you that free service
+[00:56:57] in return for serving ads to you that
+[00:57:00] doesn't mean as a matter of policy that
+[00:57:02] the law should have a lower standard and
+[00:57:04] the stored Communications Act and the
+[00:57:07] Electronic Communications Act are
+[00:57:09] intended to fill voids in the Fourth
+[00:57:12] Amendment and to produce a policy
+[00:57:15] decision on what standard the government
+[00:57:17] should follow to get access so even
+[00:57:20] though I'm willing to let you look at it
+[00:57:22] or I have like you know my son 800
+[00:57:25] friends on Facebook that doesn't mean
+[00:57:30] I'm willing to let the government look
+[00:57:31] at it or I should be able to let them
+[00:57:32] have access to it on a mere subpoena
+[00:57:36] without judicial oversight should it be
+[00:57:38] probable cause is the question and
+[00:57:41] that's the question I think it will
+[00:57:43] consume Congress in the coming session
+[00:57:46] for all of these sorts of network social
+[00:57:49] networks is everything moves wireless
+[00:57:53] we've added mobility as an attribute
+[00:57:58] that is much more revealing even than
+[00:58:01] the content itself and we have yet to
+[00:58:04] address from a legal standpoint I think
+[00:58:07] holistically which standard should apply
+[00:58:09] to that and I go back to what I said at
+[00:58:12] the outset I think there are really
+[00:58:14] three categories here the historical
+[00:58:18] although even that is subject to privacy
+[00:58:21] in intrusiveness and concerns the real
+[00:58:25] time where am i right now and then the
+[00:58:29] prospective
+[00:58:30] which is you know where am I going over
+[00:58:32] a period of time and it may turn out
+[00:58:36] that there are three different standards
+[00:58:37] that are appropriate for those
+[00:58:40] circumstances but as I said you know the
+[00:58:43] government is very good at heuristics
+[00:58:45] they look at the historical record and
+[00:58:47] determine where you're going from that
+[00:58:49] next time who else is good at heuristics
+[00:58:51] insurance companies if I know the route
+[00:58:55] you take every day going to work in your
+[00:58:57] car maybe I give you a cheaper rate do
+[00:59:01] we want redlining based on your location
+[00:59:03] profile do we want the insurance company
+[00:59:06] to require you to disclose your location
+[00:59:08] in order to make determinations on what
+[00:59:11] rate is appropriate to you but we
+[00:59:14] haven't we have a whole raft of these
+[00:59:16] issues ahead of us that we've only just
+[00:59:19] now started to really think through and
+[00:59:22] i'm not sure where we're going to end up
+[00:59:25] with that one i just want to get the
+[00:59:30] simplest pieces of this and clear in my
+[00:59:31] mind so a pen register is a record of
+[00:59:35] the numbers i dialed in real time you're
+[00:59:38] not linger signaling in real time okay
+[00:59:40] and so that's easy to get if somebody
+[00:59:43] just asked we want the pen register but
+[00:59:45] this guy dialed yes it turns out meet
+[00:59:47] here and then in terms of locating if
+[00:59:49] somebody wants to know exactly where
+[00:59:50] this is do they triangulate it from
+[00:59:53] three cell towers or is it a GPS how do
+[00:59:55] they know i'm a 23 average street okay
+[00:59:58] there are multiple ways and it depends
+[01:00:00] on the carrier some carriers have built
+[01:00:03] tools to ping a phone based solely on
+[01:00:07] triangulation within their network
+[01:00:08] because this is a radio it's just
+[01:00:11] sending out a signal and it's
+[01:00:12] registering on every tower the tower
+[01:00:14] picks the strongest signal to carry the
+[01:00:17] call but all the towers still know where
+[01:00:19] you are so I simply analyzing the time
+[01:00:21] of delivery of the signal I can
+[01:00:23] triangulate your precise performance
+[01:00:25] okay some carriers have built that in
+[01:00:27] others have not and can only tell law
+[01:00:30] enforcement where the tower is in which
+[01:00:33] face of the tower it's on so I can look
+[01:00:35] at a quarter of a circle and know you're
+[01:00:38] in that direction GPS is very different
+[01:00:41] and as long as I have a clear signal
+[01:00:44] I can triangulate because GPS is based
+[01:00:47] on the same concept three satellites
+[01:00:51] visible at any time measuring the time
+[01:00:53] of delivery of the signal between the
+[01:00:55] three so there also is a hybrid called
+[01:00:59] network assisted GPS where I take both
+[01:01:02] the GPS signal and the network signal
+[01:01:04] and National up to come out with so
+[01:01:06] that's how they determine it so they're
+[01:01:08] two different they're two different ways
+[01:01:09] to do triangulation satellite
+[01:01:11] triangulation and cell tower
+[01:01:13] triangulation and and this has to have a
+[01:01:15] GPS GPS enabled before they can do the
+[01:01:19] former correct I'm a big fan of the wire
+[01:01:28] and I know that some may be some other
+[01:01:29] people in this room you know I don't
+[01:01:33] follow the advice of the drug dealers in
+[01:01:35] that show but I'm intrigued by if I did
+[01:01:38] by the use of what we would I guess call
+[01:01:41] operational security by these very
+[01:01:43] intelligent drug dealers and one of the
+[01:01:45] techniques characters in this show use
+[01:01:48] is what they want they call burners
+[01:01:49] which are prepaid cell phones that they
+[01:01:52] don't actually have a refill they buy a
+[01:01:54] 30-dollar phone at 7-eleven use it for a
+[01:01:57] couple days and then throw it away and
+[01:01:59] I'm wondering if you can speak just for
+[01:02:01] a couple minutes on on how this shift to
+[01:02:06] essentially disposable phones purchased
+[01:02:08] in cash has changed what normally would
+[01:02:12] be the status quo maybe made life easier
+[01:02:15] or maybe made life more difficult and
+[01:02:16] and particularly I guess one thing I
+[01:02:18] want to focus in on is the fact that you
+[01:02:20] know no matter if you change your phone
+[01:02:22] every week if you're still calling your
+[01:02:24] mom on her fixed line phone you're
+[01:02:27] linkable funny I can just tell that's
+[01:02:29] the community of interest so long as
+[01:02:31] they know you're calling your mom and
+[01:02:33] are able to get a wiretap up quickly
+[01:02:35] remember in you may not know this but
+[01:02:38] the wiretap law has something called a
+[01:02:40] roving wiretap which allows the
+[01:02:43] government to dispense with the ordinary
+[01:02:45] procedures when they know the individual
+[01:02:48] is trying to evade surveillance so it
+[01:02:51] used to be set up for purposes of phone
+[01:02:53] booths where you could rapidly go and
+[01:02:56] get an order on a new phone booth in the
+[01:02:58] in the carrier would have to put it up
+[01:02:59] now it's being used for disposable cell
+[01:03:01] phones because you know obviously they
+[01:03:03] walk in buy a new one and then you need
+[01:03:05] the number the UK has just prosecute or
+[01:03:10] intended to prosecute I as I understand
+[01:03:12] it somebody who failed to register their
+[01:03:14] prepaid cell phone so in the UK they
+[01:03:16] have a requirement that if you buy
+[01:03:18] prepaid you still have to register that
+[01:03:20] phone so they know who you are a you
+[01:03:24] know there are probably a million Mickey
+[01:03:26] Mouse's in UK right now using that
+[01:03:29] registration service not too hard to
+[01:03:32] have a fake ID to do that besides but
+[01:03:34] anyway it's law enforcement attempt to
+[01:03:37] solve a problem which is a very serious
+[01:03:39] problem for them but prepaid does not
+[01:03:43] mean non wire temple they're still as a
+[01:03:48] vendor that vendor still is a platform
+[01:03:50] that platform still records the dialing
+[01:03:52] and signaling in order to complete the
+[01:03:55] call so if I have the information
+[01:03:57] someplace I can get that information a
+[01:04:00] wireless phone still must register on a
+[01:04:03] network that network still must be paid
+[01:04:05] for that call and so there is a means to
+[01:04:08] debit that prepaid account so the only
+[01:04:11] issue is whether its rapid enough to
+[01:04:14] capture it in real time and get the
+[01:04:16] carrier's assistance to do it and
+[01:04:18] actually prepaid has not been as big a
+[01:04:22] problem as wired and 24 and some of
+[01:04:25] those other shows what would lead you to
+[01:04:27] believe which is good because we want
+[01:04:29] the criminals to think that they're more
+[01:04:31] secure it's the good guys we don't want
+[01:04:34] to my questions going to go and it's
+[01:04:38] going to take you out of your comfort
+[01:04:39] zone because my work is mostly with
+[01:04:40] human rights activists and repressive
+[01:04:42] nations so it's routine for me to go
+[01:04:45] into a meeting with someone in Cairo and
+[01:04:47] we will all then disassembled our cell
+[01:04:49] phones and depending on your level of
+[01:04:51] paranoia that can be the sim card in the
+[01:04:52] battery or I've seen people go even
+[01:04:54] further than that my question is
+[01:04:56] basically this when we had the debate in
+[01:04:59] the US over clipper all these years ago
+[01:05:01] one of the more compelling arguments I
+[01:05:03] thought came from Patrick ball some
+[01:05:05] major human rights and technology
+[01:05:06] advocate who said I don't care how much
+[01:05:09] we trust the US government I don't care
+[01:05:10] how many safeguards we have them
+[01:05:11] place we're going to build these
+[01:05:14] backdoors into telecoms equipment that
+[01:05:15] equipment is going to get exported
+[01:05:16] around the world and it's going to go to
+[01:05:18] governments where we know those
+[01:05:19] safeguards aren't in place and so even
+[01:05:21] if we have a really terrific functional
+[01:05:23] key escrow system your bring it into the
+[01:05:25] Bob way and that's just not going to
+[01:05:26] happen it's simply the back door that
+[01:05:28] lets the same is that getting discussed
+[01:05:31] at all at the standards level associated
+[01:05:33] with this when we're building these
+[01:05:35] standards we have a tendency to export
+[01:05:38] them whether we wish to or not work
+[01:05:40] sporting them into extremely different
+[01:05:42] legal environments what are the
+[01:05:44] implications of that is that being
+[01:05:45] discussed at all of the standard setting
+[01:05:47] yeah i mean the standards are developed
+[01:05:51] by manufacturers who distribute their
+[01:05:53] equipment to multiple markets and the
+[01:05:56] standards comply with whatever the local
+[01:05:58] law demands are they try not to build
+[01:06:02] for 270 countries they would prefer to
+[01:06:05] build for one country one nation one low
+[01:06:08] but inevitably there are additional
+[01:06:11] requirements that are baked in for
+[01:06:13] depending on you know whether you're
+[01:06:15] selling into China or whether you're
+[01:06:16] selling into someplace else but but you
+[01:06:19] know also don't forget repressive
+[01:06:21] regimes control the access points and so
+[01:06:23] I don't really need the manufacturer to
+[01:06:25] do anything if everything going in and
+[01:06:28] out of a country flows through the pipe
+[01:06:29] that I own and you know of course that's
+[01:06:32] how we deal with places that's how you
+[01:06:35] know China and other places deal with
+[01:06:36] with those problems as well so you know
+[01:06:41] I think you could have standards all you
+[01:06:43] want on it the access ports are the big
+[01:06:46] issue and that's not really true I mean
+[01:06:48] it's particularly untrue in the China
+[01:06:50] case right i mean if you actually were
+[01:06:53] to monitor all internet traffic coming
+[01:06:55] in and out of china there's simply no
+[01:06:56] equipment that's capable of doing it at
+[01:06:58] that point the Great Firewall based on
+[01:07:00] the research we've been doing for five
+[01:07:02] years here is now mostly at a provider
+[01:07:06] level which is to say either at the isp
+[01:07:08] level or even more than that at the
+[01:07:09] publishing platform level so the actual
+[01:07:12] technology has enormous implications and
+[01:07:15] what that is P for instance is capable
+[01:07:18] of doing has enormous implications yes I
+[01:07:20] don't agree with you there i think the
+[01:07:23] and you're you're right that the path of
+[01:07:25] least resistance is often followed by
+[01:07:28] the service provider wishing to enter
+[01:07:30] that market and in order to give
+[01:07:32] permission to enter they will sometimes
+[01:07:35] a block IP addresses have takedown
+[01:07:38] requirement but look that's the criminal
+[01:07:40] law of that country if I can't say
+[01:07:43] anything bad about the head of India's
+[01:07:47] government of the head of turkeys
+[01:07:48] government and if i do say something bad
+[01:07:51] i'm going to go to jail and if i host
+[01:07:53] that i want to go to jail well service
+[01:07:55] providers aren't going to host the
+[01:07:56] illegal thing even if it's Nazi
+[01:07:58] memorabilia right so you end up with
+[01:08:01] compromises made by service providers
+[01:08:03] but the ultimate firewall is the access
+[01:08:06] port at the end of the day because I
+[01:08:08] could simply turn it off and everything
+[01:08:11] in between is a compromise which lets
+[01:08:13] something in or something out and it's
+[01:08:15] really not the standards that are
+[01:08:16] getting there I will say this however
+[01:08:18] and and I think inevitably the internet
+[01:08:22] from a technological point of view is
+[01:08:25] breaking down based on volume and and
+[01:08:29] the quality control means of solving
+[01:08:33] that problem our manufacturers building
+[01:08:35] in quality of service capabilities to
+[01:08:38] their equipment which has the effect of
+[01:08:40] doing what you know regulating traffic
+[01:08:43] ports applications just follow the
+[01:08:48] comcast issue with regulating
+[01:08:51] peer-to-peer communications and you'll
+[01:08:54] see so even though those standards are
+[01:08:58] not intended for surveillance they have
+[01:09:00] the practical application of being able
+[01:09:03] to identify and isolate on a protocol
+[01:09:05] level certain communications and so by
+[01:09:09] default I'm creating a system for the
+[01:09:12] internet which is going to make
+[01:09:13] surveillance and/or firewalling a lot
+[01:09:17] easier yes local government
+[01:09:38] the discussions are happening quietly
+[01:09:41] but I don't see the town might be
+[01:09:59] implemented or misuse mm-hmm so the
+[01:10:03] criminal let me do it reverse order the
+[01:10:05] criminal law is the criminal law whether
+[01:10:07] a agent improperly wiretaps or a
+[01:10:13] civilian improperly wiretaps all of you
+[01:10:16] may have enjoyed the private
+[01:10:18] investigator to the Stars pellicano
+[01:10:20] going to jail for illegally wiretapping
+[01:10:23] he had an accomplice in a inside of
+[01:10:27] companies that helped him illegally
+[01:10:29] wiretap likewise going to jail the same
+[01:10:33] applies to law enforcement agents there
+[01:10:37] was a sheriff recently that was
+[01:10:41] sentenced to two years in prison for
+[01:10:42] illegally wiretapping we've had DEA
+[01:10:45] agents two in particular in New York
+[01:10:48] sent to federal prison for illegally
+[01:10:51] using subpoenas to get call records I'll
+[01:10:56] say this absolutely about while the
+[01:10:59] government investigators are zealots and
+[01:11:01] want to solve their case they are very
+[01:11:03] sensitive to following the law I've
+[01:11:05] regularly had them say to me I don't
+[01:11:08] want that because I'm not authorized to
+[01:11:11] get it and not all carriers or ISPs are
+[01:11:14] particularly educated about what they
+[01:11:16] can and can't do there are 3500 cell
+[01:11:20] phone companies nope you don't realize
+[01:11:22] that but they're a there's tons of them
+[01:11:23] there are the equivalent number of ISPs
+[01:11:26] in this country they don't have a
+[01:11:28] skilled staff and dealing with us or for
+[01:11:31] legal review the inspector general's
+[01:11:33] report for national Security's letters
+[01:11:35] revealed that some ISPs were giving
+[01:11:38] content out on administrative subpoena
+[01:11:41] they were giving email out
+[01:11:42] and all they were asking for were the
+[01:11:45] subscribers name it address so you know
+[01:11:48] over collection can occur but but
+[01:11:51] generally speaking investigators are
+[01:11:54] very good at following the law and I
+[01:11:57] don't think we have a lot of effort on
+[01:12:00] their part to go around it now you can
+[01:12:02] argue that different for the war in the
+[01:12:04] surveillance program and all of that
+[01:12:05] issue we could have a whole second
+[01:12:09] debate about that one here but i think
+[01:12:11] you know generally speaking the
+[01:12:14] enforcement and following the law pretty
+[01:12:17] good and and approving wiretaps by the
+[01:12:20] way you know we only do about under
+[01:12:22] 2,000 authorized wiretaps a year in this
+[01:12:25] country compare that to italy i have a
+[01:12:28] friend there who once laughed at his
+[01:12:31] third divorce occurred because somebody
+[01:12:33] wire tapped him as the chief of police
+[01:12:35] in rome his wife found out about it 360
+[01:12:39] thousand a year so compare us to Italy
+[01:12:42] to Germany hundreds of thousands i mean
+[01:12:44] the u.s. is actually punctilious about
+[01:12:46] approving wiretaps and i commend the
+[01:12:49] department of justice for the process
+[01:12:51] they follow their on a global basis
+[01:12:54] however all of the discussion is about
+[01:12:57] something different than wiretapping
+[01:12:59] because state security is carved out of
+[01:13:02] international treaties we don't turn our
+[01:13:05] investigative needs over to global
+[01:13:09] institutions we do however work with
+[01:13:12] countries on cross-border evidence
+[01:13:14] gathering and have and this is where a
+[01:13:17] very interesting debate is occurring
+[01:13:19] globally right now we have the
+[01:13:23] convention on cybercrime which requires
+[01:13:27] those signatory countries to cooperate
+[01:13:30] to deal with cross-border evidence
+[01:13:33] gathering in computers and databases
+[01:13:37] stored in the US now if i provide gmail
+[01:13:43] services or a social networking platform
+[01:13:47] that's accessible by users in greece
+[01:13:50] this is a little bit to your
+[01:13:51] massachusetts example and i have 20
+[01:13:54] million users
+[01:13:55] Greece and the Greek government says you
+[01:13:58] know there are or better still the
+[01:14:01] Brazilian government where this is is
+[01:14:03] absolutely true most of your users are
+[01:14:06] pedophiles and skinheads so we want that
+[01:14:11] information and all of their email that
+[01:14:13] goes with it but my database is in the
+[01:14:17] US and under the stored Communications
+[01:14:20] at I can't disclose content to foreign
+[01:14:23] law enforcement I can give it to my
+[01:14:25] government if they come to me but now
+[01:14:27] being a skinhead in Brazil is not a
+[01:14:30] crime in the US so I don't have a
+[01:14:33] predicate in order to disclose that
+[01:14:35] information in emergency cases like the
+[01:14:38] Mumbai bombing our government works with
+[01:14:41] their government to get emergency
+[01:14:42] disclosure of content and call
+[01:14:46] identifying and communications
+[01:14:47] identifying information they work
+[01:14:49] collaboratively in emergencies like that
+[01:14:51] to address those issues but for the
+[01:14:53] routine criminal activity in a foreign
+[01:14:56] country we don't have a very good
+[01:14:57] mechanism and so what do they do they
+[01:14:59] arrest the executives in the country you
+[01:15:03] know they beat on them to attempt to get
+[01:15:05] the company to disclose it and the
+[01:15:08] companies are always walking a very fine
+[01:15:10] line on how to do that we have mutual
+[01:15:13] legal assistance treaties which we refer
+[01:15:16] them to and we get assistance from the
+[01:15:18] Department of Justice to work with the
+[01:15:19] local law enforcement to do it but you
+[01:15:22] know the best thing in the world for the
+[01:15:24] future political career of a district
+[01:15:26] attorney in a area and Brazil is to do
+[01:15:28] what prosecutable you know take take up
+[01:15:32] the cudgels of the rights of the people
+[01:15:34] and you know this is around the world
+[01:15:37] and it's every service provider there's
+[01:15:39] a globally accessible business and
+[01:15:42] that's a big issue on the horizon we
+[01:15:44] don't have a good answer to right now my
+[01:15:49] boss
+[01:15:50] from good choice who transgressed night
+[01:15:54] I haven't thought in such strong terms
+[01:15:58] of the difference before today asking
+[01:16:01] for the record of an individual versus
+[01:16:03] asking for the record of all the
+[01:16:05] individuals in a given area there was a
+[01:16:08] recent exam like either the food riots
+[01:16:12] of Egypt where it was the disclosure
+[01:16:15] recently the Vodafone had turned over
+[01:16:17] the information on mon who was present
+[01:16:18] there well what are the legal standards
+[01:16:21] for asking for information on people who
+[01:16:25] were attending event versus getting
+[01:16:29] getting information on an individual are
+[01:16:31] they are they pretty well defined were
+[01:16:33] they up in the air grab because this
+[01:16:35] seems to be an area very very vulnerable
+[01:16:39] to abuse I had a police chief in a small
+[01:16:42] community in Michigan say that there was
+[01:16:45] a protest that they expect was going to
+[01:16:47] be violent and he wanted the location on
+[01:16:49] all of the phones so that they could
+[01:16:51] prepare to defend against the inevitable
+[01:16:54] riot the civil rights march you know
+[01:16:59] obviously the abuse is enormous what's
+[01:17:03] the standard your guess is as good as
+[01:17:05] mine because it's not clear let me give
+[01:17:07] you a couple of some very specific
+[01:17:09] examples the law separates remote
+[01:17:16] computing services into what there's a
+[01:17:20] category called the remote computing
+[01:17:22] service and so if I store my documents
+[01:17:26] online put my photos online then the
+[01:17:30] government can get access to that under
+[01:17:32] certain conditions now they're actually
+[01:17:35] very low standards to do that but they
+[01:17:37] can get access to that for me as a
+[01:17:40] subscriber to that service but what is
+[01:17:46] YouTube is it a remote computing service
+[01:17:50] and a visa be the person that posted it
+[01:17:51] certainly what about visa be the person
+[01:17:53] that watched it if I get a request for
+[01:17:57] every person that viewed a particular
+[01:18:00] video that happened to be in Arabic that
+[01:18:03] happen to have an al-qaeda symbol in the
+[01:18:04] background which many do which senator
+[01:18:07] leave them ER and took umbrage at uh
+[01:18:10] what's the standard to get that all
+[01:18:13] persons registered on a cell site what's
+[01:18:15] the standard to get that all persons
+[01:18:18] that viewed a particular website the
+[01:18:21] content of it when somebody asked when
+[01:18:23] law enforcement asked in a in a case and
+[01:18:26] Wisconsin for all of the people who
+[01:18:28] bought a particular book amazon.com
+[01:18:33] moved to quash that and our First
+[01:18:35] Amendment grounds the district court
+[01:18:37] agreed that that would reveal too much
+[01:18:39] in order for them to go fish essentially
+[01:18:43] in order to develop witnesses for their
+[01:18:45] defrauding scheme that they were looking
+[01:18:47] for right of that particular book the
+[01:18:50] standards are absolutely unclear and we
+[01:18:53] as a people now rely on service
+[01:18:56] providers to make those objections in
+[01:19:00] the first instance because it's not even
+[01:19:02] clear you would have standing to object
+[01:19:04] to that request in many states the
+[01:19:08] individual record holder doesn't have
+[01:19:12] standing to object to a third-party
+[01:19:15] subpoena New Jersey for example so who
+[01:19:21] can object while the carrier objects on
+[01:19:23] what grounds it's burdensome and that's
+[01:19:26] really basically where we are today if
+[01:19:28] not for the service providers and that
+[01:19:32] information would go and I have to say
+[01:19:35] that most service providers are very
+[01:19:40] concerned because their business rests
+[01:19:44] on your comfort level with their
+[01:19:47] protection of your privacy you won't use
+[01:19:49] it if you're not say and so most of them
+[01:19:51] stand up like Google did to the
+[01:19:55] Department of Justice subpoena for
+[01:19:56] search and I think that's a great thing
+[01:19:59] but not it's not uniform and it's not a
+[01:20:02] uniform reaction in the standards just
+[01:20:05] are not clear they should be
+[01:20:13] keep up with a hammer whatever no
+[01:20:17] absolutely come on that note let's thank
+[01:20:20] our speaker thank you my email
+[01:20:35] you

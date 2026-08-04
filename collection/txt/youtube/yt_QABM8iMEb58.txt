@@ -1,0 +1,1586 @@
+[00:00:10] uh it's my huge huge pleasure to
+[00:00:12] introduce um uh Julie Cohen to you I
+[00:00:14] suspect everybody knows Julie's work
+[00:00:16] here but just a few um brief notes she
+[00:00:18] is a professor at the um Georgetown
+[00:00:20] school of law but is um visiting here at
+[00:00:22] Harvard Law School for the entire year
+[00:00:24] which is fabulous for us and for our
+[00:00:26] students she's teaching variants of the
+[00:00:28] classes that she teaches here ranging
+[00:00:31] from um copyright to um uh property in
+[00:00:35] the first year and advanced um theory of
+[00:00:38] intellectual property and so forth which
+[00:00:40] has been uh fabulous the great news also
+[00:00:42] for us is that she's in the middle or
+[00:00:44] the near the end I suppose of a book
+[00:00:45] project um uh I know um Julie's work
+[00:00:49] primarily by reading um all the articles
+[00:00:51] that she comes out with in law reviews
+[00:00:53] and so forth which are um important um
+[00:00:57] uh elements of our field in Cyber Law um
+[00:00:59] if you to read um any one of those um my
+[00:01:03] favorite uh is actually in some ways
+[00:01:05] maybe the most recent the one on privacy
+[00:01:06] and transparency um uh in the Chicago
+[00:01:09] Law review um which uh I would commend
+[00:01:12] to all of you if you're in the business
+[00:01:14] of reading uh law review articles um and
+[00:01:17] I know there's some of those themes that
+[00:01:18] are carried through into the book I
+[00:01:20] would imagine that Julie is going to um
+[00:01:22] talk about here um on configuring the
+[00:01:24] network self and um with that I will
+[00:01:26] turn it over to Julie for the next 15 or
+[00:01:28] 20 minutes okay thank you so much John
+[00:01:31] and thanks to the birkman Center for
+[00:01:34] inviting me to do this and to all of you
+[00:01:36] for showing up uh
+[00:01:39] and the
+[00:01:42] um the little blurb on the web made
+[00:01:45] reference
+[00:01:47] to uh structural conditions of human
+[00:01:50] flourishing which is something that
+[00:01:53] comes at the very end of this book that
+[00:01:55] I've been writing and so what I thought
+[00:01:57] I would do is um spend actually more
+[00:02:01] time giving you background than talking
+[00:02:04] about chapter nine but I'll I'll get
+[00:02:06] there
+[00:02:07] um uh so um so I'm going to kind of set
+[00:02:11] the table for that and if you're
+[00:02:12] wondering why I'm not getting to it I
+[00:02:14] will get to it eventually but so um so
+[00:02:17] the book uh configuring the network self
+[00:02:21] is um motivated by uh and way back when
+[00:02:26] when I started working on it by two
+[00:02:28] things that really struck me about the
+[00:02:31] discourse around information law and
+[00:02:34] policy um and when I say the discourse
+[00:02:37] I'm referring to the US law and policy
+[00:02:40] discourse um there are differences um
+[00:02:44] between that discourse and for example
+[00:02:46] the European discourse in certain
+[00:02:48] respects so I'm not making a claim to be
+[00:02:50] talking about that um but within the US
+[00:02:53] uh legal and policy space the um the two
+[00:02:57] things that struck me as odd were number
+[00:02:59] number one that we make a lot of grandio
+[00:03:02] pronouncements about designing um laws
+[00:03:06] and infrastructures that facilitate Free
+[00:03:08] Speech or facilitate Market choice so
+[00:03:10] there's a lot of freedom being floated
+[00:03:11] around um freedom in expressive Freedom
+[00:03:14] Market freedom and yet quite often at
+[00:03:17] the end of the day there's a set of
+[00:03:18] results that seems um in many ways
+[00:03:21] antithetical to the interests of the
+[00:03:22] individuals and communities that have to
+[00:03:24] exist and go about their business within
+[00:03:26] this space to the extent that they're
+[00:03:28] told a whole bunch of things they can't
+[00:03:30] do with content owned by other people
+[00:03:32] there are relatively few barriers to um
+[00:03:35] collection and aggregation of
+[00:03:36] information about people and observation
+[00:03:39] of what they do um the world of
+[00:03:43] artifacts within which we move is
+[00:03:45] increasingly seamless and opaque it's
+[00:03:46] sort of a homework of good design that
+[00:03:48] you know everything has to look like an
+[00:03:50] iPhone but it's really hard to figure
+[00:03:51] out how it works uh and what it's doing
+[00:03:54] um so there's a disconnect between the
+[00:03:56] the discourse about all these freedoms
+[00:03:58] and the way it actually seems to work um
+[00:04:00] and then the second disconnect is um is
+[00:04:03] you know should be easy enough for
+[00:04:04] people listening to recognize it's the
+[00:04:07] disconnect between the um the copyright
+[00:04:11] centered debate about cultural
+[00:04:12] environmentalism and enclosure and free
+[00:04:14] culture on the one hand and the Privacy
+[00:04:16] debate about the other on the other hand
+[00:04:19] um the the um there's a the free culture
+[00:04:24] debate is all about openness and often
+[00:04:27] seems to me to be about openness to such
+[00:04:29] a great EX ENT that um it's impossible
+[00:04:32] um or at least very difficult um to to
+[00:04:35] contemplate how privacy claims might be
+[00:04:38] um reconciled within that discourse
+[00:04:40] about open open open and and to to
+[00:04:42] contemplate um how that might work
+[00:04:44] architecturally and thus for Advocates
+[00:04:47] free culture Advocates and privacy
+[00:04:48] Advocates to make common cause with one
+[00:04:50] another because um of the the um ways in
+[00:04:54] which openness becomes fraught um and so
+[00:04:57] is puzzling about these disconnects that
+[00:05:00] I experienced
+[00:05:02] um and what I ended up deciding um and
+[00:05:07] and so I'll I'll state for you now um
+[00:05:11] the major substantive thesis of the book
+[00:05:13] and also a major um methodological
+[00:05:16] thesis of the book they're related is
+[00:05:18] that
+[00:05:19] um we make these laws and policies and
+[00:05:24] we have these debates about Freedom
+[00:05:26] within a frame of reference that at
+[00:05:28] least within the US law and policy
+[00:05:29] discourse derives from liberal political
+[00:05:31] Theory to a very large extent and so
+[00:05:34] there are um terms that get tossed
+[00:05:37] around like autonomy and freedom um and
+[00:05:40] there are presumptions that get tossed
+[00:05:42] around like um uh rational choice and um
+[00:05:47] disembodied um uh uh uh individuals who
+[00:05:52] can play in the realm of the virtual um
+[00:05:55] and uh and who can exercise autonomous
+[00:05:59] choice CH in markets that are
+[00:06:01] increasingly virtual
+[00:06:04] and that's not
+[00:06:07] really uh a a worldview that has much
+[00:06:12] relation to reality in my opinion um uh
+[00:06:16] and uh what we ought to be focusing on
+[00:06:19] if we want to understand um for example
+[00:06:23] why a free culture agenda might be
+[00:06:24] important or why privacy might be
+[00:06:26] important and how you might reconcile A
+[00:06:28] Wish For Greater openness inent culture
+[00:06:30] and a wish for more effective protection
+[00:06:32] of privacy would be to focus um on the
+[00:06:36] exper what I call the experience
+[00:06:37] geography of the networked Information
+[00:06:39] Society on the conditions that govern
+[00:06:41] information flows to and from and about
+[00:06:43] people on the fact that those people are
+[00:06:45] real and embodied and localized in
+[00:06:48] cultures and contexts and are
+[00:06:50] experiencing the network um indirectly
+[00:06:52] as it's mediated by devices and
+[00:06:55] platforms and interfaces um and have to
+[00:06:58] learn how to make it work somehow um the
+[00:07:03] what I'm describing as the the framework
+[00:07:05] um sort of ported in from Liberal Theory
+[00:07:07] doesn't tend to give us good tools to
+[00:07:09] ask those questions because um if you
+[00:07:12] for example start from the presumption
+[00:07:14] that the self is autonomous and separate
+[00:07:17] from culture um then it's going to be
+[00:07:20] very difficult to ask how selves are
+[00:07:22] constituted by culture and how the rules
+[00:07:24] that we make about access to culture
+[00:07:26] result in different different um uh uh
+[00:07:29] consequences and that that we need to
+[00:07:31] evaluate um if you treat the self as
+[00:07:33] autonomous and separate from culture
+[00:07:36] it's going to be different difficult to
+[00:07:37] say things about how regimes of privacy
+[00:07:40] or more privacy or less privacy um uh
+[00:07:43] result in meaningful um uh significant
+[00:07:47] consequences for um uh the way that we
+[00:07:50] experience uh our culture and the way
+[00:07:52] that our political discourse Works uh
+[00:07:55] and so it turned out when I read some
+[00:07:58] more that actually there are lots of
+[00:08:00] folks that do ask these questions they
+[00:08:01] just don't primarily seem to be
+[00:08:03] operating in law um they're you know
+[00:08:08] people who work in cultural studies
+[00:08:09] people who work in information studies
+[00:08:11] and Science and Technology studies um
+[00:08:13] and if I haven't mentioned your field
+[00:08:15] but insert here lots of people in the
+[00:08:18] room are are in these other areas there
+[00:08:20] there are whole literatures about this
+[00:08:22] um you know that often often sort of
+[00:08:25] encapsulated by legal Scholars under the
+[00:08:28] umbrella term post modernist which has
+[00:08:30] then kind of used in a very pejorative
+[00:08:32] way um which I think is unfortunate and
+[00:08:34] so one um sort of overall purpose of the
+[00:08:37] book project is to unpack that set of
+[00:08:41] literatures and and and uh um ask okay
+[00:08:45] well if we pay attention to actually how
+[00:08:48] the Information Society works on the
+[00:08:50] level of um situ what I call situated
+[00:08:52] embodied users of networks and network
+[00:08:55] and information and how um and how uh
+[00:08:58] those situ embodied users experience uh
+[00:09:01] information Technologies we may be able
+[00:09:04] to learn some things that then could
+[00:09:06] inform our thinking about information
+[00:09:07] law and
+[00:09:09] policy
+[00:09:10] um the and and so the book seeks to do
+[00:09:15] that um and seeks to do it within an
+[00:09:18] overall um normative framework
+[00:09:21] informed substantially but not
+[00:09:23] completely by the um the uh mares Martha
+[00:09:27] nbam um Theory of uh capabilities for
+[00:09:30] human flourishing um so I State just as
+[00:09:34] a as a this is my you know my normative
+[00:09:36] prior that we ought to be uh seeking to
+[00:09:39] pursue a regime of information law
+[00:09:41] policy that will promote human
+[00:09:42] flourishing that will furnish people
+[00:09:43] with the capabilities to flourish
+[00:09:45] flourish meaningfully and there's great
+[00:09:47] work that's been done by a whole bunch
+[00:09:48] of folks on access to knowledge and
+[00:09:50] network neutrality um for example that
+[00:09:53] talks about um uh talks about uh for
+[00:09:56] example um that one needs meaningful
+[00:09:58] access to culture in order to be able to
+[00:10:01] participate in politics in culture as
+[00:10:04] culture um in life uh and therefore um
+[00:10:08] uh and therefore a set of intellectual
+[00:10:10] property rules should um should take
+[00:10:12] those considerations into account um
+[00:10:15] where I part company though with that
+[00:10:17] framework um is um is the extent to
+[00:10:20] which that framework also tries to
+[00:10:22] situate itself within the liberal
+[00:10:23] tradition and and it's I have a theory
+[00:10:25] about why they do that which I won't
+[00:10:27] bore you with now um but it tends to
+[00:10:29] result in a fair amount of indeterminacy
+[00:10:31] and so a critique that's often leveled
+[00:10:33] about at the capabilities theory is that
+[00:10:35] you could just make anything into a into
+[00:10:36] a required capability for flourishing um
+[00:10:40] uh because uh you could to the extent
+[00:10:42] that you could argue that it becomes
+[00:10:43] affirmatively necessary for people to
+[00:10:45] have it in order to flourish um how do
+[00:10:48] we make that framework more concrete how
+[00:10:51] do we lend it content um I argue you
+[00:10:53] lend it content by actually looking at
+[00:10:55] these postmodern literatures that tell
+[00:10:58] us um important things about the
+[00:11:01] mutually constituting relationships
+[00:11:03] between self and culture between self
+[00:11:05] and Community between uh technology and
+[00:11:07] culture uh and Community um and uh and
+[00:11:11] then you lend the theory of capabilities
+[00:11:13] for human flourishing content by being
+[00:11:15] able to say things about how those
+[00:11:17] processes work um and in consequence
+[00:11:20] what kinds of guarantees or spaces the
+[00:11:25] laws should attempt to
+[00:11:27] provide um
+[00:11:32] the there are some Concepts that we
+[00:11:35] might come back to in the Q&A but I
+[00:11:37] don't want to just talk and talk and
+[00:11:39] talk um what emerge as three critical
+[00:11:42] reference points for that inquiry um are
+[00:11:45] uh first of all um what I've already
+[00:11:49] I've already referred to the notion that
+[00:11:50] selves are mutually are constituted by
+[00:11:53] culture um but more narrowly uh the
+[00:11:57] first critical reference point for this
+[00:11:58] inquiry is um what I refer to as the
+[00:12:00] mutually constituting relationship
+[00:12:02] between information Technologies and
+[00:12:04] embodied perception um you all
+[00:12:06] experience whether or not you stop to
+[00:12:08] think about it the tools that you have
+[00:12:11] as reconfiguring your access to the
+[00:12:13] world um and it's not just virtual um
+[00:12:15] it's it's a relationship between you
+[00:12:18] your situated self and the geography of
+[00:12:21] the world that is changing and changing
+[00:12:23] again and being remediated um uh in part
+[00:12:26] by the characteristics of this device or
+[00:12:29] interface or platform that is between
+[00:12:31] you and everything else um and uh and
+[00:12:34] there's a whole bunch of good thinking
+[00:12:36] about how to theorize that how to
+[00:12:39] understand it how to describe it um and
+[00:12:40] how to interrogate it the second
+[00:12:43] critical reference point is the concept
+[00:12:44] of everyday practice um which is um sort
+[00:12:49] of an anti- Paradigm uh that's useful
+[00:12:52] for describing what people do um so if
+[00:12:54] you read the legal literature you often
+[00:12:57] find um a dominant Paradigm that says
+[00:13:00] for example we should evaluate um the
+[00:13:03] consequences of a particular legal or
+[00:13:05] architectural regime by reference to its
+[00:13:07] effect on political discourse and speech
+[00:13:09] or by reference to its effect on freedom
+[00:13:11] of speech or by reference to its effect
+[00:13:13] on whether people can make free and
+[00:13:14] informed choices in markets and those
+[00:13:17] frames tend to um tend to yield pretty
+[00:13:21] reductive models of human behavior so at
+[00:13:24] the end of the day you're kind of
+[00:13:25] sitting there scratching your head going
+[00:13:26] well is all people do just run around
+[00:13:28] making rational choices in markets or
+[00:13:30] are we instead to think of people as
+[00:13:33] constantly animated by um romantic you
+[00:13:36] know Notions of political dissent um uh
+[00:13:40] uh and and critical commentary you see
+[00:13:42] this in the fair use Juris Prudence a
+[00:13:44] lot everyday practice is is a is a um
+[00:13:48] concept uh uh that's used to describe
+[00:13:50] sort of all of the everything else um
+[00:13:53] you know having a beer and watching the
+[00:13:55] football game today and engaging in
+[00:13:57] political commentary tomorrow and going
+[00:13:59] to buy an eye touch the next day and
+[00:14:03] everything else that comes in between um
+[00:14:06] and how people um how people um uh uh
+[00:14:11] engage in behaviors and how they make
+[00:14:13] sense of them to themselves and in their
+[00:14:15] communities um everyday practice is not
+[00:14:17] linear um it is not always animated by
+[00:14:21] overarching strategies it's often very
+[00:14:23] reactive um it's often very tactical so
+[00:14:26] there's a great website that people set
+[00:14:28] up to go walk around New York City and
+[00:14:30] not go in front of any surveillance
+[00:14:31] camera um that's a tactical response to
+[00:14:35] the increasing deployment of
+[00:14:36] surveillance cameras and it's very ad
+[00:14:38] hoc it's not like somebody sat down to
+[00:14:40] to devise a political Theory before they
+[00:14:42] set that up they just did it um I think
+[00:14:45] there's something valuable to be learned
+[00:14:47] um from focusing on everyday practice as
+[00:14:51] the dominant conception of how people do
+[00:14:53] what they do um and then the third
+[00:14:55] critical reference point is the notion
+[00:14:56] of play okay uh
+[00:15:00] play okay uh the the third point is the
+[00:15:03] notion of play um play is a a concept
+[00:15:06] that appears particularly in the
+[00:15:07] intellectual property literature um uh
+[00:15:11] when people um uh critique the breath of
+[00:15:15] the copyright rules they often say
+[00:15:17] something like and then uh we see
+[00:15:20] therefore that people should have
+[00:15:21] freedom to play with cultural resources
+[00:15:24] um and play is important it's linked in
+[00:15:27] a lot of literatures to creativity to
+[00:15:29] invention um yet I think all of that
+[00:15:33] discussion about deliberate intentional
+[00:15:35] play that people engage in needs to be
+[00:15:37] broadened to Encompass another
+[00:15:40] conception or definition of play as just
+[00:15:43] the play of circumstances right the um
+[00:15:47] the idea that creativity for example
+[00:15:50] will Blossom not just because you decide
+[00:15:52] today that you want to play but because
+[00:15:55] life puts random stuff in your way um
+[00:15:59] and uh and and you know if you go and
+[00:16:02] read uh uh uh for example the work of
+[00:16:06] people who have done uh historical
+[00:16:08] studies of Great Moments in art uh or
+[00:16:10] who who interview contemporary artists
+[00:16:13] quite often that's what you get back you
+[00:16:15] know I don't know why I thought of that
+[00:16:16] but life threw this and this and this in
+[00:16:17] my path and I mixed them together and
+[00:16:20] that's what came out um so there's a
+[00:16:22] sense of play uh not as play by
+[00:16:25] individuals but play of play of
+[00:16:27] circumstances play of of random stuff
+[00:16:30] that life puts in your way um and that
+[00:16:33] play um and is is is uh a critical part
+[00:16:38] of what we should I argue be seeking to
+[00:16:40] Foster in our information policy and
+[00:16:42] it's a it's a critical condition of
+[00:16:44] human flourishing so structural
+[00:16:47] conditions of human flourishing um that
+[00:16:49] emerge after I take these three critical
+[00:16:52] reference points and and work through
+[00:16:54] them um in chapters about copyright
+[00:16:56] privacy architecture code
+[00:17:00] um are as follows one access to
+[00:17:02] knowledge um I think it's important I
+[00:17:05] think great work has been done on access
+[00:17:06] to knowledge but I don't think access to
+[00:17:09] knowledge is enough to um to supply a
+[00:17:12] base for human flourishing in the
+[00:17:14] networked Information Society um because
+[00:17:16] it doesn't get you all the things that
+[00:17:19] turn out to be important it doesn't for
+[00:17:20] example get you rights to reuse cultural
+[00:17:23] products um unless you're willing to
+[00:17:25] Define access as
+[00:17:27] encompassing rights of reuse I guess you
+[00:17:29] could but it seems to be that we're
+[00:17:31] talking about two different things um
+[00:17:33] we're talking about the ability to
+[00:17:35] access stuff in the first place and um
+[00:17:39] second the flexibility in the legal
+[00:17:41] structure that allows you to take things
+[00:17:43] and reuse them a2k doesn't guarantee you
+[00:17:46] for example rights of privacy in fact to
+[00:17:48] the extent the access uh uh frame has
+[00:17:51] anything to say about privacy it usually
+[00:17:53] tends to say things about how more
+[00:17:55] openness is good um so there are two
+[00:17:59] other conditions that I think we need to
+[00:18:01] add to um uh to begin developing a
+[00:18:04] taxonomy of structural conditions for
+[00:18:06] human flourishing in the networked
+[00:18:08] Information Society um the first of
+[00:18:09] those is operational
+[00:18:11] transparency um we need to know how
+[00:18:15] these digital architectures work um it
+[00:18:18] is not enough for example to require um
+[00:18:23] data aggregators to disclose to you what
+[00:18:25] information they have collected about
+[00:18:26] you
+[00:18:29] you need to know how it's going to be
+[00:18:31] used it is not enough to say you have a
+[00:18:35] choice between Google and whatever
+[00:18:41] right um it is not enough to say you
+[00:18:44] have a choice between iPhone and
+[00:18:48] blackberry or between um you know take
+[00:18:51] your pick you have to be given enough
+[00:18:54] information to know what options are
+[00:18:56] being presented to you and what options
+[00:18:57] are being foreclosed
+[00:19:00] um in order to know something about the
+[00:19:02] work that these devices that are
+[00:19:04] mediating your perception of the
+[00:19:06] information environment are
+[00:19:08] doing um and third semantic
+[00:19:12] discontinuity this is my favorite one um
+[00:19:15] so so uh this chapter at the end of the
+[00:19:17] book argues that um uh there's a thing
+[00:19:20] called semantic discontinuity that is a
+[00:19:22] vital structural condition of human
+[00:19:24] flourishing in the networked Information
+[00:19:26] Society and what it is is formal
+[00:19:28] incomplete l incompleteness in legal and
+[00:19:31] Technical uh uh
+[00:19:33] infrastructures for example copyright
+[00:19:36] formal incompleteness in copyright
+[00:19:38] rights such that to reuse culture you
+[00:19:41] don't need to invoke a catchall defense
+[00:19:43] like fair use and pray you can convince
+[00:19:46] somebody um but there is actually space
+[00:19:49] left
+[00:19:50] over for play
+[00:19:54] um for example in
+[00:19:56] privacy um
+[00:20:01] rigid arbitrary unreasonable rules
+[00:20:05] against transacting in and aggregating
+[00:20:07] personal
+[00:20:09] data such that there is space left over
+[00:20:12] for people to play with identity to
+[00:20:14] engage in unpredictable conduct um and
+[00:20:18] to to have their senses of self um
+[00:20:23] evolve within this space leftover for
+[00:20:26] example in the Realms of AR chitecture
+[00:20:29] and this one's going to push people's
+[00:20:31] buttons If the Privacy one didn't
+[00:20:32] already um if you if you read the
+[00:20:36] computer science literature there is an
+[00:20:40] ingrained completely unquestioned Norm
+[00:20:43] that life will be better and better and
+[00:20:44] better for everybody if we have seamless
+[00:20:46] interoperability between everything
+[00:20:49] everywhere all the time data platforms
+[00:20:51] interfaces you name it um and I guess
+[00:20:54] that's really good for some purposes but
+[00:20:56] a consequence of that um
+[00:20:59] uh just uh automatic um unquestioned
+[00:21:04] regress to seamless interoperability is
+[00:21:07] um for example that data about you moves
+[00:21:09] around and around and around without
+[00:21:11] your ability to know where it's going or
+[00:21:13] to stop it it's that um uh for example
+[00:21:16] people will say oh great you know social
+[00:21:18] networks are great one network is great
+[00:21:20] another networks is great wouldn't it be
+[00:21:22] even better if we combine them to make
+[00:21:24] one big social network um and it turns
+[00:21:27] out um that to the extent you scale up
+[00:21:31] um certain desirable features of that
+[00:21:33] Network are magnified and certain
+[00:21:35] undesirable features of that Network are
+[00:21:37] magnified you lose uh uh uh to a very
+[00:21:39] meaningful extent whatever ability to
+[00:21:42] control uh uh the the the visibility of
+[00:21:45] of your data and your behavior um uh
+[00:21:48] compared to what you have before uh and
+[00:21:51] if all we think is important is open
+[00:21:53] exchange of data I guess that would make
+[00:21:55] sense but if what we think is important
+[00:21:58] is um play and everyday practice and
+[00:22:00] play in the two senses that I've talked
+[00:22:02] about deliberate play and interstitial
+[00:22:05] play right the play of circumstances um
+[00:22:08] running into unexpected stuff within
+[00:22:10] gaps in the network um I think we ought
+[00:22:13] to think that through again uh uh
+[00:22:16] there's a real extent to which I think
+[00:22:18] human beings benefit from
+[00:22:21] discontinuity um of the sort that I'm
+[00:22:25] identifying and trying to focus on um
+[00:22:28] and so so I that's a conversation that I
+[00:22:30] want to start even if it takes us to
+[00:22:32] some really strange places and with that
+[00:22:35] I will stop and open the floor awesome
+[00:22:37] this is going to be a great book and a
+[00:22:39] great conversation I have a sense there
+[00:22:41] are some reactions from the crew who
+[00:22:43] wants first Charles um I have played in
+[00:22:47] this area for a while um dealing with
+[00:22:50] identity issues and and so forth um one
+[00:22:53] of the things we realized early on was
+[00:22:55] that people need to have the freedom to
+[00:22:57] have multiple person
+[00:22:59] so church lady 43 May porn star
+[00:23:02] 562 right and and that and those worlds
+[00:23:05] should be separate at some level but as
+[00:23:08] things become more integrated those
+[00:23:10] those they tend these things tend to get
+[00:23:12] blurred and then we have the issue of
+[00:23:15] maybe that person is also terrorist
+[00:23:17] 65 um and then there is one of those and
+[00:23:20] then we have the the security theater
+[00:23:23] reaction to that um which which kind of
+[00:23:26] gets to the point of your uh hold uh I
+[00:23:29] think the reason this this is such such
+[00:23:31] an important issue to discuss um because
+[00:23:34] we could wind up where we've got this
+[00:23:36] seamless integrated world where all I'm
+[00:23:38] I'm careful on saying is anything I
+[00:23:40] would say in a work environment so I
+[00:23:41] can't talk politics I can't talk
+[00:23:43] religion I I can't really have opinions
+[00:23:45] that are
+[00:23:46] unpopular in in that world and that
+[00:23:50] quaffs so many positive things about how
+[00:23:53] we can evolve as a society what I worry
+[00:23:56] about is Joe McCarthy coming back and
+[00:23:58] asking you are you or have you ever been
+[00:24:01] a member of this group which which is
+[00:24:03] now in disfavor because in 50 or 60
+[00:24:06] years we've seen social norms change
+[00:24:09] completely yeah that's I mean yes that's
+[00:24:13] a that's a great comment we need to have
+[00:24:15] that discussion and and and the legal
+[00:24:18] aspects of that I think
+[00:24:21] are um that there's open territory here
+[00:24:24] that need that this there needs to be
+[00:24:25] more definition than there is now that
+[00:24:27] seems totally consistent
+[00:24:29] absolutely absolutely um there's a push
+[00:24:32] back that often is a response to that
+[00:24:34] which is um you know but if you restrict
+[00:24:39] the flow of information in xway we will
+[00:24:43] slide down a slippery slope
+[00:24:46] to Chinese internet censorship or what
+[00:24:49] I'm looking at Donnie or whatever um and
+[00:24:53] um that's uh I think we have to move out
+[00:24:58] of the security of that in order to have
+[00:25:00] the conversation because it's actually
+[00:25:02] not true right um there's always uh a
+[00:25:07] sense in which information flows are
+[00:25:08] limited and structured in particular
+[00:25:10] ways you can't have protocols for
+[00:25:12] example that just let everything go
+[00:25:14] everywhere um but we have to be I think
+[00:25:16] more willing to kind of open the door to
+[00:25:18] saying okay um uh there are these
+[00:25:21] competing considerations we're trying to
+[00:25:22] balance here some of which um involve
+[00:25:24] having accurate knowledge and others of
+[00:25:26] which don't um how can we make this
+[00:25:30] work
+[00:25:31] Charlie I perked up when you talked
+[00:25:35] about copyright and the need for play at
+[00:25:38] the joints without the playful person
+[00:25:41] having to fend off uh claims with
+[00:25:44] defenses of fair use and my
+[00:25:48] understanding is that well the way it is
+[00:25:50] right now that that is exactly the
+[00:25:52] situation and have you got some approach
+[00:25:57] that would create this space of
+[00:26:00] playfulness that one doesn't need to
+[00:26:03] defend so I do um in a funny way right
+[00:26:08] and it's a funny way because it would
+[00:26:09] involve going back and looking at the
+[00:26:12] 1909 us Copyright Act and
+[00:26:16] asking what were some good things about
+[00:26:18] this law um that was a law that is just
+[00:26:23] reviled um by copyright Scholars and
+[00:26:26] policy makers today because for example
+[00:26:30] instead of saying um as the current law
+[00:26:33] does you get exclusive rights and
+[00:26:35] original works of authorship regardless
+[00:26:37] of you know the manner or medium in
+[00:26:40] which they're expressed it had
+[00:26:41] categories right and you couldn't even
+[00:26:44] get the rights unless you fell within
+[00:26:46] categories like lecture or essay or
+[00:26:49] dramatic work or whatever um and then
+[00:26:51] the rights were much more narrowly
+[00:26:53] limited so not all categories of Works
+[00:26:55] got all rights and that's still true to
+[00:26:58] to a limited extent today but it's true
+[00:26:59] to a much lesser degree and it's reviled
+[00:27:02] because um uh the um pressure on the
+[00:27:06] copyright industry side to expand that
+[00:27:08] framework was overwhelming you know how
+[00:27:11] can it be um the argument would go that
+[00:27:13] you erect an arbitrary legal framework
+[00:27:15] that makes unsustainable distinctions
+[00:27:17] between different modes of expression
+[00:27:19] with the result that um uh actions that
+[00:27:22] have a bottomline consequence can't be
+[00:27:24] appropriated right can't be um and and I
+[00:27:27] think we need to flip that around um uh
+[00:27:30] we need to be willing not to go back to
+[00:27:32] exactly what the 1909 act said um but to
+[00:27:37] Define rights to reproduction and to
+[00:27:41] adaptation in a way that gives certain
+[00:27:45] very significant rights still to
+[00:27:47] copyright owners and I can talk about
+[00:27:49] why I still think that but quite clearly
+[00:27:52] and unambiguously reserves lots of other
+[00:27:55] things to users and does so without
+[00:27:58] regard to this really annoying Criterion
+[00:28:01] of actual or potential Market effect
+[00:28:03] which in the hands of a court can always
+[00:28:06] get you know blown into a reason for
+[00:28:08] extending the right to cover whatever it
+[00:28:11] is the users have done um I think
+[00:28:15] um well let me stop and ask if you're
+[00:28:18] inevitably been running up against the
+[00:28:20] pocketbook of the copyright holders who
+[00:28:22] say you're giving away or pony yeah um
+[00:28:25] of course and and you know there's a
+[00:28:27] limit to what one can do in any one
+[00:28:30] piece of scholarship and there needs to
+[00:28:33] be something which this is not um that
+[00:28:37] um uh that uh takes what I'm doing here
+[00:28:40] sort of as a as a theoretical matter um
+[00:28:43] and says okay how do we get there um
+[00:28:46] yeah and I absolutely agree with you
+[00:28:47] getting there is no mean feat um but I
+[00:28:50] do think part of getting there involves
+[00:28:53] beginning a discourse about the various
+[00:28:56] meanings of play and the various values
+[00:28:59] of play and seeking to make it
+[00:29:02] understood that everybody benefits from
+[00:29:04] that um that it's not just a bunch of
+[00:29:07] crazy YouTube posters um for example
+[00:29:10] that benefit from that but it's even the
+[00:29:12] mass culture Industries themselves
+[00:29:14] benefit from that because there's a
+[00:29:16] circulation and a firment um that then
+[00:29:19] redounds to their benefit as well um how
+[00:29:22] about you Professor nesson do you see a
+[00:29:24] narrative here from Julie's story that
+[00:29:26] leads to the reform that you have have
+[00:29:28] an interest
+[00:29:31] in well I
+[00:29:34] I approach it at the most fundamental
+[00:29:37] level of whether there's some
+[00:29:39] presumption of fair use rather than a
+[00:29:42] presumption against
+[00:29:43] it uh and right now the burden that she
+[00:29:47] describes is really overwhelming even
+[00:29:49] for
+[00:29:51] non-commercial uh people who are copying
+[00:29:54] without any profit motive they still
+[00:29:57] have to fend off the is uh extraordinary
+[00:30:00] assault that can be made on them so I'm
+[00:30:03] just starting from the law perspective
+[00:30:06] of Shifting the presumption in a way
+[00:30:09] that clearly represents the playfulness
+[00:30:12] of the consumer the end using consumer
+[00:30:15] on the end would be a huge step forward
+[00:30:17] I think I saw you trying to do this in
+[00:30:19] the Tenon bomb case a bunch of times to
+[00:30:21] focus on the user and the that whole
+[00:30:23] experience it seems it's actually not at
+[00:30:25] all um out of step with the overall meth
+[00:30:28] logical project that Julie is trying to
+[00:30:30] advance
+[00:30:33] her I am um I'm fascinated by this
+[00:30:35] project and I'm really looking forward
+[00:30:37] to the book um I um am interested
+[00:30:40] particularly in the the sort of
+[00:30:41] literature you refer to about um you
+[00:30:44] said that the the lawyers denigrate this
+[00:30:46] Pomo this embodied understanding of the
+[00:30:49] everyday um because when you said it it
+[00:30:51] made me think of a book that was
+[00:30:53] published about 10 years ago 1999 um
+[00:30:56] that was boldly titled the internet um
+[00:30:59] by uh by an anthropologist and a
+[00:31:02] sociologist um and it would I don't know
+[00:31:04] if you know it but the idea they um it
+[00:31:07] was it's considered by some to be a
+[00:31:08] groundbreaking groundbreaking sort of
+[00:31:10] work in uh embodied local cultural
+[00:31:13] understanding of the internet and they
+[00:31:14] thought we are just around the corner in
+[00:31:16] 1999 from an understanding in social
+[00:31:18] science that the internet is really
+[00:31:20] local and embodied and cultural and what
+[00:31:23] we need to do is to write the first book
+[00:31:25] of the flourishing of books that will
+[00:31:27] follow that will explain how this works
+[00:31:29] and their book was about Trinidad
+[00:31:31] because they happen to be one of them is
+[00:31:33] an Anthropologist of Trinidad and so he
+[00:31:35] wrote this book about the internet and
+[00:31:37] Trinidad and the argument is basically
+[00:31:39] that you know if you're if you're in
+[00:31:40] Trinidad the internet is one thing and
+[00:31:42] if you're not it's a different thing and
+[00:31:43] it has to do with being triny and what
+[00:31:46] we need are many of these different
+[00:31:47] understandings of local internets and
+[00:31:49] what it means to have an embodied
+[00:31:50] everyday experience of local internet
+[00:31:52] and the subtitle of the book is an
+[00:31:53] ethnographic approach so the argument
+[00:31:55] was that the internet Co and an
+[00:31:57] ethnographic approach is the the big
+[00:31:59] turn that's going to come and in other
+[00:32:00] writing they said that they rushed it
+[00:32:01] into print because they saw that this
+[00:32:04] big turn in social science was like
+[00:32:05] right around the corner there's going to
+[00:32:06] be like the internet Co and an
+[00:32:08] ethnographic approach in and then
+[00:32:10] country X or group X um it didn't really
+[00:32:13] happen did it I mean there's there's
+[00:32:14] still a I mean the the ideas that you
+[00:32:16] refer to if I if I take your literature
+[00:32:18] right it doesn't seem to have exactly
+[00:32:20] carried the day I mean you definitely
+[00:32:21] find people working in this vein but
+[00:32:23] neither is it this um neither when we
+[00:32:26] hear the internet do we leap to the idea
+[00:32:27] that it is of course embodied in
+[00:32:30] particular and extremely different if
+[00:32:31] you're one kind of person versus another
+[00:32:33] kind of person or in one country versus
+[00:32:34] another I mean there's some of it of
+[00:32:35] course and you referred to Chinese
+[00:32:37] censorship that maybe as an example but
+[00:32:40] I wonder could you say more about this
+[00:32:42] literature that you're that you referred
+[00:32:44] to right so
+[00:32:47] um you
+[00:32:49] know I haven't seen within for example
+[00:32:54] um mainstream US legal scholarship
+[00:32:58] and mainstream policy studies and you
+[00:33:01] know think tank documents about digital
+[00:33:04] policy um a recognition of this what
+[00:33:08] what seems to me to happen although I
+[00:33:10] would love to discover exceptions is
+[00:33:12] that there's a thing called a digital
+[00:33:14] divide and you have to overcome it right
+[00:33:18] if you are still in some you know bited
+[00:33:22] Urban you know inner city place
+[00:33:25] somewhere or in some Shack on the edge
+[00:33:28] of the grid and your connectivity is
+[00:33:30] limited or you don't really know enough
+[00:33:33] to use the internet for all the things
+[00:33:34] that you need to use it for we want to
+[00:33:36] help you get over that um uh and you
+[00:33:42] know that's good and bad right I don't
+[00:33:44] want to say it's it's all bad it would
+[00:33:46] be nice for example to have a national
+[00:33:49] Broadband policy like the one in the
+[00:33:51] Brookman report um but um it would be
+[00:33:55] really nice not to do that in a way that
+[00:33:57] denies all of what you just talked about
+[00:34:00] um and it it doesn't seem to be in so
+[00:34:03] like internet adoption as
+[00:34:06] assimilation I mean that sounds kind of
+[00:34:07] Borg like but it's more um you know
+[00:34:11] there's a there's
+[00:34:14] a there seems to be an assumption that
+[00:34:18] um there's a a sort of uniform digital
+[00:34:23] ethos and level of Competency that we
+[00:34:25] just have to get everybody to and
+[00:34:26] depending on what report you read it
+[00:34:28] would be Market oriented or expression
+[00:34:31] oriented um but that kind of seems to be
+[00:34:34] what what it
+[00:34:36] is more no Cil David
+[00:34:40] Fernando so I'd like to see if you could
+[00:34:44] elaborate a bit on the the
+[00:34:47] implication that uh interoperability and
+[00:34:51] a desire for interoperability implies a
+[00:34:55] um desire that information should flow
+[00:34:56] everywhere that seems to me that a
+[00:34:59] response could be that these are
+[00:35:01] two separate things and we don't want
+[00:35:05] information to not flow because um
+[00:35:09] because things are
+[00:35:10] incompatible but uh rather if we want
+[00:35:13] information not to flow it should be
+[00:35:15] because of an
+[00:35:16] explicit um decision in the
+[00:35:20] architecture um that that that there is
+[00:35:22] some policy decision and the
+[00:35:25] architecture could be designed to allow
+[00:35:27] certain information flows and not allow
+[00:35:29] other information flows that's a
+[00:35:31] separate thing from the question of
+[00:35:34] compatibility and
+[00:35:36] interoperability
+[00:35:39] um I don't know that I necessarily would
+[00:35:42] want to
+[00:35:43] exclude either one of those options
+[00:35:47] [Music]
+[00:35:49] um
+[00:35:52] the so um so we could imagine right that
+[00:35:57] we everybody thinks this is the greatest
+[00:36:00] thing since sliced bread and everybody's
+[00:36:01] on board with semantic discontinuity and
+[00:36:03] digital architectures and we're just
+[00:36:05] going to design uh and decree by Fiat
+[00:36:08] you know a system of um of randomized
+[00:36:13] incompatibilities right
+[00:36:18] um there's a value to
+[00:36:23] um having those incompatibilities emerge
+[00:36:25] in other ways than by
+[00:36:28] design and there's a value to not fixing
+[00:36:31] some of the ones that exist in the world
+[00:36:34] um even
+[00:36:36] though at this point we don't bu andarge
+[00:36:38] tend to think about it that way um and
+[00:36:42] and so I think that
+[00:36:47] um the challenge
+[00:36:50] is how to design gaps right or how to
+[00:36:56] design a a a
+[00:36:58] a framework that encourages gaps to
+[00:37:01] appear and rewards gaps that appear and
+[00:37:06] if you think about it it's almost like
+[00:37:08] everything is driving against that um I
+[00:37:11] got to the end of the book and I was
+[00:37:12] like geez I have to write something
+[00:37:13] about Capital markets right there was a
+[00:37:14] piece in the New York Times a couple
+[00:37:16] weeks ago about how open- Source um
+[00:37:18] companies that do well tend to get
+[00:37:20] bought by proprietary companies and
+[00:37:22] become subsidiaries and nobody really
+[00:37:24] knows like what they're doing with them
+[00:37:25] or how they could be managed differently
+[00:37:27] if that hadn't happened Capital markets
+[00:37:30] reward interconnection um and at a very
+[00:37:33] very basic level that matters um I'm
+[00:37:36] sorry assimilation yeah yeah Borg yeah
+[00:37:40] yeah um you know I'm fighting that but
+[00:37:45] um but yeah and and and uh and so you
+[00:37:49] know either it's a completely quixotic
+[00:37:53] and ridiculous idea or it's really
+[00:37:54] important but that there are just a lot
+[00:37:56] of moving parts
+[00:37:58] I don't know if that's the answer you
+[00:38:00] envisioned but so I guess what you're
+[00:38:04] saying is that the kind of gaps that you
+[00:38:05] have in mind are not necessarily ones
+[00:38:07] that can really be designed in the way
+[00:38:11] computer science there are ones that I
+[00:38:13] think would emerge if some of the rules
+[00:38:15] were different because people want to do
+[00:38:17] them I had an RA once go and look for
+[00:38:20] discussions on open- Source groups about
+[00:38:23] forking um and it was so interesting
+[00:38:26] what she found um there are these
+[00:38:29] discussions right some of you have been
+[00:38:30] involved in some of them or have seen
+[00:38:32] them and this is a a core tenative open
+[00:38:36] source right if you don't like the way
+[00:38:37] the standards going you can Fork it um
+[00:38:40] but people get so anxious um because
+[00:38:43] it's at war with this other deeply held
+[00:38:46] belief that everything should talk to
+[00:38:47] everything else um but constantly people
+[00:38:50] are seeking to fork and to create their
+[00:38:52] own communities and it seems that um
+[00:38:55] that uh that it it would be good to
+[00:38:58] respect that and find ways to enable
+[00:39:01] it
+[00:39:03] David um after a number of years here
+[00:39:06] having the techn determinism more or
+[00:39:08] less kicked out at me I find it hasn't
+[00:39:11] entirely so awesome
+[00:39:13] okay well excuse me um are are you you
+[00:39:18] find awesome the fact that I've had the
+[00:39:19] techn determinism mainly kicked out of
+[00:39:22] me or that there's a residue that I'm
+[00:39:23] about to ask you
+[00:39:24] about and as a good postmodernist I have
+[00:39:27] to say both
+[00:39:29] right um so I
+[00:39:32] I I love your talking where you're going
+[00:39:35] with us so thank you let be clear about
+[00:39:37] that
+[00:39:39] um um
+[00:39:42] so given that the internet is different
+[00:39:45] if you are is is a different thing
+[00:39:48] because of your embodied experience of
+[00:39:50] it if you are in Trinidad as opposed to
+[00:39:52] if you're in Cambridge etc etc which
+[00:39:54] seems to be incontestably true and
+[00:39:56] really important to keep in mind
+[00:39:58] especially for aging techn determinists
+[00:40:00] um nevertheless I find myself thinking
+[00:40:02] that you know yes but there are things
+[00:40:05] that anybody who goes on the internet in
+[00:40:09] as long as the internet is in any
+[00:40:10] recognizable form so there are
+[00:40:13] conceivable sort of paired down things
+[00:40:16] that violate all sorts of of rules and
+[00:40:19] norms and Cannons of the internet that
+[00:40:20] I'm going to put aside but whether
+[00:40:23] you're in Trinidad or you're in Beijing
+[00:40:25] or you are in Cambridge if you're on the
+[00:40:27] internet you don't see necessarily all
+[00:40:29] the same you won't see all the same
+[00:40:30] things but you will have the sense that
+[00:40:33] um ideas can be linked which is a really
+[00:40:36] powerful um new capability that there's
+[00:40:41] a huge amount of information more than
+[00:40:43] you could ever consume that you could
+[00:40:45] ever touch that a lot of that
+[00:40:47] information was put up by people like
+[00:40:49] you not simply by people who have access
+[00:40:51] to publishing systems um that there is
+[00:40:54] an amazing amount of disagreement on the
+[00:40:56] internet even in Fairly controlled
+[00:40:58] internets versions of the internet
+[00:41:00] there's a tremendous amount of
+[00:41:01] disagreement at every level um that
+[00:41:04] those things are constant for any
+[00:41:06] culture any cultural encounter with the
+[00:41:09] internet you come away I so I'm
+[00:41:12] proposing this but I don't know it's
+[00:41:13] right you come away with things like
+[00:41:16] that that and so that makes me think
+[00:41:18] well damn it I'm a techn determinist
+[00:41:20] again because I'm saying that any
+[00:41:21] encounter no matter how embodied what
+[00:41:23] embodiment what culture is still going
+[00:41:25] to come away believing and knowing those
+[00:41:27] sorts of things so is that am I wrong
+[00:41:29] about that residue is that itself so
+[00:41:31] inculturated that um yeah it's true but
+[00:41:33] it's that very level of residue is taken
+[00:41:36] up differently by different cultures and
+[00:41:37] by different embodied individuals within
+[00:41:39] those cultures or is there something
+[00:41:41] that actually can be said across
+[00:41:43] cultures about our experience of the
+[00:41:45] internet um well I think there there
+[00:41:50] certainly are things that can be set
+[00:41:51] across cultures about it it all depends
+[00:41:53] on your level of abstraction right it's
+[00:41:56] good
+[00:41:58] to have access to all this information
+[00:41:59] that's pretty abstract um people will
+[00:42:02] see the information and make different
+[00:42:03] things of it um uh for some reason I'm
+[00:42:08] thinking of the the Wikipedia page about
+[00:42:10] the village that kept getting relabeled
+[00:42:12] as Israeli or
+[00:42:13] Palestinian um as a as a really good
+[00:42:16] example of that but you know it doesn't
+[00:42:18] have to be an example that's so fraught
+[00:42:21] um I I think you're only a technological
+[00:42:24] determinist if you believe that there's
+[00:42:28] only one way to get there um you know
+[00:42:32] that there's only one set of rules under
+[00:42:33] which we could continue to live under
+[00:42:35] conditions that in which there is lots
+[00:42:37] of information available on the web
+[00:42:40] [Music]
+[00:42:42] um and that anything that we might do
+[00:42:48] to Fork some of the flows or protect
+[00:42:52] privacy will jeopardize all the rest of
+[00:42:55] it and I just don't think
+[00:42:57] that it's at all obvious that that's
+[00:43:00] right but I didn't necessarily
+[00:43:02] understand you to be saying that so I
+[00:43:05] guess I have to ask you whether that's
+[00:43:06] what you're saying um no well it's not
+[00:43:08] exact that may be a consequence of what
+[00:43:10] I'm saying I guess I'm asking it I guess
+[00:43:12] more um not at the level of how we get
+[00:43:14] there but how deeply the postmodern
+[00:43:20] critique Cuts so
+[00:43:23] the um is there postmodernism generally
+[00:43:28] doesn't like residues because it's
+[00:43:29] always about finding the residue and
+[00:43:31] saying ah you've got a residue and then
+[00:43:33] showing that you you're actually able to
+[00:43:35] pull that rug and you know sort of
+[00:43:36] residues all the way down so I'm
+[00:43:38] suggesting that there's um as a
+[00:43:40] hypothesis that there is in fact a
+[00:43:42] residue that's cross-cultural that is it
+[00:43:46] I'll say it close to inevitable uh and
+[00:43:50] it's not just that these are
+[00:43:51] generalities these are really deep and
+[00:43:52] important things right that ideas can be
+[00:43:54] linked yeah that's broad generality but
+[00:43:56] it's also
+[00:43:58] implies a restructuring of many cultures
+[00:44:01] view of how knowledge and discourse
+[00:44:03] Works um that uh people disagree
+[00:44:06] endlessly um that's pretty General but
+[00:44:09] it's also really concrete because you
+[00:44:11] see these people who are arguing at all
+[00:44:13] different so um is there a residue is is
+[00:44:17] there a set of stuff that after we go
+[00:44:19] after we acknowledge deep in important
+[00:44:21] acknowledgement the cultural differences
+[00:44:22] are profound and shape our experience of
+[00:44:25] everything including the net are we able
+[00:44:27] to say yeah but you know there is
+[00:44:29] something that is true for everybody who
+[00:44:31] encounters the n and these are not just
+[00:44:34] you know things that are important deep
+[00:44:35] and possibly transformational for many
+[00:44:37] cultures yeah yeah oh I don't so I
+[00:44:39] didn't mean to be suggesting that there
+[00:44:41] wasn't um and so so here probably is a
+[00:44:45] good place to admit that liberalism
+[00:44:48] makes its way back in to what I do um
+[00:44:51] but what I say is that it's not
+[00:44:53] necessarily the case that you want to
+[00:44:55] throw out all the aspirations
+[00:44:58] of liberalism just because it's a really
+[00:45:01] crappy
+[00:45:03] descriptive um tool right it tells you
+[00:45:06] nothing about the way the world works
+[00:45:07] but some of its aspirations are pretty
+[00:45:09] cool um and critical subjectivity for
+[00:45:12] example is an aspiration um of
+[00:45:17] liberalism just hasn't done a very good
+[00:45:19] job at recognizing how you get that um
+[00:45:23] uh uh um the free spread of you know a
+[00:45:29] corpus of existing knowledge um so one
+[00:45:32] thing I would say would be a residue if
+[00:45:34] you know if it were being done
+[00:45:35] differently imagine the digital library
+[00:45:38] the perfect Digital Library
+[00:45:40] um in which you could have access to all
+[00:45:43] published books um you know not exactly
+[00:45:48] the way it's working out but it could be
+[00:45:49] really cool um and you know you could
+[00:45:53] still take and make of it what you
+[00:45:56] wanted to but I would argue that that's
+[00:45:59] a universal good or it ought to be um
+[00:46:02] and so I'm not trying to say I have
+[00:46:05] a you know a neutral Universal
+[00:46:08] prescription um for a structure upon
+[00:46:11] which any vision of human flourishing
+[00:46:13] could fit um I'm trying to articulate a
+[00:46:16] vision that includes both critical
+[00:46:18] subjectivity and access to the tools
+[00:46:20] necessary to develop it does that answer
+[00:46:23] your
+[00:46:23] question okay very fruitful thank you
+[00:46:28] yeah following Christian's line of
+[00:46:32] question it it has been Linguistics as a
+[00:46:35] discipline has been accused at least
+[00:46:37] mainstream linguistic has been accused
+[00:46:39] by some people of creating this kind of
+[00:46:41] artificial object of study called the
+[00:46:43] language um at at the expense of
+[00:46:46] eliminating speakers and people uh so
+[00:46:49] creating these thing that can be
+[00:46:50] actually dissected and manipulated and
+[00:46:53] scientifically um and so I wonder
+[00:46:56] whether something some similar
+[00:46:58] accusation can be raised against um um
+[00:47:02] Cyber Law or Internet studies or or
+[00:47:05] these disciplines for using the idea of
+[00:47:07] a cyers space um as this kind of like
+[00:47:10] spatial metaphor that is very cool for
+[00:47:13] conceptualizing what's going on but at
+[00:47:15] the same time it kind of erases uh
+[00:47:17] people from uh the idea uh of from
+[00:47:21] what's being studied um so I wonder
+[00:47:24] whether you can draw that kind of
+[00:47:26] parallel there because it seems to me
+[00:47:27] the idea of cyers space it creates this
+[00:47:30] sense of something real and concrete
+[00:47:32] that is there but it actually does it at
+[00:47:35] the expense of thinking about that
+[00:47:37] without the experience of everyday users
+[00:47:39] that you were talking about before right
+[00:47:41] and I wrote a whole paper about this
+[00:47:42] actually which I'm drawing on a lot for
+[00:47:44] the book um uh but um I agree with that
+[00:47:50] um you know there's a tendency to rify
+[00:47:52] cyberspace make it separate and then
+[00:47:55] just you know project are fantasies of
+[00:47:57] social ordering onto it whatever those
+[00:47:59] fantasies happen to be and there's a lot
+[00:48:01] of Divergence on that and the term I
+[00:48:03] like to use instead is Network space um
+[00:48:06] which is a space that is real right and
+[00:48:09] is connected by networks and that
+[00:48:12] changes um and is kind of rearranged as
+[00:48:15] a result of what networks can do um so
+[00:48:19] you know 200 years ago you would not
+[00:48:21] have said Paris was closer to New York
+[00:48:24] than um Williamsburg Virginia but today
+[00:48:27] you might because there are lots of
+[00:48:29] people who do the Paris to New York
+[00:48:31] thing and don't go south of DC um and uh
+[00:48:35] and and we need to and so networked
+[00:48:39] space is a term that's sort of more
+[00:48:42] amenable to reminding us constantly that
+[00:48:45] we're actually talking about the real
+[00:48:46] world and real people who live in the
+[00:48:47] real world um yeah I think so um let's
+[00:48:52] go doc Allan and it seems to me you're
+[00:48:55] saying that some that the Linguistics of
+[00:48:58] the of the better of the subject really
+[00:49:01] do matter that
+[00:49:03] um we can admit that um that cyberspace
+[00:49:07] is IM material and different in real
+[00:49:09] space but your your draft and and what
+[00:49:13] you've been saying is is full of really
+[00:49:15] concrete metaphors you know space
+[00:49:18] environment I really like the geography
+[00:49:20] of experience that phrase used early um
+[00:49:24] because we P we not only perceive things
+[00:49:26] that way we we they're real I mean you
+[00:49:29] know other people on the net I don't
+[00:49:30] even know where they are but there's
+[00:49:31] zero distance from me on this um uh a
+[00:49:35] friend of mine describes the net as a
+[00:49:36] giant zero and that was a subject of a
+[00:49:38] talk I gave a couple years ago um and it
+[00:49:42] seems to me that the part of the problem
+[00:49:45] and maybe part of the problem with the
+[00:49:47] way that um professor lesing and others
+[00:49:51] are approaching things um has to do with
+[00:49:56] starting
+[00:49:57] with
+[00:49:58] the not just with the Assumption of the
+[00:50:00] person as
+[00:50:01] this solitary dot that you're talking
+[00:50:04] about here but this but two completely
+[00:50:07] different conceptual systems that we're
+[00:50:09] up against the copyright absolutists who
+[00:50:11] say the internet is a plumbing system
+[00:50:13] through which is made to pump content to
+[00:50:15] Consumers and if you're talking about
+[00:50:18] access for example a term that is often
+[00:50:21] used it still sounds like it's you're at
+[00:50:23] the end of a spigot rather than a
+[00:50:26] particip in the middle of this thing an
+[00:50:28] inhabitant of this geography of
+[00:50:31] experience and on the one hand you've
+[00:50:33] got the plumbing system you have a
+[00:50:35] Content pump and on the other hand you
+[00:50:37] have um an environment you have you have
+[00:50:40] spaces with domains and locations that
+[00:50:42] you visit and have architecture and
+[00:50:44] designers and Builders and we can't
+[00:50:46] avoid using either of these metaphors
+[00:50:48] actually because we do packetize things
+[00:50:50] we do send things we do upload and
+[00:50:52] download right and these two conceptual
+[00:50:55] systems are utterly inm complet
+[00:50:56] completely at odds and yield different
+[00:50:58] policy and yield different law and the
+[00:51:00] first is defaulted the plumbing system
+[00:51:02] is the one that's sort of defaulted it's
+[00:51:04] the one Charlie's up against with ten
+[00:51:06] and bomb and you know I don't know how
+[00:51:08] to get out of that I've been thinking
+[00:51:10] about this for years but it seems to be
+[00:51:12] these two conceptual systems are utterly
+[00:51:14] at odds and we're right in the middle of
+[00:51:16] I think you've got a very creative
+[00:51:17] approach to it though and I like it I
+[00:51:19] actually thank you I I think privacy may
+[00:51:22] help to get us out of it because it's so
+[00:51:25] clear that it's not a plumbing system
+[00:51:26] system when it comes to privacy um you
+[00:51:30] know people have tended
+[00:51:33] to be quite comfortable sort of
+[00:51:35] accepting that you have no privacy get
+[00:51:37] over it you're all hosed a little um but
+[00:51:40] but when you put privacy FR in center
+[00:51:42] it's quite clear that it's a
+[00:51:44] geography right um and you know and some
+[00:51:48] like for example some of the stuff the
+[00:51:49] FCC is doing right now
+[00:51:52] um I I would love to be a fly on the
+[00:51:54] wall in there it's almost like someone
+[00:51:55] told them to just stay at of copyright
+[00:51:57] but everything else they're doing um
+[00:52:00] seems more amenable to the environmental
+[00:52:04] SL Geographic approach so I wouldn't say
+[00:52:06] it's
+[00:52:07] completely you know out of the realm of
+[00:52:10] possibility um but it's it's it's
+[00:52:14] difficult go
+[00:52:16] jul so Julie this is really interesting
+[00:52:18] I think captured a lot of the values
+[00:52:20] that people have talked about this room
+[00:52:22] for past few years and I was wondering
+[00:52:24] if you could take us ahead a few steps I
+[00:52:26] think you've convinced most people in
+[00:52:28] this room uh and now we want to start
+[00:52:30] putting it into policy either in you
+[00:52:33] know rule-based laws or rule-based
+[00:52:35] Technical Systems and I'm curious you
+[00:52:38] just touched on the FCC is this approach
+[00:52:41] amendable to thinking about rule-based
+[00:52:44] systems um and so how and if not water
+[00:52:48] some of the other tools we can begin to
+[00:52:49] think in terms of pushing this towards
+[00:52:51] making this the way the world operates
+[00:52:53] right um and so when you ask that you're
+[00:52:57] talking about Technical Systems uh right
+[00:53:00] not a lawyer but I'm also curious what
+[00:53:02] this would look like in a legal
+[00:53:03] framework okay um so so and I know
+[00:53:07] something about what it might look like
+[00:53:08] in a legal framework and next to nothing
+[00:53:10] about what it would look like in a
+[00:53:11] technical framework but I want to start
+[00:53:12] there anyway and speculate right and
+[00:53:14] come back to the legal framework so
+[00:53:18] um it's um it's a conundrum right
+[00:53:21] because when you tend to think about
+[00:53:23] design you tend to think about designing
+[00:53:24] rules to produce particular results and
+[00:53:26] I'm kind of talking about the opposite
+[00:53:27] designing rules that leave space
+[00:53:31] um and
+[00:53:34] yet people are starting to think that
+[00:53:37] way in different contexts not entirely
+[00:53:39] successfully so there's this whole
+[00:53:40] discussion about can you anonymize data
+[00:53:43] and it turns out that we thought you
+[00:53:45] could and it turns out to be harder than
+[00:53:47] we thought right but it hasn't turned
+[00:53:50] out that you can't it just turns out
+[00:53:53] that you need to relinquish even more
+[00:53:55] control you need to just just trash the
+[00:53:57] data and not be able to get it back
+[00:53:58] which we have culturally a really hard
+[00:54:00] time doing um but there you know there
+[00:54:04] are I think there's a lot of room to
+[00:54:07] experiment there
+[00:54:11] um the
+[00:54:12] [Music]
+[00:54:14] um in law right what that looks like is
+[00:54:18] just making arbitrary rules right you
+[00:54:22] can have the right to make your book
+[00:54:23] into a movie
+[00:54:26] telling a sequel to the characters in
+[00:54:28] the book you don't have the right to
+[00:54:30] stop someone else from setting another
+[00:54:32] story in that
+[00:54:34] world why because we just don't want to
+[00:54:36] give it to you right um or you
+[00:54:41] know you have the right to ask people
+[00:54:44] for these 10 items of information before
+[00:54:46] you decide to give them a mortgage but
+[00:54:47] you don't have the right to ask them
+[00:54:48] these other ones why because we think
+[00:54:52] that's good
+[00:54:54] policy you know seems simple enough
+[00:54:57] except that there's a whole um Armature
+[00:55:00] of of argument that's deployed to kind
+[00:55:02] of Whittle that away um but it's not
+[00:55:05] written anywhere that it needs to be
+[00:55:07] that way um there are you know so so
+[00:55:10] it's a little harder than that because
+[00:55:12] there are um various legal doctrines
+[00:55:14] that exist to kind of root out arbitrary
+[00:55:16] decision making um and some of those
+[00:55:18] probably need to be rethought in this
+[00:55:20] context um but uh but in principle I
+[00:55:23] don't see that it's impossible so one
+[00:55:25] more in question then I want to pull in
+[00:55:27] a couple from the online chat and I want
+[00:55:29] to reserve one for myself cool okay so
+[00:55:33] all this discussion about Network spaces
+[00:55:35] and the origin of the internet um and
+[00:55:37] its purpose always makes me think of
+[00:55:40] Academia you know the sort of birthplace
+[00:55:42] of you know the network and uh the
+[00:55:45] virtue of you know closed spaces and and
+[00:55:48] cultures and schools as well as the
+[00:55:50] opportunity to share things beyond the
+[00:55:53] the
+[00:55:54] boundaries and uh I me interested in
+[00:55:56] this I I have a nonprofit open Education
+[00:55:59] website myself and uh one of the things
+[00:56:02] I've I've noticed is that there's great
+[00:56:05] communication and fluid idea sharing
+[00:56:07] within the university space but very
+[00:56:09] rarely does that knowledge and
+[00:56:12] discussion uh escape the wall Garden
+[00:56:15] it's kind of unique I mean we're in a
+[00:56:16] strange place here uh kind of on The
+[00:56:18] Cutting Edge we're broadcasting
+[00:56:20] ourselves on the internet but most
+[00:56:22] schools and classrooms don't do such
+[00:56:24] things and I wonder if you think there's
+[00:56:26] a unique place for the arguments you're
+[00:56:29] making uh within the space of education
+[00:56:32] and academics uh in terms of sharing
+[00:56:35] knowledge openly as well as the need in
+[00:56:39] many cases to remain private and
+[00:56:41] maintain that space of intimacy in the
+[00:56:43] classroom where you can explore and
+[00:56:45] experiment without uh outside eyes I
+[00:56:48] suppose I think um I actually it's a
+[00:56:51] great question I think those Dynamics
+[00:56:52] are actually really well
+[00:56:54] recognized but often subconsciously
+[00:56:58] right by folks who move in these
+[00:57:00] communities so you know any good
+[00:57:05] educator will be able to have opinions
+[00:57:09] and there will be a lot of convergence
+[00:57:11] um in those opinions about how certain
+[00:57:14] things are best reserved for closed you
+[00:57:18] know there's some some slippage between
+[00:57:20] do you want it to be just in the
+[00:57:22] classroom or chat but limited to members
+[00:57:24] of the class and other things are okay P
+[00:57:26] for a larger forum and a larger Forum um
+[00:57:29] any academic who's been an academic for
+[00:57:33] a while will have um um pretty
+[00:57:36] well-formed opinions about um what kind
+[00:57:39] of draft you should be sharing with how
+[00:57:41] many people um and what kinds of
+[00:57:43] discussions are better had oneon-one or
+[00:57:45] in a workshop or at a symposium or just
+[00:57:49] you know on a Blog um and I think that
+[00:57:53] what we don't do um enough nearly enough
+[00:57:57] is draw attention to the way all of
+[00:57:59] these systems work and what's valuable
+[00:58:01] about them and we take everything and
+[00:58:04] try to figure out how we can Port it
+[00:58:05] onto the internet and make it bigger
+[00:58:07] right I'm talking to people I have no
+[00:58:08] idea who the hell they are that's fine
+[00:58:10] for this right but um but but you know
+[00:58:14] there's a value to examining that um and
+[00:58:17] identifying you know hey wait a second
+[00:58:20] you're questioning this uh not you
+[00:58:22] personally but if if you question the
+[00:58:23] the semantic discontinuity idea look at
+[00:58:25] all the ways it exists in your world
+[00:58:28] right and that you value um to such a
+[00:58:31] large extent that you take them for
+[00:58:32] granted
+[00:58:34] often so I'm gonna let doc do the
+[00:58:37] channeling for a second from Wendy
+[00:58:38] Selzer whom you do know but who
+[00:58:40] is she says uh why is it so clear that
+[00:58:44] the Internet isn't a plumbing system
+[00:58:45] with regard to privacy should we give
+[00:58:47] the next comment for just see and she
+[00:58:48] says we um in italics create bulges in
+[00:58:52] the plumbing not the net
+[00:58:56] we create bulges in the plumbing so
+[00:58:59] you're like a clog in the
+[00:59:01] sewer
+[00:59:03] um yeah I don't um frog in the fountain
+[00:59:07] stick with fresh
+[00:59:09] water okay
+[00:59:14] um you know I suppose it all depends on
+[00:59:18] your point of view so if you run a data
+[00:59:20] aggregation business you would be
+[00:59:22] inclined to see it that way um but I
+[00:59:25] think that you take you know any any
+[00:59:27] executive of a data aggregation business
+[00:59:29] and ask him or her um about uh how he or
+[00:59:33] she feels
+[00:59:36] about this gender neutral stuff is going
+[00:59:38] to kill me how he feels about his
+[00:59:39] privacy in his own life um and whether
+[00:59:44] you know he wants to have in his
+[00:59:47] company's database
+[00:59:50] um you
+[00:59:51] know how often a week uh he takes an
+[00:59:55] extra drink or the fact that his
+[00:59:57] favorite television show is Fear Factor
+[01:00:00] or whatever um that person is going to
+[01:00:03] have opinions about that um that are
+[01:00:06] completely inconsistent with his
+[01:00:08] professional existence I think I think
+[01:00:10] it's a very rare person that it's not
+[01:00:12] that they don't exist so like the Steve
+[01:00:13] man surveillance stuff um we all know
+[01:00:15] about so there there are these people
+[01:00:17] who believe that they should document
+[01:00:18] and share everything about their
+[01:00:20] existence with people but it's not where
+[01:00:23] most of us are um and
+[01:00:26] there's a lot of good that comes from
+[01:00:28] the fact that that's not where most of
+[01:00:29] us are and that should matter in the
+[01:00:31] policy space to a lot uh greater extent
+[01:00:34] than it has done um so you know I resist
+[01:00:37] the idea that the internet is a plumbing
+[01:00:38] system where privacy is concerned not
+[01:00:41] because you can't see it that way but
+[01:00:42] because you shouldn't and we don't so
+[01:00:45] that's good um do you mind if I take one
+[01:00:48] myself absolutely not so I want to just
+[01:00:50] return to the um uh notion initially
+[01:00:53] from your um privacy visibility article
+[01:00:56] one of the things that was so exciting
+[01:00:57] to me was this idea that you took um aim
+[01:01:00] at the us privacy Scholars resistance to
+[01:01:02] theoretical approaches from other fields
+[01:01:04] and so forth particularly the
+[01:01:05] surveillance studies people and I think
+[01:01:07] you start to open up a lot of things
+[01:01:08] that then you open up you know further
+[01:01:10] here that just seems really interesting
+[01:01:12] and exciting and a challenge to most of
+[01:01:14] us doing legal work um as a research
+[01:01:17] matter right you really um basically say
+[01:01:19] to all of us you're not looking at this
+[01:01:21] with the proper frame and you're not
+[01:01:23] using all the tools you could and that's
+[01:01:24] I think just incredibly help helpful and
+[01:01:27] um you do it very broadly in both of
+[01:01:29] these works you also then apply it to
+[01:01:30] our field which I think is great um one
+[01:01:32] of the things that Wendy was Raising in
+[01:01:34] the chat which is where I think some of
+[01:01:35] this can be um also so fruitful is at
+[01:01:38] these kind of sticking points where
+[01:01:40] things like free expression come up
+[01:01:42] against privacy so we have intuitions
+[01:01:44] that free expression is good on the net
+[01:01:46] and openness is good on the net and free
+[01:01:47] culture is good on the net we also have
+[01:01:49] intuitions that you know privacy is
+[01:01:50] important and so forth and I feel like
+[01:01:52] one thing that you are pointing toward
+[01:01:54] is ways of handling the these um uh sort
+[01:01:57] of sticking points between things that
+[01:01:59] we in our first instance just think are
+[01:02:01] good you know motherhood and apple pie
+[01:02:02] free expression and privacy you're
+[01:02:04] actually saying no actually a lot of the
+[01:02:06] stuff is an interesting conflict and
+[01:02:07] maybe if you brought the right tools to
+[01:02:09] Bear we would have a more thoughtful
+[01:02:11] holistic um policy approach that may be
+[01:02:13] over reading into what you're trying to
+[01:02:14] do um but i' s I'd love to hear how you
+[01:02:17] think this tool set will help us at
+[01:02:19] these difficult um kind of points of
+[01:02:21] tension so that's actually really useful
+[01:02:23] thank you so much because that's exactly
+[01:02:25] the claim that um you need the
+[01:02:27] discontinuity to manage the conflict
+[01:02:30] right um there isn't a single unifying
+[01:02:34] framework
+[01:02:35] that can make it all make sense and that
+[01:02:38] people have really strongly
+[01:02:41] held beliefs feelings intuitions what
+[01:02:44] have you about how different kinds of
+[01:02:46] information should be treated
+[01:02:48] differently everybody should get access
+[01:02:50] to you know
+[01:02:52] Wikipedia
+[01:02:54] um everybody should get access to my
+[01:02:57] diary now if I become a famous person
+[01:03:00] and someone wants to write about my
+[01:03:01] diary on Wikipedia then we have you know
+[01:03:03] it gets it can get hard but um but the a
+[01:03:06] function of these semantic
+[01:03:08] discontinuities as I'm calling them and
+[01:03:09] actually the way they have functioned in
+[01:03:11] the real world is exactly to manage that
+[01:03:15] um so that so it's not that you don't
+[01:03:16] have problems it's not that disputes
+[01:03:18] don't arise it's not that you don't have
+[01:03:19] you know this or that public outrage
+[01:03:21] it's that you have a way to kind of
+[01:03:24] muddle along um um and and and have it
+[01:03:28] make sense and and in a way that most
+[01:03:30] people can can live with um that there's
+[01:03:34] a really good book this is kind of segue
+[01:03:37] a little bit but um one of my favorite
+[01:03:39] books it's a really rough read um but um
+[01:03:42] but I like it anyway it's by a woman
+[01:03:44] called Katherine hailes and it's called
+[01:03:45] how we became posthuman and she's a
+[01:03:47] literary scholar but she looks at the um
+[01:03:49] she goes back to the early reports of a
+[01:03:52] series of meetings on you know how to
+[01:03:54] understand information they had just a
+[01:03:56] wild mly crew of people including
+[01:03:58] Margaret me and you know people you
+[01:03:59] wouldn't necessarily expect to be in
+[01:04:01] these meetings and out of it ultimately
+[01:04:03] came um uh the um sort of modern
+[01:04:06] understanding of cybernetics um but
+[01:04:09] there were moments when it could have
+[01:04:10] gone differently and and and um as I
+[01:04:13] understand it right one sort of received
+[01:04:15] truth of you know within the cybernetic
+[01:04:20] worldview is that information is
+[01:04:22] information regardless of its physical
+[01:04:24] state um um you know it's the same it
+[01:04:28] passes through minds and and artifacts
+[01:04:30] but it's all you know unified um and I
+[01:04:34] actually think that's wrong right um we
+[01:04:38] are analog in some really important ways
+[01:04:41] um and you see it you know that you
+[01:04:45] could look the whole history of efforts
+[01:04:46] to design artificial intelligence is an
+[01:04:49] is you know trying to make a computer be
+[01:04:52] analog in certain ways that it just has
+[01:04:54] a hard time doing um you know an artist
+[01:04:57] can look at um you know a bunch of other
+[01:05:00] paint a bunch of paintings and a carrot
+[01:05:02] growing in the garden and see that it's
+[01:05:04] cloudy and go oh you know I should do
+[01:05:06] this and it's really hard to teach a
+[01:05:07] computer to do that and it's really
+[01:05:10] important um so uh you know it's it's
+[01:05:13] worth thinking about why it's important
+[01:05:15] and trying to make sure we don't get rid
+[01:05:17] of it hugely fruitful um I wrote a book
+[01:05:21] with wor gusers you know called Born
+[01:05:22] digital and one of the things someone
+[01:05:24] did right after the book came out was
+[01:05:25] gave a t-shirt to my seven-year-old son
+[01:05:27] which says I am analog which he wears
+[01:05:29] every single day to bed to remind
+[01:05:32] me I have to put in a a plug for my my
+[01:05:36] uh colleague and friend Chris Brigman at
+[01:05:38] Virginia who's selling a t-shirt that
+[01:05:39] says God hates
+[01:05:41] Twitter you could get one of those too
+[01:05:43] get in touch with him so um we'll all
+[01:05:45] write to Chris and um before we do so
+[01:05:48] though um Julie has uh not only taught
+[01:05:50] one class today not only shared this
+[01:05:52] Lunchtime with us but she's going to
+[01:05:54] teach another class later today so we
+[01:05:55] should thank her profusely um and let
+[01:05:57] her go so Julie thank you
+[01:06:01] very thank you not to say the question

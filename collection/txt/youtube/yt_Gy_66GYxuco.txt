@@ -1,0 +1,1842 @@
+[00:00:00] let me
+[00:00:01] um first say uh I'm I'm the setup guy
+[00:00:03] here actually how is the punch line and
+[00:00:06] the reason for this is that on this as
+[00:00:07] on many of the projects that Hal and I
+[00:00:09] work on jointly it's about half a dozen
+[00:00:11] at the moment uh I wave my arms a lot
+[00:00:14] and then Hal actually makes things work
+[00:00:17] um one of the reasons that we're
+[00:00:18] presenting media cloud is to a certain
+[00:00:20] extent it doesn't work and one of the
+[00:00:22] reasons that it doesn't work is that we
+[00:00:24] are taking an engineering approach to
+[00:00:27] some extremely deep computer science
+[00:00:29] Problems by which I mean we are looking
+[00:00:31] at uh solutions that exist out there we
+[00:00:34] are linking them together with the
+[00:00:37] variable help of David La Rochelle who's
+[00:00:38] sitting there on the corner and sort of
+[00:00:41] duct taping together existing algorithms
+[00:00:44] and pieces of code to try to solve a
+[00:00:46] very very difficult and deep problem we
+[00:00:48] are clearly not going to solve it based
+[00:00:51] on the methodology we have at the moment
+[00:00:52] and so in part the reason we're coming
+[00:00:54] and talking to computer scientists is
+[00:00:55] that there are large chunks of this
+[00:00:57] problem where we need deep algorithmic
+[00:00:59] help to get forward on it but just to
+[00:01:01] give you a sense for how nasty and messy
+[00:01:04] the problem that we're playing with is
+[00:01:05] I've had sitting behind us a paper from
+[00:01:09] 1965 and this is a paper that in the
+[00:01:11] field of media studies is pretty seminal
+[00:01:13] and I don't know to what extent it
+[00:01:14] actually ends up making its way into
+[00:01:16] computer science department so I'm
+[00:01:17] guessing probably not nearly as much as
+[00:01:20] if you were showing up at a good
+[00:01:22] Communications Department but this paper
+[00:01:24] is by Johan galtong and Mari Rouge and
+[00:01:27] it was a study
+[00:01:28] of four Norwegian newspapers over the
+[00:01:32] course of about four years so 1961 to
+[00:01:35] 1965 golf tongue and Rouge literally
+[00:01:38] took the morning and evening newspapers
+[00:01:40] in Oslo and clipped out every single
+[00:01:44] newspaper story that mentioned Cyprus
+[00:01:46] Congo or Cuba and then with an enormous
+[00:01:50] stack of stories in front of about 1200
+[00:01:52] that accumulated over four years they
+[00:01:55] decided to try to figure out what
+[00:01:58] is allowed to become news and this is a
+[00:02:01] very fundamental question of all the
+[00:02:02] things that happen in the world on any
+[00:02:04] given day only a certain number of them
+[00:02:06] end up being considered to be newsworthy
+[00:02:07] only a certain number of them end up
+[00:02:09] being Amplified and get the sort of
+[00:02:10] attention that you get from showing up
+[00:02:12] in a newspaper this is a question that
+[00:02:15] has extremely important economic
+[00:02:16] implications it's got extremely
+[00:02:18] important political implications there
+[00:02:21] are lots of stories out there of both
+[00:02:23] wonderful and tragic events that
+[00:02:25] essentially end up being invisible
+[00:02:26] because in one fashion or another they
+[00:02:28] cease to be news there's also the
+[00:02:31] possibility of events that get far too
+[00:02:33] much attention and far too much scrutiny
+[00:02:35] by virtue of the fact that they may not
+[00:02:37] be particularly newsworthy but we're
+[00:02:39] sort of addicted to them in one fashion
+[00:02:40] or another we can't stop looking at them
+[00:02:42] you can think of celebrity news you can
+[00:02:44] think of Fascinations with the
+[00:02:45] individual machinations of political
+[00:02:47] campaigns the question of what gets to
+[00:02:50] become news is an interesting and sort
+[00:02:52] of deep political one and we think also
+[00:02:55] one that you can start asking some
+[00:02:56] quantitative questions about there the
+[00:02:58] reason this paper was interesting is
+[00:03:00] that in 1965 these two took a crack at
+[00:03:03] answering this question quantitatively
+[00:03:04] and so they went through these articles
+[00:03:06] and they figured out some very basic
+[00:03:08] things when you mention the leader of a
+[00:03:11] country
+[00:03:12] news involving those High status
+[00:03:14] individuals is far more likely to get
+[00:03:17] attention uh than ordinary people on the
+[00:03:19] street stories that involve large
+[00:03:21] powerful Nations like the United States
+[00:03:23] or the Soviet Union were far more likely
+[00:03:25] to get mentions uh than simply
+[00:03:28] interactions between Cyprus and Greece
+[00:03:31] for instance if you had the prime
+[00:03:33] minister of the UK visiting there's a
+[00:03:35] much greater chance of becoming news So
+[00:03:37] based on doing extrapolation from
+[00:03:40] analyzing that text they were able to
+[00:03:43] put forward 13 rules which while they
+[00:03:45] may not actually be methodologically
+[00:03:46] supported by the data turn out to be a
+[00:03:49] pretty good way of understanding how
+[00:03:50] news gets shaped and in fact our
+[00:03:52] understanding of news still owes a lot
+[00:03:54] to this paper I've spent the last six or
+[00:03:57] seven years sort of screwing around with
+[00:03:59] this paper and trying to find different
+[00:04:01] ways to ask questions about this and I
+[00:04:02] put out a paper in 2003 using a brain
+[00:04:06] dead stupid methodology that doesn't
+[00:04:07] work very well which basically involves
+[00:04:10] going to Google News searching for the
+[00:04:12] name of a country and saying how many
+[00:04:13] stories do you have about this Google
+[00:04:15] news and then mapping it anyone here
+[00:04:17] who's ever done any algorithmic work can
+[00:04:19] come up with 20 reasons why that
+[00:04:20] shouldn't work you're right all 20 of
+[00:04:22] them are good reasons why it doesn't
+[00:04:23] work you can still make some interesting
+[00:04:26] generalizations about this and what I
+[00:04:28] was able to demonstrate roughly in that
+[00:04:30] paper is that media attention in a lot
+[00:04:33] of U.S media sources roughly tracks GDP
+[00:04:36] per capita we are far far more likely to
+[00:04:40] read news about wealthy countries than
+[00:04:42] we are about poor countries simplest way
+[00:04:44] to understand this is to look at Nigeria
+[00:04:47] versus Japan Nigeria shows up a very
+[00:04:50] gentle shade of pink in this map Japan
+[00:04:52] shows up a significantly darker shade of
+[00:04:55] red the darker the red the more intense
+[00:04:57] the attention the lighter the blue uh
+[00:04:59] sorry the darker the blue the lighter
+[00:05:01] the attention Japan and Nigeria have
+[00:05:03] roughly the same population they're both
+[00:05:05] about 130 million they're both
+[00:05:07] enormously strategically and
+[00:05:08] geopolitically important on any given
+[00:05:11] day across U.S media there's about an 8
+[00:05:14] to 12 times ratio of news on Japan as
+[00:05:17] there is to Nigeria you know it's
+[00:05:19] interesting this actually shows up very
+[00:05:20] very differently in different media it
+[00:05:21] gets down to about two to one in British
+[00:05:23] media in part because of long
+[00:05:25] involvement uh of the British Empire
+[00:05:27] within West Africa so there are
+[00:05:30] historical factors that tend to shape
+[00:05:31] this but within U.S media you can make
+[00:05:33] some interesting generalizations about
+[00:05:35] how income Works in here if you're
+[00:05:37] interested in this you shouldn't read my
+[00:05:39] stuff because it's methodologically
+[00:05:40] problematic you should read Dennis Wu
+[00:05:42] who's over at Northeastern he's done a
+[00:05:45] really nice job of this on sort of
+[00:05:47] Newsroom a news Gathering factors where
+[00:05:50] he looks at where AP and Reuters and all
+[00:05:53] of these other news organizations are
+[00:05:54] deployed and he's able to demonstrate a
+[00:05:57] very tight correlation between where
+[00:05:59] newspaper men are and how reporting
+[00:06:01] happens
+[00:06:14] I'm sure that's true
+[00:06:16] um yep
+[00:06:17] absolutely and and so the work that I've
+[00:06:20] done on this was around Google News
+[00:06:21] around the BBC around the New York Times
+[00:06:23] so this at this point is Google News one
+[00:06:26] of the interesting things that I was
+[00:06:28] able to do early on in that was look at
+[00:06:30] technorati which at that point was a
+[00:06:32] pretty good
+[00:06:34] analog for what was happening in the
+[00:06:37] most popular blogs saw a very very
+[00:06:40] similar pattern in some ways even a more
+[00:06:41] pronounced pattern a lot of sort of
+[00:06:45] cyber utopian celebration about this
+[00:06:46] idea that we were going to get a more
+[00:06:47] diverse view of the world out of blogs
+[00:06:50] I'm guilty of some of that since we've
+[00:06:52] been building this network of blogs from
+[00:06:54] the developing world when you look at a
+[00:06:55] large set of them you seem to have a
+[00:06:57] very similar Geographic focus in
+[00:06:59] Geographic attention
+[00:07:01] so
+[00:07:02] these are really inept ways of doing
+[00:07:05] this and I mentioned they're
+[00:07:06] methodologically problematic where we
+[00:07:08] would like to get and what media cloud
+[00:07:10] is so designed to do is to take what we
+[00:07:12] were doing here and get just beyond
+[00:07:13] geography to get into questions of what
+[00:07:17] the topics are who the individuals you
+[00:07:19] focus on are can you make large
+[00:07:22] generalizations about what certain types
+[00:07:25] of media are paying attention to or not
+[00:07:26] paying attention to and what this means
+[00:07:28] at a certain point is what we'd really
+[00:07:30] like to have is the ability to take a
+[00:07:32] media Source like the New York Times and
+[00:07:34] give you a nutritional information label
+[00:07:36] for it
+[00:07:38] over the past week here's what the New
+[00:07:40] York Times has focused on here's what
+[00:07:42] the New York Times has not focused on
+[00:07:44] here's how it compares to some of the
+[00:07:46] other players in the space
+[00:07:49] um we would also like to be able to
+[00:07:50] build this into your web browser so we'd
+[00:07:53] love to be able to voluntarily let you
+[00:07:56] look at what you're looking at on the
+[00:07:58] web and give you an indication that all
+[00:08:01] you've looked at over the last day is
+[00:08:03] Recaps of the Packers 49ers game and you
+[00:08:06] haven't actually found anything out
+[00:08:07] about Latin America
+[00:08:08] uh again voluntarily I don't want to
+[00:08:10] mandate this on anyone's Firefox but it
+[00:08:13] would be nice to have as a plug-in that
+[00:08:14] can go in there what we really want more
+[00:08:16] than anything else is we want a way of
+[00:08:19] sort of understanding the interactions
+[00:08:21] between new emerging media existing
+[00:08:24] media
+[00:08:26] where are new ideas new memes new ways
+[00:08:29] of framing a story coming from I think
+[00:08:32] we have a mental model of how New Media
+[00:08:34] Works which essentially says we have
+[00:08:36] wire Services out there we've got AP and
+[00:08:38] Reuters they report they end up in
+[00:08:40] mainstream newspapers where they may add
+[00:08:42] some things to it embellish and then
+[00:08:44] bloggers comment and fact check and that
+[00:08:46] becomes I don't know that that's true uh
+[00:08:49] actually I don't know that that's the
+[00:08:50] existing cycle we're starting to see
+[00:08:52] other Cycles sort of come into play one
+[00:08:54] of the really disturbing ones that I've
+[00:08:55] seen come into play is people start
+[00:08:57] talking on Twitter at emerging topic
+[00:09:00] ends up making it into the right frame
+[00:09:01] on Twitter and then the newspaper is
+[00:09:03] reporting it whether they have any facts
+[00:09:04] or not so the question is how do we
+[00:09:07] eliminate the question mark out of this
+[00:09:09] and start putting some arrows and
+[00:09:10] weights in there who's feeding whom how
+[00:09:13] does the dynamic work how do we go back
+[00:09:14] and forth on it so the ways people have
+[00:09:17] done quantitative media analysis over
+[00:09:19] the last decade or so fit into sort of
+[00:09:21] three General categories probably the
+[00:09:24] best work out there is being done by the
+[00:09:25] project for excellence in journalism at
+[00:09:27] a site called journalism.org they have
+[00:09:29] something called the news coverage index
+[00:09:30] which looks at a set of 53 U.S media
+[00:09:34] sources that includes a couple of
+[00:09:36] websites it includes some radio stations
+[00:09:38] some newspapers a real swath between
+[00:09:40] large and small press and they literally
+[00:09:43] have a room for full of people about
+[00:09:45] half as many people as they're in this
+[00:09:47] room and they hand code the data and
+[00:09:50] what they're able to tell you on any
+[00:09:51] given week is roughly what stories
+[00:09:55] dominated the news hole how much
+[00:09:56] attention they got they can often tell
+[00:09:58] you something about the tone it's a very
+[00:10:01] very powerful project if you're at all
+[00:10:03] interested in media attention you need
+[00:10:05] to be subscribing to their newsletter
+[00:10:06] they're doing some of the best work out
+[00:10:08] there
+[00:10:09] um but it's it's agonizingly difficult
+[00:10:12] to do it requires enormous amounts of
+[00:10:14] money there are commercial companies
+[00:10:15] doing this as well there's a group
+[00:10:16] called media tenor which you can hire to
+[00:10:19] essentially do brand management for you
+[00:10:20] and they will do a combination of
+[00:10:23] automated search for your company or for
+[00:10:25] your issue as well as sort of manual
+[00:10:27] classification of was it a positive or
+[00:10:29] was it a negative mention they can give
+[00:10:31] you a general sense of how you're being
+[00:10:32] perceived
+[00:10:34] these methods are highly accurate
+[00:10:36] they're incredibly flexible you can ask
+[00:10:40] fairly subtle questions was the coverage
+[00:10:43] positive or negative were people talking
+[00:10:45] about Obama in this particular context
+[00:10:47] you can do this yourself and in fact we
+[00:10:50] do a lot of media experiments where you
+[00:10:52] just sit down and hand code 20 50 100
+[00:10:54] pieces of media the problem is you get
+[00:10:57] to a point where you just can't do it
+[00:10:59] anymore it's very very difficult to get
+[00:11:02] a sort of large statistically meaningful
+[00:11:04] data set you can Outsource the problem
+[00:11:06] and have lots and lots of different
+[00:11:08] people work on it but then you start
+[00:11:09] bumping into questions of intercoder
+[00:11:11] reliability how do you get everybody
+[00:11:12] using the same classification how do you
+[00:11:15] get rid of your your error collection
+[00:11:17] one of the biggest problems for us is
+[00:11:19] that this is Never Real Time PJ by
+[00:11:22] investing millions of dollars a year can
+[00:11:24] tell you what's going on about it a week
+[00:11:26] after the fact and for the really big
+[00:11:28] trends they're telling you about three
+[00:11:29] months after the fact so we'd love to
+[00:11:31] get to the point where we can do some of
+[00:11:32] this stuff in real time
+[00:11:34] there is some gorgeous stuff being done
+[00:11:37] closer to real time not exactly in real
+[00:11:39] time and this largely is in the field of
+[00:11:41] Link analysis so there was a great paper
+[00:11:44] in 2005 called divided they blog uh by a
+[00:11:49] domination glance which looked at a set
+[00:11:51] of sort of hand classified U.S political
+[00:11:54] blogs and tried to get a sense for was
+[00:11:57] the left and the right in the American
+[00:11:59] blogosphere talking to one another and
+[00:12:02] the way they did this is they looked at
+[00:12:04] links to one another and they looked at
+[00:12:05] links to third-party sites and what they
+[00:12:07] found was a huge cluster of blue blogs
+[00:12:10] linking to one another a huge cluster of
+[00:12:11] red blogs a very very small bit of
+[00:12:14] overlap between the two our front and
+[00:12:17] culligester hargitai went back repeated
+[00:12:19] some of this research with a slightly
+[00:12:20] different data set looked at that
+[00:12:22] intersection where the left talks to the
+[00:12:24] right and the left usually says very
+[00:12:26] rude things to the right and vice versa
+[00:12:27] it's not that that's sort of you know
+[00:12:30] the the golden Middle Ground of
+[00:12:31] democracy that's actually the space at
+[00:12:33] which we all yell at one another when we
+[00:12:34] actually bother to address one another
+[00:12:37] gorgeous gorgeous piece of work done by
+[00:12:40] John Kelly and bruceettling who's
+[00:12:42] sitting in the room here
+[00:12:43] looking at classifying blogospheres
+[00:12:47] based on who they link to so not how one
+[00:12:50] blog links to another but linking to
+[00:12:52] third-party sources these are clusters
+[00:12:55] of Iranian blogs and what you're seeing
+[00:12:57] here is the Iranian blogosphere
+[00:12:59] clustering in four General topical
+[00:13:02] spaces you have a reformist group down
+[00:13:05] here which is the group that we all sort
+[00:13:07] of thought we knew about in the Iranian
+[00:13:09] blogs we sort of knew there had to be a
+[00:13:11] conservative group but we didn't know
+[00:13:13] very much about it we actually were able
+[00:13:16] to find out from this that there was a
+[00:13:17] group called The twelvers who believe in
+[00:13:20] the 12th Imam who have their own set
+[00:13:22] there's a group called mixed networks
+[00:13:24] that are actually sort of hard to Define
+[00:13:25] and hard to say who they're all about in
+[00:13:27] the top left there's this wonderful
+[00:13:29] cluster that no one would have
+[00:13:30] anticipated which is Persian poetry
+[00:13:32] which turns out to be one of the most
+[00:13:35] powerful forces in the Iranian
+[00:13:37] blogosphere uh people who are trading
+[00:13:39] back and forth love poetry some of which
+[00:13:41] actually gets political and occasionally
+[00:13:43] gets censored if you do this for the the
+[00:13:45] uh the US bloggers here you end up with
+[00:13:47] a Knitter cluster which I tend to think
+[00:13:49] of as having a certain amount of
+[00:13:50] parallels to it you didn't think that it
+[00:13:52] was there but it actually turns out to
+[00:13:54] be an enormously powerful sort of
+[00:13:56] cluster that you would only get out of
+[00:13:58] doing the link analysis
+[00:14:00] what's great about link analysis is you
+[00:14:02] don't hand code you sort of set out a
+[00:14:04] crawler it goes it figures out who
+[00:14:06] points to who a link is a pretty
+[00:14:08] unambiguous symbol
+[00:14:09] you can use really large data sets you
+[00:14:12] can automate it there are good tools out
+[00:14:15] there that look in terms of hubs and
+[00:14:17] authorities and networks you can throw
+[00:14:18] that at your data and you can come up
+[00:14:20] with some good generalizations the
+[00:14:22] problem with it is that the link is only
+[00:14:24] one aspect of content it doesn't help
+[00:14:27] you at all with traditional media
+[00:14:29] because newspapers for the most part
+[00:14:30] don't link even ones that you've moved
+[00:14:32] online they don't link particularly
+[00:14:34] often works really well for blogs it
+[00:14:36] works really poorly for mainstream media
+[00:14:39] it only looks at the structure it
+[00:14:40] doesn't look at the content of the text
+[00:14:42] which means that you're looking at a
+[00:14:44] small part of what's inherent in that
+[00:14:46] there's a real danger that you somehow
+[00:14:48] conflate the link structure with an
+[00:14:50] underlying social structure I don't know
+[00:14:52] that there's necessarily evidence
+[00:14:54] although I'm hoping Bruce will jump on
+[00:14:55] me if I manage to get that wrong that
+[00:14:57] these guys necessarily hang out together
+[00:15:00] one of the other challenges with it is
+[00:15:02] that after you've built these clusters
+[00:15:04] you do need someone who speaks Persian
+[00:15:06] or Russian or so on and so forth to come
+[00:15:07] in and tell you what these clusters
+[00:15:08] actually are because what you're able to
+[00:15:11] say is that these things are related to
+[00:15:12] each other in terms of graph Theory but
+[00:15:14] it doesn't necessarily tell you what
+[00:15:16] they're about
+[00:15:17] so we're starting to get excited about
+[00:15:19] things that are doing content based
+[00:15:22] analysis the projects that are out there
+[00:15:25] are pretty primitive there are people
+[00:15:27] who are taking Google news and trying to
+[00:15:30] map together the way that Google News
+[00:15:31] clusters together stories to do
+[00:15:34] comparative attention to stories there's
+[00:15:36] a beautiful art project that actually
+[00:15:38] gives you a sense for what you might do
+[00:15:40] with a huge data set called we feel fine
+[00:15:42] which is basically just a specialized
+[00:15:45] spider that looks for people saying I
+[00:15:48] feel and then tries to figure out what
+[00:15:50] people are talking about in terms of
+[00:15:52] their emotions and how it differs
+[00:15:53] demographically between the people who
+[00:15:55] are speaking I think probably the best
+[00:15:57] rigorous work that's being done on
+[00:15:58] content at this point is being done by a
+[00:16:00] group at Cornell called meme tracker
+[00:16:02] which is looking at quotes So phrases
+[00:16:05] like
+[00:16:06] you can put lipstick on a pig I I you
+[00:16:09] can and so
+[00:16:11] um
+[00:16:12] they look at how a quote is used in full
+[00:16:16] and then subdivided to try to figure out
+[00:16:19] how a story moves through the media so
+[00:16:21] the theory being that when someone says
+[00:16:23] a full quote that's apparent and then
+[00:16:26] you can look for children coming down
+[00:16:27] off of it and you can watch through
+[00:16:28] media diffusion and their paper on Meme
+[00:16:30] tracker actually had a very very
+[00:16:32] interesting finding suggesting that
+[00:16:34] there's a very small subset of blogs
+[00:16:36] that may actually be leading newspapers
+[00:16:38] which again goes counter to that theory
+[00:16:40] that I posited which has sort of become
+[00:16:42] the mainstream belief of how blogs work
+[00:16:45] together content analysis is just
+[00:16:47] becoming possible what's nice about it
+[00:16:49] is that theoretically you should be able
+[00:16:51] to work with any sort of unstructured
+[00:16:52] text if you can do it well you should be
+[00:16:55] able to do large data sets and automate
+[00:16:56] it you should be able to do pretty
+[00:16:58] visualization around it there are huge
+[00:17:01] downsides it's inaccurate it's never
+[00:17:04] going to be as accurate as hand coding
+[00:17:06] this stuff at least not in the near
+[00:17:08] future there are language constraints
+[00:17:10] all the systems we have to do this to
+[00:17:12] sort of look at a text and say here are
+[00:17:14] the entities in these texts here are the
+[00:17:16] topics in these texts are language
+[00:17:17] specific
+[00:17:18] so even if you build a lovely system for
+[00:17:20] English it's a real challenge to get it
+[00:17:22] to Russian which is in fact the
+[00:17:23] challenge that we're working on right
+[00:17:24] now and now more than a year into this
+[00:17:26] project we're discovering that even if
+[00:17:28] what you're doing is duct taping
+[00:17:29] together components it's an enormous
+[00:17:32] enormous programming investment
+[00:17:34] so we have put out a prototype system
+[00:17:36] called media Cloud it's at
+[00:17:38] mediacloud.org the truth is what you see
+[00:17:40] on mediacloud.org is disappointing it's
+[00:17:43] an alpha that we put out a long time ago
+[00:17:44] it actually doesn't give you a very good
+[00:17:46] sense of what our system does in a
+[00:17:47] moment we're going to hand you over to
+[00:17:48] how who will show you what our system
+[00:17:50] does the very basic concept behind it is
+[00:17:54] that we have a spider out there it's not
+[00:17:57] a spider sorry we are subscribing to
+[00:18:00] tens of thousands of news feeds out
+[00:18:03] there RSS feeds so we're going to
+[00:18:06] newspapers we're finding all of the RSS
+[00:18:07] feeds they have we're going to blogs
+[00:18:09] we're going to any media Outlets we can
+[00:18:11] find we're subscribing to their RSS and
+[00:18:12] Adams feeds we're pulling in all those
+[00:18:16] stories we're actually getting the full
+[00:18:18] stories which is pretty non-trivial
+[00:18:21] because you're usually getting a snippet
+[00:18:23] out of the RSS we're going to the URL
+[00:18:24] we're stepping through the pages
+[00:18:25] retrieving all of it we're extracting
+[00:18:28] the story text out from all the craft so
+[00:18:31] we're pulling all the formatting data
+[00:18:33] all the navigation data and we're
+[00:18:34] actually getting to the story text we're
+[00:18:36] tossing that towards uh open Calais from
+[00:18:39] Reuters which is a pretty good extractor
+[00:18:41] system we're also using other systems to
+[00:18:43] try to get term extraction and topics
+[00:18:45] out of it and then we're dumping it into
+[00:18:47] a database and at this point that's
+[00:18:50] largely all we're doing and the reason
+[00:18:52] behind that is that while we have huge
+[00:18:54] research questions we're trying to sort
+[00:18:56] of be the middleware layer and the
+[00:18:58] middleware that we're trying to be is we
+[00:18:59] want to provide terabytes of data coming
+[00:19:02] out of media and tools to pull this in
+[00:19:05] and do some analysis on it but neither
+[00:19:07] of us are communication Scholars so we'd
+[00:19:09] really rather let those communication
+[00:19:11] Scholars figure out how to build
+[00:19:12] experiments and ask questions about this
+[00:19:13] whether they're journalists whether
+[00:19:15] they're journalism critics whether
+[00:19:17] they're communication Scholars we're
+[00:19:19] also Building A system that has a bunch
+[00:19:21] of little Parts in it some of which
+[00:19:22] don't work very well at this point and
+[00:19:24] we very much want to work with a
+[00:19:25] computer science Community to try to
+[00:19:27] figure out how to make those things work
+[00:19:28] out but
+[00:19:30] for a sense of how this actually works
+[00:19:32] at this point I'm going to hand it over
+[00:19:33] to someone
+[00:19:42] so I'm going to start off by showing you
+[00:19:45] um
+[00:19:46] the end results
+[00:19:48] I hope
+[00:19:53] so what I'm going to show you first is
+[00:19:55] the sort of um
+[00:19:58] the tail end of of what we're getting
+[00:20:00] out of all the work we're doing and then
+[00:20:02] I'm going to go back and step through
+[00:20:04] um how we're generating those results
+[00:20:07] and all of the good and the not so good
+[00:20:10] things we're doing so uh what we've
+[00:20:12] built is what we're calling our
+[00:20:13] dashboard and the idea here is you can
+[00:20:16] type in any of the new sources we're
+[00:20:18] covering some of the New York Times
+[00:20:20] and you can get a sense of
+[00:20:22] um the kinds of language that the New
+[00:20:24] York Times is using so this is a little
+[00:20:27] bit interesting you can see broadly what
+[00:20:29] kinds of things they're talking about
+[00:20:30] you can read we this is for the week of
+[00:20:34] uh this is for the week of October 12th
+[00:20:36] which is when the playoffs were so you
+[00:20:39] can see they're doing a lot of talking
+[00:20:40] about baseball
+[00:20:42] um and then you can even if you're
+[00:20:44] wondering about the specifics of any of
+[00:20:45] these things if you're wondering who uh
+[00:20:47] lidge is you can dig down in and you can
+[00:20:50] see the specific sentences that were
+[00:20:51] used to discuss that term
+[00:20:57] yeah so this is a development system
+[00:20:58] which is running off of my little USB
+[00:21:00] drive here so there might be weights of
+[00:21:03] a few seconds at points so this gives us
+[00:21:05] a sense of lidge is um is uh actually
+[00:21:09] don't even know who he is he's a manager
+[00:21:11] place okay and then this links off to
+[00:21:14] the stories too so you can look at the
+[00:21:15] actual stories and I'll give you an
+[00:21:18] example of how that's helpful in a sense
+[00:21:20] in a large sense what we're trying to do
+[00:21:22] with this dashboard system is is trying
+[00:21:25] one method of going from all this sort
+[00:21:27] of raw data that Ethan described we're
+[00:21:29] collecting to trying to be able to help
+[00:21:31] people make some sort of conclusions
+[00:21:32] about the substance of what's in the
+[00:21:34] stories
+[00:21:35] so we can do this not only with uh with
+[00:21:38] individual sources but we can also do it
+[00:21:40] with sets of sources so we can take the
+[00:21:43] list of the top 10 U.S mainstream media
+[00:21:46] and we can get the same sort of thing we
+[00:21:47] can get a sense of what they're talking
+[00:21:49] about as well it looks pretty similar to
+[00:21:50] the New York Times
+[00:21:51] um
+[00:21:53] and then this over here is just a trend
+[00:21:54] line to see sort of over time over the
+[00:21:56] last over that week what they were
+[00:21:58] talking about and how it different uh
+[00:22:00] and then the other thing we can do is we
+[00:22:02] can throw we have all these lists of
+[00:22:03] words we can throw this into a
+[00:22:05] clustering system and what this is
+[00:22:07] basically telling us is uh how do these
+[00:22:10] sources group together according to the
+[00:22:13] kinds of words that they use in their
+[00:22:15] stories
+[00:22:16] and what we get here is we get a couple
+[00:22:18] of sort of pretty hard journalism
+[00:22:20] sources and then we get two clusters
+[00:22:24] which are mainly the local newspapers
+[00:22:27] who write a lot about sports in the
+[00:22:30] non-local newspapers who don't write
+[00:22:32] much about sports
+[00:22:36] we can also do this for the New Media
+[00:22:40] and this is going to take a second to
+[00:22:41] load this is a list uh this is a list of
+[00:22:43] a thousand blogs one of the challenges
+[00:22:46] we have is just figuring out which media
+[00:22:48] we want to track and how to make sense
+[00:22:49] of them I'll talk in a little bit about
+[00:22:51] what it means one of the questions is
+[00:22:53] what are the top 10 U.S mainstream media
+[00:22:55] what we've used for this list is uh some
+[00:22:59] data from Google about which of these
+[00:23:01] sites are getting the most traffic but
+[00:23:03] it's always a difficult question just to
+[00:23:05] identify those lists for this popular
+[00:23:07] blogs list what we're using is a list
+[00:23:09] from blog lines blog lines has a list of
+[00:23:11] their top 1000 feeds so it's not at all
+[00:23:14] perfect but it's one pretty good
+[00:23:17] snapshot of of uh of the most popular
+[00:23:22] blogs in the US at least and so this is
+[00:23:25] where it starts to get pretty
+[00:23:26] interesting you see that this set of
+[00:23:28] words look really quite different than
+[00:23:29] the mainstream media you have some of
+[00:23:31] the same political stuff like American
+[00:23:33] and Obama but then you also have a lot
+[00:23:36] of tech stuff you have this Google and
+[00:23:37] internet and software and Microsoft
+[00:23:40] stuff
+[00:23:41] um and Twitter and then you have uh all
+[00:23:44] all blogs talk a lot about what they
+[00:23:45] love so love always comes up a lot and
+[00:23:48] then you have uh
+[00:23:51] um and then you the photo stuff is
+[00:23:53] always you always have big clusters of
+[00:23:54] photo stuff and then if we cluster this
+[00:23:56] here's where we start to get some really
+[00:23:58] pretty interesting results the first
+[00:23:59] thing you find is that the US popular
+[00:24:01] blogs list actually contains about um 12
+[00:24:03] Spanish language blogs so that's just a
+[00:24:05] good test case that you're clustering is
+[00:24:07] working at a base level and then we
+[00:24:09] start to get some interesting blogs you
+[00:24:11] have this sort of Google Google cluster
+[00:24:13] which is a cluster of people talking
+[00:24:15] mostly substantly about Google and you
+[00:24:18] can um just sort of dig into this stuff
+[00:24:20] and get a sense of for instance how
+[00:24:22] Google sitesync is talking about Google
+[00:24:25] um you can go you can you can go to the
+[00:24:28] page for a specific Source I've picked
+[00:24:31] this at random which I shouldn't have
+[00:24:32] done the reason this has a crappy little
+[00:24:33] Cloud here is it probably only had one
+[00:24:35] story for the week so it didn't have
+[00:24:36] much
+[00:24:37] um it didn't have much to work on if we
+[00:24:40] go to like TechCrunch that'll give us
+[00:24:42] more interesting results
+[00:24:43] and then again we can sort of dig into
+[00:24:45] individual sources so we can get a sense
+[00:24:47] of how this is and what sense is this
+[00:24:49] cover in Google and what sense is this
+[00:24:51] about Google Assistant artifact or is it
+[00:24:52] real Tech runs obviously seems pretty
+[00:24:55] real they're talking about Google a lot
+[00:24:58] um and then but and then we see this
+[00:25:00] sort of expected political uh cluster
+[00:25:02] here lots of people talking about Obama
+[00:25:04] one interesting thing here is that when
+[00:25:06] you're looking at the um when you're
+[00:25:09] looking at actual content at this level
+[00:25:11] you end up with all of the sort of right
+[00:25:13] and the left stuff together because
+[00:25:14] they're all using broadly the same kinds
+[00:25:16] of language uh and it's not at least at
+[00:25:19] this level clustering with all this
+[00:25:20] other stuff it doesn't pop the right
+[00:25:22] versus left distinctions pop don't pop
+[00:25:24] out too much what pops out is the
+[00:25:25] political versus non-political
+[00:25:27] and then very interestingly we get
+[00:25:30] um two clusters here one for quilting
+[00:25:32] and one for knitting so who'da known
+[00:25:34] right that of the top 1000 blogs um 50
+[00:25:38] some odd of those blogs are about
+[00:25:39] quilting and knitting and if you dig
+[00:25:41] through to these you may seem all to be
+[00:25:43] really about
+[00:25:44] um knitting and quilting and if you add
+[00:25:45] those together you get about as many
+[00:25:47] blogs
+[00:25:51] good thing
+[00:25:53] um if you you have about as many of
+[00:25:54] those blogs in the nilting and quilting
+[00:25:57] group as you have in the Obama group in
+[00:25:59] the politics group so all of a sudden so
+[00:26:01] we're already starting to get pretty
+[00:26:02] interesting results about what this sort
+[00:26:04] of composition of these of these groups
+[00:26:06] are we also have um
+[00:26:08] we also have a list of of the long tail
+[00:26:11] blogs and that is just a random sample
+[00:26:13] of a thousand blogs of roughly all of
+[00:26:16] the blogs in the US that we we got from
+[00:26:18] uh the spinner API Spinners a company
+[00:26:22] that tracks blogs uh and another thing
+[00:26:25] that we can do is we can um we can
+[00:26:28] compare the sets of sources to one
+[00:26:31] another so after my um my pitiful laptop
+[00:26:34] thinks for a minute what's going to come
+[00:26:36] up here is a set of comparative word
+[00:26:38] clouds where on one hand we have the
+[00:26:40] sets of words that are more likely to
+[00:26:42] appear in the popular blogs than the
+[00:26:44] random long tail blogs and on the other
+[00:26:46] side we're going to have the kinds of
+[00:26:48] words that tend to appear more in the
+[00:26:50] long tail blogs than the popular Vlogs
+[00:26:53] um so on the on the left you see
+[00:26:55] something that looks pretty similar to
+[00:26:56] what we saw for the Raw Feed except you
+[00:26:58] see the technology stuff really pops out
+[00:27:01] a lot more so that means there's a lot
+[00:27:02] of representation of technology in the
+[00:27:04] popular blogs but not as much if you go
+[00:27:06] out into the long tail and then you have
+[00:27:07] this really interesting list them in the
+[00:27:10] lawn the long tail side they talked
+[00:27:11] about God a lot they talk about
+[00:27:12] education teachers teaching and students
+[00:27:15] a lot they talk about love a lot again
+[00:27:17] they have a law list which is uh um law
+[00:27:20] was comedy stuff of this that pops out
+[00:27:24] that's not another list so um so this
+[00:27:27] again is giving us a pretty good
+[00:27:28] snapshot of of by it's going from this
+[00:27:32] sort of raw list of text and words we
+[00:27:33] have to actually making some interesting
+[00:27:35] conclusions about how the content of
+[00:27:38] these sets of sources differ from one
+[00:27:40] another
+[00:27:41] so those are those are the sort of
+[00:27:43] results that we're getting now I'm going
+[00:27:45] to just move through really pretty
+[00:27:47] quickly uh because we're taking up a lot
+[00:27:49] of time but I'm going to move pretty
+[00:27:50] quickly through each of the components
+[00:27:52] and sort of what we're doing at each
+[00:27:53] stage and what's working what's not
+[00:27:56] working and I hope that you'll sort of
+[00:27:57] pepper me with questions criticism
+[00:27:59] suggestions uh afterwards so there are a
+[00:28:02] number of challenges here one is that
+[00:28:04] there's lots of media in the world and
+[00:28:06] we are sort of medium scale systems so
+[00:28:09] we're a sort of order of magnitude above
+[00:28:11] what you can do with hand coding but
+[00:28:13] we're never as a project of of a
+[00:28:16] research center at Harvard we're never
+[00:28:18] going to be of the sort of Google News
+[00:28:19] size or the where we're tracking you
+[00:28:22] know millions of sources we're always
+[00:28:24] going to be in those sort of tens of
+[00:28:25] thousands of sources
+[00:28:27] um uh size most likely so that means we
+[00:28:29] have to make choices about what we're
+[00:28:30] going to cover uh in in a lot of those
+[00:28:33] it turns out it's very hard to make
+[00:28:35] choices for instance about what is what
+[00:28:37] is the set of a thousand or even ten
+[00:28:39] thousand blogs that are going to
+[00:28:40] represent all blogs in the world or what
+[00:28:42] are the Thousand what is the set what do
+[00:28:43] you what set of media do you choose to
+[00:28:46] represent mainstream media even when you
+[00:28:49] have those list of sources it's
+[00:28:52] non-trivial exposedly for the mainstream
+[00:28:54] media to just collect the feeds from the
+[00:28:58] sources so one of the main things that
+[00:28:59] makes this project possible is that all
+[00:29:01] all these sources published RSS feeds so
+[00:29:03] it's very easy for us to get the list of
+[00:29:06] stories are published in general once
+[00:29:07] you have the RSS feed but it turns out
+[00:29:09] for virtually all mainstream media
+[00:29:12] there's no feed for all the stories from
+[00:29:14] that store so there's no New York Times
+[00:29:16] RSS feed there are 200 some odd New York
+[00:29:19] Times RSS feeds so there's some
+[00:29:22] challenges just going out and figuring
+[00:29:23] and writing some code to go out and
+[00:29:25] capture what those 200 Feats are and
+[00:29:28] then they're substantive hard there are
+[00:29:30] additional hard questions about what
+[00:29:33] constitutes the New York Times does
+[00:29:34] frequent is Freakonomics part of the New
+[00:29:36] York Times
+[00:29:37] or is it just a separate block and those
+[00:29:39] are questions we just have to address
+[00:29:40] address and struggle with
+[00:29:43] um
+[00:29:45] the other part of our system which is
+[00:29:46] pretty probably the most straightforward
+[00:29:48] part is just our crawler our crawler
+[00:29:50] just goes out and gets the RSS feeds
+[00:29:52] from each of these feeds every few hours
+[00:29:56] and then just downloads all the URLs it
+[00:29:58] finds the one little bit of extra work
+[00:29:59] it does is it tries to do paging so if
+[00:30:02] there's a little next page Link at the
+[00:30:03] bottom of the story it tries to get the
+[00:30:05] subsequent Pages as well so that you
+[00:30:06] don't just get the first page in the New
+[00:30:08] York Times story you get all 10 pages
+[00:30:11] um
+[00:30:12] the
+[00:30:13] next thing we do is once we have all
+[00:30:15] that content when you have a New York
+[00:30:18] Times story you end up with not just the
+[00:30:21] story but you end up with a lot of craft
+[00:30:22] around it what we think of Croft as far
+[00:30:24] as navigation and ads and other stuff
+[00:30:26] that's not the text of the story itself
+[00:30:28] ideally that would be in the RSS feed
+[00:30:30] and for some for most blogs it is but
+[00:30:34] for virtually all mainstream media all
+[00:30:36] you get for the in the RSS feed is maybe
+[00:30:38] a sentence or two of a description of
+[00:30:40] the text so we have to we have to
+[00:30:42] somehow figure out how to strip Out All
+[00:30:44] Those ads and especially in the
+[00:30:46] navigation from the text of the story
+[00:30:48] because otherwise you'll think that
+[00:30:50] every that two-thirds of all New York
+[00:30:52] Times stories for the next four years
+[00:30:54] are about Obama just because almost
+[00:30:55] every page includes a link to above so
+[00:30:57] we so we have a system that does this
+[00:30:59] extraction so uh if we take this is an
+[00:31:04] example of a story that we've downloaded
+[00:31:05] about Iraq and oil investment and what
+[00:31:09] we've done is we've taken if we look at
+[00:31:10] the actual story
+[00:31:12] looks like this so you can see it's got
+[00:31:15] all this craft around it this is what we
+[00:31:16] downloaded and we ran it through our
+[00:31:18] extractor and we ended up with desks so
+[00:31:20] we ended up with a big block of text and
+[00:31:22] the way that we do this is we have a
+[00:31:24] number of different signals the core
+[00:31:25] signal we use is the um the HTML density
+[00:31:28] of each line and what that basically
+[00:31:30] means is for a sentence like this over
+[00:31:34] here
+[00:31:35] which is a link which we don't want
+[00:31:36] there's going to be a lot of HTML around
+[00:31:38] that to format it and make it a link and
+[00:31:40] not very much text on that line for a
+[00:31:43] line like this there's going to be lots
+[00:31:45] of text and not very much formatting so
+[00:31:47] as a very broad signal that does a
+[00:31:49] pretty good job of telling us what is
+[00:31:51] the substantive text and what's not but
+[00:31:53] it doesn't do a good enough job so we
+[00:31:54] end up having to add a bunch of other
+[00:31:57] modifiers in there we can actually go to
+[00:32:01] one of these stories and you can see
+[00:32:04] this tells this is our little extractor
+[00:32:06] page that tells us what the system is
+[00:32:08] doing for each line so these purple
+[00:32:11] lines here are ones that we're
+[00:32:13] extracting the lot this the score right
+[00:32:16] here is the raw HTML density and then
+[00:32:19] the score here is the modified density
+[00:32:21] with all of our other modifiers added so
+[00:32:24] an example is some of the modifiers very
+[00:32:26] long lines and absolute terms are more
+[00:32:29] likely to be a substantive text lines
+[00:32:32] that are far away from a previous lines
+[00:32:35] the further away it gets from something
+[00:32:36] that looked like text the less likely
+[00:32:38] you are to be real text and then we do
+[00:32:41] um the final thing we do is we do a
+[00:32:43] similarity test we just look at how
+[00:32:46] similar is this text to the text that we
+[00:32:48] do get in the for the title in the
+[00:32:50] description of the RSS V and if it looks
+[00:32:52] very similar to that text then we'll
+[00:32:54] we'll have a discount on it so this is
+[00:32:56] an example of wine that looked like
+[00:32:57] maybe it was not substantive text
+[00:32:59] because if you look at the text of the
+[00:33:01] line over here see it's got some links
+[00:33:03] in it
+[00:33:04] so it's got a fair amount of HTML but
+[00:33:07] once we did all of the all of the
+[00:33:08] functioning on it we scored it correctly
+[00:33:11] this is also our training system so
+[00:33:13] these check boxes over here say whether
+[00:33:16] or not it should be included as
+[00:33:17] substantive text so what we do is we
+[00:33:19] Design This algorithm in a generic sense
+[00:33:21] and we have a set of of about a thousand
+[00:33:23] stories that we just manually gone
+[00:33:25] through and trained like this and then
+[00:33:26] every time we make modifications we just
+[00:33:28] rerun against the train set and we see
+[00:33:30] what how accurate is
+[00:33:33] um the biggest problem with this system
+[00:33:35] now is it's we're we capture almost all
+[00:33:39] of the text we're supposed to capture
+[00:33:40] the problem is including text that we
+[00:33:43] shouldn't be including there's a lot of
+[00:33:45] edge cases of text that looks like
+[00:33:47] something substantive text that is not
+[00:33:49] really so that's been our challenge
+[00:33:51] going forward
+[00:33:52] after we get all of this text we just
+[00:33:56] have a generic tagging system
+[00:33:58] um
+[00:33:59] so we so we can just send the send the
+[00:34:02] text into any sort of tagging any set of
+[00:34:04] tagging modules and it comes back with a
+[00:34:06] list of tags so one of those tagging
+[00:34:07] modules is Calais so all we did was we
+[00:34:10] just connected to the Calais web service
+[00:34:12] and sent it this text and it sent us
+[00:34:14] back a bunch of
+[00:34:15] um tags that it thinks the story is
+[00:34:17] about so it thinks it's about New York
+[00:34:18] and and the Islamic Republic of Iran and
+[00:34:22] electricity
+[00:34:24] um and then we can also send it through
+[00:34:26] other tagging modules if we want we have
+[00:34:29] another module called our New York Times
+[00:34:31] topics which is module which is just a
+[00:34:34] simple simple dictionary mixture which
+[00:34:36] just means we take the list of the New
+[00:34:38] York Times publishes the list of topics
+[00:34:40] that it it's about
+[00:34:42] um three or four thousand news topics
+[00:34:44] that it thinks are interesting to the
+[00:34:45] world at any given point and we just try
+[00:34:47] to find those words in the text of the
+[00:34:49] story you see it ends up being a higher
+[00:34:52] quality but much smaller list and
+[00:34:54] especially is not
+[00:34:55] um it's much better for coverage of
+[00:34:58] domestic news than international news
+[00:35:00] which again you see here it doesn't have
+[00:35:01] much Yahoo has a similar service to
+[00:35:04] Calais you just um show up some text
+[00:35:06] then and it gives you some tags but uh
+[00:35:08] in our testing it's not as good it
+[00:35:10] includes more just nonsense stuff
+[00:35:13] like Vigilant Guardian
+[00:35:18] and then uh the other the other thing
+[00:35:21] that we do that we're actually using
+[00:35:22] more for the analysis that we're doing
+[00:35:24] right now is we create vectors from all
+[00:35:26] this stuff which is just means for every
+[00:35:27] story that we download we just um break
+[00:35:30] it up into the individual words and have
+[00:35:32] a list of how many of each word appears
+[00:35:34] in each story and that's important
+[00:35:36] because there's a great deal of natural
+[00:35:38] language processing work that's based on
+[00:35:40] just having those lists of words that
+[00:35:42] appear in each story that's for instance
+[00:35:43] how we do a clustering that we do is
+[00:35:45] based on those lists of stories
+[00:35:48] um and then the final part is the
+[00:35:50] clustering stuff which is a great
+[00:35:51] example of us just using plugging in
+[00:35:54] stuff that's already there we use a
+[00:35:55] toolkit called Pluto that's one that's a
+[00:35:57] very good toolkit that has lots of knobs
+[00:35:59] and switches of a half different way
+[00:36:02] different algorithms to run the
+[00:36:03] clustering on in different
+[00:36:05] metrics to judge the similarity by so we
+[00:36:08] basically just plug into this Pluto
+[00:36:10] system we can create any we can just do
+[00:36:12] any clustering run by giving the set of
+[00:36:14] stories and start in an end date and we
+[00:36:15] run it and part of the nature of
+[00:36:17] clustering
+[00:36:18] um is always that it's incremental you
+[00:36:21] just twist knobs basically until you get
+[00:36:24] results that look good it's always a
+[00:36:26] sort of Secret of the stuff so this this
+[00:36:28] lets us sort of you can see I've I've
+[00:36:29] just spent a lot of time iterating over
+[00:36:32] these lists of clusters to try to get
+[00:36:34] clusters that seem to make sense one
+[00:36:36] example of the of the limitations is the
+[00:36:39] toolkit that we're using you have to
+[00:36:41] tell it how many clusters you want so
+[00:36:43] you have to tell you want 10 clusters or
+[00:36:44] five clusters or three clusters so
+[00:36:46] that's a moderate matter again you just
+[00:36:48] run it and
+[00:36:50] um it sometimes seems like it's got
+[00:36:52] stuff mixed up or it sometimes seems
+[00:36:53] like it's splitting stuff arbitrarily
+[00:36:55] and that's just something you have to
+[00:36:56] fit on
+[00:36:58] I just want to jump in and just talk for
+[00:37:00] maybe two or three minutes about what
+[00:37:03] this might mean for people who are sort
+[00:37:04] of using this for media research or or
+[00:37:07] political science research and there's
+[00:37:08] just a really early experiment we did
+[00:37:10] with some colleagues over at uh George
+[00:37:13] Washington University they were asked by
+[00:37:16] colleagues at the uh the U.S institute
+[00:37:18] for peace what we could do as far as
+[00:37:21] analyzing media to understand media
+[00:37:24] coverage in Conflict environments and so
+[00:37:27] what we did is we took a fairly narrow
+[00:37:28] data set we took a month's worth of data
+[00:37:30] we looked at seven newspapers 17
+[00:37:33] political blocks so very very small
+[00:37:34] subset of what we have and this is just
+[00:37:37] because we wanted to focus on how we
+[00:37:38] transformed and visualize the data we
+[00:37:40] could easily scale this up and look at a
+[00:37:43] much much larger set
+[00:37:45] the goal was to look at three specific
+[00:37:48] conflicts that were taking place during
+[00:37:50] that period of time two which were sort
+[00:37:52] of real conflicts and one which you can
+[00:37:53] think of as a stalled conflict which is
+[00:37:55] the ongoing action in Darfur so this is
+[00:37:58] a set that included the Iran election
+[00:37:59] protests it included the end of the Sri
+[00:38:02] Lankan war and uh we were also looking
+[00:38:04] at Darfur at the same time we started
+[00:38:07] looking at this and one of the things
+[00:38:08] that we realized was that just to get a
+[00:38:10] comparison for what was going on so
+[00:38:12] first of all in this Set uh the two
+[00:38:14] lines that you can actually see
+[00:38:15] distinctions in are the Iran coverage
+[00:38:16] everything else simply flattens out and
+[00:38:19] it's just orders of magnitude smaller uh
+[00:38:22] even despite the fact that a 30-year
+[00:38:24] long Civil War ended you simply can't
+[00:38:27] see it within the data this becomes even
+[00:38:29] more apparent when you bring in another
+[00:38:30] story that was going on at the same time
+[00:38:32] which is Michael Jackson's death and the
+[00:38:35] paper that we really want to get out of
+[00:38:37] this in the long run is we think we have
+[00:38:39] definitive proof that Michael Jackson
+[00:38:42] ended the Iranian Revolution we think
+[00:38:45] think this might in fact be a major
+[00:38:47] revolutionary in fact I would go further
+[00:38:49] and suggest that I would look for
+[00:38:50] ahmadinishad as having blame for the
+[00:38:53] death of Michael Jackson because it does
+[00:38:55] appear to be what killed off the uh the
+[00:38:58] Iran elections protest story uh again
+[00:39:01] all other stories sort of in comparison
+[00:39:03] to the size of these stories end up
+[00:39:06] hailing in comparison
+[00:39:07] um it's interesting we had expected uh
+[00:39:10] to see with Iran a little bit of blog's
+[00:39:14] leading mainstream media because
+[00:39:17] particularly we saw a huge amount of
+[00:39:20] information being picked up in Twitter
+[00:39:22] also picked up in blogs it was very very
+[00:39:24] difficult for newspapers to report from
+[00:39:26] the ground in Tehran we expected to see
+[00:39:28] maybe a little bit more of a leading
+[00:39:30] effect than we did but we do see a
+[00:39:32] little of it with that blue line being
+[00:39:34] blog attention compared to the pink line
+[00:39:37] being newspaper attention it looks like
+[00:39:39] you can make a case that blogs were a
+[00:39:41] little bit ahead of the story in terms
+[00:39:42] of their intensity of it followed by
+[00:39:44] newspaper holding on to it perhaps a
+[00:39:46] little bit longer as bloggers fell down
+[00:39:48] this is normalized there's there's
+[00:39:50] problems with the data but this is sort
+[00:39:51] of giving you a sense for where we might
+[00:39:53] want to go with this we're also able to
+[00:39:56] drill down again using these graphing
+[00:39:59] techniques using similarities between
+[00:40:01] words try to figure out
+[00:40:04] um
+[00:40:05] specifically how people are framing
+[00:40:07] within this set and what's interesting
+[00:40:09] is when we use these tools to sort of
+[00:40:11] look at what words were used in a
+[00:40:14] particular set of stories you realize
+[00:40:16] one of the interesting limitations of
+[00:40:18] our tools were basically amplifying
+[00:40:21] noise so we're putting a microphone at
+[00:40:23] specifically stories that mentioned Iran
+[00:40:26] then we're looking at words that were
+[00:40:28] more common in blogs than they were in
+[00:40:31] newspapers and what we get out of that
+[00:40:33] are some things that are interesting and
+[00:40:35] some things that are not it turns out
+[00:40:37] that neocon and grandstanding turn out
+[00:40:40] to be noise our parser isn't working the
+[00:40:42] phrase those grandstanding neocons
+[00:40:45] appears 40 times in our set we should
+[00:40:47] Simply Be tracking every sentence and
+[00:40:49] only allowing one appearance of it but
+[00:40:51] we've sort of Amplified that noise other
+[00:40:53] parts are interesting Charles
+[00:40:54] Krauthammer turns out to be pretty
+[00:40:56] fascinating you drill down on him and
+[00:40:58] you find out that a comment that he's
+[00:41:00] made gets mentioned and analyzed in six
+[00:41:03] different blogs it only makes one
+[00:41:05] newspaper so it's an interesting way to
+[00:41:07] watch how the frame is changing between
+[00:41:09] the two
+[00:41:10] with Sri Lanka we actually got a pretty
+[00:41:13] novel result we expected that what we
+[00:41:15] would see is that real responsible that
+[00:41:17] some quotes newspapers would cover Sri
+[00:41:19] Lanka bloggers would ignore it actually
+[00:41:22] what happened was when peace was
+[00:41:24] declared by the government whether it is
+[00:41:26] in fact peace or not there was a pretty
+[00:41:29] uh concomitant Spike on both of them
+[00:41:31] what's interesting is that the
+[00:41:32] newspapers came and did sort of an
+[00:41:34] analysis story two weeks later saying
+[00:41:37] okay so what now what's the future of
+[00:41:40] Sri Lanka we didn't see that picked up
+[00:41:42] at all in the blogs so we see sort of a
+[00:41:44] secondary Peak which drilling down into
+[00:41:46] it appears to be about what are the
+[00:41:48] long-term implications of this how did
+[00:41:50] this change we don't end up seeing it
+[00:41:52] within the blog data the Darfur thing
+[00:41:54] made me really happy my thesis on Darfur
+[00:41:57] was that we would find that bloggers
+[00:41:59] were talking about it but it wasn't
+[00:42:01] actually showing up in the newspaper
+[00:42:02] because nothing actually happened in
+[00:42:04] Darfur During the period of time that
+[00:42:06] we're talking about what's interesting
+[00:42:08] is that Darfur now has entered the
+[00:42:10] language as a metaphor and so drilling
+[00:42:12] down if you look in how Darfur gets
+[00:42:15] mentioned it's simply mentioned in the
+[00:42:18] context of genocide in general Congo
+[00:42:21] refugees displacement it's simply
+[00:42:24] invoked so it's no longer a news story
+[00:42:26] specifically about defer it's a way to
+[00:42:29] sort of bring it out as an analogy so
+[00:42:31] look this is a very superficial paper
+[00:42:34] it's a small amount of data but looking
+[00:42:36] at that question of how media might work
+[00:42:39] differently in Conflict environments
+[00:42:40] this gives you a sense for what you
+[00:42:42] might be able to drill down both in
+[00:42:44] terms of General incidents and also
+[00:42:45] being able to do the differences in the
+[00:42:47] language we have a tradition of ending
+[00:42:50] media Cloud Talks by telling you what's
+[00:42:53] broken and we started making this slide
+[00:42:55] together over breakfast and uh you know
+[00:42:58] we started with everything and then we
+[00:42:59] started subdividing out of there this
+[00:43:02] turns out to be a hard problem on about
+[00:43:05] half a dozen different levels on the
+[00:43:07] technical side of it extracting really
+[00:43:09] difficult getting clean text out of
+[00:43:12] formatted HTML turns out to be almost
+[00:43:14] impossible we're probably going to need
+[00:43:16] to go to a sentence by sentence model so
+[00:43:18] that we don't end up with repeated
+[00:43:19] sentences all the time because
+[00:43:20] newspapers tend to repeat the same
+[00:43:22] headline over and over and if you can't
+[00:43:24] get it correctly out of your extractor
+[00:43:25] screws up your data clustering is really
+[00:43:28] tough the algorithms exist they work you
+[00:43:31] can tweak them
+[00:43:33] but you know they have certain
+[00:43:34] fundamental limitations if you're
+[00:43:36] clustering into 10 categories an 11th
+[00:43:38] topic comes up you got to restart your
+[00:43:40] clustering systems at least with the
+[00:43:41] ones that we've been using the big stuff
+[00:43:44] we'd love to do we want to be looking at
+[00:43:46] things like meme Discovery and that
+[00:43:48] example with Krauthammer is actually a
+[00:43:50] pretty interesting piece of meme
+[00:43:52] Discovery we were able to find that
+[00:43:54] bloggers were talking about Krauthammer
+[00:43:56] in a way that newspapers weren't you
+[00:43:59] could imagine following the word
+[00:44:01] Krauthammer in an Iran context over a
+[00:44:04] period of time and looking to see
+[00:44:06] whether it got Amplified or not whether
+[00:44:08] other media picked it up we actually
+[00:44:11] think we're starting to have a system
+[00:44:12] where you can look for people reframing
+[00:44:15] an issue we often see in this data set a
+[00:44:18] blogger saying if you want to understand
+[00:44:20] you have to understand the story of X
+[00:44:22] and then you look for X over time and
+[00:44:25] sometimes X will get picked up by
+[00:44:26] another blogger or by a newspaper 99
+[00:44:29] times out of 100 x just disappears Into
+[00:44:32] The Ether and what you're watching there
+[00:44:33] is a meme die before your eyes which is
+[00:44:36] sort of exciting but trying to figure
+[00:44:38] out how to do that in a way that's not
+[00:44:40] manual where you can actually go through
+[00:44:42] it and look at the holy ecosystem them I
+[00:44:45] was joking with Harry before the what
+[00:44:46] you really want help on is getting from
+[00:44:48] that list of tags that we're generating
+[00:44:50] out of these automated tools into some
+[00:44:52] sort of a hierarchy how can we then say
+[00:44:55] okay here are the 40 specific tags but
+[00:44:57] also here's oil which is probably the
+[00:44:59] best way to sum this up which means if
+[00:45:01] you want to do that media nutritional
+[00:45:04] data that we talked about at the
+[00:45:05] beginning you can say 20 of your stories
+[00:45:07] were about oil or at least mentioned oil
+[00:45:10] there's also the non-technical size of
+[00:45:13] this that get incredibly difficult we've
+[00:45:15] been able to get as far as we have uh
+[00:45:17] not just because we have completely
+[00:45:19] brilliant Engineers working on this but
+[00:45:21] brilliant Engineers who speak English
+[00:45:22] and it turns out that if we're going to
+[00:45:24] rebuild this system for Russian for
+[00:45:27] Arabic for Chinese we need a great deal
+[00:45:29] of linguistic data and we really need to
+[00:45:31] be working with programmers who speak
+[00:45:33] those languages because there are a
+[00:45:35] thousand knobs that need to be tweaked
+[00:45:37] and twiddled to get there there are
+[00:45:39] enormous massive legal concerns
+[00:45:41] associated with this we are functionally
+[00:45:44] making copies of you know a thousand
+[00:45:47] newspapers every day and at some point
+[00:45:50] someone's going to wake up and decide
+[00:45:51] that this might have some copyright
+[00:45:53] issues we really wanted when we did this
+[00:45:56] to release all of our data and we've
+[00:45:58] been advised by our lawyers that that is
+[00:46:00] probably not a good idea so we're now
+[00:46:02] moving towards an API plan where we
+[00:46:04] essentially say come use our data we're
+[00:46:06] going to monitor what you're doing with
+[00:46:08] the API if your republ pushing the New
+[00:46:10] York Times with your own ads on it we
+[00:46:12] will cut you off but we'd love to let
+[00:46:13] you do it for other reasons the other
+[00:46:15] one that I'll just mention in closing
+[00:46:17] and then really we will shut up and let
+[00:46:18] you ask some questions is dark matter we
+[00:46:22] can track stuff that we can spider and
+[00:46:25] scrape And subscribe to we can't track
+[00:46:27] Facebook we can't track links that are
+[00:46:30] forwarded from one person to another via
+[00:46:32] email these turn out to be we think
+[00:46:34] incredibly important vectors in
+[00:46:35] understanding the media ecosystem so
+[00:46:38] we've got a good start we have tons of
+[00:46:40] problems to work on we would welcome
+[00:46:42] your help on it and that's where we're
+[00:46:44] at
+[00:46:52] wow all right uh questions
+[00:47:03] web ecology is affiliated with Berkeley
+[00:47:06] it is a set of
+[00:47:09] researchers some of them in Cambridge
+[00:47:11] some of them have Harvard affiliations
+[00:47:13] some of them are just fascinating young
+[00:47:15] researchers working on things they are
+[00:47:18] very much also interested in these
+[00:47:19] questions of what quantitative data tell
+[00:47:23] us about what's going on they put out a
+[00:47:25] really nice paper on Iran and Twitter
+[00:47:28] from what I understand they're now
+[00:47:30] working on a question that sounds
+[00:47:31] frivolous and isn't which is why did
+[00:47:35] people turn their Twitter icons green
+[00:47:37] and when do they stop
+[00:47:38] and it's a really interesting question
+[00:47:41] about social actions and distributed
+[00:47:44] so they are a beloved fellow Travelers
+[00:47:48] sort of normal relationships
+[00:47:54] um the word formal and the word perfect
+[00:47:56] correlated together uh we we know them
+[00:48:00] uh we hang out with them who like them
+[00:48:04] what are the differences
+[00:48:07] uh they don't have a system they are
+[00:48:10] grabbing data sets and then our analysis
+[00:48:13] so for instance they actually did some
+[00:48:15] code that I've written to spider Twitter
+[00:48:18] is something we'd love to have in the
+[00:48:21] system in the long run one of the things
+[00:48:22] that I should say is that we made a we
+[00:48:25] made a point of trying to deal with open
+[00:48:26] data
+[00:48:28] one of the things that we really worry
+[00:48:30] about is throughout the development
+[00:48:31] research so we've released all the code
+[00:48:33] under an apparel license you can go
+[00:48:36] rebuild what we're doing by putting the
+[00:48:38] code up and then rebuilding the database
+[00:48:39] but we also understand that that's all
+[00:48:41] short because it takes you a year to
+[00:48:43] build the database that we have and it's
+[00:48:44] an enormous amount of computational
+[00:48:46] resources so that's why we're going to
+[00:48:47] try to go through the data over an API
+[00:48:49] because of that design decision we've
+[00:48:51] also tried to steer away from
+[00:48:54] collections of data where people who
+[00:48:56] come and say oh you're Harvard we love
+[00:48:57] to work with you let's give them some
+[00:48:59] data Twitter is one of those cases you
+[00:49:02] can get all of Twitter's stream data if
+[00:49:05] you either pay them or if you beg them
+[00:49:08] we've stayed away from that because if
+[00:49:12] someone else is going to replicate our
+[00:49:13] work they may not be able to pay or they
+[00:49:15] may not be able to bend Twitter actually
+[00:49:17] just announced its first meaningful
+[00:49:19] revenues four million dollars from
+[00:49:21] selling information about their system
+[00:49:22] which is
+[00:49:25] important so given that that now appears
+[00:49:26] to be part of a business model
+[00:49:28] for now we're probably going to stay at
+[00:49:30] home
+[00:49:32] 's link but yeah they use some of my
+[00:49:34] scripts and now refined them they're
+[00:49:36] collecting tweets on specific tags and
+[00:49:39] then they're doing analysis which
+[00:49:40] certainly shared ideas back and forth
+[00:49:42] we'd love to get to a point where a
+[00:49:44] media cloud system could be including
+[00:49:45] Twitter as well what's tricky about it
+[00:49:48] is that 140 characters doing things like
+[00:49:50] clustering or doing textual analysis
+[00:49:54] I'll tell you a question about the the
+[00:49:57] the your relationship with the the
+[00:50:00] newspapers
+[00:50:05] do they consider you the to be their
+[00:50:07] friends or do you do they uh do you
+[00:50:10] think you've discovered anything about
+[00:50:11] them that they don't know about
+[00:50:13] themselves already or so what's been
+[00:50:16] interesting is figuring out who
+[00:50:19] interested
+[00:50:22] people who study journalism so folks
+[00:50:25] like Columbia journalism will do get
+[00:50:27] fascinated credits because it's a way to
+[00:50:29] get from anecdote to data
+[00:50:33] there are some new sites who are faceted
+[00:50:37] violence we've had a lot of very
+[00:50:39] productive conversations with Public
+[00:50:41] Radio International
+[00:50:43] it happens that their president is also
+[00:50:45] a totally data-driven geek
+[00:50:48] and she loves the idea of being able to
+[00:50:50] monitor their coverage compare it to
+[00:50:52] other networks out there get a sense for
+[00:50:54] what they're strong at and what their
+[00:50:55] weekend
+[00:50:56] one of the many missteps of this project
+[00:50:59] is that we launched at the same time as
+[00:51:01] American journalism is collapsing so
+[00:51:04] trying to get people interested in what
+[00:51:06] they're covering Better or Worse does it
+[00:51:09] work real well when everyone's responses
+[00:51:11] we can't do anything anymore the sky is
+[00:51:13] falling and so it's been very very
+[00:51:15] difficult to get people certificate
+[00:51:18] what people do want to do is ask
+[00:51:21] questions about how journalism is
+[00:51:24] changing of business management
+[00:51:26] so for instance a colleague at USC
+[00:51:29] Edinburgh said could we use media Cloud
+[00:51:32] to study what happens when journalists
+[00:51:35] start paying attention to how many
+[00:51:37] people look at a school
+[00:51:39] that's a great question so all these
+[00:51:42] newsrooms are now sort of refocusing on
+[00:51:43] this question of how much web traffic
+[00:51:45] are you generating does that change how
+[00:51:47] you write does that change your Capital
+[00:51:48] coverage if someone's got that in News
+[00:51:51] Group data we should be able to have
+[00:51:53] that outside data and we should be able
+[00:51:54] to form
+[00:51:59] another thing that this potentially lets
+[00:52:00] us do is to answer the question of what
+[00:52:03] happens when the Boston votes
+[00:52:06] we sort of generate this is one of a
+[00:52:09] broad way of
+[00:52:11] describing what we can do with these
+[00:52:13] sort of comparative media Source
+[00:52:15] analyzes is PM will say what does the
+[00:52:18] what does the Boston Bill had for all
+[00:52:20] the world and the converse of that is
+[00:52:22] true which is the Boston what Globe goes
+[00:52:24] away
+[00:52:27] for some of us what we realize the story
+[00:52:30] and one of the things that we're
+[00:52:32] considering doing is the times have
+[00:52:34] actually been very friendly about this
+[00:52:35] has said do you want to run this on our
+[00:52:37] archives
+[00:52:38] our open data side of this makes us say
+[00:52:40] no because their archives are as open as
+[00:52:43] we'd like to be the researchers
+[00:52:46] go hell yeah I mean one of the questions
+[00:52:48] that everyone would like really good
+[00:52:50] data
+[00:52:52] everyone
+[00:52:53] I would like really compare them on is
+[00:52:55] what's the percentage of international
+[00:52:59] we know who Paul stars were
+[00:53:03] the early 1800s we were running at you
+[00:53:05] know age 20 International to domestic we
+[00:53:08] know that it's you know shifted probably
+[00:53:10] to 20 in another direction did that
+[00:53:12] happen over once how's that happen
+[00:53:14] gradually if we could throw that at the
+[00:53:16] New York Times from 1851 in the present
+[00:53:18] that we'd have to write huge amounts of
+[00:53:21] stuff to figure out that you know
+[00:53:22] Prussia was not the U.S so that it's a
+[00:53:26] whole sorts of business that's for
+[00:53:27] different moments of time but that's the
+[00:53:28] sort of analysis you can imagine I guess
+[00:53:31] my question really was what you know why
+[00:53:33] doesn't the Boston Globe want to know
+[00:53:34] what the Boston Globe adds to the world
+[00:53:36] and
+[00:53:37] don't they have a commercial interest in
+[00:53:40] understanding themselves in the way that
+[00:53:41] we were making
+[00:53:42] it possible to understand or do you
+[00:53:45] think that they that's why that's what I
+[00:53:46] would say you know
+[00:53:47] you say the you know our company your
+[00:53:50] coverage is in proportion to uh National
+[00:53:53] you know your coverage of of foreign
+[00:53:55] countries is
+[00:53:57] you know uh per cap in the GDP I mean
+[00:54:00] that's like of course that's the only
+[00:54:03] very good people to read ourselves you
+[00:54:04] know I mean do they know it already can
+[00:54:07] they use can they use what they they
+[00:54:09] have perhaps not for ends that you would
+[00:54:11] uh that you would want but uh so I I
+[00:54:15] I've been sort of in the business of
+[00:54:17] confronting journalists about
+[00:54:19] shortcomings that come out of their
+[00:54:21] problems via data
+[00:54:25] what ends up happening is you sit down
+[00:54:27] the journalist and you say you know it's
+[00:54:28] funny you guys don't write very much
+[00:54:30] about develop the world and they say
+[00:54:32] yeah I know you know my last 10 stories
+[00:54:34] on Molly all got Spike right right uh so
+[00:54:37] it's not my fault and it's not even my
+[00:54:39] editor's fault it's my Publisher's fault
+[00:54:41] and the publisher if you then talk to
+[00:54:43] them and you're lucky if you're having a
+[00:54:45] conversational segment hope it's
+[00:54:46] beautiful actually you guys are the
+[00:54:48] audience and the reinforcement that
+[00:54:50] we're getting is that you want hyper
+[00:54:51] local mirrors you belong to your kid's
+[00:54:53] name in the paper from the Little League
+[00:54:55] game you don't give a crap about what's
+[00:54:57] going on in Equatorial opinion and every
+[00:54:59] time we run a story on every tour of
+[00:55:01] game where our circulation goes down so
+[00:55:03] yeah don't tell us that we're screwing
+[00:55:05] up we're giving you what you want now
+[00:55:07] something in that cycle is probably
+[00:55:10] dysfunction it doesn't make a ton of
+[00:55:13] sense that at an increasingly globalized
+[00:55:15] and interconnected economy that our
+[00:55:17] access to Media gets more and more and
+[00:55:19] more hyper local you know it would make
+[00:55:21] sense after petroleum crashes and none
+[00:55:23] of us spray more than 10 miles away
+[00:55:25] but at this particular moment in time it
+[00:55:27] seems like something about that
+[00:55:29] reinforcement signal isn't working right
+[00:55:31] I'm hoping we can help answer some of
+[00:55:34] those questions but those are you know
+[00:55:36] those are adults have a Rouge size
+[00:55:38] questions uh you know we're at shipping
+[00:55:41] little pieces often
+[00:55:56] if I thought the journalists were
+[00:55:57] actually paying attention to my data I
+[00:55:59] would be more worried
+[00:56:03] so some of this is not hard to generate
+[00:56:06] in terms so I actually have a suspicion
+[00:56:09] I've been looking at the New York Times
+[00:56:11] for about six years now
+[00:56:14] one of the fascinating things with the
+[00:56:15] New York Times is that you can pick any
+[00:56:17] country no matter how small
+[00:56:19] and in any given calendar year they'll
+[00:56:22] run a minimum number one story so you
+[00:56:24] sort of want to be able to make that
+[00:56:25] sweeping you know question and say if
+[00:56:27] you've never written about Cameroon the
+[00:56:29] answer is once a year if there's
+[00:56:31] something on camera and it's never like
+[00:56:33] here's the annual feature on camera and
+[00:56:34] it just sort of comes around with it so
+[00:56:37] I actually think they probably are at
+[00:56:38] the Times where they have really smart
+[00:56:40] data analytics people looking at things
+[00:56:42] like that is it a possibility absolutely
+[00:56:45] any time you do surveillance or
+[00:56:49] surveillance and you can have some sort
+[00:56:51] of analysis of what your patterns are
+[00:56:52] you can have changes come out of it but
+[00:56:56] the way that I look at this I mean the
+[00:56:57] reason that slide is up there as far as
+[00:56:59] nutritional information is that I think
+[00:57:02] in general you want to have more
+[00:57:04] information better or less information
+[00:57:06] about lessons if what's happened to the
+[00:57:09] New York Times over the past 10 years is
+[00:57:12] that it's become more and more and more
+[00:57:14] a local thing and this was certainly one
+[00:57:16] of the courses in the New York
+[00:57:17] population is trying to make it more
+[00:57:19] competitive with opposed to the Daily
+[00:57:21] News well that's an interesting thing is
+[00:57:23] it's still the paper of Records it's
+[00:57:24] still this international newspaper that
+[00:57:26] we think it is if it's actually shifting
+[00:57:28] I'd rather have the dead after is it
+[00:57:30] going to have second order effects sure
+[00:57:32] absolutely
+[00:57:33] willing to take this on it would be
+[00:57:36] happy that we were successful enough
+[00:57:37] that we actually had
+[00:57:40] this absolutely
+[00:57:41] but I have to have enough for natural
+[00:57:43] language processing but are there
+[00:57:46] as you look at the tools for an
+[00:57:48] extracting
+[00:57:49] terms on it are there tools out there
+[00:57:51] that go beyond
+[00:57:53] um treating you know
+[00:57:56] documents about the words and kind of
+[00:57:58] terms and
+[00:58:00] um
+[00:58:01] was then
+[00:58:05] but
+[00:58:09] um
+[00:58:10] no
+[00:58:11] and that's one of the reasons we don't
+[00:58:13] think about that there are there are
+[00:58:15] expensive tools to do that there are
+[00:58:17] hard to be useful to do that there's a
+[00:58:19] lot of computer science research a lot
+[00:58:21] of paper
+[00:58:23] but as far as as far as we have
+[00:58:26] the effect there are no of the sort of
+[00:58:28] easily duct tape over the rules of the
+[00:58:30] times that we use like for instance and
+[00:58:33] sort of customers I mean there are a lot
+[00:58:34] of there's a lot of natural language
+[00:58:36] across
+[00:58:50] that make it easy to go from
+[00:58:54] from a sort of bag of words to
+[00:58:57] the topics and that's been
+[00:59:00] our biggest challenge and the stuff that
+[00:59:02] we haven't really figure out how to do
+[00:59:04] there's stuff that we've done well
+[00:59:07] um we've done it well does a pretty good
+[00:59:09] job of sort of looking at both language
+[00:59:11] and
+[00:59:13] yeah
+[00:59:16] and we can do a pretty good job if you
+[00:59:18] know what the topic is so you know you
+[00:59:20] want to look at Darfur and get pretty
+[00:59:22] good grasp of what the coverage of
+[00:59:24] Darker is what's really what we come
+[00:59:26] through and do because
+[00:59:31] to take some arbitrary set of stories
+[00:59:33] that say here are the 12
+[00:59:35] here are the 12 topics so here are the
+[00:59:37] 12 News
+[00:59:50] basically
+[00:59:52] they're a lot this is not to say there's
+[00:59:54] not work being done again our model is
+[00:59:56] we're Engineers meet and we have
+[00:59:58] less than a full-time programmers time
+[01:00:03] so the work that we can accomplish is
+[01:00:05] mostly a plug-in certificate pieces that
+[01:00:08] do a lot of work for us
+[01:00:13] so
+[01:00:14] um so there's lots of society if it's if
+[01:00:16] it's not available at the library
+[01:00:19] and it's not open source at this point
+[01:00:23] um part of the reason for this just so
+[01:00:25] you understand is that people have been
+[01:00:27] selling document clustering the topic
+[01:00:29] extraction systems for six to seven
+[01:00:31] figures
+[01:00:33] yeah back when I was in Industry we
+[01:00:36] bought some of those things yeah they
+[01:00:38] weren't any better than the open source
+[01:00:40] ones
+[01:00:52] and so what's really interesting about
+[01:00:55] this from from our perspective just in
+[01:00:57] terms of learning from failure
+[01:00:59] um we thought the reason we started this
+[01:01:02] project was that they realized that
+[01:01:04] between RSS so that we didn't responders
+[01:01:06] and play where we could just take text
+[01:01:10] feed at this level and they would come
+[01:01:11] back with topics
+[01:01:13] felt like for the first time we could
+[01:01:15] take my Geographic work but even more
+[01:01:16] than that we could do topic work and we
+[01:01:18] could give you that nutritional
+[01:01:19] information
+[01:01:20] it turns out we've actually had very
+[01:01:22] little progress on that program so it's
+[01:01:24] actually very very hard to go from a
+[01:01:26] calaisix out which is too much
+[01:01:29] um clay also despite the fact that it's
+[01:01:33] free and
+[01:01:34] relatively open and there's a lot of
+[01:01:36] good things about it under the load that
+[01:01:38] we've been putting through tends to
+[01:01:40] match words together and create new
+[01:01:41] performance toes and that doesn't work
+[01:01:43] out or they haven't yet released weights
+[01:01:46] on terms which will be a big help for us
+[01:01:48] once they do because then we can pick
+[01:01:49] the heavily weighted terms we've
+[01:01:51] actually been much more effective in
+[01:01:53] doing the word veterans and so almost
+[01:01:55] all your
+[01:01:58] how do the average bloggers talk as
+[01:02:00] compared to the elite blockers as
+[01:02:02] compared to the Mexican media because
+[01:02:04] we've been able to do more word vectors
+[01:02:06] in part that's where the libraries are
+[01:02:10] the
+[01:02:16] things is
+[01:02:17] stickiest kind of antagonally the
+[01:02:19] easiest kind of natural language process
+[01:02:24] if you don't give us ideas
+[01:02:26] so you can get
+[01:02:28] that Nike you don't get that there are
+[01:02:31] any stories about that financial crisis
+[01:02:32] except
+[01:02:36] and it turns out it's pretty
+[01:02:39] you found it difficult to take that
+[01:02:41] collection of empties even if it's
+[01:02:42] pretty good with technology it's hard to
+[01:02:46] kill it's harder than me anticipated to
+[01:02:48] go to that permanent activities that are
+[01:02:50] substitute
+[01:02:51] the country stuff is different because
+[01:02:53] there's a sort of obvious questions
+[01:02:55] it's much harder to figure out what this
+[01:02:57] questions and answers are for
+[01:03:02] do you know any
+[01:03:04] any open source
+[01:03:06] medical
+[01:03:09] area you're talking about which is this
+[01:03:12] topic Upstream is extremely hot area so
+[01:03:14] a lot of people are doing different
+[01:03:17] things but
+[01:03:18] it's probably not at the stage where
+[01:03:20] it's packaged up into a nice little
+[01:03:22] library that you just want is it it's a
+[01:03:25] very fast moving Target
+[01:03:42] this is sort of the conversation that
+[01:03:45] we're looking for
+[01:03:46] because again since we're approaching
+[01:03:49] this as a duct tape engineers
+[01:03:51] looking at something that's still in the
+[01:03:53] research paper phase that may be solving
+[01:03:55] our problems six to five months down the
+[01:03:57] line is the sort of thing that we need
+[01:03:59] to know about and that we're never going
+[01:04:00] to know about because some of the things
+[01:04:03] people think about it so
+[01:04:05] um
+[01:04:09] document as a bag of words and then you
+[01:04:13] can say well divide these bags of words
+[01:04:15] into 10
+[01:04:20] um
+[01:04:22] where do you get the number
+[01:04:24] if the number is wrong if they really
+[01:04:26] hate then
+[01:04:28] that can screw everything up and you'll
+[01:04:31] get a bunch of topics in interest
+[01:04:35] so one of the areas people working on
+[01:04:37] now is trying to do this in different
+[01:04:40] non-parametrically where you don't think
+[01:04:42] about it you say divided up in different
+[01:04:44] topics
+[01:04:55] use
+[01:04:57] relax the assumption that every document
+[01:04:59] is about one cup
+[01:05:01] probably not if you're good
+[01:05:04] to assumption so you say well
+[01:05:06] um you'll you'll you'll ask the question
+[01:05:09] what if you say there's a bunch of
+[01:05:11] topics and documents are generated by
+[01:05:15] first selecting the subset of topics and
+[01:05:17] then selecting word based on their topic
+[01:05:21] and you can get much tighter
+[01:05:30] you know
+[01:05:32] these are the kinds of these people are
+[01:05:33] working on you might expect to get
+[01:05:35] better results but it's not like L.A
+[01:05:43] but one I mean one of the reasons we're
+[01:05:44] developing this as the platform is the
+[01:05:47] hope that eventually get to the point
+[01:05:48] where
+[01:05:49] people working on those kinds of
+[01:05:51] problems don't want to be worrying about
+[01:05:52] the text and how to how to step into
+[01:05:55] their system
+[01:05:57] results they get are one of the one of
+[01:06:00] our dreams with us is to be able to
+[01:06:02] provide platform and said here but
+[01:06:04] here's a place where you can just plug
+[01:06:05] in you're really interesting code
+[01:06:07] because we're doing which is valuable
+[01:06:11] determination and
+[01:06:14] the credit services
+[01:06:17] okay one last question
+[01:06:21] request in the Darkness
+[01:06:28] and what would look different in the way
+[01:06:31] things get reported so much newspapers
+[01:06:41] absolutely once we once you can start
+[01:06:43] getting into video and audio we're
+[01:06:45] dealing with a whole other classes and
+[01:06:47] problems that we're holding our
+[01:06:49] qualified to deal with basically doesn't
+[01:06:51] stop this before well that's true at
+[01:06:54] least start with the assumption that not
+[01:06:56] only do we have taxed but we've got you
+[01:06:58] know digitized and text so
+[01:07:01] um we're already excluding things from
+[01:07:03] this that don't have RSS feeds just
+[01:07:05] aspiring it yourself is very painful
+[01:07:08] um we're sort of betting on this idea
+[01:07:11] that as more and more people are
+[01:07:14] transcribing
+[01:07:18] the truth is what we're mostly doing is
+[01:07:20] sort of comparative code so Elisa Miller
+[01:07:22] who is both
+[01:07:24] RI I'm actually one of the better
+[01:07:26] scholars in this field is doing work on
+[01:07:29] television attention because her sort of
+[01:07:32] Bugaboo is how little International
+[01:07:34] media attention there is within
+[01:07:35] television discounts so she does handful
+[01:07:38] when she hires some folks they sit in
+[01:07:40] the room they go through a week's worth
+[01:07:41] doing television she produces a data set
+[01:07:43] they put up a card around and they're
+[01:07:46] really ugly and scary
+[01:07:48] um
+[01:07:49] so it's still going to be to a point
+[01:07:51] sampling on that until someone gets a
+[01:07:54] really good algorithm that can listen to
+[01:07:56] the radio or listen to the audio and
+[01:08:00] video via transfer format as far as I
+[01:08:02] understand
+[01:08:09] yeah yeah well that'll get us closer as
+[01:08:12] we start getting automatic transcription
+[01:08:14] coming out of it now the trip with
+[01:08:15] automatic transcription is going to be
+[01:08:17] one quality
+[01:08:24] okay I think we're the point of the hour
+[01:08:26] is uh is
+[01:08:27] here
+[01:08:28] um
+[01:08:29] everybody wants to chat over a little
+[01:08:31] bit about the front and I and I believe
+[01:08:34] they're looking for people to give them
+[01:08:36] ideas right helpful ideas questions
+[01:08:40] questions
+[01:08:46] okay thanks so much

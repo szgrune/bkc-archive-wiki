@@ -1,0 +1,2050 @@
+[00:00:04] i've been at microsoft about 13 years
+[00:00:06] the last about two and a half or three
+[00:00:08] years has been in the microsoft research
+[00:00:10] organization
+[00:00:12] if microsoft overall is a corporation of
+[00:00:15] about a hundred thousand people
+[00:00:17] uh the research division of phd's
+[00:00:20] computer science is about 900 people uh
+[00:00:22] of that about half of those are located
+[00:00:24] in redmond half of them are located um
+[00:00:26] around the world in research sites and
+[00:00:28] innovation centers
+[00:00:30] whereas i mentioned most of those have
+[00:00:32] phds of computer science and are working
+[00:00:34] on longer term projects you know five
+[00:00:36] seven 10-year projects
+[00:00:38] our team is much more applied much more
+[00:00:41] focused uh we are kind of looking more
+[00:00:44] of time frames of uh 12 months 18 months
+[00:00:46] 24 months in terms of uh getting the
+[00:00:48] projects out there how we do that and
+[00:00:51] hence the name external research is we
+[00:00:52] don't do the research ourselves we
+[00:00:54] actually fund and partner with
+[00:00:56] researchers outside of outside of our
+[00:00:58] company so we'll work with
+[00:01:00] the academy we will work with government
+[00:01:02] agencies uh non-profit or in some cases
+[00:01:04] maybe commercial publishers et cetera
+[00:01:07] to
+[00:01:08] develop technologies uh to develop
+[00:01:10] functionality that we think
+[00:01:13] would
+[00:01:14] benefit the community overall and if
+[00:01:16] there's some role that microsoft can
+[00:01:18] play in facilitating that that process
+[00:01:21] that's what we do
+[00:01:23] that's enough of the commercial talk the
+[00:01:25] rest of it is going to be the
+[00:01:26] observations that i've i've made over
+[00:01:28] the three years of of working in this
+[00:01:30] space
+[00:01:32] i'd also like to introduce alex wade
+[00:01:35] my colleague from microsoft research
+[00:01:37] if the questions get really tough you're
+[00:01:40] going to give them i'm going to give
+[00:01:41] them to him
+[00:01:44] the themes that i would like to uh to
+[00:01:46] touch on over the course of my talk
+[00:01:48] will be obviously the the tsunami of of
+[00:01:52] data that is starting to overwhelm
+[00:01:53] scholarship and
+[00:01:55] the the daunting uh
+[00:01:57] daunting issues that that raises for the
+[00:01:59] scholarly communication life cycle um
+[00:02:01] the concept of moving upstream how uh
+[00:02:04] how librarians how publishers
+[00:02:07] how
+[00:02:08] authors and individual researchers can
+[00:02:10] really begin to move upstream and take
+[00:02:12] more control over the process and
+[00:02:15] thereby making it better further
+[00:02:17] downstream
+[00:02:18] i will look at that about how we can
+[00:02:20] integrate
+[00:02:21] or how
+[00:02:22] the functionality that we need to
+[00:02:24] surface out of the tools and out of
+[00:02:25] lifecycle can be integrated into
+[00:02:27] existing tools and existing workflows
+[00:02:31] one of the huge themes
+[00:02:33] that our group likes to pursue in our
+[00:02:35] work in um
+[00:02:37] in the scholarly communication space is
+[00:02:40] enabling semantic computing so i'm going
+[00:02:41] to talk about what that means and some
+[00:02:43] examples that we've that we've noticed
+[00:02:45] in the uh in the
+[00:02:47] ecosystem
+[00:02:48] um one of the largest uh themes that i
+[00:02:51] will be touching on is the the provision
+[00:02:53] of services i think this is the this is
+[00:02:55] the future of scholarly communication so
+[00:02:57] we'll be talking about tools related to
+[00:02:59] data analysis to collaboration and
+[00:03:02] finally um some um kind of uh
+[00:03:04] interesting developments related to
+[00:03:06] preservation and the capture and
+[00:03:07] delivery provenance
+[00:03:09] i'm going to be talking about the the
+[00:03:11] potential for cloud services
+[00:03:13] and then lastly i'm going to make some
+[00:03:15] comments that might get me fired back
+[00:03:17] when i go home to redmond but hopefully
+[00:03:19] not
+[00:03:20] um
+[00:03:21] the um
+[00:03:23] i think the issue here i'm not going to
+[00:03:24] spend a lot of time on i think we're all
+[00:03:26] aware of it you know data-driven science
+[00:03:28] data-driven research uh is an an
+[00:03:32] an unbelievable we have no idea i think
+[00:03:35] we can we can talk about the numbers but
+[00:03:36] we literally haven't begun to uh either
+[00:03:39] either calculate or really uh we can
+[00:03:42] envision it but we haven't really done
+[00:03:43] enough with it and it's a it's an
+[00:03:45] unbelievable
+[00:03:47] uh
+[00:03:48] scale problem that we again we can we
+[00:03:50] can theorize around but i don't think we
+[00:03:53] really attack tackle it at the scale
+[00:03:55] that we're going to need to
+[00:03:58] that said computing is stepping up to
+[00:04:00] both create the problem and help us
+[00:04:01] solve the problem we're seeing uh
+[00:04:03] massive data sets
+[00:04:05] um which is raising the issue around the
+[00:04:07] federation of those data sets
+[00:04:08] integration of those data sets and and
+[00:04:10] collaboration of scholars and and across
+[00:04:12] those
+[00:04:13] um the evolution of core and multi-core
+[00:04:15] computing um is again like i said
+[00:04:18] contributing to the problem but is also
+[00:04:19] going to be the way that we address the
+[00:04:20] problem and then there's the potential
+[00:04:23] of the power of the client and the cloud
+[00:04:26] and how we'll be able to access this
+[00:04:28] data access this information anywhere
+[00:04:30] anytime
+[00:04:32] these are kind of the underpinning of a
+[00:04:35] lot of the solutions that i think will
+[00:04:36] be will be envisioning and that i'll be
+[00:04:38] speaking about today
+[00:04:40] but to capture to characterize the
+[00:04:43] situation as it is now
+[00:04:45] um there is the ongoing need to collect
+[00:04:47] this data we've been scientists have
+[00:04:48] been collecting this data and have been
+[00:04:51] uh you know in some ways delivering it
+[00:04:53] as part of the scholarly communication
+[00:04:54] life cycle
+[00:04:55] but um i don't think that the rest of
+[00:04:57] the workflow over you know in the last
+[00:04:59] three or four hundred years or even in
+[00:05:01] the last 20 or 30 years we've been able
+[00:05:03] to really take good advantage of that
+[00:05:05] what we are starting to see is this this
+[00:05:07] data processing and analysis and
+[00:05:09] visualization we're still in the just
+[00:05:11] the very very early days of this and
+[00:05:13] then archiving this is you know
+[00:05:15] traditionally role of archives of
+[00:05:16] librarians um and it's been in a very
+[00:05:18] paper-based form and the the mind reels
+[00:05:22] at um at how we're going to address this
+[00:05:25] uh issue going forward
+[00:05:26] but um this is a a real uh as we would
+[00:05:30] say opportunity these are issues these
+[00:05:32] are challenges but these are also the
+[00:05:34] ways that we need to solve and address
+[00:05:35] uh the problem
+[00:05:38] um again to characterize the the the
+[00:05:41] issue i'm going to touch upon a project
+[00:05:44] uh this is um just some some statistics
+[00:05:47] from the life under your feet i'm sorry
+[00:05:49] i'll move over to the side here sorry um
+[00:05:51] the life under your feet uh project at
+[00:05:53] johns hopkins and this just gives you i
+[00:05:54] mean this is again a drop in the bucket
+[00:05:57] this is just one example of a research
+[00:05:59] project um this has been you know there
+[00:06:01] are you know arguably you know tens of
+[00:06:03] thousands of these around the world but
+[00:06:04] it just gives you an idea uh 200
+[00:06:06] wireless uh you know computers 10
+[00:06:08] sensors each we're looking at you know
+[00:06:11] something over 200 million measurements
+[00:06:13] per year this is a three year project
+[00:06:15] center how do they how do they capture
+[00:06:16] this how do they maintain it how do they
+[00:06:18] curate this how do they turn around and
+[00:06:20] compare it with other like data sets
+[00:06:22] around the world how do they
+[00:06:24] share that information et cetera
+[00:06:26] this is um a fantastic project this is
+[00:06:29] one of many actually that microsoft is
+[00:06:31] funding out of microsoft research to
+[00:06:32] work exactly around data sharing data
+[00:06:35] collaboration and data curation but just
+[00:06:37] to give you an idea of the kind of
+[00:06:39] magnitude of we're looking at
+[00:06:42] this raises the issue and i this is a
+[00:06:45] fantastic joe hellerstein is a fantastic
+[00:06:47] blogger and i would highly recommend
+[00:06:48] that you um check out his blog but this
+[00:06:51] is a specific one refer where he
+[00:06:53] referred to as the commoditization of
+[00:06:55] massive data analysis
+[00:06:57] and you'll see you know he's he's
+[00:06:59] pointing out and i've kind of
+[00:06:59] highlighted some of the concepts but i
+[00:07:01] like the idea that he's touching on that
+[00:07:03] we haven't even arrived at the the
+[00:07:06] industrial revolution of data yet we
+[00:07:08] have uh we're in such early days and as
+[00:07:10] much as we think we're so advanced we
+[00:07:12] have all these tools our resources we're
+[00:07:14] um at the very very very early stages
+[00:07:17] and then i as you can see on the slides
+[00:07:19] i ask a couple of rhetorical questions
+[00:07:21] um here um you know i'm not going to
+[00:07:24] answer them i wish i could but i can
+[00:07:25] guarantee that the answer to that is
+[00:07:27] going to be yes the the cloud the cloud
+[00:07:30] issues that answer is going to be yes
+[00:07:33] um and then to characterize that problem
+[00:07:35] but then to put it in the the aspect of
+[00:07:37] what it what it looks like to your to
+[00:07:39] your typical e scientist or e researcher
+[00:07:42] you've got obviously um data coming from
+[00:07:44] experiments and instruments you've got
+[00:07:47] data coming from other existing archives
+[00:07:49] pre-existing
+[00:07:50] searching the literature pulling out
+[00:07:52] data from symbols simulations that are
+[00:07:54] might be based on the first two
+[00:07:56] and then you've got all the problems and
+[00:07:57] the amazing thing is is right now the
+[00:08:00] individual research scientist or the
+[00:08:01] individual lab is having to do and take
+[00:08:03] on all of that
+[00:08:05] and um on the other end you might have
+[00:08:07] the library um or the archive or the um
+[00:08:11] someone at some point in the in the
+[00:08:12] university or the organization who's in
+[00:08:14] charge of the repository trying to
+[00:08:15] receive this at some at some other point
+[00:08:18] an incredibly complex workflow and one
+[00:08:21] that has grown uh expansively in the
+[00:08:23] last 20 years and we've all kind of
+[00:08:26] tackled bits and parts of it but
+[00:08:28] we've run into a handful of best
+[00:08:29] practices which we're going to be
+[00:08:30] chatting about here but um there is an
+[00:08:33] immense amount of opportunity i will
+[00:08:35] stress that word again that's happening
+[00:08:37] in this space
+[00:08:38] now
+[00:08:39] i mentioned the concept of moving
+[00:08:41] upstream
+[00:08:42] um and this is i think
+[00:08:44] a very uh
+[00:08:46] you know i'm going to use the word
+[00:08:47] opportunity about 400 times i think
+[00:08:49] but this is um
+[00:08:52] represents for us
+[00:08:54] for us and i mean i mean scholars i mean
+[00:08:56] researchers i mean uh corporations i
+[00:08:59] mean open access publishers i mean
+[00:09:01] librarians and archivists there is an
+[00:09:03] immense amount of work that needs to be
+[00:09:05] done but an immense amount it's it's an
+[00:09:07] exciting time because there is kind of
+[00:09:09] no no baseline there is um only
+[00:09:11] opportunity to uh to to do that and so
+[00:09:13] i'm going to give you some examples of
+[00:09:14] what i what i mean sorry um
+[00:09:17] by moving upstream um
+[00:09:20] if there's an organizing metaphor that i
+[00:09:22] would like to refer to it's the research
+[00:09:24] life cycle or what i'll refer to as the
+[00:09:26] scholarly communication life cycle
+[00:09:28] the uh the idea of collecting your data
+[00:09:30] doing your research doing your analysis
+[00:09:32] moving to a phase of authoring where
+[00:09:34] actually you've got your thesis and i'm
+[00:09:36] going to write it down then there's the
+[00:09:37] idea of sharing it the need to publish
+[00:09:39] and disseminate that
+[00:09:41] you might be blogging about your
+[00:09:42] research results you might be writing an
+[00:09:44] article or writing a book or giving a
+[00:09:46] paper at a professional conference but
+[00:09:47] in somehow making those first two steps
+[00:09:49] public in a in a in a way to share with
+[00:09:52] your um colleagues in the domain
+[00:09:54] and then ideally moving to a phase where
+[00:09:56] you store that and you make it um you
+[00:09:58] archive it and you preserve it for
+[00:09:59] future generations and and for others so
+[00:10:02] if we think about these as four core
+[00:10:04] sets of the of this life cycle i'm going
+[00:10:06] to add to that two other concepts the
+[00:10:09] need to collaborate uh and that is
+[00:10:11] collaborating within and across those
+[00:10:13] four core steps and then additionally
+[00:10:16] the need for discovery the need to
+[00:10:18] search and find from and find
+[00:10:20] information within and across those sets
+[00:10:23] and so i just list this as a as a kind
+[00:10:25] of an organizing metaphor
+[00:10:27] i think traditionally from a we'll say
+[00:10:30] from a library an archives or our
+[00:10:32] curation point of view
+[00:10:34] this is typically where i won't say
+[00:10:36] where the process starts but where
+[00:10:37] libraries and archives spend most of
+[00:10:39] their time and i think where we need to
+[00:10:41] really think about data curation is
+[00:10:43] moving back up that life cycle and
+[00:10:45] that's why i mentioned the moving
+[00:10:46] upstream concept i think we need to be
+[00:10:48] addressing a lot of these problems much
+[00:10:50] earlier on
+[00:10:52] my observation is from working with kind
+[00:10:54] of leading edge
+[00:10:56] innovators in e-science re-research
+[00:10:58] there are uh the the most forward
+[00:11:01] thinkers in this space are people that
+[00:11:03] realize that and are working very hard
+[00:11:05] at data capture and data curation at the
+[00:11:07] very early stages and worrying about um
+[00:11:09] how to capture that information how to
+[00:11:11] share it uh the protocols
+[00:11:14] very very carefully scripting that and
+[00:11:16] those are the people that we're trying
+[00:11:17] to work with in terms of best practices
+[00:11:19] and then being able to make sure that it
+[00:11:21] moves throughout that entire life cycle
+[00:11:23] that it's not just operating in in silos
+[00:11:32] the trick there is integration and how
+[00:11:34] do we as we move from step from step to
+[00:11:38] step to be able to take not only the
+[00:11:40] data the metadata and the provenance and
+[00:11:42] ship that around and this is uh this is
+[00:11:46] you know and this is another point that
+[00:11:47] i'll make later in the talk it's very
+[00:11:50] problematic sometimes there are domains
+[00:11:52] that are very very cohesive and very
+[00:11:55] non-proprietary about their research
+[00:11:56] there are others that are very
+[00:11:58] proprietary and being able to get data
+[00:12:01] curation standards and protocols in
+[00:12:02] those specific domains can be very
+[00:12:04] problematic but it's very i'd say
+[00:12:07] inherent on the data curators in uh
+[00:12:10] wherever stage they may be maybe it's
+[00:12:12] publishers maybe it's librarians maybe
+[00:12:14] it's people in the labs
+[00:12:16] to be able to integrate and be able to
+[00:12:18] move things from system to system uh
+[00:12:20] based on those protocols and based on
+[00:12:22] interoperability
+[00:12:26] so the interest from uh from my
+[00:12:28] company's perspective
+[00:12:30] is uh how can we facilitate the move
+[00:12:33] from what we would think of as you know
+[00:12:34] four or five hundred years of the
+[00:12:36] scholarly article how can we move from
+[00:12:38] these very static summaries
+[00:12:40] to much richer information vehicles
+[00:12:42] and so you know as you can see here pace
+[00:12:44] of science is picking up status quo is
+[00:12:46] being challenged there are some
+[00:12:47] innovators there are some people that
+[00:12:48] are are dragging but we maintain and
+[00:12:51] i'll provide some examples of uh others
+[00:12:53] in the ecosystem that there is an
+[00:12:55] immense amount that is available that's
+[00:12:58] why i'm kind of pointing out the you
+[00:12:59] know the the um the bottom below the
+[00:13:01] surface there's just a an immense
+[00:13:04] amount if we can imagine
+[00:13:07] that the container that is the
+[00:13:09] scientific article that it has the
+[00:13:11] ability to serve as and facilitate
+[00:13:14] reproducible science the ability to when
+[00:13:16] you get a paper you also get the data
+[00:13:19] you also get machine readable we'll say
+[00:13:21] you know methodology that you're able to
+[00:13:23] reproduce that methodology against your
+[00:13:24] data set or
+[00:13:26] share your data set with someone else
+[00:13:28] and let them utilize the methodology
+[00:13:30] interactive data the ability for you to
+[00:13:32] take pull out a table change a figure
+[00:13:35] easily insert it back in and ship that
+[00:13:37] document off or for you to be doing this
+[00:13:39] on the web and not be thinking about a
+[00:13:41] specific document whether that be a pdf
+[00:13:43] a word document or something online in
+[00:13:45] that way
+[00:13:45] the ability collaborate collaborate real
+[00:13:48] time with other researchers
+[00:13:50] dynamic documents that literally
+[00:13:52] changing on the fly are the ability for
+[00:13:55] reputation and influence to be uh to be
+[00:13:57] captured to be passed on and shared in a
+[00:14:00] way these are all the
+[00:14:02] themes that we're starting to see we're
+[00:14:03] starting to see resident in
+[00:14:05] examples again
+[00:14:07] online certain commercial journals open
+[00:14:10] access journals are all starting to
+[00:14:11] dabble with this
+[00:14:14] um a couple of points specific to that
+[00:14:16] that i'd like to call out
+[00:14:18] um we're seeing interesting work for
+[00:14:19] instance from on the commercial side
+[00:14:21] elsevier has been doing this article of
+[00:14:24] the future competition they also have a
+[00:14:26] grand challenge that they issue every
+[00:14:28] year
+[00:14:29] these are producing some some
+[00:14:30] fascinating fascinating ideas i would um
+[00:14:33] i'll be making this slide deck available
+[00:14:35] and these are live links and if you're
+[00:14:37] not familiar with these these are annual
+[00:14:39] i think these are about two years old
+[00:14:41] and every year these get a fair amount
+[00:14:43] of attention
+[00:14:44] but obviously very scientific focus
+[00:14:46] because it's ill severe but amazing
+[00:14:49] amazing ways that they're working within
+[00:14:51] different domains to show how
+[00:14:52] collaboration and how dissemination of
+[00:14:54] information can work
+[00:14:56] recently i think this is probably about
+[00:14:57] a month ago as you might have heard um
+[00:14:59] public library of science plus um
+[00:15:01] started a new
+[00:15:03] uh i guess channel for delivering
+[00:15:05] information that they're referring to as
+[00:15:06] currents
+[00:15:07] and uh their specific focus was the h1n1
+[00:15:11] flew
+[00:15:12] and what they're doing as you can see
+[00:15:13] here is it's fundamentally it's it is um
+[00:15:17] how do they how do they phrase it uh it
+[00:15:18] does not go an in-depth peer review it's
+[00:15:21] actually the whole point here is not to
+[00:15:23] drag things out through a 6 12 18 month
+[00:15:27] peer review process but to have a
+[00:15:29] handful of experts in the field review
+[00:15:31] it very quickly and get it out as
+[00:15:32] quickly as possible this is a
+[00:15:34] partnership between
+[00:15:35] nih plus and being published on google
+[00:15:38] google knoll and i think this is a
+[00:15:40] fascinating thing i think a lot of a lot
+[00:15:43] of uh journals would blanch the concept
+[00:15:45] that this is uh very uh you know uh
+[00:15:49] important scientific information that
+[00:15:50] isn't receiving full peer review
+[00:15:53] and i think this is uh and that is not
+[00:15:55] different from the nature proceedings
+[00:15:57] work this is basically a preprint of
+[00:16:00] service that nature a publishing group
+[00:16:02] has been offering for uh two and a half
+[00:16:04] or three years and i think these are uh
+[00:16:07] interesting in that and i probably
+[00:16:10] represent uh the future and that you're
+[00:16:12] starting to see
+[00:16:14] a [ __ ] in the armor of the peer review
+[00:16:16] system that people are starting to say
+[00:16:18] it's more important to get information
+[00:16:20] out even maybe it's not the 99 or 100
+[00:16:22] solution
+[00:16:24] if it is advancing the cause and
+[00:16:25] advancing science let's get it out there
+[00:16:27] as quickly as possible
+[00:16:30] um
+[00:16:31] another interesting thing that's been
+[00:16:32] announced over the last six or nine
+[00:16:33] months that has um uh
+[00:16:37] garnered i think a great deal of
+[00:16:38] interest is the google wave and i myself
+[00:16:41] haven't spent enough time on it but
+[00:16:43] watching the blogs and watching the
+[00:16:45] people that we work with there's a lot
+[00:16:47] of interest into what this means you
+[00:16:49] know time will tell us to how um if we
+[00:16:51] see adoption of google wave but it the
+[00:16:53] the opportunities for scholarly
+[00:16:55] communication have been um have been
+[00:16:57] heightened and some of the leaders and
+[00:16:58] innovators in the field have jumped on
+[00:16:59] this and what that could what that could
+[00:17:01] mean for uh changes especially when you
+[00:17:04] talk about the commercial publishing
+[00:17:06] world
+[00:17:07] and then lastly uh just another another
+[00:17:09] part of the chain is mendeley are
+[00:17:12] which is uh
+[00:17:13] i think pc based and um the papers which
+[00:17:16] is a mac based application
+[00:17:18] um and you know
+[00:17:20] many different people have referred to
+[00:17:21] at least mendeley but papers as well
+[00:17:23] it's kind of the itunes for academic
+[00:17:24] there's a way for you to download and
+[00:17:26] store basically your own repository on
+[00:17:28] your desktop of of the papers that
+[00:17:30] you're looking and then it you know
+[00:17:32] recommends oh if you're interested in
+[00:17:33] these papers you know not unlike an
+[00:17:34] amazon recommender service the ability
+[00:17:36] and this is amazing as you'll see uh 60
+[00:17:39] 000 people have already signed up four
+[00:17:41] million scientific papers have been
+[00:17:42] uploaded and that's doubling about every
+[00:17:44] 10 weeks so there this is a small
+[00:17:46] company that we actually chatted with a
+[00:17:47] couple of times probably six months ago
+[00:17:49] and they've they've seen some amazing
+[00:17:51] growth so it's uh some
+[00:17:53] differing uh free ways that you're
+[00:17:55] seeing uh you know peer peer review
+[00:17:58] being scaled back a little bit papers
+[00:18:00] being distributed in different ways not
+[00:18:02] unlike maybe archive.org et cetera but
+[00:18:05] new kind of new paradigms for how this
+[00:18:07] how information is being transferred
+[00:18:09] within and across academic domains
+[00:18:13] um so that raises the point of uh yes
+[00:18:16] you know how how are we going to see uh
+[00:18:19] the world as we've known it for several
+[00:18:21] hundred years around scholarly
+[00:18:22] publishing how are we going to see that
+[00:18:23] change
+[00:18:24] and this is going to be um in the world
+[00:18:27] of
+[00:18:28] open access taking a a larger role and
+[00:18:32] the idea of paid and walled content
+[00:18:34] starting to break down and go away how
+[00:18:36] are we how are we going to see different
+[00:18:38] entities
+[00:18:39] continue to
+[00:18:41] i was a derived value out of out of that
+[00:18:43] content it's not going to be necessarily
+[00:18:44] the content itself
+[00:18:46] but it's going to be adding services on
+[00:18:48] top of that and there's many ways that
+[00:18:50] we're going to see how that happens
+[00:18:53] the the benefit is we're now finally in
+[00:18:55] a world where research is is easily
+[00:18:58] shareable we're not talking about you
+[00:19:00] know a hundred pages of tables of
+[00:19:02] statistics in the back of a journal from
+[00:19:04] 1800 we're now able to you know send a
+[00:19:06] spreadsheet or download something from a
+[00:19:08] web service so the data now is easily
+[00:19:11] shareable
+[00:19:12] and interoperability is still a bit of
+[00:19:14] an issue but i think we're going to be
+[00:19:16] tackling that
+[00:19:17] from
+[00:19:18] an interesting scenario related to to
+[00:19:20] data sharing
+[00:19:22] many of you might be familiar with this
+[00:19:23] sloan digital sky survey um this is um
+[00:19:27] some some fantastic work um by
+[00:19:29] astronomers at many institutions and
+[00:19:31] organizations around the world but you
+[00:19:33] can see that they've got three terabytes
+[00:19:35] of fully public information from 13
+[00:19:38] institutions um 500 uh you know 300
+[00:19:42] million objects etc an amazing an
+[00:19:45] amazing job that these institutions have
+[00:19:47] done to pull data from different sources
+[00:19:50] different formats and pull it together
+[00:19:51] and make it available in a consumable
+[00:19:53] form and on top of that
+[00:19:56] the amazing thing is you can see 350
+[00:19:58] million web hits in six years and we
+[00:20:01] have
+[00:20:02] not well let's say let's round up a
+[00:20:04] million distinct users versus a known
+[00:20:08] population of you know astronomers
+[00:20:10] worldwide of ten thousand so we're
+[00:20:12] starting to see when you put this data
+[00:20:13] out there and you put it in a consumable
+[00:20:15] form you're seeing much broader interest
+[00:20:18] outside of the domain it's fascinating
+[00:20:20] to me um the the greatest example and i
+[00:20:23] point to galaxy zoo
+[00:20:24] is um you know
+[00:20:26] basically the mechanical tur
+[00:20:28] concept of making the state available
+[00:20:31] and having people kind of drill down
+[00:20:32] into it and care help them uh have them
+[00:20:36] classify different uh different aspects
+[00:20:38] of it this has received the galaxy z1
+[00:20:40] since it launched i think about 18 or 20
+[00:20:42] 24 months ago it's received a lot of
+[00:20:44] publicity there's been a lot of
+[00:20:46] a public access of this information over
+[00:20:49] a hundred thousand people participating
+[00:20:51] the the one that you may have heard of
+[00:20:52] is uh i believe was a a dutch homemaker
+[00:20:55] who was for some reason looking at this
+[00:20:57] found a unique object flagged it uh it
+[00:21:00] immediately got escalated to some of the
+[00:21:02] most senior people involved in this and
+[00:21:04] it was a it was referred to as a blue
+[00:21:06] object that they had not ever seen
+[00:21:07] before um based on that response uh
+[00:21:10] they've actually several months ago
+[00:21:12] turned to the hubble or made sure to
+[00:21:13] turn the hubble telescope to look at
+[00:21:14] that specific thing and sure enough this
+[00:21:16] woman identified a
+[00:21:18] an object that had never been heretofore
+[00:21:20] discovered so it's amazing concept of
+[00:21:22] sharing that data and the possibilities
+[00:21:25] for citizen science to um to help
+[00:21:27] facilitate that you know do something
+[00:21:29] that those ten thousand astronomers may
+[00:21:31] not have been able to do for many many
+[00:21:33] years
+[00:21:35] obviously there are concerns with data
+[00:21:38] sharing um i think the astronomy
+[00:21:39] community is uh at the forefront in
+[00:21:41] terms of making making this information
+[00:21:43] available making it available beyond
+[00:21:45] their domain
+[00:21:46] but there is it's an immense task for
+[00:21:48] the integrating uh integrating it uh
+[00:21:51] ensuring the interoperability among
+[00:21:52] those data sets
+[00:21:54] there's a challenge around annotating it
+[00:21:56] making making sure that people can say
+[00:21:58] oh wait we need to look into this or
+[00:21:59] this is an anomaly or this is great or
+[00:22:02] who did this basically you know again
+[00:22:04] kind of starting to touch on the next
+[00:22:06] point there provenance and the quality
+[00:22:08] of the of the data and it's annotating
+[00:22:11] it at a high level and annotating it
+[00:22:13] perhaps even at the at the individual
+[00:22:15] atomic data point level level
+[00:22:18] um exporting it and publishing it in
+[00:22:20] agreed formats again kind of mapping
+[00:22:22] back to the interoperability issue
+[00:22:25] and then security how do you share this
+[00:22:27] when do you share it with whom do you
+[00:22:29] share it
+[00:22:30] these are all issues that i think in
+[00:22:33] many domains have stopped people from
+[00:22:36] doing data sharing have stopped people
+[00:22:38] have have forced communities to become
+[00:22:40] proprietary and i stress to you i would
+[00:22:42] look at the same list and say these are
+[00:22:44] the exactly the opportunity
+[00:22:46] areas that will provide uh whether it be
+[00:22:50] in libraries
+[00:22:52] institutions whether it be commercial
+[00:22:53] publishers the people that are able to
+[00:22:55] address these problems in clever ways
+[00:22:57] are going to be the market uh
+[00:22:59] differentiators moving forward and so
+[00:23:00] these are exactly the areas that i would
+[00:23:03] love to see institutions i would love to
+[00:23:05] see scholarly societies i'd love to see
+[00:23:07] libraries address these issues
+[00:23:10] in an open and interoperable way
+[00:23:20] other services um data analysis um i'm
+[00:23:23] listing a handful of names here uh
+[00:23:25] swivel which is independent um uh but
+[00:23:28] uh ibm's mini eyes google's gap minder
+[00:23:31] metabases freebase there are many others
+[00:23:33] some of these are kind of more
+[00:23:35] on a different scale but the idea in all
+[00:23:38] of these is that these are open
+[00:23:40] web-based services that are being made
+[00:23:41] available some have kind of baseline
+[00:23:44] services that are available for free and
+[00:23:45] if you want premium services you have to
+[00:23:47] subscribe at a different level but the
+[00:23:50] idea that you can take in multiple data
+[00:23:52] sets and i mean one example is to you
+[00:23:53] can i would encourage you to go up to
+[00:23:55] swivel and look at the the public data
+[00:23:57] sets that people have loaded up again
+[00:23:58] provenance and security issues but for
+[00:24:00] the ones that are up there it's amazing
+[00:24:02] the data mashups that you can that you
+[00:24:04] can create or the free tools if you want
+[00:24:06] to load your own data up and running
+[00:24:07] against yourself or your colleagues
+[00:24:08] these free services that are that are
+[00:24:10] now being made available to me again
+[00:24:13] these are fantastic
+[00:24:15] tools that the academic
+[00:24:17] academic community could be using could
+[00:24:20] be using as models maybe you're not want
+[00:24:21] to use this but maybe you want to build
+[00:24:23] services that are in a very similar vein
+[00:24:25] but um i think these are um tools that
+[00:24:28] should certainly be
+[00:24:30] should certainly be utilized i i
+[00:24:32] personally have only used many eyes for
+[00:24:34] from for textual analysis and it's a
+[00:24:36] fantastic fantastic tool i'd recommend
+[00:24:38] checking it out if you haven't already
+[00:24:41] but based on
+[00:24:43] these tools based on these things we're
+[00:24:46] really starting to see the publishing
+[00:24:47] ecosystem shift
+[00:24:49] and we are seeing um
+[00:24:52] some of the scholarly i'm sorry some of
+[00:24:53] the commercial publishers uh
+[00:24:55] investigating and again uh things like
+[00:24:58] the elsevier grand challenge starting to
+[00:24:59] say hey can you guys give us some ideas
+[00:25:01] and then you know maybe we'll incubate
+[00:25:03] incubate that maybe we'll um you know
+[00:25:05] pursue some of these ideas but we're
+[00:25:07] definitely seeing publishers um think
+[00:25:10] about these uh these sorts of services
+[00:25:12] um i'm really interested if you take a
+[00:25:15] look at another at another world and you
+[00:25:18] look at you know the world that i'm very
+[00:25:19] familiar with of software you know
+[00:25:21] you've seen open source and you've seen
+[00:25:23] ibm and red hat really build not they're
+[00:25:26] not selling the code but they're selling
+[00:25:28] the services on top of the code and this
+[00:25:30] is the i think a model that i think a
+[00:25:32] lot of publishers are probably going to
+[00:25:33] be looking at and adopting the idea that
+[00:25:36] hey the content can be free but the
+[00:25:38] services that's where the value adder
+[00:25:39] that's where the differentiator that's
+[00:25:41] where the the the the financial um uh
+[00:25:44] enumeration might happen
+[00:25:46] the other thing is this
+[00:25:47] provides very rapid prototyping and so
+[00:25:51] especially if you're starting to
+[00:25:53] not get concentrated or not focused on
+[00:25:55] the peer review as we've traditionally
+[00:25:56] known it but the idea to build um
+[00:25:58] analytical services and visualization
+[00:26:00] services etc allows very rapid
+[00:26:03] prototyping and very unique things to
+[00:26:05] happen
+[00:26:07] and we can envision and it's already
+[00:26:09] starting to happen days when
+[00:26:10] repositories won't be
+[00:26:12] simply the full text of research papers
+[00:26:14] but they'll be able to include and
+[00:26:16] incorporate the grey literature
+[00:26:18] supporting around those papers
+[00:26:20] data images maybe software emulations et
+[00:26:23] cetera that will support that so that we
+[00:26:25] need to evolve away from again just the
+[00:26:27] the traditional concept of the paper and
+[00:26:30] think about all of the things that the
+[00:26:32] content in the paper and what it could
+[00:26:34] represent
+[00:26:35] so um i'm you know of obviously i'm
+[00:26:37] saying the obvious on the last point but
+[00:26:39] you know to make all of this happen some
+[00:26:41] enhanced concepts of inner
+[00:26:43] interoperability protocols are
+[00:26:45] are very very necessary
+[00:26:50] a couple of examples uh that i think is
+[00:26:52] uh i think to to illustrate the point um
+[00:26:55] we're very familiar with data.gov um but
+[00:26:57] they're um is it's fantastic to see that
+[00:27:00] you know um shortly after the new
+[00:27:02] administration change but there was this
+[00:27:04] push within the government to say you
+[00:27:06] know we've been we've been collecting
+[00:27:08] and we've been making this this data
+[00:27:09] available to ourselves for a long period
+[00:27:11] of time hey we there's a there's a onus
+[00:27:14] on on us to turn around and make it
+[00:27:15] available uh and and uh make it
+[00:27:18] available to all the taxpayers and so
+[00:27:20] it's been fantastic to watch data.gov
+[00:27:23] really take off and um not unlike the
+[00:27:26] the concept of you know swivel but we're
+[00:27:28] starting to see some really baseline
+[00:27:29] services delivered this way as well
+[00:27:32] another idea that i like quite a bit is
+[00:27:34] i'm not sure if
+[00:27:36] folks are familiar with but worldwide
+[00:27:38] science.org
+[00:27:39] and this is a an amalgamation of
+[00:27:44] government agencies
+[00:27:45] or other bodies in different worldwide
+[00:27:48] uh countries that are responsible for
+[00:27:50] maintaining scientific and technical
+[00:27:52] information
+[00:27:53] on the behalf of their country so the
+[00:27:55] participating the types of groups that
+[00:27:57] would be participating from the uh from
+[00:27:59] the united states would be department of
+[00:28:00] energy or our nsf etc but a lot uh see
+[00:28:04] if they have the number here uh it's
+[00:28:06] probably somewhere around 60 or 70
+[00:28:08] different countries that are
+[00:28:09] participating but they are pulling
+[00:28:11] together all of their scientific
+[00:28:12] information and you know again in a kind
+[00:28:15] of u.n of scientific data they're
+[00:28:17] pulling all this information together
+[00:28:19] and providing a search uh a federated
+[00:28:21] search across that and i think this is
+[00:28:23] fantastic because they're not going to
+[00:28:26] publishers it's
+[00:28:27] you know it could be the british library
+[00:28:28] it could be individual agencies
+[00:28:30] uh scientific and technical information
+[00:28:32] agencies in korea and russia et cetera
+[00:28:34] that are getting together and doing this
+[00:28:36] uh regardless of borders regardless of
+[00:28:38] language pulling together
+[00:28:40] i think this is a fantastic model and
+[00:28:42] it's something where you know certain
+[00:28:44] institutions are saying we'll worry
+[00:28:46] about the data curation other ones are
+[00:28:47] saying we're going to worry about the
+[00:28:48] crawling and the indexing and they're
+[00:28:50] dividing and conquering and tackling
+[00:28:52] that again kind of in a un fashion it's
+[00:28:55] fantastic to see a lot has happened in
+[00:28:58] this space over just literally over the
+[00:28:59] last um two to three years so um i this
+[00:29:02] is something i think is a fantastic
+[00:29:03] model to to emulate
+[00:29:06] now the concept of um
+[00:29:08] enabling semantic computing
+[00:29:12] is an interesting one
+[00:29:14] the tough thing is people have been
+[00:29:15] talking about semantics and semantic
+[00:29:17] computing for years and we still are
+[00:29:19] talking about it we're still not kind of
+[00:29:21] feeling the benefit of it i'm one of the
+[00:29:23] people that has kind of jumped the chasm
+[00:29:24] and definitely feel like there's going
+[00:29:26] to be extreme benefit for us in the long
+[00:29:28] run um and so
+[00:29:30] a lot of the the efforts that um happen
+[00:29:32] within our group our research group at
+[00:29:34] microsoft are focused on enabling this
+[00:29:37] um but it still might be a while before
+[00:29:40] the kind of rank and file um are able to
+[00:29:43] enjoy the benefits of what we're going
+[00:29:44] to see in this in this space
+[00:29:46] um
+[00:29:47] pointing to another another blogger um
+[00:29:50] cameron alon from uh
+[00:29:51] uh from the uk um he has a blog called
+[00:29:55] science in the open
+[00:29:56] and
+[00:29:57] i i love i love
+[00:29:59] the highlights here where he says the
+[00:30:00] laboratory record is reduced to a feed
+[00:30:02] which describes the relationships
+[00:30:04] between samples procedure procedures and
+[00:30:06] data
+[00:30:07] stressing the point that yeah the data
+[00:30:09] is great but the the next step is
+[00:30:11] understanding the relationships between
+[00:30:13] the data
+[00:30:14] and the relationships between the data
+[00:30:16] and the paper and the methodology and
+[00:30:17] the and the co-authors that are written
+[00:30:19] and the expansion of linked data out
+[00:30:21] from the individual atomic data points
+[00:30:24] and then he points out what is also
+[00:30:26] requires is good plugins applications
+[00:30:28] and services to help people generate the
+[00:30:30] lab record feed it also requires a
+[00:30:32] minimal and arbitrary sensible way of
+[00:30:34] describing the relationships again
+[00:30:36] here's the opportunity again stepping
+[00:30:39] away from simply the paper and starting
+[00:30:41] to think about the data and how we can
+[00:30:43] enable that and by
+[00:30:46] the the whole promise i think i'll
+[00:30:47] probably skip ahead to the next slide
+[00:30:49] the whole promise that this that this
+[00:30:51] represents is
+[00:30:53] the you know the ability of tagging and
+[00:30:55] identifying these relationships and
+[00:30:57] letting machines generate this
+[00:30:59] intelligence this artificial
+[00:31:00] intelligence that is
+[00:31:02] uh things that we at our you know our
+[00:31:04] minds will not be able to capture but
+[00:31:06] only uh via high performance computing
+[00:31:08] will be able to see this i want to
+[00:31:10] stress that there's a distinction
+[00:31:12] between semantic technologies in the
+[00:31:14] semantic web
+[00:31:15] semantic web is you know one of the many
+[00:31:18] tools at our disposal but there are
+[00:31:20] semantic semantic-based solutions that
+[00:31:22] have to be
+[00:31:24] operationalized at much lower levels
+[00:31:25] that's just kind of one manifestation or
+[00:31:27] one channel that we will see
+[00:31:30] so how do we start to arrive how do we
+[00:31:33] take advantage of these things so yes
+[00:31:35] there's the idea of leveraging
+[00:31:36] collective intelligence there is you
+[00:31:39] know at a very simple way there's the
+[00:31:41] concepts of these recommender systems
+[00:31:43] last
+[00:31:44] last fm or when you're buying something
+[00:31:45] on amazon yes you know other people who
+[00:31:48] bought this also bought that's that's
+[00:31:50] you know brain dead in a lot of ways in
+[00:31:52] comparison to the benefit or the promise
+[00:31:55] of semantic computing and so we're
+[00:31:57] starting you know there are applications
+[00:31:59] of these recommender systems kanetia
+[00:32:01] biomed central's faculty of a thousand
+[00:32:04] but by comparison these are these are
+[00:32:06] very manual they're not literally manual
+[00:32:08] but they're very still kind of peer
+[00:32:10] review based or some kind of basic
+[00:32:12] social networking but there is the idea
+[00:32:14] of this automated uh correlation of
+[00:32:17] scientific data and um smart composition
+[00:32:20] of services and functionality the idea
+[00:32:22] that things that we would have never
+[00:32:24] been able to to compute or think about
+[00:32:26] on our on our own if we're able to
+[00:32:28] describe those describe those uh
+[00:32:31] relationships between things and let the
+[00:32:33] computers do that do the the connections
+[00:32:36] uh we're you know you know gonna be in a
+[00:32:38] much better space when these things are
+[00:32:40] realized uh the the other point that i'd
+[00:32:42] like to stress here is that we're not
+[00:32:43] all going to have super computers under
+[00:32:45] our desk to do these things and in the
+[00:32:47] in the in the near term uh i i
+[00:32:50] envision and i think very strongly that
+[00:32:52] we're going to be
+[00:32:53] as a as a as a academic community
+[00:32:55] leveraging cloud computing more and more
+[00:32:59] uh
+[00:33:01] we see a lot of usage
+[00:33:03] going around the world we see a lot of
+[00:33:04] usage yes it's it's great and scientists
+[00:33:06] all would like to have
+[00:33:08] massive computing powers a lot of them
+[00:33:10] are starting to use things like amazon
+[00:33:13] ec2
+[00:33:14] our amazon s3 to store their information
+[00:33:17] or to do their um to do their
+[00:33:18] calculations
+[00:33:20] and i think that that is a model that
+[00:33:22] you know it's going to ramp up quite a
+[00:33:24] bit
+[00:33:26] so just kind of reiterating the last
+[00:33:29] point you know in a world where um all
+[00:33:31] data is linked and this is uh
+[00:33:33] the linkdata.org kind of an ever
+[00:33:36] evolving uh world uh sorry diagram of
+[00:33:40] linked data
+[00:33:41] it's very much worth a visit to that to
+[00:33:43] that site um
+[00:33:45] there's an immense amount of uh of the
+[00:33:47] potential but
+[00:33:48] when we have that when we have the
+[00:33:50] ability to demonstrate and catalog these
+[00:33:52] uh these networks
+[00:33:55] you can imagine when everything is
+[00:33:57] stored processed and analyzed in the
+[00:33:58] cloud the kind of services that can that
+[00:34:01] can just be automatically generated
+[00:34:03] knowledge management knowledge discovery
+[00:34:05] uh you know virtualization storage
+[00:34:07] services notification of uh you can you
+[00:34:10] can easily start to capitalize on
+[00:34:12] especially if you're not focused on the
+[00:34:14] storage and the compute if you're able
+[00:34:16] to kind of basically offshore out
+[00:34:18] outsource that and you're able to focus
+[00:34:20] on delivering these services
+[00:34:22] i think it's again a much greater value
+[00:34:25] add for our respective roles whether it
+[00:34:27] be
+[00:34:28] as as authors as scientists as
+[00:34:31] librarians as archivists in some form or
+[00:34:34] fashion
+[00:34:37] when we talk about cloud computing just
+[00:34:38] for a point of distinction uh you know
+[00:34:40] many people have kind of broken into
+[00:34:41] three three categories this is actually
+[00:34:43] from tim o'reilly but the idea of can a
+[00:34:45] very baseline infrastructure utility
+[00:34:47] computing moving up a level to platform
+[00:34:50] and platform as a service and there's
+[00:34:52] examples of
+[00:34:54] salesforce.com google's app engine many
+[00:34:56] things in that in that area and then
+[00:34:59] finally the thing that i think we're
+[00:35:00] most all familiar with the idea of
+[00:35:02] software in user applications things
+[00:35:04] like facebook things like search amazon
+[00:35:06] et cetera um but these would be the you
+[00:35:09] know the three levels and what i was
+[00:35:10] mentioning earlier is i think this is
+[00:35:13] for most of us uh in in the scholarly
+[00:35:15] communication or research world we would
+[00:35:17] love to be able to not worry about those
+[00:35:20] and spend our time in this area so this
+[00:35:22] is this is the opportunity space
+[00:35:26] and i think this isn't a very very
+[00:35:28] obvious concept but why would we want to
+[00:35:30] do this um so we don't all have to have
+[00:35:32] a super computer sitting under our desk
+[00:35:33] but there are many reasons that would
+[00:35:36] that are going to lead us to cloud
+[00:35:37] computing
+[00:35:39] and it just again takes a huge chunk of
+[00:35:42] you know time resources and effort off
+[00:35:45] of the table and allows us to think of
+[00:35:46] much higher value-add uh services
+[00:35:50] certainly the cloud landscape is still
+[00:35:52] developing but you to get an idea of the
+[00:35:55] services that that are already out there
+[00:35:57] we may not even think about them as
+[00:35:58] cloud services but the idea of flickr of
+[00:36:01] smug mug etc for for photos
+[00:36:04] for video obviously we know about uh
+[00:36:06] youtube uh how many people are familiar
+[00:36:08] with syvee
+[00:36:10] a handful four or five syvee is
+[00:36:12] basically youtube for scientists and the
+[00:36:14] idea of um and it's a it's free it was
+[00:36:16] actually nsf funded came out of uc san
+[00:36:18] diego but it's the idea of you know what
+[00:36:21] i've got a 75-page physics paper and i
+[00:36:23] really don't want to read it i'm
+[00:36:25] exaggerating but instead of reading the
+[00:36:27] abstract or the entire paper why don't i
+[00:36:29] go and watch an uh the author who
+[00:36:31] actually did it do a ten or five or
+[00:36:33] seven minute v
+[00:36:34] that explains the concepts and maybe
+[00:36:36] actually demonstrates there's another
+[00:36:38] another similar thing called
+[00:36:40] jove the journal of visualized
+[00:36:42] experiments and it's an amazing again an
+[00:36:44] amazing use that is really kind of a
+[00:36:46] layer above the above the article it
+[00:36:49] could also save a lot of money traveling
+[00:36:50] to conferences if you want to if you
+[00:36:52] want to just take a look at these things
+[00:36:53] online
+[00:36:54] i'll jump back to smug mug for a second
+[00:36:56] how many people are familiar with smug
+[00:36:58] mug
+[00:37:00] so only three or four the the amazing
+[00:37:02] thing about smug mug is it's flicker
+[00:37:04] they own no infrastructure they are
+[00:37:06] completely utilizing uh amazon sc3 and
+[00:37:10] ec2 um and so it they have zero i.t
+[00:37:13] infrastructure and so they've built
+[00:37:14] their entire business on top of amazon
+[00:37:16] which is a risk but i think in a lot of
+[00:37:18] ways that they're a very
+[00:37:19] forward-thinking company and that
+[00:37:20] they're saying we're just going to take
+[00:37:22] that part of the equation off the table
+[00:37:24] and we're going to worry about doing
+[00:37:25] that you know more value-added services
+[00:37:28] obviously other ones include slideshare
+[00:37:30] for presentations google docs for word
+[00:37:32] processing spreadsheets we're seeing a
+[00:37:33] lot of these end user tools that are
+[00:37:35] already available in the cloud
+[00:37:37] but you know in a certain way these only
+[00:37:39] go a certain
+[00:37:41] to a certain degree and it's not maybe
+[00:37:43] not the last mile for what for what
+[00:37:46] scholars and for what researchers need
+[00:37:48] and i think that there's a gulf there
+[00:37:50] that is again an opportunity for people
+[00:37:52] to step in and begin to take advantage
+[00:37:54] of these resources and build those
+[00:37:57] compelling and value added services in
+[00:37:59] the middle i mentioned amazon's s3 and
+[00:38:02] ec2
+[00:38:03] i'm going to skip over the duracloud
+[00:38:05] project because i'm going to have a
+[00:38:06] slide on that in a moment but the idea
+[00:38:08] that we could start leveraging these
+[00:38:10] resources
+[00:38:11] to do the hard aspects of of archiving
+[00:38:14] and preservation that have heretofore
+[00:38:16] been very difficult we've kind of
+[00:38:17] prevented us from doing it these things
+[00:38:19] are starting to get to be a lot easier
+[00:38:21] and then there's the idea of of new
+[00:38:23] business models that are developing in
+[00:38:24] this space
+[00:38:26] service provision could be a new way to
+[00:38:27] sustainability for some for some
+[00:38:29] journals or from for some societies i'm
+[00:38:32] also interested to see the nsf uh data
+[00:38:35] net solicitation uh they're actually in
+[00:38:38] round two doing a second round of
+[00:38:39] solicitation these are uh 20 million
+[00:38:42] dollar four four-year grants that are
+[00:38:45] being given not to one institution but
+[00:38:47] coalitions of institutions that are
+[00:38:49] coming together
+[00:38:50] in the first round it was um
+[00:38:53] johns hopkins and probably about eight
+[00:38:56] or ten partners
+[00:38:57] got
+[00:38:58] awarded the first one as well as um
+[00:39:01] was it i'm trying to remember if it was
+[00:39:02] oak ridge and university of new mexico
+[00:39:04] but those are the two first awardees but
+[00:39:06] the idea behind these is saying okay all
+[00:39:09] the problems i've been talking about
+[00:39:10] around collecting data storing data and
+[00:39:13] preserving it to make sure that the
+[00:39:14] scientific data is available nsf said we
+[00:39:17] realize this is a problem and we're
+[00:39:18] going to get groups of not just
+[00:39:20] individual institutions but groups of uh
+[00:39:22] institutions together with a specific
+[00:39:24] mandate a to create
+[00:39:26] sustainable digital preservation
+[00:39:29] solutions and something that they have
+[00:39:31] to turn around and make available so
+[00:39:33] they have to actually produce something
+[00:39:34] not just a prototype but something that
+[00:39:36] can be turned around and shared with the
+[00:39:37] community
+[00:39:38] and there i know nsf is in the second
+[00:39:40] round of awards um for that at present
+[00:39:43] but it's to me it's a very uh it's a
+[00:39:46] very interesting evolution in thinking
+[00:39:48] that these aren't based around actually
+[00:39:49] developing new data it's taking existing
+[00:39:51] data and data moving forward and how do
+[00:39:54] we preserve that and ensure that it's
+[00:39:55] going to be around and the mandate is on
+[00:39:57] these is to say not just it's a
+[00:39:59] four-year grant you're you're funding
+[00:40:01] runs out but there's a goal a stated
+[00:40:03] goal of the thing that this these have
+[00:40:04] to be sustainable and you have to build
+[00:40:05] a business model for how these will
+[00:40:07] continue after the initial four-year
+[00:40:09] grant
+[00:40:11] then
+[00:40:12] preservation of provenance
+[00:40:17] the um i mentioned
+[00:40:19] the duracloud project
+[00:40:21] this is uh for those of you that are
+[00:40:23] familiar with uh d space uh fedora they
+[00:40:26] actually merged uh into those were two
+[00:40:29] separate uh open source software
+[00:40:32] repository packages they actually merged
+[00:40:34] into a single entity about six months
+[00:40:36] ago uh which is they're now referred to
+[00:40:38] as duraspace
+[00:40:40] and they are initiating a project that
+[00:40:42] is called duracloud and this is the idea
+[00:40:45] that uh at the i will say at the at the
+[00:40:48] top level here
+[00:40:50] um you might have hundreds thousands in
+[00:40:53] fact you know we are probably talking
+[00:40:54] somewhere between two and three thousand
+[00:40:56] institutional or are centralized
+[00:40:58] repositories around the world um several
+[00:41:01] here on the harvard campus several over
+[00:41:03] at mit et cetera um but you know two or
+[00:41:05] three thousand of these worldwide and
+[00:41:07] right now
+[00:41:08] they don't have a very good you know
+[00:41:10] backup or plan b or plan c in terms of
+[00:41:13] how they're preserving that data some
+[00:41:15] some are experimenting but in terms of
+[00:41:17] how could they uh how could they scale
+[00:41:19] this or how could they really address us
+[00:41:20] in a much larger
+[00:41:22] order or fashion and so what the
+[00:41:25] duraspace team has done they went to the
+[00:41:27] mellon foundation and said we would like
+[00:41:29] to build a business a scalable large
+[00:41:31] scale business around preserving
+[00:41:34] information at these academic
+[00:41:36] institutions for these institutional
+[00:41:37] repositories and so what duracloud will
+[00:41:41] be doing is providing this area
+[00:41:43] providing this durable
+[00:41:45] storage
+[00:41:46] sorry durable storage service layer
+[00:41:49] and
+[00:41:50] and then so they would basically you
+[00:41:52] know let's take the dash repository here
+[00:41:55] at harvard dash could go to duracloud
+[00:41:57] and say i would like to sign a service
+[00:41:58] level agreement with you i will have a
+[00:42:01] local store of my of my data but then i
+[00:42:03] will store a backup or store a mirror
+[00:42:05] with you
+[00:42:06] and then what duracloud does is turn
+[00:42:08] around and they go to hp microsoft
+[00:42:10] google
+[00:42:11] amazon whoever and they sign and they
+[00:42:14] are able to distribute and share
+[00:42:16] multiple copies of different locations
+[00:42:17] et cetera so there's two agreements that
+[00:42:19] are going on but it's i think it's a
+[00:42:21] fantastic this is the best application i
+[00:42:23] can think of in terms of cloud computing
+[00:42:25] and preservation and it's a it's just
+[00:42:26] it's a large scale this is something
+[00:42:28] that uh you know i know the duracloud
+[00:42:30] people are talking with everyone we hope
+[00:42:32] to be one of the providers behind the
+[00:42:34] scenes as well but i just think this is
+[00:42:35] a brilliant approach and obviously
+[00:42:37] institutions will be paying for this
+[00:42:39] service will be funded in that way and
+[00:42:41] these services will be um will
+[00:42:43] attract this kind of ecosystem as well
+[00:42:49] another blogger john wilbanks from his
+[00:42:52] science commons blog
+[00:42:53] i think raises an interesting point that
+[00:42:55] i will be i will be closing on
+[00:42:57] we need more than computer software
+[00:42:59] routers and fiber to share scientific
+[00:43:01] information more efficiently we need a
+[00:43:02] legal and policy infrastructure that
+[00:43:04] supports better yet reward sharing
+[00:43:07] and so the point that i close on here
+[00:43:09] and i i stress that you rec that you you
+[00:43:12] read more of his blog
+[00:43:13] but um this is what i hope doesn't get
+[00:43:15] me fired back in redmond but at the end
+[00:43:17] of the day
+[00:43:18] it's not it's not exclusively software
+[00:43:20] yes i've been talking about the
+[00:43:21] opportunity et cetera but it's as we all
+[00:43:24] know i wish i could say i've got the
+[00:43:26] answer and here it is xyz but at the end
+[00:43:28] of the day it's making sure that people
+[00:43:30] are participating in this that we can
+[00:43:31] encourage that we can provide incentives
+[00:43:33] and rewards
+[00:43:35] that we can perhaps revisit what peer
+[00:43:38] review looks like or what the 10-year
+[00:43:39] process looks like these are things that
+[00:43:41] have to change that have to evolve and
+[00:43:43] it's going to be different in every
+[00:43:45] domain it's going to be different from
+[00:43:46] institution to institution but at the
+[00:43:48] end of the day you know as much as i'm
+[00:43:50] as a software verb to much as much i can
+[00:43:51] say i'd love for there to be some code
+[00:43:53] that we could write that would address
+[00:43:54] the situation but at the end it's a
+[00:43:56] sociological issue that has to be
+[00:43:58] addressed as well it's it's it's a key
+[00:44:01] part
+[00:44:02] of that equation
+[00:44:03] so
+[00:44:05] i will point you this is the the last
+[00:44:07] little tiny bit of a commercial but this
+[00:44:08] is just a website uh that describes um
+[00:44:11] some of the work that we're doing at
+[00:44:12] microsoft research just
+[00:44:14] research.microsoft.com
+[00:44:16] and then lastly i will just share my
+[00:44:19] information my email contact and a
+[00:44:21] website about the specific area that we
+[00:44:24] that we work with
+[00:44:25] so um i would like to open it up to
+[00:44:27] questions there might be
+[00:44:30] questions coming on from the twitter
+[00:44:32] feed
+[00:44:33] but thank you very much
+[00:44:58] okay
+[00:44:59] can we certainly make the slide deck
+[00:45:00] available as well
+[00:45:10] oh yeah
+[00:45:11] well and again some of it's happening
+[00:45:12] already you know i have a couple of a
+[00:45:15] couple of the examples you know the
+[00:45:16] elsevier plus very interesting things
+[00:45:19] and it's just a matter of um
+[00:45:21] these are you know i look at plos as a
+[00:45:23] very forward-thinking organization
+[00:45:24] public library of science um and it just
+[00:45:26] has to be an issue of are the domains
+[00:45:29] you know they are a leading edge but an
+[00:45:31] innovator but the domains have to kind
+[00:45:33] of latch on and start taking it and
+[00:45:35] running with it another example is you
+[00:45:36] know google wave fascinating potential
+[00:45:39] but it's been tossed out there and it
+[00:45:41] remains to be seen if communities are
+[00:45:42] going to adopt it in a lot of ways you
+[00:45:44] know you look at you know you know
+[00:45:47] domains like astronomy or physics or
+[00:45:48] chemistry you know very guild like you
+[00:45:51] know kind of old school and you know
+[00:45:53] some you have some innovators and some
+[00:45:55] laggards and it's just going to be
+[00:45:56] interesting when we can see like a
+[00:45:58] tipping point happen in certain areas
+[00:46:00] and
+[00:46:01] you know the oh i feel like the onus is
+[00:46:03] on the people in this room the people in
+[00:46:05] these institutions to say how do we lead
+[00:46:08] them you know across that chasm what are
+[00:46:10] the compelling you know rewards or
+[00:46:12] incentives or services that we can
+[00:46:13] provide to say
+[00:46:15] don't do it the old way do it the new
+[00:46:17] way
+[00:46:18] so i i wish i knew i wish i could say
+[00:46:20] when but i think it's going to vary from
+[00:46:22] domain to domain from institution to
+[00:46:24] institution
+[00:46:25] yes
+[00:46:41] a guy at a company um socratic in
+[00:46:42] seattle and they're building things in
+[00:46:45] bed they're trying to enable social data
+[00:46:47] analysis so they're looking at data.gov
+[00:46:49] for example yes and saying well we can
+[00:46:51] build
+[00:46:52] embedded little widgets that people can
+[00:46:54] use to analyze government data in the
+[00:46:58] context of a blog post or a political
+[00:47:00] discussion right online and they and
+[00:47:02] they're pretty sophisticated about it
+[00:47:04] right so they want to put it out and so
+[00:47:06] i wonder
+[00:47:07] what will bubble up from the mass
+[00:47:09] culture you know it develops online
+[00:47:11] where intelligent people are talking
+[00:47:12] about about data and
+[00:47:15] what will come down in a sense from
+[00:47:16] institutions that you know nsf cyber
+[00:47:19] infrastructure right kind of right
+[00:47:22] yeah so uh i think quickly characterize
+[00:47:25] the questions when
+[00:47:27] if we look at the consumer space what um
+[00:47:29] implications or what examples could we
+[00:47:31] start seeing kind of bleeding over into
+[00:47:33] the into the academic or our our public
+[00:47:36] sector in that way um i think it's a
+[00:47:40] an amazing uh space to watch i i think i
+[00:47:42] i've tried to list a couple i think
+[00:47:44] examples like syvee
+[00:47:47] like slideshare et cetera there are
+[00:47:48] certain things that cybe where you can
+[00:47:50] say okay well yes there's youtube but
+[00:47:52] how do we build a special application of
+[00:47:55] that for scientists we see a little of
+[00:47:57] that um and again uh i think the
+[00:48:00] consumer space is a fantastic it's
+[00:48:02] interesting you know you used to kind of
+[00:48:03] think of uh the consumers i'm sorry the
+[00:48:06] business space may be influencing
+[00:48:07] consumer space and we've seen a complete
+[00:48:09] reverse of that and we're seeing a lot
+[00:48:10] of things bubble up from there and
+[00:48:12] applied uh in a in uh to the academic
+[00:48:15] world there or to the to the private
+[00:48:16] sector where um
+[00:48:19] i'm trying to think of you know other
+[00:48:20] examples that i've seen and
+[00:48:22] again it all depends on and from my from
+[00:48:25] my perspective it all depends on when
+[00:48:26] that gets adopted by the leading the
+[00:48:28] leading people in the field the
+[00:48:30] innovators in the field and if they can
+[00:48:32] you know kind of jump that chasm and
+[00:48:34] make it more broadly
+[00:48:36] broadly useful um or broadly applicable
+[00:48:38] so it it it's uh
+[00:48:41] it varies i i i just there are there are
+[00:48:44] certainly examples of it um you know
+[00:48:47] smug mug et cetera there are things like
+[00:48:49] that but
+[00:48:51] yes
+[00:48:53] this is great i'm really really happy to
+[00:48:55] have you
+[00:48:56] this is wonderful but i do want to ask a
+[00:48:58] question
+[00:49:02] okay so um
+[00:49:04] when proselytizing internally at
+[00:49:06] microsoft yes what do you see as the
+[00:49:09] issues that need to be overcome there is
+[00:49:11] anything yes oh yeah
+[00:49:13] and um how's it going yeah um so
+[00:49:17] um whereas you know 50 of my job is
+[00:49:20] talking externally um or i should
+[00:49:23] characterize that as by talking some and
+[00:49:25] trying to listen more
+[00:49:27] to your point the rest of our job is
+[00:49:30] going back inside the company and acting
+[00:49:32] as a conduit acting as an advocate for
+[00:49:35] the higher education space overall and
+[00:49:38] whether that be from a teaching and
+[00:49:39] learning and education space or a
+[00:49:41] research in scholarly communication
+[00:49:43] space
+[00:49:44] myself alex others in in the external
+[00:49:47] research group are literally your
+[00:49:49] advocates to turn around and and trying
+[00:49:51] to make the case make the business case
+[00:49:53] within the company and so that's our job
+[00:49:56] inside the company and so what we've
+[00:49:59] done over the course of the existence of
+[00:50:00] our our specific group over the last
+[00:50:02] three years is exactly come out to
+[00:50:05] venues like this sit in meetings attend
+[00:50:07] academic conferences listen hear what
+[00:50:09] the pain points are
+[00:50:11] here find out what the innovators are
+[00:50:13] doing whether it's on our software
+[00:50:15] whether it's on open source software
+[00:50:16] whether it's on competitive software but
+[00:50:19] turn around and go back into the product
+[00:50:21] group and say guys
+[00:50:22] look to kind of to your point look what
+[00:50:24] these leading people are doing or look
+[00:50:25] what this is look what is happening
+[00:50:27] in the um consumer space and look at
+[00:50:30] what we can do inside word with sql with
+[00:50:32] sharepoint et cetera
+[00:50:34] oh okay so um that's a whole different
+[00:50:37] presentation i mean we are i'm and we
+[00:50:40] had another meeting on campus where we
+[00:50:41] did a little bit of that this morning so
+[00:50:43] yes we are building we probably built
+[00:50:45] six or eight add-ins uh for for
+[00:50:48] microsoft office that facilitate
+[00:50:50] chemical drawing semantic markup
+[00:50:52] writing uh writing um academic articles
+[00:50:56] um uh the consumption of ontologies in
+[00:50:59] in in journals uh and ours i should say
+[00:51:02] in word documents we've built a tool for
+[00:51:05] facilitating collaboration on top of
+[00:51:07] sharepoint that facilitates
+[00:51:08] collaboration among scientists and
+[00:51:10] academics um uh we built a repository
+[00:51:13] software uh platform that allows people
+[00:51:17] to to build um
+[00:51:18] uh to build repositories
+[00:51:20] just you know i would recommend that
+[00:51:23] maybe check out the website it's
+[00:51:24] microsoft.com scholarly com and that
+[00:51:27] will take you to the list of the
+[00:51:28] products that the projects that we've
+[00:51:30] that we've produced
+[00:51:33] much
+[00:51:34] larger of the things i think is going to
+[00:51:35] make it even bigger impact is that we've
+[00:51:37] just recently announced
+[00:51:38] foundation uh as separate from microsoft
+[00:51:41] called the codeplex foundation and that
+[00:51:43] really unlocks a lot of things that was
+[00:51:45] blocking microsoft in the past we're
+[00:51:46] actually able to contribute to open
+[00:51:47] source projects now we just contributed
+[00:51:50] uh 25 000 lines of code to the linux
+[00:51:52] kernel for driver support so there were
+[00:51:54] things that even where philosophically
+[00:51:56] people were turning around at microsoft
+[00:51:59] there were things that we could not do
+[00:52:00] and now we're able to do that
+[00:52:03] change it
+[00:52:06] a lot more to be said and you probably
+[00:52:08] get the idea
+[00:52:09] yes yes it's more common than a question
+[00:52:12] here but here however the institute for
+[00:52:14] quantum creative social science we have
+[00:52:16] developed an end user application
+[00:52:18] actually that uh lessens all the
+[00:52:20] concerns
+[00:52:22] in the data sheet
+[00:52:24] and in addition it has uh the
+[00:52:27] data analysis vocabulary uh mostly
+[00:52:30] social sciences
+[00:52:44] is here and we've tried to address one
+[00:52:48] by one and besides one thing that it has
+[00:52:50] been
+[00:52:51] well uh discussed as about how people
+[00:52:54] actually adopted afterwards right is
+[00:52:56] that so issues not only the software
+[00:52:58] providing this as a service that's uh
+[00:53:01] our summaries open up and source is free
+[00:53:04] to
+[00:53:05] add data but the main thing that has
+[00:53:07] helped to adapt
+[00:53:09] across researchers across the world has
+[00:53:11] been to
+[00:53:13] give ownership of the well at least
+[00:53:16] provide
+[00:53:17] the perception of ownership of the data
+[00:53:19] so they create their own site they
+[00:53:20] unload it there we take care of all the
+[00:53:23] archiving uh provide all the services to
+[00:53:26] their site but they can configure
+[00:53:28] completely decided basically the
+[00:53:30] facebook
+[00:53:33] that sounds like a fantastic best friend
+[00:53:35] so i i definitely want to talk to you
+[00:53:37] and i'd like to have a slide about the
+[00:53:38] work that you guys are doing it's
+[00:53:40] fantastic
+[00:53:55] many of your examples were um data sets
+[00:53:58] or in science
+[00:54:00] with data science yes and data is sort
+[00:54:02] of like nonstick but once data is used
+[00:54:06] and
+[00:54:07] papers are written
+[00:54:09] i was wondering how the i mean elsevier
+[00:54:11] is doing something but how published
+[00:54:14] texts
+[00:54:15] uh we're gonna were they gonna keep up
+[00:54:18] with data sets where things going to be
+[00:54:20] developed for them but now it sounds
+[00:54:21] like you are to developing
+[00:54:28] yes so i mean there's there's many ways
+[00:54:30] of thinking about it so a lot of the
+[00:54:31] work that
+[00:54:32] our group is doing is how can we take
+[00:54:35] documents that are written in in a word
+[00:54:37] file traditionally how can we evolve
+[00:54:39] that how can we you know capture that in
+[00:54:41] xml how can we embed data sets and
+[00:54:44] images et cetera in that and send that
+[00:54:46] document around how can we semantically
+[00:54:48] mark up how can we in include
+[00:54:50] information that's one idea right and
+[00:54:52] that's those these are some of the
+[00:54:53] experiments we're doing other some of
+[00:54:55] the things i've talked about is how can
+[00:54:56] you say we're not going to worry about
+[00:54:58] pdfs we're not going to worry about word
+[00:55:00] docs how can we do it on the web things
+[00:55:01] like google wave things about um you
+[00:55:03] know just the representation of on html
+[00:55:06] there's places that are saying we don't
+[00:55:07] need to think about these old containers
+[00:55:09] anymore we can do it in a virtual way on
+[00:55:11] on on the on the web and so there's
+[00:55:13] those and those are some of the other
+[00:55:15] areas of exploration we want to be able
+[00:55:17] to look and observe
+[00:55:18] all of those
+[00:55:20] one of the
+[00:55:22] ideas that seems key to me is
+[00:55:25] when you were talking about id
+[00:55:26] relationships
+[00:55:28] and
+[00:55:29] are you providing a way to do that
+[00:55:33] i mean or
+[00:55:35] yes are you addressing this yes like in
+[00:55:38] part yes and again we're doing you know
+[00:55:39] we're doing
+[00:55:40] we're again
+[00:55:42] taking
+[00:55:43] the tools that people are most familiar
+[00:55:45] with which is one approach of saying for
+[00:55:47] you know in certain areas word is our
+[00:55:49] powerpoint or excel very common tool for
+[00:55:52] arthrin or capturing information in
+[00:55:54] those areas we're trying to build ways
+[00:55:56] to allow scholars or allow researchers
+[00:55:59] to define those relationships to import
+[00:56:01] ontologies mark up the document define
+[00:56:03] those
+[00:56:04] define those relationships and share
+[00:56:06] that maybe with a repository or with a
+[00:56:08] database or with a publisher when they
+[00:56:09] submit that so yes we are doing that
+[00:56:11] there's other examples of the the
+[00:56:14] work that we're doing where we've the
+[00:56:15] research uh output repository platform
+[00:56:18] that we built is taking advantage of
+[00:56:19] that and doing the calculations in the
+[00:56:21] link and the semantic calculations to
+[00:56:23] pull those and document those
+[00:56:24] relationships so there's there's there's
+[00:56:27] examples um that we're doing and as well
+[00:56:29] as other organizations and partnering
+[00:56:31] with other organizations
+[00:56:39] yeah i'll stress that where as much as
+[00:56:41] i'd say would be great if mike you did
+[00:56:43] everything on microsoft we know that
+[00:56:44] that's not going to happen and so our
+[00:56:46] main focus is to say
+[00:56:48] when and if you use microsoft software
+[00:56:50] we want to make sure that it's
+[00:56:52] not a hindrance but it facilitates your
+[00:56:54] interaction if you we want if you put
+[00:56:56] data into it you get the same data out
+[00:56:57] or better data out of that in that
+[00:56:59] process so that's that's the kind of
+[00:57:01] effort that we're doing in microsoft
+[00:57:02] research
+[00:57:05] yes i have a question um what's the
+[00:57:08] latest developments in terms of how data
+[00:57:10] is being tagged or marked up
+[00:57:13] semantically
+[00:57:14] sort of automatically on the flies is
+[00:57:16] generated because a lot of the times it
+[00:57:18] seems like there's this curation step
+[00:57:19] scientists take like an excel
+[00:57:21] spreadsheet from their
+[00:57:22] wherever it is and then put it into the
+[00:57:24] computer and then eventually it ends up
+[00:57:26] sort of tagged
+[00:57:28] but it seems like really before this
+[00:57:29] will take off
+[00:57:30] the machine doing the measurement really
+[00:57:32] has to know how to tag it what's going
+[00:57:33] on with that
+[00:57:37] um
+[00:57:45] one idea so i would not feel uh
+[00:57:49] there are basically machines that are
+[00:57:50] doing blogging right and that are able
+[00:57:52] to you know put thing out you're able to
+[00:57:54] do the tagging of that information
+[00:57:55] that's coming off feeding into a certain
+[00:57:57] place and it's being tagged
+[00:57:58] automatically those but i'm not uh i'm
+[00:58:00] not experiencing that i don't have
+[00:58:01] enough background there how what we are
+[00:58:04] doing within microsoft i can talk a
+[00:58:05] little bit about actually i can point to
+[00:58:06] alex and i would mention the kim for
+[00:58:09] word i mean how are we doing the
+[00:58:10] semantic markup and the data in the we
+[00:58:12] have built an ad in uh that facilitates
+[00:58:15] chemical authoring and semantic markup
+[00:58:17] for chemistry
+[00:58:19] yeah and that's definitely part of it i
+[00:58:21] mean it's uh it's within the authority
+[00:58:22] environment the two examples i think are
+[00:58:25] most interesting right now there's
+[00:58:27] multiple examples of this but uh the the
+[00:58:29] chemistry group at southampton
+[00:58:32] university has all of their instruments
+[00:58:34] measuring uh
+[00:58:36] environmental variables measuring
+[00:58:37] machine outputs every every single thing
+[00:58:39] that somebody was having to record in a
+[00:58:42] lab notebook is all being recorded for
+[00:58:44] them being output directly to the blog
+[00:58:46] so when you go and record your
+[00:58:46] experiment you say i was in this room at
+[00:58:48] this time and you're effectively
+[00:58:50] creating a data mashup between your lab
+[00:58:52] notebook and what the room is telling
+[00:58:54] you what went on is that where cameron
+[00:58:55] neyland's yes yes exactly exactly right
+[00:58:59] when you move into the into the sort of
+[00:59:00] automatic step uh there's a group at the
+[00:59:03] oxford e research center that's doing
+[00:59:05] some work in uh in the cancer research
+[00:59:07] space
+[00:59:08] that is allowing uh researchers to
+[00:59:10] semantically annotate within the excel
+[00:59:13] environment so instead of just having a
+[00:59:14] column in a row and you don't know if
+[00:59:16] it's
+[00:59:17] you may be able to tell the temperature
+[00:59:18] but you don't know if it's apparent
+[00:59:19] higher celsius or you know that it's an
+[00:59:21] instrument that was recording this
+[00:59:23] particular
+[00:59:25] stream of data you the underlying xml of
+[00:59:28] that excel spreadsheet now is annotated
+[00:59:30] pointing to an ontology that says this
+[00:59:33] experiment was used this is how the data
+[00:59:35] was gathered this is the units that it's
+[00:59:37] hand
+[00:59:38] so that then when you upload it there's
+[00:59:39] no further processing you you have
+[00:59:41] another format that goes into another
+[00:59:42] system that's all that's all carried
+[00:59:44] along the units problem really seems
+[00:59:46] like a tricky part it's not an overload
+[00:59:49] thanks
+[00:59:50] another example to look at in terms of i
+[00:59:52] would take a best practice in in data
+[00:59:55] curation is the fluxnet.org
+[00:59:58] and that is um it's something like 100
+[01:00:01] different organizations worldwide that
+[01:00:03] are all calculating capturing uh water
+[01:00:06] uh water hydration data from around the
+[01:00:08] world and working in a cooperative
+[01:00:10] single framework to you know capture
+[01:00:12] that information and share it
+[01:00:14] a great story about non-proprietary
+[01:00:16] sharing of information uh you know
+[01:00:18] duration curation across data sets etc
+[01:00:22] yes
+[01:00:23] we're increasingly blurring the lines
+[01:00:24] between what i traditionally consider
+[01:00:26] scholarly information and a wide range
+[01:00:29] of other kinds of information or maybe
+[01:00:30] expanding the definition of what we
+[01:00:32] think of as scholarly information the
+[01:00:35] traditional role of libraries because
+[01:00:37] there's a few of us in the room
+[01:00:38] is to select collect and preserve what
+[01:00:41] we
+[01:00:42] determined to be or think is uh
+[01:00:45] communication
+[01:00:48] what's your impression of what the role
+[01:00:50] is of the libraries as
+[01:00:57] for full disclosure i'm actually uh my
+[01:01:00] history is as an academic librarian so i
+[01:01:02] was i was at columbia university for
+[01:01:04] years
+[01:01:05] exactly
+[01:01:07] then they made me go to microsoft but um
+[01:01:10] to your point
+[01:01:12] my opinion uh i think that the safe the
+[01:01:16] safe world of collecting books and
+[01:01:17] collecting scholar i'm sorry collecting
+[01:01:19] scholarly journals um it's been done we
+[01:01:22] figured it out yeah we can we can kind
+[01:01:24] of figure out you know how to how do we
+[01:01:26] get from 98 percent to
+[01:01:28] 99 or 100 but that's not the problem and
+[01:01:30] that's not where we're going to make the
+[01:01:32] difference moving forward it is data
+[01:01:34] curation it is provision of services it
+[01:01:37] is working directly with publishers or
+[01:01:39] going around publishers and working
+[01:01:41] directly with the scholars and saying
+[01:01:43] absolutely conceptually it may have been
+[01:01:45] done it still takes an enormous amount
+[01:01:46] of energy and money absolutely exactly
+[01:01:50] no argument but i would argue that that
+[01:01:52] is taken as read i mean that is not what
+[01:01:55] i mean it still has to happen it needs
+[01:01:57] to happen behind the scenes we are going
+[01:01:59] to make the most incremental impact is
+[01:02:02] all of the you know
+[01:02:03] what traditionally has been either you
+[01:02:06] know gray literature or the stuff that's
+[01:02:08] been underneath the desk or on the on
+[01:02:10] the shelves of the scientists that's the
+[01:02:12] stuff that's unique and that needs the
+[01:02:14] brain power what what librarians and
+[01:02:17] archivists have done for centuries we've
+[01:02:19] figured out we need to apply those
+[01:02:21] skills to a new set of data and that's
+[01:02:23] that's my opinion
+[01:02:24] and i'm a former librarian too so i can
+[01:02:26] be i can be heretical but i i mean it's
+[01:02:29] a librarian yes
+[01:02:31] you can you can divide it up into the
+[01:02:33] curatorial preservation aspects of the
+[01:02:35] work or you can you can
+[01:02:36] look at the side of the the actual
+[01:02:38] scholarship of furthering scholarship
+[01:02:40] and those are two
+[01:02:42] separate avenues and extremely difficult
+[01:02:45] areas to tackle but to these upstream
+[01:02:50] uh analogy here i think i think that the
+[01:02:52] big opportunity in the big place that
+[01:02:54] that the profession needs to go
+[01:02:57] is to get into the laboratory needs to
+[01:02:58] be with the researcher needs to be when
+[01:03:00] applications are being written to solve
+[01:03:02] a problem
+[01:03:03] a lot of the times it's not being
+[01:03:05] written with an eye to how the
+[01:03:07] information comes out of the system
+[01:03:08] right so scientists create problems for
+[01:03:10] themselves that they need to be solved
+[01:03:12] are they are extreme are they create
+[01:03:14] they create a solution that makes sense
+[01:03:15] for other scientists but maybe won't
+[01:03:17] cross a domain or won't make it easily
+[01:03:19] available for other populations that
+[01:03:21] might be interested in that data and i
+[01:03:22] think that's a value that librarians
+[01:03:24] have been able to provide
+[01:03:26] thank you
+[01:03:27] yes
+[01:03:28] great to talk thank you very much
+[01:03:30] um
+[01:03:31] i want to probe a little bit your uh
+[01:03:33] what you did to the
+[01:03:35] sociological uh shape that might be
+[01:03:37] taking place
+[01:03:39] and i've worked with scientists for i'm
+[01:03:41] not going to ever decide just
+[01:04:08] but um
+[01:04:09] you know i wonder if the ship it's going
+[01:04:11] to take it's going to take a generation
+[01:04:12] for all this to sort of sort of sort
+[01:04:14] itself out because younger people coming
+[01:04:16] in and they're used to blogs they're
+[01:04:17] used to communicating a lot who used to
+[01:04:19] be not very private but you know for
+[01:04:21] example in the market research you know
+[01:04:23] two market researchers may not want to
+[01:04:25] share things you know on themselves
+[01:04:27] because they're competing
+[01:04:28] with their products so yeah i can see
+[01:04:30] some
+[01:04:31] cultures where it may make sense
+[01:04:33] where there's going to be a ton of
+[01:04:34] resistance yeah
+[01:04:36] um
+[01:04:37] again i wish i had a canonical answer
+[01:04:39] for you the the answer is there's a
+[01:04:41] broad scale and it's going to vary you
+[01:04:43] know from domain to domain it's going to
+[01:04:45] vary even within the domain there's
+[01:04:46] going to be innovators there's going to
+[01:04:47] be laggers um
+[01:04:49] are we going to have to wait a
+[01:04:50] generation in some cases yes in other
+[01:04:52] cases i don't think so i think we we've
+[01:04:54] seen i've seen witness you know in the
+[01:04:56] last five or ten years tremendous shifts
+[01:04:58] uh external microsoft um let's pick
+[01:05:01] let's pick open source software um three
+[01:05:04] well let's say five years ago
+[01:05:06] there's no way the work that we're doing
+[01:05:08] now would have been supported within
+[01:05:09] microsoft and microsoft has started to
+[01:05:11] go hmm wait a minute we need to think
+[01:05:13] about markets in a different way we need
+[01:05:14] to engage with different communities in
+[01:05:16] different ways to a point now we've
+[01:05:18] created an open source foundation that
+[01:05:19] are parts of the company that are
+[01:05:20] generating a lot of open source and
+[01:05:22] again if you would have said to me ten
+[01:05:24] years ago is microsoft going to be
+[01:05:26] thinking that way i would have said
+[01:05:27] never and and some of the most you know
+[01:05:30] um
+[01:05:32] proprietary thinking people in the
+[01:05:33] company have now completely shifted and
+[01:05:35] so that kind of that kind of
+[01:05:38] opportunity that kind of potential
+[01:05:39] reward
+[01:05:40] um is i think the the incentive that we
+[01:05:44] need to be able to demonstrate to to
+[01:05:46] scientists and to say okay you've been
+[01:05:47] very proprietary about it but if you can
+[01:05:50] point to examples of where sharing
+[01:05:52] actually helped um you know a colleague
+[01:05:54] or something else uh some other type of
+[01:05:56] situation vastly improve a colleague's
+[01:05:59] career or you know what i'm saying
+[01:06:01] or helps you i mean the problem the
+[01:06:02] reason people don't share their data is
+[01:06:03] because they they've run a process run
+[01:06:06] an experiment and they in their mind
+[01:06:08] have six papers out of it and as soon as
+[01:06:10] you share your data you're opening it up
+[01:06:11] to the world and you're hurting yourself
+[01:06:13] if the reward system was such that by
+[01:06:15] sharing your data that is also
+[01:06:17] recognized as part of your contributions
+[01:06:20] then there's more incentive to do that
+[01:06:22] and the other side of it i think that
+[01:06:24] you're talking about addressing is if
+[01:06:26] it's incredibly hard no one wants to do
+[01:06:28] it if there's so many roadblocks and so
+[01:06:30] many hurdles to sharing that sharing
+[01:06:32] that data or making it talked with other
+[01:06:34] data
+[01:06:35] then they're definitely not going to do
+[01:06:36] it but if you can create systems uh that
+[01:06:39] facilitate that and make it ridiculously
+[01:06:41] easy or even
+[01:06:43] five percent easier than it is now then
+[01:06:45] that might be the incentive so
+[01:06:48] yeah and the one way to actually uh
+[01:06:51] credit to the to the science that shares
+[01:06:54] the data is by creating the latest
+[01:06:56] citations
+[01:06:57] we provided them a way of yeah one way
+[01:07:02] for all
+[01:07:03] researchers to
+[01:07:05] understand what they well to get credit
+[01:07:07] for what they do is have the number of
+[01:07:09] citations and a long time they have been
+[01:07:10] desired right in general so if the data
+[01:07:26] uh
+[01:07:28] the upstream data services and the role
+[01:07:31] of libraries
+[01:07:32] let's imagine i gave you a beautiful
+[01:07:35] young mind of a librarian and you can
+[01:07:37] mold it into any way what skills would
+[01:07:40] you put in there or because we all hear
+[01:07:42] that
+[01:07:44] that's necessary
+[01:07:45] but is this a computer scientist that
+[01:07:47] we're talking about is it a hybrid
+[01:07:49] between
+[01:07:51] information expert of some sort computer
+[01:07:53] scientist and a scientist in this
+[01:07:56] subject and you can describe the course
+[01:07:58] um so
+[01:08:00] very interesting i'm not going to be
+[01:08:01] able to sit here and say here's the 15
+[01:08:02] things you need to do i'll talk about
+[01:08:05] i mentioned the data net
+[01:08:07] the data net
+[01:08:08] solicitation nsf put out and so that's
+[01:08:11] basically pulling together um scientists
+[01:08:14] it's pulling together librarians and
+[01:08:15] archivists pulling together in some
+[01:08:16] cases um businesses
+[01:08:19] and um it occurred to me that that would
+[01:08:21] be an amazing you can if you could teach
+[01:08:23] a class on what those guys are doing and
+[01:08:25] so i actually um alex are both
+[01:08:27] affiliated with the information school
+[01:08:29] at university of washington and i've
+[01:08:31] explained to them about i don't think
+[01:08:33] you need to be training librarians the
+[01:08:34] way we need to be trained and we need to
+[01:08:36] start thinking about the service
+[01:08:38] orientation and not and reference
+[01:08:40] interviews but how do we start saying
+[01:08:42] you need to build services you need to
+[01:08:43] be build value added
+[01:08:46] services on top of that on top of the
+[01:08:48] data and it's literally i think to your
+[01:08:50] point i think it's getting them some
+[01:08:52] classes over uh in the business school
+[01:08:54] it's getting some exposure to policy and
+[01:08:57] legal in other areas it's sitting down
+[01:08:59] with the informatics groups chem
+[01:09:01] informatics or bioinformatics and
+[01:09:03] getting these partnerships
+[01:09:04] multi-disciplinary partnerships across
+[01:09:06] departments
+[01:09:07] and i think that's
+[01:09:09] you know the way that it has to go i
+[01:09:11] mean everything is bleeding into um to
+[01:09:13] uh you know kind of multi-disciplinary
+[01:09:15] work but
+[01:09:16] i get as a librarian i get a little
+[01:09:18] frustrated when i go into a place and
+[01:09:21] it's not a librarian doing the work but
+[01:09:23] it's a chemist doing the work the
+[01:09:24] chemist who you know that is phd
+[01:09:26] chemistry is now doing work that i would
+[01:09:27] traditionally
+[01:09:28] i think and suspect a librarian or an
+[01:09:31] information professional should be doing
+[01:09:33] and i feel like that's a failing on our
+[01:09:35] profession uh where the where the you
+[01:09:37] know the scientific domains have had to
+[01:09:39] spill over into traditional things that
+[01:09:41] librarians should be doing and i think
+[01:09:43] it's a it's the onus is on the
+[01:09:45] information schools to reclaim in in
+[01:09:48] partnership not not in a competitive way
+[01:09:50] but to say no we are we're expert in
+[01:09:52] doing that and all these other
+[01:09:53] experiences now we need to do it in your
+[01:09:54] area as well
+[01:09:56] there's a lot that librarians have
+[01:09:57] learned over a couple of centuries that
+[01:09:59] we need to apply in those in those other
+[01:10:00] areas so we have time for one more
+[01:10:02] question
+[01:10:04] yes
+[01:10:08] uh and notice your microsoft pass
+[01:10:11] internal passing you put more and more
+[01:10:12] information on your application code
+[01:10:15] your you know application design online
+[01:10:17] and share with others like before we
+[01:10:19] know microsoft sale every single month
+[01:10:22] um
+[01:10:23] have you you can't receive the advantage
+[01:10:25] or benefits yet after you put more and
+[01:10:27] more information
+[01:10:29] or your application called online or
+[01:10:32] walmart where uh
+[01:10:34] so this is a
+[01:10:36] benefits here uh
+[01:10:39] i wish i could say something like yeah
+[01:10:41] we've seen you know word usage spike or
+[01:10:43] sharepoint license no wait where
+[01:10:46] the reason we're doing this in many ways
+[01:10:48] the reason that microsoft specifically
+[01:10:50] microsoft research is doing this work
+[01:10:53] most academic institutions around the
+[01:10:55] world have already licensed microsoft
+[01:10:57] software you've already paid for it the
+[01:10:58] institution has already bought it it may
+[01:11:00] not be in use
+[01:11:02] it may not be used by
+[01:11:04] by various departments or very simple
+[01:11:05] for various reasons and what we're
+[01:11:07] trying to say is if you didn't know this
+[01:11:08] functionality exists
+[01:11:10] it does or if it doesn't exist or it's
+[01:11:12] not meeting your needs let us help
+[01:11:14] make sure that it does and we can either
+[01:11:16] build that or we can give your feedback
+[01:11:18] to the product group and ensure that
+[01:11:19] that is additional functionality so
+[01:11:21] we're fundamentally we're not trying to
+[01:11:24] say hey we've had a great benefit for
+[01:11:26] microsoft they're trying to say we want
+[01:11:28] you to have the benefit because you've
+[01:11:30] already literally your institutions have
+[01:11:31] already purchased software we want to
+[01:11:33] make sure that you deploy it and have a
+[01:11:35] positive experience doing that and it
+[01:11:36] helps you get your job your job done and
+[01:11:39] again as a point that i made a little
+[01:11:40] bit earlier it's not that we want
+[01:11:42] everyone to run well again yes that'd be
+[01:11:44] ideal we'd love to have everyone run you
+[01:11:45] know microsoft software all the time but
+[01:11:47] we know that that's probably not a
+[01:11:48] reality specifically when we get into
+[01:11:50] you know specific domain applications we
+[01:11:53] want to make sure that up in that
+[01:11:54] ecosystem that microsoft's you know
+[01:11:56] interoperable that you can get data in
+[01:11:58] and out that we can you know play
+[01:12:00] friendly and um and be part of that be
+[01:12:02] part of that ecosystem in a positive
+[01:12:05] fashion
+[01:12:06] okay thank you
+[01:12:24] you

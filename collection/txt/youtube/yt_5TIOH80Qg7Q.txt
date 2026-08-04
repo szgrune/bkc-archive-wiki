@@ -1,0 +1,2867 @@
+[00:00:03] a few weeks ago I attended uh one of
+[00:00:05] these things called Fu Camp um which I
+[00:00:08] uh found out was the campers themselves
+[00:00:11] come up with what happens on the
+[00:00:12] schedule and there's basically a grid
+[00:00:14] that people mob at a certain key moment
+[00:00:17] an empty grid of things you might want
+[00:00:19] to talk about in parallel and then
+[00:00:21] different time slots going down like a
+[00:00:23] spreadsheet and uh people put up various
+[00:00:25] suggestions for various rooms and uh I
+[00:00:28] went to put up my suggestion in a uh a
+[00:00:30] row that looked curiously empty there
+[00:00:32] was only one thing in the row in one
+[00:00:34] room called wolf from Alpha and I didn't
+[00:00:38] know what it was but I put my modest
+[00:00:39] little proposal for whatever my session
+[00:00:41] was going to be next to it and somebody
+[00:00:42] immediately took me aside and told me
+[00:00:44] that that was not a good
+[00:00:48] idea so I put my tail between my legs
+[00:00:50] and moved my sticky to another box and
+[00:00:53] uh after attending myself then uh what
+[00:00:56] occurred in that little block the wolf
+[00:00:57] from alpha demo uh I could see why uh I
+[00:01:01] was pleased to been able to meet uh
+[00:01:03] Steven Wolfram who's here uh a gentleman
+[00:01:06] who is simultaneously terrifically
+[00:01:08] unassuming and approachable and at the
+[00:01:11] same time from what I can tell one of
+[00:01:12] the most ambitious and ambitiously
+[00:01:14] minded people I've ever met uh the demo
+[00:01:17] that I saw was really interesting it got
+[00:01:20] me thinking uh among other things about
+[00:01:22] the role of the university and what we
+[00:01:24] are here at universities to do and how
+[00:01:26] we're supposed to do I I hate the phrase
+[00:01:29] knowledge man management but Knowledge
+[00:01:31] Management otherwise known as learning
+[00:01:33] and uh it seemed to me that the kind of
+[00:01:37] project that Steven is undertaken here
+[00:01:40] something that uh if it
+[00:01:43] works uh has a real quality of Marvel to
+[00:01:46] it um is something that is achieved one
+[00:01:49] step at a time one data flow at a time
+[00:01:51] as you'll see so I'm going to turn it
+[00:01:52] over to him let him explain his project
+[00:01:54] how it started how it works uh do a
+[00:01:57] little bit of a demo and then we'll just
+[00:01:59] open it up to to a conversation there
+[00:02:00] are a number of people watching on the
+[00:02:01] webcast and there are means for those on
+[00:02:03] the webcast to be able to ask questions
+[00:02:05] back in a key moments we may also turn
+[00:02:07] over to our webcast representative bench
+[00:02:09] here uh who will share what's going on
+[00:02:12] uh in the outside world so with no
+[00:02:13] further Ado uh let me uh welcome and
+[00:02:16] please join me in welcoming Steven
+[00:02:23] Wolfram thanks very much well I want to
+[00:02:25] tell you about a tremendously ambitious
+[00:02:27] project that uh that we've been working
+[00:02:29] on it's uh it's actually a project that
+[00:02:30] I've been thinking about for a very long
+[00:02:32] time it's uh probably about once a
+[00:02:34] decade I've wondered whether it was
+[00:02:36] finally time to really start trying to
+[00:02:39] do this project in the past I've always
+[00:02:42] concluded that it was hopeless um but a
+[00:02:44] few years ago I I decided it was finally
+[00:02:46] time to actually try doing this project
+[00:02:49] so here's the goal the goal is to sort
+[00:02:51] of find a way to make the systematic
+[00:02:53] knowledge that we've accumulated in our
+[00:02:55] civilization Compu bow to find a way to
+[00:02:58] take sort of all that data that's out
+[00:03:00] there and all the models and methods and
+[00:03:02] so on that we know and somehow combine
+[00:03:05] them to be able to compute whatever can
+[00:03:06] be computed about the world well it's a
+[00:03:09] pretty big project um but uh what I what
+[00:03:12] I realized was that the state of
+[00:03:14] technology and the web and so on and in
+[00:03:16] particular two big projects that I've
+[00:03:18] spent the past quarter Century or so
+[00:03:19] doing finally made this project not
+[00:03:22] completely crazy so i' I've worked on
+[00:03:25] Mathematica now for 23 years and what uh
+[00:03:29] what that's done is to build up a
+[00:03:30] language a platform for computing formal
+[00:03:33] things and and for representing things
+[00:03:35] formally um it's been very successful
+[00:03:37] both practically and intellectually um
+[00:03:40] and in fact in the last few years it's
+[00:03:41] been it's been exciting to see sort of
+[00:03:43] how all the pieces that we've built all
+[00:03:44] these years have fit together to create
+[00:03:46] a an accelerating sort of recursive
+[00:03:48] pattern of growth for the system so Okay
+[00:03:51] so we've got a really powerful sort of
+[00:03:53] symbolic language for representing
+[00:03:55] things and providing algorithms about
+[00:03:57] things the other big thing uh in my life
+[00:04:00] has been my work on nkss a new kind of
+[00:04:02] science on studying the the
+[00:04:04] computational universe of possible
+[00:04:06] programs and and what they do so nks has
+[00:04:09] has shown that it really is possible to
+[00:04:11] understand an awful lot of things in the
+[00:04:12] world computationally and more important
+[00:04:15] that there are often incredibly simple
+[00:04:17] rules that lead to incredible complexity
+[00:04:20] and richness well as I've sort of
+[00:04:22] absorbed that realization that Paradigm
+[00:04:25] I I finally got to thinking that perhaps
+[00:04:26] all that knowledge out there might
+[00:04:28] somehow be presentable might be
+[00:04:30] handleable by rules that are simple
+[00:04:32] enough that one could actually build
+[00:04:34] them so that's what we've been trying to
+[00:04:36] do it's a it's a project sort of built
+[00:04:38] with the nks Paradigm with lots of
+[00:04:39] practical ideas from nks and built on
+[00:04:42] the platform that Mathematica provides
+[00:04:44] obviously it's a huge project like my
+[00:04:46] previous two projects uh which have been
+[00:04:48] running for 23 and 28 years respectively
+[00:04:51] this is this is going to be a very
+[00:04:52] long-term project but I think we're
+[00:04:54] finally now at the point where we feel
+[00:04:57] okay letting it loose in the world
+[00:05:00] and the first instance of the technology
+[00:05:01] that that uh we building is a is a free
+[00:05:04] website called W from alpha that'll be
+[00:05:06] launching in in just a few
+[00:05:07] weeks so well let me uh uh try and uh
+[00:05:12] show you a little bit of it so okay the
+[00:05:15] the idea of wol from alfha is uh
+[00:05:17] essentially you type in a question and
+[00:05:20] wolf from alfha types back an answer
+[00:05:22] okay this is encouraging so
+[00:05:25] far so the the first type of questions
+[00:05:28] that we can type in are of mathy kinds
+[00:05:30] of questions like I might type something
+[00:05:32] like this and I'm typing it in kind of a
+[00:05:34] a cruddy syntax that doesn't um uh
+[00:05:37] doesn't have much um uh is it's kind of
+[00:05:39] just the the sort of as ification of of
+[00:05:42] some piece of math but but here's the
+[00:05:43] answer so it tells me there's the
+[00:05:45] there's the result of the integral here
+[00:05:47] are a couple plots that we might like to
+[00:05:48] see of the of the integral here are some
+[00:05:50] Alternative forms of the integral U
+[00:05:53] other kinds of useful facts about the
+[00:05:55] integral and uh for the the students of
+[00:05:58] the world and so on or if you if you
+[00:06:00] want to follow along as a human what
+[00:06:02] what wol from malfa is doing um oops
+[00:06:05] that that it should should yeah there we
+[00:06:07] go it um uh it can show us there are
+[00:06:09] some possible steps that you you as a
+[00:06:11] human could have taken to get to the
+[00:06:13] answer that wol from alpha got to uh
+[00:06:15] pretty fast there so so we can do all
+[00:06:17] kinds of things in this sort of formal
+[00:06:19] mathematical kind of world we can also
+[00:06:22] kind of jump out into the into the the
+[00:06:24] real world of sort of uh uh practical
+[00:06:27] facts about the world so let's say we
+[00:06:28] are say what's the GDP of France um
+[00:06:31] there's the result there's a a plot of
+[00:06:34] uh the history and and here's a a few
+[00:06:36] other things that we might immediately
+[00:06:37] want to know about GDP and we press more
+[00:06:39] we can get to more stuff if we want to
+[00:06:41] we can kind of dress this up we could
+[00:06:42] say what is the GDP of France for
+[00:06:46] example question mark um and uh it'll go
+[00:06:50] off and uh be able to figure out that
+[00:06:52] we're really asking the same question we
+[00:06:53] we asked before give us the same answer
+[00:06:56] let's maybe say we want to know what's
+[00:06:57] the GDP of France divided by Italy okay
+[00:07:01] so we as humans can pretty much tell
+[00:07:03] what that question means um and so can
+[00:07:06] it and because all this data is kind of
+[00:07:09] organized in such a way that it's
+[00:07:10] computable um it can immediately work
+[00:07:13] out okay it knows this value it knows
+[00:07:15] that value it can divide them it can get
+[00:07:17] the result we can say show the details
+[00:07:19] and it'll show us here the um uh the
+[00:07:21] result from that okay or we could say
+[00:07:24] something like uh I don't know internet
+[00:07:27] users in Europe for instance
+[00:07:29] um and now there'll be a bunch of data
+[00:07:31] that it has about that um and uh uh it
+[00:07:35] can it'll go through and and look up the
+[00:07:37] data that it has and try and figure out
+[00:07:39] a reasonable way to summarize that data
+[00:07:40] so it'll tell us the total number of
+[00:07:42] Internet users the country with the
+[00:07:43] highest number it'll give us some
+[00:07:45] histograms and then it might give us a
+[00:07:46] table down here of the various countries
+[00:07:48] we can ask it to show more of those only
+[00:07:50] 93 internet users in Vatican City so it
+[00:07:52] claim I guess they have other sources
+[00:07:54] yes
+[00:07:58] right
+[00:08:00] so so we can go and uh uh we can go and
+[00:08:04] ask um let's say we pick a place let's
+[00:08:06] try um something like Lexington um and
+[00:08:10] uh oh I realize okay so this I'm I'm
+[00:08:13] connected here through a VPN tunnel to
+[00:08:15] um uh to a machine at our company
+[00:08:17] headquarters in Illinois so it thinks
+[00:08:19] I'm in Illinois if it had thought that I
+[00:08:21] was in Massachusetts which I am uh it
+[00:08:24] probably would have defaulted to it
+[00:08:26] should have defaulted to Lexington
+[00:08:27] Massachusetts as it is it just defaulted
+[00:08:29] to Lexington Illinois and told me
+[00:08:31] something about Lexington Illinois let's
+[00:08:33] go and tell it to we really want to talk
+[00:08:34] about Lexington Massachusetts here cuz
+[00:08:36] that's just down the down the road from
+[00:08:38] here so it can tell us a certain amount
+[00:08:39] about Lexington it says uh you know what
+[00:08:42] the population is it tells us that some
+[00:08:44] here are some nearby larger cities it's
+[00:08:47] telling us it's a a very uh uh toasty 91
+[00:08:50] degrees in in Lexington Massachusetts
+[00:08:52] right now um let's go and uh ask it
+[00:08:55] let's let's ask it a little bit more
+[00:08:56] detail about the um uh whoops the the
+[00:08:59] weather in um Lexington
+[00:09:04] Massachusetts um so now it'll go and uh
+[00:09:07] figure that out um and it'll tell us
+[00:09:09] it'll give us a summary at the top
+[00:09:11] here's the temperature and so on and
+[00:09:12] then it'll show us a plot of that's the
+[00:09:15] temperature as a function of time for
+[00:09:16] the past week in Lexington Massachusetts
+[00:09:18] and it's predicting uh this is uh from
+[00:09:21] weather forecast it will it's predicting
+[00:09:23] for the next few days that's how the
+[00:09:24] temperature will vary with time maybe we
+[00:09:26] can go and say Okay show us the uh the
+[00:09:29] last 10 years worth of weather um in
+[00:09:31] Lexington Massachusetts and there's uh
+[00:09:34] there's the result and you can see that
+[00:09:36] um uh it varies every every year from
+[00:09:39] warmer in the summer to colder in the
+[00:09:40] winter all those kinds of things um we
+[00:09:42] could if we wanted to we could kind of
+[00:09:44] uh dig in more precisely and we could
+[00:09:45] say you know whether on um let's try
+[00:09:48] something like this you know just some
+[00:09:50] random date there um it'll go and uh
+[00:09:53] hopefully be able to tell us on that
+[00:09:55] particular day what the average
+[00:09:56] temperature was um there's the there's
+[00:09:58] the pattern for the week around that day
+[00:10:00] and so
+[00:10:01] on uh or we could uh go ahead and say
+[00:10:04] something like um let's say we say
+[00:10:07] something like Lexington Massachusetts
+[00:10:09] and then we just type in Moscow here um
+[00:10:12] and it'll it'll probably I don't know
+[00:10:14] what which I I think it will pick by
+[00:10:16] default the Moscow and Russia um and now
+[00:10:18] it'll show us things about the
+[00:10:20] comparison between those two cities
+[00:10:22] it'll show us you know how we get from
+[00:10:23] one to the other um how far it is um
+[00:10:26] those kinds of things um we could go and
+[00:10:29] uh um on the right we can uh it'll give
+[00:10:32] us a link to Wikipedia page for example
+[00:10:35] about Lexington which we could go look
+[00:10:36] at if we wanted kind of a a more
+[00:10:38] narrative discussion this is uh all from
+[00:10:40] Alfa is really concentrating on giving
+[00:10:41] us you know just the facts about things
+[00:10:44] so maybe we can type in something like
+[00:10:46] uh we give it some unit of measure let's
+[00:10:49] say you know 5 miles per second for
+[00:10:51] example and so um uh it's
+[00:10:55] um uh uh we'll it'll say okay there 5
+[00:10:58] miles per second what what uh one thing
+[00:11:00] it tries to do is to tell us something
+[00:11:01] useful based on the input we gave so uh
+[00:11:04] useful things it can tell us are things
+[00:11:06] like what are some other units that that
+[00:11:07] might be good to give that speed in what
+[00:11:09] are some comparisons for that speed that
+[00:11:12] might be useful in terms of
+[00:11:13] understanding roughly what it is uh
+[00:11:14] maybe we could try something else let's
+[00:11:16] try 6,000 C and uh let's see what it
+[00:11:18] thinks that is okay so it says assuming
+[00:11:21] that c is a unit and then assuming it
+[00:11:23] means degrees Centigrade now it can tell
+[00:11:25] us sort of conversions for 6,000 degre
+[00:11:27] Centigrade it'll tell us some other
+[00:11:29] useful things like that's the black body
+[00:11:30] Spectrum at 6,000 de that's the color
+[00:11:33] that a black object would be if if uh
+[00:11:35] heated to that temperature um those
+[00:11:37] kinds of things or let's say we ask it
+[00:11:40] um say something like I don't know you
+[00:11:41] know $17 an hour um we can uh now it'll
+[00:11:45] it'll um give us uh a result about that
+[00:11:48] based on um just giving us sort of
+[00:11:51] convenient conversions um for that uh
+[00:11:53] for that quantity or maybe we could type
+[00:11:55] in something like uh you know 4,000
+[00:11:58] words writing some essay or something um
+[00:12:01] it'll tell us uh um here are here are
+[00:12:03] some sort of typical things we can we
+[00:12:05] can always drill down and say show us
+[00:12:07] more stuff here um and uh there's
+[00:12:10] there's the result for for some other
+[00:12:12] kinds of quantities associated with
+[00:12:14] 4,000 words or we could go and say um uh
+[00:12:18] I don't know we could we could start
+[00:12:19] asking about materials like you know
+[00:12:21] let's say 333 g of gold um and it'll
+[00:12:26] probably be able to figure out um uh I
+[00:12:28] have to say a little little frustrated
+[00:12:29] it's running a little slower than I'm
+[00:12:31] used to seeing it run I don't know
+[00:12:32] whether that's because of some some
+[00:12:34] strange uh condition but um uh anyway I
+[00:12:37] think when it's um when it's alive in
+[00:12:40] the world it'll be a tiny bit zippier
+[00:12:42] than this um the uh okay so so it's
+[00:12:45] telling us um about uh in this case you
+[00:12:47] know some number of grams of gold and
+[00:12:50] it's telling us its value it's about
+[00:12:51] $10,000 by in current commodity prices
+[00:12:54] and here's the heat capacity of that
+[00:12:56] amount of gold um all those kinds of
+[00:12:59] things um maybe we can go and uh let's
+[00:13:02] say we doing chemistry we can say you
+[00:13:03] know we could type in some chemical like
+[00:13:05] you know uh h2so4 and now we could say
+[00:13:08] something like um uh okay let's uh let's
+[00:13:12] say we're making you know five molar
+[00:13:14] h2so4 um it can then compute uh what um
+[00:13:19] what you would need to to make that and
+[00:13:20] it'll tell us you know how to prepare
+[00:13:22] something like that or we could tell it
+[00:13:24] um let's say we typed in something like
+[00:13:26] uh well it knows about lots of kinds of
+[00:13:28] ch and so on so let's say we type in
+[00:13:30] caffeine okay we can always go and and
+[00:13:32] actually compute things about this so
+[00:13:34] it'll know all kinds of stuff about
+[00:13:35] caffeine but we can say you know what's
+[00:13:37] the caffeine molecular weight we could
+[00:13:39] say you know caffeine molecular weight
+[00:13:41] uh divided by water let's say um and it
+[00:13:45] should just give us a result for that or
+[00:13:47] we could go and say something like um oh
+[00:13:50] I don't know we could uh pick another
+[00:13:51] material like something like um uh
+[00:13:53] decane let's say and now we can go and
+[00:13:55] ask it you know what is decane okay so
+[00:13:58] there's some basic information about
+[00:13:59] decane let's say what's decane like at
+[00:14:02] two atmospheres and 50° Centigrade um
+[00:14:05] and now it'll have to uh dive in and try
+[00:14:07] and compute uh from uh um information
+[00:14:11] about that material it can compute
+[00:14:12] that's the position in the phase diagram
+[00:14:14] and here are some uh uh some particular
+[00:14:17] properties of the material at that
+[00:14:18] temperature and pressure um those kinds
+[00:14:20] of things or let's uh let's pick another
+[00:14:23] area let's let's do something let's say
+[00:14:25] something medical so let's say we go you
+[00:14:28] know we say LDL 180 so you know that
+[00:14:30] might be a result from some medical
+[00:14:32] tests that somebody's been reported um
+[00:14:35] and this will now kind of dive into some
+[00:14:36] public health study um and it'll say uh
+[00:14:40] okay if your LDL level is 180 that means
+[00:14:42] that you're at the 95.9 percenti of the
+[00:14:45] population and now we could we could
+[00:14:47] kind of slice that a little bit more we
+[00:14:48] could say you know male age 40 or
+[00:14:51] something um and now it'll go and take
+[00:14:53] that public health study and it'll go
+[00:14:54] and slice down in the public health
+[00:14:56] study and look specifically for the
+[00:14:58] subpop popultion that matches th those
+[00:15:00] criteria and that'll tell okay so for
+[00:15:02] that subpopulation you're just at the
+[00:15:04] 92nd percentile or maybe we could say um
+[00:15:07] uh let's say something like uh we want
+[00:15:09] to know what's the LDL level versus uh
+[00:15:12] serum potassium level and notice that
+[00:15:14] the stuff I'm typing in is in kind of uh
+[00:15:17] uh I can type in sort of hopefully um
+[00:15:19] type in kind of expert speak um for this
+[00:15:22] for this field um you know I'm not I
+[00:15:24] don't have to sort of spell everything
+[00:15:26] out okay so here it's giving us the
+[00:15:28] compar between LDL levels pottassium
+[00:15:30] levels it's probably going to show us
+[00:15:32] well there isn't a lot of correlation it
+[00:15:33] seems there but but uh it's showing us
+[00:15:35] the uh the correlation that there might
+[00:15:37] be between those two uh medical tests or
+[00:15:40] we could go and um let's try something
+[00:15:42] else let's try um something like uh life
+[00:15:45] expectancy uh you know male age 40 in
+[00:15:49] Italy let's say um and we could go and
+[00:15:52] uh now it'll go and look at um data on
+[00:15:56] that and it tries to tell us something
+[00:15:58] that um it tries to sort of give us
+[00:15:59] useful information based on what it can
+[00:16:02] compute about that so there's
+[00:16:04] distributions of survival curves and so
+[00:16:06] on uh there's a curve of the history of
+[00:16:09] that life expectancy as a function of
+[00:16:10] time and that's probably some frozen
+[00:16:12] history of probably a couple of Wars
+[00:16:14] there um that cause it to to go down um
+[00:16:17] and we could maybe actually let's let's
+[00:16:19] go and just say let's ask about a
+[00:16:21] specific year here let's say what was
+[00:16:22] the life expectancy for a male age 40 um
+[00:16:25] in 1933 and oh okay so it there's some
+[00:16:28] to this because it says assuming 1933 is
+[00:16:31] the year of the data which means the
+[00:16:32] year of death use it as the year of
+[00:16:35] birth for the person instead so maybe we
+[00:16:38] can click that saying let's use it as
+[00:16:39] the year of birth instead and now it'll
+[00:16:41] give us a a different number based on on
+[00:16:44] uh uh people age 40 born in
+[00:16:47] 1933 well we can go and let's look at
+[00:16:49] some other kinds of things I mean
+[00:16:50] there's lots of different stuff that one
+[00:16:52] can compute about the world so let's
+[00:16:53] let's say um let's type in something
+[00:16:56] like this it's probably going to guess
+[00:16:57] that that's a specification of a person
+[00:16:59] um and uh now it'll be able to tell us
+[00:17:01] things like um how does that height and
+[00:17:04] weight lie within the distribution of of
+[00:17:07] body mass index and and all sorts of
+[00:17:09] other things um based on that that input
+[00:17:12] uh maybe we can try a different thing
+[00:17:13] let's let's keep on with a sort of
+[00:17:14] biological theme let's say I type in
+[00:17:16] something like this see what we can
+[00:17:19] figure out about that um okay so it'll
+[00:17:21] go and dive into the human genome and uh
+[00:17:24] it'll be able to figure
+[00:17:26] out what um where that particular
+[00:17:29] sequence um matches on the reference
+[00:17:32] human genome so you can see it has a a
+[00:17:34] few matches on chromosome one and uh
+[00:17:36] goes and Scrolls down there are all the
+[00:17:38] various matches let's pick one of these
+[00:17:39] genes I don't know msh3 whatever that
+[00:17:42] might be I've never heard of it but um
+[00:17:45] uh let's say we we ask it we could say
+[00:17:47] tell us the properties of of gene msh3
+[00:17:50] or we can say something like you know
+[00:17:51] let's see what happens 567 base pairs
+[00:17:55] Upstream of uh that Gene msh 3 see
+[00:17:58] whether it can figure out how to do that
+[00:18:00] um so okay so there it um it's going
+[00:18:03] that number of base pairs upstream and
+[00:18:04] it's saying what's on the human genome
+[00:18:06] that number of base pairs upstream and
+[00:18:07] there's sort of a picture of the the
+[00:18:09] local environment of the human genome
+[00:18:11] there um or let's pick another kind of
+[00:18:14] uh random string of letters let's um
+[00:18:17] let's go to a ticker symbol for a stock
+[00:18:19] for example um and now it'll it'll be
+[00:18:21] able to tell us something about it'll
+[00:18:23] give us the real-time quote for that
+[00:18:24] stock it'll give us a bunch of
+[00:18:26] fundamentals data about the stock um all
+[00:18:28] sorts of uh performance information um
+[00:18:31] somewhere down here it'll probably show
+[00:18:32] us uh like a a projection you know this
+[00:18:35] is it's not as good as weather
+[00:18:36] forecasting and so on but you can get uh
+[00:18:39] kind of based on historical volatility
+[00:18:41] you can get some kind of projection for
+[00:18:43] what uh um what the stock might do um or
+[00:18:46] we can let's say we type uh you know
+[00:18:48] msft and Sun for example um Sun might
+[00:18:51] mean you know the thing in the sky but
+[00:18:53] here because it's uh uh next to
+[00:18:55] something that's about stocks it'll
+[00:18:57] figure out that it probably means a
+[00:18:59] stock and it's going to say it's going
+[00:19:00] to assume it's Sun Microsystems rather
+[00:19:02] than other sunn named stocks and now
+[00:19:05] it'll give us this is sort of a typical
+[00:19:06] thing of M alfha you can get uh if you
+[00:19:08] have several entities it will
+[00:19:10] automatically give you a comparison
+[00:19:11] between the the uh the uh properties of
+[00:19:14] those entities so we can go we could
+[00:19:16] drill down if we want to and look at
+[00:19:17] lots of detailed financial data about
+[00:19:19] these companies and we can see uh all
+[00:19:21] sorts of comparisons and so on here well
+[00:19:24] we could also go and uh start Computing
+[00:19:26] things let's say we're interested in
+[00:19:27] morgage is we can go and say you know a
+[00:19:29] 5% 20-year mortgage um we can now go and
+[00:19:33] uh it'll need to know here um what
+[00:19:36] what's the loan amount so let's say we
+[00:19:38] say um let's pick something else let's
+[00:19:40] say it's €200,000 for instance um now
+[00:19:44] it'll go and compute Things based on
+[00:19:46] based on that um and uh give us a result
+[00:19:50] here and tell us uh things like uh you
+[00:19:52] know the table of monthly payments or
+[00:19:55] all those kinds of things maybe we can
+[00:19:57] let's let's get more elaborate here
+[00:19:58] let's let's make this an adjustable rate
+[00:20:00] mortgage which just will make things a
+[00:20:02] bit more complicated um and then there
+[00:20:04] are all kinds of different options of
+[00:20:05] things that you can sort of add
+[00:20:07] different criteria you different uh sort
+[00:20:09] of uh details you can add but here's
+[00:20:12] kind of uh here's some basic information
+[00:20:13] on this adjustable rate mortgage and
+[00:20:15] various simulations of of what would
+[00:20:17] happen in different scenarios those
+[00:20:18] kinds of things and we can go and do all
+[00:20:20] sorts of fancy uh kind of um uh quany
+[00:20:24] kinds of uh computations too well let's
+[00:20:28] say we type in something else let's say
+[00:20:30] we say you know something like
+[00:20:32] $225 okay pretty easy to understand what
+[00:20:34] that is um of course what that
+[00:20:37] particular piece of input means depends
+[00:20:39] on where we're coming from so for
+[00:20:41] example if we were coming from Mexico
+[00:20:43] that same symbol uh would mean something
+[00:20:45] different and we can kind of pretend
+[00:20:47] that we're coming from Mexico by just
+[00:20:48] sort of typing in some little cheat code
+[00:20:51] here um and uh now uh by default what
+[00:20:54] it'll assume is that that dollar sign
+[00:20:56] 225 means Mexican pesos um and it'll
+[00:20:59] show us uh results about that we could
+[00:21:00] tell it okay have this assume we
+[00:21:03] actually mean US Dollars instead um and
+[00:21:06] now it'll uh uh figure out some useful
+[00:21:08] things to tell us like it'll tell us
+[00:21:09] there's the US dollar thing there's the
+[00:21:12] there's the local currency there's a the
+[00:21:13] historical conversions um those sorts of
+[00:21:16] things um well we can go and do all
+[00:21:19] kinds of computations in all kinds of
+[00:21:21] areas let's say for example we might um
+[00:21:23] let's say something like this that's a
+[00:21:25] that's an air foil specification from a
+[00:21:28] iCal engineering um and uh uh here it'll
+[00:21:32] compute um properties of uh the
+[00:21:34] engineering properties of that um that
+[00:21:36] thing maybe I can fill in here let's
+[00:21:38] tell it um I want it at a 15 Dee angle
+[00:21:42] um so let's let's just put that there
+[00:21:44] and now it'll redo this computation um
+[00:21:46] for a different configuration and work
+[00:21:49] out the uh at least the potential flow
+[00:21:52] around this um uh uh this kind of air
+[00:21:54] foil or we might um let's jump into a
+[00:21:57] complete completely different area let's
+[00:21:59] say we type in something like you know D
+[00:22:02] Minor okay um we can uh then um it'll uh
+[00:22:08] uh decide that that's about some kind of
+[00:22:10] musical thing we could even um let's see
+[00:22:12] if this works here we can even say you
+[00:22:14] know play the sound see if this works
+[00:22:16] may work may not
+[00:22:21] work okay not too exciting but but uh um
+[00:22:25] it could uh play that scale or we could
+[00:22:28] say something like you know jumping into
+[00:22:30] some other kind of area we could say
+[00:22:32] something like uh red plus yellow okay
+[00:22:35] and now it'll uh figure out that um okay
+[00:22:38] we can add those two colors together we
+[00:22:40] get orange and here's some information
+[00:22:42] about um uh things like um uh how you
+[00:22:46] would enter that on an HTML page those
+[00:22:48] sorts of things or maybe we could go um
+[00:22:50] uh let's try something like this we
+[00:22:52] could uh think about a website so
+[00:22:54] something like the the Apple main
+[00:22:56] website it'll think that that's a a uh
+[00:22:59] Internet domain okay there's the number
+[00:23:01] of daily page views things like that we
+[00:23:02] can look at uh what's the history of
+[00:23:04] page views there and um okay probably
+[00:23:08] Apple had some exciting event right then
+[00:23:11] um that caused a spike in its traffic or
+[00:23:13] we could go and uh let's try try and
+[00:23:15] take a look um uh let's look at a
+[00:23:18] university let's say I don't know why
+[00:23:20] let's let's try Stanford University okay
+[00:23:23] um we can uh now we'll know quite a bit
+[00:23:25] of stuff about Stanford University we'd
+[00:23:27] know things like uh you know how many
+[00:23:28] students it has uh you know how many
+[00:23:31] people got phds in uh in education at
+[00:23:34] Stanford last year all these kinds of
+[00:23:36] details and we can go and ask
+[00:23:37] specifically for this information if if
+[00:23:39] we want to and do comparisons and and
+[00:23:42] generate plots and all those sorts of
+[00:23:44] things or we could uh let's pick another
+[00:23:47] area let's I don't know let's try an
+[00:23:48] occupation let's say lawyers just for
+[00:23:51] you're very kind thematic relevance the
+[00:23:54] the uh so it let's say assuming it's an
+[00:23:56] occupation okay so it's going to tell us
+[00:23:57] a certain amount about um uh the the
+[00:24:00] current uh uh employment for for lawyers
+[00:24:03] in in the US so we could perhaps say um
+[00:24:06] uh something maybe this will work I'm
+[00:24:08] not sure um if we say um what's the
+[00:24:11] median wage and maybe it'll be able to
+[00:24:13] compute let's see what it does okay so
+[00:24:15] it has at least a few years of data of
+[00:24:17] uh uh the trend on something like that
+[00:24:20] um or you know we can dive into pretty
+[00:24:22] detailed stuff about um about lots of
+[00:24:25] kinds of areas so you know I don't know
+[00:24:26] if we say how much how much fish is
+[00:24:28] produced in France in a year right it'll
+[00:24:30] tell us uh you know such and such a
+[00:24:31] number of metric tons there's a plot of
+[00:24:33] the last few years if we go down it'll
+[00:24:35] tell us you know conversion so it's
+[00:24:37] saying about 57 pounds of fish per
+[00:24:39] second on average are produced and
+[00:24:41] that's uh that's about 1 the rate at
+[00:24:44] which trash is produced in New York City
+[00:24:46] these these these types of
+[00:24:49] things uh what percentage of the trash
+[00:24:51] is fish that's a that's a good question
+[00:24:54] I I doubt that that's a uh I doubt
+[00:24:56] anybody has actually measured
+[00:24:58] that um now we can we can say something
+[00:25:01] like uh you know what's uh production of
+[00:25:04] fish in France versus Poland and now
+[00:25:06] it'll it'll try and tell us things like
+[00:25:08] what are the relative uh how can we sort
+[00:25:10] of visualize the relative values of of
+[00:25:12] uh of those quantities things like that
+[00:25:15] or let's uh let's jump into a completely
+[00:25:16] different area let's say you know we are
+[00:25:19] uh let's say you know two cups of orange
+[00:25:21] juice or something um and uh you know
+[00:25:24] it'll tell us it should be able to
+[00:25:26] synthesize the nutrition label for that
+[00:25:28] um it'll uh it'll be able to tell us you
+[00:25:31] know in orange juice V vitamin C is very
+[00:25:34] uh very big thing and you know there's
+[00:25:36] thamin and pottassium and so on we could
+[00:25:38] drill down and say what are some other
+[00:25:39] things that sort of occur unusually much
+[00:25:41] in in orange juice um and uh maybe we
+[00:25:45] could show here how does orange juice
+[00:25:46] compare to the distribution of all
+[00:25:48] common foods where where what percentile
+[00:25:50] rank is it at for those uh uh for those
+[00:25:53] things and so on or we could say I don't
+[00:25:55] know let's imagine um uh let's say you
+[00:25:58] know something like this one slice
+[00:26:00] cheddar cheese let's say see if that
+[00:26:03] works
+[00:26:05] um okay so it could figure out so now
+[00:26:08] it'll it'll synthesize a nutrition label
+[00:26:10] for that uh sort of composite food there
+[00:26:13] one but um uh that's um okay so now you
+[00:26:18] know let me jump into another kind of
+[00:26:19] area let's say um we say something like
+[00:26:21] this um that's kind of the uh uh it'll
+[00:26:24] assume that that oh that happen to be a
+[00:26:26] single word okay I I um U I don't know
+[00:26:29] let's let's give it another blank there
+[00:26:31] see what that does um so this is this is
+[00:26:33] now sort of doing the the crossword
+[00:26:35] puzzle word puzzle like thing of
+[00:26:37] matching words in English to this or we
+[00:26:40] could go um let's say uh let's look at
+[00:26:43] something like you know Mount Everest or
+[00:26:45] something um and we could say there
+[00:26:47] it'll it'll know things about Mount
+[00:26:48] Everest you know like what are some
+[00:26:51] nearby towns nearby mountains things
+[00:26:53] like that but we could also just say
+[00:26:54] specifically say you know height of
+[00:26:56] Mount Everest and then maybe we could
+[00:26:57] can say divided by length of Golden Gate
+[00:27:00] Bridge just to pick things from two
+[00:27:02] different kinds of uh areas so now it'll
+[00:27:06] it'll know those two numbers and it'll
+[00:27:07] be able to just divide them and and uh
+[00:27:09] get a
+[00:27:11] result or let's uh try another kind of
+[00:27:13] thing let's try some people okay so
+[00:27:15] let's say you know Alan Turing and Kurt
+[00:27:17] girdle to two fine fine chaps um and now
+[00:27:21] it'll give us some information um about
+[00:27:24] uh uh about those people little bit of
+[00:27:27] of computable data about those people a
+[00:27:29] little timeline of of when they lived um
+[00:27:31] those sorts of things or maybe we could
+[00:27:33] say something like um we could really
+[00:27:35] sort of combine things together and we
+[00:27:36] could say something like uh weather in
+[00:27:39] Princeton New Jersey uh when Kurt girle
+[00:27:43] died see whether that works um okay take
+[00:27:48] a little while to figure this out see
+[00:27:50] this works okay there we go so average
+[00:27:53] temperature 30 deges Fahrenheit Etc um
+[00:27:57] we could uh let's try something
+[00:27:59] completely different let's say uh let's
+[00:28:01] jump into another area let's say um
+[00:28:03] we're interested in some kind of
+[00:28:04] genealogy kind of thing let's say um uh
+[00:28:08] grandson's son something like that um
+[00:28:11] now it'll it'll compute the uh the kind
+[00:28:14] of the family tree and it can it can
+[00:28:15] figure out things like uh what's the
+[00:28:17] probability that uh different pieces of
+[00:28:19] genetic material are shared between
+[00:28:21] those two uh uh those two two people um
+[00:28:24] those sorts of things um or we can go
+[00:28:27] and uh sort of slice down all kinds of
+[00:28:30] data so we can say you know fifth
+[00:28:31] largest country in Europe for example
+[00:28:35] and we can we can ask these kinds of
+[00:28:37] questions about what's the um uh what's
+[00:28:39] the nth largest or you know what's the
+[00:28:41] things with a boiling point greater than
+[00:28:42] such and such those those sorts of
+[00:28:44] things and here it'll say you know
+[00:28:45] where's the result by area by population
+[00:28:47] and so on or we could say something like
+[00:28:50] I don't know GDP versus Railway length
+[00:28:54] in Europe um let's try something like
+[00:28:56] that um see that works okay oh that
+[00:29:00] didn't do quite what I expected I
+[00:29:02] thought it would make a nice um uh a
+[00:29:04] nice plot of those to oh well
+[00:29:07] um it didn't it probably uh I'm probably
+[00:29:10] used to the absolutely latest version of
+[00:29:12] or from alfha which is about a week
+[00:29:15] later than the than the thing that I'm
+[00:29:16] uh that I'm showing you here um let's uh
+[00:29:20] let's try something like um I don't know
+[00:29:22] we can drill into another area let's try
+[00:29:24] um some some random piece of uh met
+[00:29:27] ological history okay so we'll have data
+[00:29:29] on some hurricane we could say let's you
+[00:29:32] know look at more let's drill down let's
+[00:29:34] get some more data about that if I press
+[00:29:36] that button did I press that button no
+[00:29:38] um and uh uh there we see that let's say
+[00:29:43] let's let's just try the the name Andrew
+[00:29:46] okay what do we get if we type a name um
+[00:29:49] well then it knows that that's uh so it
+[00:29:51] knows I'm coming from the US it has data
+[00:29:53] on us births so it says it looks like
+[00:29:55] there was a a giant um Andrew Peak
+[00:29:58] somewhere in the uh uh in the late 1980s
+[00:30:01] looks like and actually it can figure
+[00:30:02] out um based on that Andrew Peak and
+[00:30:04] based on mortality curves it can figure
+[00:30:06] out given that you're throwing a random
+[00:30:08] Andrew today what's the uh what's their
+[00:30:11] likely age so it says there's a there's
+[00:30:13] a Peak at around 25 years old and
+[00:30:15] there's about um let's maybe let's
+[00:30:17] compare it with how about we'll put in a
+[00:30:21] see about that just uh
+[00:30:23] um okay so there oh look those youve won
+[00:30:26] this time yeah right it's um okay so
+[00:30:30] there's actually the Jonathan's and the
+[00:30:32] Andrews really tracked each other there
+[00:30:34] um look at that okay the um uh different
+[00:30:38] names have very different uh kinds of
+[00:30:41] signatures so what we can ask something
+[00:30:43] like you know we can say you know it's
+[00:30:45] easy to ask something like you know who
+[00:30:46] was the 18th president of the US that's
+[00:30:48] just sort of something you could look up
+[00:30:49] but let's say you know who was the
+[00:30:51] president of Brazil in 1922 for example
+[00:30:54] that's something that requires a little
+[00:30:55] bit of uh uh figuring out from the data
+[00:30:58] um who was the who was the person um uh
+[00:31:02] there at that time or we can do another
+[00:31:04] kind of thing we could let's say we
+[00:31:06] could say you know what's the um what's
+[00:31:08] the tide in New York City on um uh some
+[00:31:11] particular day and there's is something
+[00:31:13] where we where we're both uh we have to
+[00:31:16] uh bring in data about sort of General
+[00:31:18] tide data and then we have to actually
+[00:31:20] compute what the tide will be like at
+[00:31:22] this particular time in the future or we
+[00:31:25] could do uh there's all sorts of things
+[00:31:26] you can compute I mean let's say you
+[00:31:28] know 10 flips four heads or something so
+[00:31:32] we can kind of guess that that's about
+[00:31:34] coins and so can it and it'll tell us
+[00:31:36] you know what's the probability for that
+[00:31:38] uh for that particular configuration or
+[00:31:40] we could do something like let's do
+[00:31:41] another mathy kind of thing let's say we
+[00:31:43] type in some sequence let's say um let's
+[00:31:46] see if I can think of a a good sequence
+[00:31:48] here so let's say we do something like
+[00:31:50] this and we say so what's the next term
+[00:31:52] in that sequence um so it can figure out
+[00:31:55] okay there's a plot of that sequence and
+[00:31:56] now it figures out possible closed form
+[00:31:58] for that sequence is some 2 the N plus1
+[00:32:00] thing and here's how it might continue
+[00:32:02] and there's some other kinds of mathy
+[00:32:04] things that can be said about that
+[00:32:06] sequence or maybe we could just type in
+[00:32:08] some you know random oops some random
+[00:32:10] number here um see what it concludes
+[00:32:12] about that um it'll probably try and
+[00:32:14] figure out from that number what are
+[00:32:16] some possible closed forms for that
+[00:32:18] number in terms of constants and other
+[00:32:20] kinds of things that it knows or if we
+[00:32:21] really I don't know how many math type
+[00:32:23] people there are here but there's uh
+[00:32:25] there's lots of depth in these kinds of
+[00:32:26] places that one can compute things like
+[00:32:28] here's a um here's a a knot or we could
+[00:32:31] we could ask it something like you know
+[00:32:33] what's the um next uh how about this
+[00:32:36] next total solar eclipse um and oh it'll
+[00:32:41] it'll think I'm in Champagne Illinois so
+[00:32:43] that's okay but it it tells me anyway
+[00:32:45] there's a um oh that's the next total
+[00:32:47] solar eclipse after today in the world
+[00:32:50] um it there's the uh there's the one and
+[00:32:53] there's the the path it will take let's
+[00:32:55] say let's try typing Chicago or
+[00:32:57] something um and now it'll try and
+[00:32:59] figure out I think whether what's the
+[00:33:01] next total solar eclipse that will be
+[00:33:03] visible from Chicago um and it says it's
+[00:33:06] about 15 years from now so um or we can
+[00:33:10] do we can do all kinds of things I don't
+[00:33:11] know we can uh can keep going for a
+[00:33:14] really long time showing you different
+[00:33:15] kinds of things that wolf malfa can do
+[00:33:17] here's here's another example this is uh
+[00:33:20] um so his uh like I type in ISS and
+[00:33:23] it'll assume that's a spacecraft I guess
+[00:33:25] there's also an airport with that
+[00:33:27] acronym and now it'll figure out um it
+[00:33:29] has a real-time feed for for orbital
+[00:33:32] elements for spacecraft and then it can
+[00:33:34] solve the equations for uh the motion of
+[00:33:36] a spacecraft in the earth's
+[00:33:37] gravitational field and can tell us that
+[00:33:39] the ISS is now going at 17,000 M hour
+[00:33:43] and it appears to be over China come
+[00:33:45] back in a few minutes it'll probably be
+[00:33:46] somewhere different it'll tell us uh
+[00:33:48] from from Champagne Illinois it's not
+[00:33:50] visible right now but it'll next rise at
+[00:33:52] 1:14 a.m. uh
+[00:33:55] tomorrow so okay well we can
+[00:33:58] um uh interesting problem okay um we can
+[00:34:04] um we can do all kinds of things uh with
+[00:34:07] wolf malfa here's sort of a uh a rough
+[00:34:10] list of uh a few kind of sample areas
+[00:34:13] that that uh uh that we've um uh We've
+[00:34:18] we've worked on so far um but uh i' I've
+[00:34:21] sort of given you an indication of a few
+[00:34:23] kinds of uh directions that that um that
+[00:34:26] W Mal
+[00:34:27] goes in maybe I should say a little bit
+[00:34:29] um about sort of uh more generally about
+[00:34:32] what is this technology what what's
+[00:34:33] inside this thing um what what can it do
+[00:34:36] what what do we expect it to do in the
+[00:34:37] future um I mean the first thing to
+[00:34:39] realize about it is that that we're
+[00:34:42] we're trying to compute things I mean
+[00:34:44] when you think about the web and so on
+[00:34:46] you think about all the information
+[00:34:47] that's available on the web we now have
+[00:34:49] very impressive tools search engines and
+[00:34:51] so on that allow us to go and find
+[00:34:53] anything that's been explicitly written
+[00:34:55] down before uh somewhere on the web um
+[00:34:59] what we but but that's and and sort of
+[00:35:01] however fragmented the information is if
+[00:35:03] somebody explicitly wrote down a
+[00:35:05] particular thing on the web we can go
+[00:35:07] find that but when we have a particular
+[00:35:10] question that we're asking that involves
+[00:35:12] sort of our particular value of
+[00:35:15] something or our particular place or
+[00:35:17] whatever else uh the likelihood that
+[00:35:19] we'll find the answer to that particular
+[00:35:21] question just explicitly written down on
+[00:35:23] the web goes way down what we're trying
+[00:35:25] to do with W from is to take those kinds
+[00:35:28] of things that can be computed about the
+[00:35:30] world given all the data that's been
+[00:35:32] accumulated about the world um and uh
+[00:35:36] given all of the methods and models and
+[00:35:38] equations and formulas and so on that um
+[00:35:42] uh have been created from from science
+[00:35:44] and engineering and all sorts of forms
+[00:35:45] of analysis take all of that stuff that
+[00:35:48] uh that we sort of know about how to
+[00:35:50] compute things and try and package it to
+[00:35:52] the point where uh we can actually sort
+[00:35:54] of just walk up to a website and ask
+[00:35:57] some question and have it generate the
+[00:35:59] knowledge that that we want to have sort
+[00:36:01] of the the objective is to reach sort of
+[00:36:03] expert level knowledge across a very
+[00:36:06] wide range of domains across sort of
+[00:36:07] everything where where you can compute
+[00:36:09] things and have it be the case that sort
+[00:36:11] of like interacting with an expert it
+[00:36:14] will kind of understand what you're
+[00:36:15] talking about do the actual computation
+[00:36:18] and then get be able to sort of present
+[00:36:20] to you results sort of formatted and
+[00:36:23] presented in such a way that that you
+[00:36:24] should be able to understand um what the
+[00:36:27] uh what the consequences are so I mean
+[00:36:29] in terms of what's inside this thing
+[00:36:31] there really there four big big sort of
+[00:36:33] pieces to the what's needed to create
+[00:36:36] wolf from alfha the first thing is data
+[00:36:38] curation uh wolf from alfha has has
+[00:36:40] trillions of pieces of curated data so
+[00:36:43] what that means is uh we're getting data
+[00:36:46] from uh uh both from sort of uh free
+[00:36:49] data licensed data all sorts of kinds of
+[00:36:52] data some of it is fairly static data a
+[00:36:54] lot of it is data that uh comes from
+[00:36:56] from feeds that come into to our system
+[00:36:59] and we're taking this data and we're
+[00:37:01] running it through this kind of uh
+[00:37:03] partially automated partially human
+[00:37:04] process of sort of correlating different
+[00:37:06] sources of data trying to verify the
+[00:37:09] data trying to set it up so that it's
+[00:37:10] well organized and and clean and
+[00:37:12] computable and so that's one of the
+[00:37:14] things we found in our sort of uh we
+[00:37:16] kind of built this industrial data
+[00:37:18] curation Pipeline and what we found is a
+[00:37:21] lot can be done automatically we have
+[00:37:22] lots of great mathematical programs that
+[00:37:24] analyze data in all kinds of ways at
+[00:37:26] some point you need a human domain
+[00:37:29] expert in the middle of it and we're
+[00:37:31] lucky enough that within our company
+[00:37:32] we've got uh experts in lots of kinds of
+[00:37:34] things and we have kind of an extended
+[00:37:36] network of of outside folk who've been
+[00:37:38] very helpful to us in sort of providing
+[00:37:40] expertise in a in a wide range of
+[00:37:42] different areas so so the sort of the
+[00:37:44] first component here is curated data
+[00:37:46] being able to sort of uh take data from
+[00:37:48] lots of different places uh clean it up
+[00:37:51] make it computable organize it so that
+[00:37:53] we can really count on it and expect to
+[00:37:55] build things on the basis of it so a
+[00:37:58] second big component um is the actual
+[00:38:00] algorithms the computations that go on
+[00:38:02] inside um and those are uh the the um
+[00:38:05] what's what we're trying to do there is
+[00:38:07] to take sort of all methods models
+[00:38:09] equations Etc from all different areas
+[00:38:12] and actually Implement them in in the
+[00:38:15] Mathematica code that lies inside World
+[00:38:17] from alpha so that we can actually uh do
+[00:38:19] computations um about all sorts of
+[00:38:22] things and there are uh it's the good
+[00:38:24] news is it's sort of there are a finite
+[00:38:26] number of methods and models and so on
+[00:38:27] that have been discovered in kind of the
+[00:38:29] the history of of science and
+[00:38:31] engineering and so on um there still uh
+[00:38:34] not a small number and by now uh the in
+[00:38:37] the inside World from alfha is about
+[00:38:39] five or six million lines of Mathematica
+[00:38:41] code that Implement all of those uh uh
+[00:38:43] methods and models and so on so that's
+[00:38:46] sort of the second component of of w
+[00:38:48] from alfha is this implementation of
+[00:38:49] actual algorithms and computations uh
+[00:38:52] the third component is the linguistic
+[00:38:54] analysis that we have to do to
+[00:38:56] understand the the inputs kind of the
+[00:38:57] idea of or from alpha is there's no
+[00:38:59] manual there's no documentation you get
+[00:39:01] to interact with it just as you think
+[00:39:03] about uh things and so what we need to
+[00:39:07] do there is to sort of solve the problem
+[00:39:09] of taking free form natural human
+[00:39:11] language and being able to interpret it
+[00:39:14] now obviously natural language
+[00:39:15] processing has been a long uh long sort
+[00:39:18] after goal um what we get to do is
+[00:39:21] something a little bit different it's
+[00:39:22] sort of the opposite in a sense of uh
+[00:39:25] what um uh people have traditionally
+[00:39:28] been been aiming for with natural
+[00:39:29] language processing kind of the
+[00:39:30] traditional approach traditional problem
+[00:39:32] has been you know you're thrown a
+[00:39:34] million pages of of flowing perfect uh
+[00:39:37] text and you're asked you ask for your
+[00:39:39] computer to understand that text we have
+[00:39:42] sort of the opposite problem there's a
+[00:39:44] certain set of kind of symbolic
+[00:39:47] representations of of things that we can
+[00:39:49] compute with and we're asking whether
+[00:39:50] these particular utterances from humans
+[00:39:53] can be mapped into things that we can
+[00:39:55] actually compute with so it's it's a
+[00:39:56] different problem it's one that has had
+[00:39:58] much less uh attention um I don't know
+[00:40:01] whether it's an easier problem all I
+[00:40:03] know is that we've managed to find uh
+[00:40:05] some good Solutions particularly using
+[00:40:07] some methods that come from nks and and
+[00:40:10] uh other kinds of things we managed to
+[00:40:12] find uh a surprisingly successful
+[00:40:14] solutions to to the problem of being
+[00:40:16] able to understand even quite short
+[00:40:18] utterances in even kind of the Jaron of
+[00:40:20] very specialized Fields I actually
+[00:40:22] thought one of the many things that
+[00:40:23] could have gone wrong with this project
+[00:40:25] is that uh uh by the time you get to the
+[00:40:28] kind of short lazy things that people
+[00:40:29] actually type in that there will be huge
+[00:40:32] amounts of ambiguity in what people were
+[00:40:34] actually talking about um that's turned
+[00:40:35] out not to be nearly as much of a
+[00:40:37] problem as as we had expected and it's
+[00:40:39] been possible to really disentangle uh
+[00:40:41] what people mean um when when we're
+[00:40:43] mapping it onto the sort of symbolic
+[00:40:45] representation that we can deal with so
+[00:40:47] kind of the final uh uh component so
+[00:40:50] sort of the third component of of Oram
+[00:40:51] Alfa is this uh linguistic understanding
+[00:40:53] component uh the fourth component is
+[00:40:56] really the the ability to automate
+[00:40:58] presentation of things so uh we can
+[00:41:00] compute all kinds of things about some
+[00:41:02] particular area we might be able to
+[00:41:04] compute a thousand different things we
+[00:41:05] might be able to produce uh you know
+[00:41:07] tens of thousands of possible graphs the
+[00:41:09] question is what do you actually want to
+[00:41:11] show people so that they can kind of
+[00:41:13] cognitively grasp um what the uh uh what
+[00:41:16] um what you're trying to communicate and
+[00:41:18] so there's a whole another uh sort of
+[00:41:20] kind of Technology that's this kind of
+[00:41:22] algorithmic presentation technology um
+[00:41:25] that sort of tries to pick out what's
+[00:41:26] important and that's something that
+[00:41:27] again requires domain expertise requires
+[00:41:30] humans to be in the loop requires
+[00:41:32] heuristic algorithms requires kind of
+[00:41:34] this approach that we call computational
+[00:41:35] Aesthetics that we've worked on in
+[00:41:37] Mathematica for for many years of being
+[00:41:39] able to sort of optimize the
+[00:41:41] presentation of uh for example graphical
+[00:41:43] data so so these are these are really
+[00:41:46] the the sort of the four pieces um to to
+[00:41:49] W from alpha the the data curation the
+[00:41:51] internal sort of algorithms and
+[00:41:53] computation uh the linguistic
+[00:41:55] understanding and the the automated
+[00:41:56] presentation those are those are the
+[00:41:58] things that we sort of have to pull
+[00:41:59] together to make this work there also
+[00:42:01] it's a it's a big complicated practical
+[00:42:03] thing and and when it goes live U it'll
+[00:42:05] be running on you know 10,000 CPUs and
+[00:42:07] it's lots of parallel computation and uh
+[00:42:09] you know when you send a a query in it's
+[00:42:12] spread out across a bunch of machines
+[00:42:13] using grid Mathematica and all sorts of
+[00:42:15] other uh fancy kind of state-of-the-art
+[00:42:18] software engineering kinds of things
+[00:42:19] that have to go into it um but sort of
+[00:42:22] at a uh uh but but that's sort of those
+[00:42:24] are the components in terms of the the
+[00:42:25] under in technology um
+[00:42:28] so it's it's our this is uh uh this is a
+[00:42:33] project that um I was not sure whether
+[00:42:36] it was possible um in fact I'm a little
+[00:42:38] surprised that it's worked out as well
+[00:42:40] as it has um it's uh uh it's something
+[00:42:43] that um uh we're in a sense just at the
+[00:42:45] beginning um I think we've got to the
+[00:42:47] point where uh if we kind of go into the
+[00:42:50] typical reference libraries for example
+[00:42:53] and I look around at the different
+[00:42:54] shelves and so on I can say okay you
+[00:42:56] know that block we've got a a pretty
+[00:42:57] good start on that block that one we you
+[00:42:59] know we've we we're decently through and
+[00:43:01] I think probably probably 90% of the
+[00:43:03] shelves in a typical reference library
+[00:43:05] we can say we've at least got a
+[00:43:07] reasonable start on um so uh that's
+[00:43:10] that's kind of um where we're at with it
+[00:43:12] um I think uh we can um uh well be more
+[00:43:17] fun to to hear from people here what um
+[00:43:19] uh um I can please yes okay it seems
+[00:43:22] like tell us who you are Andy use the
+[00:43:26] microphone in front of you that end up
+[00:43:27] on thec that way push the button first
+[00:43:30] hi I'm Andy orm I work for O'Reilly
+[00:43:32] media I write a lot about policy
+[00:43:34] technology and I wonder um what you've
+[00:43:37] done about the inconsistencies in data
+[00:43:39] you say you massage it or curated a bit
+[00:43:41] but we don't know how reliable the data
+[00:43:43] is it would help to know how how much
+[00:43:45] inconsistency there was when you took it
+[00:43:47] in and we don't know how reliable the
+[00:43:49] algorithm is it would be kind of nice to
+[00:43:50] have a box at the bottom saying you you
+[00:43:52] can trust it this much based on the
+[00:43:54] algorithm we used and the the
+[00:43:56] inconsistencies perhaps in the incoming
+[00:43:58] data right right so I mean the first
+[00:44:00] thing we we try to do is to give some
+[00:44:01] kind of General Source information for
+[00:44:03] for data that for which there is a
+[00:44:05] meaningful Source I mean if it's you
+[00:44:07] know mathematical kinds of data the
+[00:44:10] source is might be nice for you know for
+[00:44:12] referencing and and being nice to one's
+[00:44:14] friends so to speak but it's not
+[00:44:15] relevant in terms of whether it's
+[00:44:17] whether it's right or wrong for for sort
+[00:44:19] of data real world data we try and
+[00:44:21] always give some kind of source
+[00:44:23] information popup at the bottom that
+[00:44:24] that kind of gives a general indication
+[00:44:26] of where the data is from the you know
+[00:44:28] what we what we end up doing what we're
+[00:44:30] trying to do is to create sort of an
+[00:44:32] authoritative source for data and you
+[00:44:35] know it's kind of like a big
+[00:44:36] encyclopedia project um something
+[00:44:38] something like that and what we're doing
+[00:44:40] is we're trying to do a the best job we
+[00:44:42] can at taking all these different
+[00:44:44] possible sources of data and correlating
+[00:44:46] them and coming up with the best value
+[00:44:48] we can come up with we may get it wrong
+[00:44:50] but you know we are you know we're we
+[00:44:53] like to think of ourselves as being able
+[00:44:55] to provide something authoritative we
+[00:44:56] can then give references to sort of
+[00:44:58] Upstream authorities um that uh uh we
+[00:45:01] use to get sort of the raw material that
+[00:45:03] we used but in practice or at least in
+[00:45:05] principle you're committed to if there
+[00:45:06] is data massaging going on to being able
+[00:45:09] to express to the user what massaging
+[00:45:11] happened well so what we the the the
+[00:45:14] level of that that we can deal with is
+[00:45:16] we we know about you know ranges of
+[00:45:18] values for things so for example if
+[00:45:20] there's some piece of data and there you
+[00:45:22] know there isn't just one definite value
+[00:45:25] there's a range of value vales we will
+[00:45:26] certainly deal with that and we can
+[00:45:27] carry that around in a computation the
+[00:45:29] problem is by the time you've got a lot
+[00:45:31] of footnotes on a number you can't do a
+[00:45:33] hell of a lot with that number you know
+[00:45:35] the the difficulty is I mean we've seen
+[00:45:37] this actually in in Mathematica um you
+[00:45:39] know it's really good to have a definite
+[00:45:42] number you can then do all kinds of
+[00:45:43] computations based on that definite
+[00:45:44] number if you have an interval you can
+[00:45:47] do a certain amount if you start saying
+[00:45:49] let's break it into this complicated
+[00:45:51] distribution pretty soon you it
+[00:45:53] degenerates into well we can't really
+[00:45:55] say very much based on this I mean if if
+[00:45:56] what you're trying to do is to just uh
+[00:45:59] dig down to get one un massaged uncomp
+[00:46:02] computed with number then you can say
+[00:46:03] what was the source of this data what is
+[00:46:05] its precise Provence and so on but by
+[00:46:07] the time it's actually gone through a
+[00:46:08] non-trivial computation there's no good
+[00:46:11] human way to describe what's happening
+[00:46:13] It Go something like WEA average
+[00:46:15] temperature in London might be measured
+[00:46:17] at 6 p.m and 6 a.m. and average
+[00:46:19] temperature in Boston might be measured
+[00:46:20] at midnight and no
+[00:46:23] right right so so I mean we try and give
+[00:46:25] footnotes that kind of indicate um as
+[00:46:28] best I mean like for example if we say
+[00:46:30] you know weather in London for example
+[00:46:32] um it'll it'll undoubtedly you know
+[00:46:33] it'll give us some data about this and
+[00:46:35] it'll undoubtedly say somewhere at the
+[00:46:37] bottom um it'll say uh okay it'll
+[00:46:40] probably give weather station comparison
+[00:46:42] so there are several weather stations
+[00:46:44] that are in different places and it's
+[00:46:45] going to tell us the uh the current
+[00:46:47] temperature of those different weather
+[00:46:48] stations we probably ask for more
+[00:46:49] weather stations here so that kind of
+[00:46:51] gives us you know whenever there's
+[00:46:52] something like that where there's some
+[00:46:54] um uh um you know where there's some
+[00:46:56] uncertainty we try and do a good kind of
+[00:46:59] uh in a sense scholarly job of saying
+[00:47:02] what's going on so for example it says
+[00:47:03] here sorted by distance and inferred
+[00:47:05] reliability so what's going on is the
+[00:47:07] top weather station was the one that was
+[00:47:09] closest while being reasonably reliable
+[00:47:12] there might be an amateur weather
+[00:47:13] station just down the street that is not
+[00:47:14] so reliable we typically won't choose
+[00:47:16] that we'll typically choose one that has
+[00:47:18] higher reliability but is slightly
+[00:47:19] further away so long as the altitude
+[00:47:21] difference isn't too high etc etc etc I
+[00:47:24] mean it gets it gets pretty footnoted
+[00:47:26] pretty quickly um I mean I think that
+[00:47:28] you know the thing to realize about well
+[00:47:30] we could lots more okay go ahead yes
+[00:47:34] Christopher alberg independent uh the
+[00:47:36] you know the idea of shortcutting
+[00:47:37] between analysis tool and data set is
+[00:47:39] beautiful I just love that having been
+[00:47:41] the analysis tool business is fantastic
+[00:47:43] now how can you say timely so right now
+[00:47:45] it would be fantastic with swine flu to
+[00:47:47] have the latest data in there and I
+[00:47:48] would assume that you're by launch will
+[00:47:50] have all the swine flu data on on the
+[00:47:52] planet but give it you know there's
+[00:47:53] going to be a lot of things that people
+[00:47:55] would like to keep keep current and how
+[00:47:56] how how do you deal with that right so
+[00:47:58] so I mean what we're what we hope is
+[00:48:01] that many people I mean we've already
+[00:48:03] seen this um you know people like the
+[00:48:06] idea of what we're doing lots of people
+[00:48:07] have data they've spent a lot of effort
+[00:48:09] collecting this data they would like to
+[00:48:11] see this data made as easily available
+[00:48:13] to as broad a range of people as
+[00:48:14] possible uh we hope to make a a
+[00:48:17] streamlined formalized way for people to
+[00:48:19] contribute data um the challenge is uh
+[00:48:22] we need to uh we want to curate this
+[00:48:24] data we want audit the data we want to
+[00:48:26] be convinced that we can sort of Stand
+[00:48:28] by this data because we're really you
+[00:48:30] know we we we we're standing by the data
+[00:48:32] that that we put in here um so the the
+[00:48:35] idea will be that there will be a
+[00:48:37] mechanism for people to contribute data
+[00:48:40] um a mechanism for us to audit that data
+[00:48:42] and so on and uh hopefully to flow quite
+[00:48:45] quickly into the system um but yes we
+[00:48:47] we're uh we we're we're keenly
+[00:48:49] interested in in um uh in all forms of
+[00:48:52] data and uh you know look forward to
+[00:48:54] working with people in lots of different
+[00:48:56] areas to to put things in other
+[00:49:00] questions hi it looks looks fantastic um
+[00:49:04] David Weinberger I'm David weberg this
+[00:49:05] is a more or less a follow on um to what
+[00:49:07] extent in what other ways can you open
+[00:49:09] this up or will you open this up uh
+[00:49:11] either in terms of let's say uh API
+[00:49:13] access um or the ability of people to
+[00:49:16] add their own um amusing comparisons the
+[00:49:19] garbage fish comparison and the rest of
+[00:49:21] it right so so those are two slightly
+[00:49:25] different things so in terms of apis
+[00:49:27] also metadata a third let me add a third
+[00:49:29] openness here the openness of the
+[00:49:30] metadata standards that you're using
+[00:49:32] okay so um you know W from alpha when it
+[00:49:36] when it comes out in a few weeks um its
+[00:49:39] first instance is as a thing for humans
+[00:49:41] to interact with of great interest is
+[00:49:43] also the ability for programs to
+[00:49:45] interact with it through you know what
+[00:49:46] an API um and there will be a Vari of
+[00:49:49] levels of API so um uh the um uh the
+[00:49:54] first level of API is basically a sort
+[00:49:56] of presentation level API where people
+[00:49:59] can take pieces of w from alpha output
+[00:50:01] and embed them on websites um the sort
+[00:50:04] of second level of API is kind of a
+[00:50:05] symbolic level API where people can take
+[00:50:07] the underlying XML that uh from which
+[00:50:10] all the stuff that you see on the web on
+[00:50:13] these pages is constructed and can get
+[00:50:15] those lumps of XML and mash them up
+[00:50:17] however they want and kind of there's a
+[00:50:19] third level of API where people can get
+[00:50:21] sort of individual numbers or individual
+[00:50:23] results uh from both the data bases that
+[00:50:27] we have and the and the the data that we
+[00:50:28] have and from the computations that we
+[00:50:30] have and there might even be if we're
+[00:50:33] very lucky let's see um there might be
+[00:50:35] uh uh see
+[00:50:39] um see whether this is uh um might even
+[00:50:43] be there let's see if there's a first
+[00:50:45] draft we'll find out if there's a first
+[00:50:47] draft oh look at that preliminary March
+[00:50:49] 27th okay there's the there's at least a
+[00:50:52] first draft of the API documentation
+[00:50:54] here so that that that's a good sign
+[00:50:56] that there's really going to be an you
+[00:50:57] had a chance to read that right it's uh
+[00:51:00] um uh but but you know one of the things
+[00:51:02] that's very helpful to us in terms of in
+[00:51:04] terms of setting up um uh API kinds of
+[00:51:07] things is that sort of everything is
+[00:51:09] done in Mathematica this this actual
+[00:51:11] output is uh sort of a rendered version
+[00:51:14] of a mathematica notebook um and in fact
+[00:51:16] you can you can take this output and uh
+[00:51:18] that you can get a pdf version of this
+[00:51:20] output or you can get a live
+[00:51:21] mathematical version of this output um
+[00:51:23] so the structure when I say you can get
+[00:51:25] it as XML for us what you're really
+[00:51:28] getting it at is the symbolic
+[00:51:30] Expressions that Mathematica uh is based
+[00:51:32] on which are trivially interconvertible
+[00:51:34] with XML so that's sort of the the level
+[00:51:36] of API kind kinds of things now you
+[00:51:39] asked about being able to sort of upload
+[00:51:41] personal data to the system uh it's the
+[00:51:43] intention to have a a sort of
+[00:51:46] personalizable professional version of
+[00:51:48] or malfa uh that will have a a
+[00:51:51] subscription mechanism and so on and
+[00:51:52] will have the ability for people to
+[00:51:54] upload their own dat data both for
+[00:51:56] analysis and for the purpose of knitting
+[00:51:58] some of their own uh data features into
+[00:52:01] into the actual computations that are
+[00:52:02] done uh you asked about metadata
+[00:52:05] standards um the uh uh when we open up
+[00:52:09] as we intend to kind of our data
+[00:52:12] repository mechanism so that people can
+[00:52:13] contribute data uh into our data
+[00:52:15] curation pipeline um that uh as when we
+[00:52:19] do that some of our ontology for example
+[00:52:22] we will be exposing some of our ontology
+[00:52:24] and making that presumably available
+[00:52:26] through you know rdf and whatever else
+[00:52:29] um for purposes of people to to sort of
+[00:52:31] provide data in a form that can can
+[00:52:33] readily be fed into the data cation
+[00:52:36] pipeline where should we go next um well
+[00:52:40] please yes hi David burmaster um let's
+[00:52:44] see in some areas of science there are
+[00:52:46] truly differences of opinion that have
+[00:52:48] not been settled I was trying to think
+[00:52:50] of an example of that but maybe you have
+[00:52:52] one uh my favorite is would be a
+[00:52:54] question of are a certain class of
+[00:52:56] chemicals called pcbs are they human
+[00:53:00] carcinogens and there are some folks who
+[00:53:02] say yes and some folks who say no but
+[00:53:03] you may have a different example right
+[00:53:06] well I mean so what we try to do in
+[00:53:08] cases like this is uh we try to give a
+[00:53:11] footnote when you know when there I was
+[00:53:13] expecting actually something slightly
+[00:53:14] different here I was expecting that um
+[00:53:16] if I typed in something about 13 billion
+[00:53:18] years ago that it would offer me several
+[00:53:20] different here maybe if I say something
+[00:53:22] like you know red shift um uh 7.8 or
+[00:53:26] something see what it does um okay so
+[00:53:28] it'll it'll say you know also include
+[00:53:30] dark energy density you know use a
+[00:53:32] different Universe
+[00:53:35] model so we can probably I think people
+[00:53:37] were wondering if there was a
+[00:53:38] creationist Universe model yeah um but
+[00:53:42] uh you know so we can get um uh so so
+[00:53:44] the basic thing that we try to do is if
+[00:53:47] there's sort of a difference of of
+[00:53:48] opinion so to speak we we try to give
+[00:53:51] people if we can sort of parameterize it
+[00:53:53] appropriately we try to sort of give
+[00:53:54] people a choice uh in this little box at
+[00:53:56] the top you know do you want to assume
+[00:53:58] the whatever it is Lambda CDM Universe
+[00:54:00] model or do you want to assume some
+[00:54:01] other Universe model and if there is a
+[00:54:03] new universe model that comes out thanks
+[00:54:05] to some Discovery at Caltech is there
+[00:54:07] someone at Wolf from alfra headquarters
+[00:54:09] that has to say stop the presses there's
+[00:54:10] a new universe model and tweak this
+[00:54:12] search result yeah it's a lot of work
+[00:54:15] yeah yeah that's what we're trying to do
+[00:54:16] I mean that this is a you know the goal
+[00:54:18] is to be able to have a a place where
+[00:54:21] sort of the knowledge that's being
+[00:54:22] generated can be sort of put in
+[00:54:24] computational form and made available
+[00:54:26] for for everybody and sort of the idea
+[00:54:28] is you know we we've certainly been
+[00:54:29] trying to work out these questions like
+[00:54:31] at what rate is new knowledge coming in
+[00:54:33] you know can we keep up with different
+[00:54:35] kinds of things yeah I mean it's this
+[00:54:37] vision of these like boiler rooms where
+[00:54:38] you've got people shoveling knowledge
+[00:54:40] into the furnace you know to an order of
+[00:54:42] magnitude how many people do you figure
+[00:54:44] will have to wear a wol from badge and
+[00:54:46] be shoveling well okay so we obviously
+[00:54:49] tried to work this out um you know I
+[00:54:51] think this project has actually been
+[00:54:53] done by a surprisingly small number of
+[00:54:54] people I mean for but most of the
+[00:54:55] history of this project last few years
+[00:54:57] it's been about 100 people it's now
+[00:54:58] about 250 people um it's probably you
+[00:55:01] know to to kind of continue growing at
+[00:55:04] the kind of rate and to sort of expand
+[00:55:06] out and deal with all the things that
+[00:55:08] people are are very nicely you know
+[00:55:10] offering to us it's probably going to
+[00:55:12] end up being a thousand people or
+[00:55:13] something um the uh the thing that um uh
+[00:55:16] you know this image of of I have to say
+[00:55:19] I'm reminded of one of the people who
+[00:55:21] might be watching the webcast so I
+[00:55:22] should be careful what I say but one of
+[00:55:23] the people who's been uh uh working on
+[00:55:25] this project um who there are many sort
+[00:55:28] of scholarly people who work on this
+[00:55:29] project but there's one in particular
+[00:55:31] who gets a lot of information from books
+[00:55:33] and so uh you know basically my my image
+[00:55:36] of his mode of work is you know every
+[00:55:37] morning there's a delivery from the
+[00:55:39] University Library new book a big pile
+[00:55:41] of books and uh at the end of the day
+[00:55:44] those ones go back next day another pile
+[00:55:46] come in um you know that that's a part
+[00:55:48] of what's been going on in in uh uh in
+[00:55:50] doing this project and that's you know
+[00:55:52] what we expect to uh to continue with
+[00:55:56] yes uh Ruben Rodriguez a one at the law
+[00:55:58] school um who do you see using wolf from
+[00:56:01] alpha um is it for you know the kid who
+[00:56:05] needs help on his homework or is this
+[00:56:06] for serious scientists who are looking
+[00:56:09] up facts right so so I mean the goal is
+[00:56:12] to make sort of expert level knowledge
+[00:56:15] accessible and available to anybody
+[00:56:17] anywhere anytime okay who needs expert
+[00:56:20] level knowledge about things you know
+[00:56:22] experts need it um uh also you know one
+[00:56:25] of the trends in the world tends to be
+[00:56:27] what used to be just relevant to experts
+[00:56:29] at one time once it can be exposed for
+[00:56:32] other people to get access to it um it's
+[00:56:34] really useful to lots of other people
+[00:56:36] too so long as it can be presented in a
+[00:56:37] form where they can understand what's
+[00:56:39] going on now clearly there are lots of
+[00:56:40] educational uses for this I mean clearly
+[00:56:42] in you know education of of all
+[00:56:44] different kinds of people who maybe one
+[00:56:47] day will be experts so to speak um Can
+[00:56:49] can find this useful um I think there
+[00:56:52] will be kind of a I think there will be
+[00:56:54] very peaks of usage I think there'll be
+[00:56:56] a bunch of professional users in a bunch
+[00:56:58] of different professions um sometimes
+[00:57:00] they'll say well you know uh for my
+[00:57:03] particular you know incredibly
+[00:57:04] specialized computation I've I've got
+[00:57:06] some other tool that can do that but as
+[00:57:08] soon as they go just a tiny bit away
+[00:57:10] from the thing that they've been
+[00:57:11] specialized in um they'll end up saying
+[00:57:14] gee it's really useful to be able to
+[00:57:16] have this kind of uniform mechanism for
+[00:57:18] doing the computations I need um but uh
+[00:57:20] you know one of the things I think is
+[00:57:22] which I find sort of intellectually
+[00:57:23] rather satisfying about this is you know
+[00:57:25] I've been a scientist for many years
+[00:57:27] right so um and there's all this Nifty
+[00:57:29] stuff in science and I've learned how to
+[00:57:31] compute all kinds of things in science
+[00:57:33] um often you know I might not be
+[00:57:36] bothered to compute something um because
+[00:57:38] you know it would take me you know if I
+[00:57:40] wanted to work out you know what's the
+[00:57:41] angle of the Sun at this particular
+[00:57:42] moment in this particular place if I'm
+[00:57:45] if I think given maybe 20 minutes or
+[00:57:47] something I could actually compute it
+[00:57:49] and get it right okay um but I probably
+[00:57:51] wouldn't bother right and many people
+[00:57:54] you know wouldn't actually be able to
+[00:57:55] compute it and get it right but what
+[00:57:58] what um uh uh you know what W from alfha
+[00:58:00] does is it takes that piece of
+[00:58:02] scientific knowledge and it basically
+[00:58:04] makes it immediately accessible uh for
+[00:58:06] anybody um and uh um I think that one of
+[00:58:10] the things that'll be really nice is
+[00:58:11] that you know science has achieved quite
+[00:58:14] a bit in the last however many you know
+[00:58:16] hundred years and so on and but most
+[00:58:18] people don't really get exposed to what
+[00:58:20] it's achieved most of the time because
+[00:58:22] they can't actually you know they need
+[00:58:23] to be professional scientists to
+[00:58:25] actually um you know make use of these
+[00:58:27] things one of the one of the points here
+[00:58:28] is that of being able to expose more of
+[00:58:30] what's been achieved in science and
+[00:58:32] engineering and so on to to a much
+[00:58:33] broader audience I also have a suspicion
+[00:58:36] that that in itself will induce some
+[00:58:38] interesting research that will get done
+[00:58:40] because people will realize after
+[00:58:41] everybody starts Computing things about
+[00:58:44] some particular area they'll realize
+[00:58:45] well it' be really nice if there was a
+[00:58:46] better model for this and then somebody
+[00:58:49] will go and figure out a better model
+[00:58:50] and uh that will be uh that will be um
+[00:58:53] go from there yes please Bob lurry
+[00:58:57] retired uh how are you how much are you
+[00:59:00] going to charge for this or are you
+[00:59:02] gonna are you're going to just have a
+[00:59:03] whole row of
+[00:59:04] advertising it's okay so so um the your
+[00:59:09] seant now right that's the contextual
+[00:59:11] advertising for this that's the um the
+[00:59:14] the uh so the this website that I've
+[00:59:17] been showing you this will be completely
+[00:59:18] free site for anybody anywhere anytime
+[00:59:21] this is it's a it's a free thing um the
+[00:59:24] uh uh we will have corporate sponsors
+[00:59:27] who will uh uh have things on on the
+[00:59:31] side here in fact I'm they're just the
+[00:59:33] ones for launch are just sort of getting
+[00:59:35] lined up now and I think they're going
+[00:59:37] to be some kind of Nifty Things actually
+[00:59:38] I'm kind of looking forward to seeing
+[00:59:39] what uh uh what actually shows up on
+[00:59:41] these sidebars um but but uh primarily
+[00:59:44] these are these are sort of U sort of
+[00:59:46] major brand corporate sponsor kinds of
+[00:59:48] things um there's also clearly we know a
+[00:59:51] lot about the specific questions people
+[00:59:54] are asking
+[00:59:55] and uh By the time they're sort of
+[00:59:57] drilled down to looking at some
+[00:59:58] particular part of output um we know in
+[01:00:01] considerable detail what what kind of
+[01:00:02] question what kind of piece of knowledge
+[01:00:04] people want and one of the things that
+[01:00:06] will certainly happen is there is a lot
+[01:00:08] of kind of vendor type information that
+[01:00:10] will be highly useful to people and
+[01:00:12] we're trying to figure out what's the
+[01:00:13] right sort of mechanism to ingest uh
+[01:00:16] vendor information um and to be able to
+[01:00:19] provide it in an appropriate way on the
+[01:00:21] site um basically we're sort of
+[01:00:23] separating the
+[01:00:25] uh sort of the advertising side of
+[01:00:26] things from the informational side of
+[01:00:28] things and sort of the idea is there's
+[01:00:30] there's vendor information and there'll
+[01:00:32] probably be quite a bit of sort of
+[01:00:33] service business in in getting vendor
+[01:00:35] information to the point where it can be
+[01:00:36] fed into the data curation pipeline then
+[01:00:39] it sort of will get go into kind of the
+[01:00:41] the sort of this wall of of data
+[01:00:43] auditing between kind of the the vendor
+[01:00:45] supplied information and what actually
+[01:00:47] shows up on the site that's that's kind
+[01:00:48] of the idea um of how that will work now
+[01:00:51] there's also going to be a a
+[01:00:52] professional version of the site which
+[01:00:53] is sort of intended for people who are
+[01:00:55] really doing systematic computations all
+[01:00:57] the time who want to upload their own
+[01:00:59] data who want to store some of their own
+[01:01:01] definitions and so on in in the system
+[01:01:04] and that will be a subscription
+[01:01:06] service please hi so what happens if
+[01:01:09] there is no answer like if you type in
+[01:01:12] the 55th largest state in the US or
+[01:01:14] something does it or the date of World
+[01:01:16] War II I don't know see largest it may
+[01:01:20] not be able to let's do something like
+[01:01:22] let's do the um uh 300 largest country
+[01:01:26] in Europe see what that does I don't
+[01:01:30] know what it will do um okay in that
+[01:01:33] particular case it just it just says
+[01:01:34] there's the input interpretation it
+[01:01:36] gives no result I actually would have
+[01:01:37] expected it to say something about and I
+[01:01:39] have a feeling that in the very very
+[01:01:41] latest version um it will say something
+[01:01:43] slightly different in a case like that
+[01:01:45] um that's one of the uh okay now I'm
+[01:01:47] going to cheat and use the hourly build
+[01:01:49] which might be completely broken um okay
+[01:01:52] okay so there so there it did something
+[01:01:54] slightly different it says no known
+[01:01:55] countries um that's a typical kind of
+[01:01:59] thing the
+[01:02:02] yes Esther harai burkman so I'd like to
+[01:02:05] go back to the question of data sources
+[01:02:07] so one of the things you showed us was
+[01:02:10] population of Internet users somewhere
+[01:02:11] and so for certain data sources they're
+[01:02:13] very agreed upon sources but for some
+[01:02:17] things there aren't and I'm just
+[01:02:18] wondering how you're choosing those and
+[01:02:21] this would be especially relevant in a
+[01:02:22] lot of social science questions so
+[01:02:25] identifying good sources is one of the
+[01:02:27] key problems in in doing data curation
+[01:02:30] and so on I mean if you get a lousy
+[01:02:31] Source you do a huge amount of work and
+[01:02:34] what you get out at the end is garbage
+[01:02:36] okay so sort of source identification is
+[01:02:38] a thing that we you know it's the one of
+[01:02:40] the highest judgment most important
+[01:02:41] pieces of this whole pipeline U you know
+[01:02:44] how do we do it we try and do the best
+[01:02:46] job we can we try and have sort of uh
+[01:02:48] use good judgment ask experts um look
+[01:02:51] around at all possible sources you know
+[01:02:53] assess them
+[01:02:54] um and then compare you know one thing
+[01:02:56] we've often done is we'll get some some
+[01:02:59] sources and uh we'll you know there'll
+[01:03:02] be some source that maybe is even a a
+[01:03:04] quite proprietary source that we made
+[01:03:05] arrangements to get and so on um and
+[01:03:08] it'll turn out you know we get the
+[01:03:09] source in and we start looking at it and
+[01:03:11] we start you know plotting things and
+[01:03:12] visualizing things and it's just full of
+[01:03:14] garbage you know because often what's
+[01:03:16] happened is I mean it goes both ways
+[01:03:18] there are some very well publicized
+[01:03:20] sources that are pretty bad there are
+[01:03:22] some ones that there are you know ones
+[01:03:24] that are really good there are ones that
+[01:03:26] are proprietary and nobody's really
+[01:03:28] looked at them very much and so they
+[01:03:29] can't tell there's bad things in them
+[01:03:31] there are ones that are you know uh sort
+[01:03:33] of clean public sources that have been
+[01:03:35] picked over a lot um you know the US
+[01:03:37] government does a really good job
+[01:03:39] typically in uh in cleaning the data
+[01:03:41] that uh that it makes available um the
+[01:03:44] um I think um you know what we try to do
+[01:03:48] uh you know we we give the information
+[01:03:50] about what our sources are and we try
+[01:03:52] and make the best judgments we can about
+[01:03:54] what sources we choose you know it's
+[01:03:56] it's um uh you know I've personally been
+[01:03:59] on many phone calls with experts in
+[01:04:01] different areas asking uh sort of kind
+[01:04:03] of pointed questions about whether this
+[01:04:05] such and such a kind of data is even
+[01:04:08] conceivably knowable um and uh you know
+[01:04:11] sometimes it tends to crumble um and you
+[01:04:14] know the result of that will tend to be
+[01:04:15] this little footnote that gets written
+[01:04:17] um that says something like you know who
+[01:04:19] knows what it says but you know says you
+[01:04:21] know based on uh you know available
+[01:04:23] mortality data or something you know not
+[01:04:26] I I forget you know it's probably has
+[01:04:27] some some shortened form of of uh you
+[01:04:30] know accounting for the fact that you
+[01:04:32] know you can't get let's say mortality
+[01:04:34] data in some in some countries or
+[01:04:36] something like this right so you know
+[01:04:38] these these kinds of what we try to do
+[01:04:39] is to try to give a succinct version of
+[01:04:42] of what we think the the problems with
+[01:04:43] the data are likely to be yes yes
+[01:04:48] from where can
+[01:04:51] IBC the webcast uh is having some issues
+[01:04:55] I think we had a bandwidth overload that
+[01:04:56] could not possibly have been predicted
+[01:04:59] um but uh it'll be made available I
+[01:05:02] think as soon as possible afterwards Dan
+[01:05:04] how soon will you have it available
+[01:05:06] we'll have it in about an hour in about
+[01:05:07] an hour afterwards from his lips to uh
+[01:05:11] Skynet
+[01:05:14] ear cyber. law. harvard.edu will have an
+[01:05:17] anchor page pointing to the uh uh to the
+[01:05:21] webcast
+[01:05:23] yes
+[01:05:24] uh Bill Callahan Charles River analytics
+[01:05:27] uh clearly you're going to have a lot of
+[01:05:28] work to do with curation but I was
+[01:05:30] wondering technologically where do you
+[01:05:32] want to focus in the
+[01:05:33] future what what do you mean by
+[01:05:35] technologically uh I mean um you you you
+[01:05:38] had the the four components one of them
+[01:05:39] was curation but the uh the other three
+[01:05:41] I was wondering where do you think
+[01:05:43] you're going to get the biggest bang for
+[01:05:44] the buck doing research I think all four
+[01:05:47] of them need to be pushed forward I
+[01:05:48] think that the um uh you know they're
+[01:05:51] all basically this is a one thing that
+[01:05:54] I've realized in building this system is
+[01:05:56] if you lose any one of those components
+[01:05:58] you really don't have anything terribly
+[01:05:59] useful so you have to move all of them
+[01:06:00] forward I mean I think that in terms of
+[01:06:03] uh what will be some of the the the
+[01:06:04] bigger directions I mean more better
+[01:06:09] faster of what we have but but um and
+[01:06:12] and going deeper and deeper into
+[01:06:13] different kinds of data um being able to
+[01:06:16] in some cases uh uh from scratch
+[01:06:18] remeasure some data things like this for
+[01:06:20] some physical kinds of things um another
+[01:06:23] kind of Direction is being able to deal
+[01:06:24] with more complicated linguistic uh
+[01:06:26] inputs longer things not just uh you
+[01:06:29] know 10 15 words but but being able to
+[01:06:32] go you know to a couple of lines of text
+[01:06:35] and being able to take programs in as
+[01:06:36] input pieces of pseudo code and be able
+[01:06:39] to interpret what the pseudo code means
+[01:06:42] and be able to produce program fragments
+[01:06:44] that can then be built on uh those types
+[01:06:46] of things um uh being able to take other
+[01:06:49] kinds of input than purely linguistic
+[01:06:51] input so for example raw data input um
+[01:06:54] or image input um these kinds of things
+[01:06:56] those are those are some of the things
+[01:06:58] that we uh we already have thought of
+[01:07:00] typically what I've found with projects
+[01:07:02] I mean actually I found a terrible thing
+[01:07:03] and you know I'm a I'm a guy who does
+[01:07:05] big projects okay this is my third big
+[01:07:07] project but what I've noticed is that uh
+[01:07:09] it takes me five or 10 years actually
+[01:07:11] before I actually understand how to take
+[01:07:13] the next steps in a project I mean one
+[01:07:15] builds up some Paradigm and then one
+[01:07:18] realizes you know given this Paradigm um
+[01:07:21] it's possible to do all kinds of other
+[01:07:22] things but at least for me maybe others
+[01:07:24] maybe maybe maybe the world will show us
+[01:07:26] faster how to do it but at least for me
+[01:07:28] it usually takes a surprising number of
+[01:07:29] years to see sort of what the most
+[01:07:31] important next steps uh that should be
+[01:07:33] taken are
+[01:07:35] yes hi uh I'm Richard Dale um my
+[01:07:38] question is how do you see this uh in
+[01:07:42] contrast with um the semantic web uh
+[01:07:47] world and uh the representation of
+[01:07:50] knowledge kind of freely donated and
+[01:07:52] freely tagged um on the web and and both
+[01:07:55] the contribution of that and the
+[01:07:57] understanding of that right right right
+[01:07:58] so I mean you know for us if the
+[01:08:00] semantic web had had completely had been
+[01:08:03] a 100% sort of overwhelming thing in the
+[01:08:06] world uh our project would have been a
+[01:08:08] lot easier right if if every if every
+[01:08:10] piece of content on the web had already
+[01:08:12] been semantically tagged and we've been
+[01:08:14] able to just go around the web and pick
+[01:08:15] things out you know this project would
+[01:08:17] have been would have been vastly easier
+[01:08:18] I mean it's worth realizing that a lot
+[01:08:20] of what we have in in W from alpha is
+[01:08:22] not just stuff picked from the most of
+[01:08:24] it is from much more systematic
+[01:08:25] databases that are not necessarily even
+[01:08:27] available on the web um but uh the way I
+[01:08:30] see uh things I I mentioned that you
+[01:08:32] know obviously within W from alfha we
+[01:08:34] have a a pretty sophisticated ontology
+[01:08:36] that we're symbolic ontology that we're
+[01:08:37] using to sort of build up all these
+[01:08:39] Concepts and so on um we that ontology
+[01:08:43] was in a sense not created I mean even
+[01:08:44] though I'm a kind of a guy who likes
+[01:08:46] sort of grand schemes for things and so
+[01:08:48] on we didn't create that ontology as a
+[01:08:50] top- down kind of thing where we just
+[01:08:51] sort of said the world is divided into
+[01:08:53] three three parts and there this this
+[01:08:55] and this or something you know that
+[01:08:56] ontology is mostly a bottom up kind of
+[01:08:59] thing where we have all these particular
+[01:09:00] domains we built an ontology for this
+[01:09:02] domain that domain that domain we
+[01:09:04] realized there was commonality between
+[01:09:05] these ontologies we kind of merge them
+[01:09:07] together um these types of things um now
+[01:09:10] I think that uh I hope that as we expose
+[01:09:13] some of our data repository mechanisms
+[01:09:15] um that that will help to make it easier
+[01:09:18] to do some kinds of semantic web kinds
+[01:09:20] of things because that will expose some
+[01:09:22] of our ontology mechanisms and and
+[01:09:24] hopefully those will be able people will
+[01:09:26] be able to line data and things up
+[01:09:28] according to those uh sort of
+[01:09:29] ontological
+[01:09:31] mechanisms yes John crley at the Kennedy
+[01:09:34] School uh your answer neatly segued into
+[01:09:37] my question deals with the
+[01:09:39] ontologies at what point can we get to
+[01:09:42] look at the formal specifications for
+[01:09:44] each of these ontologies and then moving
+[01:09:47] into the future at what point can we
+[01:09:48] inject our own ontologies to be able to
+[01:09:51] access the data sets and pull out models
+[01:09:53] that that are based on new
+[01:09:55] knowledge okay so so I mean the good
+[01:09:58] news about all of this is it's all
+[01:10:00] represented in nice clean symbolic
+[01:10:02] mathematical code um the uh you know our
+[01:10:06] um the idea of kind of um uh knitting
+[01:10:10] sort of new knowledge into the system uh
+[01:10:14] the knitting process is a bit
+[01:10:15] complicated because among the other
+[01:10:17] problems you know at the end of it our
+[01:10:19] sort of interface is human natural
+[01:10:21] language and human natural language is
+[01:10:23] surprisingly messy so for example one of
+[01:10:26] the things that has to happen when you
+[01:10:27] put a new area in there are all these
+[01:10:29] new terms for things that go in right
+[01:10:32] and some of these terms clash in
+[01:10:33] horrible ways with terms for you know
+[01:10:35] like like a classic bug in this system
+[01:10:37] was when uh uh you know we're putting in
+[01:10:40] people and there's a a chap who goes by
+[01:10:42] the name of 50 Cent okay and uh so you
+[01:10:45] know that was an example of uh uh you
+[01:10:48] know I mean we have pretty good systems
+[01:10:49] for picking these things up but that was
+[01:10:50] kind of an amusing example of where you
+[01:10:52] know absolute horor you know
+[01:10:54] computations that involved you know
+[01:10:56] money suddenly we're we're going rapping
+[01:10:58] and so on but uh so there are these
+[01:11:01] things where you have to be careful as
+[01:11:02] you knit new knowledge in um and that's
+[01:11:05] that's not something where you know
+[01:11:06] where I expect that we can kind of just
+[01:11:08] uh let let loose all of those types of
+[01:11:10] things but but in terms of uh uh the
+[01:11:13] exposure of sort of ontology stuff uh
+[01:11:15] that will happen as soon as we have our
+[01:11:16] kind of data repository mechanism up
+[01:11:18] people will be able to see pieces of
+[01:11:19] their their and are you aspiring to
+[01:11:21] allow people to ask questions within a
+[01:11:23] domain so if we wanted to hypothesize
+[01:11:25] Texas breaking up into four states four
+[01:11:28] substates and what would that look like
+[01:11:29] is there a way to say suppose that Texas
+[01:11:32] as you know it were replaced by blah
+[01:11:33] blah Now give me the graph of gosh you
+[01:11:36] know that's I mean that's pretty hard
+[01:11:38] you know a good test here is how many
+[01:11:40] words do you need to use to describe
+[01:11:42] what you're talking about if the answer
+[01:11:44] is you know more than a line's worth
+[01:11:47] it's going to be hard for us to you know
+[01:11:49] I mean it maybe a more realistic example
+[01:11:51] is at some point you have to make a call
+[01:11:52] as to whether Palestine exists and I
+[01:11:54] don't know what reference source you'll
+[01:11:56] use in order to decide but if somebody
+[01:11:58] wanted to see it the other way and say I
+[01:12:01] want to know about world infant
+[01:12:03] mortality but presume that Palestine
+[01:12:05] exists so so a typical example so what
+[01:12:07] we try to do in cases like this is to
+[01:12:09] say you know assuming case a use case b
+[01:12:13] instead right so that's the that's our
+[01:12:15] best way now the problem is in in cases
+[01:12:17] like that of of aggregated and
+[01:12:19] disaggregated socioeconomic data the
+[01:12:21] data just doesn't exist I mean it's you
+[01:12:24] know there were two countries and they
+[01:12:26] merged well two countries merging into
+[01:12:27] one we can deal with that one country
+[01:12:29] breaking into two you go back and try
+[01:12:31] and find the historical data it just
+[01:12:32] doesn't exist and you know there's
+[01:12:34] nothing damn you Czechoslovakia yeah
+[01:12:36] right and uh you know so so and you know
+[01:12:39] I think one of the things that I I hope
+[01:12:41] will happen is that there are holes in
+[01:12:43] the data and where with enough
+[01:12:45] scholarship and effort you could fill
+[01:12:46] these holes in and I'm hoping that
+[01:12:48] people will be motivated when when there
+[01:12:50] are visible holes um to to go and figure
+[01:12:53] out too that that could suggest that
+[01:12:55] with some form of annotation or optional
+[01:12:57] engine that allow people who happen to
+[01:12:59] have overlapping queries to find each
+[01:13:01] other and communicate about it you might
+[01:13:03] find communities built around those yeah
+[01:13:05] this is an interesting question of of
+[01:13:07] what to what extent we can sort of build
+[01:13:09] communities in because I think there
+[01:13:10] there are lots of detailed expert areas
+[01:13:12] here and there will be people who have
+[01:13:14] you know detailed things to say and we
+[01:13:16] you know we I don't know you know that
+[01:13:19] the the question of how best to build
+[01:13:21] these kinds of communities very
+[01:13:22] interested in suggestions about this um
+[01:13:25] please yes I'm I'm Zack Stone I'm a
+[01:13:28] student here if you're thinking about 50
+[01:13:30] Cent are you planning to open this up to
+[01:13:31] include more popular information if a
+[01:13:33] bunch of people show up and badly
+[01:13:35] misspell Britney Spears are you
+[01:13:37] interested in helping them well I'm sure
+[01:13:39] if we type in they're beyond
+[01:13:42] help you know I mean if we if we said uh
+[01:13:45] I mean we we have a certain amount of
+[01:13:46] popular uh po pop culture kind kinds of
+[01:13:49] thing is what just happened but you you
+[01:13:51] expect to be able to say at least
+[01:13:52] compare the height of Britney spear in
+[01:13:53] 50 Cent that's that's true who's
+[01:14:01] longer just hold on a
+[01:14:04] second
+[01:14:06] um uh let's just see I think you should
+[01:14:09] spell it worse than that I can try I
+[01:14:11] could try some some strange misspelling
+[01:14:13] but but yeah I mean we'll probably I
+[01:14:15] don't know let's try that
+[01:14:17] um okay nice um the uh so in terms of
+[01:14:22] popular culture you know we we've we've
+[01:14:24] got um a certain amount of popular
+[01:14:26] culture information um it's uh uh
+[01:14:29] actually in some sense popular culture
+[01:14:31] information in so far as it's computable
+[01:14:33] at all is much more shallowly computable
+[01:14:36] than all of the scientific kind and
+[01:14:38] Engineering kinds of things so in a
+[01:14:40] sense the mechanisms are much simpler
+[01:14:42] like you know we can figure out who's
+[01:14:43] related to who genealogically things
+[01:14:45] like that we can figure out how tall
+[01:14:46] people are things of that kind um and I
+[01:14:48] fully expect um we will you know we will
+[01:14:51] have lots of popular culture information
+[01:14:53] I mean it gets uh oh you know there's
+[01:14:55] there's there's linguistic Horrors um
+[01:14:57] because you know if you put in lots of
+[01:14:59] Books and Music and things like this a
+[01:15:02] lot of the names of things uh Clash
+[01:15:04] horribly with with other common Concepts
+[01:15:07] and this ambiguation which we certainly
+[01:15:09] are capable of doing um will uh you know
+[01:15:12] we we essentially for for things that we
+[01:15:14] put in including you know books people
+[01:15:16] movies things like this there has to be
+[01:15:18] some kind of popularity index that we
+[01:15:20] use that determines the disambiguation
+[01:15:22] and we actually now have pretty good
+[01:15:22] techn techology we use Wikipedia for
+[01:15:24] example a lot in the popularity index um
+[01:15:28] kind of uh area because you can look at
+[01:15:30] a look at a person a thing whatever in
+[01:15:32] Wikipedia it's not a it's not a perfect
+[01:15:34] indication but it's at least some
+[01:15:36] indication of whether um uh you know
+[01:15:39] whether if there are lots of incoming
+[01:15:40] links if there's lots of talk about that
+[01:15:42] person or thing there's a higher
+[01:15:44] probability that people will actually be
+[01:15:45] be asking questions about it and you do
+[01:15:47] have some pop culture built into the
+[01:15:49] engine right if you ask for the wingspan
+[01:15:50] of an unladen sparrow does it uh about
+[01:15:53] that but but it'll it'll certainly I
+[01:15:55] mean you know if we type in something
+[01:15:57] you know if we
+[01:15:59] um you know if we say something like
+[01:16:01] this we'll have uh um you know we'll
+[01:16:03] know something about the the um uh the
+[01:16:06] movie and we'll know you know box office
+[01:16:08] total data and but I mean if you ask it
+[01:16:09] meaning of life it does know the answer
+[01:16:11] to that right oh I hate that I hate that
+[01:16:14] I hate that I don't know whether it'll
+[01:16:15] do the it'll do
+[01:16:21] um I hate this
+[01:16:24] this has been a subject of uh I was I
+[01:16:27] was going to what I really want to do is
+[01:16:29] actually write
+[01:16:30] an but that's a much more
+[01:16:39] appropriate Mr FX onomy
+[01:16:42] uh okay let's see what we say about 42
+[01:16:45] so it'll tell us some things about 42
+[01:16:47] okay it'll tell us some okay no it's
+[01:16:49] telling us it's only telling us very uh
+[01:16:52] uh very nonhuman useless stuff like the
+[01:16:54] fifth Catalan
+[01:16:58] number
+[01:17:00] yes John Mueller ly um do you see uh or
+[01:17:04] Envision any uh integration with
+[01:17:05] something like psych from uh psychor
+[01:17:08] right so so I mean Psych is is the the
+[01:17:12] sort of most advanced example of a kind
+[01:17:14] of Common Sense reasoning system um and
+[01:17:17] it's sort of interesting to compare what
+[01:17:18] we're doing with W from alpha with kind
+[01:17:20] of the tradition in Ai and Common Sense
+[01:17:22] reasoning and so on I mean the the in a
+[01:17:24] sense uh sort of what a lot has of what
+[01:17:27] has gone on there is to try and take
+[01:17:29] what we as humans do when we reason
+[01:17:31] about things and make it kind of
+[01:17:32] computer strength um now you know when
+[01:17:36] humans reason about certain kinds of
+[01:17:37] things they do pretty well when humans
+[01:17:38] are reasoning about let's say some
+[01:17:40] physical process um humans pure human
+[01:17:43] reasoning isn't that great at dealing
+[01:17:45] with figuring out what's going to happen
+[01:17:46] in physics I mean this was kind of the
+[01:17:48] the big idea of Galileo and Newton and
+[01:17:50] so on 300 years ago was you don't just
+[01:17:52] have to do natural Philosophy by
+[01:17:53] thinking about things you can uh roll up
+[01:17:56] your mathematics and sort of blast your
+[01:17:58] way through and get to answers so we're
+[01:18:00] in the in the Newtonian Galilean kind of
+[01:18:02] tradition of just you know blast your
+[01:18:05] way through to An Answer kind of thing
+[01:18:07] using uh you know the best sort of
+[01:18:09] whatever it is math algorithm whatever
+[01:18:11] tools to to get to those answers um so
+[01:18:14] how does that relate to kind of Common
+[01:18:16] Sense reasoning I think that uh uh we
+[01:18:18] will provide a a very good basis for
+[01:18:21] sort of wrapping much sort of more
+[01:18:23] powerful Common Sense reasoning because
+[01:18:25] we can actually we can do the non-human
+[01:18:28] parts of the reasoning really well um
+[01:18:30] and so if there are people who have a
+[01:18:32] good you know a good leg up on doing the
+[01:18:34] human parts that it will be possible to
+[01:18:36] to merge those in an interesting way and
+[01:18:39] uh uh hope to be able to see that as an
+[01:18:41] application of our
+[01:18:43] API let's see
+[01:18:45] yes hi I'm Mo Benjamin Mo Hill so I mean
+[01:18:50] I guess uh a lot of people ask questions
+[01:18:52] about the data so I'll ask one about the
+[01:18:53] about the code uh you mentioned that one
+[01:18:55] of the benefits would be uh that that
+[01:18:57] when people have to go and you know
+[01:18:59] solve these problems themselves they
+[01:19:00] often do it wrong so you've written six
+[01:19:02] million five to six million lines of uh
+[01:19:04] clean Mathematica code but presumably
+[01:19:06] there's some uh uh there are a few
+[01:19:07] mistakes in there as well yes and um uh
+[01:19:10] so one of the too many issues that I'm
+[01:19:12] involved with is reproducible um science
+[01:19:14] and sort of advocating for that and the
+[01:19:17] the standard there seems to be that you
+[01:19:18] sort of provide the code and people can
+[01:19:19] sort of look in them is there is there
+[01:19:21] any sort of analog in here or we just
+[01:19:22] sort of to trust that this has been done
+[01:19:24] correctly right well so I mean we we've
+[01:19:27] got uh in different worlds so for
+[01:19:29] example you know with with Mathematica
+[01:19:32] one of the great things is that the code
+[01:19:33] tends to be succinct enough that you can
+[01:19:35] actually read it and you know for
+[01:19:37] example we have this big thing the
+[01:19:39] demonstrations project okay which is a a
+[01:19:41] project about sort of contributing
+[01:19:43] interactive uh um demonstrations of
+[01:19:46] things using using Mathematica this is
+[01:19:48] the 4,740 of these things now um as of
+[01:19:51] today so this is a case where there's
+[01:19:54] there's Great Value to being able to
+[01:19:55] sort of succinctly read little pieces of
+[01:19:57] code that do things um in terms of of
+[01:20:00] well from alpha um in terms of
+[01:20:02] Mathematica itself um you know what we
+[01:20:04] try to do is to do sort of the best QA
+[01:20:08] that we can and um in a sense what we've
+[01:20:11] leared is at various times in the
+[01:20:13] history of Mathematica we made available
+[01:20:15] big swaths of source code um you know
+[01:20:18] big swaths of mathematical code actually
+[01:20:19] for a decade we used to ship kind of the
+[01:20:23] the code that underlay um a lot of our
+[01:20:26] calculus computations in Mathematica and
+[01:20:29] the sad fact was that nobody read it I
+[01:20:32] mean it was very frustrating because a
+[01:20:33] lot of effort went into actually making
+[01:20:35] that code clean enough that we thought
+[01:20:36] we could expose it to people but nobody
+[01:20:39] read it so why not well there was a lot
+[01:20:41] of effort to read it but also a lot of
+[01:20:43] these kinds of computations it's better
+[01:20:46] to look at the result and check it and
+[01:20:48] you know do run test cases and so on
+[01:20:50] rather than to go and try and read this
+[01:20:51] code I mean it's it's it's kind of like
+[01:20:53] the same the same issue comes up uh you
+[01:20:56] know with uh one of the things that's
+[01:20:58] you know people say well you know just
+[01:21:00] show me it as a theorem so to speak you
+[01:21:02] know show me that that you know prove
+[01:21:04] that you've got the right answer let's
+[01:21:05] say in Mathematica for for math kinds of
+[01:21:07] things you know prove that you've got
+[01:21:08] the right answer you know synthesize a
+[01:21:10] kind of uh a human readable theorem well
+[01:21:13] um actually the state-of-the-art of
+[01:21:14] synthesizing human readable theorems
+[01:21:15] isn't that good yet um but uh um you
+[01:21:18] know typically machine generated proofs
+[01:21:21] um are you know just full of steps all
+[01:21:23] of which actually makes sense but the
+[01:21:25] whole thing is is completely un un kind
+[01:21:28] of not cognitively uh sort of uh
+[01:21:31] accessible to a person um the uh the
+[01:21:34] thing that one realizes at some point is
+[01:21:35] humans reading this are vastly less
+[01:21:38] efficient than automated quality
+[01:21:39] assurance methods trying to check pieces
+[01:21:41] of what's going on so you know our our
+[01:21:44] emphasis has been sort of do the best
+[01:21:46] sort of QA that we can run as many test
+[01:21:48] cases and then let people have the kind
+[01:21:50] of uh the behavior Ro so sort of aspects
+[01:21:53] of the code and and just run it and so
+[01:21:54] on which is not to say that that we
+[01:21:56] won't make available uh if there's some
+[01:21:58] particular area where there's some
+[01:22:00] particularly interesting you know comput
+[01:22:01] actually having said that for example
+[01:22:03] things like the the formulas that wol
+[01:22:05] from alfha uses to compute things you
+[01:22:07] usually can just ask it and it will show
+[01:22:09] you the formula that uses to compute
+[01:22:11] something I mean when it's in deeper
+[01:22:13] levels of code I mean you know if it's
+[01:22:14] going and solving you know if I type in
+[01:22:17] some you know random uh um I do love the
+[01:22:21] way that I can type this stuff in
+[01:22:22] absolutely cruddy notation let's see see
+[01:22:25] if it understood that okay you know I
+[01:22:26] type in some random nonlinear
+[01:22:28] differential equation um uh you know
+[01:22:31] this is not the code that is making that
+[01:22:33] is solving that differential equation I
+[01:22:35] guarantee this is a huge amount of code
+[01:22:37] um and there's nothing you know it would
+[01:22:39] be a work of uh you know it's it's many
+[01:22:42] PhD thesis worth of work to go through
+[01:22:45] and figure out what in Earth all this
+[01:22:46] code is is uh um is doing and it's not
+[01:22:49] something that you don't have a
+[01:22:50] philosophical objection to releasing
+[01:22:53] pieces of code no I mean it's it's not a
+[01:22:55] you know particularly when it comes to
+[01:22:57] particular kinds of computations that
+[01:22:58] we're doing um you know our our pride of
+[01:23:01] of thing is not the models the models
+[01:23:04] are you know coming from the world our
+[01:23:07] you know our pride of thing is
+[01:23:08] integrating all this stuff and and uh as
+[01:23:10] I say in many cases let's see if we if
+[01:23:12] we ask something like you know I don't
+[01:23:13] know a pendulum let's try you know a 5
+[01:23:16] cm pendulum for example um it'll
+[01:23:19] probably tell me okay so it'll give me
+[01:23:20] some results here and somewhere it'll
+[01:23:23] say come on wake up here there we go
+[01:23:27] okay um someplace it'll say you know
+[01:23:30] there's a thing that says show formula
+[01:23:31] here okay so in this case I can go and
+[01:23:34] say you know the formula for a pendulum
+[01:23:36] is quite simple but it might be there
+[01:23:37] might be a much more complicated formula
+[01:23:39] for something that you would similarly
+[01:23:40] be able to get displayed there yes is
+[01:23:44] this going to be integrated into
+[01:23:46] Mathematica right now you can get a lot
+[01:23:48] of data on six and seven but this this
+[01:23:52] sounds pretty good right so the the um
+[01:23:55] what will happen is in a future version
+[01:23:57] of Mathematica um you'll actually be
+[01:23:59] able to type sort of wol from alfha
+[01:24:01] input into Mathematica in sort of a
+[01:24:03] special mode I think it'll be you type
+[01:24:04] an equal sign at the beginning of the
+[01:24:05] line you start typing it in it'll it'll
+[01:24:08] then be able to do the linguistic
+[01:24:09] analysis stuff from wol alpha it will go
+[01:24:11] and send the stuff out to the wol alpha
+[01:24:13] servers get the results back they'll
+[01:24:15] come back in these pods inside
+[01:24:17] Mathematica you then get to sort of
+[01:24:19] press the uh some button on these pods
+[01:24:21] to use the computation um that uh uh was
+[01:24:25] um uh that came back from from the
+[01:24:28] system so yes it will be it will be I
+[01:24:30] think that'll be a quite nice kind of
+[01:24:31] interation we can just take temperature
+[01:24:32] since we're at the bottom of the uh hour
+[01:24:34] here we can we can extend out a little
+[01:24:36] bit but how many people still have
+[01:24:37] questions they're eager to ask just a
+[01:24:40] not that many and how many have uh
+[01:24:42] queries they want to suggest Run Okay a
+[01:24:46] couple of those so maybe we can uh take
+[01:24:48] the questions and if you've got queries
+[01:24:49] you're thinking of end with a round of
+[01:24:51] some sample searches please pleas hi uh
+[01:24:54] it's Jonathan from MIT um I just
+[01:24:57] wondered how much more work you've got
+[01:24:59] to do on the natural language processing
+[01:25:01] side of it because it certainly seemed
+[01:25:03] that in a lot of the Search terms you
+[01:25:05] used there was a fairly sort of
+[01:25:06] specialist lexicon
+[01:25:08] of uh phrases uh symbols that perhaps
+[01:25:12] wouldn't be naturally apparent to the
+[01:25:16] public right so I mean the you know how
+[01:25:18] much work do we have to do we don't know
+[01:25:21] okay it's a simple is that I mean we we
+[01:25:23] look you know there's a we're running a
+[01:25:24] bunch of small tests of the system right
+[01:25:26] now and we are looking you know there is
+[01:25:29] a daily Splat log which means things
+[01:25:31] that fail right and we look through the
+[01:25:33] things that fail we try to figure out
+[01:25:35] why did they fail do they fail because
+[01:25:37] it's the it's just a type of query that
+[01:25:39] is not the kind of thing we deal with is
+[01:25:41] it failing because we don't have a
+[01:25:42] particular kind of domain is it failing
+[01:25:44] because we didn't understand the
+[01:25:45] linguistic aspects of it here's what
+[01:25:47] I've noticed um the the pure linguistic
+[01:25:51] fluffy as we call it which is you know
+[01:25:53] the extra words that people put in
+[01:25:55] saying you know what is the value of
+[01:25:58] such and such um you know we we're
+[01:26:01] pretty good at removing linguistic fluff
+[01:26:04] um and uh you know you have to be
+[01:26:06] careful when you remove linguistic fluff
+[01:26:07] because you have to make sure that there
+[01:26:09] wasn't a word like you know there wasn't
+[01:26:11] a critical some critical uh grammatical
+[01:26:13] structure inside the linguistic fluff um
+[01:26:16] and uh the um we're pretty good at
+[01:26:19] removing that um the uh the most what
+[01:26:22] what tends to happen when you look at
+[01:26:23] people interacting with a system is uh
+[01:26:26] at first they may ask things in in a
+[01:26:28] very fluffy form with with lots of extra
+[01:26:31] words and so on but pretty soon they get
+[01:26:33] lazy and they say I don't need all those
+[01:26:35] extra words let me just type in the
+[01:26:37] thing that I would say if I was talking
+[01:26:39] to somebody who really knew about this
+[01:26:40] particular area just the key things that
+[01:26:42] they need to know as soon as they get to
+[01:26:44] that point we don't even need to do this
+[01:26:46] defluffing and you know the things I was
+[01:26:48] typing in just because I wasn't wanting
+[01:26:50] to type a bunch of extra words um were
+[01:26:53] uh you know looked might look a little
+[01:26:55] bit cryptic but that you know the what
+[01:26:56] we see what seems to happen is that
+[01:26:58] people quickly uh tend to type in just
+[01:27:02] the concepts as they think about them
+[01:27:04] the word order is irrelevant the
+[01:27:05] grammatical structures are crummy um
+[01:27:08] it's just a bunch of Concepts it's kind
+[01:27:10] of the opposite of as geves it's like
+[01:27:11] just emote at geves yes yes right I mean
+[01:27:14] you know I think from a sort of
+[01:27:15] linguistic Theory point of view you know
+[01:27:17] we're much more seeing the kind of deep
+[01:27:19] structure of language the kind of ways
+[01:27:20] people think about things then we are
+[01:27:22] seeing the surface structure of of
+[01:27:24] nicely formed English sentences and so
+[01:27:26] on but you know this question of how
+[01:27:27] much further do we have to go in
+[01:27:28] linguistic analysis we don't know I mean
+[01:27:31] it's as simple as that the the um you
+[01:27:33] know it's uh um uh and we certainly um
+[01:27:37] uh you know depending on the
+[01:27:39] domain uh there sort of a a sublanguage
+[01:27:41] that happens in for example mathematics
+[01:27:44] that's its own quite complicated thing
+[01:27:45] where there are all these different ways
+[01:27:47] to say things and uh and so on and you
+[01:27:49] know we've done in the mathematics
+[01:27:51] domain and and things related to
+[01:27:52] mathematics I think we've done a really
+[01:27:53] good job of capturing the complete you
+[01:27:56] know language that any human would
+[01:27:58] understand um in some areas where there
+[01:27:59] are lots of words and lots of different
+[01:28:01] nuances of meaning um it's more
+[01:28:03] difficult and you know don't don't know
+[01:28:05] how difficult it will end up being
+[01:28:08] yes um I'm Peter Olson the free software
+[01:28:11] Foundation I'm particularly interested
+[01:28:12] in how this changes the landscape
+[01:28:14] relating to Public Access access to
+[01:28:16] knowledge because it seems there's a
+[01:28:18] great deal of information uh in journals
+[01:28:21] which some process has to occur in order
+[01:28:24] to free that up so it could be used in
+[01:28:25] your system could you comment on that
+[01:28:28] well so in terms of of journals and so
+[01:28:32] on I mean you know typically we're just
+[01:28:34] reading these papers and things I mean
+[01:28:36] so you know it's uh what what um you
+[01:28:40] know when there is systematic material
+[01:28:43] uh that um has been accumulated
+[01:28:46] somewhere let's say a proprietary
+[01:28:47] database of some kind you know the big
+[01:28:50] challenge for us is you know make the
+[01:28:52] right deals so that we can get that
+[01:28:53] proprietary database into the system I
+[01:28:55] mean that's that's really the um uh you
+[01:28:57] know that that's that's the thing that
+[01:28:59] has to happen um in terms of you know
+[01:29:01] have we been successful in making these
+[01:29:03] deals yeah we've been pretty successful
+[01:29:05] um you know by into the system you mean
+[01:29:06] also able to be taken out of the system
+[01:29:08] by the Casual user of wol from alpha
+[01:29:11] well okay so there there are problems
+[01:29:13] here because you know in the current
+[01:29:15] state of the world right there are you
+[01:29:17] know people go to a lot of trouble to
+[01:29:19] assemble these things and we may be able
+[01:29:21] to to convince people that you know it's
+[01:29:24] okay to have it be casually accessible
+[01:29:26] in the system particularly if they're in
+[01:29:27] the source information and so on but to
+[01:29:29] say well gee then you know can somebody
+[01:29:31] just take the thing that we just put a
+[01:29:33] huge amount of effort into assembling
+[01:29:34] and just lift it all and take it out you
+[01:29:37] know the answer will be no um that's you
+[01:29:39] know that's not uh and better that we be
+[01:29:42] able to give everybody access to
+[01:29:45] particular pieces of data and than but
+[01:29:48] but you know with the understanding that
+[01:29:50] they're not going to be able to lift the
+[01:29:51] whole thing out
+[01:29:52] um than that we say no no no we don't
+[01:29:54] want to touch anything where you can't
+[01:29:55] lift the whole thing out so let's just
+[01:29:57] not give people access to any of it um
+[01:30:00] but that's a you know I don't know all
+[01:30:01] of the you know we we have yet to learn
+[01:30:04] all of the issues that are going to come
+[01:30:05] up with this um you know right now I
+[01:30:07] think it's it's uh I've been very sort
+[01:30:10] of pleasantly actually surprised um by
+[01:30:13] the extent to which uh uh people have
+[01:30:15] been very very uh sort of cooperative
+[01:30:18] and practical about what we're doing
+[01:30:20] this fellow out of your field of view
+[01:30:22] I'm sorry please Christo figer from the
+[01:30:24] Kennedy School um I wonder you say all
+[01:30:27] sorts of data and I'm looking for the
+[01:30:29] philosophical and not the Practical
+[01:30:30] answer um there's a lot of individual
+[01:30:32] data around that is semi-public or if
+[01:30:35] you get access to Priority database so
+[01:30:37] will at some point I say okay who of the
+[01:30:38] relatives of Christoph schw figer can
+[01:30:41] pay their rent yeah that's a that's a
+[01:30:43] that's a nasty problem I mean so you
+[01:30:45] know for me you know what we're dealing
+[01:30:48] with is publicly accessible data
+[01:30:50] genuinely public data you know data on
+[01:30:52] public companies data on you know things
+[01:30:55] that are you know in the public record
+[01:30:56] well very public data now for example
+[01:30:59] one of the issues is things like people
+[01:31:01] search right and we we know we could do
+[01:31:04] a bunch of stuff there we know we could
+[01:31:05] line up a bunch of databases we could do
+[01:31:08] really good job personally I don't
+[01:31:10] really want to okay because right now
+[01:31:12] the state of these things is it's still
+[01:31:15] you know if if I look myself up on a
+[01:31:17] people search thing there'll be 15
+[01:31:18] copies of me and that's kind of you know
+[01:31:20] that as far as I'm concern that's sort
+[01:31:22] of good because there sort of the
+[01:31:24] information you know there public
+[01:31:25] records information but it's kind of a
+[01:31:26] little messy um you know probably with
+[01:31:28] the technology we have one could make it
+[01:31:30] much more precise personally I'm not
+[01:31:32] keen to do that um I don't think that
+[01:31:35] but you know people uh I don't know how
+[01:31:37] that will evolve and how the visibility
+[01:31:39] of Technology like this will cause you
+[01:31:42] know other people to think about doing
+[01:31:43] those kinds of things but you know
+[01:31:44] that's my personal you know preference
+[01:31:47] in terms of that that type of thing um
+[01:31:49] and and uh in and you know what we're
+[01:31:51] trying trying to do as I say um there's
+[01:31:53] a lot of very good genuinely public
+[01:31:56] information out there it is not our goal
+[01:31:58] to kind of borrow into stuff that uh
+[01:32:00] that I would prefer not to see borrowed
+[01:32:04] into yes I'm Sam lipaa graduate student
+[01:32:08] in chemistry at MIT um I feel like
+[01:32:10] people have been dancing around a
+[01:32:12] question a little bit because we are
+[01:32:14] here at the burkman center this basan of
+[01:32:16] Open Source and free culture and so this
+[01:32:19] is a a proprietary system running on
+[01:32:21] your own servers with your own employees
+[01:32:23] and so I I'm wondering what you think of
+[01:32:25] a sort of more Wikipedia like model I
+[01:32:28] can see reasons not to have it but on
+[01:32:30] the other hand I would say that you know
+[01:32:32] as a chemist who sometimes wants very
+[01:32:34] specialized data and sometimes has it I
+[01:32:37] might be a little upset if I have to pay
+[01:32:39] you to put my own data in and you might
+[01:32:41] be a little inundated if everybody who
+[01:32:44] wants to give you good data you have to
+[01:32:46] spend a lot of time curating do you
+[01:32:48] worry about some competitor coming and
+[01:32:51] making a wey data that's completely open
+[01:32:54] and growing much faster for example
+[01:32:57] that' be great I as far as I'm concerned
+[01:32:59] the the you know our goal look what
+[01:33:01] we've
+[01:33:02] done making this thing is not especially
+[01:33:05] easy and it has many parts it isn't just
+[01:33:08] a question of you know shovel a bunch of
+[01:33:10] data in and then it will all come alive
+[01:33:13] you know these uh uh one of the
+[01:33:15] challenges for example if I look at
+[01:33:17] Wikipedia today um Wikipedia is a
+[01:33:19] fantastic achievement it's very useful I
+[01:33:21] use it all the time um but it it uh you
+[01:33:24] know it it has gone in particular
+[01:33:26] directions um and for example a a common
+[01:33:29] observation is um when you uh if if you
+[01:33:33] are looking for some systematic data in
+[01:33:35] Wikipedia somebody may have put um you
+[01:33:37] know systematic data some somebody may
+[01:33:39] have for example loaded up um you know
+[01:33:42] some properties of some particular kind
+[01:33:44] of chemical they may have you know put
+[01:33:45] 300 of these things who knows if they're
+[01:33:47] laundering somebody else's IP or that
+[01:33:49] kind of thing but they anyway they put
+[01:33:51] 300 you know properties of 300 chemicals
+[01:33:53] very nice and consistently into 300
+[01:33:55] pages in Wikipedia then over the course
+[01:33:57] of the next two years people who thought
+[01:33:59] they knew better went and modified you
+[01:34:02] know 200 of those pages in Fairly random
+[01:34:04] ways that might have been an improvement
+[01:34:06] might not have been an improvement but
+[01:34:07] the result is that there's no
+[01:34:08] consistency left and when you try and
+[01:34:10] you know compute from that you're pretty
+[01:34:12] much sunk and as I say for us um the uh
+[01:34:17] uh you know Wikipedia's the most useful
+[01:34:18] thing about wikkipedia is the folk
+[01:34:20] information that you get from it what's
+[01:34:22] popular what are typical names for
+[01:34:24] things you know New York is also called
+[01:34:25] the Big Apple something you wouldn't
+[01:34:27] find in government sources um those
+[01:34:29] types of things I mean in terms of you
+[01:34:31] know is there a way I mean what we have
+[01:34:34] here is uh something that is not just a
+[01:34:39] you shovel data in you also have to have
+[01:34:41] all these real-time feeds for data you
+[01:34:43] have to have things that sort of compute
+[01:34:44] with the data you know I I've certainly
+[01:34:46] thought you know how do we you know how
+[01:34:47] can we kind of franchise out what we
+[01:34:49] have in some way it's it's it's not so
+[01:34:52] easy to see because it isn't just okay
+[01:34:55] here's a lump of data now go add to that
+[01:34:57] data it's here's a lump of data and all
+[01:34:59] these real-time feeds and all these
+[01:35:01] arrangements with people who are
+[01:35:02] providing real-time feeds and here's all
+[01:35:04] this computation that we have to do and
+[01:35:06] here's all this Linguistics that we have
+[01:35:07] to put in and pretty soon you're
+[01:35:09] reproducing the whole thing and by the
+[01:35:11] way it's free anyway so it's kind of
+[01:35:14] notum uh you know you're you're
+[01:35:16] reproducing something that is a a um uh
+[01:35:19] you know I mean one of the things that
+[01:35:21] you know what I'm what I'm interested in
+[01:35:22] doing is because I think it's a it's a
+[01:35:25] worthwhile thing and it makes I think
+[01:35:27] it's uh a nice thing for my project
+[01:35:30] number three is to sort of make
+[01:35:31] accessible to the world for free just
+[01:35:34] tons and tons of of knowledge and and
+[01:35:36] and information and computation I mean
+[01:35:38] in terms of your your question of
+[01:35:40] whether um whether there'll come a point
+[01:35:43] at which we are completely inundated by
+[01:35:45] people trying to feed things into the
+[01:35:46] system um uh you know that's a that's a
+[01:35:51] complicated economic Technical and other
+[01:35:54] question um the thing that is
+[01:35:56] encouraging to me in terms of that is uh
+[01:35:59] you know we've built pretty good
+[01:36:01] automated sort of automated curation
+[01:36:03] pipelines and things we've got pretty
+[01:36:05] good procedures I think we can withstand
+[01:36:06] a significant scaling up of the rate of
+[01:36:09] of data being absorbed by the system um
+[01:36:12] in terms of uh um will um well let's see
+[01:36:17] I mean the the uh um uh you know I I I
+[01:36:22] like to believe that there's sort of an
+[01:36:23] ecosystem that develops if people find
+[01:36:25] this useful and people um you know then
+[01:36:28] there's ways that we can support the
+[01:36:30] effort to sort of scale up having more
+[01:36:31] things be put in I also think that if
+[01:36:34] you actually want this to work well that
+[01:36:36] it is very hard to achieve that by
+[01:36:38] having sort of uh um you know 10,000
+[01:36:42] people just sort of all feed Little
+[01:36:43] random pieces in there is I know because
+[01:36:46] I've been doing it there is a need for
+[01:36:48] sort of central leadership to the thing
+[01:36:50] to actually have a cons assistant system
+[01:36:52] um that where all the pieces fit
+[01:36:53] together um and that's uh you know
+[01:36:55] that's something that is very hard to
+[01:36:57] achieve in kind of a a Wiki kind of
+[01:36:59] fashion as we start to wrap up are there
+[01:37:01] any interesting uh queries from our
+[01:37:03] online feeds of various kinds Omar
+[01:37:09] or that didn't mean to surprise you a
+[01:37:12] lot have been
+[01:37:13] covered and are there any search queries
+[01:37:16] as long as we've got an instance of this
+[01:37:17] up and running that people wanted to try
+[01:37:19] out is it worth it to do a few here the
+[01:37:21] front
+[01:37:23] row
+[01:37:25] who know know
+[01:37:28] I a map of a cat map of what map of a
+[01:37:32] cat a map of a cat is that a Dr Seuss
+[01:37:38] reference shows you my I'm sure it won't
+[01:37:41] uh no it it hopeless it this is what you
+[01:37:45] need to know right no I
+[01:37:47] mean so that's an example probably of of
+[01:37:51] uh
+[01:37:51] that's what I would call um uh that's
+[01:37:55] what I like to refer to as artificial
+[01:37:56] stupidity okay I think it did know the
+[01:37:59] wingspan of an unlean Sparrow sure knows
+[01:38:01] that right it it'll know a lot of sort
+[01:38:02] of folk information like that but but if
+[01:38:04] this is a if this is a cultural
+[01:38:05] reference which I don't happen to know
+[01:38:07] but umom oh okay okay okay yeah it does
+[01:38:11] not yet know Anatomy it knows it knows
+[01:38:13] it's beginning to know a fair amount
+[01:38:14] about it knows about drugs it knows
+[01:38:16] about diseases um it doesn't happen to
+[01:38:19] know Anatomy yet um the uh but this is
+[01:38:21] an example I mean you know this is a
+[01:38:24] little bit horrifying but but um uh this
+[01:38:26] is an example where um of what can
+[01:38:29] happen when you know it has a certain
+[01:38:30] set of Concepts and it's trying very
+[01:38:32] very hard um to figure something out and
+[01:38:34] it concluded that there's some
+[01:38:35] Australian company and uh caterpillar a
+[01:38:39] company in the
+[01:38:41] US yes there is a way to do that
+[01:38:45] question how real time are your data
+[01:38:47] when you say you have real-time feeds uh
+[01:38:49] take a stock say micro moft msft is it
+[01:38:53] the daily closes is it the 20 minute
+[01:38:56] delayed one minute prices or is it the
+[01:38:57] tick data it is okay so what we have is
+[01:39:01] um I think it'll be about one minute
+[01:39:02] delayed probably so it says one minute
+[01:39:04] AG go so this is the this is the feed
+[01:39:06] from the exchanges now of course there's
+[01:39:08] all kinds of Plumbing necessary to make
+[01:39:10] that happen yes we've got the that
+[01:39:12] plumbing done we don't have intraday
+[01:39:15] tick by tick data we have the the real
+[01:39:17] time data coming in um that there's some
+[01:39:20] limitations from changes about what we
+[01:39:21] can present for free etc etc etc long
+[01:39:24] story but it does suggest that one
+[01:39:25] artifact of this going public might be
+[01:39:28] lots of people coming up with odd
+[01:39:30] juxtapositions or
+[01:39:31] comparisons the an increase in the tax
+[01:39:35] on fishing trollers with the amount of
+[01:39:36] fishing in a particular country right
+[01:39:39] that yeah so see I mean one of the
+[01:39:41] things what okay so one thing that I
+[01:39:43] have to say about when this goes live um
+[01:39:46] is you know one of my greatest concerns
+[01:39:50] is the a high density of what I might
+[01:39:52] call novelty queries okay which are
+[01:39:55] really not the point we we could spend a
+[01:39:57] huge amount of effort covering lots of
+[01:39:59] novelty queries and that would it would
+[01:40:02] be it would be lots of fun but after the
+[01:40:04] novelty dies down then we're left with
+[01:40:06] people who actually want to use this you
+[01:40:08] know many times a day every day and in
+[01:40:11] you know as far as I'm concerned that's
+[01:40:12] that's probably the place where you know
+[01:40:14] we but of course unusual juxtapositions
+[01:40:17] may not be Novelties they may be novel
+[01:40:20] as compared to Sparrow wingspans and
+[01:40:22] stuff like exactly no I mean and that
+[01:40:23] would be you know that's will be of
+[01:40:25] great interest I mean this is you know I
+[01:40:26] will be fascinated to read you know some
+[01:40:29] of these particular these Splat logs of
+[01:40:31] of you know things that didn't work and
+[01:40:33] uh you know see what's uh um see what
+[01:40:35] kinds of things people think of yes uh
+[01:40:38] just as you talk about this I wonder uh
+[01:40:41] how will you feel if Google starts to
+[01:40:43] present your results as one of their
+[01:40:45] responses to questions the way they
+[01:40:47] present the Wikipedia results and and
+[01:40:49] and other facts they will present
+[01:40:51] the msft quote and then a bunch of other
+[01:40:54] um right I mean you know obviously we're
+[01:40:56] working you know to partner with sort of
+[01:40:59] all possible organizations that make
+[01:41:01] sense and you know search narrative news
+[01:41:05] you know all these kinds of things are
+[01:41:06] somewhat complimentary to what we have
+[01:41:09] um and uh uh you know hopefully there'll
+[01:41:11] be some great uh uh sort of uh um
+[01:41:14] synergies that exist there I mean as a
+[01:41:16] practical matter um you know you got to
+[01:41:19] realize that this we are generating
+[01:41:22] things on the fly so we're not this
+[01:41:24] isn't I mean even if we wanted it to be
+[01:41:27] the case and we might that we could say
+[01:41:29] okay let's expose this to search engines
+[01:41:32] what are we going to expose you know we
+[01:41:34] could start generating you know a
+[01:41:36] quadrillion pages on the web so so the
+[01:41:38] best you could hope for is actually you
+[01:41:39] know wolf from might wolf from alpha may
+[01:41:41] know the answer to this click here yes
+[01:41:43] as one of the options right so so I mean
+[01:41:44] one of the things that we will see is
+[01:41:47] there is this question of pre-scanning
+[01:41:49] uh generic for examp example the generic
+[01:41:51] search queries right and asking does wol
+[01:41:54] from Mala have a chance right uh we
+[01:41:56] actually have we have some pretty good
+[01:41:59] ideas about how to fast prescan um kind
+[01:42:01] of the generic stream to see what uh in
+[01:42:04] what cases we we have a chance I mean
+[01:42:06] know a very a very obvious turistic is
+[01:42:08] if it's got numbers in it that's a you
+[01:42:10] know that's a place where um you know we
+[01:42:13] have a chance one of the questions this
+[01:42:15] is naturally led to for me is thinking
+[01:42:18] about whether the great universities and
+[01:42:20] libraries of world see this kind of
+[01:42:22] Enterprise as like beneath them it's
+[01:42:25] mere aggregation of facts and number
+[01:42:27] crunching or way too far above them they
+[01:42:29] couldn't possibly afford to do anything
+[01:42:31] so comprehensive and um to me trying to
+[01:42:35] find some sweet spot where edu and.org
+[01:42:37] can find a role here in this ambitious
+[01:42:42] uh project um that's to me one of the
+[01:42:45] ening that's a really interesting right
+[01:42:47] it's a really interesting question I
+[01:42:48] mean I think that you know what has
+[01:42:49] tended to happen you know in Academia is
+[01:42:52] that uh the accumulation of data while
+[01:42:55] in fact extremely useful for the world
+[01:42:57] has in the pre in the last 50 years or
+[01:42:59] so kind of slid below you know to sort
+[01:43:02] of the below of what what is considered
+[01:43:05] kind of uh you know uh I don't know what
+[01:43:08] you know good academic you know feathers
+[01:43:11] or something um and that's sort of a
+[01:43:14] shame because you know often the
+[01:43:16] aggregation of hard you know data is a
+[01:43:19] hell of a lot more useful for the world
+[01:43:20] than another kind of um opinion piece so
+[01:43:23] to speak generated in some particular
+[01:43:25] area and I think it's a shame that that
+[01:43:27] it has not been you know it hasn't
+[01:43:30] tended to be academically respectable to
+[01:43:32] to go out and um sort of uh just you
+[01:43:35] know study pieces of data I mean at
+[01:43:36] different times in history there have
+[01:43:38] been different kinds of things like you
+[01:43:39] know when chemistry was young for
+[01:43:41] example I think it was the case that
+[01:43:42] people just went out and you know they
+[01:43:43] looked at every possible you know
+[01:43:45] chemical I think that was that was it
+[01:43:47] was certainly commercially uh uh
+[01:43:49] respectable I I think it was also
+[01:43:51] academically respectable um the uh in
+[01:43:54] terms of libraries
+[01:43:56] um I I I think you're right that in that
+[01:43:59] case this tends to be you know this is
+[01:44:02] much too kind of uh computer complicated
+[01:44:05] for the typical current sort of Library
+[01:44:08] situation I mean it's been interesting I
+[01:44:09] you know as we've uh as we've talked to
+[01:44:11] people about wol malfer I've been kind
+[01:44:13] of curious what are the historical
+[01:44:15] antecedence you know what what um uh you
+[01:44:17] know even though the technology might
+[01:44:19] not have existed you know what what sort
+[01:44:22] of got close to this in the past and I
+[01:44:24] think that the um there obviously have
+[01:44:25] been lots of Library efforts
+[01:44:27] encyclopedia efforts um actually you
+[01:44:30] know Li Nets basically had this nailed
+[01:44:33] um you know he had the idea of you know
+[01:44:35] uh we can take sort of any human
+[01:44:37] argument and we can find sort of a a way
+[01:44:40] to mechanically computationally work out
+[01:44:42] the answer to the argument and he was
+[01:44:43] making mechanical calculator type things
+[01:44:46] and so on and then he was going around
+[01:44:48] convincing the princes of his time to go
+[01:44:50] and try and assemble giant libraries so
+[01:44:52] you could feed the information into the
+[01:44:53] machine and so on and he you know he had
+[01:44:56] he had the idea the only problem was he
+[01:44:58] was 300 years too early um but uh you
+[01:45:01] know so this is um but yes I think the
+[01:45:04] question you ask is really interesting
+[01:45:05] and I I i' I've thought about it a
+[01:45:07] certain amount and uh uh it would be be
+[01:45:11] a great topic to to talk further about
+[01:45:13] so this bridge to the 17th century will
+[01:45:14] be completed when do we go live yeah
+[01:45:18] right well a few weeks a few weeks it's
+[01:45:20] it's uh it's a question of um uh
+[01:45:23] there'll be even I I hope the going live
+[01:45:26] event will be actually we'll see we'll
+[01:45:29] see if we really if we really have the
+[01:45:32] um nerve to do this will actually be a
+[01:45:34] live webcast thing oh wow but we know
+[01:45:36] how well that
+[01:45:38] works greetings to those out on the
+[01:45:40] webcast and to those who will uh hear
+[01:45:42] the podcast that will shortly follow
+[01:45:44] please join me in thanking Steven
+[01:45:46] [Applause]
+[01:45:49] Wolfram
+[01:45:51] [Applause]
