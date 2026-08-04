@@ -1,0 +1,1682 @@
+[00:00:08] so I hope if some of you here are from
+[00:00:10] the healthcare world
+[00:00:11] all tell me a little bit I plan to leave
+[00:00:13] lots of time for questions and comments
+[00:00:15] and discussion about your perspective on
+[00:00:17] dealing with some kinds of ransomware
+[00:00:19] threats and other types of online
+[00:00:20] security issues that you've perhaps
+[00:00:23] encountered my background is really in
+[00:00:25] thinking about the extra mass of
+[00:00:27] security incidents I'm interested in
+[00:00:29] what happens after something goes wrong
+[00:00:32] after data is stolen after hard drives
+[00:00:35] are infected whenever it's gonna be how
+[00:00:37] do people make decisions about what the
+[00:00:38] right response is how do policymakers
+[00:00:40] give guidance about what those decisions
+[00:00:43] should be how does that guidance
+[00:00:44] actually influence decisions does it
+[00:00:46] influence decisions at all who sues whom
+[00:00:49] how are the costs going to be settled so
+[00:00:51] I want to give sort of a brief overview
+[00:00:53] both of the emergence of ransomware for
+[00:00:55] those of you who may not be super
+[00:00:57] familiar with it as a threat model and
+[00:00:59] also kind of how hospitals in the health
+[00:01:01] care industry gets dragged into this
+[00:01:03] space in the first place over really the
+[00:01:06] past 5-10 years we're looking at so this
+[00:01:09] is a graph which is not showing up very
+[00:01:10] well in this light blue that's basically
+[00:01:13] showing you the drop and how much you
+[00:01:14] can sell a stolen payment card number
+[00:01:16] four on the black market so if you think
+[00:01:18] back 10 years right if we're talking
+[00:01:20] 2006 2007 the typical model for the
+[00:01:23] online in cyber crew from December
+[00:01:24] cybercriminal is like Albert Gonzalez
+[00:01:26] who leads the big heist at TJX steals
+[00:01:29] millions and millions of credit card
+[00:01:31] numbers that's where the money is you
+[00:01:33] steal lots of credit card numbers you
+[00:01:34] sense them through Eastern Europe
+[00:01:36] Ukraine they're sold all over the place
+[00:01:39] now worse a fair bit of money right
+[00:01:41] people will buy those stolen payment
+[00:01:43] card numbers probably in 2006-2007 for
+[00:01:46] upwards of $25 they're yours are already
+[00:01:48] starting to see it decline in 2011
+[00:01:50] people do a lot of that right you've all
+[00:01:52] read about a lot of these breaches in
+[00:01:54] which retailers are hacked and millions
+[00:01:56] of payment card records are stolen in
+[00:01:58] around 2011 2012 by 2014 you're starting
+[00:02:03] to see this really precipitous drop and
+[00:02:05] how much you can sell those payment card
+[00:02:07] numbers for and there are a couple
+[00:02:09] reasons for that
+[00:02:10] right part of is just there's this huge
+[00:02:12] glut right the supply has gotten so
+[00:02:14] great that everybody's competing in
+[00:02:17] these black market forums part of it is
+[00:02:19] also that credit card companies payment
+[00:02:21] networks are getting better at detecting
+[00:02:24] and mitigating the
+[00:02:25] they're detecting these things faster so
+[00:02:27] you can't spend as much money on these
+[00:02:29] credit card numbers that you're
+[00:02:30] purchasing a lot of the time but for all
+[00:02:32] of these various reasons by 2016 this is
+[00:02:35] data collected by Intel security and the
+[00:02:38] Verizon data breach investigations
+[00:02:39] report last year but you've dropped from
+[00:02:42] $25 per record in 2011 to $6 per record
+[00:02:45] in 2016 as this is happening as we're
+[00:02:48] seeing these prices drop one of the
+[00:02:51] things that gets a lot of attention in
+[00:02:53] the media and people who sort of think
+[00:02:55] about the economics of cybercrime is the
+[00:02:58] fact that the medical records have
+[00:02:59] gotten really valuable right there's
+[00:03:02] there's not that glut yet of medical
+[00:03:04] records it's worth people think about
+[00:03:06] five to ten times as much as a payment
+[00:03:08] card record on the black market in
+[00:03:11] 2011-2012 we're not the only people who
+[00:03:14] can read these articles criminals catch
+[00:03:16] on to the fact that this is where the
+[00:03:18] money is and accordingly you see exactly
+[00:03:20] what you would expect a huge increase
+[00:03:22] from 2011 to 2015 in the number of
+[00:03:24] medical records that are being stolen
+[00:03:26] right if you think about the big medical
+[00:03:28] breaches you've probably read about
+[00:03:29] Anthem Blue Cross Blue Shield is a
+[00:03:31] relatively recent compared to kind of
+[00:03:34] the payment card retailer breaches from
+[00:03:36] before again a number of reasons why we
+[00:03:39] might think of medical records as being
+[00:03:41] more expensive or more valuable that's
+[00:03:43] data that usually isn't discardable
+[00:03:46] right the way you can cancel your credit
+[00:03:48] card number can't do that with your
+[00:03:50] health insurance policy number for the
+[00:03:52] most part of the way I actually sort of
+[00:03:53] started getting interested in health
+[00:03:55] care and started talking to hospitals
+[00:03:56] and people in that industry was because
+[00:03:58] I was doing a project looking at what
+[00:04:01] happens after these large-scale data
+[00:04:02] breaches and why has it been so hard to
+[00:04:05] translate a lot of the lessons learned
+[00:04:06] in the payment card industry to the
+[00:04:08] healthcare industry right why haven't we
+[00:04:10] gotten to the point at detecting
+[00:04:12] healthcare fraud or canceling policy
+[00:04:14] numbers or replacing some of this data
+[00:04:16] that we got to over years of learning
+[00:04:20] about it in the payment card world which
+[00:04:22] was totally fascinating and I learned a
+[00:04:24] lot about sort of how healthcare data is
+[00:04:26] handled and I'm sure there's much much
+[00:04:28] more that I don't know but this is
+[00:04:31] happening 2015 we've got 80 million
+[00:04:35] records 80 million medical records
+[00:04:37] stolen right the same
+[00:04:38] thing is happening to the medical data
+[00:04:40] that happened to the payment card data a
+[00:04:41] couple years earlier
+[00:04:43] Alison there's this huge glut
+[00:04:44] everybody's medical records have already
+[00:04:46] been stolen five times over you can't
+[00:04:48] tell them for as much money anymore you
+[00:04:50] start to see these drops in price again
+[00:04:52] here's a record if you can read this one
+[00:04:55] either it's being sold for five dollars
+[00:04:57] full medical record right this is this
+[00:04:59] is not big money anymore and so the next
+[00:05:02] step in this progression not just for
+[00:05:04] hospitals for for everybody pretty much
+[00:05:07] is really gonna be ransomware
+[00:05:09] and that's gonna start insert a full
+[00:05:11] force in 2013 2014 we're gonna see
+[00:05:14] cryptolocker and all of its sort of
+[00:05:16] subsequent copycat programs coming out
+[00:05:19] making millions of dollars there and
+[00:05:21] it's going to hit the healthcare
+[00:05:23] industry on the whole as with the data
+[00:05:25] breach is a little bit later right it's
+[00:05:28] not gonna become a sort of big deal
+[00:05:30] healthcare problem pretty much until
+[00:05:31] last year you start reading about
+[00:05:33] hospitals being hit by ransomware I have
+[00:05:35] to cover yet that in sort of every other
+[00:05:37] factored statistic I'm vaguely going to
+[00:05:39] reference what the fact that there was
+[00:05:40] so much we don't know when we talk about
+[00:05:42] ransomware numbers right you're not
+[00:05:44] obligated to report ransomware incidents
+[00:05:46] so we assume that however many we know
+[00:05:49] about there are hundreds thousands
+[00:05:51] millions more out there that we don't
+[00:05:53] know about for a lot of good reasons you
+[00:05:55] probably don't want to talk about it if
+[00:05:57] you're a company that's been hit by
+[00:05:59] ransomware
+[00:05:59] there's just really really incomplete
+[00:06:02] information so everything I say should
+[00:06:04] be sort of treated in that vein as you
+[00:06:06] know we think this is true based on what
+[00:06:08] very very little we know what we do know
+[00:06:10] is that last year there were more than a
+[00:06:12] dozen successful ransomware attacks on
+[00:06:14] hospitals and by successful I just mean
+[00:06:16] managed to encrypt all of their servers
+[00:06:18] managed to sort of either force them to
+[00:06:20] make a payment or to shut down
+[00:06:22] everything and start from scratch
+[00:06:24] rebooting from their backups if they had
+[00:06:26] backups and the other thing that's
+[00:06:29] really interesting about hospitals which
+[00:06:31] on the whole is not true of other
+[00:06:32] sectors where we see ransomware is that
+[00:06:35] there's actually strains of ransomware
+[00:06:37] that have been designed specifically for
+[00:06:39] hospitals that we see them being
+[00:06:41] targeted in a more focused way right
+[00:06:43] most ransomware that we're familiar with
+[00:06:45] is just kind of indiscriminate right it
+[00:06:48] goes out it looks for servers it says
+[00:06:50] here's a server it encrypts it
+[00:06:51] demands a generic fee usually in
+[00:06:53] bitcoins usually sort of hundreds of
+[00:06:55] dollars let's say between three and six
+[00:06:57] hundred dollars and what you start to
+[00:06:59] see last year with a piece of ransomware
+[00:07:01] called locky is a piece of ransomware
+[00:07:03] that has been specifically designed to
+[00:07:05] target one sector it's charging much
+[00:07:08] higher fees right it knows it's not just
+[00:07:10] gone after your individual laptop it
+[00:07:11] knows that it's targeting places that
+[00:07:13] have more money to spend than just a few
+[00:07:16] hundred dollars so it's raising those
+[00:07:18] fees it's working pretty well on the
+[00:07:21] whole for those of you who have been
+[00:07:22] fortunate enough not to encounter a lot
+[00:07:25] of ransomware in your life I want to
+[00:07:27] give you sort of a little bit of a sense
+[00:07:28] of what that process looks like how it
+[00:07:31] works especially how it works with this
+[00:07:33] one piece of ransomware we're going to
+[00:07:34] talk about a lot about and lucky here's
+[00:07:36] everybody realizing last year there's
+[00:07:38] too much stolen healthcare data
+[00:07:39] something's got to give what gives is
+[00:07:42] lucky right so you start to see starts
+[00:07:44] out usually as an email send a kind of
+[00:07:47] generic email somebody in the hospital
+[00:07:49] accounting system dear sir/madam please
+[00:07:51] see attached file regarding clients
+[00:07:53] recent bill there's a word document
+[00:07:55] attached invoice follow blah blah blah
+[00:07:57] you open the word document again there's
+[00:08:01] a lot of training in these hospitals
+[00:08:03] there's a lot of training that you all
+[00:08:04] probably go through wherever you work
+[00:08:05] about you never open that attachment and
+[00:08:07] never click on that email in the first
+[00:08:09] place which is good training it is
+[00:08:12] important to learn but also when you go
+[00:08:14] and you talk to people in these
+[00:08:15] hospitals they say you know I get
+[00:08:17] invoices all day long I get emails with
+[00:08:19] attachments that are really important
+[00:08:21] from insurance companies from patients
+[00:08:23] from doctors right there's no there's no
+[00:08:26] obvious way to feel that's the answer is
+[00:08:28] we're just going to teach every single
+[00:08:29] person who works in every single
+[00:08:30] hospital much less every other place and
+[00:08:32] in the world not to open this attachment
+[00:08:35] though we could certainly be doing
+[00:08:37] better at that than we are you open the
+[00:08:39] attachment you get this totally
+[00:08:41] indecipherable Word document of garbage
+[00:08:44] and it tells you look if the data
+[00:08:46] encoding is incorrect enable macros
+[00:08:48] right up top Microsoft Word is warning
+[00:08:51] you be careful you're in protected view
+[00:08:53] email attachments can contain viruses
+[00:08:55] unless you need to edit it's safest to
+[00:08:57] stay in protective view but then there's
+[00:08:59] a little button you can click to enable
+[00:09:03] and if you do that thinking okay Leo
+[00:09:04] clearly
+[00:09:05] the encoding is wrong I should enable
+[00:09:07] macros that's one lucky guess your hard
+[00:09:10] drive resets your wallpaper to give you
+[00:09:12] very explicit instructions one of the
+[00:09:14] problems the people who operate
+[00:09:16] ransomware schemes it encounter a lot of
+[00:09:18] the time by the way all payments and
+[00:09:19] ransomware are generally made in Bitcoin
+[00:09:21] because it's much less easy to trace
+[00:09:23] right it's much harder to figure out who
+[00:09:25] you've paid or for law enforcement to
+[00:09:26] catch them a lot of people hospitals but
+[00:09:29] also lots of other places don't really
+[00:09:32] know how to purchase Bitcoin so I
+[00:09:34] started getting these sort of very
+[00:09:35] detailed descriptions of okay guys
+[00:09:37] here's what you do you know open up this
+[00:09:39] browser go to this address
+[00:09:40] step by step there are even customer
+[00:09:42] support operations really right you can
+[00:09:45] call them you can say I'm trying to pay
+[00:09:47] you by I don't know how and they've
+[00:09:49] they've really tried to make it easier
+[00:09:50] and I should mention by the way one of
+[00:09:52] the reasons that ransomware doesn't
+[00:09:54] doesn't get big until the past few years
+[00:09:56] not just that you can sell stolen
+[00:09:58] payment card data for a lot of money
+[00:10:00] read somewhere has a model as a piece of
+[00:10:02] malware has been around since the 90s
+[00:10:04] but you need some untraceable payment
+[00:10:06] system right you can't be demanding this
+[00:10:08] and asking for a MasterCard number
+[00:10:10] because then it's really easy to trace
+[00:10:12] whose MasterCard account that is it's
+[00:10:13] really easy for MasterCard to shut that
+[00:10:15] down so you need to wait for Bitcoin to
+[00:10:18] get sort of popular and accepted enough
+[00:10:20] that you can walk any clueless hospital
+[00:10:23] administrator through the process of
+[00:10:25] purchasing it locks your screen here's
+[00:10:28] your here's your instruction set and
+[00:10:30] then you have to make a decision about
+[00:10:33] what you do next and a lot of my
+[00:10:35] interest in a lot of what I want to talk
+[00:10:36] about today is sort of how you make that
+[00:10:38] decision what guidance you have in terms
+[00:10:41] of the kind of reigning king of hospital
+[00:10:44] data security which is of course HIPAA
+[00:10:47] the Health Insurance Portability and
+[00:10:48] Accountability Act what what kind of
+[00:10:51] information you have from that that
+[00:10:52] maybe helps you think about what you
+[00:10:54] should do next and what I want to try
+[00:10:58] and focus on because I talk a lot about
+[00:10:59] sort of ransomware in general and how it
+[00:11:01] works and how people respond to it but
+[00:11:03] because this is a healthcare series I
+[00:11:05] want to focus on sort of hospital
+[00:11:06] ransomware attacks in particular in the
+[00:11:08] spirit of how are these ransomware
+[00:11:10] attacks different from all other
+[00:11:12] ransomware attacks you can see I started
+[00:11:13] thinking about this talk right around
+[00:11:15] Passover and what you've seen so far is
+[00:11:18] pretty standard
+[00:11:19] right that could happen to anybody does
+[00:11:21] happen to anybody you see law firms hit
+[00:11:23] with this get enough specialized lock
+[00:11:25] you was for hospitals law firms get this
+[00:11:27] they get the demand for five hundred
+[00:11:28] dollars they just pay they move on they
+[00:11:30] think they're lucky nobody asked for
+[00:11:32] more hospitals start seeing this it's
+[00:11:35] not huge sums of money we see sort of
+[00:11:37] some negotiation at the very beginning
+[00:11:39] of 2016 in which they're asking for a
+[00:11:42] million dollars in bitcoins and their
+[00:11:45] hospital saying you can't do that
+[00:11:47] how about twenty five thousand right so
+[00:11:50] you you see it sort of balance out
+[00:11:52] around twenty thousand or a little lower
+[00:11:54] in terms of payments that we we know of
+[00:11:57] actually being made by hospitals and to
+[00:11:59] the criminal right the cost of
+[00:12:01] distributing this is not such that you
+[00:12:03] need it to be a million dollar payout
+[00:12:05] seventy thousand dollars is a good
+[00:12:07] amount of money
+[00:12:07] to get for one ransomware infection much
+[00:12:10] more than you're getting from most
+[00:12:12] ransomware for most individual
+[00:12:13] infections mostly it's being paid
+[00:12:19] directly by hospitals at the moment
+[00:12:21] because mostly they can't get insurance
+[00:12:24] to cover ransomware in particular right
+[00:12:26] it's not it's it's too resented insurers
+[00:12:29] are too sort of nervous about how to
+[00:12:31] model it and how to cover it that for
+[00:12:33] most policies you're not going to get
+[00:12:35] that included but it's been an issue and
+[00:12:38] ensures are actually very interested in
+[00:12:40] the question of how they can sell these
+[00:12:41] policies but they're scared that they
+[00:12:44] don't that we can't sort of build the
+[00:12:45] actuary and while actuarial models in a
+[00:12:47] way that means they'll definitely be
+[00:12:49] able to to cover their costs if they do
+[00:12:52] that one of the thing I want to point
+[00:12:54] out about Lackey
+[00:12:55] it goes right for the volume shadow
+[00:12:59] system which is the kind of default
+[00:13:00] windows backup system that many
+[00:13:03] hospitals use many windows users use to
+[00:13:05] create automatic backups so kind of like
+[00:13:08] if people use Mac's
+[00:13:09] time machine where it automatically goes
+[00:13:11] through and backs up your stuff somehow
+[00:13:13] every set number of hours or days so
+[00:13:16] system like that used for Windows
+[00:13:18] creates these shadow copies they're
+[00:13:21] called
+[00:13:21] if your shadow copies are networked to
+[00:13:24] your computer as you plug in external
+[00:13:26] hard drive and then you take it away
+[00:13:27] lock you can't do anything about that
+[00:13:29] because it has no connection but if it's
+[00:13:32] network as it
+[00:13:33] it would be in hospital for a lot of
+[00:13:34] servers a lot you go straight for those
+[00:13:36] it encrypts them as well so it's not the
+[00:13:39] most sophisticated piece of malware that
+[00:13:41] we've ever seen but it's good enough to
+[00:13:43] look for the backups it's good enough to
+[00:13:46] get the job done in a lot of cases in
+[00:13:50] terms of why hospitals are a little bit
+[00:13:52] different why people would target
+[00:13:54] hospitals why they'd be interested in
+[00:13:56] sort of making that a focus for an
+[00:13:59] entire piece of malware a number of
+[00:14:02] reasons that are very similar to why
+[00:14:03] there are focus for data breaches right
+[00:14:05] even a lot of legacy systems in
+[00:14:07] hospitals you've got a lot of devices
+[00:14:09] and pieces of machinery that only run on
+[00:14:13] certain versions of Windows that are no
+[00:14:15] longer supported no longer have security
+[00:14:17] updates that you feel you can't
+[00:14:19] necessarily easily change because the
+[00:14:21] HIPAA compliance is hanging over you and
+[00:14:23] you're worried about you know am I sure
+[00:14:26] that the new version meets all of the
+[00:14:28] criteria that the old version did do I
+[00:14:30] need to go through a long review process
+[00:14:32] to make sure that this is going to be in
+[00:14:35] compliance with HIPAA in the first place
+[00:14:36] the other thing I want to say about
+[00:14:38] HIPAA is that it's very focused right
+[00:14:41] it's ready 20 years ago we ransomware is
+[00:14:43] not on the scene obviously it's very
+[00:14:45] focused on the protection of personal
+[00:14:47] health information very interested in
+[00:14:50] the question of you know have you let
+[00:14:51] people's private health information be
+[00:14:53] accessed by somebody else do you need to
+[00:14:55] let them know about that what are the
+[00:14:57] rules and when where is not that for the
+[00:15:00] most part but ransomware is coming at
+[00:15:02] this from a threat model that is not
+[00:15:04] really what HIPAA is designed to protect
+[00:15:06] against so if you if you look at the
+[00:15:08] incredibly elaborate and often
+[00:15:10] resource-intensive security systems that
+[00:15:12] are set up in hospitals right I mean
+[00:15:14] there's there's more security in just in
+[00:15:17] terms of sort of sheer number of things
+[00:15:19] that people have bought in hospitals
+[00:15:22] than I've seen maybe anywhere except
+[00:15:24] financial firms they're really investing
+[00:15:26] in this they're really sort of trying
+[00:15:27] hard to take it seriously but the other
+[00:15:29] thing that HIPAA means because it's
+[00:15:31] pretty complicated because there are a
+[00:15:33] lot of rules and they're constantly
+[00:15:34] being updated
+[00:15:35] there's a lot of this is being
+[00:15:36] outsourced to third parties to
+[00:15:38] consultants who specialize and HIPAA
+[00:15:40] compliance who come in and set up all
+[00:15:41] your systems for you and often the
+[00:15:44] people at the hospital themselves don't
+[00:15:46] feel like they have a very
+[00:15:47] grasp on how does this work or why is
+[00:15:49] this set up this way and you hear just
+[00:15:51] an extraordinary number of stories from
+[00:15:54] people who work in IT at hospitals who
+[00:15:56] aren't you know like clueless about how
+[00:15:59] networks are set up the same things like
+[00:16:01] yeah you know they came in and they made
+[00:16:02] sure our system was HIPAA compliant but
+[00:16:04] then we couldn't print anything so we
+[00:16:06] had to hire another consultant who came
+[00:16:08] in and then we could print things that
+[00:16:10] they undid everything that the first
+[00:16:11] consultant did and and there's just I
+[00:16:13] think a lot of sort of lot of barriers
+[00:16:16] to people feeling like they can get a
+[00:16:17] handle on what HIPAA means and whether
+[00:16:19] or not their systems are HIPAA compliant
+[00:16:21] a huge reliance on these third-party
+[00:16:24] pieces of software and systems that
+[00:16:26] you're hoping will kind of make sure
+[00:16:28] that you're in line with everything that
+[00:16:30] HIPAA says you need to do which is not
+[00:16:32] about avoiding ransomware which is all
+[00:16:33] about making sure that your patient
+[00:16:35] information is not being stolen and sold
+[00:16:37] in those black-market forums and whatnot
+[00:16:39] there's a sense which I would argue we
+[00:16:42] will talk about this a little bit more
+[00:16:43] is perhaps not borne out as much as the
+[00:16:46] attackers think it will be that
+[00:16:47] hospitals really need to keep going so
+[00:16:49] if you put it on the spot and you say
+[00:16:50] all of your data is encrypted give us
+[00:16:52] money now they say we have to do
+[00:16:54] anything we can because we can't shut
+[00:16:56] down for a day and you know come back
+[00:16:59] later and think about what to do really
+[00:17:01] important continuity of care real
+[00:17:03] urgency right the stakes are much higher
+[00:17:05] than most of the ransomware incidents
+[00:17:07] that we read about when you're talking
+[00:17:09] about an entire hospital where nobody
+[00:17:11] can access any medical records nobody
+[00:17:13] can access any lab results nothing's
+[00:17:15] working
+[00:17:16] the other thing that comes up that I
+[00:17:19] want to mention is there's this sense
+[00:17:21] that the people who are targeting the
+[00:17:23] hospitals are like the lowlifes of the
+[00:17:25] cyber criminal underworld and there was
+[00:17:28] a report that came out last year from
+[00:17:29] McAfee that sort of focused on this and
+[00:17:31] went into some of the malware forums
+[00:17:33] where people trade secrets and you know
+[00:17:35] talk about the best ways to commit
+[00:17:37] crimes and there's an enormous amount of
+[00:17:39] hostility for the people who do this
+[00:17:42] these are some of the quotes that they
+[00:17:43] found I think translated from russian
+[00:17:44] dumbest hackers ever like they couldn't
+[00:17:47] hack anything else or there's a sense
+[00:17:49] that like this is not this is not the
+[00:17:51] ethical way to be using malware here's
+[00:17:54] another one yes this is pretty sad in a
+[00:17:56] new low these ransom attacks are bad
+[00:17:58] enough people who are like real malware
+[00:18:00] Leonardo's don't hold you up for ransom
+[00:18:03] they do cooler things because encrypting
+[00:18:04] your data that's not hard but if someone
+[00:18:06] were to die or be injured because of
+[00:18:08] this it is just plain wrong the hospital
+[00:18:10] should have backups that they can
+[00:18:11] recover from so even if they need to
+[00:18:13] wipe the system clean it would result in
+[00:18:14] only a few days of lost data or data
+[00:18:16] that would later need to be manually
+[00:18:17] input but the immediate damage and risk
+[00:18:19] is patient safety I pick this up because
+[00:18:23] the criminal ethics are a really big
+[00:18:26] deal for people who operate ransomware
+[00:18:28] rings right which is which is like a
+[00:18:29] ridiculous sentence to say and I can't
+[00:18:31] believe I've even just said it aloud but
+[00:18:33] there were there are different levels of
+[00:18:35] people who write ransomware so if I can
+[00:18:37] make good ethical ransomware operator
+[00:18:39] which naturally I would be if I went
+[00:18:41] into the business i ransomware goes it
+[00:18:43] encrypts all of your files I extort
+[00:18:46] money from you because that's what I do
+[00:18:47] but once you pay I really do give you a
+[00:18:50] decryption key and it really does
+[00:18:51] decrypt all of your data if I'm a less
+[00:18:54] good ransomware opera remember big spike
+[00:18:56] in this over the past couple years
+[00:18:58] people see that it's working people see
+[00:18:59] that you can get money this way takes
+[00:19:01] away a lot of the risks of that sort of
+[00:19:03] previous stolen credit card crime
+[00:19:07] because all of those fences all those
+[00:19:10] forms where you sell things have been a
+[00:19:11] huge hot spot for like lurking FBI
+[00:19:13] agents who come and catch you that way
+[00:19:15] removes all of those financial
+[00:19:17] intermediaries you're just getting
+[00:19:18] Bitcoin payments you don't need to worry
+[00:19:20] about finding customers because you've
+[00:19:21] got your customers your victim right
+[00:19:23] there in front of you so big influx a
+[00:19:26] lot of people sort of rushing to this
+[00:19:28] some of them are great I mean they're
+[00:19:31] criminals but they're great and that's
+[00:19:32] all they'll do what they say they will a
+[00:19:34] lot of them art a lot of them will take
+[00:19:35] your money and then nobody [ __ ] shinky
+[00:19:38] or the description doesn't work or they
+[00:19:40] just don't bother with that part so this
+[00:19:42] is a big problem for the criminals
+[00:19:43] because the good criminals who will
+[00:19:46] really decrypt your data all of a sudden
+[00:19:48] people start saying well don't don't pay
+[00:19:49] them you know I paid and never got my
+[00:19:52] data back anyway weakens the market for
+[00:19:54] everybody and there they kind of turn on
+[00:19:56] each other and there are these really
+[00:19:58] weird sort of tussles about what it what
+[00:20:00] it means to be a good ransomware
+[00:20:02] operator any event right so there's
+[00:20:04] there's a lot of tension within the
+[00:20:06] criminal world as well about should we
+[00:20:09] be going after hospitals is this you
+[00:20:11] know is this within the code of ethics
+[00:20:12] for the ran
+[00:20:14] somewhere operator doesn't really matter
+[00:20:16] right there are certainly people who are
+[00:20:17] willing to go after hospitals but it
+[00:20:20] does mean a lot of people think that
+[00:20:22] you're not getting the cream of the crop
+[00:20:23] attacking hospitals that when you're
+[00:20:26] looking at a program like Lottie it's
+[00:20:28] good enough but it's not unstoppable
+[00:20:30] it's not the best malware on the market
+[00:20:32] that you're dealing with with that's
+[00:20:35] just not the smartest ones right the
+[00:20:36] people who are really good at this are
+[00:20:38] going after bigger fries yeah as a
+[00:20:42] service kid so for one hundred and
+[00:20:44] seventy-five bucks you can buy a kit
+[00:20:45] that has a console that you can manage
+[00:20:47] whose but your clients that have been
+[00:20:49] infected and how you're paying etcetera
+[00:20:51] but it's you know either with a thin
+[00:20:53] client or a thick client and four
+[00:20:55] hundred seventy five bucks there's no
+[00:20:56] limit on how that's great I love that oh
+[00:21:03] boy a lotta ways of making money
+[00:21:15] her what is that really getting me yeah
+[00:21:19] that's a great question so they're
+[00:21:21] they're a couple ways you can go with
+[00:21:22] the stolen medical records one is just
+[00:21:24] opening fraudulent accounts right
+[00:21:26] usually your medical record will have
+[00:21:28] enough information for me to open a bank
+[00:21:30] account in your name take out a loan in
+[00:21:32] your name commit sort of more
+[00:21:33] traditional kinds of financial fraud we
+[00:21:36] often think about it when we see
+[00:21:37] fraudulent IRS returns filed we think a
+[00:21:40] lot of that comes potentially from
+[00:21:42] medical records though it's hard to
+[00:21:43] trace definitively the other big
+[00:21:45] business there is gonna be medical fraud
+[00:21:47] right there's a huge business in filing
+[00:21:51] false claims with Medicare and Medicaid
+[00:21:53] for you know million-dollar automated
+[00:21:56] wheelchairs through completely
+[00:21:58] fictitious medical shops and and so
+[00:22:01] there's there's a lot of money there and
+[00:22:02] as I said the sort of the previous
+[00:22:03] project that got me started looking at
+[00:22:05] hospitals I learned from the back door
+[00:22:08] what Europe when you're history is we
+[00:22:09] don't have any evidence to suggest that
+[00:22:11] I mean I can't tell you that's never
+[00:22:13] happened but there's not that there's
+[00:22:15] certainly not a lot of cases where we
+[00:22:17] look and say you know this employer
+[00:22:19] bought a lot stolen medical records and
+[00:22:21] looked up whether or not you would be a
+[00:22:23] healthy worker right um it could happen
+[00:22:26] I don't mean to say it's never happened
+[00:22:28] but mostly what we've seen has been
+[00:22:30] health insurance fraud and fraudulent
+[00:22:32] financial accounts and as I say they're
+[00:22:34] their records where the information is
+[00:22:36] harder to change right the health
+[00:22:38] insurance companies don't go around and
+[00:22:39] cancel a lot of policy numbers yeah here
+[00:22:42] is whether this time frame seems to
+[00:22:45] parallel the growth of electronic health
+[00:22:47] records is that okay that's right
+[00:22:50] um I think you've seen ID electronic
+[00:22:54] medical records come a little earlier
+[00:22:55] right you see the the EMR craze hit
+[00:22:58] maybe a year or two before locky and the
+[00:23:03] kind of hospital ransomware wave from
+[00:23:06] for most of the big systems right the
+[00:23:08] banner health system goes to EMR 2014 I
+[00:23:12] think but yeah it's it's happening sort
+[00:23:15] of at a similar moment where hospitals
+[00:23:17] are shifting more and more of their
+[00:23:19] infrastructure online you have use of
+[00:23:21] electronic health records facilitate
+[00:23:23] things for these probably does right
+[00:23:29] they well you can set up an EMR system
+[00:23:31] you have a kind of centralized server
+[00:23:33] all the records that everybody's
+[00:23:34] computers are reaching into touch and
+[00:23:36] that's my deal if you want to spread
+[00:23:38] ransomware because if you can sort of
+[00:23:39] get to the centralized hub then that
+[00:23:41] spreads everything quickly on top of
+[00:23:43] which of course of all of your medical
+[00:23:44] records are electronic then you're much
+[00:23:46] more susceptible to any kind of
+[00:23:48] cybercrime in these ways yeah to use a
+[00:23:51] little bit of a medical term of
+[00:23:53] wondering about the comorbidity if you
+[00:23:55] will of ransomware alongside stealing of
+[00:23:58] records because that's one thing we're
+[00:23:59] talking about two issues and I don't
+[00:24:01] understand to what extent they're
+[00:24:02] integrated when someone is subject to
+[00:24:06] ransomware antennae can do those
+[00:24:07] attackers often also remove or upload
+[00:24:10] the files that they capture or we don't
+[00:24:12] think so okay
+[00:24:13] so these really don't have evidence
+[00:24:15] these are really separate sort of people
+[00:24:17] who are perpetrating them for the most
+[00:24:18] part we have and there's a totally
+[00:24:23] separate business model yeah it's also
+[00:24:25] it's relevant to come back to HIPAA for
+[00:24:26] a moment because a lot of HIPAA is about
+[00:24:28] worrying that medical records are
+[00:24:29] leaving your system right a lot of what
+[00:24:32] you do when you're sort of going through
+[00:24:33] the HIPAA compliance process is making
+[00:24:35] sure you know do I have a flag if
+[00:24:37] somebody's exfiltrating a million
+[00:24:39] medical records we
+[00:24:40] good thing to do but doesn't anything
+[00:24:42] help you if this is what you're trying
+[00:24:44] to defend against so we've got the sort
+[00:24:47] of scum of the criminal underworld
+[00:24:49] designing malware which is not the best
+[00:24:52] malware but good enough to infect a lot
+[00:24:54] of hospitals including this one this is
+[00:24:57] Hollywood Presbyterian in California had
+[00:24:59] a sort of very high profile ransomware
+[00:25:01] attack in February of 2016 I profiled
+[00:25:05] for a couple reasons first one was that
+[00:25:07] they didn't pay right away
+[00:25:08] this was one of the negotiated ransoms
+[00:25:11] where there was you know a million
+[00:25:12] dollars demanded I was in bitcoins but I
+[00:25:14] can't remember the Bitcoin numbers
+[00:25:15] because they're so meaningless to me and
+[00:25:17] they changed so rapidly and they
+[00:25:18] negotiate it down over the course of
+[00:25:20] about a week and for a week they just go
+[00:25:22] offline they send patients to other
+[00:25:25] hospitals when they can they're using
+[00:25:27] paper charts they're you know taking
+[00:25:29] things down to the lab and kind of
+[00:25:31] regressing 10 20 years works ok doesn't
+[00:25:35] work great because they ultimately end
+[00:25:37] up paying about $17,000 in bitcoins gets
+[00:25:40] a lot of attention because one of the
+[00:25:42] first hospitals that actually admits to
+[00:25:45] paying it's one of the first cases it's
+[00:25:47] certainly not you know the first case of
+[00:25:48] ransomware where somebody pays we've
+[00:25:49] seen police departments pay we've seen
+[00:25:51] law firms we've seen individuals pay but
+[00:25:55] one of the first hospitals that pays and
+[00:25:57] one of the things I want to talk about
+[00:25:58] is why hospitals especially after this
+[00:26:01] incident tend to be less likely to pay
+[00:26:04] these ransoms we think right again
+[00:26:06] hugely incomplete data everything I say
+[00:26:08] about more likely or less likely
+[00:26:09] caveated
+[00:26:10] all to hell but we think tend to be less
+[00:26:12] likely to pay this one pays gets a lot
+[00:26:15] of attention and just in general at the
+[00:26:17] beginning of 2016 where you're seeing
+[00:26:19] lock you start to spread this is a lock
+[00:26:20] the infection one of the early ones that
+[00:26:22] we know about there's a lot of attention
+[00:26:25] all of a sudden on the question of
+[00:26:26] hospitals and ransomware there's enough
+[00:26:28] attention to spur the Department of
+[00:26:30] Health and Human Services to issue some
+[00:26:32] formal guidance and again one of the
+[00:26:34] things I'm interested in just in terms
+[00:26:36] of cybersecurity incidents in general is
+[00:26:38] what is the guidance that we get from
+[00:26:39] policymakers about how you should be
+[00:26:41] responding to this in particular with
+[00:26:43] ransomware where you have this very
+[00:26:45] clear choice right I'm gonna pay and I'm
+[00:26:48] gonna support a criminal enterprise and
+[00:26:49] by doing that I'm gonna encourage more
+[00:26:51] criminals to get into this business
+[00:26:52] because I'm making it more lucrative
+[00:26:54] for them to mention there's you know a
+[00:26:57] lot of sort of cases where somebody pays
+[00:26:59] in a few months or a year later comes
+[00:27:02] back again and says by the way we're
+[00:27:04] gonna you know hold you hostage again so
+[00:27:06] it's there are a lot of disadvantages to
+[00:27:08] paying wanted to look at what's the
+[00:27:10] guidance they get and the guidance comes
+[00:27:12] out a couple months after the Hollywood
+[00:27:13] Presbyterian incident is in the news and
+[00:27:16] it's very vidi as most policy guidance
+[00:27:19] on ransomware for everybody is so this
+[00:27:22] is from the Health and Human Services
+[00:27:23] guidelines that come out in July of 2016
+[00:27:26] that goes through sort of what is
+[00:27:28] ransomware will HIPAA help protect you
+[00:27:29] against ransomware yes absolutely they
+[00:27:31] tell you and at great length about how
+[00:27:33] important HIPAA is then they go to this
+[00:27:36] really interesting question right part
+[00:27:38] of what HIPAA is is a way to say if if
+[00:27:41] your patients health information is
+[00:27:43] violated you need to report value for
+[00:27:44] the COS you to report that to the
+[00:27:46] patient you need to report that to the
+[00:27:47] media in some cases they asked this
+[00:27:49] question which nobody's really asked in
+[00:27:52] a formal context yet is it a HIPAA
+[00:27:53] breach if ransomware infects of covered
+[00:27:56] entities or business associates computer
+[00:27:58] system and everybody's just been
+[00:28:00] operating under the assumption that all
+[00:28:01] of these data breach notification laws
+[00:28:03] and all you know forty seven states or
+[00:28:05] whatever it is now don't apply to rent
+[00:28:07] somewhere because your data hasn't been
+[00:28:08] stolen hasn't been exfiltrated all of a
+[00:28:10] sudden can you have helped in human
+[00:28:12] services saying we'll wait a minute
+[00:28:13] maybe it does and what they say is
+[00:28:16] unless you can demonstrate a little
+[00:28:19] probability that the protected health
+[00:28:21] information has been compromised then a
+[00:28:23] breach of protected health information
+[00:28:24] is presumed to have a curt that's a very
+[00:28:26] strong statement except it's not really
+[00:28:29] because we don't really know what it is
+[00:28:30] to demonstrate a low probability the
+[00:28:32] entity must then comply with the
+[00:28:33] applicable breach notification
+[00:28:34] provisions including notification to
+[00:28:36] affected individuals without
+[00:28:38] unreasonable delay to help human
+[00:28:40] services and to the media and accordance
+[00:28:41] with HIPAA breach notification
+[00:28:42] requirements so strong statement there's
+[00:28:45] nobody in government in any other sector
+[00:28:47] who's tried to say ransomware is going
+[00:28:50] to be sort of subject to any kind of
+[00:28:52] reporting prospective researcher it's
+[00:28:55] great news because you hope that we're
+[00:28:56] gonna start to learn more about how many
+[00:28:57] incidents that are out there and what's
+[00:28:59] going on from the perspective of
+[00:29:01] hospitals it's a big deal right we're
+[00:29:03] going to have to notify all these
+[00:29:04] patients whose health information has
+[00:29:06] been encrypted that's
+[00:29:07] that's worrying that's something you
+[00:29:09] want to sort of avoid well Centre in
+[00:29:12] Buffalo New York if that ended up being
+[00:29:13] read somewhere because I we're gonna
+[00:29:15] talk about miracles every time so one of
+[00:29:18] the things you do with your hospital is
+[00:29:20] you when you shut down all of your
+[00:29:21] computer systems and you send all of
+[00:29:22] your patients away you sort of hedge a
+[00:29:25] little bit in your he's not the first to
+[00:29:26] have done this is like there's something
+[00:29:27] wrong with our computers and the first I
+[00:29:29] think the first case that I know of
+[00:29:31] where they did this was the med tech or
+[00:29:33] the MedStar hospitals in DC they're like
+[00:29:35] this isn't ransomware we're just we're
+[00:29:37] just doing some rebooting and then
+[00:29:38] employees started sending pictures of
+[00:29:40] the screens to reporters at the
+[00:29:42] Washington Post so the screws are all
+[00:29:44] like pay us you know 500 Bitcoin or died
+[00:29:46] and so yes there that that is ransomware
+[00:29:48] I'll come back to that because it's
+[00:29:50] right in my neck of the woods and it's
+[00:29:52] one of the ways you also sort of try to
+[00:29:54] circumvent it a little bit by saying you
+[00:29:56] know rebooting systems computer problems
+[00:29:59] we'll get back to you not ransomware so
+[00:30:02] all the Human Services comes out with
+[00:30:03] these guys there's a big big loophole in
+[00:30:06] here which is this low probability make
+[00:30:09] sure maybe you could say look red
+[00:30:11] somewhere seems to be pretty low
+[00:30:12] probability we don't have any records of
+[00:30:14] data being stolen that seems like the
+[00:30:16] low probability so they address that as
+[00:30:18] well that's the next question how can
+[00:30:19] covered entities or business associates
+[00:30:21] demonstrate that there's a low
+[00:30:22] probability that the protected health
+[00:30:24] information has been compromised such
+[00:30:25] that breach notification would not be
+[00:30:27] required this is another really
+[00:30:29] interesting answer they say well here's
+[00:30:32] what you have to consider you have to
+[00:30:33] think about the integrity of the
+[00:30:35] protected health information so even if
+[00:30:37] it hasn't been exfiltrated
+[00:30:38] that's not the only issue right when we
+[00:30:40] think about the security triad for those
+[00:30:42] of you who come out of sort of computer
+[00:30:43] science backgrounds we think about from
+[00:30:45] confidentiality integrity availability
+[00:30:47] definitely availability has been
+[00:30:49] compromised here so I guess I even if
+[00:30:51] you don't think confidentiality has been
+[00:30:53] breached iam you don't think anybody's
+[00:30:54] ever seen these medical records who
+[00:30:57] wasn't authorized to do so you have to
+[00:30:59] worry about the integrity of the data
+[00:31:01] AJ Ches says frequently ransomware after
+[00:31:04] encrypting the data it was seeking
+[00:31:05] deletes the original data and leaves
+[00:31:07] only the data in encrypted form that's
+[00:31:09] sort of a misunderstanding of encryption
+[00:31:11] in some ways but we'll go with it
+[00:31:12] right I mean deletes the data is not
+[00:31:15] exactly what encryption does but sure
+[00:31:17] identity may be able to show mitigate
+[00:31:19] of the impact of a ransomware attack
+[00:31:21] affecting the integrity of pH I through
+[00:31:23] the implementation of robust contingency
+[00:31:25] plans including disaster recovery and
+[00:31:27] data backup plans conducting frequent
+[00:31:29] backups ensuring the ability to recover
+[00:31:31] data from backups is crucial to
+[00:31:33] recovering from a ransomware attack and
+[00:31:34] ensuring the integrity of pH I affected
+[00:31:36] by ransomware so the message here is if
+[00:31:40] you back everything up restore the
+[00:31:43] entire system from your backups then you
+[00:31:46] can be sure that the integrity of this
+[00:31:48] data has not been violated and you don't
+[00:31:50] have to report anything right then then
+[00:31:53] you can avoid this whole has there been
+[00:31:55] a HIPAA breach problem on the other hand
+[00:31:58] if you pay if you pave and you haven't
+[00:32:01] restored everything from your backups
+[00:32:02] maybe in HHS's understanding of
+[00:32:05] encryption when they deleted all of your
+[00:32:07] information they restore it to you and
+[00:32:09] they've changed some of it again no
+[00:32:12] evidence to suggest this has ever
+[00:32:13] happened it could happen conceivably
+[00:32:15] right you could delete some of the
+[00:32:18] encrypted data um you could alter it
+[00:32:20] perhaps so why you would want to hard to
+[00:32:24] say so this sets hospitals down this
+[00:32:28] path which I would say really we haven't
+[00:32:30] seen in any other sector of becoming
+[00:32:32] very resistant to paying these ransoms
+[00:32:35] of feeling like if we pay not only have
+[00:32:38] we given in to the criminals and said
+[00:32:40] this horrible business model and
+[00:32:41] encourage more people to engage in this
+[00:32:43] type of activity but also on top of that
+[00:32:45] what we really care about is now we have
+[00:32:48] to report a HIPAA breach we have to send
+[00:32:50] letters to thousands billions of
+[00:32:52] patients whose data has been affected we
+[00:32:55] have to sort of start this whole
+[00:32:56] mechanism in process and for them the
+[00:32:58] calculus really changes right it's not
+[00:33:00] just a question of can I afford to spend
+[00:33:02] seventeen thousand dollars on a ransom
+[00:33:03] it's can I afford to kind of go down
+[00:33:06] this whole horrible path of thinking
+[00:33:08] about what it means to have a
+[00:33:10] large-scale HEPA breach on my hand so I
+[00:33:12] come back to the Erie County Medical
+[00:33:14] Center which is a hospital in Buffalo
+[00:33:16] right near me and I want to talk a
+[00:33:19] little bit about their decision not to
+[00:33:20] pay and where they are now and what
+[00:33:23] happens when you decide not to pay right
+[00:33:25] one of one to interesting questions I
+[00:33:27] think come out of this right first one
+[00:33:29] is wire hospitals less likely to pay or
+[00:33:31] very unlikely to pay at the very least
+[00:33:33] but I think a lot of that has to do with
+[00:33:35] those HIPAA guide of those HIPAA
+[00:33:36] addendum I just showed you some of it
+[00:33:40] has to do with the fact that it's just
+[00:33:41] frankly not always clear to people in
+[00:33:43] hospitals who can make that decision
+[00:33:45] right the the finances of a hospital are
+[00:33:48] so complicated that to kind of decide
+[00:33:51] we're gonna make even a relatively small
+[00:33:53] payment that you know thousands of
+[00:33:55] dollars which is not a huge amount of
+[00:33:56] money to a big Hospital it's not clear
+[00:33:58] who has that authority it's not clear
+[00:34:00] sort of where that money comes from or
+[00:34:02] how you account for it in the process
+[00:34:04] it's certainly not clear if you're
+[00:34:06] worried about HIPAA that once you've
+[00:34:08] paid your ransom you've eliminated sort
+[00:34:11] of all the malware from your system
+[00:34:12] right even if you get your data back
+[00:34:13] could somebody still have some snippets
+[00:34:16] of code lurking on your servers waiting
+[00:34:18] to do this again in a year potentially
+[00:34:20] right so if you're worried about sort of
+[00:34:22] HIPAA compliance in general you maybe
+[00:34:24] have some resistance to paying and
+[00:34:26] rather just wipe everything and start
+[00:34:28] clean that's what your and Medical
+[00:34:30] Center decides to do they're hit by
+[00:34:32] ransomware on April 9th so almost three
+[00:34:36] weeks ago now but shut down all of their
+[00:34:38] systems and they're still recovering
+[00:34:43] right this has been a very slow process
+[00:34:45] this has not been I plug my external
+[00:34:47] hard drive in and an hour later
+[00:34:49] everything looks just like it did before
+[00:34:51] they had backup so that was good right
+[00:34:54] we give we give them credit for that but
+[00:34:55] the process of rebooting an entire
+[00:34:58] Hospital from backups turns out to be
+[00:35:00] pretty elaborate pretty slow doesn't
+[00:35:04] doesn't actually kind of end up being a
+[00:35:08] quick or easy restoration process and
+[00:35:11] for the past two two and a half weeks
+[00:35:14] right they've been doing all of their
+[00:35:15] patient care pretty much on paper
+[00:35:17] they're now at the point or earlier this
+[00:35:20] week we're at the point where they had
+[00:35:22] some temporary email systems set up they
+[00:35:25] had the ability to view some electronic
+[00:35:28] medical records but not to edit them
+[00:35:30] some not all of their electronic mode
+[00:35:32] they had some financial systems back
+[00:35:35] online they were beginning to be able to
+[00:35:37] like issue pay checks again by the way
+[00:35:40] going back to data breaches for a sec
+[00:35:42] this has been true even before
+[00:35:44] ransomware that were covering from these
+[00:35:46] attacks
+[00:35:47] four hospitals has been more expensive
+[00:35:48] than for any other sector this is from
+[00:35:50] Poonam on an IBM do an annual survey of
+[00:35:53] what are the costs of data breaches and
+[00:35:55] they look at the cost per record to the
+[00:35:58] victim so this is not the cost you sell
+[00:36:00] it for on the black market
+[00:36:01] this is how much cost you've incurred to
+[00:36:04] the organization you've breached
+[00:36:06] healthcare swing out here three hundred
+[00:36:08] fifty five dollars per record compared
+[00:36:10] to you know research institutions where
+[00:36:12] we only spend one hundred twelve dollars
+[00:36:13] for each record yes good question but
+[00:36:19] why isn't all this data encrypted to
+[00:36:23] begin with a woman says well hospital
+[00:36:27] should be encrypting patient thing
+[00:36:29] though yeah sometimes I mean you can you
+[00:36:31] can encrypt encrypted data right so just
+[00:36:34] because I've encrypted all of my data
+[00:36:36] doesn't mean that somebody else can't
+[00:36:39] come in and encrypt it further so that I
+[00:36:40] can't decrypt it if that makes sense
+[00:36:43] Oh data breaches no but all of them so a
+[00:36:48] couple answers to that if you're talking
+[00:36:50] about data breaches so first of all a
+[00:36:51] lot of protected health information is
+[00:36:53] encrypted now there are also ways to
+[00:36:55] access it it's unencrypted forms because
+[00:36:57] there have to be a lot of ways to access
+[00:36:59] it and it's unencrypted form so if you
+[00:37:00] are logged in on your hospital computer
+[00:37:03] you've given all of your credentials
+[00:37:05] you're checking out your medical records
+[00:37:07] and you download that attachment then
+[00:37:09] even though it's all encrypted when the
+[00:37:11] system shut off and stored it's it's not
+[00:37:14] encrypted to that adversary at that time
+[00:37:17] so that's one part is right a lot of
+[00:37:19] this whole point of going through email
+[00:37:20] instead of like scanning for open ports
+[00:37:22] on the servers is to get at it after
+[00:37:24] your credentials have already been
+[00:37:25] entered when it's when it's live when
+[00:37:28] it's in clear-text part of it is that
+[00:37:30] you you can Riaan cryptid data right and
+[00:37:33] just because so I don't care what the
+[00:37:35] data is as the attacker I don't really
+[00:37:37] care about already but encrypted all I
+[00:37:39] care about is making so you can't access
+[00:37:41] it right so I could restore it to you in
+[00:37:43] its encrypted form which would be good
+[00:37:46] enough for you to decrypt even though
+[00:37:47] right you can you can layer more
+[00:37:49] encryption on top of it if you want to
+[00:37:51] and also frankly there's you know more
+[00:37:54] encryption that you're seeing in
+[00:37:55] hospitals since since the heyday of the
+[00:37:57] medical data breaches a few years ago
+[00:37:59] but yes always
+[00:38:00] thing to do not necessarily enough in
+[00:38:02] all of these cases to protect you from
+[00:38:04] everything yeah good gription did the
+[00:38:10] human health services guidelines include
+[00:38:13] anything about a Christian being able to
+[00:38:14] say that there was a low probability of
+[00:38:18] reach because yeah the integrity was
+[00:38:21] changed
+[00:38:21] usually encryption carries checksums
+[00:38:24] with it as well as guarantees
+[00:38:26] integravision yes Jeeves gives a lot I
+[00:38:29] mean so encryption is you know certainly
+[00:38:31] covered in HEPA and certainly there is
+[00:38:34] guidance for hospitals about encrypting
+[00:38:36] protected health information I don't
+[00:38:38] think as I recall that that was in the
+[00:38:40] sort of explicit ransomware guidelines
+[00:38:42] as a way to be sure that the integrity
+[00:38:45] hadn't been altered though you're right
+[00:38:48] it's not a terrible way of looking at
+[00:38:49] that to say oh can you can you check it
+[00:38:51] based on some of the encryption tools to
+[00:38:54] look at it I don't think that was
+[00:38:55] considered again I think part of that
+[00:38:57] maybe is about this idea which I would
+[00:39:01] contest but which comes out strongly in
+[00:39:03] those guidelines that the data's been
+[00:39:04] deleted right and so the sense that you
+[00:39:07] know even if it was encrypted if it's
+[00:39:08] all been deleted could they just come in
+[00:39:10] and dump some random other data in its
+[00:39:13] place potentially right I mean none of
+[00:39:16] these are impossible things
+[00:39:17] none of them are things that we've ever
+[00:39:19] seen anybody do in any of these cases
+[00:39:21] sometimes people don't get their data
+[00:39:23] back rarely do they get back the wrong
+[00:39:25] data right rarely does somebody go to
+[00:39:27] the trouble of giving you back decrypted
+[00:39:29] data and you're like wait a minute this
+[00:39:30] wasn't my hard drive this was so some no
+[00:39:32] the answer is I think they don't talk
+[00:39:34] about that would be the worst idea as a
+[00:39:36] way of sort of trying to talk about the
+[00:39:38] likelihood of compromise of data
+[00:39:41] integrity come back to your Medical
+[00:39:43] Center for a second or just to give you
+[00:39:45] a sense of what this process looks like
+[00:39:47] right they've got a little bit of
+[00:39:48] read-only medical records they've got a
+[00:39:50] couple financial systems going on this
+[00:39:52] week as we speak then we're working on
+[00:39:55] getting the bed coordinating system
+[00:39:57] working right so they can know where are
+[00:39:58] the open beds and where can we move
+[00:40:00] patients within the hospital working on
+[00:40:02] establishing a new hospital email system
+[00:40:04] they're basically running on a sort of
+[00:40:05] lightweight temporary system at the
+[00:40:07] moment trying to give doctors the
+[00:40:10] ability to view outpatient EMRs again
+[00:40:12] not write to them just look
+[00:40:15] and trying to be able to communicate
+[00:40:17] with the lab system one of the things
+[00:40:18] that comes up when you talk to people at
+[00:40:20] these hospitals is perhaps the most
+[00:40:23] urgent piece that's missing is
+[00:40:24] communication with the labs right people
+[00:40:26] say we get lab results too slowly we
+[00:40:28] can't you know adjust we can't make
+[00:40:30] diagnosis as quickly as we want to
+[00:40:31] they're working on that to have
+[00:40:34] communication with their labs next week
+[00:40:37] beginning of May coming up on a
+[00:40:38] month-long anniversary of this infection
+[00:40:41] they're going to be looking at trying to
+[00:40:42] transmit radiological images to the
+[00:40:45] health care providers trying to restore
+[00:40:47] desktop computers nobody's using a
+[00:40:49] desktop computer at this hospital for
+[00:40:51] the most part right those are all 6000
+[00:40:55] servers yes good sized hospital there's
+[00:40:57] there's a lot of servers look pewters
+[00:40:59] very slow process trying to restore the
+[00:41:02] inpatient electronic olmec old medical
+[00:41:04] records and finally start thinking about
+[00:41:05] kin physicians actually perform any of
+[00:41:07] this documentation they've being they've
+[00:41:09] been doing on paper online again and get
+[00:41:12] get into the EMR s not just and read the
+[00:41:15] only version so this is about a month we
+[00:41:18] think we're off of work to get this
+[00:41:21] Hospital back online and I think there
+[00:41:24] are a couple reasons why you might see
+[00:41:25] that as a slower process that it would
+[00:41:28] be some other places one is again
+[00:41:30] there's you know a lot of HIPAA
+[00:41:32] compliance stuff along the way that you
+[00:41:34] need to be checking that you need to be
+[00:41:35] kind of bringing in people who perhaps
+[00:41:37] understand the system or set up the
+[00:41:38] system that you're not super familiar
+[00:41:40] with to help you figure out how all of
+[00:41:43] these things are working I think there's
+[00:41:45] an incredibly sort of fragmented network
+[00:41:47] structure that you're seeing here where
+[00:41:49] all of these are kind of running on
+[00:41:51] different pieces of software sometimes
+[00:41:53] running on different operating systems
+[00:41:54] it's not not just kind of one-stop
+[00:41:57] restore everything all at once there's
+[00:41:59] there's a huge amount of diversity and
+[00:42:01] you know if radiological images are
+[00:42:04] going to be its own system that's not
+[00:42:06] related to talking to the lab lab system
+[00:42:09] right that's that's going to be its own
+[00:42:11] whole separate project and there's also
+[00:42:13] I think just a lot of caution on the
+[00:42:15] other hand one of the things that I
+[00:42:18] found really fascinating about talking
+[00:42:20] to people at hospitals that have
+[00:42:21] experienced this is that going to paper
+[00:42:24] records right this whole horrible
+[00:42:26] expensive laborious process
+[00:42:28] is not universally hated by the people
+[00:42:32] who work in these hospitals from the
+[00:42:34] perspective of providing patient care so
+[00:42:36] I want to end talking about one quote
+[00:42:39] from a health care provider but gives I
+[00:42:42] think some sense of sort of how this is
+[00:42:43] viewed from within the healthcare
+[00:42:45] industry in a way that I would have
+[00:42:47] anticipated who they blame for
+[00:42:48] ransomware how they feel about the kind
+[00:42:51] of technology that they use she says I
+[00:42:53] hope for someone somewhere this was a
+[00:42:55] wake up call about how worthless all of
+[00:42:57] the ridiculous security trainings and
+[00:42:59] email labels and endless login
+[00:43:00] procedures are all that time wasted
+[00:43:02] putting confidential headers on messages
+[00:43:04] with lab results are going through 12
+[00:43:06] steps to check our email and for what so
+[00:43:08] I won't pause there for a moment and
+[00:43:10] just say the extent to which people
+[00:43:12] resent right there's a lot of security
+[00:43:14] in hospitals the extent to which
+[00:43:16] physicians health care providers resent
+[00:43:18] it was really quite striking right they
+[00:43:21] don't they don't see this as you of
+[00:43:22] course this is important because we do
+[00:43:24] such valuable work and we need to make
+[00:43:25] sure our patients are provided they say
+[00:43:26] look this this stuff seems like a huge
+[00:43:28] waste of our time I don't believe this
+[00:43:30] does anything and now I'm vindicated
+[00:43:32] because all the systems are down even
+[00:43:34] though I was following all of these
+[00:43:36] stupid rules all the time and she goes
+[00:43:39] on and you know I'm not sure the quality
+[00:43:41] of care was really any worse where we
+[00:43:42] were doing everything on paper for a few
+[00:43:44] days labs were slower so that wasn't
+[00:43:46] good but I think I know more about my
+[00:43:48] patients and maybe even give better care
+[00:43:50] when I can see everything laid out on a
+[00:43:52] normal paper chart instead of hidden a
+[00:43:54] bunch of pop-up windows in a computer
+[00:43:55] record it was nice to be reminded that
+[00:43:57] we can still take care of patients
+[00:43:59] without machines I mean it was awful and
+[00:44:01] chaotic and I wouldn't wish it on my
+[00:44:02] worst enemy
+[00:44:03] but you know it was also kind of
+[00:44:04] refreshing in a way so I'm struck by the
+[00:44:08] extent she's not the only person who's
+[00:44:11] expressed sentiments along both of these
+[00:44:12] lines first of all but this is clear
+[00:44:15] clear indictment of every stupid
+[00:44:17] security thing they've ever made us do
+[00:44:19] in the hospital right this is
+[00:44:20] fascinating as sort of a way of
+[00:44:22] assigning blame for this kind of
+[00:44:24] incident nobody wants to sit there and
+[00:44:25] say you know who are these scumbags who
+[00:44:27] would target a hospital don't they know
+[00:44:28] we're saving lives yet everyone wants to
+[00:44:30] say who were those idiots who thought it
+[00:44:33] was a good idea to put in the email
+[00:44:34] system where I have you know a different
+[00:44:36] colored flag in the subject for every
+[00:44:39] different kind of possible Oh
+[00:44:42] whatever then what's happening how much
+[00:44:44] they hate EMRs because they always want
+[00:44:46] to talk about that and they also I think
+[00:44:48] and this this was surprising to me feel
+[00:44:51] a certain amount of victory right this
+[00:44:53] is not paying the starting from scratch
+[00:44:55] even this going back to paper ECMC is
+[00:44:58] not the first one the URI Medical Center
+[00:45:00] Hollywood Presbyterian is not the first
+[00:45:02] one to spend some time on paper either
+[00:45:04] feels a little bit like yeah we can
+[00:45:06] still do this
+[00:45:07] you know our profession is not totally
+[00:45:08] reliant on these computers they haven't
+[00:45:10] totally stopped us yeah but there are
+[00:45:14] still real time machines of various
+[00:45:17] kinds you know monitoring me and and
+[00:45:20] feeding data into something and so
+[00:45:23] where's my heart monitor data going if
+[00:45:25] it's not going into these computers so
+[00:45:28] there's a great question and I think
+[00:45:29] there you're depending on the hospital
+[00:45:31] and depending on the Machine there are a
+[00:45:33] lot of different answers for the most
+[00:45:35] part everybody seems to feel and again
+[00:45:38] this is not my world so I don't know
+[00:45:39] what all of the most relevant machines
+[00:45:41] are that like the ventilators are fine
+[00:45:42] right when you have a ransomware attack
+[00:45:45] that's not being operated off of the
+[00:45:47] network that's not something that's
+[00:45:48] being controlled in a kind of
+[00:45:51] centralized way that's a machine that
+[00:45:54] does one thing I think for the most part
+[00:45:55] isn't gonna be network isn't going to be
+[00:45:57] accessible things that are monitoring me
+[00:45:59] and being data out to something and
+[00:46:01] there's nothing to feed the data out to
+[00:46:02] ah how's that affect my patient care not
+[00:46:06] great I mean it's all but but I mean to
+[00:46:08] say I think a lot of the vital signs are
+[00:46:10] being monitored and read on kind of
+[00:46:12] stand-alone non-networked machinery not
+[00:46:15] all right not not everything necessarily
+[00:46:18] but you're getting a certain amount of
+[00:46:19] the kind of critical life care in a way
+[00:46:22] that's not networked and that this is
+[00:46:24] you know part of a larger fight I think
+[00:46:26] in a lot of these hospitals if that some
+[00:46:30] people notice that even if this whole
+[00:46:31] thing is down yes I think that those
+[00:46:34] monitors are not I think partly they're
+[00:46:37] too old right we couldn't you know hook
+[00:46:39] them up to the network if we wanted to
+[00:46:41] and this is part of a larger fight at a
+[00:46:43] lot of these places about you know we
+[00:46:45] could get really newfangled high-tech
+[00:46:47] control from your cell phone what your
+[00:46:48] blood pressure is but but what do we do
+[00:46:51] when when we see lucky when all the
+[00:46:53] stuff starts going down is there some
+[00:46:55] security
+[00:46:55] kind of keeping the old systems off the
+[00:46:57] network and away from everything else
+[00:47:00] yeah I don't know if it was to adjacent
+[00:47:04] but in terms of when you're seeing a
+[00:47:06] doctor and they take notes and they
+[00:47:09] don't show you the house and there are
+[00:47:11] errors in the note they're interpreting
+[00:47:14] what they think they hear or you're
+[00:47:16] saying are they want to state a
+[00:47:18] different way and sometimes it's
+[00:47:21] actually a negative comment that is
+[00:47:23] absolutely long according to that and
+[00:47:26] I've seen that with friends I've seen
+[00:47:29] that with people that were your end of
+[00:47:30] life and so even something like Oh
+[00:47:36] egg yolk when you're allergic to sulfa
+[00:47:39] drugs there's big letters on the chart
+[00:47:41] and they give themself drugs since I'm a
+[00:47:43] singer so body it's like blisters and
+[00:47:46] why is it going that but she's gonna die
+[00:47:48] is gonna die
+[00:47:49] so there's degrees of severity of
+[00:47:52] consequences of finding is it easy to
+[00:47:55] have in the paper system or whatever
+[00:47:58] system they have a little bit simplified
+[00:48:01] but still priority a BC that the double
+[00:48:04] check another one she said that she went
+[00:48:06] to get permits and the spelling of the
+[00:48:10] one that she was given to get for her
+[00:48:13] husband it was it was not a sedative
+[00:48:16] because he was starting it worried it
+[00:48:18] stopped ii was against so there was a
+[00:48:22] mild something rather mild for some her
+[00:48:24] anxiety and then there was a one that
+[00:48:28] was still very closely and really
+[00:48:30] commonly in it was a pop atlas genic oh
+[00:48:33] yes mister is wrong to give them a heart
+[00:48:36] patient yeah so so Aaron is in medical
+[00:48:39] records are very much not my field of
+[00:48:41] expertise I know there are people who
+[00:48:43] sort of study this more closely what I
+[00:48:44] will say is part of the promise of the
+[00:48:46] electronical medical records was
+[00:48:48] supposed to be to avoid those kinds of
+[00:48:50] problems right so that instead of trying
+[00:48:52] to figure out why did she write here I
+[00:48:53] can't read this horrible handwriting you
+[00:48:55] know it's all it's all typed it's all
+[00:48:57] there
+[00:48:57] um I have no sense of sort of to what
+[00:49:01] extent that works to what extent we
+[00:49:02] actually see a reduction in medical
+[00:49:05] errors thanks to the implementation of
+[00:49:08] electronic
+[00:49:09] medical records certainly everybody
+[00:49:10] likes to complain about them that
+[00:49:11] doesn't mean they're not helping in some
+[00:49:13] ways Oh terrific
+[00:49:16] oh I'm the information security officer
+[00:49:18] but I just met with one of the our ends
+[00:49:20] and she's been there 30 years but she
+[00:49:22] was saying that everybody going kicking
+[00:49:25] and screaming and it's she had a
+[00:49:26] different take on maybe this quote you
+[00:49:28] know but essentially she said once they
+[00:49:30] were electronic and they had a day where
+[00:49:32] things went down everybody was
+[00:49:34] complaining because they couldn't read
+[00:49:35] the doctor's handwriting and they
+[00:49:37] couldn't know things worry me exactly
+[00:49:38] what you're describing stuff was it
+[00:49:40] getting prescribed right they had no
+[00:49:41] idea what the medication was so so there
+[00:49:43] was a lot of backlash medication yeah
+[00:49:46] well it's like when you have a
+[00:49:48] misspelled word yep why not a checker
+[00:49:50] because that's not that there's not
+[00:49:52] millions of different you know drugs
+[00:49:54] that are given but this if this person's
+[00:49:56] already taking these two and this new
+[00:49:58] person comes in and say well let's add a
+[00:50:00] little bit of this that should be a link
+[00:50:03] that should be heads up here hello
+[00:50:07] anything that's probably true I think
+[00:50:08] reverting to medical to paper records
+[00:50:11] for ransomware purposes probably does
+[00:50:13] create a whole whole bunch of other
+[00:50:15] issues that you would worry about
+[00:50:17] rapport that's the part I guess was an
+[00:50:19] engagement was to have the advantages of
+[00:50:22] both of having me anything that you're
+[00:50:26] teaching you're learning there are
+[00:50:28] advantages to having a narrative versus
+[00:50:31] choice codes etc have exceptions that
+[00:50:34] you're so having the church comes with
+[00:50:35] some commune modification of multiple
+[00:50:38] choice as an example because people have
+[00:50:42] this open-ended thing and they can't
+[00:50:43] think of all the vitamins are taken and
+[00:50:45] all this and all that but if they
+[00:50:46] they're the bigger stuff if it's about
+[00:50:51] their condition it can be an observer
+[00:50:53] but coming for a heart problem and
+[00:50:55] asthma problems that's there's a lot of
+[00:50:57] kind of general general guidelines
+[00:51:00] whether taking that could be check offs
+[00:51:02] and and be on digital as well as the
+[00:51:06] printed out in a storm so it's easy for
+[00:51:08] the person to read to communicate with
+[00:51:10] to take back to them to the loved one
+[00:51:13] and discuss one
+[00:51:14] what's going on it almost sounds like
+[00:51:16] what you're advocating for is in prepare
+[00:51:18] yeah in a preparation for a possible
+[00:51:20] ransomware make sure that the paper
+[00:51:21] process covers those scenarios and has a
+[00:51:25] pre-printed checklist so where it's not
+[00:51:27] more arduous but that you don't put
+[00:51:29] anybody at health risk of dying or
+[00:51:31] getting the wrong medication or as much
+[00:51:34] as possible may we ask if anybody here
+[00:51:36] brought up I was apart from these health
+[00:51:39] circles at Harvard although 12:14 had
+[00:51:41] some staple glucose alpha I remember the
+[00:51:47] whole wall all of balls were showing
+[00:51:49] about 26 different being white points of
+[00:51:52] the places that this information goes
+[00:51:55] later when I refused I'll be finding
+[00:52:00] variables and working of installation
+[00:52:02] our customized stuff yes I was a while
+[00:52:05] ago ten years ago they were talking
+[00:52:07] about there is the waves can interrupt
+[00:52:11] we're talking about interrupting that
+[00:52:12] possibly disturbing for the spot it is
+[00:52:16] pertinent to what hospital systems can
+[00:52:19] be held at hostage
+[00:52:22] well individual patients machines can be
+[00:52:26] stopped without a lot of expenses it's
+[00:52:30] from outside in a car
+[00:52:32] if they're within a certain range unless
+[00:52:34] they're in so the design it would took
+[00:52:36] up what they call facilities designed
+[00:52:37] hospitals and emergency care at the
+[00:52:40] Harvard School of Public Health and so
+[00:52:42] this was a big issue there they knew
+[00:52:44] about it
+[00:52:45] so they were actually nesting sort of
+[00:52:47] like not exactly Faraday cages but stuff
+[00:52:49] like that first thing I haven't heard
+[00:52:51] about that particular threat model thing
+[00:52:53] this had nothing to with Internet of
+[00:52:54] Things this was like well it is because
+[00:52:58] we they were using a no wires directly
+[00:53:01] typing so they go using Wi-Fi and don't
+[00:53:03] even have to to stop our own port
+[00:53:06] machineries and there isn't you know two
+[00:53:09] important people to fill okay
+[00:53:10] very illegal very very morally wrong but
+[00:53:13] all many had found in photo detectors
+[00:53:16] the press set it almost sounds like
+[00:53:17] someone's trying to apply ten busting
+[00:53:19] skater design principle medical record
+[00:53:22] processes
+[00:53:27] yeah yeah hey last questions yours post
+[00:53:32] Aroha yeah Birds axe so I can seem like
+[00:53:38] burn the Erie County Medical Center they
+[00:53:42] reversed
+[00:53:43] has it ever happened to hospitals and
+[00:53:47] medical centers that use cloud-based EMR
+[00:53:49] actually storing the data are they less
+[00:53:52] susceptible to these attacks so the way
+[00:53:54] that HIPAA is set up as I understand it
+[00:53:57] if you're gonna use a cloud but we think
+[00:53:59] of as a cloud solution you're going to
+[00:54:01] be using what we'd call a private cloud
+[00:54:02] because you're you're so worried about
+[00:54:05] sort of protecting that health
+[00:54:06] information so you're gonna have your
+[00:54:08] own set of servers they may be remote
+[00:54:10] but they're they're gonna be yours
+[00:54:13] you're gonna be sort of really
+[00:54:15] responsible for operating them so it
+[00:54:16] certainly has happened to places that
+[00:54:18] don't necessarily store their data on
+[00:54:20] site it's never there is no hospital I
+[00:54:22] don't think to my knowledge that's like
+[00:54:24] storing all of its data with Google or
+[00:54:27] with Amazon just because you can't do
+[00:54:29] that so they keep large companies as I
+[00:54:35] understand again and this is you know
+[00:54:36] I'm not the world's expert on EMR don't
+[00:54:40] store your data for you they come in and
+[00:54:42] they set it up so that you're storing
+[00:54:45] your own data mm-hmm
+[00:54:47] epic will store your data for you they
+[00:54:50] do it the way you're describing but I
+[00:54:52] mean they also have hosting services
+[00:54:53] will done they will actually post the
+[00:54:54] data if you don't have sure to do it I
+[00:54:56] think Alina memories have been posted at
+[00:54:59] their EMR provider it's an interesting
+[00:55:01] question cuz I mean I'm just worried
+[00:55:03] because it seems like the concern is the
+[00:55:04] security of of the data whatever it's
+[00:55:07] being stored or the network er you know
+[00:55:09] the security things that are
+[00:55:11] set upward and I'm just wondering it I
+[00:55:12] don't think it would matter that is
+[00:55:15] right if it is going to sort of set
+[00:55:16] aside some group of servers and say
+[00:55:18] these are your hospital servers will
+[00:55:20] store the data for me for you and send
+[00:55:22] it to your computers that if one of
+[00:55:24] those computers while it's connected to
+[00:55:25] an epoch server yes in fact it's
+[00:55:27] probably be able to infest those epic
+[00:55:29] servers but I don't I don't know of any
+[00:55:31] specific cases where we've seen that
+[00:55:33] happen most of the hospitals I've talked
+[00:55:35] to have either stored their data on-site
+[00:55:37] or you're at a dedicated data facility
+[00:55:40] for them I don't know to what extent BM
+[00:55:42] our companies feel like they have a good
+[00:55:45] handle on this or feel like you know
+[00:55:46] everything would be better people were
+[00:55:48] storing more of their data with us yeah
+[00:55:53] policy responses to the ransomware it
+[00:55:57] sounds like the government actually
+[00:55:57] established a protocol that made
+[00:55:59] hospitals less likely to pay was that a
+[00:56:01] lucky guess was that huh that was no
+[00:56:04] sort of rogue or rogue is a strong word
+[00:56:06] for it um but but so in other parts of
+[00:56:09] my work on ransomware I look at kind of
+[00:56:11] what the DOJ what the FBI has given as
+[00:56:13] advice to people and they've really been
+[00:56:15] sort of talking talking out of both ends
+[00:56:17] in terms of whether or not they advise
+[00:56:19] people to pay there was a big deal a
+[00:56:20] couple years ago an FBI agent was
+[00:56:22] speaking at a conference basically said
+[00:56:24] you know most of the time you just tell
+[00:56:26] people to pay and everybody said oh my
+[00:56:28] god this means you know the FBI has no
+[00:56:29] idea what to do about ransomware and
+[00:56:31] they can't help you which probably was
+[00:56:34] roughly what it meant other than the FBI
+[00:56:36] kind of rolled that back and they said
+[00:56:38] no no like our advice is you shouldn't
+[00:56:41] pay but if you need to pay then you
+[00:56:44] should pay and either way you should let
+[00:56:46] us know about it because we'd like to
+[00:56:48] know um so there's there's really
+[00:56:50] ambiguous guidance on this sort of just
+[00:56:52] in general from the law enforcement
+[00:56:54] community there's not been a huge amount
+[00:56:56] of success in the past couple years and
+[00:56:58] catching people who operate ransomware
+[00:57:00] schemes the the big success was the
+[00:57:02] takedown of a bot called GAMEOVER Zeus
+[00:57:04] which distributed one of the sort of
+[00:57:06] first really effective ransomware
+[00:57:08] programs called cryptolocker now the
+[00:57:10] person who ran that who's a Russian
+[00:57:12] hacker named Afghani boga Jeff is not in
+[00:57:14] jail because he lives in Russia and they
+[00:57:16] didn't want to arrest him but but they
+[00:57:18] didn't figure out what is they did take
+[00:57:20] down some of his infrastructure um it's
+[00:57:23] not clear either that
+[00:57:24] Farah has a great way of tracking these
+[00:57:26] and figuring out who's behind them or
+[00:57:28] even if they did that they would be able
+[00:57:29] to do very much about it because we
+[00:57:31] think a lot of these operations are run
+[00:57:33] overseas but we don't don't know for
+[00:57:36] sure so I would say in general outside
+[00:57:39] of healthcare you've seen sort of a much
+[00:57:40] more wish you wash your response from
+[00:57:43] people saying we you know we really
+[00:57:44] don't encourage you to pay because that
+[00:57:46] just keeps them going but you know if
+[00:57:49] it's important you have to weigh the
+[00:57:50] priorities and whatever it's holding
+[00:57:53] human service is coming out and saying
+[00:57:55] if you're gonna pay you're gonna report
+[00:57:57] this this is gonna be a HIPAA breach
+[00:57:58] you're gonna send letters to everybody
+[00:58:00] was a very strong step in the context of
+[00:58:03] sort of the larger law enforcement and
+[00:58:05] policy guidance nobody has tried to say
+[00:58:07] that about any other kind of company or
+[00:58:09] if you're gonna pay a rest home you need
+[00:58:11] to report that under data breach
+[00:58:13] notification laws under anything else so
+[00:58:15] it was sort of impressive I would say it
+[00:58:18] was you know a very strong step toward
+[00:58:20] saying we're gonna try and cut off this
+[00:58:22] cash we're gonna try and make this a
+[00:58:23] less viable business model for Federals
+[00:58:26] the point of doing this right probably
+[00:58:28] not that people think the integrity of
+[00:58:30] the data has been compromised we have no
+[00:58:31] evidence to suggest that's ever happened
+[00:58:33] no evidence to suggest that aside from
+[00:58:35] being criminals these are people who go
+[00:58:36] in and take out important facts from
+[00:58:37] your medical records because we don't I
+[00:58:42] don't I don't know that there is
+[00:58:43] evidence to suggest that probably the
+[00:58:45] point you're sending that diamonds is to
+[00:58:47] try and get people to stop paying and
+[00:58:48] hope that then they'll leave the
+[00:58:50] hospitals alone because it's just not
+[00:58:51] lucrative enough that they'll you know
+[00:58:53] go after the universities are fine to
+[00:58:55] find a new place to play
+[00:58:59] you know it's talking about at a local
+[00:59:02] hospital a very local to a city and that
+[00:59:06] it's right here in Massachusetts and it
+[00:59:09] was right in the Boston Globe and it's a
+[00:59:11] chief up about the distortion and the
+[00:59:14] erasure of innocence proof of innocence
+[00:59:18] like you know the wires and they were
+[00:59:20] false charges and so the proof of
+[00:59:22] innocence things were disappeared and
+[00:59:23] wood and the
+[00:59:25] and the ambulance that took the person
+[00:59:26] there's no bill for that so I require
+[00:59:29] these if you're supposed to be a
+[00:59:30] hospital has to have insurance so
+[00:59:32] somebody have to pay for that ambulance
+[00:59:34] but does the public under you know the
+[00:59:37] FOIA Act have a right to even find out
+[00:59:40] because this guy was on the front page
+[00:59:42] they had 24 years very proud we have a
+[00:59:44] district took five six years one so he
+[00:59:47] was actually destroying and are altering
+[00:59:49] the ones that know where people of
+[00:59:52] interest that were to be protected in
+[00:59:56] towns that have a very shall we say
+[01:00:01] questionable source of major income in
+[01:00:04] the millions come you know sure
+[01:00:07] well thank you all so much for coming
+[01:00:08] have been really fun for me to talk to
+[01:00:11] some people who actually come out of the
+[01:00:12] health care world and a wonderful rest
+[01:00:15] of your Thursday thank you

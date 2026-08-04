@@ -1,0 +1,1598 @@
+[00:00:02] it's my great pleasure to introduce
+[00:00:03] Susan venes uh Susan is a faculty
+[00:00:06] associate here at the birkman center she
+[00:00:08] teaches at American University uh at
+[00:00:10] their School of International Service
+[00:00:13] Susan is the founder of the dangerous
+[00:00:15] speech project which studies
+[00:00:16] inflammatory speech and its capacity to
+[00:00:19] inspire violence uh and looks at how to
+[00:00:21] limit the harm of dangerous speech while
+[00:00:24] still protecting freedom of expression
+[00:00:26] uh Susan and I and several other fellows
+[00:00:28] uh from the Berkman Center have working
+[00:00:30] on a variety of different uh thought
+[00:00:32] experiments and tests and ideas to test
+[00:00:34] some of the uh principles of freedom of
+[00:00:37] expression and how they apply online to
+[00:00:39] start thinking about how we can
+[00:00:40] rigorously challenge uh some of our
+[00:00:43] justifications for freedom of speech
+[00:00:45] through uh what we can observe online um
+[00:00:47] and explore those in Greater detail and
+[00:00:49] we talk a lot about the pro speech
+[00:00:50] solutions for speech harms and the
+[00:00:53] efficacy of counter speech and lots of
+[00:00:54] other stuff so I am uh totally thrilled
+[00:00:56] and happy to introduce Susan to you all
+[00:00:59] where she's going to be talking about
+[00:01:00] troll wrestling for beginners datadriven
+[00:01:02] methods to decrease hatred online please
+[00:01:05] join me in welcoming
+[00:01:07] [Applause]
+[00:01:10] Susan I wish I could tell you that I'm
+[00:01:13] going to um sh our sitter stand it's up
+[00:01:15] to you okay I can flop around and and uh
+[00:01:20] I I unfortunately I was about to tell
+[00:01:21] you I won't demonstrate troll wrestling
+[00:01:23] we'll have to leave that for another
+[00:01:25] time um but I'd like to start by
+[00:01:27] explaining this very serious title
+[00:01:30] uh so what is troll wrestling um and why
+[00:01:33] do I say beginners why for beginners um
+[00:01:37] so as you all know hatred racism
+[00:01:39] xenophobia homophobia misogyny and
+[00:01:42] violent threats are all rampant online
+[00:01:45] we're all worried about it but there is
+[00:01:47] a sense of helplessness in the Zeitgeist
+[00:01:50] about this um research and public
+[00:01:52] discourse so far have focused on what
+[00:01:54] seems to be an uncontrollable plague of
+[00:01:57] all of this um we here and we say the
+[00:02:01] internet FS hatred um uh online
+[00:02:06] disinhibition is causing this you know
+[00:02:09] or a simpler and and uh more time
+[00:02:12] honored uh line kids nowadays you know
+[00:02:16] there's something wrong with the new
+[00:02:17] generation or wrong with the Internet or
+[00:02:20] both um or we hear and we say often
+[00:02:24] don't feed the trolls as you know um so
+[00:02:28] don't feed the trolls is the online
+[00:02:31] world's principal policy response to
+[00:02:33] this very serious and perhaps growing
+[00:02:37] problem um the other two standard
+[00:02:39] responses by the way are the same ones
+[00:02:42] that human authorities usually but not
+[00:02:44] only governments have been using and
+[00:02:46] have always used to deal with
+[00:02:48] objectionable speech of any kind and
+[00:02:51] those two other responses are
+[00:02:54] punishment you go after the speaker
+[00:02:57] right um in uh uh
+[00:03:01] comparatively uh uh mild and um and fair
+[00:03:06] forms of punishment sometimes the
+[00:03:08] Speaker gets prosecuted um in other
+[00:03:11] circumstances the speaker is punished um
+[00:03:15] uh without rule of law and sometimes the
+[00:03:17] punishment as goes as far as
+[00:03:20] death uh uh and then of course we have
+[00:03:24] censorship which is which is uh
+[00:03:27] practiced very vigorously all over the
+[00:03:29] world today as it has been um ever since
+[00:03:32] we began expressing ourselves uh uh well
+[00:03:37] expressing ourselves at all so these two
+[00:03:39] forms punishment and censorship can do
+[00:03:42] very serious damage to freedom of
+[00:03:43] expression first of all um that's the
+[00:03:46] first reason why I am worried about them
+[00:03:48] and wouldn't want to rely on
+[00:03:50] them second and equally important they
+[00:03:53] don't work very well in many contexts
+[00:03:56] including uh in particular online I
+[00:03:59] would suggest suest you that punishment
+[00:04:01] and censorship work even less well
+[00:04:03] online than they do offline um the
+[00:04:06] speech of anoir alaki for example has
+[00:04:09] been vigorously censored in many
+[00:04:12] contexts including online and he himself
+[00:04:15] was punished quite severely with death
+[00:04:18] as you
+[00:04:19] know yet his speech continues to be seen
+[00:04:21] and heard widely today I I was just last
+[00:04:25] week talking with someone who studies
+[00:04:27] this in detail and uh an Al alaki speech
+[00:04:31] is still influencing lots of people
+[00:04:33] online um he continues to inspire hatred
+[00:04:36] and violence just as he inspired the
+[00:04:39] Boston Marathon
+[00:04:41] bombers so punishment and censorship I
+[00:04:44] hope I've convinced you if you didn't
+[00:04:45] already believe that are
+[00:04:47] inadequate that brings us back to don't
+[00:04:50] feed the trolls what about that in that
+[00:04:53] maximum there are several even many
+[00:04:57] implicit assumptions that c into
+[00:05:00] question the wisdom of relying on it let
+[00:05:02] me give you just four of those implicit
+[00:05:06] assumptions the first one is that it
+[00:05:09] works the idea is that if you ignore a
+[00:05:13] troll still to be defined by the way if
+[00:05:16] you ignore a troll that person will stop
+[00:05:20] there are some anecdotal evidence to
+[00:05:21] support this idea but it's quite limited
+[00:05:24] uh it tends to be limited only to one
+[00:05:26] platform first of all and sometimes only
+[00:05:29] to one
+[00:05:30] exchange right with a person and a troll
+[00:05:35] um and as far as I know there isn't
+[00:05:37] robust data to support the contention
+[00:05:40] that don't feed the trolls is a
+[00:05:42] successful policy response in other
+[00:05:45] words that it works in reducing the
+[00:05:46] expression of hatred online so that's
+[00:05:48] one assumption that I think you ought to
+[00:05:51] join me in questioning the second one is
+[00:05:54] that online hatred is actually produced
+[00:05:57] in its vast majority by people we would
+[00:05:59] call
+[00:06:00] trolls uh the few experiments that have
+[00:06:03] been conducted on who is producing
+[00:06:05] racist hateful misogynist etc etc speech
+[00:06:09] online indicate that in fact as much of
+[00:06:12] half of it is produced by non trolls by
+[00:06:16] people we would not consider to be
+[00:06:18] trolls we also have some early data
+[00:06:21] indicating that feeding these non-
+[00:06:24] trolls who speak like trolls can in fact
+[00:06:28] be successful
+[00:06:30] and I'll show you that little bit of
+[00:06:32] early evidence that that we have the
+[00:06:35] third assumption is that trolls are a
+[00:06:37] homogeneous species that there is one
+[00:06:40] kind of a person that is a troll um and
+[00:06:45] that therefore they are likely to react
+[00:06:47] in the same way in response to similar
+[00:06:50] treatment the assumption that if you do
+[00:06:52] something to a troll the troll will
+[00:06:54] response in a respond in a particular
+[00:06:56] way you must agree depends on the idea
+[00:06:59] that a troll is a troll is a
+[00:07:01] troll and you know how well that worked
+[00:07:04] with roses okay the fourth assumption
+[00:07:07] I'd like to point out to you is that um
+[00:07:11] well the implicit assumption um is that
+[00:07:15] don't feed the trolls or this is not
+[00:07:16] quite an assumption I'll call it an
+[00:07:18] observation don't feed the trolls
+[00:07:20] focuses our attention on those people
+[00:07:23] who are producing hateful speech whether
+[00:07:25] they are trolls or
+[00:07:27] not however it is useful and important
+[00:07:29] to focus if not Instead at least in
+[00:07:33] addition on the rest of us on the
+[00:07:37] audience on everyone else who now sees
+[00:07:39] and hears so much hateful objectionable
+[00:07:43] violent offensive frightening speech
+[00:07:47] online wouldn't it be useful to think
+[00:07:50] about the effect of all of this speech
+[00:07:52] on the rest of us on the community the
+[00:07:55] fear the shame the silencing and the
+[00:07:57] shifting of discourse Norms that this
+[00:07:59] type of speech produces so don't what I
+[00:08:02] what I want to uh uh argue to is that
+[00:08:06] this Maxim don't feed the trolls
+[00:08:09] concentrates our attention
+[00:08:11] on the trolls themselves and trying to
+[00:08:13] change their behavior their ideas their
+[00:08:16] speech etc etc um research and data
+[00:08:19] collection should also focus on the non
+[00:08:23] controls the
+[00:08:25] audience so we have hardly begun to take
+[00:08:29] uh to take the quite extraordinary and
+[00:08:33] and would even say wonderful opportunity
+[00:08:36] that online communication provides to
+[00:08:38] study possibilities for shifting
+[00:08:40] discourse Norms away from this
+[00:08:43] hatred online communication is a
+[00:08:46] remarkable opportunity for a number of
+[00:08:47] reasons one you can study the effects of
+[00:08:50] speech on people when the speech is
+[00:08:52] disseminated
+[00:08:54] online not so easily but much more
+[00:08:57] easily than you can study the effects of
+[00:08:59] spe speech
+[00:09:01] offline um and there are other other uh
+[00:09:05] reasons why it's a remarkable
+[00:09:06] opportunity but but to get to the slides
+[00:09:09] and then much more importantly to get to
+[00:09:10] your questions um I'll just uh uh say
+[00:09:16] that now I feel I've explained why I
+[00:09:18] call it troll wrestling for
+[00:09:20] beginners and that is we are all
+[00:09:23] beginners we are all beginners there is
+[00:09:25] an exceptional opportunity to study
+[00:09:28] other meth methods of decreasing hateful
+[00:09:31] expression online which as I'll show you
+[00:09:34] a few people have just begun um to take
+[00:09:38] but I hope to convince at least some of
+[00:09:40] you to um uh to expand on those
+[00:09:44] efforts okay so there's this opportunity
+[00:09:47] to diminish hatred with other methods
+[00:09:48] including what I call counter speech
+[00:09:51] that is to say not ignoring the Trolls
+[00:09:54] but instead speaking uh uh speaking in
+[00:09:57] response to them and to try to convince
+[00:10:00] you of that I'm just going to make three
+[00:10:02] points and then I'll show you this work
+[00:10:04] that's already been done and I will
+[00:10:06] close then with some suggestions for
+[00:10:09] next steps for other work that that can
+[00:10:11] be done okay why do I think this is such
+[00:10:13] a great opportunity uh after all a few
+[00:10:16] more reasons one it isn't hatred that's
+[00:10:20] new this idea that the internet is
+[00:10:22] somehow causing
+[00:10:25] hatred is wrong it does perhaps um
+[00:10:29] produce a sense of of either different
+[00:10:33] Community Norms or less explicit
+[00:10:37] Community Norms or indeed a lack of
+[00:10:39] community so that people feel
+[00:10:41] disinhibited to express um hateful ideas
+[00:10:46] but the internet does not create those
+[00:10:48] ideas they have always been there what
+[00:10:51] is so different
+[00:10:53] now is that the rest of us over here or
+[00:10:57] of course in most cases over
+[00:11:00] oversee hateful expression the rest of
+[00:11:03] us are now privy to speech that pre-
+[00:11:06] internet we would not have seen or heard
+[00:11:10] so for example if the Klux Clan held a
+[00:11:13] rally they wouldn't have invited those
+[00:11:15] of us who are here in this
+[00:11:17] room if people if men wanted to tell
+[00:11:19] rape jokes to each other in the past
+[00:11:21] they would have told them in a physical
+[00:11:24] space within a small community of people
+[00:11:28] in which they felt confident that no one
+[00:11:30] else who would disapprove of those jokes
+[00:11:32] would overhear in a locker room on a
+[00:11:35] hunting trip I know I'm using
+[00:11:37] stereotypes please forgive me but in
+[00:11:39] those physical spaces the people
+[00:11:43] exchanging that speech knew that for
+[00:11:46] example women wouldn't have overheard
+[00:11:48] that speech that's not to say that
+[00:11:49] racist speech wasn't also shared in
+[00:11:52] physical public space as well but lots
+[00:11:56] of it was exchanged in places where
+[00:11:58] those who spoke it and those who heard
+[00:12:00] it knew that it wouldn't be overheard
+[00:12:02] that increasingly online is not the case
+[00:12:05] that is to say speech is crossing
+[00:12:07] boundaries between human
+[00:12:10] communities of all kinds in a way that
+[00:12:14] in all the rest of human history was
+[00:12:16] impossible um this has become a new
+[00:12:18] feature of human
+[00:12:21] life it causes a tremendous amount of
+[00:12:24] pain but it's also an opportunity to
+[00:12:26] learn to toss lightly perhaps speech
+[00:12:31] back across those boundaries to see what
+[00:12:34] sort of effect it might have this is
+[00:12:37] something we don't know how to do not
+[00:12:39] surprisingly it's a brand
+[00:12:42] new um sport if you like it's a brand
+[00:12:45] new
+[00:12:48] effort um people are now exposed to new
+[00:12:51] hateful speech but can also be exposed
+[00:12:54] to new constructive and peaceful speech
+[00:12:57] and speech expressing social norms to
+[00:12:59] which they have never been exposed uh in
+[00:13:01] the past for example if I asked you
+[00:13:04] where have 16-year-olds traditionally
+[00:13:06] gotten their ideas and opinions
+[00:13:08] throughout the course of all of human
+[00:13:09] history they got them overwhelmingly
+[00:13:12] from the small highly
+[00:13:15] homogeneous normative community of
+[00:13:17] people around them their parents their
+[00:13:19] siblings their peers their clergy their
+[00:13:22] neighbors their soccer coach you know a
+[00:13:26] small homogeneous group of people that
+[00:13:28] is no longer the case that is an
+[00:13:30] opportunity that again has only just
+[00:13:32] barely begun to be exploited um the
+[00:13:36] second reason why I think this is quite
+[00:13:38] an opportunity is that it is far from
+[00:13:40] impossible to spe to shift speech Norms
+[00:13:43] within communities um as I said to a
+[00:13:46] journalist yesterday I'm not suggesting
+[00:13:48] that we all fly to the moon in our
+[00:13:50] pajamas without a without a rocket you
+[00:13:52] know for the your arms it's not
+[00:13:54] impossible it's not even all that uh uh
+[00:13:58] outlandish on the contrary we have
+[00:14:00] plenty of examples pre- internet those
+[00:14:02] of you who have heard me talk about this
+[00:14:04] before please forgive me I always give
+[00:14:05] this example um what is the likelihood
+[00:14:08] that an American
+[00:14:10] politician will use the n-word in public
+[00:14:12] even though not only is that speech not
+[00:14:14] prohibited by law in the United States
+[00:14:17] um any politician has a constitutionally
+[00:14:20] protected right to use the n-word in
+[00:14:22] public however How likely is
+[00:14:25] it anybody knowingly knowingly
+[00:14:29] believing the microphone is
+[00:14:34] on1 thank you 0 1% my students usually
+[00:14:37] say zero but you're more precise okay
+[00:14:40] it's extremely extremely unlikely 50 or
+[00:14:44] 60 years ago there were probably PES in
+[00:14:46] the United States where you couldn't
+[00:14:47] have gotten elected if you didn't use
+[00:14:49] that word is that fair to say if you
+[00:14:53] want 70 years okay no anybody want to
+[00:14:56] argue with that
+[00:14:59] so Shi speech Norms in that particular
+[00:15:03] case have shifted not only a little not
+[00:15:05] only a lot but 18 180 degrees entirely
+[00:15:09] uh marriage equality is another uh is
+[00:15:11] another example of a very rapid shift in
+[00:15:14] historical terms um that one did have
+[00:15:18] some help from from uh the online world
+[00:15:21] uh but that's to say uh Speech Norms
+[00:15:24] within communities can can shift um in
+[00:15:27] human terms very quickly
+[00:15:29] um and the third point is that as the
+[00:15:32] psychologist Maria kova pointed out very
+[00:15:35] eloquently in a fine New Yorker of piece
+[00:15:36] last
+[00:15:37] October people's behavior shifts
+[00:15:40] dramatically in response to community
+[00:15:44] Norms this I will be able to illustrate
+[00:15:46] this uh for you in just a moment uh uh
+[00:15:49] with some online research as well as she
+[00:15:51] wrote one of the most important controls
+[00:15:54] of our behavior is the established Norms
+[00:15:57] within any given community
+[00:15:59] for the most part she wrote We act
+[00:16:02] consistently with the space and the
+[00:16:05] situation this is true of the vast
+[00:16:07] majority of
+[00:16:09] people even
+[00:16:12] trolls now as as I've been promising
+[00:16:15] I'll describe a few early efforts to
+[00:16:17] gather data on how to diminish hatred
+[00:16:20] online I'll suggest some other
+[00:16:21] experiments and then I will ask of
+[00:16:23] course I will ask you to suggest some
+[00:16:30] um in Kenya at the end of 2007 after
+[00:16:35] months of hateful and inflammatory
+[00:16:38] speech online and after an election fell
+[00:16:41] apart um there was a terrible eruption
+[00:16:44] of violence more than a thousand people
+[00:16:46] got killed and more than half a million
+[00:16:48] people were displaced from their homes
+[00:16:50] many of them have still not been able to
+[00:16:52] return
+[00:16:53] home last uh
+[00:16:56] spring almost just a year ago
+[00:16:59] uh on March 4th of 2013 K Kenya held its
+[00:17:03] next presidential election after that
+[00:17:06] disaster as that next election loomed uh
+[00:17:11] in 2011 and and uh 2012 uh many of us
+[00:17:17] who love Kenya um including of course uh
+[00:17:20] many Kenyans began to worry about the
+[00:17:22] prevalence of inflammatory speech in uh
+[00:17:26] in Kenyan discourse on and offline
+[00:17:29] um and a project was launched called
+[00:17:32] umati a TI it means crowd in Swahili uh
+[00:17:36] to scour the Kenyon online spaces for
+[00:17:40] hateful speech and inflammatory speech
+[00:17:42] and what I call dangerous speech um as
+[00:17:46] Andy explained dangerous speech uh is uh
+[00:17:49] a term I've coined to refer to speech
+[00:17:52] that has a special capacity to inspire
+[00:17:55] Mass violence such as what happened in
+[00:17:58] Kenya in 200
+[00:17:59] 8 so this is a slide representing some
+[00:18:03] results from the umati project and what
+[00:18:05] it shows is uh unfortunately a large
+[00:18:09] number of examples of very inflammatory
+[00:18:12] speech collected from Facebook
+[00:18:16] pages and then such an astonishingly
+[00:18:19] small number collected from tweets that
+[00:18:21] you can perhaps barely even
+[00:18:23] see that side of the
+[00:18:26] slide now and by the way this is data
+[00:18:30] from more than 7,000 total examples that
+[00:18:32] were eventually
+[00:18:34] collected and the project is now
+[00:18:36] continuing and so forth um what I'm
+[00:18:40] trying to show you is the gigantic
+[00:18:42] disproportion we expected a considerable
+[00:18:44] disproportion between Facebook and
+[00:18:46] Twitter for all kinds of reasons
+[00:18:47] including somewhat different populations
+[00:18:50] on each of the platforms the comparative
+[00:18:53] expectation of privacy on Facebook not
+[00:18:55] on Twitter and so forth but not this
+[00:18:58] kind of a
+[00:18:59] disproportion this was
+[00:19:02] wild so we started looking at first
+[00:19:05] anecdotally to see what might explain
+[00:19:08] the comparative absence of inflammatory
+[00:19:11] speech on
+[00:19:13] Twitter and what we found was lots of
+[00:19:15] counter speech um for a bit of context
+[00:19:18] in this period in Kenya there was so
+[00:19:20] much concern about inflammatory speech
+[00:19:22] that there were many many appeals in all
+[00:19:26] kinds of media
+[00:19:29] including of course online spaces but
+[00:19:31] even um in graffiti murals painted on
+[00:19:35] the walls of Nairobi all kinds of
+[00:19:37] language appealing to people to keep the
+[00:19:40] peace to stay calm to remember that
+[00:19:42] they're all Kenyans um and not to listen
+[00:19:46] to inflammatory speech so what we ended
+[00:19:48] up finding was quite a bit of that on
+[00:19:50] Twitter that is to say um
+[00:19:54] Community responses on Twitter asking
+[00:19:57] other people to stay calm in response to
+[00:20:00] inflammatory speech so here's an
+[00:20:04] example
+[00:20:06] um one person tweets all the ALU the
+[00:20:09] alua and aluya tribe can go to hell as
+[00:20:12] long as it's the kikuyu tribe running
+[00:20:14] things um that was particularly in that
+[00:20:17] context a very inflammatory thing to
+[00:20:20] say in
+[00:20:22] response is this the Kenya we
+[00:20:25] want uh you should apologize to the kot
+[00:20:28] the kenyons on
+[00:20:29] Twitter and this this is highly
+[00:20:32] compressed there was lots of other uh
+[00:20:34] conversation as you can imagine but I'm
+[00:20:37] I'm trying to give you a very compact uh
+[00:20:41] streamlined um sampling of some of this
+[00:20:45] work and so then we have a response from
+[00:20:48] the
+[00:20:49] original uh person who tweeted or at
+[00:20:52] least from the original account sorry
+[00:20:54] guys what I said wasn't right and I take
+[00:20:56] it back lesson learned
+[00:21:00] sort of oddd behavior for a
+[00:21:02] troll I I don't I'm hearing you saying H
+[00:21:06] and things like that of course I don't
+[00:21:07] know what you're thinking but we at
+[00:21:09] least were a bit surprised by that um
+[00:21:13] so we started looking at some other um
+[00:21:17] cases of of of inflammatory and hateful
+[00:21:20] tweets that were met with lots of
+[00:21:23] counter
+[00:21:24] speech spontaneous counter speech by the
+[00:21:27] way these are not um
+[00:21:29] experimental
+[00:21:32] interventions so you may remember that
+[00:21:34] Nina Daval laurri an American whose
+[00:21:36] parents immigrated from India was chosen
+[00:21:39] as our latest Miss
+[00:21:41] America and um in almost immediate
+[00:21:45] response
+[00:21:46] uh there were many many many tweets
+[00:21:50] attacking her and attacking her choice
+[00:21:52] as Miss America and mischaracterizing
+[00:21:55] her as Arab among other things
+[00:21:58] so here is one such tweet this uh
+[00:22:01] account poured out hateful racist um uh
+[00:22:07] tweets about Miss America about Nina
+[00:22:10] davui here are responses one day I hope
+[00:22:13] you'll realize how shameful this tweet
+[00:22:15] is I hope you realize it
+[00:22:17] tomorrow someone else your hatred made
+[00:22:20] it onto Sky News
+[00:22:22] congrats that's an incidental um
+[00:22:25] interesting factor that we also noticed
+[00:22:27] in Kenya often
+[00:22:29] um online speech gets greatly magnified
+[00:22:31] particularly in contexts where not
+[00:22:33] everyone is online when it is reported
+[00:22:36] in the mainstream media this also
+[00:22:37] happens extensively in the United States
+[00:22:40] particularly hateful content online is
+[00:22:42] often reproduced uh by the mainstream
+[00:22:45] media so that happened in this
+[00:22:47] case and then we have a somewhat
+[00:22:50] different type of counter speech
+[00:22:52] ignorant illiterate racist
+[00:22:55] idiot so this should uh make you aware
+[00:22:59] that in the same way that we can't say
+[00:23:01] Troll and refer to one unilateral
+[00:23:04] homogeneous species we can't say counter
+[00:23:08] speech and be referring to only one type
+[00:23:09] of thing so one of my own projects now
+[00:23:12] going forward is to study counter speech
+[00:23:15] and try to understand the different
+[00:23:17] forms of it that exist and to develop a
+[00:23:20] kind of taxonomy of counter speech with
+[00:23:22] the idea of determining when which forms
+[00:23:26] are useful
+[00:23:28] when is it successful in what kind of
+[00:23:30] circumstances and in response to what
+[00:23:32] sort of speech produced by
+[00:23:35] whom um so here's another example of
+[00:23:38] counter speech don't just hate her for
+[00:23:39] her skin color she's an American like
+[00:23:41] anybody
+[00:23:44] else response from the original account
+[00:23:47] I think it's funny what they have to say
+[00:23:48] but I am not
+[00:23:50] racist and I didn't realize it would
+[00:23:52] explode like
+[00:23:54] that so counter speech has not evidently
+[00:23:57] been very successful
+[00:24:01] uccessful until a few hours
+[00:24:05] later he tweets Miss America directly
+[00:24:09] actually sorry for being rude and racist
+[00:24:12] he's putting racist in quotes but he
+[00:24:14] still says that and calling you a Arab
+[00:24:19] a um my so far only anecdotal
+[00:24:24] nonrigorous experimental hypothesis is
+[00:24:28] that trolls have bad
+[00:24:31] grammar and that counter speakers
+[00:24:34] somehow tend to do better with their
+[00:24:36] grammar but as I say that's only a very
+[00:24:38] very uh anecdotal impression so far
+[00:24:41] sorry for being rude and racist and
+[00:24:42] calling you Arab please Tweet back so
+[00:24:45] everyone will know it's real so this is
+[00:24:47] another example of a of a troll someone
+[00:24:50] who produced hateful and inflammatory
+[00:24:52] speech who received counter speech and
+[00:24:54] seems to have been affected by it such
+[00:24:57] that he uh recants and even apologizes
+[00:25:00] like the example in Kenya we have lots
+[00:25:02] of other ones but I don't want to take
+[00:25:03] the time to show you um many of
+[00:25:08] those instead I guess I've already I
+[00:25:10] hope that I've already suggested to you
+[00:25:12] that it is worth studying this quite a
+[00:25:15] lot more to see if one can glean some
+[00:25:18] knowledge from it about how to produce
+[00:25:21] this sort of reaction
+[00:25:24] um I hope you will put this together
+[00:25:26] with what I asked you about 16
+[00:25:28] 16-year-olds or I suggested to you that
+[00:25:29] 16-year-olds traditionally have gotten
+[00:25:31] their ideas and opinions from from a
+[00:25:34] small and homogeneous group of
+[00:25:36] people this guy might be such an
+[00:25:39] example and in his original tweets he
+[00:25:41] might have been saying the sorts of
+[00:25:43] things that the rest of us would never
+[00:25:44] have seen or heard from him before he
+[00:25:48] got
+[00:25:49] online so this is what I mean by by an
+[00:25:53] opportunity now I I I I hasten to tell
+[00:25:57] you that I don't don't imagine that that
+[00:25:59] we are going to that anybody is going to
+[00:26:02] bring around um all the hardcore
+[00:26:06] extremists and haters and violent
+[00:26:09] misogynists and racists and so forth uh
+[00:26:11] out
+[00:26:13] there that is first of all not realistic
+[00:26:16] and secondly not
+[00:26:18] necessary to shift Community
+[00:26:21] Norms we need to influence some critical
+[00:26:25] mass of people within a particular
+[00:26:27] Community not everyone and particularly
+[00:26:29] not the
+[00:26:31] outliers most people are in the sort of
+[00:26:35] 80% or so of malleable
+[00:26:38] middle who um as kova uh argued in her
+[00:26:44] New Yorker piece um tend to shift their
+[00:26:48] behavior in response to what they
+[00:26:50] perceive to be Community
+[00:26:55] Norms there's another source of some
+[00:26:58] experimental data and that is the gaming
+[00:27:01] industry um already uh some quite
+[00:27:05] interesting experiments have been done
+[00:27:07] by various different gaming companies
+[00:27:09] and regarding various platforms um the
+[00:27:12] most work has been done by Riot games
+[00:27:14] which produces League of Legends which
+[00:27:16] I'm told is the most popular game of all
+[00:27:18] time in any case it's exceedingly
+[00:27:20] popular um Jeffrey Lynn directed um an
+[00:27:26] extensive uh set of EXP experiments
+[00:27:29] produced by a large team that he
+[00:27:30] assembled uh at at Riot games um after
+[00:27:34] Riot beames games became alarmed at the
+[00:27:37] level and variance of toxic uh hostile
+[00:27:41] and even violent speech being used by
+[00:27:44] Gamers um playing League of
+[00:27:48] Legends uh the results are quite
+[00:27:51] striking first of all um this is one of
+[00:27:55] the experiments that found to to the
+[00:27:57] surprise of this uh of this uh group of
+[00:28:01] researchers that fully half of the toxic
+[00:28:04] messages were not coming from people who
+[00:28:07] would otherwise have been considered
+[00:28:09] trolls that is to say about half of uh
+[00:28:13] of uh toxic messages were produced by
+[00:28:15] people who otherwise seemed to behave
+[00:28:18] normally the rest of the time they were
+[00:28:21] uh as Lynn describes it apparently
+[00:28:23] having a bad day although as he points
+[00:28:26] out just just one person having a bad
+[00:28:30] day can cause all the other people
+[00:28:32] playing a given game to perceive that
+[00:28:36] the atmosphere in the game at that time
+[00:28:38] is
+[00:28:39] toxic and that can in turn shift uh
+[00:28:42] shift Norms so first of all half of
+[00:28:45] toxic messages did not come from trolls
+[00:28:47] second um pure feedback and Community uh
+[00:28:50] driven sanctions uh caused quite quite
+[00:28:53] dramatic changes in player uh Behavior
+[00:28:58] um other other uh what we can call
+[00:29:02] tweaks in the platform made substantial
+[00:29:06] differences in player behavior and
+[00:29:10] therefore we can probably conclude
+[00:29:12] Community Norms as the players perceive
+[00:29:14] them and finally very small changes in
+[00:29:19] the platform for example uh a small
+[00:29:22] changes in uh the language used to
+[00:29:25] prompt players
+[00:29:28] made substantial differences in their
+[00:29:30] behavior in some cases dramatically
+[00:29:32] improved player
+[00:29:33] Behavior even font colors apparently uh
+[00:29:37] can can um have a considerable impact on
+[00:29:41] uh player
+[00:29:47] Behavior so there's another source of uh
+[00:29:50] interestingly enough some of the same
+[00:29:52] conclusions and that is uh a team at
+[00:29:55] Facebook that conducts what they call
+[00:29:57] compat passion research compassion
+[00:30:00] research is uh work designed to um to
+[00:30:06] teach Facebook how to get people who use
+[00:30:09] Facebook to behave in in more pro-social
+[00:30:13] ways um one of the um conclusions that
+[00:30:18] that or one of the the pieces of work of
+[00:30:20] which Facebook is particularly proud is
+[00:30:23] what they call social reporting this is
+[00:30:26] changing the the uh um
+[00:30:29] flow uh of prompts that you see when you
+[00:30:31] try to flag content on Facebook for
+[00:30:34] example you see an image that a friend
+[00:30:36] of yours on Facebook has posted you
+[00:30:38] don't like it you try to flag it or
+[00:30:41] report it to Facebook and Facebook now
+[00:30:43] will prompt you to engage first with the
+[00:30:46] person who posted this offensive this
+[00:30:49] content that has offended you and then
+[00:30:52] uh the Facebook flow tends to prompt you
+[00:30:54] also with language that you might use
+[00:30:56] when you communicate with this other
+[00:30:58] user the language focuses on emotion so
+[00:31:01] you're encouraged to say something like
+[00:31:03] um could you please take this Photograph
+[00:31:05] down it makes me feel embarrassed or uh
+[00:31:08] it hurts my feelings um and Facebook
+[00:31:11] working with a couple of uh teams of
+[00:31:13] academics at Berkeley and at Yale um has
+[00:31:16] had very successful results with this um
+[00:31:21] and has again
+[00:31:23] um uh just like Riot games found that
+[00:31:27] very small changes in the language used
+[00:31:31] in these prompts can have a dramatic
+[00:31:33] impact positive impact on um user
+[00:31:39] Behavior so I have said that uh This is
+[00:31:42] highly effective and useful but not in
+[00:31:44] all
+[00:31:49] contexts so that brings us
+[00:31:52] um to very different contexts such as uh
+[00:31:56] Myanmar or Burma
+[00:31:59] where uh several very important things
+[00:32:02] are true one is
+[00:32:04] that Facebook is
+[00:32:07] overwhelmingly the most used social
+[00:32:10] media platform so much so that um uh
+[00:32:15] friend of mine who works a lot in in in
+[00:32:17] Myanmar told me um just the other day
+[00:32:19] that you can ask somebody are you on the
+[00:32:23] internet in Myanmar and often they'll
+[00:32:25] say yes I'm on Facebook in other words
+[00:32:28] Facebook in in the eyes of some people
+[00:32:31] is the internet when people search they
+[00:32:33] search on Facebook when they look for
+[00:32:36] information they look for it on Facebook
+[00:32:37] Facebook is a source of news and
+[00:32:40] information um has therefore an enormous
+[00:32:42] amount of
+[00:32:43] influence um and unfortunately at the
+[00:32:46] same time um there has been perhaps
+[00:32:50] something like in Kenya in in uh in 2007
+[00:32:54] there is an increasing tide of Highly
+[00:32:56] inflammatory speech um offline and
+[00:33:00] online um in particular inciting um uh
+[00:33:04] Buddhists against Muslims in Myanmar
+[00:33:07] including uh a group of Muslims called
+[00:33:10] the
+[00:33:11] rohinga and um these terribly ugly uh
+[00:33:17] Facebook
+[00:33:18] posts are examples of that um this
+[00:33:23] brings us to a couple of last points
+[00:33:25] that I'd like to make and then I'll I'll
+[00:33:26] finish and uh
+[00:33:28] uh turn to
+[00:33:29] questions um and that is that platform
+[00:33:33] architecture can have an enormous uh
+[00:33:36] impact on
+[00:33:38] responses and on how people
+[00:33:42] behave for example the the social
+[00:33:45] reporting uh flow that has proved so
+[00:33:48] useful in some contexts and that can can
+[00:33:50] greatly improve behavior in some
+[00:33:53] contexts does not work so well in
+[00:33:55] Myanmar where first of all if you are
+[00:33:56] encouraged to
+[00:33:58] report in the in in a country where that
+[00:34:01] is still only emerging from a military
+[00:34:05] dictatorship the implication of
+[00:34:07] reporting is entirely different can be
+[00:34:10] terribly pejorative and frightening and
+[00:34:12] therefore people often hesitate to do
+[00:34:14] that and secondly when the platform
+[00:34:17] helpfully asks you whether you would
+[00:34:18] like to engage first with the person who
+[00:34:21] posted a message like
+[00:34:24] this that would be often the last thing
+[00:34:27] you would want to do since you could be
+[00:34:29] putting your life in danger or you would
+[00:34:32] think you might be putting your life in
+[00:34:34] danger and therefore
+[00:34:37] um the reporting flow that is so useful
+[00:34:41] in one uh normative context could have a
+[00:34:46] totally different effect in a different
+[00:34:48] one therefore any lessons that that can
+[00:34:51] be learned from the sort of research I'm
+[00:34:53] describing may have to be carefully uh
+[00:34:57] uh
+[00:34:59] um um understood within particular human
+[00:35:03] contexts since obviously human cont well
+[00:35:06] it should be obvious that human uh
+[00:35:08] contexts and social contexts are
+[00:35:10] extremely different from one
+[00:35:12] another
+[00:35:14] um and then finally uh it's worth noting
+[00:35:18] that that Facebook which was designed
+[00:35:20] for uh purposes very different from the
+[00:35:22] ones for which it is being used in
+[00:35:24] Myanmar after all it's not intended
+[00:35:27] originally as a uh as a as a as a new
+[00:35:31] source um nor was it intended to take
+[00:35:33] over as a kind of substitute
+[00:35:36] internet um it's also not very good for
+[00:35:40] the expression of dissent after all if
+[00:35:42] someone posts something like that or
+[00:35:45] something like
+[00:35:47] this uh these are authentic uh posts
+[00:35:51] from Facebook simply translated from
+[00:35:54] from bermese into English this is simply
+[00:35:57] um a cover from Time Magazine uh
+[00:36:00] depicting ratu who is um probably the
+[00:36:04] single most famous uh uh monk in Myanmar
+[00:36:08] at the moment uh frequently inciting his
+[00:36:10] followers against Muslims and against
+[00:36:13] rohinga and I I um use it not because
+[00:36:16] it's on on Time Magazine but just to to
+[00:36:19] give you an example of um the sort of
+[00:36:22] person who's unfortunately uh spreading
+[00:36:24] these kinds of
+[00:36:26] messages um
+[00:36:28] if you are uh uh a Burmese person who is
+[00:36:31] appalled or any person who can read
+[00:36:33] Burmese and who is appalled by some of
+[00:36:35] those messages and you see them on a
+[00:36:38] Facebook page um how can you
+[00:36:42] respond you may flag or report to
+[00:36:45] Facebook but as I've already suggested
+[00:36:48] to you there are lots of reasons why you
+[00:36:50] might not do that what else can you
+[00:36:55] do in response to a post on on
+[00:36:59] Facebook you can't tell me none of you
+[00:37:02] is on
+[00:37:06] Facebook well you can like it right
+[00:37:09] that's the main thing that people do in
+[00:37:11] response to posts on Facebook you can
+[00:37:12] like it and that's being done in huge
+[00:37:14] numbers so there are tons of likes in
+[00:37:17] response to all three of the posts that
+[00:37:19] I have shown
+[00:37:20] you um of course that's not a very good
+[00:37:22] way of expressing dissent you can't
+[00:37:24] unlike it you could comment on on it um
+[00:37:29] however the Facebook page is effectively
+[00:37:32] a private space because the person whose
+[00:37:34] page it is can immediately delete your
+[00:37:36] comment or feston the page with lots and
+[00:37:39] lots of other positive comments which
+[00:37:40] will effectively disappear your
+[00:37:43] comment so the interesting thing is that
+[00:37:45] in this case it's a private space
+[00:37:47] functioning as a quasi public space and
+[00:37:51] this suggests that it is also important
+[00:37:54] to focus on the characteristics of the
+[00:37:57] archit Ure of particular platforms and
+[00:37:59] the effects that they may have on um
+[00:38:02] discourse
+[00:38:03] Norms so finally um ideas for more
+[00:38:08] research there are I'm happy to tell you
+[00:38:11] there are lots of anti-hat efforts
+[00:38:14] online as we speak I took a couple of
+[00:38:17] months last year and had a wonderful
+[00:38:18] time collecting them many of them um uh
+[00:38:22] rely heavily on humor and parody by the
+[00:38:25] way um and many of they are enormously
+[00:38:29] popular if we can judge at least by Page
+[00:38:32] views um I couldn't find however a
+[00:38:35] single systematic effort to study their
+[00:38:39] effect the extent to which they change
+[00:38:42] anybody's mind or decrease the incidence
+[00:38:44] of hateful speech so my first suggestion
+[00:38:46] is let's do
+[00:38:48] that study the effect of existing anti-h
+[00:38:51] hatred efforts online including but not
+[00:38:54] limited to counter speech there are many
+[00:38:56] different sorts of effort efforts happy
+[00:38:58] to discuss those but I won't take up
+[00:39:00] time with it now number two let's study
+[00:39:04] counter speech and its effects in other
+[00:39:07] online communities I've shown you that
+[00:39:09] Riot games and some other gaming
+[00:39:11] companies have studied the effects of
+[00:39:13] counter speech and other anti-hat
+[00:39:15] techniques within gaming communities but
+[00:39:18] that's only one type of human Community
+[00:39:21] um there are lots of others such as mesh
+[00:39:24] networks mesh networks which are
+[00:39:28] also relatively um static human
+[00:39:32] communities um and then there are silos
+[00:39:35] such as the one that I've effective
+[00:39:38] silos such as the one that I have
+[00:39:40] suggested to uh Facebook on mianmar uh
+[00:39:46] constitutes and then finally uh uh I've
+[00:39:49] implicitly already suggested this but
+[00:39:50] I'd like to included in the list um it's
+[00:39:53] worth studying changes in platform
+[00:39:55] architecture in various contexts for the
+[00:39:58] effects that they may may have on uh
+[00:40:01] discourse Norms within particular
+[00:40:04] communities so with that I would like to
+[00:40:08] thank you very much and ask for your
+[00:40:10] questions and
+[00:40:14] ideas oh
+[00:40:23] yeah seems like you know historically
+[00:40:25] the reason people came up with you know
+[00:40:27] don't feed trolls was the expectation
+[00:40:30] that starving them of attention causes
+[00:40:33] them to get bored and go somewhere else
+[00:40:36] or go away that's right why when do you
+[00:40:40] think that does not work and
+[00:40:44] why I could only guess since I since I
+[00:40:47] haven't done proper research to study
+[00:40:50] that and and it's one of my
+[00:40:52] suggestions that this be
+[00:40:55] studied carefully
+[00:40:59] so so first of all um you said that that
+[00:41:02] one of the reasons why we began to rely
+[00:41:04] on don't feed the trolls was the I think
+[00:41:06] you said the
+[00:41:08] Assumption or the obervation even that
+[00:41:11] it often caused you know basically if
+[00:41:13] somebody's if somebody keeps speaking
+[00:41:14] and nobody's responding to them and and
+[00:41:17] and nobody's listening to them that you
+[00:41:20] know they will be failing to achieve
+[00:41:21] their objective which is to stir up
+[00:41:23] trouble yeah so first of all there's a
+[00:41:25] big difference between an assump or an
+[00:41:27] expectation and an
+[00:41:30] observation um at least uh it would be
+[00:41:33] good to have lots more
+[00:41:35] observation and if possible to do it in
+[00:41:38] a systematic way so that one could draw
+[00:41:40] some real conclusions from it for
+[00:41:41] example um is it true that people really
+[00:41:45] fall silent when they are ignored by
+[00:41:47] their targets um or is it just that they
+[00:41:52] might attack one particular Target less
+[00:41:55] when that Target ignores them and
+[00:41:56] instead focus on others or do they
+[00:41:58] switch platforms or do they come back
+[00:42:00] tomorrow um we know of so many cases of
+[00:42:05] Relentless
+[00:42:07] systematic uh uh harassment and abuse of
+[00:42:11] people
+[00:42:12] online um that it's difficult to believe
+[00:42:15] that don't feed the trolls works at
+[00:42:17] least on a collective
+[00:42:19] basis other reason that it came to be
+[00:42:22] and I think it started on on uset for
+[00:42:24] those who are old enough to remember it
+[00:42:26] was the feel
+[00:42:28] that you know by starving the toll of
+[00:42:29] attention it avoids disrupting the
+[00:42:33] entire conversation in form um so
+[00:42:37] basically it's a way to keep it on its
+[00:42:38] per keep keep things on point and on
+[00:42:40] purpose yes and I I I want to be clear
+[00:42:43] I'm not saying that don't feed the
+[00:42:45] trolls doesn't work or never works but
+[00:42:48] that number one it would be very useful
+[00:42:49] to understand when and in which
+[00:42:52] circumstances and how it works and
+[00:42:54] secondly not to allow it to displace all
+[00:42:57] other possibilities which in my view
+[00:42:59] also should be studied Willow that also
+[00:43:03] it don't be the trolls as far as
+[00:43:04] attention there's still getting
+[00:43:05] attention because the audience is wide
+[00:43:07] enough that they are getting positive
+[00:43:09] responses that they're not getting the
+[00:43:11] negative push back so you've just
+[00:43:13] removed any
+[00:43:15] dissent that's also a very good
+[00:43:18] point sometimes if you actually identify
+[00:43:20] a person as a to they realize they've
+[00:43:23] been outed and they'll actually shy away
+[00:43:26] from the conversation because because
+[00:43:27] they feel like they can't do any damage
+[00:43:30] anymore uh then I would ask you whether
+[00:43:32] that that is a person who would be
+[00:43:35] stereotypically understood as a troll in
+[00:43:37] other words if you can convince someone
+[00:43:40] to stop with that kind of community
+[00:43:43] shaming is that really the person you
+[00:43:45] mean when you say troll after all I you
+[00:43:47] know at one point in this talk I think I
+[00:43:49] said I haven't yet defined Troll and
+[00:43:51] then I never
+[00:43:53] did
+[00:43:54] uh so that's another task that is you
+[00:43:58] know is on my list or that I'd love to
+[00:44:00] shove on to one of
+[00:44:03] yours yes so I'd like to distinguish
+[00:44:06] between people who are deliberately
+[00:44:08] trollish and people who are
+[00:44:09] inadvertently trolls and the second
+[00:44:12] group of the ones that might be shamed I
+[00:44:14] mean all of us in a traffic jam have
+[00:44:16] cussed and sworn and if all of that was
+[00:44:17] live tweeted we would be trolls to the
+[00:44:20] max in a traffic jam but these people
+[00:44:22] are inadvertent trolls are otherwise
+[00:44:24] well behaved well adjusted normal nice
+[00:44:25] people who don't want to spread hate in
+[00:44:27] the world they're just in a crappy
+[00:44:28] situation they're frustrated and so this
+[00:44:30] links to your last point the question I
+[00:44:31] have for you is do you think that the
+[00:44:33] system of discussion online is
+[00:44:35] fundamentally unproductive and leads
+[00:44:37] people to that kind of frustration of a
+[00:44:38] traffic jam you have these 8,000
+[00:44:40] threaded comments that go nowhere and it
+[00:44:42] ends off when somebody calls you Hitler
+[00:44:44] or cures but it's unproductive what do
+[00:44:47] you get from a discussion that's 8,000
+[00:44:48] comments I'm wondering whether the tool
+[00:44:50] itself is broken that's a wonderful
+[00:44:53] question um an impartial and inadequate
+[00:44:57] response that I can give you is that we
+[00:44:59] have so far observed just in um early
+[00:45:04] Research on
+[00:45:05] Twitter that in a situation where there
+[00:45:07] is hateful speech and counter speech
+[00:45:10] once the counter speakers begin using uh
+[00:45:14] um insults Andor slurs all the discourse
+[00:45:18] goes down to that level so one you know
+[00:45:21] I talked about developing a a taxonomy
+[00:45:24] of counters
+[00:45:25] speech without doing that I can tell you
+[00:45:27] that that counter speech is unlikely to
+[00:45:30] be or I can hypothesize that counter
+[00:45:33] speech is unlikely to be successful if
+[00:45:34] it uses obscenities and
+[00:45:38] slurs and and as Riot games and Facebook
+[00:45:42] found when they were tweaking platform
+[00:45:44] architecture the language used in
+[00:45:46] counter speech seems to make quite a
+[00:45:49] considerable difference also in the
+[00:45:51] positive direction that's not really an
+[00:45:53] answer to your question but I hope that
+[00:45:56] that it is is at least a
+[00:46:01] Corel platform being broken potentially
+[00:46:04] I mean there are different ways to to
+[00:46:06] play around with that and this may be
+[00:46:07] another thing to study if it's you know
+[00:46:10] whether it's Facebook or whether it's
+[00:46:11] experimental platforms but um you see
+[00:46:15] the the very latest Facebook posts right
+[00:46:17] and and you mentioned you know people
+[00:46:19] will just shove them off but when you
+[00:46:21] look at something um another platform
+[00:46:24] you see Amazon which is showing the the
+[00:46:27] best reviews and the worst reviews right
+[00:46:29] there's there are platform mechanisms to
+[00:46:30] call out uh different qualities so I
+[00:46:34] wonder if there's a lot of space there
+[00:46:35] to to explore yes for example YouTube
+[00:46:37] has recently changed its um uh
+[00:46:42] opportunities for moderating comments if
+[00:46:45] you've got a channel um you can moderate
+[00:46:48] comments so that uh certain comments are
+[00:46:51] are are favored or for example so that
+[00:46:54] um uh Anonymous comments are featured
+[00:46:58] much less prominently and uh comments
+[00:47:01] associated with real uh identities
+[00:47:04] feature higher and so forth so yes there
+[00:47:06] there there are um some interesting
+[00:47:09] experiments out there with with and and
+[00:47:12] this is perhaps uh in partial response
+[00:47:15] uh now to your question there are ways
+[00:47:17] of
+[00:47:19] um uh uh
+[00:47:22] regulating um uh comment spaces in
+[00:47:26] particular so that it isn't just this uh
+[00:47:29] fire hose of of of everything in which
+[00:47:32] the worst tends to dominate in in the
+[00:47:35] minds of some of the people
+[00:47:37] reading yeah moderate a political debate
+[00:47:41] space in Singapore and political debate
+[00:47:43] spaces are the they're like bait for
+[00:47:45] trolls um one of the things that we
+[00:47:48] thought would work was removing
+[00:47:50] anonymity which YouTube's assumption was
+[00:47:52] but as you pointed out Facebook is the
+[00:47:54] source of a lot of hatred that's
+[00:47:56] associated with with their family It's
+[00:47:57] asso associated with their friends it's
+[00:48:00] real identities are involved and they're
+[00:48:02] still extremely vigorous trolls there so
+[00:48:05] anonymity was not the solution Sur same
+[00:48:08] in Kenya but anonymity doesn't
+[00:48:11] necessarily uh work it
+[00:48:14] um you talked about U
+[00:48:18] MW I'm interested in suggestion that
+[00:48:21] there's a sort of direct causal
+[00:48:23] relationship between people expressing
+[00:48:27] pretty V sentiments on Facebook and
+[00:48:29] Twitter and act the actual sort of
+[00:48:31] violence and social problem especially
+[00:48:33] in the country where internet
+[00:48:34] penetration is so extremely low it's the
+[00:48:37] last estimates is far less than 5% so I
+[00:48:41] mean does it matter that much that
+[00:48:43] people are venting on Facebook when the
+[00:48:47] actual causes of the problems are
+[00:48:48] probably a lot more
+[00:48:50] profound yes thanks very much for the
+[00:48:52] question first of all yeah uh internet
+[00:48:54] penetration at the moment is below 10%
+[00:48:57] in Myanmar however um there are two
+[00:49:01] companies that have um publicly set
+[00:49:05] themselves the goal of producing um
+[00:49:08] mobile access for 75% of the population
+[00:49:12] by
+[00:49:13] 2015 one of them is going straight to
+[00:49:17] 3G and already lots of people are buying
+[00:49:21] uh inexpensive feature phones from China
+[00:49:23] the same ones that um are increasing the
+[00:49:26] number of people online in countries
+[00:49:29] like Kenya at an exponential rate so
+[00:49:33] whatever is happening among a relatively
+[00:49:35] small trash of the population in
+[00:49:37] countries like Myanmar is likely very
+[00:49:40] soon to be happening among a much larger
+[00:49:43] proportion of the
+[00:49:44] population um so that's that's one thing
+[00:49:47] secondly I I don't mean to imply that
+[00:49:50] that we know that speech online causes
+[00:49:53] violence offline it may be that it's
+[00:49:55] more of a reflection of the sort of
+[00:49:58] speech that is also being disseminated
+[00:50:01] offline and that is the case in Myanmar
+[00:50:04] for example
+[00:50:06] um uh the sort of speech that is being
+[00:50:09] distributed hand toand on CDs after it
+[00:50:13] is given in um um in physical speeches
+[00:50:17] by monks or by political leaders um is
+[00:50:21] also what is online and then
+[00:50:24] um the people who are online are
+[00:50:28] disproportionately influential and
+[00:50:29] educated and have money and so forth and
+[00:50:32] so if they see um discourse Norms in
+[00:50:36] which it is entirely acceptable or seems
+[00:50:39] to be acceptable to say things like the
+[00:50:43] ones that I that I showed you on slides
+[00:50:45] then that that may have quite uh some
+[00:50:49] influence on on them and on the people
+[00:50:51] they talk
+[00:50:53] with most people think it's acceptable
+[00:50:55] because we see that kind of speech every
+[00:50:58] most of us think it's unacceptable I
+[00:51:00] would suggest that people in my are the
+[00:51:06] same well there's also a difference
+[00:51:08] between thinking it's unacceptable and
+[00:51:11] feeling that one may safely say
+[00:51:15] so in what is seen to be a public
+[00:51:19] space so
+[00:51:21] um it seems to be the case that there
+[00:51:24] are quite a lot of people who dis agree
+[00:51:27] in Myanmar but no longer feel that it is
+[00:51:30] safe to say so and that represents a
+[00:51:33] shift in discourse Norms in the in in a
+[00:51:36] wrong and potentially dangerous
+[00:51:38] Direction
+[00:51:41] so I'm not saying hasset that that um
+[00:51:45] shifting discourse Norms online would
+[00:51:47] necessarily solve a problem but it might
+[00:51:50] at least decrease the worsening of a
+[00:51:53] problem
+[00:51:56] and at least it seems worth a
+[00:51:59] try
+[00:52:02] yep um under what circumstances and what
+[00:52:05] kind of exposure that you
+[00:52:07] see examples of counter spech um
+[00:52:09] occurring because one of the things I've
+[00:52:11] been trying to get a handle on is that
+[00:52:13] like you know you click on any yahu
+[00:52:15] article or any political political blog
+[00:52:17] or even CNN article and you'll see long
+[00:52:19] list of of hate speech kind of going
+[00:52:21] down but there's not really that much
+[00:52:22] response and it seems that response only
+[00:52:24] occurs in certain types of environment
+[00:52:26] or certain types of media and wondering
+[00:52:29] if the implication for that is that
+[00:52:30] there just a higher threshold for
+[00:52:32] desensitization that people just don't
+[00:52:34] care I mean if you look at a sports blog
+[00:52:36] and look at like the Michael Sam thing
+[00:52:37] for example as a football player coming
+[00:52:40] out G you won't
+[00:52:41] see any sort of camera speech in that
+[00:52:43] sense or you'll see little but you'll
+[00:52:45] see more some from the media than you
+[00:52:46] will in the comment sections saying that
+[00:52:49] you know if whever um whether he whether
+[00:52:53] the position is justifying or not but
+[00:52:54] there's a lot more hate speech there
+[00:52:56] that's not responded to so just here's
+[00:52:59] what circumstances this so I am also
+[00:53:02] very curious about that have also
+[00:53:04] observed that that counter speech is
+[00:53:07] surprisingly uh common in some on some
+[00:53:11] platforms and in some circumstances in
+[00:53:13] fact um I was surprised to have found so
+[00:53:16] much of it on Twitter in response to
+[00:53:18] certain surges of of hatred and racism
+[00:53:21] and so on like the Nina dorri case um I
+[00:53:25] don't know why it is so prevalent in
+[00:53:28] some cases and absent in others and
+[00:53:31] would love to know is it that for
+[00:53:33] example um people don't think it's
+[00:53:35] likely to have any
+[00:53:37] effect um my guess is that is that you
+[00:53:41] know if if we did a poll um and asked
+[00:53:45] people do you think you're you're you're
+[00:53:47] likely to have an effect on someone who
+[00:53:50] has tweeted or posted something racist
+[00:53:53] or hateful my guess and believe me it's
+[00:53:56] only a guess I haven't done this yet um
+[00:53:59] most people would guess that they won't
+[00:54:02] be able to really accomplish anything
+[00:54:04] with counter speech so though pardon me
+[00:54:08] what if you asked it from the other
+[00:54:09] point of view in terms of would you care
+[00:54:10] if someone posted something hateful
+[00:54:12] would you care yeah so you know people
+[00:54:15] ignore hate speech and they kind of are
+[00:54:16] desensitized to it so it's not as big of
+[00:54:19] a deal if you see it in comments you
+[00:54:21] kind of just scroll over it it's like oh
+[00:54:22] it's troll speech right if I'm on Reddit
+[00:54:24] or I'm on U political and I'm looking at
+[00:54:26] the comments I just literally just gloss
+[00:54:29] over it's not something that sticks out
+[00:54:30] to me you may but there are also lots of
+[00:54:32] other people who haven't succeeded and
+[00:54:35] really um filtering it out who are still
+[00:54:39] yeah I'm kind of curious who those
+[00:54:40] people might be yeahum me thank
+[00:54:44] you and then we're coming back to this
+[00:54:46] side of the room I'm sorry I haven't
+[00:54:47] forgotten about you go ahead you said
+[00:54:49] initially that in real in the real world
+[00:54:52] people would say things in one context
+[00:54:55] that they wouldn't necessarily say in
+[00:54:56] another you know in a closed room with
+[00:54:58] the people that they think agree with
+[00:55:00] them they might say one thing and not
+[00:55:02] say something in public uh the question
+[00:55:04] I'm having about this is people are
+[00:55:08] posting to some extent knowing or
+[00:55:11] expecting a certain Community to see it
+[00:55:15] like if you're posting on Facebook you
+[00:55:17] expect your friends to see it if you
+[00:55:18] post to a group you expect just the
+[00:55:20] group to see it um if you're posting on
+[00:55:23] Twitter you may use a hasht either
+[00:55:25] people who are follow following you or
+[00:55:27] people who are following particular
+[00:55:28] hashtag and if you're post if you're
+[00:55:30] posting a comment on a News website you
+[00:55:33] know that it's going to be seen by
+[00:55:36] whoever so I'm um so on some level I
+[00:55:41] wonder whether people are intentionally
+[00:55:44] posting on the sites to be provocative
+[00:55:46] and also intentionally posting what they
+[00:55:49] don't think will be seen Beyond it's the
+[00:55:51] same old thing it's just in an online
+[00:55:53] context I think the answer is yes
+[00:55:56] both in different circumstances so for
+[00:55:59] example you saw that the guy who posted
+[00:56:01] the Miss America tweets that I showed
+[00:56:03] you was surprised that he got so much
+[00:56:05] response was surprised that his tweet
+[00:56:08] was reported on Sky News
+[00:56:11] um from studying those tweets and quite
+[00:56:15] a few others around that case including
+[00:56:17] his and once in response to
+[00:56:20] him my sense is that is that he didn't
+[00:56:25] intend to be speak speaking to such a
+[00:56:27] broad and varied
+[00:56:31] audience not everyone is the most
+[00:56:33] sophisticated
+[00:56:37] user um and that's why I say there's an
+[00:56:39] opportunity he heard from all kinds of
+[00:56:42] people whom he would never have
+[00:56:44] encountered
+[00:56:46] offline um and eventually he he was
+[00:56:49] influenced by those people in what seems
+[00:56:52] to be a very positive
+[00:56:55] way so again it's not a solution to
+[00:56:57] hatred in the world
+[00:56:59] but there might be some quite useful
+[00:57:02] tools that haven't yet been properly
+[00:57:05] studied or discovered somebody over here
+[00:57:08] you been kind of answering my question
+[00:57:09] as it go wrong I'm wondering like how
+[00:57:11] does this function as a form of
+[00:57:14] democracy
+[00:57:16] directly a lot of things
+[00:57:19] do well maybe perspective based yeah
+[00:57:23] well maybe one way of um
+[00:57:27] of sharpening uh the answer in response
+[00:57:29] to your question um is to note that in
+[00:57:32] the United States one of the most um
+[00:57:36] common uh sort of theoretical
+[00:57:38] justifications or explanations for our
+[00:57:40] first amendment Juris Prudence is um uh
+[00:57:45] the remark by Justice Louie brandise in
+[00:57:48] a case published in
+[00:57:50] 1927 that the remedy for uh bad speech
+[00:57:54] is good speech or more speech by the way
+[00:57:57] he he qualified that remark he said if
+[00:58:00] there is enough time to correct the harm
+[00:58:03] and so forth but
+[00:58:05] um Justice
+[00:58:08] brandise um gave us a policy
+[00:58:11] response interestingly however we really
+[00:58:14] don't have much evidence about whether
+[00:58:17] whether and when and how that remedy is
+[00:58:19] successful it's our Collective intuition
+[00:58:22] that it that it works pretty well
+[00:58:24] because after all does a huge job
+[00:58:26] conflict between the normative thetive
+[00:58:29] when it comes to uh freedom of speech
+[00:58:32] right our speech in general but I just
+[00:58:35] you know as time goes by there are more
+[00:58:37] models of democracy um certainly in this
+[00:58:41] culture other as well I
+[00:58:44] believe well in in in this country in
+[00:58:47] particular but of course not only in
+[00:58:49] this country um freedom of speech is
+[00:58:52] understood to be an an essential um
+[00:58:57] uh requirement for for Democratic life
+[00:59:00] and in fact Democratic governance
+[00:59:05] right so then uh we have to find a way
+[00:59:09] to to to make that work
+[00:59:13] um I would say also in the in in the
+[00:59:15] context of the observation that um very
+[00:59:20] hateful uh offensive and even
+[00:59:23] threatening speech can silence people so
+[00:59:27] freedom of speech can functional freedom
+[00:59:30] of speech can be affected in in many
+[00:59:33] different ways by discour show that it's
+[00:59:34] like you know there are
+[00:59:36] consequences yeah yeah you can't yell
+[00:59:39] fire when a prodct movie
+[00:59:41] here now you have to find a mov
+[00:59:47] there so this is sort of a three part
+[00:59:50] question and feel free to answer any
+[00:59:52] part of it you want to focus on um but
+[00:59:53] first it seems really problematic to
+[00:59:55] sort of
+[00:59:56] have this discussion of trolls and non-
+[00:59:58] trolls without defining either right so
+[01:00:01] multiple examples that you pointed out
+[01:00:04] you said this this seems like a troll
+[01:00:05] response this doesn't seem like a troll
+[01:00:07] response and so clearly there's some
+[01:00:09] sort of framework that you're using in
+[01:00:10] your head that indicates which one you
+[01:00:12] think maybe it is because your your
+[01:00:15] response is where to indicate that so
+[01:00:16] I'd be very interested to know what it
+[01:00:18] is even if you don't have a formal
+[01:00:19] definition of troll or non-roll what
+[01:00:21] what kind of criteria you're using to
+[01:00:23] distinguish model really interesting um
+[01:00:25] ALS so um it seems sort of picking up on
+[01:00:28] what the gentleman over here said
+[01:00:30] earlier um thinking about domains within
+[01:00:33] which people would say be willing to say
+[01:00:36] certain types of speech um sort of
+[01:00:38] historically I mean you gave a bunch of
+[01:00:40] examples like rape jokes maybe would
+[01:00:42] only be told among men things like that
+[01:00:45] um and I think historically a lot of
+[01:00:47] these actually point to power
+[01:00:48] differentials and that they're not
+[01:00:49] actually just private domains it's about
+[01:00:51] whoever is actually um has the most
+[01:00:54] power can say it in front of people who
+[01:00:55] have power and that's part of actually
+[01:00:57] enacting your power and so it seems like
+[01:00:59] what might be new online if it is um and
+[01:01:03] if it even make sense to separate online
+[01:01:05] and offline in any way um is the idea
+[01:01:08] that there are a different power of
+[01:01:09] differentials going and that actually
+[01:01:11] might be a really good thing yes um and
+[01:01:14] then finally um I wondered you mentioned
+[01:01:16] that it was um easier to study the
+[01:01:18] effects of speech in um online spaces
+[01:01:22] and I wondered how do you study the
+[01:01:23] effects of speech and why would it be
+[01:01:25] easier
+[01:01:26] and what was the last thing why would it
+[01:01:28] be easier why would it be easier okay
+[01:01:30] thank you uh trolls and non- trolls
+[01:01:37] um I'm not sure how useful the term
+[01:01:40] trolls is and so I use it mostly tongue
+[01:01:42] and cheek but it's still a very
+[01:01:45] thought-provoking question and so I will
+[01:01:47] give it a stab
+[01:01:51] um trolls are people um who who are who
+[01:01:56] are so deeply committed to their racist
+[01:02:01] xenophobic hateful etc etc etc um
+[01:02:07] views that engaging with them is very
+[01:02:10] unlikely
+[01:02:11] to uh change the way in which they're
+[01:02:13] expressing
+[01:02:16] themselves and what I'm
+[01:02:19] suggesting with the data and and and and
+[01:02:21] also with um some of the anecdotal
+[01:02:24] evidence that I've so far seen online
+[01:02:26] is that there's a common misperception
+[01:02:29] that the majority of hateful and
+[01:02:32] offensive and inflammatory speech is
+[01:02:35] produced just by those
+[01:02:40] people so so that's so and
+[01:02:43] then non- trolls would be other people
+[01:02:47] in whom um there are factors at work
+[01:02:51] such as uh ignorance
+[01:02:54] fear um
+[01:02:56] um lack of Engagement with groups of
+[01:02:59] people different from them and so
+[01:03:03] forth that's the first question or an
+[01:03:06] attempt to answer the first
+[01:03:09] question and with respect to the power
+[01:03:12] differentials yes uh I I I think that's
+[01:03:15] a very useful observation um and I agree
+[01:03:18] that it can be very good uh that power
+[01:03:22] relationships are different online than
+[01:03:24] they were uh or still are offline in
+[01:03:27] some cases um so yes
+[01:03:35] um last one remind
+[01:03:42] me so the effects of speech um um of
+[01:03:47] course that's also a very large category
+[01:03:51] and can be defined in many different
+[01:03:54] ways um
+[01:03:57] one of the simplest ways to Define it is
+[01:04:00] the capacity of speech to alter the way
+[01:04:02] someone else or to influence the way
+[01:04:04] someone else
+[01:04:06] speaks so if someone who posted a a
+[01:04:09] hateful or angry tweet about Nina
+[01:04:12] dri reads tweets from other people
+[01:04:14] imploring him to change and then
+[01:04:19] apologizes then if he has been affected
+[01:04:22] by that speech online something which of
+[01:04:24] course we can't assume maybe his
+[01:04:26] grandmother sat him down in the kitchen
+[01:04:28] and you know lectured him but if he has
+[01:04:31] been influenced by um speech online
+[01:04:37] then then we have been able to observe
+[01:04:40] that by studying tweets um and that's an
+[01:04:44] easy way to find such a person and
+[01:04:47] ultimately to find lots of such people
+[01:04:50] um with a view to
+[01:04:53] examining um how interactions between
+[01:04:57] people online can influence the uh
+[01:05:00] online behavior of those
+[01:05:04] people respond to that I think that the
+[01:05:06] idea of trolls um a lot of people use a
+[01:05:09] different kind of framework where the
+[01:05:10] trolling is actually kind of an art form
+[01:05:12] where other people are seen as the
+[01:05:13] puppets of the troll is is actually yes
+[01:05:16] you asked me for my definition and I
+[01:05:18] realize that other people use different
+[01:05:20] when you use that term sort of more
+[01:05:21] broadly different people might have
+[01:05:23] different ideas and so it's worth I
+[01:05:25] think it's really worth specifying
+[01:05:27] exactly what you mean when you say a
+[01:05:28] troll because I think it's open to um
+[01:05:32] misunderstanding and the types of
+[01:05:33] responses in terms of counter speech
+[01:05:35] that you would give to these are very
+[01:05:37] different point very well taken but it
+[01:05:39] also seems like sort of going back to
+[01:05:40] what hasset said that even if you can um
+[01:05:43] have impact on or on the discourse right
+[01:05:47] like if you can have discursive effects
+[01:05:49] that is fantastic in some ways but we
+[01:05:51] don't know what that actually might mean
+[01:05:52] in terms of um more physical behaviors
+[01:05:55] or about how people are going to act I
+[01:05:56] mean there's this great anecdotal study
+[01:05:58] of mystery writers who are supposed to
+[01:06:00] have one of the lower lowest incidences
+[01:06:02] of homicide ever presumably because
+[01:06:04] they're out writing out all of their
+[01:06:06] like angry right so it may be these
+[01:06:09] people who are on Facebook or who are
+[01:06:10] venting via Twitter maybe that's
+[01:06:12] actually preventing violence and so if
+[01:06:14] we see a discursive effect where people
+[01:06:15] stop venting but they still feel the
+[01:06:17] same we've actually done a disservice
+[01:06:20] right and so yes it seems um I mean you
+[01:06:24] also have mentioned that you have lots
+[01:06:25] more research that you're planning to do
+[01:06:26] so if I could ask one last followup
+[01:06:28] question it would be what are some of
+[01:06:29] the specifics of your research and like
+[01:06:32] what are you going to tackle next and
+[01:06:33] how are you going to determine impact or
+[01:06:35] whatever is your next so I'm I'm about
+[01:06:37] to start for example I'm about to start
+[01:06:39] uh a two-year project um looking for uh
+[01:06:44] cases on Twitter like the two that I
+[01:06:47] showed you that is to say um cases in
+[01:06:50] which there there has been a surge of
+[01:06:53] hatred um hateful speech with uh counter
+[01:06:57] speech responses in which some of the
+[01:07:00] original accounts have recanted or
+[01:07:02] apologized we'd like to collect lots of
+[01:07:05] those examples with a view to studying
+[01:07:08] um why and in what
+[01:07:11] circumstances counter speech seems to be
+[01:07:13] successful in
+[01:07:14] influencing people who have originally
+[01:07:17] produced hateful or inflamatory tweets
+[01:07:20] and secondly we would like very much to
+[01:07:23] study um the the effect of this counter
+[01:07:27] speech on the rest of the audience on
+[01:07:30] the rest of the community what effect is
+[01:07:32] it having on people who are reading
+[01:07:34] these
+[01:07:35] exchanges we um guess that that the huge
+[01:07:39] incidence of hateful speech is having an
+[01:07:42] impact on people although that's also uh
+[01:07:46] considerably
+[01:07:47] understudied um we'd like to know
+[01:07:50] whether the counter speech itself is
+[01:07:51] also having an impact on other people
+[01:07:55] what are the perceptions of these types
+[01:07:57] of exchanges particularly on first of
+[01:07:59] all on Twitter it's very easy to study
+[01:08:01] it because because Twitter is public but
+[01:08:04] also we're already seeing that there
+[01:08:05] tend to be these these sudden spikes
+[01:08:07] these sudden surges of
+[01:08:11] expressed anger and hatred and then in
+[01:08:15] uh quite a few cases we were surprised
+[01:08:17] to find there's also a sudden surge of
+[01:08:19] response some of it uh equally
+[01:08:23] angry and expressed in obscenities and
+[01:08:27] so forth and then some of it expressed
+[01:08:30] in in more gentle and conciliatory terms
+[01:08:33] which brings me back to this point that
+[01:08:35] there are many forms of counter speech
+[01:08:37] which as far as I know haven't been
+[01:08:39] examined
+[01:08:41] much time for one more brief
+[01:08:45] question wait that's you choose I can't
+[01:08:47] do that thank so try to do this quickly
+[01:08:52] um I have two fast comments and then um
+[01:08:54] questions about area of research one
+[01:08:56] comment is I see um a lot of hate speech
+[01:08:59] I feel obligated to do something about
+[01:09:02] it but I don't because I don't have time
+[01:09:05] to do to respond to that many issues or
+[01:09:08] there's too much of it uh uh and uh
+[01:09:10] second comment is um I've seen postings
+[01:09:14] on Facebook that I consider cruly
+[01:09:17] anti-semitic and have reported them and
+[01:09:20] um the Facebook respon is you know does
+[01:09:22] not a violation and that's disappointing
+[01:09:25] um the questions I have are have you or
+[01:09:29] anybody else that you know of done uh
+[01:09:31] research on the sort of cyber bullying
+[01:09:34] that has resulted in suicides of
+[01:09:36] teenagers yes there's a huge field of
+[01:09:38] research on cyber bullying um now and uh
+[01:09:42] because there is such a a lot of concern
+[01:09:46] about it particularly in the United
+[01:09:47] States and generally in in the west um
+[01:09:51] that's not to say that there isn't any
+[01:09:52] concern about it elsewhere but but it is
+[01:09:55] um
+[01:09:56] um one of the forms of objectionable
+[01:09:59] speech online that has received the most
+[01:10:02] attention and study in the United States
+[01:10:04] and so yes there's quite a bit of work
+[01:10:07] on that and and the second area I want
+[01:10:09] to ask about you talked a little bit
+[01:10:10] about anonymity um if you consider a
+[01:10:13] Continuum from Anonymous comments to
+[01:10:16] pseudo Anonymous comments to um proped
+[01:10:20] real names to fully authenticated real
+[01:10:22] names do you know if anybody has done
+[01:10:25] any research on where in along that
+[01:10:29] Continuum one might have an effect of um
+[01:10:32] controlling speech not controlling but
+[01:10:34] but do you mean by by requiring people
+[01:10:37] not to be anonymous by well yeah I'm
+[01:10:40] saying there's this Continuum from
+[01:10:42] Anonymous to highly authenticated and
+[01:10:45] whether um there is any research that
+[01:10:48] says there as bullying there there are
+[01:10:53] uh quite a few um
+[01:10:56] uh projects to to look at the effect of
+[01:10:58] anonymity or quasi anonymity on online
+[01:11:02] Behavior I can if you if you like after
+[01:11:04] the talk I can give you a couple of
+[01:11:06] references um I don't think though that
+[01:11:09] um that one can make a general blanket
+[01:11:13] statement that for example this spot
+[01:11:15] along the Continuum will diminish hatred
+[01:11:18] um most because as I tried to suggest um
+[01:11:22] different um contexts online as offline
+[01:11:26] are uh functioning differently and
+[01:11:28] having different influences on Behavior
+[01:11:31] both of people posting hatred and people
+[01:11:33] reacting to it thank you thank you guys
+[01:11:36] all for coming and please join me one
+[01:11:37] more time thank you suan
+[01:11:42] [Applause]

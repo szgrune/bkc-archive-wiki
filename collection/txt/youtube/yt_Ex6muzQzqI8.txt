@@ -1,0 +1,1862 @@
+[00:00:10] we're lucky to have Yuri here today uh
+[00:00:13] he is at the beginning of what we
+[00:00:16] predict will be a long and Brilliant
+[00:00:17] career uh teaching computer science at
+[00:00:19] Stanford
+[00:00:22] um prior to uh coming to Stanford he uh
+[00:00:26] was working as a postto at Cornell uh he
+[00:00:30] did work on a really interesting tool
+[00:00:32] called meme tracker which is uh a large
+[00:00:34] part of what we're going to talk about
+[00:00:35] today um but his work along with his uh
+[00:00:39] colleagues John kleinberg and Dan uh
+[00:00:42] hooder uh is some of the most
+[00:00:44] interesting work being done right now on
+[00:00:47] sort of the frontier of quantitative
+[00:00:49] analysis of media which is to say now
+[00:00:52] that a great deal of uh journalistic and
+[00:00:55] other media is available online what can
+[00:00:57] we do with statistical tools to analyze
+[00:01:00] how the news cycle uh takes place prior
+[00:01:02] to that uh he did his work at carnegi
+[00:01:05] melon uh and also at the University of
+[00:01:07] Liana and his native Slovenia so we are
+[00:01:11] uh thrilled to have Yuri with us and
+[00:01:12] he's going to give us a talk which will
+[00:01:14] start general and probably get technical
+[00:01:16] until some of us wave our arms and uh
+[00:01:19] tell him to stop getting Technical and
+[00:01:20] then we'll have an open conversation
+[00:01:22] about it welcome um thanks a lot um So
+[00:01:25] the plan for uh today are sort of three
+[00:01:28] things um first I want to show you so
+[00:01:30] the motivating question for everything
+[00:01:32] will be okay what can you do if you can
+[00:01:34] go on the web and practically get all
+[00:01:36] the news that are there on the web sort
+[00:01:38] of what kind of things you can do and um
+[00:01:40] I want to show you let's say three three
+[00:01:42] things the first thing I'll show you is
+[00:01:44] how can you identify short textual
+[00:01:46] phrases basically memes if you like that
+[00:01:49] then we will be able to trace how they
+[00:01:51] propagate through the web and we'll say
+[00:01:52] okay can we see how this media ecosystem
+[00:01:54] how does it work sort of that will be
+[00:01:56] the first let's say half of the talk
+[00:01:58] then in the then I'll show two more
+[00:02:00] um two more let's say more computer
+[00:02:01] sciency questions first question will be
+[00:02:04] um imagine that so all that we see is
+[00:02:06] how people mention information but we
+[00:02:08] don't see who influences whom or in a
+[00:02:11] sense of if you think of how disease
+[00:02:12] propagates the question is you see how
+[00:02:14] people get sick but you don't see who in
+[00:02:17] who infected whom so the question is can
+[00:02:19] you infer the underlying network over
+[00:02:21] which you know influence information
+[00:02:23] viruses propagate and then once you have
+[00:02:26] the network and you know how stuff
+[00:02:27] propagates then the last question will
+[00:02:29] be can go and identify who is really
+[00:02:31] influential in these networks so or for
+[00:02:33] example on in the media case you could
+[00:02:35] say which news sites which should I
+[00:02:37] follow so that I'm most up to date right
+[00:02:39] so that I hear about big news before
+[00:02:41] everyone else hears about it right so
+[00:02:43] that's basically um the plan for the
+[00:02:45] talk and um this was done um sort of as
+[00:02:49] when I was still a PhD student at car
+[00:02:51] melon then part of it at at Cornell and
+[00:02:54] the last part uh and some part of it now
+[00:02:56] um at Stanford um with a bunch of
+[00:02:59] co-authors okay so um let's start a bit
+[00:03:02] General right so um what I want to study
+[00:03:06] is basically information and the media
+[00:03:07] right and this is some somehow the
+[00:03:09] intersection between news media
+[00:03:11] technology and let's say the political
+[00:03:13] process right and another thing that
+[00:03:16] that um that why this is interesting is
+[00:03:19] that um there is basically this tension
+[00:03:21] between between let's say Global effects
+[00:03:23] of the mass media right that is sort of
+[00:03:25] pushing information on the you know
+[00:03:27] between the people and then then I have
+[00:03:29] all this uh local effects um from the
+[00:03:32] social structure basically how people
+[00:03:33] talk to one another right and um what I
+[00:03:36] want to ask is basically how how does
+[00:03:38] the information get transmitted uh
+[00:03:40] between media basically how between
+[00:03:43] media and these personal networks uh
+[00:03:46] that arise from let's say social
+[00:03:48] contacts right so that's those that's
+[00:03:50] basically the dichotomy between mass
+[00:03:52] media who sort of pushing things out and
+[00:03:54] all these like social interpersonal
+[00:03:56] networks that also play role in how
+[00:03:58] information spreads and transs okay so
+[00:04:01] um and of course right with the
+[00:04:03] emergence of Internet blogging social
+[00:04:05] media and things like that um this this
+[00:04:08] difference between Global and local
+[00:04:10] influence is somewhat evaporating right
+[00:04:12] because for example blogs are now
+[00:04:14] feeling the the the part between purely
+[00:04:17] personal uh networks and purely you know
+[00:04:20] media type uh pushing of information
+[00:04:23] right uh because you know I can now
+[00:04:24] follow on Twitter whoever I like I can
+[00:04:27] read whichever blog I like and things
+[00:04:29] like that right and um another thing
+[00:04:32] that is going on is that this um speed
+[00:04:34] of how media is reporting and you know
+[00:04:36] how we are discussing stories is um
+[00:04:39] intensified in a sense that um um it's
+[00:04:42] not that we are having this you know
+[00:04:44] sort of 24-hour publishing cycle where
+[00:04:47] in the morning you go and buy a new new
+[00:04:48] newspaper and you go new about new
+[00:04:51] things right it's like you can
+[00:04:52] constantly get a feed of what is going
+[00:04:54] on okay and all these sort of Notions
+[00:04:58] get captured into something that that we
+[00:05:00] intuitively call like a 24hour news
+[00:05:02] cycle right so basically this is
+[00:05:04] something that is um some somewhat hard
+[00:05:07] to Define right but it's it's a some
+[00:05:09] kind of natural period or some kind of
+[00:05:11] cycle by which you know the news comes
+[00:05:13] appears and and disappears right um and
+[00:05:17] the what the qu so to show you two
+[00:05:20] examples of how people understand new
+[00:05:22] cycle here are um two quotes from The
+[00:05:24] New York Times uh uh during the US 2008
+[00:05:28] presidential uh election campaign right
+[00:05:31] and you know they discuss mainan and
+[00:05:33] Obama and then they say you know how
+[00:05:35] with every new cycle something is
+[00:05:37] different here and you know um you know
+[00:05:39] they also say how from every new cycle
+[00:05:42] to every other new cycle the you know
+[00:05:44] the the political text tactics of of the
+[00:05:46] campaign tends to change okay so um this
+[00:05:50] is how we intuitively think what a new
+[00:05:52] cycle is so what I want to ask is
+[00:05:55] basically the following question right
+[00:05:56] is this new cycle right is this
+[00:05:58] something that is a metaphorical
+[00:06:00] construct basically something that you
+[00:06:02] know we humans came up with and we
+[00:06:04] understand it as a some some kind of it
+[00:06:07] gives us um an intuitive understanding
+[00:06:09] of how things might might work or is it
+[00:06:12] actually something that is visible in
+[00:06:13] the data right so is it something that I
+[00:06:15] can quantify and measure or is it
+[00:06:17] something that it's you know is it a
+[00:06:18] more a metaphor metaphorical construct
+[00:06:22] and the other question is then if I can
+[00:06:24] um if I can measure it um what are its
+[00:06:27] basic properties okay so sort of what
+[00:06:29] are the basic properties of this this
+[00:06:31] new cycle and this is this is what I
+[00:06:33] want to do okay so I want to quantify
+[00:06:35] what the new cycle is um then the first
+[00:06:38] question that I need to ask is basically
+[00:06:40] what are the basic units of this new
+[00:06:42] cycle that I would like to track okay so
+[00:06:45] um here are a few candidates sort of
+[00:06:47] this is more for um computer science
+[00:06:49] people right so one way to track you
+[00:06:51] know news would be to say okay I will be
+[00:06:53] tracking how people link to one another
+[00:06:55] right so I would be tracking hyperlinks
+[00:06:57] so right if I write a blog post and
+[00:06:59] point to some other block post that prob
+[00:07:02] there must have been a reason why I link
+[00:07:03] to that other block post right so I
+[00:07:05] could say you know I could make some
+[00:07:07] inference about that maybe we wrote
+[00:07:09] about related things or that I borrowed
+[00:07:11] some information from that blog post
+[00:07:13] that I'm linking from right so one way
+[00:07:14] to do this would be to trace hyperlinks
+[00:07:16] the problem is um this is too fine grain
+[00:07:19] right there are very few hyperlinks uh
+[00:07:21] news media don't link among themselves
+[00:07:23] it's mostly bloggers that link to one
+[00:07:24] another and most often bloggers don't
+[00:07:26] even create these links right so for
+[00:07:28] example tracing hyperlinks this won't
+[00:07:29] work right another thing would be to do
+[00:07:32] um some kind of topic models like LDA
+[00:07:35] type topic models um this also won't
+[00:07:37] work because these topics they are too
+[00:07:40] they are too bulky they are too big
+[00:07:42] right it's they are good if you want to
+[00:07:43] model something that changes you know
+[00:07:45] our tens of years or something but not
+[00:07:47] on on news that sort of changes at a
+[00:07:49] daily or hourly scale so this is another
+[00:07:51] thing that wouldn't work um here's
+[00:07:54] another idea that you could say you
+[00:07:55] could say okay I will go and I will
+[00:07:57] extract named entities right you know
+[00:07:59] would go and extract things like Obama
+[00:08:01] McCain Microsoft Apple Paris France and
+[00:08:04] things like that right um the problem
+[00:08:06] with this is that you know Obama appears
+[00:08:08] in news every day right maybe with a bit
+[00:08:10] different intensity but the particular
+[00:08:12] name entity appears every day so it
+[00:08:14] would be very hard for me to associate a
+[00:08:16] particular named entity with a
+[00:08:17] particular piece of news all right so
+[00:08:19] that also wouldn't work so well and the
+[00:08:21] the next thing that I could do is say
+[00:08:23] okay let me extract common sequences of
+[00:08:26] sequences of words right um and if I go
+[00:08:29] do that then these are the common
+[00:08:30] sequences of words that appear on the
+[00:08:32] web right made in China I love you Web
+[00:08:34] 2.0 and things like that right and this
+[00:08:36] is again not something that I would
+[00:08:38] associate with the new cycle okay so um
+[00:08:43] these are sort of four four failed
+[00:08:45] attempts so um what I would like um is
+[00:08:49] um to to to do the following right so
+[00:08:51] basically I would like to find some
+[00:08:53] textual units that correspond to some
+[00:08:56] kind of Aggregates of Articles right so
+[00:08:58] that they can um summarize big articles
+[00:09:02] um I want something that that um varies
+[00:09:05] in in an order of days right something
+[00:09:07] that is very dynamic in some sense and
+[00:09:09] the last sort of uh thing that I would
+[00:09:11] like to do is I would like to be these
+[00:09:14] things to be simple so that I can handle
+[00:09:15] them you know on terabytes of data okay
+[00:09:18] so that's sort of my uh my wish list and
+[00:09:21] um the plan now is basically can I
+[00:09:24] identify such textual phras uh fragments
+[00:09:27] we can call them phrases or memes
+[00:09:29] basically travel relatively intact um
+[00:09:33] through the through many articles right
+[00:09:35] that sort of I want to find short
+[00:09:36] textual pieces that that are sort of
+[00:09:39] characteristic for particular news and
+[00:09:41] that you know travel intact or they
+[00:09:42] appear pretty much unchanged through a
+[00:09:45] series of Articles and um the idea is is
+[00:09:48] very simple let's use quoted phrases
+[00:09:51] right so let's use stuff that appears in
+[00:09:53] a quotation mark some text end of
+[00:09:55] quotation mark right so basically this
+[00:09:56] is the regular expression expression to
+[00:09:59] exract my names right so I'll be just
+[00:10:01] following quotes Okay and um why is this
+[00:10:04] a good idea right um the first thing is
+[00:10:07] that quotes are sort of integral parts
+[00:10:10] of journalistic practice right this is
+[00:10:12] the first first so they appear quite a
+[00:10:14] lot the second thing is um they follow
+[00:10:17] um iterations of the story right if
+[00:10:19] there is a particular strong quote
+[00:10:21] somebody made or a statement then this
+[00:10:23] will appear in many different versions
+[00:10:24] of the article or or of the same news
+[00:10:27] written by different journalists this
+[00:10:28] sort of this this little signature will
+[00:10:30] appear in all all of these different
+[00:10:32] articles right and what's another good
+[00:10:34] thing about quotes I know exactly who
+[00:10:36] said it when they said it and where they
+[00:10:38] said it right so I can really attribute
+[00:10:40] every little this piece of information
+[00:10:42] to to a particular point in space to a
+[00:10:44] particular person right so I can really
+[00:10:46] identify what what was it about okay so
+[00:10:50] um that's what I'll be doing right so
+[00:10:52] the data that I'll show you here is um
+[00:10:55] sort of a small data set right so I'll
+[00:10:56] be showing you a data that we got from
+[00:10:59] it's basically just 3 months of data
+[00:11:01] leading up to the US presidential
+[00:11:03] election we have 1 million uh news
+[00:11:07] articles blog posts uh per day um and uh
+[00:11:11] basically what we have is everything
+[00:11:13] that Google news has so that's about
+[00:11:14] 20,000 news sites and um 1.6 million
+[00:11:19] blogs okay so basically what I'm working
+[00:11:22] working with is about um 100 million
+[00:11:25] documents um that are coming from this
+[00:11:28] you know 1.6
+[00:11:30] million different websites okay and
+[00:11:34] um and the my my time period is between
+[00:11:37] August 1st and October 31st right um and
+[00:11:40] when I go and do this quote extraction I
+[00:11:42] get out 112 million different quotes
+[00:11:46] Okay out of these 90 million articles
+[00:11:49] okay so now now I have the quotes um and
+[00:11:52] what is what is the challenge then that
+[00:11:54] I want to solve is the following thing
+[00:11:56] right these phrases or these quotes they
+[00:11:58] they change a lot so what I'm showing
+[00:12:00] you here is some kind of um a graph
+[00:12:03] where every node is a is a quote and the
+[00:12:06] arrows mean how one quote is or how one
+[00:12:09] phrase is included in another right so
+[00:12:11] this is how a phrase actually changes
+[00:12:12] coming out of P one's mouth right I mean
+[00:12:14] this is actually an accurate
+[00:12:17] model almost okay so here is what came
+[00:12:20] out of her mouth right it's about ping
+[00:12:22] around with terrorists right so here is
+[00:12:24] our oppon opponent is someone who sees
+[00:12:26] America uh it seems as being so
+[00:12:28] imperfect imperfect enough enough so
+[00:12:30] that he's spiling around with terrorists
+[00:12:32] who would Target their own country right
+[00:12:33] so this was the whole the whole thing
+[00:12:35] right and now here you see all different
+[00:12:38] subp parts of it and how they relate to
+[00:12:40] one another right so here is just P
+[00:12:42] around with terrorists who would Target
+[00:12:43] their own country terrorists who would
+[00:12:45] Target their own country failing around
+[00:12:46] with terrorists who would Target their
+[00:12:48] own country and so on right so the first
+[00:12:50] challenge that I have now is that I get
+[00:12:52] this bunch of these quotes and I would
+[00:12:53] like to somehow group them together into
+[00:12:56] into groups that are mutational variant
+[00:12:59] of one another
+[00:13:01] yes um it just means it's a this means
+[00:13:04] approximate inclusion so this is sort of
+[00:13:07] included in this this is included in
+[00:13:08] that this is included in this and so on
+[00:13:10] okay so sort of as you go down things
+[00:13:12] are bigger right and here you see you
+[00:13:14] can see that you know here is the second
+[00:13:16] part of the quote right about America
+[00:13:18] being imperfect and here is you know
+[00:13:20] sort of the first part of fing around
+[00:13:22] with terrorists right and then these
+[00:13:24] things will come together right so here
+[00:13:25] is sort of quotes that that uh f focus
+[00:13:29] on the second part of this big quote and
+[00:13:31] here are the here's sort of things that
+[00:13:33] focus on the first big first part of the
+[00:13:35] okay I just ask is that flow related to
+[00:13:39] syntax or to time do that change there
+[00:13:41] is no time there's no time here so here
+[00:13:43] is so what this is it just means um in
+[00:13:46] some sense this is short edit distance
+[00:13:49] okay so but I'll go into how I create
+[00:13:51] this graph in the next slide okay so um
+[00:13:54] here is what I want to do right so if I
+[00:13:56] have all this so imagine that every
+[00:13:58] letter now is a word right and these are
+[00:14:00] my phrases right so what I would like to
+[00:14:02] do now is um somehow create an edge
+[00:14:05] where every Edge means um me so a phrase
+[00:14:08] CF could have evolved from this
+[00:14:11] particular phrase this particular phrase
+[00:14:12] or that particular phrase right so
+[00:14:14] basically what I want to say is okay who
+[00:14:16] where where could I a phrase um evolve
+[00:14:20] from okay so um and what do what does an
+[00:14:23] arrow mean it just means okay I'm
+[00:14:25] approximately included in you right I'm
+[00:14:27] sort of your subset right so um CF is a
+[00:14:31] is a subset of BC EF right and you know
+[00:14:35] another it's also a subset of uh cfp
+[00:14:38] right and so on okay so um I I create
+[00:14:42] such graph right um where now these
+[00:14:44] edges are exactly the edges that I had
+[00:14:47] in the previous slide and what I'd like
+[00:14:48] to do now is um I will first um put some
+[00:14:52] weights on these edges that will sort of
+[00:14:54] say Okay How likely am I you know to
+[00:14:56] evolve from this quote versus from that
+[00:14:58] quote versus from that quote and what I
+[00:15:00] would like to do now is I would like to
+[00:15:03] um partition this graph such that at the
+[00:15:07] end every note has a unique parent right
+[00:15:10] sort of I want to have you know the Adam
+[00:15:12] and Eve parent here and then you know
+[00:15:15] there must be some kind of line each how
+[00:15:17] I came to be right so what basically I
+[00:15:20] want to do is I want to delete some of
+[00:15:23] these edges here such that the the total
+[00:15:26] volume of the edges that remain in the
+[00:15:28] graph is as high as possible with the
+[00:15:31] constraint that every note has a unique
+[00:15:33] parent right if I follow the links I
+[00:15:35] have to end up with a unique parent
+[00:15:37] right so in this case um this would be a
+[00:15:39] solution right so I would delete here
+[00:15:42] because this this this one now has two
+[00:15:44] two sort of two possible parents right
+[00:15:46] this could be a sort of a super a parent
+[00:15:48] or this could be the the original Parent
+[00:15:51] right while um in you know here
+[00:15:54] everything is fine because at the end
+[00:15:55] everything evolved from this person I
+[00:15:57] don't care whether if this way or that
+[00:16:00] way at the end if if these are the edges
+[00:16:02] I delete everything is okay where do the
+[00:16:04] where did the weights come from um
+[00:16:06] weights so um weight the way I'm do
+[00:16:09] doing weights is just think of it you
+[00:16:10] know it's a string Cy distance okay you
+[00:16:12] know how similar are we one is could
+[00:16:15] have I evolved from you and the other
+[00:16:16] one is how much effort you know how big
+[00:16:18] change how much I it's not statistical
+[00:16:20] just it's just structural uh exactly
+[00:16:22] yeah so it's somehow a precompute this
+[00:16:24] wayes based on the domain knowledge you
+[00:16:26] know how the language works and things
+[00:16:27] like that okay that's there was another
+[00:16:29] question I was why why are you insisting
+[00:16:32] that we consider only a single source of
+[00:16:36] ancestry if I'm thinking about a whole
+[00:16:38] bunch of news sites I imagine that sort
+[00:16:41] of many people could arrive at the same
+[00:16:44] short quote from having seen different
+[00:16:47] versions of a longer quote so I would
+[00:16:50] imagine that that people shortened it
+[00:16:53] independently at the end is something
+[00:16:55] that Sarah Palin said right and then you
+[00:16:57] know here can be one part of ping around
+[00:17:00] the terrorists and here's another part
+[00:17:01] of ping around the terrorists and when
+[00:17:03] you come to this short quote I sort of
+[00:17:05] don't really care whether you came this
+[00:17:06] way or this way but this is this
+[00:17:08] particular quote okay that's the
+[00:17:09] motivation why yes you need to have a
+[00:17:11] unique right there is a unique thing
+[00:17:13] from which you arrive this uh implicitly
+[00:17:17] assumes that the full quote is available
+[00:17:18] somewhere uh sure yeah yes it assumes
+[00:17:22] that there is that this is available yes
+[00:17:26] um which tends to be the case um yeah if
+[00:17:28] you get 1 million use documents a day
+[00:17:31] then usually the thing is there but is
+[00:17:33] that a requirement for the algorithm can
+[00:17:35] you simplify the graph without having a
+[00:17:38] source of quotes to work from or do you
+[00:17:41] you always find ABCD e f g within your
+[00:17:45] data set somewhere so the re I mean the
+[00:17:48] reason why we formulated the problem
+[00:17:50] this way is because these quotes are so
+[00:17:51] short that if you do you really want to
+[00:17:54] keep this linage information otherwise
+[00:17:56] you can't do anything right
+[00:17:59] Things become very hard right because
+[00:18:00] you can have for example imagine Joe the
+[00:18:02] plumber right that is you know Joe the
+[00:18:04] plumber most of us will think about a
+[00:18:07] particular context but actually if you
+[00:18:08] go into this 1 million documents you
+[00:18:10] know Joe the plumber the first time you
+[00:18:12] see it it's way before the real Joe the
+[00:18:14] plumber appeared right just because
+[00:18:15] somebody you know really had a plumber
+[00:18:17] whose name was Joe and he came do
+[00:18:19] something right and then you are like
+[00:18:21] okay what should I do right and that's
+[00:18:23] the reason why you want to approach this
+[00:18:25] and say you know I just think Joe the
+[00:18:27] plumber is this thing and not you know
+[00:18:29] your favorite plumber who came to you or
+[00:18:31] need something
+[00:18:35] okay we used spinner data and we had a
+[00:18:37] huge amount of problems with people
+[00:18:39] having exact same quote one carriage
+[00:18:41] return added or one character added so
+[00:18:43] actually it may have just gotten one
+[00:18:45] relevant influential hit but it was
+[00:18:47] repeated you know 100 thousand times
+[00:18:49] that's a that's a great question so it
+[00:18:51] turn like for us spam is like we don't
+[00:18:53] really handle like we didn't even have
+[00:18:55] to handle spam um sort of the only thing
+[00:18:58] we have is like a stop list of around
+[00:19:01] 100 quotes that are movie titles and uh
+[00:19:04] CD sort of music titles right you know
+[00:19:07] Indiana Jones blah blah right so we
+[00:19:09] filter out these things and that's all
+[00:19:11] right and sort of what we are left with
+[00:19:13] at the end are this very clean political
+[00:19:16] political quotes so um the whole of I
+[00:19:20] mean of so in some sense we didn't
+[00:19:22] really need to go into into spam too
+[00:19:25] much so it was not a problem so we had
+[00:19:27] like few few so one thing we said was
+[00:19:30] like um you have to appear at you know
+[00:19:32] your W you your your total number of
+[00:19:35] manions has to be let's say at at most
+[00:19:38] five times the number of different
+[00:19:39] websites you come from right so you sort
+[00:19:41] of have to appear at some particular
+[00:19:43] diversity of webites this kills the spam
+[00:19:46] already and then the other thing is we
+[00:19:48] had this uh Short Stop list that were
+[00:19:50] basically movie titles because we were
+[00:19:51] not interested in them so surprisingly
+[00:19:54] we didn't have any trouble with SP but
+[00:19:56] it's a good question okay so this would
+[00:19:59] be now my my my quote clusters and let
+[00:20:02] me just show you um an example right so
+[00:20:04] this is fundamentals of our economy are
+[00:20:07] strong right and these are all all
+[00:20:09] different ways some of them um and this
+[00:20:12] is the volume of um basically how many
+[00:20:15] times this thing was said of
+[00:20:16] fundamentals of our economy are strong
+[00:20:18] right and you know some are good and
+[00:20:20] some are you know not that good but
+[00:20:23] things belong to this particular the
+[00:20:25] fundamentals of our economy are strong
+[00:20:28] right and you know here is something
+[00:20:29] bigger where the person cited the it's
+[00:20:32] sort of a quote of a quote right but all
+[00:20:35] in all now what I get is things like
+[00:20:37] that right these
+[00:20:38] chunks where all these phrases I say
+[00:20:41] this is all the variant of you know
+[00:20:44] fundamentals of our economy or St okay
+[00:20:46] so now what I did is now I have a way to
+[00:20:49] take these documents extract these short
+[00:20:51] phrases and group them together so that
+[00:20:53] I have all the mutational variants uh
+[00:20:55] put together okay so um that's what I
+[00:20:58] have so what I want to look now is show
+[00:21:00] you some results if I start looking at
+[00:21:02] this data and the first question is can
+[00:21:04] you do any anything interesting with
+[00:21:06] this because what I'm showing you here
+[00:21:07] is this is time and this is just n let's
+[00:21:11] say um number of Articles per hour I see
+[00:21:14] or the number of phrases I get uh per
+[00:21:17] hour okay and um what do I want to make
+[00:21:20] a point here is that it's pretty much
+[00:21:22] constant right I again this weekly
+[00:21:24] weekly um periodicities right this is
+[00:21:26] sort of weekend this is during the week
+[00:21:29] but overall there are no Trends in this
+[00:21:31] no let's say particular Global Trends in
+[00:21:33] the data right sort of the amount of
+[00:21:35] stuff that I see over time is constant
+[00:21:37] right so basically what this is telling
+[00:21:38] is that somehow the bandwidth of the
+[00:21:41] online media is constant right sort of
+[00:21:43] the bandwidth how much how much stuff is
+[00:21:45] produced is about constant over time
+[00:21:48] sure I have this periodicity that you
+[00:21:49] know naturally corresponds to the said
+[00:21:52] 5day working week and then you know two
+[00:21:54] days off and so on but all in all
+[00:21:56] there's you know it seems to be pretty
+[00:21:57] much constant
+[00:21:59] could is the could it be that the number
+[00:22:01] of blogs and new new sources is also
+[00:22:03] constant or that where new blogs that
+[00:22:06] that appeared you know a month into the
+[00:22:08] data set they excluded no we also get
+[00:22:11] new stuff that is coming and of course
+[00:22:13] like the number of blogs is you know
+[00:22:15] slowly growing but blogs are also dying
+[00:22:17] so all in all there's no you account for
+[00:22:20] that okay so basically the question is
+[00:22:24] are there any interesting temporal
+[00:22:25] variations and uh the answer is yes they
+[00:22:28] are right so so what I'm showing you
+[00:22:29] here is this is just time from August 1
+[00:22:32] to end of October and these are 50
+[00:22:35] largest volume so 50 most mentioned
+[00:22:38] phrases or phrase clusters right and you
+[00:22:40] know you can nicely see right so this
+[00:22:42] was you know the the George the
+[00:22:44] aggression the the conflict in Georgia
+[00:22:47] between Russia and Georgia right then
+[00:22:48] here is the presidential campaign you
+[00:22:51] know it started here with a republican
+[00:22:54] uh um sorry with the Democrat convention
+[00:22:56] and then this was a republican
+[00:22:58] convention and then you know lipstick on
+[00:23:00] a peck comes and you know here is
+[00:23:02] fundamentals of our economy and again
+[00:23:04] economy and right here are all sort of
+[00:23:07] attacks on Obama that didn't really work
+[00:23:09] like you know who is this one this one
+[00:23:12] can I call you Joe uh things like that
+[00:23:15] right and this is the last presidential
+[00:23:16] debate which sort of you know the two
+[00:23:19] one was spreading the wealth around the
+[00:23:21] other one was I'm not President Bush if
+[00:23:23] you remember and um then it's this one
+[00:23:26] about SAR Palin and then it's sort of
+[00:23:28] fans right but what's interesting now is
+[00:23:30] that even though sort of overall you
+[00:23:33] know I see some somewhat constant number
+[00:23:35] of these things coming to me but I see
+[00:23:37] these huge spikes when I look at the
+[00:23:39] most popular things right so um actually
+[00:23:43] I have a I have a zoom in right so
+[00:23:45] here's the most interesting part how
+[00:23:47] things came and how they how they how
+[00:23:50] they went away right and what is nice
+[00:23:52] about this picture is that this is
+[00:23:54] completely automatically generated right
+[00:23:55] I didn't hand I didn't do anything by
+[00:23:58] hand hand right like you know these are
+[00:24:00] exactly the sort of the the the phrases
+[00:24:03] from from my clusters um you know it's a
+[00:24:07] press of a button and this comes out
+[00:24:08] right so it's somewhat interesting that
+[00:24:10] you know you get
+[00:24:12] in 90 million documents on the end you
+[00:24:14] say look this is what was going on okay
+[00:24:18] yes the slight changes in the wording so
+[00:24:20] for example instead of um I am not
+[00:24:23] President Bush if it was I was not or oh
+[00:24:26] um that goes accounted in the clustering
+[00:24:29] right so the way I create the stes in
+[00:24:30] the clustering I'm basically having a
+[00:24:33] string string added distance metric
+[00:24:35] right so you I say you know you can
+[00:24:37] remove a few words you can swap a few
+[00:24:39] words doesn't really matter right so yes
+[00:24:41] exactly so here you know there will be
+[00:24:42] many different ways of how people said
+[00:24:44] failing around with terrorists or
+[00:24:46] whatever and you know this is not like
+[00:24:48] here can be those big long quotes short
+[00:24:50] quotes doesn't matter right as long as
+[00:24:52] sort of they they are subsets of one
+[00:24:54] another okay and about negations like if
+[00:24:56] someone said not something versus
+[00:24:59] something yeah uh I'm uh that's I don't
+[00:25:01] account for that so I'm sort of I'm
+[00:25:03] because I have so much data I can sort
+[00:25:05] of be very stupid if you like no I'm I'm
+[00:25:07] the same way because I also like I need
+[00:25:09] to um I need to be able to work with
+[00:25:12] such big amount of data so I cannot
+[00:25:13] really spend too much time on every
+[00:25:15] individual thing so um there are
+[00:25:18] trade-offs yes I mean in PR I could be
+[00:25:20] much smarter how how sort of how these
+[00:25:22] things are done and I think they can be
+[00:25:23] greatly improved in terms of you know
+[00:25:25] how do you do this clustering and so on
+[00:25:27] all right so that's the first thing so
+[00:25:29] what I'll show you now is sort of a set
+[00:25:32] of plots where I'm some somewhat
+[00:25:33] interested in how in the temporal
+[00:25:35] dynamics of you know U for example what
+[00:25:38] I'll be showing you is I'll have on the
+[00:25:40] x axis I'll have time and on the y axis
+[00:25:42] I'll have some kind of notion of volume
+[00:25:44] or popularity and um zero will always
+[00:25:47] mean this is the peak time right this is
+[00:25:49] the time when the the thing reaches the
+[00:25:52] the peak attention right and what I'm
+[00:25:54] showing you here is this is now um
+[00:25:56] average uh uh CL it over I think top
+[00:26:00] thousand uh phrase clusters and the only
+[00:26:03] thing to notice is Right long before the
+[00:26:06] thing was said I see some sort of
+[00:26:07] background noise and then just around
+[00:26:09] the time when it was said um I see
+[00:26:11] almost this like Delta function Behavior
+[00:26:14] right so the blue line here is a is a
+[00:26:16] fit of an exponential function right and
+[00:26:18] the only point I want to make here is
+[00:26:20] exponential function doesn't increase
+[00:26:21] fast enough to be able to model the peak
+[00:26:24] right so I have to model this with
+[00:26:26] something that that goes to Infinity of
+[00:26:28] zero right so it really like shoots up
+[00:26:31] here and then you know again it super
+[00:26:33] quickly decays and you know then it's
+[00:26:35] the Noise Okay so this is now on a very
+[00:26:38] long time scale so what I look now is
+[00:26:40] just this period okay and one thing that
+[00:26:43] I will do is um is that I will label
+[00:26:47] websites into news media and blogs right
+[00:26:50] and I will use a sort of a very simple
+[00:26:52] categorization I will say everything
+[00:26:54] that appears on Google News I will call
+[00:26:57] news okay and everything else I will
+[00:26:59] call blogs okay so I know I have 20,000
+[00:27:02] new sites here and 1.6 new sites here
+[00:27:05] but then if I measure let's say the
+[00:27:07] number of article that comes from here
+[00:27:09] versus here I get 20 44% of Articles
+[00:27:12] coming from these 20,000 sites and you
+[00:27:14] know 56 from this 1.6 million sites
+[00:27:16] right so at the end sort of I have quite
+[00:27:19] balanced U quite a good balance between
+[00:27:22] news media sites and blog sites right
+[00:27:24] and I'm just using Google News
+[00:27:26] classification so again I'm just sort of
+[00:27:28] using whatever they they index that's
+[00:27:29] news everything else I call block okay
+[00:27:32] and um what I'm showing you here now is
+[00:27:34] again I'm showing you time now not hours
+[00:27:37] um and this is um again fraction of
+[00:27:40] volume or popularity right and um this
+[00:27:43] this is the popularity of uh mainstream
+[00:27:46] media um um phrases or when when sort of
+[00:27:50] the phrase become popular in the
+[00:27:52] mainstream media and this is when the
+[00:27:53] phrase become popular on the on the
+[00:27:54] blogos right and what this is basically
+[00:27:57] telling me is that um
+[00:27:59] main what so mainstream media tends to
+[00:28:03] um tends to be ahead of the blogosphere
+[00:28:05] for about 2.5 hours right so the
+[00:28:08] blogosphere tends to follow whatever
+[00:28:10] sort of what mainstream media says with
+[00:28:12] a lag of around 2.5 hours okay so that's
+[00:28:15] um the point here right so the
+[00:28:17] difference between these two paks is 2.5
+[00:28:19] hours okay so what this would so what
+[00:28:21] this now tells me sort of that media is
+[00:28:24] produ news is produced by media and then
+[00:28:26] bloggers you know feed off and you know
+[00:28:28] they they chew for 2 hours and then they
+[00:28:30] say something right
+[00:28:37] um9 excuse me so
+[00:28:40] at2 oh yeah yeah next slide good
+[00:28:42] question okay so actually I can go into
+[00:28:44] more details right so I can actually
+[00:28:46] take a look at every website and say
+[00:28:48] okay when do you mention things you know
+[00:28:50] relative to the peak time right and here
+[00:28:53] is now um so for this experiment I took
+[00:28:55] top 100 most uh popular
+[00:28:58] and what I'm showing you this is the
+[00:29:00] rank this is the lag lag means negative
+[00:29:02] lag means yes you are ahead of the peak
+[00:29:05] popularity so zero is Peak popularity
+[00:29:07] right so if you are negative you are
+[00:29:09] before and if you are positive you are
+[00:29:11] after um this means how many of these
+[00:29:13] top 100 they reported on they mentioned
+[00:29:16] and this is the website right so before
+[00:29:19] I was saying um blocks Trail news media
+[00:29:22] for 2.5 hours but if you look at what is
+[00:29:24] going on here is that the the the sides
+[00:29:27] that
+[00:29:28] really are well ahead of the of everyone
+[00:29:32] else are basically professional
+[00:29:34] bloggers right you know um hington post
+[00:29:38] uh talking points memo hot air talk left
+[00:29:41] di cost right there are you know 14 15
+[00:29:44] hours ahead of the peak popularity right
+[00:29:47] and then you know the the mainstream
+[00:29:49] things come and they're around 10 hours
+[00:29:51] before the the popularity right so what
+[00:29:54] this basically says is yes you have
+[00:29:56] these professional bloggers that then
+[00:29:58] you have the mainstream media sites and
+[00:30:00] then you have you know millions of these
+[00:30:01] other casual bloggers that that blog
+[00:30:04] about things right so this is what this
+[00:30:06] is saying
+[00:30:08] yes um there's a distinction at daily
+[00:30:11] cost between the front page bloggers who
+[00:30:15] are part of the editorial staff and the
+[00:30:18] individuals who have their own postings
+[00:30:20] there did you make a distinction between
+[00:30:22] now um for this case I didn't and the
+[00:30:26] the thing is I was considering the first
+[00:30:28] mention on that particular site right so
+[00:30:30] I'm only I'm interested in when the
+[00:30:32] thing was first mentioned on the site so
+[00:30:35] probably what is the case here is that
+[00:30:36] all these bloggers that are you know
+[00:30:38] that are not on the front page they sort
+[00:30:40] of do things late but I don't because
+[00:30:43] something something else already
+[00:30:44] mentioned is on the dily cost I just
+[00:30:46] consider that okay okay and the last of
+[00:30:49] these types of plots is the following
+[00:30:52] right so again time um this is spe
+[00:30:54] popularity and um what is this the the y
+[00:30:58] axis now sort of me measuring how much
+[00:31:01] at every time step what fraction of of
+[00:31:03] mentions come from the blogosphere okay
+[00:31:06] so if if it's high here it means mostly
+[00:31:10] blogosphere is mentioning the thing and
+[00:31:12] if it's sort of low it means news media
+[00:31:14] are mentioning the thing okay and um
+[00:31:17] this is sort of what you see is this
+[00:31:18] heart bit like pattern right so before
+[00:31:21] long before everything happens it's sort
+[00:31:23] of this background noise at 56% right I
+[00:31:25] told you 56% of the stuff comes from
+[00:31:28] blogosphere and 44 from news media in
+[00:31:30] our data set right so I'm here then then
+[00:31:34] then um this at this time so bloggers
+[00:31:37] take majority of the mentions right so
+[00:31:39] this could be the professional bloggers
+[00:31:41] right then it goes down this is still
+[00:31:43] before the peak this is now when main
+[00:31:46] mainstream media takes over right and
+[00:31:48] then I get another bounce back Which is
+[00:31:50] higher towards the blogosphere right and
+[00:31:52] this is again right it's sort of two
+[00:31:54] hours later after the peek right and
+[00:31:56] these are these are now the sort of the
+[00:31:58] normal bloggers and then it somehow goes
+[00:32:01] back to the to the normal but the point
+[00:32:03] is here it was at 56 here it's sort of
+[00:32:05] at 57 right so blogosphere tends to
+[00:32:08] mention things longer
+[00:32:12] yes ahuh um this is the real data so
+[00:32:14] this was just some um um spline smooth
+[00:32:17] okay but this is the real data [ __ ] [ __ ]
+[00:32:20] [ __ ]
+[00:32:25] okay in the relationship between
+[00:32:27] mainstream bloggers and and mainstream
+[00:32:29] news media uh between quote phrases you
+[00:32:32] looked at where there are certain types
+[00:32:33] of stories or memes that seem to show a
+[00:32:37] more variation from this than others um
+[00:32:41] let I um let me actually show you uh
+[00:32:45] yeah let me show you my next slide
+[00:32:46] because it's sort of in this direction
+[00:32:48] okay so what I can also do then is to
+[00:32:51] ask sort of this XY T which which what I
+[00:32:54] mean by that is basically I can I can
+[00:32:56] say okay give me give me news phrases or
+[00:32:59] give me phrases that have a particular
+[00:33:01] temporal signature right so for example
+[00:33:03] if I have these uh three numbers then I
+[00:33:05] can say basically give me something that
+[00:33:07] has um between X and Y fraction of total
+[00:33:10] phrase volume um occurred on blogs at
+[00:33:13] least days before the overall PE right
+[00:33:15] so what I can do now is I can say okay I
+[00:33:18] can um I can say give me give me phrases
+[00:33:21] that appeared on the blogosphere long
+[00:33:23] long before they appeared in the news
+[00:33:24] media right and um we we b a very simple
+[00:33:29] experiment where we where we said this
+[00:33:31] um to be between 30 and 70 and this was
+[00:33:34] 7even days and um here are here are uh
+[00:33:38] the news sort of the phrases that that
+[00:33:41] that this simple query took out right
+[00:33:43] and um this is the SEL and the global
+[00:33:46] warming thing that sort of bloggers
+[00:33:48] discovered and then later the mainstream
+[00:33:50] media reported about um and um this one
+[00:33:54] was another um phrase about uh you know
+[00:33:59] that the thing is above um someone's pay
+[00:34:01] grade right this is also from the
+[00:34:03] political campaign so using such a
+[00:34:06] simple um simple queries it turns out
+[00:34:08] that around let's say three 3 to 4% of
+[00:34:11] all these popular phrases started in the
+[00:34:14] blogosphere and went into the mainstream
+[00:34:16] media right so if you look at how much
+[00:34:18] evidence is there that you know bloggers
+[00:34:20] come up with something that then becomes
+[00:34:22] very popular on the in the mainstream
+[00:34:24] media um there's around 4% of such
+[00:34:26] things okay so that's sort of the last
+[00:34:30] the last thing I can say about this and
+[00:34:32] what I haven't showed you we have a
+[00:34:34] simple model of how that models these
+[00:34:37] temporal dynamics of these phrases um
+[00:34:40] where we have like three different um
+[00:34:43] three different ingredients that you can
+[00:34:45] ask so you can ask okay what would be
+[00:34:47] the three basic ingredients that every
+[00:34:49] phrase would have that would depend how
+[00:34:51] popular it is right and there are sort
+[00:34:53] of the the three things is one is what
+[00:34:55] we call attractiveness right how
+[00:34:56] interesting is this particular piece of
+[00:34:58] news right the other one is uh how old
+[00:35:01] it is right sort of the older you are
+[00:35:02] the less likely are people to talk about
+[00:35:04] you and the third ingredient is
+[00:35:06] popularity right the more people talk
+[00:35:07] about you the more likely more more
+[00:35:10] likely other people are to talk about
+[00:35:12] you right and there actually turns out
+[00:35:14] that we can quite reliably model these
+[00:35:16] temporal signatures without really
+[00:35:18] needing the
+[00:35:19] attractiveness um ingredient right so we
+[00:35:23] sort of need popularity and age but
+[00:35:26] attractiveness doesn't seem to play
+[00:35:28] much role in sort of a very simple model
+[00:35:31] that we were playing with okay so um
+[00:35:35] this now concludes um what I wanted to
+[00:35:38] say about the new cycle and how to track
+[00:35:40] it so now I sort of want to show two
+[00:35:43] more computer sciencey things if that is
+[00:35:45] fine yeah okay say maybe 10 more minutes
+[00:35:48] and then we'll open it up and give you
+[00:35:50] even more questions than we've been
+[00:35:51] giving you so this I may Rush a bit but
+[00:35:53] uh try to bear with you okay so here is
+[00:35:56] what what so if you go back and say okay
+[00:35:58] what are we really doing right here is
+[00:36:00] you know my my world my set of blogs and
+[00:36:02] all I see is how these blogs mention
+[00:36:04] things right I see that you know a
+[00:36:06] particular blog mentioned mentioned the
+[00:36:08] phrase and then somebody else mentioned
+[00:36:09] it and somebody else mentioned it and
+[00:36:11] you know there's a new phrase that then
+[00:36:13] some other people were mentioning over
+[00:36:14] time right but what I don't see is how
+[00:36:17] how this phrase really propagated right
+[00:36:19] so I don't see these links that I would
+[00:36:21] say okay it started here it went you
+[00:36:23] know to this Blog then block then it
+[00:36:25] went here and then it went here and that
+[00:36:27] way right so I don't see the links I
+[00:36:29] only see when people mention the thing
+[00:36:30] right so what I'll be asking now is the
+[00:36:32] following right so I will try to infer
+[00:36:35] this defusion or influence networks
+[00:36:37] right so I will assume that you know
+[00:36:39] there are some nodes in my network and
+[00:36:40] there are some edges in this network but
+[00:36:43] all I see are the nodes and I don't see
+[00:36:44] the edges but what I see is then the
+[00:36:47] times when nodes get infected so what I
+[00:36:50] mean by that is you know imagine that a
+[00:36:52] says post a particular piece of news and
+[00:36:55] then you know a bit later C C talks
+[00:36:58] about it and B talks about it and E
+[00:37:00] talks about it right and all I see I say
+[00:37:02] okay there was I call this now a Cascade
+[00:37:05] and I see that a no day said this at
+[00:37:08] time one C said it at time two B said it
+[00:37:10] at time three and E said it at time four
+[00:37:12] right and now I can see a different
+[00:37:14] Cascade you know that start at C and
+[00:37:16] somehow spreads through my network right
+[00:37:19] and again all I see is the temporal
+[00:37:21] signature of how this Cascade spread
+[00:37:23] through the network right so what I
+[00:37:24] would like to do now is to say okay can
+[00:37:27] I infer sort of from such data can I
+[00:37:30] infer the edges of this network okay so
+[00:37:33] what I would basically like to do is if
+[00:37:35] you think of a disease is I see times
+[00:37:38] when people get sick but I don't see who
+[00:37:40] really who who you know coughed at whom
+[00:37:43] or who infected whom and I would like to
+[00:37:45] infer who what were the edges over which
+[00:37:48] the infection propagated okay so now
+[00:37:51] I'll give very quickly how you can
+[00:37:53] formulate this problem and how you can
+[00:37:54] solve it okay so I'm given a Cascade a
+[00:37:57] Cascade for me um is just you know this
+[00:38:00] is a Cascade right it tells me who got
+[00:38:02] infected and when they got infected okay
+[00:38:04] but I don't know how okay so then I can
+[00:38:08] say okay if I take two nodes in the in
+[00:38:11] my network How likely is that um I
+[00:38:14] infected J and I'll make a very simple
+[00:38:16] model here I'll just say you know the
+[00:38:18] probability of infection depends on the
+[00:38:21] time how what was the time difference
+[00:38:23] between the the times when the two nodes
+[00:38:25] got infected like the longer the time
+[00:38:26] the less likely you to infect the person
+[00:38:28] okay so I'm making I can make this
+[00:38:31] arbitrarily complicated so it doesn't
+[00:38:33] really matter this sort of the simple
+[00:38:34] thing I can do okay but you know here I
+[00:38:36] could have a very very complicated model
+[00:38:38] of How likely is one person to infect
+[00:38:41] another person based on time
+[00:38:42] characteristics things like that okay
+[00:38:44] but for now let's just assume it's
+[00:38:45] something very simple okay so imagine
+[00:38:48] that I can compute this thing what I
+[00:38:50] want to now compute is How likely is
+[00:38:52] this Cascade to happen if it propagates
+[00:38:55] in a particular pattern T so what I mean
+[00:38:57] by that is if this is my um my network
+[00:39:01] and you know this St really propagated
+[00:39:03] from a to c and then from A to B and
+[00:39:05] from B2 e and not maybe you know this
+[00:39:08] way or something or or this way um then
+[00:39:11] it's easy for me to compute How likely
+[00:39:13] is this Cascade to occur right I just
+[00:39:15] say How likely this Cascade to occur in
+[00:39:18] such a three pattern I just go over the
+[00:39:20] edges of this three and compute the
+[00:39:22] probabilities that you know a infected c
+[00:39:25] a infected B and B infected e okay of
+[00:39:28] course condition that I know how how the
+[00:39:31] infections which edges were sort of uh
+[00:39:34] guilty for this infections right but
+[00:39:36] because I don't know these Hedges I need
+[00:39:40] to consider basically all possible thre
+[00:39:43] or all possible patterns how these four
+[00:39:45] nodes could get infected okay so what in
+[00:39:49] principle I would like to compute I
+[00:39:50] would say Okay How likely is the Cascade
+[00:39:52] to occur in My Graph um I need to go now
+[00:39:56] over all possible
+[00:39:57] propagation is G and compute the
+[00:40:00] probability of a Cascade under that
+[00:40:02] three the probability of that three okay
+[00:40:05] and you know I'll just I'll assume that
+[00:40:06] all trees are equally likely so I can
+[00:40:08] ignore that but see the problem is that
+[00:40:10] I have to go over all possible
+[00:40:12] propagation trees okay so even now if I
+[00:40:17] can compute How likely is a particular
+[00:40:19] Cascade to occur in a in a graph then I
+[00:40:22] can Define the following problem I say
+[00:40:24] okay I want to select a graph on K edges
+[00:40:26] such that all my the set of my Cascades
+[00:40:29] is the most likely to happen right I
+[00:40:31] want to say okay this is a set of
+[00:40:32] Cascades I observed what is the most
+[00:40:34] likely graph over which over which
+[00:40:37] Cascades could have propagated and this
+[00:40:39] graph has to have at least K edges um
+[00:40:42] the sorry at most P edges why do I have
+[00:40:44] this constraint is because if I have a
+[00:40:47] complete graph that's always the best
+[00:40:49] explanation right if anyone can infect
+[00:40:50] anyone else then you just order the the
+[00:40:54] nodes in the time of how they got
+[00:40:55] infected and that's the best way right
+[00:40:57] that's sort of the easiest way for you
+[00:40:58] to do it so but if you want a graph that
+[00:41:00] is not you know a complete graph then
+[00:41:02] you need to have some constraint here so
+[00:41:04] it's sort of for technical reasons right
+[00:41:06] and there are two problems here first is
+[00:41:08] that Computing this thing right is
+[00:41:10] intractable right the reason is because
+[00:41:13] you have to consider all possible um
+[00:41:15] propagation trees it turns out that
+[00:41:17] there is this beautiful matri Matrix
+[00:41:20] tree theorem that will do this super
+[00:41:22] exponential thing thing in cubic time
+[00:41:25] okay so that's nice thing here and the
+[00:41:27] other thing is even if you're able to
+[00:41:29] compute this the question is how do you
+[00:41:31] maximize over it okay and there's
+[00:41:34] another magic that happens that you can
+[00:41:36] prove that um this function is sub
+[00:41:39] modular which basically means it has
+[00:41:41] this diminishing returns property which
+[00:41:43] in turn means that I can find this graph
+[00:41:47] that is near optimal okay and I'm sorry
+[00:41:49] that I left lots of details but sort of
+[00:41:52] here are two magical moments that you
+[00:41:53] feel very happy about when they happen
+[00:41:56] and everything works and um here's a
+[00:41:58] small example okay so I'll show you now
+[00:42:00] a small example so the second is the
+[00:42:03] following there is a true
+[00:42:05] Network um with some edes right and it
+[00:42:08] says this node can infect that node okay
+[00:42:10] and now I will um use let's say some
+[00:42:13] independent Cascade model or something
+[00:42:15] to to to simulate a few Cascades over
+[00:42:18] this graph right and then I want to go
+[00:42:20] and and sort of reconstruct the graph
+[00:42:22] from the times when nodes got infected
+[00:42:24] and the simple Baseline that I will
+[00:42:26] compare against here is is just that for
+[00:42:28] every Edge I will compute the strength
+[00:42:31] of that edge basically I say okay over
+[00:42:33] all the Cascade what was the probability
+[00:42:36] that you infected v um and this should
+[00:42:39] be the weight of that UV Edge okay and
+[00:42:41] if I go do that this is what I get right
+[00:42:44] so these are the edges that I correctly
+[00:42:47] infer and then the red are the ones that
+[00:42:49] I miss and for example you can if you
+[00:42:52] focus here right what happens so when a
+[00:42:55] Cascade starts somewhere here it comes
+[00:42:56] to this note and then lots of these
+[00:42:58] other nodes get infected over time right
+[00:43:01] but then what is this um what this is
+[00:43:04] confusing is that if this gets infected
+[00:43:07] at time two and this one gets infected
+[00:43:09] at time three and this got infected at
+[00:43:11] time one then the edge here gets created
+[00:43:14] right so you get these types of edges
+[00:43:16] because it's more more likely that that
+[00:43:18] uh this happened than than this because
+[00:43:21] the time Delta here is longer than time
+[00:43:22] Delta there but if you use our thing you
+[00:43:26] basically do almost perfectly okay so
+[00:43:29] this is how well we can do um using all
+[00:43:31] those tricks that I showed you before so
+[00:43:34] okay with with the comment that a lot of
+[00:43:36] the graph Theory here is like President
+[00:43:39] Obama's quote well above our pay grade
+[00:43:41] what does this mean for actually
+[00:43:43] modeling real world great okay so what I
+[00:43:47] have here now is a very small part of a
+[00:43:50] network where I basically see when media
+[00:43:53] says particular things I also see times
+[00:43:55] and now I'm trying to say okay if if you
+[00:43:58] know the thing is spreading or if one
+[00:44:00] media is following another media um how
+[00:44:03] are they following one another right and
+[00:44:05] this is a very small part I sort of
+[00:44:08] labeled here blue are blogs and red are
+[00:44:10] mainstream media and yes Huffington Post
+[00:44:12] and salon.com or mainstream media
+[00:44:15] because they are indexed by Google News
+[00:44:17] okay but you can see sort of nice things
+[00:44:19] right so here is a big political cluster
+[00:44:22] and you know you that are more experts
+[00:44:24] on these things that I am would probably
+[00:44:26] find more interesting patterns here but
+[00:44:29] that's sort of the politics um this is
+[00:44:32] gossip and um and this is uh technology
+[00:44:36] right it's like this Modo and Gadget
+[00:44:38] CNET and things like that right so we
+[00:44:41] nicely get this topical clusters based
+[00:44:43] on who who who is following whom and you
+[00:44:46] also find these sites here you know that
+[00:44:49] they talk about uh everything a bit
+[00:44:52] right there sort of act as Bridges
+[00:44:54] between these different areas okay so
+[00:44:57] that's the first thing I want to show
+[00:44:59] and the second thing I want to show is
+[00:45:00] the following thing um if again this is
+[00:45:03] my blogosphere and now that I have the
+[00:45:06] network I can say you know information
+[00:45:07] appeared here then it propagated this
+[00:45:09] way this way and that way okay and then
+[00:45:11] you know there's another piece of
+[00:45:13] information that propagated in a
+[00:45:14] particular way and here's the third
+[00:45:16] piece of information that propagated in
+[00:45:18] a particular way so now I can ask um
+[00:45:21] which things do I want to read to be
+[00:45:23] most up to dat okay and here's one way
+[00:45:26] right so way would be okay I want to
+[00:45:28] read this block okay so what's good
+[00:45:30] about this the good thing is that I get
+[00:45:32] to know about all three different things
+[00:45:34] that happen right I get to know about
+[00:45:36] red blue and yellow okay what is bad is
+[00:45:39] that I get to hear them very late right
+[00:45:41] they started you know long time before I
+[00:45:44] get to see
+[00:45:45] them um on right so I sort of know
+[00:45:48] everything but very late or I could say
+[00:45:50] let me read this guy right so what's
+[00:45:53] good about this one is that yes I get to
+[00:45:56] hear things exactly when they appear but
+[00:45:58] you know I don't get to hear about the
+[00:46:00] red
+[00:46:01] thing okay um so I get to I get to know
+[00:46:06] about the blue I get to know about the
+[00:46:08] yellow but I don't get to know about the
+[00:46:10] red right so now what I can ask is the
+[00:46:13] question um if I have a blogosphere and
+[00:46:17] I want to let's say follow three blogs
+[00:46:20] which three blogs should I follow such
+[00:46:22] that I somehow cover this blogosphere as
+[00:46:25] as best as I can in a sense that you
+[00:46:27] know I want to se follow this blog
+[00:46:29] because it covers the topics that appear
+[00:46:31] in this part of the blog asere right and
+[00:46:33] you know then I can say I want to follow
+[00:46:35] this one and so on and so forth right
+[00:46:37] and again um this is hard to do but you
+[00:46:41] can do it um and um so the way the
+[00:46:45] algorithm works is the following so
+[00:46:47] here's another real example so every dot
+[00:46:49] here is a Blog um and the way the
+[00:46:52] algorithm works is that um we will see
+[00:46:55] sort of some colors appear and what I'll
+[00:46:56] be is I'll be showing you what happens
+[00:46:58] as you are reading more blocks right so
+[00:47:01] the first thing that sort of the
+[00:47:02] algorithm says it says read this block
+[00:47:05] here right and what it says now is you
+[00:47:07] will sort of detect everything but when
+[00:47:10] information start starts here it takes
+[00:47:13] quite long time to come there right so
+[00:47:15] the second thing you will select is for
+[00:47:16] example you say okay this is the second
+[00:47:18] block to read right because this is
+[00:47:20] covering this part of the blogosphere
+[00:47:22] and you know this is the third blog and
+[00:47:24] fourth and fifth and so on right and now
+[00:47:27] um every color sort of tells me which is
+[00:47:29] the block that is covering this
+[00:47:31] particular you know this particular
+[00:47:33] block here okay and you know I can do
+[00:47:36] this and um I can quickly show you how
+[00:47:39] well it works so this is for example the
+[00:47:41] number of blogs that I'm reading and
+[00:47:43] this is the fraction of stories that I'm
+[00:47:45] detecting so higher is better um right
+[00:47:49] if I would be reading random blogs this
+[00:47:50] is what I would do if I would be reading
+[00:47:53] blogs that have lots of posts so I just
+[00:47:55] take I will take the the 100 Mo BL 100
+[00:48:00] blogs with the most volume okay um I
+[00:48:03] could also say I will read blogs based
+[00:48:05] on the number of outlinks right the more
+[00:48:07] the more outlinks you have the more
+[00:48:08] likely I am to read you right another
+[00:48:11] thing is to say okay I will read blogs
+[00:48:13] that receive the most ining right that
+[00:48:16] works better but if you actually do the
+[00:48:17] thing right this is how much we can do
+[00:48:21] um or how good is our solution in terms
+[00:48:25] of what do we need to read and how much
+[00:48:27] stories you cover okay and you know this
+[00:48:30] is uh who is the most influential back
+[00:48:31] in 2006 doesn't matter um so let me the
+[00:48:34] last slide basically uh what I want to
+[00:48:37] basically what I showed you is you know
+[00:48:38] some kind of framework or idea how to
+[00:48:40] track the how to track memes and news uh
+[00:48:43] as they as they you know propagate over
+[00:48:45] the web how you can quantify what's
+[00:48:47] going on and what kind of sort of nice
+[00:48:49] algorithmic consequences it givs we have
+[00:48:51] this website called M tracker.com where
+[00:48:54] um there is some demos there is all the
+[00:48:57] data that I showed so you can go
+[00:48:59] download the data and play with it this
+[00:49:01] meme tracker data and so on and um there
+[00:49:04] are many further questions right so one
+[00:49:07] very important question is what are we
+[00:49:09] missing right we are extracting this
+[00:49:10] quotes it gives us something but we are
+[00:49:13] missing lots of other things so what
+[00:49:15] kind of biases are we introducing and
+[00:49:16] what are we missing that's what of the
+[00:49:18] first thing um the second thing is um
+[00:49:21] you know how can this help me to for
+[00:49:23] example identify dynamics of
+[00:49:25] polarization right are there sort of
+[00:49:27] political camps or you know if there's a
+[00:49:29] particular quote does it sort of get
+[00:49:31] split up and you know one part of the
+[00:49:32] network likes the first part and the
+[00:49:34] other part of the network like lies the
+[00:49:36] second part um and uh one thing that we
+[00:49:40] sort of with this networks uh Network
+[00:49:42] diffusion Network inference we try to
+[00:49:44] address is you know how are these memes
+[00:49:46] actually spreading between the people
+[00:49:48] yes okay so uh I'm done thank you
+[00:50:00] I am somehow guessing there are more
+[00:50:02] questions in this room so uh who wants
+[00:50:04] to jump in go ahead what would happen if
+[00:50:07] you uh didn't restrict yourself to
+[00:50:08] quotes because I mean the memes could be
+[00:50:10] found in so you could use the sentence
+[00:50:12] as the as the Baseline and run the same
+[00:50:15] algorithm would take a lot longer
+[00:50:16] because you have a lot more data um but
+[00:50:20] but you would you would end up with
+[00:50:21] clusters of sentences where you know
+[00:50:23] this sentences is talking about the
+[00:50:24] troubled asset relief program for
+[00:50:25] example like this is
+[00:50:27] because it's using a lot of the same
+[00:50:28] words um I just I mean clearly it's a
+[00:50:32] different it's a different dynamic
+[00:50:33] because because with the quotes you're
+[00:50:34] dealing with people who are essentially
+[00:50:36] referring to the same event uh where
+[00:50:38] something fixed was said but it seems
+[00:50:41] like I just wonder how General this
+[00:50:42] would be the the clustering approach
+[00:50:45] that you use as a as a topic modeling
+[00:50:48] kind of approach when you apply not just
+[00:50:50] to fixed quotes which is just like
+[00:50:52] you're just throwing a bunch of sentence
+[00:50:55] segments whatever yeah I mean in
+[00:50:57] principle yes you could do that right
+[00:50:58] that would um the question is would you
+[00:51:02] you know how would you get retired
+[00:51:04] before the computation would be done but
+[00:51:07] uh everything else yeah in in a sense
+[00:51:09] you yes you could do it I think like
+[00:51:11] what we noticed is that things so these
+[00:51:13] things work really well if you work with
+[00:51:15] about half a year of data when you try
+[00:51:18] to do this on the full year of data um
+[00:51:21] there was just sort of too much of this
+[00:51:23] background noise and things started to
+[00:51:25] break to break down the clustering
+[00:51:27] itself so this very simple version so I
+[00:51:29] think you really need to worry about
+[00:51:31] then a time in a sense that you know you
+[00:51:33] have to spike or your temporal sign
+[00:51:36] needs to be about similar or you have to
+[00:51:37] appear at about the same time as your
+[00:51:39] parent or something right um and the
+[00:51:42] other thing is you'd want to be much
+[00:51:43] smarter about how you define Connections
+[00:51:45] in this graph but in a in a in principle
+[00:51:48] yes you can you can you can do this over
+[00:51:50] anything so one thing that we are trying
+[00:51:51] to do now is we are trying to do it over
+[00:51:54] tweets right because tweets have this4
+[00:51:56] character long things so just read each
+[00:51:58] one of them as a sentence and see if
+[00:52:01] there's any you know copying or mutation
+[00:52:03] between these things so yeah you could
+[00:52:05] you could easily do
+[00:52:07] that any other question yes I was
+[00:52:11] wondering if you ever came maybe I
+[00:52:13] missed it if you ever came to a final
+[00:52:15] definition of the phrase news cycle
+[00:52:17] that's one of the things you started out
+[00:52:18] talking about uh you know I'm interested
+[00:52:20] in this because I worked for 10 years
+[00:52:22] for the Associated Press in the pre-
+[00:52:24] internet era when the news cycle was
+[00:52:27] something very real and concrete
+[00:52:29] and we we toiled under it all the
+[00:52:32] time ah a very specific meaning um so I
+[00:52:38] think through this through this so one
+[00:52:40] thing that I haven't showed you is you
+[00:52:42] can then take these temporal signatures
+[00:52:43] of the phrases and like you can say okay
+[00:52:45] what are the typical classes of these
+[00:52:47] signatures right and you it turns out
+[00:52:49] that there are six of them right you
+[00:52:52] sort of have you have um one that you
+[00:52:54] have there are sort of three tell you
+[00:52:57] how wide how how quickly Rises and how
+[00:53:00] quickly decays one is sort of very
+[00:53:01] narrow one is symmetric but very wide
+[00:53:04] and one is sort of very quick and slower
+[00:53:06] and then you have one that uh you know
+[00:53:09] there's a small Spike on the first day
+[00:53:10] and a big spike on the second day the
+[00:53:12] next one is sort of this is flip and the
+[00:53:14] last one is a spike and then a very very
+[00:53:16] slow Decay like three four days and then
+[00:53:18] what we also did is then you can say
+[00:53:20] okay we we labeled websites into like
+[00:53:22] seven different categories like we said
+[00:53:25] okay professional blogs normal
+[00:53:27] news agencies televisions
+[00:53:29] newspapers I think that was it and then
+[00:53:32] like you find very nice characteristics
+[00:53:34] of you know if a news agency pushes
+[00:53:36] something out then it's very very thck
+[00:53:39] and then um sometimes sort of then you
+[00:53:42] have to behaviors one is very slow Decay
+[00:53:43] and one is very quick Decay and things
+[00:53:45] like that so you can find these nice
+[00:53:47] correlations between how things will
+[00:53:49] Spike given who who who mentioned them
+[00:53:51] and when um so this was this was one
+[00:53:54] thing that we were looking at uh and
+[00:53:57] yeah you see this very sort of very
+[00:53:59] strong 24-hour signatures um another
+[00:54:01] thing that I should say and I haven't
+[00:54:02] really talked about it is um together
+[00:54:05] with the um uh the Pew Center for
+[00:54:09] excellence in journalism right what we
+[00:54:11] did with them was we were working on um
+[00:54:14] coverage of the this economic crisis
+[00:54:17] right the Great Depression and they were
+[00:54:19] and it was very interesting when we were
+[00:54:20] working together to they were really
+[00:54:22] interested in you know who were whose
+[00:54:24] phrases or whose quotes got mentioned
+[00:54:27] with regard to this particular topic
+[00:54:28] right and then you can compare you know
+[00:54:30] was it sort of President Obama who was
+[00:54:33] um pushing out or who got cited the most
+[00:54:36] with regard to this topic or you know
+[00:54:37] was it was it some economists and so on
+[00:54:39] and um we got some very interesting
+[00:54:41] results there where sort of you know
+[00:54:43] domain experts got very interested in
+[00:54:45] the methodology itself and they found it
+[00:54:47] quite useful which I think was very nice
+[00:54:49] result
+[00:54:52] yes this is I'm fascinated about how
+[00:54:55] this shows the spread of
+[00:54:57] information in terms of where you can go
+[00:54:59] get it and I don't understand your work
+[00:55:02] to have uh be so inclusive as to
+[00:55:05] understand when people actually engage
+[00:55:07] with
+[00:55:08] it but do you know of anyone who's
+[00:55:10] working on that that they're that there
+[00:55:12] may be a news cycle by class of human
+[00:55:15] being who consumes
+[00:55:17] news that is not all people who are
+[00:55:20] sitting in front of desks all day with
+[00:55:22] always on uh internet things that have
+[00:55:24] that have a natural news cite to their
+[00:55:26] own lives do you know of any work that
+[00:55:29] goes
+[00:55:30] there um I mean I think what you are
+[00:55:34] asking is a very good point right
+[00:55:35] because we we just see everyone who's
+[00:55:38] connected right we don't see people who
+[00:55:39] are not connected or who are you know
+[00:55:41] not blogging in some sense so
+[00:55:45] um
+[00:55:47] I what should I say so I think that's
+[00:55:49] sort of a Val a very valid point yeah
+[00:55:51] that we are biased towards no no no
+[00:55:54] criticism intent I'm just wondering if
+[00:55:55] there's
+[00:55:57] I think there's some good work out there
+[00:55:59] that's looking at this more from
+[00:56:01] ethnography right because this is really
+[00:56:03] an analysis of when the publication
+[00:56:06] takes place I would point you towards
+[00:56:08] something like AP study uh where they
+[00:56:11] looked at Young News consumers and did a
+[00:56:14] a sort of detailed ethnographic approach
+[00:56:16] and what they were able to do was sort
+[00:56:18] of come out with the idea that people
+[00:56:21] are actually looking for information
+[00:56:23] continually through the day there's sort
+[00:56:24] of a a morning feeding whether that's TV
+[00:56:27] news or a newspaper but then there's
+[00:56:29] sort of people going and reloading
+[00:56:30] throughout the day one thing that
+[00:56:32] actually would be really interesting is
+[00:56:34] to try to graph uh essentially news
+[00:56:38] reporting or publication frequency which
+[00:56:40] is essentially what yours data is giving
+[00:56:42] you versus news consumption sort of
+[00:56:45] inted from these eth ethnographies and
+[00:56:48] try to get a sense for whether the two
+[00:56:50] actually parall that's that's what I'm
+[00:56:52] curious very curious about or actually
+[00:56:53] just something which is probably a
+[00:56:55] little more simple which is trying to
+[00:56:57] add to the data um traffic or audience
+[00:57:00] data from the sources that you're
+[00:57:01] actually analyzing so for example if you
+[00:57:03] would have K through data from the media
+[00:57:05] sites and you can just say what's the
+[00:57:07] number of clicks on that on that article
+[00:57:09] so yeah unforunately as we know from
+[00:57:12] it's the for impossible to get but yeah
+[00:57:16] that would be a very nice way to say
+[00:57:17] okay you know okay it got mentioned but
+[00:57:20] how did you get po or something a
+[00:57:22] question over here so how unusual is the
+[00:57:24] perod studying in terms of the dominance
+[00:57:26] of quotes right so election periods
+[00:57:29] they're all about quotes people making
+[00:57:30] speeches when they would making speeches
+[00:57:32] you know news is based around a quote
+[00:57:34] because based around
+[00:57:35] policy statements of policy positions
+[00:57:37] and that thing just wondering the
+[00:57:39] external Liberty of this this is so
+[00:57:43] outside of those types of special
+[00:57:44] periods I see I that's that's an
+[00:57:46] excellent question so um we we looked at
+[00:57:50] also some other time periods that were
+[00:57:52] sort of three months you know left and
+[00:57:53] right and we still found um there were
+[00:57:56] still spikes they were a bit lower and
+[00:57:58] they were much more diverse in a sense
+[00:58:00] that you know the iPhone release you
+[00:58:03] know the gets quot gets quoted a lot or
+[00:58:06] we were you know looking afterwards it
+[00:58:07] was like the Obama inauguration speech
+[00:58:09] and so on so there are these examples
+[00:58:11] where sort of also later that that
+[00:58:14] happened so yes I agree that this
+[00:58:16] pre-election period is a bit is a bit
+[00:58:18] specific but even later it's not that it
+[00:58:20] would be flat you find these nice things
+[00:58:23] that that uh take over maybe not in such
+[00:58:26] a such a proportion as lipstick on a pig
+[00:58:28] did right but there
+[00:58:31] are yes um so along with the with the
+[00:58:34] popularity of means have you have you
+[00:58:36] been looking at the sentiment of them so
+[00:58:38] for example if people discuss them with
+[00:58:40] a positive tone or a negative tone um I
+[00:58:43] haven't but I think that would be a
+[00:58:44] great idea like to say okay now here's
+[00:58:47] the here's the meme you know what's the
+[00:58:48] sentiment around it I think that would I
+[00:58:50] think you have the data and I would love
+[00:58:52] to see that I can yeah yeah we can do
+[00:58:55] that
+[00:58:56] yes CU you had the graph that showed
+[00:58:58] sort of the number of blogs and the
+[00:58:59] different methodologies the coverage
+[00:59:01] have you looked at how an aggregator
+[00:59:03] like say Google News fits in terms of
+[00:59:05] coverage
+[00:59:07] so what I can do is this right I know
+[00:59:11] sort of I know what what uh this is what
+[00:59:13] technorati is doing right and you know
+[00:59:16] its number of fings right but see it
+[00:59:18] does much worse and the reason why it
+[00:59:19] does much worse is because when when I
+[00:59:22] optimize I also consider overlaps right
+[00:59:24] if there are two very popular logs that
+[00:59:26] cover the same topics I will just pick
+[00:59:28] one right so that's sort of this this
+[00:59:32] the the difference here Google does that
+[00:59:34] in some
+[00:59:35] sense it says there's 576 others with
+[00:59:38] the story so I just didn't know how good
+[00:59:40] their coverage would be and I I assume
+[00:59:42] they're using a purely you know
+[00:59:45] algorithmic um system of using they're
+[00:59:48] using uh they're using some very clever
+[00:59:51] uh clustering approach um the question
+[00:59:53] there
+[00:59:54] is I think it's a good question like
+[00:59:56] what what you're asking is a good
+[00:59:58] question I don't have a too good answer
+[01:00:00] because it's also not clear how would
+[01:00:01] you measure what you know what what it
+[01:00:04] probably just be you know Google in a
+[01:00:06] data point I'm just sort of curious
+[01:00:07] where they'd end up on that part part of
+[01:00:10] what's tricky about this is what's going
+[01:00:11] on in Google News there's a really nice
+[01:00:14] algorithm there which is collapsing
+[01:00:16] thousands of stories down to story which
+[01:00:19] is similar open question about how you
+[01:00:22] do that this is one approach to doing
+[01:00:24] this one approach and whatever their
+[01:00:25] black
+[01:00:26] slopp to it with media there's of
+[01:00:29] different approaches to it but you
+[01:00:32] know figuring out how you do that
+[01:00:34] collapse in fact it tells you first of
+[01:00:36] all how you score something like this
+[01:00:38] and uh it's hard because to a certain
+[01:00:40] extent we're competing against a black
+[01:00:42] box yeah no I wasn't I mean just sort of
+[01:00:45] looking for a data point not you know a
+[01:00:48] horizontal vertical comparison I would
+[01:00:51] think that Google News would be very
+[01:00:53] close to here right because what it
+[01:00:54] gives you at the end is sort of you know
+[01:00:56] links to New York Times Bloomberg War
+[01:00:58] Street Journal and so on so it's and yes
+[01:01:01] it sort of does Things based on the
+[01:01:03] based on the stories but it does it on
+[01:01:04] on the individual stories not on sort of
+[01:01:06] the clouds of stories right which what
+[01:01:09] you'd like to do is not just say I want
+[01:01:11] to know about a particular story but
+[01:01:13] about all these different stories that
+[01:01:15] are there right so I think it would be
+[01:01:16] here right because what are the things
+[01:01:18] that that get most Link at this
+[01:01:21] mainstream media site yes um so on this
+[01:01:25] word here um
+[01:01:26] um how how how resilient is this like as
+[01:01:30] as uh when you're trying to select the
+[01:01:32] most influential blogs how resilient is
+[01:01:34] this as uh things change over time like
+[01:01:36] because there's a particular snapshot of
+[01:01:38] time right so is is this any good at
+[01:01:41] will be the same 10 blogs six months
+[01:01:43] from now or someone else we switch to
+[01:01:45] the talking about the iPhone this is an
+[01:01:47] excellent question so basically the
+[01:01:49] question is right I use some historic
+[01:01:51] data to decide which blocks to read but
+[01:01:53] then there are all these news that
+[01:01:54] happen tomorrow and I'm really
+[01:01:55] interested in those not you know the old
+[01:01:57] ones and the question is how do I
+[01:01:59] generalize the future um so um we have
+[01:02:03] we have ways how to do that so if you do
+[01:02:05] it naively then it's problematic the
+[01:02:07] other thing is also what's problematic
+[01:02:09] is what do you say here do you say the
+[01:02:12] number of blogs I read or the number of
+[01:02:13] posts I need to read right so for
+[01:02:15] example if you say the number of blogs
+[01:02:17] then you are biased towards blogs that
+[01:02:19] have lots of posts right if you say I
+[01:02:21] want to read the smaller number of posts
+[01:02:23] then what will happen is you will be
+[01:02:25] select you like heavily overfitting in a
+[01:02:27] sense that you'll be selecting all these
+[01:02:29] small blogs with you know three posts
+[01:02:31] that just by chance were early in one
+[01:02:33] use right so it turns out that um you
+[01:02:36] can very nicely interpolate between sort
+[01:02:38] of two these two extremes and if you
+[01:02:40] find um and that gives you so if you do
+[01:02:43] that that gives you good generalization
+[01:02:44] another sort of puristic that gives you
+[01:02:46] good generalization is just exclude
+[01:02:48] small blogs right you say I want to read
+[01:02:50] something that you know at least has
+[01:02:51] some Dial Dial volume and that and then
+[01:02:54] um you generalize quite but we went into
+[01:02:57] quite a lot of detail about this
+[01:02:58] generalization and actually there's
+[01:02:59] another formulation of this problem that
+[01:03:02] gives you more robust solutions that I
+[01:03:04] didn't mention so yeah um we can do we
+[01:03:07] can do it but if you are not careful you
+[01:03:09] have the
+[01:03:10] over any other yeah c um I think this is
+[01:03:14] a dumb question I probably missed it but
+[01:03:15] what is our solution our solution is
+[01:03:19] this so if I only have three blogs to
+[01:03:20] read and I want to know as much as
+[01:03:22] possible so this is the the idea is that
+[01:03:24] you are sort of selecting the blogs
+[01:03:26] greedy and say okay this is what this
+[01:03:28] block covers and then you are asking
+[01:03:29] okay which new blog should I add to
+[01:03:31] cover the most new area right or here's
+[01:03:34] the idea right I would I so what blogs
+[01:03:36] specifically are those or what news
+[01:03:38] sites can you your data uhuh what's my
+[01:03:40] data set well should I be reading
+[01:03:42] talking points memo New York Times and
+[01:03:44] Huffington Post if I want I have three
+[01:03:47] blogs I can read and I want the most
+[01:03:48] information then this would be 2008
+[01:03:51] election so for the
+[01:03:53] 2006 uh where's my list this would be
+[01:03:55] the right so if you want three pick this
+[01:03:58] three this was at least the you know the
+[01:04:00] data set from 2006 and if you want six
+[01:04:02] pick the top six right because the way
+[01:04:05] the algorithm works it sort of PS first
+[01:04:07] picks the block that covers the most and
+[01:04:09] then it picks the next block that covers
+[01:04:11] the most new area subject to whatever
+[01:04:14] you have already covered right so it
+[01:04:15] sort of always pick something that
+[01:04:16] covers the most new stuff so we can if
+[01:04:18] you say I want to pick top sort of the
+[01:04:20] best something you just pick the top
+[01:04:22] here and it takes into account when they
+[01:04:25] post it as well exactly yeah so so what
+[01:04:27] I'm actually like there are again three
+[01:04:30] different formulations of how do you
+[01:04:32] think about what do you really want like
+[01:04:34] so one thing is to say I want to
+[01:04:36] minimize the time between when the when
+[01:04:38] the stuff was mentioned and when I get
+[01:04:39] to hear about it right that's one one
+[01:04:41] objective the other objective is to say
+[01:04:43] I don't really care when I when I detect
+[01:04:46] it I just want to know that it happened
+[01:04:48] and then the last objective is to say I
+[01:04:50] don't care how late I detect but what I
+[01:04:52] care is that after myself lots of people
+[01:04:55] getting Factor right and um the one that
+[01:04:58] we were experimenting with the most is I
+[01:05:01] when I detect I want sort of I want to
+[01:05:03] have a lot of mentions afterwards so
+[01:05:05] that's that's the one that makes so how
+[01:05:07] is this different from the 2008 that the
+[01:05:11] election uh we haven't run this on the
+[01:05:13] 2008 data um one thing that I should say
+[01:05:15] is this is so the way we started looking
+[01:05:18] at this problem is the following
+[01:05:20] application you have it's completely
+[01:05:22] different you have a city water
+[01:05:23] distribution Network right so like pipes
+[01:05:26] and houses right and you have people
+[01:05:28] drinking water and then you you you
+[01:05:31] assume that you know what some of these
+[01:05:33] Junctions a contamination can happen and
+[01:05:36] the poisonous water is spreading through
+[01:05:37] your network so the question is where
+[01:05:39] should you put sensors like monitoring
+[01:05:41] stations to detect these contaminations
+[01:05:44] okay and what I'm doing here is the same
+[01:05:46] thing I say here's my blog Network and I
+[01:05:48] have this information contaminations
+[01:05:50] where should I place my sensors to
+[01:05:53] detect these contaminations right and
+[01:05:54] now I can say I want to detect so sort
+[01:05:57] of the penalty or the reward I get
+[01:05:59] depends on the time how long it was
+[01:06:01] between the introduction contamination
+[01:06:02] and I detected or how many people I
+[01:06:05] saved right if this would basically say
+[01:06:07] after I detect how many how many other
+[01:06:09] people would get infected so the more
+[01:06:11] people I Sav the more people sort of
+[01:06:13] would get infected afterwards the better
+[01:06:15] so it turns out it's the same
+[01:06:17] problem um but uh so this is this is how
+[01:06:20] we came to look at this yes um have you
+[01:06:23] tracked the which variant
+[01:06:26] spot so if you have say some sort of
+[01:06:28] quote um I'm guessing that it doesn't
+[01:06:30] spread in the same proportion as it
+[01:06:32] initially appears and so have you
+[01:06:34] checked to see what variant is the one
+[01:06:36] that becomes the most popular I think
+[01:06:38] that's um so we looked at this a bit but
+[01:06:40] not enough and I think that's another
+[01:06:42] very interesting thing that one could do
+[01:06:43] is actually try to somehow understand
+[01:06:45] what are you know what are the catchy
+[01:06:46] parts so I have a bunch of future work
+[01:06:49] things here and one thing is so here's a
+[01:06:51] graph right this is lipstick on a pig
+[01:06:53] but it's still a pig and each line here
+[01:06:55] so the the width of the line tells you
+[01:06:57] the number of mentions of the thing and
+[01:06:59] the where it appears so this means the
+[01:07:02] most popular part of this quote was you
+[01:07:04] know lipstick on a pig right and this
+[01:07:06] was then the second most popular one and
+[01:07:08] third most popular one and so on right
+[01:07:10] so this sort of gives you some idea of
+[01:07:13] which subp parts get pensioned more than
+[01:07:14] others but I think it would be very
+[01:07:16] interesting to try to model and
+[01:07:17] understand such things and we haven't
+[01:07:19] done much with this so I think that's
+[01:07:20] another interesting idea uh let's go
+[01:07:23] this way so yeah go ahead all right uh
+[01:07:27] just a technical question if there is no
+[01:07:30] quotation is that your matter is still
+[01:07:33] stand not quotation news for example in
+[01:07:37] Chinese newspapers maybe a lot of news
+[01:07:40] and not quotation they just mention
+[01:07:42] someone mentioned something something no
+[01:07:45] quotation marks um so the way I'm doing
+[01:07:47] possible to use to that kind of context
+[01:07:51] um so the way we do it right now is we
+[01:07:53] only take quotation so we are sort of
+[01:07:55] super done um of course you could start
+[01:07:57] with a small seat set and then expand
+[01:07:59] and search for you know similar things
+[01:08:01] outside quotation marks and so on so
+[01:08:03] there are ways how you could go around
+[01:08:04] it but what I showed you really just
+[01:08:06] takes starts with things that are that
+[01:08:09] appear in quotes and given that we have
+[01:08:11] such a high volume of of uh of news we
+[01:08:14] can afford to do that so that's what I
+[01:08:16] would say uh so there was a question
+[01:08:18] here and then okay so you U you've
+[01:08:21] inferred this this distribution tree
+[01:08:25] which
+[01:08:25] the infection tree whatever you want to
+[01:08:27] sure call it by this nice optimization
+[01:08:30] stuff and all the math worked out
+[01:08:32] beautifully for you and and and so
+[01:08:34] you've been able to find these uh sites
+[01:08:37] that are that are good sources you don't
+[01:08:41] have any empirical data to uh by which
+[01:08:45] you can judge whether that is in fact
+[01:08:47] these are in fact the paths by which the
+[01:08:50] stuff follow flowed from one one new
+[01:08:53] source to another do you uh that's a
+[01:08:54] great question so one thing that we did
+[01:08:56] was the following um I know the hyper
+[01:08:59] links right so I know when a particular
+[01:09:01] blog linked to another particular blog
+[01:09:03] so what I did is was the following I
+[01:09:05] also see what this what phrases this box
+[01:09:07] mentioned so the experiment we did was
+[01:09:10] that we throw away hyper links we only
+[01:09:11] see what people mention and then we say
+[01:09:14] can we infer who linked at whom and we
+[01:09:16] can do that quite well so that was one
+[01:09:19] way to to that's a validation the to the
+[01:09:22] validation on the real data because
+[01:09:23] usually so another thing would be um
+[01:09:25] when you do that on Twitter right on
+[01:09:27] Twitter you know because you know who
+[01:09:28] follows whom you know what are the links
+[01:09:30] or which information can propagate right
+[01:09:32] so the question again would be if you
+[01:09:33] see what we can talk about can you infer
+[01:09:35] the Twitter social networ so that would
+[01:09:36] be another way to validate um what we
+[01:09:38] also did is we did lots of experiments
+[01:09:41] on synthetic data and there uh
+[01:09:43] regardless of the network like our break
+[01:09:46] even point is in '90s so it's like it
+[01:09:49] works amazingly well um of course I mean
+[01:09:52] on synthetic data you know there is sort
+[01:09:54] of there's variance but you know stuff
+[01:09:57] the thing follows your model so
+[01:09:58] everything is good but when we tried
+[01:10:00] also on this real data with these
+[01:10:02] hyperlinks sort of um comparison it did
+[01:10:05] quite L we have time for one last
+[01:10:08] question so okay I'll do my best um so I
+[01:10:12] mean I guess bouncing off of your
+[01:10:14] comment I guess it's impossible to find
+[01:10:16] the the real uh empirical
+[01:10:19] uh objective links between pages so
+[01:10:22] you're using maximum likelihood to find
+[01:10:25] the hidden marov model as it were behind
+[01:10:27] like the the uh the abstract connections
+[01:10:31] between these Pages uh using like
+[01:10:34] probabilistic links sure yes what's the
+[01:10:36] what's the most likely path between this
+[01:10:39] yeah yeah I mean there is I like I think
+[01:10:43] um yes there is sort of no ground truth
+[01:10:45] and it's Al is also the question is
+[01:10:47] what's the interpretation of this
+[01:10:49] network right in a sense that all I'm
+[01:10:51] saying is my links mean this particular
+[01:10:53] site tends to repeat after that
+[01:10:55] particular side as you shown it does
+[01:10:57] very well that's yeah exactly but you
+[01:10:59] know what are are sort of there's no
+[01:11:02] ground truth or no objective truth so
+[01:11:04] yeah I agree with that so things that
+[01:11:06] where you could get such ground tro
+[01:11:07] would be for example Twitter and but
+[01:11:09] even there what for example people found
+[01:11:11] in these networks is that information
+[01:11:13] tends to jump a lot right it's not that
+[01:11:15] you know things would start somewhere
+[01:11:17] and then nicely spread no it's just sort
+[01:11:18] of pops up at different places because
+[01:11:21] there is everything else around the
+[01:11:23] world that you know also plac as a all
+[01:11:25] of sort of does diffusion on its own
+[01:11:27] right and then you just see it pop up um
+[01:11:30] so that's another
+[01:11:33] thing so well Yuri thank you very very
+[01:11:35] much and thanks for taking all these
+[01:11:37] questions
+[01:11:38] [Applause]

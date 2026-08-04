@@ -1,0 +1,2254 @@
+[00:00:02] hello everyone my name is Christian
+[00:00:04] sandvig and I'm delighted to welcome you
+[00:00:06] to the Berkman Center lunch talk
+[00:00:10] um I'm going to be introducing myself
+[00:00:12] and the group here before we begin I'm
+[00:00:14] an associate professor at the school of
+[00:00:16] information and the department of
+[00:00:18] communication studies at the University
+[00:00:19] of Michigan and I'm here visiting with
+[00:00:22] my esteemed colleagues Carrie
+[00:00:24] carrahelios and Cedric langborbs Kerry
+[00:00:27] is associate professor of computer
+[00:00:29] science at the University of Illinois
+[00:00:31] and Cedric is associate professor at the
+[00:00:35] Coordinated Science laboratory also at
+[00:00:37] the University of Illinois and both of
+[00:00:39] them are co-directors of the center for
+[00:00:41] people and infrastructures
+[00:00:43] at Illinois
+[00:00:45] so okay so today's talk will be done
+[00:00:48] jointly by the three of us actually
+[00:00:50] sequentially by three of us and our
+[00:00:52] title is uncovering algorithms
+[00:00:54] to get started I'd like to take you back
+[00:00:56] to the 1960s
+[00:00:59] back in the 1960s there was a computer
+[00:01:02] system that was uh incredibly
+[00:01:04] significant in the history of computing
+[00:01:05] some of you may know it it's called The
+[00:01:07] saber system anyone know the saber
+[00:01:09] system the saber system was one of the
+[00:01:11] first large-scale applications of
+[00:01:14] computing commercially so at the time
+[00:01:17] after it was built it was the largest
+[00:01:19] computer network that was
+[00:01:20] non-governmental in the world and its
+[00:01:23] purpose was Airline reservations so the
+[00:01:26] saber system was actually built by
+[00:01:28] American Airlines and the American
+[00:01:31] Airlines had the idea that rather than
+[00:01:34] using this really interesting paper and
+[00:01:35] pencil and Rolodex system they used to
+[00:01:37] use for reserving seats on planes
+[00:01:39] computers might be able to handle the
+[00:01:41] immense logistical challenge of
+[00:01:43] reserving all the planes in American
+[00:01:44] Airlines Fleet so they distributed
+[00:01:46] Terminals and the terminals were to be
+[00:01:48] used by ticket agents and then later
+[00:01:49] travel agents and they crucially allowed
+[00:01:53] people to reserve flights other than
+[00:01:55] American Airlines so you might know
+[00:01:56] saber because it's now still exists and
+[00:01:58] it's the engine behind sites like
+[00:02:00] Travelocity or Expedia and so this is
+[00:02:03] the saber system now American Airlines
+[00:02:05] that paid for the saber system was at
+[00:02:08] the time led by the somewhat
+[00:02:10] controversial CEO named Bob Crandall
+[00:02:14] and uh Bob Crandall this talk isn't
+[00:02:17] about price fixing this is just the
+[00:02:19] picture of Bob Crandall that I found
+[00:02:20] although he does look slightly guilty I
+[00:02:22] imagine that he provided this picture to
+[00:02:24] the to the New York Times but he looked
+[00:02:26] slightly guilty and he was a
+[00:02:27] controversial figure because users of
+[00:02:30] the saber system actually found that uh
+[00:02:32] it seemed to privilege American Airline
+[00:02:35] flights over other Airlines flights and
+[00:02:38] at first this was just a suspicion among
+[00:02:40] the competitors to American but later it
+[00:02:43] became uh somewhat obvious that this was
+[00:02:45] happening and it launched a famous
+[00:02:47] antitrust investigation against American
+[00:02:50] Airlines now uh Bob Crandall um
+[00:02:53] uh Bob Crandall uh built the saber
+[00:02:56] system and one of the interesting things
+[00:02:57] about it is when he testified before
+[00:03:00] Congress about what he was doing
+[00:03:02] um he gave this quote which introduces
+[00:03:05] our topic today he said the preferential
+[00:03:07] display of our flights and the
+[00:03:09] corresponding increase in our market
+[00:03:10] share is the competitive restaurant for
+[00:03:13] having created the saber system in the
+[00:03:15] first place and so rather than going in
+[00:03:17] front of Congress and saying well it's
+[00:03:19] just a unbiased search system he said of
+[00:03:23] course it's rigged why wouldn't we rig
+[00:03:24] it why would anyone invest so much money
+[00:03:26] in an internet platform and not rig it
+[00:03:28] so we might call this the Crandall
+[00:03:30] theory of algorithmically curated
+[00:03:33] material and the Crandall Theory would
+[00:03:36] be of course it's rigged why wouldn't it
+[00:03:37] be rigged why would we spend so much
+[00:03:39] money on it anyway of course it's going
+[00:03:41] to Advantage our interests sometimes
+[00:03:42] perhaps over the interest of the people
+[00:03:44] looking for flights he actually
+[00:03:46] pioneered HCI fans are interested
+[00:03:48] perhaps he pioneered this idea of a unit
+[00:03:51] at American that he called screen in
+[00:03:53] science and these people were tasked
+[00:03:56] with manipulating the order of results
+[00:03:57] on the saber system so as to increase
+[00:04:00] profits
+[00:04:02] so let's move forward then from the
+[00:04:04] 1960s to today
+[00:04:07] you know at the time 1960 the 1960s you
+[00:04:11] know this was a pioneering computer
+[00:04:12] system but but now we live in an online
+[00:04:15] world that's totally Awash in
+[00:04:17] algorithmically curated content from the
+[00:04:19] search results that we get from Google
+[00:04:20] and Bing to social media sites where our
+[00:04:23] news feeds are curated and we often have
+[00:04:26] some uncertainty about what exactly
+[00:04:28] those algorithms are doing and so our
+[00:04:31] talk today is to address this sort of
+[00:04:34] rising I would say A Chorus of
+[00:04:36] scholarship that says that
+[00:04:37] algorithmically curated material is
+[00:04:39] important and there might be some reason
+[00:04:42] that we need to know how the algorithms
+[00:04:44] work even if we don't work at the
+[00:04:46] algorithm providers and these reasons
+[00:04:47] could be legitimate so in Crandall's
+[00:04:50] case some have argued that he was
+[00:04:52] breaking the antitrust law so that would
+[00:04:53] be a legitimate reason to know how the
+[00:04:55] saber algorithm work but it doesn't have
+[00:04:57] to be illegal you might just be a user
+[00:04:59] of these algorithms and in order to make
+[00:05:00] an informed decision about what system
+[00:05:02] you want to use you want to know what
+[00:05:03] they're doing maybe you want to know
+[00:05:04] what they're doing with their personal
+[00:05:05] information maybe you're a competitor
+[00:05:08] and so on so there might be legitimate
+[00:05:10] reasons for you to want to know inside
+[00:05:12] the algorithm even though you don't own
+[00:05:14] the algorithm itself
+[00:05:15] um
+[00:05:16] so this picture is actually from a great
+[00:05:18] story in read in read white uh that used
+[00:05:21] to be read write web um about Facebook
+[00:05:23] system of likes as some of you may have
+[00:05:26] read in the background material that's
+[00:05:27] on the link for today
+[00:05:29] um the Facebook news feed has some
+[00:05:32] interesting features and one of them is
+[00:05:34] that uh when people like things on the
+[00:05:36] news feed sometimes those likes are
+[00:05:38] repurposed and attached to
+[00:05:40] advertisements that are shown to their
+[00:05:42] friends and so one of the interesting
+[00:05:44] things about this story is that the
+[00:05:46] journalist who wrote the story did a
+[00:05:47] great job describing how people started
+[00:05:49] to notice what we might call implausible
+[00:05:52] like relationships like the oh you know
+[00:05:54] my friend the the you know the Rabid
+[00:05:57] vegetarian likes McDonald's my friend
+[00:05:59] the Marxist thinks that Facebook is
+[00:06:02] great this is strange and and then so
+[00:06:04] they actually embarked on a process
+[00:06:06] where they did things like some people
+[00:06:08] created fake Facebook accounts and
+[00:06:10] Tinker it around to try and see if they
+[00:06:12] could reproduce this Behavior other
+[00:06:14] people just talk to their friends and
+[00:06:15] said Can anyone send me any pictures of
+[00:06:17] things that Facebook says I like to try
+[00:06:20] and figure out how the algorithm works
+[00:06:21] and so this is really our topic today is
+[00:06:23] that you might be using a system that
+[00:06:25] algorithmically curated and you might
+[00:06:27] want to know how the algorithm is
+[00:06:29] working but it's kind of a tricky thing
+[00:06:30] to figure that out because we all have a
+[00:06:33] personalized experience with these uh
+[00:06:36] with these algorithms
+[00:06:37] and when I say A Chorus of Scholars I
+[00:06:39] just want to briefly mention that the
+[00:06:41] name some of them in the audience today
+[00:06:42] I mean people have been writing about
+[00:06:44] this like Gillespie nissanbaum zitrain
+[00:06:47] baruchus Pasquale I mean it's really a
+[00:06:50] large number of people are saying this
+[00:06:52] is important stuff and we need to we
+[00:06:53] need to do something about it but what
+[00:06:54] is it that we're going to do is not
+[00:06:56] always that clear and so our topic is
+[00:06:58] sort of The Next Step so for the
+[00:06:59] remainder of the talk I'll address these
+[00:07:01] questions with my colleagues the first
+[00:07:03] question is how can research on
+[00:07:05] algorithms proceed without access to the
+[00:07:07] algorithm is that just impossible should
+[00:07:09] we give up what should we do about it
+[00:07:10] how might we address this this problem
+[00:07:13] it's a very difficult problem and then
+[00:07:15] for the remainder of the talk we'll
+[00:07:17] actually present some initial results
+[00:07:18] from our attempt at trying to look into
+[00:07:21] the Facebook news feed algorithm a
+[00:07:23] little bit crudely and we're going to
+[00:07:25] ask questions like what is the algorithm
+[00:07:27] doing for a particular person how can we
+[00:07:29] usefully visualize what it's doing not
+[00:07:31] visualize the news feed but visualize
+[00:07:33] the algorithm which is a different
+[00:07:34] problem and how do people make sense of
+[00:07:36] it
+[00:07:38] um
+[00:07:39] so uh our proposal in a nutshell relies
+[00:07:42] heavily on an idea of a question a quick
+[00:07:46] question a clarification question
+[00:07:48] okay an algorithm um a a good word to
+[00:07:52] replace the word algorithm is recipe
+[00:07:55] so an algorithm is a series of steps
+[00:07:58] yeah so so that's I think is that
+[00:08:02] my computer science colleague nods
+[00:08:05] all right so um so so in other words how
+[00:08:08] does Google decide what search results
+[00:08:10] to give you when you type in a query
+[00:08:11] there's a series of steps encoded in
+[00:08:13] software that produce a result for you I
+[00:08:16] mean technically we might have
+[00:08:18] a more formal definition but but let's
+[00:08:20] not
+[00:08:21] um okay so social science audit so the
+[00:08:23] our answer to this problem of what to do
+[00:08:25] relies on this methodology called the
+[00:08:27] social science audit I said social
+[00:08:29] science audit because the word audit
+[00:08:30] might conjure Financial audit and that
+[00:08:33] is similar but the social science audit
+[00:08:35] is a very famous methodology in the
+[00:08:37] social sciences that was originally
+[00:08:39] pioneered uh in the housing department
+[00:08:41] in the United States to detect racial
+[00:08:43] discrimination and the idea of the audit
+[00:08:45] methodology is that you send testers
+[00:08:50] they call them in audit methodology to
+[00:08:52] see what actually is happening in a
+[00:08:55] particular social situation so in in the
+[00:08:56] case of the housing audits they would
+[00:08:58] send testers to try to do things like
+[00:09:01] buy houses and rent apartments to see if
+[00:09:03] they were discriminated against and so
+[00:09:05] this is our metaphorical comparison to
+[00:09:07] what we'd like to do with audits a
+[00:09:09] famous audit study that was in the news
+[00:09:11] recently that you might have heard about
+[00:09:12] is this study published in APS where a
+[00:09:17] psychologist and and people at a
+[00:09:18] business school actually did an audit of
+[00:09:20] professors
+[00:09:21] um I'll jump to the New York Times
+[00:09:22] headline because it's a better headline
+[00:09:24] they found professors are prejudiced
+[00:09:26] they they basically sent professors
+[00:09:28] requests for meeting that were identical
+[00:09:31] and then they varied the names of the
+[00:09:34] person requesting the meeting and they
+[00:09:36] varied them according to for example the
+[00:09:38] U.S census has a a list of the names
+[00:09:41] that are in common use and it Associates
+[00:09:43] them with different uh genders and
+[00:09:45] racial and ethnic groups and so if you
+[00:09:47] vary the name on the message you could
+[00:09:49] create an association between a a gender
+[00:09:51] and a racial and ethnic group and they
+[00:09:52] found that if you were a woman or if you
+[00:09:54] were a member of a racial minority you
+[00:09:56] were less likely to get a response from
+[00:09:59] your professor when you asked for an
+[00:10:00] appointment
+[00:10:01] so that's a standard example of the
+[00:10:03] social science audit methodology
+[00:10:06] so our proposal in this talk is that we
+[00:10:09] should have algorithm Audits and I'll
+[00:10:11] describe what exactly I mean by that
+[00:10:14] um but uh
+[00:10:17] yeah so our proposal is the algorithm
+[00:10:19] audit and what I'm going to do is I'm
+[00:10:21] going to actually give you five example
+[00:10:24] research designs of how you might do an
+[00:10:26] algorithm audit and these line up with
+[00:10:28] other things that people have proposed
+[00:10:30] and so what I'm going to do a little bit
+[00:10:31] is introduce them but I'm also going to
+[00:10:33] say why I think one is a little better
+[00:10:35] than the other and then we'll move on to
+[00:10:36] the second part of the talk we'll we'll
+[00:10:37] say what we're going to do
+[00:10:39] our example is Facebook but this
+[00:10:42] actually is a broad topic so Facebook is
+[00:10:44] not really the overall point and it
+[00:10:46] could be any platform that has
+[00:10:47] algorithmically curated content so
+[00:10:50] actually when I tweeted about this talk
+[00:10:52] earlier today someone who may be in this
+[00:10:54] room tweeted back and they say you
+[00:10:56] should just get them to tell you what
+[00:10:57] the algorithm is and that would solve
+[00:10:59] the problem and in fact that's been
+[00:11:01] proposed by many authors Pasquale is the
+[00:11:03] most associated with this idea the thing
+[00:11:06] about that though is that it seems like
+[00:11:07] a great idea at first but when you think
+[00:11:09] about a little more what would you
+[00:11:10] actually do with that information so for
+[00:11:12] example let's say that I had in this
+[00:11:14] pocket the Google search results
+[00:11:16] algorithm them like what would that look
+[00:11:18] like exactly like first of all it
+[00:11:20] changes all the time it's if it were in
+[00:11:22] code it would be quite lengthy it might
+[00:11:24] be we might agree on what certain parts
+[00:11:26] of the algorithm are doing but we
+[00:11:28] wouldn't necessarily be able to use the
+[00:11:31] algorithm to predict a particular
+[00:11:33] outcome of a particular instance unless
+[00:11:35] we had data about what kinds of things
+[00:11:37] were fed into it it's it's not really
+[00:11:39] clear that reading the algorithms is
+[00:11:41] going to be super useful there are some
+[00:11:43] instances where it might be useful where
+[00:11:44] there's some process question we might
+[00:11:46] want to settle but generally having the
+[00:11:48] algorithm public is not necessarily the
+[00:11:51] answer to our concerns you can see this
+[00:11:53] in fact with platforms like Reddit there
+[00:11:55] are some platforms that have the
+[00:11:56] algorithm public like people who
+[00:11:58] submitted to the who won the Netflix
+[00:11:59] prize describe their algorithm people
+[00:12:02] read it has an open source platform and
+[00:12:04] so most of the algorithm is public
+[00:12:06] except for a part called vote fuzzing
+[00:12:08] the thing about making it public as well
+[00:12:11] is that publicizing the algorithm might
+[00:12:13] help people that we don't want to help
+[00:12:14] because many platforms have associated
+[00:12:17] groups of near-duals spammers hackers
+[00:12:20] people who are trying to game the system
+[00:12:22] right and so if it were comprehensible
+[00:12:24] we might not want to release it publicly
+[00:12:27] because people might then use that for
+[00:12:29] nefarious purposes all right the second
+[00:12:32] way we might do it is to ask the users
+[00:12:34] themselves about how the algorithm works
+[00:12:37] now you could think about this does
+[00:12:39] anyone remember Consumer Reports they're
+[00:12:41] still around although they're not the
+[00:12:42] cultural Force they once were but
+[00:12:43] Consumer Reports you know they used to
+[00:12:45] send surveys for example to car owners
+[00:12:47] and it would say did your car break down
+[00:12:49] when did it break down and then they
+[00:12:51] would gather these surveys and issue
+[00:12:52] reliability reports for cars and so we
+[00:12:55] might think of an interesting
+[00:12:56] algorithmic investigation that would be
+[00:12:58] an audit that would find users and ask
+[00:13:00] them questions and this has some great
+[00:13:02] advantages one advantage is that
+[00:13:04] metaphysically speaking it might be
+[00:13:06] really important to know what the users
+[00:13:08] think the algorithm is doing that might
+[00:13:09] be more important than actually knowing
+[00:13:11] what the algorithm is doing because you
+[00:13:13] could imagine the users modifying their
+[00:13:15] behavior based on what they thought the
+[00:13:17] algorithm is doing and this could
+[00:13:19] produce a very different overall system
+[00:13:21] depending on the thoughts that they had
+[00:13:22] about the algorithm so it has some
+[00:13:24] advantages of finding out what they
+[00:13:26] think but then the disadvantage would be
+[00:13:27] in a platform like Facebook like the
+[00:13:29] news feed asking people a bunch of
+[00:13:31] really detailed questions if we wanted
+[00:13:33] to do a large statistical analysis I
+[00:13:34] mean how would that work you have a lot
+[00:13:36] of sort of problem with remembering like
+[00:13:38] you know seven days ago did your news
+[00:13:41] feed contain these four words more
+[00:13:43] frequently it's just not something that
+[00:13:44] you can ask the users
+[00:13:46] so a third a third approach that some
+[00:13:49] have taken is scrape everything this is
+[00:13:51] an 1875 painting called floor scrapers a
+[00:13:55] third approach is scrape everything the
+[00:13:57] G is cut off
+[00:13:58] anyway
+[00:13:59] um and this approach you would have some
+[00:14:01] sort of programmatic interaction with
+[00:14:03] the platform in order to figure out what
+[00:14:04] the algorithm was doing but then you run
+[00:14:06] into other problems and one problem is
+[00:14:08] that the platform might not like it and
+[00:14:09] currently a lot of our interactions with
+[00:14:11] platforms via apis are at the platform's
+[00:14:14] discretion and so there's an adversarial
+[00:14:16] relationship in an audit study and it's
+[00:14:18] difficult to know how you would manage
+[00:14:19] that
+[00:14:20] programmatically you also have a problem
+[00:14:23] that in the United States the Computer
+[00:14:24] Fraud and Abuse Act makes scraping
+[00:14:27] things against the will of the platform
+[00:14:29] very problematic and so when we were
+[00:14:31] interested in doing the study we'll
+[00:14:32] present later we sought legal advice and
+[00:14:34] the legal advice told us don't do it
+[00:14:36] because of the Computer Fraud and Abuse
+[00:14:37] Act
+[00:14:38] um
+[00:14:40] the fourth out of fifth approach would
+[00:14:42] be sock puppets sock puppet is internet
+[00:14:44] slang for false accounts that are
+[00:14:47] manipulated by someone else so a nice
+[00:14:49] thing about the sock puppets is it
+[00:14:50] really mirrors the audit methodology
+[00:14:52] classically to this to detect
+[00:14:54] discrimination for example because the
+[00:14:56] sock puppet could be a user account that
+[00:14:58] their researcher inserts and then does
+[00:15:00] something so there's some intervention
+[00:15:01] like let's see if I search for this over
+[00:15:03] and over again if the personalization
+[00:15:05] builds up and then I get different
+[00:15:06] results so the stock web has this nice
+[00:15:08] way that you can control sort of what's
+[00:15:10] happening and learn more but again you
+[00:15:12] have the problem of the Computer Fraud
+[00:15:14] and Abuse Act and it's not clear that
+[00:15:16] that's super ethical
+[00:15:18] um because you're inserting a bunch of
+[00:15:19] fake data into the platform right it
+[00:15:22] might be trivial but still it doesn't
+[00:15:24] doesn't seem necessarily the wisest
+[00:15:26] course
+[00:15:26] and then finally the approach that we're
+[00:15:30] actually advocating and going to talk
+[00:15:32] about next is the collaborative audit
+[00:15:34] and that would combine some features
+[00:15:36] from many parts of the the things that
+[00:15:37] we talked about before the collaborative
+[00:15:39] audit you could think of a little bit as
+[00:15:41] this site biddingfortravel.com which is
+[00:15:43] obscure has anyone heard of
+[00:15:44] biddingfortravel.com
+[00:15:45] so basically it's a user Community where
+[00:15:47] they all got together and decide we all
+[00:15:50] like to book hotel rooms on Priceline
+[00:15:52] what if we all exchange information with
+[00:15:53] each other about what kinds of bids
+[00:15:56] we're putting on Priceline and then we
+[00:15:57] see by comparing bids and results if we
+[00:15:59] can come to a collective understanding
+[00:16:01] of how Priceline works so that's what
+[00:16:02] bidding for travel is you can really
+[00:16:04] make a good deal on Priceline if you
+[00:16:06] read bidding for travel but for our
+[00:16:09] purposes it's got some interesting
+[00:16:10] features because you've got the users
+[00:16:11] working together it's not clear that
+[00:16:13] it's unethical because they're using the
+[00:16:14] system as they normally would at the
+[00:16:16] same time they're interested in figuring
+[00:16:18] out how the algorithm Works they're
+[00:16:19] exchanging information now this is just
+[00:16:21] a forum but our idea for the
+[00:16:22] collaborative audit would be there would
+[00:16:23] be some software assisted way that you
+[00:16:26] could organize a large group of users
+[00:16:27] and learn from them so on that note I'm
+[00:16:30] going to pass the the mic to my
+[00:16:32] colleague Professor Cara halios and
+[00:16:34] she'll talk our study
+[00:16:38] um can you hear me I think I'm on okay
+[00:16:41] so we began by sitting in a room
+[00:16:43] together playing with the Facebook API
+[00:16:45] seeing what we can get can we get what
+[00:16:48] post people see or appear on their news
+[00:16:49] feeds can we get what people like what
+[00:16:52] comments they like our goal was to
+[00:16:54] better understand the algorithm
+[00:16:55] ourselves and to create some sort of
+[00:16:57] visualization so that participants in a
+[00:17:00] study might be able to better understand
+[00:17:01] the elements of their algorithms
+[00:17:03] presented in the form of the Facebook
+[00:17:05] news feed
+[00:17:06] so we gathered lots and lots of data we
+[00:17:09] were trying to figure out what was going
+[00:17:10] on and we thought it was really hard
+[00:17:12] because we made a Facebook group page
+[00:17:13] and it turns out that if you look at the
+[00:17:15] how many people see it four of us saw it
+[00:17:17] it would say that one of us saw it so we
+[00:17:19] were discovering discrepancies in the
+[00:17:20] Facebook servers when they synced how
+[00:17:22] can you collect reliable data so we
+[00:17:24] spent a lot of time assessing what it is
+[00:17:26] to get reliable Facebook data
+[00:17:27] essentially we wanted to use this data
+[00:17:30] to visualize the consequences of an
+[00:17:31] algorithm
+[00:17:33] we did some pilot studies and casually
+[00:17:36] in these user studies we found that some
+[00:17:38] graduate students even the Cs Department
+[00:17:40] who routinely used Facebook were unaware
+[00:17:43] that their feeds were filtered so we
+[00:17:45] were showing random visualizations and
+[00:17:48] we just assumed that people knew about
+[00:17:50] the algorithm we were wrong we had to
+[00:17:52] take a huge step back and remove the
+[00:17:54] complexity remove all the likes and
+[00:17:56] comments and all of that and just go
+[00:17:57] back to the Bare Bones and create a
+[00:17:59] simple series of visualizations to tell
+[00:18:01] a story about the algorithm to take
+[00:18:03] users on a visual Journey that explores
+[00:18:06] and reveals slowly parts of the
+[00:18:08] algorithm to them so there is some
+[00:18:10] precedent for this if anyone's familiar
+[00:18:12] with the work of Kevin Lynch he studied
+[00:18:15] invisible processes and supportive
+[00:18:17] design so in the 19 mid 1900s it was
+[00:18:20] wayfinding studies he explored how
+[00:18:21] individuals perceive and navigate the
+[00:18:23] urban landscape and what about he looked
+[00:18:26] at what about a city allows easier
+[00:18:28] perception more accurate mental maps for
+[00:18:30] the dweller and his work actually was
+[00:18:31] incorporated into practice for better
+[00:18:33] Urban Design
+[00:18:35] so we borrow from him and the approach
+[00:18:38] that we came up with was an interview
+[00:18:40] survey approach similar to what Kevin
+[00:18:42] Lynch did we then created something that
+[00:18:45] we're calling a prompt that I will
+[00:18:46] explain shortly that exposes some of
+[00:18:49] these hidden algorithms to users using
+[00:18:51] the Facebook API
+[00:18:52] and finally the idea is to work with
+[00:18:54] many users together to help them
+[00:18:56] personally and as a collective
+[00:18:58] understand what's happening and today
+[00:18:59] I'm going to present these first initial
+[00:19:00] steps as a work in progress
+[00:19:02] so what did we do we brought 40 people
+[00:19:05] into the lab we did a simple
+[00:19:07] pre-interview to understand their
+[00:19:08] Facebook usage we showed them our our
+[00:19:12] prompt and again I'll explain that in a
+[00:19:14] little bit and then we did a follow-up
+[00:19:15] interview with these 40 people we spoke
+[00:19:18] to them anywhere between an hour and a
+[00:19:20] half and three hours we find people
+[00:19:21] really wanted to talk about their
+[00:19:22] experience using the news feed the study
+[00:19:25] ran from November of 2013 to April of
+[00:19:28] 2014 with the follow-up in June
+[00:19:32] um unlike most of the computer science
+[00:19:33] studies I've done in the past where we
+[00:19:35] get about 40 CS students or anyone we
+[00:19:37] can find down the hall we went to great
+[00:19:40] efforts to try to recruit a good
+[00:19:41] representative sample as good as we
+[00:19:43] could as good as we could get in this
+[00:19:45] pre-interview process we collected
+[00:19:47] demographic info like I said we
+[00:19:49] discussed Facebook practice like I
+[00:19:51] didn't know that people would just
+[00:19:52] glance at the news feed then go to
+[00:19:54] interview people's individual timelines
+[00:19:56] and back and forth like a lot of this
+[00:19:57] was new to me
+[00:19:59] um we got people's General Facebook
+[00:20:00] beliefs and then after that we showed
+[00:20:04] them our prompt which I'm going to
+[00:20:05] describe shortly
+[00:20:07] so feedbiz is the prompt that takes you
+[00:20:11] on this visual Journey it's a set of
+[00:20:13] four panels that emphasize the content
+[00:20:14] and the people that are reflected in
+[00:20:16] your Facebook news feed so I'm going to
+[00:20:19] start by showing you uh the first fan
+[00:20:21] panel
+[00:20:22] um so like I said it's a Facebook web
+[00:20:24] app that uses fql and the API to extract
+[00:20:28] posts and other features from your
+[00:20:30] Facebook feed what you're looking at
+[00:20:31] here on the left is all the posts that
+[00:20:34] were posted by all of the friends on
+[00:20:36] your specific Network in this case this
+[00:20:37] is my network actually on the right are
+[00:20:40] the posts that appear on my news feed
+[00:20:42] and you can't see this very well on this
+[00:20:44] projector but the ones that are both are
+[00:20:45] colored the same way so for example I
+[00:20:48] did not see that Cliff lampy liked a
+[00:20:50] post but I did see that
+[00:20:52] um James landay wrote VPN for China
+[00:20:54] working check
+[00:20:55] one of the first things that people
+[00:20:57] noticed when they saw this is just how
+[00:20:59] long this left column is compared to the
+[00:21:02] right column it's huge it's huge you're
+[00:21:04] scrolling and scrolling and scrolling
+[00:21:06] you're not getting to the end and we
+[00:21:07] only showed about a week's worth of data
+[00:21:10] um I can tell you that I don't remember
+[00:21:11] the first time I realized there was an
+[00:21:13] algorithm behind the news feed I just
+[00:21:15] don't remember some people did for most
+[00:21:18] of our subjects this view was the first
+[00:21:20] time they're even aware of the existence
+[00:21:22] of an algorithm
+[00:21:24] more so
+[00:21:25] um they had no idea how the algorithm
+[00:21:27] affected their use yet almost everyone
+[00:21:30] was very eager to talk to a start a
+[00:21:31] conversation about it in Pro parts of
+[00:21:33] the feed exposed by the tool
+[00:21:36] um just to give you a glimpse of our
+[00:21:38] subject pool it turns out that 37 of the
+[00:21:41] people roughly were aware that there's
+[00:21:42] an algorithm before participating in our
+[00:21:44] study
+[00:21:45] um in 62 were not aware
+[00:21:49] um so I showed you the content panel the
+[00:21:52] next step we took them to was on a
+[00:21:53] people panel this is a person view and
+[00:21:56] the idea for this one was to make sense
+[00:21:58] of why people appear on your news feed
+[00:22:00] and try to make sense why some folks are
+[00:22:02] hidden so for example what you're
+[00:22:04] looking at here on the left are three
+[00:22:07] bars representing three people whose
+[00:22:09] posts are completely hidden from you you
+[00:22:11] don't see their posts on the right are
+[00:22:14] three people whose posts you see all of
+[00:22:16] and in the middle you get this hybrid
+[00:22:17] mix of posts that you see and you don't
+[00:22:19] see so for example I saw all of Justine
+[00:22:21] Cassell's posts for the week Jennifer
+[00:22:24] Chase posted two things I saw one of
+[00:22:26] them but I did not see the other and Jim
+[00:22:28] Foley posted a message that I think I
+[00:22:30] really wanted to see but I don't know
+[00:22:31] because I didn't see it
+[00:22:34] um and so here you can refresh on this
+[00:22:35] screen and you can keep seeing like
+[00:22:37] different people and where they appear
+[00:22:39] in this sort of histogram of whose posts
+[00:22:42] you see and whose posts you don't see
+[00:22:43] and one of the things we found is people
+[00:22:45] were exploring this was that people
+[00:22:46] would get really really upset when
+[00:22:48] family members loved ones appeared in
+[00:22:51] the left two spots and not in the right
+[00:22:53] column
+[00:22:55] um as you keep refreshing these lists
+[00:22:57] get kept getting longer and longer so
+[00:22:58] you can see this full list of everyone's
+[00:23:00] posts that you where you see all of them
+[00:23:02] and you'll see that everything these
+[00:23:04] people wrote here was completely hidden
+[00:23:05] from you using this interface
+[00:23:07] so aggregating these lists we then
+[00:23:09] wanted to see what would people change
+[00:23:11] if they could change it
+[00:23:12] so the next few they saw was a
+[00:23:14] modification view where you could move
+[00:23:16] people around you could put them from
+[00:23:17] the rarely seen category because they're
+[00:23:19] mostly seen or the sometimes seen
+[00:23:21] category and similarly we then showed
+[00:23:24] people this is a people view we then
+[00:23:25] showed them a separate modification
+[00:23:26] content view so for example here on the
+[00:23:29] left you're seeing posts that were on
+[00:23:31] your news feed on the right are posts
+[00:23:33] that were not on your news feed so for
+[00:23:34] example I did not see that that Earth
+[00:23:37] wished Lena a happy birthday I didn't
+[00:23:39] see that Eric wished his dad a happy
+[00:23:41] birthday I didn't see that Tavares wish
+[00:23:43] somebody else a happy birthday but I did
+[00:23:45] see these two images what we did is we
+[00:23:47] asked people then to check on them like
+[00:23:49] if you hadn't seen them would you have
+[00:23:50] wanted to see that in this case if you
+[00:23:53] had seen it is this something that you
+[00:23:55] would have been happy living without
+[00:23:58] um and so I'm going to move along to
+[00:24:00] talk a little bit about levels of
+[00:24:01] awareness because throughout this probe
+[00:24:03] this prompt that I'm talking about
+[00:24:04] participants were talking to us they
+[00:24:06] were discussing their thoughts they were
+[00:24:07] giving their own interpretations and
+[00:24:09] theories like creating a model of how
+[00:24:11] the algorithm works on the fly as they
+[00:24:14] were being shown this information and
+[00:24:16] I'm going to briefly talk about their
+[00:24:17] paths to work to awareness like I said
+[00:24:19] some new before and some of the comments
+[00:24:21] they gave to us were along these lines
+[00:24:23] no but some people have I mean if 250
+[00:24:26] friends but some people have a thousand
+[00:24:27] and if computer wants to show you
+[00:24:29] everything there's no way it could
+[00:24:31] um it crashes your computer
+[00:24:32] plus like the phone use feed is
+[00:24:34] different from the laptop news feed
+[00:24:36] sometimes I look at something on my
+[00:24:37] phone but when I go online there's a ton
+[00:24:39] more
+[00:24:40] um so basically the comments focus in
+[00:24:42] three different areas people felt that
+[00:24:44] things were filtered just because of
+[00:24:45] necessity if you have 2 000 friends you
+[00:24:47] just can't show everything two um
+[00:24:49] comparison sometimes people look at the
+[00:24:51] timelines and they look at the news feed
+[00:24:52] and they can see the discrepancies or
+[00:24:54] they look at one platform of the phone
+[00:24:56] and one platform of the computer and
+[00:24:58] they notice discrepancies there and the
+[00:25:00] third way that they mostly find out was
+[00:25:01] through blogs or you know the
+[00:25:04] girlfriends came up a lot as explaining
+[00:25:05] to boyfriends why something happened I
+[00:25:08] read this a while a year or two ago or
+[00:25:10] that all of these keys of things that
+[00:25:11] you have to do to get into people's news
+[00:25:13] feed
+[00:25:14] of the folks that were unaware these are
+[00:25:17] some of the comments they gave us I bet
+[00:25:19] it would be on my news feed I probably
+[00:25:20] would catch it at some point during the
+[00:25:22] day and probably just don't scroll down
+[00:25:24] enough people kept thinking that it was
+[00:25:25] because of their own behavior or their
+[00:25:27] own lack of of investment that they
+[00:25:30] didn't see many of these posts
+[00:25:32] um I don't know for sure because I know
+[00:25:33] there are some friends I guess it seems
+[00:25:34] like I don't see anything by them very
+[00:25:37] often you know maybe they just stop
+[00:25:38] posting but didn't occur to them that
+[00:25:40] something was happening behind the
+[00:25:42] scenes
+[00:25:44] um exploring this data from over 40
+[00:25:47] people we found some awareness factors
+[00:25:49] that led to somebody knowing about the
+[00:25:52] algorithm
+[00:25:53] um we thought that membership duration
+[00:25:55] would affect it it did not we thought
+[00:25:57] that you know the scene content versus
+[00:25:59] the total content if you only saw a
+[00:26:01] small amount would affect it it did not
+[00:26:02] we thought that if you had a huge
+[00:26:04] Network it would affect it because then
+[00:26:06] you have like all these people and you
+[00:26:07] might not see some of it it wasn't a
+[00:26:08] predominant Factor what did affect
+[00:26:10] knowledge of the algorithm was usage
+[00:26:12] frequency how often you used Facebook
+[00:26:14] activity levels if you were a heavy
+[00:26:16] poster versus a light poster or listener
+[00:26:17] if you'd ever created a Facebook page or
+[00:26:20] a group because you get these analytic
+[00:26:22] pages that summarize how many people go
+[00:26:24] to the pages for you and finally if you
+[00:26:26] did use top recent stories and switched
+[00:26:28] between the feeds or a few blocked
+[00:26:30] people or hit posts
+[00:26:32] some of the reactions that we got to
+[00:26:35] feedviz ranged from
+[00:26:37] um you know people describing folk
+[00:26:39] theories conspiracy theories one person
+[00:26:41] quit Facebook on the spot but most
+[00:26:43] people learned you know over time over
+[00:26:47] the course of our visual narrative to
+[00:26:49] understand why why it was happening and
+[00:26:51] it made sense to them
+[00:26:53] so for most people we got these initial
+[00:26:56] surprise shocks so do they actually hide
+[00:26:59] these things for me like hey
+[00:27:01] um it's kind of intense because you see
+[00:27:03] the movie The Matrix it's kind of waking
+[00:27:05] up in the Matrix in a way I mean you
+[00:27:08] have what you think as your reality of
+[00:27:10] like what they choose to show you or
+[00:27:12] just what the hell Facebook
+[00:27:15] um again I want to stress that these
+[00:27:16] were initial reactions because very
+[00:27:18] quickly after that people started saying
+[00:27:20] so there's some algorithm something or
+[00:27:22] some rules to choose white things that
+[00:27:25] appear to me it's very interesting I
+[00:27:27] never knew that Facebook really hides
+[00:27:28] something so are they doing some kind of
+[00:27:30] mining or machine learning and again I
+[00:27:33] mentioned folk theories people came up
+[00:27:35] with very very clever and very likely
+[00:27:38] probable features behind the algorithm
+[00:27:40] they discussed likes comments looking at
+[00:27:42] the Timeline like if I look at
+[00:27:44] somebody's timeline I'll see more
+[00:27:45] messages from them if I like something
+[00:27:46] they wrote I'll see more messages from
+[00:27:47] them if I communicate with them via the
+[00:27:49] inbox I'll see more from them we call
+[00:27:51] this interaction via clicking so they
+[00:27:53] were really good at grasping the
+[00:27:54] clicking interactions someone further to
+[00:27:56] stressed that I like politics I read
+[00:27:59] blogs about politics that's why I get
+[00:28:01] politic information and they were moving
+[00:28:02] even outside of Facebook saying that
+[00:28:05] um you know I read this blog hence I'm
+[00:28:07] getting this post on Facebook
+[00:28:10] um so this idea of topics came up a lot
+[00:28:12] looking at the other content
+[00:28:14] visualizations and feedback from that in
+[00:28:18] the shot where you see posts where you
+[00:28:19] see content that you don't see someone
+[00:28:21] actually was like I wish I had seen this
+[00:28:22] because I think she needs support for
+[00:28:24] that mention any change support if I see
+[00:28:27] it then I will say something but she was
+[00:28:28] pointing to a comment that she had not
+[00:28:30] seen and she wanted to support this
+[00:28:31] person and wished she had seen it in the
+[00:28:34] people view somebody said for now I
+[00:28:36] cannot really understand how they
+[00:28:37] categorize these people actually this is
+[00:28:39] my brother and actually he needs to be
+[00:28:41] here I want to see him I need to see
+[00:28:43] everything my brother says
+[00:28:45] in the screen where people move things
+[00:28:48] around in this case move people around
+[00:28:49] in this case move content around we
+[00:28:51] found that people most people
+[00:28:52] manipulated people from these different
+[00:28:55] views they moved family into the mostly
+[00:28:59] seen category
+[00:29:00] it turns out in the content view people
+[00:29:02] didn't change very much at all they
+[00:29:04] refused like people that changed you
+[00:29:06] know a lot of things but for the most
+[00:29:07] part it turns out the people were quite
+[00:29:09] content with what happened with the
+[00:29:10] content that appeared on their news feed
+[00:29:14] um so we completed this this prompt and
+[00:29:16] then this past June we sent some
+[00:29:18] follow-up questions to people
+[00:29:20] um just to see how they behave on
+[00:29:22] Facebook now and if anything had changed
+[00:29:24] and we found that 29 of the 40 people
+[00:29:27] replied to our follow-up and we found
+[00:29:29] that after learning about the algorithm
+[00:29:30] people change their behavior
+[00:29:31] specifically they changed their reading
+[00:29:33] Behavior the interaction people were a
+[00:29:36] bit more stingy with their likes and
+[00:29:37] careful about what they liked people
+[00:29:39] switched between the top stories and the
+[00:29:41] most recent post features quite a bit
+[00:29:43] more and they started hiding posts they
+[00:29:46] started blocking things they started
+[00:29:48] being a bit more careful about what they
+[00:29:50] posted and people started unfriending
+[00:29:52] people more than they had done in the
+[00:29:54] past
+[00:29:55] one quote from this was after our
+[00:29:57] discussion actually went back and
+[00:29:58] started experimenting a little with the
+[00:30:00] news feed and discussing with some
+[00:30:01] friends and ways to streamline what I
+[00:30:02] was receiving since then I've become
+[00:30:04] more interested in checking my Facebook
+[00:30:05] because it does not seem as cluttered
+[00:30:07] with random information I have no
+[00:30:08] interest in
+[00:30:09] so people are actually getting more and
+[00:30:10] more involved in playing with it and
+[00:30:12] probably give it further on their own
+[00:30:13] and using Facebook as a platform for for
+[00:30:16] a prompt and I am now going to pass the
+[00:30:18] batanta Cedric
+[00:30:25] been given the
+[00:30:27] our test to summarize everything and try
+[00:30:29] to tell you where we want to move from
+[00:30:31] this uh what we what carries
+[00:30:34] summarize for you showed that actually
+[00:30:37] being giving people an insight into not
+[00:30:40] necessarily what's under the hood but
+[00:30:42] basically allowing people to test drive
+[00:30:44] algorithm it actually matters
+[00:30:46] and that's what that's one of the points
+[00:30:48] we're making for the value of
+[00:30:49] algorithmic audits it does it actually
+[00:30:52] had more of an impact than what we
+[00:30:53] thought it would in the sense that as
+[00:30:56] Kerry said some people
+[00:30:58] just stopped called turkey or came up
+[00:31:01] with their own Theory but what do we
+[00:31:02] want to add whether we want to go from
+[00:31:04] from
+[00:31:05] here now one of the things we're working
+[00:31:07] on now is to actually scale field feed
+[00:31:10] these up so that it can be used by more
+[00:31:13] than 40 people and actually be widely
+[00:31:16] available and then based on all the data
+[00:31:18] that we want to gather actually perform
+[00:31:20] the type of audit that Christian was
+[00:31:21] talking about and in some sense if if
+[00:31:24] you like we want to machine learn the
+[00:31:26] machine learning algorithm the issue of
+[00:31:29] course being there that as opposed to
+[00:31:30] Facebook or Google or whoever you want
+[00:31:33] the data is in centralized the data is
+[00:31:34] distributed among the users and so we
+[00:31:37] have to take care of
+[00:31:39] our own algorithmic problems in terms of
+[00:31:42] preserving privacy Distributing data and
+[00:31:46] and sharing information among the users
+[00:31:48] but at the end of the day instead of a
+[00:31:51] whole bunch of individual folk theories
+[00:31:53] we would want to arrive as a communal
+[00:31:55] common view of an outgo of what we think
+[00:31:58] the news feeders do it based on all the
+[00:32:01] data that people have gathered uh as a
+[00:32:05] what what does matter also and
+[00:32:09] we've been trying to scratch our head as
+[00:32:12] to whether that's good or bad is this
+[00:32:13] idea of actually giving give giving
+[00:32:15] users insight into why they're getting
+[00:32:18] the data they're getting is something
+[00:32:19] that's gaining wider acceptance you are
+[00:32:22] probably aware of the fact that there's
+[00:32:23] this feature in Google that
+[00:32:25] whenever you're performing a search you
+[00:32:27] can click on this little yellow ad thing
+[00:32:29] it would tell you you're getting this ad
+[00:32:31] for such and such reason and very
+[00:32:33] recently Facebook announced that they're
+[00:32:34] rolling out a similar feature the
+[00:32:38] we did see again through carry study
+[00:32:40] that Sophia is that this may this had
+[00:32:44] can play an important role the question
+[00:32:45] is does it matter what the motive is
+[00:32:48] it's been discussed that maybe Facebook
+[00:32:50] has ulterior motives they may want to go
+[00:32:53] back and correct this prediction so that
+[00:32:55] they get more more data we think that it
+[00:32:58] might actually matter what the motive is
+[00:32:59] and but
+[00:33:02] there isn't
+[00:33:04] nonetheless we think there is value in
+[00:33:07] showing people definitely why they're
+[00:33:09] getting the that
+[00:33:10] the recommendation or the ad that
+[00:33:12] they're getting and again that's the
+[00:33:13] idea that was behind fitbies so to
+[00:33:15] conclude really I want to end with a
+[00:33:18] question an admonishment and a call to
+[00:33:20] Arms the question which had been
+[00:33:23] underlying this study
+[00:33:26] and really came out of
+[00:33:29] not quite the audit because we're still
+[00:33:30] on our way towards performing the type
+[00:33:32] of disability that we want but even
+[00:33:34] putting a prompt into news feed in this
+[00:33:37] case is this question of what do you
+[00:33:39] what do users really need to know about
+[00:33:41] algorithm well I think we've hopefully
+[00:33:43] convinced you that there is value in
+[00:33:45] telling you something about this
+[00:33:47] algorithm again we're not it seems that
+[00:33:50] you may not have to be able to
+[00:33:52] necessarily open the hood and look under
+[00:33:54] the hood maybe test driving it is good
+[00:33:56] enough but what kind of test drive do
+[00:33:57] you want to do and again that that you
+[00:34:01] could see that in in the wide range of
+[00:34:03] reaction that Kerry got uh that was a
+[00:34:06] question the admonishment is that again
+[00:34:09] transparency alone is not enough and may
+[00:34:11] not even be feasible
+[00:34:14] and we believe that an audit might
+[00:34:17] actually be more valuable than and more
+[00:34:20] feasible than really just opening the
+[00:34:23] hood and letting you peer into the
+[00:34:25] specifics of the algorithm and to do
+[00:34:27] that we need to create an infrastructure
+[00:34:29] for a disability not transparency but
+[00:34:32] auditability and that's really why
+[00:34:34] that's a wide-ranging project there are
+[00:34:37] some obstacles to a disability right now
+[00:34:39] again a delete first of all at the legal
+[00:34:42] level as Christian mentioned
+[00:34:44] it may sometimes even auditing depending
+[00:34:47] on how you perform the odd the audit may
+[00:34:50] be illegal or maybe run against some of
+[00:34:52] the user's agreement of of the platform
+[00:34:56] you're trying to audit but that may be a
+[00:34:59] great place not only to extend the law
+[00:35:00] but also to extend maybe even how we
+[00:35:04] give access to apis and also that may be
+[00:35:07] a great place where non-profit or even
+[00:35:09] maybe a governmental agency might
+[00:35:11] actually do do a lot of good and
+[00:35:13] valuable work and I'll end with that and
+[00:35:15] thank you for your attention
+[00:35:17] so
+[00:35:19] [Applause]
+[00:35:23] um
+[00:35:25] uh so we didn't arrange in advance how
+[00:35:27] we would do q a who wants to run q a
+[00:35:30] we're all going to me all right well um
+[00:35:34] yeah well you don't you don't have to
+[00:35:35] stand up it's fine
+[00:35:37] um so uh we're happy to take your
+[00:35:39] questions and uh we need you to speak
+[00:35:40] into the mic because of the uh
+[00:35:43] the live stream which I forgot to
+[00:35:44] mention actually during the intro this
+[00:35:46] is being live streamed and so anything
+[00:35:47] you say is public
+[00:35:49] yeah my question is not about your
+[00:35:51] conclusions but about how you did this
+[00:35:53] in the first place in order to show
+[00:35:55] those screens it seems like you must
+[00:35:57] have access to some sort of totally
+[00:35:59] unfiltered Raw Feed that has everything
+[00:36:02] um does that mean anybody can do that
+[00:36:05] and
+[00:36:07] how did you get that and if you did it
+[00:36:09] without the cooperation of Facebook how
+[00:36:10] did you especially every every single
+[00:36:13] person came into the lab they signed a
+[00:36:16] consent form we explained the study to
+[00:36:17] them they logged into their Facebook
+[00:36:19] account and used our Facebook
+[00:36:21] application
+[00:36:22] so by using our Facebook application the
+[00:36:24] API allows for calls where you can get
+[00:36:26] it everything that their friends post so
+[00:36:29] this is a this is an application that
+[00:36:31] they used once they logged out you know
+[00:36:33] it it was gone so we could only see the
+[00:36:36] data while we were standing next to them
+[00:36:38] and they were using the application with
+[00:36:39] themselves signed in I mean any of us
+[00:36:42] could write a similar app and and
+[00:36:44] basically see overall feed anytime we
+[00:36:46] want you could see your Raw Feed if you
+[00:36:48] wrote an app correct
+[00:36:50] yeah and actually we hope to release our
+[00:36:53] tool in which case you could use our
+[00:36:54] tool to see your Raw Feed
+[00:36:57] not well but that's an important
+[00:37:00] right now Facebook is coming to you
+[00:37:02] embedded with algorithms and filter
+[00:37:04] filters that you didn't choose but that
+[00:37:07] doesn't have to be this way you can you
+[00:37:10] can pick your filter you can make it
+[00:37:12] though
+[00:37:13] yeah I mean another great point is
+[00:37:15] they're probably listening so Facebook
+[00:37:17] don't turn it off like do we want
+[00:37:19] auditability to be dependent on their uh
+[00:37:21] they're saying it's okay for us to do
+[00:37:23] this because they can change the API
+[00:37:24] tomorrow
+[00:37:27] part of the
+[00:37:28] of the record right that's right Dan can
+[00:37:31] you cut that out no I'm just kidding
+[00:37:33] um where's the mic ready okay
+[00:37:36] I actually have a similar question about
+[00:37:38] the
+[00:37:40] what is actually the all in the all
+[00:37:42] right like presumably it doesn't include
+[00:37:44] things that have been caught by Facebook
+[00:37:46] spam filter whatever that entails
+[00:37:48] presumably it doesn't include things
+[00:37:50] that people have reported or marked a
+[00:37:52] Spam that have been pulled out of the
+[00:37:53] all feed and I guess I'm wondering I
+[00:37:56] mean so if top news is known to be a
+[00:37:59] subset of the all we
+[00:38:03] still don't really know what all is a
+[00:38:05] subset of
+[00:38:06] and I wonder if you think that your
+[00:38:10] collaborative audit approach is able to
+[00:38:13] answer that sort of question or if
+[00:38:15] that's kind of an entirely different
+[00:38:17] black box that we need to tackle through
+[00:38:19] a different approach
+[00:38:24] that as well so they all
+[00:38:26] more closely resembles the most recent
+[00:38:27] feed
+[00:38:28] and so we took for someone like me we
+[00:38:31] took about a week's worth of a week's
+[00:38:33] worth of news feed posts and it's it's
+[00:38:36] quite long it's it's longer than you
+[00:38:38] could actually probably sit and scroll
+[00:38:40] through which is why the studies
+[00:38:41] probably went over three hours and
+[00:38:42] people wanted to sit there longer but
+[00:38:45] it's more of a timeline approach that
+[00:38:46] you get so if I wanted to get the top
+[00:38:48] stories feed with the API today I cannot
+[00:38:50] get that so we used the most recent we
+[00:38:54] use the most recent
+[00:38:55] so I hope that answers part of your
+[00:38:57] question I know there was a part two but
+[00:38:58] I forgot the part two
+[00:38:59] I think it was the the spam and the
+[00:39:02] marked content and is that
+[00:39:07] yeah I don't know that we're going to be
+[00:39:09] able to get that right it's a great
+[00:39:11] question I mean it would be neat
+[00:39:13] so I also have a related question on the
+[00:39:15] other side which is I mean in some ways
+[00:39:18] Facebook is more open than most
+[00:39:19] algorithms you see I mean even if their
+[00:39:21] API goes away you could probably
+[00:39:23] painstakingly redo this by taking all
+[00:39:26] the names that someone is friends with
+[00:39:27] and then individually going down what
+[00:39:29] every single thing that person posted
+[00:39:31] because it's on their page to create
+[00:39:33] theology to create the all so you could
+[00:39:34] recreate it without even the API but
+[00:39:38] most algorithms are not like that I mean
+[00:39:42] most of the things that we see that are
+[00:39:43] algorithmically filtered there's there
+[00:39:45] is no accessible version of all at the
+[00:39:49] beginning you you said that you saw this
+[00:39:51] as being not specifically about Facebook
+[00:39:54] but about all kinds of things we deal
+[00:39:57] with with algorithmic filters from
+[00:39:59] Google to Pandora to whatever I put in
+[00:40:01] the Pandora because they're algorithm
+[00:40:03] bugs me but um how do you see applying
+[00:40:07] your Technique or your approach when you
+[00:40:09] don't have any kind of access to
+[00:40:11] something resembling all
+[00:40:15] so you know we'd show specific features
+[00:40:17] to look at so if we were to choose
+[00:40:18] Twitter you know we might choose some
+[00:40:20] other features as well or maybe have a
+[00:40:22] subset of all or more
+[00:40:24] um this idea of all on Twitter is just
+[00:40:26] huge you know I don't have I think it
+[00:40:28] costs right now like a million dollars
+[00:40:30] to get a year to get like all of Twitter
+[00:40:33] um and you can get a subset you can get
+[00:40:34] one percent
+[00:40:35] um but we chose specific features and I
+[00:40:37] think for different tools or for
+[00:40:39] different social media sites or
+[00:40:40] different news feeds we could cater
+[00:40:42] specific features of the site to expose
+[00:40:44] we might necessarily have to choose this
+[00:40:45] specific one but there are other
+[00:40:47] features you might expose that might
+[00:40:49] give you an idea that an algorithm is
+[00:40:51] you know is lying under the hood I mean
+[00:40:54] I think Carrie's point is is uh is
+[00:40:56] partly my reaction is that agreement I
+[00:40:59] think but it's like Facebook's all
+[00:41:01] versus filtered is not really a
+[00:41:03] limitation of the collaborative audit
+[00:41:05] approach it's just what Facebook does
+[00:41:06] because you know Twitter changes the
+[00:41:08] font size on tweets they're looked at a
+[00:41:10] lot but it doesn't have the filter that
+[00:41:12] works in the same way except for search
+[00:41:13] results but but you could do the same
+[00:41:15] collaborative audit because it just
+[00:41:17] involves testing and looking at the
+[00:41:19] results and comparing information in its
+[00:41:21] most general form and so you actually
+[00:41:22] have communities that are already exist
+[00:41:24] around many of the algorithms that we
+[00:41:25] use every day that are trying to do this
+[00:41:27] so your example Judith was was Google
+[00:41:29] and I mean there you have Google has
+[00:41:31] this big SEO community that tries to you
+[00:41:34] know think about how the algorithm works
+[00:41:35] by querying it over and over again and
+[00:41:37] so our proposal is that if you organize
+[00:41:40] this Behavior a little more because it
+[00:41:41] right now it's often on these forums
+[00:41:43] where people are just like yeah I tried
+[00:41:45] that 50 times and I still got this you
+[00:41:47] know if it were programmatic and
+[00:41:49] organized maybe by Mechanical Turk or
+[00:41:51] some other interface or some something
+[00:41:53] that allows you with data I think that
+[00:41:54] you could actually learn a lot it might
+[00:41:56] not be exactly these things but that
+[00:41:57] wouldn't be because the collaborative
+[00:41:59] audit wouldn't work just because the
+[00:42:00] algorithm is doing a different thing
+[00:42:02] so just quickly what would you call the
+[00:42:05] algorithm on Twitter because it seems
+[00:42:07] relatively non-algorithmic I mean maybe
+[00:42:10] I'm missing but relative to Facebook
+[00:42:13] I mean well I mean uh tarleton's piece
+[00:42:16] about Twitter says that the most
+[00:42:17] relevant one is the trending algorithm
+[00:42:18] okay yeah that's true I guess it seems
+[00:42:21] so irrelevant in some ways like sort of
+[00:42:23] spaced but they also I mean their search
+[00:42:25] results are pretty heavy-handed aren't
+[00:42:27] they I mean you search results in the
+[00:42:28] all versus
+[00:42:30] um
+[00:42:31] that's a similar thing to the Facebook
+[00:42:33] right
+[00:42:37] foreign
+[00:42:38] thanks
+[00:42:40] um so I I wonder I mean I'm hugely
+[00:42:42] sympathetic to the questions you guys
+[00:42:44] are trying to answer and I think they're
+[00:42:45] fascinating I wonder if part of what is
+[00:42:47] coming up in the questions that Chris
+[00:42:48] and Judith had
+[00:42:50] um it strikes me that the metaphor of
+[00:42:52] the audit is a little tricky because in
+[00:42:55] some ways using the API it's as much
+[00:42:58] sort of critical technical practice
+[00:42:59] right where it's you you have access to
+[00:43:01] bid information many of your users don't
+[00:43:02] know how to do that right they're not
+[00:43:03] writing API interfaces themselves but
+[00:43:06] you can do that and create a different
+[00:43:07] access to the information and then do
+[00:43:10] this kind of like contrast right sort of
+[00:43:12] recognize that which feels a little
+[00:43:13] different than the idea like the classic
+[00:43:15] one where you just send in moles it's
+[00:43:17] more of a sock puppet approach right you
+[00:43:19] send in someone and go do the thing
+[00:43:20] they're supposed to be able to do and
+[00:43:22] get information back sort of on the
+[00:43:23] ground so part of it I think is this
+[00:43:25] question of
+[00:43:27] just you know being able to say like
+[00:43:29] sometimes this can depend on the API
+[00:43:30] sometimes there won't be an API or an
+[00:43:32] API won't give you the kind of
+[00:43:33] information you have so you have to play
+[00:43:35] it differently but I was wondering if if
+[00:43:37] the suggestion you were making about
+[00:43:40] taking feed Vis and expanding it past
+[00:43:42] you know the 40 students you bring into
+[00:43:43] the into the room but being able to make
+[00:43:45] it available on a wide scale was there
+[00:43:47] also an idea that if you did that and
+[00:43:50] then the the people who were playing
+[00:43:51] with it were then telling you
+[00:43:53] information by their choices right so
+[00:43:55] like boy I don't care about the people I
+[00:43:58] don't care about moving the mostly scene
+[00:44:00] off what I do care about is moving the
+[00:44:02] never seen on or vice versa right you
+[00:44:04] might start to begin to have data on
+[00:44:07] that is that part of the impulse so then
+[00:44:08] the truly collaborative audit is you set
+[00:44:11] this thing into the wild and then many
+[00:44:12] many people begin to not only learn that
+[00:44:15] there's an algorithm and learn something
+[00:44:16] about how it works but then say here are
+[00:44:19] the impulses I would have about
+[00:44:20] fixing the algorithm and I wanted also
+[00:44:24] about well
+[00:44:26] so that's part of it so we do have the
+[00:44:28] data for the 40 people we're actually
+[00:44:29] analyzing in more depth this is a work
+[00:44:31] in progress I mean there are some
+[00:44:33] interesting tools out there that also
+[00:44:35] help expose people more in the wild
+[00:44:37] there's this wonderful game by Watchdog
+[00:44:39] where it takes your Facebook feed and it
+[00:44:41] actually the characters around are
+[00:44:42] inspired by characteristics so if
+[00:44:45] there's somebody that you don't speak to
+[00:44:46] very often you know they might be it
+[00:44:48] might claim that you're suspicious of
+[00:44:50] them and so the features on Facebook
+[00:44:52] actually affect the behavior in the game
+[00:44:54] itself and that's another way to think
+[00:44:55] of getting at awareness
+[00:44:57] but one of the things that we learned
+[00:44:59] during the study is that you don't know
+[00:45:01] what to expect so but we do want to get
+[00:45:03] it on for the wild I think it's going to
+[00:45:04] take a few trials and a few Pilots to
+[00:45:06] see what people want to do you know
+[00:45:08] we've done other similar types of autism
+[00:45:10] Mechanical Turk and we found that people
+[00:45:12] just don't want to fill it out and so
+[00:45:13] it's a trial and error piece
+[00:45:21] excellent question I mean I think you
+[00:45:23] know generally speaking I'm
+[00:45:26] I just want to say I'm pretty delighted
+[00:45:29] by these results I I think that they're
+[00:45:31] actually really interesting and they're
+[00:45:32] really
+[00:45:33] give me a lot of Hope because the
+[00:45:36] transparency stuff that was written
+[00:45:37] about algorithms I just didn't see how
+[00:45:38] it was going to work and so it didn't
+[00:45:41] leave me feeling like there was anything
+[00:45:42] that we could do and yet we have like
+[00:45:44] really important societal problems I
+[00:45:46] mean maybe Bob Crandall wasn't enough I
+[00:45:48] mean I should have mentioned like
+[00:45:49] Latonya Sweeney's work about racism and
+[00:45:53] ad placement or something like that
+[00:45:54] right I mean so we have these really
+[00:45:56] important problems that we would like to
+[00:45:57] address and we don't really know how and
+[00:45:59] so I'm actually quite encouraged and I
+[00:46:01] like the audit app metaphor a lot even
+[00:46:03] though I admit as you pointed out it's
+[00:46:05] not exactly the same as the classic
+[00:46:07] audit but I like it in part because we
+[00:46:09] could ask who does audits now so housing
+[00:46:12] audits are still performed and they're
+[00:46:13] actually done by activists off sometimes
+[00:46:16] in collaboration with researchers who
+[00:46:18] help with the statistics they're done in
+[00:46:19] lawsuits and so in some ways this is
+[00:46:22] like a blueprint of what Civil Society
+[00:46:24] might do to address this algorithmic
+[00:46:27] structure that people are increasingly
+[00:46:28] concerned about so you're right totally
+[00:46:30] a fair copper it's not a perfect
+[00:46:31] parallel but I actually like the idea
+[00:46:33] testing over and over again whether it's
+[00:46:35] a sock puppet or a real person I also
+[00:46:37] like the idea of collaborating with the
+[00:46:39] people partly because that gets around
+[00:46:40] some of the legal problems but also
+[00:46:42] because just generally that seems like
+[00:46:44] what we ought to be doing is working
+[00:46:45] with people to help them understand
+[00:46:46] what's happening so I just I don't think
+[00:46:49] I was positive enough and again to some
+[00:46:51] extent do
+[00:46:53] if we wanted to go back to really what
+[00:46:56] to the essence of the algorithm if we
+[00:46:58] were interested in really learning the
+[00:47:00] algorithm that would be an issue that
+[00:47:02] things keep changing obviously but that
+[00:47:04] that's not even the standard that we're
+[00:47:06] going after in some sense
+[00:47:08] you
+[00:47:10] if
+[00:47:11] a large enough
+[00:47:13] a large enough community of people
+[00:47:16] get through multiple testing experiences
+[00:47:20] the impression it's confirmed it's not
+[00:47:22] just you own peculiar experience with
+[00:47:24] with this algorithm that something is
+[00:47:26] happening that may be ground enough to
+[00:47:28] say that maybe that's not the intended
+[00:47:30] effect that you wanted but that may be
+[00:47:31] ground enough to go back and say well
+[00:47:34] this is what your algorithm seems like
+[00:47:36] to a reasonable amount and that seems to
+[00:47:39] agree somewhat to the standard of of law
+[00:47:42] that is rolling existing audits so again
+[00:47:45] the point is not that we're not
+[00:47:47] we've been having very long discussion
+[00:47:49] including late in the night yesterday
+[00:47:50] about are we reverse engineering or not
+[00:47:52] we're we're not reverse engineering in
+[00:47:54] the sense that the goal we're not going
+[00:47:57] after a sheet of paper that says this is
+[00:48:01] what your algorithm is but if
+[00:48:04] somehow that might not being a lawyer
+[00:48:07] but my feeling is that this is really
+[00:48:09] how law works is
+[00:48:11] that of course rules but if a large and
+[00:48:14] what that's at least how IRB works is is
+[00:48:17] the large enough community of people
+[00:48:20] have a common experience that this is
+[00:48:22] how the the artifact they're interacting
+[00:48:25] with Works maybe it's true at least as
+[00:48:28] far as low and R B is concerned I would
+[00:48:31] I would also be curious to see like
+[00:48:33] people doing something similar you know
+[00:48:35] over over periods of time so even just
+[00:48:37] talking to them before and after it was
+[00:48:40] nice seeing the change and you can
+[00:48:41] imagine that over periods of time maybe
+[00:48:43] like larger changes will you know have
+[00:48:46] more Collective shifts so I would be
+[00:48:47] curious from a qualitative point of view
+[00:48:49] even to talk to people once every two
+[00:48:51] years or so
+[00:48:53] I'm surprised that you didn't mention
+[00:48:54] advertising and
+[00:48:57] um I I think it's very reasonable to
+[00:48:59] imagine that the actual algorithm the
+[00:49:01] hidden algorithm has inputs from
+[00:49:05] people who are buying your attention by
+[00:49:08] the the feed and right now a lot of that
+[00:49:10] is
+[00:49:12] um overt you know an ad announces itself
+[00:49:15] as an ad uh incredibly annoyingly
+[00:49:18] but more insidiously
+[00:49:20] um of course if someone mentions
+[00:49:22] something that is either the name of a
+[00:49:24] product
+[00:49:25] for which someone has bought essentially
+[00:49:28] advertising space it could be bumped up
+[00:49:31] in the algorithm or even more Insidious
+[00:49:33] things and anyway you mentioned
+[00:49:36] motivation and I'm relieved to see that
+[00:49:38] Zuckerberg spoke with the Wall Street
+[00:49:41] Journal and said that it has nothing to
+[00:49:42] do with making money
+[00:49:45] the reason that the news feed was opened
+[00:49:48] up to advertising is to create the
+[00:49:52] illusion of uh profitability so he could
+[00:49:55] pertain the best Engineers I'm looking
+[00:49:56] at an article here so don't worry about
+[00:49:59] the advertising side I was curious uh
+[00:50:01] though here's my actual question
+[00:50:03] um you know there's there's a lot of hot
+[00:50:06] air right now around consent with
+[00:50:09] research and Facebook
+[00:50:11] um are you guys worried are you taking
+[00:50:13] are you considering your kind of project
+[00:50:15] differently in light of all this kind of
+[00:50:18] misplaced I feel uh concern about
+[00:50:22] consent and research I think the first
+[00:50:24] part the advertising part so in the
+[00:50:26] pre-reading the for the third link is
+[00:50:28] all about advertising and we mentioned
+[00:50:30] it a few times so I guess I'm just going
+[00:50:31] to say Bravo
+[00:50:33] we agree so so the corrupt
+[00:50:35] personalization thing is all about
+[00:50:37] advertising and the example here about
+[00:50:38] liking and the likes being attached to
+[00:50:40] ads are about advertising so I
+[00:50:42] definitely think that's a oh and
+[00:50:44] Cedric's thing about clicking on the I
+[00:50:46] to see why the ad was recommended so I
+[00:50:48] think we're totally with you I'm seeing
+[00:50:49] this as being really relevant to
+[00:50:50] advertising and the profit motive and
+[00:50:52] what Bob Crandall wants and what Mark
+[00:50:55] wants so then you want to answer that
+[00:50:56] you can have the consent one oh consent
+[00:50:59] I mean if you notice I mean we were
+[00:51:00] we're probably more careful than we
+[00:51:03] needed I mean we brought people into a
+[00:51:04] lab
+[00:51:06] it's very consenting
+[00:51:08] um you know and you know they sat down
+[00:51:11] they filled out a consent form you know
+[00:51:13] they they opted to put in this to log
+[00:51:15] into Facebook to do the study so this is
+[00:51:18] about this is the more consenty side of
+[00:51:20] things moving to more collectivism side
+[00:51:23] of things you know Christian gave a
+[00:51:26] great discussion and Cedric about you
+[00:51:28] know looking at there's two different
+[00:51:30] things here there's law and there's like
+[00:51:32] ethics so like I I see consent is
+[00:51:34] falling into the ethics part of things
+[00:51:36] and so far you know we've done
+[00:51:39] you know we've been as consenty as we
+[00:51:42] could be moving towards a more
+[00:51:44] collectivist approach there's
+[00:51:45] interesting ways to do consent and you
+[00:51:47] can do online consent and so you know
+[00:51:49] that's very commonplace
+[00:51:51] um
+[00:51:53] it's more like you get a splash page if
+[00:51:55] you like some if you agree to go further
+[00:51:56] you click on it you know you give your
+[00:51:58] consent and you you know proceed with
+[00:51:59] the study you know just a minor point
+[00:52:01] there I think the idea of a
+[00:52:02] collaborative audit though would be
+[00:52:03] collaborative like there was a really
+[00:52:04] interesting This American Life story
+[00:52:06] about someone who performs housing
+[00:52:08] audits as their job for a non-profit and
+[00:52:11] they found this to be a transformative
+[00:52:13] experience because they were shocked at
+[00:52:15] the extent of racism and from my reading
+[00:52:18] of the Facebook environment people would
+[00:52:20] like to collaborate with us to help us
+[00:52:21] figure out their news feed so in some
+[00:52:24] sense we don't really have the same
+[00:52:25] consent problem I think and that results
+[00:52:27] with our that's we're also saying that's
+[00:52:29] really a key thing like learning about
+[00:52:31] the algorithm from three University
+[00:52:33] professors is different from learning
+[00:52:34] about the algorithm from Facebook
+[00:52:35] telling you this is what it does
+[00:52:36] hopefully we have more credibility
+[00:52:39] we're not psychologists
+[00:52:41] no but there's interesting approaches of
+[00:52:43] things you can do like collaboratively
+[00:52:45] as well and and still have consent
+[00:52:46] people wanna people do wanna people
+[00:52:48] really want to talk like these are some
+[00:52:50] of the funnest discussions we've had
+[00:52:55] I'm Nathan Matthias a PhD student at the
+[00:52:58] media lab and Berkman fellow and of the
+[00:53:02] last eight months or so at MIT we've
+[00:53:05] been reacting to legal challenges and
+[00:53:10] um
+[00:53:11] things like subpoenas serve to students
+[00:53:13] for research they're doing on things
+[00:53:15] like Bitcoin and we're starting to talk
+[00:53:18] to groups like the eff to figure out how
+[00:53:22] we can
+[00:53:23] support researchers who are doing work
+[00:53:26] that in Gray areas of law like audits
+[00:53:30] which could follow foul of cfaa and
+[00:53:33] figure out
+[00:53:34] where there might also be policy changes
+[00:53:37] that could be needed I'm curious to hear
+[00:53:40] how far down the road you've gone and
+[00:53:42] I'd love to chat afterward as well
+[00:53:45] but I think I'd love to hear hear about
+[00:53:48] like how far down the legal Road and
+[00:53:50] policy Road you've been thinking in this
+[00:53:52] space
+[00:53:54] well the you know the thing about
+[00:53:56] presenting about problems with the cfaa
+[00:53:59] in legal venues is that there's not a
+[00:54:01] lot of debate because you say wow the
+[00:54:03] CFA really sucks and then all the
+[00:54:05] lawyers are like yeah it really sucks
+[00:54:07] um so the issue there might be uh
+[00:54:10] political will
+[00:54:11] um but certainly this is something that
+[00:54:13] we've talked about in other venues and I
+[00:54:14] think it's great that you raise it here
+[00:54:15] like there must be some lawyers around
+[00:54:16] here somewhere right here we are and and
+[00:54:19] these are and we're we're researchers
+[00:54:21] hopefully on the side of the just and
+[00:54:23] we're struggling and partly we're
+[00:54:25] struggling because of a sort of legal
+[00:54:27] institutions that seem to be in our in
+[00:54:30] our way here even though I think we're
+[00:54:31] trying to do is the right thing
+[00:54:33] um similarly
+[00:54:34] um
+[00:54:35] audits are really tricky with irbs
+[00:54:37] relating to the previous question
+[00:54:38] because you are in an adversarial
+[00:54:40] relationship with your subjects and the
+[00:54:42] IRB doesn't really Envision that because
+[00:54:44] it evolved from medical research and so
+[00:54:46] they don't really Imagine The Physician
+[00:54:48] being in an adversarial relationship
+[00:54:50] with their patient but um so that
+[00:54:52] there's an interesting discussion to be
+[00:54:54] had there that probably needs looking
+[00:54:55] into although
+[00:54:57] um I think we've been lucky with a
+[00:55:00] reasonable IRB so we say this is what
+[00:55:02] we're doing and
+[00:55:03] it's okay but but this is an area that I
+[00:55:06] think we we need help with I mean the
+[00:55:07] research Community should stand up and
+[00:55:09] say yes this is what we need to do first
+[00:55:11] news name I've forgotten your your point
+[00:55:13] is what we should do we should reform
+[00:55:16] these laws
+[00:55:19] I have a question about
+[00:55:21] um
+[00:55:21] how you did you get the scene data did
+[00:55:24] you have to write your own JavaScript or
+[00:55:27] does Facebook API give you the scene
+[00:55:30] content
+[00:55:31] um we go through a list of all of your
+[00:55:33] friends and then look at their timelines
+[00:55:35] oh no that's for the all for the scene
+[00:55:38] there's the API the API provides that
+[00:55:40] and so we don't know if you actually saw
+[00:55:43] it we know if it was on your news feed
+[00:55:45] if it was displayed by the computer yeah
+[00:55:48] so there's a difference between I'm
+[00:55:49] sorry how far you scroll down too
+[00:55:51] because if you get to the bottom then um
+[00:55:54] you know it repopulates the screen and
+[00:55:56] so it does that dynamically it doesn't
+[00:55:57] do it all on the Fly
+[00:55:59] so this is more of a speculative
+[00:56:00] question then but so Facebook has that
+[00:56:02] data why don't why don't they share that
+[00:56:04] or when I post something why doesn't
+[00:56:06] Facebook tell me who saw it or who
+[00:56:11] that's a that's a good question there's
+[00:56:12] a there's a wonderful paper by Michael
+[00:56:14] Bernstein with hidden from within base
+[00:56:16] Facebook about looking at sort of like
+[00:56:18] the imagined audience
+[00:56:20] and so they found that the audience was
+[00:56:22] actually I think three times bigger than
+[00:56:24] what you thought it was when you when
+[00:56:25] you posted something
+[00:56:27] um but seeing we were struggling with
+[00:56:29] the terminology ourselves because
+[00:56:30] technically it's not seeing it's more
+[00:56:32] like appearing and whether or not you
+[00:56:34] saw it
+[00:56:36] one of the points made in that blog post
+[00:56:40] link to the talk announcement is that um
+[00:56:42] they do show the scene analytic if you
+[00:56:44] manage a Facebook page or a Facebook
+[00:56:47] group it is possible to get that scene
+[00:56:49] analytic to show up and it's interesting
+[00:56:51] because there one motive that's been
+[00:56:52] Advanced not by me but by commentators
+[00:56:54] is that they do that because they want
+[00:56:56] to emphasize that that number could be
+[00:56:58] bigger if you bought ads
+[00:57:00] so that's why they reveal the scene
+[00:57:01] analytic there is that they say oh look
+[00:57:03] how low it is what if you ran a Facebook
+[00:57:05] campaign then you would get you're
+[00:57:06] thinking that very explicitly if you
+[00:57:09] seen that that notice
+[00:57:20] please this is kind of a silly question
+[00:57:22] but is it possible that there's actually
+[00:57:25] no one person in Facebook who knows
+[00:57:28] exactly how the algorithm works
+[00:57:30] I just say it because I've encountered
+[00:57:33] situations where I've been on the user
+[00:57:35] and trying to find out how an algorithm
+[00:57:38] Works in a piece of software that we
+[00:57:40] bought and I could never find anyone who
+[00:57:42] could tell tell me how it was working
+[00:57:44] just because the organization
+[00:57:45] organization was large or the the key
+[00:57:49] piece of code was buried very deep in
+[00:57:51] the platform
+[00:57:54] you know I wish I wish I could answer
+[00:57:56] that it's possible but I don't know if
+[00:57:59] one person knows exactly how it works I
+[00:58:01] do know that when you build large
+[00:58:02] complex pieces of software with many
+[00:58:05] many people and if you have a really
+[00:58:07] good Chief Architect then that person
+[00:58:09] should know but I don't know for I
+[00:58:12] honestly don't know well in the in the
+[00:58:14] first
+[00:58:19] one yeah
+[00:58:22] well I so I mean I I'm skeptical that
+[00:58:25] they know I don't know what Carrie
+[00:58:26] thinks about it but I'm skeptical I mean
+[00:58:28] but one thing that's important to point
+[00:58:29] out is that in a collaborative audit
+[00:58:31] we're not necessarily interested in
+[00:58:33] assigning blame because we're interested
+[00:58:35] in the consequences right now and so we
+[00:58:38] detect those consequences so it doesn't
+[00:58:39] matter that much to us if there is
+[00:58:41] something bad going on like there's a
+[00:58:42] particular person and I think that's
+[00:58:44] important because some of our
+[00:58:45] discussions about Facebook have devolved
+[00:58:47] into a discussion of like whether Mark
+[00:58:49] Zuckerberg is a nice man to quote Dan
+[00:58:52] Schiller but that's really not the point
+[00:58:53] like it's a you know Google Plus has
+[00:58:56] implemented many of the same algorithms
+[00:58:58] as Facebook and so uh it's a structure
+[00:59:01] that we need to address really not the
+[00:59:03] whims of personalities of particular
+[00:59:05] people
+[00:59:07] although maybe there's a there's an evil
+[00:59:09] person who knows it all and is you know
+[00:59:13] I don't know um it's
+[00:59:15] it's part
+[00:59:16] typo to
+[00:59:18] maybe be more aware of an algorithmic
+[00:59:21] gaze with both interesting and
+[00:59:22] complicated consequences
+[00:59:25] um and I was wondering if
+[00:59:27] sort of in the process you guys got lots
+[00:59:29] of what seem like really exciting
+[00:59:30] qualitative data if people reflected at
+[00:59:34] all on the fact that it was their
+[00:59:36] choices about relationships and
+[00:59:37] communication that led to the results
+[00:59:39] that they were seeing that the algorithm
+[00:59:41] was in fact interacting with their own
+[00:59:43] personal choices and whether or not you
+[00:59:46] saw any self-reflection about how they
+[00:59:48] might manage their relationships
+[00:59:49] separate from Facebook
+[00:59:51] I mean the idea of oh my brother isn't
+[00:59:53] appearing in this maybe your brother
+[00:59:55] isn't appearing because you're never
+[00:59:56] listening to what your brother's saying
+[00:59:57] so maybe you should listen to what your
+[00:59:58] brother is saying if you think it
+[00:59:59] actually matters or it turns out what
+[01:00:01] people were saying about that specific
+[01:00:02] comment was that you know I speak to my
+[01:00:04] brother so much face to face I don't
+[01:00:05] need to speak to him on Facebook so
+[01:00:07] there's no relationship on Facebook
+[01:00:08] because of the face-to-face relationship
+[01:00:10] so there were a lot I couldn't go into
+[01:00:13] that much depth because the terms of the
+[01:00:15] qualitative data and the analysis that
+[01:00:16] we did on the theories that people came
+[01:00:18] up with they were immense they fell into
+[01:00:20] the main categories of clicking
+[01:00:21] behaviors like things that I actively do
+[01:00:24] to articulate publicly that something is
+[01:00:26] happening
+[01:00:27] to sending inbox behaviors and then
+[01:00:29] going a bit further into imagining even
+[01:00:32] some algorithms that that I don't know
+[01:00:33] how to build yet
+[01:00:35] um but they were talking a lot about
+[01:00:36] topic analysis they were talking a lot
+[01:00:38] about reading Pages you know
+[01:00:41] um you know outside like on Hacker News
+[01:00:43] and because of something I did in Hacker
+[01:00:44] News I'm getting this on Facebook right
+[01:00:45] now so the stories that people were
+[01:00:47] coming up with were pretty complex and
+[01:00:49] pretty
+[01:00:50] um they were very interesting and I
+[01:00:53] think that at least in the early phases
+[01:00:54] a lot of what they they suggested I
+[01:00:56] think is very plausible like I don't
+[01:00:58] know the algorithm but I can suspect
+[01:01:00] that what I like has something to do
+[01:01:02] with well actually from a Facebook paper
+[01:01:04] written by the wonderful Laura Burke I
+[01:01:06] do know that comments matter more than
+[01:01:07] likes and so people picked up on that
+[01:01:16] no I think that's a really interesting
+[01:01:17] point but I mean one thing to emphasize
+[01:01:19] is that we could read the news feed as a
+[01:01:22] sort of accurate lens of our personal
+[01:01:24] relationships in some way but at the
+[01:01:26] same time many of the features of the
+[01:01:28] news feed are arbitrarily defined by
+[01:01:30] Facebook and they're not analogous to
+[01:01:32] any other system and they're evolving
+[01:01:35] like the like like what is a like
+[01:01:36] exactly what does it mean and so I think
+[01:01:39] I would rather emphasize rather than
+[01:01:40] this being like a a result of my own
+[01:01:42] choices that the fact that these are
+[01:01:44] fairly arbitrary systems that we're
+[01:01:46] teaching people to use and so like
+[01:01:48] personally I never like anything I just
+[01:01:50] am very careful about my friend
+[01:01:51] selection so I usually want to see
+[01:01:53] everyone if they're posting but the way
+[01:01:55] if Facebook's own descriptions of its
+[01:01:57] algorithm is correct that would really
+[01:01:59] result in a sucky news feed for me
+[01:02:02] because I don't interact with the like
+[01:02:03] button or the comments enough and that's
+[01:02:05] what happens so am I like wrong for not
+[01:02:08] pressing the like button more and using
+[01:02:10] the the friend feature so but your
+[01:02:13] broader point is algorithmic literacy
+[01:02:15] which is a phrase that's gotten a lot of
+[01:02:16] currency lately and it's an interesting
+[01:02:18] one and I'm not sure what I think about
+[01:02:19] it I don't know we talked about this
+[01:02:21] some I'm not sure if I'm representing my
+[01:02:22] co-authors but I mean in some way
+[01:02:24] algorithmic literacy seems like a
+[01:02:25] failure because it's like
+[01:02:28] we collectively have built a bunch of
+[01:02:29] systems that we don't like so the best
+[01:02:31] we can do is sort of teach our children
+[01:02:33] to be skeptical of them right so it
+[01:02:35] would be nicer if the algorithm sort of
+[01:02:37] worked and were really everyone really
+[01:02:39] liked them and then but at the same time
+[01:02:41] when we do so for example if we taught
+[01:02:45] people how to use the Facebook uh how to
+[01:02:47] use the Facebook and the Facebook
+[01:02:48] algorithm that might help them but in
+[01:02:50] some ways as Kerry's pointed out in
+[01:02:52] other contexts they don't need that
+[01:02:54] knowledge I mean it's most useful when
+[01:02:56] Facebook is doing something they don't
+[01:02:57] like so if Facebook does something that
+[01:02:59] they like all the time we might not need
+[01:03:01] to know as much about how the algorithm
+[01:03:02] works and this is the zitrain proposal
+[01:03:04] for a fiduciary relationship between you
+[01:03:07] and the the platform so that if the
+[01:03:09] platform's acting in your interest
+[01:03:11] that's great you don't need to know as
+[01:03:13] much how it works because you hire a
+[01:03:15] lawyer you don't need to know the law
+[01:03:16] they know the law they're working on
+[01:03:18] your behalf but right now they're not
+[01:03:19] working on your behalf and you're not
+[01:03:20] sure what they're doing so anyway
+[01:03:22] there's a lot to your question that I'm
+[01:03:24] sorry
+[01:03:33] is great with people like brother who's
+[01:03:35] like this you know coming up or you want
+[01:03:38] to see nothing you'll want to do that by
+[01:03:40] hand
+[01:03:41] definitely
+[01:03:43] alive
+[01:03:47] so I don't think Judith you don't have a
+[01:03:49] mic so you just said that there used to
+[01:03:51] be a way that you could request to see
+[01:03:53] everyone's post from a particular person
+[01:03:54] I think they did take that out now you
+[01:03:56] can only hide them you can't close
+[01:03:58] friends was
+[01:04:03] well anyway
+[01:04:05] we need a collaborative audit yeah to
+[01:04:08] figure out this paper who has the mic
+[01:04:09] now Dan is pointing yeah I think this is
+[01:04:12] really interesting I'm Nick Siever UCR
+[01:04:14] Finance apology uh hey we cite you Nick
+[01:04:18] and so I have a question about folk
+[01:04:20] theories uh which are of interest to me
+[01:04:22] disciplinarily I guess but the the sort
+[01:04:24] of takeaway being that most of these
+[01:04:25] theories are folk theories and if you
+[01:04:27] sit alongside someone who's working on a
+[01:04:30] personalization algorithm say and ask
+[01:04:33] them to explain things that are
+[01:04:34] happening you get a lot of similarly
+[01:04:37] well I wouldn't say uninformed but like
+[01:04:40] informed in a way that doesn't
+[01:04:41] necessarily have anything to do with
+[01:04:42] what's going on under the hood
+[01:04:43] explanations right they'll say oh well
+[01:04:45] this must be because whatever and this
+[01:04:47] is a lot to do with this Facebook
+[01:04:48] question of like does anybody know
+[01:04:50] what's really going on probably not it's
+[01:04:52] distributed but also be not just because
+[01:04:54] the algorithms are complicated but
+[01:04:56] because they only do things in
+[01:04:58] conjunction with data and the thing that
+[01:05:00] these people spend all day bashing their
+[01:05:01] heads against is the fact that
+[01:05:03] unexpected data types come in screw with
+[01:05:05] what the algorithm does and it's all
+[01:05:07] edge cases right and so one of the
+[01:05:09] things that I liked about the paper
+[01:05:10] about auditing was this question of you
+[01:05:13] know talking about sort of sampling the
+[01:05:15] algorithm because what you're doing is
+[01:05:16] you're also sampling the space of data
+[01:05:18] that can go into the algorithm
+[01:05:20] um but I'm wondering where this goes I
+[01:05:23] like the you know okay now people are
+[01:05:24] aware of the algorithm and we're moving
+[01:05:25] from ignorance to awareness or something
+[01:05:27] like that but I'm not sure what happens
+[01:05:29] in the future when you move from folk
+[01:05:30] Theory to something else especially if
+[01:05:33] this idea of what the algorithm is
+[01:05:35] really up to is kind of fuzzy in a way
+[01:05:38] that I would suggest is uh one of the we
+[01:05:40] were just saying on Twitter one of the
+[01:05:41] only certain things about algorithms is
+[01:05:43] that they're actually fairly uncertain
+[01:05:45] about what they're doing because they're
+[01:05:46] changing all the time Etc
+[01:05:48] um so I'm just curious like what you're
+[01:05:49] going to do about the fact that you
+[01:05:51] might say that all theories are folk
+[01:05:52] theories at the end and so
+[01:05:54] why pick one over another
+[01:05:57] so I think that's a really nice point
+[01:05:59] just to go back a little bit you know we
+[01:06:02] came across that same problem in
+[01:06:03] developing our study because we used to
+[01:06:06] use the term mental Maps a lot we wanted
+[01:06:07] to see what people's mental map was of
+[01:06:09] the algorithm
+[01:06:10] um it turns out if you don't know when
+[01:06:11] it exists you don't really have a mental
+[01:06:12] map of one in the first place and you
+[01:06:15] don't create a mental map by using our
+[01:06:17] tool once you know you need to
+[01:06:19] experience something quite a bit to
+[01:06:20] develop you know a model in your head
+[01:06:22] for for what that actually means and so
+[01:06:25] in some ways you know One path forward
+[01:06:28] is to you know collect some of these
+[01:06:30] collect some of these folk theories and
+[01:06:32] see you know what the common
+[01:06:33] denominators are you know another path
+[01:06:35] is to actually put out a few like tasks
+[01:06:37] for people and say look if you do this
+[01:06:40] you know can you tell us what the
+[01:06:42] consequences might be and collect a bit
+[01:06:43] more solidative if they volunteered to
+[01:06:45] give it the idea is not to like I think
+[01:06:48] starting with the folk theories has been
+[01:06:50] so much fun because it's been it's
+[01:06:52] amazing how quickly people know the
+[01:06:55] insides of their networks in ways that
+[01:06:56] as Outsiders we could never fully
+[01:06:58] comprehend
+[01:06:59] um and they know sort of the the the the
+[01:07:01] small little things that they did on
+[01:07:03] Facebook like like two days ago that
+[01:07:06] might have influenced something that we
+[01:07:07] couldn't even have picked out in an
+[01:07:08] interview
+[01:07:09] but one of the things that we're
+[01:07:10] exploring right now is looking at
+[01:07:12] specific tasks like if I do this then
+[01:07:15] what might happen or Christian had a
+[01:07:16] really nice
+[01:07:18] um I had a really nice story where one
+[01:07:20] of a posts that he made stayed at the
+[01:07:21] top for a really long period of time and
+[01:07:22] he was asking people you know how long
+[01:07:24] it was there
+[01:07:26] um why it was there I don't remember the
+[01:07:28] exact details of your big story but yeah
+[01:07:30] I mean so um I I think I completely
+[01:07:33] agree with Kerry's response just to get
+[01:07:35] to your first question or maybe it was
+[01:07:37] your last about what if
+[01:07:39] what do you do are you just going to
+[01:07:40] gather what people think about these
+[01:07:41] algorithms and it's all going to be sort
+[01:07:43] of a folk Theory but but remember that
+[01:07:44] one port point of feedvis is that it is
+[01:07:47] actually gathering information about the
+[01:07:49] feed and what is shown to you and what
+[01:07:50] isn't and so that part isn't a folk
+[01:07:52] Theory really it's we're asking people
+[01:07:54] to explain it but that is actual data
+[01:07:56] about what that we think the algorithm
+[01:07:58] is doing and keep in mind as well
+[01:08:00] Crandall's theorem like Crandall's view
+[01:08:03] of algorithms is that they're all rigged
+[01:08:05] and I mean not to be Sensational but I
+[01:08:08] mean you know he was testifying before
+[01:08:09] Congress because he was in trouble and
+[01:08:12] similarly like the Latina Sweeney
+[01:08:14] example I mentioned like there are laws
+[01:08:16] against things that algorithms might be
+[01:08:18] doing and the consequences are real and
+[01:08:20] and that's really important and so you
+[01:08:23] could imagine not just an assemblage of
+[01:08:24] interesting things people said about
+[01:08:26] algorithms but you could imagine the
+[01:08:28] discovery of really troubling things
+[01:08:29] going on with algorithms and I mean one
+[01:08:32] example of this would be edelman's work
+[01:08:34] here at Harvard where just by making
+[01:08:37] individual queries in a variety of
+[01:08:39] platforms himself not in a collaborative
+[01:08:41] audit but just like an individual audit
+[01:08:43] he's found all kinds of stuff going on
+[01:08:45] that you know seem like I think he puts
+[01:08:48] it as you know raises concerns about
+[01:08:50] fraud like I mean his most um
+[01:08:54] pithy example is probably the way that
+[01:08:56] he added commas to certain search
+[01:08:58] queries on Google and revealed what he
+[01:09:01] believed were hard-coded rules that
+[01:09:04] would only respond to certain keywords
+[01:09:06] even though Google has said it doesn't
+[01:09:08] use hard-coded rules but he seemed to
+[01:09:10] think that if you put a comma after some
+[01:09:12] search words that related to health
+[01:09:13] Google Health would then become the
+[01:09:15] first first result and then if you
+[01:09:17] eliminated the comma it would not be the
+[01:09:19] first search result and that's very
+[01:09:21] interesting because
+[01:09:22] um
+[01:09:23] I'm not a antitrust lawyer but I think
+[01:09:25] they would be interested um potentially
+[01:09:26] well maybe not in the US in Europe they
+[01:09:29] care about that
+[01:09:31] right
+[01:09:32] so actually building on this question of
+[01:09:35] uh sampling I have two questions same
+[01:09:37] question from the computer science point
+[01:09:38] and the law point so the data here is
+[01:09:41] extremely highly dimensional and the
+[01:09:43] idea that you can sample even a non-zero
+[01:09:46] fraction of that is is sort of
+[01:09:47] ridiculous like it's impossible because
+[01:09:49] there's only seven billion people in
+[01:09:51] there easily you know trillions and
+[01:09:52] trillions and trillions of possible
+[01:09:54] inputs
+[01:09:55] um so computer science from the computer
+[01:09:57] science standpoint have you thought
+[01:09:58] about how to deal with the
+[01:09:59] dimensionality and exploring the space
+[01:10:01] from the sampling standpoint and I guess
+[01:10:02] from the legal perspective is does that
+[01:10:04] matter to you if an algorithm could be
+[01:10:07] doing something like so for example I
+[01:10:08] think of discrimination in advertising
+[01:10:11] um so it is the fact that it could be
+[01:10:12] doing something legal or is currently
+[01:10:14] doing something illegal or not ethically
+[01:10:16] desirable uh does that make a difference
+[01:10:20] so let me take the the second one the
+[01:10:23] second one first which I I think again
+[01:10:26] is that's where I see a difference
+[01:10:27] between
+[01:10:30] to be technical model identification and
+[01:10:32] what is what is
+[01:10:34] what might be required
+[01:10:37] for law purposes that provide it and
+[01:10:40] I'll go to the first question after that
+[01:10:42] provided I could come up with a model
+[01:10:45] and I could say that you know there is a
+[01:10:48] model that's learnable that seems the
+[01:10:51] best explanation based on the sampling I
+[01:10:53] have is that you discriminate
+[01:10:55] I don't have a proof but all that may
+[01:10:59] all that what that made by me
+[01:11:02] in a court of law
+[01:11:03] or towards a court of law is maybe the
+[01:11:07] option to subpoena maybe I can actually
+[01:11:10] if if that's what seems to happen
+[01:11:13] I'm not I will never be able that that's
+[01:11:15] the difficulty is I don't think we'll
+[01:11:17] ever be able to assign intent
+[01:11:19] I will never be able to come out of an
+[01:11:21] audit and say I do know for sure that
+[01:11:24] you know you're using race as a
+[01:11:26] discriminating Factor all I can say is
+[01:11:28] here are very simple models or here the
+[01:11:31] most the most probable models based on
+[01:11:34] you know the traces or the data the data
+[01:11:37] that we have
+[01:11:38] that are that explain the data and it
+[01:11:41] seems that you are actually
+[01:11:44] discriminated and maybe that might
+[01:11:47] actually be of interest even to the to
+[01:11:49] the programmer because you you may not
+[01:11:50] even know for example in I'm French in
+[01:11:53] France it is illegal to have any data
+[01:11:55] that is based on religion you cannot ask
+[01:11:58] about religion right you you and to some
+[01:12:02] extent you can always take surrogates
+[01:12:03] for it but if by doing so you were to
+[01:12:06] construct an object that could predict
+[01:12:08] that could predict religion you might be
+[01:12:10] in trouble you may not want to do it so
+[01:12:12] but again no I I
+[01:12:16] do not believe I do not expect to ever
+[01:12:19] be able to assign intent or to even to
+[01:12:21] come up with a model that's likely that
+[01:12:24] is the true model with hyperability but
+[01:12:26] it might just be enough and again that's
+[01:12:29] also what audits do is we you never
+[01:12:32] at the legal level you never end up with
+[01:12:34] you know you cannot say that
+[01:12:37] discrimination is that play for sure all
+[01:12:38] you can say is it very much looks like
+[01:12:40] you're acting as if you're
+[01:12:42] discriminating stop do something about
+[01:12:44] it if add noise so be it so the standard
+[01:12:49] is different also that's that's why in
+[01:12:51] some sense we think that the concept of
+[01:12:53] audit is actually powerful here in terms
+[01:12:55] of sampling you have a good point that
+[01:12:56] definitely they are that's something
+[01:12:58] that we started looking into I again
+[01:13:00] there might there are intrinsic limits
+[01:13:02] to what's learnable from what we could
+[01:13:04] do and maybe we won't be able that's one
+[01:13:06] of the things we hope to be able to
+[01:13:07] learn as we scale speed Visa is maybe
+[01:13:10] simply you know they you can go at the
+[01:13:13] level of fundamental right fundamental
+[01:13:17] um
+[01:13:18] theorems as to exactly you know what's
+[01:13:20] the sample complexity of learning
+[01:13:22] particular thing so we're we're hoping
+[01:13:24] to be able to
+[01:13:26] we're hoping that we can still learn
+[01:13:28] something but that would be a great
+[01:13:29] experiment in practice is it can we are
+[01:13:31] we going to hit those bounds or not
+[01:13:33] right absolutely I I also do not ex
+[01:13:36] expect to be able to learn everything
+[01:13:38] perfectly and again neither do I need do
+[01:13:41] I even want to do this I mean just but
+[01:13:44] that's a great question a closing point
+[01:13:46] on that is that you know the
+[01:13:48] quantitative models we use now for
+[01:13:49] things like this really suck so like to
+[01:13:52] stay on the antitrust theme let's look
+[01:13:54] at the hhci
+[01:13:56] is it a really great model of anything
+[01:13:57] wait what does it stand for something
+[01:13:59] hershenfeld someone know one knows all
+[01:14:02] right all right whether whether you are
+[01:14:04] right is there is there right that's the
+[01:14:07] test to decide whether you are uh
+[01:14:10] you are um you deserve antitrusting get
+[01:14:13] this up it's a quantitative test to
+[01:14:14] determine whether you deserve any trust
+[01:14:16] scrutiny and it's very very simplistic
+[01:14:18] and in fact some somewhat ridiculous and
+[01:14:20] yet it's in wide use and so we don't
+[01:14:22] actually have to do that much in order
+[01:14:23] to do as well or better as some of the
+[01:14:26] things that we're using now so I think
+[01:14:27] we can improve on current practice
+[01:14:29] I think Dan is giving us a signal here
+[01:14:32] yeah is this is that the signal you're
+[01:14:34] giving is it this signal
+[01:14:36] we can manage one more question
+[01:14:38] well where who has the mic it's probably
+[01:14:41] the person who just asked the question
+[01:14:42] yeah
+[01:14:44] so I take a sort of reverse Delight in
+[01:14:47] database vandalism and Facebook is the
+[01:14:50] one I like to mess with the most and one
+[01:14:52] of the things that I like to do to it is
+[01:14:54] I make these custom lists
+[01:14:57] without using the free ones that they
+[01:14:59] have they're all funny names
+[01:15:01] and there's one of them that's the only
+[01:15:03] thing I read
+[01:15:05] how to what extent am I thwarting its
+[01:15:08] algorithms by never using my run my
+[01:15:12] quote raw up Facebook filter
+[01:15:18] you know that's a really good question
+[01:15:20] can you tell me a little bit more about
+[01:15:21] how you create these and who's on these
+[01:15:23] because it'll give us some people
+[01:15:24] actually want to see okay I I hate
+[01:15:28] Facebook so much that I'm on it twice
+[01:15:29] okay and because it actually use
+[01:15:35] much smaller number of people but then
+[01:15:36] even on that I have a smaller list
+[01:15:39] that's like people I know that are
+[01:15:42] actually part of my life that don't post
+[01:15:43] doing ideas on Facebook because I have
+[01:15:45] good friends who do that yeah very sort
+[01:15:47] of if I you know decide I'd like
+[01:15:50] somebody's stuff when I go to look at
+[01:15:52] the I'll put them in yeah
+[01:15:55] and so that's the only thing I ever
+[01:15:58] looked at on Facebook so I guess I'm so
+[01:16:00] where is the thwarting so you're seeing
+[01:16:02] this list
+[01:16:03] [Music]
+[01:16:07] is there preset best friends I see I see
+[01:16:10] so you're not using the smart lists
+[01:16:12] you're making your own list
+[01:16:14] okay
+[01:16:19] um yeah
+[01:16:27] so they know who you see I can tell you
+[01:16:30] that the smart lists are more like a
+[01:16:32] recommender like system so the idea is
+[01:16:34] that
+[01:16:36] um you know from the beginning they're
+[01:16:37] just not very good at all how many
+[01:16:38] people here use Smart lists
+[01:16:42] exactly okay he said he said what are
+[01:16:45] response it might be using them without
+[01:16:46] knowing they're called that oh so they
+[01:16:47] basically pre-populate some groups with
+[01:16:50] close friends acquaintances
+[01:16:53] um
+[01:16:54] and so uh Zuckerberg actually gave a
+[01:16:56] talk I think that less than five percent
+[01:16:58] of people actually use these
+[01:17:01] um so they're not that widely used if
+[01:17:04] you have a in a sense you're creating
+[01:17:05] your own news feed
+[01:17:06] so you've made your own personalized
+[01:17:08] news feed so they see what you see in
+[01:17:09] that feed and they probably make
+[01:17:10] predictions within that feed but right
+[01:17:13] now like the close friends and
+[01:17:14] acquaintance from my interpretation I
+[01:17:16] don't think that there's that much that
+[01:17:18] you can that much meaningful data you
+[01:17:19] can get from that yet but it's an
+[01:17:21] interesting point I mean we are admirers
+[01:17:22] of this stream of literature that you
+[01:17:24] may know which is about sort of the
+[01:17:26] Tactical use of a system in opposite
+[01:17:30] ways to what it's intended for some
+[01:17:31] political purpose and a good scholarly
+[01:17:33] example is what does it track me not
+[01:17:36] yeah yeah so that yeah like Helen this
+[01:17:38] environment I forget her co-author right
+[01:17:40] now but uh so great so it sends false
+[01:17:42] data about you in order to protect your
+[01:17:44] privacy so there's a there's a really
+[01:17:46] interesting area there's an interesting
+[01:17:48] critique of it by bushnayer from an
+[01:17:51] actual security Viewpoint of it but
+[01:17:54] yeah like some other thwarting might be
+[01:17:55] if you put names of people in there also
+[01:17:57] that you don't care to read and somehow
+[01:17:59] find a way to read what you really want
+[01:18:00] out of that mess but that gets I don't
+[01:18:02] know how you would do that
+[01:18:10] label them family close friends yeah
+[01:18:13] yeah and so it turns out people don't
+[01:18:15] want to do that people
+[01:18:17] it takes time
+[01:18:20] Dan's giving me eyes no yeah so so thank
+[01:18:25] you very much for a very engaged
+[01:18:26] audience
+[01:18:31] [Applause]

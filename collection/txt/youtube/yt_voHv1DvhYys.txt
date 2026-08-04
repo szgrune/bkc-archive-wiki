@@ -1,0 +1,1006 @@
+[00:00:00] So the afternoon sessions as you have
+[00:00:01] seen uh include two substantive sessions
+[00:00:04] on the technology development that is uh
+[00:00:07] very actively underway right now in
+[00:00:10] advance of the April 2013 launch. We are
+[00:00:13] keeping expectations low with the hope
+[00:00:15] of outperforming of course we've got
+[00:00:17] some wonderful partners who are working
+[00:00:19] with the secretariat and with the DPLA
+[00:00:22] um technical aspects workstream to do
+[00:00:24] that. And one of the people who has been
+[00:00:26] at the core of this effort is a man
+[00:00:28] named Jeffrey Lick who's on his way up
+[00:00:30] to the um podium right now. Jeffrey is
+[00:00:33] uh a partner to the effort um as a
+[00:00:36] consultant and really the sort of core
+[00:00:38] project manager for technology all the
+[00:00:41] way around trying to implement what we
+[00:00:43] have heard from the community in the
+[00:00:44] technical aspects workstream led by
+[00:00:46] Martin and SJ and others in that
+[00:00:49] respect. Uh Jeffrey comes from a group
+[00:00:51] called POP pod consulting. He's a
+[00:00:53] partner at Pod which is a Cambridge,
+[00:00:55] Massachusetts based firm that we've had
+[00:00:57] a lot of experience working well with.
+[00:00:58] He also is at Sapiant, one of the big
+[00:01:01] integrator firms uh as well uh in an
+[00:01:03] international setting. Um and we're very
+[00:01:05] lucky that he has devoted himself so uh
+[00:01:07] substantively to this project, Jeffrey
+[00:01:08] L.
+[00:01:11] Thank you, John. Um
+[00:01:14] so I guess the purpose of this is to
+[00:01:17] really start getting specific about what
+[00:01:19] it is that we're actually going to be
+[00:01:20] building for April. Um, and in the
+[00:01:22] process for getting there, there's been
+[00:01:24] we've been talking a lot about, you
+[00:01:25] know, big visions, big goals, and
+[00:01:28] wonderful content. At some point, we
+[00:01:30] actually need to build something
+[00:01:31] specific. And this is what what I want
+[00:01:33] to do is just give a very try to give as
+[00:01:35] clear a picture of possible what we're
+[00:01:37] planning to do for April. Um, so, you
+[00:01:40] know, we can all go out can communicate
+[00:01:42] that to the world and also if it's wrong
+[00:01:44] or you have some questions, we can you
+[00:01:47] give you enough details so you can um we
+[00:01:49] can try to answer those questions.
+[00:01:52] So
+[00:01:53] this is what I said. I want to give a a
+[00:01:55] concrete picture. I also want to talk
+[00:01:56] about how what our progress is in terms
+[00:01:58] of getting towards that goal. How we're
+[00:02:00] moving, what the plan is between now and
+[00:02:01] April. And um very importantly talk
+[00:02:05] about the different opportunities for
+[00:02:06] getting um different groups involved
+[00:02:09] because we know there are a lot of
+[00:02:10] people want to contribute to the DLA in
+[00:02:11] some way either by attending these
+[00:02:13] meetings. um there's a very good
+[00:02:16] opportunity for contributing very
+[00:02:17] solidly in the technical front and we
+[00:02:19] need to make sure we make those
+[00:02:20] opportunities as clear as possible and
+[00:02:23] um make sure that there are things which
+[00:02:25] are going to actively contribute to our
+[00:02:27] um to our April launch.
+[00:02:29] So this is sort of the the big picture
+[00:02:32] of what the deep platform for April 2013
+[00:02:36] is going to look like. So we are
+[00:02:39] building at the core of it is a metadata
+[00:02:42] repository which is going to be um
+[00:02:46] aggregated from the various service hubs
+[00:02:47] and content hubs. There's a ingestion
+[00:02:51] process which is going to basically take
+[00:02:54] the aggregate the content from those
+[00:02:56] hubs and put it in the repository in a
+[00:02:58] form that can be easily used and sort of
+[00:03:02] most importantly there's an API on top
+[00:03:04] of it. I think that's something we I we
+[00:03:05] haven't actually been talking about a
+[00:03:07] lot today so far that I've heard. But
+[00:03:09] the API is really the mechanism by which
+[00:03:12] we're going to expose the great content
+[00:03:15] that's within the DLA to the world. Um
+[00:03:18] for those of you who are not familiar,
+[00:03:19] API is application programming
+[00:03:21] interface. It's basically a set of um of
+[00:03:25] um transactions or calls that you can
+[00:03:27] make against the API that will let you
+[00:03:31] do stuff with the repository. And I
+[00:03:35] think this is one of the um sort of key
+[00:03:38] distinguishing factors in the DPA
+[00:03:40] overall DPA platform because we're not
+[00:03:42] telling you you can only go look at it
+[00:03:43] through this website. We're not
+[00:03:44] restricting the API to a subset of
+[00:03:47] people who have special privileges to
+[00:03:48] it. everything goes to the API and
+[00:03:50] everybody has the same level of access
+[00:03:52] and that will be access to all the
+[00:03:54] information they have within the
+[00:03:55] repository.
+[00:03:56] We're also um you see up there there's a
+[00:03:58] front end which is going to be built on
+[00:03:59] top of the API which will be sort of the
+[00:04:02] um you know the place where people can
+[00:04:04] go in April to browse the content in the
+[00:04:07] within the API and then lots of colored
+[00:04:09] boxes which represent all the great
+[00:04:11] stuff that we expect people to build on
+[00:04:14] on top of the API. And one of our main
+[00:04:17] success criteria here is in the ways
+[00:04:19] that we'll know that we've done the
+[00:04:21] right thing is that people um want to
+[00:04:23] build stuff on top of the API that they
+[00:04:25] have the ability to build stuff on top
+[00:04:27] of the API and they actually build stuff
+[00:04:28] that people want to use and um you know
+[00:04:31] we're going to talk a little bit later
+[00:04:32] about how how we want to make that
+[00:04:34] happen but that is something which
+[00:04:36] depends critically on the community of
+[00:04:39] developers that we want to build around
+[00:04:41] the DPI participating and getting
+[00:04:42] engaged in it. Um the other piece here
+[00:04:45] is the you know there are things that we
+[00:04:48] expect people are going to want to be
+[00:04:49] able to do with the content within the
+[00:04:50] DPA that aren't necessarily practical to
+[00:04:53] do through the API. Um an example is you
+[00:04:56] think about hot trust you have the a you
+[00:04:59] can um if you want to do analysis of the
+[00:05:01] entire corpus of material that we have
+[00:05:03] within the repository that's not
+[00:05:04] something you can easily do within the
+[00:05:05] API. So we're providing a mechanism by
+[00:05:08] which you can just take a copy of the
+[00:05:10] whole of all the data and do what you
+[00:05:12] want with it. And since you know is I
+[00:05:15] believe the rights for all the metadata
+[00:05:17] are going to be CC0 that is something
+[00:05:18] that we can actually do.
+[00:05:20] Finally, one other piece of this is that
+[00:05:23] we've got this um we want to package all
+[00:05:27] this up, not just the content, but the
+[00:05:29] code, the entire infrastructure in a way
+[00:05:31] that um anybody else can go and take the
+[00:05:35] entire DPA platform and run it locally,
+[00:05:38] run it on a cloud server, just have the
+[00:05:40] ability to get that set up, which will
+[00:05:43] we hope will foster um you know, the
+[00:05:46] development of tools that might be
+[00:05:47] useful in a more local environment. and
+[00:05:50] um uh you know has other benefits which
+[00:05:52] I'll talk about in a bit but
+[00:05:55] the main thing here is like when we talk
+[00:05:57] when when I today talk about the Dplay
+[00:05:59] platform what I'm referring to is the
+[00:06:01] purple stuff. So that's sort of the core
+[00:06:04] of what's what we're putting together.
+[00:06:08] So in terms of the metadata repository
+[00:06:09] this is um you know we are building this
+[00:06:13] is a little remedial for everybody who's
+[00:06:14] who's who's been involved with this but
+[00:06:16] we are building a metadata repository.
+[00:06:18] We are not building a full content
+[00:06:19] repository. It's just metadata. Um
+[00:06:22] metadata is information about the
+[00:06:24] content. Um and as we've talked about um
+[00:06:29] today, that's going to be aggregated
+[00:06:30] from the various service hubs and
+[00:06:31] content hubs that um that participate in
+[00:06:34] the DLA. There are different types of
+[00:06:37] entities or objects that we're going to
+[00:06:39] be storing metadata about. We have this
+[00:06:41] concept of an item, which is an object
+[00:06:44] that we have metadata for. um like a
+[00:06:47] newspaper or an image or a piece of
+[00:06:49] text. We also want to keep track of
+[00:06:52] collections so that um when you have for
+[00:06:56] example we often have many items that
+[00:06:58] come from a particular collection, we
+[00:07:00] want to keep the relationship between
+[00:07:01] those items in that collection together
+[00:07:03] and have some information about the
+[00:07:04] collection which gives valuable context
+[00:07:06] to um the people who are looking at that
+[00:07:08] item and trying to understand what it is
+[00:07:10] and trying to find it. We also want to
+[00:07:11] keep track of contributors in terms of
+[00:07:13] who's actually contributed the object to
+[00:07:15] the DPA. So we have um you know know
+[00:07:18] what that source is and also something
+[00:07:21] which is a little farther out in the
+[00:07:22] road map but is you know opens up some
+[00:07:25] really interesting possibilities is the
+[00:07:27] idea of events around objects. So
+[00:07:30] um you know if you have you know if
+[00:07:34] we're dealing with book data for example
+[00:07:36] an event might be that somebody has read
+[00:07:37] the book or borrowed the book or someone
+[00:07:39] has you know viewed the object. Um by
+[00:07:41] keeping track of the information, it
+[00:07:43] enables us to do some interesting things
+[00:07:45] in terms of highlighting most used items
+[00:07:47] and um you know providing some uh
+[00:07:50] additional guidance in terms of
+[00:07:51] navigating through the repository to
+[00:07:52] find stuff that other people find
+[00:07:54] interesting and find um things that
+[00:07:56] other people who are looking at the
+[00:07:57] things that you might like might find
+[00:07:58] interesting. So
+[00:08:03] um this is just an example of metadata
+[00:08:05] just being super explicit about the
+[00:08:07] types. When we talk about metadata, this
+[00:08:09] is what we're talking about. Our schema
+[00:08:10] is based on Dublin qualified Dublin
+[00:08:12] core. We have a um we published the
+[00:08:15] draft schema out on the DPLA wiki. We're
+[00:08:19] starting to get some some very good
+[00:08:22] feedback on it which we're going which
+[00:08:23] we're going to be addressing which is
+[00:08:24] great. I would encourage everybody to
+[00:08:26] who you know has an opinion to take a
+[00:08:28] look and and send us your thoughts. But
+[00:08:31] we are you know these are pretty much
+[00:08:33] some basic Dublin core items. Um we're
+[00:08:36] also planning on keeping track of u
+[00:08:40] having previews for the items in the
+[00:08:41] repository. Um
+[00:08:44] but you know this is sort of what's
+[00:08:45] going to be coming in and as we talked
+[00:08:47] heard in the discussion around service
+[00:08:50] hubs you know we're expect part of our
+[00:08:52] expectation is that the service hubs are
+[00:08:54] doing a certain amount of quality
+[00:08:57] control and standardization
+[00:08:58] normalization before the data comes to
+[00:09:00] us because obviously one of the big
+[00:09:02] challenges in dealing with um repository
+[00:09:06] and aggregation of lots of other
+[00:09:07] repositories is inconsistent metadata
+[00:09:09] metadata with various levels of detail
+[00:09:12] Um, and uh, you know, we want we at, you
+[00:09:16] know, at the DLA, we don't obviously
+[00:09:18] have the the people to go through and
+[00:09:20] and fix all the metadata. So, we're
+[00:09:22] going to be relying heavily on the
+[00:09:22] service hubs to do the best job that
+[00:09:26] that they can. Um,
+[00:09:29] the and we'll talk about a bit more
+[00:09:32] about that in terms of ingestion. I
+[00:09:33] don't know. Can anybody guess where this
+[00:09:35] comes from?
+[00:09:38] Nobody.
+[00:09:42] Clemson, South Carolina. That's right.
+[00:09:44] And obviously the um the thumbnail
+[00:09:47] doesn't really work blown up to like six
+[00:09:49] feet high, but there you go. Um okay,
+[00:09:52] content sources. This is these are the
+[00:09:55] service hubs and the content hubs that
+[00:09:57] we've been discussing so far. Um
+[00:10:01] you know, obviously these are primarily
+[00:10:03] cultural heritage objects that we're
+[00:10:05] talking about. There are lots of
+[00:10:06] newspapers. We we are definitely
+[00:10:09] planning to include books in the in the
+[00:10:11] um um you know in the first in the first
+[00:10:14] iteration by April once we get the the
+[00:10:16] data sorted out. The we are starting out
+[00:10:20] by doing OIPH harvesting to get the
+[00:10:23] metadata from the content from the
+[00:10:24] service hubs that's going to work for
+[00:10:27] four or five of them. There's some which
+[00:10:28] don't have that harvesting setup right
+[00:10:30] now which will provide us a good chance
+[00:10:32] to test out some of the other ingestion
+[00:10:33] mechanisms that we want to use. So, you
+[00:10:36] know,
+[00:10:38] you know, we're starting the OIPH. It's
+[00:10:40] not because we think it's, you know, the
+[00:10:41] greatest thing in the universe or um,
+[00:10:44] you know, it's it's what we want to do,
+[00:10:45] but a lot of content out out there
+[00:10:47] available through it. And so, we want to
+[00:10:49] in the interest of getting things moving
+[00:10:51] and getting real content into the
+[00:10:52] system, we want to start with that um,
+[00:10:54] so we can get going as quickly as
+[00:10:56] possible.
+[00:10:59] So, ingestion. So this is
+[00:11:03] we are building an ingestion pipeline in
+[00:11:05] ingestion process that is going to
+[00:11:08] manage the retrieval of content from the
+[00:11:10] various content service hubs and sort of
+[00:11:12] normalizing it cleaning up and putting
+[00:11:14] it into the repository. So obviously
+[00:11:17] there are different elements to this
+[00:11:19] actually getting the files doing format
+[00:11:20] translations is necessary um and then
+[00:11:23] enrichment normalization one of the
+[00:11:27] things that we are expecting we're
+[00:11:29] expecting not to do is really try to
+[00:11:33] manage or massage the metadata within
+[00:11:35] the DPA itself because we simply do not
+[00:11:38] have you know the people or the time
+[00:11:39] we're not the people are going to be
+[00:11:40] closest to the content so uh you know we
+[00:11:44] want you know we want that cleanup to be
+[00:11:47] done before it gets to us. But we know
+[00:11:49] that there are always going to be um
+[00:11:54] there always going to be inconsistencies
+[00:11:55] or differences between the different
+[00:11:56] aggregators and different service hubs
+[00:11:58] that we're dealing with. That's just a
+[00:11:59] fact of life. So we're going to have to
+[00:12:02] we want to have a library of essentially
+[00:12:06] modules and cleanup routines enrichments
+[00:12:07] that we can apply to the content as it
+[00:12:10] comes in to you know normalize date
+[00:12:13] format. So if we have two separate data
+[00:12:14] formats are coming in, we can figure it
+[00:12:16] out. We can standardize it um for
+[00:12:17] ourselves and not have to try to get all
+[00:12:20] the different service hubs and content
+[00:12:21] hubs to standardize what they're
+[00:12:22] providing us um because that's would be
+[00:12:27] difficult um would be very difficult um
+[00:12:30] and the other reason is that we
+[00:12:34] um there are certain functions that we
+[00:12:36] want to provide through the API that
+[00:12:37] depend on certain types of data being
+[00:12:40] available. So for example, if um you
+[00:12:45] know one way of browsing the data within
+[00:12:48] the repository could be let's look at a
+[00:12:49] timeline and see what types of you know
+[00:12:51] what's happening around 1950 1945 and
+[00:12:54] 1955. If we have content that comes in
+[00:12:58] with a date range of say you know 20th
+[00:13:01] century you know does that go on the
+[00:13:03] timeline or does it not? We need to
+[00:13:05] basically um massage the data to a point
+[00:13:08] where we can we can use it effectively
+[00:13:10] within the visualizations and then and
+[00:13:11] the navigational paths we're providing
+[00:13:13] people through the API and through the
+[00:13:14] front end so they can actually get to
+[00:13:16] the content. Another example might be
+[00:13:18] doing if we get um you know simple
+[00:13:21] things like getting if we get a city we
+[00:13:23] need to figure out what the actual
+[00:13:24] latitude longitude of that city is and
+[00:13:26] make sure that we have that in our
+[00:13:27] repository so when we do geographic
+[00:13:29] searches we can pick it up. Um we have a
+[00:13:32] lot of ideas around this and you know
+[00:13:33] this is not something that's new. A lot
+[00:13:35] of people are doing this. Um but the the
+[00:13:38] goal is to gradually increase the
+[00:13:40] library of enrichments that we're
+[00:13:41] applying so that we can um over time not
+[00:13:44] have to rebuild these things and reuse
+[00:13:46] them for for each of the um different
+[00:13:48] service hubs and content hubs that we
+[00:13:49] bring on board.
+[00:13:52] The final another piece of the ingestion
+[00:13:56] process is that one of the concerns that
+[00:13:58] came up yesterday when we were talking
+[00:14:00] about metadata and the technical
+[00:14:03] architecture is how do we make sure that
+[00:14:05] we don't unnecessarily lose the richness
+[00:14:08] of the data that we're getting? I for
+[00:14:10] example we're getting mark records. They
+[00:14:12] have a lot of data that's not that's not
+[00:14:13] going to be part of our core schema. So
+[00:14:15] what we're going to be doing um is
+[00:14:19] preserving the entire metadata record
+[00:14:21] that we receive for each um for each
+[00:14:24] piece of metadata as as part of a
+[00:14:26] record. So even if we don't have you
+[00:14:28] know we'll do all the mapping to get to
+[00:14:30] a standardized set of metadata but the
+[00:14:32] original record will still be there for
+[00:14:33] anybody to be able to retrieve it
+[00:14:35] through the API. Um, and we would
+[00:14:38] ideally we would like to be able to
+[00:14:40] index that so you can do faceted search
+[00:14:42] and faceted browsing based on fields
+[00:14:45] that may be specific to a particular
+[00:14:47] collection or a particular repository, a
+[00:14:48] particular type of data. We're not
+[00:14:50] exactly sure how we're going to do that
+[00:14:51] yet, but that's one of the goals. But we
+[00:14:53] figure that by keeping the complete
+[00:14:55] original set of metadata there, that
+[00:14:56] gives us a lot more flexibility in the
+[00:14:58] future to um, you know, to do
+[00:15:00] interesting things.
+[00:15:04] So for the API, what the API is
+[00:15:07] basically going to allow you to do is
+[00:15:08] going to allow you to search stuff and
+[00:15:10] do faceted search. It's it's pretty much
+[00:15:12] pretty much what it's going to allow you
+[00:15:13] to do. So you can do keyword search, you
+[00:15:15] can do date range searches, location
+[00:15:17] searches. Faceted browsing is absolutely
+[00:15:20] key part of this. So you can narrow your
+[00:15:23] search down to everything that's within
+[00:15:26] Colorado and then narrow down by date
+[00:15:27] and so on and so forth. That's the the
+[00:15:29] key functionality. It's very it's pretty
+[00:15:31] similar to what we would have seen in
+[00:15:33] the um the alpha version API that came
+[00:15:36] out um back in April. So it's it's it's
+[00:15:39] similar in terms of the types of
+[00:15:40] functionality it's exposing. The API is
+[00:15:43] going to be completely it's going to be
+[00:15:45] a REST API. It's going to be pure HTTP
+[00:15:48] to connect to and retrieve data. We're
+[00:15:49] going to allow you to specify whether
+[00:15:51] you want to get the data back in JSON,
+[00:15:53] in XML, maybe in schema or HTML. Um,
+[00:15:57] link data is sort of something we're not
+[00:16:00] really fully addressing right now, but
+[00:16:03] it's something we know is in the future.
+[00:16:06] Um, and we also want to to make this
+[00:16:10] useful to people. We want to provide,
+[00:16:14] you know, documentation so it's easy to
+[00:16:15] use, full document, API, sample code,
+[00:16:18] and potentially libraries for common
+[00:16:21] like like a Python library or a Ruby
+[00:16:23] library that you can use to just very
+[00:16:25] easily access the API. Um these those
+[00:16:28] are also things which potentially
+[00:16:29] members of the community might be able
+[00:16:30] to build as well. One of the one of the
+[00:16:34] questions that came up yesterday was how
+[00:16:36] does somebody who is you know not
+[00:16:38] particularly tech technically savvy or
+[00:16:40] doesn't have you know technical people
+[00:16:41] on staff how can they take advantage of
+[00:16:43] the API. So an example of the type of
+[00:16:45] thing you might be able to do is
+[00:16:48] it's it's certainly possible to build a
+[00:16:49] JavaScript widget which would make a
+[00:16:52] given a title or a search box go to our
+[00:16:56] API get the data back and display it as
+[00:16:57] something which could be just dropped
+[00:16:58] into any any web page anywhere without
+[00:17:01] any particular programming experience.
+[00:17:03] So that's the kind that's the kind of
+[00:17:04] thing which um you know actually I
+[00:17:07] expect someone else someone is going to
+[00:17:08] build as soon as you make the API fully
+[00:17:10] available because it's pretty easy to do
+[00:17:11] but we would want to be able to put that
+[00:17:13] out there. So we build easy onramps for
+[00:17:15] people to get using the API.
+[00:17:23] So the point of the API is to get people
+[00:17:26] to use it. Um, one of our big challenges
+[00:17:30] and things we're trying to do is to make
+[00:17:31] sure that we're making it easy for
+[00:17:33] people to do that. So we've heard about
+[00:17:34] the the you may be familiar with the
+[00:17:36] beta sprinters who did work um during
+[00:17:40] the past year. So, we're looking at a
+[00:17:42] continuing that effort to so people can
+[00:17:44] build some more substantial things on
+[00:17:46] top of the API and prove it out for us
+[00:17:49] and let us know what we've done right,
+[00:17:51] what we haven't done right. Because if
+[00:17:52] someone's trying to build something on
+[00:17:53] top of the API that's going to be useful
+[00:17:55] and it looks like it's going to be
+[00:17:56] valuable to the community, but they
+[00:17:58] can't do it because of X, Y, or Z, we
+[00:18:00] want to know that. And the only way you
+[00:18:01] can really do that is by getting people
+[00:18:03] to use it. They're just I mean, we can
+[00:18:05] do all the theoretical design that we
+[00:18:06] want, but that's really the proof. We
+[00:18:10] also
+[00:18:12] um have an appfest which is scheduled
+[00:18:14] for November 8th and 9th in Chattanooga.
+[00:18:17] And I encourage you all to sign up for
+[00:18:20] that. Give your ideas for what you want
+[00:18:21] somebody to build for you. Um and you
+[00:18:24] know that's sort of continuing the vein
+[00:18:26] of hackathons have been a part of the
+[00:18:28] DLA um for a while now. As I mentioned
+[00:18:31] before, documentation, sample code,
+[00:18:34] client libraries, all those good things
+[00:18:35] to make it as easy as possible for
+[00:18:37] people to come on board and start using
+[00:18:39] it.
+[00:18:42] So in terms of the front end, we heard
+[00:18:44] earlier um somebody mentioned that
+[00:18:47] ifactory has is been retained to
+[00:18:49] essentially build the front end. And so
+[00:18:52] I guess we need to be really careful
+[00:18:53] what we say about the front end because
+[00:18:54] it's not the front end, it's a front end
+[00:18:56] to the DLA. That's a gesture to what the
+[00:18:58] types of things that you could do. a
+[00:19:00] gesture towards the possibilities and
+[00:19:03] the the scope of that is basically to um
+[00:19:07] provide search functionality, provide
+[00:19:09] faceted search, provide detail detailed
+[00:19:13] views of the content within the
+[00:19:14] repository and also to allow people to
+[00:19:19] you know identify form collections of
+[00:19:21] their own and share those collections
+[00:19:24] other people. So tag things that they
+[00:19:25] want they want to put in a group and
+[00:19:26] then share people and let other people
+[00:19:28] other people use them. This is um I
+[00:19:32] guess a really important thing here is
+[00:19:34] that the this front end is does not have
+[00:19:37] any sort of privileged access to the
+[00:19:40] deep or to the repository um compared to
+[00:19:43] any other tool that people might build
+[00:19:44] on top of the API. So you in theory
+[00:19:46] anybody could be building this this um
+[00:19:48] this front end right now. But we expect
+[00:19:52] that by having a fairly substantial web
+[00:19:56] application built on top of the API that
+[00:19:57] will help us figure out are we actually
+[00:19:59] exposing um exposing the right calls and
+[00:20:03] will also help us understand if the
+[00:20:07] cleanup that we're doing as part of the
+[00:20:08] ingestion process is working because if
+[00:20:10] some if you're trying to build a front
+[00:20:12] end on top of our repository and you
+[00:20:13] find out that you know the subjects are
+[00:20:16] you know may become very obvious that
+[00:20:18] the sub browsing by subject is
+[00:20:19] impossible because you know the subject
+[00:20:21] headings haven't been um haven't been um
+[00:20:24] normalized properly. That's something
+[00:20:25] that we'll find out very quickly and
+[00:20:27] then you know we'll see is that
+[00:20:28] something that we need right now or
+[00:20:30] something we need to do later how can we
+[00:20:31] address it.
+[00:20:36] So in terms of the road map so this is
+[00:20:39] these are these are the things we're
+[00:20:41] trying to build for April 2013.
+[00:20:44] Um
+[00:20:46] it's the wet clay metaphor is is good. I
+[00:20:50] think our some of our clay is almost
+[00:20:52] slurry you might say. So it's I mean the
+[00:20:56] approach that we're taking towards
+[00:20:57] towards building this out is we're it's
+[00:20:59] it's
+[00:21:01] about move like moving the ball forward
+[00:21:04] getting real data seeing what works and
+[00:21:07] and just pushing along. We we don't have
+[00:21:09] sort of a a dayby-day plan between now
+[00:21:11] and April but we have a set of
+[00:21:13] priorities and a sequence of events
+[00:21:15] which we want things to happen. Um and
+[00:21:18] we you know we want feedback we want
+[00:21:21] input. That's sort of the one thing
+[00:21:23] throughout this project that has been,
+[00:21:25] you know, I've been sort of banging the
+[00:21:27] drum. Maybe not very effectively because
+[00:21:29] it's haven't gotten huge amounts of it,
+[00:21:30] but we really want as many people
+[00:21:32] engaged in looking at what we're doing
+[00:21:34] so we can make sure that we're doing the
+[00:21:36] right doing the right thing.
+[00:21:39] So in terms of the road map for so this
+[00:21:42] past April there was an alpha version of
+[00:21:44] the API that was put that was put
+[00:21:46] together um and we're actually we're
+[00:21:48] actually and that that um is the API
+[00:21:52] some of you may have worked with or seen
+[00:21:54] seen in the past that contained a lot of
+[00:21:57] um many many book records from Harvard's
+[00:21:59] collection as well as assorted other
+[00:22:01] pieces of metadata. We are sort of
+[00:22:03] following on in the spirit of that API.
+[00:22:05] It's the same many of the same types of
+[00:22:07] transactions, but really focusing on you
+[00:22:10] making the ingestion process more um
+[00:22:14] less handcrafted, less boutiquey, more
+[00:22:16] more industrial strength and um putting
+[00:22:18] the whole putting the whole thing on a
+[00:22:20] more of a production footing that will
+[00:22:22] carry us forward over the next, you
+[00:22:24] know, months and and maybe maybe years.
+[00:22:28] So
+[00:22:29] our immediate milestone is really early
+[00:22:31] November to have a version of API up
+[00:22:35] which contains some which allows you to
+[00:22:37] do some stuff and which has some
+[00:22:38] cultural metadata in it because we have
+[00:22:40] an app fest on November 8th and 9th and
+[00:22:42] it's going to be a really really sad
+[00:22:44] appfest if there's no API or there's no
+[00:22:47] data. So you know it really it really
+[00:22:50] concentrates the mind when you have a
+[00:22:51] specific deadline. So, previously DPLA
+[00:22:54] Midwest was my deadline, but then this
+[00:22:56] came up and thought, "Oh, that's better.
+[00:22:57] That'll be that'll be a good thing to
+[00:22:59] work for." Um so in terms of the front
+[00:23:02] end the front end design process is
+[00:23:05] kicking off um on Monday and we it's um
+[00:23:11] you know the IFAC is going to be going
+[00:23:13] through a typical design process in
+[00:23:14] terms of doing some discovery looking
+[00:23:15] personas doing wireframes doing a visual
+[00:23:18] design and the goal is to get to a fully
+[00:23:22] fleshed out design you know front-end
+[00:23:24] visual interaction design by the end of
+[00:23:27] December at which point um you know
+[00:23:28] it'll be put into HTML and then
+[00:23:30] development of that is going to continue
+[00:23:33] um in parallel with the API development
+[00:23:35] um in preparation for our launch in
+[00:23:37] April. So the a couple things about this
+[00:23:41] one is that the um
+[00:23:44] the front end
+[00:23:46] it's you know April 13th is is just
+[00:23:49] around the corner. It's even more just
+[00:23:51] around the corner than it was was
+[00:23:52] yesterday. So, the front-end design
+[00:23:54] process is going to have to move fairly
+[00:23:55] swiftly and we are still trying to
+[00:23:58] figure out what's the best way to get
+[00:23:59] community involvement so people can see
+[00:24:01] what's being um you know what what the
+[00:24:04] direction is that we're taking without
+[00:24:07] um compromising the schedule which means
+[00:24:10] that you know decisions need to be made
+[00:24:11] fairly quickly. So, you know, I'm going
+[00:24:13] to apologize in advance for that. That
+[00:24:15] process is going to sort of be plowing
+[00:24:18] ahead at full speed between now and
+[00:24:20] December. But um you know if you want to
+[00:24:22] provide input and you don't think the
+[00:24:24] opportunities are there just keep on
+[00:24:26] chasing us and we'll make sure that
+[00:24:28] happens. Um
+[00:24:31] so between in parallel with the front
+[00:24:32] end being you know once the FS is done
+[00:24:34] in parallel with the front end being
+[00:24:36] developed we're just going to be
+[00:24:37] iterating through and developing the
+[00:24:39] platform and you know we are it's going
+[00:24:43] to
+[00:24:45] I guess what I say is we are planning to
+[00:24:47] once after the app fest new versions of
+[00:24:49] the API with the new features we develop
+[00:24:51] are going to continually be made
+[00:24:52] available on the public facing site so
+[00:24:55] people can continue working against it
+[00:24:56] and and seeing what's in there. We are
+[00:24:59] going to be taking our sort of general
+[00:25:01] approach is let's take one of our
+[00:25:02] content sources, ingest it, see what
+[00:25:04] doesn't work, fix that, get that to a to
+[00:25:07] an appropriate level of of quality um so
+[00:25:10] that it doesn't want to do then do the
+[00:25:11] next content source and hopefully as we
+[00:25:13] move through this process we will um
+[00:25:16] subsequent content sources will be
+[00:25:18] easier to do and if they aren't then
+[00:25:20] we're obviously doing something wrong.
+[00:25:22] So but it's basically a continuous
+[00:25:24] process of iterating improving until
+[00:25:26] until April. This is a um you know this
+[00:25:30] is a this is a challenging plan because
+[00:25:31] we're building the front end and
+[00:25:32] integrating and lots of things are going
+[00:25:34] at the same time. Um so we are going to
+[00:25:37] do our best to to keep on top of it.
+[00:25:42] There's a lot of other stuff that we
+[00:25:44] have sort of in the hopper for April and
+[00:25:47] again this is going to be prioritized
+[00:25:49] sort of on um you know an as we need it
+[00:25:53] basis. So, uh, you know, if we don't
+[00:25:56] have anybody who if none of the service
+[00:25:58] hubs is trying to provide us data using
+[00:25:59] EAD, then we're not going to we're not
+[00:26:01] going to do that right now. But this
+[00:26:03] gives you sort of a sense of the types
+[00:26:04] of things that are out there. Um, you
+[00:26:07] know, as as John said earlier, it's all
+[00:26:10] about opportunity cost and
+[00:26:11] prioritization. So, there's a ton of
+[00:26:14] stuff to do. Some of it's going to be
+[00:26:15] before April, some of it's going to be
+[00:26:16] after April. I don't know which is going
+[00:26:17] to be which at this point. our what the
+[00:26:19] main thing is our sort of main priority
+[00:26:21] is to get the core the core
+[00:26:23] functionality in place get the injection
+[00:26:25] process working and get the front end in
+[00:26:27] a in a point which is going to be
+[00:26:29] compelling and interesting.
+[00:26:34] So as I said we we want people to get
+[00:26:36] involved this the dev portal on the DPA
+[00:26:39] wiki is really the best place to find
+[00:26:41] out what's going on. We're posting um
+[00:26:44] status reports in terms of um you know
+[00:26:46] what's happened in the past week there.
+[00:26:48] That is the the hub and um at which you
+[00:26:52] can get all the information about the
+[00:26:53] schema, all our development
+[00:26:54] documentation. We're also have our
+[00:26:58] our sort of weekby-eek plan is being
+[00:27:00] tracked in Redmine which is sort of a
+[00:27:02] project management issue tracking
+[00:27:03] system. It's open there. It's public.
+[00:27:06] You can go and see what we're doing and
+[00:27:09] harass us about it if you want to. It's
+[00:27:12] um you know if you really really want to
+[00:27:14] get in the details that's what's going
+[00:27:15] on. The code is on GitHub. We have two
+[00:27:17] separate repositories set up now under
+[00:27:19] github.com/dpla.
+[00:27:21] Platform and ingestion are the um the
+[00:27:24] ones we're starting with um which are
+[00:27:25] the platform and the ingestion. And you
+[00:27:28] know again once code is is developed
+[00:27:32] will be pushed there and you can take a
+[00:27:33] look and if you're adventurous you can
+[00:27:35] download yourself and um and see what's
+[00:27:38] going on. So,
+[00:27:42] in terms of
+[00:27:44] um sort of contributing, the Yapfest is
+[00:27:48] a great place. There's a a um spot in
+[00:27:51] the DPA wiki where you can go and
+[00:27:53] suggest things you want people to build,
+[00:27:55] which seems like a great idea because if
+[00:27:57] they don't build it, you haven't lost
+[00:27:58] anything. And if they do, you've you've
+[00:28:00] got something. Um if you can attend,
+[00:28:02] great. Register, sign up. Um, and also
+[00:28:05] just,
+[00:28:07] you know, build on top of the API. Build
+[00:28:08] something, try something out, see if it
+[00:28:10] works for you. And if it doesn't, let us
+[00:28:11] know. And if it does, great. That'll be
+[00:28:13] exciting. Let us know features you want.
+[00:28:16] There's also there are a couple things
+[00:28:17] that we um,
+[00:28:20] you know, think there are also potential
+[00:28:22] areas for other people to contribute
+[00:28:23] that we haven't really figured out
+[00:28:25] exactly how to do yet. So, just to let
+[00:28:26] you know what the these are on our
+[00:28:28] radar. one is that
+[00:28:31] um you know there we're planning on
+[00:28:33] building a library of utilities and
+[00:28:35] modules that help in terms of data
+[00:28:36] enrichment cleanup and so forth and that
+[00:28:38] seems and how we're architecting this is
+[00:28:39] that each of those libraries is accessed
+[00:28:42] over a rest you know rest API they use
+[00:28:44] internally so there's a very you know
+[00:28:47] it's in theory possible for someone just
+[00:28:48] to build a module that does um you know
+[00:28:51] entity extraction or some interesting
+[00:28:53] type of um enrichment that we haven't
+[00:28:55] thought of. So, we would like to be able
+[00:28:58] to let people, you know, give people the
+[00:29:01] tools to build those modules and plug
+[00:29:03] them in. We haven't quite figured out
+[00:29:04] what the best mechanism for that is yet
+[00:29:06] either. What the best mechanism for that
+[00:29:08] is yet. We also want to make it easy for
+[00:29:12] people to discover other things that
+[00:29:15] people are building on top of the DLA
+[00:29:17] API. So, um you know, maybe this is a
+[00:29:20] shared space in GitHub, maybe something
+[00:29:22] else. We don't really know yet, but we
+[00:29:23] want we what we do know is by the time
+[00:29:25] people start building things with the
+[00:29:26] appfest, we want there to be place you
+[00:29:27] can go and see what people are doing um
+[00:29:31] on top of the API.
+[00:29:34] All right.
+[00:29:36] So,
+[00:29:37] this these are the folks who've been
+[00:29:38] working on developing it. Some people
+[00:29:40] some are developing, some have been part
+[00:29:42] of a you know a team that's been
+[00:29:43] reviewing and and sort of monitoring
+[00:29:45] progress as we go. Um it's been you know
+[00:29:48] it's been great. Um
+[00:29:52] there also
+[00:29:54] um
+[00:29:56] and that's pretty much all I have. I've
+[00:30:00] left a lot of time I think for
+[00:30:02] questions. So um I see one right here.
+[00:30:08] Just you want to wait for the
+[00:30:09] microphone.
+[00:30:15] We love you. Sincere loved you. I've
+[00:30:18] never But that is so redeeming. Um, a
+[00:30:21] lot of lies was able to do Jesus was
+[00:30:24] able to meet it says it's on. Okay,
+[00:30:25] there you go. A lot of libraries use
+[00:30:28] Drupal to develop frontends for the
+[00:30:32] various applications and uh it seems
+[00:30:35] like uh if you had a if there was a
+[00:30:38] Drupal module for DLA this you you could
+[00:30:43] uh really leverage a lot of front-end
+[00:30:46] development. Has there been any thought
+[00:30:49] of trying to interest uh someone in the
+[00:30:51] Drupal community or uh or or somebody in
+[00:30:56] the in the core coding group to uh come
+[00:30:59] out with a a Drupal module by April 13th
+[00:31:04] or shortly thereafter? I think I think
+[00:31:06] that's a great idea. I think it would be
+[00:31:08] an excellent appfest thing. As someone
+[00:31:10] in the Drupal community, I would say
+[00:31:12] yes. That's that's great. We don't we
+[00:31:15] don't have any we don't have any
+[00:31:16] specific plans to build ourselves right
+[00:31:17] now but it' be a great appfest thing
+[00:31:20] question over there
+[00:31:23] or a comment I should say
+[00:31:26] Jeff um I'm wondering given the fact
+[00:31:29] that most of us have to do a lot of
+[00:31:31] reporting of things uh to justify the
+[00:31:35] work we're doing. I'm wondering what as
+[00:31:37] far as analytics and metrics has been
+[00:31:40] talked about from the uh infrastructure
+[00:31:43] side. Um I think it's been talked about
+[00:31:47] in the extent that we want to have
+[00:31:48] reporting and analytics but we haven't
+[00:31:52] but it it's um I think once we but it's
+[00:31:56] it's one of the things we know we need
+[00:31:58] to do it we haven't drilled down to the
+[00:31:59] detail. expect once we the first time we
+[00:32:02] run a new issue we're going to say okay
+[00:32:03] we need some analytics and reporting on
+[00:32:04] this and then we'll start building at
+[00:32:06] that point but there's specific
+[00:32:08] analytics or reporting that you think
+[00:32:09] would be useful then that would be
+[00:32:11] definitely something we'd like to know
+[00:32:12] about
+[00:32:16] any other comments or questions
+[00:32:27] um
+[00:32:31] I think when you said search DLA, what
+[00:32:34] exactly does that mean? What are you s
+[00:32:36] What are you searching? You're doing
+[00:32:37] that would be a either a full text
+[00:32:40] search of all the metadata um or a
+[00:32:43] search constrained by a particular field
+[00:32:45] or it's a date search constrained by a
+[00:32:48] date range of some kind or location
+[00:32:50] search.
+[00:32:52] Actually one thing I forgot to mention
+[00:32:54] earlier is just in terms of um you know
+[00:32:57] technology that we're using to build
+[00:32:59] this there's a whole layer of discussion
+[00:33:01] underneath this I don't really want to
+[00:33:02] get into because it you know it's pretty
+[00:33:04] timeconuming probably of interest to
+[00:33:05] only a smaller subset of people but we
+[00:33:08] are we are using um elastic search to
+[00:33:12] provide the core searching and faceted
+[00:33:14] search functionality the repository is
+[00:33:16] going to be in couchd and then we're
+[00:33:18] also using a bunch of um code from the
+[00:33:22] recollection project library congress to
+[00:33:24] kick off the ingestion work. So relying
+[00:33:27] on that.
+[00:33:32] Any other comments?
+[00:33:36] I don't want to cut anyone else off.
+[00:33:40] Think we're good. Go for it. Um, so
+[00:33:42] there's a one email we got from David
+[00:33:44] Rothman who's been a frequent
+[00:33:46] participant in the DPLA discussions
+[00:33:47] online and I thought I'd just take this
+[00:33:50] opportunity to share his idea. Just
+[00:33:52] float it up.
+[00:34:01] Hello. Thank you. Um, it's not exactly a
+[00:34:04] techdev idea, but it's one that you
+[00:34:05] might react to and get it on the record.
+[00:34:07] Um, David's suggestion is that the DPLA
+[00:34:10] eventually, not necessarily the first
+[00:34:12] version, think about serving as a
+[00:34:14] digital locker for books and other items
+[00:34:16] for library patrons to use and enjoying
+[00:34:18] eternal access to content they bought
+[00:34:20] from Amazon, Barnes & Noble, and other
+[00:34:21] places, even if it were sort of a
+[00:34:23] spin-off idea. No, this is not clearly
+[00:34:26] core to where we've been going, and I
+[00:34:27] know it would raise a lot of uh other
+[00:34:29] issues. But I wonder how, just to use
+[00:34:31] this as an example, we might think about
+[00:34:35] sort of keeping in a parking lot a bunch
+[00:34:36] of ideas such as this one from Mr.
+[00:34:39] Rothman in a um I don't know if it's
+[00:34:42] someday desired functionality or how
+[00:34:44] you're thinking about ideas like this
+[00:34:46] that obviously we'd have to think about
+[00:34:47] as a policy matter. Would we ever accept
+[00:34:49] DRM? would we, you know, lots of things
+[00:34:52] would flow from it, but just so we kind
+[00:34:54] of capture thoughts early in the process
+[00:34:56] that aren't going to be in the the April
+[00:34:58] 2013 version, but we might want to
+[00:34:59] return to conceptually. I think that
+[00:35:01] would be great. I mean, it would be I
+[00:35:02] think it would be definitely useful to
+[00:35:04] have a place where all the things that
+[00:35:05] we've thought about on the radar and
+[00:35:08] either we've said, you know, it's our
+[00:35:10] understanding we're not going to be
+[00:35:11] doing this or we want to do at some
+[00:35:12] point in the future and giving people a
+[00:35:14] way to um to contribute to that would be
+[00:35:16] would be great. something you can guess
+[00:35:18] that is something we can set up.
+[00:35:26] Yeah. Okay. Um I know this isn't a
+[00:35:29] question that applies to the situation
+[00:35:33] between now and April, but it's a
+[00:35:36] question that's h over for a long time.
+[00:35:38] Um we talk about orphan works in a in a
+[00:35:43] um paper environment. I often think of
+[00:35:47] this whole world of bastard works in a
+[00:35:49] digital environment. That is to say, um
+[00:35:53] digital uh archives of material that
+[00:35:56] have been built in HTML uh and that uh
+[00:35:59] cannot be ingested. Uh I' I've been
+[00:36:03] doing an awful lot of work with
+[00:36:04] incredibly rich depositories that just
+[00:36:08] cannot come in. Yeah. Well, what kind of
+[00:36:12] um ideas are there out there for
+[00:36:15] automating the ingestion of this kind of
+[00:36:17] stuff? So I mean this is something that
+[00:36:19] we we have has been on our radar and
+[00:36:21] we've called it the web harvester
+[00:36:23] basically and the the idea is you would
+[00:36:26] point it at a collection like
+[00:36:28] essentially a website which contains a
+[00:36:30] collection and then um you know it
+[00:36:33] sounds it's not easy it's hard but you
+[00:36:36] know go and harvest that and like try to
+[00:36:38] like based on the um clues in terms of
+[00:36:41] the URLs the hierarchy of the content
+[00:36:43] figure out what the structure of it is
+[00:36:45] and then um you know basically pull out
+[00:36:49] the data and get it ready and have it
+[00:36:51] prepared for ingestion into the DLA.
+[00:36:53] Obviously there are a lot of pieces to
+[00:36:56] that. You know there's certainly certain
+[00:36:57] amount of you know probably tweaking to
+[00:37:00] you know read you know read out the
+[00:37:03] website look at the data come back tweak
+[00:37:05] the settings so we can identify the
+[00:37:07] particular fields that map to particular
+[00:37:08] fields of DPA and there's it's more of a
+[00:37:11] a cleansing process that could be
+[00:37:13] something um another idea that came up
+[00:37:15] the um yesterday was looking at the
+[00:37:19] service hubs. So we have service hubs
+[00:37:21] right now that are geographically based.
+[00:37:23] Essentially, there's no reason why there
+[00:37:25] couldn't be a service hub whose job was
+[00:37:27] to um you know work with smaller groups
+[00:37:30] who have websites that have um rich data
+[00:37:33] in it and they could build the tools to
+[00:37:37] ingest that data um deal with a lot of
+[00:37:39] the sort of hands-on communication and
+[00:37:41] manual work that would be required maybe
+[00:37:43] crowdsourcing that or however you want
+[00:37:45] but handling those interactions and then
+[00:37:48] feed to the DLA a cleaned up um you know
+[00:37:51] a cleaned up feed that we could then It
+[00:37:53] does it that does introduce some other
+[00:37:56] complications because one of the things
+[00:37:58] that we're doing in terms of looking at
+[00:37:59] the
+[00:38:01] the data that we're getting from service
+[00:38:02] hubs is part of our remitt you know we
+[00:38:05] think is to go and make sure that you
+[00:38:06] the original content is still there and
+[00:38:08] you know get changes and so forth. So in
+[00:38:10] an environment where you're doing a
+[00:38:12] one-time ingestion of website and then
+[00:38:14] cleaning up and then following the delay
+[00:38:15] that becomes a little more problematic.
+[00:38:17] Um, but I think that's a great example
+[00:38:19] of where a service hub could spring up
+[00:38:21] and, you know, take on, you know, take
+[00:38:23] on that type of role.
+[00:38:32] Questions from the virtual community.
+[00:38:40] All right,
+[00:38:41] concludes the session. Jeffrey, great
+[00:38:43] job. We will reconvene here in about
+[00:38:44] 3:45. Thank you.

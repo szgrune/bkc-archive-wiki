@@ -1,0 +1,1506 @@
+[00:00:01] all right I know some of you are still
+[00:00:03] getting your your food in the back of
+[00:00:05] the room but but maybe we'll we'll start
+[00:00:08] start things going that was really fast
+[00:00:11] I appreciate that things thanks
+[00:00:14] everybody for being here my name is
+[00:00:15] Chris Babbitt's I'm a clinical professor
+[00:00:16] here at the Law School and along with a
+[00:00:18] couple of our panelists and faculty
+[00:00:20] co-director at the Berkman Kline Center
+[00:00:22] for Internet and Society and we're
+[00:00:24] really thrilled to welcome you to
+[00:00:25] today's event this is in some ways one
+[00:00:28] of our usual Tuesday luncheon events we
+[00:00:30] host at the Berkman Kline Center for
+[00:00:32] those of you who do not come to those
+[00:00:33] regularly please go to our website sign
+[00:00:36] up they are not usually quite this big
+[00:00:38] but we do feed you and offer you
+[00:00:40] scintillating conversation and
+[00:00:41] discussion almost every Tuesday so sign
+[00:00:44] up for our mailing lists if you're not
+[00:00:46] able to come in person the events are
+[00:00:47] typically live streamed as is this one
+[00:00:49] and will be archived online later so you
+[00:00:51] can tune in I mentioned that just in
+[00:00:53] case you asked a question later as we
+[00:00:55] hope you will just be mindful that your
+[00:00:57] you're live online we are here today to
+[00:01:01] talk about a broad range of topics that
+[00:01:04] I think generally fall under the
+[00:01:06] umbrella of algorithmic fairness
+[00:01:08] algorithmic justice at the Berkman Kline
+[00:01:10] Center we have an initiative underway
+[00:01:11] around ethics and governance of
+[00:01:14] artificial intelligence and a
+[00:01:15] significant swath of that work touches
+[00:01:18] on some of the issues we're going to be
+[00:01:19] talking about today
+[00:01:21] very specifically in the criminal
+[00:01:22] justice system and also more broadly as
+[00:01:24] we deploy and develop and as
+[00:01:27] particularly government actors procure
+[00:01:30] algorithmic technologies do things like
+[00:01:32] performing risk assessments on criminal
+[00:01:34] defendants and the like what what
+[00:01:36] factors do they need to be considering
+[00:01:37] how do we do our best to ensure that
+[00:01:40] those systems are not biased or as
+[00:01:42] unbiased as we can we can make them and
+[00:01:45] we have an incredible group of panelists
+[00:01:48] here today to talk to us about these
+[00:01:49] topics Chris Griffin and Jonathan
+[00:01:52] Zittrain here from the law school
+[00:01:54] Margo self so that Seltzer and Cynthia
+[00:01:56] twerk from School of Engineering and
+[00:01:58] Applied Sciences and rather than my
+[00:02:00] sitting here and reading their BIOS to
+[00:02:02] you I'm gonna maybe go down the line and
+[00:02:03] ask each of them to introduce themselves
+[00:02:04] talk a little bit about the work that
+[00:02:06] they do relevant to the subject matter
+[00:02:08] of
+[00:02:09] be talking about today and just offer a
+[00:02:11] few general words on their perspective
+[00:02:15] on sort of algorithmic fairness and
+[00:02:17] justice and from there we'll turn this
+[00:02:20] into a discussion again we'll be sure
+[00:02:22] and leave hopefully about 15 minutes at
+[00:02:23] the end for questions from you and Chris
+[00:02:26] since you are seated immediately to my
+[00:02:28] right I'm gonna ask if we can start with
+[00:02:30] you sure good afternoon everyone my name
+[00:02:33] is Chris Griffin and I am the research
+[00:02:34] director of the access to justice lab
+[00:02:36] here at Harvard Law School the ADA J lab
+[00:02:39] was founded in the summer of last year
+[00:02:42] and one of our founding projects is in
+[00:02:46] fact on pre-trial risk assessment
+[00:02:48] everything that we do at the ADA J lab
+[00:02:51] is pursuant to a randomized control
+[00:02:53] trial so I hope that as the conversation
+[00:02:56] progresses we'll talk specifically about
+[00:02:59] why we chose that methodology for the
+[00:03:02] lab why and how we're applying it to the
+[00:03:05] question of pretrial risk assessments
+[00:03:08] and just to let you know a little bit
+[00:03:11] about myself my background is in
+[00:03:13] empirical law and economics and I came
+[00:03:16] to the lab having analyzed data after
+[00:03:21] the fact not looking at how we can
+[00:03:24] evaluate prospectively how new
+[00:03:27] interventions in the legal system are
+[00:03:28] affecting both adjudicatory and outcomes
+[00:03:32] and outcomes that arise after the
+[00:03:34] courthouse steps and one of our again
+[00:03:37] signature evaluations is of pre-trial
+[00:03:41] risk assessment and it is an evaluation
+[00:03:44] of an algorithm and I am happy to say
+[00:03:49] that we're doing that unfortunately for
+[00:03:50] this conversation I don't have any
+[00:03:52] results to share with you because our
+[00:03:55] first things take a lot they take a long
+[00:03:57] time to do and our first evaluation
+[00:03:58] launched only in April of this year but
+[00:04:01] I can say at the outset from where I sit
+[00:04:04] right now that a big part of the
+[00:04:06] conversation regarding the use of
+[00:04:09] algorithms and especially the criminal
+[00:04:11] justice system is what is our
+[00:04:14] counterfactual thinking if you have deep
+[00:04:18] concerns about the use of these tools
+[00:04:21] hopefully what we'll talk
+[00:04:23] this afternoon is what the alternative
+[00:04:25] would be and we know that a big part of
+[00:04:27] that is unguided human decision-making
+[00:04:29] which is not the worst thing in the
+[00:04:32] world but it certainly is not the best
+[00:04:34] and so our job as we see it at the agent
+[00:04:37] APA lab is to really understand how much
+[00:04:40] more predictive power these algorithmic
+[00:04:42] tools are providing to our judicial
+[00:04:44] officials excellent Chris thank you
+[00:04:47] Margo hi I'm Margo Seltzer I'm a
+[00:04:50] professor of computer science in
+[00:04:51] Harvard's Johnny Paulsen School of
+[00:04:54] Engineering and Applied Sciences I'm
+[00:04:56] also the faculty director of the Center
+[00:04:58] for Research Center for research and
+[00:05:00] computation and society we call
+[00:05:02] ourselves circus and we have a grand old
+[00:05:04] time
+[00:05:04] and I also feel like I have a bit of an
+[00:05:07] impostor on this panel so my research is
+[00:05:10] primarily in the area of systems not AI
+[00:05:12] not fairness not law but I have in fact
+[00:05:17] for the last year year and a half
+[00:05:19] been working on a form of model building
+[00:05:23] called transparent models and I think
+[00:05:24] I'm a huge fan of the concept of
+[00:05:27] transparency in a model which is that
+[00:05:29] instead of entrusting any kind of
+[00:05:31] decision making or advice-giving to a
+[00:05:33] black fox I would prefer that I could
+[00:05:36] give you a in the words of my colleague
+[00:05:38] Cynthia reading an index card that you
+[00:05:40] could understand exactly what the model
+[00:05:42] is saying and what it's doing and then
+[00:05:44] maybe we can have a discussion about how
+[00:05:46] one would apply what we've learned from
+[00:05:47] that model so I'm going to be arguing
+[00:05:49] about transparency more than anything
+[00:05:52] else
+[00:05:53] terrific Cynthia so I'm also in computer
+[00:05:58] science and I'm new to Harvard I only
+[00:06:02] started here in January I've been coming
+[00:06:08] at fairness from a theoretical
+[00:06:09] perspective so I'm a theoretical
+[00:06:11] computer scientist and I've been trying
+[00:06:13] to look at how would we actually define
+[00:06:16] fairness and once we had good definition
+[00:06:20] how would we be able to determine how
+[00:06:22] would we be able to generate decision
+[00:06:25] making algorithms I did hear to our
+[00:06:27] definition of fairness and how can we
+[00:06:29] test other algorithms to see whether or
+[00:06:31] not they're fair interestingly I'm my
+[00:06:36] les convinced of the transparency
+[00:06:39] question and I'm trying to put some
+[00:06:41] thoughts together for presentation
+[00:06:44] tomorrow that will address that those
+[00:06:49] black belts just so you know excuse me
+[00:06:51] I'm a third degree black belt yes okay
+[00:07:06] I'm traveling Citroen I am a professor
+[00:07:08] both of Law School and in the computer
+[00:07:10] science department here and one of the
+[00:07:13] cofounders of the Berkman Center for
+[00:07:15] Internet and Society and I already hear
+[00:07:25] some great themes I'm looking forward to
+[00:07:28] plumbing including transparency and I
+[00:07:31] would break that into transparency of
+[00:07:33] the overall technical system you might
+[00:07:36] be renting deploying that contracting
+[00:07:39] out for and especially when we think of
+[00:07:42] the administration of criminal justice I
+[00:07:43] think it's a great question to ask what
+[00:07:45] parts should a municipality or other
+[00:07:47] public authority roll its own versus
+[00:07:49] what should be contracted out to a
+[00:07:52] private firm that then might be
+[00:07:53] proprietary about what it does I'd love
+[00:07:56] to see us avoid the mistakes that have
+[00:07:59] been made with voting machine technology
+[00:08:01] over the past 20 years on that front and
+[00:08:04] there's also the question of
+[00:08:05] transparency of if you do get to see the
+[00:08:07] algorithm how much do you feel like you
+[00:08:10] have any insight into the kinds of
+[00:08:12] decisions it's making it may be that
+[00:08:14] transparency doesn't solve a whole lot
+[00:08:17] and then there's also the question of
+[00:08:20] predictive power something might
+[00:08:22] actually have terrific predictive power
+[00:08:25] and then also by some accounts be
+[00:08:29] incredibly biased if we take as a
+[00:08:31] hypothesis that the police may be more
+[00:08:33] likely to arrest one type of person or
+[00:08:37] one ethnicity over another then the
+[00:08:40] baseline recidivism rate on which you
+[00:08:43] would say is this disproportionate or is
+[00:08:46] it fair is it self
+[00:08:48] influenced by the behavior of law
+[00:08:50] enforcement before something even enters
+[00:08:52] the courthouse and thinking about how
+[00:08:55] you would try to adjust for that if at
+[00:08:57] all possible in an algorithm I think is
+[00:09:00] a deeply deeply profound and difficult
+[00:09:04] question
+[00:09:05] finally I'm interested in the use of AI
+[00:09:08] not just to judge an individual who's
+[00:09:10] standing before the criminal justice
+[00:09:12] system it has to make decisions about
+[00:09:13] that person but rather holistically to
+[00:09:17] what extent could AI shed light on the
+[00:09:19] root causes that might say this is why
+[00:09:21] you have so many cases coming through
+[00:09:23] your courthouse here are the inputs
+[00:09:24] maybe an intervention here for thinking
+[00:09:27] in Sim City terms time to build a
+[00:09:28] stadium or a park or something maybe
+[00:09:31] those are the sorts of things that AI
+[00:09:32] could shed light on it and suddenly what
+[00:09:34] it appeared threatening might actually
+[00:09:35] be quite interesting that's great so
+[00:09:40] many places we could start there I'm
+[00:09:41] inclined since it came up in I think all
+[00:09:43] four of your introductions in one way or
+[00:09:45] another to start with this transparency
+[00:09:46] question and I can say one of the most
+[00:09:49] interesting things to me about being
+[00:09:51] involved in this broad initiative we
+[00:09:53] have around algorithms and justice and
+[00:09:55] the interplay between artificial
+[00:09:57] intelligence and these kind of
+[00:09:58] powerfully predictive tools that
+[00:10:00] Jonathan mentioned has been getting
+[00:10:01] computer scientists and lawyers in the
+[00:10:03] same room and to talk about legal
+[00:10:05] concepts and CS concepts that seemed to
+[00:10:07] map neatly on to it one another but but
+[00:10:09] often don't transparency is one of those
+[00:10:11] where we have a notion in law of due
+[00:10:13] process where at the end of the day if
+[00:10:15] the state is going to make some decision
+[00:10:16] about me we want that to be done via
+[00:10:19] some process that is both fair
+[00:10:21] understandable open to the public in
+[00:10:23] some ways and in some ways that fits
+[00:10:27] neatly with I think the idea is that
+[00:10:28] Margo and Cynthia we're talking about
+[00:10:30] when they mentioned transparency in the
+[00:10:33] context of computer science maybe I'll
+[00:10:35] start with you Margo can you talk a
+[00:10:36] little bit more about what you mean when
+[00:10:38] you say you've become a strong proponent
+[00:10:40] of transparent systems sure so what I
+[00:10:43] mean by transparent system design is
+[00:10:44] that if a system makes a decision about
+[00:10:47] you or comes up with a prediction about
+[00:10:51] you that you can say hmm and why did you
+[00:10:54] make that prediction and I can give you
+[00:10:57] an answer in some way that has actually
+[00:10:59] come
+[00:10:59] hen scible to you and I draw the line it
+[00:11:01] comprehensible which is that you know a
+[00:11:03] reasonable person could look at the
+[00:11:05] model and have some sense of why it's
+[00:11:07] predicted the way and for them as
+[00:11:09] opposed to a set of numbers that that
+[00:11:13] seem to map to certain features that
+[00:11:15] don't map to anything recognizable about
+[00:11:17] you so well that's what I mean by
+[00:11:19] transparent so if I can give you a set
+[00:11:21] of statements that are of the form you
+[00:11:23] know if you are speaking on a panel and
+[00:11:26] you're wearing purple then we predict
+[00:11:28] you are in favor of transparency if you
+[00:11:32] are it's been true every time I've seen
+[00:11:34] it so far
+[00:11:38] transparency but the model is that
+[00:11:41] easily interpretable is my goal it is
+[00:11:43] that hard to do again from a technical
+[00:11:47] perspective from a legal perspective
+[00:11:48] that seems very much in line with what I
+[00:11:50] think lawyers would expect from
+[00:11:52] interactions with the justice system
+[00:11:53] that if I walk into a court and they say
+[00:11:56] you're a risk score is X and Jonathan
+[00:11:58] walks in and his risk score is X plus 3
+[00:11:59] that we should be able to understand the
+[00:12:02] distinction between those two that but
+[00:12:05] yet in conversations that we've been
+[00:12:06] having again between lawyers and
+[00:12:08] computer scientists here it's it's it's
+[00:12:09] been suggested that in some ways that's
+[00:12:11] not always as as easy as we would want
+[00:12:14] it to be for anyone else so one is I
+[00:12:19] would like to be able to say why is my
+[00:12:21] risk score lower than Jonathan's or
+[00:12:24] higher than Johnson so that's the
+[00:12:25] question I want to be able to answer and
+[00:12:28] then there's a second piece I wanted to
+[00:12:30] say which is oh you know how hard is
+[00:12:34] that technically it seems to be and I
+[00:12:37] won't say that we like know this with
+[00:12:39] certainty but it seems to be that in
+[00:12:42] some cases you can achieve higher
+[00:12:44] accuracy for techniques that do not
+[00:12:46] produce these models but I don't think
+[00:12:49] we know for sure unless if you will
+[00:12:52] correct me that it is always the case
+[00:12:54] that you can do better with a model that
+[00:12:56] is not explainable that fair yes it's
+[00:13:00] fair so the class of models that
+[00:13:04] include both the explainable ones and
+[00:13:08] the let's say uninterpretable ones is
+[00:13:11] strictly larger than the class of models
+[00:13:13] that are interpretable and therefore
+[00:13:16] there's it's certainly feasible that
+[00:13:19] there were things that have better
+[00:13:20] accuracy in the uninterpretable part I
+[00:13:24] should say people like Cynthia Rudin
+[00:13:27] have been rediscovering or
+[00:13:29] re-implementing techniques from like the
+[00:13:32] 80s that had been left fallow that have
+[00:13:37] is their highlight that they are
+[00:13:38] explainable and as you say it doesn't
+[00:13:40] mean they might they might not be better
+[00:13:42] but the explain ability might be an
+[00:13:44] important part of the legitimacy of a
+[00:13:46] process but I'm also thinking in theory
+[00:13:49] of David Weinberger's recent work where
+[00:13:52] he's been talking about what if there
+[00:13:54] are aspects to reality that are causal
+[00:13:58] there is a path but that happened to
+[00:14:01] depend on such a baroque set of
+[00:14:04] variables large complicated that they
+[00:14:07] just don't boil down to a formula like F
+[00:14:11] equals MA now that may or may not be the
+[00:14:13] case it may turn out that there are
+[00:14:14] often lying share kind of power law
+[00:14:18] explanations 80% of the phenomenon is
+[00:14:21] accounted for by 20% of the categories
+[00:14:23] of data for something but it doesn't
+[00:14:25] have to be that way it could be that
+[00:14:27] there's a category of knowledge that we
+[00:14:28] haven't accessed yet because we've only
+[00:14:30] been applying the the poor human mind to
+[00:14:33] problems and only the human you might
+[00:14:35] can only think in terms of F equals MA
+[00:14:37] or equals M c-squared or something that
+[00:14:40] the equation itself is just so long you
+[00:14:44] get bored by the time you're halfway
+[00:14:45] through reading it and at that point it
+[00:14:48] is explained it is transparent but it's
+[00:14:52] not really explained a bull and I'm not
+[00:14:56] sure what would happen is we get more
+[00:14:58] and more a is capable of generating
+[00:14:59] predictions without theory right okay so
+[00:15:02] I Jonathan I think Jonathan is
+[00:15:04] completely correct but I would like to
+[00:15:06] just go back even to the question of
+[00:15:09] these simple rules lists that Margot is
+[00:15:14] talking about
+[00:15:15] so the way the rules lists work is that
+[00:15:18] they're of the following form typically
+[00:15:20] you have antecedents and you have
+[00:15:24] probabilities so let's say you're trying
+[00:15:26] to classify mushrooms as to whether
+[00:15:29] they're likely to be poisonous or not
+[00:15:31] and you have certain features that you
+[00:15:33] look like look at maybe whether the
+[00:15:35] stalk is smooth or rough maybe whether
+[00:15:38] the mushroom has a foul odor or no odor
+[00:15:41] or smells like anise or maybe different
+[00:15:47] kinds of shapes of the head is that a
+[00:15:49] flat-headed is it a very conical head so
+[00:15:52] you have methods for generating rules
+[00:15:54] lists that are fairly simple
+[00:15:56] that will say if the stalk looks this
+[00:16:00] way and the head looks that way and the
+[00:16:02] smell is such-and-such then the
+[00:16:04] probability that it is poisonous is p1
+[00:16:07] and then there's another rule which is
+[00:16:11] really an else if so you have antecedent
+[00:16:14] 1 implies probability p1 of being
+[00:16:16] poisonous else antecedent to has
+[00:16:22] probability P to of being poisonous else
+[00:16:25] antecedent 3 has probability P 3 so when
+[00:16:30] you look at this rules list you may
+[00:16:32] think that the explanation of the
+[00:16:35] probability that that comes out is that
+[00:16:38] you have satisfied a certain antecedent
+[00:16:40] but that's not the whole story if you
+[00:16:43] get to antecedent 3 then in fact you
+[00:16:45] have failed to satisfy antecedent 1 you
+[00:16:48] have failed to satisfy antecedent 2 and
+[00:16:51] you're actually now at antecedent 3 so
+[00:16:53] it's not a 3 that is it's not just that
+[00:16:56] a 3 is true it's not a 1 and not a 2 and
+[00:17:00] a 3 and my suspicion and where I have an
+[00:17:06] undergraduate who's building a
+[00:17:07] experiment now to to test exactly this
+[00:17:10] sort of thing is that my suspicion is
+[00:17:12] that people simply don't understand that
+[00:17:14] they they're making a decision based on
+[00:17:17] this more complicated formula not a 1
+[00:17:19] and not a 2 and a 3 it's not just that a
+[00:17:23] 3 is true and so the whole question of
+[00:17:26] why was something classified this way
+[00:17:29] even in this incredibly simple scenario
+[00:17:32] is much more complex than initially
+[00:17:34] meets the eye absolutely right and
+[00:17:40] here's how I think about it let's
+[00:17:42] imagine instead of deciding as mushrooms
+[00:17:44] are poisonous we're deciding why you got
+[00:17:46] turned down for a loan okay and so you
+[00:17:49] know the examiner right can point and
+[00:17:51] say well you fell into you know this
+[00:17:53] clause let's say it's the third one that
+[00:17:54] said no we don't give you a loan a
+[00:17:57] question on your mind might be well what
+[00:18:02] could I do such that next time that
+[00:18:05] won't happen and so even if I can't
+[00:18:08] compute all the compound probabilities
+[00:18:09] they're actually resulting in Rule three
+[00:18:12] I could in fact look and say oh oh look
+[00:18:15] this rule up here would have said give
+[00:18:16] me the loan but I don't fit into it
+[00:18:19] because I didn't finish school or my
+[00:18:23] income isn't this so I think that even
+[00:18:25] though it's weighed farther than just
+[00:18:27] looking at the Clause you did fall into
+[00:18:29] you have a better chance of at least
+[00:18:32] responding to her understanding
+[00:18:33] something about how this decision was
+[00:18:35] made even though it is as Cynthia says
+[00:18:37] way more complicated no I couldn't agree
+[00:18:39] more fully but the question of
+[00:18:42] disagreement holding a lot of
+[00:18:44] disagreement how do I find how do I
+[00:18:47] you're asking what is a cheap and
+[00:18:51] reasonable path that I could take to
+[00:18:53] come to a different outcome that's a
+[00:18:55] very different mathematical question
+[00:18:58] from the question of why was I
+[00:19:01] classified a certain way and it's
+[00:19:03] conceivable that you can build
+[00:19:06] algorithms that are not interpreted
+[00:19:08] which still enable the how do I get to a
+[00:19:11] different outcome at a reasonable price
+[00:19:12] question to be answered Christian was
+[00:19:16] open about my thoughts on this our first
+[00:19:18] that at least in the criminal justice
+[00:19:20] realm your classification under an
+[00:19:24] algorithm is often a combination of
+[00:19:26] static factors over which you did have
+[00:19:29] control but you no longer do and some
+[00:19:33] dynamic ones namely interviews
+[00:19:35] especially in the pretrial release
+[00:19:37] context so when we think about
+[00:19:40] transparency and classification
+[00:19:42] and a lot of it can't Alysse in and the
+[00:19:45] criminal contacts can't be boiled down
+[00:19:47] to what could I have done differently at
+[00:19:49] the time of scoring except for perhaps
+[00:19:52] differential answers to the interview
+[00:19:54] and so I want to maybe offer a
+[00:19:57] hierarchical or multi-level approach to
+[00:20:01] thinking about transparency and this is
+[00:20:03] again informed by the work that we're
+[00:20:05] doing with the public safety assessment
+[00:20:06] the first thing which I really doubt
+[00:20:08] anybody in the public is going to get
+[00:20:11] their heads around in terms of
+[00:20:13] understanding how this works is the true
+[00:20:15] underlying research that produce an
+[00:20:17] algorithm be it a standard econometric
+[00:20:20] model be it certainly a machine learning
+[00:20:23] process but we could expect transparency
+[00:20:27] there again I don't know how much that's
+[00:20:29] going to advance the objectives of the
+[00:20:32] public understanding what's happening so
+[00:20:34] then we move to how is that research
+[00:20:36] translated into scoring mechanisms and
+[00:20:39] there we could focus on the inputs not
+[00:20:42] so much on how those inputs are
+[00:20:44] translated into outputs but what inputs
+[00:20:46] are we generally using to come up with
+[00:20:48] the risk scores but I'll argue even more
+[00:20:51] importantly because if you have an
+[00:20:53] ordinal risk scale from one to six for
+[00:20:55] example does the decision-maker actually
+[00:20:58] know what the difference is between a
+[00:21:00] two and a three or a three and a five
+[00:21:02] perhaps perhaps not what I think matters
+[00:21:05] the most is how those numbers are then
+[00:21:07] translated if at all into actionable
+[00:21:10] recommendations and there I think is
+[00:21:12] where transparency is most needed
+[00:21:14] because if the decision-maker has a set
+[00:21:17] menu of options that are angered by the
+[00:21:20] risk scores I think the public is most
+[00:21:22] interested in understanding how we
+[00:21:23] translate those scores into the
+[00:21:26] decisions that our public officials are
+[00:21:27] making can you say more about that I
+[00:21:29] don't understand what you're saying well
+[00:21:30] enough sure okay so in the specific
+[00:21:33] context of the PSA you have underlying
+[00:21:36] in that case proprietary research that
+[00:21:40] generated the model to predict risks of
+[00:21:43] failure to appear or committing a new
+[00:21:45] crime wait a second so when you say a
+[00:21:48] model here you mean something where I
+[00:21:50] feed in the data from this individual
+[00:21:52] and I get out a number say okay so there
+[00:21:54] was a
+[00:21:55] metric model that was fit by the
+[00:21:56] researcher that has now built into
+[00:21:59] software used in counties and states
+[00:22:01] around the country okay when you feed in
+[00:22:03] that information nine static risk
+[00:22:06] factors it spits out three outputs a
+[00:22:09] risk of failing to appear on a one to
+[00:22:12] six scale a risk of committing a new
+[00:22:15] crime on a one to six scale and a zero
+[00:22:17] one flag if the person is at elevated
+[00:22:20] risk of new violent criminal activity it
+[00:22:23] would be one thing to spit out those
+[00:22:24] fours hand those to the judge of initial
+[00:22:26] appearance and say Your Honor let us
+[00:22:29] know what you think about detention or
+[00:22:31] release but what they've done with the
+[00:22:33] PSA is convert through a matrix that is
+[00:22:36] chosen by the jurisdiction those risk
+[00:22:39] scores into specific recommendations and
+[00:22:42] another thing about these algorithms is
+[00:22:44] we want to ask ourselves do they
+[00:22:46] generate required action by the state
+[00:22:49] official or just another piece of
+[00:22:51] information to guide their decision
+[00:22:53] making and in the case of the PSA it's
+[00:22:56] merely a recommendation right well one
+[00:23:00] thing that Chris's remarks illustrate is
+[00:23:04] just the boring aspect of the critical
+[00:23:07] not the brain remarks I just wanted to
+[00:23:11] intercept that chuckle before it
+[00:23:12] completed the boring aspect of data
+[00:23:16] quality and whether your model as
+[00:23:20] implemented is able to reflect the
+[00:23:23] quality of the data going in you've got
+[00:23:25] somebody doing an interview of somebody
+[00:23:27] and they ask three questions and they
+[00:23:30] don't they didn't really get an answer
+[00:23:31] so they move on to the next one or
+[00:23:33] they're not certain about their
+[00:23:35] assessment if it's calling for any
+[00:23:36] discretion on the part of the
+[00:23:37] interviewer those are things you could
+[00:23:39] represent in a model but generally don't
+[00:23:42] and what it means is that by the time
+[00:23:44] and has funneled into a single score
+[00:23:46] much less through a matrix a
+[00:23:48] recommendation there's no representation
+[00:23:50] anymore of the quality of the data that
+[00:23:53] went in and the people doing the
+[00:23:54] interviews may have no clue that that
+[00:23:57] answer to that question could be the
+[00:23:59] difference between freedom and
+[00:24:01] confinement for the person they're
+[00:24:03] talking to so that's something you could
+[00:24:04] systemically try to work out in fact you
+[00:24:06] could study just how good
+[00:24:08] the corpus of data is in practice not
+[00:24:11] just in theory there was one other point
+[00:24:15] I was going to make but I may have lost
+[00:24:18] it so I'll just interrupt it but really
+[00:24:20] quickly to your point Jonathan one of
+[00:24:23] the things that we've learned in our
+[00:24:25] ongoing and prospective evaluations in
+[00:24:27] the PSA is that that data quality issue
+[00:24:29] is one that is highly highly fraught
+[00:24:34] across the country it's because because
+[00:24:37] just what if it turns out there's crappy
+[00:24:38] data well there is it so I believe that
+[00:24:41] the data that are collected in each
+[00:24:42] system are usually collected quite well
+[00:24:45] the problem is we know we talked about
+[00:24:47] voting earlier we know that voting
+[00:24:50] systems are adopted county by county
+[00:24:53] usually or are they could be that the
+[00:24:56] supervisors of elections are at that
+[00:24:59] local level the same is true for the
+[00:25:03] criminal justice system and that court
+[00:25:05] databases jail databases prosecutors
+[00:25:08] databases are all housed at the county
+[00:25:11] level and none of them ever talks to
+[00:25:14] each other and so one of the most
+[00:25:16] important issues about making sure that
+[00:25:18] the data inputs are as solid as possible
+[00:25:21] is hopefully educating states that if
+[00:25:24] they're building new databases or
+[00:25:25] reforming their existing ones please
+[00:25:28] create unique identifiers that abstract
+[00:25:32] from personal information but that
+[00:25:33] allowed the state and then evaluators
+[00:25:35] like us to be able to track individuals
+[00:25:37] across the system without that
+[00:25:39] algorithms are somewhat useless because
+[00:25:43] you can't track the inputs and the
+[00:25:45] outcomes in a reliable manner I should
+[00:25:47] say I remembered my second point it gets
+[00:25:49] back to Cynthia's mushrooms which is
+[00:25:53] mushrooms are a natural phenomena they
+[00:25:55] evolved a particular way that might mean
+[00:25:58] that there would be something amenable
+[00:26:00] to the kind of simple series of
+[00:26:02] antecedent and consequent statements
+[00:26:05] that you could make about them but
+[00:26:07] imagine if you could just design the
+[00:26:08] mushrooms and design them as deviously
+[00:26:11] as you please at which point you could
+[00:26:13] devise an arbitrarily complex rule set
+[00:26:16] with like the slightest exception for
+[00:26:19] what otherwise looks a hundred percent
+[00:26:21] safe
+[00:26:22] oh yeah in this case it has some really
+[00:26:24] modest quality that makes it poisonous
+[00:26:28] it would then be fair to ask for systems
+[00:26:30] like these where might the incentives be
+[00:26:34] to game it if you're creating the
+[00:26:36] qualities on which judging will happen
+[00:26:39] and I almost I think about the tax code
+[00:26:41] and the ways in which that is
+[00:26:43] purposefully recondite and there isn't
+[00:26:46] secret tax law it's all there but you
+[00:26:49] can read the tax code all night and
+[00:26:51] still have no clue what it's actually
+[00:26:53] telling you to do it's in part because
+[00:26:55] there are exceptions being written in
+[00:26:58] meant to be describing generically a
+[00:27:00] situation that only applies to one
+[00:27:02] company if you transpose that into the
+[00:27:05] realm of justice or something else you
+[00:27:06] could see a lot of problems with those
+[00:27:10] models and it's almost a recommendation
+[00:27:12] to say I'd rather trust a
+[00:27:13] machine-learning being getting feedback
+[00:27:15] from the world rather than some simple
+[00:27:18] model that gets deposited written by a
+[00:27:20] human did you have something to say
+[00:27:26] I'm just applause well it does I mean
+[00:27:29] your comment earlier Jonathan about the
+[00:27:32] interviewer who may not understand the
+[00:27:34] import of the question that she's asking
+[00:27:36] actually you one might view that as a
+[00:27:38] feature not a bug I guess if you're
+[00:27:40] trying to get human decision-making out
+[00:27:42] of these equations but it assumes a lot
+[00:27:44] about the way the overall model was
+[00:27:47] designed at the outset that was done
+[00:27:48] such that someone who doesn't know the
+[00:27:50] impact of what they're asking actually
+[00:27:51] gets to the right result you seem
+[00:27:53] skeptical well so so I want to get to
+[00:27:56] the other half these issues so we're
+[00:27:58] talking about you know what happens with
+[00:28:00] models and software and there's sort of
+[00:28:03] this implicit assumption here that well
+[00:28:07] clearly I mean the the suspicion around
+[00:28:10] machine algorithms right stems from some
+[00:28:12] inherent and I believe misplaced belief
+[00:28:16] that humans are actually fair and
+[00:28:18] unbiased right now we know that that's
+[00:28:20] not true like like we just know that
+[00:28:23] that's not true is there anyone here who
+[00:28:24] wants to argue that fact okay
+[00:28:27] maybe judges making decisions are less
+[00:28:29] biased than the typical human being but
+[00:28:32] but I'm going to claim they're still
+[00:28:33] biased to so now
+[00:28:35] question is what happens when you have a
+[00:28:38] human who is biased and maybe a piece of
+[00:28:41] software and a piece of software which
+[00:28:42] maybe is biased I'm not even sure how
+[00:28:47] you can make any statements about the
+[00:28:48] two of them but I'm hoping Cynthia at
+[00:28:50] some point solve that problem but but I
+[00:28:54] guess I would like to live in the
+[00:28:55] fantastical world where the person who's
+[00:29:00] ultimately making the decision so
+[00:29:01] assuming it's a recommendation can in
+[00:29:04] fact take a model with some
+[00:29:06] understanding of that it might be biased
+[00:29:09] in certain ways and maybe there are ways
+[00:29:11] we could describe that and that that
+[00:29:13] combination might actually be able to
+[00:29:15] make a more impartial decision because
+[00:29:18] at least if I'm a human and I'm thinking
+[00:29:20] about bias and bias in a model I might
+[00:29:23] actually then mentally be more
+[00:29:24] predisposed to thinking about my own
+[00:29:26] bias as well because we know that one of
+[00:29:29] the things people have a hard time doing
+[00:29:30] is confronting their own biases
+[00:29:32] automatically but that sometimes if you
+[00:29:35] can prompt them to think about it they
+[00:29:36] actually do a little better and so maybe
+[00:29:38] the model serves as a way to do that but
+[00:29:42] does that so one of the arguments in
+[00:29:45] favor of these kinds of risk assessment
+[00:29:46] tools in general is argument for
+[00:29:49] consistency is an argument that
+[00:29:51] different judges in different counties
+[00:29:53] or different judges in different states
+[00:29:54] will reach a more consistent set of
+[00:29:56] results the more we rob them of
+[00:29:57] discretion and reduce this to numbers
+[00:30:00] and I'm wondering if what you're saying
+[00:30:02] Margeaux pushes back against that
+[00:30:04] because you're suggesting that we ought
+[00:30:06] to be allowing the judges to use these
+[00:30:09] scores in some way but to have those
+[00:30:11] scores informed by their broader
+[00:30:13] understandings of the criminal justice
+[00:30:14] system fairness due process if we lived
+[00:30:20] in a world in which these algorithms
+[00:30:22] these risk assessments were demanding
+[00:30:26] before the court a number of legal
+[00:30:30] problems with that but also practical
+[00:30:33] and just the ethos of our system would
+[00:30:37] be lost we rely on the judicial official
+[00:30:41] to use his or her wisdom experience and
+[00:30:45] discretion to make these decisions
+[00:30:48] we like to think of these tools as not
+[00:30:53] even necessarily D biasing mechanisms
+[00:30:56] but information enhancing ones those
+[00:31:00] that reduce or it sorry increase the
+[00:31:04] signal-to-noise ratio so leaving out
+[00:31:07] biases that may correlate with
+[00:31:09] observable characteristics we also know
+[00:31:12] that human beings are imperfect
+[00:31:14] observers of the world around them and
+[00:31:16] so Mis classification could be not
+[00:31:19] connected to a suspect classification
+[00:31:21] like race or sex it could simply be a
+[00:31:25] misunderstanding of the risk that
+[00:31:27] anybody poses with a particular profile
+[00:31:30] and we are thinking about the PSA and
+[00:31:34] running some simulations right now to
+[00:31:37] suggest what the likely effect of a tool
+[00:31:40] like this could be and a lot turns not
+[00:31:42] only on how poor the observational
+[00:31:46] abilities are of the judges but also
+[00:31:48] what difference that variety in
+[00:31:52] observational skill makes how different
+[00:31:56] are people because if they're already
+[00:31:58] very different and misperception makes
+[00:32:01] them look a lot more alike than the risk
+[00:32:04] to will arguably separate people more
+[00:32:08] easily whereas if people are already
+[00:32:10] more alike misperception is likely to
+[00:32:13] keep them all bunched together and the
+[00:32:16] risk assessment tool is probably not
+[00:32:18] going to do a lot of work I'm skipping
+[00:32:19] over a lot of very specifics I'm talking
+[00:32:21] very vaguely and and generally but the
+[00:32:24] point is that we like to think of this
+[00:32:26] because bias is such a negative concept
+[00:32:28] and a lot of people's minds I don't
+[00:32:30] think we were mentioning it in that way
+[00:32:32] but bias could also just be termed as
+[00:32:35] the inability to perceive with with
+[00:32:39] sufficient clarity if if the data that
+[00:32:48] on which algorithms and model algorithms
+[00:32:51] are being trained and models are being
+[00:32:52] built is biased because as the number of
+[00:32:55] us have said already the system is in
+[00:32:57] perfect
+[00:32:58] and we have an historical system that
+[00:32:59] has relied on humans in perfect
+[00:33:01] judgments such that the data that cryst
+[00:33:03] mentions about whether you're likely to
+[00:33:05] flee or return for your trial whether
+[00:33:07] you're likely whether you're dangerous
+[00:33:08] or whether you're likely commit a
+[00:33:10] violent crime if we accept that those
+[00:33:12] datasets are themselves the products of
+[00:33:14] biased decision-making is there any hope
+[00:33:17] of training that bias out of these
+[00:33:19] systems as we as we build them garbage
+[00:33:24] in garbage out is there a generally I
+[00:33:27] would say garbage in garbage out yes
+[00:33:31] there are some attempts into in the
+[00:33:34] literature to try to do bias
+[00:33:38] I haven't found them theoretically
+[00:33:40] compelling and in general I think that
+[00:33:46] they're problematic but I don't I don't
+[00:33:51] know maybe it's maybe it's possible to
+[00:33:56] combine a small amount of unbiased data
+[00:33:59] with a lot of historical data and
+[00:34:02] somehow or other leverage the two of
+[00:34:07] them 2d bias the historical data or to
+[00:34:11] somehow learn models that are less
+[00:34:13] biased so that seems a lot less hopeless
+[00:34:17] I suddenly feel a little bit hopeless on
+[00:34:23] this two to one of your earlier
+[00:34:25] questions Chris you know if you maintain
+[00:34:29] a lot of discretion that could have the
+[00:34:32] countervailing effect of reducing the
+[00:34:34] continuity that risk assessment tools
+[00:34:37] are designed to produce I think that the
+[00:34:42] continuity that we're really looking for
+[00:34:43] is that focal point that would be
+[00:34:46] available in all cases to interact with
+[00:34:50] the judges discretion here's an example
+[00:34:52] of that to speak to the garbage in
+[00:34:54] question with the PSA you will have if
+[00:34:58] you are a judge receiving a report a
+[00:35:01] list of what the nine risk factors are
+[00:35:03] and how they stack up with the
+[00:35:06] defendants criminal history in some
+[00:35:08] jurisdictions are not only giving you
+[00:35:09] the yes/no
+[00:35:11] or the count of how many failures to
+[00:35:14] appear there were but they will tell you
+[00:35:16] if there was a felony conviction what
+[00:35:18] was the crime for which the individual
+[00:35:20] had been convicted and if the judge
+[00:35:22] wants to look at that background and say
+[00:35:24] to him or herself you know maybe some of
+[00:35:27] these risk factors are so tainted by
+[00:35:31] bias earlier in the system
+[00:35:33] I will discount their applicability to
+[00:35:37] this case and that will allow me to
+[00:35:39] depart from the recommendation I might I
+[00:35:42] believe that the risk factor is
+[00:35:45] extending the prediction of risk too far
+[00:35:49] I will back away from that and recommend
+[00:35:51] a more lenient release condition and so
+[00:35:53] I think again there you start with a
+[00:35:55] focal point there may be some anchoring
+[00:35:57] bias that arises from that but I argue
+[00:36:00] that's probably a good thing again given
+[00:36:03] how variable unguided human
+[00:36:05] decision-making can be but that same
+[00:36:07] unguided human decision-making when
+[00:36:09] combined with the risk factors can I
+[00:36:12] think make the system a lot more just I
+[00:36:15] want to pick up on a point that Jonathan
+[00:36:17] made in his opening remarks and maybe
+[00:36:19] tie it back to some of the conversations
+[00:36:21] we've been having about transparency
+[00:36:22] interpretability and that has to do with
+[00:36:24] questions around the interplay between
+[00:36:26] private commercial actors developing
+[00:36:28] these tools in the state and state
+[00:36:30] criminal justice systems that are
+[00:36:31] applying them is there something I guess
+[00:36:35] the first question is is there something
+[00:36:36] inherently concerning about about that
+[00:36:38] model the way we have state government
+[00:36:41] local government procuring software to
+[00:36:42] do any number of things made by private
+[00:36:44] vendors is there something particular
+[00:36:45] about these risk scores that should give
+[00:36:48] us should give us particular pause and
+[00:36:51] then related to that I guess is the
+[00:36:53] question of whether the kinds of
+[00:36:55] interests were described discussing here
+[00:36:57] around transparency interpretability
+[00:36:59] explain ability are in some way at odds
+[00:37:02] with the private commercial interests of
+[00:37:03] companies that develop these tools they
+[00:37:05] may not want to reveal their their
+[00:37:07] special sauce or their you know whatever
+[00:37:09] it is that makes their tool as good as
+[00:37:12] it can as good as it purportedly is
+[00:37:15] anyway any reactions on the sort of
+[00:37:17] state the state use of private
+[00:37:20] commercially developed tools so when
+[00:37:29] faced with this question I like to
+[00:37:33] appeal to the miracles of modern
+[00:37:35] cryptography that allow us to prove
+[00:37:39] things about secrets to prove that
+[00:37:43] secrets have certain properties without
+[00:37:46] actually revealing the secret so in
+[00:37:48] particular if the secret is an algorithm
+[00:37:50] and I want to prove that it has a
+[00:37:52] certain property there are techniques
+[00:37:55] from cryptography that would allow me to
+[00:37:57] carry out this proof and convince you
+[00:38:01] that the out that the secret algorithm
+[00:38:03] has this property without actually
+[00:38:05] letting you see the secret algorithm and
+[00:38:07] I would succeed truly if and only if the
+[00:38:12] the secret algorithm really did have
+[00:38:15] this desired property so at least in
+[00:38:19] theory I'm much less concerned with this
+[00:38:21] particular problem there's there's just
+[00:38:24] a whole lot of technology out there that
+[00:38:27] could be leveraged
+[00:38:28] if secrecy of the algorithm were truly
+[00:38:31] the only problem well just I of course I
+[00:38:38] think we'd all be grateful for the
+[00:38:40] extent to which their forms of proof
+[00:38:41] that let the company keep the secret
+[00:38:45] while still being able to probe and
+[00:38:48] audit it but there's the antecedent
+[00:38:50] question of why should the company be
+[00:38:52] keeping the secret and I don't blame the
+[00:38:54] company for wanting to develop a
+[00:38:55] business model around something but
+[00:38:57] especially if you think there's going to
+[00:39:00] be more data accrued that would improve
+[00:39:01] a model the idea that that keeps through
+[00:39:04] feedback effects getting the company's
+[00:39:06] hands and no one else can really use it
+[00:39:08] that just locks in whatever you've
+[00:39:10] gotten there's no form of competition
+[00:39:12] for a better model so I would love to
+[00:39:14] hear if anybody would make the case
+[00:39:17] including from the companies where if
+[00:39:18] you're looking at it from a societal
+[00:39:20] point of view why you would possibly
+[00:39:22] want to see this farmed out rather than
+[00:39:25] have it developed in-house and maybe a
+[00:39:28] given County may not have the data
+[00:39:30] science team needed to
+[00:39:32] do it but you know counties are
+[00:39:33] organized into States it's a part of a
+[00:39:35] larger country like surely if we all
+[00:39:37] chip in you know we can build an
+[00:39:40] interstate and that's the sort of thing
+[00:39:42] that I think it's just been not on the
+[00:39:46] radar it's a new phenomenon you have an
+[00:39:49] existing system and then there are
+[00:39:50] entrepreneurial companies coming in to
+[00:39:52] improve things but I have yet to hear an
+[00:39:56] argument as to why we would possibly
+[00:39:59] want this to be with contractors at
+[00:40:01] arm's length especially if they are
+[00:40:04] going to be able to claim trade secret
+[00:40:05] over what they're doing proofs
+[00:40:07] notwithstanding I agree completely and
+[00:40:12] build on that so so first of all the
+[00:40:14] secrecy of the model is a totally
+[00:40:17] independent thing from business model
+[00:40:19] this is something the open-source
+[00:40:20] community never quite understood but
+[00:40:22] open source is a license and business
+[00:40:24] model is not a license it's a business
+[00:40:25] so the same thing exists in tools like
+[00:40:28] this number one there was a number two
+[00:40:34] you were talking about so yes it so so I
+[00:40:37] am totally fine with private companies
+[00:40:41] building these models but I see no
+[00:40:43] reason that they should be even allowed
+[00:40:46] to do it in a closed fashion such that I
+[00:40:50] have no idea what's going on
+[00:40:51] that's just why soon as before you sign
+[00:40:53] right how many of you you know would
+[00:40:55] take a drug because you plugged it into
+[00:40:58] a black box about which you knew nothing
+[00:41:01] other than we think the vendor is
+[00:41:02] trustworthy and you would then feel
+[00:41:04] comfortable taking that drug that is 95
+[00:41:08] percent of drugs I sometimes like when
+[00:41:14] I'm like truly bored I read the insert
+[00:41:16] with the prescription drug and there's
+[00:41:18] like always that little diagram of a
+[00:41:19] molecule and like that's pretty and then
+[00:41:21] in the middle it's like pharmacology
+[00:41:23] it's like through an unknown process
+[00:41:24] headache it goes away
+[00:41:27] sorry like why do you want me to take
+[00:41:33] this and actually I have one doctor that
+[00:41:35] the day I walked into his office and he
+[00:41:37] was about to assign me a drug he said
+[00:41:39] okay let me show you the following
+[00:41:40] research papers about people who haven't
+[00:41:43] exactly like yours and what the results
+[00:41:46] are and this is exactly what I want to
+[00:41:50] see if the algorithms that we're using
+[00:41:52] to decide people's fates so it's a great
+[00:41:54] example so that's a statistical that's a
+[00:41:56] statistical argument your doctor was
+[00:41:58] making the doctor was not walking you
+[00:42:00] through the pharmacological process
+[00:42:01] correct correct which was so it's it's
+[00:42:05] testing not transparency well correct
+[00:42:10] that was not a transparency that was a
+[00:42:12] because my biochemistry problem we
+[00:42:14] wouldn't be up to the transparency and I
+[00:42:16] think it truly is an unknown prospect
+[00:42:18] but I was really good
+[00:42:22] Chris non-responder Chris Daniel have a
+[00:42:26] microphone so if you wanna get some
+[00:42:27] questions make sure everyone knows I'm
+[00:42:29] on board with transparency as well we
+[00:42:32] noted that wearing purple was so to make
+[00:42:37] that clear but but also to speak very
+[00:42:40] selfishly for the imaging lab let's say
+[00:42:43] that we can't really get to a place
+[00:42:46] where we force or even convince
+[00:42:49] companies research outfits to reveal the
+[00:42:54] research or even the underlying
+[00:42:56] algorithm behind these assessments what
+[00:42:59] if we then get the proof through the
+[00:43:02] best possible evaluation method at the
+[00:43:04] end of the day what does the public
+[00:43:05] really want to know again don't think
+[00:43:07] they want a half they don't really want
+[00:43:09] to know
+[00:43:09] unless there's going to be a visualize
+[00:43:11] litigation over the outcome in defendant
+[00:43:13] a's case what is behind the decision i
+[00:43:17] think people really want to know whether
+[00:43:19] these things work and so to take the
+[00:43:22] drug analogy which we really really love
+[00:43:25] at the lab we are going to subject our
+[00:43:28] legal innovations to the same clinical
+[00:43:31] trials that the FDA requires of those
+[00:43:34] drugs that all of us are taking I can't
+[00:43:37] wait 15 years from now to hear how it
+[00:43:39] goes I know dr. T but just to just to
+[00:43:41] but we subject these ideas whether it be
+[00:43:46] a risk assessment whether it be some new
+[00:43:48] idea for enhancing civil legal justice
+[00:43:51] we provide these
+[00:43:53] randomly in the field to decision-makers
+[00:43:56] to see if the outcomes are measurably
+[00:43:58] better when those tools are used versus
+[00:44:01] when they are not and so we hope to be a
+[00:44:03] part of this movement towards more
+[00:44:06] evidence-based practices but at the same
+[00:44:08] time making people feel more comfortable
+[00:44:09] with them by showing them whether or not
+[00:44:12] they stand a chance
+[00:44:13] and in fact our and Chris can I just add
+[00:44:16] real quick if it's not outlandish to
+[00:44:21] think that for instance real rates could
+[00:44:23] be greatly influenced by factors that
+[00:44:25] they shouldn't be by demographic right
+[00:44:27] made personal characteristics the
+[00:44:30] algorithm could happily just predict
+[00:44:34] that basically is predicting what a
+[00:44:35] police officer will do rather than what
+[00:44:37] the accused would do and how would we
+[00:44:41] then adjust for that I don't know if
+[00:44:44] that's a de biasing question or
+[00:44:45] something else but if you're just saying
+[00:44:47] the proof is in the pudding the clinical
+[00:44:49] trials are gonna come out beautifully
+[00:44:51] perhaps I think the one suggestion I
+[00:44:55] might have and I'm unclear right now is
+[00:44:59] to help us with work in practice
+[00:45:00] although there are rumblings of this
+[00:45:02] occurring in what cases I'm not aware of
+[00:45:05] specifically around the country but
+[00:45:06] giving such tools I mean think about the
+[00:45:09] evidence that is overwhelming in the
+[00:45:12] empirical literature on the disparities
+[00:45:14] and stops by law enforcement by race and
+[00:45:18] ethnicity Lord knows how many officers
+[00:45:22] need because they're using either
+[00:45:25] improper or just wrong proxies to make
+[00:45:31] these decisions if you had something
+[00:45:33] like a risk assessment at that stage if
+[00:45:35] you had these objective tools throughout
+[00:45:37] the lifespan of a criminal case that
+[00:45:40] could be one solution but I haven't
+[00:45:42] given enough thought to and I think we
+[00:45:43] need to at the lab on the fact that
+[00:45:45] taking the PSA an outcome is measured in
+[00:45:49] terms of new chromel activity not even
+[00:45:51] as a charge not certainly conviction but
+[00:45:54] an arrest that could very much be not
+[00:45:58] related at all to the underlying
+[00:45:59] criminal behavior but to the practices
+[00:46:01] of law enforcement that was a choice
+[00:46:02] made by the developers of the tool and
+[00:46:05] thus one that were
+[00:46:06] taking weird for just kinda bags like
+[00:46:09] people who protest and get arrested
+[00:46:11] is it the likelihood that they'll
+[00:46:12] protest again arrested it so these are
+[00:46:16] the the point is that there are tough
+[00:46:17] questions notwithstanding our strong
+[00:46:20] belief in the the ability of the RCT
+[00:46:23] methodology to suss out real causal
+[00:46:26] relationships there are still really
+[00:46:27] hard questions that we have to contend
+[00:46:29] with in doing this type of research
+[00:46:31] remember the other point so so as
+[00:46:35] somebody who builds software for a
+[00:46:36] living like every piece of software has
+[00:46:38] bugs and so this is the response to like
+[00:46:41] should these models be allowed to be
+[00:46:43] closed and I worry a lot about bugs so
+[00:46:46] you know maybe someday we'll live in a
+[00:46:48] world where you can have verified
+[00:46:50] software and then we have to be able to
+[00:46:51] write specifications correctly and I'm a
+[00:46:53] little suspect about that but but in a
+[00:46:55] world where every piece of software has
+[00:46:57] a bug the thought of software that has
+[00:47:00] bugs then being used in a fashion where
+[00:47:03] I have no idea what it what it thinks
+[00:47:06] it's doing and then B what it's actually
+[00:47:08] doing makes me really nervous on that
+[00:47:12] note I think we'll have plenty of hands
+[00:47:14] I'm gonna have Dan to play the Phil
+[00:47:16] Donahue role and running down the aisles
+[00:47:18] hello
+[00:47:19] I am Kathy I am also a computer
+[00:47:23] scientist and I was excited to see two
+[00:47:25] women black belt computer scientists I
+[00:47:28] have so many thoughts we don't limit it
+[00:47:31] to two first on the transparency side
+[00:47:34] the United States government spends nine
+[00:47:37] to six billion dollars on government
+[00:47:40] contracts in case folks didn't know it's
+[00:47:42] an area that I've worked in quite a bit
+[00:47:45] and the whole idea of getting a pill
+[00:47:47] that you know will kill you and probably
+[00:47:48] taking that pill again is what we do we
+[00:47:51] pay for contracts that are not
+[00:47:53] transparent that we know will probably
+[00:47:55] not work we rehire the same contractors
+[00:47:57] that have failed us and then we continue
+[00:48:00] to to do it I have a long list of
+[00:48:02] examples we actually try to implement
+[00:48:04] I'm with United States digital service
+[00:48:06] and we've actually tried to say we won't
+[00:48:10] take a contract unless you develop in
+[00:48:12] the open and the companies fight so hard
+[00:48:16] against
+[00:48:17] for so many reasons citing really
+[00:48:21] ridiculous reasons so I would love to
+[00:48:25] talk more about that but it's a ninety
+[00:48:27] billion dollar industry and we
+[00:48:30] continually we as a federal government
+[00:48:31] in the United States continuously buy
+[00:48:33] things that don't work and and at one
+[00:48:36] point there was an argument for these
+[00:48:37] are taxpayer dollars it should be open
+[00:48:39] the American people are paying for it
+[00:48:41] they should see what's in there and and
+[00:48:44] we don't and then the other bit was on
+[00:48:46] the Garbett the data side I totally hear
+[00:48:50] the you know train people on the risk
+[00:48:53] assessment scores and things like that
+[00:48:54] but also as a developer and seeing what
+[00:48:58] my colleagues and even myself at in
+[00:49:00] times Margo you mentioned you know you
+[00:49:03] have these if-then statements right like
+[00:49:05] if you're wearing purple or if you've
+[00:49:07] been convicted three times all those
+[00:49:08] things are biased and even today many
+[00:49:12] engineering shops don't think about that
+[00:49:15] we talked about it as part of our lives
+[00:49:16] here and in ethics and AI most groups
+[00:49:20] don't talk about that it's you get
+[00:49:22] excited about the data and use go build
+[00:49:23] something so how do we infuse that back
+[00:49:25] into companies and in groups and even
+[00:49:28] students may be working with with the
+[00:49:29] data we can debate here all day about
+[00:49:32] what to do once things are shipped but
+[00:49:35] there are so many groups building today
+[00:49:36] that are just not going to think about
+[00:49:38] the biases and the code we're writing I
+[00:49:40] am teaching it in a new course that I'm
+[00:49:42] developing this semester she talked the
+[00:49:45] syllabus is secret actually the this
+[00:49:52] issue raised about software developers
+[00:49:54] not understanding and thinking about the
+[00:49:55] ethics and bias is huge and I I think
+[00:49:58] that we as educational institutions have
+[00:50:00] a role to play and I am delighted not
+[00:50:03] only is Cynthia developing a course that
+[00:50:05] really addresses that we have a program
+[00:50:07] throughout our entire CS curriculum that
+[00:50:09] we piloted last spring and are expanding
+[00:50:11] this year to in every course that we can
+[00:50:14] and this year it's up to about six or
+[00:50:16] eight actually inject issues of ethics
+[00:50:20] embedded in the material right it's not
+[00:50:22] just enough to take a separate course in
+[00:50:24] ethics you actually have to consider the
+[00:50:26] ethics while you're in the throes of
+[00:50:28] building you know does
+[00:50:29] a user interface or while you're in the
+[00:50:31] throws is cleaning the data and so there
+[00:50:34] really has to be a push starting with
+[00:50:36] the education level and then persisting
+[00:50:38] throughout the companies of considering
+[00:50:41] in the same way that we consider this is
+[00:50:43] maintainability and scalability and
+[00:50:45] performance and ethical considerations
+[00:50:47] it's got to be an equal pillar and it
+[00:50:49] starts with us we have teachings all our
+[00:50:55] positions I'll also add on that point
+[00:50:57] that part of the ethics and governance
+[00:50:59] of AI initiative at Berkman we've been
+[00:51:01] really focused on the procurement the
+[00:51:03] point of procurement which is actually
+[00:51:05] more at the state level here then at the
+[00:51:07] federal level for the kinds of tools
+[00:51:08] we're talking about here but that point
+[00:51:09] of procurement empowering state
+[00:51:11] procurement officials to request the
+[00:51:13] information they need to make these
+[00:51:14] decisions to assess the weather ethical
+[00:51:16] considerations and others have been
+[00:51:18] incorporated into the design of these
+[00:51:19] systems that I think is a big part of
+[00:51:21] what we're going to be trying to do mr.
+[00:51:23] Holland hi my name is Adam hond
+[00:51:25] staff at the Perkins Center on the
+[00:51:27] lawyers side of things there's a thread
+[00:51:30] but I'm hearing underlying everything
+[00:51:31] everyone is saying and thank you all for
+[00:51:33] this wonderful discussion though and I'm
+[00:51:35] gonna try to articulate it so that you
+[00:51:37] can speak to it you mentioned just you
+[00:51:41] know where the outcomes just we've heard
+[00:51:43] about can you explain the result we've
+[00:51:44] heard about it augmenting human
+[00:51:47] decision-making capacity etc to my ear
+[00:51:51] all that presumes that we have an idea
+[00:51:53] of some better decision-making process
+[00:51:58] towards which were moving theologically
+[00:52:00] and so what I want to know is how do we
+[00:52:04] know what that is how will we know if
+[00:52:06] we've achieved it how will we know if
+[00:52:09] maybe we've somehow moved past it but
+[00:52:12] ask the Ottoman to a different flavor of
+[00:52:14] good but not perfect and to the question
+[00:52:19] of the proprietary stuff are those going
+[00:52:24] to be updated because I just know way
+[00:52:25] too many examples as well oh the
+[00:52:26] government bought some software and that
+[00:52:28] was about 15 years ago and it hasn't
+[00:52:30] been updated because we can't afford it
+[00:52:31] but if the model is predicated on
+[00:52:34] learning
+[00:52:34] and how will it know if it's getting it
+[00:52:38] right will it incorporate last year's
+[00:52:40] data oh we had this many false positive
+[00:52:43] this many false negatives let's tweak
+[00:52:44] the model or is it
+[00:52:46] sorry proprietary you can pay for the
+[00:52:48] upgrade if you want but more broadly
+[00:52:50] I'm totally biased I'm human I would
+[00:52:54] love to augment that how do I know what
+[00:52:57] I'm like menteng toward everybody has
+[00:53:00] this idea that you know a is emotionless
+[00:53:04] without bias but what is an optimal set
+[00:53:08] of decision-making criteria just a small
+[00:53:13] question so of course that's a huge
+[00:53:21] question it's also in my view exactly
+[00:53:26] the right question and as I'm trying to
+[00:53:33] work out this general theory one thing
+[00:53:39] that seems clear is somehow if we knew
+[00:53:42] for a given classification task who
+[00:53:46] ought to be treated similarly to whom
+[00:53:49] then a lot of things would become easier
+[00:53:52] it's not automatic but a lot of things
+[00:53:54] become a lot easier so my belief is that
+[00:54:00] the real use of AI and machine learning
+[00:54:04] is going to be in discovering this
+[00:54:06] metric of forgiving classification how
+[00:54:10] similar are new to me and for every pair
+[00:54:13] of people how similar are they to each
+[00:54:15] other and I believe that this is that
+[00:54:23] we're going to we're it's going to be an
+[00:54:27] imperfect but improving situation and
+[00:54:30] that at the best that we're I mean we're
+[00:54:37] going to be doing society's best guess
+[00:54:39] but as we do more and more research our
+[00:54:42] notion of what the best guess is will
+[00:54:44] improve that's the only path that I see
+[00:54:47] toward answering
+[00:54:49] so I really think that the real question
+[00:54:51] for machine learning is how how do we
+[00:54:54] determine who is similar to whom for
+[00:54:56] this particular classification task in
+[00:54:59] that sense colloquially speaking it's
+[00:55:01] I've always thought Cynthia of your work
+[00:55:03] as less being able to tell us what's
+[00:55:05] fair and more being able to tell us
+[00:55:07] what's unfair and prevent it you'd think
+[00:55:09] they would just be the inverse of the
+[00:55:10] other but maybe not at least
+[00:55:12] colloquially speaking and it may be that
+[00:55:15] what you're articulating to a lawyer's
+[00:55:17] ears would sound like equal protection
+[00:55:19] you know that you want like to be
+[00:55:22] treated like and that's an equal
+[00:55:24] protection concept that's pretty
+[00:55:27] fundamental in the American and around
+[00:55:29] the world frameworks of the rule of law
+[00:55:31] but equal protection still doesn't tell
+[00:55:34] you the content of say when you get past
+[00:55:36] the simpler questions of bail where it
+[00:55:38] really is are they going to hurt anyone
+[00:55:41] and will they come back to face the
+[00:55:43] music like those are empirical
+[00:55:45] predictions you could make if you're
+[00:55:47] trying to figure out whether it's time
+[00:55:48] to release somebody early from from
+[00:55:50] serving a sentence or how long to
+[00:55:52] sentence a person a big part of the
+[00:55:54] formula just is an innate question of
+[00:55:56] what punishment fits what crime and you
+[00:55:59] could still ask equal protection
+[00:56:00] questions around it but you need an
+[00:56:02] initial sense of what counts as a grave
+[00:56:05] offense I mean the Harvard professors
+[00:56:08] that stood across Mass Ave and a
+[00:56:10] carefully choreographed sort of thing
+[00:56:13] with the police who were alerted that
+[00:56:14] they were going to do it the police
+[00:56:15] stopped the traffic so they could walk
+[00:56:17] out into the street then they're like
+[00:56:19] please they were going to arrest you you
+[00:56:20] know they're that's not likely to result
+[00:56:23] in a book being thrown at them they've
+[00:56:26] got plenty already they're professors
+[00:56:28] for what they're doing and that might
+[00:56:31] seem fair given that it was performative
+[00:56:33] but that all requires a theory of
+[00:56:36] justice that it would be a lot to ask
+[00:56:39] machine learning pattern recognition to
+[00:56:41] tell you you've got to fill it in and
+[00:56:43] sometimes legislators do sometimes
+[00:56:46] judges do with their various feelings I
+[00:56:48] don't know if that would change the one
+[00:56:50] other thing you do point out though is
+[00:56:51] that to the extent that we started to
+[00:56:55] ease the work of a typical judge by only
+[00:56:59] presenting to the judge the really
+[00:57:01] borderline if he cases and trying to
+[00:57:03] dispose more efficiently
+[00:57:05] maybe with advice maybe just some Ursa
+[00:57:07] merrily the cases that just fit the
+[00:57:09] template so easily we don't want to
+[00:57:11] waste anybody's time with them you do
+[00:57:13] risk ossifying the training set on which
+[00:57:17] the judgments from real judges were made
+[00:57:20] in whatever year you changed the system
+[00:57:23] grateful for the efficiencies introduced
+[00:57:26] by the machine learning algorithms and
+[00:57:27] it would just be weird to imagine like
+[00:57:29] we're gonna get equal protection for
+[00:57:32] justice as made it out in 1957 like that
+[00:57:36] it's like yep it's totally consistent
+[00:57:37] with what these the judges from 1957
+[00:57:40] would have done I don't know if it means
+[00:57:42] it should just be some exercise for
+[00:57:43] every so often we just go on a judging
+[00:57:46] spree to see if things have changed
+[00:57:49] since the last time judges were judging
+[00:57:50] but then again the judges might be rusty
+[00:57:52] do you keep a couple judges running and
+[00:57:54] beckoned artisanal courtrooms that's
+[00:57:57] like here the justice is handmade and
+[00:58:00] there are other curves it's just like
+[00:58:02] you know spit it out the way that most
+[00:58:04] of our food is produced
+[00:58:05] I maybe that would work but it again it
+[00:58:07] would be a somewhat self-conscious
+[00:58:08] exercise by our judges so I stopped to
+[00:58:11] think about Chris is a similar view to
+[00:58:14] what the others have said slightly
+[00:58:16] different as well so when I hear your
+[00:58:18] question I immediately think of an
+[00:58:21] economic optimization problem maybe
+[00:58:23] those who are schooled in the economic
+[00:58:24] analysis of law know that you know with
+[00:58:28] tort law for example we can set a
+[00:58:30] standard of care in a model such that
+[00:58:33] anything below that would probably lead
+[00:58:35] to too many accidents and anything above
+[00:58:37] that is constraining our Liberty too
+[00:58:39] much relative to the cost of those
+[00:58:41] accidents are we trying to do the same
+[00:58:43] thing here especially in the criminal
+[00:58:45] justice from perhaps but I really don't
+[00:58:48] believe that any of these risk
+[00:58:49] assessment tools can solve that
+[00:58:51] optimization problem the only actors the
+[00:58:54] only way that we can get to that
+[00:58:56] optimization is through a conversation
+[00:58:58] in the populous that's a reason why with
+[00:59:02] the PSA for example the matrix of
+[00:59:05] options that are then mapped onto the
+[00:59:09] risk scores is chosen by the
+[00:59:11] jurisdiction itself a jurisdiction has
+[00:59:14] to decide what its
+[00:59:15] it's for risk is what its tolerance for
+[00:59:18] the increasing cost of incarceration
+[00:59:20] might be that's what's going to get
+[00:59:23] updated time and time again after the
+[00:59:25] jurisdiction sees its decision-makers
+[00:59:27] using the risk assessment tool but the
+[00:59:30] tool itself I don't believe we'll ever
+[00:59:32] be able to get you to that X star that
+[00:59:36] optimized outcome rather it's the
+[00:59:39] interaction of the information provision
+[00:59:41] from the tool with the decisions that
+[00:59:43] are made but that's what's being updated
+[00:59:45] over time is our ability to accept
+[00:59:49] certain restrictions on Liberty but also
+[00:59:51] on the other side certain bad outcomes
+[00:59:54] we're trying to balance those two
+[00:59:56] competing interests do you have a sense
+[00:59:58] of how different those matrices look in
+[01:00:01] different jurisdictions they can't be
+[01:00:03] too different because the creators of
+[01:00:06] the tool want certain general outcomes
+[01:00:10] to be placed and for example in the
+[01:00:12] upper left you're really looking for Oh
+[01:00:15] our release own recognizance no
+[01:00:17] conditions of any sort and the bottom
+[01:00:19] right if you're in a right to bail state
+[01:00:22] we want those people detained but we
+[01:00:24] have to set bail in the middle that's
+[01:00:27] where a lot of the decisions are made
+[01:00:28] about what's offered based largely on
+[01:00:30] the resources that the jurisdiction has
+[01:00:32] but in general it's from upper left to
+[01:00:34] bottom right just more strenuous
+[01:00:36] conditions but reducing as well the
+[01:00:39] amount of monetary bail that we rely
+[01:00:41] upon to secure release well you didn't
+[01:00:43] really answer my question my question
+[01:00:45] the answer is there is some baseline
+[01:00:48] uniformity in that they want certain
+[01:00:51] types of release to appear somewhere on
+[01:00:53] the matrix but the jurisdiction gets to
+[01:00:55] choose where they're located I'm
+[01:00:58] conscious about time but we're an
+[01:00:59] squeeze in one more from Sicilia hi I'm
+[01:01:02] Cecilia I'm an LLM student here at
+[01:01:04] Harvard and mine is actually a follow up
+[01:01:06] with that question so we established at
+[01:01:08] the beginning that human beings are not
+[01:01:10] just not fair they have their own biases
+[01:01:12] so in my mind immediately I put up a
+[01:01:15] normal curve like the decisions are
+[01:01:17] elicited from like unfair to very fair
+[01:01:20] and the bulk of it are here because
+[01:01:23] human beings are biased bulk of them are
+[01:01:25] with bias
+[01:01:26] so with AI we're trying to have a
+[01:01:28] continuous one so we're trying to get
+[01:01:30] rid of the outliers I understand that
+[01:01:33] but getting rid of the outliers means
+[01:01:36] that we're gonna have more decisions
+[01:01:38] with bias because we know that human
+[01:01:39] beings produce the decisions with their
+[01:01:42] bias so I'm curious is it actually
+[01:01:45] dangerous to use data coming from bias
+[01:01:48] human beings because the AI will get rid
+[01:01:50] of the outliers and produce more bias
+[01:01:52] into the system I think this is the
+[01:01:56] point that was made before with the
+[01:01:58] garbage in garbage out yes it's I'm not
+[01:02:01] quite sure about connecting it to this
+[01:02:03] outlier question but if your training
+[01:02:05] based on biased data and you're not
+[01:02:07] doing anything to compensate for this
+[01:02:10] then if you have a good learner it will
+[01:02:13] imbibe the bias with the Mother's Milk
+[01:02:15] of the data and the resulting algorithm
+[01:02:19] will be biased isn't every data will be
+[01:02:24] biased because human beings are what I'm
+[01:02:27] trying to say is wouldn't be make
+[01:02:29] wouldn't make it stands more if they
+[01:02:32] give data artificially produced how do
+[01:02:38] you produce that artificial so I think
+[01:02:40] we all agree there is some danger
+[01:02:42] inherent in any data set that was
+[01:02:44] produced by human behavior I'm going to
+[01:02:46] buy into that I don't know what the
+[01:02:48] alternative is because how do i generate
+[01:02:51] realistic but unbiased data I think
+[01:02:55] we're gonna have to leave it there join
+[01:02:56] me think in thanking Chris Margot
+[01:02:58] Cynthia and Jonathan and thank you all
+[01:03:03] you
+[01:03:16] you

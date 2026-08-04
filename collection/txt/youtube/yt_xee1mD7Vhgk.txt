@@ -1,0 +1,1178 @@
+[00:00:00] Thank you all from come for coming in
+[00:00:02] from the great sunshine outside.
+[00:00:04] Brewster, you put on a great party in
+[00:00:06] many many respects, including this
+[00:00:08] amazing weather and amazing spot. It was
+[00:00:10] wonderful. Thank I'm sorry to those who
+[00:00:13] are watching virtually that you didn't
+[00:00:15] get to enjoy the California sunshine
+[00:00:17] here in San Francisco.
+[00:00:20] This next session is a long awaited
+[00:00:22] affair which is the first uh discussion
+[00:00:25] slash unveiling of the technical
+[00:00:28] platform that some people have been
+[00:00:29] working incredibly hard on. I like the
+[00:00:31] title very much from beta sprint to
+[00:00:33] alpha release which we're about to see.
+[00:00:36] Um, I thanked before the heads of a
+[00:00:38] bunch of different work streams and I
+[00:00:41] wanted to before introducing uh my
+[00:00:43] friend and colleague David Weinberger to
+[00:00:45] send a particular shout out and thanks
+[00:00:47] to the technical aspects workstream. Uh,
+[00:00:50] Martin Kelfatavic and Chris Freeland
+[00:00:52] have been co-chairing that group. Martin
+[00:00:54] and Chris, are you here? And give us a
+[00:00:56] wave. uh you guys have been uh
+[00:00:57] astonishingly good at this job and have
+[00:01:00] been great partners both to the
+[00:01:02] conveners uh in the workstream and the
+[00:01:04] steering committee as we've been working
+[00:01:06] with the technology development team uh
+[00:01:08] the interim techdev team that you're
+[00:01:10] going to hear from in a moment. So thank
+[00:01:11] you to all who have um been part of
+[00:01:12] this. It's a challenge of course to do
+[00:01:14] any distributed effort, but I think
+[00:01:16] we're uh well on uh track for a uh um
+[00:01:22] 2013 release, but along the way we
+[00:01:24] wanted to have something that we could
+[00:01:25] push against and uh and test some
+[00:01:27] assumptions with. And this team has been
+[00:01:29] working uh around the clock to get to
+[00:01:32] this point. Uh, I'm thrilled to
+[00:01:34] introduce my colleague David Weinberger
+[00:01:36] who works at the Harvard Library
+[00:01:38] Innovation Lab where he's co-director
+[00:01:39] with Kim Dulan um and his team and
+[00:01:42] they've been teaming up also with the
+[00:01:43] Burkman Center crew and I'm sure you'll
+[00:01:45] do uh introductions uh with this uh with
+[00:01:49] this group. We have been blessed to have
+[00:01:51] your uh incredible thought and hard work
+[00:01:53] and this is an early stage chance to
+[00:01:55] push around what they've done and there
+[00:01:57] will be much more uh chance for input
+[00:01:59] and discussion over the course of the
+[00:02:00] next year. Uh, David, we look forward to
+[00:02:02] hearing from you. Thanks for all the
+[00:02:03] work. No.
+[00:02:05] Oh, thank you. Thank you very much,
+[00:02:07] John. Um, what a just it's an an
+[00:02:11] ineffable pleasure to be in this temple
+[00:02:13] with with you people. I get to call it a
+[00:02:16] temple, I guess, not so much a church.
+[00:02:19] Um, so why don't we introduce ourselves?
+[00:02:21] Um, John's already introduced me, so I'm
+[00:02:23] going to pass it to you, Dan.
+[00:02:25] All right. I'm Dan Kispiro with the
+[00:02:27] Burkeman Center. I'm a developer there
+[00:02:29] and I am the point 2 developer on the
+[00:02:32] platform.
+[00:02:34] I'm Paul Dner. I'm a developer at the
+[00:02:37] Harvard Library Innovation Lab and also
+[00:02:39] on the dev team.
+[00:02:41] And I'm Matt Phillips, a software
+[00:02:44] developer in the library innovation lab
+[00:02:46] and also on the core dev team.
+[00:02:48] And there are actually lots of other
+[00:02:49] people. So this this is the the core. Um
+[00:02:52] and they're amazing. There are lots of
+[00:02:54] other people who are helping at every at
+[00:02:57] every level including the secretariat
+[00:02:59] and Rebecca who can't be thanked often
+[00:03:01] enough during this session and and Mora
+[00:03:03] and um the other work streams have been
+[00:03:07] really really helpful. So what we want
+[00:03:09] to give you today is a taste of the
+[00:03:13] platform and the very first thing to say
+[00:03:16] are slides up by the way?
+[00:03:19] Ah, okay. Great. The very first thing to
+[00:03:21] say is that what we're presenting today
+[00:03:25] is the opposite of etched in stone. It's
+[00:03:28] uh this is a proposal that's been
+[00:03:30] written in software for reasons I I I
+[00:03:33] hope will become clear. Um and so we
+[00:03:36] want to give you uh an idea of our
+[00:03:38] thinking behind this um and show you uh
+[00:03:42] some very quick demos. And I need to let
+[00:03:44] you know, and you'll figure this out
+[00:03:46] anyway, that the demos are all screen
+[00:03:49] captures. They're all screencasts, but
+[00:03:51] they were done absolutely live. They're
+[00:03:54] unedited. We did them basically over the
+[00:03:56] past day in uh my hotel room. Um so we
+[00:04:01] just didn't have we didn't want to have
+[00:04:02] to worry about um you know, life. So,
+[00:04:06] because the I'm told I can't see these
+[00:04:09] screens, of course, but I'm told that
+[00:04:10] the sun Brewster, if you could stop the
+[00:04:12] course of the sun in the sky, we would
+[00:04:14] appreciate that. We'll
+[00:04:16] work on it.
+[00:04:17] Working on it. Um, failing that, you may
+[00:04:20] find a better picture uh through the
+[00:04:23] live stream at this. The only,
+[00:04:25] unfortunately, the only black text on
+[00:04:27] white in the entire session uh gives you
+[00:04:29] the address for that, which is you can
+[00:04:31] go to either dp.la LA or you can go to
+[00:04:33] livestream.com/bpla
+[00:04:36] um and you may get actually a better
+[00:04:37] picture especially with the wonderful
+[00:04:39] Wi-Fi here in the internet archive.
+[00:04:44] So a very quick timeline everything
+[00:04:46] we're going to try to do everything
+[00:04:47] really quickly. There's a lot to go
+[00:04:48] through. So we were constituted on
+[00:04:51] January 3rd um in oh the middle or I
+[00:04:54] guess third week of January we did the
+[00:04:56] initial build uh live data live API. We
+[00:05:01] of course do all of this in public um
+[00:05:03] with the idea that having people push
+[00:05:06] against it is the best way of figuring
+[00:05:10] out in an environment like this what
+[00:05:12] what works, what doesn't and what might
+[00:05:14] be useful. So we've been doing early
+[00:05:16] builds. Uh then we built a bunch of
+[00:05:19] scenarios and and Nate and Nate Nate
+[00:05:22] Hill and and his group um we are talking
+[00:05:26] together about the set of scenarios, but
+[00:05:28] we made up a set of scenarios that we
+[00:05:29] thought developers maybe would want
+[00:05:32] things they might want to do on top of
+[00:05:33] what we're building. We did we spent a
+[00:05:35] lot of time putting together a scope
+[00:05:37] document sort of a technical overview
+[00:05:39] and a proposal that's available. It's
+[00:05:41] also on our wiki. All the addresses are
+[00:05:43] at the end. um that lays out what we
+[00:05:47] think is the scope what we're proposing
+[00:05:49] what we're suggesting so that you can
+[00:05:51] push back what the scope of uh the
+[00:05:54] project through April um 2013 April 5th
+[00:05:58] um Martin and Chris our wonderful heads
+[00:06:02] they are amazing awesome heads of the
+[00:06:05] technical workstream put together a
+[00:06:07] hackathon and you'll see some of the
+[00:06:08] results from that April 24th three days
+[00:06:10] ago we did build 03 uh which
+[00:06:14] um has uh more fully developed schemas.
+[00:06:18] It has a lot more data including the 12
+[00:06:20] million um metadata records from the
+[00:06:23] Harvard library as well as uh 7 million
+[00:06:25] from Library of Congress and more. Um
+[00:06:28] and that brings us to here. Throughout
+[00:06:30] this process, we've been gathering data,
+[00:06:33] uh, writing scripts, um, trying out
+[00:06:36] different sorts of data, uh, right from
+[00:06:38] the very beginning, making sure that we
+[00:06:39] don't focus only on library metadata,
+[00:06:42] but also the sorts of data, metadata
+[00:06:44] that comes from online collections.
+[00:06:46] We've been talking with lots and lots of
+[00:06:48] people in the space, um, partners and
+[00:06:50] potential partners, and we've been
+[00:06:51] encouraging the development of
+[00:06:53] applications that test out the, um, what
+[00:06:56] we've been building. So just I'm going
+[00:06:58] to start um sort of one big step back.
+[00:07:01] Everybody here knows this but just in
+[00:07:02] case as you know computer software
+[00:07:05] consists of there's often some data some
+[00:07:08] computation some services and a user
+[00:07:10] interface that sits on top of it. This
+[00:07:12] is also known here as the shiny thing
+[00:07:16] in a web application uh running in your
+[00:07:19] browser. Same thing except the web is in
+[00:07:21] between the two and the the UI talks to
+[00:07:24] the back end. So what's important is
+[00:07:26] what for the moment is what our team is
+[00:07:29] not building. We are not building a user
+[00:07:32] interface. That's not part of our
+[00:07:33] charter is one of the I'm I'm very happy
+[00:07:36] to hear that the discussion of this of
+[00:07:39] the of the user interface and the need
+[00:07:41] for one arising at this meeting. I think
+[00:07:43] it's very important but it's not what
+[00:07:44] we're doing. So we're gathering metadata
+[00:07:46] and some content. We are planning, this
+[00:07:49] is the plan anyway, to enhance that
+[00:07:51] metadata in ways we'll talk about,
+[00:07:52] provide a set of services that will be
+[00:07:54] useful to developers and to make all of
+[00:07:55] this available not through a user
+[00:07:57] interface, not directly, but through an
+[00:07:59] API, an application programming
+[00:08:00] interface by which programs talk to and
+[00:08:03] and use the services and data that um a
+[00:08:07] platform
+[00:08:08] provides. And that's what we're
+[00:08:10] building. We're building a platform. A
+[00:08:12] platform consists of those pieces at
+[00:08:13] least in this definition.
+[00:08:16] So why would you build a platform? Well,
+[00:08:17] you do it in the hope that developers
+[00:08:20] will come along and they will build
+[00:08:22] stuff that is gorgeous, wonderful,
+[00:08:24] useful, a place where you can live and
+[00:08:26] thrive and take advantage of all of the
+[00:08:29] incredible metadata that's available in
+[00:08:31] this ecosystem and some of which
+[00:08:34] metadata will be available through the
+[00:08:36] platform.
+[00:08:39] So, you know, a little more detail um
+[00:08:42] you have the the platform there and then
+[00:08:44] you have some some data sources
+[00:08:45] underneath it. nodes, for example,
+[00:08:47] online collections, library collections,
+[00:08:49] DPLA digitizations,
+[00:08:51] um perhaps some stuff from the web,
+[00:08:53] perhaps some stuff from users. We'll
+[00:08:55] talk about these in a minute. Um and on
+[00:08:57] top there's a set of applications that
+[00:08:59] we hope developers will build and they
+[00:09:01] will amaze us. We don't know what this
+[00:09:02] is the central conundrum and the central
+[00:09:04] value of the platform is we don't know
+[00:09:06] what people will build and and the
+[00:09:08] platform is successful to the extent to
+[00:09:10] which developers surprise us because
+[00:09:13] it's a platform for innovation. So we
+[00:09:15] hope that developers will make
+[00:09:18] incredible useful things. Users will
+[00:09:21] come to those applications. And we also
+[00:09:24] hope and expect that other sites that
+[00:09:26] already exist or maybe some that don't
+[00:09:28] quite yet will use the data and metadata
+[00:09:33] within the platform to enhance their own
+[00:09:36] offerings.
+[00:09:38] Whether it's library of the future.
+[00:09:42] Did I get I'm going to give you a plug.
+[00:09:44] I might as well give it the right URL.
+[00:09:46] Is library
+[00:09:47] your future library.com
+[00:09:49] your future library.com or if it's maybe
+[00:09:52] another end of the scale of Wikipedia in
+[00:09:55] terms of simply in terms of the number
+[00:09:57] of users at this point.
+[00:09:59] So why a platform? Why do that? Well, in
+[00:10:02] order to get more value from the objects
+[00:10:05] of culture that are spread out,
+[00:10:08] distributed across the environment. We
+[00:10:10] want more people to find them, more
+[00:10:11] people to understand them, to share them
+[00:10:13] and to do things with them. And also so
+[00:10:15] that the in cultural institutions
+[00:10:17] whether they're real world or online or
+[00:10:20] in between or both that they find
+[00:10:23] benefit in what we're doing as well. The
+[00:10:25] platform should serve both. So even
+[00:10:27] though ICE just said we cannot
+[00:10:28] anticipate what developers are going to
+[00:10:30] do, we've done some scenario. You have
+[00:10:33] to sort of anticipate some of it. So
+[00:10:35] here are six extremely quick scenarios
+[00:10:37] of things that maybe people will build.
+[00:10:40] So for example, somebody might build a
+[00:10:42] library browser, an OPAC for children or
+[00:10:46] somebody might build library analytic
+[00:10:48] packages. That's the sort of thing you
+[00:10:50] could do with the sort of platform that
+[00:10:51] we believe we're building. uh a local
+[00:10:54] historical society that has a collection
+[00:10:56] of of documents or images and wants to
+[00:11:00] make them more available, more findable
+[00:11:03] by the public might find this platform
+[00:11:05] useful. Another site, for example,
+[00:11:08] Wikipedia might find some of the data
+[00:11:10] that's in it useful. And likewise, uh
+[00:11:13] absolutely going the other direction.
+[00:11:15] Wikid data is a really interesting
+[00:11:18] project. for example, um there's lots of
+[00:11:21] different sorts of social applications
+[00:11:23] that could use the metadata of the sort
+[00:11:26] that we're contemplating. Um books and
+[00:11:29] cultural items are social objects.
+[00:11:32] Social groups form around them. That's
+[00:11:34] the point of of cultural objects. They
+[00:11:36] form culture around them. They form and
+[00:11:38] that requires social formation. So maybe
+[00:11:40] somebody will build some social
+[00:11:42] applications on top of the DLA platform.
+[00:11:45] and within the DP DLA platform, we hope
+[00:11:48] there will be such a richness of
+[00:11:49] metadata that that people will do
+[00:11:50] computationally intensive work with it.
+[00:11:54] So those are three simple sort of
+[00:11:56] scenarios and there's sort of one more
+[00:11:57] piece of this sketch which is in
+[00:12:00] addition so of course what we're
+[00:12:02] building is open source software. Um and
+[00:12:04] on on the one hand we would find it
+[00:12:07] incredibly valuable if there were
+[00:12:09] various types of connectors that made it
+[00:12:13] dead easy for nodes and for other
+[00:12:16] institutions and even users to
+[00:12:17] contribute their metadata into the
+[00:12:19] platform and to have a two-way uh
+[00:12:22] programmatic conversation. And in
+[00:12:24] addition on the right hand side um
+[00:12:27] there's
+[00:12:29] we want to make it we think this is a
+[00:12:30] proposal that a local institution
+[00:12:34] um that wants to use this platform. Of
+[00:12:36] course it's open source so they can just
+[00:12:38] get all the software and use it um
+[00:12:40] however they want. But there are things
+[00:12:42] that we can anticipate that would make
+[00:12:43] it more useful to local institutions. um
+[00:12:46] we can perhaps build that um or help
+[00:12:49] somebody build that um so that a local
+[00:12:52] institution can get the same sorts of
+[00:12:53] advantages out of its own metadata and
+[00:12:56] building local applications on top of
+[00:12:58] it. And of course that would optionally
+[00:12:59] feed directly into the DLA as well. I
+[00:13:03] that's technically known as a win-win.
+[00:13:04] We don't know what to call this. We
+[00:13:06] thought about calling a diplet or in a
+[00:13:08] less gendered way a diplet um or a
+[00:13:11] dimple or a dumpling to not maybe not
+[00:13:15] and um and we tend to I think be calling
+[00:13:18] it a dipling or diplet and just
+[00:13:20] informally it's possible it needs a
+[00:13:22] better name though
+[00:13:25] so three big sessions of what we want to
+[00:13:27] talk about today um first is um the
+[00:13:29] challenge of the task of gathering
+[00:13:31] interesting metadata so we we currently
+[00:13:34] have a whole bunch bunch of metadata
+[00:13:37] that we've ingested that we've brought
+[00:13:39] in including as I mentioned Library of
+[00:13:41] Congress 7 million uh mark records
+[00:13:44] Harvard has the 12 million biodiversity
+[00:13:48] heritage with just about 50,000 the
+[00:13:49] bankro library uh from the from
+[00:13:52] California um we have the University of
+[00:13:56] Illinois Urbana Champagne collection uh
+[00:13:58] San Francisco Public Library images old
+[00:14:01] old SF that's 48,000 a little resource
+[00:14:05] called uh reporters resource that has
+[00:14:07] 600 um scientific reports that are of
+[00:14:10] particular interest to journalists.
+[00:14:12] We've also been experimenting because
+[00:14:14] why not with bringing in some web
+[00:14:15] content on the grounds and and you'll
+[00:14:17] tell us that this is not where you want
+[00:14:19] it to go but on the grounds that if
+[00:14:20] somebody comes to DLA and they're
+[00:14:22] looking up a topic there may well be
+[00:14:25] some stuff on the web that they would
+[00:14:26] benefit from if it were if it were
+[00:14:29] returned in the results. So things like
+[00:14:30] TED talks, Google author talks, uh NPR
+[00:14:33] broadcasts about books, we've brought in
+[00:14:35] that metadata as well. And then usage
+[00:14:38] data uh in in addition which we think
+[00:14:41] will has the potential to spur lots of
+[00:14:43] innovation. There are lots of issues
+[00:14:45] around usage data as well, circulation
+[00:14:46] data and books on reserve and things
+[00:14:48] like that. So we've been gathering uh so
+[00:14:51] far through custom methods. We've been
+[00:14:54] writing scripts. If it's a if it's a
+[00:14:55] mark 21 record in the standard book
+[00:14:57] format, then we're pretty much it's
+[00:14:59] pretty much automated. We'll just bring
+[00:15:00] it in. And likewise for other sorts of
+[00:15:02] data as well. But we absolutely
+[00:15:04] recognize that custom uh ingestion is it
+[00:15:08] doesn't scale. We needed to do that now,
+[00:15:11] but it doesn't scale. And so the idea is
+[00:15:13] that ingestion will be done through an
+[00:15:15] API uh through um an ingestion engine
+[00:15:21] um from nodes. And the joy there is so
+[00:15:24] they'll remember to make a node to joy
+[00:15:27] joy to nodes node to joy pun which I
+[00:15:30] think I'm going to skip um as well as
+[00:15:33] perhaps from individual institutions um
+[00:15:37] uh from other perhaps in websites and
+[00:15:39] then there are the deep and difficult
+[00:15:40] issues of maintaining and scheduling and
+[00:15:42] syncing and correcting and in two-way
+[00:15:44] dialogue. These are very very difficult
+[00:15:46] issues. the nodes offer some uh serious
+[00:15:50] advantages in this regard and want to
+[00:15:53] thank the content committee again for
+[00:15:54] their help with this. Look forward to
+[00:15:56] more help. So Dan is going to so we're
+[00:15:59] going to show you a couple of quick
+[00:16:00] demos and we're jump back into uh sort
+[00:16:03] of um boring exposition which is my job
+[00:16:06] and then some more demos. Um but so
+[00:16:08] here's some demos of some things that
+[00:16:10] have been built. Um, and as I say, all
+[00:16:14] of these are screen captured, but very
+[00:16:16] fresh and unedited. So,
+[00:16:18] all right,
+[00:16:19] Dan.
+[00:16:21] Thank you. Um, so I'm going to show an
+[00:16:25] experiment that developed at the uh,
+[00:16:26] Dipla Hackathon, and this was in
+[00:16:29] collaboration with a couple other
+[00:16:30] developers. And what I wanted to do is,
+[00:16:33] uh, make a more visual way to browse and
+[00:16:35] query the Dipl API. sort of uh allowing
+[00:16:39] you to refine a set of queries and then
+[00:16:41] sort of stack criteria on top of them uh
+[00:16:44] up so that you can get a a more refined
+[00:16:46] result set. So I'm going to start this.
+[00:16:49] This is live as well. Um so you can play
+[00:16:52] with this now if you feel so inclined.
+[00:16:55] So we're going to enter a keyword search
+[00:16:58] across all 19 million records for monkey
+[00:17:00] trial. And you can see that this is
+[00:17:02] going to find a number of relevant
+[00:17:04] results. And then this is filtering
+[00:17:06] based on the uh Library of Congress
+[00:17:08] results as well. The covers are coming
+[00:17:10] from open library.org.
+[00:17:12] Um so we're calling out to another open
+[00:17:14] API. So now we're doing a search for
+[00:17:16] creator, so authors for Collins. You can
+[00:17:19] see that that returned 10,000 records
+[00:17:21] currently. And we're going to refine
+[00:17:23] that search by uh putting in the name
+[00:17:25] Suzanne. And um that again is going to
+[00:17:28] be against the uh creator keyword uh
+[00:17:31] search. Um so now these covers are being
+[00:17:34] loaded by um you know from open library.
+[00:17:37] Um we're going to
+[00:17:41] you know filter again on uh Library of
+[00:17:43] Congress records.
+[00:17:45] Uh and then
+[00:17:48] going to go down look at the so there
+[00:17:51] was 25 results. So that's a pretty tight
+[00:17:52] result set for an author. And you can
+[00:17:54] see the Hunger Games here. So when we
+[00:17:56] click this um we're loading um external
+[00:17:59] jackets from the library thing open API
+[00:18:02] and then this is a link to the library
+[00:18:03] thing page as well um based on ISBN. If
+[00:18:07] we click this cover then we're going to
+[00:18:09] go to the open library page and if this
+[00:18:11] was something that we could read online
+[00:18:12] then we could borrow that you know read
+[00:18:14] it online or borrow it through WorldCat
+[00:18:16] as well. So that's one example.
+[00:18:23] Thank you.
+[00:18:29] Paul,
+[00:18:32] thank you.
+[00:18:34] So the next application is another
+[00:18:36] experiment from our hackathon um
+[00:18:40] developed over the course of a few hours
+[00:18:42] one day uh basically responding to the
+[00:18:45] challenge of how you can visualize the
+[00:18:47] facets that can be returned with any
+[00:18:49] query against the API. How can you
+[00:18:52] visualize them in a more intuitive way?
+[00:18:54] typically they come back as text
+[00:18:56] rendered results. Um so this is one
+[00:18:58] attempt to address that issue. Um
+[00:19:06] so we do a a keyword search on Darwin.
+[00:19:09] We get the results back and it's us and
+[00:19:11] it's looking at the facets for subject,
+[00:19:13] language,
+[00:19:14] author and year. In the top section we
+[00:19:17] have different rectangles of different
+[00:19:19] magnitudes showing the the relative
+[00:19:21] importance of the various facets. We
+[00:19:23] then have a timeline of the years of
+[00:19:24] publication of the books that were
+[00:19:26] returned in the object set. And then we
+[00:19:28] have a word cloud that expresses the
+[00:19:30] same sort of idea. Uh the second search
+[00:19:32] is of course monkey and we get a similar
+[00:19:36] uh display here with the various facets
+[00:19:39] that are returned shown as rectangles of
+[00:19:43] varying magnitude. The the next
+[00:19:46] application um is actually one that
+[00:19:48] wasn't developed at the hackathon.
+[00:19:49] that's being developed at the innovation
+[00:19:51] lab to address the issue of how to help
+[00:19:53] collection managers in libraries be able
+[00:19:56] to assess their collections based on
+[00:19:58] statistical information. It's a it's a
+[00:20:00] data set that we hope we will be able to
+[00:20:02] include in the DPLA at some point not
+[00:20:05] too far in the future. We happen to have
+[00:20:07] that data internally at Harvard and are
+[00:20:08] using it with this application, but it
+[00:20:10] shows you the sort of thing that can be
+[00:20:11] done with circulation statistics. It's
+[00:20:14] using the the data that we have uh in
+[00:20:17] this particular case of checkouts for
+[00:20:19] books in the time period of 2002 to
+[00:20:22] 2011. Um it's also looking at the
+[00:20:25] subjects for the different for the
+[00:20:27] different items based on their LC class
+[00:20:29] numbers. Um and the year that the
+[00:20:33] circulation event uh happened. So if we
+[00:20:37] look here, we see a global global
+[00:20:39] presentation. Uh the different colors
+[00:20:41] represent the different subject areas.
+[00:20:43] Um so in the top one you have language
+[00:20:45] and literature for example with a little
+[00:20:47] over a million records in our data set.
+[00:20:49] Then you do a specific keyword search
+[00:20:51] and in this case on evolution and you
+[00:20:54] bring back the subject set of all the
+[00:20:56] items that respond to that particular
+[00:20:58] keyword broken down by subject
+[00:21:00] classification and once again also by
+[00:21:02] the circulation statistics. So a
+[00:21:03] collection manager could look at this
+[00:21:05] and be able to tell which areas of the
+[00:21:07] collection are being used most for these
+[00:21:09] particular for these particular kinds of
+[00:21:11] interests.
+[00:21:13] Thank you.
+[00:21:16] [Applause]
+[00:21:17] [Music]
+[00:21:21] Hello.
+[00:21:23] Scary.
+[00:21:25] So, one thing that that this demo shows
+[00:21:27] is that you can take a small slice of
+[00:21:30] DPA content as opposed to maybe taking a
+[00:21:31] big slice like Dan showed. So, you know
+[00:21:35] what you might refer to this as the the
+[00:21:36] card and pocket jQuery plugin. So we
+[00:21:39] have an old school card here. It's
+[00:21:40] sticking in a pocket, you know, like you
+[00:21:42] would get in a library 10 years ago.
+[00:21:45] And so you pass this jQuery plugin, a
+[00:21:48] unique identifier, an ISBN number and
+[00:21:50] OLC ID,
+[00:21:52] and you get back details on how the
+[00:21:55] community has engaged with this item. So
+[00:21:57] number of copies or number of checkouts,
+[00:22:00] right? So this is really easy one jQuery
+[00:22:03] plugin to install. Maybe someone would
+[00:22:05] install it in their OPAC or in a blog
+[00:22:07] post. It's not kind of a whole thing
+[00:22:09] that you need an army of engineers to
+[00:22:10] install. So I like the idea of taking a
+[00:22:12] real small slice.
+[00:22:18] This is a a project that came out of the
+[00:22:19] beta sprint called Mint. And so what it
+[00:22:22] does is it creates a crosswalk between
+[00:22:24] incoming data and things that are in the
+[00:22:27] API already. So when we bring things
+[00:22:29] into uh the platform, we try to map
+[00:22:33] incoming data to a set of standard
+[00:22:35] terms. So maybe you can search over a
+[00:22:37] title field and it can be you know
+[00:22:39] pretty standard but obviously when a
+[00:22:41] data set's coming in from the wild maybe
+[00:22:43] someone calls it you know my title or
+[00:22:45] book title or something. So Mint is a
+[00:22:47] web interface that lets an end user
+[00:22:49] create that crosswalk between my title
+[00:22:52] and title and helps us ingest the data.
+[00:22:57] Okay.
+[00:23:01] [Applause]
+[00:23:03] So the next segment is um how do you
+[00:23:07] make metadata usable and it addresses
+[00:23:10] the the problem that Matt was just
+[00:23:12] talking about and that mint mint is one
+[00:23:14] part of a a potential uh solution is too
+[00:23:17] strong but a helper towards. So think of
+[00:23:20] each of these jelly beans as one of the
+[00:23:22] items pointed to in by the uh by the
+[00:23:25] platform by the DPLA meta collection
+[00:23:28] except that that's way out of scale. In
+[00:23:30] fact, you should drop back by some
+[00:23:31] orders of of of 10 powers of 10 this
+[00:23:34] picture and you have more like the the
+[00:23:37] some sense of the scale of difficulty.
+[00:23:38] And the issue is as Matt says that there
+[00:23:41] are there's as is well known there's not
+[00:23:44] uniformity about how to label things,
+[00:23:47] how what either the label should be or
+[00:23:49] what the content should be. So things
+[00:23:50] that are the same have different
+[00:23:52] metadata attached to them. This is one
+[00:23:54] of the the key difficulties. And so the
+[00:23:57] challenge is to um get enough detail so
+[00:24:00] that it's useful but not um so much that
+[00:24:03] you scare away contributors by requiring
+[00:24:05] them to do extensive mapping and
+[00:24:08] something that they often are not
+[00:24:09] familiar with. Um and also to do this in
+[00:24:12] a pretty rough and rapid way because
+[00:24:16] April 2013
+[00:24:19] that's basically tomorrow. So we're
+[00:24:21] trying to do this a as imperfectly but
+[00:24:24] as as quick quick quickly and usefully
+[00:24:26] as we can. Um so what we are proposing
+[00:24:29] and what we've we're trying out so far
+[00:24:31] and seems to actually be pretty good um
+[00:24:34] is to have two types of of schemas. So
+[00:24:38] um on the one hand so you take one of
+[00:24:40] these jelly beans you you take a thin
+[00:24:42] wrapper around it of pretty predictable
+[00:24:45] standard data. Most things are going to
+[00:24:47] have not all of them but many of them
+[00:24:49] have a title a creator a publisher
+[00:24:52] license it whatever small fairly small
+[00:24:54] set express that in completely standard
+[00:24:57] ways so we are proposing smooshing
+[00:25:00] together dublin core and schema.org or
+[00:25:02] two very well-known um standards. U but
+[00:25:06] then there's all that other goodness on
+[00:25:08] the inside of the jelly bean that you it
+[00:25:10] isn't into in a standard format but may
+[00:25:13] have tremendous value. So what we're
+[00:25:14] proposing is that we maintain all of
+[00:25:16] that data, not try to put it into a
+[00:25:19] standard um into a a standard schema for
+[00:25:23] the reasons I I mentioned, but keep it
+[00:25:25] so that if somebody knows that what data
+[00:25:27] is there, he or she will be able to get
+[00:25:29] at it programmatically. And there are
+[00:25:31] absolutely pros and cons to this. Um the
+[00:25:35] pros are well, it makes it much easier
+[00:25:36] to ingest this two-part um proposal.
+[00:25:40] Much easier to ingest. you get a big
+[00:25:42] chunk of stuff that can be searched
+[00:25:45] across all of the contents that search
+[00:25:48] for title will turn up titles of lots of
+[00:25:50] different sort of stuff from many
+[00:25:52] different sorts of collections and the
+[00:25:54] rest is still there. we're not throwing
+[00:25:55] out any data. But on the other hand, to
+[00:25:59] find the stuff that's not going into the
+[00:26:00] two standard into the standard schema,
+[00:26:02] the simplified schema, you have to know
+[00:26:04] what you're looking for. And we will
+[00:26:05] make the schema particular schema
+[00:26:07] available through the API, but you have
+[00:26:09] to that is the documentation about it,
+[00:26:10] but you have to know what you're looking
+[00:26:11] for. Um and it's certainly the case that
+[00:26:14] doing this purely through link data
+[00:26:16] internally because we will support
+[00:26:17] linked data out and in but doing it
+[00:26:19] internally would give some tremendous
+[00:26:20] advantages for making connections among
+[00:26:22] all those different jelly beans along uh
+[00:26:25] likenesses and similarities that the a
+[00:26:28] schema cannot predict. And on the third
+[00:26:31] hand,
+[00:26:33] April 2013,
+[00:26:35] we also have questions about uh scaling
+[00:26:38] up linked data, which so here's a
+[00:26:41] proposal to to the DPLA that it would be
+[00:26:46] I think wonderful if DLA sponsored some
+[00:26:49] research. We'll give um anybody who
+[00:26:52] wants it, they can have all of the data
+[00:26:53] of course and the API specification and
+[00:26:56] try to build it using link data
+[00:26:58] internally with a triple store and if it
+[00:27:00] scales and if it works that would be
+[00:27:01] fantastic. That would be amazing. In the
+[00:27:03] meantime, we will charge ahead with a
+[00:27:05] more um traditional approach to managing
+[00:27:09] this data.
+[00:27:11] So we currently have um three schemas,
+[00:27:15] three types of information that we're
+[00:27:17] tracking. the item information, item
+[00:27:19] information, contributor information,
+[00:27:20] and event data, which is circulation and
+[00:27:22] other sorts of events. Um, we will also
+[00:27:25] have a creator schema, but we're with
+[00:27:27] all these we're very interested in
+[00:27:29] having a discussion about what you think
+[00:27:30] should be in there. We want to do as
+[00:27:32] little recreating as possible. And we
+[00:27:35] hope well we think that there but this
+[00:27:37] is for the DPL DLA to decide that
+[00:27:39] there's room for a users schema as well
+[00:27:42] that tracking some level of information
+[00:27:44] optin of course with privacy um uh and
+[00:27:48] security built in but information about
+[00:27:50] the users of the EPLA. This may be a
+[00:27:52] terrible idea. It may be a good idea. Um
+[00:27:55] we want to suggest
+[00:27:57] some reasons why it's at least something
+[00:27:59] to think about. So Matt,
+[00:28:08] so so people like putting things on
+[00:28:10] shelves, right? In in the physical
+[00:28:11] world, they like putting things on
+[00:28:13] shelves that they want to hang on to in
+[00:28:15] the long term and the short term.
+[00:28:18] So there's no reason why that can't
+[00:28:19] translate to the the web world, right?
+[00:28:22] So this is a project we've been working
+[00:28:23] on the lab and developed an integration
+[00:28:26] with DLA
+[00:28:27] uh called Shelme. So, I got a little bit
+[00:28:30] of a video here. So, my sh this is my
+[00:28:33] personal shelf me page and I have three
+[00:28:35] shelves. One called Mapping the World.
+[00:28:38] And these are the things that I've put
+[00:28:40] on my shelf. Right. So, these are books.
+[00:28:43] I'm going to add a new one here. I'm on
+[00:28:45] Amazon page. Search for a new book.
+[00:28:49] I like that one. And I click the
+[00:28:52] bookmark. Say add to my Shel Me page.
+[00:28:55] And Shel Me extracts some metadata from
+[00:28:57] Amazon here. And I have to do a little
+[00:28:59] bit of cleanup because this is a beta
+[00:29:01] version. And now I've got that item on
+[00:29:03] my shelf. So I took something from
+[00:29:06] Amazon, put it on a list of things that
+[00:29:08] I'm calling mapping the world. And
+[00:29:11] you'll see that that I have details of
+[00:29:14] this this thing. And I can get back to
+[00:29:15] the original source. And so this is from
+[00:29:17] Amazon, but it can come come from
+[00:29:19] anywhere. Right now it can come from
+[00:29:21] IMDb or Music Brains or Dan's covered
+[00:29:26] app. So we did a quick integration here.
+[00:29:28] Let's search for map.
+[00:29:34] I find a bunch of cool things in DLA.
+[00:29:36] Let's say I want
+[00:29:39] want one of these things. I want to put
+[00:29:40] on my shelf. This Italy builds book that
+[00:29:43] looks really great. So, shelf me
+[00:29:46] extracts information here. Again, I have
+[00:29:48] to do a little cleanup because this is a
+[00:29:49] beta version.
+[00:29:51] And now I'm adding it to my shelf.
+[00:29:54] And so, here it sits right next to my
+[00:29:56] thing from Amazon. This could be
+[00:29:58] sandwiched between something from Google
+[00:30:00] books, maybe something, you know, from
+[00:30:02] IMDb, anything on the web.
+[00:30:06] So, you know, this this is supported for
+[00:30:08] multiple users for multiple shelves.
+[00:30:10] It's at shelf.mme. It'll be out pretty
+[00:30:12] soon. Our lab's been working on it.
+[00:30:17] I have another thing to show you here
+[00:30:19] called stack view. And stack view is
+[00:30:20] really the engine that powers shelve.
+[00:30:22] And stack view is kind of this general
+[00:30:23] purpose tool that we've packaged up and
+[00:30:25] put on GitHub. and we hope people will
+[00:30:27] use. We did an integration with
+[00:30:30] uh DLA.
+[00:30:33] So you can pull results in and build a
+[00:30:35] stack from lots of sources. Here's ones
+[00:30:37] one from Amazon. You can scroll through
+[00:30:39] this stack. You see the books are
+[00:30:41] represented uh in dimensions you might
+[00:30:43] find in the real world. The length comes
+[00:30:44] from the length, the width from the page
+[00:30:46] height or number of pages and the color
+[00:30:48] comes from maybe some heat mapping.
+[00:30:51] Here's an example from Google Books I
+[00:30:53] can scroll through. Here's one from
+[00:30:55] DPLA. Uh there are also examples from
+[00:30:57] Open Library and WorldCat on this page.
+[00:31:00] Again, this is a this is a production uh
+[00:31:03] project that's on GitHub. We hope you'll
+[00:31:05] go and grab it and build a DPA powered
+[00:31:07] stack.
+[00:31:09] Great.
+[00:31:10] Thanks.
+[00:31:11] [Music]
+[00:31:13] [Applause]
+[00:31:15] Um so one of the conceiv this is in some
+[00:31:18] sense a small widget, right? I mean it's
+[00:31:19] building it's taking a list of books
+[00:31:21] coming from a variety of sources
+[00:31:22] including DPLA and it's presenting it in
+[00:31:24] in an appealing visual way. Um, one of
+[00:31:27] the hopes is that since this is open
+[00:31:28] source that uh, people will build
+[00:31:30] widgets as a way of very easily
+[00:31:33] embedding content from the DPLA into non
+[00:31:38] DPL DLA sites, whether it's a blog post
+[00:31:41] or a local library that wants to give
+[00:31:44] its users the ability to navigate
+[00:31:47] visually through the content of
+[00:31:50] of that library of the DLA's meta
+[00:31:52] library. So um this is a toy I I wrote
+[00:31:56] this. So this is a toy. This is the
+[00:31:57] opposite of ever being production ready
+[00:32:00] from this is from the hackathon. So the
+[00:32:02] idea is if you DPLA does not have uh it
+[00:32:05] has lots of works but we don't have
+[00:32:06] covers for. Um so let's say you do a
+[00:32:09] search on evolution and you click on the
+[00:32:11] result for dreaming in the dark and you
+[00:32:14] say well I'd like to get a cover. So um
+[00:32:16] it goes out to flicker and it pulls back
+[00:32:18] what it thinks are relevant um covers.
+[00:32:20] You pick one, you you crop it, you maybe
+[00:32:23] do a because you're a good citizen, you
+[00:32:25] correct the capitalization, get rid of a
+[00:32:27] punctuation mark that shouldn't be
+[00:32:28] there. And then if you want to, you can
+[00:32:30] add a new background to the to the
+[00:32:33] banner. And then you do the thing the
+[00:32:35] important thing and the thing that
+[00:32:36] absolutely doesn't work which is you
+[00:32:38] save the cover because there it's
+[00:32:41] actually getting uh doing a search live
+[00:32:43] against DLA but it's not saving anything
+[00:32:46] to the DLA in part because we don't have
+[00:32:48] a concept of a user and this is one of
+[00:32:51] the questions for DLA. Is there room for
+[00:32:53] a concept of a user? I should point out
+[00:32:56] um these are the four images that came
+[00:32:58] back from Flickr. The title is Dreaming
+[00:33:00] in the Dark. The absolutely most
+[00:33:02] terrifying one you could pick is the one
+[00:33:04] on the right. That would be the wrong
+[00:33:06] cover to pick for Dreaming in the Dark.
+[00:33:07] I hope that's the nightmare version.
+[00:33:11] So, this is this is a a demo from one of
+[00:33:14] the beta sprinters. It was known as
+[00:33:16] Extra Muri. It's now called ZGA um that
+[00:33:19] James Burns there contributed. And so,
+[00:33:22] here's the idea. Um you first of all,
+[00:33:25] you log in. ZGA is this phenomenal tool
+[00:33:27] for pulling in images and and content of
+[00:33:30] any sort from any site that has an open
+[00:33:33] API and then letting the user construct
+[00:33:36] beautiful narratives from this
+[00:33:38] walkthroughs of it. So in this case
+[00:33:40] we've done a search at DLA. It's come
+[00:33:42] back with some raw data. We said add it.
+[00:33:44] This again through a bookmark lit uh
+[00:33:46] which it now has done. Um it has taken
+[00:33:50] the the first 10. It's brought them in.
+[00:33:52] you can see the metadata that's been
+[00:33:55] pulled in quite accurately by this by
+[00:33:57] Zika from the DPLA's collection. And
+[00:34:00] then we're going to um
+[00:34:03] start adding these images to a
+[00:34:05] collection. And in this case, the
+[00:34:07] collection will include what you're
+[00:34:08] looking at now, which are images from
+[00:34:10] Boston Public Library. Um ZGA doesn't
+[00:34:13] care where the images come from. You
+[00:34:15] pull them all together, you make a a
+[00:34:16] collection of images and and sound and
+[00:34:19] video and then can structure it like a
+[00:34:22] deeply personal
+[00:34:24] walk through a movie. Um so this is a
+[00:34:27] type of integration of another
+[00:34:29] application that adds I think tremendous
+[00:34:31] value to the content that people have
+[00:34:34] contributed institutions have
+[00:34:36] contributed to the DLA.
+[00:34:38] There's also the possibility of taking
+[00:34:41] those collections that users have
+[00:34:43] created and bringing that information
+[00:34:45] back into the DPLA because it's
+[00:34:47] incredibly useful semantic information.
+[00:34:49] Of course, the user would have to opt
+[00:34:50] into this, but that would be, I think,
+[00:34:52] just an amazing uh round trip. So, there
+[00:34:56] are lots of types of enhancements that
+[00:34:58] need to be done to the metadata. All of
+[00:35:01] these are impossible to do completely or
+[00:35:04] even to do well. These are well-known
+[00:35:06] computational problems in in the field
+[00:35:09] of library science. This is so first is
+[00:35:11] uniform title where you have a set of
+[00:35:13] books that are basically the same book
+[00:35:15] but they have different titles to them
+[00:35:17] for whatever reason. Uh and so you want
+[00:35:20] to get those together so that when a
+[00:35:21] user does a search she finds all the the
+[00:35:24] books and other works that she's looking
+[00:35:25] for. And Paul actually has done a lot of
+[00:35:27] work on this and uniform title is is I
+[00:35:30] think a really good example of the sort
+[00:35:32] of thing that we can do successfully.
+[00:35:34] But then there's a whole other range of
+[00:35:35] ways in which books are related. Um, and
+[00:35:38] it's an open-ended field. Um, that's
+[00:35:42] this is a deep and very important
+[00:35:43] problem and we need help of all sorts in
+[00:35:46] dealing with this. Likewise, pulling
+[00:35:48] together books that are recommended or
+[00:35:50] providing the information to somebody
+[00:35:52] who develops a tool that's going to make
+[00:35:54] recommendations. And then the inevitable
+[00:35:56] dduping, the removal of duplications,
+[00:35:57] which requires identifying books as
+[00:35:59] being the same when all their meta
+[00:36:00] metadata may be different and doing this
+[00:36:02] across collections. It's very difficult.
+[00:36:04] There are people working on it. It's a
+[00:36:06] deep deep problem and again we look for
+[00:36:10] help. We will do the best we can but we
+[00:36:12] need we need help. So how to do this?
+[00:36:16] Well you want to make it the aim of this
+[00:36:17] is to provide a platform that gives
+[00:36:18] access to data in a way to metadata
+[00:36:20] excuse me and through the metadata to
+[00:36:22] content um that makes it very easy for
+[00:36:24] developers to work with it. Um so from
+[00:36:27] the developer point of view the
+[00:36:29] developer is going to see outputs um and
+[00:36:31] that will include the core simplified
+[00:36:33] data that we talked about access to all
+[00:36:35] the data that's brought in all the
+[00:36:36] metadata and even getting back to the
+[00:36:38] original records having information
+[00:36:40] available as data download you just want
+[00:36:43] all the data go take it and do what you
+[00:36:45] want with it and through linked open
+[00:36:46] data both coming in but also going out.
+[00:36:49] Um so
+[00:36:52] here is um the last demo and this is
+[00:36:55] coming from Dan Brickley. Um and he's
+[00:36:59] narrating it. So I will simply stop.
+[00:37:04] Zoe Babich and I created this
+[00:37:06] demonstration of one way the DPA
+[00:37:08] platform can play in the world of link
+[00:37:10] data. What we're doing is using topics
+[00:37:12] and entities from link data to create
+[00:37:14] entry points into diverse DPLA
+[00:37:15] collections as well as into other
+[00:37:17] aggregations like Europeana. For this
+[00:37:19] first demo, we're using manually
+[00:37:21] collected results, but we're happy with
+[00:37:23] what we're seeing from the platform APIs
+[00:37:25] and a live prototype will be up in a
+[00:37:27] couple of weeks. Our top level
+[00:37:29] navigation uses RDF data from Freebase,
+[00:37:32] which itself aggregates linked data from
+[00:37:33] Wikipedia and others. We've filtered
+[00:37:36] those for use in DPLA and generated per
+[00:37:38] topic, per artist and so on pages. Here
+[00:37:41] we see a simple A to Z listing of art
+[00:37:43] movements where each entry is in effect
+[00:37:45] backed up by a miniature database of
+[00:37:47] associated information. So let's let's
+[00:37:49] jump into the abstract art entry. You'll
+[00:37:51] see how each page forms a navigational
+[00:37:53] hub that we can populate with data from
+[00:37:55] DLA and elsewhere. The idea is to cross
+[00:37:58] reference across collection types,
+[00:38:00] books, images, museums, etc. You'll see
+[00:38:02] here items from the DPLA meta collection
+[00:38:04] and later on some images from European.
+[00:38:07] As we scroll down through the entry for
+[00:38:08] abstract art, you can see how new
+[00:38:10] modules can be dropped in as the DLA
+[00:38:12] collections grow. These entry points are
+[00:38:14] built from link data with which we can
+[00:38:16] generate appropriate queries to send off
+[00:38:18] to the DLA and Europeana platform APIs.
+[00:38:21] This lets us generate useful pages
+[00:38:23] today. But this kind of microite will
+[00:38:25] benefit greatly as these platforms and
+[00:38:27] collections move towards providing
+[00:38:29] richer link data natively. Our approach
+[00:38:31] shows how DLA can hook into the link
+[00:38:33] data ecosystem and how link data lets us
+[00:38:36] build browsable navigation systems on
+[00:38:38] top of the DLA platform.
+[00:38:44] Yeah, Dan is
+[00:38:48] Dan Brookkeley is amazing. He's many
+[00:38:49] time zones away, but he is just
+[00:38:52] wonderful to work with. So, um we had a
+[00:38:55] hackathon April 5th. The last little bit
+[00:38:57] of video to show you is in fact a
+[00:38:58] two-minute uh um roundup. Uh the
+[00:39:02] videography is horrible.
+[00:39:04] Um we are glad everyone could make it on
+[00:39:07] relatively short notice. So um thanks to
+[00:39:10] the Burkeman staff. Um I'd like to
+[00:39:11] introduce Chris Freeland, the co-chair
+[00:39:13] of the tech stream. Hi Chris. pulled
+[00:39:15] together a tiny Ruby script that
+[00:39:17] basically took a query um in my case
+[00:39:20] monkeys and grabbed four fields used
+[00:39:22] that delimited file as input into
+[00:39:24] viewshare in an attempt to build views
+[00:39:28] like having a pie chart showing
+[00:39:30] groupings by the data source.
+[00:39:32] For instance, I did the uh monkey search
+[00:39:34] as inspired by Corey and I find that
+[00:39:37] there's an author here, David Lipsky.
+[00:39:40] Comes back and tells me that there are
+[00:39:41] three different David Lipkies that it
+[00:39:43] knows about. being able to uh generate
+[00:39:46] lists uh from queries to the GPLA API
+[00:39:51] and placing them on a map.
+[00:39:54] It glocates your position through your
+[00:39:56] browser and it finds the three nearest
+[00:39:58] local public libraries
+[00:40:00] in version two.
+[00:40:00] One of them happens to be in the middle
+[00:40:02] of a river.
+[00:40:04] So I I was just working with James and
+[00:40:06] Nate a little bit to get help them hook
+[00:40:08] up uh Wikimedia images into their into
+[00:40:11] their map because they also wanted
+[00:40:12] little image. This is a query for
+[00:40:14] butterflies. It's the first 20 results
+[00:40:16] and it puts them all on a timeline that
+[00:40:18] you can see down here, but you can see
+[00:40:24] um butterflies what people have thought
+[00:40:26] and said about the various points.
+[00:40:28] So I created a really simple Python
+[00:40:30] wrapper, Python library wrapper for the
+[00:40:33] API
+[00:40:35] to you know define facets that you want,
+[00:40:37] define sort parameters that you want.
+[00:40:39] One of the things that we've wanted to
+[00:40:40] do but haven't had time to do yet was to
+[00:40:42] go out and get related OCLC uh has an
+[00:40:45] XID service they call it. So during
+[00:40:47] ingestion when the ISBN shows up they
+[00:40:49] can call out get the related items um
+[00:40:52] and create a a work and ferour speak
+[00:40:56] that's the work level the one that
+[00:40:57] that was really great in just a few
+[00:40:59] hours to get all that done. Um, so
+[00:41:01] again, I do want everyone
+[00:41:06] Yeah, that that was
+[00:41:09] that was an amazing day. I want want to
+[00:41:10] thank Martin and Chris again. Um, so
+[00:41:14] those were most of the ones that you
+[00:41:16] didn't see semi- live here today. That
+[00:41:19] was all in one afternoon. That was an it
+[00:41:21] was to me astounding. I think it made us
+[00:41:23] all feel really really uh hopeful. Uh an
+[00:41:28] amazing set of people as well. So, thank
+[00:41:31] you for coming. Um, okay. So, April
+[00:41:34] 2013, here's what we think. With a lot
+[00:41:38] of help, a lot of help from all of you,
+[00:41:40] we can get to working API and ingestion
+[00:41:45] engine that that works. It's going to
+[00:41:46] be, it's not going to get everything,
+[00:41:49] not even close, but it'll be, we hope,
+[00:41:52] um, automated enough. um a pretty good
+[00:41:57] collection of worthwhile material that
+[00:41:59] is metadata that's pointing out to many
+[00:42:03] of the astounding collections that are
+[00:42:06] available. Um as well as whatever
+[00:42:09] digitizations the DPLA has sponsored. Um
+[00:42:12] we hope something like diplets and
+[00:42:14] connectors um to be specified. Um, and
+[00:42:18] we hope lots of communitydeveloped apps
+[00:42:21] and integration with with sites large
+[00:42:23] and small. We are not doing a front end.
+[00:42:26] I think I've been clear about that. But
+[00:42:28] I also want to point out the following.
+[00:42:29] The metadata will be incredibly messy.
+[00:42:33] It will will be nowhere near that you
+[00:42:35] look up something and you get everything
+[00:42:37] back that's relevant about it. It's
+[00:42:39] going to miss lots of stuff. That's the
+[00:42:41] nature of dealing with metadata that's
+[00:42:43] coming in from as many rich sources as
+[00:42:45] we want. sources that were not designed
+[00:42:47] with supporting the DPLA or being even
+[00:42:49] interoperable in mind. The ingestion
+[00:42:52] will be clunky. It will be, as Paul
+[00:42:54] says, perhaps have a mild case of
+[00:42:57] indigestion.
+[00:42:58] It will, we we hope, work and support um
+[00:43:02] the the set of nodes and collections
+[00:43:05] that will make the platform worthwhile.
+[00:43:07] But it it's going to be really hard and
+[00:43:08] and and difficult um and uneven. And
+[00:43:13] most of all, we can promise that this
+[00:43:14] will be wildly imperfect. It will be an
+[00:43:18] alpha at at best. That's what we we're
+[00:43:21] we're aiming for because a year is not
+[00:43:24] very long.
+[00:43:26] The only way we can do this is with help
+[00:43:30] from you as individuals, from your
+[00:43:32] institutions, from the work streams,
+[00:43:34] from from the mailing lists, from other
+[00:43:37] uh labs, from other other application
+[00:43:41] teams. that is the o and by reusing
+[00:43:44] massive amounts of code. It's an open
+[00:43:47] source world. So we need this is a plea
+[00:43:49] for help because this is a gigantic um
+[00:43:53] undertaking. But we think that we are
+[00:43:58] headed that this approach in general
+[00:43:59] with all of the room for argument and
+[00:44:01] discussion and improvement that this
+[00:44:03] approach in general of building a
+[00:44:04] platform that gives open access to open
+[00:44:06] metadata through a set of services that
+[00:44:09] will support what developers want to do
+[00:44:12] has the possibility of generating the
+[00:44:15] type of innovation that the web itself
+[00:44:18] was designed for. These are some links.
+[00:44:22] Thank you very very much and we look
+[00:44:23] forward to talking with you and and
+[00:44:24] thank thank this team which is an
+[00:44:27] amazing awesome team.
+[00:44:35] I believe we have two minutes for
+[00:44:37] questions.
+[00:44:44] We'll do our best.
+[00:44:46] Um do you guys you actually have an API
+[00:44:48] that we can write apps against? Is that
+[00:44:49] what you guys are doing? Yeah, that's
+[00:44:51] and what some of those links will lead
+[00:44:52] us there. Is that it?
+[00:44:54] Yes.
+[00:44:54] Great.
+[00:44:55] Everything that you saw was live in my
+[00:44:57] hotel room against the API against real
+[00:45:00] data um in real time. Absolutely. Please
+[00:45:04] kick the the tar out of the API and let
+[00:45:07] us know.
+[00:45:08] Cool.
+[00:45:14] Just a request to uh put up the URLs
+[00:45:17] again, please.
+[00:45:23] Um, I was just wondering why
+[00:45:28] I see that you you're using PHP and I
+[00:45:31] was wondering why you chose PHP.
+[00:45:36] I'm not going to answer.
+[00:45:38] The lang in my opinion the lang the
+[00:45:40] language doesn't really matter. That was
+[00:45:42] a common language that uh one of the
+[00:45:44] common languages across our team. So it
+[00:45:46] seemed like an easy choice. We're
+[00:45:48] certainly not married to it.
+[00:45:50] I've I've built stuff against the API
+[00:45:53] using uh Ruby and Rails and just my app
+[00:45:57] that I showed the covered app is purely
+[00:46:00] client side. So, it's just a choice.
+[00:46:08] If if you have further thoughts about
+[00:46:10] that, um see us afterwards. Get on the
+[00:46:12] mailing list. We would love love to hear
+[00:46:14] from you.
+[00:46:22] And somebody else is going to have to
+[00:46:23] tell us to get off the stage.
+[00:46:27] One question.
+[00:46:27] You're good. Just how much content is
+[00:46:29] available to date through the platform?
+[00:46:33] If by content you mean metadata?
+[00:46:36] Um, no content assets.
+[00:46:40] So this is a metadata server. We are not
+[00:46:43] aggregating content directly. We're not
+[00:46:46] putting it. We're not we don't have a
+[00:46:47] repository for content. Not at this
+[00:46:49] point. We will for DLA digitizations
+[00:46:51] which don't yet exist. But the primary
+[00:46:54] the first aim of this is to aggregate
+[00:46:56] metadata that will point out to content.
+[00:47:00] 19 million records though.
+[00:47:07] Okay. Thank you so much.
+[00:47:09] [Applause]

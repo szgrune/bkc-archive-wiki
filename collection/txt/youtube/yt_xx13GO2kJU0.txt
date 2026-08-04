@@ -1,0 +1,1829 @@
+[00:00:00] Today we have Jim Cowi from uh Renus. Uh
+[00:00:04] for um for years actually um uh one of
+[00:00:10] my problems uh my personal problems in
+[00:00:13] my life is that I constantly got asked
+[00:00:14] by people in the press and otherwise is
+[00:00:17] the internet down in Egypt, Russia,
+[00:00:19] China forever and I would say and all of
+[00:00:21] us would say I don't know. we can ask
+[00:00:24] the six people that we know whether it's
+[00:00:26] down and maybe they'll tell us where
+[00:00:28] they won't and maybe it's their DSL
+[00:00:29] problem or not. Um, and this was sort of
+[00:00:32] a fundamental problem that was that was
+[00:00:33] that seems simple but it's actually can
+[00:00:35] be very hard to answer. Uh, and this has
+[00:00:38] become increasingly important the past
+[00:00:40] four years where largecale outages of
+[00:00:42] the internet have been used as modes of
+[00:00:46] internet control particularly in the
+[00:00:47] Arab Spring but in uh other places as
+[00:00:50] well. Um, so now, uh, thanks to Jim Cow,
+[00:00:54] I I usually have an answer for that. And
+[00:00:56] the answer is go, uh, go look at
+[00:00:58] Renesus's blog because they probably on
+[00:01:00] the same day you asked the question
+[00:01:02] answered it with actual data from, uh,
+[00:01:05] traffic and from routing,
+[00:01:08] what parts of internet in any any given
+[00:01:10] country are up or down.
+[00:01:12] So, uh, Jim, uh, kindly agreed to come
+[00:01:15] talk to us today, uh, to some degree
+[00:01:18] about, um, those specific issues of
+[00:01:20] tracking, um, internet outages, but also
+[00:01:23] more largely about, um, the structure
+[00:01:26] of, um, of autonomous systems and uh,
+[00:01:30] uh, networks and provisioning of
+[00:01:33] networks on the internet in a whole and
+[00:01:35] how that impacts questions of uh,
+[00:01:37] technical but also political, social,
+[00:01:39] and economic uh,
+[00:01:42] So with that
+[00:01:43] very good thanks. Um
+[00:01:48] so it's true we we we do attempt to tell
+[00:01:51] people when the internet is
+[00:01:52] substantially down in particular places
+[00:01:54] we hope to get it on the same day. Um
+[00:01:57] uh we've discovered a whole new sort of
+[00:02:00] data source for this which is that when
+[00:02:02] the internet goes out in a particular
+[00:02:03] country reporters will start to call and
+[00:02:06] so if we say wow we got calls from the
+[00:02:08] Associated Press and Bloomberg and
+[00:02:09] they're all asking about Afghanistan
+[00:02:12] then we know oh yeah time to check the
+[00:02:14] logs. Um but uh so today uh I'm going to
+[00:02:19] be talking with your permission about
+[00:02:21] stuff that is down in the in the
+[00:02:23] basement in the buried in the streets of
+[00:02:26] the internet as opposed to where a lot
+[00:02:27] of you are studying as I understand it
+[00:02:29] which is control issues and uh political
+[00:02:32] issues and application issues up top.
+[00:02:34] Now that's not to say there aren't
+[00:02:35] control and political issues down below.
+[00:02:38] Um but where we function mostly is is
+[00:02:40] under under street level. Um, we're
+[00:02:43] studying how the internet is put
+[00:02:45] together at the most fundamental level,
+[00:02:47] which is agreements among providers and
+[00:02:49] the uh fibers and the physical resources
+[00:02:51] that the internet runs on. Um, we've
+[00:02:54] been at this, I'm a co-founder. We've
+[00:02:56] been at this for about 10 years now,
+[00:02:57] which seems like a long time. Um,
+[00:03:01] studying the engineering obviously, uh,
+[00:03:04] the performance, but also the economics
+[00:03:06] and the security when we can of the
+[00:03:08] internet. Um the way we've always done
+[00:03:10] this historically is we've collect
+[00:03:12] connected to hundreds of internet
+[00:03:14] service providers around the world and
+[00:03:16] gotten them to share routing data with
+[00:03:18] us. That is they're literally giving us
+[00:03:20] copies in real time of all of their
+[00:03:21] routing traffic so that we understand
+[00:03:23] how they reach everything on Earth all
+[00:03:25] the time and we mine that uh in recent
+[00:03:28] years and and if anybody has questions
+[00:03:31] just jump in and ask because there's no
+[00:03:33] reason for this to be unidirectional.
+[00:03:35] Um, we then we augment that by taking a
+[00:03:39] look at the structure of the
+[00:03:40] relationships that are exposed in the
+[00:03:42] paths. For example, uh, if I need to get
+[00:03:44] to a particular site in China, I know
+[00:03:47] all of the providers that serve that
+[00:03:48] site. I know all of the people that they
+[00:03:50] buy from. I know most of the people that
+[00:03:52] they peer with. I can try trace that
+[00:03:54] back to any place on Earth and figure
+[00:03:56] out what the path should have been if I
+[00:03:58] tried to get from a server in Dayton,
+[00:04:00] Ohio to a server in Beijing.
+[00:04:03] Um, we're inferring continuously the
+[00:04:05] business relationships, the economics of
+[00:04:07] connectivity from that data, trying to
+[00:04:10] figure out uh who is peering with each
+[00:04:12] other. Uh, whether it's settlement free
+[00:04:14] or somebody is paying and when it's
+[00:04:16] simply a transit relationship, somebody
+[00:04:17] is paying to carry traffic away. And as
+[00:04:20] you can imagine, that evolves daily. Um,
+[00:04:24] we uh we try to track uh the primary
+[00:04:27] providers in every country. We try to
+[00:04:28] track everybody's customer list and we
+[00:04:31] keep all of this data around forever. So
+[00:04:33] we can go back and do cool
+[00:04:34] retrospectives and show how the internet
+[00:04:36] uh diversity for example in a in an
+[00:04:39] internet ecosystem like uh like Saudi
+[00:04:41] Arabia or uh or Canada has changed over
+[00:04:45] time. Um
+[00:04:48] we find that this this is the sort of
+[00:04:49] thing that a lot of people need to know
+[00:04:51] about network service providers
+[00:04:52] obviously for business uh financial
+[00:04:54] services industry wants to know the the
+[00:04:56] fastest way to get trades executed
+[00:04:57] around the planet. Uh governments are
+[00:04:59] always interested. Any global enterprise
+[00:05:01] these days that does business on
+[00:05:03] multiple continents uh gets irked when
+[00:05:05] the internet stops working and they have
+[00:05:06] to dive down into the infrastructure to
+[00:05:08] figure out why that is.
+[00:05:11] So I brought you a topic on geopolitics
+[00:05:13] just because domestic politics is
+[00:05:15] interesting but international politics
+[00:05:17] to me is is is uh is perhaps you know
+[00:05:20] more so. Uh and then I I had to stop. Um
+[00:05:24] you know geopolitics is supposed to have
+[00:05:26] been killed by globalization right and
+[00:05:28] globalization is the internet is geop is
+[00:05:31] globalization's primary symbol. So the
+[00:05:33] internet actually told me that the
+[00:05:34] internet had killed geopolitics.
+[00:05:37] Um
+[00:05:38] so magically the internet is is said to
+[00:05:40] do all of these great things and you
+[00:05:42] know it creates civil society where
+[00:05:44] there was none. It has completely you
+[00:05:46] know torn down our understanding of how
+[00:05:48] states should function. You know we're
+[00:05:49] all just in individuals on Facebook now.
+[00:05:52] Um obviously this is
+[00:05:56] it's not even a complete list of all the
+[00:05:58] great things that the internet magically
+[00:06:00] does. So obviously this is you know kind
+[00:06:02] of bunk. The infrastructure is no more
+[00:06:04] flat than the rest of the world. It's
+[00:06:05] it's really ugly.
+[00:06:07] Um, it was built out of lawyers and
+[00:06:10] people trying to make money, connecting
+[00:06:12] to each other, trying to squeeze money
+[00:06:14] out of people in order to use their
+[00:06:16] resources. So, you have tens of
+[00:06:17] thousands of contracts written between
+[00:06:20] consenting parties, big and small, all
+[00:06:22] over the place. Sometimes they're in
+[00:06:23] different places. They speak different
+[00:06:25] languages. They have different culture.
+[00:06:26] Uh, they're all trying to maximize
+[00:06:28] profit. They're all trying to squeak
+[00:06:29] around under the gaze of the regulators.
+[00:06:32] Uh, the internet by definition crosses
+[00:06:35] borders. And so everything eventually
+[00:06:36] gets messy. And so everything that you
+[00:06:38] see in in geopolitics, everything you
+[00:06:40] read about in the paper about uh spheres
+[00:06:43] of influence and national interests and
+[00:06:45] so forth has a counterpart in in on the
+[00:06:48] internet and how internet structure
+[00:06:49] plays out and in terms of how disputes
+[00:06:52] happen and are and are resolved. And uh
+[00:06:54] on the internet most often disputes are
+[00:06:56] resolved by going around the dispute.
+[00:07:00] So what I'll do today just as a
+[00:07:02] conversation starter u I'll do this very
+[00:07:04] quickly so we have lots of time for
+[00:07:06] conversation is take you on a very brief
+[00:07:09] internet tour of kind of the the ancient
+[00:07:11] world from Tangier to Bishquek this is
+[00:07:14] the part of the internet that we call
+[00:07:15] the interesting part of the internet not
+[00:07:18] that North American internet isn't
+[00:07:19] interesting not that European internet
+[00:07:22] isn't interesting but they frankly are
+[00:07:24] kind of boring everything kind of costs
+[00:07:26] roughly the same everything's really
+[00:07:27] cheap you can get connectivity anywhere
+[00:07:29] you want. You have six different
+[00:07:30] providers to choose from, unless you're
+[00:07:32] a home broadband user in New Hampshire,
+[00:07:35] say, but that aside, if you're a
+[00:07:38] commercial user, generally you have
+[00:07:39] pretty good pretty good selection. Um,
+[00:07:42] in this world, you don't. You almost
+[00:07:45] always don't. Um, it's dominated by the
+[00:07:47] old incumbents, the old telephone
+[00:07:49] companies. They're often quite friendly
+[00:07:51] with the governments that regulate them
+[00:07:53] and in some cases own them. Um, and, uh,
+[00:07:56] there's just a lot going on here. You're
+[00:07:58] going to see as we go through the the uh
+[00:08:01] uh through the tour, you'll see things
+[00:08:03] that are are familiar to you from the
+[00:08:04] newspaper, grudges, political relations,
+[00:08:07] um spheres of influence that are
+[00:08:09] developing. A lot of references to
+[00:08:11] things like energy pipelines and energy
+[00:08:13] transport and highways because that's
+[00:08:14] where you put fiber and that's what the
+[00:08:16] internet at its core is actually built
+[00:08:18] on.
+[00:08:20] So I always have to stop before I take
+[00:08:22] my tour and and acknowledge my my patron
+[00:08:24] saint of uh large networks in the
+[00:08:27] eastern hemisphere. So if you haven't
+[00:08:30] looked up uh the travels of Iben Batuta,
+[00:08:32] he wrote a book the 14th century about
+[00:08:35] his incredible
+[00:08:36] uh somewhat fictitious but probably
+[00:08:38] mostly real travels. Uh he started as a
+[00:08:41] lawyer in Tangier. He worked all the way
+[00:08:44] to China and he made it all the way back
+[00:08:46] home again right in the middle of the
+[00:08:47] Black Death.
+[00:08:49] And what he describes is familiar today
+[00:08:51] as you look at modern internet. He's
+[00:08:53] talking about how information flowed
+[00:08:55] along the 14th century networks of
+[00:08:58] scholarship and uh religious education
+[00:09:01] and commerce along the Silk Road and
+[00:09:03] communication. So uh this has all been
+[00:09:06] done before.
+[00:09:08] Um so we'll just blow through these very
+[00:09:09] quickly so you can see how different
+[00:09:11] places experience different things as
+[00:09:12] they try to get connected to the
+[00:09:14] internet.
+[00:09:15] Uh here we are in in the far west in the
+[00:09:19] mockreb you've got Morocco, Algeria,
+[00:09:20] Tunisia and Libya all served by these
+[00:09:24] relatively short submarine cable runs
+[00:09:26] mostly directly from Europe. These
+[00:09:28] things are coming from from places like
+[00:09:30] Marseilles uh or Sicily. These are this
+[00:09:33] is a best case. This is this should be
+[00:09:35] as good as it gets. Um on the other end
+[00:09:38] of these cables, you get access to
+[00:09:40] everybody who's serving Europe. you get
+[00:09:42] uh very low latencies, very low delays
+[00:09:44] to to almost all the content you could
+[00:09:46] ever want in Europe. Um the only uh
+[00:09:50] thing that that perhaps throws a fly in
+[00:09:52] the ointment here is that these are
+[00:09:54] mostly run, as I said, by national
+[00:09:56] incumbents. Uh Tunisia has more
+[00:09:59] diversity. Morocco and Algeria and
+[00:10:01] certainly Libya relatively less
+[00:10:03] diversity. Um but still it's made up for
+[00:10:06] to some extent by the fact that they
+[00:10:07] have so much choice available at the
+[00:10:09] cable landing. Um and so their their
+[00:10:12] their prices are relatively low. Uh the
+[00:10:15] amount of freedom they have to choose
+[00:10:16] how they're going to transport internet
+[00:10:18] traffic is fairly high
+[00:10:20] to each other or only to
+[00:10:22] only Europe from Morocco to
+[00:10:26] your your packets are probably going
+[00:10:27] through Spain, Italy.
+[00:10:28] Very very possibly. Yes. Although they
+[00:10:30] are I mean these are successive stages
+[00:10:32] in some sense on the same cables. And so
+[00:10:35] uh it it's possible that that on the
+[00:10:36] same cable you can uh get connectivity
+[00:10:39] from one place to the other. But at a
+[00:10:40] logical level, it's more likely that
+[00:10:42] yes, the service provider you buy from
+[00:10:43] is probably going to route your traffic
+[00:10:44] back uh someplace in Europe.
+[00:10:48] Um it's also true, as we'll see later,
+[00:10:50] that just because you have two different
+[00:10:52] people in one of these countries doesn't
+[00:10:53] mean they can actually send each other
+[00:10:55] traffic. If one of them is a customer of
+[00:10:57] the big incumbent, somebody else is a
+[00:10:59] customer of his small competitor, they
+[00:11:01] may not actually be connected in the
+[00:11:02] country and their packets may actually
+[00:11:04] go back to Frankfurt or someplace or
+[00:11:06] Paris and and return to the country. And
+[00:11:09] you can imagine what kind of of
+[00:11:11] competitive pressure that places,
+[00:11:14] not very much.
+[00:11:16] If you if we move down the coast a
+[00:11:18] little bit, um Egypt of course was in
+[00:11:20] the news this year uh for internet
+[00:11:22] structure and not in a good way. Egypt
+[00:11:24] has
+[00:11:26] everything it takes to be uh an internet
+[00:11:28] transit hub for this entire region. It
+[00:11:30] really has huge amounts going for it.
+[00:11:32] It's the natural traversal point for
+[00:11:35] almost all of the fiber optics that are
+[00:11:37] going from the Mediterranean uh through
+[00:11:39] to the Indian Ocean and beyond. Um
+[00:11:41] almost all of this is coming ashore at
+[00:11:43] Alexandria, maybe doing an overland
+[00:11:45] traversal, plunking into the Suez, and
+[00:11:47] off it goes. And so this is the physical
+[00:11:50] pinch point for until now the majority
+[00:11:53] of transit to the entire Middle East.
+[00:11:54] and and uh uh certainly now large parts
+[00:11:58] of eastern Africa. Um the problem here
+[00:12:01] has been um although there was a an
+[00:12:04] effort by the regulators to liberalize
+[00:12:06] this um Telecom Egypt retained a very
+[00:12:09] central role in terms of maintaining the
+[00:12:10] physical infrastructure um and it was
+[00:12:13] actually possible during the troubles to
+[00:12:15] to turn off all the internet service
+[00:12:17] providers bar one or two um just by
+[00:12:20] cutting power at a single facility. So
+[00:12:23] you have logical diversity in the sense
+[00:12:25] that there are a lot of service
+[00:12:27] providers serving Egypt. But uh in terms
+[00:12:30] of of the of uh how regulation and the
+[00:12:33] physical infrastructure channels that
+[00:12:35] traffic, it turned out that there was a
+[00:12:37] lot less diversity than we thought. I
+[00:12:39] was shocked when I saw that that um most
+[00:12:41] of Egypt was taking off. Um but there it
+[00:12:44] is a different solution to the problem.
+[00:12:46] If we slide around into the eastern Med
+[00:12:48] very quickly, um, Israel has its own
+[00:12:51] cables that come in that are not the
+[00:12:53] same cables used by everybody else in
+[00:12:54] the region. So sometimes you'll hear um
+[00:12:57] uh you know, strange complaints like uh
+[00:13:00] we had a a physical cable fault on CIW
+[00:13:02] three or four and lots of countries
+[00:13:04] around the Gulf were thrown out for
+[00:13:06] weeks. And why didn't Israel go down?
+[00:13:08] Well, it's because Israel has their own
+[00:13:10] cables. They have landings on cables
+[00:13:12] that are physically diverse from those
+[00:13:14] that serve other countries. Um the
+[00:13:16] Palestinian territories are locked in
+[00:13:18] and so by law I think they have to buy
+[00:13:20] through Israeli physical infrastructure
+[00:13:22] but logically we now see them buying a
+[00:13:24] lot more in the last year from uh
+[00:13:26] European carriers like Level 3 or
+[00:13:28] Deutsche Telecom.
+[00:13:30] Jordan is well well set up because they
+[00:13:33] have submarine cable landings of their
+[00:13:34] own at Akaba. So they have at least two
+[00:13:37] uh connections to the big flag cable
+[00:13:39] that goes around the world. Um uh they
+[00:13:43] also have terrestrial connectivity to
+[00:13:44] Saudi and uh and and and and uh to
+[00:13:48] Turkey to the north through Syria. Okay.
+[00:13:51] So this is again not too bad. There's
+[00:13:53] there's there's reasonable connectivity
+[00:13:55] here for those who want it. And so
+[00:13:57] prices for bandwidth are are higher than
+[00:14:00] they are back in the mock, but they're
+[00:14:02] still modest. We work our way up the
+[00:14:05] coast. It gets to be worse. Okay. And
+[00:14:07] you can see here the effects of
+[00:14:09] geography and politics um uh reducing
+[00:14:13] the choices that consumers have in
+[00:14:15] country, reducing the choices that
+[00:14:16] enterprises have if they want to get to
+[00:14:17] the internet. Lebanon was in a terrible
+[00:14:19] position because uh they didn't have
+[00:14:22] access to the big cables that landed
+[00:14:23] just down the coast in Egypt. All they
+[00:14:25] had was uh some old-fashioned uh uh
+[00:14:28] relatively small connectivity coming
+[00:14:30] from Cyprus. And then you could see that
+[00:14:32] that was the case because a lot of the
+[00:14:34] autonomous systems in the Lebanese
+[00:14:36] internet are just are buying
+[00:14:37] connectivity from uh satellite
+[00:14:39] providers. So they're buying from
+[00:14:41] satgate. They're buying from providers
+[00:14:43] where the next hop if you trace into
+[00:14:45] Lebanon uh is in Germany somewhere or or
+[00:14:49] in Czechoslovakia, Czech Republic. Um
+[00:14:53] this all changed in 2010 about a year
+[00:14:55] ago. uh they finally got the big IEW
+[00:14:57] cable and suddenly they had a terabit
+[00:15:00] allotted to them of capacity. That's an
+[00:15:02] incredible uh flood of potential
+[00:15:05] internet landing at their doorstep. Uh
+[00:15:08] but there were ongoing political
+[00:15:10] problems between the people who had the
+[00:15:11] cable landing and the government. Uh
+[00:15:14] questions about how it was going to be
+[00:15:15] tariffed. I mean if you allow this flood
+[00:15:17] of internet into your country, the price
+[00:15:19] structure is going to collapse, which it
+[00:15:21] is going to. Uh it took almost a full
+[00:15:23] year just to get hypothetical tariffs
+[00:15:26] published for how much it would cost to
+[00:15:27] get one of these big pipe connections
+[00:15:28] that they had never had access to
+[00:15:30] before.
+[00:15:32] Um and I think even just now we've seen
+[00:15:34] providers in Lebanon begin to take
+[00:15:37] advantage of this wonderful new cable
+[00:15:39] landing. And as sure as the sun rises,
+[00:15:42] uh, we've started to see their satellite
+[00:15:44] connections turn off because nobody
+[00:15:46] wants to keep an Intel sat satellite
+[00:15:48] internet earth station working for one
+[00:15:50] day longer than you have to because it's
+[00:15:52] horrendously expensive. Um, this is
+[00:15:55] exactly the same sort of shift that
+[00:15:56] we've seen in East Africa with the
+[00:15:58] arrival of the Secon cable.
+[00:16:01] Um Syria is if any if it's possible in
+[00:16:04] even a worse situation they had the same
+[00:16:06] sort of uh small pipe connectivity to
+[00:16:09] Cypress and Lebanon. Uh and uh I'll show
+[00:16:14] in a minute how Syria is turning to
+[00:16:16] terrestrial routes to make up for the
+[00:16:18] fact that they can't get adequate
+[00:16:20] submarine connectivity.
+[00:16:22] Um you can't talk about these guys
+[00:16:24] without going a little farther north and
+[00:16:26] talking about Turkey. So Turkey uh as
+[00:16:29] you know is is positioned to become a
+[00:16:30] really influential country in the region
+[00:16:33] u politically and and sort of as a uh as
+[00:16:36] a trends setter if you will and internet
+[00:16:38] it's extremely true uh Turkey has the
+[00:16:41] bridge to Europe physical bridge um they
+[00:16:44] are on all of the major fiber paths to
+[00:16:47] Europe which follow the old Roman roads
+[00:16:48] through Bulgaria uh they have
+[00:16:50] connectivity through Greece um who gets
+[00:16:53] it from Italy and all of this these uh
+[00:16:56] this high bandwidth fiber from Europe
+[00:16:57] sort of flows down the old roads and
+[00:16:59] into Istanbul and on and Turkey has
+[00:17:02] realized that they are actually a
+[00:17:05] potentially a major exporter of
+[00:17:06] internet. This is this could be a new
+[00:17:08] industry for them and so not only Turk
+[00:17:11] Telecom the incumbent but also their
+[00:17:12] competitors uh have started building
+[00:17:15] parallel projects to build fiber to all
+[00:17:17] of their neighbors. So imagine what
+[00:17:19] happens in a world where um before there
+[00:17:22] was no connectivity and now uh uh
+[00:17:25] perhaps along the lines of some of the
+[00:17:26] old railroads that were built by the
+[00:17:28] Germans, you know, before World War I,
+[00:17:30] um there's now Turkish fiber going down
+[00:17:32] into the Hijaz to serve the Saudi
+[00:17:35] peninsula or headed across into Iraq or
+[00:17:37] even headed to Georgia. So Turkey begins
+[00:17:40] to establish a sphere of influence where
+[00:17:43] they export internet service to a lot of
+[00:17:45] neighbors that they would like to be
+[00:17:46] good friends with.
+[00:17:48] pipelines right away.
+[00:17:50] In many cases they are because the
+[00:17:52] engineering is already done. This is
+[00:17:53] really rugged territory in eastern
+[00:17:55] Turkey. Um if you once you've got a
+[00:17:58] pipeline cited um usually they have
+[00:18:01] fiber buried alongside them anyway
+[00:18:02] because they want to have uh uh control
+[00:18:05] and communications between the various
+[00:18:07] stations along the route. So in some
+[00:18:09] sense you almost get internet for free
+[00:18:11] as as the pipelines go through which is
+[00:18:13] this this connection that recurs about
+[00:18:16] the uh uh energy transport being very
+[00:18:20] much linked to information transport in
+[00:18:21] this region
+[00:18:25] um
+[00:18:28] OT is a huge Greek company that owns two
+[00:18:31] the two big fiber networks coming down
+[00:18:33] redundantly one up Italy one through
+[00:18:35] Hungary and uh in that sense Yes, they
+[00:18:38] are because they offer Turk Telecom
+[00:18:40] enormous amounts of bandwidth. Um,
+[00:18:42] commercial relationships are the best
+[00:18:44] friendship, right? Um,
+[00:18:47] so where does all that bandwidth go
+[00:18:49] ultimately? Well, the Gulf States have
+[00:18:51] been looking for alternatives for a long
+[00:18:53] time. Um, the Gulf States all around the
+[00:18:56] Saudi the Arabian Peninsula have been
+[00:18:59] unhappy with uh the availability of
+[00:19:02] submarine links. They always get cut.
+[00:19:03] People drag anchors across them. You
+[00:19:05] lose your internet for weeks. it's just
+[00:19:06] untenable. Um, so these guys have
+[00:19:09] started looking for alternatives and
+[00:19:10] Egypt really brought it into focus for
+[00:19:12] them. Virtually overnight they were
+[00:19:14] talking about how do we get around the
+[00:19:16] Egyptian pinch point. These people could
+[00:19:18] deny us internet with a single
+[00:19:20] accidental or deliberate break. So um,
+[00:19:24] suddenly overnight consortiums spring up
+[00:19:26] to build overland paths that can be
+[00:19:28] redundant with these submarine pads. Um,
+[00:19:32] perhaps a topic for for questions or
+[00:19:34] another day. We've worked closely with
+[00:19:35] the telecoms regulator in Bahrain uh
+[00:19:38] which is a place where um things were
+[00:19:41] extremely expensive. They continue to be
+[00:19:42] very expensive. But um this is sort of
+[00:19:45] evidence that pushing for open
+[00:19:47] competition and inviting creative
+[00:19:49] alternatives for second and third uh uh
+[00:19:52] providers uh can really lower prices for
+[00:19:54] for consumers and businesses. And uh I
+[00:19:57] think what everybody here has on their
+[00:19:59] mind perhaps Bahrain most of all is um
+[00:20:02] when the energy economy turns here there
+[00:20:04] has to be something to follow. What
+[00:20:06] follows is the information economy
+[00:20:08] perhaps. This is where your college
+[00:20:09] graduates can go. They have to get it
+[00:20:11] jobs. You need the internet for that. It
+[00:20:13] has to be fast and it has to be
+[00:20:14] reliable. It has to be cheap. And so
+[00:20:17] this has become a major strategic
+[00:20:19] question for all of these countries. How
+[00:20:20] do we get the internet cheaper, faster,
+[00:20:23] more secure um without going through
+[00:20:25] people we don't like? Uh on that note,
+[00:20:28] these are some of the the ways people
+[00:20:30] have not only hypothesized about getting
+[00:20:31] internet into the Gulf, but actually
+[00:20:33] started to build these. Um in red there
+[00:20:36] you see the Jotty link, which is a uh
+[00:20:38] consortium based path. It's actually lit
+[00:20:41] now. It's working and passing traffic.
+[00:20:43] um Saudi telecom, uh Jordanian Telecom,
+[00:20:47] Syrian Telecom, and Turk Telecom got
+[00:20:49] together and built this route from Jedha
+[00:20:51] to Aman to Damascus to Istanbul. Uh it's
+[00:20:54] still up through all of the troubles in
+[00:20:56] Syria. Um if anything, the Syrian
+[00:20:58] government has been very um helpful and
+[00:21:01] and willing to demonstrate that this is
+[00:21:02] business as usual. These pads are uh uh
+[00:21:06] maintained and the service is lit. Uh
+[00:21:09] you have the competitors in each of
+[00:21:11] these countries, the competitors to the
+[00:21:12] incumbents uh building a parallel route,
+[00:21:14] the RCN route which goes from the
+[00:21:17] submarine cable landing at Fuja. I
+[00:21:19] should have a laser pointer to Riad to
+[00:21:22] Aman to Tartus to Istanbul. Slightly
+[00:21:24] different routes, different companies in
+[00:21:26] in in each country except for in Aman
+[00:21:30] and in Syria.
+[00:21:31] RCA is the same local company.
+[00:21:33] No, it's a No. Well, that would be cool,
+[00:21:35] wouldn't it? Uh no, that's an acronym
+[00:21:37] collision. Um, one of the really
+[00:21:40] interesting ones here is EPEG. That's
+[00:21:41] the the brown line up top is EPEG.
+[00:21:44] That's the European Persian Express
+[00:21:46] Gateway, which has not been built, but
+[00:21:48] is really cool. It starts in Oman, where
+[00:21:51] Omanel is talking about building uh an
+[00:21:54] entire internet exchange in Tea House.
+[00:21:57] It jumps across uh the straight of
+[00:21:59] Hormuz just before the straight to Jask
+[00:22:01] in Iran. It runs on Iran's terrestrial
+[00:22:03] infrastructure all the way to the north.
+[00:22:05] Crosses the border into Azerbaian,
+[00:22:08] gets carried into Russia, crosses the
+[00:22:10] border to Ukraine at Rostavan, and then
+[00:22:13] cable and wireless takes it to
+[00:22:14] Frankfurt. That sounds like a crazy
+[00:22:16] route, but actually if you look, it's a
+[00:22:17] great circle route and uh could be very
+[00:22:20] low latency. Um, and again, it goes
+[00:22:23] through different regions. what you're
+[00:22:25] looking for here. If you're if you're if
+[00:22:26] I'm a company in the Gulf and I want
+[00:22:28] reliable connectivity, I want to buy
+[00:22:30] from consortiums or or from companies
+[00:22:32] that can offer me diversity and these
+[00:22:34] pads give me diversity. Um we'll talk in
+[00:22:37] a minute just briefly about Iraq which
+[00:22:39] also is is emerging from from war and
+[00:22:42] talking about becoming an internet
+[00:22:44] provider.
+[00:22:46] Um Iraq is very central, right? If you
+[00:22:48] look at the geography of Iraq, you
+[00:22:50] couldn't pick a better place to build a
+[00:22:52] regional backbone. Uh in the south they
+[00:22:54] have submarine cable landings for major
+[00:22:56] cables at Bazra. If you look west they
+[00:22:59] have overland through the desert to
+[00:23:00] Jordan and Saudi Arabia and Syria. If
+[00:23:02] you go east you can hit Iran. If you go
+[00:23:05] north you can hit Turkey.
+[00:23:07] It's if there were a government there
+[00:23:09] that wanted to make this a priority. Uh
+[00:23:12] the geography is actually pretty sweet.
+[00:23:14] at the moment they have as you'd expect
+[00:23:16] sort of fundamental problems with
+[00:23:18] keeping uh electrical power grid uh
+[00:23:21] operations and so forth but uh you know
+[00:23:23] over time these things will work out. If
+[00:23:26] you look at Iran of course we always
+[00:23:28] since 2009 we've had our eye on Iran uh
+[00:23:31] and their control of the internet. Where
+[00:23:33] does Iran's internet actually come from?
+[00:23:35] We you know you never think about you
+[00:23:36] know where does internet come from? Uh
+[00:23:39] some of it does come from the Gulf over
+[00:23:41] the submarine cables that everybody else
+[00:23:42] uses but a lot of it these days actually
+[00:23:45] comes from the north. It comes from
+[00:23:46] Russia. Uh Russia through uh uh
+[00:23:50] Azerbaijan through the Baku internet
+[00:23:52] exchange is exporting internet transit
+[00:23:54] to Iran.
+[00:23:56] Uh which gives them again I wrote a blog
+[00:23:59] about this. They have to balance they
+[00:24:01] have to maximize the diversity. They
+[00:24:02] don't want to get cut off by a cable cut
+[00:24:04] in the Gulf. They want to have a backup
+[00:24:06] route through a friendly party to the
+[00:24:07] north. So, it's just common sense. Um,
+[00:24:11] Iran has written, I guess, as recently
+[00:24:13] as May about possibility of going it
+[00:24:15] alone. Uh, they, you know, they'd like
+[00:24:17] to disconnect from the internet and run
+[00:24:18] their own internet.
+[00:24:20] Um, Iran does have a very mature
+[00:24:23] internal domestic internet with a lot of
+[00:24:25] richness and a huge number of autonomous
+[00:24:27] systems. Uh, so I guess we'll we'll
+[00:24:30] leave that as an exercise to see whether
+[00:24:31] they can ever accomplish that. But it's
+[00:24:33] interesting because they actually use
+[00:24:35] the internet regionally geopolitically
+[00:24:37] to get influence over neighbors. So Iran
+[00:24:39] is a net exporter of internet transit
+[00:24:42] because they sell to uh to to Iraqi
+[00:24:45] Kurdistan for example. Uh if you're if
+[00:24:47] you are in Sulmania, you can buy Iranian
+[00:24:49] internet transit. Um if you're in Hat in
+[00:24:52] Afghanistan, because the big ring of
+[00:24:55] fiber that surrounds Afghanistan has has
+[00:24:58] been somewhat dysfunctional for a long
+[00:25:00] time. uh in Harat, one of your only
+[00:25:02] choices for internet service may in fact
+[00:25:03] be going across the border uh into Iran
+[00:25:07] and Iran is happy to provide that
+[00:25:09] service. This is one of the the uh in
+[00:25:11] addition to energy exports and financial
+[00:25:13] support for that region. This is one of
+[00:25:15] the ways that they can be a good
+[00:25:16] neighbor and and have influence over
+[00:25:18] what develops there. They maintain
+[00:25:20] communications.
+[00:25:22] Yeah,
+[00:25:29] my next slide.
+[00:25:32] Perfect.
+[00:25:34] I I did not I did not schedule that.
+[00:25:37] So, yeah, go north. So, now you're we
+[00:25:39] started where it was easy. Now, it's
+[00:25:41] really not easy. Okay. Now we are in a
+[00:25:46] very sticky region politically uh in
+[00:25:49] terms of energy distribution in terms of
+[00:25:52] the politics of your neighbor to the
+[00:25:53] north. Um
+[00:25:57] there is a cable system in in Georgia
+[00:25:59] called the the Cauasus cable system uh
+[00:26:02] which runs uh east to west. You can you
+[00:26:04] pick up service in Baku there on the
+[00:26:06] right. Go across Azerbaijan. You cross
+[00:26:09] the border with the uh the the uh the
+[00:26:12] pipeline that goes past Tiblzi. You head
+[00:26:14] over to the Turkish border and you're
+[00:26:16] off to Turkey. If you go north to the
+[00:26:19] coast, um you can reach I think it's
+[00:26:21] Poti where there are submarine cables
+[00:26:23] ready to take your traffic across the
+[00:26:25] Black Sea to uh Romania uh or to uh to
+[00:26:29] Varna in Bulgaria. Big pipes. Um they
+[00:26:33] are alongside energy pipelines which are
+[00:26:36] uh perhaps risky places to run transit.
+[00:26:38] uh in in a in a dangerous place, but u
+[00:26:42] that's what provides the east-west
+[00:26:43] transit that people want to use if they
+[00:26:45] don't want to go south to Iran or go
+[00:26:49] north to Russia. So, Azeri providers
+[00:26:52] have been carrying a lot of the the
+[00:26:53] weight here. They are providing uh
+[00:26:55] everybody who's on the other side of the
+[00:26:57] Caspian Sea. Uh eventually there will be
+[00:27:00] pipelines across the Caspian Sea once
+[00:27:01] they kind of get the international
+[00:27:02] ownership of the sea sorted out. And
+[00:27:04] there will be fiber routes and those
+[00:27:06] fiber routes are going to need back haul
+[00:27:08] to Europe and the caucuses will provide
+[00:27:10] it. Um you may have read uh last year
+[00:27:13] about uh a big internet outage in
+[00:27:16] Armenia where a grandmother cut a cable
+[00:27:19] in Georgia and this is her.
+[00:27:22] She has her own Facebook page. Uh she uh
+[00:27:26] have friended her.
+[00:27:29] Yeah. uh a large part of this the
+[00:27:32] Armenian internet just went out went
+[00:27:34] dark and it was because up here just
+[00:27:36] north uh just it was just west of
+[00:27:37] Tiblazy. She as the story goes was
+[00:27:40] foraging for firewood and happened to
+[00:27:42] come across a piece of fiber which
+[00:27:44] theoretically was buried six feet deep
+[00:27:46] beside the Georgian National Railway and
+[00:27:48] she sliced it and she turned Armenia off
+[00:27:51] and a lot of um so she now it's
+[00:27:55] interesting because she actually says
+[00:27:56] she didn't do it. She says she doesn't
+[00:27:57] know what they're talking about. She
+[00:27:58] didn't wasn't anywhere near there but
+[00:28:00] steal cover for a living. It says that
+[00:28:02] person.
+[00:28:03] Yeah, she this is you know she she's the
+[00:28:05] most powerful woman in this.
+[00:28:07] She did not create that page. I think
+[00:28:09] no I think somebody did this on her
+[00:28:11] behalf.
+[00:28:13] But it makes you think incidents like
+[00:28:14] this make you think if these information
+[00:28:16] routes become incredibly important for
+[00:28:18] people who are trying to circumvent
+[00:28:20] let's say transit routes through Russia,
+[00:28:23] accidents happen.
+[00:28:25] Uh if you cross into the TransCaspian
+[00:28:28] region and go to Central Asia, you're
+[00:28:29] way up uh in in the in the beyond. Um
+[00:28:33] these are classically places where um
+[00:28:36] they're getting a lot of their transit
+[00:28:37] still from the Russian providers, but
+[00:28:39] there are also paths opening to China.
+[00:28:42] Um Usbekistan was actually one of the
+[00:28:45] people who stepped in when Afghanistan
+[00:28:47] lost their links to Pakistan. The Afghan
+[00:28:49] government for a time was buying the
+[00:28:51] majority of their transit from
+[00:28:52] Usbekiststan through that little pass
+[00:28:54] there and it was all going to Russia.
+[00:28:57] Um, Turk Menistan again there's huge
+[00:28:59] amounts of energy exploration around the
+[00:29:01] Caspian Sea. Turk Menistan is in the in
+[00:29:03] the core of this. They've built new uh
+[00:29:06] they are building new pipelines and I
+[00:29:08] think railway links to Iran. Every time
+[00:29:11] you do that, somebody's going to lay
+[00:29:12] fiber because it doesn't cost very much
+[00:29:13] extra to do that. And so new paths will
+[00:29:16] open up and we will see them emerge.
+[00:29:19] uh Russia really does have uh a huge
+[00:29:22] amount of regional influence. Uh we
+[00:29:24] actually took a measurement here uh from
+[00:29:27] our routing table studies and said what
+[00:29:29] percentage of each country's network
+[00:29:31] providers are on net meaning somewhere
+[00:29:33] upstream there's a Russian provider.
+[00:29:36] Um so as you'd expect is 90% uh all
+[00:29:39] through uh Kazakhstan, Kyrgystan,
+[00:29:42] Azarbaan, Bellow, Russia, Usbekistan,
+[00:29:43] Taj to Turk Manistan and Russia itself.
+[00:29:47] And then there's a tale. Armenia has
+[00:29:48] less. Why? Because Armenia buys a lot of
+[00:29:50] transit from the Turks. Uh Latvia has
+[00:29:53] less. Why? Because they're facing Europe
+[00:29:55] and they can buy some of their own stuff
+[00:29:56] directly. Uh Iran, uh Georgia, Muldova,
+[00:30:01] Ukraine, all uh buying but on the
+[00:30:04] border. So they have other choices and
+[00:30:07] uh and then through the Iranians of
+[00:30:09] course Iraq and Afghanistan actually
+[00:30:10] were uh getting a significant portion of
+[00:30:12] their internet traffic through the
+[00:30:14] Russians. So this is a this is a very
+[00:30:16] real uh sphere that they have worked
+[00:30:19] pretty hard to build. It's it's
+[00:30:20] economically quite important.
+[00:30:23] Lithuania not on the west.
+[00:30:25] Uh
+[00:30:27] it may I'm not sure if that's an
+[00:30:28] accidental omission or if it's just
+[00:30:30] because they they simply uh went west.
+[00:30:33] If you if you can go west, you should.
+[00:30:35] Almost all of the transit that you see
+[00:30:36] represented here is backhauled to just a
+[00:30:39] few European cities like London or
+[00:30:41] Frankfurt.
+[00:30:43] So if you can go there yourself over
+[00:30:45] your own territory, you shouldn't
+[00:30:46] bother. So real quick, and we can go
+[00:30:48] with uh with open session questions. Um
+[00:30:52] as you've seen, there are really obvious
+[00:30:54] ways that energy security ties in with
+[00:30:56] information transport. So um most people
+[00:31:01] terrestrial at least don't set out to
+[00:31:02] build uh fiber systems where it's
+[00:31:05] expensive and they're breaking new
+[00:31:06] ground. Usually they will follow
+[00:31:08] existing pathways where whether that's
+[00:31:10] power lines uh pipelines side highways
+[00:31:14] unless you have absolutely no choice. Uh
+[00:31:17] submarine fibers
+[00:31:19] the way that almost everybody on earth
+[00:31:21] uh gets their longhaul connectivity is
+[00:31:24] famously safe. Why? Well, it's you know
+[00:31:26] geopolitically it's interesting. It goes
+[00:31:27] through international waters where it's
+[00:31:29] hard to find, let alone break. Uh but
+[00:31:33] then if somebody does manage to break
+[00:31:34] it, well, it takes can take up to weeks
+[00:31:36] to get a ship out to the middle of the
+[00:31:37] ocean and fix it.
+[00:31:39] Um these terrestrial fibers that we've
+[00:31:42] described are crossing national borders
+[00:31:43] and that automatically gives you risk,
+[00:31:45] political risk over who's going to
+[00:31:47] control each station along the fiber.
+[00:31:49] Would you buy into a cable that was
+[00:31:51] running through uh four countries, none
+[00:31:54] of which were really your friends and uh
+[00:31:56] in each country it was the incumbent,
+[00:31:58] the least responsive provider that was
+[00:32:01] uh providing service.
+[00:32:04] It still may be worth it because they
+[00:32:05] may give you a good price. Um it may be
+[00:32:07] the lower latency price. The terrestrial
+[00:32:09] routes out of the Gulf are certainly
+[00:32:11] going to be much faster than the
+[00:32:12] submarine routes that have to go all the
+[00:32:14] way around the Arabian Peninsula to get
+[00:32:16] back to Europe. Everybody's making these
+[00:32:19] trade-offs all the time. To
+[00:32:20] what extent is the political risk a
+[00:32:21] denial of service or a slow roll of
+[00:32:23] service as opposed to the local security
+[00:32:26] folks stepping in?
+[00:32:27] Um, so local security guys dipping in is
+[00:32:30] generally a risk for the local people,
+[00:32:32] right? So, uh, access networks. Um, here
+[00:32:35] we're mostly looking at I just want to
+[00:32:38] cross your country. I want to get my
+[00:32:39] YouTube videos and I want to stream them
+[00:32:41] through your country as rapidly as
+[00:32:42] possible. Uh, so the really the as you
+[00:32:44] say the risk is denial of service. thing
+[00:32:47] could break could simply be turned off.
+[00:32:49] We could say, you know, we're
+[00:32:50] renegotiating the deal. I think we'll,
+[00:32:52] you know, try this again. That has not
+[00:32:54] happened. And I think it's interesting
+[00:32:56] to look at the the game theory of a
+[00:32:59] multi-nation
+[00:33:01] uh uh cable system because if you turn
+[00:33:04] it off, everybody loses revenue.
+[00:33:07] Um you can see here that that several of
+[00:33:10] these countries are are hard at work
+[00:33:12] continuing work that they've done in
+[00:33:13] other arenas in the past. So Turkey
+[00:33:15] emerges as a vastly important connector.
+[00:33:18] Uh Russia continues to be a vastly
+[00:33:20] important connector. Uh Iran and to some
+[00:33:22] extent Saudi Arabia are both going to be
+[00:33:25] uh uh regional hubs and possibly others
+[00:33:29] in that space like the Emirates or Oman.
+[00:33:32] And of course way out in the end we
+[00:33:34] didn't talk because I mercifully stopped
+[00:33:36] the tour but China is sitting at the
+[00:33:38] other end uh and also has significant
+[00:33:40] interests in internet paths.
+[00:33:44] So in all these ways there's a lot of a
+[00:33:45] lot of economics. Uh uh
+[00:33:48] you didn't mention India in this
+[00:33:49] context.
+[00:33:50] I did not and even better I didn't
+[00:33:52] mention Pakistan.
+[00:33:54] Um
+[00:33:55] it was skillful of me I thought.
+[00:33:58] Um
+[00:34:00] there is of course the the is it the
+[00:34:02] Karakorum highway that links Pakistan
+[00:34:04] with China. So it's supposed to be four
+[00:34:06] tanks wide. Um there's a new uh uh uh
+[00:34:10] Chinese base at at Cuadar on the on the
+[00:34:13] coast near the street of Hormuz. Uh all
+[00:34:16] of these things will contribute to the
+[00:34:18] building of uh of international
+[00:34:20] relations probably internet connectivity
+[00:34:22] between Pakistan and China over time. Um
+[00:34:25] which would be great because otherwise
+[00:34:27] to get from Pakistan to China takes a
+[00:34:29] long time. You have to go typically all
+[00:34:31] the way around on fiber through the
+[00:34:32] streets of Malaa and all the way up the
+[00:34:34] coast and back in. Um, so from the
+[00:34:37] standpoint of, you know, the internet
+[00:34:39] should get better, the internet should
+[00:34:40] get cheaper, the infrastructure should
+[00:34:42] get more reliable, all the links should
+[00:34:43] get shorter, that's that's great. The
+[00:34:47] more connectivity is seldom a bad thing.
+[00:34:52] Still didn't talk about India.
+[00:34:56] Um, India is well served by submarine
+[00:34:59] cables. Uh, very richly so. They've been
+[00:35:01] one of the original stops on both coasts
+[00:35:04] on many major cables. And so India
+[00:35:06] doesn't have to worry a great deal about
+[00:35:08] its international connectivity. They
+[00:35:10] don't have a lot of people that they
+[00:35:11] seriously need to talk to to their
+[00:35:13] north. Uh although shorter routes to
+[00:35:15] China would be better. Um India has as
+[00:35:19] you know a great uh IT industry and and
+[00:35:22] actually one of the uh the largest um
+[00:35:26] tier one providers in the world. Tata is
+[00:35:28] an Indian company uh projecting internet
+[00:35:31] transit east and west from from this
+[00:35:33] from from India.
+[00:35:36] So it's interesting India is in some
+[00:35:38] sense well-connected. They are more like
+[00:35:40] uh uh in pricing and and in connectivity
+[00:35:44] they are more like a a European or or a
+[00:35:46] North American scenario. In these other
+[00:35:49] places I've described it's sometimes
+[00:35:51] hard to to understand how big the gap
+[00:35:53] is. It can be uh a hundred times
+[00:35:57] difference in the price. You can pay one
+[00:35:59] euro to transit one megabit of service
+[00:36:02] for a month if you're in Frankfurt and
+[00:36:05] it can cost a hundred or hundreds of
+[00:36:07] euros if you are in the Gulf or if
+[00:36:10] you're in subsaharan Africa. You have
+[00:36:12] these massive differences in price and
+[00:36:15] there are companies that have vested
+[00:36:17] interests in in making money from that
+[00:36:19] spread.
+[00:36:21] So every time you get more connectivity
+[00:36:24] that spread will drop and the living
+[00:36:25] standards for people on in the internet
+[00:36:27] in hard-to-reach places will go up but
+[00:36:30] it will also kill a lot of companies uh
+[00:36:32] inevitably.
+[00:36:34] So everything is about politics and
+[00:36:36] money
+[00:36:39] just by geography and how much of that
+[00:36:42] is kind of political and and economic
+[00:36:45] manipulation of of
+[00:36:47] is that easy to say or
+[00:36:49] with the exception of certain really
+[00:36:51] expensive cables to lay that have to be
+[00:36:53] paid back and therefore they're always
+[00:36:54] going to be expensive to be on. It's
+[00:36:57] almost never the cables. It's almost
+[00:36:59] never the distance. It is almost always
+[00:37:01] local politics and local competition. In
+[00:37:04] particular, it has to do with who owns
+[00:37:05] the landing station for the cable. Um,
+[00:37:08] in some countries, the incumbent is the
+[00:37:11] natural person to own the landing
+[00:37:13] station.
+[00:37:15] And um, if the incumbent owns the
+[00:37:17] landing station, it means that no
+[00:37:19] competitive provider necessarily can get
+[00:37:20] access directly to the international
+[00:37:23] carriers. They might like to go to the
+[00:37:24] landing station and say, "I want to buy
+[00:37:26] uh you know a gig of of transit from
+[00:37:28] Level 3 or from Singapore Telecom or or
+[00:37:31] Deutsche Telecom." Um but they can't get
+[00:37:35] it. They say, "No, sorry. You've got to
+[00:37:37] go through us. We're reselling. We have
+[00:37:38] the license on the landing station for
+[00:37:40] 20 years and we're going to resell that
+[00:37:42] transit to you at the market price which
+[00:37:44] was approved by the regulator." And
+[00:37:46] that's the story. There are other places
+[00:37:49] like Bahrain where they've made a very
+[00:37:50] concerted effort to have more landing
+[00:37:53] stations on more diverse cables and to
+[00:37:55] put them all in different people's hands
+[00:37:57] so that you actually do get some choice.
+[00:38:00] It's always a private
+[00:38:03] almost always yes because you have well
+[00:38:07] you have to have somebody to operate the
+[00:38:08] landing station which is a technical
+[00:38:10] operation. Um and typically those
+[00:38:14] franchises are granted for a period of
+[00:38:16] years and they can include exclusivity
+[00:38:19] and under those circumstances prices
+[00:38:21] don't tend to drop.
+[00:38:24] Um there's there are examples in the
+[00:38:26] world where for example flag lands twice
+[00:38:29] in aa and so Jordan Telecom has one
+[00:38:32] landing station and one of the
+[00:38:34] competitors I think it's VTEL operates
+[00:38:37] the other one and yet uh when we look at
+[00:38:40] it um we never see uh measurements go
+[00:38:43] through the second landing station
+[00:38:45] whenever we try to go to Jordanian
+[00:38:48] targets uh to reach them with a trace or
+[00:38:50] something or a ping uh the traces always
+[00:38:53] go through the the primary and we we
+[00:38:55] don't see detail on the path. So why is
+[00:38:57] that? We don't know. It's there are
+[00:38:59] mysteries like this that remain. Um
+[00:39:03] where I was going with the question was
+[00:39:05] um I want to get a sense from you the
+[00:39:08] degree to which the governments
+[00:39:11] as well as the businesses but especially
+[00:39:13] the governments recognize the internet
+[00:39:15] as a rising tide that lifts all economic
+[00:39:18] boats,
+[00:39:18] right?
+[00:39:19] and and work not to protect the
+[00:39:22] incumbents, whatever they may be, and
+[00:39:25] their parochial interests in a really
+[00:39:29] rather narrow business,
+[00:39:31] right,
+[00:39:31] that they operate at the expense of the
+[00:39:33] rest of the economy.
+[00:39:35] I think it's hard to talk about
+[00:39:37] governments all through this region as
+[00:39:39] having monolithic intent or strategy. In
+[00:39:42] many cases there are internal
+[00:39:45] uh divisions where uh one group may be
+[00:39:48] interested in promoting security which
+[00:39:50] is much easier if you have a single
+[00:39:51] strong incumbent. Another group might be
+[00:39:53] interested in promoting competition and
+[00:39:55] reducing prices for consumers which
+[00:39:57] happens better if you have a
+[00:40:00] distribution of control. And so they
+[00:40:02] have different strategic interests and
+[00:40:04] often in some of these countries you'll
+[00:40:06] see that play out as a matter of
+[00:40:07] domestic politics. How is that balance
+[00:40:10] going to tip in the abstract? I think
+[00:40:12] everybody recognizes the value of
+[00:40:15] information in the internet. Now,
+[00:40:18] uh concretely
+[00:40:21] uh you know often the the uh the major
+[00:40:25] internet providers in a country are some
+[00:40:27] of the largest companies in the country.
+[00:40:29] And so getting them to change direction
+[00:40:31] or strategy
+[00:40:33] u is is a maybe a frightening proposal.
+[00:40:41] Yeah, few years ago we knew that Russia
+[00:40:43] had the natural gas pipelines towards
+[00:40:46] Ukraine. I think is possible if Russia
+[00:40:48] has quarrels with the companies that
+[00:40:50] depends on infrastructure of internet.
+[00:40:53] Is Russia possible to cut off those
+[00:40:55] services?
+[00:40:56] Yes. And any fiber that is you know in
+[00:40:59] any country is subject to the laws of
+[00:41:00] that country and can be turned off. um
+[00:41:05] gas pipelines, you know, there aren't as
+[00:41:07] many of them as there are fibers that
+[00:41:08] carry bits. And so, uh they are more
+[00:41:12] vulnerable to disconnection because if I
+[00:41:14] know that you're going to just route
+[00:41:15] around me, I may not bother.
+[00:41:18] Uh
+[00:41:19] that's why uh people start to look at
+[00:41:23] this strategically and they say well so
+[00:41:26] I'm I need u you know I need three fast
+[00:41:29] paths between London and Beijing.
+[00:41:33] And so I need them to be fast and
+[00:41:35] reliable and cheap. That's impossible.
+[00:41:38] So maybe I'll take one of the main
+[00:41:41] submarine routes out of the London
+[00:41:43] internet exchange uh go all the way
+[00:41:45] around uh through Egypt, through the
+[00:41:47] Suez, through the Straits of Malaka up
+[00:41:50] around and into Beijing. But then maybe
+[00:41:52] I'll take a second route and I'll get
+[00:41:54] one that goes uh through Russian
+[00:41:56] territory. It goes along the old the
+[00:41:57] Siberian railway and and heads right
+[00:42:00] out. And that'll be lower latency, but
+[00:42:02] it'll be slightly higher price. That's
+[00:42:03] the trade-off. Then they may say, well,
+[00:42:05] you know, anything could happen to those
+[00:42:08] two. I need a third one. And so the
+[00:42:09] third one today might be, I'll follow
+[00:42:11] the Roman roads to Istanbul. I'll ride
+[00:42:13] across Turkey on either Turk Telecoms or
+[00:42:16] Turk cells fiber backbone. I'll hand off
+[00:42:19] to my partner in Georgia. I'll ride
+[00:42:21] through the Caucasus. I'll reach Baku.
+[00:42:24] Um,
+[00:42:25] who knows what happens from there, you
+[00:42:27] know? Maybe maybe then I'm happy with my
+[00:42:29] Russian path. Maybe in the future
+[00:42:31] something else develops to the south.
+[00:42:33] It's this continuous game and companies
+[00:42:35] really do play it when they have the
+[00:42:37] information trying to figure out what
+[00:42:39] risk are they exposed to. U how do I
+[00:42:42] hedge that risk appropriately?
+[00:42:45] U because it used to be the case in
+[00:42:47] especially in the Gulf States that you
+[00:42:49] could have a single fiber would break
+[00:42:51] somewhere off of Egypt and it would take
+[00:42:53] you out for a week or two weeks the
+[00:42:55] whole country. And people recognize that
+[00:42:57] that is not really uh
+[00:43:01] consistent with with economic
+[00:43:03] development or with an IT industry that
+[00:43:04] functions or with banks or with anything
+[00:43:06] these days.
+[00:43:10] Japan and Korea have any role to play in
+[00:43:12] this region or are they just little
+[00:43:13] self-contained uh places?
+[00:43:16] Uh [ __ ] Japan hosts u uh for example NT
+[00:43:20] uh so one of the the big tier ones that
+[00:43:22] can offer you service anywhere in the
+[00:43:24] world. Um but Geographically, Japan,
+[00:43:27] Korea are pretty much at the end end of
+[00:43:29] the line from that side. And
+[00:43:31] nobody nobody would nobody would send
+[00:43:32] traffic east from uh from the Middle
+[00:43:35] East through uh through Japan.
+[00:43:39] Um I've seen uh when when there were
+[00:43:42] outages in in the Mediterranean, I've
+[00:43:44] seen uh Gulf States send traffic over
+[00:43:47] satellite to the Hong Kong teleport. So,
+[00:43:50] but not terrestrially.
+[00:43:51] But not terrestrially. Well, u mostly on
+[00:43:53] submarine. I mean it and typically we
+[00:43:56] call those the wrong way around the
+[00:43:57] world routes. Um so I'd rather get the
+[00:43:59] short route to Europe and if I can't get
+[00:44:00] it well I will go the long way. But
+[00:44:03] you're talking about hundreds of
+[00:44:05] milliseconds. So try doing uh voice try
+[00:44:08] doing high latency or low latency uh uh
+[00:44:11] trading you know over a link like that
+[00:44:13] and just doesn't work. A second
+[00:44:16] question, when you're talking about the
+[00:44:18] Gulf States going offline for a week,
+[00:44:20] doesn't that really mean switching to
+[00:44:21] satellite or some other high-cost
+[00:44:23] provider for the week at a greatly
+[00:44:25] increased cost? For some of them, it
+[00:44:27] does. So, some some autonomous systems
+[00:44:29] will retain connectivity on contract for
+[00:44:32] for cases just like that. So, a bank,
+[00:44:35] for example, might have a satellite link
+[00:44:36] that they could use. um somebody like uh
+[00:44:39] the African Development Bank in Tunisia
+[00:44:42] has satellite connectivity that they
+[00:44:43] maintain just in case something goes
+[00:44:45] wrong with with Tunisia's actual
+[00:44:47] connectivity. Um but most people these
+[00:44:50] days look at the internet and and by
+[00:44:53] people I mean corporations
+[00:44:55] uh will look at the internet and say wow
+[00:44:57] I can get a cost savings here of orders
+[00:44:59] of magnitude over you know before I had
+[00:45:02] to buy a a wavelength or a fiber path or
+[00:45:05] something going uh under the ocean. Uh
+[00:45:09] now I can just buy generic internet from
+[00:45:11] my local provider and it will be a
+[00:45:12] hundred times cheaper. So people look at
+[00:45:15] that and they don't go back and in
+[00:45:17] satellite internet is is even more
+[00:45:20] expensive than any of the al other
+[00:45:21] alternatives on earth
+[00:45:24] historically.
+[00:45:25] So they often they they tear those down
+[00:45:27] and they get rid of the earth station
+[00:45:29] and they forget about it. They don't
+[00:45:31] want to look back.
+[00:45:33] So I I'm curious about the the
+[00:45:36] connection between the content layer and
+[00:45:38] the transport layer. Right. So one of
+[00:45:40] the things I I wondered when you showed
+[00:45:42] that great map of influence of um of
+[00:45:46] Russian sourcing of internet, right, is
+[00:45:48] to think about so so um we have some
+[00:45:52] data that shows that Russia Russia and
+[00:45:54] China in particular are
+[00:45:56] mostly internets in any case they
+[00:45:58] overwhelmingly look at um content hosted
+[00:46:01] within their own networks, right? And so
+[00:46:03] I would be curious to know if there's
+[00:46:04] any relationship between um between
+[00:46:07] exporting of content to exporting of
+[00:46:10] traffic for uh Russia and China and
+[00:46:12] other countries.
+[00:46:13] Right. So um
+[00:46:16] there is a coupling between content and
+[00:46:19] traffic clearly uh in the case of China
+[00:46:21] and Russia are interesting because they
+[00:46:23] are both their own uh center of gravity
+[00:46:25] for their own language and so they tend
+[00:46:27] to have their own content in country. Um
+[00:46:30] there is a Russian diaspora all through
+[00:46:32] this the the former Soviet Union and so
+[00:46:35] there is a lot of traffic that comes to
+[00:46:36] Russian content from there.
+[00:46:39] Um
+[00:46:40] there are other the other big players.
+[00:46:42] It's kind of interesting actually that
+[00:46:43] the big guys are the ones who have
+[00:46:45] idiosyncratic or or or local language
+[00:46:48] populations where the they host their
+[00:46:49] own content. Turkey uh and Iran
+[00:46:53] predominantly. Um
+[00:46:57] but um it's actually interesting because
+[00:47:00] a lot of the a lot of the traffic is
+[00:47:02] driven by things like YouTube videos. Uh
+[00:47:06] YouTube and Google in general don't host
+[00:47:08] everywhere. They they can be fairly
+[00:47:10] selective about where they end up. Where
+[00:47:13] they end up has enormous impacts on the
+[00:47:16] local internet cost structure. Um if you
+[00:47:20] get large content to appear in a local
+[00:47:22] data center, suddenly everybody locally
+[00:47:24] will want to be at that data center and
+[00:47:26] interconnect
+[00:47:27] uh this can overcome for example some of
+[00:47:29] the problems um that you have in
+[00:47:33] relationships between incumbents and
+[00:47:34] competitors in a small country.
+[00:47:37] Uh if if you have local content
+[00:47:41] problems, uh regulations that forbid you
+[00:47:43] from hosting certain kinds of YouTube
+[00:47:45] videos, for example, um you may find
+[00:47:48] that that content will not settle itself
+[00:47:51] inside your jurisdiction.
+[00:47:53] As soon as you've lost the content in
+[00:47:55] your jurisdiction, well, now you're just
+[00:47:57] another guy at the end of a soda straw
+[00:47:58] who has to go get his video content from
+[00:48:00] Europe or from California. And then
+[00:48:03] everybody pays. And so there is a very
+[00:48:06] real coupling between content regulation
+[00:48:11] and infrastructure quality and
+[00:48:13] infrastructure cost and infrastructure
+[00:48:15] delay.
+[00:48:17] By chasing the big content out of
+[00:48:19] country, you're basically forcing
+[00:48:21] everybody to uh to go where the content
+[00:48:23] is to get it.
+[00:48:27] I'm specifically curious about China as
+[00:48:29] well because China seems um politically
+[00:48:32] they're clearly very focused on doing
+[00:48:35] essentially what you said Iran is trying
+[00:48:37] to do which is just billing and internet
+[00:48:39] right
+[00:48:39] they don't really care about outside
+[00:48:40] content they just want all they've tried
+[00:48:42] very hard to make all virtually all the
+[00:48:44] content be local but at the same time
+[00:48:46] you paint a picture here where there's
+[00:48:48] sort of power and influence and money to
+[00:48:49] be gained by exporting um the traffic
+[00:48:53] itself the sort of activity so there
+[00:48:55] seems like there's tension there between
+[00:48:57] there is
+[00:48:58] building connections for to export them
+[00:49:00] but keeping the project.
+[00:49:02] Yep. Um Iran is the same thing on a
+[00:49:05] small scale. You know Iran wants to be
+[00:49:07] an island but they also export internet.
+[00:49:09] A lot of it here is is geography. So
+[00:49:12] Iran exports because they can. They have
+[00:49:14] easily accessible neighbors. Russia has
+[00:49:17] its diaspora population and they have
+[00:49:19] contiguous territory so they can. And
+[00:49:20] there's also railroads, pipelines, roads
+[00:49:23] in place to allow them to to connect
+[00:49:25] easily. And so they do and u they do
+[00:49:30] good business uh doing internet service
+[00:49:33] to their neighbors. China is less so.
+[00:49:36] China really is more more of an island.
+[00:49:38] Even in a place that you would expect
+[00:49:40] like for example Vietnam where you might
+[00:49:42] think there would be significant
+[00:49:43] internet traffic between the two. um you
+[00:49:46] do see that China Telecom for example
+[00:49:48] provides internet service to some of the
+[00:49:51] providers in Vietnam. But when you
+[00:49:52] actually go and find out what do the
+[00:49:54] Vietnamese providers choose when they
+[00:49:56] want to go to the internet, meaning we
+[00:49:59] study all of the all of the active
+[00:50:00] measurements, we study all of the
+[00:50:02] routes, we try to figure out how much
+[00:50:04] Vietnam really goes to China to get
+[00:50:06] traffic, to get content, it's very
+[00:50:08] small. Uh the Vietnamese providers
+[00:50:11] apparently really just want to get onto
+[00:50:14] the big tier one global carriers
+[00:50:16] backbones and get out and get YouTube
+[00:50:19] videos. They don't it's not clear that
+[00:50:22] there's a lot of Chinese content that is
+[00:50:24] that is really on their radar. China is
+[00:50:27] much more self-contained. There's a lot
+[00:50:28] less let's call it export to neighbors.
+[00:50:33] the kind of kind of
+[00:50:34] No, that's very interesting because it
+[00:50:35] it shows that there's like a there's a
+[00:50:37] major economic and political influence
+[00:50:40] cost in China's decision to kick YouTube
+[00:50:43] off, right? Yes.
+[00:50:44] And there they they have this very
+[00:50:46] powerful internal network control very
+[00:50:49] well, but provides the sort of key cats
+[00:50:51] that that folks want, but the cost is
+[00:50:54] they can't export YouTube, which is
+[00:50:57] that's true.
+[00:50:59] And they don't they don't have the
+[00:51:00] political influence of transfer,
+[00:51:02] right? Anybody who doesn't host big
+[00:51:03] content on your own network in your own
+[00:51:06] country, you're a consumer. You you end
+[00:51:08] up having to go out and get the content.
+[00:51:10] You know that traffic flows are really
+[00:51:12] asymmetric. I make a tiny little request
+[00:51:14] for a video and then I get megabytes of
+[00:51:16] video. I get a gigabyte of video
+[00:51:18] streaming in at me. So, uh those are
+[00:51:21] scenarios where you lose you lose power
+[00:51:24] if you don't have uh a balance of
+[00:51:27] traffic. If you're always the guy who
+[00:51:28] has to receive the content and you have
+[00:51:31] nothing locally to make that easier on
+[00:51:32] you, u it really constrains growth. And
+[00:51:36] I think we've touched on a few of the
+[00:51:38] ways that it affects the ways that
+[00:51:40] incumbents choose to compete with or not
+[00:51:42] with competitors.
+[00:51:43] Don't some countries, Iran for example,
+[00:51:46] and in the news lately China uh may be
+[00:51:48] trying to actually do that intentionally
+[00:51:51] because they don't want their internal
+[00:51:53] population to be exposed to all this.
+[00:51:55] Yes.
+[00:51:57] That's the question. Um,
+[00:52:00] that has been stated by Iran at least
+[00:52:02] back in May as an explicit intention. We
+[00:52:04] just we'd like not to go get that
+[00:52:06] content. And you kind of have to ask,
+[00:52:09] will the will the will the Iranian
+[00:52:11] population sit still and just be happy
+[00:52:13] with with Iranian tube and with Iranian
+[00:52:16] search engine and with Iranian Facebook?
+[00:52:21] I don't know. The companies that work
+[00:52:22] there certainly need unfiltered access
+[00:52:24] to the real internet, not because they
+[00:52:26] want to go to YouTube, but because they
+[00:52:27] actually want to connect to people and
+[00:52:29] and and sustain commerce and get
+[00:52:32] financial data and so forth. So, can you
+[00:52:35] have it both ways? Can you grow an
+[00:52:36] internet economy where the businesses
+[00:52:38] are happy, but also build a restrictive
+[00:52:40] consumer internet where nobody looks at
+[00:52:42] all the good stuff? I don't know if
+[00:52:45] that's socially sort of sustainable in
+[00:52:47] the long run.
+[00:52:48] Do do any of the of the operators, the
+[00:52:50] carriers say based on what you just
+[00:52:53] said, geez, we'd really like to get
+[00:52:55] Google here. Um, and offer them, hey,
+[00:52:57] look, we've got condition power. We've
+[00:52:58] got real estate. We can give you space.
+[00:53:01] Or if that stuff happens, is it so below
+[00:53:02] the table that nobody knows about it?
+[00:53:04] Um,
+[00:53:07] so I'm not I'm not authoritative on this
+[00:53:09] question because I'm not Google. Um, I
+[00:53:12] think that that I don't think Google
+[00:53:13] guys ever have to buy beer.
+[00:53:18] I think that uh people make make are
+[00:53:21] very friendly and want to demonstrate
+[00:53:23] the benefits of a place. Um but
+[00:53:25] ultimately I suspect that it scrapes up
+[00:53:27] against not only power and stability and
+[00:53:29] so forth but you know friendly
+[00:53:30] regulatory environment
+[00:53:33] and
+[00:53:35] I don't know that would be if if you
+[00:53:37] have that as a uh Burkeman center
+[00:53:39] lunchon I will come to that one your
+[00:53:42] Google comment on this
+[00:53:45] Arrange
+[00:53:48] that.
+[00:53:50] They'll come here. They just won't say
+[00:53:51] anything.
+[00:53:54] No, drink's fine.
+[00:53:55] They'll be happy to come here and let us
+[00:53:56] buy them beer.
+[00:53:58] No, fine.
+[00:54:02] Just a procedural question. At the
+[00:54:04] beginning, you you just you said that
+[00:54:06] you get data from lots of ISPs.
+[00:54:08] Um, what do they get in return? Like why
+[00:54:11] would an ISP give you the information?
+[00:54:13] Right. Um
+[00:54:16] this quest the answer to this question
+[00:54:17] has evolved over 10 years in the very
+[00:54:19] early days. Um I participate in a lot of
+[00:54:22] the network operator groups the guys
+[00:54:24] that actually I don't do this but these
+[00:54:26] guys do this. So I I'm I've done program
+[00:54:28] committee work for example with NANOG in
+[00:54:30] North America uh with MNOG the Middle
+[00:54:33] Eastern network operators group uh with
+[00:54:35] ENOG the Eurasian network operators
+[00:54:37] group. Uh in the early days it was very
+[00:54:40] much about uh you know uh can we help
+[00:54:43] you measure and we could talk to routing
+[00:54:46] routing engineers and they would simply
+[00:54:48] turn on sessions to us. Uh we would give
+[00:54:51] them we still do give them uh some
+[00:54:53] feedback in the form of complimentary
+[00:54:55] subscriptions to some of the tools so
+[00:54:57] that they can look at the engineering
+[00:54:58] tools and see you know why are my routes
+[00:55:00] withdrawn or u to try to figure out some
+[00:55:03] of the paths that uh that their traffic
+[00:55:05] might be taking. So there is some
+[00:55:06] concrete benefit there that they get. Um
+[00:55:09] as the set has grown um we used to we
+[00:55:13] used to go out and try to meet specific
+[00:55:15] providers and really you know please
+[00:55:17] connect to us because we need your
+[00:55:18] perspective. Now we're up to um I think
+[00:55:22] it's about 400 different unique sessions
+[00:55:25] and we now have coverage
+[00:55:28] in almost every country and with almost
+[00:55:31] every provider that is sort of
+[00:55:33] substantially in the way of large
+[00:55:35] amounts of traffic and at that point
+[00:55:37] we've reached
+[00:55:39] uh I won't call it a complete picture
+[00:55:42] but something which which which
+[00:55:45] reliably fails to disappoint when we try
+[00:55:47] to ask it questions about regional
+[00:55:49] connectivity. Um so that the the stress
+[00:55:52] is no longer there to go and get more
+[00:55:54] and more uh connections for this this
+[00:55:57] observation system. But the everybody
+[00:56:00] who does join up does get a some
+[00:56:02] complimentary subscription to the the
+[00:56:04] data services
+[00:56:06] which they find useful.
+[00:56:11] Sure. How how big a market is there of
+[00:56:14] the engineering firms that actually do
+[00:56:15] the work of landing under C? Are there a
+[00:56:18] few large providers? So, it's a fairly
+[00:56:21] open market. You know, I'm not totally
+[00:56:23] read in on that. There a project like
+[00:56:26] that um
+[00:56:28] they don't happen at the rate of
+[00:56:30] hundreds per year. You know, they have
+[00:56:32] they happen they tend to happen in in
+[00:56:34] peaks and valleys. there'll be a big
+[00:56:36] burst of cable laying and then there'll
+[00:56:37] be a a desert for a few years where
+[00:56:39] everybody says, "Wow, we really built
+[00:56:41] too much cable." Um I I don't know what
+[00:56:44] engineering firms I know Alcatel Lucent
+[00:56:46] has done a lot of work like that,
+[00:56:48] especially in in the Gulf region. They
+[00:56:50] lay a lot of cable. Um
+[00:56:53] they tend not to be the companies
+[00:56:55] themselves, you know, laying the cable
+[00:56:57] that that operate cable. There's sort of
+[00:56:59] a separation of concerns, but there
+[00:57:01] can't be too many layers because frankly
+[00:57:02] there's not a lot of money left in
+[00:57:04] pushing bits around the planet.
+[00:57:07] Everybody's pretty tight.
+[00:57:08] What sort of a order of magnitude cost
+[00:57:12] would there be to lay sort of a undersea
+[00:57:16] cable landing?
+[00:57:19] I don't want to I don't want to misquote
+[00:57:20] and and my knowledge may be may be way
+[00:57:22] out of date.
+[00:57:24] So, let let me get back to you.
+[00:57:31] So I'm very curious about you said
+[00:57:33] earlier about the that Egypt was able to
+[00:57:36] shut down its internet because Egypt
+[00:57:39] telecom controlled the physical
+[00:57:41] infrastructure. My with with absolutely
+[00:57:43] no grounding my story I've I've told
+[00:57:46] that is that it's just a matter of a
+[00:57:48] dozen telephone calls to companies that
+[00:57:51] Egypt has some influence over. So but
+[00:57:53] that's actually a very different story.
+[00:57:54] is very interesting. So I'm curious if
+[00:57:56] you have what sort of evidence what you
+[00:57:58] know about that
+[00:57:59] um
+[00:58:01] what so I don't have definitive evidence
+[00:58:03] on either side of that. The the the
+[00:58:06] majority of the reports that we had
+[00:58:08] received said it was one of those two
+[00:58:10] scenarios. Either it was 12 phone calls
+[00:58:13] uh or it was uh a physical shutdown. And
+[00:58:17] what we did I had the slides was we in
+[00:58:20] the blog you can see it. We looked at
+[00:58:22] the time series of outages to see how
+[00:58:24] fast it happened. And then we asked
+[00:58:26] ourselves, I think every route went out
+[00:58:28] within 20 minutes except for the
+[00:58:30] providers that were unaffected. And we
+[00:58:32] said, well, is that a time scale that
+[00:58:35] makes sense with phone calls or physical
+[00:58:37] infrastructure?
+[00:58:39] And initially I said that has to be
+[00:58:42] phone calls 20 minutes. I mean that's,
+[00:58:44] you know, an eternity on the internet.
+[00:58:47] And somebody pointed out to me that um
+[00:58:49] if you have uh UPS gear uh so battery
+[00:58:54] backups for your routers and they're in
+[00:58:56] a rack and they're in some dark dusty
+[00:58:58] room in the basement of a exchange
+[00:59:00] building and somebody turns off the
+[00:59:01] power. What will happen? Well, they'll
+[00:59:04] some of them will will immediately die
+[00:59:05] because they've never been serviced and
+[00:59:07] you know like my battery backup at home
+[00:59:09] probably would not work right now if the
+[00:59:10] power went out. Others of them will will
+[00:59:12] have been refreshed and maybe you get
+[00:59:14] three minutes, maybe another one you get
+[00:59:16] eight minutes and after about 20 minutes
+[00:59:17] they're dead. U so all we have is I
+[00:59:22] think anecdote and inspection of the
+[00:59:23] outage data. Uh but I'm reasonably
+[00:59:26] convinced at this point that it was in
+[00:59:27] fact power related probably at a central
+[00:59:30] point.
+[00:59:36] Anybody have better evidence? I'm here
+[00:59:38] scouting for evidence as well.
+[00:59:43] is an unusual thing. I mean, the level
+[00:59:44] of we look at a lot of these countries,
+[00:59:46] we come up with scores for them based on
+[00:59:48] how many different people actually have
+[00:59:50] international access. That's usually a
+[00:59:53] fairly good metric of what's going to
+[00:59:54] happen under duress. If you have a large
+[00:59:57] number of domestic providers, all of
+[00:59:58] whom are able to buy directly from
+[01:00:00] European or Asian providers, that's
+[01:00:03] usually a sign that everybody has access
+[01:00:05] to the cable landings, um, that
+[01:00:07] everybody can write the contracts that
+[01:00:09] they need to. uh it typically means that
+[01:00:12] there's nobody sort of uh uh being the
+[01:00:14] bottleneck
+[01:00:16] and so based on that alone I had
+[01:00:18] predicted better survivability for Egypt
+[01:00:21] during the troubles because there are
+[01:00:24] several independent providers there all
+[01:00:26] of whom at a logical level in the
+[01:00:28] routing and the paths look like they
+[01:00:30] have perfectly good direct relationships
+[01:00:33] with international providers but we
+[01:00:35] underestimated the degree I think to
+[01:00:37] which telecom Egypt still owned
+[01:00:41] the exchange infrastructure uh
+[01:00:43] controlled the power uh owned the dots
+[01:00:46] owned the fiber all the things that you
+[01:00:48] had to have in order to make the
+[01:00:49] connections to the international
+[01:00:50] providers. So it was it was hidden lack
+[01:00:53] of diversity.
+[01:00:58] So I guess my sorry for dominating. So
+[01:01:01] my my other question I have is about um
+[01:01:04] edge peering
+[01:01:05] which is this problem that if you're if
+[01:01:07] you're monitoring um routes by just
+[01:01:10] looking at routes announce right route
+[01:01:11] announcements in the core of the network
+[01:01:14] basically right
+[01:01:15] then there's no way for you to see the
+[01:01:16] little peers who are just the the
+[01:01:19] networks on the edge who are just
+[01:01:20] announcing peer connections in between
+[01:01:23] one another. That's right.
+[01:01:24] Do you feel like you have a grasp of
+[01:01:26] what those connections are or you feel
+[01:01:28] like they just don't matter or just
+[01:01:29] don't matter for your purposes?
+[01:01:31] Um that is one of the systematic errors
+[01:01:33] in this approach. Any approach that's
+[01:01:35] based on observing paths, routing paths,
+[01:01:38] uh you're right. So if you imagine the
+[01:01:41] internet as sort of a a big mountain,
+[01:01:43] snowcapped mountain like Earok.
+[01:01:46] Um so the the absolute edge, those of us
+[01:01:50] with DSL at home, we're at the base of
+[01:01:52] the mountain looking up at the summit
+[01:01:54] and you buy from a provider who's at
+[01:01:56] base camp one and maybe he buys from a
+[01:01:58] provider who's at base camp 2 and on up
+[01:02:00] to the top. At the top of the mountain
+[01:02:02] there are about 12 or 13 providers
+[01:02:04] holding hands with nobody above them.
+[01:02:06] the default-free zone, the tier one of
+[01:02:09] the internet if it exists, and all they
+[01:02:11] do is pass traffic to each other,
+[01:02:13] basically settlement free. That's how it
+[01:02:15] always worked before. And what has
+[01:02:17] happened over time is a greater and
+[01:02:19] greater tendency for people halfway down
+[01:02:21] the mountain to string fiber to each
+[01:02:24] other from base camp to base camp and
+[01:02:27] deliberately so that they don't have to
+[01:02:28] to pay to carry traffic all the way to
+[01:02:30] the top of the mountain and back down
+[01:02:32] again.
+[01:02:33] Um
+[01:02:36] when will Renis see that? Well, we see
+[01:02:37] it whenever we have a relationship for
+[01:02:40] collection with one of the providers who
+[01:02:42] is below uh the provider of in of
+[01:02:46] interest. Right? So, if I have if I'm if
+[01:02:49] I have sessions from two or three people
+[01:02:50] down at base camp 1 and I want to find
+[01:02:53] out who uh base camp a guy way up at
+[01:02:55] base camp 4 is peering with uh I'm in
+[01:02:58] good shape because they are his
+[01:03:00] customers and I hear from them what he
+[01:03:02] is doing. I will see the peer routes to
+[01:03:04] his peers. Uh edge peering is the
+[01:03:07] hardest case where people way down low
+[01:03:09] who historically never should have had
+[01:03:11] enough traffic to make it worth it are
+[01:03:13] peering. it makes it very hard for Renis
+[01:03:16] to get a collection uh relationship with
+[01:03:21] either of the parties and in that case
+[01:03:22] we will not see that peering edge. It's
+[01:03:24] a it's a a known problem. Um if that if
+[01:03:28] these are small guys who are just
+[01:03:29] peering for fun because you know uh I'm
+[01:03:32] the University of Iowa and you're the
+[01:03:34] biggest computer repair company in Iowa
+[01:03:36] and we should be peering. It may not
+[01:03:38] matter if the people at the edge are
+[01:03:41] content providers, maybe emerging large
+[01:03:43] content providers, then yeah, we're
+[01:03:45] missing some of the traffic that's
+[01:03:46] implied by those routes. But that's what
+[01:03:49] active measurement is for as well. So in
+[01:03:51] the last couple of years, as I said,
+[01:03:53] we've done a lot of work to get dozens
+[01:03:55] and dozens of vantage points from which
+[01:03:57] we can do active trace route to every
+[01:03:59] prefix in the global table, the entire
+[01:04:02] world basically. So that we can try to
+[01:04:04] find some of these paths in traces even
+[01:04:07] when we don't see them in the routing.
+[01:04:09] And we can sort of put those two views
+[01:04:11] of the planet side by side, the physical
+[01:04:14] router connectivity side and the logical
+[01:04:16] routes side and say, "Oh, this is
+[01:04:18] interesting. There's a there's an edge
+[01:04:20] being crossed here in this graph that is
+[01:04:21] not actually crossed in this graph."
+[01:04:25] And
+[01:04:27] causes consternation, nashing of teeth.
+[01:04:30] And then we figure out what it is.
+[01:04:33] Are there research projects here that
+[01:04:35] are
+[01:04:37] thinking along similar lines?
+[01:04:39] Uh there research projects that would
+[01:04:41] like to have answers to this question.
+[01:04:44] Well,
+[01:04:48] so so you've made a a a compelling case
+[01:04:51] about the geopolitical power, the the
+[01:04:55] potential for power, but how how often
+[01:04:58] do you see manifestations of this? I
+[01:05:00] mean, you've also talked about the
+[01:05:01] accidents, the grandmother with it and
+[01:05:03] the anchor. So, accidents are not that
+[01:05:06] and the self-inflicted damage is not
+[01:05:08] that,
+[01:05:09] right?
+[01:05:09] But how often do you see people
+[01:05:11] threatening to shut down or actually
+[01:05:13] shutting down access? Is that happened?
+[01:05:16] I have never seen it attributed. And you
+[01:05:18] would think that yes, if you were going
+[01:05:19] to use something like that as a lever of
+[01:05:22] power, you should talk about it. You
+[01:05:24] know, here's what I'm going to do.
+[01:05:25] Here's what I just did.
+[01:05:27] And we haven't haven't seen a lot of
+[01:05:31] that. There was we we were uh
+[01:05:35] I remember during the the brief Russian
+[01:05:37] Georgian skirmish that went on, we were
+[01:05:40] actually watching um Georgian routes
+[01:05:42] through Turkey and uh because we were
+[01:05:46] curious what would happen. There was
+[01:05:47] some speculation at the time that
+[01:05:48] somebody would launch uh attacks and
+[01:05:51] maybe take out the pipeline in order to
+[01:05:54] create some some economic chaos. Well,
+[01:05:58] never happened. I think there were some
+[01:05:59] near near misses but uh no specific
+[01:06:02] attacks but there would have been an
+[01:06:04] impact on global routing at that point.
+[01:06:07] It would have been accidental though as
+[01:06:08] a byproduct of somebody who's trying to
+[01:06:11] to exert influence through u
+[01:06:15] blowing things up. The internet would
+[01:06:17] not have been the target.
+[01:06:19] U as they say the internet is harder to
+[01:06:22] use
+[01:06:23] as a weapon I would say at an
+[01:06:25] infrastructure level just because there
+[01:06:27] is so much internet and the credible
+[01:06:29] threat of turning something off goes
+[01:06:31] away if everybody has two or three
+[01:06:33] backups.
+[01:06:35] You could use this against French
+[01:06:36] Polynesia to great effect. They only
+[01:06:38] have, you know, a cable.
+[01:06:40] Snap that cable. Now you're under our
+[01:06:42] control.
+[01:06:43] Weren't there real incidents? There was
+[01:06:45] something in Estonia a while ago. Uh
+[01:06:47] there was the thing during the George
+[01:06:48] and Russian war. Every once in a while
+[01:06:51] during unrest in some of these other
+[01:06:53] countries a lot of things get turned off
+[01:06:55] sometimes with prior announcement.
+[01:06:58] There there was an incident and no who
+[01:07:01] knows if this is connected or not. There
+[01:07:03] was an incident back during the Georgian
+[01:07:06] uh uh time where the Russian army blew
+[01:07:11] up the cable landing station at Pi which
+[01:07:14] was I think not yet complete and the
+[01:07:15] fiber was not yet lit but it was going
+[01:07:17] to be a vast expansion of the uh Caucus'
+[01:07:21] cable system. It was going to carry
+[01:07:22] large amounts of traffic to Varna across
+[01:07:26] the Black Sea and the landing station
+[01:07:28] got taken out. Fog of war. Who knows
+[01:07:31] why?
+[01:07:34] I think a lot of the other incidents
+[01:07:35] that we kind of we all hear about in the
+[01:07:38] blogosphere are are DDoSes and things
+[01:07:41] that are at higher levels. I haven't
+[01:07:42] really heard a lot about infrastructure
+[01:07:44] maybe because
+[01:07:47] fewer people comparatively understand
+[01:07:48] the infrastructure. You know, it's kind
+[01:07:50] of magic. It's down under the streets as
+[01:07:52] we say and uh it's not understandable as
+[01:07:56] a target.
+[01:07:58] If you take out a government website, it
+[01:08:00] means more than if you turn off an
+[01:08:01] internet connection in terms in the
+[01:08:04] press in terms of influence,
+[01:08:08] which is I guess good, right? We don't
+[01:08:10] want the internet infrastructure being
+[01:08:11] used as a geopolitical weapon. We want
+[01:08:13] it being used to to grow economies and
+[01:08:15] foster communication and connectivity,
+[01:08:17] all the good stuff. We don't want it
+[01:08:18] being uh used as a lever for exercising
+[01:08:22] power.
+[01:08:25] How much does the uh I've heard
+[01:08:28] speculation that the the routing
+[01:08:30] redirect through China recently
+[01:08:33] we're actually signaling of a
+[01:08:34] willingness to use routing as a a tool.
+[01:08:39] You want to comment on that stuff?
+[01:08:40] Speculate.
+[01:08:41] Read my blog. Oh,
+[01:08:44] I heard that speculation too. So
+[01:08:46] speculations are cool, but they're not,
+[01:08:48] you know, they're not falsifiable.
+[01:08:51] um
+[01:08:55] the the the technical details of that as
+[01:08:57] and we looked at that in in a lot of
+[01:08:59] detail. It it looked like the kind of
+[01:09:01] thing that was really more more
+[01:09:02] compatible with an explanation by
+[01:09:04] accident than deliberate signaling of
+[01:09:07] the ability to redirect.
+[01:09:13] But you know speculations are as I say
+[01:09:15] they're unfalsifiable.
+[01:09:22] So I think that's uh I think that's
+[01:09:24] good. Uh thanks for the talk.
+[01:09:26] Thank you.
+[01:09:29] [Applause]

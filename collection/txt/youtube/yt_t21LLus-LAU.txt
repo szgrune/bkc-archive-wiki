@@ -1,0 +1,872 @@
+[00:00:01] CHRIS: Please welcome Ryan Copus.
+[00:00:07] RYAN COPUS: Thank you, Chris.
+[00:00:08] And thank you to the Berkman Klein Center for having me
+[00:00:11] here.
+[00:00:11] And thank you to all of you for showing up.
+[00:00:14] I'll be talking about the role of algorithms in our justice
+[00:00:17] system.
+[00:00:18] And hopefully I can help point the way forward
+[00:00:20] for a general, realistic, and ethically responsible way
+[00:00:25] of using them to improve our justice systems.
+[00:00:29] I'm happy to have questions.
+[00:00:30] Wait till the end, but if you have a burning question,
+[00:00:33] and you want to ask it--
+[00:00:35] go ahead.
+[00:00:35] I'm happy to get a question in the middle of the presentation
+[00:00:38] as well.
+[00:00:40] So let's start by understating the obvious.
+[00:00:43] We humans are not perfect decision makers.
+[00:00:47] Our decisions fluctuate with how tired we are, with the weather,
+[00:00:50] with our general moods.
+[00:00:53] Last I checked, Wikipedia's list of cognitive biases
+[00:00:57] stood at almost 200.
+[00:00:59] And a lot of those cognitive biases are really stubborn.
+[00:01:03] They're not the kinds of things that are going
+[00:01:05] to go away with more training.
+[00:01:07] For example, I had a layover in Vegas a few weeks ago.
+[00:01:12] And because they had their first little bit of snow in 11 years,
+[00:01:15] I was stuck there for two days.
+[00:01:17] And I was alone so I did a fair amount of gambling.
+[00:01:21] I've taken a lot of statistics courses.
+[00:01:24] I've done a lot of statistical studies,
+[00:01:26] and I've read a lot of statistics papers.
+[00:01:28] I think I understand the idea of an independent draw
+[00:01:30] pretty well.
+[00:01:32] But when I was gambling, was I affected
+[00:01:35] by the gambler's fallacy?
+[00:01:37] Absolutely so.
+[00:01:38] Right.
+[00:01:38] I just lost 10 bets in a row, no way I can lose the next one.
+[00:01:42] I knew it was nonsense.
+[00:01:44] But that didn't mean I was immune to it.
+[00:01:47] And I don't think there's any good reason
+[00:01:50] to believe that these deficiencies and reasoning go
+[00:01:52] away when we give someone legal training and a black robe.
+[00:01:56] And we now have evidence suggesting
+[00:01:59] that judges are in fact affected by things,
+[00:02:01] like the cases they immediately decided before,
+[00:02:06] the temperature, the proximity of their last meal,
+[00:02:10] the political polarization that occurs during election seasons.
+[00:02:13] Their workloads.
+[00:02:15] Judges are prone to these types of deficiencies,
+[00:02:19] just like the rest of us.
+[00:02:24] And I think that's a really big problem in the adjudication
+[00:02:27] system.
+[00:02:28] We rely on a massive number of decision makers
+[00:02:31] to go out and decide individual cases.
+[00:02:34] That means a lot of different people
+[00:02:36] with a lot of different biases activated
+[00:02:38] under a lot of different circumstances.
+[00:02:41] And what we end up with is a lot of noise.
+[00:02:46] Justice begins to look more like a coin flip.
+[00:02:51] Some individuals who should prevail, don't.
+[00:02:53] Some individuals who shouldn't prevail do.
+[00:02:56] But I think it's even worse than that.
+[00:02:58] As Justice Brandeis succinctly put it, in most matters
+[00:03:03] it's important that the case is settled rather
+[00:03:05] than it be settled right.
+[00:03:08] If businesses and people can't predict
+[00:03:11] how the law is going to apply to them,
+[00:03:13] they're going to struggle to plan their affairs.
+[00:03:22] And I think researchers are starting to sketch
+[00:03:25] the scope of this problem.
+[00:03:27] In a working paper with [? Ryan Hubert ?]
+[00:03:30] I showed that at least 40% of cases in the Ninth Circuit
+[00:03:35] Court of Appeals could be decided differently, based
+[00:03:38] simply on whether they're assigned to one panel rather
+[00:03:41] than another panel.
+[00:03:42] And there's a lot of other research showing
+[00:03:44] disturbing amounts of inconsistency
+[00:03:46] in asylum, social security, disability decisions,
+[00:03:49] and criminal sentencing.
+[00:03:52] So given all this, it's not surprising that people--
+[00:03:56] a lot of people are excited by the prospect of algorithms
+[00:03:58] improving decision making.
+[00:04:01] But there's also been a lot of push-back.
+[00:04:03] And what I want to do is just quickly
+[00:04:04] review three broad classes of algorithms.
+[00:04:08] Point to their weaknesses and then
+[00:04:10] hopefully point towards a proposal
+[00:04:12] for again, realistically and ethically responsibly using
+[00:04:17] algorithms in our justice system.
+[00:04:22] So the first class I think about is legal reasoning algorithms.
+[00:04:26] These are attempts to code the law into a computer program.
+[00:04:30] The law specifies the results.
+[00:04:32] Give us some facts, and the law says
+[00:04:34] what the result, the legal result should be.
+[00:04:37] These legal reasoning algorithms try to replicate that.
+[00:04:40] TurboTax is a really good example.
+[00:04:44] We give TurboTax our basic factual inputs,
+[00:04:47] and it spits out a legal answer.
+[00:04:53] TurboTax is great.
+[00:04:54] It's really useful for much of society.
+[00:04:59] It excels at those easy standard cases
+[00:05:02] that don't have hard issues.
+[00:05:05] It even excels at mechanically complex calculations.
+[00:05:10] But where it starts to suffer is in this kind of contested cases
+[00:05:14] that make it to court.
+[00:05:16] Where the facts, and the mapping of facts to illegal results
+[00:05:19] are just hard.
+[00:05:21] And they require the kind of discretionary judgment laid
+[00:05:26] in investigation that "if then" statements and "better
+[00:05:30] than TurboTax" just aren't good at doing it.
+[00:05:34] At least without a major leap in technology,
+[00:05:36] we're not going to be able to rely
+[00:05:38] on these types of legal reasoning algorithms
+[00:05:42] to improve our decision making.
+[00:05:45] Maybe a really simple way of saying
+[00:05:47] that is, TurboTax is a really long way away
+[00:05:50] from being able to help tax courts make decisions.
+[00:05:56] There's been a lot of focus on a second class of algorithms.
+[00:05:59] What I call input prediction algorithms.
+[00:06:02] These types of algorithms focus on predicting
+[00:06:05] some core input that's relevant to the proper legal results.
+[00:06:09] The big example right now are those models
+[00:06:12] predicting an individual's risk of recidivating.
+[00:06:18] This is a purely predictive, pattern matching,
+[00:06:22] relying on just statistical associations, not legal logic
+[00:06:26] or any causal relationship between variables.
+[00:06:30] So for example, whether or not one's parents
+[00:06:32] are divorced might be predictive of whether or not someone is
+[00:06:35] going to commit another crime.
+[00:06:39] That does not mean at all, of course, that
+[00:06:41] whether or not someone's parents are
+[00:06:43] divorced is causally related to someone committing a crime.
+[00:06:47] It's just a predictive exercise.
+[00:06:52] And it's this type of predictive exercise
+[00:06:55] that I think has everyone excited about algorithms.
+[00:06:58] With large data sets, lots of measurements on variables,
+[00:07:02] and machine learning that can get in there
+[00:07:04] and really detect minute statistical patterns.
+[00:07:08] We can get some pretty impressively accurate
+[00:07:12] predictions.
+[00:07:14] But there's also a lot of push-back on these algorithms.
+[00:07:18] And let's try to understand a few of the reasons why.
+[00:07:25] First, some scholars have given this the term, selective labels
+[00:07:30] problem.
+[00:07:31] Whenever we're engaged with a predictive exercise,
+[00:07:35] we want to make sure there's a reasonable match
+[00:07:38] between the data we're using to build a model,
+[00:07:41] and the data we're applying that model to.
+[00:07:45] And that's a real problem.
+[00:07:46] And when we're trying to estimate something
+[00:07:48] like recidivism.
+[00:07:50] Because we can only see whether or not someone
+[00:07:52] recidivates when we release them.
+[00:07:55] So judges release someone, then we can observe whether or not
+[00:07:58] they commit another crime.
+[00:07:59] Or if we detain defendants we can't observe whether or not
+[00:08:05] they can commit another crime.
+[00:08:07] Maybe it might be a few years later when they've aged out,
+[00:08:10] but now all sorts of things have changed.
+[00:08:12] Age is a major driver of criminal risk.
+[00:08:17] So we're stuck in this boat of building
+[00:08:19] the algorithm on released defendants,
+[00:08:22] and then trying to apply it to both detained defendants
+[00:08:25] and released defendants to figure out who
+[00:08:27] should be a release defendant.
+[00:08:29] There are some creative ways to get around
+[00:08:32] this kind of problem, but it's a really difficult problem.
+[00:08:36] A second form of technical bias, I think a lot of people
+[00:08:40] are familiar with, is that we might just not
+[00:08:43] have very reliable measures of the thing we're
+[00:08:46] trying to predict.
+[00:08:48] We're trying to predict criminal recidivism,
+[00:08:51] or criminal activity.
+[00:08:54] So we have this equal number of white spy and black spy
+[00:08:59] all committing crimes.
+[00:09:01] But black spies are more likely to get detected and sent
+[00:09:07] in prison.
+[00:09:08] And if that's our measure of recidivism,
+[00:09:10] that's going to artificially inflate black risk scores
+[00:09:14] relative to white risk scores.
+[00:09:22] But that's technical bias.
+[00:09:25] Let's pretend we can get rid of all that technical bias.
+[00:09:28] We've solved all the problems.
+[00:09:30] We're done with that.
+[00:09:31] Were still left over with claims of normative bias.
+[00:09:35] Even a classically, or an algorithm
+[00:09:38] that is accurate in the classical sense
+[00:09:42] may involve troublesome normative disparities.
+[00:09:50] One way to put it right is basically,
+[00:09:53] algorithm stereotype.
+[00:09:55] And even if those stereotypes were to be true,
+[00:09:59] we might be uncomfortable making use of them.
+[00:10:02] Now there's a lot of literature on this,
+[00:10:03] and I'm not going to pretend to have a final resolution
+[00:10:08] on algorithmic fairness.
+[00:10:10] And how we should deal with these kind of issues.
+[00:10:12] But I think at least a couple of things are clear.
+[00:10:15] One, just removing troublesome variables from the algorithm
+[00:10:20] won't solve the problem.
+[00:10:22] We can't just remove race and gender from the algorithm,
+[00:10:25] and feel good about ourselves.
+[00:10:27] Other variables, basically everything
+[00:10:30] is statistically associated with race and gender.
+[00:10:34] So taking race and gender out doesn't do anything
+[00:10:36] because all the other variables that
+[00:10:37] are related to race and gender just put it back in.
+[00:10:41] All right.
+[00:10:43] And I think a second point is we should
+[00:10:46] be careful not to evaluate algorithms in a vacuum.
+[00:10:53] Human decisions can also involve troublesome normative
+[00:10:57] disparities.
+[00:10:58] And if an algorithm can improve decision
+[00:11:01] making without making those disparities worse,
+[00:11:04] I think that counts for a win for the algorithm.
+[00:11:07] But I think there is a pretty serious concern
+[00:11:10] that once those kind of normative biases
+[00:11:14] are in an algorithm, it becomes more difficult,
+[00:11:20] or they become more resistant to change.
+[00:11:22] Humans can adapt, more progress.
+[00:11:24] But once we have an algorithm.
+[00:11:26] It's a little more hidden, maybe a little more
+[00:11:29] difficult to get that algorithm to move with the times.
+[00:11:36] Finally, there's the black box problem.
+[00:11:41] I think the black box problem occurs at basically three
+[00:11:46] levels whenever we're in this predictive exercise.
+[00:11:51] The first level is we're doing predicting, and predicting
+[00:11:55] is not giving any causal explanation.
+[00:11:58] It's just letting us know what statistical associations are.
+[00:12:02] So even a regression, not fancy machine learning,
+[00:12:05] just a regression being used to predict something
+[00:12:08] is a black box.
+[00:12:11] We might get a little comforted because we can find
+[00:12:13] that coefficient on a variable.
+[00:12:15] And we can say, Oh, controlling for all these other variables,
+[00:12:19] your parents being divorced results
+[00:12:22] in a 0.2% higher chance of engaging in crime.
+[00:12:29] Modern social scientists do not view that as a reasonable way
+[00:12:33] to interpret that coefficient.
+[00:12:34] We have no idea what that coefficient really means.
+[00:12:37] Throw another variable in there, that coefficient
+[00:12:39] bounces around, changes.
+[00:12:40] Maybe it goes negative.
+[00:12:43] Second level is once we move to these more complicated machine
+[00:12:46] learning models.
+[00:12:48] Now we can't even understand what's
+[00:12:50] happening at a statistical level.
+[00:12:52] Not only can we not meaningfully interpret a coefficient,
+[00:12:55] but now it's really hard to figure out
+[00:12:57] what's going on in the machine learning algorithm.
+[00:13:00] Tons of interactions.
+[00:13:03] And if humans lives are being decided on these algorithms,
+[00:13:10] there's an intuition at least, that they'd
+[00:13:13] like to be able to understand what's going on.
+[00:13:17] And then third, probably the most ridiculous level
+[00:13:23] of black box.
+[00:13:25] I don't think it'll last for too much longer, if I had to guess.
+[00:13:30] We have a lot of these prediction algorithms are built
+[00:13:35] and maintained by businesses.
+[00:13:38] That make trade secret claims.
+[00:13:42] So that means litigants rarely even
+[00:13:44] get the chance to even try to look
+[00:13:47] at the complicated machine learning algorithm
+[00:13:49] to figure out what's going on.
+[00:13:54] And I think there's one other big problem with these kind
+[00:13:59] of input predictive machines.
+[00:14:03] They don't really offer much of a way
+[00:14:05] forward for most of our other adjudication systems.
+[00:14:09] It works a little bit in crime.
+[00:14:10] Well, we find this really important
+[00:14:12] variable, criminal recidivism.
+[00:14:15] Let's predict that, and that really
+[00:14:17] feeds into what the ultimate decision should be.
+[00:14:20] But what do we do in social security cases.
+[00:14:22] It's really hard to think something we could plausibly
+[00:14:25] measure, and predict that would go into the judge's decision.
+[00:14:29] I's saying with contractual disputes, sexual harassment
+[00:14:31] cases, securities litigation--
+[00:14:36] Basically, if we're focusing in on those input
+[00:14:39] predictive models, we're leaving a whole bunch
+[00:14:42] of other litigation context--
+[00:14:45] Just left to fend for themselves.
+[00:14:49] So what else can we do?
+[00:14:52] I want to focus on what I call decision predictive algorithms.
+[00:14:58] Here we're just going to skip the whole idea
+[00:15:00] of trying to predict some core input to the decision.
+[00:15:04] And we're just going to try to predict
+[00:15:06] the ultimate legal decision itself.
+[00:15:10] Most of the development on these kind of decision
+[00:15:12] predictive algorithms have been made in the private sphere.
+[00:15:17] Lex Machina.
+[00:15:19] Now, I think the value of these types of algorithms
+[00:15:23] in the private sphere is a little lower than is generally
+[00:15:28] appreciated.
+[00:15:29] And it comes down to another mismatch problem.
+[00:15:34] To build these kind of predictive algorithms,
+[00:15:36] what's the data we build them on?
+[00:15:38] We build them on litigated cases.
+[00:15:41] These other cases--
+[00:15:42] Lex Machina-- they never see.
+[00:15:44] So they can't incorporate them into their models.
+[00:15:46] So we build these models on the litigated cases.
+[00:15:49] And then what do we apply those models to?
+[00:15:53] Well, I think the idea with these legal analytics companies
+[00:15:56] is to help litigators decide--
+[00:16:00] Is it worth going forward with this case?
+[00:16:02] Is it worth going forward with this motion?
+[00:16:06] What's my probability of winning this motion?
+[00:16:08] But if they're on that edge--
+[00:16:10] They were previously in that non-litigated cases.
+[00:16:13] There's very little reason to think that the algorithm built
+[00:16:17] on litigated cases would apply accurately
+[00:16:21] to the population of non-litigated cases.
+[00:16:23] These are all statistical associations.
+[00:16:25] There are a set of statistical associations
+[00:16:27] that exist within litigated cases.
+[00:16:29] We have no idea that, that set of statistical associations
+[00:16:32] also exist in the non-litigated cases.
+[00:16:37] So I think the value of these decision prediction algorithms
+[00:16:41] is really in the public sphere.
+[00:16:44] And let me try to motivate that argument a little bit.
+[00:16:51] In a given case--
+[00:16:53] Didn't quite mean to do that far.
+[00:16:55] Here we go--
+[00:16:56] In a given case we usually only get to see one decision.
+[00:17:01] For example, we get to see Judge Judy decide a case
+[00:17:05] after her football team won, on a rainy day,
+[00:17:10] after she happened to rule favorably in her five most
+[00:17:14] recent cases.
+[00:17:15] And who knows what else.
+[00:17:17] We get to see this one outcome.
+[00:17:20] But maybe the result would have been different
+[00:17:23] under different circumstances.
+[00:17:25] Maybe she would have ruled positively for example,
+[00:17:29] if she decided the case after the football team won,
+[00:17:32] on a sunny day, and after she had
+[00:17:33] issued three negative rulings in her last three cases.
+[00:17:37] But of course, we don't get to see
+[00:17:38] these other possible outcomes.
+[00:17:41] But it's worse than that.
+[00:17:43] We don't get to see how any of the other judges
+[00:17:46] were to decide of this case under any other circumstances.
+[00:17:52] But this information is really valuable.
+[00:17:58] Instead of deciding a case's fate
+[00:18:00] on the basis of just one randomly observed decision.
+[00:18:04] That x in the top left corner with Judge Judy,
+[00:18:07] after a football team won.
+[00:18:09] Wouldn't it be nice if we could somehow get information
+[00:18:12] on how all of the judges would have
+[00:18:14] decided under a wide variety of circumstances?
+[00:18:19] That's basically what a decision predictive algorithm
+[00:18:22] can give us.
+[00:18:24] By simply dropping the random factors out of the algorithm,
+[00:18:28] we can basically estimate the percentage of green check marks
+[00:18:32] on this board.
+[00:18:34] And that seems like a much more reasonable way
+[00:18:36] to decide cases than relying on just one random decision.
+[00:18:40] A co-author and I often think of this
+[00:18:43] is as synthetic crowd sourcing.
+[00:18:44] With the decision predictive model, what we're trying to do
+[00:18:47] is simulate a world where every judge votes multiple times.
+[00:18:52] And then we can sort of estimate the percentage,
+[00:18:55] the frequency with which a given case would have succeeded.
+[00:19:00] If it were--
+[00:19:02] Yeah.
+[00:19:04] Now, you might be thinking, why does dropping these variables--
+[00:19:10] football win, weather, judge, decision streak, and all
+[00:19:13] the other possible noise variables that exist out there
+[00:19:16] in the world.
+[00:19:16] What does that work to eliminate their influence
+[00:19:19] in an algorithm?
+[00:19:20] When I just pointed out that removing variables like race
+[00:19:23] and gender doesn't work.
+[00:19:26] And the answer is because, unlike race and gender,
+[00:19:29] all of these noise variables are not statistically associated
+[00:19:33] with the case characteristics.
+[00:19:35] So there's no proxy variable that could just
+[00:19:37] reintroduce those associations.
+[00:19:44] Now, the first nice feature of this kind of approach,
+[00:19:51] is we finally have a nice match.
+[00:19:53] All right.
+[00:19:54] We're using the predictive algorithm.
+[00:19:56] We're building the predictive algorithm with litigated cases.
+[00:19:59] And then we're going to apply the predictive algorithm
+[00:20:02] to litigating cases.
+[00:20:04] But before you get too excited, there are some concerns.
+[00:20:09] If we're using this kind of algorithm
+[00:20:11] to automate, or even recommend decisions to judges--
+[00:20:17] Litigants can react and respond.
+[00:20:21] So there may be people who would not have litigated before.
+[00:20:26] They sat back and they think, my case isn't good enough.
+[00:20:29] I don't think I have a good chance of winning.
+[00:20:31] So I'm not going to go litigate.
+[00:20:33] Once an algorithm is being employed--
+[00:20:37] Let's say we're using the algorithm
+[00:20:38] to recommend decisions to judges.
+[00:20:42] Once an algorithm is employed, the litigant
+[00:20:45] may say, well, my facts spit out a really high number.
+[00:20:51] I'm going to go join the litigating cases.
+[00:20:55] But the algorithm is not going to be
+[00:20:57] particularly accurate with respect to that individual.
+[00:20:59] Because that individual is not part of the data
+[00:21:01] set that was used to build the predictive model.
+[00:21:05] And there's a second way litigants can
+[00:21:09] game the algorithm.
+[00:21:12] Predicted losers, those people who had
+[00:21:15] low probabilities of winning--
+[00:21:18] They might find easy little ways to trick the algorithm
+[00:21:22] into thinking they're the type of case that
+[00:21:24] has a high chance of winning.
+[00:21:28] A simple example.
+[00:21:29] Maybe the algorithm uses law firms
+[00:21:32] as one of the predictive variables.
+[00:21:34] And one law firm is associated with a higher winning rate.
+[00:21:39] Maybe one of the predicted losers
+[00:21:42] says, Ah, I want to pretend I'm one of those firms that
+[00:21:46] would have hired the top law firm, and had a strong case.
+[00:21:52] So I'm going to go hire that top law firm.
+[00:21:54] They're masquerading as those litigants
+[00:21:57] with a higher probability of success.
+[00:22:02] And there's still the black box problem.
+[00:22:05] If we're using these kind of algorithms
+[00:22:07] to guide automate decisions, there's still this concern
+[00:22:11] that a black box that we don't understand
+[00:22:14] is spitting out our answer.
+[00:22:16] And that raises some due process concerns.
+[00:22:22] And then finally, we've gotten rid of all the noise variables.
+[00:22:28] But by getting rid of noise, we can actually
+[00:22:32] increase some of the bias.
+[00:22:36] So if judges are widely biased against a particular type
+[00:22:43] of case, the algorithm will embed that bias.
+[00:22:49] It's based off of judges decisions,
+[00:22:51] and could even inflate that bias.
+[00:22:55] So again, if we're using these algorithms
+[00:22:58] to guide, or automate decisions, we've got some concerns.
+[00:23:04] Especially again, this concern that once an algorithm--
+[00:23:08] once we've got biases in our algorithm
+[00:23:10] they may be more resistant to being fixed and adjusted.
+[00:23:17] So in light of all these problems,
+[00:23:20] I am not going to suggest that we
+[00:23:23] use these decision predictive algorithms to automate,
+[00:23:28] or guide decisions.
+[00:23:30] Instead, I want to suggest, I think
+[00:23:33] we should use them to revitalize what
+[00:23:36] I think of as our traditional noise control system.
+[00:23:42] The appellate system.
+[00:23:45] Right now our appellate systems are struggling
+[00:23:47] under intense caseloads.
+[00:23:49] We don't know how to sift through the massive number
+[00:23:52] of cases to find those cases that need the most attention.
+[00:23:56] To find those cases that were most likely
+[00:23:58] decided incorrectly.
+[00:24:00] We basically rely on an ad hoc mix of two strategies.
+[00:24:05] One.
+[00:24:06] We set up fees, or other barriers.
+[00:24:10] And the idea here is we can't give appellate resources,
+[00:24:16] or full appellate resources to everybody at the first level.
+[00:24:20] But maybe if we set up some screening procedure,
+[00:24:23] some barrier--
+[00:24:26] Either financial, or Byzantine paperwork
+[00:24:29] that only the litigants who evaluate their own case.
+[00:24:35] And think they have a high probability of succeeding
+[00:24:38] will undertake pay, and go into the appeal system.
+[00:24:44] That might work, but there are some obvious equity problems.
+[00:24:48] Do we really want people being able to buy their way
+[00:24:51] into the appellate court?
+[00:24:53] And regardless, it's pretty clear
+[00:24:56] that courts are not willing to set fees
+[00:24:59] anywhere close to where they would need to be to incentivize
+[00:25:03] efficient screening.
+[00:25:05] And then we have this other second option, which
+[00:25:09] is, well, let's take a peek.
+[00:25:13] Let's get someone to provide some preliminary assessment
+[00:25:17] of a case to figure out whether or not
+[00:25:19] it has a good probability of being reversed.
+[00:25:28] We hire staff attorneys in our Courts of Appeals.
+[00:25:31] We hire just other staff to do the work
+[00:25:37] of taking a preliminary look, and saying, yeah judges,
+[00:25:40] we think this should go up.
+[00:25:41] We think you might be interested in reversing this.
+[00:25:46] That kind of preliminary assessment
+[00:25:47] is probably going to be full of-- lots of mistakes.
+[00:25:50] It's preliminary.
+[00:25:51] It's being done by non-judges, so it's not
+[00:25:55] likely to be very perfect.
+[00:25:57] And it's-- I don't know.
+[00:25:59] I compare it to a modern bank trying
+[00:26:02] to detect credit card fraud with just a bunch of human eyeballs.
+[00:26:08] It's not going to work.
+[00:26:10] It's crazy.
+[00:26:11] No model or make would do that now.
+[00:26:12] And I don't think modern adjudication
+[00:26:14] system should either.
+[00:26:16] I think we should use algorithms to identify
+[00:26:20] the cases that were most likely decided wrong
+[00:26:23] at the lower level.
+[00:26:29] So let me give you a couple of examples.
+[00:26:34] The California Board of Parole Hearings
+[00:26:37] rarely reviews its own decisions.
+[00:26:40] For every case, two parole commissioners
+[00:26:42] are assigned to hear the inmate's case.
+[00:26:47] And the only time it's reviewed--
+[00:26:49] with one exception, I'll tell you
+[00:26:51] about in a little bit-- the only time it's reviewed
+[00:26:53] is when one of the two sitting commissioners
+[00:26:55] suggests that the full board review the case.
+[00:27:00] I think that should change.
+[00:27:03] I do not think we should so cavalierly let
+[00:27:07] someone's freedom depend on the idiosyncrasies
+[00:27:13] and moods of the two commissioners
+[00:27:16] that just happen to be assigned to them to that day.
+[00:27:21] So Hannah Laqueur and I wanted to get
+[00:27:26] a little proof of concept.
+[00:27:27] And try to show that maybe algorithms could
+[00:27:30] help the California Board of Parole Hearings
+[00:27:33] develop a more robust review system.
+[00:27:36] So we used a computer script.
+[00:27:38] We got the population of hearing transcript.
+[00:27:40] Used a computer script to pull out
+[00:27:44] a large number of variables.
+[00:27:46] And then we built a predictive model.
+[00:27:49] A decision predictive model leaving out
+[00:27:52] all of those noise variables.
+[00:27:53] We didn't include who the judge was.
+[00:27:54] We didn't include the weather that day.
+[00:27:56] We didn't include whether football teams had won or lost.
+[00:28:00] We didn't include what the judge's last meal was.
+[00:28:02] We dropped all those variables, and we're just
+[00:28:05] trying to estimate the remaining underlying signal.
+[00:28:12] And so we do that.
+[00:28:14] And so we get cases.
+[00:28:16] For each case, we have a probability
+[00:28:18] that, that case will succeed.
+[00:28:21] Say 70%.
+[00:28:24] And now we take that 70%, and we calculate a degree of error.
+[00:28:29] Degree of error is just the difference
+[00:28:33] between the predicted outcome and the actual outcome.
+[00:28:37] So if we have a case that has a 70% chance of success.
+[00:28:42] And it gets a zero, it gets denied.
+[00:28:45] That's a large degree of error.
+[00:28:48] That is not what we expected, and it's a sign
+[00:28:50] that maybe these noise variables are
+[00:28:53] making a case come out in a way it wouldn't usually come out.
+[00:28:57] If it's a 70% probability of success and it's a one,
+[00:29:02] they grant.
+[00:29:03] It's not a very high degree of error.
+[00:29:07] Just 0.3, so we would prioritize reviewing the former decision
+[00:29:13] and not the latter.
+[00:29:17] So the board of parole hearings, as I noted,
+[00:29:22] does not really review their own decisions.
+[00:29:25] But a little oddly, the governor does
+[00:29:30] review a subset of decisions.
+[00:29:32] So we use this as some type of empirical test
+[00:29:36] to see whether or not our estimated degrees of errors--
+[00:29:41] Were picking up on cases that were probably outliers.
+[00:29:45] And that most judges under most circumstances would reverse.
+[00:29:52] And we see at least Governor Jerry Brown likes our model.
+[00:29:57] As the degree of error goes up, Governor Brown
+[00:30:00] is much more likely to reverse a case.
+[00:30:05] And let me show you one more example.
+[00:30:08] This is the Ninth Circuit Court of Appeals.
+[00:30:11] Same basic story.
+[00:30:12] We scraped the population of docket sheets
+[00:30:16] from 1995 to 2012 civil appeals.
+[00:30:22] While we pull out a whole bunch of variables.
+[00:30:24] These are just a handful of examples.
+[00:30:28] And we're doing this because the Ninth Circuit Court of Appeals
+[00:30:34] is struggling under intense caseloads.
+[00:30:38] Historically, it has served as the main noise control
+[00:30:42] body for the Ninth Circuit.
+[00:30:44] It stands ready to fix any outlier district court cases.
+[00:30:49] Any noise driven district court cases.
+[00:30:52] It's been there to try to fix those cases.
+[00:30:55] But now, the Ninth Circuit Court of Appeals
+[00:30:58] has exploded in size.
+[00:31:01] Its caseload has increased by 1,400% over the last 50 years.
+[00:31:06] Judgeships have increased by only 250%.
+[00:31:10] But even then, we now have at least a minimum 3,600
+[00:31:14] different combinations of judges that could be deciding a case.
+[00:31:21] And in response, judges are not doing as much of the work
+[00:31:30] as they once did.
+[00:31:32] They're hiring staff attorneys.
+[00:31:33] They're hiring people out of law school.
+[00:31:36] They're hiring law clerks to come in and actually make
+[00:31:40] a lot of these decisions.
+[00:31:42] Then get maybe some cursory review by the panel judges.
+[00:31:48] And we're suggesting that, let's let the Ninth Circuit better
+[00:31:58] be able to identify again, the bad decisions.
+[00:32:01] The decisions with a high degree of error.
+[00:32:02] The decisions that are much different than we would expect.
+[00:32:08] We want to identify the single x up in the corner
+[00:32:11] when everything else is a green check mark.
+[00:32:14] Those are the cases we want to get in front of a review board
+[00:32:16] to try to make sure that x was a right, or at least
+[00:32:20] reasonable x.
+[00:32:24] And just again, a little test to see whether or not
+[00:32:29] these estimated degrees of error successfully
+[00:32:32] capture, or point towards decisions
+[00:32:36] that most judges would think are bad decisions.
+[00:32:40] And we get some nice results.
+[00:32:43] For every additional degree of error,
+[00:32:46] the probability of dissent increases by 0.3%.
+[00:32:50] Negative appellate history, which
+[00:32:51] includes things like en banc review,
+[00:32:53] or Supreme Court review--
+[00:32:55] For every degree of error we get a 0.4% increase.
+[00:32:59] And in cases with high degrees of error are also--
+[00:33:06] They receive more negative analysis in future opinions.
+[00:33:10] So future judges look back at those opinions,
+[00:33:14] and criticize them as bad decisions.
+[00:33:16] And we think the Ninth Circuit could
+[00:33:18] do a lot more to prevent and regulate
+[00:33:20] these types of bad decisions before they even happen
+[00:33:24] with the aid of an algorithm.
+[00:33:27] And that will end it.
+[00:33:30] Thank you, and I--
+[00:33:32] Done.
+[00:33:32] Thank you.
+[00:33:41] My--
+[00:33:47] SPEAKER 3: Thanks for that.
+[00:33:48] That was nuanced, fantastic.
+[00:33:52] A question about two things.
+[00:33:55] The part at the end seemed to be less about injustice, and more
+[00:33:59] about the court being self inconsistent.
+[00:34:03] So you're not going to identify systematic injustices, only
+[00:34:06] inconsistencies with the court.
+[00:34:08] What it seemed like you were going on the Judge Judy
+[00:34:11] side is kind of classic econometrics,
+[00:34:14] causal inference, in order to eliminate--
+[00:34:16] I mean, you had-- we don't observe the counterfactuals.
+[00:34:20] So we try to find judge leniency, or comparable cases
+[00:34:25] in order to estimate the effects of irrelevant factors.
+[00:34:28] So can you see how those two things link up?
+[00:34:31] RYAN COPUS: Yeah.
+[00:34:32] So I'm not advancing the idea that we should
+[00:34:35] try to go out and measure--
+[00:34:37] Fine if other researchers do.
+[00:34:39] Let's do it.
+[00:34:39] It's fun.
+[00:34:40] We find all the ways that noise influences decisions.
+[00:34:43] It makes headlines.
+[00:34:45] I don't think that approach gets us very far towards a better
+[00:34:50] adjudication system.
+[00:34:52] In part, because there's just so much noise.
+[00:34:54] We can pick out some random variable
+[00:34:57] to go look at, but there's just--
+[00:35:00] The sources of noise are nearly infinite.
+[00:35:03] So I don't know how successful the project--
+[00:35:06] And I didn't mean to suggest I was heading down that road.
+[00:35:13] You're right.
+[00:35:14] My definition of injustice is pegged to the judges'
+[00:35:25] collective views.
+[00:35:27] And I think outside it's very hard
+[00:35:31] to get another empirically robust definition.
+[00:35:38] I think most of us respect judges.
+[00:35:41] They're trying to do a good job on average.
+[00:35:45] They get the right decision.
+[00:35:46] Hopefully more than 50% of the time
+[00:35:48] they get the right decision.
+[00:35:50] And so the idea is, let's try to aggregate all those votes.
+[00:35:55] And now we've got--
+[00:35:57] It counters this jury theorem.
+[00:35:59] We have this representation like, Oh, 63% of votes
+[00:36:02] will be cast in favor of this decision that goes away
+[00:36:06] from that.
+[00:36:08] In the end it's just a--
+[00:36:11] this judge's decision is incompatible
+[00:36:14] with her colleagues decisions.
+[00:36:17] But I'm happy enough, and I think most of us
+[00:36:20] most of the time would be happy enough to call that
+[00:36:24] an unjust decision.
+[00:36:25] Or they're going to be sometimes where
+[00:36:27] there's an outlier decision.
+[00:36:28] And you think, yeah, that was a courageous decision.
+[00:36:34] All the other judges are getting this all wrong.
+[00:36:36] And this judge this time, she went out on a limb.
+[00:36:41] And made this courageous decision.
+[00:36:43] And those are going to happen sometimes,
+[00:36:44] but I think they're really rare.
+[00:36:46] I think for most of us, most of the time,
+[00:36:47] when we look at one of these outlier decisions.
+[00:36:50] These decisions that just are far deviations from where we
+[00:36:54] expect most judges to decide.
+[00:36:57] It's not going to be a courageous decision.
+[00:36:59] It's going to be a bad decision.
+[00:37:09] SPEAKER 4: Hi.
+[00:37:13] Thanks so much for this.
+[00:37:15] I think my question piggybacks well off of what you just said.
+[00:37:20] I'm wondering a little bit how you
+[00:37:23] see judges and the judiciary using this type of information
+[00:37:30] to actually change these patterns.
+[00:37:35] And I also wonder the impact of this type of thinking,
+[00:37:40] of consistency on the efficacy of like novel legal theories
+[00:37:50] to advance certain types of legal evolution.
+[00:37:56] Because it seems like this would generally
+[00:38:01] trend towards very consistent interpretations
+[00:38:07] of specific topics.
+[00:38:14] RYAN COPUS: All right.
+[00:38:15] Sorry, remind me of your first question?
+[00:38:17] I don't have a pen up here.
+[00:38:18] SPEAKER 4: It was just more about
+[00:38:20] how do you see this information being used by the judiciary.
+[00:38:24] RYAN COPUS: Yeah.
+[00:38:25] In a lot of different ways.
+[00:38:27] So in the paper I'm writing on the Ninth Circuit,
+[00:38:31] one way I'm talking about implementing it is--
+[00:38:34] In the Ninth Circuit, there's basically already
+[00:38:38] this two track system of justice.
+[00:38:41] Prose appeals are automatically put over to one camp.
+[00:38:45] They're not going to get in front of real judges.
+[00:38:47] They're going to be decided by staff attorneys.
+[00:38:49] They don't need this extra attention.
+[00:38:51] They're easy cases.
+[00:38:53] And then there are these the other sets of cases.
+[00:38:56] These more serious, contested, plaintiffs, and defendants,
+[00:39:00] represented by law firms.
+[00:39:01] They're going to get moral argument, things of that sort.
+[00:39:05] So I look at that, and I think the courts are already
+[00:39:07] using an algorithm.
+[00:39:08] It's just a really, really bad algorithm.
+[00:39:10] There's this one simple variable,
+[00:39:12] and they're splitting it like that.
+[00:39:17] Instead, if you estimated these degrees of error,
+[00:39:22] or estimated a case's probability of succeeding--
+[00:39:29] You find that there are not--
+[00:39:33] a large subset of prose cases that
+[00:39:37] belong in this other category.
+[00:39:40] They should be getting more immediate attention by judges
+[00:39:44] because they have a high probability of winning.
+[00:39:47] As far as how this contributes to new
+[00:39:54] and developing legal theories.
+[00:40:00] I don't know.
+[00:40:00] I don't know how much it does.
+[00:40:04] This has been a part of what we've done all along
+[00:40:08] with appellate systems.
+[00:40:09] Appellate systems are basically tools
+[00:40:13] to get the outliers within the norm.
+[00:40:19] And I think what I'm doing is just suggesting how
+[00:40:24] we can do that a lot better.
+[00:40:34] Hi.
+[00:40:40] SPEAKER 5: We need it for the recording, sir.
+[00:40:42] Could you please speak into the microphone.
+[00:40:47] SPEAKER 6: We know the water, the quantity for the algorithm.
+[00:40:54] I'm thinking of quality of the cases
+[00:40:56] because there are so many intervening variables.
+[00:40:59] And you show some them, you know,
+[00:41:01] the result of the game, and the weather, number of cases.
+[00:41:05] But I'm just wondering.
+[00:41:07] It's a very different attitude on the part of adjustment
+[00:41:09] that he or she is trying.
+[00:41:12] A felony whereas we'll, say, capital punishment.
+[00:41:16] Have you had any experience or have you found,
+[00:41:19] or have you studied the differences between like, when
+[00:41:23] you have a stomach ache, and it's just a minor case--
+[00:41:26] or I don't know.
+[00:41:27] I'm just rolling my thoughts-- versus a serious, very serious
+[00:41:31] case when those intervening variables controlled
+[00:41:33] are not diagnostic?
+[00:41:37] RYAN COPUS: Yes.
+[00:41:37] OK.
+[00:41:38] So I take that as a good point.
+[00:41:43] And it might be true.
+[00:41:44] But let me push back just a little bit more.
+[00:41:49] Those hard cases--
+[00:41:54] Yeah, judges are going to be thinking a lot harder
+[00:41:56] about those cases.
+[00:41:57] They're going to be trying, and maybe we
+[00:42:00] would think these noise variables are
+[00:42:02] going to affect them less often because they're
+[00:42:04] more concentrated.
+[00:42:05] They really care about this, about getting this case right.
+[00:42:10] But another way of putting it is--
+[00:42:13] It's a 50-50 case.
+[00:42:14] It's really hard.
+[00:42:16] So maybe that's exactly where we would expect these noise
+[00:42:20] variables, even if they're minimized
+[00:42:21] by intense concentration--
+[00:42:24] They don't need to have much of an impact
+[00:42:26] to get a judge over the line, and rule
+[00:42:29] one way rather than the other.
+[00:42:40] SPEAKER 7: Thank you for the great talk.
+[00:42:43] The one thing that I was missing is.
+[00:42:47] So you take all the history of the cases
+[00:42:49] for training data of the way they ruled.
+[00:42:52] And you eliminate the noise variables.
+[00:42:55] And then, you try to output what's
+[00:42:59] the error for a new case.
+[00:43:02] Is that correct?
+[00:43:03] RYAN COPUS: We output--
+[00:43:05] The first step is building the model of the training data set,
+[00:43:08] and then generate a predictive probability for the test set
+[00:43:12] on the probability of winning.
+[00:43:15] SPEAKER 7: OK.
+[00:43:15] RYAN COPUS: From there, then we look at the actual outcome.
+[00:43:19] And calculate the degree of error.
+[00:43:22] SPEAKER 7: I think my question was--
+[00:43:24] I did not understand the Jerry Brown graph.
+[00:43:28] Is that more like you try to predict the--
+[00:43:34] How likely the case is to win?
+[00:43:37] And that was actually ruled in that way.
+[00:43:40] Is that what this graph was showing?
+[00:43:42] RYAN COPUS: So this is--
+[00:43:45] So on the x-axis we have degree of error.
+[00:43:47] So this is how far away the actual outcome--
+[00:43:53] at the Board of Parole Hearings level, not the governor.
+[00:43:55] At the border parole hearings level, how far away
+[00:43:59] their actual outcome was from the predicted probability
+[00:44:03] of success.
+[00:44:05] All right.
+[00:44:06] And now that gives us a degree of error.
+[00:44:09] Some sense of how much of an outlier is this case?
+[00:44:11] How weird is this, and should we have some suspicions that this
+[00:44:16] is driven largely by noise?
+[00:44:20] And then we're just using the governor graph to show that A--
+[00:44:23] Look, where we think a case has been driven by a lot of noise.
+[00:44:28] The governor-- The initial decision
+[00:44:31] has been driven by a lot of noise.
+[00:44:34] The Governor seems to agree with this.
+[00:44:36] We'd love a better comparison.
+[00:44:38] The Governor is not perfect.
+[00:44:39] We don't think this is a good system of review,
+[00:44:41] but it's what we had to test.
+[00:44:44] SPEAKER 7: Thank you.
+[00:45:01] SPEAKER 8: So right now, for example in the Ninth Circuit
+[00:45:04] you're outputting some sort of probability of error
+[00:45:06] as a call for more judicial resources.
+[00:45:09] When you use the example of a prose defendant,
+[00:45:12] there's one place where you can improve
+[00:45:14] on existing bad algorithm.
+[00:45:16] Is there any reason why you couldn't combine
+[00:45:18] that probability of error with a severity,
+[00:45:22] or harm of that error.
+[00:45:24] For example, in a prose case, where
+[00:45:27] it's a couple of years in prison versus life in prison,
+[00:45:30] or something like that.
+[00:45:32] Would there be reasons why you'd want to or not?
+[00:45:34] RYAN COPUS: Oh.
+[00:45:34] Yes.
+[00:45:35] I think so.
+[00:45:35] All right.
+[00:45:36] I'm not suggesting that the Ninth Circuit only
+[00:45:38] focus on cases with a high degrees of error.
+[00:45:44] Even a death penalty case that has a really low degree
+[00:45:47] of error probably deserves more attention
+[00:45:50] from judges than a small contractual dispute
+[00:45:54] with a really high degree of error.
+[00:45:57] So yeah.
+[00:45:57] I'm not suggesting one size fits all.
+[00:46:01] Good question.
+[00:46:13] SPEAKER 9: Hi.
+[00:46:13] I'm just curious if you've shared
+[00:46:16] this with judges, appellate judges,
+[00:46:18] and how they've reacted to it.
+[00:46:19] And what they think about this being part
+[00:46:23] of the decision making formula in terms of where they
+[00:46:28] spend their time and attention?
+[00:46:30] RYAN COPUS: I not shared it.
+[00:46:38] I've shared it with [AUDIO OUT] I think there were maybe
+[00:46:42] a little of [AUDIO OUT] and I don't--
+[00:46:44] I mean, I didn't really think we were going
+[00:46:45] to get them to take this on.
+[00:46:50] I have not shared it with any federal judges
+[00:46:53] to be perfectly honest.
+[00:46:55] I'm much more concerned with getting it published.
+[00:46:59] Maybe after that fact, after that accomplishment,
+[00:47:02] I'll turn towards making a dent in the world, rather than just
+[00:47:07] an academic dent.
+[00:47:14] CHRIS: We'll probably wrap it up there.
+[00:47:16] Please let me again thank you for [INAUDIBLE]..
+[00:47:18] RYAN COPUS: OK.
+[00:47:19] Thank you.

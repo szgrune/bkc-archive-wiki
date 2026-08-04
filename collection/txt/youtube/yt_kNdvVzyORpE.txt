@@ -1,0 +1,1787 @@
+[00:00:00] thanks for uh joining us today my name
+[00:00:02] is axo arbach I'm a fellow here this
+[00:00:04] year at the burkman center and at citp
+[00:00:07] in
+[00:00:08] Princeton um this is somewhat of an
+[00:00:11] unusual setting uh after the talk uh the
+[00:00:14] day before yesterday um we found out
+[00:00:16] that uh some of the backup or some of
+[00:00:18] the stream have been gone so I'll do the
+[00:00:21] first 10 minutes of the talk again I was
+[00:00:23] asked to do that and then afterwards we
+[00:00:25] will gradually um go into the talk um uh
+[00:00:30] into the real talk so you'll see a
+[00:00:31] different shirt and you'll see audience
+[00:00:34] and um uh and that will be fine so today
+[00:00:36] I'll be talking about um government
+[00:00:40] hacking both in the law enforcement and
+[00:00:42] in the intelligent
+[00:00:43] space um and um the recent response or
+[00:00:47] the response come couple of years ago by
+[00:00:50] the German constitutional Court to um to
+[00:00:53] call for an constitutional right to it
+[00:00:55] security I start the presentation with
+[00:00:58] this quote from 19
+[00:01:01] 1971 uh the quote reads in almost every
+[00:01:03] issue of weekly uh of the weekly
+[00:01:06] Computer World which is a magazine is an
+[00:01:08] article detailing a case of Computer
+[00:01:10] Fraud embezzlement or sabotage over 100
+[00:01:13] difficult uh different articles um uh
+[00:01:16] had been written on this issue uh from
+[00:01:18] the mid
+[00:01:19] 1971 until 1972 the source is down there
+[00:01:23] on the slide uh and this goes only to
+[00:01:26] tell that even though with uh with the
+[00:01:29] NSA re Revelations made possible by Mr
+[00:01:31] Snowden and with some law enforcement
+[00:01:34] hacking issues um cases that have been
+[00:01:36] popped up in recent years we think that
+[00:01:38] this is a very new issue but it has
+[00:01:40] already been around for 40 years but
+[00:01:43] legislators are only now thinking about
+[00:01:45] this issue and how to respond so we have
+[00:01:47] to realize that the technical reality is
+[00:01:50] 40 years ahead of of the legislative
+[00:01:53] debate and that is something that I want
+[00:01:55] to uh want to focus on
+[00:01:58] today um so hacking government hacking
+[00:02:01] has been around for a long time but it
+[00:02:03] has really accelerated in the recent
+[00:02:05] years especially last 10 to 15 years uh
+[00:02:09] and especially the last couple of years
+[00:02:10] and this has all to do with socio
+[00:02:12] technical changes that you know
+[00:02:14] everybody has heard a lot about but we
+[00:02:17] move our Communications our information
+[00:02:19] into the web and recently into the cloud
+[00:02:23] um and there was this interesting moment
+[00:02:26] uh in the mid90s that is now commonly
+[00:02:28] known as as the crypto Wars um and the
+[00:02:32] crypto wars were all about um the FBI
+[00:02:35] and the NSA and other government
+[00:02:36] authorities all around the world were
+[00:02:38] saying that Communications were going
+[00:02:40] dark uh moving behind for example https
+[00:02:45] encryption and that um made it much
+[00:02:48] harder for government authorities to do
+[00:02:50] the conventional types of of
+[00:02:52] surveillance through wire tabs now this
+[00:02:55] led to these crypto Wars where one uh
+[00:02:58] part of of Society Civil Society for
+[00:03:02] example um uh but also industry
+[00:03:04] financial Industries pleaded for strong
+[00:03:07] cryptography to protect Communications
+[00:03:09] but on the other hand you had government
+[00:03:11] authorities in law enforcement and
+[00:03:13] intelligence saying no um we should uh
+[00:03:16] uh uh not allow this strong encryption
+[00:03:18] to happen um because uh that disables
+[00:03:22] our surveillance capabilities now the
+[00:03:24] interesting moment was the crypto Wars
+[00:03:27] and the conventional wisdom is that the
+[00:03:30] crypto Wars had been won by industry and
+[00:03:33] Civil Society so there's this famous
+[00:03:35] book uh by Steven Levy uh called crypto
+[00:03:38] that details or that that outlines uh
+[00:03:41] the whole um crypto Wars and the under
+[00:03:44] tile is quite uh quite uh beautiful it
+[00:03:47] says how the code Rebels beat the
+[00:03:50] government saving privacy in the digital
+[00:03:52] age now for over a decade this had has
+[00:03:56] been the conventional wisdom it has been
+[00:04:00] uh very much part of uh you know
+[00:04:01] technical and and legal debates that uh
+[00:04:04] the crypto worlds War I and encryption
+[00:04:07] saves the day well of course with the
+[00:04:09] recent uh Revelations made possible by
+[00:04:13] Mr Snowden uh for example the NSA Bull
+[00:04:16] Run uh Revelations but also last week um
+[00:04:20] I'll talk a bit more about that um we
+[00:04:22] see that this is not really the case and
+[00:04:24] we're actually a bit more in a situation
+[00:04:26] uh like this beautiful uh picture at um
+[00:04:30] uh that I found um um where you have a
+[00:04:33] clunky internet infrastructure and the
+[00:04:36] code Rebels going uh you know up and
+[00:04:40] enjoying the excitement of the ride and
+[00:04:42] then finding at the end that there's an
+[00:04:45] obstacle um between their legs when
+[00:04:47] they're done and this picture we
+[00:04:50] remember Freedom uh plays with that
+[00:04:52] Nostalgia I think it's a beautiful
+[00:04:53] artwork that's more realistic uh in the
+[00:04:56] situation that we are today only last
+[00:04:59] week
+[00:05:00] um Glenn Greenwald the journalist his
+[00:05:02] outfit with Ryan uh Gallagher the new
+[00:05:05] outfit of The Intercept published uh
+[00:05:07] news slides on how the NSA plans to
+[00:05:10] infect millions of computer with malware
+[00:05:13] these are all uh about Network attacks
+[00:05:16] uh at the end of December um D spigel
+[00:05:20] laa pyros Jake appam and others
+[00:05:22] published the tailored access operations
+[00:05:25] catalog um which is much more about
+[00:05:27] hacking into devices and now we know
+[00:05:30] that uh the capabilities um of these
+[00:05:33] intelligence agencies all around the
+[00:05:34] world are are are enormous and that all
+[00:05:37] vulnerabilities and Communications are
+[00:05:39] basically being exploited also in the
+[00:05:42] law enforcement space recent quote from
+[00:05:44] The Washington Post uh about the the FBI
+[00:05:49] uh and it reads the most powerful FBI
+[00:05:51] surveillance software can coverly
+[00:05:53] download files photographs stor emails
+[00:05:56] gather real time images by activating
+[00:05:59] cameras has connected to computers say
+[00:06:02] um say court documents people and people
+[00:06:04] with familiar with this technology so
+[00:06:05] this is happening and the plausible
+[00:06:07] deniability about government hacking
+[00:06:10] that has been very much uh uh present in
+[00:06:13] in in policy debates it's now gone we
+[00:06:16] know that this is happening uh and that
+[00:06:19] it's increasing and that it is very
+[00:06:22] problematic but uh today I will talk
+[00:06:25] about uh Western governments so how
+[00:06:29] should we understand the hacking
+[00:06:31] governments uh the hacking efforts of
+[00:06:32] Western governments and how should we
+[00:06:34] respond to them and the goal for today's
+[00:06:36] talk at the end will be to co-create and
+[00:06:39] and think about uh and have you all uh
+[00:06:42] think about uh an agenda for research
+[00:06:45] policy and also activism and activism I
+[00:06:47] think is very important on the short
+[00:06:50] term to raise the importance of the
+[00:06:52] issue and to do fact finding so today
+[00:06:55] will not be directly about uh something
+[00:06:58] that has been very much uh in the news
+[00:07:00] lately and the citizen lab uh of Berkman
+[00:07:04] friend Ron debert has done some
+[00:07:06] fantastic work in this space um uh which
+[00:07:10] is all about uh governments nonwestern
+[00:07:13] governments and I'm I'm fully aware of
+[00:07:15] the contentious uh uh distinction
+[00:07:18] between that but here um uh there's been
+[00:07:22] a lot of coverage about how these
+[00:07:24] non-western uh governments have been uh
+[00:07:27] purchasing hacking software
+[00:07:30] uh made by Western
+[00:07:32] companies um this is a slide on uh um
+[00:07:37] hacking team one of those companies and
+[00:07:39] the suspected governments that use their
+[00:07:41] their RCS software all around the world
+[00:07:43] well you see uh some some pretty
+[00:07:45] interesting countries there uh you know
+[00:07:47] Saudi Arabia Kazakhstan turkey Nigeria
+[00:07:50] even Ethiopia the Ethiopian case has
+[00:07:53] been uh covered by The Washington Post
+[00:07:55] lately uh but today is not directly
+[00:07:58] about that why because uh Western
+[00:08:00] governments have a long tradition of
+[00:08:02] dual use regulation so um um arms
+[00:08:08] treaties uh not selling your your
+[00:08:11] weapons uh or your digital weapons for
+[00:08:13] that matter to non-western governments
+[00:08:16] and authoritarian regimes there's
+[00:08:18] already a lot of great work being done
+[00:08:20] second reason and the third reason and I
+[00:08:22] think that's really uh at the heart of
+[00:08:23] this issue is that it's super I mean
+[00:08:26] it's very attractive for Western
+[00:08:28] governments and Western politicians to
+[00:08:30] point their finger at these companies
+[00:08:32] and authoritarian regimes uh it's easy
+[00:08:34] to condemn uh for hagon basically uh
+[00:08:38] other governments but what I want to
+[00:08:40] talk about today is that Western
+[00:08:42] governments themselves are very much
+[00:08:44] engaged in this um uh and we have to
+[00:08:47] have a a much more rigorous debate on
+[00:08:50] this okay so today um the outline is I
+[00:08:54] will first uh discuss some hacking cases
+[00:08:56] by Western governments then I will
+[00:08:58] highlight um you know uh it could be 11
+[00:09:01] it could be 37 but I want to
+[00:09:03] specifically focus on 11 problems with
+[00:09:05] government
+[00:09:06] hacking um uh I have a longer blog post
+[00:09:11] uh on that um if you want to read more
+[00:09:13] about that which is also on the burkman
+[00:09:15] uh uh website um where you found this
+[00:09:18] talk if you want to do more reading um
+[00:09:21] then I'll talk about this new
+[00:09:23] constitutional right to it security
+[00:09:24] which was proposed by uh which has been
+[00:09:27] installed by the German Federal
+[00:09:28] Constitution Court um and you already
+[00:09:31] see traces in the European Court of
+[00:09:33] human rights of that uh being accepted
+[00:09:36] and finally I want to discuss with the
+[00:09:37] audience uh and I have discussed with
+[00:09:40] the audience um these elements of a of a
+[00:09:42] research agenda and uh and a discussion
+[00:09:46] all right so first these hacking cases
+[00:09:47] by Western governments there was uh not
+[00:09:50] so long ago about a month ago um this
+[00:09:53] fantastic conference put together by
+[00:09:55] Chris seoan um in Yale um the stream is
+[00:09:58] online uh if you're interested you
+[00:10:00] should definitely take a look had a
+[00:10:02] bunch of great speakers and um I was
+[00:10:05] there as well and some yeah you know
+[00:10:07] considerable parts of the talk are
+[00:10:09] inspired by the speakers and I try to
+[00:10:11] attribute uh where I could um um but
+[00:10:15] definitely worth a look if you want to
+[00:10:16] have more information is this law
+[00:10:18] enforcement and hacking panel uh
+[00:10:19] conference at at
+[00:10:22] jail um uh there I discussed two of
+[00:10:25] these uh cases but here I have a lot
+[00:10:27] more time to go into the detail so so um
+[00:10:30] let's just separate three cases of
+[00:10:32] government hacking uh law enforcement
+[00:10:34] investigation botnet prosecution and
+[00:10:36] mitigation a Dutch case and this
+[00:10:39] ubiquitous intelligence gathering okay
+[00:10:42] so let's start with the law enforcement
+[00:10:45] investigations um in the US um this has
+[00:10:49] been going on for quite some time and um
+[00:10:52] uh but we know very little about this uh
+[00:10:55] and only a couple of months ago um um we
+[00:10:59] uh got insight into uh D FBI requesting
+[00:11:03] a warrant uh from a Magistrate Judge um
+[00:11:07] uh to hack into the computer um uh uh of
+[00:11:11] a certain person um um for uh because uh
+[00:11:16] they suspected um that from this
+[00:11:19] particular
+[00:11:21] device um uh uh um uh uh they they
+[00:11:27] expect uh they suspected from this
+[00:11:28] particular device somebody using
+[00:11:31] somebody else's uh credentials to log
+[00:11:33] into internet banking environment and do
+[00:11:36] some transactions there um they wanted
+[00:11:38] to hack into the device to find out who
+[00:11:41] this person was and uh whether uh um
+[00:11:44] they could uh uh find find the suspect
+[00:11:47] and that was that was exactly the
+[00:11:49] problem with this case and Magistrate
+[00:11:51] Judge Smith who also spoke at this Yale
+[00:11:54] conference in April 2013 he turned this
+[00:11:57] FBI hacking request down and why you
+[00:12:00] know the three Central reasons why he
+[00:12:01] did this is that the FBI wanted to hack
+[00:12:04] into a device but they didn't really
+[00:12:07] know the identity of the suspect um
+[00:12:10] that's why they wanted to hack into the
+[00:12:11] computer and they didn't even know the
+[00:12:13] location of the device so they wanted to
+[00:12:16] do a search for uh a device and of a
+[00:12:21] device they wanted to search the device
+[00:12:24] uh they thought uh uh had uh access this
+[00:12:28] account but they weren't
+[00:12:29] sure and they uh whenever they got this
+[00:12:34] warrant they want also wanted to uh
+[00:12:36] search the computer itself and there um
+[00:12:39] the hugely uh problematic uh aspects of
+[00:12:42] this warrant manifested himself uh
+[00:12:45] themselves because um uh this is
+[00:12:48] basically comes very close judge Miss to
+[00:12:51] a general warrant you don't know the
+[00:12:54] identity of the suspect so you run the
+[00:12:57] risk of uh searching for
+[00:12:59] uh U the computer of something somebody
+[00:13:02] that is uh very uh you know uh innocent
+[00:13:06] uh and has not even been suspected of a
+[00:13:08] crime and you don't even know the
+[00:13:10] location so this computer could be
+[00:13:11] anywhere in the world and this computer
+[00:13:14] could be at a public space maybe a
+[00:13:15] public library for example uh a computer
+[00:13:18] that many people use uh uh or in an
+[00:13:21] internet cafe uh rather than one person
+[00:13:24] and he said uh judge Smith ruled that uh
+[00:13:28] that uh does does not satisfy the
+[00:13:30] particularity requirement of the Fourth
+[00:13:31] Amendment and the third reason was also
+[00:13:34] that um um what the FBI wanted to do is
+[00:13:38] uh look for IP addresses but also uh do
+[00:13:42] conduct video surveillance uh they
+[00:13:44] wanted to turn on the webcam on this
+[00:13:46] particular computer and um look whoever
+[00:13:50] uh was using it and uh in the Texas
+[00:13:52] district there is uh strong Fourth
+[00:13:54] Amendment requirements for video
+[00:13:56] surveillance that hadn't been met so
+[00:13:58] this is a rare case of a warrant coming
+[00:14:02] out at the same year conference
+[00:14:04] professor donu of Georgetown said well
+[00:14:06] I've been researching I've been trying
+[00:14:08] to research this issue but there's a
+[00:14:10] very big problem uh because um I found
+[00:14:14] dozens of cases from California to the
+[00:14:16] New York District uh where the FBI
+[00:14:19] requested warrants but um they were
+[00:14:21] sealed so uh and judge schmith uh
+[00:14:24] reiterated this point uh they both
+[00:14:27] pointed that uh there is no public
+[00:14:29] scrutiny possible of this practice by
+[00:14:31] the FBI when all those court cases are
+[00:14:33] sealed so we don't have an idea of the
+[00:14:36] scope and how often this uh uh is is
+[00:14:38] being done because these court cases are
+[00:14:40] sealed this is a big problem that needs
+[00:14:42] to be
+[00:14:44] addressed okay second case um um um the
+[00:14:49] bundus this is a very uh um uh this is a
+[00:14:53] case that already started public debate
+[00:14:55] in Germany about eight years ago so uh
+[00:14:58] one of of the states of the federal
+[00:15:00] government uh the Federal Republic of
+[00:15:02] Germany uh nor Ryan westa one of the
+[00:15:05] states wanted to
+[00:15:07] legislate uh the use of government
+[00:15:09] malware by law enforcement agencies and
+[00:15:11] made a law and this law was challenged
+[00:15:14] ultimately at the Supreme Court in
+[00:15:15] Germany the federal constitutional
+[00:15:18] Court uh and uh here is the federal
+[00:15:21] constitutional Court you you see their
+[00:15:24] uh um um their funky hats and what was
+[00:15:27] so nice about this case is that um um
+[00:15:31] The
+[00:15:32] Bu um uh invited three computer security
+[00:15:36] professors and uh and one computer
+[00:15:39] security expert from the chaos uh
+[00:15:41] Computer Club uh to be part of the Court
+[00:15:44] proceedings testing the validity of this
+[00:15:47] law uh against the the German
+[00:15:51] Constitution uh and this
+[00:15:53] buus the German Supreme Court really uh
+[00:15:57] went to Great Lengths to understand the
+[00:15:59] technical details and um um uh
+[00:16:02] ultimately uh and I'll talk a bit more
+[00:16:05] about the ruling later but ultimately uh
+[00:16:07] in 2008 the bundas for fing uh ruled
+[00:16:12] that the uh German state law um was uh
+[00:16:16] inv violate so was uh breaching uh or
+[00:16:19] violating the German Constitution and
+[00:16:22] came up with this new constitutional
+[00:16:25] right to it security very interesting
+[00:16:27] case what I want to talk about now is
+[00:16:30] that in
+[00:16:32] 2011 um the chaos Computer Club uh uh
+[00:16:37] got hold of uh a piece of government
+[00:16:39] malware so even though in 2008 the
+[00:16:43] German constitutional Court um um ruled
+[00:16:48] uh that uh government hacking is uh
+[00:16:51] violates the Constitution under the
+[00:16:53] specific law that had been
+[00:16:56] installed um um it found 3 years later
+[00:16:59] the chaos uh Computer Club uh found
+[00:17:02] government uh malware in the wild they
+[00:17:05] were able to reverse a nit to reverse
+[00:17:08] engineer it um and this secretly
+[00:17:11] deployed government malware uh turned
+[00:17:14] out to be very problematic and this re
+[00:17:18] uh process of reverse engineering is
+[00:17:19] highly instructive for us to better
+[00:17:22] understand government ha hacking in the
+[00:17:24] all in the in the law enforcement space
+[00:17:27] so let me tell you some some technical
+[00:17:29] details about um uh about uh about the
+[00:17:33] malware
+[00:17:34] itself so a first very important uh
+[00:17:37] aspect of this is that the government
+[00:17:40] made false claims uh about the malware
+[00:17:43] itself um the government always held
+[00:17:46] that uh even in the Constitutional court
+[00:17:49] case that uh their government malware
+[00:17:53] their Trojan was used uh only for Source
+[00:17:57] wire tapping
+[00:17:59] so only for listening into the
+[00:18:01] communications between the Hacked device
+[00:18:04] and other devices basically a wir tab
+[00:18:08] but what the the um the German uh the
+[00:18:11] chaos Computer Club found was that um in
+[00:18:15] the malware the capability was already
+[00:18:18] uh built into it to do remote searches
+[00:18:21] and a remote search is something
+[00:18:23] different than a wir tab because that's
+[00:18:24] when you actually go into a device and
+[00:18:27] search on its hard drive
+[00:18:29] etc for more information not a wir tub
+[00:18:32] when some something is communicated but
+[00:18:34] actually looking bit similar to a house
+[00:18:36] search what's what's what's on the
+[00:18:39] computer so the government held no this
+[00:18:41] is only for wir tapping but the K
+[00:18:43] Computer Club found no this is also uh
+[00:18:46] they're also able to use this for remote
+[00:18:49] searching another false claim by the
+[00:18:51] government was that uh we will always um
+[00:18:56] uh our government malware will always be
+[00:18:57] case specific so our malware is custom
+[00:19:00] custom made and we have quality audits
+[00:19:03] every time we deploy one specific piece
+[00:19:05] of malware well this is also something
+[00:19:08] that the chaos Computer Club was able to
+[00:19:10] debunk because they found several pieces
+[00:19:12] of malware which were exactly the same
+[00:19:14] not custom made at all and then most
+[00:19:18] critically uh the malware had a lot of
+[00:19:21] deep security flaws so uh what happened
+[00:19:25] um um uh most importantly I think
+[00:19:29] um uh it was fairly badly uh encrypted
+[00:19:32] and some things weren't even encrypted
+[00:19:34] so try to imagine that uh the government
+[00:19:37] installs uh a virus or or a piece of
+[00:19:40] malware on your computer and then is
+[00:19:42] able to you know from the law
+[00:19:44] enforcement offices uh give the piece of
+[00:19:47] malware on your computer commands now
+[00:19:49] these commands that travel all over the
+[00:19:52] Internet until they reach your computer
+[00:19:54] the piece of M were unencrypted so if
+[00:19:57] you were able to intercept those
+[00:19:58] commands you were actually able to
+[00:20:01] change the malware and to change the
+[00:20:03] commands given to the malware as a man-
+[00:20:05] in the-middle attacker so try to try to
+[00:20:08] let that rest in for a moment and think
+[00:20:10] about its
+[00:20:11] implications the implications are that
+[00:20:14] for example you could uh uh better
+[00:20:17] understand what kind of uh commands law
+[00:20:20] enforcement gives to the computer but
+[00:20:22] you could also modify those commands so
+[00:20:25] you could actually tamper with uh uh
+[00:20:28] with the malware in a way that uh lets
+[00:20:31] you as a third person so as a man in
+[00:20:33] the- Middle attacker uh for example uh
+[00:20:37] do other stuff on the computer of an end
+[00:20:39] user So This is highly
+[00:20:42] problematic um a second thing you could
+[00:20:44] do is impersonate those authorities so
+[00:20:47] you couldn't you could even pretend as a
+[00:20:50] third person that you are the government
+[00:20:52] and uh uh give um uh and use the malware
+[00:20:56] to give all sorts of commands to that
+[00:20:58] computer or maybe even to uh um um use
+[00:21:02] the malware yourself in other cases so
+[00:21:05] hack other systems and and and and do
+[00:21:08] that and then a third uh very uh big
+[00:21:12] problem is that uh as a man in the
+[00:21:14] middle attacker you could actually go
+[00:21:17] back use the malware to hack law
+[00:21:19] enforcement systems so you could
+[00:21:21] actually and this is I mean the the the
+[00:21:23] consequences of this are enormous of
+[00:21:25] course um you could actually go use the
+[00:21:28] m and go into the systems of law
+[00:21:30] enforcement itself and then uh change
+[00:21:32] all sorts of uh uh uh aspects uh of
+[00:21:36] government law enforcement databases for
+[00:21:38] example I mean the implications um you
+[00:21:41] could think of uh are are enormous so
+[00:21:45] all these problems emerged highly
+[00:21:47] insecure government malware deployed
+[00:21:49] even though uh the government uh uh had
+[00:21:52] a constitutional Court ruling against it
+[00:21:55] um um you know government malare not
+[00:21:58] being spefic specific um but generally
+[00:22:00] used with all sorts of capabilities
+[00:22:02] already built in highly problematic case
+[00:22:05] highly secretively deployed and only
+[00:22:07] because the chaos Computer Club reverse
+[00:22:09] engineered it we've been able to to see
+[00:22:12] its
+[00:22:13] implications I'll talk more about it
+[00:22:15] later but highly problematic okay botn
+[00:22:18] Nets different
+[00:22:20] case um and for botn Nets we look uh to
+[00:22:23] the Netherlands but this happens all
+[00:22:25] over the world but um the Dutch case is
+[00:22:28] really interesting inter in because it
+[00:22:29] shows uh you know the information that
+[00:22:31] has emerged is just very
+[00:22:33] rich so um if you would have seen on
+[00:22:37] your computer this warning screen uh
+[00:22:40] somewhere in 2 October 25th
+[00:22:44] 2010 it meant that um your computer was
+[00:22:48] infected with the Brea
+[00:22:50] botnet and that the government had
+[00:22:53] infected your computer with a a small
+[00:22:55] piece of code to Spur whenever you turn
+[00:22:58] your computer on this uh this warning
+[00:23:01] screen and this warning screen is uh
+[00:23:04] here's the the police logo public
+[00:23:07] prosecutor the Dutch uh CT and and a
+[00:23:10] company that actually made this uh made
+[00:23:12] this malware so this is a case in which
+[00:23:16] um a lot of computer a lot of um
+[00:23:19] computers all around the world were
+[00:23:20] infected with a botn net and where the
+[00:23:23] uh the Dutch government used the botn
+[00:23:25] net to mitigate the botn net so a botn
+[00:23:28] net is uh very basically is um uh a
+[00:23:34] server um uh a command and control
+[00:23:37] server somewhere in the world that has
+[00:23:41] uh uh infected uh a lots of as you call
+[00:23:44] it uh B clients and this creates this
+[00:23:48] zombie network uh in which this go
+[00:23:51] command and control server called the
+[00:23:53] and the bot Herer that controls it uh
+[00:23:56] can send out commands for you know
+[00:23:58] search for credit cards Etc um um all
+[00:24:01] over the world botn Nets are a really
+[00:24:03] serious problem for Internet Security
+[00:24:06] and for uh the and for Crime it's not at
+[00:24:09] all to uh under uh understate the
+[00:24:12] problem
+[00:24:13] here um the Dutch government had said
+[00:24:16] that 30 million uh devices all over the
+[00:24:20] world uh had been infected um they
+[00:24:23] exagerated this number at least by an
+[00:24:25] order of magnitude uh to you know hype
+[00:24:28] up uh the seriousness of this case but
+[00:24:30] definitely this was a large botn net and
+[00:24:33] uh so yeah people were um uh uh there
+[00:24:37] was a lot of attention on this also from
+[00:24:40] other countries to do something about
+[00:24:41] this um and uh the the Dutch law
+[00:24:45] enforcement agencies took a pretty bold
+[00:24:48] approach so
+[00:24:51] um um some of the technical aspects here
+[00:24:54] is that um as I already said um
+[00:24:58] the Dutch law enforcement agency claimed
+[00:25:00] that 30 million devices were 30 million
+[00:25:03] devices so three were infected but it
+[00:25:07] was rather more like one and a half
+[00:25:09] million still a
+[00:25:11] lot um and uh to uh prosecute and to
+[00:25:15] mitigate the bot net the Dutch law
+[00:25:17] enforcement agencies did two hacks one
+[00:25:20] they hacked into this command and
+[00:25:21] control
+[00:25:22] server um they did this to find out who
+[00:25:26] uh was administrating um the botn net
+[00:25:29] and uh to prosecute him and the second
+[00:25:31] hack was a hack into all the computers
+[00:25:35] uh around the world that were infected
+[00:25:37] with the botn net in order to install a
+[00:25:40] close Source uninspected piece of code
+[00:25:43] on one and a half million computers all
+[00:25:45] around the world that would spur this
+[00:25:47] warning screen but it uh whenever this
+[00:25:50] happened uh for years nobody had seen
+[00:25:52] the code nobody actually know uh knew
+[00:25:55] what capabilities apart from sping this
+[00:25:57] warning SC were part of the code and uh
+[00:26:00] users on the other hand would uh see
+[00:26:03] this uh would go to this link um uh um
+[00:26:08] this link mentioned here uh and their
+[00:26:11] systems would automatically be
+[00:26:13] updated now um that of course had uh uh
+[00:26:18] a lot of security
+[00:26:20] implications um bits of Freedom a Dutch
+[00:26:22] NGO um where uh I uh not at the time
+[00:26:26] anymore but uh where I used to to be at
+[00:26:30] um did a lot of Freedom of Information
+[00:26:31] requests for the code and finally uh
+[00:26:35] well the Freedom of Information uh
+[00:26:37] request uh wasn't honored uh but the
+[00:26:40] government um released the code itself
+[00:26:43] and uh well if you see it it's actually
+[00:26:45] a pretty you know it's not that uh uh
+[00:26:48] interesting a code it's just basically
+[00:26:50] asking for uh the window shell to open
+[00:26:54] and then um for computers to uh serve to
+[00:26:57] this uh URL L um this URL uh would then
+[00:27:01] spur this warning screen nothing more
+[00:27:04] it's a it's language dely 6 I think uh
+[00:27:07] not uh particularly uh interesting but
+[00:27:10] what is interesting is for one uh that
+[00:27:13] the warning screen wasn't uh encrypted
+[00:27:16] over SSL so um basically this opened up
+[00:27:20] uh to uh fishing attacks where uh you
+[00:27:24] could actually impersonate uh a website
+[00:27:26] or do whatever you could listen in to
+[00:27:28] all the computers uh that were visiting
+[00:27:31] this warning screen and actually assume
+[00:27:32] that they had been infected by this botn
+[00:27:34] net and the code was not even signed so
+[00:27:38] um uh basically uh when you went to this
+[00:27:41] web page and clicked on the website uh
+[00:27:44] um or went to the website and you saw
+[00:27:47] the link and that would then you know
+[00:27:49] execute this code the code wasn't even
+[00:27:51] signed so there was no md5 checks on I
+[00:27:54] mean to cut a long story short everybody
+[00:27:57] could have inserted uh a different uh uh
+[00:28:00] Link in there or maybe antivirus
+[00:28:02] companies from a bit more Rogue nature
+[00:28:05] could actually um um do all sorts of bad
+[00:28:08] things there so again a case of law uh
+[00:28:11] law enforcement hacking in which
+[00:28:13] security was uh was a pretty serious
+[00:28:18] issue even after the botnet was uh uh
+[00:28:21] mitigated uh within weeks the botn net
+[00:28:23] was already functioning again which also
+[00:28:26] turns uh uh raises very important
+[00:28:29] questions about botnet mitigations
+[00:28:31] itself um and the botnet moved from a
+[00:28:34] centralized command and control server
+[00:28:36] to a peer peer-to-peer infrastructure
+[00:28:38] making it even much more hard to uh
+[00:28:41] mitigate the B net
+[00:28:43] okay third case um ubiquitous
+[00:28:46] intelligence gathering well this has
+[00:28:48] been over the news a lot in the last
+[00:28:50] couple of uh uh
+[00:28:53] weeks um there was the end of December
+[00:28:55] where there spigle published the
+[00:28:57] tailored access operations catalog uh
+[00:29:00] which uh showed us that uh the
+[00:29:02] capabilities of especially the NSA and
+[00:29:05] the gchq in Britain are uh are pretty
+[00:29:08] far
+[00:29:09] Advanced um and then there was uh a week
+[00:29:13] ago uh a new slide
+[00:29:15] released uh on the this is then the
+[00:29:18] quantum catalog and um well there's a
+[00:29:21] lot of information here I won't talk
+[00:29:23] about everything but uh particularly
+[00:29:26] interesting is quantum DNS you know DNS
+[00:29:30] injection is is done um all sorts of man
+[00:29:33] in the side techniques man in the middle
+[00:29:35] techniques uh and what is very
+[00:29:37] interesting is that a lot of these
+[00:29:40] operations have already been operational
+[00:29:42] or a lot of these programs have already
+[00:29:43] been operational for uh you know for
+[00:29:46] about 10 years here's Quantum Sky um uh
+[00:29:50] for the denial of access to a web page
+[00:29:53] already operating since 2004
+[00:29:55] Etc so um already for and and basically
+[00:29:59] this is uh dirty hacking techniques um
+[00:30:03] it's not uh it's not particularly
+[00:30:06] special um but it's used and and already
+[00:30:09] for a very long time and you know with
+[00:30:12] all the revelations I guess the basic
+[00:30:14] Point here is that um well Internet
+[00:30:17] Security is in a pretty deplorable State
+[00:30:20] um and also that the fact that it is in
+[00:30:22] a deplorable state is being exploited uh
+[00:30:25] massively by intelligence agencies and
+[00:30:28] once again you always need to tell this
+[00:30:29] I mean this isn't only the United States
+[00:30:32] when these uh vulnerabilities exist it's
+[00:30:35] quite probable that they're also used by
+[00:30:38] you know a range of other uh countries
+[00:30:41] all over the world uh and not to mention
+[00:30:44] cyber criminals so um a lot of very very
+[00:30:48] deep problems um and lack of uh all
+[00:30:51] sorts of um means of oversight and um
+[00:30:54] and legal
+[00:30:55] protection so that's what I want to talk
+[00:30:57] about a little bit more um you know
+[00:31:00] there's a whole bunch as this is such a
+[00:31:03] new issue and as legislators have only
+[00:31:06] in recent years uh started to you know
+[00:31:09] in Europe started to think about this
+[00:31:11] and only in recent months in the United
+[00:31:13] States um um the technical capabilities
+[00:31:17] are 40 years ahead of the mindset of
+[00:31:21] legislators so that's that's something
+[00:31:23] to keep in mind um and basically just
+[00:31:26] very briefly I'll talk about you know 11
+[00:31:28] but it could be you know the list just
+[00:31:30] goes on and on um one very basic problem
+[00:31:34] for cyber crime uh mitigation is that we
+[00:31:38] have no reliable data we have no idea um
+[00:31:42] how much uh the costs are of cyber crime
+[00:31:45] save the you know the annual report of
+[00:31:48] simant that of course has a huge
+[00:31:50] interest if pumping up uh these damages
+[00:31:53] um um they often for example they
+[00:31:56] include uh copyright in infringements uh
+[00:31:59] for music downloaded into their reports
+[00:32:02] which is uh numbers they directly get
+[00:32:04] from the entertainment industry that
+[00:32:05] kind of stuff it's really dodgy it's not
+[00:32:08] reliable and we don't really have
+[00:32:10] reliable data to make evidence-based
+[00:32:12] policy very deep
+[00:32:15] problem um then uh as we already saw in
+[00:32:18] the German case there's no clear
+[00:32:20] separation there's no clear technical
+[00:32:22] separation between wir and search so
+[00:32:24] most of the malware that is employed
+[00:32:26] already has uh all sorts of capabilities
+[00:32:29] built into them and you can argue
+[00:32:32] whether uh doing a wir tap uh on
+[00:32:35] somebody's system is actually a wir tab
+[00:32:38] um no a wir tab would be looking at the
+[00:32:40] wire and not at the system but now a lot
+[00:32:43] of this government mare is targeted at
+[00:32:45] the system to perform a wiet but built
+[00:32:47] in with all these new capabilities so
+[00:32:49] this old legal conceptual separation
+[00:32:52] between wiretap and search is something
+[00:32:54] we really need to think about and is
+[00:32:55] very
+[00:32:56] problematic and with all these systemic
+[00:32:59] uh Lying by law enforcement uh
+[00:33:01] agencies um and no laws we have really
+[00:33:05] hard time uh to do uh proper judicial so
+[00:33:08] in the courts and and and policy
+[00:33:10] oversight and we already saw this in
+[00:33:13] magist judge uh Smith's and Professor
+[00:33:16] Don's comments at the conference but
+[00:33:18] oversight is really hard and um where we
+[00:33:22] have no reliable data on the actual
+[00:33:24] scale of the problem we have no reliable
+[00:33:25] data of the actual practices either
+[00:33:29] well insecure malware um both in the
+[00:33:33] Dutch but certainly in the reverse
+[00:33:35] engineered German bundus case is an
+[00:33:38] information security disaster um you
+[00:33:41] know in Germany we saw that uh the
+[00:33:44] malware employed could actually not only
+[00:33:46] be uh uh subverted but it could also be
+[00:33:49] used to attack law enforcement systems
+[00:33:51] so this is like this is like uh you
+[00:33:54] know asset of the most serious sorts
+[00:33:57] this is something that you really don't
+[00:33:58] want to touch if you don't know what
+[00:34:00] you're
+[00:34:01] doing and then very importantly I think
+[00:34:04] um allowing government hacking to occur
+[00:34:07] creates really bad security incentives
+[00:34:10] so we all have a benefit with
+[00:34:12] information security uh in our in our
+[00:34:14] network
+[00:34:15] communications but uh creating this
+[00:34:18] possibility for for governments to hack
+[00:34:20] creates these very bad um
+[00:34:23] incentives uh just as a short aside
+[00:34:26] there's there's about three ways to uh
+[00:34:28] enter a device uh one is through social
+[00:34:31] engineering so for example fishing
+[00:34:33] attacks uh another one is uh through
+[00:34:36] installing a box at an ISP that enables
+[00:34:40] a man- inth the- middle attack at the
+[00:34:41] ISP level um and the third is uh to do
+[00:34:45] it at your operating system something we
+[00:34:47] have already seen in the NSA disclosures
+[00:34:49] that Windows update is actually used to
+[00:34:51] report um the vulnerabilities in a in a
+[00:34:55] in a Microsoft uh Windows setting uh to
+[00:34:58] the NSA for them to you know to uh
+[00:35:01] determine their attack techniques so
+[00:35:04] social engineering of an individual is
+[00:35:06] one thing but placing a box like um fin
+[00:35:09] spy um it's a it's a box uh offered by
+[00:35:13] this company called gamma International
+[00:35:14] from the UK or involving operating uh
+[00:35:18] system uh vendors in this process makes
+[00:35:22] the whole the whole ecosystem really
+[00:35:25] vulnerable to attack so this is a big
+[00:35:27] problem and the question we should ask
+[00:35:29] ourselves is will Microsoft Apple uh and
+[00:35:32] Google um will they be forced by the
+[00:35:35] government to comply with the request to
+[00:35:37] actually uh report back you know
+[00:35:40] security vulnerabilities or even insert
+[00:35:42] back doors in their system on the other
+[00:35:44] hand of course there's the ISP if the
+[00:35:45] ISP installs a box in its Network which
+[00:35:49] enables like all their millions of
+[00:35:51] subscribers to be uh hacked into of
+[00:35:53] course if somebody hacks that particular
+[00:35:55] box then you have a really serious ious
+[00:35:58] problem another another issue is of
+[00:36:00] course with antivirus what is antivirus
+[00:36:02] going to do when they flag uh government
+[00:36:05] malware will they be compelled to let it
+[00:36:07] through uh firewall intrusion detection
+[00:36:10] uh companies they all have a really
+[00:36:12] really hard problem to face in the
+[00:36:14] coming years or maybe they're already
+[00:36:15] faced with this for 10 years but we
+[00:36:17] don't know about
+[00:36:18] it sixth problem um the scope is
+[00:36:21] completely undebated so are we hacking
+[00:36:24] into a user into a device into a router
+[00:36:28] into the ISP are we hacking botn Nets
+[00:36:31] are we just hacking the entire world
+[00:36:33] nobody really has talked about this
+[00:36:35] issue and nobody really has thought
+[00:36:38] about how to tailor these capabilities
+[00:36:40] to specific uh context and this is of
+[00:36:43] course a very difficult question and um
+[00:36:46] I'll talk a bit more about it later
+[00:36:49] seventh problem is a very obvious one
+[00:36:52] it's the one of jurisdiction so um are
+[00:36:55] these capabilities only to be used
+[00:36:56] within your board ERS or across borders
+[00:36:59] especially in the law enforcement space
+[00:37:01] uh Russia and China have not yet signed
+[00:37:04] up to the cyber crime convention because
+[00:37:06] of uh territorial uh uh sovereignty
+[00:37:10] issues and um uh you can already imagine
+[00:37:13] what uh the Dutch agencies that hacked
+[00:37:16] into uh uh a computer in Armenia to uh
+[00:37:20] prosecute um U this particular bot
+[00:37:24] herder this Armenian guy um you can
+[00:37:27] already imagine what people in arm media
+[00:37:29] will be saying next time when uh some
+[00:37:32] attack or some uh botn net originates in
+[00:37:35] the Netherlands and Dutch authorities
+[00:37:38] haven't really thought about this until
+[00:37:40] bits of Freedom actually raised these uh
+[00:37:42] these issues and they were thinking oh
+[00:37:44] no wait a minute we're not really happy
+[00:37:46] with Armenia hacking into our systems
+[00:37:49] giving them so it's it's it's a
+[00:37:50] geopolitical Pandora's box right um uh
+[00:37:55] and this can already be uh witnessed in
+[00:37:58] uh in this process of the cyber crime
+[00:37:59] convention the cyber crime convention
+[00:38:01] has its issues definitely but it's the
+[00:38:03] one the one the single most
+[00:38:06] authoritative uh legal document for uh
+[00:38:09] actually harmonizing and and working
+[00:38:11] together to combat this problem of cyber
+[00:38:14] crime but for geopolitical tensions and
+[00:38:16] if we don't solve them um this will be
+[00:38:19] uh a convention that's only locally uh
+[00:38:22] adopted uh which creates all these safe
+[00:38:25] havens for crime so the fact that we
+[00:38:28] haven't discussed this yet is a major
+[00:38:30] problem because uh it creates a lot of
+[00:38:33] distrust okay and then there's of course
+[00:38:35] the Constitutional issue uh in the wake
+[00:38:37] of the Snowden disclosures there has
+[00:38:39] been a lot of debate and I've I've
+[00:38:40] already been working on this for two
+[00:38:42] years about the Constitutional scope so
+[00:38:46] uh it's it's a it's a well-known fact
+[00:38:47] maybe here in the United States but when
+[00:38:49] we uh presented our work in European
+[00:38:52] Parliament like two years ago about the
+[00:38:54] fact that the Fourth Amendment doesn't
+[00:38:56] actually protect non us
+[00:38:58] citizens um people really were scared
+[00:39:00] they were thinking hey wait a minute
+[00:39:02] these are our friends and our allies but
+[00:39:04] um we had to tell them that the legal
+[00:39:06] reality is I mean there's all sorts of
+[00:39:08] political reasons to be friends but the
+[00:39:10] legal reality is that uh when I move uh
+[00:39:13] I'm a Dutch and Danish national and when
+[00:39:16] I live in in the in Europe I have no
+[00:39:19] protection whatsoever under the US
+[00:39:20] Constitution whereas a lot of European
+[00:39:23] human rights treaties are are Universal
+[00:39:25] in scope so this protection across
+[00:39:27] borders is interesting and and I mean I
+[00:39:30] live here uh not not so far from here
+[00:39:31] but when I VPN my internet traffic to
+[00:39:33] Amsterdam do I get the same
+[00:39:35] constitutional protection against the
+[00:39:38] government raiding my house here in
+[00:39:39] Cambridge than them uh hacking into my
+[00:39:42] system because they think it's in
+[00:39:43] Amsterdam those are all super
+[00:39:45] interesting and very tough questions um
+[00:39:48] that we need to think about now another
+[00:39:50] issue that was talked about a lot at
+[00:39:52] this yo conference is parallel
+[00:39:54] construction um this has also been disc
+[00:39:57] closed in the wake of the snowland
+[00:39:58] revelations but but that's where the NSA
+[00:40:01] with its capabilities hacks into a
+[00:40:03] system uh passes on a message to the FBI
+[00:40:06] and says you know uh you might want to
+[00:40:08] have a look at this particular system uh
+[00:40:11] we can't really tell you why and then
+[00:40:13] the FBI uh uh uh constructs or rebrands
+[00:40:18] this this lead and creates the evidence
+[00:40:20] of its own this is a very old issue
+[00:40:22] already in law enforcement happens all
+[00:40:24] over the world uh we guess or we don't
+[00:40:26] know but in uh in the hacking context is
+[00:40:29] really exacerbated and
+[00:40:31] augmented um uh there there's there's a
+[00:40:34] number of uh very serious legal
+[00:40:36] commentators actually uh uh claiming
+[00:40:39] that in the dread pirate Roberts case
+[00:40:41] this uh this uh guy that uh admin
+[00:40:44] purportedly administered uh the Silk
+[00:40:46] Road um uh an unhidden service on the
+[00:40:49] tour network uh uh was actually caught
+[00:40:52] in this way um the NSA may have seen
+[00:40:55] something uh on its networks and then
+[00:40:58] passed on a tip to the FBI that hacked
+[00:41:01] into its
+[00:41:02] systems this is by the way uh only
+[00:41:04] speculated on on legal blogs um this
+[00:41:07] still has to emerge um in reality but if
+[00:41:10] I were rep P Robert's defense lawyer I
+[00:41:12] would definitely know where to
+[00:41:14] look okay um then the fundamental
+[00:41:18] question is of course is this hacking
+[00:41:19] really necessary I'll talk in a in a in
+[00:41:22] a short moment about uh Utopia which was
+[00:41:25] like this new Sil Road a new unhidden
+[00:41:28] service when the Silk Road was sh shut
+[00:41:30] down and the Dutch police actually uh uh
+[00:41:34] uh investigated and prosecuted uh the
+[00:41:37] administrators not by hacking but by
+[00:41:39] good old undercover techniques and
+[00:41:41] engaging with them uh on the service
+[00:41:43] itself so do you really need hacking
+[00:41:46] given all these fundamental problems so
+[00:41:48] there's a lot more and um that's why at
+[00:41:51] this conference I called government
+[00:41:53] hacking it's a bit like a Hydra this
+[00:41:54] Greek mythological uh uh monster you
+[00:41:57] know I mean you cut off one hat and you
+[00:41:59] think you have an apparent benefit but a
+[00:42:01] number of problematic policy issues
+[00:42:03] already emerge so um um with that um
+[00:42:08] let's take a closer look at the German
+[00:42:10] case about the constitutional right for
+[00:42:11] it security so we're right now living in
+[00:42:14] this great experiment where we put our
+[00:42:16] most sensitive information and data on
+[00:42:19] our systems um we've seen that it's
+[00:42:22] really vulnerable to security attacks
+[00:42:25] and the German govern uh the German
+[00:42:26] Federal constitutional Court stepped in
+[00:42:29] uh to respond to this uh to respond to
+[00:42:31] this situation this great experiment
+[00:42:33] that we live in this was in the buis
+[00:42:36] case where the federal uh the
+[00:42:39] Constitutional Court um took a closer
+[00:42:42] look at what actually is uh
+[00:42:46] qualitatively what is actually happening
+[00:42:47] when you're talking about
+[00:42:49] rights so they ruled in this case and
+[00:42:52] here's the source that it systems are
+[00:42:55] particularly sensitive and they
+[00:42:57] separated systems from communication and
+[00:43:00] data and they said that systems they
+[00:43:02] deserve particular protection because we
+[00:43:05] structure our lives on our systems I
+[00:43:07] mean everybody here has a computer on
+[00:43:08] this lab and you can you know you you
+[00:43:10] not only have your work uh documents but
+[00:43:13] you have your you know your holiday
+[00:43:14] pictures your email everything is you
+[00:43:17] know either stored in this uh on this
+[00:43:19] box and that actually we even structure
+[00:43:21] it we make it ready for law enforcement
+[00:43:24] to actually look into our lives that's
+[00:43:26] that this is literal words of the Court
+[00:43:29] um they say this is a all stop shop for
+[00:43:31] government access and you risk uh making
+[00:43:35] it way too easy to do
+[00:43:36] surveillance even they considered uh
+[00:43:39] networked Communications so the cloud
+[00:43:42] they said the cloud even though you
+[00:43:44] don't store that information your
+[00:43:45] particular service the cloud really
+[00:43:47] exacerbates the privacy in intrusion um
+[00:43:51] why is this is this the case because
+[00:43:53] when you hack into a system um very
+[00:43:56] often third parties will connect to it
+[00:43:58] you'll learn a lot about these third
+[00:43:59] parties and you centralize a lot of your
+[00:44:01] data even more than on your own machine
+[00:44:03] in the cloud so this was a particularly
+[00:44:06] Tax sevy Court ruling one uh one one
+[00:44:09] could say and um uh for information
+[00:44:12] security professors were witness to the
+[00:44:14] court proceedings uh one member of the
+[00:44:16] chaos communication uh chaos Computer
+[00:44:18] Club one uh uh like anarchistic hacker
+[00:44:22] was part of um of of these
+[00:44:24] constitutional court rulings which was
+[00:44:26] really an example of how should do this
+[00:44:27] kind of
+[00:44:29] stuff and then there's also um the fact
+[00:44:32] that they with all these technical
+[00:44:35] details in mind they said well hacking
+[00:44:37] it systems that violates the core of
+[00:44:39] privacy the core of personality so
+[00:44:41] that's really where our most sensitive
+[00:44:43] stuff is happening these days so hacking
+[00:44:46] into it systems goes beyond a wir tap uh
+[00:44:50] uh of your communication and it even
+[00:44:52] goes beyond the protection of your home
+[00:44:55] so here's your home uh and they said for
+[00:44:58] all kinds of reasons our it systems are
+[00:45:00] even more intrusive than than our homes
+[00:45:03] very interesting so that's why they
+[00:45:05] accepted this human right to the
+[00:45:07] confidentiality and integrity of it
+[00:45:09] systems and the the Cs the computer
+[00:45:11] science people here in the room will
+[00:45:13] recognize the the CIA Triad here but um
+[00:45:17] so both
+[00:45:18] confidentiality and integrity is
+[00:45:20] protected this confidentiality
+[00:45:22] protection has a really broad scope it
+[00:45:24] is for all General storage devices so
+[00:45:27] it's not only like your your PC or your
+[00:45:29] laptop um they thought about the
+[00:45:31] internet of things and they thought
+[00:45:33] about um in this court case also about
+[00:45:36] RAM memory and they thought well if and
+[00:45:39] about the cloud and they said that
+[00:45:41] whenever there's a general storage uh
+[00:45:43] purpose um it deserves this kind of
+[00:45:45] protection so it could well be that in
+[00:45:47] Germany in a year or two your toaster
+[00:45:49] has constitutional protection it's quite
+[00:45:52] interesting um and this is regardless of
+[00:45:55] the technical expertise the information
+[00:45:57] or operation operational security
+[00:45:59] practices of the user so that's also
+[00:46:01] really interesting and your integrity is
+[00:46:03] also protected so manipulation of data
+[00:46:06] is also
+[00:46:07] covered okay this right is not absolute
+[00:46:10] just as privacy is not absolute but uh a
+[00:46:14] limitation or or a breach of this right
+[00:46:16] must adhere to the strictest legal
+[00:46:18] criteria and stricter than a house
+[00:46:20] search I think that's really
+[00:46:22] interesting um the exceptions are then
+[00:46:25] again uh the foundations of the state so
+[00:46:28] it seems as if National Security is uh
+[00:46:32] um is explicitly
+[00:46:34] allowed um uh and the prevention of uh
+[00:46:38] damages to the foundations of the state
+[00:46:41] but these prevent preventative acts need
+[00:46:43] to have a high probability uh of
+[00:46:45] occurrence so you can't just you know
+[00:46:47] claim terrorism and everything's happen
+[00:46:49] but you need to particularize
+[00:46:51] it and then very interesting this core
+[00:46:53] of the private life which is a concept
+[00:46:56] in German Eur Prudence that is really
+[00:46:58] the most intimate space of your of your
+[00:47:00] privacy I won't go too much into it but
+[00:47:03] if if you find like really intimate data
+[00:47:06] you have to delete it immediately so
+[00:47:08] that's also very interesting
+[00:47:09] unfortunately the court didn't really
+[00:47:11] expand on this so we don't really know
+[00:47:14] we don't really know how uh this will
+[00:47:16] flash out in detail but at least it gave
+[00:47:19] the the basis for future court cases to
+[00:47:22] uh to look at this uh um to to look at
+[00:47:25] this and see well this was really inate
+[00:47:27] data that it should have been deleted it
+[00:47:28] cannot be part of Court
+[00:47:30] proceedings all right this is Germany um
+[00:47:34] but how uh about European Court of Human
+[00:47:36] Rights well I'll talk in a bit about a
+[00:47:38] case called I versus Finland where we
+[00:47:40] see the first traces of this emerging
+[00:47:43] but most critically um the European
+[00:47:46] Court of human rights has a couple of
+[00:47:47] weeks ago fast-tracked a case in which
+[00:47:50] uh uh both uh uh in which is Snowden uh
+[00:47:54] Revelations are Central so we will see
+[00:47:57] uh surprisingly quickly like in a year
+[00:48:00] or or maybe a bit longer but not much
+[00:48:01] longer we will see an actual Court
+[00:48:03] ruling of the European Court of Human
+[00:48:05] Rights about the Snowden
+[00:48:07] Revelations and that's really
+[00:48:08] interesting I I included this picture
+[00:48:10] because many people uh uh um uh don't
+[00:48:14] realize especially here in the United
+[00:48:16] States that the European Court of Human
+[00:48:17] Rights is is of the Council of Europe
+[00:48:19] and not of the European Union so this
+[00:48:21] includes Turkey um Ukraine and and and
+[00:48:25] of course most uh interesting
+[00:48:27] uh Russia as well so when there's a
+[00:48:29] ruling uh about this whenever this
+[00:48:32] happens maybe next year or in a couple
+[00:48:34] of years Russia was
+[00:48:38] yes about Snowden yeah so an English uh
+[00:48:42] set of ngos and constant KZ also of the
+[00:48:45] communic chaos communication Club a
+[00:48:47] German computer science researcher um
+[00:48:50] filed a court case in England against
+[00:48:52] the gchq and against uh the tempora
+[00:48:55] program and against the stream program
+[00:48:57] through which the gchq gets data from
+[00:48:59] the NSA and
+[00:49:02] um it's just as an aside all the
+[00:49:05] interesting nearly all the interesting
+[00:49:07] surveillance cases in the in the Council
+[00:49:09] of Europe so in this European Court of
+[00:49:10] human rights are always against the UK
+[00:49:12] government it's super interesting but
+[00:49:15] every like six or seven years there's a
+[00:49:17] there's a big surveillance case against
+[00:49:19] the UK government and why is this the
+[00:49:21] case that's because the UK government
+[00:49:23] whenever you have surveillance complaint
+[00:49:25] against the government they they have
+[00:49:27] created this funky uh tribunal which has
+[00:49:30] secret Court proceedings it's a bit like
+[00:49:32] the fisa court and um and the European
+[00:49:35] Court of human rights has said that this
+[00:49:37] is not an effective means to get your
+[00:49:39] your rights so they fast-tracked it like
+[00:49:42] a couple of weeks ago because they don't
+[00:49:44] see this tribunal as an effective remedy
+[00:49:47] um there's court cases in a several uh
+[00:49:49] several other countries including in the
+[00:49:51] Netherlands but in the Netherlands
+[00:49:53] you'll have to go through all the lower
+[00:49:54] courts and you know up up up up up and
+[00:49:57] in about six years you finally get the
+[00:49:59] European Court of human rights to decide
+[00:50:01] something but it's always good to start
+[00:50:03] uh legal proceedings in England because
+[00:50:05] you'll you'll have a fast way to uh to
+[00:50:07] the European Court of Human
+[00:50:09] Rights there we
+[00:50:14] are this one oh this this is
+[00:50:17] Ukraine isn't it oh no this is UK kakan
+[00:50:22] yeah sure um um anyway um so there's a
+[00:50:26] lot action uh here with European Court
+[00:50:28] of Human Rights and I would say you know
+[00:50:31] in the United States if we look at the
+[00:50:33] conclusion of this court case I
+[00:50:35] mentioned before uh uh uh judge Smith
+[00:50:38] says that uh there's binding Fourth
+[00:50:41] Amendment pres precedent for video
+[00:50:43] surveillance this is when you know your
+[00:50:44] webcam gets turned on uh so um there
+[00:50:48] might even be you know some traces of uh
+[00:50:51] of constitutional protection here in the
+[00:50:53] United States but of course a very
+[00:50:55] dominant School in legal theory is this
+[00:50:58] originalist uh school which uh
+[00:51:00] interprets the Constitution uh like the
+[00:51:03] framers meant it and the framers were of
+[00:51:06] course so Visionary that they could
+[00:51:07] Envision government hacking
+[00:51:11] yeah because you you said that they
+[00:51:13] didn't know who was the guy the they
+[00:51:16] requested a whole bunch of things it's
+[00:51:18] in the Court ruling uh it's it's in the
+[00:51:20] request but for example uh they wanted
+[00:51:23] to know uh of this particular device uh
+[00:51:27] to which other device servers it made
+[00:51:29] contact so you know basically all the
+[00:51:31] internet traffic um originating in this
+[00:51:34] device because uh purportedly uh from
+[00:51:38] this device um this bank account of
+[00:51:41] somebody else had been accessed but as
+[00:51:43] judge Smith said you know this could
+[00:51:46] just as well be a computer in a public
+[00:51:48] library you know I mean everybody could
+[00:51:50] be behind this device so um that's what
+[00:51:54] they wanted to know they wanted to
+[00:51:57] um let's see if I read it yesterday um
+[00:52:01] but the IP addresses was was the central
+[00:52:02] thing they still try to do the
+[00:52:04] indentification through IP addresses
+[00:52:06] which is of course you know another
+[00:52:09] another uh contentious
+[00:52:12] issue um anyway it's online and um I I
+[00:52:15] think I even have it with me um I have a
+[00:52:18] blackout at the moment anyway to
+[00:52:21] conclude um this right to it security I
+[00:52:24] think if we look at a bit longer term
+[00:52:26] term so wi tapping you know it started
+[00:52:30] with onstead and and cuts and all these
+[00:52:32] you know Decades of Uris Prudence but
+[00:52:34] now um um um and in Europe we have like
+[00:52:39] 20 30 40 Years of Uris Prudence uh
+[00:52:42] before we really got a solid wiretapping
+[00:52:45] uh Uris Prudence in there I think this
+[00:52:47] constitutional right to it security U is
+[00:52:50] definitely something uh uh worth
+[00:52:52] thinking about uh and government hacking
+[00:52:55] will only increase
+[00:52:57] as we move further into the IT
+[00:52:59] environment so that's why uh I just want
+[00:53:01] to end with raising a couple of
+[00:53:03] questions for research policy and and
+[00:53:06] activist and you know feel free to chip
+[00:53:09] in and to discuss and and you know this
+[00:53:11] is really a sort of open-ended kind of
+[00:53:14] uh brainstorm
+[00:53:16] here there's very little data I already
+[00:53:19] mentioned about the root causes of cyber
+[00:53:21] crime so um if we look at game theory
+[00:53:23] for example and this wonder One a
+[00:53:26] wonderful paper uh uh where do all the
+[00:53:29] attacks go uh if you look at Game Theory
+[00:53:31] there's actually a lot of uh uh you know
+[00:53:35] cyber crime is a business it's basically
+[00:53:37] uh cyber crime is not really attractive
+[00:53:39] to do when you look at you know when you
+[00:53:41] try to hack into particular systems no
+[00:53:44] what you want to exploit is large scale
+[00:53:46] vulnerabilities and they capture this
+[00:53:48] thought in this beautiful quote many
+[00:53:50] attacks cannot be made profitable even
+[00:53:53] when many profitable targets exist so to
+[00:53:56] tackle cyber crime what we need to do is
+[00:53:58] instead of you know going uh behind the
+[00:54:00] bad guys we really need to focus on it
+[00:54:02] security and especially in large scale
+[00:54:05] ecosystems the move very recently of
+[00:54:08] Microsoft not longer to uh support 400
+[00:54:11] million uh Windows XP machines all
+[00:54:14] across the world is something that the
+[00:54:16] legislator should simply not
+[00:54:18] tolerate okay then uh closer look at the
+[00:54:21] human right to it
+[00:54:22] security what about companies I mean
+[00:54:25] companies access the data the machines
+[00:54:27] all the time right um so how how would
+[00:54:30] this right look uh at when we when we
+[00:54:32] when we look at companies um there's of
+[00:54:35] course the Google uh ecosystem Google
+[00:54:38] does a by the way a pretty good job at
+[00:54:40] it security but you know it acts as
+[00:54:43] systems all the time um I also want to
+[00:54:46] mention kpn in in the Netherlands we
+[00:54:47] have a net neutrality uh legislation and
+[00:54:50] it really came about when kpn very
+[00:54:53] proudly at an investors uh meeting in
+[00:54:55] London
+[00:54:56] this Dutch telecommunications company
+[00:54:59] comparable with AT&T announced that it
+[00:55:01] was doing de packet inspection on all
+[00:55:04] its consumers to know exactly what they
+[00:55:05] were doing all the all of the time and
+[00:55:07] that they really had a clear picture of
+[00:55:09] what people were doing uh with their
+[00:55:11] mobile internet
+[00:55:12] connections um related to that is the
+[00:55:15] form case where form is a DEET
+[00:55:18] inspection and and marketing uh uh uh
+[00:55:21] research company that British Telecom in
+[00:55:24] in in the UK um uh contracted to
+[00:55:27] basically spy on all their users and
+[00:55:29] tell them uh what they were up to uh for
+[00:55:31] marketing reasons if we take this a step
+[00:55:34] further and we've had discussions about
+[00:55:36] this here lately is ethereum ethereum is
+[00:55:38] based on this Bitcoin protocol and
+[00:55:40] creates these uh uh distributed
+[00:55:43] autonomous companies so how is this
+[00:55:45] going to work with it security what if
+[00:55:47] for example we instruct these uh
+[00:55:49] distributed autonomous companies through
+[00:55:52] an auction model to perform cyber
+[00:55:54] attacks on a particular part in the
+[00:55:56] world you know really interesting
+[00:55:57] questions we start need to start
+[00:55:59] thinking about it then you European
+[00:56:02] Court of Human Rights accepted in this
+[00:56:04] case case um I versus Finland a positive
+[00:56:07] human right to it security so that means
+[00:56:10] um that not only should the government
+[00:56:13] refrain from hacking into system but it
+[00:56:15] should also ensure it security through
+[00:56:18] uh specific legislation this was in 2008
+[00:56:22] the final judgment nobody really took
+[00:56:24] notice but I'll be working a lot
+[00:56:26] on uh this particular topic and to think
+[00:56:29] about what is a positive human right to
+[00:56:32] it security what does it look
+[00:56:36] like yes yes yes this is a European
+[00:56:39] Court of Human Rights
+[00:56:40] decision um um in a case of Health Data
+[00:56:45] so a hospital and an employer hadn't
+[00:56:47] secured their systems and the hospital
+[00:56:49] said well we weren't under legal
+[00:56:51] obligation and the European Court said
+[00:56:53] well uh um I think yeah Finland
+[00:56:56] uh because it security is such a part of
+[00:56:59] the private life um you also not only
+[00:57:03] need to reframe from hacking into system
+[00:57:05] but you also need to ensure that private
+[00:57:08] Enterprises are taking
+[00:57:10] your positive right in a similar way
+[00:57:13] yeah yeah okay oh the this the European
+[00:57:15] Court yeah and the and the German Court
+[00:57:18] was in the law enforcement space and
+[00:57:20] negative that was a negative right
+[00:57:22] exactly yeah yeah
+[00:57:24] yeah well and then if we you know if we
+[00:57:27] turn again to uh to a more broader
+[00:57:29] question of intelligence agencies not so
+[00:57:31] much of law enforcement and companies I
+[00:57:34] mean the the research questions here are
+[00:57:37] puzzling right I mean basically we learn
+[00:57:39] that intelligence agencies are
+[00:57:41] exploiting every vulnerability in the
+[00:57:43] book and how are we ever going to curil
+[00:57:45] uh curil those
+[00:57:47] operations um there's this very
+[00:57:49] interesting quote um you know leap
+[00:57:52] frogging 50 years ahead um in this uh in
+[00:57:55] in a paper that I really uh recommend
+[00:57:57] you all reading it's a case note of this
+[00:57:59] German case that reads consider the
+[00:58:02] Trojan so the government M itself as a
+[00:58:04] digital police officer subject to the
+[00:58:07] same restrictions but also to the powers
+[00:58:09] that its physical counterparts possesses
+[00:58:11] so think about for example the work of
+[00:58:13] Oxford philosopher Nick Bostrom think
+[00:58:16] when Trojans get the capabilities to you
+[00:58:19] know to uh to uh look around on a
+[00:58:22] machine and decide you know
+[00:58:24] autonomously uh what what are we going
+[00:58:26] to do here it's very very important that
+[00:58:29] e you know people in philosophy and
+[00:58:30] ethics already start thinking about um
+[00:58:33] artificial intelligence and uh and these
+[00:58:36] kinds of issues super interesting policy
+[00:58:39] okay cyber crime policy has basically
+[00:58:41] been characterized as this famous quote
+[00:58:43] from uh from um uh from Yes Minister we
+[00:58:47] must do something hacking is something
+[00:58:49] therefore we must do it right and this
+[00:58:51] is basically not tenable so we need to
+[00:58:53] demand reliable data for informed policy
+[00:58:56] making this is Ross Anderson at all um
+[00:58:59] that tried to do this uh one and a half
+[00:59:02] years ago and just one quote striking
+[00:59:05] example uh the botn net behind one-third
+[00:59:09] of the spam sent in 2010 earned its
+[00:59:11] owners about $3 million while worldwide
+[00:59:15] expenditures on spam prevention probably
+[00:59:16] exceeded a billion dollars so think
+[00:59:18] about the mismatch there we're extremely
+[00:59:21] different uh inefficient at fighting
+[00:59:22] cyber crime what should we do instead
+[00:59:24] well catch the crooks basically just a
+[00:59:28] week ago undercover uh just weeks ago
+[00:59:30] undercover operation um which is an
+[00:59:33] alternative to hacking you don't really
+[00:59:34] always need to hack into everything you
+[00:59:36] can you know you can do all sorts of
+[00:59:38] other law enforcement operations and
+[00:59:40] hacking really sounds like it's you're
+[00:59:42] doing something but maybe you're
+[00:59:44] not um another interesting research
+[00:59:47] question is um there's a lot about you
+[00:59:50] know law policy and Technology
+[00:59:53] neutrality you should craft laws that
+[00:59:55] are Technologic Al neutral because
+[00:59:57] otherwise um um when the law is adopted
+[01:00:00] it's already not um um um uh you know in
+[01:00:05] line with the technological
+[01:00:07] reality um well maybe we should think
+[01:00:10] about surveillance law being not
+[01:00:12] technology neutral because new
+[01:00:14] technologies make the surveillance
+[01:00:15] capabilities much more intrusive so
+[01:00:17] maybe we should actually demand that
+[01:00:19] surveillance law is in some way
+[01:00:22] technology uh technology specific and
+[01:00:24] every time you want to expand the
+[01:00:26] capabilities you need a new uh uh you
+[01:00:28] need a new authorization from the
+[01:00:30] legislature research
+[01:00:32] question okay well um uh again the NSA
+[01:00:37] um there's some real oversight needed
+[01:00:39] here and not in a way that lawmakers
+[01:00:42] only respond when the small satellite is
+[01:00:44] turned at them and uh thousands of
+[01:00:47] satellites are turned to the outside
+[01:00:49] world I mean this is of course uh an
+[01:00:51] issue that all across the world we need
+[01:00:53] to press our our policy makers to do
+[01:00:56] um Game Theory again cyber warfare very
+[01:00:59] different from cyber crime in the
+[01:01:01] intelligence space uh publication in uh
+[01:01:04] or this was reported by nature but uh
+[01:01:07] Game Theory really holds very kind of uh
+[01:01:10] discomforting lessons for cyber War it's
+[01:01:12] actually um you know having the
+[01:01:15] capabilities is is very attractive from
+[01:01:17] a g game theoretical perspective so we
+[01:01:19] will see a lot of escalation here and we
+[01:01:22] have already seen it it's a bit like
+[01:01:24] cycling you know um um um if there's one
+[01:01:28] guy in the entire cycling Squad that
+[01:01:30] takes doping and the rest does not he
+[01:01:33] has a huge advantage and I always think
+[01:01:35] about you know the game theoretical
+[01:01:37] cyber War uh uh uh Dimension a bit like
+[01:01:41] cycling um um and that Spurs us to the
+[01:01:45] question about how are we going to curl
+[01:01:46] tail this okay so there's both the the
+[01:01:49] dimension of you know countries buying
+[01:01:52] these capabilities from companies and of
+[01:01:55] course there you know um uh powerful
+[01:01:58] Nations that have the capabilities of
+[01:02:01] theirselves all this you know these game
+[01:02:03] theoretical things in the law in the
+[01:02:04] intelligence space will really Char
+[01:02:06] challenge disarmament along with the
+[01:02:08] attribution problem so people are
+[01:02:10] calling for cyber peace treaties and
+[01:02:12] everything but you know it's probably
+[01:02:14] not so realistic even though it's needed
+[01:02:17] um these insights need to feed into that
+[01:02:20] process um uh and cyber War treaties are
+[01:02:23] really needed along with the Dual use
+[01:02:25] trade restrictions but it will be a lot
+[01:02:27] harder to to get them finally on
+[01:02:31] activism activists have a short-term
+[01:02:34] very important task here it's about
+[01:02:37] getting getting uh getting the facts out
+[01:02:39] reverse engineer the malware do Trace
+[01:02:42] rout Port scans whatever go to
+[01:02:45] conferences um uh at privacy
+[01:02:47] International Eric King and Chris agoy
+[01:02:49] at ACLU have been really successful in
+[01:02:51] this going to conferences obtaining
+[01:02:53] marketing material trying to to get yet
+[01:02:55] to know what what the hell is going on
+[01:02:58] um and this uh bits of freedom in the
+[01:03:02] Netherlands uh sent out open letters to
+[01:03:04] all the antivirus companies uh demanding
+[01:03:07] software transparency and asking them
+[01:03:09] directly uh what will you do when the
+[01:03:11] government malware uh when you detect
+[01:03:14] government malware well only half of
+[01:03:16] them responded so the other half you
+[01:03:18] know we can only uh we can only
+[01:03:20] speculate so do a lot of foas on malware
+[01:03:24] uh try to get these cases on sealed uh
+[01:03:26] Point towards the role of industry and
+[01:03:29] find whistleblowers between uh uh in
+[01:03:31] these
+[01:03:32] organizations um in the Netherlands
+[01:03:34] currently under consideration is a
+[01:03:36] hacking law that has way too broad uh uh
+[01:03:40] um uh suggestions in them um think about
+[01:03:43] these 11 problems and um and Advocate
+[01:03:46] against
+[01:03:47] them okay I think uh this is uh this is
+[01:03:51] about it um a final Point um which has
+[01:03:55] which is a bit broader um um I'm now
+[01:03:58] here in the United States for like six
+[01:04:00] months and um I've seen in the activist
+[01:04:03] Community a lot of uh focus on cyber
+[01:04:07] security on information security and
+[01:04:09] this recent action by axis and a couple
+[01:04:11] of other ngos on encrypt all the things
+[01:04:14] um is of course good uh network security
+[01:04:18] is an important thing but network
+[01:04:20] security is not the same as privacy and
+[01:04:21] this cartoon sort of quite elegantly
+[01:04:24] captured uh um what happens when you as
+[01:04:27] an activist Focus too much on on
+[01:04:29] security because um encrypt all the
+[01:04:32] things actually doesn't mean encrypt all
+[01:04:35] the data on a server it only means the
+[01:04:37] network so companies will be happy to
+[01:04:40] you know sign up for that kind of uh uh
+[01:04:43] of campaign but at the same time uh data
+[01:04:46] mine all your data when it's on the
+[01:04:47] server so think about the different
+[01:04:50] values of security and privacy uh in
+[01:04:52] your vocabulary all right thanks
+[01:04:55] [Applause]
+[01:05:02] um yeah you have any specific scenarios
+[01:05:04] where people have had their information
+[01:05:06] on a cloud data
+[01:05:08] mind um do you have a Gmail
+[01:05:12] account it's the business model of the
+[01:05:15] internet yeah so um basically every
+[01:05:18] cloud service um data mins all your data
+[01:05:22] that you have in the cloud uh it's not
+[01:05:24] entirely true there are cloud services
+[01:05:26] that provide some asymmetric key
+[01:05:28] encryption and encrypt your data while
+[01:05:30] it's at rest but um yeah you basically
+[01:05:34] have to assume that every every cloud
+[01:05:37] cloud company uh um especially when you
+[01:05:40] see ads such as you know basically all
+[01:05:42] the web mail providers they're basically
+[01:05:45] um either directly serving you uh
+[01:05:48] marketing materials or uh gaining
+[01:05:51] insights from the data they have and
+[01:05:53] selling it to other companies so it's
+[01:05:55] more act email data not like cloud data
+[01:05:58] that's been encrypted or
+[01:05:59] addressed well when data is encrypted
+[01:06:01] it's pretty hard to data mind
+[01:06:05] yeah sure um I thank you for a great
+[01:06:09] presentation um I'm a little bit
+[01:06:11] concerned about the use of the word
+[01:06:12] hacking when applied to government
+[01:06:14] spying and surveillance I know it's sort
+[01:06:16] of become fashionable I remember the
+[01:06:18] first time I heard it fairly recently I
+[01:06:21] thought I don't like that it's it's and
+[01:06:23] the reason is I think it trivializes
+[01:06:25] there's a there's a tendency to
+[01:06:28] trivialize what the government are doing
+[01:06:31] when they're spying on citizens and and
+[01:06:34] I think the reason for that for me has
+[01:06:36] something to do with the history of
+[01:06:37] hacking at places like MIT hacking is
+[01:06:40] this sort of harmless thing that people
+[01:06:41] do hackers you know they just they're
+[01:06:44] just hacking so I wonder if you could
+[01:06:46] respond to that and is there a better
+[01:06:48] language that really captures well
+[01:06:50] what's Insidious about this it's very
+[01:06:52] interesting I was uh in a debate uh
+[01:06:54] about a year ago
+[01:06:56] with um uh some yeah well some high
+[01:07:00] ranked officials in the Netherlands
+[01:07:01] let's put it that way and they were
+[01:07:03] really uh
+[01:07:05] concerned that the word hacking was part
+[01:07:08] of this debate so you know these guys
+[01:07:11] come from a very different background
+[01:07:12] than than you I I assume and um they
+[01:07:16] think that hacking they think that
+[01:07:18] hacking as part of the vocabulary is
+[01:07:20] really damaging them so
+[01:07:23] that's well hackers come on come on
+[01:07:26] hackers are dangerous people they don't
+[01:07:27] think hackers think like most people
+[01:07:29] that are not at MIT doing hacks like or
+[01:07:32] around it don't think that hacking is a
+[01:07:34] positive fun thing I think that's I
+[01:07:36] think that's the argument ever heard of
+[01:07:38] hack so
+[01:07:40] uh well um no well but vocabulary is
+[01:07:45] very important and um uh the NSA in its
+[01:07:49] slides talks of sabotage so you know um
+[01:07:53] Bund it's kind of kind of a cool word I
+[01:07:56] think but uh it's uh it's really you
+[01:07:59] know a Trojan or malware or whatever I I
+[01:08:01] think for activists from an activist
+[01:08:03] perspective the words you use are
+[01:08:05] extremely important I mean that really
+[01:08:08] FTS the debates there's just just as an
+[01:08:11] example um in the Netherlands there has
+[01:08:13] been a lot of Success With The Campaign
+[01:08:15] against electronic
+[01:08:17] voting um um yeah sure um so no no no so
+[01:08:22] in the Netherlands there's been a lot of
+[01:08:23] success in the campaign against insecure
+[01:08:26] electronic voting and uh here in the
+[01:08:29] United States less and when I was
+[01:08:31] talking to Ed Felton uh at Princeton who
+[01:08:33] is my supervisor there he said that well
+[01:08:36] one of the critical reasons that in a
+[01:08:38] public debate electronic voting
+[01:08:41] machines uh uh has been less successful
+[01:08:44] in the states he said is that in the US
+[01:08:46] we call them electronic voting machines
+[01:08:49] and a machine is like a coffee machine
+[01:08:51] you push on a button and coffee comes
+[01:08:52] out whereas in the Netherlands it's a
+[01:08:54] computer and you know know computers
+[01:08:56] they they they spit purple vomit all the
+[01:08:58] time it goes wrong and so people in the
+[01:09:01] Netherlands really uh the general public
+[01:09:03] understood the problem of a voting
+[01:09:06] computer rather than a voting machine
+[01:09:09] and that yeah those are his words and I
+[01:09:11] I I I fully agree with that
+[01:09:14] sure any cases where um the government
+[01:09:17] has uh compromised the system to gather
+[01:09:19] evidence and then a defendant has
+[01:09:22] challenged the admissibility of that
+[01:09:23] evidence based on one of these
+[01:09:25] constitutional theories well um I
+[01:09:28] haven't seen them I think that um The
+[01:09:31] Dread pirate Roberts case is definitely
+[01:09:34] uh bound uh to go that way in the United
+[01:09:37] States law enforcement hacking has been
+[01:09:39] mostly sealed so you know that that
+[01:09:42] really also has implications for
+[01:09:44] defendants in a case um um we haven't
+[01:09:48] really seen it but it's definitely a
+[01:09:50] good question and it's definitely
+[01:09:51] something we will see in the coming uh
+[01:09:53] in the coming well months years whatever
+[01:09:56] yeah sure part of wider consideration um
+[01:10:00] much of cyber security to me kind of
+[01:10:02] strikes me as Petty Bourgeois from like
+[01:10:04] a classical left it's all about keeping
+[01:10:07] your own personal property secure and
+[01:10:10] especially in light of you know like
+[01:10:11] when Ben banki was in Congressional
+[01:10:13] testimony like he doesn't have to reveal
+[01:10:15] where they sent trillions of dollars um
+[01:10:18] and just the whole you know I mean like
+[01:10:21] the idea of like nationalizing the major
+[01:10:24] it companies as long as those are
+[01:10:26] private and big data is seen as
+[01:10:28] legitimate it almost seems like we'll
+[01:10:31] never win just because the concentrated
+[01:10:33] power of Corporations being behind um
+[01:10:36] governments very good question and I
+[01:10:38] think um uh a lot of the response post
+[01:10:43] um already before the Snowden
+[01:10:45] Revelations when we did our research on
+[01:10:47] the foreign intelligence surveillance
+[01:10:48] act from European perspective and
+[01:10:50] presented this in Europe like in
+[01:10:53] Brussels the immediate response of
+[01:10:55] policy makers was European Cloud you
+[01:10:57] know um nationalize or localize the
+[01:11:01] interests uh to enable spying by your
+[01:11:03] own intelligence agencies but not so
+[01:11:05] much by transnational uh interests so I
+[01:11:09] think the um you know a lot of the
+[01:11:11] people in Internet research are still um
+[01:11:14] you know very much thinking in this this
+[01:11:16] Global Perspective but the way in which
+[01:11:18] hacking and surveillance is done is is
+[01:11:21] uh is is very transnational and the way
+[01:11:24] in which we will see a response from
+[01:11:26] like industry is to further nationalize
+[01:11:29] um uh these kinds of systems not so much
+[01:11:32] the interconnection stuff so I think the
+[01:11:34] balcon isation uh frame um is way
+[01:11:39] overblown um but definitely um we have
+[01:11:43] seen this for example in in routing
+[01:11:45] where uh the US Congress has said well
+[01:11:48] we don't longer allow uh Chinese routers
+[01:11:51] in our in our country like Huawei uh you
+[01:11:54] cannot do business here or at least not
+[01:11:56] in critical uh
+[01:11:58] infrastructures um um for fear of back
+[01:12:01] doors well of course you know American
+[01:12:03] routers or other routers have all their
+[01:12:06] might have back doors of themselves
+[01:12:07] which is you know still an issue open
+[01:12:09] for debate but um the the question of of
+[01:12:12] nationalism and sort of
+[01:12:14] nationalizing uh the cyber security
+[01:12:16] debate and the critical infrastructure
+[01:12:18] and National Security is is definitely
+[01:12:21] something that needs a lot more thought
+[01:12:23] and and research yeah I completely
+[01:12:29] agree okay
+[01:12:31] sure you uh invited activists to uh do
+[01:12:36] uh reverse engineering on these tools as
+[01:12:39] a way of fighting the problem I'm
+[01:12:41] guessing uh what legal implications
+[01:12:44] could that have given that these are uh
+[01:12:47] tools from the government to do what's
+[01:12:50] supposed to be uh uh law enforcement
+[01:12:52] tasks yeah very good question um so uh
+[01:12:58] um let me restate that uh in itself um
+[01:13:03] you know addressing cyber crime is a is
+[01:13:05] is is a reson atra of law enforcement
+[01:13:08] right it's a really important space to
+[01:13:10] be in but why is the reverse engineering
+[01:13:12] so critical it's it's just to you know
+[01:13:15] push back to give the right checks and
+[01:13:16] balances so in Germany and in um I I
+[01:13:20] don't know if it's enforced in Germany
+[01:13:22] already but at least in the Netherlands
+[01:13:24] I know that there's a uh a responsible
+[01:13:26] disclosure code adopted by the Dutch
+[01:13:29] government um so security researchers in
+[01:13:32] the Netherlands when they do responsible
+[01:13:33] disclosure when they for example find
+[01:13:35] government malware in the wild and
+[01:13:37] reverse engineer it and go to the law
+[01:13:39] enforcement agencies and say you know
+[01:13:41] you really should take uh into
+[01:13:44] considerations these uh these security
+[01:13:46] bugs um uh that um uh frees them from
+[01:13:51] prosecution basically so responsible
+[01:13:53] disclosure is definitely something that
+[01:13:55] also needs more attention um and I think
+[01:13:58] that you know if you I think that the
+[01:14:01] the you know the the environment the
+[01:14:03] policy environment is is quite maybe not
+[01:14:06] in the United States I'm I can't speak
+[01:14:08] for for that situation but in Europe the
+[01:14:10] the environment is changing and really
+[01:14:12] seeing the value of of you know ethical
+[01:14:15] hacking as a as a security tool so I I
+[01:14:18] think that um responsible disclosure we
+[01:14:20] will see more of that in at least in
+[01:14:22] Europe yeah and then there was one more
+[01:14:25] question so so on your slide you had
+[01:14:27] Quantum bot which is the nsa's um
+[01:14:31] program of hijacking bot Nets yeah um
+[01:14:34] and they and it says they have 140,000
+[01:14:37] uh FS coped yeah um and so I'm curious
+[01:14:40] uh what what responsibility do do do
+[01:14:43] nation states have towards say um if
+[01:14:46] they co-opt a criminal bot what what can
+[01:14:49] they do with that do they have more
+[01:14:50] legal power to engage in criminal
+[01:14:52] activities because they did not spread
+[01:14:54] the malware themselves
+[01:14:56] what uh like what is the legal framework
+[01:14:58] that
+[01:14:58] they're going very good question um I
+[01:15:03] think that will be one of the questions
+[01:15:05] to really to work on since last week
+[01:15:09] especially here in the United States um
+[01:15:11] so in the Netherlands uh with the bradel
+[01:15:14] up botnet case um they actually went
+[01:15:18] into the botet adverti this as a
+[01:15:20] successful approach this is a great
+[01:15:21] anecdote so they did this on television
+[01:15:25] so they got the the Dutch 8:00 news to
+[01:15:28] come to this uh to Le Webb which is this
+[01:15:30] large uh web hosting company and they
+[01:15:33] set up a fake server and you know a plug
+[01:15:36] and then on the 8:00 news they unplug
+[01:15:39] the
+[01:15:41] button yeah it's really bad um anyway um
+[01:15:46] you know this this costed uh for a lot
+[01:15:48] of uh push back from research
+[01:15:51] communities uh policy and and and
+[01:15:53] especially activist community ities um
+[01:15:56] the legal framework here is is very
+[01:15:58] opaque and uh as often in law laws are
+[01:16:03] created or left opaque for certain
+[01:16:05] reasons and that's why you need research
+[01:16:07] and policy and activism to push back
+[01:16:09] because you know if we hadn't have had
+[01:16:12] this this uh this slide over here we
+[01:16:14] would probably be guessing but now we
+[01:16:17] have a a really sharp question to ask to
+[01:16:20] our legislators and I think that's uh
+[01:16:22] that's very I mean your question is spot
+[01:16:24] on and and it's really something to work
+[01:16:26] on the legal framework here is is you
+[01:16:28] know it's very especially in the United
+[01:16:30] States when it comes to National
+[01:16:31] Security uh you can do a lot all right
+[01:16:35] uh time's up thanks
+[01:16:37] [Applause]

@@ -1,0 +1,624 @@
+[00:00:00] so we're going to do two sessions uh
+[00:00:01] back toback and then uh hopefully end
+[00:00:03] even on time or maybe a few minutes
+[00:00:05] early um this is the complimentary
+[00:00:08] session on dpla as platform to follow up
+[00:00:11] on Jeff Lick's discussion of the
+[00:00:13] technical development scheme uh I'm
+[00:00:15] going to welcome up SJ Klein but also I
+[00:00:17] think Martin katavic uh the two
+[00:00:19] directors of the uh co-chairs I suppose
+[00:00:22] as official term of the technal aspects
+[00:00:24] workstream and they are going to talk
+[00:00:25] about the dpla as platform uh which as
+[00:00:28] you'll see is a compliment
+[00:00:30] approach to the approach that we've been
+[00:00:32] taking with Jeff lick with pod and
+[00:00:34] ifactory so SJ and Martin thank
+[00:00:37] you thanks
+[00:00:39] John thanks everybody we're here today
+[00:00:42] to talk not about the platform as a
+[00:00:43] technical process which Jeffrey handled
+[00:00:45] so well earlier but really is a platform
+[00:00:47] is something that can take you someplace
+[00:00:49] so here we have our evocative graphic of
+[00:00:52] the platform that will take you
+[00:00:53] someplace in this case to
+[00:00:56] Chicago what we don't want to also
+[00:00:58] mention though is that the platform is a
+[00:01:00] magical thing and again thanks to the
+[00:01:02] image think people this is a um picture
+[00:01:04] from the October presentation last year
+[00:01:07] of just how we were discussing the
+[00:01:09] platform and what it would become at the
+[00:01:11] time we knew it wouldn't be magic and
+[00:01:13] that it' really be nuts and bolts and
+[00:01:14] gritty and I beans and all that type of
+[00:01:17] stuff that really makes things
+[00:01:19] work so what we now have is a dpla
+[00:01:22] platform that we can actually start
+[00:01:24] doing stuff with a platform that'll take
+[00:01:26] us places that we can do interesting
+[00:01:29] things with
+[00:01:31] and how do we get to the platform well
+[00:01:33] one thing that we did want to do is
+[00:01:34] thank some of the people that actually
+[00:01:36] helped us get to where the platform is
+[00:01:38] today um key to that is David Weinberger
+[00:01:41] who was with us yesterday and David led
+[00:01:42] the interim Tech Development Group that
+[00:01:45] brought about the whole platform just a
+[00:01:46] quick Round of Applause for David who
+[00:01:48] unfortunately couldn't be with us
+[00:01:52] today and also Chris Freeland of
+[00:01:54] Washington University in St Louis now
+[00:01:56] who was our original co-chair of the
+[00:01:58] group um we have our list of names of
+[00:02:01] the different people up there I did want
+[00:02:02] to highlight just one person which is
+[00:02:03] Lee Dirks Lee derks was a friend of many
+[00:02:06] of us he was a good friend of libraries
+[00:02:08] is a very good friend of the dpla and
+[00:02:10] tragically we lost him in October to a
+[00:02:12] car accident but it was just a great
+[00:02:15] working with Lee on this project and
+[00:02:17] again a lot of what we have today is
+[00:02:19] dependent on what Lee helped us
+[00:02:23] build so again as um Jeffrey mentioned
+[00:02:25] we've had a lot of other things
+[00:02:26] happening on the dpla platform back in
+[00:02:29] April we had our first hackathon we
+[00:02:30] actually called it a mini hackathon we
+[00:02:32] did it really quickly on a on a short
+[00:02:34] time frame we squeezed it in between the
+[00:02:37] burkman um Harvard Education Lady Gaga
+[00:02:39] event and thanks to all the burkman
+[00:02:41] staff for helping us get this all
+[00:02:43] organized in really short notice and
+[00:02:45] this was our first experiment in sort of
+[00:02:46] getting the platform out there and
+[00:02:48] getting people out there all around the
+[00:02:49] country to build on top of that
+[00:02:52] similarly we had the beta Sprint that
+[00:02:54] was launched previously in October of
+[00:02:56] 2011 and again as Jeffrey mentioned we
+[00:02:58] hope to have some of those beta
+[00:03:00] sprinters continue on in terms of
+[00:03:02] developing on top of the platform as we
+[00:03:04] move forward with the new
+[00:03:06] dpla and again as you've heard we have
+[00:03:09] the dpla app Fest coming forward in the
+[00:03:11] next in next month and again Nate Hill
+[00:03:14] who couldn't be with us today as his
+[00:03:16] wife is having a baby I don't know if
+[00:03:17] she's had a had it yet she okay so Nate
+[00:03:19] is now a
+[00:03:22] father and thanks to Nate for um
+[00:03:25] bringing us together with the
+[00:03:26] Chattanooga hack hack people and I think
+[00:03:28] the Chattanooga events going to be great
+[00:03:30] and again we want to encourage people
+[00:03:32] all around the country to participate in
+[00:03:33] it virtually if you can't actually make
+[00:03:35] it to the Chattanooga
+[00:03:38] event so what we want to do now is just
+[00:03:41] do some quick questions of the audience
+[00:03:43] of where you think the dpla platform can
+[00:03:45] take you or your community and for that
+[00:03:47] I'm going to turn it over to
+[00:03:50] SJ thanks Mar what I love about coming
+[00:03:54] to dpla events is that um we aren't one
+[00:03:57] single Community we're a lot of very
+[00:03:59] different communities who don't uh who
+[00:04:01] don't actually get to hang out together
+[00:04:03] very often outside this this forum and
+[00:04:06] sometimes I'm completely blown away I
+[00:04:08] mean you have you have the
+[00:04:10] entire development cycle of an idea from
+[00:04:14] the authors to the Publishers to the
+[00:04:15] archivists to the reusers and the
+[00:04:17] communities that are trying to mine
+[00:04:19] things out of their communities data 100
+[00:04:21] years later and for me at least work
+[00:04:24] doing a lot of work with Grassroots
+[00:04:25] based data analysis and and data munging
+[00:04:29] it's so nice to see everyone playing
+[00:04:31] nicely together and and um being
+[00:04:34] thoughtful together about what the
+[00:04:35] future of libraries should be what the
+[00:04:37] future of of knowledge sharing should be
+[00:04:39] so uh I'd love to hear a little bit from
+[00:04:43] the different communities in the
+[00:04:44] audience what DP as a platform means to
+[00:04:46] you and uh there have been some amazing
+[00:04:49] ideas that came out of the last couple
+[00:04:50] of days a number of people saying here
+[00:04:52] are the things that that we've been
+[00:04:55] working on and developing that we hope
+[00:04:57] to see shared with other people other
+[00:04:59] groups saying here's what we've been
+[00:05:00] waiting to get access to that we haven't
+[00:05:01] had access to because we were too small
+[00:05:03] or we're we're out of out of the circle
+[00:05:06] of light where you have free access to
+[00:05:08] different kinds of Collections and U so
+[00:05:12] I'd like everyone here to think about
+[00:05:14] what dpla as a platform means to your
+[00:05:16] community to the people who you serve
+[00:05:19] and and what it might mean to products
+[00:05:21] you currently have in
+[00:05:23] development how many people here have
+[00:05:25] organized or hosted some kind of hacking
+[00:05:28] or data
+[00:05:30] event at their institution in the last
+[00:05:33] year that's great uh every one of those
+[00:05:36] events sort of gets gets Channel
+[00:05:39] channeled a bit by the institution that
+[00:05:41] hosts it you have a chance to direct the
+[00:05:44] efforts of some of your some of your own
+[00:05:46] people who haven't had a CH you know the
+[00:05:48] free energy to go relax and do something
+[00:05:51] new for a day and a half or a couple of
+[00:05:53] days and all the people in in in your
+[00:05:55] neighborhood who haven't had a chance to
+[00:05:56] work with you um
+[00:06:00] this is the first time that that we will
+[00:06:02] that we will have a uh some active
+[00:06:06] things for people to hack on in the last
+[00:06:08] six or seven months I've been I'm really
+[00:06:10] enthusiastic about how quickly some
+[00:06:11] things are moving and I loved the way
+[00:06:13] Paul Karan put it when he said this is
+[00:06:15] our chance to have fun uh we can
+[00:06:17] experiment things are things are falling
+[00:06:20] into place and if when you when you get
+[00:06:22] an inspiration about something you want
+[00:06:24] to see even if you don't know how to do
+[00:06:25] it you can ask you can ask for um
+[00:06:30] something like that to happen so i' I'd
+[00:06:32] like to call on uh on some people in the
+[00:06:34] audience um I know Michael calford is
+[00:06:38] here from from the Boston Public
+[00:06:40] Library and you've been doing a lot of
+[00:06:42] work with the state of Massachusetts on
+[00:06:44] the Commonwealth
+[00:06:46] collections when I was first asked to
+[00:06:48] just say a couple words about this um
+[00:06:50] Boston Public Libraries is organizing
+[00:06:52] the um digital Commonwealth uh pilot hub
+[00:06:55] for um dpla and a lot has been said
+[00:07:00] about smaller libraries and The Branding
+[00:07:01] issues and the advocacy issues and I see
+[00:07:03] the platform as being able to really
+[00:07:05] focus in on the very unique collections
+[00:07:07] that we've all talked about very small
+[00:07:09] public libraries and historical socities
+[00:07:10] across the state or across the country
+[00:07:12] have and um by working and being part of
+[00:07:16] the dpla it really shines a light on
+[00:07:18] them exposes them so that we found at
+[00:07:21] the Boston Public Library when we
+[00:07:22] started doing this work helping smaller
+[00:07:24] institutions to digitize their
+[00:07:25] collections that legislators and funders
+[00:07:27] really like that and they really took
+[00:07:29] notice of that because it really serves
+[00:07:30] their individual communities but then it
+[00:07:32] just broadens it all out to um a much
+[00:07:35] more a much larger perspective and it
+[00:07:37] kind of gives them bragging rights and
+[00:07:38] they can really say that they're part of
+[00:07:39] a much bigger thing and with this whole
+[00:07:42] ability to develop apps on top of this
+[00:07:44] platform you know we all know that the
+[00:07:46] people who are developing apps are kids
+[00:07:48] that could be anywhere in some sleepy
+[00:07:49] little town in western Mass or in the
+[00:07:51] middle of the country so we see this as
+[00:07:53] a really great opportunity for the small
+[00:07:55] institutions that would never be able to
+[00:07:56] get their uh very unique collections out
+[00:07:58] to anyone that but the very few people
+[00:08:00] who come into their
+[00:08:03] institutions thanks and is is Alan in
+[00:08:06] know you
+[00:08:07] here so Allan Allan works at ala in
+[00:08:11] Washington office and the kinds of the
+[00:08:14] kinds of policy questions that that you
+[00:08:17] all have to deal with are really
+[00:08:18] important um I'd love to hear I'd love
+[00:08:21] to hear your thoughts on how this
+[00:08:22] affects your community uh sure just a
+[00:08:25] few things uh so mein Sullivan our
+[00:08:27] president talked about access and so so
+[00:08:30] instead of Michael talked about uh
+[00:08:33] Collections and getting collections out
+[00:08:34] from small libraries out to many other
+[00:08:36] people so they can see them uh we
+[00:08:39] thinking access for all but also access
+[00:08:42] for particular populations so for Access
+[00:08:45] for for those who are in small
+[00:08:47] communities who you know this provides
+[00:08:50] has the potential providing tremendous
+[00:08:53] capability and resources and so
+[00:08:55] providing access to those folks is is
+[00:08:57] one of the things that really really
+[00:08:59] really appeals to us as ala uh but also
+[00:09:01] access for Children and Youth as
+[00:09:04] education becomes more dependent on
+[00:09:05] primary primary materials and so it's
+[00:09:08] another this could be you know a huge
+[00:09:09] Boon for for that population on access
+[00:09:12] for people with disabilities as
+[00:09:14] information becomes more and more tied
+[00:09:15] up in contracts and Licensing we don't
+[00:09:18] have as many rights as we used to in
+[00:09:20] terms of doing things for people with
+[00:09:22] disabilities so in terms of access we're
+[00:09:24] really excited about the potential for
+[00:09:26] for dpla and it's not even cauti this
+[00:09:30] potential we it's real potential coming
+[00:09:32] so we're very excited to see that uh the
+[00:09:35] other thing is the I think the
+[00:09:37] difference between the commercial and
+[00:09:38] non-commercial sectors so some of you
+[00:09:40] may know that we've been doing a lot of
+[00:09:42] work with the big six Publishers and
+[00:09:43] ebooks and trying to get better access
+[00:09:46] for for libraries uh but it kind of
+[00:09:48] raises the larger issue of uh you know
+[00:09:52] there's all this wonderful
+[00:09:53] non-commercial content out there and how
+[00:09:55] do we make better use of that and that
+[00:09:57] that's actually a comparative advantage
+[00:09:59] Advantage for libraries if we can just
+[00:10:01] figure out how to make better use and
+[00:10:03] provide services and it's all kind of
+[00:10:06] atomized now and so dpla is is really
+[00:10:08] the catalst that can help us bring this
+[00:10:10] material together and provide better and
+[00:10:13] better services that that are
+[00:10:14] interesting so we won't be so dependent
+[00:10:16] on you know the best sellers from trade
+[00:10:18] Publishers and so on uh you know which I
+[00:10:21] I've come to learn is a very problematic
+[00:10:24] process to or problem to to attack so
+[00:10:28] it's another that's another way of
+[00:10:29] thinking about
+[00:10:32] dpla there there were a lot of nice
+[00:10:33] ideas about also in discussions today
+[00:10:36] about
+[00:10:37] how a new platform might help libraries
+[00:10:40] think think about themselves in a
+[00:10:42] different in a different context or be
+[00:10:44] be used by um the majority of the of the
+[00:10:47] people in their cities that that
+[00:10:50] currently don't uh don't necessarily get
+[00:10:52] to use them I'm with Carson oh Carson is
+[00:10:57] is he still here
+[00:11:00] awesome hi should I just speak please
+[00:11:04] well you should you should introduce
+[00:11:05] your community uh my name is Carson
+[00:11:07] black I used to be gainfully employed
+[00:11:09] and and now I'm on my own as an a
+[00:11:11] library technology consultant um and
+[00:11:13] it's been extremely exciting to be out
+[00:11:16] and to be thinking about uh the idea of
+[00:11:18] dpla as a platform as Allan talked about
+[00:11:21] we've got content challenges right and
+[00:11:23] and libraries uh public libraries are
+[00:11:25] used to thinking of content in terms of
+[00:11:27] things that we purchase and some way and
+[00:11:29] that's valid uh as far as uh content
+[00:11:32] goes what I'm really excited about with
+[00:11:34] dpla is that this gives us an
+[00:11:37] opportunity to take what's what exists
+[00:11:40] now but is invisible and make it visible
+[00:11:43] for everyone uh in a in a very very
+[00:11:46] powerful way so not just um in a static
+[00:11:49] way like come and come and see it but
+[00:11:51] there's going to be um ways that it's
+[00:11:53] integrated into into people's lives and
+[00:11:56] I think that that that that it will be
+[00:11:58] transformation ational um on this basis
+[00:12:01] simply because of the the design the
+[00:12:03] design is really rich everything that uh
+[00:12:06] we've worked on uh that uh that everyone
+[00:12:09] has worked on in the different work
+[00:12:10] streams um from the governance to the to
+[00:12:12] the nuts and bolts of the the technology
+[00:12:14] are really sinking together really well
+[00:12:16] so I'm I'm thrilled about that that
+[00:12:18] concept of taking things that exist now
+[00:12:20] things that we paid for with public
+[00:12:21] dollars uh that are kind of invisible in
+[00:12:24] a lot of cases and uh making them Vivid
+[00:12:27] in HD
+[00:12:30] thanks
+[00:12:31] Carson that line about making the
+[00:12:33] invisible visible is uh something we
+[00:12:35] could probably get new stickers for that
+[00:12:38] would be
+[00:12:40] great
+[00:12:46] Shia hi I'm uh Sheila mallister I'm with
+[00:12:49] the digital library of Georgia and um
+[00:12:52] we're located at the University of
+[00:12:54] Georgia so not only are we a research
+[00:12:56] library but um we represent the land and
+[00:12:59] sea Grant institutions of our state and
+[00:13:03] there are a couple things being a re uh
+[00:13:06] having that kind of role
+[00:13:08] um really brings out and so we have we
+[00:13:12] are really concerned with service and
+[00:13:14] Outreach to to our um our whole
+[00:13:17] Statewide community and dpla as um the
+[00:13:21] folks from um Boston Public mentioned
+[00:13:24] really does re will reach out to um to
+[00:13:28] all all sorts of different
+[00:13:30] communities but um I think what's really
+[00:13:33] exciting from a research institution is
+[00:13:36] the opportunity for our faculty and our
+[00:13:38] students to use this platform to create
+[00:13:41] new and innovative ways of of looking at
+[00:13:45] at the problems that are facing us new
+[00:13:48] methods of scholarship and the like so
+[00:13:50] we're very excited to be involved in the
+[00:13:57] project
+[00:14:00] other people with ideas
+[00:14:02] about how their communities
+[00:14:05] will build on top of the platform or
+[00:14:07] potentially
+[00:14:08] be drawing from
+[00:14:13] it
+[00:14:15] marking I'm Margie Avery and I'm a I
+[00:14:18] work for a publisher I work for a
+[00:14:19] nonprofit scholarly publisher so I'm
+[00:14:21] really excited about what this uh
+[00:14:23] platform can do in terms of providing an
+[00:14:25] infrastructure for a lot of the
+[00:14:27] materials that we try to publish but
+[00:14:29] aren't actually able to include into a
+[00:14:31] book So currently we have uh whenever
+[00:14:35] I'm approached by authors for publishing
+[00:14:37] something there's so much stuff that we
+[00:14:38] have to leave out and some of that is
+[00:14:40] reasonable to leave out but a lot of it
+[00:14:42] is because we can't print it and we
+[00:14:44] can't uh we can't accommodate the
+[00:14:46] material with the dpla platform we can
+[00:14:50] uh link to these primary sources we
+[00:14:52] could link to letters um photographs um
+[00:14:57] videos images of things that that are
+[00:14:59] not able to be described in print so I I
+[00:15:02] see this really enhancing scholarship as
+[00:15:04] well as connecting scholarship with its
+[00:15:07] original resources
+[00:15:10] so some yeah some of the specific app
+[00:15:13] ideas people were were floating around
+[00:15:15] yesterday included a lot of ways to pull
+[00:15:18] back enrich metadata or to to enrich
+[00:15:22] existing local sites for small
+[00:15:24] institutions and to both What U Margie
+[00:15:26] and Michael are saying
+[00:15:29] I certainly think that should make
+[00:15:31] everyone's current institution and
+[00:15:32] current sites
+[00:15:37] um a place for people
+[00:15:39] to test out and experiment with those
+[00:15:42] new things something that's beautiful
+[00:15:44] independent of uh of the global vision
+[00:15:48] or or the global aggregation of uh of
+[00:15:51] local
+[00:15:53] Collections and I guess I'll just bring
+[00:15:55] it all the way down to the ultimate user
+[00:15:59] I just went up to the yo media while
+[00:16:01] during the break and what I can Envision
+[00:16:05] at the very end is young people that
+[00:16:07] will never get to Ciro that'll never get
+[00:16:09] to all these other place it's going to
+[00:16:11] open up the world to them and that's
+[00:16:13] when you think about what that can do
+[00:16:15] and what it would do for those kids that
+[00:16:17] are right upstairs from us and what
+[00:16:19] they'd be able to touch primary sources
+[00:16:22] in a different
+[00:16:23] way you
+[00:16:27] care
+[00:16:32] so I really want to encourage people who
+[00:16:34] have who have worked
+[00:16:36] with children and who worked with with
+[00:16:38] audiences and are building their own
+[00:16:40] local
+[00:16:42] participation networks to think about
+[00:16:44] ways that that could inform what dpla is
+[00:16:46] doing and uh ways that that could guide
+[00:16:50] technical decisions that are being made
+[00:16:52] or interface decisions that are being
+[00:16:53] made as Jeff mentioned interface is
+[00:16:56] being a global interfaces being designed
+[00:16:59] in the next couple of months but the
+[00:17:02] interfaces that people build on their
+[00:17:03] own on top of instances of the dpla
+[00:17:07] tools will will
+[00:17:09] be um fertile ground for other other
+[00:17:14] kinds of interface
+[00:17:17] experiments and just one final comment
+[00:17:19] is again that for those of you who
+[00:17:20] haven't had a hackathon in your library
+[00:17:22] spaces I really encourage you to do it
+[00:17:24] get a couple bags of giant Doritos and
+[00:17:26] some Mountain Dew turn on the lights let
+[00:17:29] it go and come back a couple hours later
+[00:17:32] and see what people have built with your
+[00:17:34] content and the DPL platform if you want
+[00:17:37] to hold a hackathon and you're not sure
+[00:17:38] how to do it but you have space please
+[00:17:41] let us know and we can help you organize
+[00:17:43] something we know there's going to be
+[00:17:45] this one in Tennessee in a month there's
+[00:17:46] going to be something attached to an
+[00:17:48] audience and participation event in
+[00:17:50] Virginia in December I think we've now
+[00:17:53] decided December 6th so um something
+[00:17:57] there'll be something small and and
+[00:17:59] maybe for half a day that we're trying
+[00:18:01] to organize at Harvard so if you if you
+[00:18:04] have the the enthusiasm and you're not
+[00:18:06] sure what it would what it would take um
+[00:18:08] talk to us talk to Nate think of it as a
+[00:18:10] 21st century Tupperware party
+[00:18:15] oh and we'll turn it back to John yeah
+[00:18:18] awesome thank you please join me in
+[00:18:20] thanking SJ and Martin and their
+[00:18:21] [Applause]
+[00:18:27] team
+[00:18:30] all right so this is our very last
+[00:18:32] session I just want to share a few
+[00:18:34] thoughts on what you can expect in the
+[00:18:36] next several months leading up to the
+[00:18:38] April
+[00:18:40] 2013 uh kickoff but also to make space
+[00:18:43] if anyone has any uh any final comments
+[00:18:45] or questions unrelated to the uh
+[00:18:48] technical discussions we've just been
+[00:18:50] having um I want to hit just a few key
+[00:18:52] points which restate where we have come
+[00:18:55] recently and then and where we're headed
+[00:18:57] um as noted we formed the new board of
+[00:18:59] the dpla and we have the new 501c3 set
+[00:19:02] up so in the next several months we'll
+[00:19:04] be moving from a very draft form of
+[00:19:07] bylaws and uh Charter and so forth uh to
+[00:19:11] a more fully form set so if you have an
+[00:19:13] interest in governance type work let us
+[00:19:15] know and we can um we'll be online in
+[00:19:17] the governance work stream but also uh
+[00:19:19] taking suggestions of that sort as we go
+[00:19:21] forward um second we've obviously made a
+[00:19:24] huge amount of progress on the um uh
+[00:19:26] content and scope workstream which has
+[00:19:29] led into the digital hub's pilot uh with
+[00:19:31] Emily Gore now on the ground we're
+[00:19:34] fantastically staffed initially we'll be
+[00:19:36] building out a team around Emily and
+[00:19:39] also obviously operationalizing those
+[00:19:41] first seven uh hubs we are on the
+[00:19:43] lookout very much for additional content
+[00:19:46] Partners uh we will be trying to figure
+[00:19:48] out what that partnership agreement
+[00:19:50] looks like it may be that you will come
+[00:19:52] forward to us as an institution we'll
+[00:19:54] say we'd love to work with you and
+[00:19:55] announce as a Content Hub even if we
+[00:19:57] can't actually just the content before
+[00:19:59] April so let's figure out how we can
+[00:20:01] make a rolling thunder up to April in
+[00:20:04] terms of announcement of Institutions
+[00:20:05] that wish to participate um and help us
+[00:20:07] figure out what that partnership
+[00:20:09] agreement should look like I think Emily
+[00:20:11] said it beautifully there's a structure
+[00:20:13] for doing this we want to try to reduce
+[00:20:15] the oneoff onetoone uh relationships
+[00:20:17] between dpla and institutions so that it
+[00:20:19] doesn't get too complex um we want to
+[00:20:21] have the kind of agreement that can be
+[00:20:23] um scalable and effective across a range
+[00:20:25] of different institutions and the more
+[00:20:27] that we can set up these uh Arrangements
+[00:20:30] in advance of April 2013 even again if
+[00:20:32] we don't ingest the data or metadata
+[00:20:34] initially I think that's going to be
+[00:20:35] very helpful for people to see uh where
+[00:20:38] we are going uh third we've talked a lot
+[00:20:40] about the um content um uh in terms of
+[00:20:45] how it will be delivered in the
+[00:20:46] technical terms in the last uh two
+[00:20:47] sessions um we'll be of course
+[00:20:49] completing and launching the first
+[00:20:51] prototype and again this is just a
+[00:20:53] gesture this is just a prototype in
+[00:20:55] April 2013 so don't expect too much of
+[00:20:57] what what you see then um and we have to
+[00:21:00] figure out how to talk about it in a way
+[00:21:01] that lets people see the the vision of
+[00:21:04] where we're headed um without getting
+[00:21:05] too disappointed in in what we
+[00:21:07] experienced at the beginning um but I do
+[00:21:09] think it's going to be fun and
+[00:21:10] interactive and um there are lots of
+[00:21:12] ways to contribute to that as you've
+[00:21:13] just heard I think the idea of 21st
+[00:21:15] century Tupperware party sounds fabulous
+[00:21:17] so if you would like to host such a
+[00:21:19] party uh in form of a hackathon we will
+[00:21:21] be glad to um provide some support for
+[00:21:23] that in various ways I think we could do
+[00:21:25] a whole pile of them between now and
+[00:21:27] April 2013 and continuing and I think
+[00:21:29] one of the things that has excited many
+[00:21:31] people about this project is how we're
+[00:21:33] taking the spirit of the open source
+[00:21:34] Community the spirit of the wikim media
+[00:21:36] Community or Milla or Creative Commons
+[00:21:38] and bringing that into um this kind of
+[00:21:40] knowledge uh space and I think that's
+[00:21:43] something that with uh the leadership of
+[00:21:45] SJ and Martin and David Weinberger and
+[00:21:47] others will uh continue to do um and
+[00:21:49] then last of course continue to build
+[00:21:51] community across all the different uh
+[00:21:53] aspects of the work that we have
+[00:21:55] together and you can be looking out uh
+[00:21:57] uh to the board um for our suggestions
+[00:22:00] of how to do that and how we segue the
+[00:22:02] steering committee and the work streams
+[00:22:03] into a committee structure that will
+[00:22:05] hopefully engage people uh in the work
+[00:22:07] going forward to April
+[00:22:08] 2013 um and Way Beyond um I'm going to
+[00:22:12] pause there for a second I'm looking
+[00:22:14] down at my um colleagues Mora and dor
+[00:22:17] and others is there anything that you
+[00:22:18] would want to um have us remind the crew
+[00:22:20] at this at this
+[00:22:22] stage I think we're jumping
+[00:22:24] out one last uh call out for any oh yes
+[00:22:28] Doran I would thank you want to Second
+[00:22:31] your earlier comment when you were up
+[00:22:32] there about that um this is as much
+[00:22:34] about Community as about a product I
+[00:22:36] think that's really important I think
+[00:22:37] that message is evidenced by today and I
+[00:22:40] think going forward even it's something
+[00:22:41] that we need to keep talking about
+[00:22:42] because I think that's a really key part
+[00:22:44] of how we should Define ourselves
+[00:22:47] absolutely I think one of the ways in
+[00:22:48] which we have sought to make this
+[00:22:50] project different from ever other
+[00:22:51] efforts to create National digital
+[00:22:53] libraries whether here or around the
+[00:22:54] world has been saying we're totally
+[00:22:56] devoted to this being a the end user and
+[00:22:58] about the community of people who care
+[00:23:00] about these materials and doing it in a
+[00:23:02] truly inclusive way we've got to keep
+[00:23:04] ourselves honest in that way and and
+[00:23:06] really try to make this a model in in
+[00:23:08] that respect so we will continue to
+[00:23:09] emphasize that as we as we start to
+[00:23:12] launch other thoughts or questions to to
+[00:23:16] share anyone from the live stream who
+[00:23:17] feels ignored happy to have you uh tweet
+[00:23:21] in or email
+[00:23:25] in all right well I think that we are at
+[00:23:27] a point that we actually can end early
+[00:23:29] which is very exciting um I'd love to
+[00:23:31] have one final thank you to the people
+[00:23:33] who worked so hard to make this happen
+[00:23:36] both at the Chicago Public Library and
+[00:23:37] at the Brickman Center Secretariat
+[00:23:39] please join me in thanking that crew and
+[00:23:41] we'll see you all in April thank
+[00:23:47] you

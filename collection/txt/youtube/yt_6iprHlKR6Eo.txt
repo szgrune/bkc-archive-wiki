@@ -1,0 +1,1950 @@
+[00:00:02] so first a show of hands who in the room
+[00:00:05] has ever used a Nim or a pseudonym
+[00:00:09] online wow next question who still does
+[00:00:12] use a Nim or a pseudonym online the FBI
+[00:00:15] is
+[00:00:17] watching um and how many of you think
+[00:00:19] that being able to use a Nim or a
+[00:00:21] pseudonym online is
+[00:00:22] important are we doing pretty good all
+[00:00:24] right um so when people ask me why I
+[00:00:27] insist on using terms like wallet name
+[00:00:30] instead of real name uh Aesthetics is
+[00:00:33] always one of the people that I end up
+[00:00:34] using as an example um when I met
+[00:00:37] Aesthetics in 2010 I was introduced to
+[00:00:39] him as Aesthetics our mutual friends
+[00:00:41] refer to him as Aesthetics even when
+[00:00:43] he's not around and so for to me that is
+[00:00:46] his quote real name although it probably
+[00:00:49] isn't what it says on your wallet right
+[00:00:50] depends which
+[00:00:52] wallet so Google unfortunately had a
+[00:00:55] different opinion uh and in 2011 he was
+[00:00:57] suspended twice by Google Plus
+[00:01:00] and so went on to start Nim rights which
+[00:01:03] is probably one of the only good things
+[00:01:04] that came out of nim Wars um Nim rights
+[00:01:07] is focused on empowerment and education
+[00:01:09] around digital identity Aesthetics have
+[00:01:11] spoken on those topics at events in
+[00:01:13] Germany New York City and San Francisco
+[00:01:15] at venues including hacker conferences
+[00:01:17] digital rights events and universities
+[00:01:20] uh he's also been involved with the
+[00:01:21] national strategy for trusted identities
+[00:01:23] and cyber space which is an Obama
+[00:01:25] strategy to try and solve identity
+[00:01:27] related challenges in areas like
+[00:01:29] medicine and Social
+[00:01:31] Security without further Ado okay all
+[00:01:34] right I guess I should stand up then or
+[00:01:36] well if I stand up we'll I block the
+[00:01:38] screen if you stand in the middle you're
+[00:01:40] fine okay because it's easier to stand
+[00:01:42] up and pace around so hi everyone thanks
+[00:01:44] for coming cool so um two things I want
+[00:01:48] to note first off I've never been to
+[00:01:50] Harvard so this is a really crazy thing
+[00:01:52] for me so thank you so much for having
+[00:01:54] me and um second it's okay to interrupt
+[00:01:57] me during the talk if you have a
+[00:01:59] question just shoot at me I can take it
+[00:02:01] and I just wanted to mention that I was
+[00:02:03] so honored with being invited here that
+[00:02:05] I actually created a little Nim Harvard
+[00:02:07] logo thing
+[00:02:09] so so uh yeah I thought that was pretty
+[00:02:11] cool so the title of this talk is
+[00:02:14] protecting identity in the digital age
+[00:02:16] and I'm going to say right now that four
+[00:02:19] of the words in that statement are
+[00:02:20] really really really loaded and probably
+[00:02:22] worthy of academic disciplines on their
+[00:02:23] own right so we're not going to cover
+[00:02:25] everything I don't have Solutions but I
+[00:02:27] do want to have a discussion so here are
+[00:02:29] some of the elements of the discussion
+[00:02:30] that we're going to be having and first
+[00:02:32] I want to tell the origin story which is
+[00:02:34] basically where this all started so how
+[00:02:36] many of you are familiar with Nim
+[00:02:38] Wars okay about half okay you guys
+[00:02:40] familiar with
+[00:02:41] Google okay familiar with Google plus
+[00:02:45] Okay cool so basically Google+ rolled
+[00:02:47] out in summer of 2011 and it seemed
+[00:02:51] really cool I was really interested I
+[00:02:52] was an early adopter one of the reasons
+[00:02:54] because I hate Facebook and I was
+[00:02:55] looking for somebody to come and crush
+[00:02:57] them and it was really really great
+[00:02:59] until I logged in one day and I saw this
+[00:03:01] if you can't read it it says basically
+[00:03:03] your profile suspended and upon
+[00:03:05] investigation I found I was being
+[00:03:06] suspended on what what became known to
+[00:03:08] me as the real names policy and it
+[00:03:11] turned out I was not the only one who
+[00:03:12] was suspended there were a whole bunch
+[00:03:14] of people all using different kinds of
+[00:03:15] names for different reasons uh some of
+[00:03:18] them had been using those names for a
+[00:03:19] very long time I think Salon rushy is
+[00:03:21] one of the people and there's a few
+[00:03:22] others uh that are of really interesting
+[00:03:24] note so a bunch of people are like hey I
+[00:03:27] should be able to be who I am on the
+[00:03:29] internet this is [ __ ] and they
+[00:03:31] fought back and what created this
+[00:03:34] created what was known as the Nim Wars I
+[00:03:35] think that term was actually coined by
+[00:03:37] Eva galper at the Electronic Frontier
+[00:03:39] Foundation so um and basically it boiled
+[00:03:43] down to we were using names that didn't
+[00:03:45] look name shaped as we came to call it
+[00:03:48] and it wasn't just a bunch of weird
+[00:03:49] freaks on the internet this is one of my
+[00:03:51] favorite examples William Shatner got
+[00:03:52] suspended Google did not believe that he
+[00:03:54] was really William Shatner so yeah
+[00:03:56] Captain Kirk so there's a bunch of crazy
+[00:03:58] stories like that uh in any case the
+[00:04:01] thesis that I want to bring and these
+[00:04:03] are things that are really challenging
+[00:04:04] for some people number one there is no
+[00:04:06] such thing as a real name and there's
+[00:04:08] this whole one one ittis about that that
+[00:04:10] I'll get to in a bit and a subnote to
+[00:04:12] that people ask me what is the name real
+[00:04:14] I say every name is real and we can
+[00:04:16] cover that a bit too number two as we'll
+[00:04:19] get to in the end efforts to enforce
+[00:04:21] such an idea cause more problems than
+[00:04:23] they solve and there's some really it's
+[00:04:25] not just Google+ there's a lot of
+[00:04:26] catastrophes that have happened over
+[00:04:28] this so we've been talking about names
+[00:04:30] so let's find out what names are and
+[00:04:32] this is one of the biggest points of
+[00:04:33] contentions that I run into names and
+[00:04:36] identity are different and there's a lot
+[00:04:38] of confusion about identity versus
+[00:04:40] identities versus identifiers versus
+[00:04:42] names and so on so I thought a lot about
+[00:04:44] this and I Define a name as a label or
+[00:04:46] symbol that is used to identify a person
+[00:04:48] thing or concept within a given context
+[00:04:51] and just to illustrate the importance of
+[00:04:53] names up on the top left I have Adam
+[00:04:55] naming the animals in the Garden of Eden
+[00:04:56] from The Book of Genesis uh because
+[00:04:58] among other things naming them you can
+[00:05:00] identify them it creates a power Dynamic
+[00:05:02] going on or power relationship I should
+[00:05:04] say and on the top right we have a
+[00:05:06] basically a royal seal like the the
+[00:05:08] symbol that you can use for
+[00:05:09] authentication and verification and so
+[00:05:11] on which among other things means that
+[00:05:13] names have multiple purposes so here's
+[00:05:16] some different kinds of names uh does
+[00:05:18] anyone here have all of these documents
+[00:05:20] by the way it's a cat car driver's
+[00:05:22] license so what well not yeah okay so
+[00:05:28] [ __ ] Ohio right yeah well they [ __ ] up
+[00:05:31] 2004 the election right so um any case
+[00:05:34] two points I want to make about this
+[00:05:36] first off you can have well two examples
+[00:05:39] really you can have names that are
+[00:05:41] completely legal and different on these
+[00:05:43] so for example let's say you have a
+[00:05:44] middle name but it doesn't show up on
+[00:05:46] one of your IDs the other example that
+[00:05:49] I've used is let's say that you have a
+[00:05:50] driver's license and a passport and then
+[00:05:52] you get married and you change your name
+[00:05:54] and then you get your driver's license
+[00:05:55] renewed but not your passport so
+[00:05:56] suddenly you have two completely legal
+[00:05:58] documents bearing two completely
+[00:06:00] different legal names which is
+[00:06:02] interesting to think about and besides
+[00:06:05] legal names there's all kinds of
+[00:06:06] different reasons that people might uh
+[00:06:08] use names or pseudonyms and so on uh I I
+[00:06:11] don't have enough time to get into all
+[00:06:12] the examples uh you guys recognize the
+[00:06:14] guy on the right by the way I fig Frank
+[00:06:17] Zappa for uh those in the younger
+[00:06:19] audience so um by the way quick question
+[00:06:21] how many of you familiar with
+[00:06:24] puus okay I'll I'll get into explanation
+[00:06:26] about that later but basically puus was
+[00:06:28] the name that is used by the authors of
+[00:06:30] the Federalist Papers to get the
+[00:06:32] Constitution into place um but the the
+[00:06:34] the thing I want to focus on here God
+[00:06:36] the Frank Zappa story okay so Frank
+[00:06:38] Zappa among other things is known for
+[00:06:40] having kids with funny names two of them
+[00:06:42] are mun and dzel so the story here is
+[00:06:46] that Frank Zappa and his wife were at
+[00:06:47] the hospital and they had this kid and
+[00:06:50] they wanted to name him dzel so they go
+[00:06:51] to the nurse and the nurse is like oh
+[00:06:52] okay what name do you want on the birth
+[00:06:53] certificate and Frank says dzel and the
+[00:06:55] nurse says no you have to use a real
+[00:06:57] name so Frank sat there and he just
+[00:06:59] thought about four random names of
+[00:07:01] musicians he knew put that on the birth
+[00:07:03] certificate fast forward five or six
+[00:07:05] years dzel who they've been calling dzel
+[00:07:08] all along discovers that that's the name
+[00:07:10] on his birth certificate so at the age
+[00:07:11] of like five or six he gets his parents
+[00:07:13] to legally change his name to dzel so I
+[00:07:16] thought that was pretty interesting but
+[00:07:18] there there are some even more
+[00:07:19] interesting examples like this one this
+[00:07:21] guy is kind of a nut job so it's you
+[00:07:24] can't see it here but his legal name
+[00:07:25] before all this craziness was snap Happy
+[00:07:27] Fish suit millon
+[00:07:30] then he had his name legally changed to
+[00:07:32] the word
+[00:07:33] variable and
+[00:07:36] then which you could tell he's kind of a
+[00:07:38] troll right but then the court finally
+[00:07:40] stepped in when he tried to get his name
+[00:07:41] changed to [ __ ]
+[00:07:42] censorship and the court decided it was
+[00:07:44] too obscene to be used and uh there's a
+[00:07:48] lot of things to say about this and many
+[00:07:50] different topics within that but I just
+[00:07:51] thought that example was kind of crazy I
+[00:07:53] mean the guy's a nut job but you know
+[00:07:54] this is the United States you can be a
+[00:07:55] nut job if you want so another example
+[00:07:58] that we run into this kind of
+[00:08:00] illustrates oh you're nod in I guess you
+[00:08:02] saw this one yeah so this kind of
+[00:08:05] illustrates some of the issues we run
+[00:08:07] into complimenting technology and
+[00:08:08] identity so this is a woman it's hard to
+[00:08:11] see her name is Janice her first name is
+[00:08:13] Janice and her last name is this long
+[00:08:15] Hawaiian name that I can't actually
+[00:08:16] pronounce and it caused some issues with
+[00:08:19] the Hawaiian driver's license system so
+[00:08:21] you can see here they actually left her
+[00:08:23] first name off and just have her last
+[00:08:25] name actually they chopped a letter off
+[00:08:26] of the last name too and she's run into
+[00:08:28] issues with this which is why there's a
+[00:08:30] news article about it I think there was
+[00:08:31] an issue with a police officer not
+[00:08:33] believeing it was a real
+[00:08:35] ID so all kinds of crazy things but
+[00:08:39] we've talked a lot about what names are
+[00:08:41] I want to focus also on why names matter
+[00:08:43] and there's two reasons I'm looking at
+[00:08:45] this um first off I suspect that this
+[00:08:47] notion of having one true or one real
+[00:08:49] name is at least in part rooted in
+[00:08:51] monotheism the second is because this is
+[00:08:54] about Western culture primarily and
+[00:08:56] Western culture takes its Ro from
+[00:08:57] judeo-christianity therefore for I want
+[00:08:59] to look at the Bible so here we have the
+[00:09:02] Gospel of John 1: one in the beginning
+[00:09:05] was the word and the Word was with God
+[00:09:06] and the Word was God so if you step back
+[00:09:09] and think about that for a moment the
+[00:09:10] word in is really interesting the word
+[00:09:12] was with God and the Word was God which
+[00:09:14] that's a really interesting relationship
+[00:09:17] and if you look at the original Greek
+[00:09:19] the word is translated from this uh
+[00:09:21] Greek word logos so logos has a lot of
+[00:09:26] interesting connotations it takes its
+[00:09:28] roots among the things that it started
+[00:09:30] surfacing in an in ancient philosophy
+[00:09:33] and I'll just Define it here beginning
+[00:09:34] with herac Cletus as a a term for a
+[00:09:37] principle of order or knowledge and this
+[00:09:41] shows up all over the place for example
+[00:09:42] in some of Plato's dialogues uh here's a
+[00:09:45] quote from the Theus where no and I'll
+[00:09:48] just quote here where no logos can be
+[00:09:50] given of a thing then it is not knowable
+[00:09:53] where a logos can be given then it is
+[00:09:55] knowable so if you're looking at a name
+[00:09:57] and defining a name as kind of the logos
+[00:09:59] where a logos is an element which
+[00:10:01] unlocks knowledge that's really
+[00:10:04] powerful and uh just quick po quiz for
+[00:10:08] the audience
+[00:10:13] here
+[00:10:17] anyone
+[00:10:19] W door okay well why do you why does it
+[00:10:23] not belong it's not a name what's that
+[00:10:26] it's not a name I'm used to seeing oh
+[00:10:27] okay and yeah everyone has different
+[00:10:30] responses to that one of the common ones
+[00:10:32] is I just know so the question that I
+[00:10:35] try to get people ask is when you see a
+[00:10:36] name how do you know that it's a real
+[00:10:38] name or not a real name and I suspect
+[00:10:41] that it's because in our cultures we
+[00:10:43] develop a kind of internal lexicon
+[00:10:45] because they're both valid words right
+[00:10:47] all these words are valid and we're able
+[00:10:49] to distinguish what kinds of words they
+[00:10:51] are so how is it then we're able to so
+[00:10:53] this name is valid this one is not and
+[00:10:56] the other thing I point out Jerome to me
+[00:10:58] that sounds French whereas Williams
+[00:11:00] sounds English and I can kind of
+[00:11:02] differentiate Geographic locations which
+[00:11:04] is effectively differentiating cultures
+[00:11:07] so the question I then pose if we can do
+[00:11:09] that with these names then these funny
+[00:11:11] fake sound and internet names maybe
+[00:11:14] that's just part of an Internet culture
+[00:11:16] which means the name is completely valid
+[00:11:17] within the culture itself so enough
+[00:11:21] about names I want to get into identity
+[00:11:22] I promise we would so I'm calling this
+[00:11:25] now Facebook's method because I used to
+[00:11:27] call it Google's method and then they
+[00:11:28] retracted names policy so go Google sort
+[00:11:33] of so there's a couple things I I
+[00:11:37] there's a whole bunch I could go over
+[00:11:38] with this but first off it's a very top-
+[00:11:41] down hierarchical system where you have
+[00:11:43] the one true real name at the very top
+[00:11:44] of the hierarchy and then all the
+[00:11:45] pseudonyms aka the fake names at the
+[00:11:47] bottom and the important thing to
+[00:11:49] Capstone is labels give someone else
+[00:11:51] power over you a a name is something
+[00:11:54] which is granted to you by a government
+[00:11:55] or by a
+[00:11:56] corporation to me that doesn't jive
+[00:11:58] really well and it's really not a good
+[00:12:00] explanation of identity so I did some
+[00:12:02] research and uh anyone here a fan of
+[00:12:04] Carl
+[00:12:05] Yung okay I see a few nods so I'll just
+[00:12:08] do a cursory one minute philosophy 101
+[00:12:11] here so Yung kind of
+[00:12:14] separates identity into two types of
+[00:12:16] identity rational and emotional identity
+[00:12:18] rational is composition of symbols Math
+[00:12:21] logic set theory things like that and
+[00:12:24] it's basically definitions and then you
+[00:12:27] have emotional identity which is
+[00:12:28] effectively emotions the way that you
+[00:12:30] feel so like the example I like to use
+[00:12:33] the word happy it describes an emotion
+[00:12:35] when I say the word happy everyone has a
+[00:12:37] different emotion a different reaction
+[00:12:39] to it but we can use that word to relate
+[00:12:41] the emotion to each other even though we
+[00:12:43] can't ever experience somebody else's
+[00:12:45] full emotion
+[00:12:47] so this whole yin-yang type thing this
+[00:12:51] is an entire Academic School in itself
+[00:12:53] but hopefully that one minute gave a
+[00:12:54] decent justification for it so I thought
+[00:12:58] about this a lot I was looking at Freud
+[00:13:00] and I came up with what I call my own
+[00:13:01] method and this is a draft if anybody
+[00:13:03] has suggestions for it I'm totally open
+[00:13:05] to it and the point here is that labels
+[00:13:08] help to Define relationships so another
+[00:13:11] word that might come to mind is Persona
+[00:13:13] which is very similar so you have the
+[00:13:15] yinyang yungan thing in the middle that
+[00:13:16] would be you and then your relationship
+[00:13:19] with Twitter and all the things that are
+[00:13:20] in circles are basically systems it
+[00:13:22] could be a social system it could be a
+[00:13:23] technical system and the lines between
+[00:13:25] the systems are the relationships and
+[00:13:28] then the name that we we have here it's
+[00:13:30] the label which defines the relationship
+[00:13:31] and the reason that I call it a
+[00:13:33] relationship is because relationships
+[00:13:36] things that come to mind are consent
+[00:13:38] they are agreements you can build trust
+[00:13:40] on relationships and have different
+[00:13:42] types of trust within relationships and
+[00:13:44] so on and there's a lot of different
+[00:13:47] things to this and because we have all
+[00:13:48] these different facets of relationships
+[00:13:50] thus facets of persona it means that we
+[00:13:53] have different kinds of labels so here
+[00:13:55] are a few and this also answers the
+[00:13:56] question of what is a Nim in the General
+[00:13:59] vernacular NY is typically short for
+[00:14:01] pseudonym but it actually means a whole
+[00:14:03] lot more and I think like I said every
+[00:14:04] name is a real name so the top one we
+[00:14:07] have a pseudonym which is a name used to
+[00:14:09] cover or hide a base name and it's
+[00:14:11] really important to note that within a
+[00:14:12] pseudonym you have two names one which
+[00:14:15] is kind of a like a mask is a physical
+[00:14:17] pseudonym for example so you have the
+[00:14:20] the uh the pseudonym and then you have
+[00:14:22] the base name so whatever your legal
+[00:14:24] name or whatever was given to you and
+[00:14:26] then it has to have two names so a po
+[00:14:29] would be a name consisting of multiple
+[00:14:30] words or symbols like Bill Clinton like
+[00:14:33] two words right first name last name a
+[00:14:35] mononym is a word that consists of one
+[00:14:36] word or symbol so Madonna is one Sher is
+[00:14:38] one things like that and then an autonym
+[00:14:42] and this one is a lot of people confuse
+[00:14:45] autonym and actually anonym with
+[00:14:46] pseudonym an autonym is a name it stems
+[00:14:49] from autonomy like self-rule
+[00:14:50] self-regulation an autonym is a name
+[00:14:52] which is bestowed upon oneself or
+[00:14:54] possibly by others but that gets a
+[00:14:56] little confusing so the example I like
+[00:14:58] to use with aut is Pope Francis Pope
+[00:15:01] Francis was elected by the college
+[00:15:02] Cardinals to be the pope he promptly
+[00:15:04] chose the name Francis nobody's going to
+[00:15:06] say that Pope Francis is a fake name
+[00:15:09] which means he has two Bas names and
+[00:15:11] that's something that a lot of people
+[00:15:13] have difficulty understanding so also
+[00:15:16] anonym there's a couple ways you could
+[00:15:18] look at this um one of the easiest
+[00:15:20] example is if you leave a comment on
+[00:15:21] like an internet blog or a web form
+[00:15:23] without logging in it'll often just put
+[00:15:25] you know Anonymous or SL do Anonymous
+[00:15:27] coward things like that so this is just
+[00:15:30] kind of an explication of what the names
+[00:15:32] are so I told you I'd get back to the
+[00:15:34] Federalist Papers right so this gets
+[00:15:37] interesting so for for those who don't
+[00:15:39] know the Federalist Papers were uh and
+[00:15:41] there's also the Anti-Federalist papers
+[00:15:43] The Federalist Papers are
+[00:15:46] the basically letters the the scripts
+[00:15:48] that were written by people who were
+[00:15:49] trying to get the Constitution ratified
+[00:15:51] they were in favor of strong central
+[00:15:52] government but the thing about it is
+[00:15:55] there are three guys Hamilton John J and
+[00:15:57] James Madison who wrote These and they
+[00:15:59] were all signed by the name puus and
+[00:16:01] also the Anti-Federalists use pseudonyms
+[00:16:03] too including Brutus and the question
+[00:16:05] that I have for you had they been forced
+[00:16:08] to drop puus and use their legal names
+[00:16:10] when they were writing these would we
+[00:16:12] have the Constitution today so just
+[00:16:14] something to think
+[00:16:15] about so technology gets interesting so
+[00:16:19] there's two reasons this on the left
+[00:16:20] here there's a driver's license from
+[00:16:22] 1937 on the right it's a more modern
+[00:16:24] driver's
+[00:16:25] license so there's two reasons that that
+[00:16:29] I decided to use this as kind of the seg
+[00:16:32] first it shows how society's
+[00:16:34] relationship with identity has changed
+[00:16:36] over the years you know almost I don't
+[00:16:39] know 1937 that's that's 80 90 years
+[00:16:41] something like that and the second
+[00:16:43] reason is because it shows how
+[00:16:44] technology has influenced our
+[00:16:46] relationship with tech with identity and
+[00:16:50] there's a whole bunch of different
+[00:16:51] things like you could see the photo no
+[00:16:53] photo and all kinds of other things like
+[00:16:54] that but it's just worth thinking about
+[00:16:56] and speaking of technology I do have to
+[00:16:59] recognize that Google did retract their
+[00:17:01] names policy in full this is the
+[00:17:02] announcement they made today we're
+[00:17:04] taking the last step there are no more
+[00:17:05] restrictions on what names you can use
+[00:17:07] and a lot of people rejoiced it was
+[00:17:08] super happy not everyone though my
+[00:17:10] friend Jason Scott on Twitter so let's
+[00:17:12] be clear Google [ __ ] you [ __ ] you [ __ ]
+[00:17:14] you [ __ ]
+[00:17:16] you and then this is actually something
+[00:17:18] I thought was really profound my friend
+[00:17:20] scud who was also deeply involved in Nim
+[00:17:22] Wars she actually wound up losing her
+[00:17:24] job at Google partly over this um she
+[00:17:27] wrote what she thought Google should
+[00:17:29] have said as an apology to basically
+[00:17:32] people whose identities were treated as
+[00:17:34] lesser like there's a whole slew of
+[00:17:37] things but I thought that that kind of
+[00:17:40] showed a really interesting take on it
+[00:17:42] all but Google's not the only one that
+[00:17:44] had the real names policy quora who I
+[00:17:47] got into a fight with them over this but
+[00:17:49] long story short quora is effectively a
+[00:17:51] question answering type website and they
+[00:17:54] recently like in the last couple of
+[00:17:55] years adopted a quote unquote real names
+[00:17:57] policy s in that well Facebook does it
+[00:17:59] and it works for them actually a lot of
+[00:18:01] people are sighting Facebook and I got
+[00:18:03] into an argument and this guy's kind of
+[00:18:04] a [ __ ] douchebag actually um but
+[00:18:08] anyways real names make people
+[00:18:09] accountable keep an anonymous under
+[00:18:12] mitigated control less moderation
+[00:18:14] resultant so the effective argument here
+[00:18:15] is using quote unquote real names makes
+[00:18:18] the quality standard higher makes people
+[00:18:19] more civil well how about that and this
+[00:18:23] article came out a couple months later
+[00:18:26] core is misogyny problem a cautionary
+[00:18:28] tail so the question is if this is what
+[00:18:31] results from the standard that quora is
+[00:18:33] using what does that say about what
+[00:18:35] quora wants so I'll just leave it at
+[00:18:38] thats like seems like they made
+[00:18:42] ay because you know the little ground
+[00:18:44] which is like you know in the form that
+[00:18:46] I moderate in other places is that you
+[00:18:48] have to have a
+[00:18:50] pseudonym uh you know you can't be
+[00:18:52] anonymous you have to pick PUD and keep
+[00:18:53] using it mhm and I don't know how you
+[00:18:56] feel about that but that's that that's
+[00:18:58] that's that's a solution I often see to
+[00:19:00] to the public well then you get a
+[00:19:01] validation question that comes up how
+[00:19:03] how do I prove I'm using a
+[00:19:06] pseudonym it's more M that you know you
+[00:19:08] have to actually you know create an
+[00:19:09] account and keep and and and use that
+[00:19:11] and not you know not be a different
+[00:19:13] person every time okay well that gets
+[00:19:15] into yeah that gets into a couple things
+[00:19:17] that um bring that up in the questions
+[00:19:19] because I want to address that but yeah
+[00:19:20] thank you so um uh but anyways qu is not
+[00:19:24] the only place that's doing this um you
+[00:19:26] guys all familiar with Airbnb
+[00:19:29] oh good okay what what was the problem
+[00:19:32] what's what the quora problem with quora
+[00:19:34] yeah the misogyny l i I didn't follow oh
+[00:19:38] um basically it's an accusation of
+[00:19:40] people uh being mistreated for whatever
+[00:19:43] reasons and the idea was that quora
+[00:19:45] thought that by forcing people to use
+[00:19:47] their legal names that issues like that
+[00:19:50] would go away and it clearly hasn't
+[00:19:52] worked so that's that's kind of what I
+[00:19:53] was getting
+[00:19:55] at so okay everyone here has heard of
+[00:19:57] ABNB BNB it sounds like so they
+[00:20:00] introduced this thing a while ago maybe
+[00:20:02] a couple of years ago which I thought
+[00:20:03] was really interesting so they have
+[00:20:05] offline ID which is you verify your
+[00:20:08] identity by scanning in a driver's
+[00:20:10] license and email it to them although
+[00:20:11] they don't really touch on how they do
+[00:20:13] encryption and data retention and so on
+[00:20:16] they also have what they call online ID
+[00:20:18] which I thought was really interesting
+[00:20:19] you can verify your identity by linking
+[00:20:21] it to Google or was it Facebook or
+[00:20:24] LinkedIn which I guess means that we're
+[00:20:26] supposed to trust Google and Facebook
+[00:20:28] and the interesting if you don't have a
+[00:20:30] profile on either any of those sites
+[00:20:32] they allow you to make a video and
+[00:20:34] upload the video of you saying hi this
+[00:20:37] is me cuz a video is also a good yeah so
+[00:20:40] it's all kinds of confused and um doc
+[00:20:42] Sur who's in the identity Community got
+[00:20:44] hit by this and he wrote a really
+[00:20:46] interesting blog piece basically his
+[00:20:47] reaction to this and well how do we make
+[00:20:50] this better and it's been this constant
+[00:20:53] struggle and even more recently Airbnb
+[00:20:55] ran into a problem this gets into
+[00:20:56] another topic too um
+[00:20:59] they had an agreement with New York so
+[00:21:01] New York has been cracking down on
+[00:21:02] illegal hotels and whatnot I'm guessing
+[00:21:04] some of the lawyers know about this
+[00:21:05] stuff
+[00:21:07] so they suspected that Airbnb was
+[00:21:10] enabling people to illegally rent out
+[00:21:12] their places so the Attorney General of
+[00:21:14] New York subpoena Airbnb to get the
+[00:21:16] identities of the people that were doing
+[00:21:17] this and they had a big back and forth a
+[00:21:19] whole lot of discussion and they they
+[00:21:21] came to an agreement on a data
+[00:21:24] minimization effectively anonymizing it
+[00:21:26] they redacted things like their name
+[00:21:28] their email address and so on there's
+[00:21:29] one thing they didn't anonymize though
+[00:21:31] there's one thing they didn't leave out
+[00:21:33] the IP
+[00:21:34] address so that that says a lot of
+[00:21:37] things maybe the standards are not there
+[00:21:38] maybe the people that were doing this
+[00:21:39] were not technical I'm not sure but it
+[00:21:42] it helps to illustrate one of the
+[00:21:43] problems and there's there's a lot of
+[00:21:44] problems with the this anonymity thing
+[00:21:46] so on the left here we have um Netflix
+[00:21:49] if you guys saw this at all so what
+[00:21:51] happened with the Netflix data set that
+[00:21:52] they released um I guess people's video
+[00:21:56] history and people were able to take
+[00:21:59] this data set and compare it to things
+[00:22:01] like IMDb and the IMDb reviews and
+[00:22:03] ratings and so on and were able to
+[00:22:05] effectively de anonymize the people that
+[00:22:07] were using Netflix and on the right you
+[00:22:09] have the AOL search history this was a
+[00:22:12] fiasco and this came out they anonymized
+[00:22:14] by basically taking people's names off
+[00:22:16] but by looking at the search patterns
+[00:22:17] that people were searching for they were
+[00:22:19] pretty accurately able to De Identify
+[00:22:21] some of the people or de anonymize I
+[00:22:23] should say so the other thing I want to
+[00:22:26] touch on with anonymity by the way cuz
+[00:22:28] this this gets really really important
+[00:22:30] there are a lot of companies that are
+[00:22:31] adopting the stance that if I anonymize
+[00:22:34] the data set I can sell it and I can
+[00:22:36] therefore become a data broker like
+[00:22:39] there are DMVs doing this there's one in
+[00:22:40] Florida that I saw news about
+[00:22:42] recently but the question is well here's
+[00:22:45] an example let's say that I go to the
+[00:22:46] hospital and get surgery or have an
+[00:22:48] operation or something right and the
+[00:22:49] hospital is like well we can make money
+[00:22:51] if we just chop his name off and sell
+[00:22:53] this well that works great if somebody
+[00:22:55] buys that they can't find out who I am
+[00:22:57] unless they ALS get the data set from
+[00:22:59] the Walgreens that happens me next door
+[00:23:01] to the hospital where I went right after
+[00:23:02] I was there and they compare and
+[00:23:04] contrast and there we go no more uh data
+[00:23:07] security
+[00:23:08] so that's pretty much what I got for you
+[00:23:11] I think I've I think I've stayed within
+[00:23:13] my time allocation so with that I'm and
+[00:23:16] by the way for the questions I have Nite
+[00:23:18] stickers and anybody who asks a question
+[00:23:20] gets a
+[00:23:21] sticker so thank
+[00:23:27] you do we have any in room questions to
+[00:23:30] start off yeah so um I completely agree
+[00:23:33] with what you said about how you know
+[00:23:35] people should have the right to be
+[00:23:38] anonymous or use a pseudonym when they
+[00:23:40] want to I'm wondering in the world of
+[00:23:43] medicine could you see a reason why for
+[00:23:46] example a hospital would want to know
+[00:23:49] someone's identity for the purposes of
+[00:23:51] giving them the best medical treatment
+[00:23:53] in in other words identity equals your
+[00:23:56] right history and no knowing your
+[00:23:58] medical history can help so there's two
+[00:24:01] things that come up with this um and
+[00:24:03] that's a really good question first um
+[00:24:06] and this is something I often say I
+[00:24:07] didn't say it here though if you're
+[00:24:09] using a legal name it makes sense like
+[00:24:12] with medical stuff with HIPPA and other
+[00:24:14] things that there are laws regarding how
+[00:24:16] the data is used whereas like some of
+[00:24:18] these startups that are asking for your
+[00:24:19] ID there's no legal protection about
+[00:24:21] that so medicine is a bit different just
+[00:24:23] like financial data because there are
+[00:24:24] laws like regarding it so legal document
+[00:24:28] legal practice there you go the other
+[00:24:30] thing that I think is worth noting is
+[00:24:32] that a patient owns their data right
+[00:24:35] it's that that's one of the tenants of
+[00:24:37] HIPPA is that the patient has to give
+[00:24:39] consent and all that only in the US what
+[00:24:42] oh yeah only well Europe has so much
+[00:24:44] better data protection than we do it's
+[00:24:46] it's not even funny but one of the
+[00:24:49] interesting things is and I think this
+[00:24:51] may be what one of the things you're
+[00:24:52] hinting at can a patient cons like
+[00:24:55] withhold some of the medical history so
+[00:24:57] for example let's say that they had like
+[00:24:59] a sexual history they don't want their
+[00:25:01] doctor to know about and how do we
+[00:25:03] that's something we still don't know
+[00:25:04] that's that's like I said the there
+[00:25:06] aren't full answers to these things yet
+[00:25:08] it just opened for discussion so does
+[00:25:10] that help the question at all this is my
+[00:25:13] area specialty uh being patient privacy
+[00:25:16] rights and uh there are uh what
+[00:25:20] aesthetic said is is uh is the situation
+[00:25:24] first of all what Hippa says is that you
+[00:25:27] have a right to be treated if you are
+[00:25:28] known to the practice so the right to to
+[00:25:33] not be identified is written into Hippa
+[00:25:36] second of all if you do the research or
+[00:25:39] to the extent the research has been done
+[00:25:40] I should say uh enforcing a a real names
+[00:25:44] policy actually causes people to hide
+[00:25:47] information causes more damage than uh
+[00:25:51] the problems that it solves in terms of
+[00:25:55] so those are sort of the two pieces of
+[00:25:57] the puzzle and health
+[00:25:59] okay how do you how do you become known
+[00:26:01] to the practice without having
+[00:26:02] identified yourself at some point you go
+[00:26:05] to the doctor and uh the doctor takes
+[00:26:08] your picture sticks it in the medical
+[00:26:09] record never uh never shares that with
+[00:26:13] anybody if you want to access it online
+[00:26:15] they give you a one-time password which
+[00:26:17] now Associates you with that health
+[00:26:20] record M and everything works including
+[00:26:23] the electronic access If I Could Touch
+[00:26:25] on that by the way the process of
+[00:26:27] identification is really interesting one
+[00:26:29] of the examples that I use is if you go
+[00:26:31] to a bar bouncer asks for your ID the
+[00:26:34] law doesn't state that you must show ID
+[00:26:36] the law states that you have to be of a
+[00:26:37] certain age and the question is why is
+[00:26:39] it that they ask for your ID rather than
+[00:26:41] just asking you the question so
+[00:26:43] identification is a really interesting
+[00:26:45] process a comment I was going to make
+[00:26:48] this wasn't question I was going to ask
+[00:26:50] later um people often use the medical
+[00:26:51] system and bars both as a means of as a
+[00:26:54] means of obtaining you know legal drugs
+[00:26:56] um you know not because prescription
+[00:26:59] drug abuse is a major major concern so
+[00:27:01] it may be one of the concerns they may
+[00:27:02] have people may be saying faking certain
+[00:27:06] symptoms or overemphasizing certain
+[00:27:07] symptoms in the hope of getting the uh
+[00:27:09] the drugs that they want because
+[00:27:11] that's as course that would also explain
+[00:27:13] with alcohol you know kids are coming in
+[00:27:14] the bar who aren't 21 because they want
+[00:27:16] you know yep the
+[00:27:19] Foods um you got a sticker yes thank you
+[00:27:21] okay cool okay I think you got one
+[00:27:23] already but go ahead uh I just want you
+[00:27:25] you didn't raise uh identity brokers a
+[00:27:28] new thing on the scene and since uh you
+[00:27:31] wanted technical questions um please uh
+[00:27:36] do you mean identity Brokers or data
+[00:27:37] Brokers identity Brokers as in F6 the
+[00:27:41] the project and and not in England they
+[00:27:43] have them uh these
+[00:27:46] are so that gets into a word that I have
+[00:27:49] deliberately left out I raised it
+[00:27:50] because of his question and your point
+[00:27:52] about are you 18 yep um that gets into a
+[00:27:56] word I've deliberately left out of this
+[00:27:57] talk which is
+[00:28:00] trust and the question also is is
+[00:28:04] identity something which is granted to
+[00:28:06] you and if so by whom could it be by
+[00:28:08] yourself Could It Be by a government and
+[00:28:09] so on and why should that grantin have
+[00:28:13] any sort of credibility to it so do you
+[00:28:16] mean like Federated Identity or no I
+[00:28:19] mean literally the the the question that
+[00:28:22] that you the point you brought up about
+[00:28:23] the bar only needs to know you're over
+[00:28:25] 18 they don't need to know your identity
+[00:28:27] yep um a lot of the other questions
+[00:28:31] around identity are now a lot of
+[00:28:33] attention is focused on the governance
+[00:28:36] or the trust governance around the
+[00:28:39] technology of identity Brokers we have
+[00:28:41] examples in England we have examples in
+[00:28:43] the US now and I'm sure a few other
+[00:28:46] countries uh at at at a federal level at
+[00:28:50] an official level right so there's a
+[00:28:51] couple things about that um there's
+[00:28:54] what's known as the limited liability
+[00:28:55] Persona that my friend Kia has been
+[00:28:57] working on um basically the idea is this
+[00:29:00] person I need to know some attribute
+[00:29:03] about them without knowing anything else
+[00:29:06] and why should I trust that that entity
+[00:29:10] or that that process or whatnot is valid
+[00:29:12] that's a hard
+[00:29:13] question
+[00:29:15] um that gets into the whole web of trust
+[00:29:18] thing um like why should I trust this
+[00:29:21] Corporation so Facebook why should I
+[00:29:23] trust what I see on Facebook for example
+[00:29:26] and uh I don't have a really good answer
+[00:29:28] answer to that I'm sorry it's a hard
+[00:29:30] question we have a question from the
+[00:29:32] hashtag that I want to intersect in and
+[00:29:34] then we had some on the side of the room
+[00:29:35] I want to get to um so from the hashtag
+[00:29:38] stream we have could you talk a bit more
+[00:29:40] about identifiers versus identity is
+[00:29:42] correlation and conflation of the two a
+[00:29:44] core risk
+[00:29:46] here a risk to
+[00:29:48] what that's my answer to that it depends
+[00:29:51] on the context um and oh by the way
+[00:29:54] something else I I just real I thought
+[00:29:56] about with this whole uh attributes and
+[00:29:58] whatnot I think David sham has a paper
+[00:30:00] on blind um was it David sham wrote a
+[00:30:03] whole lot of cryptography papers on
+[00:30:06] what's it called it's not blind trust
+[00:30:07] it's basically anonymized currency and
+[00:30:10] how to pay for something without being
+[00:30:11] attributed so that might be an angle to
+[00:30:14] take if that makes
+[00:30:16] sense then Saul and then back over here
+[00:30:20] next
+[00:30:23] um this threatens to be a rabbit hole
+[00:30:26] question y I mean why just one
+[00:30:29] identity um I mean my you know
+[00:30:33] surveillance Theory you know says that
+[00:30:36] its effect is social sorting um and I
+[00:30:40] don't want to be sorted or I want to be
+[00:30:43] sorted in different ways in different
+[00:30:45] contexts so why why is there simply an
+[00:30:48] assumption of one
+[00:30:49] identity um you know sort of the the
+[00:30:53] alternate question is that I mean isn't
+[00:30:55] really part of the the meat of this is
+[00:30:57] how Sil Lo all the NIMS are that it's
+[00:31:00] really it doesn't really matter how many
+[00:31:03] Nims there are if it's permeable in
+[00:31:08] between so the two things I can think of
+[00:31:10] immediately sometimes people use
+[00:31:12] different names for really good reasons
+[00:31:15] uh maybe somebody is a sex worker and
+[00:31:17] they don't want to influence their job
+[00:31:18] as a teacher or more less slowed
+[00:31:21] somebody is a political dissident and
+[00:31:23] doesn't have tenor yet or to interject
+[00:31:25] with the mundane example I will fully
+[00:31:27] own to have having two online names that
+[00:31:30] I've used for 15 years well I mean the
+[00:31:34] one that actually matches my wallet is
+[00:31:36] much newer but and I just have that be a
+[00:31:38] I'm a woman and B I'm kind of an
+[00:31:41] academic the end I'm going to be judged
+[00:31:44] so much more harshly for really normal
+[00:31:46] things that are really okay just because
+[00:31:49] of gender and so I maintain separate
+[00:31:52] online identities because you know like
+[00:31:55] my students when I have them never need
+[00:31:57] to know what I look like when I go
+[00:31:58] clubbing the
+[00:32:01] end we had a question back here and then
+[00:32:05] sit for a second it's hot in
+[00:32:06] here sure yeah I mean this kind of gets
+[00:32:09] into what's been asked already but I
+[00:32:10] mean there is you know you mentioned
+[00:32:12] there's a public interest in you know
+[00:32:14] attaching information to an identity and
+[00:32:17] there's also a private interest in you
+[00:32:19] know randomizing that keeping that
+[00:32:21] private so I mean where do you see the
+[00:32:23] balance between those do do you see a
+[00:32:24] balance do you just see you know the
+[00:32:25] private interest completely weighing
+[00:32:27] this sort
+[00:32:28] reputational interest or this public
+[00:32:30] interest in
+[00:32:31] reputation gets into reputation it gets
+[00:32:33] into reputation which actually starts to
+[00:32:35] get into the answer to your question too
+[00:32:38] um and this is where National Security
+[00:32:41] keeps coming up over and over again and
+[00:32:42] I [ __ ] hate that term um I think it's
+[00:32:45] one of the reasons DC is so completely
+[00:32:46] broken right now but not even from a
+[00:32:49] national security perspective and like
+[00:32:51] you know Public Safety just you know
+[00:32:52] public knowledge I mean you're
+[00:32:53] increasing information symmetry
+[00:32:55] increasing the surveillance of accurate
+[00:32:58] information by you know however unfairly
+[00:33:01] maybe binning people into these single
+[00:33:03] sort of silos like you
+[00:33:07] said that's one of the places where it's
+[00:33:10] this is a really complicated question um
+[00:33:13] I think there's a couple things there
+[00:33:14] one of them is the scal in problem
+[00:33:16] because when you scale to much larger
+[00:33:18] Community sizes having some kind of
+[00:33:21] inherent trust is way more difficult and
+[00:33:23] you have to come up with measures like
+[00:33:25] reputation like the credit system to
+[00:33:27] begin to keep track of that because
+[00:33:28] instead of having credit at the local
+[00:33:30] store you have a credit card which has
+[00:33:32] some kind of an algorithm which
+[00:33:34] determines whether you get approved for
+[00:33:35] the loan or
+[00:33:37] not it's hard and I mean this is one of
+[00:33:41] the things I think that identity just
+[00:33:42] doesn't scale very well oh you yes if I
+[00:33:46] could make a comment on that I and I
+[00:33:48] it's uh I I think the the role of law
+[00:33:51] enforcement in government as separate
+[00:33:54] from uh Facebook and uh and other uh
+[00:33:59] sort of
+[00:34:00] non-governmental is being called into
+[00:34:02] question here not not just by you but I
+[00:34:04] think in general uh whether and and part
+[00:34:08] of that is is due to bitcoin and and the
+[00:34:11] blockchain and and we've had the lecture
+[00:34:14] here about uh
+[00:34:16] ethereum uh and what what happens when
+[00:34:19] you sort of take uh the governance
+[00:34:21] models and remove any sort of
+[00:34:23] centralized things and I when when
+[00:34:27] aesthetic talks about entick I I think
+[00:34:29] this is the part that nsti is really
+[00:34:31] struggling with as a public private
+[00:34:34] partnership um what is the role of
+[00:34:37] government uh and it's completely not
+[00:34:39] worked out yeah and to touch on that I
+[00:34:43] think you made a really really important
+[00:34:45] point one of the reasons that this
+[00:34:47] difference is important to recognize
+[00:34:48] between say Facebook and Google versus
+[00:34:50] the government is that I can vote but I
+[00:34:53] can't vote for Facebook and this this
+[00:34:56] notion of self-regulation and whatnot
+[00:34:57] could also be just the social contract
+[00:34:59] with Russo and I'll give you another
+[00:35:01] quick example the question that came up
+[00:35:03] before about uh Dr shopping for uh
+[00:35:07] Controlled Substances uh one of the
+[00:35:09] things that again is happening now and
+[00:35:11] hasn't thank God happened is that people
+[00:35:13] are trying to take the law enforcement
+[00:35:16] database that was used to go after the
+[00:35:18] doctor the the doctors that were
+[00:35:20] overriding prescriptions and the
+[00:35:22] patients that were Doctor shopping and
+[00:35:24] combine them make them accessible as
+[00:35:26] part of the electronic health record
+[00:35:28] which is a non-law
+[00:35:30] enforcement Thing by by Hipp a
+[00:35:33] definition or anything else and so we
+[00:35:35] are seeing the breakdown of the coercive
+[00:35:38] aspects of identity and the sort of
+[00:35:40] functional aspects if you would um in in
+[00:35:44] many cases and one of the challenges
+[00:35:47] that we run into especially with the
+[00:35:48] identity and data Brokers is I guess
+[00:35:51] memory and data retention issues and the
+[00:35:54] question is so so to give a fairly
+[00:35:56] Monday an example I send a government ID
+[00:35:57] to Google to verify my account what
+[00:36:00] happens to that after I do that and is
+[00:36:02] it verified if so what do they store for
+[00:36:04] how long this is this is why with the
+[00:36:06] legal identity I'm okay given it to say
+[00:36:09] a medical provider because there are
+[00:36:10] strict laws about that stuff at least
+[00:36:12] like with hippo you have to have
+[00:36:14] encryption at rest and encrypt
+[00:36:15] encryption and Transit and so
+[00:36:18] on
+[00:36:20] yes oh me yes I was thinking um oh this
+[00:36:23] is s Antiquated Backwater technology
+[00:36:25] world but in Second Life there's several
+[00:36:27] leverage to it because to uh right you
+[00:36:30] get um just to be on it lynen lab the
+[00:36:32] company that operates the grid needs
+[00:36:34] needs to know your real life identity
+[00:36:36] and um then to if you want to transfer
+[00:36:38] money to buy game currency or access the
+[00:36:40] adult areas there's even more
+[00:36:42] verification but the uh and you can have
+[00:36:45] multiple avatars who can have a you know
+[00:36:47] their basic Avatar name what they call
+[00:36:49] display name which is a nickname you can
+[00:36:51] change but also the uh revealing the
+[00:36:54] real identity of uh without of another
+[00:36:57] Avatar Sal is one of is you know is
+[00:36:59] considered you know as one of the things
+[00:37:00] that's very much against the rules of
+[00:37:02] the game and that um sometimes leads to
+[00:37:04] some interesting consequences especially
+[00:37:06] since sometimes the Avatar the person
+[00:37:09] behind the Avatar will reveal his or her
+[00:37:11] identity in some contexts but doesn't
+[00:37:12] necessarily want to identifi to others
+[00:37:14] or something B one of the interesting
+[00:37:16] things I want to point out also the word
+[00:37:18] real is up for a lot of debate one of
+[00:37:20] the interpretations I have of it is the
+[00:37:22] name you're known by in real life and
+[00:37:24] when you use it that way well the
+[00:37:26] purpose of having the financial things
+[00:37:28] tied to a legal name is more or a real
+[00:37:30] name is so that somebody who is real
+[00:37:32] entity can be held accountable and
+[00:37:34] within the names you basically there's
+[00:37:36] this whole field to study attribution in
+[00:37:38] which you have accountability and then
+[00:37:40] reputation which gets into some of the
+[00:37:41] stuff that gentleman was talking about
+[00:37:43] number cases where somebody's you know
+[00:37:46] fake Second Life name becomes a real
+[00:37:48] name like for example there a person
+[00:37:49] who's I think been affiliated with
+[00:37:50] Harvard name John ler who is now better
+[00:37:53] known as Pathfinder because that was
+[00:37:54] Pathfinder Lyndon was his identity he
+[00:37:56] was working for Lindon
+[00:37:59] question do the Europeans have a
+[00:38:02] different kind of problem we've talked
+[00:38:03] today that given they they have stronger
+[00:38:05] data protection laws but I haven't
+[00:38:07] looked at them for a while but I imagine
+[00:38:09] they're written about the person the
+[00:38:11] individual do the identifiable person
+[00:38:14] and if there's an identity which is a
+[00:38:16] pseudonym it actually may not even be a
+[00:38:18] person it may be a collective suit right
+[00:38:21] uh one of the examples I have is
+[00:38:22] Nicholas faki the mathematician group so
+[00:38:24] yeah yeah so if it's not a person they
+[00:38:26] get in trouble
+[00:38:28] not knowing how data protection laws
+[00:38:30] apply to that I'm not an expert on
+[00:38:33] European laws but what I will say is
+[00:38:35] this so well there's two things first
+[00:38:37] off Americans there is no national ID in
+[00:38:39] the United States and there's a number
+[00:38:41] of reasons for that one of which is
+[00:38:43] Americans are inherently paranoid of
+[00:38:44] authority I mean the country was founded
+[00:38:47] as an act of rebellion against the
+[00:38:49] British the other thing is that America
+[00:38:52] is a much larger country than say
+[00:38:53] Germany and Sweden and other countries
+[00:38:56] which do have a national ID in any ID
+[00:38:58] and I think it's a scaling problem there
+[00:38:59] where when you have a smaller country
+[00:39:02] having some kind of national ID is much
+[00:39:03] more
+[00:39:04] manageable does that start to answer any
+[00:39:07] of that do
+[00:39:10] seem I just it's just like know if
+[00:39:13] you've got data
+[00:39:14] on connected to identifiers and some of
+[00:39:17] those are clearly identifiers for a real
+[00:39:19] person it's clear how laws about
+[00:39:22] personal privacy apply right if it's an
+[00:39:25] identifier is linked to not as far as
+[00:39:27] you can tell not a person so like prob
+[00:39:31] is where is it does it still fall under
+[00:39:33] the under the law if it's not personal
+[00:39:36] data
+[00:39:37] it's fictional data um I don't know
+[00:39:41] that's an interesting legal question you
+[00:39:43] I'm not a lawyer so I don't know what
+[00:39:45] the implications of it yes it seemed to
+[00:39:47] me that the purpose the purpose as
+[00:39:50] opposed to what actually did of real
+[00:39:52] name policy in Facebook uh G+ qu
+[00:39:56] whatever else was to try to ensure some
+[00:39:59] sort of
+[00:40:01] accountability
+[00:40:03] um from the people who were
+[00:40:05] participating in it so basically
+[00:40:10] and that if you don't do that you end up
+[00:40:12] with something that looks like for Chan
+[00:40:13] looks like the Boston Herald comment
+[00:40:15] section uh or quora I haven't used qu
+[00:40:19] actually so I don't I don't but um
+[00:40:23] question is you know is that a is that a
+[00:40:24] goal you can that that's better achieved
+[00:40:26] in some other way way I mean the form
+[00:40:28] that I help run we have a required
+[00:40:29] pseudonym policy I mean your pudm can be
+[00:40:31] your real name or can be a pseudonym but
+[00:40:34] you have to be registered you have to
+[00:40:35] have some consistent presence and not be
+[00:40:38] you know somebody else every time you
+[00:40:40] you log in well that gets into
+[00:40:42] consistency we're using the same name
+[00:40:44] over time and and names can change maybe
+[00:40:47] you are using a PUD and eventually it
+[00:40:48] becomes a base name for yourself and um
+[00:40:52] I don't really buy that argument because
+[00:40:54] for example a lot of the issues that we
+[00:40:56] saw um I can't remember her name but
+[00:40:57] there was a girl a few years ago who
+[00:41:00] committed suicide over being bullied on
+[00:41:02] Facebook which has a names policy and
+[00:41:04] the way that I put what's that quite a
+[00:41:06] few of them amand is
+[00:41:08] probably but there have been several and
+[00:41:11] the way that I put it two things first
+[00:41:13] off we had bullies before we had cyber
+[00:41:15] bullies and the second is that
+[00:41:18] technology doesn't replace Humanity it
+[00:41:20] magnifies it so a lot of the issues that
+[00:41:23] we're having right now forcing somebody
+[00:41:25] to use a certain kind of name doesn't
+[00:41:26] really do much except force them to use
+[00:41:29] that name now they might be held
+[00:41:30] accountable to a different standard by
+[00:41:32] which I mean if you're using you're so
+[00:41:35] if you're using a legal name that
+[00:41:36] somebody can like do a Google search and
+[00:41:38] find you by then you may change things
+[00:41:41] that you do and say and this actually
+[00:41:42] turns into an act of
+[00:41:44] censorship on the other hand whether
+[00:41:46] it's held within that community and the
+[00:41:48] attribution isn't there as much it's
+[00:41:50] it's kind of
+[00:41:51] questionable so I I would I would argue
+[00:41:54] that I haven't seen any real evidence
+[00:41:56] that it it works that way I would
+[00:41:59] certain I would certainly say I've seen
+[00:42:00] evidence that if you allow you know
+[00:42:02] totally Anonymous comments you get a
+[00:42:05] mess and if you require pseudonyms you
+[00:42:07] get something that people actually want
+[00:42:08] to participate in right but I mean I see
+[00:42:12] a lot of people being dicks on Facebook
+[00:42:14] too so oh by vicariously I don't have a
+[00:42:17] Facebook account but yeah can I ask
+[00:42:19] question do you have real human
+[00:42:21] moderators and do you have an active
+[00:42:24] moderation as part of that Community is
+[00:42:26] that just to me yeah yeah oh there are
+[00:42:28] four you know the community I'm talking
+[00:42:30] about we have four moderators and they
+[00:42:32] you know they do not pre-approve things
+[00:42:34] that come in they may occasionally you
+[00:42:36] know ask somebody to remove something or
+[00:42:38] take something down that's very rare
+[00:42:39] it's basic you know it's very light
+[00:42:41] moderation CU well from what from like
+[00:42:44] the experience that I've had with
+[00:42:46] watching how boing boing's comment
+[00:42:48] threads I I'm the science editor at
+[00:42:49] boing boing and um Bo Bo's comments have
+[00:42:53] always had a pretty good Community um at
+[00:42:56] least as far as i' as long as I've been
+[00:42:58] around with them um and they've gone
+[00:43:02] back and forth through different times
+[00:43:04] when you've had to have some kind of
+[00:43:06] name whether it's your real name or
+[00:43:07] pseudonym or whatever attached to it and
+[00:43:10] when you can make Anonymous comments
+[00:43:13] and I don't think it was the name that
+[00:43:16] made as much of a difference to us
+[00:43:18] having a good Community as much as it
+[00:43:21] was the moderation and the fact that the
+[00:43:24] moderation had instilled Community norms
+[00:43:27] so that when you did have somebody come
+[00:43:28] in and act like a dick it wasn't just
+[00:43:31] the moderator who was enforcing it it
+[00:43:32] was the rest of the community coming in
+[00:43:34] enforcing it and I I I don't think you
+[00:43:35] need necessarily names for that I think
+[00:43:38] you need real human people doing
+[00:43:39] moderation like the reason the Boston
+[00:43:41] Globe comments look like they do is
+[00:43:42] because most newspapers try to like lay
+[00:43:44] out and just do it with Bots and you
+[00:43:46] can't moderate a community with Bots but
+[00:43:49] there's a border between moderation and
+[00:43:51] censorship I want to touch on that a
+[00:43:54] heavier Touch of moderation I think than
+[00:43:56] we like to have the trade-off I think is
+[00:43:58] that we we basically had to say no no no
+[00:44:02] an no total anonymity because then you
+[00:44:04] get sock [ __ ] you get you get trolls you
+[00:44:06] get uh spam right so I mean think it's I
+[00:44:08] think it's different ways of doing it
+[00:44:09] but like different kinds of trade-offs
+[00:44:11] you can have a little bit heavier hand
+[00:44:12] but whatever people want to call
+[00:44:14] themselves yeah you guys all look so
+[00:44:16] deflated I'm sorry to bring you
+[00:44:19] pessimism by the one thing I want to
+[00:44:21] touch on Carnegie Millan did a study on
+[00:44:24] um God I think it was Korea cuz Korea
+[00:44:27] had a a forum for political discussion I
+[00:44:30] I can't remember like this is a few
+[00:44:32] years old knowledge Carnegie melon did a
+[00:44:35] study on it and they found Bas
+[00:44:37] basically I think it was South Korea
+[00:44:40] forced legal names on their web form
+[00:44:42] they which they there are a number of
+[00:44:44] legal reasons they were able to do that
+[00:44:46] for and I think they found like a 0.5%
+[00:44:49] change in the way that people operated
+[00:44:51] and they determine equality by a list of
+[00:44:53] curse words and then what they called
+[00:44:54] anti-normative
+[00:44:56] Behavior
+[00:44:57] some form it was it was oh God I can't
+[00:45:00] remember it was a um they passed a law
+[00:45:04] where if your site had over
+[00:45:06] 100,000 um registered music commenters
+[00:45:10] then they had to register with a real
+[00:45:11] name and what actually and then there
+[00:45:14] ended up being a massive data breach
+[00:45:17] that resulted in them uh reversing
+[00:45:20] legislation oh it's because of a data
+[00:45:22] breach I didn't know that yeah like
+[00:45:23] maybe two years later around for a
+[00:45:27] little while and then it okay I thought
+[00:45:30] they had reverted it because of the they
+[00:45:32] found it didn't have a change I'll have
+[00:45:33] to look into the data reach
+[00:45:35] then yes you mentioned uh the medical
+[00:45:39] system and the financial system and I I
+[00:45:42] was puzzled thinking that right now
+[00:45:44] countries are are fighting against
+[00:45:47] anonymity in in banking systems against
+[00:45:49] countries that that allow numbered
+[00:45:52] accounts and and we have the same
+[00:45:54] problem online as well uh poker stars
+[00:45:56] were was forbidden to operate in the
+[00:45:58] United States because people were moving
+[00:46:00] fortunes around without being
+[00:46:03] accountable to it somehow and and I
+[00:46:06] would like to ask you considering that
+[00:46:09] people have different reasons for for
+[00:46:11] having a NY MH how would you frame
+[00:46:15] regulations or would you frame
+[00:46:17] regulations uh limiting uh the rights of
+[00:46:20] people to use names for for different
+[00:46:22] reasons I me how would you frame that if
+[00:46:24] you would frame them
+[00:46:27] this is where I have to say that I'm not
+[00:46:28] a lawyer and policy is hard for me
+[00:46:32] um it it's It's Tricky I would say like
+[00:46:35] within medicine or something in
+[00:46:38] which you do something which could
+[00:46:40] either adversely affect you or somebody
+[00:46:42] else then it gets really tricky the the
+[00:46:44] question is is there appropriate
+[00:46:45] accountability and does that
+[00:46:47] accountability depend on the name that
+[00:46:48] you're
+[00:46:49] using
+[00:46:53] yes and then
+[00:46:55] Ben
+[00:46:57] um so well I guess just in connection
+[00:47:00] with that I had an experience recently
+[00:47:03] that made me think about this I was
+[00:47:05] going to visit an Iranian journalist
+[00:47:07] colie who um who lives in Prague and I
+[00:47:11] realized on my way to his house we'd
+[00:47:13] only ever known each other online and
+[00:47:15] that I realized I didn't know his his
+[00:47:18] what name I would find on the buzzer
+[00:47:20] like I knew him as three different names
+[00:47:23] and so and I was like gosh this is
+[00:47:25] interesting and so I got there and it it
+[00:47:28] was like it turned out just to be the
+[00:47:30] initials and that was kind of enough I
+[00:47:31] was like I'm pretty sure that's him it
+[00:47:33] was um but it was kind of an interesting
+[00:47:35] moment because I realized that I was he
+[00:47:37] had sort of invited me into this other
+[00:47:41] sphere of identity that I hadn't been in
+[00:47:44] before but he had welcomed me so it was
+[00:47:45] like okay but then I guess it made me
+[00:47:48] think about like what is what are the
+[00:47:49] needs for linking different identities
+[00:47:53] and where like when I sort of cross that
+[00:47:54] line between just knowing him
+[00:47:57] in the internet and actually getting off
+[00:47:59] this train and like walking to his house
+[00:48:01] what was what was sort of going on and
+[00:48:02] and when it comes down to legal issues
+[00:48:05] like or or if you're trying to you know
+[00:48:08] sort of gain trust in a person you might
+[00:48:10] want to look at what they've written
+[00:48:11] online but if you can't connect that to
+[00:48:13] the other identity that you're you know
+[00:48:16] what I'm saying I don't know I'm just
+[00:48:17] I'm curious what you think about a [ __ ]
+[00:48:19] those like
+[00:48:21] hard yeah um that gets tricky um there's
+[00:48:25] the consent issue that comes into play
+[00:48:30] and
+[00:48:33] I God that's a hard question it's like
+[00:48:35] I've thought of all this stuff but I
+[00:48:36] don't have any good answers
+[00:48:39] yet so then and then we have one can you
+[00:48:42] talk a little bit about the like danger
+[00:48:44] of a false sense of security like I feel
+[00:48:46] like online given the levels of
+[00:48:48] surveillance it's pretty difficult to
+[00:48:50] keep identities separate and offline
+[00:48:53] increasing the cameras and Vis
+[00:48:54] recognition so like I I don't have
+[00:48:56] confidence in my myself to keep things
+[00:48:57] separate and I can see myself getting
+[00:48:58] into a lot of trouble right trying to
+[00:49:00] you know
+[00:49:02] so so man that that one gets tricky
+[00:49:05] because like the difference between say
+[00:49:06] a surveillance camera and people's
+[00:49:07] eyeballs is among other things there's
+[00:49:09] memory and there's also
+[00:49:11] accessibility
+[00:49:13] um if you have a street that has a whole
+[00:49:16] bunch of cameras around the question
+[00:49:18] it's basically a matter of disclosure
+[00:49:19] and this is one of the issues that
+[00:49:20] technology has brought to us is that
+[00:49:22] we're dealing with issues we've never
+[00:49:23] really had before uh traditionally
+[00:49:26] somebody does something and they might
+[00:49:28] forget about it or it just doesn't
+[00:49:29] nobody cares but now that it's captured
+[00:49:31] in real time oops I just
+[00:49:38] Dro T
+[00:49:41] okay been reading about how the CIA is
+[00:49:43] very worried they can't create fake
+[00:49:45] identities anymore for their agents
+[00:49:47] right right right and they hate apple
+[00:49:48] right now
+[00:49:49] too I mean one of the question that
+[00:49:51] falls into and this so that gets into
+[00:49:54] the Privacy thing where in privacy is
+[00:49:57] there's no such thing as just privacy
+[00:49:59] you have to have something to be private
+[00:50:00] to or from another entity therefore it's
+[00:50:02] a sum of relationships and there's then
+[00:50:05] the question about privacy and security
+[00:50:07] and what's appropriate security and what
+[00:50:09] are appropriate levels of privacy to
+[00:50:10] have so just like the person who decides
+[00:50:13] they don't want to disclose their sexual
+[00:50:14] history to their doctor and then they
+[00:50:15] get
+[00:50:18] misdiagnosed It's Tricky there's a lot
+[00:50:19] of Ripple effects that come with it
+[00:50:23] so there there's many different answers
+[00:50:26] to that I don't know which one I agree
+[00:50:28] with if any there's the libertarian one
+[00:50:29] that says [ __ ] off or I'm going to shoot
+[00:50:31] you in the head there is the one that
+[00:50:33] says I'm going to I'll let you in maybe
+[00:50:35] I'll let you in if you have a warrant
+[00:50:36] and so on I think a lot of that is up to
+[00:50:38] the individual or the community
+[00:50:40] agreements that they have
+[00:50:45] made part of my question I kind of feel
+[00:50:48] like though the internet comes in with a
+[00:50:49] ve of novelty I feel as some of these
+[00:50:51] issues we're running through on the
+[00:50:52] internet are something that we can kind
+[00:50:53] of get Clues to solving with respect to
+[00:50:55] reality in in real life for instance um
+[00:50:58] you spoke about how names are associated
+[00:50:59] with identities you talked about how um
+[00:51:01] in real life your name com SP with a lot
+[00:51:03] of things attached to it such as your
+[00:51:05] maybe your age your your parents where
+[00:51:06] you came from so on and so forth but
+[00:51:08] even in real life you're able to hide
+[00:51:09] that you're able to go into a different
+[00:51:10] atmosphere different context and hide
+[00:51:12] certain parts of yourself and only
+[00:51:13] reveal that part of yourself when you
+[00:51:14] want to however the law seems to have a
+[00:51:16] way of dealing with that the parts of
+[00:51:17] yourself that needs to be revealed in a
+[00:51:18] certain context depend on the purpose of
+[00:51:20] that context so if you're trying to get
+[00:51:21] into a contract you might have to reveal
+[00:51:22] certain information so both parties can
+[00:51:24] know you can have equal baring and I was
+[00:51:26] thinking in um in in cyberspace then
+[00:51:28] talk adding on that linkability point
+[00:51:30] Could you um could you uh regulate
+[00:51:32] synonyms with respect to the purpose of
+[00:51:34] the for so if you have a for in which
+[00:51:36] people should be trading out don't money
+[00:51:37] then you want maybe you want to have
+[00:51:39] more more more accountability as opposed
+[00:51:41] to a form in which you're just talking
+[00:51:42] about intellectual ideas we already do
+[00:51:44] that like in the courts you have people
+[00:51:46] as a John do plff and so on so
+[00:51:49] absolutely and so then um that that kind
+[00:51:51] of um touches on to her Point as though
+[00:51:53] um how reasonable it is for a person to
+[00:51:55] respect someone to their real identity
+[00:51:57] on the web to depend on what form
+[00:51:59] they're in and maybe that do you think
+[00:52:01] that will be a way of addressing the
+[00:52:02] issue with
+[00:52:04] synonyms it a lot of that boils down to
+[00:52:07] trust and the question oh here's here's
+[00:52:08] an example I've given you got a group of
+[00:52:10] friends and you introduce somebody new
+[00:52:11] into the group The trust that your
+[00:52:13] friends have with that person is
+[00:52:14] effectively based on your relationship
+[00:52:15] with them and over time they develop
+[00:52:17] their own I don't believe that trust is
+[00:52:19] something that can like translate from
+[00:52:20] one group to another unless you have a
+[00:52:23] bridge like that does that help to
+[00:52:25] answer at all okay it's it's hard I
+[00:52:28] mean to say hi I'm new in this system
+[00:52:31] unless there people there who already
+[00:52:32] know who you are in whatever form so
+[00:52:35] like Lo this new Social Network ins site
+[00:52:37] thing A lot of people are moving to Lo
+[00:52:38] from Twitter and the reason that I
+[00:52:40] basically know who they are is because a
+[00:52:42] lot of them are using the same name or
+[00:52:44] maybe the things that they're reporting
+[00:52:45] on are similar so it's about basically
+[00:52:47] pattern recognition and the question in
+[00:52:49] that case who who Bears liability if
+[00:52:51] that trust again the next person breaks
+[00:52:53] or something happens in that in that mix
+[00:52:54] who who do the group I mean you bring
+[00:52:59] somebody like okay I go to a party I
+[00:53:01] bring my friend and my friend gets drunk
+[00:53:03] and pukes on the couch well he's not
+[00:53:04] coming back right but that reflects
+[00:53:06] badly on me not on him whereas if he's
+[00:53:09] been in the group for a while it
+[00:53:10] reflects on
+[00:53:11] him so relationships are
+[00:53:15] hard yes um should there be some sort of
+[00:53:18] limit to the number of I you know
+[00:53:20] identities people can have I mean is it
+[00:53:22] sort of like a differ is there do you
+[00:53:23] see any sort of difference between
+[00:53:24] somebody who's like well okay I have my
+[00:53:26] of like I have my sort of legal name
+[00:53:28] identity I have my sort of identity on
+[00:53:30] one form versus somebody who's like well
+[00:53:32] I want to have like 10 different IDs on
+[00:53:35] Google Plus is that different than
+[00:53:36] someone who says I want to have two or
+[00:53:37] one or you know so there's two things to
+[00:53:39] that one of them is that we're kind of
+[00:53:41] limited as humans I gu all familiar with
+[00:53:42] dunbar's number for example yeah okay
+[00:53:45] half yes half no uh what tell us uh I'll
+[00:53:50] summarize it a sociologist I think uh
+[00:53:52] Dunbar did a study found studying
+[00:53:56] primary it's found that basically human
+[00:53:58] beings can have a social network of
+[00:54:00] around 150 it's that's based on an
+[00:54:02] algorithm it's not entirely accurate but
+[00:54:04] so we're actually limited in our
+[00:54:06] capacity to have relationships to begin
+[00:54:08] with so the more quot unquit identities
+[00:54:10] you have you're also limited by time so
+[00:54:12] the more relationships you have the
+[00:54:14] harder it is to manage all of them and
+[00:54:15] the shallower each of them becomes so
+[00:54:18] it's
+[00:54:19] hard of a danger somebody can have
+[00:54:21] unlimited identities they'll have their
+[00:54:23] sort of their troll identity and their
+[00:54:25] sort of more you know I don't know I
+[00:54:27] just think there are do you think
+[00:54:29] there's use cases for lot I don't know
+[00:54:30] if i' call that a danger it's a
+[00:54:31] possibility but depends what you're
+[00:54:36] into yes um sort of here's sort of the
+[00:54:39] counter example to this and it's it's a
+[00:54:41] really hard case it's sort of flipping
+[00:54:43] the Iranian journalist question around I
+[00:54:46] mean barttin Gilman who got one of the
+[00:54:48] people who got leaks from Edward Snowden
+[00:54:51] talks about the problem he's he had
+[00:54:54] going to Russia to interview
+[00:54:57] um and you know part of that was FAL
+[00:54:59] surveillance but part of it was was
+[00:55:02] effectively a problem of how do you drop
+[00:55:04] your electronic
+[00:55:05] identity sufficiently so that you can
+[00:55:08] acquire the audio tapes um and then
+[00:55:12] transport them back you know to the
+[00:55:15] United States so that you can listen to
+[00:55:17] them you know without them you know
+[00:55:19] getting intercepted um and that's sort
+[00:55:22] of an unsolved yeah problem I mean if he
+[00:55:25] could solve it with you know a secure
+[00:55:27] 11th identity and he already has 10
+[00:55:30] would you stop that so if I could jump
+[00:55:32] off of that there's two terms that come
+[00:55:34] to mind here one is data minimization
+[00:55:35] and the other is data leakage um anybody
+[00:55:38] who's tried to use like encryption has
+[00:55:40] run into problems like this so as a
+[00:55:42] technical example let's say that I want
+[00:55:43] to send somebody an encrypted pgp email
+[00:55:46] well first I have to contact the key
+[00:55:48] server and get their key so suddenly the
+[00:55:50] key server has a log that I've accessed
+[00:55:52] it so there's data Lage right there
+[00:55:55] um and It's Tricky so contrary to
+[00:55:58] popular I don't think there's anything
+[00:56:00] as full anonymity there's always going
+[00:56:02] to be observability and linkability to
+[00:56:04] some extent and I mean that's a
+[00:56:06] philosophical question but it's really
+[00:56:08] hard and so for example if I basically
+[00:56:11] strip naked and have no electronics you
+[00:56:12] still have a heat
+[00:56:14] signature and I mean you get things like
+[00:56:16] this when you're trying to do security
+[00:56:17] you have like the vanc freak in and so
+[00:56:19] on where you can read basically you can
+[00:56:22] capture the the electrons going into the
+[00:56:25] what's that
+[00:56:27] oh I just realized I don't have to take
+[00:56:29] this question from hashtag because I
+[00:56:30] have the question in the room oh
+[00:56:32] okay like van freak and and the the
+[00:56:35] concept being that you can reinstantiate
+[00:56:37] what shows up on somebody's computer
+[00:56:38] screen without like being in the room
+[00:56:40] with them and so on uh there's actually
+[00:56:43] a recent discussion about being able to
+[00:56:44] infer somebody's computer screen by
+[00:56:46] scanning the data that's on their
+[00:56:47] eyeballs so there there's I don't think
+[00:56:50] there's a proof of concept on that yet
+[00:56:51] but it's an interesting idea but in that
+[00:56:53] case that's data leakage right there
+[00:56:55] right and I mean b was able to do it so
+[00:56:57] it's possible but it was hard it depends
+[00:57:03] on it depends on who it is that's trying
+[00:57:06] to get like you're leaking data right
+[00:57:08] well can the person read it like if I
+[00:57:10] write a book it's useless unless people
+[00:57:12] can read it likewise if I leak data
+[00:57:14] unless the person who sees the data
+[00:57:16] knows how to interpret it then it's
+[00:57:18] useless I mean this is all about Cod
+[00:57:20] breaking and so on
+[00:57:23] Aon this isn't exactly question but um
+[00:57:25] it seems like we've been talking a lot
+[00:57:27] about uh how to enable privacy and
+[00:57:29] enable individuals to choose
+[00:57:31] non-standard names or names that we
+[00:57:33] don't usually recognizes names um but I
+[00:57:35] just kind of wanted to bring up the fact
+[00:57:38] that Facebook's name policy and all
+[00:57:39] these other policies also really impact
+[00:57:41] people who's like offline names don't
+[00:57:42] match their legal identity like
+[00:57:44] trans um I don't know if you have
+[00:57:46] something to add on that felt like it
+[00:57:49] was or you know people whose names don't
+[00:57:51] match their real names don't match their
+[00:57:54] legal names like the the Facebook case
+[00:57:55] that's going on now yeah um that's a
+[00:57:58] [ __ ] travesty uh for those who don't
+[00:58:00] know that there's a group in San
+[00:58:01] Francisco called The Sisters of
+[00:58:02] Perpetual Indulgence who um they're
+[00:58:06] fabulous people they're drag queens and
+[00:58:08] they've been around for many decades and
+[00:58:10] they they were one of the first groups
+[00:58:11] for example to do HIV awareness and
+[00:58:13] fundraising and so on they do a lot of
+[00:58:15] really good things and then Facebook
+[00:58:16] decided to suspend a whole bunch of them
+[00:58:18] at once uh for because they weren't
+[00:58:20] using their legal names they were using
+[00:58:22] names like sister Roma
+[00:58:24] um so
+[00:58:27] the
+[00:58:27] araus everybody want to find out about L
+[00:58:31] yes this is why that happened yeah and
+[00:58:33] the thing is there there's a question as
+[00:58:35] to why it was that Facebook seemed to
+[00:58:36] Target the uh transgendered and like uh
+[00:58:40] drag queens but yeah yeah also they then
+[00:58:43] got really angry about it online and
+[00:58:45] Facebook was like okay we'll work with
+[00:58:46] you and met with Facebook was like we'll
+[00:58:48] give you two weeks to use your real
+[00:58:50] names we'll reate your account so can
+[00:58:51] have two weeks to change to your real
+[00:58:53] names and then we'll be in you all again
+[00:58:58] so situation yeah I think some people
+[00:59:01] are calling it sister gate it's it's
+[00:59:03] it's I think they so they yeah they had
+[00:59:06] a meeting with Facebook which it was
+[00:59:07] inconclusive because the people from
+[00:59:09] Facebook that showed up to the meeting
+[00:59:10] were from their customer experience team
+[00:59:13] or something like that and not any
+[00:59:15] actual legal people or policy people so
+[00:59:17] I think they're having another it might
+[00:59:19] be today or tomorrow actually so that's
+[00:59:21] one of the ongoing
+[00:59:23] cases yes um so I guess was curious as a
+[00:59:27] kind of novice to this topic what
+[00:59:29] explains from your perspective or
+[00:59:31] anybody else in the room's perspective
+[00:59:32] why Facebook or other companies that
+[00:59:34] have this policy
+[00:59:37] persist okay so every I have a couple of
+[00:59:40] answers to this every answer that I've
+[00:59:42] heard from them is [ __ ] the quality
+[00:59:44] thing I don't think works like the KRON
+[00:59:46] melon study and the Korea thing um the
+[00:59:49] answer that I think it is either a naive
+[00:59:51] sense that it somehow improves quote
+[00:59:53] unquote quality and creates a better
+[00:59:55] product what I actually think it is is
+[00:59:57] for data Brokers because the thing is if
+[01:00:00] say xerion goes to Axiom like the data
+[01:00:02] Brokers and then they contact Facebook
+[01:00:04] and they say hey I have this person's
+[01:00:05] name and I have XY and I have their name
+[01:00:08] and XY about them can you give me Z
+[01:00:10] Facebook can use that to basically match
+[01:00:12] up and then sell the data without
+[01:00:13] actually just wholesale selling the data
+[01:00:15] so I mean I'll add to that I mean
+[01:00:17] there's a I
+[01:00:19] mean one there's a Simplicity I mean
+[01:00:21] it's just it make as a systems know
+[01:00:26] administrator in the larger sense you
+[01:00:28] know it's much simpler to think about if
+[01:00:30] you're you know one identity one name
+[01:00:33] the other thing in Facebook's case is
+[01:00:35] that I think they they really want to
+[01:00:37] find ways of being an extension of
+[01:00:40] government um you know organ donation
+[01:00:43] and linkages to the DMV to get your you
+[01:00:46] know organ donation status set through
+[01:00:49] Facebook and reflected on your driver's
+[01:00:51] license they talk about being able to do
+[01:00:54] the DMV stuff better than the DMV um and
+[01:00:58] there are other sorts of things which
+[01:01:00] you know if they're using the same name
+[01:01:04] you know as the legal name facilitates
+[01:01:07] that sort of um interdigitation with
+[01:01:10] your life much simpler than that they
+[01:01:12] just sell to the masses and if you want
+[01:01:13] to find your kindergarten classmate you
+[01:01:15] look for their name you don't try to
+[01:01:17] track down what they might be called
+[01:01:18] yeah but that's not the value so much
+[01:01:21] and it's not the governmental thing um
+[01:01:24] they're in the business of selling data
+[01:01:27] about individuals so to the extent that
+[01:01:31] you use your Facebook identity as a
+[01:01:34] credential to log into other things and
+[01:01:38] those other things insist on having a
+[01:01:40] traceable cment issued name for whatever
+[01:01:44] you know kyc know your customer tim-
+[01:01:47] money laundering or other policy
+[01:01:49] purposes you know that represents
+[01:01:51] increased value for the information that
+[01:01:54] Facebook can offer to it's customers so
+[01:01:58] you go Nathan and Sarah and then I'm
+[01:01:59] gonna hijack last question and three
+[01:02:01] more
+[01:02:03] spawn yeah so I'm curious about your
+[01:02:07] reaction
+[01:02:09] to uh a proposal that would distinguish
+[01:02:14] between all of these kind of data
+[01:02:16] selling privacy questions from the using
+[01:02:20] names in Social context what would your
+[01:02:22] reaction to be to something that
+[01:02:25] required you to register your Like
+[01:02:27] official government ID or your bank
+[01:02:29] account with Facebook or Kora so that
+[01:02:33] they could like give your information to
+[01:02:35] the police and sell it to third parties
+[01:02:38] while still using however many like
+[01:02:42] pseudonyms or other identifiers you want
+[01:02:45] to use in a variety of social contexts
+[01:02:48] so two things immediately come to mind
+[01:02:50] one of them is a free speech issue um
+[01:02:52] and the lawyers will probably know
+[01:02:54] McIntyre versus Ohio elections
+[01:02:55] Commission is one that's commonly cited
+[01:02:57] in the anonymous cases um the other one
+[01:03:01] is that I'm actually more okay with that
+[01:03:04] because if there is a legal agreement
+[01:03:06] that means that there's also legal
+[01:03:07] accountability at the moment Facebook
+[01:03:08] has no legal accountability as far as I
+[01:03:10] can
+[01:03:11] tell so it's it's not good but it's
+[01:03:14] better than what we have I don't want it
+[01:03:17] but I want it more I I does that make
+[01:03:20] sense it's like the lesser of two really
+[01:03:22] horrible
+[01:03:23] evils thank you so I wanted to add
+[01:03:26] something to the Facebook aspect of
+[01:03:28] things especially in the context of
+[01:03:30] Google finally changing their policy but
+[01:03:32] Facebook kind of doubling down at the
+[01:03:34] same time um and so Facebook this past
+[01:03:37] Monday I think launched uh Atlas which
+[01:03:40] is their new uh data broker kind of uh
+[01:03:44] way of collecting information about
+[01:03:46] individuals uh across devices and so the
+[01:03:50] this the jump for them now is it's not
+[01:03:52] cookie based it's uh ID based and so
+[01:03:55] it's a private ID but it's Facebook
+[01:03:57] controlled Facebook Walled Garden uh you
+[01:04:00] know they're not going to be selling it
+[01:04:01] to third parties but it's the way that
+[01:04:03] they're uh consolidating the view of the
+[01:04:06] consumer in the same way that a a data
+[01:04:08] broker would try to resolve uh the
+[01:04:10] activities of any individual in a
+[01:04:12] profile and so but that's also
+[01:04:15] connecting to offline uh contexts
+[01:04:18] including credit card purchase history
+[01:04:20] is everything else and also the thing
+[01:04:22] that Facebook is also doing instead of
+[01:04:24] being a data broker and just selling
+[01:04:25] data out they are becoming a data Beacon
+[01:04:27] and allowing advertisers to have access
+[01:04:29] to the data so they have ownership and
+[01:04:31] control but they can grant access based
+[01:04:33] on money so yes can I ask a question to
+[01:04:37] the group how many people are migrating
+[01:04:39] away from Facebook and Twitter to L well
+[01:04:42] after this what do you mean by Migra
+[01:04:43] there a difference between between
+[01:04:45] migrating away and migrating to you
+[01:04:47] could be staying in one place and also
+[01:04:49] going to the other okay who here is on
+[01:04:51] Lo or wants to be on Lo let's do that
+[01:04:54] all right who needs who needs
+[01:04:58] who doesn't want to be on Facebook
+[01:05:01] anymore who's using Facebook less
+[01:05:02] because you're on
+[01:05:04] L who's not using Facebook at
+[01:05:07] all who's not using
+[01:05:10] H
+[01:05:12] well well some just haven't chosen to
+[01:05:14] the reason I actually like is because I
+[01:05:17] am able to do long form like posts on it
+[01:05:20] like I use Twitter um but and by the way
+[01:05:23] uh the Twitter verified idea is really
+[01:05:25] interesting um it's only done for at
+[01:05:29] least this is what um the head of policy
+[01:05:31] at Twitter told me I like asked him
+[01:05:32] directly about it and he basically said
+[01:05:34] that it's purely to prevent
+[01:05:36] impersonation attempts so somebody says
+[01:05:38] I'm Tom Cruz and then they post all this
+[01:05:40] thing about how they like eaan babies or
+[01:05:42] something unless it's protected under
+[01:05:44] satire but if it's directly inflammatory
+[01:05:46] and so on but so I'm going to hijack you
+[01:05:50] haven't spoken at all and then I'll hi
+[01:05:51] last question okay cool because I want
+[01:05:53] to sticker I want to my question no also
+[01:05:56] cuz I want ask a question um I it seemed
+[01:05:59] to me that you were making a correlation
+[01:06:01] between Nims and creativity sure yeah so
+[01:06:06] um there's tons of examples from art and
+[01:06:09] literature of people right over history
+[01:06:12] using Nims and their work is
+[01:06:14] fundamentally possible because of that
+[01:06:16] um so I'm wondering if there is kind of
+[01:06:18] one example that you give of how in the
+[01:06:25] multi icity of net cultures that are
+[01:06:27] made possible by Nims something really
+[01:06:29] awesomely creative is made possible yes
+[01:06:31] let me flip back to that slide where I
+[01:06:33] skipped
+[01:06:37] over ah yes all of those okay but
+[01:06:42] there's also a lot of women who
+[01:06:43] published under male names that there's
+[01:06:46] actually right yeah yeah yeah George
+[01:06:49] yiot and the Bronto sisters fall under
+[01:06:51] that yeah there's a book called n de
+[01:06:53] plume which actually addresses some of
+[01:06:54] those questions it gets into history uh
+[01:06:57] there's also Richard Bachman step King
+[01:06:59] deep throat voler and so on so there's a
+[01:07:01] lot of different
+[01:07:02] reasons so my background is in
+[01:07:05] sociology and you know speaking with a
+[01:07:08] huge overgeneral brush for my entire
+[01:07:10] discipline um we really understand
+[01:07:13] identity to be fluid as something that's
+[01:07:16] kind of performed that's
+[01:07:17] contextual and the example that I really
+[01:07:20] love to bring up all the time is you
+[01:07:21] know Mark Zuckerberg's famous SL
+[01:07:23] Infamous quote about you having more
+[01:07:25] than one identity is like you makes you
+[01:07:27] terrible person untrustworthy whatever
+[01:07:29] and I like to of course do the cliche
+[01:07:31] social thing and point right back to
+[01:07:33] every golfman you know for whom
+[01:07:36] basically not having multiple identities
+[01:07:39] not performing different selves in
+[01:07:40] different context is antisocial Behavior
+[01:07:43] it makes you you're you're throwing off
+[01:07:45] the scene you're not playing along and
+[01:07:47] facilitating everyone else's you know
+[01:07:50] social Dynamic right like if I were to
+[01:07:53] be the same way inter acting with my
+[01:07:56] peers as I am with my
+[01:07:58] parents even that would be very
+[01:08:01] off-putting and would kind of throw the
+[01:08:02] rhythm of social interaction so I feel
+[01:08:05] like there are quiet corners of the
+[01:08:07] world where we know that identity is
+[01:08:09] supposed to be multiple and contextual
+[01:08:13] and fluid especially if you care
+[01:08:15] anything about social justice which I
+[01:08:17] happen to quite a
+[01:08:18] lot are there any examples where you see
+[01:08:22] that kind of orientation that academics
+[01:08:25] getting into policy or where policy is
+[01:08:27] starting to take into account a lot of
+[01:08:31] the established scholarship
+[01:08:34] on not singular construct a lot of
+[01:08:37] religions are like that actually uh
+[01:08:39] where your name changes based on your
+[01:08:41] role in the society I didn't I didn't
+[01:08:42] put the slide in here because I didn't
+[01:08:43] have a time but there are a couple of
+[01:08:44] interesting indigenous like New Guinea
+[01:08:46] tribes uh there's there's one tribe I
+[01:08:48] can't remember the name where they
+[01:08:50] actually none of them have any names
+[01:08:51] they just have a community name for the
+[01:08:53] tribe um there's another one where as
+[01:08:57] you go through rights of the stages of
+[01:08:59] your life effectively kind of a hero's
+[01:09:00] journey the name that you have changes
+[01:09:03] so the name is more rather a reflection
+[01:09:05] of the individual it's more a refle a
+[01:09:07] reflection of who you are and what is
+[01:09:09] your place within the society in
+[01:09:11] general so those are some there's also
+[01:09:14] um here's an example I could do the
+[01:09:15] Catholic Church uh there's a right of
+[01:09:17] confirmation in which you adopt the name
+[01:09:19] of I I think you adopt the name of a
+[01:09:22] saint that you Aspire towards to to be
+[01:09:24] with and so on and that's Pope Francis
+[01:09:27] same thing do Lama there you go and
+[01:09:29] there's a question of titles versus
+[01:09:31] names and so on so I'd say the pope is a
+[01:09:32] title Francis is a
+[01:09:34] name there's a lot of different cultures
+[01:09:36] where this
+[01:09:37] happens
+[01:09:40] yes I don't have children of my own but
+[01:09:43] for children and this is an opinion
+[01:09:45] there's no right or wrong answer but
+[01:09:48] would you say the best thing then to
+[01:09:51] allow people to have pseudonyms and
+[01:09:53] protect their Nim rights is that if you
+[01:09:56] have a child and you don't want that
+[01:09:58] child to be harassed to just you know
+[01:10:00] keep your child away from those kinds of
+[01:10:03] maybe say to your kid don't get on
+[01:10:04] Facebook until you've grown up and you
+[01:10:06] can handang I would tell it to everyone
+[01:10:08] but oh well or don't get on a sort of
+[01:10:13] um um a political Forum or or something
+[01:10:17] do you know what I mean that that if
+[01:10:18] you're not sort of grown up enough that
+[01:10:21] you can handle I mean there there
+[01:10:23] harassment is wrong of course cyber
+[01:10:25] bullying is wrong you know I thought you
+[01:10:28] were going to go to the pedophile route
+[01:10:29] there's always a pedophile question no I
+[01:10:32] was more like just thinking about you
+[01:10:34] know someone just being harassed for
+[01:10:36] having a different point of view and
+[01:10:38] yeah you know it's going to happen
+[01:10:40] regardless and like I said we had
+[01:10:42] bullies before cyber bullies and so on
+[01:10:44] although I'll point out that kids
+[01:10:45] already have multiple names like you
+[01:10:47] might have a kid whose name is William
+[01:10:49] and everyone calls him Billy so they're
+[01:10:51] used to it it's just in a context in
+[01:10:54] which it's socially assumed
+[01:10:56] absolutely and there already that happen
+[01:10:58] between kids that adults can't see it's
+[01:11:00] not like adults are listening to every
+[01:11:02] playground conversation right my
+[01:11:04] daughter thinks her name is
+[01:11:06] bear she thinks her name is bear it's
+[01:11:09] it's ala but she thinks her name is bear
+[01:11:12] that all the time this reminds me of
+[01:11:13] Calvin and hubs so right so like you
+[01:11:15] know would we want to protect our kids
+[01:11:18] by having cameras on the playgrounds
+[01:11:20] watching them all the time and end adult
+[01:11:22] listening to every conversation you know
+[01:11:23] you could argue about whether or not
+[01:11:25] like wouldn't right but but so I I guess
+[01:11:28] that that was kind of where I was going
+[01:11:30] with that you know God I unfortunately
+[01:11:33] we are at time so I have to cut everyone
+[01:11:35] off um okay it's been a really great
+[01:11:37] discussion I would say I will here's how
+[01:11:39] to contact
+[01:11:42] me ah above the golden apple
+[01:11:46] yep okay it's an homage to discordians
+[01:11:48] if anyone contact you it's it's Twitter
+[01:11:52] and lo and it's also athetics at
+[01:11:53] aesthetics.com so oh okay okay thank you
+[01:11:57] all for
+[01:11:58] coming oh here have
+[01:12:03] stickers
+[01:12:16] Aesthetics

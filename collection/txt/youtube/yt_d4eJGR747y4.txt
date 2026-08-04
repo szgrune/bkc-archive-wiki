@@ -1,0 +1,1294 @@
+[00:00:04] CHRIS BABBITT: Hi, everyone.
+[00:00:06] If I can have your attention.
+[00:00:07] My name is Chris Babbitt.
+[00:00:08] I'm one of the faculty co-director of the Berkman
+[00:00:10] Klein.
+[00:00:10] I'm so happy to see all of you here today for this great talk.
+[00:00:14] Administrative housekeeping, as some of you know,
+[00:00:16] if you've been here before.
+[00:00:18] We live stream and record these events.
+[00:00:20] So just keep that in mind if and when you ask a question later.
+[00:00:23] As we hope you we'll try and save some room at the end
+[00:00:27] for questions.
+[00:00:28] I was just saying to Rashida that we've
+[00:00:29] been trying to get her up here to do a talk for a while.
+[00:00:31] So I'm so happy that it's finally happened.
+[00:00:33] Some of you may know, we have our own AI ethics
+[00:00:35] and governance program at the Berkman Klein Center.
+[00:00:38] Working with the MIT Media Lab and we
+[00:00:39] are such huge fans of the work that Rashida and her colleagues
+[00:00:42] at AI Now are doing.
+[00:00:45] Rashida Richardson is the director of policy research
+[00:00:47] there.
+[00:00:48] And is going to be talking to us about a new paper.
+[00:00:51] Dirty Data Bad Predictions How Civil Rights Violations Impact
+[00:00:55] Police Data Predictive Policing Systems And Society.
+[00:00:58] I'm going to turn things over quickly to Rashida.
+[00:01:00] And again we'll save some time at the end for questions.
+[00:01:03] So Rashida please come up, thanks.
+[00:01:09] RASHIDA RICHARDSON: Thanks Chris,
+[00:01:11] and I'm really excited to be here even
+[00:01:12] though it did take a while.
+[00:01:18] One I'll say I won't bore you, because this
+[00:01:20] is really interesting talk.
+[00:01:21] And I'm not simply saying that to toot my own horn.
+[00:01:24] But I am just going to warn you that it's going to start off
+[00:01:27] a little interactive.
+[00:01:28] So I'm going to play a video.
+[00:01:30] And then try to solicit some responses from you,
+[00:01:32] and then you listen.
+[00:01:34] So Oh no
+[00:01:49] [VIDEO PLAYBACK]
+[00:02:51] RASHIDA RICHARDSON: OK so what are some
+[00:02:53] observations from that video.
+[00:02:55] This is where you can shout things out
+[00:02:57] or actually you can say them in the mic.
+[00:03:00] So it picks up in the recording.
+[00:03:07] Anyone?
+[00:03:08] Thoughts, observations from the video?
+[00:03:10] While I get the presentation up.
+[00:03:13] Yeah.
+[00:03:14] AUDIENCE: I think that I've seen some videos on similar topics
+[00:03:17] and this one strikes me as dry.
+[00:03:19] And the slides there's like, I don't know
+[00:03:21] like the grass and the map.
+[00:03:24] But there's no video or audio footage
+[00:03:27] of some of the organizers who are against this or [INAUDIBLE]
+[00:03:38] RASHIDA RICHARDSON: Behind you.
+[00:03:41] AUDIENCE: I would have liked to have seen a comparison
+[00:03:44] with other minority groups.
+[00:03:50] RASHIDA RICHARDSON: Anyone else?
+[00:03:53] Good back there, and then over here
+[00:03:56] and then I guess we'll start.
+[00:04:02] There's a person right back.
+[00:04:12] AUDIENCE: My first response is, it's
+[00:04:15] 2019, haven't we learned these lessons already?
+[00:04:20] AUDIENCE: It was notable just how simple the response was.
+[00:04:23] Just the typical we need to do this to prevent crime
+[00:04:28] in these high crime areas.
+[00:04:29] There wasn't sort of any broader justification
+[00:04:31] or defense of the practice from the LAPD.
+[00:04:34] RASHIDA RICHARDSON: Thank you for,
+[00:04:35] I guess humoring me by engaging.
+[00:04:38] So I'm going to highlight two major observations.
+[00:04:43] Or obvious points that came through in the video.
+[00:04:46] Which will help frame some of the discussion
+[00:04:48] for now oh it's not in play mode, sorry.
+[00:04:52] OK, and the first which the gentleman back there
+[00:04:56] kind of harped on, is the sad side of this.
+[00:04:59] In that many US police departments
+[00:05:02] continue to, and have historically
+[00:05:04] engaged in discriminatory police practices and policies.
+[00:05:07] And police are increasingly turning
+[00:05:10] to technological solutions for a range of issues.
+[00:05:14] Ranging from resource allocation to trying
+[00:05:16] to identify less discriminatory ways to contain public safety
+[00:05:22] or address crime.
+[00:05:23] And for the remainder of this talk,
+[00:05:26] I'm going to unpack those two phenomena.
+[00:05:30] And as a way of framing the larger discussion.
+[00:05:33] And then I'm going to go into some of the research
+[00:05:35] that I did.
+[00:05:36] Which was the foundation for a forthcoming law review.
+[00:05:38] Which will be out I think next week in NYU's Law Review
+[00:05:43] Online.
+[00:05:44] Which looked at dirty data and predictive policing.
+[00:05:47] And then some of the key observations, findings,
+[00:05:50] and a little bit of hope for the future.
+[00:05:53] So when I say that US law enforcement
+[00:05:56] has a problem with discriminatory police practices
+[00:05:59] and policies.
+[00:06:00] This can include unconstitutional stops
+[00:06:03] and frisk policies.
+[00:06:04] That either encourage or result in disproportionate targeting
+[00:06:08] of people of color.
+[00:06:10] Other unconstitutional practices like using a person's perceived
+[00:06:14] race or citizenship status.
+[00:06:15] As a pretext for a stop, arrest, or search.
+[00:06:19] Straight up corruption which can include
+[00:06:21] covering up crimes where officers may be implicated.
+[00:06:23] Or planting evidence on innocent people.
+[00:06:26] Juking the stats, which is a twofold phenomena.
+[00:06:30] It's both inflating or deflating individual or aggregate crime
+[00:06:34] data, that fits certain policy priorities.
+[00:06:37] So if you want certain violent crimes to appear
+[00:06:40] as if they're going down.
+[00:06:41] This may result in police trying to encourage
+[00:06:44] victims to not report a crime.
+[00:06:45] Or actually downgrading the crime and their official
+[00:06:47] reports.
+[00:06:48] Or alternatively it can mean inflating the amount
+[00:06:52] of small property crimes.
+[00:06:53] In order to justify increased policing
+[00:06:55] in certain communities.
+[00:06:57] Or to even justify the acquisition
+[00:06:59] of police technologies to target those problems.
+[00:07:03] And at the same time, police are increasingly
+[00:07:05] turning to technology.
+[00:07:07] As an easy or quick solution to address concerns,
+[00:07:10] rather than adopting systemic overhauls.
+[00:07:12] And this can include surveillance technologies
+[00:07:15] like cell site simulators.
+[00:07:16] Which is in the top left corner.
+[00:07:20] Automated license plate readers, which
+[00:07:22] is these little cameras in the middle.
+[00:07:25] And biometric technologies, that little green thing
+[00:07:28] is a finger print scanner.
+[00:07:30] And they adopt these technologies increasingly
+[00:07:34] to help investigate crimes.
+[00:07:36] And they're also turning to tasers, which is in the middle.
+[00:07:40] It looks like a gun, but it's not.
+[00:07:43] And body worn cameras to address concerns
+[00:07:45] like unlawful use of force, and accountability measures.
+[00:07:48] And then predictive policing which
+[00:07:50] is the technology I'll be focusing on for the remainder
+[00:07:53] of this talk.
+[00:07:54] Is used to help with resource allocation
+[00:07:56] and anticipating crime, or predicting where it may occur.
+[00:08:00] And there are two types of predictive policing
+[00:08:04] technologies.
+[00:08:05] You have play space, which is in the vertical image there.
+[00:08:08] And that type of system tries to predict
+[00:08:12] where a crime may occur.
+[00:08:13] In a specific geographic region, in a given window of time.
+[00:08:17] And then you have person based systems.
+[00:08:19] And you'll see this horizontal image, that's a network.
+[00:08:23] And that is an example of a person based
+[00:08:25] predictive policing system.
+[00:08:27] Which attempts to identify who may
+[00:08:29] be a victim or a perpetrator of a crime.
+[00:08:32] And both systems rely on vast amounts of law enforcement
+[00:08:35] data, to make predictions.
+[00:08:37] And some also use non law enforcement related data.
+[00:08:41] Like weather, location of liquor stores,
+[00:08:43] and other factors that the companies have decided
+[00:08:45] affect criminal activity.
+[00:08:48] So while this may seem like a fairly innocuous way to use.
+[00:08:52] And address crime and public safety issues on its face.
+[00:08:55] It's important to understand this technology in the context
+[00:08:58] in which it's being used.
+[00:09:01] Dirty data is a term commonly used in the data mining
+[00:09:05] community.
+[00:09:05] To refer to missing data, wrong data,
+[00:09:08] or non-standard representations of data.
+[00:09:11] And here and in the law review that the findings
+[00:09:14] and other analysis are in.
+[00:09:15] We expand this term so that dirty data
+[00:09:18] includes a new category.
+[00:09:19] Which reflects the culture of data production in policing.
+[00:09:23] Currently there are no national, state,
+[00:09:26] or local standards on the creation or organization
+[00:09:28] of police data.
+[00:09:30] So it often reflects the environment and priorities
+[00:09:32] of the police departments.
+[00:09:33] In the communities where the data is collected, organized
+[00:09:36] and used.
+[00:09:37] So when I use the term dirty data throughout this talk
+[00:09:40] and in the paper.
+[00:09:41] It includes, but is not limited to:
+[00:09:44] aggregate crime data generated from stops, searches,
+[00:09:47] and arrests of innocent people.
+[00:09:48] That misrepresent the prevalence of crime
+[00:09:50] in certain communities.
+[00:09:52] Data reflecting falsified records and planted evidence.
+[00:09:55] Skewed data on calls for service,
+[00:09:58] and incident reports that reflect false claims
+[00:10:00] of criminal activity.
+[00:10:01] Systemic manipulation of criminal statistics.
+[00:10:04] To promote a particular public relations
+[00:10:06] funding or political outcome.
+[00:10:08] And errors and inputting the data
+[00:10:10] like misspellings and wrong numbers.
+[00:10:13] And it is important to note that data can also
+[00:10:16] be subject to multiple forms of manipulation.
+[00:10:18] And subjective judgment at once.
+[00:10:20] Which makes it difficult, if not impossible.
+[00:10:23] For systems trained on the data like predictive policing.
+[00:10:26] To separate or even detect the good data
+[00:10:29] from the bad or dirty data.
+[00:10:31] And this point is notable because some
+[00:10:33] of the most prominent of policing companies.
+[00:10:35] And here I have clips from the two most prominent HunchLab
+[00:10:39] and PredPol.
+[00:10:40] Assume that these problems of dirty data can be isolated.
+[00:10:44] And mitigated through classical mathematical, technical, and
+[00:10:47] statistical techniques.
+[00:10:49] And the concern with dirty data is particularly problematic,
+[00:10:54] when used in policing technologies.
+[00:10:57] Because of what's known as the bias in bias
+[00:11:00] out phenomena of predictive systems.
+[00:11:02] And this means that the outcomes predicted
+[00:11:04] by these technologies.
+[00:11:06] Will most likely reflect the biases embedded in the data.
+[00:11:10] So if a specific community is disproportionately
+[00:11:12] targeted by unlawful, and discriminatory police
+[00:11:14] practices.
+[00:11:15] And therefore, over represented in the underlying police data.
+[00:11:19] This means the predictive system will most likely assume.
+[00:11:22] Or predict that this community requires greater police
+[00:11:24] scrutiny.
+[00:11:26] And with this concern in mind and others.
+[00:11:28] I examined 13 jurisdictions that are using previously used.
+[00:11:33] Or are developing predictive policing systems.
+[00:11:35] While being subject to government investigations,
+[00:11:38] consent decrees, and other federally adjudicated
+[00:11:41] settlements.
+[00:11:42] That have shown that the departments have engaged
+[00:11:45] in corrupt, discriminatory, or otherwise illegal police
+[00:11:48] practices.
+[00:11:49] And these jurisdictions include Baltimore Maryland,
+[00:11:52] Boston Massachusetts, Chicago Illinois, Ferguson Missouri,
+[00:11:57] Miami Florida, Maricopa County Arizona, Milwaukee Wisconsin,
+[00:12:02] New Orleans Louisiana, New York New York, Newark New Jersey,
+[00:12:06] Philadelphia Pennsylvania, Seattle Washington,
+[00:12:09] and Suffolk County New York.
+[00:12:10] It's kind of tiring listing all of this but--
+[00:12:16] and for this research I compared the police data, practices,
+[00:12:20] and policies for these.
+[00:12:21] That came from the investigations or litigation.
+[00:12:24] With publicly available information.
+[00:12:26] Regarding the jurisdictions use of predictive policing systems.
+[00:12:29] To assess the levels of risk that the dirty data would
+[00:12:32] affect the use or predictions made by these systems.
+[00:12:35] And the analysis revealed that nine jurisdictions implemented
+[00:12:39] predictive policing systems.
+[00:12:41] That used police data that was generated during the periods
+[00:12:44] where the departments were found to have engaged in unlawful,
+[00:12:46] and biased police practices.
+[00:12:49] And this presents high risk that the dirty data
+[00:12:52] was used, or trained to implement these systems.
+[00:12:54] And in some cases we observed that the system's predictions.
+[00:12:59] Directly reflected the legacies of discriminatory policing
+[00:13:02] in those departments.
+[00:13:03] And I've highlighted Chicago as an example.
+[00:13:06] Because there they use person based
+[00:13:09] predictive policing system.
+[00:13:11] Known as strategic subjects list.
+[00:13:14] That attempted to identify individuals
+[00:13:16] most likely to be a victim or a perpetrator
+[00:13:19] of a shooting related crime.
+[00:13:21] And a significant portion of the individuals
+[00:13:23] labeled as high risk on that list.
+[00:13:25] Had never been arrested or shot.
+[00:13:28] And the predominant majority of the list was young black men.
+[00:13:31] Which is the same exact demographic
+[00:13:33] that was disproportionately targeted.
+[00:13:34] By over 50 years of the Chicago Police
+[00:13:37] as discriminatory police practices.
+[00:13:39] And in some cases there was torture.
+[00:13:42] The other four jurisdictions were less conclusive.
+[00:13:44] Due to a lack of available public information,
+[00:13:47] on the predictive policing systems.
+[00:13:49] Or pertinent government policies like data
+[00:13:51] sharing between jurisdictions in overlapping jurisdictions.
+[00:13:55] And here I've highlighted Maricopa County.
+[00:13:58] Where you may be familiar with their top official Sheriff
+[00:14:00] Arpaio who was recently, OK you got it.
+[00:14:05] I can tell by the mm-hmm.
+[00:14:08] Where under his direction of the Department.
+[00:14:10] They engaged in a range of discriminatory police
+[00:14:13] practices.
+[00:14:13] And unlawful enforcement of immigration laws.
+[00:14:16] And in fact, the Department was subject to several court orders
+[00:14:19] prohibiting such practices.
+[00:14:21] And eventually many officials from that office.
+[00:14:23] Were held in contempt for continuing
+[00:14:25] to violate the court orders.
+[00:14:28] For about eight years, actually, it was kind of insane.
+[00:14:32] And the Sheriff's Office not only
+[00:14:34] performed law enforcement duties for the County.
+[00:14:36] But they also performed law enforcement duties.
+[00:14:39] For many of the towns and cities within its jurisdiction.
+[00:14:42] Who lacked police resources or didn't have adequate police
+[00:14:46] resources.
+[00:14:47] And there were four cities within the County
+[00:14:50] that used predictive policing.
+[00:14:52] But the reason our finding was inconclusive
+[00:14:54] is because though there was evidence of data sharing
+[00:14:57] with the Sheriff's Office.
+[00:14:58] There were no clear or at least publicly
+[00:15:01] posted data sharing policies between the departments.
+[00:15:04] So we were unable to fully assess
+[00:15:06] whether the level of risk of using the county's dirty data.
+[00:15:10] Or the level of risk that it posed
+[00:15:12] for the use of these predictive policing systems.
+[00:15:15] Using the Sheriff's county's data.
+[00:15:19] Earlier I mentioned the self-perpetuating phenomena
+[00:15:21] of bias in and bias out.
+[00:15:24] Which is generally understood as a feedback loop.
+[00:15:27] And I'll be referring to that for the remainder of the talk.
+[00:15:30] And there's already research that
+[00:15:32] shows that the mathematical models
+[00:15:34] of these predictive policing systems are susceptible.
+[00:15:36] To what are called runaway feedback loops.
+[00:15:38] Where police are repeatedly sent back to the same neighborhoods,
+[00:15:41] regardless of the actual crime rate.
+[00:15:43] And this research showed that--
+[00:15:46] in the research that I did.
+[00:15:47] We showed that feedback loops are also
+[00:15:49] attributed to biased police data, as well as societal bias.
+[00:15:55] First let's examine the problems with police data.
+[00:15:57] Police data is embedded with many flaws.
+[00:16:00] But two particular problems are of concern,
+[00:16:02] regarding the use of predictive policing systems.
+[00:16:05] The first is that police practices, policies,
+[00:16:08] and priorities.
+[00:16:08] Do not necessarily reflect the actual prevalence or occurrence
+[00:16:12] rates of crimes.
+[00:16:13] And often police data omits essential information
+[00:16:18] that is pertinent to police practices and policies.
+[00:16:21] By eliminating certain types of crime
+[00:16:23] in certain types of criminal.
+[00:16:27] For example, most local police departments
+[00:16:30] in predictive policing systems.
+[00:16:31] Traditionally focus on violent street, property, and quality
+[00:16:35] of life crimes and offenses.
+[00:16:37] Whereas white collar crimes which are compared
+[00:16:39] are comparatively under investigated, and overlooked
+[00:16:42] in crime reporting.
+[00:16:43] And despite evidence of a strong probability
+[00:16:45] that those crimes occur at a greater frequency.
+[00:16:48] Than the aforementioned categories combined.
+[00:16:52] I focus on the specific problems of bias in police data.
+[00:16:55] Because the confluence of these two specific problems.
+[00:16:58] Skew the inputs into predictive policing systems.
+[00:17:01] And ultimately produce a data driven
+[00:17:03] justification for increased policing and surveillance.
+[00:17:07] Of traditionally marginalized or overpoliced communities.
+[00:17:10] And reinforces popular misconceptions
+[00:17:13] regarding the criminality and safety
+[00:17:15] of underrepresented criminals in communities.
+[00:17:19] And these broader societal implications
+[00:17:21] is why this type of feedback loop is so pernicious.
+[00:17:24] When people observe increased police presence in context
+[00:17:28] in marginalized communities.
+[00:17:29] It can reinforce unwarranted assumptions and stereotypes.
+[00:17:33] In fact, continued exposure and reinforcement of these types of
+[00:17:37] stereotypes.
+[00:17:38] Especially in the absence of a counter narrative.
+[00:17:40] Can allow society to maintain a prejudice
+[00:17:43] against marginalized groups.
+[00:17:44] While still maintaining an explicit commitment
+[00:17:47] to egalitarianism.
+[00:17:48] In this complex yet contradictory sentiments.
+[00:17:52] Can incite responses that perpetuate this feedback loop.
+[00:17:55] For example, observing racially biased police practices.
+[00:17:59] Can reinforce racial animus and false stereotypes of violence
+[00:18:02] in criminality racial and ethnic groups.
+[00:18:06] Which can result in improper calls for--
+[00:18:09] sorry improper calls for service for non criminal activity.
+[00:18:15] That is perceived as suspicious or causes discomfort.
+[00:18:18] And this was popularly documented by the media
+[00:18:21] and in memes.
+[00:18:22] With Permit Patty and Barbecue Becky.
+[00:18:25] And the many other names of white women
+[00:18:27] that have called the police on Black people.
+[00:18:29] In the past year for innocuous behavior.
+[00:18:32] And a recent study which this graph comes from.
+[00:18:37] On gentrification in 311 data that looked at the 311 call
+[00:18:42] for service data.
+[00:18:43] And found that lower income communities of color
+[00:18:45] that experienced a large influx of
+[00:18:47] white and affluent residents.
+[00:18:49] Experienced a significantly higher increase
+[00:18:51] in quality of life complaints.
+[00:18:53] And summons were three times as more likely.
+[00:18:57] Than neighborhoods without a large influx
+[00:18:59] of white affluent residents.
+[00:19:01] And these societal particularly concerning.
+[00:19:05] Because they provide more opportunities
+[00:19:07] for police discretion and selective enforcement.
+[00:19:09] Which further distorts police data.
+[00:19:12] And I posit the incidents of negative outcomes
+[00:19:16] for marginalized communities.
+[00:19:17] Are more likely to occur in communities
+[00:19:19] where police are disconnected from.
+[00:19:21] Or not part of the communities that they're policing.
+[00:19:23] And New York and Philly are examples of cities
+[00:19:26] that have these problems.
+[00:19:29] The feedback loop can also influence
+[00:19:31] broader public policy.
+[00:19:32] By driving and providing justification and policies
+[00:19:37] that manage or push out communities that.
+[00:19:41] Do you think problem [INAUDIBLE] increasing
+[00:19:42] this [INAUDIBLE] example.
+[00:19:46] And a specific example of this outcome
+[00:19:48] are nuisance laws and ordinances.
+[00:19:50] Which empower municipal governments to penalize
+[00:19:53] individuals and communities.
+[00:19:54] For a certain numbers of calls for service or nuisance
+[00:19:57] conduct.
+[00:19:58] Which is an ill-defined category that
+[00:20:00] ranges from assault to littering,
+[00:20:02] depending on the jurisdiction.
+[00:20:04] And a recent ACLU report found that these policies
+[00:20:07] disproportionately affect poor communities of color.
+[00:20:09] Because they amplify the harms of the criminal justice system.
+[00:20:12] And exacerbate socioeconomic and racial inequalities.
+[00:20:16] By making housing instability a consequence of law enforcement.
+[00:20:21] In examining these specific jurisdictions
+[00:20:23] and highlighting important concerns regarding
+[00:20:25] the scope of dirty data.
+[00:20:27] I have a few observations.
+[00:20:29] The first, is that there are few political and institutional
+[00:20:33] incentives.
+[00:20:33] That encourage self monitoring, ongoing auditing
+[00:20:36] of data systems, or reform.
+[00:20:38] And reforms that do not restrict or prohibit
+[00:20:41] the use of dirty data.
+[00:20:42] Or require some level of a systemic overhaul
+[00:20:45] of data collection, organization, analysis,
+[00:20:47] and use practices.
+[00:20:48] Will not address the problems that I've discussed today.
+[00:20:52] Though, there is one encouraging development
+[00:20:54] that happened in the LAPD recently.
+[00:20:57] Where their police chief has announced
+[00:20:59] that they're no longer going to use person
+[00:21:01] based predictive policing systems.
+[00:21:03] And it is revising the use of their police based
+[00:21:05] predictive policing systems.
+[00:21:07] Because of concerns of dirty data,
+[00:21:09] the lack of oversight and implementation.
+[00:21:11] And overall questions about the effectiveness of these systems.
+[00:21:15] And this came after the LAPD inspector
+[00:21:18] general did a deep research.
+[00:21:21] And wrote a 60 page report outlining
+[00:21:23] many of the same problems that we found in this research.
+[00:21:27] Second, there needs to be restrictions, and prohibitions,
+[00:21:30] or complete overhauls on the use of dirty data.
+[00:21:33] And this is also necessary because problematic uses
+[00:21:37] of dirty data.
+[00:21:38] Are not limited to law enforcement or even
+[00:21:41] the specific police departments.
+[00:21:43] Where the data was generated from.
+[00:21:45] And Maricopa County in Baltimore are
+[00:21:47] two examples from the jurisdictions
+[00:21:49] that I researched.
+[00:21:50] Where the lack of clear public policies about data
+[00:21:52] sharing between police departments.
+[00:21:54] And where the jurisdictional boundaries of police
+[00:21:57] departments were blurred.
+[00:21:58] We weren't able to conclude whether the dirty data,
+[00:22:01] in fact, created a high risk.
+[00:22:04] When using the predictive policing
+[00:22:06] systems in those departments.
+[00:22:08] And also, police data is used at many other decision points
+[00:22:12] in the criminal justice system.
+[00:22:15] From prosecution, pretrial services, adjudication,
+[00:22:18] sentencing, corrections.
+[00:22:20] And other non criminal justice related political decisions.
+[00:22:23] So there is a heightened concern that dirty data can further
+[00:22:26] corrupt decision making throughout the criminal justice
+[00:22:28] system.
+[00:22:29] And this is something that I'm actively researching.
+[00:22:32] Finally, now more than ever, there
+[00:22:34] is also a need for an empowered independent authority.
+[00:22:37] To assess and address dirty data issues
+[00:22:39] within policing in the government more broadly.
+[00:22:42] The jurisdictions that were researched
+[00:22:44] were subject to highly publicized investigations
+[00:22:46] and lawsuits.
+[00:22:48] But these crucial mechanisms for uncovering and addressing
+[00:22:54] problematic policing practices.
+[00:22:55] Have been threatening by the parting acts of the former US
+[00:22:59] Attorney General, Jeff Sessions.
+[00:23:01] Before he left office, he sent around a DOJ policy memo.
+[00:23:05] Significantly limiting the use of consent decrees,
+[00:23:07] by requiring top officials sign off.
+[00:23:10] Limiting the scope and duration of the consent decrees.
+[00:23:12] And requiring department attorneys
+[00:23:14] to provide more evidence than--
+[00:23:16] or they had to provide evidence of problematic violations
+[00:23:21] beyond unconstitutional behavior.
+[00:23:23] Which can mean that many of the police departments
+[00:23:25] engaging in discriminatory and unconstitutional practices.
+[00:23:30] Their practices can continue to go unchecked.
+[00:23:34] So though the majority of this talk,
+[00:23:36] I've spent time critiquing dirty data and its consequences.
+[00:23:40] I want to be clear that data is still
+[00:23:42] an important tool for advocacy, policy making, and governance.
+[00:23:45] Because in its absence we do not understand
+[00:23:47] the full scope of issues.
+[00:23:49] And important decisions will rely on more subjective factors
+[00:23:53] like intuition.
+[00:23:54] But it's also important to recognize that data is not
+[00:23:57] ahistorical or apolitical.
+[00:24:00] and I believe this research shows
+[00:24:02] the consequences of failing to understand that point.
+[00:24:05] And if we don't interrogate the context in which that data is
+[00:24:08] collected and used.
+[00:24:09] We are also bound to use data in ways
+[00:24:12] that perpetuate the bias and corruption that
+[00:24:14] is embedded within.
+[00:24:16] Even in the most noble use cases.
+[00:24:19] If we want technology and data driven
+[00:24:21] processes to have a net benefit for all in society.
+[00:24:24] Then we need to make sure that a broad mix of stakeholders
+[00:24:28] are meaningfully engaged early.
+[00:24:30] And have Frank conversations about the methods, logic.
+[00:24:33] And goals of these systems and processes.
+[00:24:35] In order to ensure that fairness, equity, and justice
+[00:24:39] are reflected in the outcomes.
+[00:24:40] Thanks.
+[00:24:59] AUDIENCE: Thank you so much.
+[00:25:00] This is really compelling stuff and I
+[00:25:03] want to ask you a question that follows from your last point.
+[00:25:07] A question about method.
+[00:25:09] Because it seems pretty clear as you go through this that we do
+[00:25:14] need to understand more about the context in which data
+[00:25:16] is collected.
+[00:25:17] But how do you do that like what is the method?
+[00:25:20] Can we use ethnography how do we go about finding
+[00:25:25] out and from whom?
+[00:25:28] RASHIDA RICHARDSON: Well, I think
+[00:25:30] in this context for policing ethnographic studies would
+[00:25:33] be helpful.
+[00:25:33] But part of the problem is that police officers and other law
+[00:25:37] enforcement officials are not data scientists.
+[00:25:39] And often this data is not being collected or originally
+[00:25:42] intended for the use cases.
+[00:25:44] Like predictive policing or other uses and technologies.
+[00:25:48] So I think there just needs to be a wholesale systemic review
+[00:25:52] of the process.
+[00:25:56] I think I didn't say this specifically,
+[00:25:58] but it's a split of the jurisdictions that I studied.
+[00:26:00] Half of them were DOJ investigations
+[00:26:03] and consent decree.
+[00:26:04] And then the other half were federally adjudicated
+[00:26:08] settlement.
+[00:26:09] Actually two examples is here in Boston and in New York City.
+[00:26:13] Where stop and frisk policies were challenged.
+[00:26:16] And most of them were actually ACLU cases
+[00:26:19] that brought the challenges.
+[00:26:20] But in most of the DOJ consent decrees, I think half of them
+[00:26:25] were DOJ consent decrees.
+[00:26:27] And only one of them actually required
+[00:26:28] any type of reform of the data practices or ongoing audits.
+[00:26:32] So I think it's also that we need to change how
+[00:26:35] we're thinking about reform.
+[00:26:36] And that it's not simply just practices and policies.
+[00:26:39] But looking at where those practices
+[00:26:41] and policies information of embedded.
+[00:26:44] Or where the reach can--
+[00:26:46] sorry.
+[00:26:48] Where they can sort of corrupt other parts of policing.
+[00:26:52] And I think that's where through those-- like
+[00:26:55] that's one mechanism.
+[00:26:56] But obviously like I stated early on
+[00:26:58] that litigation is not the best method.
+[00:27:00] For trying to both uncover and address these problems.
+[00:27:05] So I think it needs to be both.
+[00:27:06] In that if there are jurisdictions
+[00:27:08] that are currently under reform.
+[00:27:10] Looking at the data practices, organization, and use.
+[00:27:14] Needs to be one significant part of the reform efforts.
+[00:27:17] But then I think there needs to be
+[00:27:18] some type of empowered independent authority.
+[00:27:21] That forces some level of scrutiny
+[00:27:23] or I guess just inquiry into police departments.
+[00:27:26] And how they are collecting the data, using it, and organizing.
+[00:27:36] AUDIENCE: Which type of system is
+[00:27:37] more vulnerable to the dirty data problem?
+[00:27:40] The place based or the person based?
+[00:27:42] RASHIDA RICHARDSON: So there's some scholars that--
+[00:27:44] person based is problematic.
+[00:27:46] In that essentially, you're making judgments
+[00:27:49] about an individual based on aggregate data.
+[00:27:51] So I think most people hear of how a person based system
+[00:27:54] applies.
+[00:27:54] And it's just like on its face it doesn't sound right.
+[00:27:57] And I think some scholars kind of only focus
+[00:28:00] on person based systems because on its face--
+[00:28:02] AUDIENCE: I noted that one of your slides
+[00:28:04] is for a company that says, we only do place based.
+[00:28:07] RASHIDA RICHARDSON: Yeah so the reason
+[00:28:09] why I'm harping on a lot of the research
+[00:28:12] is focused on person based.
+[00:28:13] But I don't think that place based systems
+[00:28:16] are immune from problems.
+[00:28:19] And in fact PredPol which is one of the prominent companies
+[00:28:22] constantly is trying to fight off claims of bias.
+[00:28:25] Because they're like we're place based.
+[00:28:26] We're only using crime data, location, and time.
+[00:28:30] But the fact that we don't have national or even
+[00:28:34] local standards around police data.
+[00:28:35] One of the first questions I wanted
+[00:28:38] to ask of a PredPol person is how are you
+[00:28:40] even defining crime.
+[00:28:41] Because that's usually dictated by state criminal code.
+[00:28:44] Varies by each state, and if you have an off the shelf system,
+[00:28:48] that's supposed to be applied nationally.
+[00:28:50] Not understanding that just even how you're categorizing crime
+[00:28:54] may vary by jurisdiction.
+[00:28:56] Then you're failing to understand the nuances
+[00:28:59] of that application.
+[00:29:00] And in, fact in the LAPD study that I mentioned at the end.
+[00:29:05] They used PredPol and found that there were certain SKUs
+[00:29:08] in the outcomes of that system.
+[00:29:09] So that's partially why place based is completely off
+[00:29:13] the table for LAPD.
+[00:29:15] But they're looking into place based.
+[00:29:17] Because there are ways you could possibly
+[00:29:19] try to segregate the dirty data.
+[00:29:22] Or even implement the system in a more fair way.
+[00:29:26] But I don't think at all that it's I immune.
+[00:29:29] And I think both systems need to be scrutinized equally.
+[00:29:32] There's a question in the back.
+[00:29:36] AUDIENCE: Is it possible that place based data
+[00:29:39] is fundamentally problematic.
+[00:29:40] In the sense that you can never, I guess--
+[00:29:47] The data itself is problematic in the police system.
+[00:29:51] In the sense that it's actually a more refined version
+[00:29:53] of prior assumptions.
+[00:29:56] And that actually the question is abolishing the use of data
+[00:29:59] and implementing more egalitarian practices.
+[00:30:04] RASHIDA RICHARDSON: Yes.
+[00:30:06] So that's part of the reason why I go into the feedback loops
+[00:30:09] issue.
+[00:30:09] And also one, because I think this
+[00:30:12] isn't isolated to policing and justice.
+[00:30:14] I think one of the problems in this country.
+[00:30:16] Is we see policing as a problem of a few bad apples
+[00:30:19] creating a problem in a police department.
+[00:30:21] And not as policing as a reflection
+[00:30:24] of broader societal problems.
+[00:30:26] So even with the police based data and the reason
+[00:30:29] why I focused on the 311 study.
+[00:30:31] Is there a lot of these, specifically
+[00:30:35] HunchLab and PredPol.
+[00:30:36] Have said they tried to use 311 call for service data
+[00:30:40] to counteract bias that can be in other data points.
+[00:30:43] But to me the obvious point was well, call for service data
+[00:30:47] is not immune from bias either.
+[00:30:50] And it's also not an accurate reflection of actual crime.
+[00:30:53] And this may be because I'm a New
+[00:30:55] Yorker that lives in one of the most gentrified neighborhoods.
+[00:30:57] So this was a point that hit home for me.
+[00:31:01] One of anecdote that I'll give is
+[00:31:04] where I live there is a festival at some time of the year.
+[00:31:09] And my favorite part of the summer
+[00:31:10] is UC Steel Drum bands practicing in a parking lot.
+[00:31:14] And they just practice during the week.
+[00:31:15] And over the past two years, there's
+[00:31:18] this one white resident.
+[00:31:20] That has started to call the police on the steel drum band.
+[00:31:24] And now it's gotten to the point where the police are like,
+[00:31:26] can you stop calling us.
+[00:31:27] Because we're not going to go and report that.
+[00:31:29] But that's because the police have
+[00:31:30] an understanding of the history of this neighborhood.
+[00:31:33] Or the context in which the noise complaint is coming from.
+[00:31:36] And have enough context to realize
+[00:31:39] that it's a falsified call for service.
+[00:31:42] But if you're in a department where people don't understand
+[00:31:45] the context of the communities.
+[00:31:46] Or there's a heightened sense of concern
+[00:31:49] about certain communities.
+[00:31:50] Where regardless of interrogating the substance
+[00:31:53] of the claim, you just go.
+[00:31:54] You can see how that will also skew the data.
+[00:31:57] So I kind of, of in the mind that there
+[00:32:00] is no point of police data that isn't embedded
+[00:32:03] with some level of bias.
+[00:32:05] Or some type of subjective and discretionary judgment.
+[00:32:08] So that's why I think there needs to be a wholesale review.
+[00:32:11] And that data can be used in strategic ways.
+[00:32:14] But we're not collecting data for public safety.
+[00:32:17] We're collecting data for overpolicing criminalization
+[00:32:21] of certain communities.
+[00:32:22] So I think we just need to reorient everything.
+[00:32:25] And start from the beginning or start from scratch.
+[00:32:28] And then I think that's how you can
+[00:32:29] get to more holistic solutions.
+[00:32:31] Like maybe you should send a social worker, instead of
+[00:32:33] a police officer to certain situations.
+[00:32:40] AUDIENCE: Could you talk a little bit
+[00:32:41] about police departments that use in-house developed
+[00:32:45] tools, as opposed to proprietary tools.
+[00:32:47] And if it makes any difference with regard
+[00:32:48] to dirty data problem.
+[00:32:50] RASHIDA RICHARDSON: They're all kind of the same.
+[00:32:52] Most police departments by what I would say
+[00:32:55] is off the shelf systems.
+[00:32:57] So PredPol, HunchLab, IBM, Motorola.
+[00:33:01] They all make different systems and Crimescape is another one.
+[00:33:05] Some police departments and some of these tools
+[00:33:08] can be tailored for certain interests.
+[00:33:11] So some systems can specifically only focus on robberies.
+[00:33:16] Or a specific type of crime that they're trying to address.
+[00:33:18] And in Chicago there because they have a terrible gun issue.
+[00:33:22] Is why they were focusing on shooting related crimes.
+[00:33:26] But they're both susceptible to the same issues.
+[00:33:29] And that it's all stemming back from what type of data are you
+[00:33:33] using?
+[00:33:34] As well as what is the ultimate goal of these systems.
+[00:33:36] Because I have had some people raise like, well can
+[00:33:40] you use this type of system to target interventions?
+[00:33:43] Or for some type of good use?
+[00:33:45] But Chicago is a great example, in that,
+[00:33:48] that system was originally implemented where
+[00:33:50] they wanted to warn people.
+[00:33:52] That they were either a victim or a perpetrator of a crime.
+[00:33:55] But often even the good intention type of systems
+[00:33:58] are implemented in punitive ways.
+[00:34:00] So in Chicago the way we even know
+[00:34:02] about the strategic subjects list.
+[00:34:04] Is because the police started to go to people's doors.
+[00:34:07] And say look you're on a list and without any context.
+[00:34:10] People were like what?
+[00:34:11] What does that mean?
+[00:34:12] Does that mean I'm going to be scrutinized more?
+[00:34:15] And then there was a small note in the directive that created
+[00:34:19] the strategic subject's list.
+[00:34:20] That said, if a person is subsequently
+[00:34:22] arrested after being notified that they're on the list.
+[00:34:26] The prosecutor should seek the highest charges.
+[00:34:28] So if we're actually trying to reduce crime, or at least
+[00:34:33] warn people about risk of harm.
+[00:34:35] I think there's more productive ways
+[00:34:36] to do it than to ambiguously tell someone they're on a list.
+[00:34:40] And then heighten the charges against them.
+[00:34:43] Especially since a lot of the times
+[00:34:45] when people are rearrested.
+[00:34:46] It's for probation violations of like you were out 10 minutes
+[00:34:50] past your time.
+[00:34:52] So I think it's--
+[00:34:53] yeah I've said enough, I kind of ramble.
+[00:34:57] Over here.
+[00:34:57] AUDIENCE: Yeah could you give us a sense for how
+[00:34:59] much these systems cost?
+[00:35:01] Like how much taxpayer money is being poured into them?
+[00:35:03] And then how profitable these companies are?
+[00:35:05] RASHIDA RICHARDSON: So I don't have an actual number.
+[00:35:08] In part because sometimes the business model for some
+[00:35:12] of these companies is like--
+[00:35:13] I think PredPol which is a place based predictive system
+[00:35:17] may cost around like $200,000.
+[00:35:19] But that doesn't include maintenance fees, service fees,
+[00:35:23] server fees, for warehousing the data.
+[00:35:26] And then some systems also outsource.
+[00:35:28] So they'll require you to get an Amazon
+[00:35:31] account for storing the data.
+[00:35:33] Or Google visualizations account to actually map
+[00:35:36] the visualization.
+[00:35:37] So it's hard to nail down the net cost.
+[00:35:40] But it's a mix of what is the concern to taxpayers.
+[00:35:45] Because the acquisition of these technologies
+[00:35:47] and a lot of surveillance technologies is fairly opaque.
+[00:35:51] I think about half of the systems on my list of 13,
+[00:35:56] we're funded through DOJ grants, at some point.
+[00:35:58] So often the DOJ will give a grant for a pilot.
+[00:36:01] And then the city or town will choose to continue using it.
+[00:36:04] And then that's would affect tax dollars.
+[00:36:08] But one of the concerns I've raised with some legislators
+[00:36:11] in Washington.
+[00:36:12] Is only one example which was actually Boston.
+[00:36:15] Has there ever been a retrospective study
+[00:36:17] of the efficacy of the program.
+[00:36:18] And in the Boston program they found it wasn't useful.
+[00:36:21] Similar to LAPD when you do any type of review.
+[00:36:25] It's hard to say that these systems are--
+[00:36:27] a lot of the times the police departments will
+[00:36:30] have some type of quote in a newspaper.
+[00:36:31] Saying like crime is down and we're using PredPol.
+[00:36:34] But when you're using multiple types of systems
+[00:36:37] to target crime.
+[00:36:38] How can you really isolate one system as the cause for crime
+[00:36:41] being down.
+[00:36:42] But also crime could be down for a lot of reasons
+[00:36:44] that I mentioned before.
+[00:36:45] Of systemic manipulation of crime statistics.
+[00:36:50] And in fact, there has been tons of research on COMSAT.
+[00:36:52] And how that's been manipulated, and that's
+[00:36:54] just a data analysis tool.
+[00:36:57] So in short it's costing money we just don't know how much.
+[00:37:00] And we also don't know how prevalent the use is.
+[00:37:03] And I think one of the concerning things
+[00:37:06] that I found in this research.
+[00:37:07] Is the lack of public information on these systems.
+[00:37:10] And luckily for a few of the ACLU cases,
+[00:37:13] because I used to work there.
+[00:37:15] I was able to call up their attorneys.
+[00:37:16] And I was like hey, I saw the police chief said this about
+[00:37:19] predictive policing.
+[00:37:20] They went to some predictive policing conference.
+[00:37:22] But I can't find any other documentation about use.
+[00:37:25] And it's really concerning that that's
+[00:37:27] my only way of finding information.
+[00:37:29] When the public should know whether or not
+[00:37:31] their police department is spending funds for something.
+[00:37:34] That in the few jurisdictions, they
+[00:37:35] have done some level of review.
+[00:37:37] And have found to not be very effective.
+[00:37:39] And at least perpetuate time.
+[00:37:42] Yes.
+[00:37:45] AUDIENCE: I've been in the midst of creating
+[00:37:48] a curriculum for identifying bias in machine learning
+[00:37:51] and remedying it.
+[00:37:53] And came across judge Garrity's ruling back from the 70s here
+[00:37:59] in Boston.
+[00:38:00] That led to busing students to desegregate.
+[00:38:04] And it said that de facto was determined to be a pattern.
+[00:38:18] All the technology behind this is just pattern matching.
+[00:38:22] And couldn't this be a lever to get more transparency
+[00:38:27] into the police data?
+[00:38:29] there's no good side to this.
+[00:38:30] In fact, I think the companies that
+[00:38:32] are doing it are absolutely unethical.
+[00:38:34] Because they don't have enough data.
+[00:38:36] And it's not that they don't have clean data,
+[00:38:39] they don't have enough data.
+[00:38:41] So the only good thing that can come out of this I think
+[00:38:45] is transparency.
+[00:38:46] RASHIDA RICHARDSON: Yeah so that's
+[00:38:47] actually a concern that I've raised a lot of the time.
+[00:38:50] And that there is a severe asymmetry in policy priorities.
+[00:38:55] And that I can't even list off of the amount
+[00:38:58] of predictive policing use in the United States.
+[00:39:00] But we know that there has been a lot, and it's increasing.
+[00:39:03] But there's only one pilot study I can point to.
+[00:39:06] Where police data has been used to target
+[00:39:08] a problem that we know exist in policing, which is misconduct.
+[00:39:11] And that's an ongoing pilot being done
+[00:39:14] by the University of Chicago.
+[00:39:15] It's only in three police departments.
+[00:39:17] I don't know when it will be done.
+[00:39:19] But it's looking at police officers who
+[00:39:21] may be more likely to have an adverse interaction
+[00:39:24] with a resident.
+[00:39:25] And that I think shows you the problem.
+[00:39:28] In that yes police data can be used to identify problems even
+[00:39:32] within police departments.
+[00:39:33] But that's not the priority or even
+[00:39:35] goal of a lot of police departments
+[00:39:37] or even in the adoption of such technology.
+[00:39:41] So I think that's why I keep saying
+[00:39:42] we need a wholesale overhaul.
+[00:39:45] Of thinking about these systems and also changing how
+[00:39:48] we think about public safety.
+[00:39:49] In that, there's tons of research
+[00:39:51] that shows if there's greater community trust in police.
+[00:39:55] That crime may go down, or at least people
+[00:39:57] feel more comfortable.
+[00:40:01] Coming forth and either giving evidence
+[00:40:04] to a crime or reporting crime.
+[00:40:05] And that can improve public safety.
+[00:40:08] But when you have opaque systems that produce bad outcomes.
+[00:40:11] And people don't really feel engaged,
+[00:40:13] I think it's going to create greater
+[00:40:15] tension in certain communities.
+[00:40:17] And also one of the problems is there
+[00:40:20] is no training, to my understanding,
+[00:40:22] from these companies.
+[00:40:24] And the jurisdictions using.
+[00:40:25] So I gave the Chicago example, in part because it's funny.
+[00:40:29] But it's also very illustrative of the problem.
+[00:40:32] In that, you give police a printout
+[00:40:34] and say crime may occur in this area at a certain time.
+[00:40:37] But you don't tell them what to do with the data.
+[00:40:40] Or you don't give them any type of context.
+[00:40:42] Then you're more likely to create a more hostile situation
+[00:40:45] between residents.
+[00:40:46] So I think it's both a data and systems problem.
+[00:40:49] But also it goes back to training and policy.
+[00:40:51] In that if you want to try to use these systems
+[00:40:54] in an effective way.
+[00:40:55] You probably should give more context
+[00:40:57] to the officers who are about to engage in the community,
+[00:41:00] using the system.
+[00:41:01] And I don't think training would help solve the problems
+[00:41:04] with predictive policing.
+[00:41:05] And I agree with you that the systems,
+[00:41:07] I think the vendors are also unethical.
+[00:41:09] But I think we just need to start
+[00:41:12] having conversations like this.
+[00:41:13] And changing how we think about the use of technology
+[00:41:16] in government, in solving problems.
+[00:41:21] Back there and over there.
+[00:41:25] AUDIENCE: So somewhat of a segue from the gentleman's question.
+[00:41:30] I actually had a similar question.
+[00:41:31] So do you do you see any way in which,
+[00:41:34] maybe not necessarily from the data
+[00:41:36] that the police are collecting.
+[00:41:38] Or how others maybe watchdog groups,
+[00:41:41] nonprofits such so forth, researchers
+[00:41:44] collect like their own data.
+[00:41:47] I mean I guess in simple terms like the police.
+[00:41:51] Because I'm from Chicago so I do privy
+[00:41:54] to some of these things going on.
+[00:41:56] One of the things that they started implementing,
+[00:41:58] I think last year.
+[00:42:00] Was actually they read the stolen license readers
+[00:42:03] on the police cars.
+[00:42:07] And again, this might be like the master's tools
+[00:42:11] can't dismantle the master's house type thing.
+[00:42:15] I'm actually not sure how much believe--
+[00:42:18] they probably can.
+[00:42:20] But I'm just wondering if for example,
+[00:42:25] let's say you also install a timer in a police car.
+[00:42:31] And actually recorded data of how long
+[00:42:34] they're stopping people.
+[00:42:35] And then you could cross-reference that
+[00:42:37] with race, sex, whatever to show that they're
+[00:42:41] stopping black people longer.
+[00:42:44] I mean is there any way--
+[00:42:46] RASHIDA RICHARDSON: Yeah this is why ended with the point
+[00:42:48] because I realized how I come off sometimes.
+[00:42:51] And I don't want to suggest that data in itself is bad.
+[00:42:54] There are many good uses of data.
+[00:42:56] I think in part this is a transparency problem.
+[00:42:59] And that not everyone is getting access
+[00:43:01] to the same amount of data.
+[00:43:02] And in fact, the non DOJ jurisdictions
+[00:43:06] that I researched.
+[00:43:07] How we even found out the scope of the problematic police
+[00:43:11] problems.
+[00:43:11] Was a result of litigation that required some level of data.
+[00:43:15] So I'll go back to New York, because that's my hometown.
+[00:43:18] But there it was a series of three cases
+[00:43:24] that led to what is known as the Floyd litigation.
+[00:43:26] Which is the big stop and frisk case.
+[00:43:28] But there, there were multiple cases
+[00:43:30] where they just had to get data to even understand
+[00:43:32] the scope of the problem.
+[00:43:33] And then after receiving a few decades of NYPD
+[00:43:36] data is when they saw that.
+[00:43:38] Oh, they're disproportionately targeting Black and Brown
+[00:43:42] communities and specific communities
+[00:43:44] in the outer Boroughs.
+[00:43:46] So yes data is useful and I think it can be useful
+[00:43:50] for a lot of advocacy purposes.
+[00:43:52] But it's a double edged sword in that,
+[00:43:54] the data itself is not always being
+[00:43:56] collected for these reasons.
+[00:43:58] So it takes a lot of effort and analysis
+[00:44:01] to figure out the right ways to make certain arguments.
+[00:44:04] But there are some projects, I know in Chicago there's
+[00:44:08] the Invisible Institute.
+[00:44:09] Which is trying to take police data to identify problems.
+[00:44:13] And also help with advocacy efforts.
+[00:44:15] In New York City there's a Legal Aid Society project, that's
+[00:44:20] related to the gang database.
+[00:44:21] Which is encouraging residents to do what is the state
+[00:44:25] version of FOIA on themselves.
+[00:44:27] To find out if they're part of the database.
+[00:44:29] To help build a public database to understand the problem.
+[00:44:33] So there's a lot of work and advocacy
+[00:44:36] that can come from the use of data.
+[00:44:38] And strategic ways to collect data to help reform police.
+[00:44:42] But we're not quite there yet.
+[00:44:45] And I think you have to start from the beginning.
+[00:44:48] And examining the methodology that things
+[00:44:51] are being collected in.
+[00:44:52] And also the environment that it's being collected in.
+[00:44:55] I know I said earlier but police are not data scientists.
+[00:44:58] So they're just going and doing what they're told.
+[00:45:00] Or even reporting to whatever their self-interest or precinct
+[00:45:04] interest is.
+[00:45:05] But not necessarily with the goal of aggregate data being
+[00:45:09] used in some way.
+[00:45:12] AUDIENCE: Hi.
+[00:45:15] Thanks for this interesting talk.
+[00:45:17] I've got a comment and a question.
+[00:45:21] Here in Cambridge we have ShotSpotter which is--
+[00:45:23] RASHIDA RICHARDSON: That was in one of the images.
+[00:45:25] AUDIENCE: Right yes.
+[00:45:28] Which I found fascinating because by no objective measure
+[00:45:31] do we have a gun problem.
+[00:45:34] So I started pulling on that thread
+[00:45:36] and discovered it was a DOJ grant.
+[00:45:40] So we weren't paying for it, at least at first.
+[00:45:44] And then I started pulling on the DOJ grant problem.
+[00:45:47] And discovered that it wasn't that the DOJ decided
+[00:45:52] this was a good idea.
+[00:45:53] ShotSpotter itself had gone to Washington to the House
+[00:45:57] Appropriations Committee.
+[00:45:58] Got a grant program established through Congress.
+[00:46:03] To buy their own software and then offered presale support
+[00:46:07] to cities.
+[00:46:09] To come to Washington, meet the grant makers
+[00:46:12] and teach them how to write a successful grant.
+[00:46:14] For the money that ShotSpotter had gotten the taxpayers
+[00:46:19] to appropriate.
+[00:46:20] Which is basically as corrupt a feedback loop as you can find.
+[00:46:25] It's astonishing and I'm not sure
+[00:46:28] why ShotSpotter still exists.
+[00:46:30] It's more white collar crime that goes unreported.
+[00:46:34] But my question is this.
+[00:46:40] Are there police role models or predictive
+[00:46:46] policing that you think are actually worth examining
+[00:46:49] because they're good?
+[00:46:50] Are there any best practices actually being
+[00:46:54] used around the nation.
+[00:46:56] Or is for the most part, all this stuff problematic?
+[00:46:59] RASHIDA RICHARDSON: No, it's all problematic.
+[00:47:02] But I do want to make a point about ShotSpotter.
+[00:47:05] Which connects with your question about the cost
+[00:47:08] to taxpayers.
+[00:47:09] And that I recently learned that ShotSpotter is very expensive.
+[00:47:13] And one of the problems with ShotSpotter
+[00:47:16] is the cost actually incentivizes
+[00:47:18] more discriminatory uses.
+[00:47:20] So they end up putting ShotSpotter in traditionally
+[00:47:23] overpoliced communities.
+[00:47:25] Even though that may not reflect where gun crime may occur.
+[00:47:27] Or there may not even be a gun crime issue.
+[00:47:30] But it just becomes another tool to add to the surveillance
+[00:47:34] of certain communities.
+[00:47:36] So that is to try to thread the needle.
+[00:47:41] That is one of the concerns, too.
+[00:47:43] Is that the cost may incentivize police departments
+[00:47:45] to deploy technologies in even more problematic ways.
+[00:47:50] But no, I think part of the concern
+[00:47:53] is lobbying, by a lot of these companies.
+[00:47:56] Specifically PredPol I only know one example
+[00:47:59] where they tried to get Arizona State to pass a law.
+[00:48:02] And it went through the both chambers of the legislature,
+[00:48:05] and was only vetoed by the governor.
+[00:48:08] From my research it's mostly because we
+[00:48:10] think he's a new governor.
+[00:48:11] And was trying to be fiscally responsible.
+[00:48:14] So Thank goodness for governance issues.
+[00:48:18] But they essentially would have gotten
+[00:48:21] Arizona State to fund multiple pilots of their system.
+[00:48:25] But it was under the guise of border security.
+[00:48:27] Which also was a huge question mark
+[00:48:29] of like, that's not really like--
+[00:48:30] if you go on your website and says what you're doing.
+[00:48:33] So how can you say this is for border security?
+[00:48:35] So and then another thing we were trying to understand
+[00:48:38] is that there's these third parties that
+[00:48:41] go to police departments.
+[00:48:43] They're like a marketing team that is
+[00:48:45] separate from these companies.
+[00:48:47] That go around saying oh, you have this problem,
+[00:48:49] this is the way to solve it.
+[00:48:52] And then they help like set up pilots or set up
+[00:48:54] actual contracts.
+[00:48:55] So I think there is a lot of unethical lobbying
+[00:48:58] that's happening.
+[00:48:59] Which fuels the use of these systems.
+[00:49:01] But also results in their implementation
+[00:49:04] not being very thoughtful.
+[00:49:05] Where they're just saying like oh we got this new tool.
+[00:49:09] It's new, we won't spend time trying to think of a policy.
+[00:49:11] About how to actually train officers
+[00:49:13] in using this information, because it's free.
+[00:49:15] And then maybe we won't use it, maybe we will.
+[00:49:18] So there's just like a lot of concentric issues
+[00:49:22] going on at once.
+[00:49:23] Which I think incentivize improper behavior and use
+[00:49:27] of technology.
+[00:49:35] AUDIENCE: So something we all know is that change takes time.
+[00:49:38] And you mentioned earlier is that we identified
+[00:49:40] the problem which is clear.
+[00:49:42] And then you broke down the problem for us today.
+[00:49:44] Well I guess my question is, what's
+[00:49:46] the ETA on predictive policing being gone.
+[00:49:49] So who do I need to vote for so this system gets fixed.
+[00:49:52] Because I feel like we all know the problem.
+[00:49:55] But we don't know how to--
+[00:49:56] we we're all in here like, OK, we got to fix this.
+[00:49:58] But I can't fix it personally, but I know someone out
+[00:50:01] there can.
+[00:50:02] So what should I do to help as like an eighteen-year-old me,
+[00:50:05] I guess.
+[00:50:06] RASHIDA RICHARDSON: Oh well the problem
+[00:50:08] is I don't think it's that easy of a solution.
+[00:50:10] So I think the first step and I said this at the end.
+[00:50:14] Is that there needs to be a broader
+[00:50:16] conversation about the use of these technologies up front.
+[00:50:20] One thing that we've, AI Now, we've
+[00:50:22] wrote an algorithmic impact assessment report last year.
+[00:50:26] Which looks at government use of AI related systems.
+[00:50:30] And tries to build on the history
+[00:50:32] of environmental human rights, and privacy impact statements.
+[00:50:36] In that it would force an agency to actually assess
+[00:50:40] the outcomes.
+[00:50:41] And impact of its use of the system.
+[00:50:43] Open it up to scrutiny from researchers.
+[00:50:45] And actually have a conversation with the community.
+[00:50:48] Where they intend to use these technologies.
+[00:50:50] To assess is this the best way to solve public safety
+[00:50:53] concerns.
+[00:50:54] And I think, I often say this crassly.
+[00:50:57] If you ask anyone in most of these communities.
+[00:50:59] Once you describe what predictive policing
+[00:51:01] is, if that's the best tool to solve a certain problem.
+[00:51:04] Most people would say no.
+[00:51:06] And there are more effective and probably
+[00:51:09] lower cost ways to address problems.
+[00:51:11] So I think i we need to open up the conversation
+[00:51:14] about the use of technology in government more broadly.
+[00:51:17] And engage more of the communities
+[00:51:20] where these technologies are deployed.
+[00:51:21] But also a variety of stakeholders.
+[00:51:24] Because what I often find with predictive policing is they're
+[00:51:28] created in highly technical environments.
+[00:51:30] So it's like PredPol was created by a UCLA math professor.
+[00:51:34] And a bunch of other mathematicians, and that's
+[00:51:36] not to dig at the math departments.
+[00:51:39] But it's more that you have very complicated social issues.
+[00:51:43] Where people who don't have a background or even
+[00:51:46] understanding of those problems.
+[00:51:48] Are applying a technical solution
+[00:51:49] without understanding the social context.
+[00:51:52] And then in the police department,
+[00:51:53] you only have law enforcement officials making decisions.
+[00:51:56] About whether this is the best use case.
+[00:51:58] And no one else from the other side of the criminal justice
+[00:52:01] system.
+[00:52:02] Or even from the communities are part of those conversations.
+[00:52:06] And I think if you even have one defense attorney
+[00:52:09] in any of these conversations.
+[00:52:11] They would raise a few flags about use.
+[00:52:13] So I think the first step is one, acknowledging the problem.
+[00:52:17] And having broader conversations about it.
+[00:52:18] And then I think there needs to be localized solutions.
+[00:52:21] In that I don't think a federal moratorium
+[00:52:25] on the use of predictive policing
+[00:52:27] is necessarily going to solve the problem.
+[00:52:28] Because then it will just shift to some other type
+[00:52:30] of technological use.
+[00:52:32] And it also doesn't address the problem of dirty data
+[00:52:35] within police departments.
+[00:52:36] In the fact that, that data is already
+[00:52:38] used in many different ways within police departments.
+[00:52:41] And more broadly in the criminal justice system.
+[00:52:44] So I know that's not a helpful answer
+[00:52:46] and it's also not giving you an ETA.
+[00:52:48] But because change is slow.
+[00:52:51] I think if you want equitable solutions that
+[00:52:54] actually benefits everyone.
+[00:52:55] It needs to be a conversation that's not made.
+[00:52:59] Or decisions that are made by a hand full of a few people.
+[00:53:03] Who most likely will not be affected by those systems.
+[00:53:06] I don't think there are easy solutions either.
+[00:53:08] The reason why policing has been a problem since the founding
+[00:53:11] of this country.
+[00:53:12] Is because we haven't quite figured it out.
+[00:53:13] And I don't think we're going to figure out
+[00:53:15] either technical or other solution.
+[00:53:18] But we do need to start engaging others.
+[00:53:20] To try to figure out what is the best way
+[00:53:22] to solve these problems.
+[00:53:26] I take more of a realist view, so this is maybe a negative way
+[00:53:29] to end it.
+[00:53:30] But we can accept that certain problems may not ever
+[00:53:33] be addressed.
+[00:53:33] But we can try to find ways to mitigate and improve the life.
+[00:53:37] And safety of certain communities
+[00:53:39] that are negatively harmed.
+[00:53:45] Over here and then there.
+[00:53:46] AUDIENCE: I was wondering if you could talk a little bit more
+[00:53:48] just about the research process.
+[00:53:50] Trying to get information about all of these departments.
+[00:53:52] Did you have-- and you talked a little bit about how hard it
+[00:53:55] was to find information.
+[00:53:56] Did you file a bunch of public records requests?
+[00:53:58] Were they successful?
+[00:53:59] Were they just denied?
+[00:54:00] What strategies did you find to work?
+[00:54:03] RASHIDA RICHARDSON: A lot of the information at least
+[00:54:05] on the police practices and policies is public.
+[00:54:08] In that so it was a lot of reading about really messed
+[00:54:13] up stuff.
+[00:54:14] So it was reading the DOJ investigations
+[00:54:17] and supplemental reports.
+[00:54:18] All court filings and documents related to the litigations.
+[00:54:23] It was more the predictive policing part was hard.
+[00:54:25] And part of the methodology of this research.
+[00:54:29] Is I didn't want to do and I only wanted public information.
+[00:54:32] But I also have been a lawyer for a while.
+[00:54:35] And then public records request and know
+[00:54:36] how long that stuff takes.
+[00:54:38] So I also knew that I wasn't going
+[00:54:40] to get the information I wanted in any period of time.
+[00:54:43] I could have filed this last summer
+[00:54:45] and still not have had information.
+[00:54:47] And part of the reason I wanted to focus
+[00:54:49] on what was publicly available.
+[00:54:51] Is because all of this information
+[00:54:52] should be open and available to the community.
+[00:54:55] To the public generally, but especially to the communities
+[00:54:58] where these technologies are being used.
+[00:55:00] And it's even more of a concern when
+[00:55:02] you can't find information.
+[00:55:04] In Arizona it was actually odd, because there were a few media
+[00:55:08] reports.
+[00:55:08] But then I don't know if it's because media
+[00:55:11] is having a downward turn.
+[00:55:13] But like some of the articles just disappeared over time,
+[00:55:17] and it was hard.
+[00:55:17] And I did look through public records
+[00:55:20] and for contracts of some of the systems.
+[00:55:23] Some systems I found out about through studies.
+[00:55:27] So I think Baltimore maybe was one of the examples.
+[00:55:30] Where the only acknowledgment that the Baltimore
+[00:55:34] County was using a predictive policing system.
+[00:55:37] Was because there was one study which I was able to find.
+[00:55:39] Because I'm part of a University system
+[00:55:41] that had access to research journals.
+[00:55:45] But there was one study that was on the use of that system.
+[00:55:49] And that's also concerning.
+[00:55:50] Because shouldn't people within that county
+[00:55:53] have some level of understanding of what's being used.
+[00:55:55] And it not only being limited to the research community.
+[00:55:59] So it was mostly publicly available documents.
+[00:56:02] Most of the information was public.
+[00:56:03] If anything it was just information
+[00:56:05] about the actual use of the systems.
+[00:56:08] Or which systems were being used,
+[00:56:09] what is the hardest to find.
+[00:56:11] And if someone wanted to replicate this.
+[00:56:15] Or even expanded beyond just DOJ consent decrees.
+[00:56:19] And federally adjudicated settlements
+[00:56:22] in certain jurisdictions.
+[00:56:25] I think doing public records requests would help.
+[00:56:28] But I don't necessarily think that it
+[00:56:30] would end in a fruitful production of documents,
+[00:56:33] that one would want.
+[00:56:36] But I encourage you guys, if you're interested in doing it,
+[00:56:38] it just takes a while, or years.
+[00:56:43] AUDIENCE: So you talked about the need for conversations
+[00:56:46] with stakeholders.
+[00:56:48] And I was just wondering if you could
+[00:56:50] give some examples of who you think
+[00:56:52] those stakeholders should be.
+[00:56:54] And what that conversation or what that process might look
+[00:56:57] like.
+[00:56:58] RASHIDA RICHARDSON: So the process
+[00:56:59] I was describing before could be part of a procurement process.
+[00:57:02] That most municipalities already have in place.
+[00:57:05] And it should definitely happen before you buy something.
+[00:57:08] Because one of the advantages to having a more broader
+[00:57:11] conversation.
+[00:57:12] Is you can identify problems that could presumably
+[00:57:14] be fixed, or put into the contract with a vendor.
+[00:57:18] But who the stakeholders should be.
+[00:57:20] You could have people who were affected
+[00:57:22] by the criminal justice system.
+[00:57:24] And that's either people from communities
+[00:57:25] that have been overpoliced.
+[00:57:26] Or someone who's actually been to prison.
+[00:57:29] Criminal defense attorneys and other
+[00:57:31] advocates for individuals in the criminal justice system.
+[00:57:34] And people who police officers, police officials, inspector
+[00:57:38] generals.
+[00:57:39] Not every municipality has one, but that's usually
+[00:57:42] an independent body that has oversight.
+[00:57:45] And some level of accountability authority
+[00:57:47] over police departments.
+[00:57:48] But I think it needs to be balanced.
+[00:57:50] Because I find in most law enforcement
+[00:57:52] related conversations.
+[00:57:54] It's usually only law enforcement related people.
+[00:57:58] So it's only police Chiefs and prosecutors, but not
+[00:58:01] anyone else.
+[00:58:03] And I also think just people within a community.
+[00:58:05] Because I don't necessarily think
+[00:58:07] you need to have had a negative impact
+[00:58:09] from the criminal justice system.
+[00:58:11] To have an opinion on how you think your community
+[00:58:13] should be policed.
+[00:58:20] Thanks.

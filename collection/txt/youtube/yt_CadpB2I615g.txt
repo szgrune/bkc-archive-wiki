@@ -1,0 +1,1432 @@
+[00:00:01] hello thank you all for coming out to
+[00:00:03] this Berkman talk lunch I'm David
+[00:00:06] Weinberger we'll get to Driessen just a
+[00:00:09] moment because you're here to hear and
+[00:00:13] speak with trees but hurt he will
+[00:00:17] correct by pronunciation I hope very
+[00:00:20] first thing that he does and I apologize
+[00:00:23] but there are some things you should
+[00:00:25] know before we get started which first
+[00:00:27] thing is this is live so anything that
+[00:00:31] you say can be heard by the world it is
+[00:00:34] also being recorded so everything you
+[00:00:37] say can be heard by the world forever so
+[00:00:40] please say whatever you would like but
+[00:00:42] just you know if the internet so keep
+[00:00:43] that in mind so the dress is going to
+[00:00:47] give a talk and then we'll open it up
+[00:00:52] for discussion we will end it 115 please
+[00:00:55] feel free to use whatever hashtags make
+[00:00:58] you happy but the pound Berkman is one
+[00:01:01] good one and at trees if when you're
+[00:01:05] tweeting also at Berkman Center at on
+[00:01:09] Twitter I it's bourbon centered ok for
+[00:01:17] your tweeting for your treating pleasure
+[00:01:20] so that's here's the extent of my
+[00:01:25] introduction almost all of it in fact is
+[00:01:26] written here except that Teresa's has
+[00:01:29] left out that he is the founder and
+[00:01:31] inventor of Drupal as well as its
+[00:01:33] project leaves of much more modest
+[00:01:35] modest title on the screen he's also
+[00:01:37] co-founder and CTO of aquia and with
+[00:01:41] that let me welcome welcome trees here
+[00:01:45] thank you so much for coming
+[00:01:49] everybody is working so yeah next are
+[00:02:01] the introduction David so my name is
+[00:02:04] Rhys ice whoops i started the drupal
+[00:02:09] project in a long time ago 15 years ago
+[00:02:13] out of my dorm room in antwerp where i
+[00:02:18] was living at the time nowadays i live
+[00:02:20] in not in the boston area actually so I
+[00:02:23] moved from Belgium to you know united
+[00:02:26] states by five six years ago um and for
+[00:02:30] the first seven years Iran Drupal as a
+[00:02:34] hobby projects I went to went to work at
+[00:02:37] a little startup in Belgium building
+[00:02:40] real-time operating system than Java
+[00:02:43] Virtual Machine you know machines but at
+[00:02:48] night and hearing the weekends I would
+[00:02:50] work on on Drupal it was my true passion
+[00:02:53] you know trying to to play with
+[00:02:56] different things on the web and at the
+[00:02:58] time very much Drupal was an
+[00:03:00] experimental platform for me to play
+[00:03:02] with things like RSS and blogging you
+[00:03:04] know community features and things like
+[00:03:08] that when I left a little start that I
+[00:03:13] worked on I went on and did a PhD in
+[00:03:17] computer science my PhD had nothing to
+[00:03:20] do with Drupal part about it was all
+[00:03:22] about java virtual machines does it
+[00:03:27] doesn't really matter but but when I
+[00:03:29] finished my PhD I decided to turn my
+[00:03:32] passion we might hope that job and so I
+[00:03:34] started a company called aquia which is
+[00:03:38] actually based here in now in Boston so
+[00:03:40] I started it from Belgium in Boston we
+[00:03:43] have since grown to over 750 people
+[00:03:47] people have noticed that we're one of
+[00:03:50] the fastest-growing private technology
+[00:03:52] companies in the United States so we've
+[00:03:55] been around for about seven years
+[00:03:56] commercially and you know we work with
+[00:04:01] large use it as grupal
+[00:04:03] 53 build products and services around
+[00:04:05] purple but it is me in my door when I
+[00:04:11] started rupal and a lot of things have
+[00:04:14] obviously changed some of these early
+[00:04:17] days and most recently drupal third you
+[00:04:22] know 15 years old and we also released
+[00:04:25] Drupal 8 on the same day and we
+[00:04:27] celebrated that you know with 240
+[00:04:32] parties all around the world which is
+[00:04:34] kind of cool and you know today Drupal
+[00:04:39] is used by roughly three percent of all
+[00:04:41] the websites in the world so millions of
+[00:04:43] websites we have a very large and active
+[00:04:45] community of contributors there over
+[00:04:49] 35,000 people contributing to Drupal
+[00:04:52] today um you know which is which is
+[00:04:54] pretty exciting but obviously a lot has
+[00:04:58] changed since the day I started rupal
+[00:05:00] and today and on this slide you can read
+[00:05:04] a few examples but um when I started
+[00:05:07] Drupal I felt like it could wrap my arms
+[00:05:09] around everything that was going on the
+[00:05:10] web today obviously that's almost
+[00:05:13] impossible to even know what's going on
+[00:05:16] but like Google is still a private
+[00:05:18] company at the time I remember while I
+[00:05:22] was working on Drupal before I released
+[00:05:26] the first version of Drupal Google I
+[00:05:28] just launched at words and they're like
+[00:05:31] 500 customers so obviously today they're
+[00:05:35] advertising business alone is a you know
+[00:05:38] 65 billion dollar business and so just
+[00:05:41] to think about the impact of advertising
+[00:05:44] and how that changed on the web it's
+[00:05:47] kind of a big deal but half of the
+[00:05:50] people at cell phones but in a day an
+[00:05:53] AT&T only had just launched text
+[00:05:56] messaging a few months before and so
+[00:05:59] this idea of the mobile web just didn't
+[00:06:02] exist um now obviously social media
+[00:06:06] Facebook Twitter the only we're born
+[00:06:10] many years later open source so Drupal
+[00:06:14] is open source open source was still
+[00:06:17] something that people were trying to
+[00:06:18] understand and companies like Microsoft
+[00:06:21] and others they would put out these
+[00:06:24] memos you know leaked Oregon purpose I
+[00:06:28] don't know you know sharing that they
+[00:06:29] felt threatened by the open source
+[00:06:31] movement and so very interesting time
+[00:06:34] today obviously mobile is a big deal
+[00:06:37] social media is a big deal open source
+[00:06:39] is extremely well accepted and continues
+[00:06:42] to grow but you know Google is one of
+[00:06:44] the largest technology companies in the
+[00:06:46] world so and ripple survived all of
+[00:06:48] these you know changes in the markets
+[00:06:50] and I think we survived them because
+[00:06:52] we've always sort of thought ahead you
+[00:06:55] know we've always been thinking where do
+[00:06:57] we need to go to stay relevant and then
+[00:07:00] we manage to navigate our community to
+[00:07:03] be at the right time at the right place
+[00:07:04] and so we are 15 years old but we
+[00:07:07] continue to gain um you know momentum um
+[00:07:13] all right I mentioned the birthday and
+[00:07:17] so if you go back in time you think
+[00:07:20] about how things were and if you think
+[00:07:22] about how things are today you know back
+[00:07:25] in the day there's a lot of small
+[00:07:26] websites that were connected to Google
+[00:07:29] you know people would search them at an
+[00:07:31] overtime there's these bigger platform
+[00:07:34] that third beam urge you know companies
+[00:07:37] like google that i mentioned linkedin
+[00:07:39] facebook and i feel that today that
+[00:07:42] grown so big that they're actually
+[00:07:44] starting to squeeze a lot of these
+[00:07:46] smaller sites are out of the picture the
+[00:07:50] way people consume the internet can
+[00:07:52] literally be to these platforms there's
+[00:07:55] been research which you may all be aware
+[00:07:58] of that basically state that a lot of
+[00:08:00] people think Facebook is the internet
+[00:08:02] you ask people but his facebook she'll
+[00:08:06] say facebook at dinner and so i think
+[00:08:10] that that is a bit of a challenge
+[00:08:12] personally and so today i want to talk
+[00:08:14] about the open web some of the trends in
+[00:08:17] the market and i'd love to discuss um
+[00:08:21] how we can try and save the open web
+[00:08:24] right and so before we do that it like
+[00:08:27] to share a few
+[00:08:30] you know thoughts myself and maybe first
+[00:08:33] tried to define what do we mean open
+[00:08:35] weapon what do we mean with the closed
+[00:08:37] Club alright because I think aligning on
+[00:08:39] some sort of a definition is probably
+[00:08:41] useful a useful start so when we dug by
+[00:08:45] deploys what we typically refer to
+[00:08:48] audrey's walled gardens it's also how
+[00:08:50] the media refers to don't companies like
+[00:08:53] Facebook and Apple and Google the
+[00:08:56] capture a lot of data but at the same
+[00:08:59] time I think what makes it interesting
+[00:09:02] is that the walled gardens even though
+[00:09:04] they have a lot of data they try to you
+[00:09:07] know attract everybody to their sites
+[00:09:09] they're also doing some good things if
+[00:09:12] you think about Google if you think
+[00:09:13] about Facebook they've literally brought
+[00:09:16] millions you know even billions of
+[00:09:19] people online and they provided a better
+[00:09:21] experience for them enabling them to
+[00:09:23] connect with one another in the process
+[00:09:27] there is lots of great stories of how
+[00:09:29] these platforms have a really meaningful
+[00:09:32] impact on even democracy on human rights
+[00:09:35] and how they've been able to drive
+[00:09:37] change in the world so this is where it
+[00:09:40] gets difficult right because they have a
+[00:09:43] lot of data there's real concerns around
+[00:09:46] privacy and the likes at the same time
+[00:09:48] you're also really helping a lot of
+[00:09:51] people if you think about the fact that
+[00:09:54] things like Google give people that have
+[00:09:58] internet access pretty much instant
+[00:10:01] access to critical information can be
+[00:10:05] life-changing or a lot of these
+[00:10:06] organizations or people i should say so
+[00:10:12] i think what's scary about those is
+[00:10:14] their scale you know google facebook of
+[00:10:17] over a billion users each i think
+[00:10:19] facebook is 1.6 billion active users
+[00:10:21] each month Apple has over a billion iOS
+[00:10:25] devices and it's that scale combined
+[00:10:28] with the fact that they are able to
+[00:10:32] shave the news there's a study from
+[00:10:36] Politico that says that Google could
+[00:10:38] actually influence the results of the
+[00:10:40] American election
+[00:10:42] um by just tweaking their algorithm and
+[00:10:45] i'm showing search results a little bit
+[00:10:47] different so they're literally able to
+[00:10:49] shape the news facebook can show you
+[00:10:52] everything right so they're deciding
+[00:10:54] what you know what status updates are
+[00:10:57] they going to show you so they could
+[00:10:59] build in a bias either on purpose or by
+[00:11:02] accident not saying they're all no evil
+[00:11:06] but you know bias can be introduced they
+[00:11:10] check out awful lot of data but all of
+[00:11:13] all of us and I'll show that in a second
+[00:11:15] I think that's potentially a reason for
+[00:11:18] concern and frankly I don't think
+[00:11:20] they'll stop until they know everything
+[00:11:22] about us and I'll talk about that a
+[00:11:26] little bit as well but if you think
+[00:11:28] about what they know trying to create a
+[00:11:30] diagram for some of these big platforms
+[00:11:33] amazon is the first one a linkedin
+[00:11:36] facebook google apple um and then try to
+[00:11:41] visualize kind of what information they
+[00:11:42] know butters and it's pretty terrifying
+[00:11:44] if you think about it then google
+[00:11:46] probably knows the most of us you know
+[00:11:51] because i mean i use gmail instead of
+[00:11:55] all my email google ads is on you know
+[00:11:59] i'm like i don't know what their market
+[00:12:01] share is for advertising but probably
+[00:12:03] ninety percent of the advertising is
+[00:12:05] using google ads and said they know
+[00:12:08] every website that i go to and based on
+[00:12:11] that they can determine my interests um
+[00:12:14] now they tried google plus that have you
+[00:12:17] know all these information about my
+[00:12:18] social network and the likes and in fact
+[00:12:20] you should try a few searches like if
+[00:12:22] you search just in google com for an
+[00:12:26] amazon order that you please it will
+[00:12:28] actually show you on google com your
+[00:12:31] amazon order reformat it by google i/o
+[00:12:35] if you ever try this the racine of your
+[00:12:39] amazon purchase has to go into your
+[00:12:41] gmail of it like they're able two choirs
+[00:12:43] these things and know what you buy it's
+[00:12:45] not just an email in your inbox it's an
+[00:12:47] actual thing for them that they know
+[00:12:49] that in my opinion these platforms could
+[00:12:52] evolve to the point that they basically
+[00:12:56] of all these things checked I think
+[00:13:00] that's if you think about a lot of the
+[00:13:02] acquisitions they do and new features
+[00:13:04] that they launched almost always there
+[00:13:07] is like this ability to check another
+[00:13:09] box which i think is interesting amazon
+[00:13:12] recently announced that they're starting
+[00:13:14] a mail service for example allows them
+[00:13:18] to to get or email and so I think this
+[00:13:23] is a concern but the challenge here is
+[00:13:27] that they do it is because they can
+[00:13:29] actually build and deliver a better user
+[00:13:31] experience the fact that Google know so
+[00:13:33] much about you is actually not
+[00:13:36] necessarily a bad thing you think about
+[00:13:39] Google now how many people know google
+[00:13:41] map people also they basically push you
+[00:13:45] relevant information at the right time
+[00:13:48] and they can do so because they know all
+[00:13:50] these things about you they know where
+[00:13:51] you're going they're know who your next
+[00:13:54] meeting is is with and all of these
+[00:13:56] things so I think this is really
+[00:13:59] important because I do believe that
+[00:14:01] these walled gardens are winning because
+[00:14:03] it's so easy right people use facebook
+[00:14:05] because it's very easy to stay in touch
+[00:14:08] with your friends and family for me for
+[00:14:13] example I moved from Belgium to the US
+[00:14:15] for me to stay in touch with my friends
+[00:14:18] and family before Facebook i would have
+[00:14:20] to give them a phone call and ask k mom
+[00:14:22] our things or a friend how are things
+[00:14:26] and now i can just you know tap into
+[00:14:29] this stream of status updates from all
+[00:14:33] my friends and all my family in a way
+[00:14:36] that's much easier and much more
+[00:14:38] scalable so that's why these platforms
+[00:14:40] are winning same thing with linkedin a
+[00:14:44] nap and apple and the likes all right if
+[00:14:48] you go back to the definition real quick
+[00:14:49] so there is this idea of the open web
+[00:14:52] and David will notice but you know back
+[00:14:57] in the day throw something my creative
+[00:15:00] freedom everybody has their own websites
+[00:15:02] and you could express yourself you could
+[00:15:05] make that website purple or green with
+[00:15:08] blue dots or not
+[00:15:10] you wanted to do right you could create
+[00:15:12] an experience you could represent
+[00:15:14] yourself with unlimited creative freedom
+[00:15:18] there's also something serendipitous
+[00:15:21] about the web and do some extender is
+[00:15:24] still today but I remember the evenings
+[00:15:26] where we get lost on the web and ended
+[00:15:28] up reading in all these pages and then
+[00:15:31] get lost again and ended up on this
+[00:15:33] section of the webbing I feel that's
+[00:15:35] gone a little bit to be honest like we
+[00:15:37] just scroll our Facebook feed and that's
+[00:15:39] it oh we have much more control not only
+[00:15:45] over the experience and how we present
+[00:15:47] ourselves but also for our data and to
+[00:15:51] some extent of our privacy and and all
+[00:15:53] of these things are sort of
+[00:15:54] decentralized and burst open standards
+[00:15:57] that emerge that's right to connect some
+[00:15:59] of these things and the and Google and
+[00:16:03] other search engines are tried to kind
+[00:16:05] of make sense of these decentralized
+[00:16:07] chaos that was the web and so don't
+[00:16:12] dress that with the closed web and you
+[00:16:15] know people's facebook profiles is
+[00:16:17] pretty much identical there's no like
+[00:16:19] creative freedom in those things
+[00:16:22] algorithms as i mentioned decide what we
+[00:16:25] see in what we don't see you know it's
+[00:16:29] and getting worse and worse in some
+[00:16:31] regards with flip warts and apple mutes
+[00:16:34] and facebook and linkedin delft filter
+[00:16:37] and curate what we see and there's a
+[00:16:41] thin line between creation and
+[00:16:43] censorship for example and something to
+[00:16:46] to think about privacy it's all over the
+[00:16:50] news all the time but obviously there's
+[00:16:53] questions around privacy and a lot of
+[00:16:55] the information is siloed with a handful
+[00:16:58] or maybe a dozen of large companies and
+[00:17:01] it gave me that and there's there's many
+[00:17:03] examples of this in the media me chat is
+[00:17:06] a basically the app that people use in
+[00:17:10] China and it's going on the Facebook
+[00:17:13] plus apps if you dope and so there was a
+[00:17:16] girl in the we chat app you never seen
+[00:17:20] it may be a little hard to to imagine
+[00:17:22] but
+[00:17:23] that the holding company behind we chat
+[00:17:26] then decided to buy another no ride
+[00:17:30] sharing company if you will and then
+[00:17:33] instantly kicked out uber from no hm so
+[00:17:38] these big platforms it can be a little
+[00:17:41] terrifying in terms of how they handle
+[00:17:43] these kinds of things Twitter once had a
+[00:17:46] completely open API where everybody
+[00:17:48] could build their own Twitter clients at
+[00:17:51] some point they said we're not going to
+[00:17:53] allow it anymore because we want to
+[00:17:55] monetize all of the clients that exists
+[00:17:58] so they closed the having to open it guy
+[00:18:00] in favor of making more money facebook
+[00:18:05] with three basic strength to launch free
+[00:18:07] internet to you know countries like
+[00:18:11] India and then deciding to do that on
+[00:18:14] their terms where they can use Facebook
+[00:18:15] and a few other things but not
+[00:18:17] completely free internet it is these
+[00:18:20] platforms have a lot of power to Google
+[00:18:22] as I mentioned being able to buy us you
+[00:18:27] know what you searched and the results
+[00:18:29] to the point that they can influence the
+[00:18:31] result of Elections so there's a lot of
+[00:18:33] questions in my mind about this at the
+[00:18:37] same time and I'll bring these things
+[00:18:39] together in a second I want to talk
+[00:18:41] about a few trends and for those people
+[00:18:44] that have been you know following my
+[00:18:46] blog I've written about all of those but
+[00:18:48] one of the things I've been talking
+[00:18:50] about it for a while is this idea of the
+[00:18:52] big reverse of the web you want to know
+[00:18:56] all the details you can go to my blog
+[00:18:57] but the idea is you know I believe that
+[00:19:02] we're in sort of a transformational
+[00:19:04] phase of the web wherever and I'm
+[00:19:06] flipping the web on its head where the
+[00:19:12] way things used to work is people would
+[00:19:14] go to multiple sites and get the
+[00:19:17] information that they want if you wanted
+[00:19:19] to get the news you with those with the
+[00:19:20] new york times may be done you be good
+[00:19:22] another site and every morning people
+[00:19:24] would wake up and go to like a list of
+[00:19:26] all these sites to define the
+[00:19:28] information that they wanted to define
+[00:19:34] in the future and it's already happening
+[00:19:36] you know information will come to you
+[00:19:39] instead of you having to go to the
+[00:19:42] source information will increasingly
+[00:19:44] come to you not just information but
+[00:19:46] also services and products and it's this
+[00:19:49] idea of that content will find you and
+[00:19:52] it will find you at the right time on
+[00:19:54] the right device and so it's a big
+[00:19:57] technology trend that we're all trying
+[00:20:00] to go after but I think it's significant
+[00:20:03] if you know so it's important to
+[00:20:05] understand when we talk about the future
+[00:20:08] of the weapon it will be pretty clear in
+[00:20:10] a second here the second trend is data
+[00:20:13] is eating the world again all these
+[00:20:17] companies captured our data and they use
+[00:20:18] that data and they use it in combination
+[00:20:20] increasingly more with machine learning
+[00:20:23] official intelligence and the likes to
+[00:20:26] again you know all these things combined
+[00:20:29] basically to give you the right
+[00:20:31] information or the right service at the
+[00:20:32] right time on the right device and they
+[00:20:35] try to do that in a data-driven you know
+[00:20:38] smart way so have a couple of you know
+[00:20:42] slides about this um you know there's an
+[00:20:46] example of syrup getting a notification
+[00:20:47] and the often called is mobile or
+[00:20:51] contextual moments this is ideal today
+[00:20:54] you pull up your phone and we're at the
+[00:20:55] airport stranded like it was this
+[00:20:59] weekend hi then you go to the airline
+[00:21:02] website basically asks if you want to
+[00:21:04] book in your tickets I don't want to
+[00:21:06] book in your ticket I want to figure out
+[00:21:07] when you know where my flight is and why
+[00:21:10] I'm you know why it's cancelled or what
+[00:21:12] White's postponed so I wanna
+[00:21:14] contextually relevant experiences or
+[00:21:17] when I arrived at an airport and my
+[00:21:19] luggage is less lost I don't want to
+[00:21:21] book a new flight I want to buy my
+[00:21:23] luggage and so building these kinds of
+[00:21:26] smart experiences or contextual or
+[00:21:28] mobile moments i think is where the
+[00:21:31] future is that data will be behind that
+[00:21:34] they need to know where my luggage is
+[00:21:36] they need to integrate with a luggage
+[00:21:38] service in this particular example so
+[00:21:40] it's all about building these data data
+[00:21:44] driven experiences a
+[00:21:45] the official intelligence will be
+[00:21:48] underpinning all of these things and
+[00:21:50] again all of these things combined will
+[00:21:53] lead to a better user experience but it
+[00:21:56] will also raise a lot of questions and
+[00:21:59] so I blog believe that this this is true
+[00:22:03] that user experience always wins now
+[00:22:06] people actually don't necessarily think
+[00:22:08] hard about how their data is used or the
+[00:22:12] ramifications of sharing all of their
+[00:22:14] data that they'll just do whatever is
+[00:22:16] most convenient right so that's
+[00:22:21] important to keep in mind and so if you
+[00:22:24] think about the future of the web you
+[00:22:25] know will it be an open web or will be
+[00:22:27] closed well um I don't necessarily have
+[00:22:32] the answer um I think it literally could
+[00:22:36] go either way but I think we need to
+[00:22:38] think about it again we can we build you
+[00:22:44] know transparent algorithms you know
+[00:22:48] that we understand how they work how can
+[00:22:51] we building a driven algorithms because
+[00:22:54] that's where the future is that you know
+[00:22:56] it's to be data driven the help is
+[00:22:58] discovered information and that do not
+[00:23:01] exclude serendipity for example how can
+[00:23:06] we take back control over our privacy
+[00:23:09] and our data and how that's used and how
+[00:23:13] can we break these silos the head full
+[00:23:16] of large platforms and you know try to
+[00:23:20] decentralize them in a way that um then
+[00:23:24] we can still offer the best user
+[00:23:26] experience it's really hard you think
+[00:23:29] about how do we compete with Google when
+[00:23:32] the way to compete is having all that
+[00:23:34] data all that compute power and all
+[00:23:37] these resources how do we do that in a
+[00:23:41] decentralized way obviously not exactly
+[00:23:45] easy right and so I think there's a
+[00:23:50] couple of things that we want one I
+[00:23:52] think we need more transparency we need
+[00:23:56] to know what data is captured we need
+[00:23:59] know how that data is used but also how
+[00:24:03] do you celebrate amiss work and so I've
+[00:24:06] been talking about this idea and I'm
+[00:24:09] still not sure if it's the best idea but
+[00:24:10] it's this idea that we need an FDA for
+[00:24:13] data and algorithms like if you have
+[00:24:16] these large platforms like Google that
+[00:24:19] have an impact on society that can
+[00:24:22] influence the outcomes of Elections as
+[00:24:25] just one example it would be good if
+[00:24:27] somebody could actually audit these
+[00:24:30] algorithms to make sure there's no bias
+[00:24:33] built into them either on purpose or by
+[00:24:37] accident um so this is one of the things
+[00:24:41] i'd love to get your input it once we're
+[00:24:43] through the slides is is this a way to
+[00:24:45] to do it or is there a better way to get
+[00:24:49] you know to get these companies to do
+[00:24:54] the right thing if they're not doing
+[00:24:55] right then you think about the history
+[00:24:57] of the FDA you know was introduced many
+[00:25:01] many years ago it was the same kind of
+[00:25:03] idea people started to produce food
+[00:25:06] mass-produced food people started to
+[00:25:08] avenge drugs at some point the
+[00:25:10] government had to step in to make sure
+[00:25:12] that these things sort of all you know
+[00:25:15] met certain quality standards and the
+[00:25:17] like so and if you want to do it is for
+[00:25:20] data and algorithms how would we do it
+[00:25:22] because not exactly easy right to audit
+[00:25:24] an algorithm maybe we need algorithms to
+[00:25:27] audit the algorithms you need like it's
+[00:25:30] not like somebody can go to all the
+[00:25:31] lines of code at Google they say that
+[00:25:34] you know things are working well all
+[00:25:37] right so second thing I think we need is
+[00:25:41] we need to protect our data and
+[00:25:44] specifically privacy and control and and
+[00:25:47] again it's something I've been talking
+[00:25:49] about for a while not in a lot of detail
+[00:25:52] is his idea of a personal information
+[00:25:55] broker it's it's the idea where you
+[00:25:58] unbundle Facebook and Google and try to
+[00:26:02] store date information in one place that
+[00:26:06] you control but make it available to
+[00:26:09] api's to these platforms and be in
+[00:26:11] charge of
+[00:26:12] how much data you share um how long you
+[00:26:17] share it for what they can use it for
+[00:26:19] and the like and Facebook does actually
+[00:26:21] do a little bit of that use facebook
+[00:26:24] connection to log into a website you
+[00:26:27] guys done that it will tell you facebook
+[00:26:30] with or this site would like to access
+[00:26:32] this and this information from facebook
+[00:26:34] i think that's actually the right way to
+[00:26:36] go but we need to do it I think across
+[00:26:40] all these platforms some organizations
+[00:26:48] are experimenting with this I don't
+[00:26:49] think any of them have real traction but
+[00:26:52] I'd love to see this this work so one
+[00:26:56] question would be I do make this work
+[00:27:03] sorry it was an animation all right I
+[00:27:09] think the last thing that we need is
+[00:27:11] decentralization and a better user
+[00:27:13] experience and this one is also
+[00:27:15] incredibly difficult like how can we
+[00:27:17] tonight it's not good enough to be as
+[00:27:19] easy to use as Google and Facebook for
+[00:27:22] this pretty open web to win we actually
+[00:27:25] need to be much easier to use them now
+[00:27:28] it's not about getting you know parody
+[00:27:31] there it's about like beating them at
+[00:27:33] user experience which is tremendous
+[00:27:35] challenge I personally believe this is
+[00:27:40] where open source confirm it and open
+[00:27:42] standards I think we need to figure out
+[00:27:44] open standards that allow us to build a
+[00:27:46] layer of technology that enables
+[00:27:51] different sites different apps different
+[00:27:54] whatever you call it to communicate and
+[00:27:59] actually make that very easy easy to use
+[00:28:01] mmm you know like and this is where it
+[00:28:05] gets really tricky because um you know
+[00:28:10] like how do you do you know how do you
+[00:28:13] make it easy for people to leave a
+[00:28:15] comment all these different side without
+[00:28:18] them having to create an account having
+[00:28:20] to log in like can we built other layers
+[00:28:24] in the technology stack that
+[00:28:26] help facilitate that and so you know to
+[00:28:33] wrap it up um these are just a couple of
+[00:28:37] ideas of things we could try to do FDA
+[00:28:41] idea personal information broker more
+[00:28:44] standards and open source and while it
+[00:28:51] looks almost impossible in a way I do
+[00:28:53] you think that both and source projects
+[00:28:55] like drupal than half breach gonna have
+[00:28:58] a meaningful impact at least and I
+[00:29:00] really believe that you know we have to
+[00:29:03] try we have to do something because
+[00:29:06] today the web is used by billions of
+[00:29:09] people tomorrow it's going to be used by
+[00:29:12] even more people I mean think about how
+[00:29:15] many people depend on this thing and
+[00:29:17] some of the changes that are happening
+[00:29:19] the things that I mentioned with machine
+[00:29:22] learning the things that I mentioned
+[00:29:23] with data-driven experiences the
+[00:29:26] Internet of Things all of these
+[00:29:27] technologies coming together will
+[00:29:30] accelerate the development of the web
+[00:29:33] and that will no one be linear it will
+[00:29:36] be exponential acceleration of what's
+[00:29:38] possible and it will change everything I
+[00:29:42] think it will change every business
+[00:29:44] model it will change every industry will
+[00:29:47] change every country and it will impact
+[00:29:50] every life some of these changes that
+[00:29:53] are ahead of us and so honestly believe
+[00:29:57] we have a huge responsibility to build
+[00:30:00] the web that we want to build to build
+[00:30:03] the web that's a great foundation for
+[00:30:06] all these people for decades to come and
+[00:30:11] so obviously going to take a lot of
+[00:30:15] effort and a lot of help but we needed
+[00:30:17] the smartest people you know to step in
+[00:30:21] and help I think because otherwise we'll
+[00:30:24] end up with five players that define the
+[00:30:27] web so that it like to say thank you and
+[00:30:33] start a discussion
+[00:30:40] you have lots of time for questions hi
+[00:30:52] my name is Elizabeth gokhan i'ma and my
+[00:30:56] question is about you know what we
+[00:30:57] actually have the moment of the web and
+[00:31:00] with all of the systems and when you
+[00:31:02] have a mismatches you know with your
+[00:31:04] Airport example between the modeling
+[00:31:07] that's been done and reality and for
+[00:31:09] everybody in this room has had an
+[00:31:11] experience where somebody told them that
+[00:31:14] there was you know that what they knew
+[00:31:16] themselves you know your package has
+[00:31:18] been delivered it's in the computer it's
+[00:31:21] been delivered that this can lead to a
+[00:31:24] great deal of frustration and a lot of
+[00:31:28] human energy chasing some bad
+[00:31:33] information in the computer yeah um I'm
+[00:31:36] not sure why your package was missed but
+[00:31:41] no I mean it could be a variety of
+[00:31:44] different reasons obviously but I think
+[00:31:46] it speaks through the importance you
+[00:31:49] know as we build these systems right
+[00:31:52] that deliver packages are that we become
+[00:31:55] increasingly dependent on one of the
+[00:31:57] biggest challenges will be around
+[00:31:59] reliability Brazilian sees I mean if a
+[00:32:03] system goes down all of a sudden things
+[00:32:06] stop functioning and so I think there's
+[00:32:09] a lot of infrastructure a lot of tools
+[00:32:12] and processes I need to be built up to
+[00:32:14] me all of these things work really well
+[00:32:18] in and you know we see that with our
+[00:32:20] customers for example as well like a lot
+[00:32:22] of them are moving to the clouds because
+[00:32:24] that gives them that greater resiliency
+[00:32:28] and consistency and gives them that
+[00:32:31] foundational air with which they can
+[00:32:33] built it you know we're building layers
+[00:32:34] and layers on top of each other that
+[00:32:36] becomes stronger and stronger so I think
+[00:32:38] it's something that will overcome over
+[00:32:41] time the defendants on systems is a
+[00:32:45] little scary
+[00:32:48] hi I think this was a very good talk but
+[00:32:51] I want to take issue with your concept
+[00:32:53] of an FDA for algorithms a while ago
+[00:32:56] slow came up with the concept of a
+[00:32:58] cathedral versus the bazaar and at the
+[00:33:03] EDA algorithm sense very much in the
+[00:33:05] direction of the theorem maybe what
+[00:33:07] really is a consumer report score
+[00:33:11] algorithms for maybe of Wiggy
+[00:33:13] algorithmic ax that will more people
+[00:33:16] about the consequences of algorithms FDA
+[00:33:20] sounds like something like China might
+[00:33:22] they not in order to try to control what
+[00:33:24] people say and I think there's a
+[00:33:27] tendency for centralization of a lot of
+[00:33:30] these things partially for government
+[00:33:33] control plant security and partially for
+[00:33:35] monetization and I think well he might
+[00:33:37] be just work competition in an open
+[00:33:40] source framework with some good
+[00:33:42] information to help people choose right
+[00:33:45] I think it's a good good feedback again
+[00:33:48] I don't have the answer here to be
+[00:33:50] honest if the system like that could
+[00:33:54] work it may be more scalable that I'm
+[00:33:56] have the a light approach people trust
+[00:33:59] it as well so I love to think a little
+[00:34:04] bit about that if you know what comes to
+[00:34:06] mind our questions like if a system like
+[00:34:10] that would work why don't we use it for
+[00:34:13] drugs why don't we use it for food I
+[00:34:21] don't know don't you believe in sort of
+[00:34:27] Darwinian approaches see where we can
+[00:34:31] try different things and hopefully the
+[00:34:33] best solution will bubble to the top and
+[00:34:36] survive the mall for trying multiple
+[00:34:40] things and see what works best the
+[00:34:45] stripe to rub my head arrived hobby
+[00:34:46] would even start to do that and I think
+[00:34:49] we would need I think it means maybe
+[00:34:53] some level of access to the data you
+[00:34:59] know to do a good
+[00:35:00] like in-depth review well something to
+[00:35:07] think about okay I'm gonna jump in with
+[00:35:11] question Thursday so I I love everything
+[00:35:15] they were saying and I d hears about the
+[00:35:17] closing of the web but there are
+[00:35:22] efficiencies of size that enable Google
+[00:35:25] to be able to search the way that it
+[00:35:27] does have basically power plants might
+[00:35:30] takes a lot of capital um and there's a
+[00:35:33] network effect for something like
+[00:35:34] Facebook both of those seeing even if
+[00:35:37] the data was externalized and they're
+[00:35:39] dealing with open API is that anybody
+[00:35:41] could access they would still have
+[00:35:43] somewhat natural women say packages at
+[00:35:45] ten toward centralization we see any way
+[00:35:48] around the networking impact on the
+[00:35:51] economy of scale fish oh um well it's
+[00:35:59] getting a heart I don't know I'm I don't
+[00:36:08] have a crisp answer but a sort of a
+[00:36:10] hopeful attitude if you think about the
+[00:36:14] weapon how its evolved it has guiana
+[00:36:16] swung between closed and open over time
+[00:36:20] was was born open when Tim berners-lee
+[00:36:23] created a weapon they had you know
+[00:36:25] obviously was meant to be open system or
+[00:36:27] all academics could collaborate and
+[00:36:30] share and then AOL came along and was
+[00:36:33] very close to dwell in many ways where
+[00:36:36] he could browse the web through the lens
+[00:36:39] of AOL and then we got out of that like
+[00:36:43] a feel in the early two thousands or
+[00:36:46] late nineties um when Google was
+[00:36:50] emerging I felt the whip was I felt open
+[00:36:53] to me um so now it feels like it's
+[00:36:57] closing again so it's going back and
+[00:37:00] forth and I don't know exactly how we
+[00:37:02] overcome economies of scale but I
+[00:37:06] usually takes sort of a fundamentally
+[00:37:09] different approach to doing things
+[00:37:11] you know like how we went from AOL to
+[00:37:14] say the Google era it was a disruptive
+[00:37:19] innovation for lack of a better word
+[00:37:21] that stuff costs the old model to you
+[00:37:26] know to stop functioning and so I don't
+[00:37:28] know what that is but I'm hopeful that
+[00:37:30] at some point we'll about some sort of
+[00:37:31] breakthrough that will render the
+[00:37:35] economy of scale maybe less useful I
+[00:37:38] don't know I wish I wish had a better
+[00:37:41] answer to that question yeah it's one
+[00:37:48] learn then ya hey um so Jason urquiola
+[00:37:52] fellow here at Berkman Center follows a
+[00:37:56] little bit on the FDA I we've had
+[00:37:58] several speakers of the course of the
+[00:38:00] year suggest something very much like a
+[00:38:03] governmental agency to do some oversight
+[00:38:06] of things and I'm becoming convinced
+[00:38:08] that this is a mechanic administer over
+[00:38:11] the course of of these talks that this
+[00:38:13] might be something that is is wearing
+[00:38:15] pursuing the difficulty one of the
+[00:38:18] difficulties that I see arising from
+[00:38:20] this and if you have any thoughts of
+[00:38:21] love to hear them is the the fact that
+[00:38:24] we have non government actors in the
+[00:38:28] form of Google and everything that have
+[00:38:30] the ability to simply flee right like if
+[00:38:32] we instantiate an FDA for algorithms
+[00:38:35] they can run away to greener pastures um
+[00:38:38] it's not entirely monetarily easy and
+[00:38:41] there's a lot of inner structure and all
+[00:38:43] that but but there are many many many
+[00:38:45] sorts of legal things that can do in
+[00:38:47] order to hide themselves something in
+[00:38:49] the Cayman Islands or whatever right so
+[00:38:52] um are we talking about a you in you
+[00:38:56] know I like we have to come up the scale
+[00:38:58] is that the is that the way this gets
+[00:39:01] rectified or is there something new that
+[00:39:06] needs to happen that's a good question
+[00:39:09] and I'm not a policy versa or like many
+[00:39:13] of you an expert in in law and these
+[00:39:16] kinds of things um but something may
+[00:39:20] need to happen and I think that the
+[00:39:22] problem exists to some extent today
+[00:39:24] right I think you know what happens when
+[00:39:29] somebody in another country uses
+[00:39:32] facebook to do something illegal I don't
+[00:39:36] know what the law says about these
+[00:39:37] things but imagine that there is some
+[00:39:40] things in place and if there's no things
+[00:39:41] in place which probably should be
+[00:39:43] something in place but obviously they to
+[00:39:48] your point the Internet is a global
+[00:39:50] phenomenon and traditional borders don't
+[00:39:53] apply to a lot of these things everybody
+[00:39:55] uses google everybody uses facebook so
+[00:40:02] maybe I think it would be healthy if if
+[00:40:06] we did it at the local level because if
+[00:40:10] one country does this it will probably
+[00:40:12] hopefully automatically become available
+[00:40:16] to other people in other countries but
+[00:40:18] it could be more effective to do
+[00:40:21] globally for sure these are so many
+[00:40:24] clinics light since I just from I'd love
+[00:40:27] and follow up on that yeah anything cuz
+[00:40:29] I'm really puzzled by what the FDA would
+[00:40:31] you like I understand bangs hurting food
+[00:40:35] products have been demonstrated 50
+[00:40:37] unhealthy or poisonous I understand
+[00:40:40] putting a label on there what would this
+[00:40:43] do it is say that warning this news feed
+[00:40:45] is tilted towards the right or you're
+[00:40:47] gonna see more cat pictures of any
+[00:40:50] wonder yeah what are we fighting here
+[00:40:53] and Helen I do it and I don't mean to be
+[00:40:56] done but I truly don't know nice take it
+[00:40:58] out I mean I can try to answer unless
+[00:41:01] somebody wants to chime in as well but I
+[00:41:04] think at a minimum I think if these
+[00:41:07] large mug from suburb is that it going
+[00:41:09] to be good to disclose it personally so
+[00:41:15] they could ask them for this cause of
+[00:41:17] Isis if they have any that's probably
+[00:41:21] all they could do I imagine they make
+[00:41:25] they can mandate them to be neutral I
+[00:41:28] don't think you know I think they could
+[00:41:35] you have to better define what if I a
+[00:41:37] citizen
+[00:41:38] really high now fires platform those
+[00:41:41] that they have a bias hi it's very
+[00:41:46] complicated I think there was a freedom
+[00:41:50] it's been a while since I read this
+[00:41:52] story but there wasn't there is a story
+[00:41:56] I think it's a few years old where might
+[00:41:58] you not entirely sure of it super
+[00:42:00] relevance your question or your point
+[00:42:03] but there was a story right people would
+[00:42:06] search group you know use Google to
+[00:42:10] search for images of criminals do you
+[00:42:15] know this story and a lot of photos of
+[00:42:18] black people would show up and the writ
+[00:42:21] and the reason was because google earned
+[00:42:24] from clickstream behavior and people
+[00:42:27] clicking on things and so Google
+[00:42:30] unfortunately learns actually visit the
+[00:42:36] visitors and users of Google other races
+[00:42:39] bias towards thinking that you know
+[00:42:42] black people tend to be or more likely
+[00:42:45] to be criminals or something Google
+[00:42:47] going to learned that you know do like
+[00:42:50] you know show peep show photos of black
+[00:42:52] people when you search for criminals and
+[00:42:55] so that's not right right and so
+[00:43:00] hopefully somebody I mean Google
+[00:43:03] corrected this and this was not
+[00:43:04] something they did on purpose it was an
+[00:43:07] artifact I guess of if their algorithm
+[00:43:11] um but it would be good if somebody
+[00:43:15] would make sure that that doesn't you
+[00:43:20] know stay there if these things are
+[00:43:22] discovered them I don't know I just I
+[00:43:25] would imagine they would make sure these
+[00:43:27] things are handled appropriately I don't
+[00:43:32] know okay so it's up to a full
+[00:43:35] disclosure I'm not totally convinced
+[00:43:37] that the idea for FDA either I think you
+[00:43:43] could be very helpful but i also have
+[00:43:45] questions about it but i'd love to if
+[00:43:48] you have a alternative idea
+[00:43:52] love to hear in that let's broaden that
+[00:43:56] dumb dance it's relevant to the FDA or
+[00:44:00] the International loop what this is this
+[00:44:02] is sort of tangentially related to the
+[00:44:04] separate discussion and how this might
+[00:44:06] affect the sort of content that you're
+[00:44:07] seeing um going back to your idea of
+[00:44:10] sort of you I've heard this is kinda in
+[00:44:12] a bunch of ways they keep hearing
+[00:44:13] personal data store you know everything
+[00:44:15] that you have all this information about
+[00:44:17] you it's kept somewhere that you can
+[00:44:19] keep it safe and you can decide what
+[00:44:21] companies get access to what information
+[00:44:23] about you that's awesome that's
+[00:44:25] fantastic there's a huge advance in many
+[00:44:27] ways but the sort of insidious after
+[00:44:29] effect of this I think is going to be
+[00:44:31] pretty dramatic in terms of the content
+[00:44:34] that you get if companies like Facebook
+[00:44:36] and Google no longer have immense
+[00:44:38] amounts of free or very cheap data about
+[00:44:41] your preferences your movements or so on
+[00:44:44] so forth if this is coming at some sort
+[00:44:46] of price to them either you're charging
+[00:44:48] them for it or it's more of an issue of
+[00:44:50] scarcity that cost is going to be passed
+[00:44:53] along to the people who are making the
+[00:44:55] most of it the advertisers and so forth
+[00:44:57] we've already seen and you know I come
+[00:45:00] out of journalism so maybe I'm a little
+[00:45:01] bit biased as far as this is concerned
+[00:45:02] um this rise of sponsored content this
+[00:45:08] right as a very very sneakily tailored
+[00:45:11] content for the needs of an advertiser
+[00:45:13] or a service or a cause do you have any
+[00:45:16] thoughts on how something like a
+[00:45:18] personal data store might encourage that
+[00:45:21] to just take off in this horrible weird
+[00:45:24] filter bubble kind of way no it's a good
+[00:45:27] this is a good it's a very good
+[00:45:29] observation thank you um so I think I
+[00:45:35] think there is a risk that it disrupts
+[00:45:37] these business models around advertising
+[00:45:39] obviously but actually think you may
+[00:45:42] also provide opportunity for them I know
+[00:45:45] I'll give one example whether it whether
+[00:45:49] it flies or not so one of the challenges
+[00:45:52] today you know I sign up on our website
+[00:45:56] they have to do every single website to
+[00:45:59] wait on account provide my address
+[00:46:03] information
+[00:46:04] provide my credit card information all
+[00:46:07] of these things right and so then what
+[00:46:08] happens is these stores start to send me
+[00:46:12] physical mail snail mail or if you know
+[00:46:17] email but they don't know when I move as
+[00:46:20] an example and so they're targeting just
+[00:46:23] completely breaks when something changes
+[00:46:25] in my personal life Twitter as i move to
+[00:46:28] physical location their mail ism doesn't
+[00:46:31] get delivered any more to keep sending
+[00:46:33] it or my preferences change tight all of
+[00:46:38] a sudden have a new interests they don't
+[00:46:40] know about it until i go back to tell
+[00:46:42] them but one opportunity of this
+[00:46:45] personal information broker is if i
+[00:46:49] decide to move update my address in one
+[00:46:52] location it could potentially I'm just
+[00:46:56] you know brainstorming I guess it could
+[00:46:58] potentially be sent to all of the
+[00:47:00] parties that have given access to my
+[00:47:02] data and that could make them more
+[00:47:05] efficient or if all of a sudden I become
+[00:47:10] really interested in our classic cars or
+[00:47:13] I'm not interested in classic cars but
+[00:47:15] imagine I become interested in classic
+[00:47:17] cars it wouldn't be bad for all these
+[00:47:20] organizations that I've told them they
+[00:47:23] can do my interests to kind of pick up
+[00:47:25] this new interest without me having to
+[00:47:27] go back and somehow tell them implicitly
+[00:47:30] and so while I agree with your point
+[00:47:33] that its destructive I think there could
+[00:47:36] be opportunities you know to make them
+[00:47:40] more effective as well um so could be a
+[00:47:45] win-win he's our son on the same topic
+[00:47:50] which is really being very patient know
+[00:47:54] about the agreement so you mentioned the
+[00:47:59] web sort of swinging from open to close
+[00:48:02] to open and it made me think regarding
+[00:48:05] data do you see with the Apple FBI case
+[00:48:08] for instance you see companies trying
+[00:48:10] out to remove their own access from
+[00:48:12] certain data
+[00:48:13] that they don't have to turn it over do
+[00:48:15] you see there may be swinging to a point
+[00:48:17] where collecting all this data ends up
+[00:48:18] costing more because regulators come in
+[00:48:20] and put on sort of financial regulation
+[00:48:23] as limitations that will raise the
+[00:48:25] compliance costs so high that having
+[00:48:28] that data is less valuable than not
+[00:48:30] having it right no it's an interesting
+[00:48:32] I've never thought about it that way
+[00:48:34] it's an interesting observation not
+[00:48:39] having the data pupici perps wife and
+[00:48:41] could be could be safer in a way to is
+[00:48:45] it if something happens it doesn't maybe
+[00:48:49] affect their brands they don't think
+[00:48:54] it's a very interesting point I don't
+[00:48:56] know how to balance his eyes but and I
+[00:48:59] think it's also brilliant marketing
+[00:49:00] strategy obviously you know it's it's a
+[00:49:06] way for Apple to because they still
+[00:49:07] collect a lot of data or if they're
+[00:49:11] capable of collecting a lot update
+[00:49:13] although they do a pretty good job
+[00:49:14] leaving the data on the phone I think um
+[00:49:18] more on your device of its it's
+[00:49:21] definitely a way to differentiate
+[00:49:22] themselves from other companies too oh
+[00:49:29] um I think the financial auditing model
+[00:49:35] the requirements that are placed on
+[00:49:36] publicly traded companies or another way
+[00:49:39] to think about algorithms as opposed to
+[00:49:41] the FDA I mean sort of transparency and
+[00:49:44] disclosure on steroids but the question
+[00:49:49] I was going to ask you about that I mean
+[00:49:50] this is a wide-ranging really
+[00:49:52] interesting and talk I wanted to drill
+[00:49:57] down on how you know open sores open web
+[00:50:00] open standards might actually be able to
+[00:50:03] compete but with this future and I mean
+[00:50:07] wonder the point you made is you know
+[00:50:09] that machine learning artificial
+[00:50:11] intelligence you know it's going to be
+[00:50:15] more and more important and I mean it
+[00:50:18] feels like it's about to become a
+[00:50:21] commodity
+[00:50:22] so I think you're exactly right there
+[00:50:25] and the reality is that this stuff the
+[00:50:30] stats are largely open source to begin
+[00:50:33] with so open source you know it may be
+[00:50:36] necessary but it isn't sufficient for
+[00:50:39] competition may the the you know the
+[00:50:45] other aspect that's what in a machine
+[00:50:48] learning kickoff is the availability of
+[00:50:50] data there suddenly I mean what's being
+[00:50:53] implemented now was thought of in the
+[00:50:54] 80s but finally there's huge corpuses of
+[00:50:57] data core body of data you know that
+[00:51:01] that can actually teach machines much
+[00:51:03] more interesting things and some of that
+[00:51:07] data is open some of it isn't but you
+[00:51:10] know the third thing that's happening is
+[00:51:13] money against the corporations like
+[00:51:16] Google Apple Facebook I mean are
+[00:51:19] investing you know huge amounts of money
+[00:51:22] in there you know Industrial Research
+[00:51:24] lands on this stuff you know with only
+[00:51:27] lip of the iceberg being sort of public
+[00:51:29] academic research and sort of the
+[00:51:33] depressing question I have is I mean how
+[00:51:36] does the open source open web open
+[00:51:38] standards community in you know compete
+[00:51:42] with that sort of focus of resources
+[00:51:45] from the proprietary you know platform
+[00:51:49] companies great question and thanks for
+[00:51:52] your patience again I don't think
+[00:51:55] there's an easy answer that is question
+[00:51:57] right on I think we can win if we
+[00:52:01] actually succeed in collaborating and
+[00:52:05] have a few few answers their question
+[00:52:09] but the first one is to look at rupal as
+[00:52:11] an example we compete with proprietary
+[00:52:16] software produced by companies like
+[00:52:18] Adobe Microsoft Oracle and they're great
+[00:52:21] competitors however the innovation
+[00:52:27] coming out of Drupal is way bigger than
+[00:52:30] what's coming out of these organizations
+[00:52:32] because we've managed to scale Drupal to
+[00:52:35] the point
+[00:52:36] where we have you know millions of users
+[00:52:38] that we have 35,000 developers
+[00:52:42] contributors that are actively
+[00:52:43] contributing to duty you know the
+[00:52:46] betterment or the advancements of Drupal
+[00:52:48] the software and our competitors may
+[00:52:51] have I don't know how many developers
+[00:52:55] they have on there in our CMS product
+[00:52:57] let's say the 200 or 300 450 they don't
+[00:53:02] have 35,000 all right and so if we can
+[00:53:06] organize ourselves we actually get a lot
+[00:53:09] of stuff done the challenge isn't
+[00:53:13] getting everybody organized getting
+[00:53:16] everybody aligned on the same vision and
+[00:53:18] all of these things but maybe advance is
+[00:53:21] in in collaborative software on how you
+[00:53:24] collaborate you know can help facilitate
+[00:53:28] some of these things you know just you
+[00:53:32] know and when I started Drupal we did
+[00:53:33] everything by email by email the email
+[00:53:36] patches around wasn't very scalable
+[00:53:39] right and now you know in skype and
+[00:53:43] google hangouts and you know things like
+[00:53:46] slack and github all of these things
+[00:53:49] didn't exist really at the time and it
+[00:53:51] has enabled us to scale how we work um
+[00:53:54] it is more efficient so maybe something
+[00:54:00] like that could happen also to go and
+[00:54:03] you know do these things to compete with
+[00:54:06] these big platforms so that would be
+[00:54:11] part 1 of my answer car 2 is you know
+[00:54:16] maybe government should fund more you
+[00:54:19] know universities to do to do some of
+[00:54:22] this fundamental nowhere right it
+[00:54:25] doesn't have to doesn't necessarily have
+[00:54:28] to be done in these commercial
+[00:54:33] organizations but it could be done more
+[00:54:34] for the greater good so I think that
+[00:54:39] would be interesting to and I'm sure you
+[00:54:42] guys would like that
+[00:54:49] I'd a third point but I'm spacing I here
+[00:54:54] but it was yeah I forgot what it was but
+[00:55:03] obviously a huge challenge just to read
+[00:55:05] the resources not just human resources
+[00:55:08] compute power data crumbled if you look
+[00:55:12] at IBM they're kind of going to the very
+[00:55:15] large transformation as an organization
+[00:55:18] and they be but whether it be the amount
+[00:55:21] of resources that be pouring into IBM
+[00:55:23] Watson for example is I mean it's I'm
+[00:55:26] blowing to try and be first at this
+[00:55:29] machine intelligence or cognitive
+[00:55:32] technology and then they're spending
+[00:55:35] billions buying data companies they
+[00:55:37] bought wetter the better channel for was
+[00:55:41] over a billion dollars i think just to
+[00:55:43] get that data primarily right so um it's
+[00:55:51] obviously a huge challenge to compete if
+[00:55:53] you don't have the data oh so you know
+[00:55:56] maybe policy I mean if you I don't know
+[00:55:59] again I'm not a policy guy but I don't
+[00:56:04] think there's a silver bullet here I
+[00:56:05] think if the way to win and to change it
+[00:56:08] is you have to do a lot of different
+[00:56:13] things
+[00:56:17] I want to go back to the FDA a question
+[00:56:23] for a moment I think something that's
+[00:56:26] been left out of the discussion is
+[00:56:27] consumer literacy the things that we're
+[00:56:30] talking about are pretty rarified here
+[00:56:32] and it's awfully hard to make privacy
+[00:56:35] concerns feel sexy to the consumer so
+[00:56:38] and for me I think one pro for an FDA
+[00:56:41] for data is that you know I'm not a I'm
+[00:56:45] not a biologist and I don't have the
+[00:56:48] expertise to know what's a good medical
+[00:56:51] study and in the same way I'm also not a
+[00:56:53] coder and I don't have the expertise to
+[00:56:55] know what a good algorithm is or what a
+[00:56:58] bias algorithm is so the agency
+[00:57:00] presumably would be making that
+[00:57:03] determination for me right but on the
+[00:57:06] other hand I think we can see from the
+[00:57:08] FDA that compliance can be costly in
+[00:57:11] favor big producers you know if you
+[00:57:13] think about how factory farming works
+[00:57:16] right they're all of these sanitation
+[00:57:18] requirements for slaughtering animals
+[00:57:20] that are hard for the for the small
+[00:57:25] producer to and live up to so I think
+[00:57:28] that's kind of it that's an interesting
+[00:57:30] tension in this request right is it the
+[00:57:32] sort of thing that would be intended to
+[00:57:35] and make the web more free and open but
+[00:57:37] kind of backfire and you know make the
+[00:57:40] big producers more powerful good point I
+[00:57:44] don't thought about that myself now what
+[00:57:49] do you think did you know it's like it's
+[00:57:51] like a balancing act and I don't have to
+[00:57:57] think about that for sure we're at this
+[00:58:00] point no hi I'm Matt and so I've been
+[00:58:04] thinking about this FDA question and
+[00:58:07] since you've been getting some pushback
+[00:58:09] on it I'm actually sort of one
+[00:58:12] throughout the case I think it could be
+[00:58:14] something that businesses might want I
+[00:58:17] like this idea of thinking about scope
+[00:58:19] because i think that there is a very big
+[00:58:22] difference between what Bing does with
+[00:58:24] its algorithm and what Google does with
+[00:58:26] its al
+[00:58:26] rhythm as far as the scale of the effect
+[00:58:28] but also a lot of times businesses are
+[00:58:32] consumers of algorithms and algorithms
+[00:58:34] do different things and so on sometimes
+[00:58:37] you're animate be making like medical
+[00:58:40] decisions with an algorithm as opposed
+[00:58:42] to news feed and what you read decisions
+[00:58:45] and there's already all sorts of
+[00:58:48] existing law that applies to the things
+[00:58:50] that these companies do so if I was a
+[00:58:53] for-profit company looking for
+[00:58:55] algorithms I almost would feel more
+[00:58:57] comfortable if some kind of government
+[00:58:59] agency provided a certification of some
+[00:59:02] sort that the algorithm complies with
+[00:59:05] existing laws in the fields and then
+[00:59:07] secondarily maybe doesn't have I know
+[00:59:11] unintended effects not just for consumer
+[00:59:14] purposes but also for PR purposes and
+[00:59:17] legal purposes maybe that's a defense so
+[00:59:21] I was just wondering on would you view
+[00:59:23] this is like something like there'd be
+[00:59:25] rules that apply to all players or do
+[00:59:28] you think that on it would be something
+[00:59:30] people opt into and sort of um what
+[00:59:33] sorts of side effects do you think the
+[00:59:36] agency would look at that's a good
+[00:59:38] question um but having thought about it
+[00:59:43] will hold up obviously it I think it
+[00:59:45] would depend on the industry or maybe
+[00:59:47] application like here's one example um
+[00:59:51] increasingly more people or not you know
+[00:59:55] critically more to use DNA samples to
+[00:59:59] determine whether somebody's guilty or
+[01:00:01] not guilty yes that's algorithms or
+[01:00:04] software involved the determine whether
+[01:00:07] somebody goes to jail or doesn't go to
+[01:00:10] jail interesting situation because you
+[01:00:14] would like the algorithm to work really
+[01:00:16] well so that there is no side effects of
+[01:00:21] sending the wrong person new jail or
+[01:00:24] having a person that should be in jail
+[01:00:26] not go to jail right so just one so in
+[01:00:31] that domain I guess I think all the
+[01:00:34] players should be subject to the same
+[01:00:37] kind of scrutiny
+[01:00:42] and maybe be held to different standards
+[01:00:45] um another example would be self-driving
+[01:00:49] cars this is also been in the news where
+[01:00:51] the situation where a self-driving car
+[01:00:54] needs to make a decision between killing
+[01:00:58] its splash passengers or or for killing
+[01:01:02] you know pedestrians like if all of a
+[01:01:05] sudden somebody you know runs over the
+[01:01:07] street and the self-driving car can
+[01:01:09] either you know driving to a wall or
+[01:01:12] drive over these people it's a tough
+[01:01:17] decision yeah obviously I don't know
+[01:01:23] that's a good example of where we meet
+[01:01:25] clear regulation and then cuz they mean
+[01:01:29] it obviously you want every card to do
+[01:01:31] the same thing because otherwise if the
+[01:01:33] Google car decides to run over another's
+[01:01:36] Volvo is self-driving car decides um and
+[01:01:41] I've kill its passengers more people are
+[01:01:43] going to buy the Google party I'm gonna
+[01:01:46] call myself so this is on the NEA
+[01:01:50] impression which seems to be the
+[01:01:52] dominant question there so I'm thinking
+[01:01:54] two reasons to use a government to do
+[01:01:56] this at FDA one is to compel the search
+[01:01:59] engines to contribute to make their
+[01:02:01] algorithms an album the second is then
+[01:02:03] maybe to force them to behave one way or
+[01:02:06] another one chin discovered so I wanted
+[01:02:08] to make a suggestion which somebody else
+[01:02:09] brought on which is a consumer report
+[01:02:11] sort of thing which has no government
+[01:02:13] involved which is so suppose there were
+[01:02:18] some set of people who are relaxed
+[01:02:22] wordly reliable their academics are
+[01:02:23] professionals it is independent
+[01:02:24] organization that performs tasks based
+[01:02:28] upon the results of query so you don't
+[01:02:30] have to look at the algorithms which is
+[01:02:31] going to be really hard to do anyway but
+[01:02:34] you perform tests you look at the
+[01:02:36] results and you're able to say well it
+[01:02:39] looks like for the following here's the
+[01:02:41] evidence seems to show that Google
+[01:02:43] disfavors fox news it has it covers more
+[01:02:47] about Hillary Clinton land
+[01:02:48] Bernie Sanders but Bing and so forth
+[01:02:53] this one more porn results fewer women
+[01:02:57] result or whatever just look at the
+[01:02:59] results and give tell us what they are
+[01:03:03] so that would be transparency without
+[01:03:05] requiring anybody to any of the engines
+[01:03:09] to the to agree to it well that with
+[01:03:12] that sort of thing accomplished terrain
+[01:03:13] uh what are you looking for the
+[01:03:15] regulatory side of it where you and
+[01:03:16] compel the search engines to be more
+[01:03:18] fair no I don't think that have to be
+[01:03:21] more fair necessarily it's an
+[01:03:26] interesting question and I don't
+[01:03:27] actually don't have a really strong
+[01:03:29] opinion either way but I no minimum I
+[01:03:33] think it would be good to understand the
+[01:03:35] bias I think there's nothing wrong with
+[01:03:37] curation per se I mean just like people
+[01:03:40] know Fox News is you know reports
+[01:03:43] differently than CNN which reports
+[01:03:45] differently than other media companies
+[01:03:50] so I think it could be fine for these
+[01:03:53] kinds of things or the reporting of news
+[01:03:57] or finding information I think some bias
+[01:03:59] will be fine just gets really difficult
+[01:04:02] when you know if you handle data as
+[01:04:06] complex as Google does to actually
+[01:04:10] understand their bias on a specific
+[01:04:12] topic maybe it's impossible right so
+[01:04:16] that is a little bit of a concern and so
+[01:04:18] these closing advice could be helpful as
+[01:04:20] you say even the search engines don't
+[01:04:22] always know their bias it's very dumb
+[01:04:23] exactly in search for criminals and but
+[01:04:26] for other things I think there are the
+[01:04:28] DNA testing maybe the self-driving cars
+[01:04:31] example I don't think disclosing your
+[01:04:35] vines is enough because as I mentioned
+[01:04:38] if one self-driving car has one buys and
+[01:04:41] another self-driving cars and other
+[01:04:42] bites it's not mr. they're all going to
+[01:04:46] do the same thing which is not
+[01:04:47] necessarily the best thing for society
+[01:04:49] it he said to me that's the question
+[01:04:51] when it really impacts society may not
+[01:04:55] be enough to disclose your bias you may
+[01:04:59] actually need to be held to certain
+[01:05:01] standards
+[01:05:02] so good hello thank you here's not my
+[01:05:09] name is Sarah also department center um
+[01:05:10] this is actually going to privacy
+[01:05:13] question and what I noticed is that a
+[01:05:16] lot of conversations around protecting
+[01:05:17] privacy or media or very near term as in
+[01:05:22] a hard at times but i'm curious your
+[01:05:23] thoughts about the longer term beyond
+[01:05:26] our own lifetimes especially things like
+[01:05:29] personal messages and email or personal
+[01:05:32] messages on facebook and whether this
+[01:05:34] idea of having the broker of personal
+[01:05:38] data could protect sort of our legacies
+[01:05:40] as in a more great grandchildren of
+[01:05:42] access or personal emails is this a
+[01:05:45] relevant question is there anything we
+[01:05:46] can do now to prevent that to prevent
+[01:05:50] access to rotate and feature yeah it's a
+[01:05:54] great question like because some of the
+[01:05:56] data love to see step you know to keep
+[01:05:59] available right like often wish that
+[01:06:03] photos of my grandparents or something
+[01:06:07] and so we actually live in a time where
+[01:06:09] our grand grand grand grand children may
+[01:06:14] be able to learn a lot about us which i
+[01:06:17] think is exciting no and actually I've
+[01:06:21] thought about is like I would be happy
+[01:06:22] to even pay a commercial service to say
+[01:06:26] huh as photos on my blog for example
+[01:06:29] like can I pay somebody that will then
+[01:06:31] promise me to keep these photos on my
+[01:06:35] blog for the next four hundred years I'm
+[01:06:39] an interesting business model because
+[01:06:43] actually would love for my grand grand
+[01:06:45] grand children if I'm you know lucky
+[01:06:47] enough to have those to be able to go
+[01:06:48] out and see a look here's some photos of
+[01:06:52] trees doing I don't scheme so slow
+[01:07:00] I love it aside for some things I
+[01:07:07] wouldn't want to miss essere about a
+[01:07:12] fertile have access to things Edelman
+[01:07:14] stay private right who's like that man
+[01:07:16] eat anything you need to do now is we're
+[01:07:20] thinking about the way to whether works
+[01:07:21] to sort of retention secret surveillance
+[01:07:24] hmm oh yeah the flip side is absolutely
+[01:07:28] there there's definitely things people
+[01:07:30] don't want to keep roads or are not
+[01:07:32] useful to keep rowing maybe um well I
+[01:07:36] don't know how we manage that actually
+[01:07:38] she said if you come for the best man
+[01:07:41] cut velvet great question side I don't
+[01:07:47] have a good answer so we have time we
+[01:07:50] barely have time for one more question
+[01:07:51] so a quick question there will be quick
+[01:07:54] answer I'll be pet turtle we meditated
+[01:08:00] at all the power and how we can see
+[01:08:02] power in your current hands and coding a
+[01:08:06] good lender that I like the song says
+[01:08:09] very Maurice it's easier to gain harder
+[01:08:13] to use and easier truth and I like at
+[01:08:19] your points about the centralization and
+[01:08:21] transparency and I know that you used
+[01:08:25] your own example to 135,000
+[01:08:29] collaborators that you have for me and
+[01:08:32] see damn laga I don't know army of me
+[01:08:35] Corp our names of actors from the power
+[01:08:40] or internet your point of them so my
+[01:08:44] question is do you talk with your put
+[01:08:47] your meat from army of powerful people
+[01:08:51] about the importance of the
+[01:08:53] civilizations and transparency and
+[01:08:56] health encourage them for doing worry
+[01:08:58] Batman right so it's a great question as
+[01:09:04] I mentioned a great final question
+[01:09:06] actually I think I do believe you have
+[01:09:07] responsibility to try and build the web
+[01:09:11] or the foundations of the future version
+[01:09:14] the web that kind of has the right
+[01:09:17] values has the right attributes and so I
+[01:09:21] you know I tried to in between running
+[01:09:25] Drupal and running aqua try to provide
+[01:09:28] some thought leadership around these
+[01:09:29] things because I know a lot of the
+[01:09:31] people in the Drupal community read it
+[01:09:33] but as you mentioned their individual
+[01:09:35] contributors that can help either spread
+[01:09:37] that message or actually try and do
+[01:09:39] something about it right um so with the
+[01:09:43] limited powers that I have a try to
+[01:09:46] activate others to help make a
+[01:09:50] difference which is also why I'm here
+[01:09:52] it's not every day I get to talk in
+[01:09:55] front of a an amazing group of people
+[01:09:58] that are actually thinking about these
+[01:10:00] questions more than than I do I imagine
+[01:10:03] especially at the Berkman Center so no
+[01:10:08] I'm excited to be part of the
+[01:10:10] conversation and I'm trying to
+[01:10:12] contribute where I can I guess and
+[01:10:16] enable others to contribute where data
+[01:10:17] it's not every day we get to talk with a
+[01:10:21] leader champion of the open web so thank
+[01:10:25] you
+[01:10:31] the staff that always goes incredible
+[01:10:35] and invisible jobs
+[01:10:48] you

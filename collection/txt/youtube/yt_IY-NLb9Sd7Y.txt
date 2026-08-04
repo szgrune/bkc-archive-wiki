@@ -1,0 +1,1131 @@
+[00:00:01] So my name is Kendra Albert.
+[00:00:02] I'm a clinical instructor here at the Cyberlaw Clinic,
+[00:00:05] and a lecturer at law here at the law-- lecture on law
+[00:00:08] here at the law school-- at law, on law-- you know.
+[00:00:12] And I have the honor today of getting
+[00:00:14] to host a conversation with Jonathan, who's
+[00:00:17] been a friend and a mentor for a long time on,
+[00:00:20] can tech be governed?
+[00:00:22] Which is a easy question that I think
+[00:00:24] we'll be able to dispose of within this hour span.
+[00:00:29] So I'm going to first introduce Jonathan,
+[00:00:31] and then we're going to talk for a little bit about--
+[00:00:34] especially given his history in the space and the long history
+[00:00:37] of work that he's produced-- how he thinks about this problem
+[00:00:40] now in this current--
+[00:00:45] at the year of our Lord, 2019, the current trash fire.
+[00:00:51] What I'm going to then ask you to do-- so I'm giving you
+[00:00:53] some warning so you can prepare for it-- is I'm
+[00:00:55] going to ask you to talk with your neighbors.
+[00:00:57] I know that's not traditional to these Berkman luncheon format,
+[00:01:01] but there's so much knowledge and wisdom in this room,
+[00:01:04] and I'm excited to tap into it before we go back
+[00:01:07] into a full group conversation.
+[00:01:09] I should note, in case you are unfamiliar
+[00:01:11] with the rote announcement, or missed the very prominent sign
+[00:01:17] outside, this talk is being recorded,
+[00:01:19] and I believe it is being livestreamed.
+[00:01:21] No?
+[00:01:21] I think it's not being livestreamed,
+[00:01:23] but will find its way online.
+[00:01:24] All right.
+[00:01:25] So even if you're not held accountable for what
+[00:01:27] you said immediately, you may be held accountable for it later.
+[00:01:31] And I guess that goes for Jonathan and I, as well,
+[00:01:33] so here we go.
+[00:01:35] But just to start off with your bio,
+[00:01:37] since you have so many fancy titles,
+[00:01:38] that it'd be truly sad to not share them.
+[00:01:45] Jonathan Zittrain is the George Bemis Professor
+[00:01:47] of International Law of Harvard Law School
+[00:01:49] and the Harvard Kennedy School of Government,
+[00:01:52] Professor of Computer Science at the Harvard
+[00:01:54] School of Engineering and Applied Sciences,
+[00:01:55] Director of the Harvard Law School Library,
+[00:01:57] and Faculty Director of the Berkman Center for Internet
+[00:01:59] and Society.
+[00:02:00] He also serves as the Vice Dean for Library and Information
+[00:02:03] Resources.
+[00:02:03] I'm sure I missed some.
+[00:02:05] I'm working on something at the dental school, but it's--
+[00:02:07] Sounds great.
+[00:02:07] --not come through yet.
+[00:02:11] So his research interests are ethics and governance
+[00:02:13] of artificial intelligence, battles
+[00:02:15] for control of digital property, and a whole bunch
+[00:02:17] of other stuff-- which that I actually won't list,
+[00:02:19] because it'll take too long.
+[00:02:23] We chatted beforehand, and I'm not
+[00:02:24] going to do the thing where I force
+[00:02:25] him to read from his own book that he wrote in 2008-- you
+[00:02:28] know, would you read into the record
+[00:02:31] your previous statements on the topic?
+[00:02:33] But I am going to read it to y'all.
+[00:02:36] So in 2008, you wrote this book called
+[00:02:38] The Future of the Internet-- and How to Stop It.
+[00:02:40] Spoiler-- I'm not sure we stopped it.
+[00:02:42] I'm working on a sequel right now called Well, We Tried.
+[00:02:44] Yeah.
+[00:02:46] And in it--
+[00:02:48] I'm going to paraphrase your theory-- you
+[00:02:51] talk about the power of generativity and general
+[00:02:53] technology as [INAUDIBLE] platforms, ones where users can
+[00:02:57] build their own ways, to their own paths
+[00:03:01] through building their own things.
+[00:03:04] And at the end of the book, from the conclusion, you wrote,
+[00:03:08] "The point at which a generative project"--
+[00:03:10] that's my insertion-- "is worth the effort of bad people
+[00:03:15] to game it is a milestone of success.
+[00:03:18] It is the token of movement from the primordial soup"--
+[00:03:21] nice-- "that begins the generative pattern
+[00:03:24] to the mainstream impact that attracts
+[00:03:26] the next round of problems."
+[00:03:27] Well, the internet has succeeded, I think.
+[00:03:32] It is worth the effort of bad people to game it.
+[00:03:35] So here we are meeting the problems.
+[00:03:37] I wonder how your thinking on the value of generative systems
+[00:03:40] has changed, since you wrote that in 2008.
+[00:03:43] Great question.
+[00:03:47] I think the paean I wrote in 2008 to generativity--
+[00:03:58] a great word that I think might have been suggested
+[00:04:00] in a workshop, as I was otherwise arm-wavingly talking
+[00:04:04] about how excited I and others were about the future
+[00:04:08] of the internet, by Julie Cohen--
+[00:04:11] the generativity is about the idea
+[00:04:17] that anybody could contribute to a technology.
+[00:04:21] Now, of course, anybody--
+[00:04:23] do you really mean anybody?
+[00:04:24] But gosh, compared to the status quo--
+[00:04:30] and as you know, the book took some pains to talk about
+[00:04:34] typical consumer-facing technologies,
+[00:04:37] and the way in which they were appliance-sized--
+[00:04:41] that is kind of like, congratulations,
+[00:04:43] here's your technology.
+[00:04:44] Enjoy, but only enjoy in the ways that we allow you to.
+[00:04:50] And that, as technology gets more sophisticated,
+[00:04:53] the theory went, that could either
+[00:04:56] mean that the appliancization and the control by the vendor,
+[00:05:00] or whoever can influence the vendor,
+[00:05:03] that control can become that much more comprehensive.
+[00:05:07] It's one thing that's like, darn it, why
+[00:05:10] can't I set my refrigerator to go below negative 10?
+[00:05:16] I have some specimens I really want to keep cold.
+[00:05:20] I feel my freedom impinged upon.
+[00:05:22] That lack of affordance is magnified,
+[00:05:29] when the refrigerator can spy on you
+[00:05:33] or it can be hacked from afar.
+[00:05:35] And that resulted, for me, in a lot of thinking, and even
+[00:05:41] some scholarship post-2008, about the Internet of Things,
+[00:05:44] and what it would mean.
+[00:05:46] So hold on.
+[00:05:46] Yes?
+[00:05:47] I'm going to do the part where I interrupt you for your time--
+[00:05:48] Please.
+[00:05:49] --so we get used to it.
+[00:05:50] Yeah, yeah.
+[00:05:51] So what's the security harm of not
+[00:05:55] being able to set it below 10 degrees?
+[00:05:57] Is it just that your milk is--
+[00:05:59] some bad attacker can't deep freeze your milk?
+[00:06:03] So I thought, at first, you were saying, what's the--
+[00:06:08] how unfree do you feel to be unfrozen?
+[00:06:13] And it is not that unfree.
+[00:06:16] And we even have come to such expectations,
+[00:06:18] initially just grounded in physics,
+[00:06:20] and later grounded in what vendors of products
+[00:06:23] might have for us, around--
+[00:06:25] We're still grounded in physics.
+[00:06:27] Still grounded in physics, somewhat, about what
+[00:06:31] the products can and won't do.
+[00:06:34] And so I guess the worry now is, kind of when
+[00:06:41] you think of a general purpose PC and a general purpose
+[00:06:44] internet, the PC can be reconfigured
+[00:06:46] to do anything at any time.
+[00:06:48] The internet can communicate between any person
+[00:06:51] and any other person at any time, so much so--
+[00:06:54] I remember being amazed at this because it
+[00:06:57] was in such plain sight, but I didn't quite
+[00:06:59] appreciate it at first--
+[00:07:00] there's no main menu on the internet.
+[00:07:03] Talk about what valuable real estate that would be,
+[00:07:06] if there were a main menu to the internet.
+[00:07:08] And there isn't.
+[00:07:09] The internet is like, yeah, you're on the internet.
+[00:07:12] Don't look at me.
+[00:07:13] Look at whoever you want to look at.
+[00:07:15] I've connected you to whoever you want to be connected to.
+[00:07:18] It's that level of genericity--
+[00:07:20] generic-ness-- about what you can
+[00:07:22] do that I was so excited about, and that we didn't
+[00:07:25] ask for from our appliances.
+[00:07:27] It's like, a fridge is a fridge, and if you want something
+[00:07:30] a lot colder, by a freezer.
+[00:07:31] If you want some even colder than that,
+[00:07:33] I assume there's some industrial deep freezer you can get.
+[00:07:36] But as things-- this is why, again,
+[00:07:39] Internet of Things is so relevant, and remains so--
+[00:07:42] as any given thing is able to be reconfigured
+[00:07:46] into any other thing or set of functions,
+[00:07:51] that is a lot of power up for grabs.
+[00:07:55] And my question looked after to the generative lens,
+[00:07:57] and it's a somewhat simplistic one, in hindsight--
+[00:08:00] was, where will that power go?
+[00:08:02] Will it redound to the benefit of the vendor, who's just
+[00:08:04] going to be able to, I don't know,
+[00:08:07] start tracking your fridge door opening,
+[00:08:10] start selling it to insurance--
+[00:08:12] Mine cryptocurrency on your fridge processor.
+[00:08:14] That has happened--
+[00:08:15] I know.
+[00:08:16] --with my fridge.
+[00:08:17] Wait, with your fridge?
+[00:08:18] This is a problem.
+[00:08:20] With your literal fridge, or your model of fridge?
+[00:08:22] I fear I've said too much.
+[00:08:26] Jonathan's [INAUDIBLE] attack service just
+[00:08:27] went up, as a thousand hackers listened to this video
+[00:08:30] and found out what kind of fridge he had.
+[00:08:32] Yes.
+[00:08:33] Redefines what a cold call is in law school terms.
+[00:08:37] Too soon, too soon.
+[00:08:39] But even jumping a level of abstraction
+[00:08:44] higher right now, so much, to me,
+[00:08:47] of the current story of technology
+[00:08:50] is that it is taking away from a basket of miscellany
+[00:08:55] that we might call fortuity or randomness.
+[00:08:59] Everybody always talks about the weather,
+[00:09:01] but nobody ever does anything about it--
+[00:09:03] sort of a clarion call about climate change right now,
+[00:09:05] but an old Mark Twain quote.
+[00:09:07] Taking out of fortuity-- can't predict it, can't control it--
+[00:09:10] gosh.
+[00:09:11] If things go on the internet, who knows what happens?
+[00:09:14] It's so organic, and that is both scary but liberating,
+[00:09:17] next to Walter Cronkite telling us what to think.
+[00:09:20] But that moved away from the fortuity,
+[00:09:24] thanks to strength in technology and its reach.
+[00:09:29] Wherever you turn, there's a camera [INAUDIBLE]
+[00:09:32] deposited a microphone over there
+[00:09:33] moments before things started.
+[00:09:35] And so you never know when there's surveillance,
+[00:09:38] or even more important--
+[00:09:40] Sousveillance?
+[00:09:41] Sousveillance?
+[00:09:42] Yeah.
+[00:09:43] Yes, coming back at you.
+[00:09:46] And in fact, how many of us are enabling
+[00:09:48] it ourselves by the instruments we've festooned ourselves with?
+[00:09:54] Just to quickly finish that thought,
+[00:09:57] we're taking, as humanity, stuff out of the random bucket
+[00:10:01] and putting it into the it's now possible to learn,
+[00:10:06] to predict, and even to control this buckets.
+[00:10:10] And then we ask, how shall we govern it?
+[00:10:13] And the thing is we haven't figure out
+[00:10:15] how to govern the stuff that we could govern before.
+[00:10:18] And now, it's like, well now, there's that much more,
+[00:10:20] and that's why, to me-- and I'll probably stop talking--
+[00:10:24] the question, put dryly, and in law school
+[00:10:27] terms, of intermediary liability,
+[00:10:30] which is to say some aggregated platform, or vendor, or entity
+[00:10:34] is in a position now, thanks to these new tools
+[00:10:37] and technologies, to learn about us and to affect us.
+[00:10:42] What are their responsibilities, if we act out?
+[00:10:46] That is now a question that, after a 20-year interregnum
+[00:10:50] of not visiting it, we are visiting,
+[00:10:53] wow, really intensely.
+[00:10:55] Sorry.
+[00:10:55] You don't need to apologize.
+[00:10:57] I was interrupting you.
+[00:10:57] I feel like I'm being all over the place here.
+[00:10:59] No, so I wonder--
+[00:11:00] you labeled the box randomness or fortuity--
+[00:11:03] Yes.
+[00:11:03] --and I think that's actually stems nicely
+[00:11:05] into my next question, because I don't know
+[00:11:07] if I would label it that way.
+[00:11:08] I would label it the systemic distributional effects
+[00:11:11] of the system before the technology.
+[00:11:13] You're going to need a bigger Sharpie.
+[00:11:15] Yeah.
+[00:11:15] It's a lot of--
+[00:11:16] It is a lot of-- we can abbreviate
+[00:11:18] systemic distribution-- anyway, so know my question
+[00:11:21] there is, you have-- you highlighted
+[00:11:24] that we have the opportunity to start over, in some ways.
+[00:11:28] But certainly, in many contexts, the stuff that was in the box
+[00:11:33] before has translated onto the new technology.
+[00:11:35] Mm-hmm.
+[00:11:36] I think that your point about this not reconsidering for 20
+[00:11:39] years is, in some ways, true.
+[00:11:42] But you may know what I'm about to say next, which
+[00:11:45] is there are plenty of people who've been suggesting that it
+[00:11:48] is, in fact, this very systemic distributional effects that
+[00:11:52] come before that force us to reconsider how we hold
+[00:11:56] accountable these digital platforms that
+[00:11:59] have generative effects.
+[00:12:00] Yes.
+[00:12:01] So first, on what to label the box--
+[00:12:05] the box of fortuitous, which in Monopoly, we would call chance.
+[00:12:09] People still play Monopoly?
+[00:12:11] OK.
+[00:12:12] Is anybody playing Monopoly right now?
+[00:12:15] It's not a very good game, and it was secretly
+[00:12:17] about socialism [INAUDIBLE].
+[00:12:18] Oh no, until Parker Brothers seized it.
+[00:12:20] Yeah.
+[00:12:21] Yep.
+[00:12:21] Yes, it was the Landlord's Game.
+[00:12:23] But we digress.
+[00:12:25] This is actually a--
+[00:12:27] fortuitously or not-- good example.
+[00:12:30] Yes.
+[00:12:30] The chance deck, if you're playing the game,
+[00:12:33] it's like, I don't know what I'm going to get.
+[00:12:35] If it's chance, it's usually not great.
+[00:12:37] Bank error not in your favor.
+[00:12:38] But somebody made the deck, so it's not
+[00:12:42] like the game appeared out of nowhere.
+[00:12:44] Mm-hmm.
+[00:12:47] I think those two concepts exist at once,
+[00:12:49] that stuff that any given person or entity might think
+[00:12:53] of as previously being in this thing we call fortuity,
+[00:12:57] is really--
+[00:12:58] I guess what I mean by it is it felt more immutable.
+[00:13:02] It's not something I can affect.
+[00:13:04] It's just something under which I exist, or labor, or suffer.
+[00:13:09] And part of the optimism, among some quarters early on,
+[00:13:13] was, cool, now we can rewrite the game.
+[00:13:18] That was so much of the thought of the distributed generative
+[00:13:23] internet, including on content too.
+[00:13:25] Anybody can blog.
+[00:13:26] That was global voices.
+[00:13:28] That was, indeed, often the spirit of our center,
+[00:13:32] I think, was, let's not accept things as they are.
+[00:13:36] Let's build and change.
+[00:13:38] But of course, who's at the table
+[00:13:41] building is a huge question.
+[00:13:44] And the question you just left us with
+[00:13:46] was, gosh, over the past 20 years,
+[00:13:48] it's not like there hasn't been anybody
+[00:13:49] waving a flag here and there.
+[00:13:52] If I had to track in the conventional wisdom,
+[00:13:56] and only in the conventional wisdom, the trajectory
+[00:13:59] of thinking around these topics, I loosely
+[00:14:03] have two categories, and maybe a third around the corner.
+[00:14:05] And I'll just really quickly mention that.
+[00:14:08] The first category I would describe
+[00:14:10] as what I'd call the rights framework, and that I should--
+[00:14:14] I don't know if it's just a disclosure or a confession,
+[00:14:17] as a board member of the Electronic Frontier Foundation.
+[00:14:20] EFF was among the leaders of the rights framework.
+[00:14:24] I see at least one EFF T-shirt in the room right now.
+[00:14:28] The rights framework said the biggest thing
+[00:14:32] to worry about online--
+[00:14:34] and I'm just paraphrasing-- is that our buzz will be harshed.
+[00:14:39] Who is "our" is another question.
+[00:14:41] But this is cool.
+[00:14:43] There's all sorts of new stuff we can do,
+[00:14:45] and some of the biggest dangers are governments fearing
+[00:14:49] that stuff they thought they could control
+[00:14:51] is about to be taken and placed into the fortuity box.
+[00:14:56] They're going to fight against this.
+[00:14:57] That's the spirit of the cryptoanarchist manifesto
+[00:15:01] of Barlow's Declaration of Independence of Cyberspace.
+[00:15:06] And we should talk about Barlow.
+[00:15:09] And we need to preserve the freedom of the space by not--
+[00:15:17] by looking at things from a rights
+[00:15:18] perspective, and an atomized, for any individual,
+[00:15:22] what can you do?
+[00:15:22] What levers can you pull online, or as a builder
+[00:15:26] of code, a computer science person?
+[00:15:29] That was the right's framework, and that
+[00:15:31] was the spirit behind what has become
+[00:15:33] just a handle for a bunch of these issues now--
+[00:15:36] so-called CDA 230.
+[00:15:37] I don't know if we want to get completely into that, but just
+[00:15:40] to say, the idea in the American legal framework
+[00:15:44] that Congress would, as basically
+[00:15:47] a footnote, a peripheral item of a larger law,
+[00:15:51] meant actually to regulate the internet
+[00:15:54] for the purpose of keeping material
+[00:15:56] that was harmful to minors--
+[00:15:57] pornography-- away from them.
+[00:16:01] Say also, however, you shouldn't think
+[00:16:05] that, if you are an intermediary and you
+[00:16:08] edit stuff, that will suddenly mean that,
+[00:16:10] by having dared to edit and come in and take stuff out,
+[00:16:13] suddenly you're responsible for all the stuff
+[00:16:15] you're editing from other people.
+[00:16:17] That's roughly what 230 was saying.
+[00:16:19] That has been seen as a great element of freedom,
+[00:16:24] of allowing stuff to be built without worrying that you're
+[00:16:27] going to get sued out of existence because one
+[00:16:29] commenter did something awful to somebody else.
+[00:16:32] It's also become basically a license
+[00:16:35] to build something, to see the cloud arise
+[00:16:40] from all of its awful uses, and be like, not my problem.
+[00:16:44] And that starting, I'd say, around 2010,
+[00:16:48] has led to a second framework that
+[00:16:51] uses a completely different vocabulary around assessing
+[00:16:57] the state of the internet.
+[00:16:58] And instead of thinking about it in terms
+[00:17:00] of rights, which is still a powerful language,
+[00:17:03] it's talking about what I'd call public health.
+[00:17:08] Is this hurting people?
+[00:17:10] And if it's hurting people, what would make it hurt people less?
+[00:17:14] And if that could be done, who could do it?
+[00:17:17] And if they're refusing to do it,
+[00:17:18] ought they to be encouraged or required
+[00:17:21] to do something to hurt people less?
+[00:17:23] That's a totally different framework
+[00:17:25] from the rights framework.
+[00:17:27] The rights framework would say, don't
+[00:17:28] have the intermediaries-- whoever they
+[00:17:30] might be-- be the net police.
+[00:17:32] The other would be, don't let those who build stuff
+[00:17:37] and start the dominoes going, and not only--
+[00:17:40] walk away from it is too simple--
+[00:17:42] profit from it in an ongoing way,
+[00:17:46] not have to take responsibility for what they're doing--
+[00:17:49] especially in an era where, thanks to, say, good AI,
+[00:17:53] they can.
+[00:17:54] They can't just protest that the internet is too damn big.
+[00:17:58] There's so many posts on Facebook.
+[00:18:00] We can only hire so many people around the world
+[00:18:02] to look at them.
+[00:18:02] It's like, yes, but you can train an AI model.
+[00:18:05] What could possibly go wrong, is what the rights people
+[00:18:07] will say.
+[00:18:08] But this is the debate that's joined, poorly,
+[00:18:13] because the values and the vocabulary
+[00:18:16] are not well yet mapped.
+[00:18:18] There's no API to allow communication, not only
+[00:18:21] between people, I think, but within our own heads about it,
+[00:18:25] in the conventional wisdom.
+[00:18:28] I will leave off my third thing.
+[00:18:30] I don't-- I want to hear--
+[00:18:31] We'll get back to it.
+[00:18:32] Don't worry.
+[00:18:32] OK.
+[00:18:33] So I wonder about that mapping of the rights framework
+[00:18:36] onto a harm framework, because it actually strikes me in--
+[00:18:41] that there's some pretty big tie-ins to critical race theory
+[00:18:45] and legal theory related to--
+[00:18:47] and I'm thinking particularly of Words that Wound,
+[00:18:50] and the work of folks like Kimberlé Crenshaw and Mari
+[00:18:54] Matsuda on how do we take these traditional First Amendment
+[00:18:59] [INAUDIBLE] rights frameworks, and start reframing them
+[00:19:02] to more adequately consider the harm that is being caused.
+[00:19:06] And so I wonder how you engage with scholars
+[00:19:10] in other traditions, or critical race theories
+[00:19:14] directly, around the places where we've already
+[00:19:18] seen this tension erupt.
+[00:19:19] Because I think you're right that there is a rights
+[00:19:21] framework and a public healthy harm framework--
+[00:19:24] although, I'm not sure the public health people
+[00:19:26] would use public health in the same way.
+[00:19:30] Well, sometimes literally public health, when
+[00:19:32] it's like anti-vax stuff is going through,
+[00:19:36] and shouldn't there be some responsibility
+[00:19:38] not to surface it on a search for,
+[00:19:40] "should I vaccinate my child?"
+[00:19:42] But this almost gets to the question--
+[00:19:44] notice I've been saying in the conventional wisdom,
+[00:19:48] in the kind of canon, and I think
+[00:19:52] that nicely joins the question of, who defines the canon?
+[00:19:58] And what is the canon?
+[00:20:04] And I should only maybe speak around cyberlaw as a field.
+[00:20:08] It's not like there haven't been people writing
+[00:20:10] from all different angles, and methodologies,
+[00:20:13] and viewpoints about it, but there's kind of
+[00:20:15] been a cyberlaw canon that almost boils things down
+[00:20:23] to like e-commerce law, and what you should know.
+[00:20:27] Notice we've been talking a bit about all this stuff.
+[00:20:29] We have yet to really mention a case.
+[00:20:31] I'm actually kind of surprised we mentioned the law.
+[00:20:35] I try.
+[00:20:36] Yeah, right.
+[00:20:37] But in the conventional framework,
+[00:20:40] I think there is a tendency-- and I surely
+[00:20:43] share it too-- to grasp for the familiar, which
+[00:20:47] is to say what's near you and to reinforce it.
+[00:20:49] And that's why thinking about a research center
+[00:20:52] and its priorities, it's not--
+[00:20:56] and gosh, I'm about to--
+[00:20:58] this is where it's like, just don't finish your sentence--
+[00:21:01] but I was going to say--
+[00:21:03] Those are the best sentences.
+[00:21:05] I was going to say, there's, of course,
+[00:21:07] a rich debate around science, and engineering,
+[00:21:11] and objectivity.
+[00:21:13] But I imagine there would be people among us who
+[00:21:16] would make the case that, if you're going to learn physics,
+[00:21:19] there's carts that go down hills and all that,
+[00:21:21] and then let's send you to the History of Science Department,
+[00:21:24] and you can have a frank exchange of views.
+[00:21:26] Debate on what a cart is and what a hill is,
+[00:21:27] and [INAUDIBLE]--
+[00:21:27] All of that kind of stuff.
+[00:21:28] And yet, at the end of the day, the bridge falls or not.
+[00:21:32] And again, you were even saying, at some point,
+[00:21:34] physics kicks in, and there's such a thing as physics--
+[00:21:39] some would say-- or would they?
+[00:21:42] I won't tell the historians of science.
+[00:21:44] Right.
+[00:21:45] But in this--
+[00:21:46] I mean, it's probably actually STS.
+[00:21:48] In this field, I think, given that so much of the environment
+[00:21:54] in which we exist, that is constructed by,
+[00:21:57] mediated by the technology, is built by people,
+[00:22:02] even though there's no one person who's like, yes,
+[00:22:07] I built that--
+[00:22:08] unless, in our era of concentrated power
+[00:22:10] and software, it's like, well, actually it's
+[00:22:12] Mark Zuckerberg right?
+[00:22:14] And like four other people, and here they are.
+[00:22:16] All right, that's something to talk about
+[00:22:18] on platform regulation.
+[00:22:21] But the fact that it is built by people creates such, at least,
+[00:22:25] a clearer and more obvious, I think,
+[00:22:29] to a larger group of people, way of saying to them,
+[00:22:33] this stuff doesn't have to be the way it is.
+[00:22:38] And in fact, part of when I found my own excitement rising,
+[00:22:46] even in an era where there's less to be--
+[00:22:48] or at least juxtaposed with the excitement--
+[00:22:50] a lot to be mortified about, has been to ask not just,
+[00:22:56] here's a phenomenon--
+[00:22:59] how do we regulate?
+[00:23:01] What parts of it do we allow or not?
+[00:23:03] And again, who is we here that could credibly be doing that?
+[00:23:07] But rather, what if it acted entirely differently?
+[00:23:12] And I got to say, for me, that has meant maybe
+[00:23:14] a year's long immersion in my own bandwidth
+[00:23:20] into thinking about how you'd construct stuff
+[00:23:26] differently, and in particular, the differences
+[00:23:29] between centralized and distributed.
+[00:23:31] Now, centralized and distributed is still--
+[00:23:34] it's a network architectural question.
+[00:23:37] It can apply in lots of different areas.
+[00:23:41] I don't know that that's still engaging with critical race
+[00:23:44] theorists, but it is possibly bringing to the table--
+[00:23:49] it's not just, again, how do we assess this and do
+[00:23:51] we like it or not, but what would we build?
+[00:23:55] How would it look different-- both in the technology
+[00:23:58] and institutionally, the configurations.
+[00:24:01] Because it might be that the technology could support
+[00:24:05] new institutional configurations at a time
+[00:24:08] when it's not just like the tech is letting us down.
+[00:24:12] It feels like everything is letting us down right now.
+[00:24:15] And a lot of the questions of internet governance
+[00:24:19] are reflected larger questions of governance with a capital G.
+[00:24:24] I think that's right, and I think that--
+[00:24:26] you already raised this question,
+[00:24:27] but I think close our one-on-one discussion with a, is--
+[00:24:32] who is the us?
+[00:24:34] Because I think one of the major critiques of the--
+[00:24:37] even my own characterisation of like,
+[00:24:39] "now is a trash fire" at the beginning,
+[00:24:42] is that, for many, many people, it's always been a trash fire.
+[00:24:47] And I think that, actually, that's--
+[00:24:50] I looked back on the history of cyberlaw, and looked--
+[00:24:55] I remember being surprised in myself,
+[00:24:57] as someone who entered the field and roughly 2011,
+[00:25:02] finding that folks have been writing about race and gender
+[00:25:04] online for literally--
+[00:25:07] since as long as being online had existed.
+[00:25:10] But that that work doesn't feel like it had really penetrated
+[00:25:15] as much of the canon, as you were saying,
+[00:25:17] of cyberlaw until relatively recently, with [INAUDIBLE] work
+[00:25:21] and Ruha Benjamin's work, who's going to be coming and speaking
+[00:25:24] in two weeks, which I encourage everyone to come to.
+[00:25:26] Jerry Kang, 20 years ago, yes.
+[00:25:29] So I wonder if you can talk about who you
+[00:25:32] think tech is governed for right now, and what that--
+[00:25:39] how that informs what you do, going forward.
+[00:25:43] Well, at the risk of generalizations--
+[00:25:47] I just invited it.
+[00:25:48] Fair enough.
+[00:25:51] Tech is produced for who can pay for it.
+[00:25:56] And if there's another area that somebody wanting
+[00:26:01] to be integrative around internet and society
+[00:26:04] would be thinking, it's actually the microeconomics
+[00:26:09] of the space, the--
+[00:26:13] perhaps even by design--
+[00:26:15] boring and Byzantine ways in which the act [AUDIO OUT]
+[00:26:24] looking at something triggers--
+[00:26:28] as I put it in, I think, a piece that has yet to be published--
+[00:26:32] Spoilers.
+[00:26:32] --more computational effort to do something with that,
+[00:26:37] click than the Apollo command module had.
+[00:26:41] Again, it's taken out of the fortuity basket.
+[00:26:44] It's like, you didn't even want to look at that.
+[00:26:46] And again, by you, I--
+[00:26:48] let's see.
+[00:26:49] It's probably some of these mobile phone.
+[00:26:51] Or maybe I've said too much.
+[00:26:53] They're here.
+[00:26:56] And that microeconomics story is a really important one because,
+[00:27:03] if we're talking about--
+[00:27:05] and have yet to resolve, again, [INAUDIBLE]
+[00:27:08] what we want the space to look like, it's
+[00:27:11] really hard to just make it so.
+[00:27:13] There was a time [INAUDIBLE] what, 2005,
+[00:27:17] or around that era--
+[00:27:19] when it was like Wikipedia was the point
+[00:27:24] of a spear that was going to reconfigure
+[00:27:28] how people interact with each other,
+[00:27:30] how knowledge is generated.
+[00:27:31] And then it became--
+[00:27:32] it turned out it was just an arrowhead.
+[00:27:37] Where's the rest of the spear?
+[00:27:38] Wikipedia works in practice, but not in theory.
+[00:27:42] And then the next thing was like,
+[00:27:45] and you know what, maybe Wikipedia
+[00:27:46] doesn't work so well anyway, at which point, it's like,
+[00:27:50] now what do we do?
+[00:27:56] I have not seen myself in more open and welcoming time
+[00:28:02] for people to contribute to this field.
+[00:28:08] I have not seen a time of less certainty about what
+[00:28:14] the canon of the field is.
+[00:28:17] Among my colleagues, I have not seen them
+[00:28:21] as puzzled as they are now--
+[00:28:24] and I count myself among it--
+[00:28:26] and that is, in its way, inspirational.
+[00:28:31] It's a moment-- at least in the academy,
+[00:28:33] but I think also in the public at large--
+[00:28:37] of some deep-seated ambivalence about what we're doing,
+[00:28:41] and to be able to make something of that moment,
+[00:28:47] and to integrate mastery of multiple fields, including
+[00:28:51] the microeconomics I was just talking about,
+[00:28:53] with the critical race theory, with the network theory,
+[00:28:58] with the people who can build stuff and say,
+[00:29:00] let's see if it takes off.
+[00:29:02] Because it's still possible to build pretty much anything
+[00:29:04] you want, and put it online, and see what happens.
+[00:29:09] Let's see what we can build together.
+[00:29:11] It's certainly my highest hope for a research
+[00:29:13] center like ours.
+[00:29:14] So I need one more thing I should say on that front, which
+[00:29:16] is a kind of aim that was general and present, but feels
+[00:29:24] more specific and urgent, in the wake of the situation
+[00:29:29] going on with MIT--
+[00:29:32] is having a constellation of centers that are, in the words
+[00:29:39] of David Weinberger, small pieces loosely joined--
+[00:29:42] something that our center has been working on-- a network
+[00:29:45] of centers around the world--
+[00:29:47] so that you don't have all your marbles in one basket.
+[00:29:49] And as much as you try to integrate
+[00:29:51] under one roof as many views as possible,
+[00:29:53] there should be multiple roofs--
+[00:29:56] rooves?
+[00:29:56] I don't know.
+[00:30:00] I think that your point about the sort of interdisciplinarity
+[00:30:03] of these problems and the way in which, traditionally, the law--
+[00:30:06] the cyberlaw canon has not necessarily
+[00:30:08] been super receptive to that interdisciplinarity
+[00:30:11] is a great point.
+[00:30:14] I think that you're right that the many centers feels
+[00:30:20] like a way to mitigate some of the potential harms
+[00:30:24] of bad actors at any one particular center.
+[00:30:28] I do think that the--
+[00:30:32] and I'm going to speak for myself, and not
+[00:30:33] for you, and not for Berkman, or Harvard Law School, or anybody
+[00:30:37] else, really--
+[00:30:42] I think there was a sort of reckless--
+[00:30:47] people have use the term techno-optimism,
+[00:30:48] and I think that's fair.
+[00:30:51] Actually, when I went back and read
+[00:30:52] the conclusion of your book, it, as you may remember,
+[00:30:54] opens with the discussion--
+[00:30:56] I regret the subsection titled Reckless Techno-Optimism.
+[00:31:00] That was reckless.
+[00:31:05] The thing I quoted from opens with a section on Nicholas
+[00:31:07] Negroponte, and that the power--
+[00:31:10] generative power, the One Laptop per Child--
+[00:31:12] Although I think there's some skepticism [INAUDIBLE]
+[00:31:13] There is some skepticism.
+[00:31:14] OK.
+[00:31:15] I will give you that.
+[00:31:17] I think that, for me, what I take away from that is that--
+[00:31:22] those questions of harm, of the public health model,
+[00:31:27] that just a rights-based model is never
+[00:31:29] going to be enough, because you're always trading off
+[00:31:32] the rights against something.
+[00:31:34] And that, I think, that the--
+[00:31:36] there's a way in which an early techno-optimist perspective
+[00:31:43] was, we're not just going to like throw--
+[00:31:46] we're not just going to change everything.
+[00:31:48] We're going to change everything,
+[00:31:49] and there aren't going to be any drawbacks, right?
+[00:31:51] Yes.
+[00:31:51] That there weren't going to be costs associated, and that's--
+[00:31:54] Yes.
+[00:31:55] Well, there goes my phone.
+[00:31:58] And that seems like one of the striking things
+[00:32:00] that we're dealing with now.
+[00:32:01] Well, I should say, certainly, in my thinking
+[00:32:05] around generativity, there--
+[00:32:07] one footnote in the book that I might be proudest of--
+[00:32:11] I know I'm an academic, when I say that--
+[00:32:13] They're actually endnotes.
+[00:32:17] [INAUDIBLE] footnote that really--
+[00:32:19] yes.
+[00:32:20] So the endnote I'm most proud of is talking about--
+[00:32:26] as I'm extolling the virtues of generativity,
+[00:32:28] and isn't it cool that anybody can do anything and nobody can
+[00:32:31] really stop them--
+[00:32:33] there's a footnote to, I think, a New Yorker piece
+[00:32:36] called "The kid who built a nuclear reactor in his shed"
+[00:32:41] about, I think, a 12-year-old kid
+[00:32:42] who built a nuclear reactor in his shed.
+[00:32:45] And it was an endnote to a paragraph.
+[00:32:48] It was like, is there such a thing as too much generativity?
+[00:32:51] And that's even taking into account,
+[00:32:54] of course, a generative model, which is
+[00:32:56] it yields catastrophic success.
+[00:32:57] Bad actors show up, for which my solution was
+[00:33:00] we need a generative defense, rather than expecting somebody
+[00:33:04] from on high to help us.
+[00:33:06] But separately, before the bad actors show up,
+[00:33:10] is just, when it's there too much generativity?
+[00:33:12] And as the power of the movement of bits
+[00:33:15] has grown, and has become so much more integrated
+[00:33:19] with the physical world, it's starting
+[00:33:23] to move towards the nuclear.
+[00:33:24] And I want to acknowledge that.
+[00:33:26] The [INAUDIBLE] I maybe should end on, though, is--
+[00:33:29] You keep trying to end it, and I keep--
+[00:33:30] True.
+[00:33:31] No, it's fine.
+[00:33:31] All right, so here's the thing I want to say, though,
+[00:33:35] about risk taking, because risk taking the kind of thing that,
+[00:33:41] on an innovation checklist, or even a how to make
+[00:33:44] an institution, or polity, or anything-- thrive--
+[00:33:48] checklist, is take risks.
+[00:33:50] And I think it's--
+[00:33:52] I won't speak for all scholars--
+[00:33:54] I couldn't possibly, but I'll speak for myself--
+[00:33:57] in a scholarly mode, taking risks
+[00:34:00] means not just writing a new piece
+[00:34:03] on your existing theory that nails down
+[00:34:07] one more piece of it, or a case study further
+[00:34:09] to my generativity, or-- which we haven't talked about,
+[00:34:12] but could-- information fiduciaries and loyalty
+[00:34:15] by companies backed up by law.
+[00:34:19] But rather, are you willing to study, and spend time with,
+[00:34:23] and write in areas where, honestly, you're
+[00:34:27] going to be a student again?
+[00:34:29] And when you deploy all of those fancy titles as the very
+[00:34:36] first star footnote to an article indicating
+[00:34:39] the authorial affiliations, and then say
+[00:34:42] stuff that's going to be, quite literally,
+[00:34:45] sophomoric, that's a form of risk taking that, at once, I
+[00:34:52] can see wanting to encourage, get out of our comfort zones,
+[00:34:58] and at the same time, is, when is risk taking recklessness?
+[00:35:03] Especially when that translates to, let's do this project,
+[00:35:05] and this project carries with it some real risks.
+[00:35:09] It's like something, something, something, Iran, something,
+[00:35:12] something, something.
+[00:35:14] All right, well, they're on an export control list,
+[00:35:16] and there's all sorts of--
+[00:35:18] but it's like-- and so [INAUDIBLE]
+[00:35:21] a lot of people it's mindful about that [INAUDIBLE]
+[00:35:23] probably [INAUDIBLE] not only trying
+[00:35:25] to be most in touch with one's own compass,
+[00:35:28] but getting radar pings back-- to totally mix my metaphors--
+[00:35:31] from the compasses of others to do it, and acknowledge
+[00:35:35] when you need to make a course correction.
+[00:35:38] Thank you.
+[00:35:40] So we've covered a lot of ground,
+[00:35:42] and there's a lot more to cover.
+[00:35:45] And I'm conscious that we, I think, have 20--
+[00:35:48] roughly 20 minutes left together.
+[00:35:50] So now, I'm going to turn to the audience participation, and not
+[00:35:52] the part where somebody puts up their hand
+[00:35:54] and asks a four-minute question that's actually a comment.
+[00:36:00] Love y'all.
+[00:36:00] I know the community.
+[00:36:02] I'm just saying.
+[00:36:04] Present company excepted, of course.
+[00:36:07] Me, ask-- give in-depth comments that
+[00:36:09] are supposed to be questions?
+[00:36:10] Everybody's [INAUDIBLE] company.
+[00:36:13] So what I'm going to ask you to do
+[00:36:14] is turn to a person or a couple people next to you,
+[00:36:18] and first, I'm going to ask you to introduce yourself.
+[00:36:21] And then I'm going to ask you to--
+[00:36:24] either you can take up the core question
+[00:36:26] of what was advertised on the tin of the talk, which I'm not
+[00:36:29] sure we gave, which is, can tech be governed?
+[00:36:32] Although, I think, in our own way,
+[00:36:33] we have answered it maybe with [INAUDIBLE] law,
+[00:36:35] which is to say no.
+[00:36:37] No, I think the answer is it has to be.
+[00:36:40] It's that we must assume it can be, and work towards it,
+[00:36:44] while having the humility not to think
+[00:36:46] that we are just running an ant farm here.
+[00:36:50] OK.
+[00:36:51] Well, we can talk about it too.
+[00:36:53] Fair enough.
+[00:36:55] So you can either take up the question of, can tech be
+[00:36:58] governed, which is a big one, or any of the smaller questions
+[00:37:02] that we've embedded, which is like,
+[00:37:03] what fields feel like the most relevant to bring into these
+[00:37:08] discussions going forward, which of these problems feel as most
+[00:37:12] "tackle-able" from an interdisciplinary lens,
+[00:37:15] or just raising other questions that came out.
+[00:37:18] So I'm going to actually give y'all five minutes to do that,
+[00:37:23] and then I'm going to try to get us back together for a full
+[00:37:25] group conversation.
+[00:37:27] And in the spirit of Berkman, Wikipedia, and formerly
+[00:37:30] the bumblebee, although people now know that how it flies--
+[00:37:34] I'm going to hope that, despite not knowing
+[00:37:35] whether this is going to work, that it will,
+[00:37:37] and it will result in good conversations.
+[00:37:40] And I'll see you back here in five minutes.
+[00:37:43] I can tell that there are lots of amazing conversations going
+[00:37:46] on, but I'm just going to continue
+[00:37:49] to speak into this microphone to interrupt you
+[00:37:51] until some of you--
+[00:37:53] John Penny, I'm talking to you--
+[00:37:55] stop speaking.
+[00:37:58] So one of the great things about the fact
+[00:38:02] that this is the beginning of the year
+[00:38:03] and this is our kickoff event is we actually have lots of time
+[00:38:06] to continue these conversations.
+[00:38:09] But first, I'm going to be nosy and want
+[00:38:11] to know a little bit about what you're
+[00:38:13] saying in the conversations.
+[00:38:16] And so I think I preceded some--
+[00:38:20] I won't say volunteers--
+[00:38:22] I "volun-told" some people that I thought they were going
+[00:38:24] to have interesting thoughts, and that I would enjoy hearing
+[00:38:28] them speak.
+[00:38:29] And then I will move to a--
+[00:38:32] maybe a slightly more actual volunteer model.
+[00:38:35] This is academia, so volun-told is kind of how we do things.
+[00:38:39] I'm going to go over here first and ask
+[00:38:42] if there's a group from--
+[00:38:45] you are not required to have a question.
+[00:38:46] I just love to hear what struck you
+[00:38:48] about your conversation, or any interesting things that
+[00:38:52] came out of it.
+[00:38:54] Hi.
+[00:38:55] Jess Daniels.
+[00:38:56] It was all very interesting, and we had a good group.
+[00:38:59] A lot of [INAUDIBLE] governance in our group.
+[00:39:03] And several people raised the issue
+[00:39:05] about black women being attacked on Twitter,
+[00:39:07] and as a case study of, how do you govern, given that,
+[00:39:12] and how do you govern and put black women
+[00:39:14] at the center of those who are being harmed?
+[00:39:17] And one of the other questions was
+[00:39:19] about the imbalance between the resources that corporations
+[00:39:22] have, that are running these platforms,
+[00:39:24] and civil society, who's trying to do
+[00:39:26] some of the intermediary work of governance.
+[00:39:28] So that was where we were.
+[00:39:34] I know that one of the things that you
+[00:39:36] wrote a lot early about, Jonathan, was IETF,
+[00:39:39] and the rough consensus running code model.
+[00:39:43] I'm wondering, given the group's provocation around the variable
+[00:39:46] resources, if you want to talk a little bit about how you see
+[00:39:51] that changing, that very democratic,
+[00:39:55] in a traditional sense-- meaning it was mostly white dudes--
+[00:40:00] process.
+[00:40:02] Well, it kind of gets back to the distributed and centralized
+[00:40:06] point.
+[00:40:07] If we were still in an era in which the biggest architectural
+[00:40:12] decisions about the digital space were being made, say,
+[00:40:17] through the auspices of something called the Internet
+[00:40:19] Engineering Task Force-- and what I love, by the way,
+[00:40:21] about our community is there's going to be people here who are
+[00:40:26] totally still into the IETF and are part of it--
+[00:40:29] it doesn't have members, but it has people who participate--
+[00:40:33] and there are going to be people who will be, like IET what?
+[00:40:35] And back in the day, that was the group that
+[00:40:42] helped to work on and came to consensus-- rough consensus
+[00:40:46] on internet protocols, the basic unknown
+[00:40:50] protocols that anybody would be entitled
+[00:40:52] to build into their software and hardware
+[00:40:54] so that the stuff could interoperate.
+[00:40:56] And of course, what those protocols permitted
+[00:41:01] would have a huge impact--
+[00:41:03] as we like to say, when you want to sound highfalutin about it--
+[00:41:07] all the way up the stack to the applications,
+[00:41:10] and to the content, and to the users.
+[00:41:12] And a decision down here about, OK,
+[00:41:15] is there going to be an identity bit, put bluntly?
+[00:41:19] Well, under a rights perspective,
+[00:41:21] you can think of all the problem is
+[00:41:22] I got to carry my internet license with me, when
+[00:41:25] I'm on the internet.
+[00:41:27] That doesn't sound great.
+[00:41:29] And then, when you think about accountability for harms,
+[00:41:31] it's like, well, I don't know, it was bits that did it,
+[00:41:35] does not sound like a satisfying answer to the problem of abuse.
+[00:41:41] Again, it's a moving target because we now,
+[00:41:43] while we still operate through protocols blessed by the IETF,
+[00:41:46] and adopted by vendors and others building software,
+[00:41:50] it's--
+[00:41:51] all right, well, what's happening on Twitter?
+[00:41:53] And Twitter is, I'm using an app, and what I see on Twitter
+[00:41:57] is what Twitter says I'll see.
+[00:41:58] And I got to say, from the point of view of a research
+[00:42:01] center, many of whom our alums are working at Twitter
+[00:42:05] in different departments--
+[00:42:07] we are--
+[00:42:08] Some of my best friends are at Twitter.
+[00:42:10] Right, absolutely.
+[00:42:13] And how to interact with that corporate sector,
+[00:42:20] because the era in which--
+[00:42:22] they might be.
+[00:42:23] There have been times when they'd say,
+[00:42:25] all right, we're ready to give you $1 million,
+[00:42:27] and you know some other folks that could use $1 million
+[00:42:30] coming from Twitter, and then Twitter can feel
+[00:42:32] better about what it's doing.
+[00:42:33] I don't mean specifically Twitter, of course.
+[00:42:35] I mean the entire corporate internet sector.
+[00:42:39] They're willing to do that, but then it's like, well,
+[00:42:42] do we want that money?
+[00:42:43] Does that affect our policy recommendations?
+[00:42:46] We, these days, tend not to take that money.
+[00:42:51] OK, well, then how do you interact with them?
+[00:42:53] Ideally, as peers across the table, and as ones who can,
+[00:42:58] in the true internet spirit of the way to get online
+[00:43:01] is to find anybody already online and just share
+[00:43:04] their access--
+[00:43:05] that is literally how all internet access works, right?
+[00:43:07] There's not some central internet switching station
+[00:43:10] that puts us all online.
+[00:43:12] It's all by getting online with somebody
+[00:43:14] already online, including ISPs.
+[00:43:16] You can bring people to the table that way,
+[00:43:19] but are they going to share data with us?
+[00:43:22] How do we know the scope of the problem?
+[00:43:24] We could do the Pew survey approach
+[00:43:26] or the ethnographic approach, and hear from people harmed,
+[00:43:29] but you'd want to complement that.
+[00:43:31] Well, what do you see from the--
+[00:43:35] what's the right-- the air traffic control
+[00:43:36] tower, the prison tower that is Twitter central looking down
+[00:43:42] on all of the users with a unique view
+[00:43:44] that only they have.
+[00:43:47] And in this current environment, getting them to share data
+[00:43:52] is both inappropriately and appropriately, depending,
+[00:43:55] really hard-- nay, impossible to do.
+[00:43:59] There were tentative arrangements
+[00:44:01] with some academics to study this stuff,
+[00:44:03] but again, now we all put on our privacy hats.
+[00:44:06] You share data what now?
+[00:44:08] Or you put on your GDPR hat, and you're like--
+[00:44:10] if you're Europe, you're like you processed what now?
+[00:44:14] That turns out to mean, from a corporate risk perspective--
+[00:44:18] no, when we say risk taking, that's not what we mean.
+[00:44:21] Safer not to work with the academics--
+[00:44:24] or anybody, for that matter.
+[00:44:25] That's a real problem.
+[00:44:27] And I don't have a solution for it,
+[00:44:29] but I find myself still working really hard for the benefit
+[00:44:33] of our center and those--
+[00:44:35] the research we could do, and the students
+[00:44:38] here, and others, who want to be able to work on real data.
+[00:44:43] How to make that happen, to me, is
+[00:44:45] one of the big almost library-style [INAUDIBLE]
+[00:44:48] our time.
+[00:44:49] I thank you for that.
+[00:44:51] And I want to actually come back to what this group was talking
+[00:44:53] about before, which is--
+[00:44:56] bless you-- sorry-- the unique experience, and centering
+[00:45:00] the voices of black women who are harassed on Twitter.
+[00:45:03] I think that sometimes there can be a tendency--
+[00:45:06] and I've seen this in myself--
+[00:45:07] to look at marginalized groups as canaries in the coal mine--
+[00:45:12] like, oh, they saw it first, and then they
+[00:45:16] can predict the outcomes.
+[00:45:18] And I do think there is a benefit to that, which
+[00:45:20] is that it often does actually require people
+[00:45:22] to engage substantively with the experiences
+[00:45:24] of marginalized folks online, especially
+[00:45:26] of women of color and black women.
+[00:45:28] But the end of the story about the canary in the coal mine
+[00:45:31] is not a positive one.
+[00:45:33] I'm pretty sure that canary dies.
+[00:45:36] I love how the canary has like a tag on it that says,
+[00:45:39] the future is here, it's just not evenly distributed yet.
+[00:45:41] Right.
+[00:45:42] The canary in the coal mine is the future is here--
+[00:45:44] Yes, right.
+[00:45:45] --not evenly distributed.
+[00:45:48] Particularly apt with tweets and Twitter, the canary.
+[00:45:53] So what I want to say there is that I think there--
+[00:45:57] in our desire, as researchers, and as a center
+[00:46:00] that does do interdisciplinary work and take disparate pieces
+[00:46:03] and put it together, it's so important
+[00:46:05] not to think about that as, oh, what can we
+[00:46:07] gain from this person or what can we
+[00:46:10] gain from this experience to speak to everyone else,
+[00:46:13] but rather to take seriously the idea
+[00:46:16] that each individual person's experience--
+[00:46:19] the canary has as much right to continue to live--
+[00:46:22] this metaphor is shitty.
+[00:46:24] I'm going to stop using it.
+[00:46:27] I just swore, and I didn't ask if that was OK.
+[00:46:29] Oh well.
+[00:46:30] It talks to me about the importance of synthesizing
+[00:46:33] experience and statistic.
+[00:46:35] Mm-hmm.
+[00:46:36] There's a real obsession with big data these days,
+[00:46:42] and what we can learn, thanks to new tools and thanks
+[00:46:44] to the data sets-- including learn
+[00:46:46] for the sake of understanding better the parameters-- what's
+[00:46:49] really going on online.
+[00:46:51] But that alone, in the absence of actual experience
+[00:46:57] and being able to hear [INAUDIBLE]
+[00:47:01] may not at all resemble others online,
+[00:47:05] including literally each of our-- we're using Twitter,
+[00:47:07] we get very different experiences back from it.
+[00:47:11] That just seems to be really vital
+[00:47:13] and an important reminder--
+[00:47:16] I'll just say again-- personally about how to temper the joy
+[00:47:23] of, great a new data set of harms--
+[00:47:25] this is so cool.
+[00:47:27] It's like, wait a minute.
+[00:47:30] It is productive and useful, but gosh, just stop for a minute
+[00:47:35] and think about [INAUDIBLE]
+[00:47:40] Well, speaking of hearing from folks,
+[00:47:44] the time gets away from us, as it always does.
+[00:47:47] I'm going to take one last comment,
+[00:47:48] and then I think we're going to wrap up.
+[00:47:51] So I'm going to take it from this group over here,
+[00:47:54] since I so unkindly called out John Penny already.
+[00:47:57] Go ahead.
+[00:47:59] Hi.
+[00:47:59] Thanks for the wonderful talk.
+[00:48:01] So we are discuss this question from a comparative perspective
+[00:48:05] and the global context, because I come from China,
+[00:48:09] and I'm a visiting scholar here.
+[00:48:11] So I just told Joe and my friend about my research project
+[00:48:15] is Chinese social credit system.
+[00:48:17] So it's more like the Chinese government
+[00:48:19] to use the big data analytic tools
+[00:48:21] and the algorithmic technologies to apply in area--
+[00:48:27] and that in that area, they will collect the information data
+[00:48:31] from the citizens and give you a scoring record
+[00:48:35] so you will have a credit score.
+[00:48:37] So they ask me, when we talk about can technology can be
+[00:48:41] governed-- so in China, it can be governed or not--
+[00:48:44] yeah, I think this is very big and challenging question.
+[00:48:49] I think, because from China's context,
+[00:48:51] it's a little bit different from the Western part,
+[00:48:55] because that technology play much, much more
+[00:48:58] a role in China's development purpose.
+[00:49:01] So it's [INAUDIBLE] have some relationship
+[00:49:04] with the prosperity with the country.
+[00:49:07] So why do you give more meaning on technology in this sense,
+[00:49:10] so it will make this governance issue more complicated and more
+[00:49:14] challenging?
+[00:49:15] So I think, if we talk about why the technology can be governed,
+[00:49:19] we should first of figuring out what kind of the barriers
+[00:49:23] for this question.
+[00:49:24] So I think in maybe Asia context or Chinese context,
+[00:49:27] there are several barriers.
+[00:49:29] The first is the knowledge gap, and the second
+[00:49:32] is the awareness of the citizens.
+[00:49:35] Recently, there is optimistic trending,
+[00:49:38] because of the social media-- also
+[00:49:40] the Western socialist media's news.
+[00:49:42] So the Chinese internet users have much, much more awareness
+[00:49:47] of privacy than before.
+[00:49:49] So now, the agencies who deal with this issue
+[00:49:51] now issue more regulations than before,
+[00:49:54] try to protect the privacy of the citizens--
+[00:49:57] and also, the pacing problem, because the legislature always
+[00:50:01] chasing from those challenging issues.
+[00:50:03] So this, basically, what we discussed.
+[00:50:06] Thank you.
+[00:50:07] And it also seems to raise the question,
+[00:50:10] if we're talking about can tech be governed, how do you--
+[00:50:13] who watches the watcher?
+[00:50:15] If you are using the technology to govern,
+[00:50:17] then you have a whole other set of questions
+[00:50:19] associated with that.
+[00:50:22] So I see we're almost at time, and so I want to offer--
+[00:50:25] Jonathan, if you have any concluding points.
+[00:50:27] Well, yeah, it's both inspired by the last comment and maybe
+[00:50:33] kind of a nice statement of a piece
+[00:50:35] of a research agenda, for which I'd certainly welcome help,
+[00:50:39] which is, as the technology gets more powerful,
+[00:50:45] do we accept that it's going to turn the dial up on control,
+[00:50:50] and then it's just a fight of how to govern it,
+[00:50:52] so that the control is responsible
+[00:50:54] and that the right outcomes happen,
+[00:50:57] if we can agree on what the right outcomes are,
+[00:50:59] et cetera, et cetera?
+[00:51:00] Or is it somehow this kind of Canutian can
+[00:51:09] we just try to push some stuff--
+[00:51:11] Hold on.
+[00:51:12] I have no idea what Canutian means.
+[00:51:13] King Canute?
+[00:51:14] No?
+[00:51:17] Well, we're not going to get into that.
+[00:51:19] OK.
+[00:51:22] There's no fighting city hall or the waves.
+[00:51:25] Is it, well, actually, let's change the technology
+[00:51:31] to somehow try to put stuff back into the fortuity bag?
+[00:51:38] No one-- gosh, this is now going to be a terrible reference,
+[00:51:41] but here we go--
+[00:51:44] no one should have the Ark of the Covenant.
+[00:51:46] It should be put into a warehouse never
+[00:51:49] to be seen again.
+[00:51:51] That was--
+[00:51:51] That's Star Wars, right?
+[00:51:56] Kendra was trying to get me to say "actually."
+[00:52:01] I actually it was mostly just doing it
+[00:52:02] for the look on his face, which was like sheer horror.
+[00:52:06] But right, it's the end of the movie.
+[00:52:08] It's the end of Raiders of the Lost Ark, of like,
+[00:52:09] this power is too great.
+[00:52:11] It's the ring.
+[00:52:11] It's the One Ring.
+[00:52:14] Can we just put some of this crap back into Mount Doom?
+[00:52:20] I don't know the answer, but I think
+[00:52:21] it may be, good luck with that.
+[00:52:24] Once you reveal there can be a One Ring,
+[00:52:26] and you actually forged one, someone,
+[00:52:30] something's going to want it.
+[00:52:31] And so there's an institutional design question--
+[00:52:34] how do you distribute that power,
+[00:52:37] or not have one ring-- have many?
+[00:52:39] Well, that didn't work either.
+[00:52:41] But versus, is this too much power for anybody to have,
+[00:52:47] given what we know, being mindful of history,
+[00:52:51] about how power accretes?
+[00:52:54] And there is a lot of power in this institution,
+[00:52:58] in this space, spent well or not--
+[00:53:01] a lot of debate around that.
+[00:53:04] But if you're in this room, you are part of it
+[00:53:06] or proximate to it.
+[00:53:08] And I mean that both for the warning that it sounds
+[00:53:12] like it is, and that I'm trying to take to heart,
+[00:53:15] and for the opportunity and responsibility
+[00:53:18] it represents for us to learn what we can,
+[00:53:22] express what we can.
+[00:53:24] And through our corner of this university, the Berkman Klein
+[00:53:28] Center, there will be a science fair
+[00:53:30] upcoming where you can learn about the ridiculously broad
+[00:53:36] kaleidoscope of projects taking on so many different pieces
+[00:53:41] of this puzzle, and have a chance to see where
+[00:53:43] you might want to fit into it.
+[00:53:45] And I really invite you to do it.
+[00:53:47] This center contains multitudes, and I
+[00:53:50] hope you'll be among them.
+[00:53:52] Thank you.
+[00:53:53] Thank you everyone.
+[00:53:54] Do you want to actually announce here time?
+[00:53:57] Thank you.
+[00:54:01] The open house is September 24 at 5:00 PM,
+[00:54:04] I think somewhere around here.
+[00:54:07] Hopefully we'll see you there.
+[00:54:08] Milstein East ABC.
