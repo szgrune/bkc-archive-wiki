@@ -1,0 +1,98 @@
+name: Fetch Mailchimp Buzz issues
+
+# Daily sync of Berkman Klein Buzz newsletter issues from Mailchimp — the
+# successor to the 2006-2015 Sympa mailing list one-time-imported by
+# scripts/import_buzz.py. See scripts/fetch_mailchimp_buzz.py's docstring for
+# the API details and why campaigns are filtered strictly by internal title
+# ("The Buzz: <date>"): the same Mailchimp audience also sends event
+# announcements, student bulletins, and one-off event follow-ups, which carry
+# different privacy/sensitivity expectations than the public Buzz digest and
+# must never end up in this archive.
+#
+# Runs 20 minutes after fetch-publications.yml (05 7) so it doesn't race
+# pushing to main at the same time as the other daily fetch workflows.
+#
+# Needs a Mailchimp API key as a repo secret:
+#   MAILCHIMP_API_KEY
+# Until it's set, this workflow no-ops daily instead of failing (see the
+# "Check Mailchimp credentials" step below) so it doesn't spam failure
+# notifications.
+
+on:
+  schedule:
+    - cron: "25 7 * * *"
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Cap on number of new issues to fetch content for (blank = no cap)"
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-mailchimp-buzz
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # GitHub Actions doesn't allow `secrets.*` directly in `if:` conditions,
+      # so check presence here (via env, never printed) and branch on the
+      # step output instead — same pattern as fetch-youtube-captions.yml and
+      # synthesize-wiki.yml.
+      - name: Check Mailchimp credentials
+        id: creds
+        env:
+          MAILCHIMP_API_KEY: ${{ secrets.MAILCHIMP_API_KEY }}
+        run: |
+          if [ -n "$MAILCHIMP_API_KEY" ]; then
+            echo "configured=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Skip notice (Mailchimp key not configured yet)
+        if: steps.creds.outputs.configured == 'false'
+        run: |
+          echo "::notice::MAILCHIMP_API_KEY is not set — skipping this run. \
+          Configure it as a repo secret to enable the daily Buzz fetch \
+          (see scripts/fetch_mailchimp_buzz.py)."
+
+      - name: Setup Python
+        if: steps.creds.outputs.configured == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        if: steps.creds.outputs.configured == 'true'
+        run: pip install requests beautifulsoup4
+
+      - name: Fetch Buzz issues
+        if: steps.creds.outputs.configured == 'true'
+        env:
+          MAILCHIMP_API_KEY: ${{ secrets.MAILCHIMP_API_KEY }}
+        run: |
+          ARGS=""
+          if [ -n "${{ github.event.inputs.limit }}" ]; then
+            ARGS="--limit ${{ github.event.inputs.limit }}"
+          fi
+          python scripts/fetch_mailchimp_buzz.py $ARGS
+
+      - name: Commit and push
+        if: steps.creds.outputs.configured == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain -- raw/archive.json)" ]; then
+            git add raw/archive.json
+            git commit -m "Automated Mailchimp Buzz fetch"
+            git push
+          else
+            echo "No new Buzz issues this run — nothing to commit."
+          fi

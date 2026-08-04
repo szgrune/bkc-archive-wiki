@@ -87,6 +87,27 @@ python3 scripts/fetch_tagteam.py --dry-run   # see what's new (no writes)
 python3 scripts/fetch_tagteam.py             # fetch + merge by hand
 ```
 
+## Berkman Klein Buzz (`archive.json`, daily)
+
+The Buzz newsletter is archived from two sources sharing one id scheme
+(`buzz_YYYYMM_N`): 417 issues from the 2006-2015 Sympa-era mailing list
+(one-time import), and 426 issues from 2016-present via
+**`scripts/fetch_mailchimp_buzz.py`**, synced daily through
+`.github/workflows/fetch-mailchimp-buzz.yml`. Filtered strictly to campaigns
+internally titled "The Buzz: \<date\>" — the same Mailchimp audience also
+sends event announcements and student bulletins, which carry different
+privacy/sensitivity expectations and must never end up in this (public)
+archive. Full detail (pagination quirks, template-cleaning issues found and
+fixed) is in `AGENTS.md` §5. **Known gap:** June 2015–June 2016 isn't
+covered by either source.
+
+```bash
+export MAILCHIMP_API_KEY=...
+python3 scripts/fetch_mailchimp_buzz.py --list-audiences     # find the audience id
+python3 scripts/fetch_mailchimp_buzz.py --dry-run --limit 5  # small sanity check
+python3 scripts/fetch_mailchimp_buzz.py                      # fetch + merge new issues
+```
+
 ## BKC publications (`archive.json`, daily)
 
 **`scripts/fetch_publications.py`** syncs BKC's own publications index

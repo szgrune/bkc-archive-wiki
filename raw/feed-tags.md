@@ -9,8 +9,8 @@ _Deterministic. These are the source feed's workflow/newsletter tags — NOT top
 | events | 949 |
 | addedcommunity | 887 |
 | buzz | 887 |
+| berkman-buzz | 843 |
 | opportunities | 797 |
-| berkman-buzz | 417 |
 | addedorbit | 382 |
 | bkc-publication | 374 |
 | added | 309 |

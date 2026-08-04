@@ -22,9 +22,16 @@ source. The human curates and asks questions; the LLM does the bookkeeping.
   now adds new ones daily (see §5). **2,063 unique domains** (NYT, Wired,
   techpolicy.press, SSRN, Harvard, 404media…). Subject matter:
   internet/tech/society/law/AI/policy.
-- **Berkman Buzz newsletters** — 417 email issues, **2006–2015**. Weekly digests
-  from the Center. Item IDs: `buzz_YYYYMM_N`. Full body text in `content` field;
-  `email` sub-object carries message-id, list, source-file.
+- **Berkman Buzz newsletters** — 843 email issues across two sources sharing
+  one id scheme (`buzz_YYYYMM_N`) and `email` sub-object shape (message-id,
+  list, source-file): 417 issues **2006–2015** from the Sympa-era mailing
+  list (one-time import, `scripts/import_buzz.py`), and 426 issues
+  **2016–present** from Mailchimp, synced daily via
+  `scripts/fetch_mailchimp_buzz.py` (see §5) — filtered strictly to
+  campaigns internally titled "The Buzz: \<date\>", since the same Mailchimp
+  audience also sends event announcements and student bulletins that must
+  never end up in this archive. **Known gap: June 2015–June 2016** is
+  covered by neither source. Full body text in `content` field.
 - **BKC YouTube videos** — @BKCHarvard channel (~1,100 videos; import ongoing,
   daily). Item IDs: `yt_VIDEO_ID`. `youtube` sub-object carries duration,
   speakers, caption type. `content` here is the video description, not the
@@ -40,7 +47,7 @@ source. The human curates and asks questions; the LLM does the bookkeeping.
   `authors_profiles` (`[{name, bkc_profile_url}]` — useful for cross-
   referencing existing `people/*.md` pages during synthesis).
 
-**Total: 7,884+ items** (and climbing daily — see §5).
+**Total: 8,310+ items** (and climbing daily — see §5).
 
 ### Two constraints that shape everything
 1. **Metadata-only for TagTeam items.** There is no article body text. Do **not**
@@ -109,14 +116,16 @@ archive-wiki/
 - `raw/archive.json` is the immutable source **for the original Buzz import
   and the original 6,925-item TagTeam export** — a wholesale external
   re-scrape is the only thing that should ever replace those existing items.
-  Three scripts append new items to it going forward, none touching existing
+  Four scripts append new items to it going forward, none touching existing
   ids: `scripts/merge_youtube_into_archive.py` (new `yt_` items, run at the
   end of the daily `fetch-youtube-captions.yml`), `scripts/fetch_tagteam.py`
   (new numeric-id TagTeam items, run daily by `fetch-tagteam-items.yml`,
-  incrementally syncing hub 1176's own Export feed), and
+  incrementally syncing hub 1176's own Export feed),
   `scripts/fetch_publications.py` (new `pub_` items, run daily by
-  `fetch-publications.yml`, syncing BKC's own publications index). All three
-  are deliberate, ongoing exceptions, not loopholes — see §5.
+  `fetch-publications.yml`, syncing BKC's own publications index), and
+  `scripts/fetch_mailchimp_buzz.py` (new `buzz_` items, run daily by
+  `fetch-mailchimp-buzz.yml`, syncing Mailchimp's own Buzz-titled campaign
+  history). All four are deliberate, ongoing exceptions, not loopholes — see §5.
 - `collection/` is also **[SCRIPT]**-owned (by `fetch_youtube.py` /
   `fetch_youtube_api.py`) — don't hand-edit it. It is **additive and
   self-contained**: both fetch scripts only ever *read* `archive.json` (for
@@ -456,6 +465,65 @@ python3 scripts/fetch_publications.py                        # fetch + merge new
   name and accept it as a partial supplement, not primary coverage.
 - Log a `## [date] fetch | publications …` entry afterward.
 
+### Fetch Mailchimp Buzz issues (`scripts/fetch_mailchimp_buzz.py`)
+Syncs Berkman Klein Buzz newsletter issues from Mailchimp — the successor to
+the 2006-2015 Sympa-era list `scripts/import_buzz.py` one-time-imported —
+into `raw/archive.json` daily, via `fetch-mailchimp-buzz.yml` (cron `25 7 *
+* *`, after publications). Needs `MAILCHIMP_API_KEY` as a repo secret; no-ops
+daily (rather than failing) until it's set, same pattern as the YouTube and
+OpenAI credential checks.
+
+```bash
+export MAILCHIMP_API_KEY=...
+python3 scripts/fetch_mailchimp_buzz.py --list-audiences     # find the audience id
+python3 scripts/fetch_mailchimp_buzz.py --dry-run --limit 5  # small sanity check
+python3 scripts/fetch_mailchimp_buzz.py                      # fetch + merge new issues
+```
+
+- **Privacy-motivated filter, not just a convenience one.** The Berkman
+  Klein Center's Mailchimp audience sends far more than the Buzz — event
+  announcements, student bulletins, one-off "thanks for attending"
+  follow-ups — which carry different privacy/sensitivity expectations than
+  the public Buzz digest and must never land in this (public) archive.
+  `matches_title_filter` matches only a campaign's **internal title**
+  (`settings.title`, e.g. `"The Buzz: July 30, 2026"`), never the public
+  subject line — confirmed against the full account history that title is
+  the one consistently reliable signal (subject lines vary too widely,
+  e.g. "AI relationships; secrets; chilling effects", no literal "buzz").
+- **Paginate by `create_time`, never `send_time`.** Confirmed against the
+  real account that Mailchimp's `/campaigns` endpoint, sorted by
+  `send_time`, has enough ties to make offset-based paging silently
+  unreliable — the same campaign re-appearing on multiple pages while
+  others were skipped entirely (measured: 947 raw rows fetched across 10
+  pages resolved to only 596 distinct ids). `create_time`, assigned once
+  per campaign, doesn't have this problem; `PAGE_SIZE=1000` (Mailchimp's
+  max) also means the account's entire history fits in a single request
+  today regardless. A `seen_ids` set during paging is kept as cheap
+  insurance on top of that.
+- **Body cleaning, three real issues found and handled** (see
+  `clean_body`'s comments for specifics): the API returns *template
+  source*, not the as-sent version, so unresolved `*|MERGE_TAG|*`
+  placeholders (`*|ARCHIVE|*`, `*|UNSUB|*`, even `*|MC_PREVIEW_TEXT|*`)
+  leak into `plain_text` and get stripped globally, not just from the
+  footer; some issues (2022+) open with hundreds of zero-width
+  (`U+200B/200C/200D/FEFF`) characters used as invisible inbox-preview-text
+  padding, stripped globally; the footer itself is cut at "You're getting
+  this email because…" rather than the "Copyright ©" / "Our mailing address
+  is" wording those are usually guessed as — this template uses neither.
+- **Known gap: June 2015–June 2016.** Sympa's import ends 2015-05; the
+  oldest Buzz-titled campaign on Mailchimp is 2016-07-07. Whatever covered
+  that ~13-month window (if anything) isn't in either source — not
+  something this pipeline can fix, worth knowing when a synthesis pass
+  hits a suspiciously quiet stretch there.
+- **Resumable**, like `fetch_publications.py`: each item is staged to
+  `raw/.mailchimp-staging.json` (atomic write) immediately after its
+  content is fetched, merged into `archive.json` only at the end.
+- **Dedup key:** the Mailchimp campaign id, stored as `mailchimp:<id>` in
+  the item's `email.message_id` — same field/shape as the Sympa-era items
+  (`message_id`, `from`, `list`, `source_file`) so nothing downstream needs
+  to special-case the source.
+- Log a `## [date] fetch | mailchimp-buzz …` entry afterward.
+
 ### Ingest (a wholesale source re-scrape happened)
 Distinct from the daily incremental `fetch_tagteam.py` sync above — this is
 for when someone hands you an entirely fresh `raw/archive.json` export (not
@@ -547,10 +615,13 @@ mechanical. Append a `lint` log entry.
 
 ## 6. Status
 
-**Corpus:** 7,884 items and growing daily from three automated fetch
+**Corpus:** 8,310 items and growing daily from four automated fetch
 pipelines — TagTeam bookmarks (daily incremental sync via
-`fetch-tagteam-items.yml`) + 417 Berkman Buzz newsletters (2006–2015,
-one-time import) + BKC YouTube videos (~1,101 public videos;
+`fetch-tagteam-items.yml`) + 843 Berkman Buzz newsletters (417 from the
+2006–2015 Sympa-era one-time import, plus 426 from 2016–present via daily
+`fetch-mailchimp-buzz.yml`, syncing Mailchimp campaigns titled "The Buzz:
+…" — see §5 for the privacy-motivated title filter and the confirmed June
+2015–June 2016 gap) + BKC YouTube videos (~1,101 public videos;
 `fetch-youtube-captions.yml` runs daily via the official Data API, budgeted
 ~39 new videos/day, so the backlog takes several more weeks unless a quota
 increase is granted) + 374 BKC publications (`pub_` items, back to 1993,
