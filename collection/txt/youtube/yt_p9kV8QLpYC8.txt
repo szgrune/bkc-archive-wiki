@@ -1,0 +1,1216 @@
+[00:00:00] so i'm going to be talking today about
+[00:00:02] web
+[00:00:03] traffic um i've been writing
+[00:00:06] uh about web track about web traffic for
+[00:00:09] about
+[00:00:10] six years now um web traffic it plays an
+[00:00:14] important role in my
+[00:00:15] new book it's played an important role
+[00:00:17] in other things and other research that
+[00:00:18] i've done
+[00:00:19] but i have to be honest for the past six
+[00:00:22] years every time i've sat down to write
+[00:00:24] something about web traffic
+[00:00:25] i've had this nagging sense that there
+[00:00:27] was something big
+[00:00:29] that we have been missing and
+[00:00:30] particularly i felt like we have not
+[00:00:32] understood very well the dynamics of web
+[00:00:34] traffic
+[00:00:35] how websites grow and change over time
+[00:00:37] how they add
+[00:00:38] audience how they lose audience um
+[00:00:42] and so a couple of months ago i received
+[00:00:45] a present
+[00:00:46] from bill tanser who is the vice
+[00:00:48] president of research
+[00:00:49] at hitwise which is a large internet
+[00:00:51] tracking firm i know that some of you
+[00:00:52] are familiar with
+[00:00:54] and bill sent me daily data for the
+[00:00:58] top 300 sites on the internet in the top
+[00:01:00] 300 sites in a couple other categories
+[00:01:03] so what i've been doing for the past
+[00:01:04] couple months with the assistance of
+[00:01:06] bruce rogers who's a colleague
+[00:01:08] an applied mathematician at arizona
+[00:01:10] state is sorting through these data
+[00:01:12] trying to analyze what they show us
+[00:01:14] about the growth and decline
+[00:01:15] of websites and ultimately trying to
+[00:01:18] model a lot of the behavior that we see
+[00:01:20] and as i'll
+[00:01:21] be getting to i think a lot of this
+[00:01:22] behavior is quite unusual um but
+[00:01:26] so that's what i'm going to be talking
+[00:01:27] about today but before i get too deep
+[00:01:30] into the modeling before i talk too much
+[00:01:32] about this data i want to talk a little
+[00:01:33] bit about why
+[00:01:34] why this matters as i talk about it in
+[00:01:38] the book an awful lot of our scholarship
+[00:01:40] about the internet has been predicated
+[00:01:42] to a greater or lesser degree on what i
+[00:01:44] call the robin hood assumption
+[00:01:45] this assumption that what the internet
+[00:01:48] is really doing is it's robbing from the
+[00:01:49] audience rich
+[00:01:51] and it's giving to the audience poor
+[00:01:53] there's all kinds of
+[00:01:54] permutations of this argument talk about
+[00:01:56] narrow casting or point casting
+[00:01:58] talking about the fragmentation of the
+[00:02:00] media environment that we hear from
+[00:02:02] media elites that we hear from from from
+[00:02:05] presidential candidates
+[00:02:07] all fits into this mold and in the
+[00:02:09] academy um
+[00:02:10] we've seen and in popular in the popular
+[00:02:12] press we've seen
+[00:02:13] recently some more sophisticated more
+[00:02:15] subtle uh frankly more persuasive
+[00:02:17] versions of this
+[00:02:18] uh recently uh through folks like cass
+[00:02:20] sunstein
+[00:02:22] yohai benkler the popular press many of
+[00:02:24] you are familiar with claims about the
+[00:02:26] long tail
+[00:02:26] which is sort of a revised version of
+[00:02:28] the of the robin hood argument
+[00:02:31] so i do a lot of things in the book but
+[00:02:32] one of the things that i do uh is
+[00:02:34] gather up all kinds of different sources
+[00:02:36] of data and try to test whether this is
+[00:02:38] actually what's going on try to figure
+[00:02:40] out actually where people are going
+[00:02:42] online and what sort of sources they're
+[00:02:44] using
+[00:02:46] um and i use a lot of different data
+[00:02:49] sources but the
+[00:02:50] the probably the most important and the
+[00:02:51] one i'm going to be referring to here
+[00:02:53] today again is hit wise uh hit wise data
+[00:02:57] i want to take a moment just to talk a
+[00:02:58] little bit more about
+[00:03:00] what where this data comes from and a
+[00:03:02] little bit about what its strengths and
+[00:03:04] weaknesses are so it wise again is a
+[00:03:06] large internet tracking company uh
+[00:03:08] originally out of australia and now in
+[00:03:10] the uk singapore the united states a
+[00:03:13] variety of other countries
+[00:03:15] and headwise provides anonymous
+[00:03:19] uh aggregate isp level data they install
+[00:03:22] software on the servers of internet
+[00:03:25] service providers
+[00:03:26] that monitor traffic aggregate clean it
+[00:03:28] aggregate it and ship it back to hit
+[00:03:30] wise um
+[00:03:32] and the the general hit-wise sample is
+[00:03:34] about 10 million
+[00:03:36] u.s households out of about 110 million
+[00:03:38] nationwide
+[00:03:40] about 7.5 million of these are in the
+[00:03:42] isps
+[00:03:43] about two and a half million of these
+[00:03:44] are in opt-in mega panels which they use
+[00:03:46] largely to gather things like
+[00:03:48] demographics
+[00:03:50] and i'm going to be talking a lot about
+[00:03:51] traffic here today and what i mean by
+[00:03:54] traffic unless i stay otherwise
+[00:03:56] is really visits and
+[00:03:59] visits are defined uh as a request for a
+[00:04:02] page
+[00:04:03] or series of pages from a website with
+[00:04:06] no more than 30 minutes
+[00:04:08] of an activity and i can talk more about
+[00:04:10] this later
+[00:04:11] if there are questions but i'm quite
+[00:04:13] convinced that for a lot of things that
+[00:04:14] social scientists are interested in
+[00:04:16] visits are the best metric to use it's
+[00:04:19] hard to use page views for example
+[00:04:21] uh without installing software on user's
+[00:04:23] computer
+[00:04:25] and if you install software and users
+[00:04:27] computers what you see is very different
+[00:04:29] behavior
+[00:04:29] and particularly in a couple of areas as
+[00:04:31] you might expect visits to adult content
+[00:04:33] drop precipitously if you install
+[00:04:36] software on their computer
+[00:04:39] measures of unique users or impressions
+[00:04:41] are often not very consistent
+[00:04:43] uh time spent on site again very tough
+[00:04:45] to get without installing software and
+[00:04:47] computers
+[00:04:47] and i think that this is certainly a
+[00:04:49] much better metric than uh
+[00:04:51] things that you sometimes see like
+[00:04:53] monthly global audience reach which
+[00:04:54] really doesn't tell us a whole
+[00:04:56] lot about how important a site is in the
+[00:04:58] public's media diet
+[00:05:02] so one of the things that we struggle
+[00:05:03] with i think in understanding traffic is
+[00:05:05] just the scale of the phenomenon that
+[00:05:07] we're trying to get at here
+[00:05:10] and this is actually one attempt of mine
+[00:05:12] to get at the scale
+[00:05:14] this is actually a map of traffic on of
+[00:05:17] us web traffic
+[00:05:18] for january 2008 and this map is
+[00:05:22] uh to scale each of these sites
+[00:05:26] is the area of each of these sites is
+[00:05:28] proportional to the number of visits
+[00:05:30] each of them receive and what we see
+[00:05:32] when we look at this data
+[00:05:34] is that the top five sites in the center
+[00:05:36] which is
+[00:05:37] google yahoo mail myspace
+[00:05:42] yahoo and windows live mail
+[00:05:46] altogether these five sites get about 21
+[00:05:49] of all u.s web visits taken together the
+[00:05:52] top 500 sites get about 51 and 52
+[00:05:55] of all traffic so um
+[00:06:00] clearly it's not just a robin hood store
+[00:06:03] so one of the things that we of course
+[00:06:05] want to know a lot of our claims about
+[00:06:06] the internet
+[00:06:07] are comparative claims we want to know
+[00:06:09] how this compares to the patterns that
+[00:06:10] we're used to in traditional media
+[00:06:12] and i go through a number of different
+[00:06:13] comparisons along these lines in the
+[00:06:14] book
+[00:06:15] one of the most simple one of the
+[00:06:17] simplest comparisons is just to look at
+[00:06:19] some category of online traffic versus
+[00:06:22] what we are used to
+[00:06:23] in newspapers the form of traditional
+[00:06:26] media that has been
+[00:06:27] most impacted by the advent of the
+[00:06:29] internet
+[00:06:32] so this is actually the audience
+[00:06:34] distribution curves
+[00:06:36] for u.s newspaper circulation and for
+[00:06:39] u.s
+[00:06:39] news and media traffic now it may look
+[00:06:42] like these lines
+[00:06:43] are close together but this is actually
+[00:06:45] on a log scale so they're really
+[00:06:47] not what we can see here
+[00:06:51] is that the u.s news and media traffic
+[00:06:53] forms an almost
+[00:06:55] almost perfectly straight line on a log
+[00:06:57] log scale
+[00:06:58] it's a power law or pareto distribution
+[00:07:00] or pretty close as many of you are
+[00:07:01] familiar with
+[00:07:03] and u.s nuclear using u.s newspaper
+[00:07:06] circulation uh looks much more
+[00:07:07] curvilinear
+[00:07:08] and again what we've done here is we've
+[00:07:10] we've just ranked the outlet
+[00:07:12] we've we've stacked up these outlets by
+[00:07:13] rank from biggest to smallest
+[00:07:16] and we when we actually add up the
+[00:07:18] numbers
+[00:07:21] what we find is that the top dozen
+[00:07:25] u.s news and media outlets online
+[00:07:28] have about 30 percent of the total
+[00:07:30] online audience
+[00:07:31] whereas the top dozen uh newspapers only
+[00:07:35] have about 20 percent of u.s newspaper
+[00:07:37] circulation
+[00:07:40] if we look at this middle part of the
+[00:07:41] curve which is all ranked 12 down to
+[00:07:44] about rank
+[00:07:45] um 500.
+[00:07:48] collectively this group of newspapers
+[00:07:51] is the large majority of u.s print
+[00:07:54] newspaper circulation 73
+[00:07:56] whereas it's only about half of news and
+[00:07:58] media traffic
+[00:08:00] and below about 600 um we only have
+[00:08:03] about six percent
+[00:08:04] of uh newspaper circulation you're
+[00:08:06] pretty much out of newspapers by that
+[00:08:08] point
+[00:08:08] yet there are still thousands of online
+[00:08:11] news outlets that get it
+[00:08:12] not that collectively get a sizable
+[00:08:15] audience
+[00:08:15] about 21 of the total traffic
+[00:08:18] so what's really going on is not just a
+[00:08:21] robin hood store
+[00:08:22] what we see is that online audiences are
+[00:08:24] getting both more and
+[00:08:26] less concentrated so there's more
+[00:08:28] eyeballs here
+[00:08:30] and more eyeballs here and it's really
+[00:08:31] the sites in the middle that are being
+[00:08:33] squeezed that are
+[00:08:34] showing relative decline in in their
+[00:08:38] audience
+[00:08:42] all right so that's the that's the
+[00:08:43] general context um
+[00:08:45] so i want to talk spend the rest of my
+[00:08:47] time talking about what i think has been
+[00:08:48] missing
+[00:08:49] from our understanding of web traffic
+[00:08:54] um and i think the biggest single thing
+[00:08:57] that has
+[00:08:57] been missing is that we've had almost no
+[00:09:00] sense
+[00:09:01] of system dynamics we haven't understood
+[00:09:04] at all
+[00:09:05] um the process by which sites gain and
+[00:09:07] lose market
+[00:09:10] so for example we want to know um how
+[00:09:12] sites are likely to do over time we want
+[00:09:14] to know the odds that google will still
+[00:09:15] be the number one site a year from now
+[00:09:17] we
+[00:09:17] are many of you i i certainly myself
+[00:09:20] want to be good social scientists
+[00:09:22] we want to quantify our uncertainty and
+[00:09:24] we also want to know not just how the
+[00:09:25] big sites are going to do about how the
+[00:09:27] smaller sites are going to do we want to
+[00:09:28] know
+[00:09:29] what are the odds that this uh shiny new
+[00:09:31] site at rank
+[00:09:32] 100 will jump to rank 50 at the end of a
+[00:09:35] year's time
+[00:09:36] what are the odds that will go to rank
+[00:09:37] 10.
+[00:09:39] so partly our claims are our our hopes
+[00:09:41] are really about
+[00:09:42] individual site performance we also
+[00:09:44] really want to understand
+[00:09:46] again how this audience distribution
+[00:09:48] curve
+[00:09:49] is likely to evolve over time
+[00:09:52] is online concentration increasing or is
+[00:09:55] it decreasing
+[00:09:56] are we becoming more or less fragmented
+[00:09:58] over time or is or is
+[00:10:00] are our online audiences converging to
+[00:10:03] some stable
+[00:10:04] distribution
+[00:10:07] and even more important as i think we're
+[00:10:09] going to see
+[00:10:10] do different sized outlets behave
+[00:10:13] differently
+[00:10:15] do small sites online behave differently
+[00:10:17] than big sites
+[00:10:20] so i talked a little bit more about the
+[00:10:22] hit-wise data let me let me explain
+[00:10:23] where
+[00:10:24] this new hit-wise data source so what
+[00:10:27] we're using here
+[00:10:28] what i'll be using for the rest of the
+[00:10:29] talk is daily market share
+[00:10:32] data so the portion of the total visits
+[00:10:34] that are accounted for
+[00:10:36] by individual websites this is three
+[00:10:39] years worth of data
+[00:10:40] um from july of 2005 uh through the end
+[00:10:44] of june 2008
+[00:10:47] and this uh data includes the top 300
+[00:10:50] sites the daily market share for the top
+[00:10:51] 300 sites in three categories
+[00:10:54] first of all all the sites the hit-wise
+[00:10:56] tracks roughly eight hundred thousand
+[00:10:58] on the internet on a typical day um all
+[00:11:02] sites in hitwise's news and media
+[00:11:04] category
+[00:11:05] um which is which uh the top 300 sites
+[00:11:07] on a given day
+[00:11:08] account for about 80 percent of of that
+[00:11:10] category's traffic
+[00:11:12] and then the top 300 sites in it wise's
+[00:11:14] politics category which is sort of a
+[00:11:16] grab bag
+[00:11:17] of everything from blogs to campaign
+[00:11:20] websites
+[00:11:21] um to online forums uh that deal with
+[00:11:23] politics
+[00:11:24] i'm gonna be talking mostly about uh
+[00:11:28] traffic over the entire internet and
+[00:11:29] traffic within this news and media
+[00:11:31] category
+[00:11:31] here today
+[00:11:34] so just to give you a broad sense of
+[00:11:36] what this traffic looks like this is
+[00:11:38] graft over these three years the daily
+[00:11:40] market share
+[00:11:42] of the top five sites um we can see a
+[00:11:44] lot of things in this
+[00:11:45] uh data so you may see uh that we have
+[00:11:48] uh myspace which has an incredible run
+[00:11:51] up until the middle of the summer of
+[00:11:53] 2007
+[00:11:54] in which it which at which time uh
+[00:11:57] it apparently stops being quite as cool
+[00:11:59] and starts losing market share drops
+[00:12:01] down to
+[00:12:02] uh third we can also see the incredibly
+[00:12:04] steady growth of google
+[00:12:06] during this time google just keeps
+[00:12:07] growing and growing just keeps eating up
+[00:12:09] more and more
+[00:12:10] market share so how are we going to
+[00:12:15] so how should we think about this kind
+[00:12:16] of data how should we begin to analyze
+[00:12:18] it
+[00:12:20] well i want to make a suggestion and
+[00:12:23] it's going to first probably seem like a
+[00:12:24] diversion but i promise you
+[00:12:26] it's not i want to talk
+[00:12:30] about stock prices
+[00:12:33] i want to talk about our intuitions
+[00:12:36] about
+[00:12:37] stock markets and how our markets how
+[00:12:39] stock markets
+[00:12:40] work
+[00:12:44] so most of us know that stock prices are
+[00:12:47] continue are a continuous process stock
+[00:12:50] market mark
+[00:12:50] stark prices change on a daily hourly
+[00:12:53] even
+[00:12:54] minute by minute basis um any individual
+[00:12:56] in a public market can buy or sell
+[00:12:58] any stock um we know that at any given
+[00:13:02] point uh stock prices can go up
+[00:13:04] or they can go down yet at the same time
+[00:13:07] as we're very familiar with at the
+[00:13:09] moment
+[00:13:09] there are long-term trends for
+[00:13:11] individual stocks and for the market as
+[00:13:13] a whole
+[00:13:13] we talk about bull markets and bear
+[00:13:15] markets
+[00:13:17] we know that that stock markets have
+[00:13:19] very strong size effects that they're
+[00:13:21] they're they tend to be quite top-heavy
+[00:13:23] a lot of the capital is invested just in
+[00:13:25] the
+[00:13:25] in the in the largest stocks and we know
+[00:13:28] that
+[00:13:29] large cap mid cap and penny stocks
+[00:13:31] behave differently
+[00:13:32] the smaller a stock is the more it tends
+[00:13:34] to vary on a daily monthly
+[00:13:36] weekly basis this is why we don't
+[00:13:38] recommend to our friends for example
+[00:13:40] that they invest all their life savings
+[00:13:41] in penny stocks
+[00:13:42] right we know that some stocks move
+[00:13:47] together or in opposite directions we
+[00:13:49] know that certain sectors of the market
+[00:13:50] move together
+[00:13:51] we know that some stocks are negatively
+[00:13:53] correlated right oftentimes when you see
+[00:13:55] a big crash
+[00:13:56] and we saw a couple of times during this
+[00:13:58] this fall was a big market crash and the
+[00:14:00] only stock that advanced
+[00:14:02] was uh campbell's canned soup right
+[00:14:06] canned goods a classic hedge right um so
+[00:14:08] that we know that there are strong
+[00:14:10] that the movements of stocks are
+[00:14:12] correlated
+[00:14:14] we know that if we look at the ftse 100
+[00:14:16] if we look at the s
+[00:14:17] s p 500 we know that the structure of
+[00:14:20] the market tends to be quite stable over
+[00:14:22] time if we look at the
+[00:14:23] portion of the total market in the top
+[00:14:25] 50 stocks for example
+[00:14:27] percentage of capital in those top 50
+[00:14:30] stocks tends to be pretty consistent
+[00:14:32] over the long run and we also know from
+[00:14:34] the
+[00:14:35] from the econometrics and from the
+[00:14:36] financial mathematics literature
+[00:14:38] the price changes are log normally
+[00:14:41] distributed
+[00:14:42] that is if we take a whole bunch of
+[00:14:44] stocks and take the log
+[00:14:45] of their daily changes in price and plot
+[00:14:48] them over time
+[00:14:49] what you get at any point is a nice
+[00:14:52] normal bell curve that just expands the
+[00:14:55] farther away
+[00:14:56] the farther out we go in time this is a
+[00:14:59] very important property
+[00:15:00] it allows an awful lot of financial
+[00:15:02] mathematics to work and we're going to
+[00:15:03] be
+[00:15:04] relying on it here today
+[00:15:07] but take another look at this list what
+[00:15:10] i want to suggest to you is that every
+[00:15:11] single item on this list is
+[00:15:13] a property that we either know or expect
+[00:15:16] or at least should expect to see in the
+[00:15:19] movement
+[00:15:20] of online audiences we should expect to
+[00:15:23] see
+[00:15:23] in web traffic we know that web traffic
+[00:15:26] happens all the time it's a continuous
+[00:15:28] process any individual can visit almost
+[00:15:31] any site on the internet
+[00:15:33] we know that at any given point a
+[00:15:35] traffic share of a site can go up
+[00:15:36] or down we know that certain sites as
+[00:15:39] we've seen show
+[00:15:40] long-term trends we know that the
+[00:15:42] general movement of
+[00:15:43] internet traffic even though it's slowed
+[00:15:45] in recent years the general trend is
+[00:15:47] for more and more visits over time we
+[00:15:50] know that
+[00:15:50] the we know that the movements of
+[00:15:53] certain stuff certain sites are
+[00:15:54] correlated
+[00:15:56] certain sites tend to get bigger or
+[00:15:57] smaller together
+[00:16:00] and we're going to be looking um to see
+[00:16:02] whether or not
+[00:16:03] levels of concentration are stable over
+[00:16:05] time and whether these price changes
+[00:16:07] really are
+[00:16:09] rather these whether these audience
+[00:16:10] share changes really are
+[00:16:12] log normally distributed so let's look
+[00:16:15] first to the level of concentration
+[00:16:19] um so one of the things
+[00:16:22] i've i've done these this analysis with
+[00:16:24] a number of different measures of
+[00:16:26] concentration this
+[00:16:27] um i have used the genie coefficient uh
+[00:16:30] uh the probably the single most uh
+[00:16:33] popular measure of concentration
+[00:16:35] in the social sciences and if we look at
+[00:16:38] concentration over every single day of
+[00:16:41] this three-year period
+[00:16:42] what we see is that it seems relatively
+[00:16:44] stable we get a somewhat different
+[00:16:46] picture if we look at
+[00:16:47] over the entire internet and it seems
+[00:16:49] somewhat uh more highly concentrated
+[00:16:51] um than we see within the politics
+[00:16:53] category of the news and media category
+[00:16:55] but again we don't see a clear trend
+[00:16:57] over time uh that the and in fact the
+[00:17:00] series
+[00:17:00] uh seems to be more or less mean
+[00:17:02] reverting
+[00:17:04] so okay so this so we really do see
+[00:17:07] pretty stable levels of concentration
+[00:17:09] uh over these three years
+[00:17:15] so one of the other things that we're
+[00:17:17] curious about in this
+[00:17:19] uh in this data is whether or not this
+[00:17:22] really
+[00:17:23] is is how how how hard this structure
+[00:17:26] is um whether
+[00:17:30] because we would expect in the stock
+[00:17:31] market that the more volatile sites
+[00:17:33] would that the the large in the stock
+[00:17:35] market we would expect the largest
+[00:17:36] stocks would be the least
+[00:17:37] fault do we see the same kind of
+[00:17:39] behavior here uh in fact we certainly
+[00:17:42] do um so take a take so this this chart
+[00:17:46] is actually
+[00:17:47] uh on the on the y-axis we have the days
+[00:17:49] where the site at rank
+[00:17:51] x changes and on the x-axis we just look
+[00:17:54] at all of these different
+[00:17:55] uh all of these different ranks
+[00:17:58] so at the start we'll see that if
+[00:18:01] uh a site begins the day at rank
+[00:18:04] one it has about a ten percent chance of
+[00:18:07] being a rank one the following day
+[00:18:11] the top dozen sites over the internet in
+[00:18:14] this hit wise data
+[00:18:16] trade places only about 10 to 20 of the
+[00:18:18] time
+[00:18:19] and they tend to trade places only with
+[00:18:21] each other
+[00:18:22] but notice the difference between the
+[00:18:25] the site that's ranked 12 which is only
+[00:18:27] changing less than
+[00:18:28] 10 of the time the site that's ranked 15
+[00:18:31] which is changing almost 80 percent of
+[00:18:33] the time the site at that rank
+[00:18:35] changes about 80 of the time on a
+[00:18:37] typical day
+[00:18:39] so we see these strong discontinuities
+[00:18:42] in the level of volatility
+[00:18:46] we see similar kinds of patterns um when
+[00:18:49] we look just
+[00:18:50] at subsections of the web so here we've
+[00:18:52] put up news and media sites right
+[00:18:53] so the volatility again seems to be
+[00:18:56] pretty strongly associated with rank
+[00:18:58] um the top news site uh is going to
+[00:19:01] it only changes about uh 12 percent of
+[00:19:04] the time
+[00:19:04] um and yet as we go further and further
+[00:19:07] up the rankings we see less and less
+[00:19:08] stability to the point where
+[00:19:10] if you're the news site at uh at
+[00:19:13] rank 300 you're changing pretty much
+[00:19:15] every day
+[00:19:21] one of the things that we're also
+[00:19:22] concerned with when we have this sort of
+[00:19:24] list of top 300 sites is leakage
+[00:19:29] and again this is a this is something
+[00:19:30] you see in financial indices
+[00:19:32] for example so the question is
+[00:19:35] we know that on every on any given day
+[00:19:38] um sites are going to change in terms of
+[00:19:41] level of traffic
+[00:19:42] they receive they could go up they could
+[00:19:44] go down and if they go down
+[00:19:45] it's possible that they could go down
+[00:19:47] far enough that they drop off our index
+[00:19:50] and what we see again is a quite regular
+[00:19:53] uh structure of volatility
+[00:19:55] um there's very little leakage uh up
+[00:19:57] till you get about to rank 150
+[00:20:00] sites that start off a day ranked 150
+[00:20:02] almost never leave the index
+[00:20:04] and yet it increases um
+[00:20:07] so by the time you get to about rank 300
+[00:20:10] the site that's at rank 300
+[00:20:12] more than 50 percent of the time will
+[00:20:13] disappear from the index the next day
+[00:20:15] and new sites will come on about 93
+[00:20:19] of the sites that appear on the index um
+[00:20:22] uh having not been on it the day before
+[00:20:24] um are sites that we've seen before so
+[00:20:26] it's a bunch of sites they're just right
+[00:20:28] near this 300 threshold that just are
+[00:20:29] going back and forth
+[00:20:31] just on the volatility of randomness on
+[00:20:33] any given day
+[00:20:37] so here's where i think it gets really
+[00:20:41] interesting so please um bear with me
+[00:20:48] this slide shows the daily variance in
+[00:20:51] relative
+[00:20:52] market share so the portion of traffic
+[00:20:54] that they gain or lose
+[00:20:56] depending on their size
+[00:21:00] aligned by the log of the rank
+[00:21:03] and what we see here is that
+[00:21:06] sites that are at the very top of this
+[00:21:08] hierarchy at the very top of this period
+[00:21:11] are very are very stable
+[00:21:14] and as they as we go further and further
+[00:21:17] down in the rankings
+[00:21:19] we see that um the amount that they
+[00:21:21] jumped from one day to the next
+[00:21:23] um given their starting rank gets bigger
+[00:21:26] and bigger and bigger
+[00:21:27] so if we look at uh right here at uh
+[00:21:31] at sites that start the day at rank 150
+[00:21:33] right they're enormously more
+[00:21:35] they have enormously more variance uh in
+[00:21:37] terms of how much they're
+[00:21:38] going to be jumping around from one day
+[00:21:40] to the next than sites that start at
+[00:21:43] rank 10. example
+[00:21:46] so this is the behavior of individual
+[00:21:48] sites and this is the behavior of
+[00:21:50] individual sites
+[00:21:50] based on where they start on on a given
+[00:21:53] day
+[00:21:54] but here's the paradox in my uh in my
+[00:21:58] in my title this is similar data but
+[00:22:01] here we're not looking
+[00:22:03] at the behavior of sites here we're
+[00:22:05] looking at the values
+[00:22:07] at every rank so
+[00:22:10] whereas before we wanted to know what
+[00:22:12] happened to the site that started the
+[00:22:13] day at rank 100
+[00:22:14] here we just want to know whatever the
+[00:22:16] value it is
+[00:22:17] of rank 100 editing at any given day
+[00:22:22] so what we can see here first of all
+[00:22:29] is that the value of the the average
+[00:22:33] change for the value every rank is
+[00:22:35] almost zero you can see there's a tiny
+[00:22:37] little blip at the start
+[00:22:38] and at around 50. but generally this
+[00:22:40] this line is almost
+[00:22:42] ruler flat so the structure of
+[00:22:45] this uh of this uh the structure of the
+[00:22:48] online system is incredibly stable
+[00:22:52] and we can see if we look at the at this
+[00:22:54] curve that there are three different
+[00:22:56] areas uh and the and if you actually do
+[00:22:58] the math you find three different
+[00:23:00] phenomena going on
+[00:23:01] and these lines on the outside um are
+[00:23:04] the uh
+[00:23:05] are are the uh the solid line
+[00:23:09] is one standard deviation um calculated
+[00:23:12] just
+[00:23:13] just doing the the uh just uh
+[00:23:16] just calculating it um and the dotted
+[00:23:19] line
+[00:23:19] is the inner 68 percent so it's
+[00:23:23] basically what
+[00:23:24] what we see here is that there are
+[00:23:27] uh straw there's the tails are a little
+[00:23:30] bit uh
+[00:23:31] a little bit heavy
+[00:23:57] um the top ranked site and every day is
+[00:24:00] yellow
+[00:24:01] right and if it changes with the purple
+[00:24:03] site the purple site becomes
+[00:24:04] yellow again but notice the bandwidth
+[00:24:07] here
+[00:24:08] notice how consistent the bandwidth is
+[00:24:11] over this over this period of time
+[00:24:15] so what we've done here is we've we've
+[00:24:17] we've modeled tried to model try to
+[00:24:19] replicate as much of this movement as we
+[00:24:21] can just using these
+[00:24:23] simple brownian motion models just day
+[00:24:26] after day after day of draw
+[00:24:28] of draws from our normal curve and what
+[00:24:30] we get when we do this is something that
+[00:24:32] looks like
+[00:24:33] this right now this data is smooth in a
+[00:24:35] slightly different way which is part of
+[00:24:36] why it looks
+[00:24:37] um uh why it doesn't have the spikiness
+[00:24:40] of the previous graph
+[00:24:42] but generally speaking an awful lot of
+[00:24:45] the movement
+[00:24:46] that we see in traffic is captured using
+[00:24:49] these
+[00:24:50] using these techniques and particularly
+[00:24:53] the bandwidth
+[00:24:54] uh is pretty well captured just by using
+[00:24:57] these simple
+[00:24:58] uh brownian motion models
+[00:25:06] so what are the implications of this
+[00:25:08] part of what we're trying to do is
+[00:25:10] it to do here is to show what the
+[00:25:12] implications of these daily growth rates
+[00:25:14] are over the long term
+[00:25:16] so what we did um bruce and i um
+[00:25:20] is we actually went out and we did 10
+[00:25:23] 000 simulations of 365 days worth of
+[00:25:26] data
+[00:25:27] and we tried to figure out where sites
+[00:25:29] ended up given
+[00:25:30] where they had started that's what we
+[00:25:32] find when we do this for the news and
+[00:25:34] media site data for example
+[00:25:36] is that if a site starts out at rank 1
+[00:25:40] it has about a 60 chance over the course
+[00:25:42] of a year of still being at rank one
+[00:25:45] um and if it does drop below rank one
+[00:25:47] right it doesn't generally go far
+[00:25:50] if the site starts out the year at rank
+[00:25:52] five according to our model it's got
+[00:25:54] about a forty percent chance
+[00:25:55] of being at rank five a year later um
+[00:25:59] and if it and it's a lot easier for a
+[00:26:01] site that starts out at rank five
+[00:26:03] to go down rather than up um
+[00:26:06] and generally speaking uh the further we
+[00:26:08] go down in the rankings the
+[00:26:10] more these curves spread out the bigger
+[00:26:12] the estimated probability distribution
+[00:26:15] gets
+[00:26:20] and we can find with similar kinds of
+[00:26:22] results if we look
+[00:26:23] at data over the entire web
+[00:26:26] remember that discontinuity in our
+[00:26:28] volatility graph
+[00:26:31] that's replicated right here in site 10.
+[00:26:34] site 10 over the entire internet
+[00:26:37] according to our model
+[00:26:38] um has a big goal between it and the
+[00:26:40] entire rest of the web it has to lose an
+[00:26:42] awful lot proportionately of traffic um
+[00:26:45] in order to get there
+[00:26:46] and it's very rare in our simulations
+[00:26:48] for it to do that so about 90
+[00:26:49] of the time if you start off the year at
+[00:26:51] rank 10 that's where you're going to be
+[00:26:54] a year later similarly the top site is
+[00:26:57] very
+[00:26:58] unlikely to lose its position
+[00:27:02] it's also very tough for sites that
+[00:27:04] start out far down in the rankings
+[00:27:06] to to break into the top 10.
+[00:27:10] sites that start off at rank 20. again
+[00:27:12] they have a much easier time
+[00:27:14] going down than they do going up
+[00:27:17] and similarly by the time you get down
+[00:27:18] to rank 50 you can end up
+[00:27:20] anywhere below this top 10 sites over
+[00:27:23] the course of a year
+[00:27:31] so how does this simulation actually map
+[00:27:33] to real
+[00:27:34] data so one way we can test this is we
+[00:27:38] have three years worth of data so for
+[00:27:39] every rank
+[00:27:41] what we did is we said okay we're going
+[00:27:43] to look at the difference between day
+[00:27:44] one
+[00:27:45] and day 365 for rank one and then we're
+[00:27:48] going to look at the day
+[00:27:49] the difference between day 366 and
+[00:27:52] uh and the value a year on and so we do
+[00:27:55] this three times for every
+[00:27:57] rank and that's what's plotted in those
+[00:27:59] blue dots
+[00:28:00] right um for every single
+[00:28:04] rank and what we see when we actually uh
+[00:28:07] do this is that the model works
+[00:28:09] strikingly well for
+[00:28:10] sites that are ranked 50 or above um
+[00:28:15] about
+[00:28:16] 75 of the sites um
+[00:28:20] uh actually are captured within two
+[00:28:22] standard deviations
+[00:28:23] um obviously we'd like 95 right but for
+[00:28:26] a model that has almost nothing in it
+[00:28:28] that's
+[00:28:28] that's actually pretty remarkable so
+[00:28:30] there's an awful lot of the movement of
+[00:28:32] these top sides that we're capturing
+[00:28:34] just by varying how much they move on a
+[00:28:35] daily basis by their ranking
+[00:28:38] below 50 what we see is that our model
+[00:28:41] is slightly biased upwards
+[00:28:43] and that the variance is compressed a
+[00:28:44] little bit this is actually the first
+[00:28:47] run and the this is a result of not
+[00:28:51] adequately taking into account the fact
+[00:28:53] that sites that leak off the index
+[00:28:56] are biasing our results a little bit um
+[00:28:58] because we know that they drop down but
+[00:29:00] we don't really know how far
+[00:29:01] they drop down um the most the latest
+[00:29:04] models that i was
+[00:29:05] working on just as i ran out the door uh
+[00:29:07] correct for this and they actually get
+[00:29:08] about
+[00:29:09] 85 of the data uh below
+[00:29:12] 50 in this two standard deviations
+[00:29:20] all right so what does all of this mean
+[00:29:22] all right
+[00:29:23] um i've showed you some pretty pictures
+[00:29:25] um i
+[00:29:26] know that many of you don't really care
+[00:29:28] that much about econometric models of
+[00:29:30] the stock market
+[00:29:32] but the reason why i've gone through
+[00:29:34] this partly of course as i think it's
+[00:29:36] important to get the numbers right to
+[00:29:37] get the data right
+[00:29:38] but also because i think that
+[00:29:41] understanding these phenomena
+[00:29:42] has enormous impacts for understanding
+[00:29:46] of the web so let me show you a couple
+[00:29:49] let me talk about these more generally
+[00:29:51] let me give you a couple of specific
+[00:29:52] examples where i think that this matters
+[00:29:54] a great deal
+[00:29:57] i think the first thing that we can
+[00:29:59] conclude from going through this
+[00:30:00] exercise
+[00:30:02] is that an awful lot of the system level
+[00:30:05] behavior
+[00:30:06] can be explained as a function of these
+[00:30:07] stochastic daily changes
+[00:30:09] we've known for a long time that traffic
+[00:30:12] on the internet was roughly power law
+[00:30:13] distributed
+[00:30:14] what we have not had is any credible uh
+[00:30:17] explanation for why that is
+[00:30:19] right um and i think that what we do
+[00:30:22] what we're doing here is we're put we're
+[00:30:24] at least kicking the can down the road
+[00:30:26] to force us to look at micro level
+[00:30:28] possible light micro level explanations
+[00:30:31] um that can replicate what we see in the
+[00:30:33] overall structure
+[00:30:34] of the web
+[00:30:38] and really i think it's important to
+[00:30:40] understand this
+[00:30:41] paradox that for from the perspective of
+[00:30:44] any individual site
+[00:30:46] there is high and extremely
+[00:30:48] heteroskedastic variants
+[00:30:50] the smaller you are in the the the
+[00:30:53] smaller your levels of traffic
+[00:30:55] the more that traffic is going to
+[00:30:57] fluctuate on a daily
+[00:30:58] monthly yearly basis right
+[00:31:02] whereas the big sites tend to be quite
+[00:31:04] stable over time
+[00:31:05] and i think this helps us reconcile the
+[00:31:07] fact that we
+[00:31:08] uh we see that google remains the top
+[00:31:11] site uh on the internet
+[00:31:12] even though we know that so many other
+[00:31:14] areas of the of the web are in constant
+[00:31:16] flux
+[00:31:17] but the fact that their web is in
+[00:31:18] constant flux shouldn't
+[00:31:20] distract us for the fact that the from
+[00:31:23] the fact that the audience distribution
+[00:31:24] is remarkably
+[00:31:26] stable
+[00:31:31] and part of what these models are meant
+[00:31:32] to do is they're they're meant to be a
+[00:31:34] first step they're meant to be a
+[00:31:35] framework for previous for a future
+[00:31:37] analysis
+[00:31:38] um anything that you can put any any
+[00:31:41] linear
+[00:31:42] any linear combination of variables
+[00:31:44] anything you can put in a regression
+[00:31:45] analysis
+[00:31:46] we can put in these models and we have a
+[00:31:48] lot of things that i'll be talking about
+[00:31:50] in a second
+[00:31:50] that might help us predict stability
+[00:31:53] over time
+[00:31:54] because an awful lot of what we want to
+[00:31:55] know about the web for example
+[00:31:57] regulators want to know how likely it is
+[00:31:59] that google is going to lose its
+[00:32:01] position
+[00:32:03] in order to develop to craft appropriate
+[00:32:05] policies
+[00:32:09] so kids but let's let's think a little
+[00:32:10] bit more about google
+[00:32:13] so google has about 70 percent of a u.s
+[00:32:16] search
+[00:32:16] market is as similar similarly dominant
+[00:32:19] in other
+[00:32:20] western european countries
+[00:32:25] when you actually look at the data what
+[00:32:26] you find is that google seems to be both
+[00:32:28] the driver
+[00:32:29] and the beneficiary of this churn
+[00:32:36] the greater the portion of traffic that
+[00:32:37] a site gets from google even controlling
+[00:32:40] for size
+[00:32:40] the more volatility we see in their
+[00:32:43] numbers over time
+[00:32:46] what this means is that is that sites
+[00:32:48] that get greater portion of
+[00:32:49] traffic from google are going to vary an
+[00:32:51] awful lot more right
+[00:32:53] and that probably has important
+[00:32:54] implications for policy
+[00:32:56] as well um i think this this these
+[00:32:59] this behavior also helps us explain part
+[00:33:01] of why google has been so dominant in
+[00:33:03] the online ad space
+[00:33:05] because one thing about google ads is
+[00:33:07] they scale as you're growing and as
+[00:33:09] you're declining
+[00:33:10] whereas with traditional media outlets
+[00:33:13] it's very hard to
+[00:33:14] uh to develop an advertising base and
+[00:33:17] that generally takes a great deal of
+[00:33:18] time
+[00:33:19] and that's time that you're likely not
+[00:33:20] going to have uh in
+[00:33:22] an online audience
+[00:33:27] i also think that there are profound
+[00:33:29] implications here for the fate
+[00:33:31] of local media and particularly for
+[00:33:33] newspapers we've seen an awful lot of
+[00:33:35] ink spilled
+[00:33:36] on both sides of the atlantic worrying
+[00:33:38] about the fate of
+[00:33:40] local media local newspapers
+[00:33:43] and there's been a lot of talk about
+[00:33:44] hopes that the web could save
+[00:33:46] newspapers could save these flagging
+[00:33:49] institutions
+[00:33:51] and some of the problems with the web as
+[00:33:53] a savior for newspapers are well known
+[00:33:54] the fact that
+[00:33:55] it needs you need about 30 online
+[00:33:56] readers uh to replace a single lost
+[00:33:59] print subscriber
+[00:34:00] um and the fact that newspapers in
+[00:34:02] general have lost an awful lot of their
+[00:34:04] display advertising their classified
+[00:34:06] advertising
+[00:34:07] for a lot of newspapers craigslist
+[00:34:10] is a very very bad thing because roughly
+[00:34:13] for a typical mid-sized us paper about
+[00:34:15] 40
+[00:34:16] of their revenue came from from
+[00:34:18] classified advertising
+[00:34:24] but what you see in these numbers when
+[00:34:27] you actually drill down is that in both
+[00:34:28] the us and the uk
+[00:34:30] national papers have gained online at
+[00:34:33] the expense
+[00:34:34] of local and regional papers
+[00:34:37] and partly what's going on here is the
+[00:34:39] effect
+[00:34:40] is the fact that online shelf space is
+[00:34:43] limited
+[00:34:44] because the structure of online audience
+[00:34:46] is so stable what you really have
+[00:34:48] is big media outlets playing musical
+[00:34:50] chairs
+[00:34:51] and how much audience they get depends
+[00:34:53] on which chair they happen to be sitting
+[00:34:55] in and the fact that this shelf space is
+[00:34:58] so limited
+[00:35:00] means that traditional staffing levels
+[00:35:02] are going to be impossible
+[00:35:04] to maintain unless
+[00:35:07] media these media institutions manage to
+[00:35:09] break into the
+[00:35:10] upper echelons of the web that's going
+[00:35:12] to be very hard for them to do
+[00:35:18] but the even bigger problem from the
+[00:35:20] perspective of newspapers
+[00:35:22] is online volatility
+[00:35:25] newspapers are used to a stable
+[00:35:26] subscription base and often
+[00:35:28] the smaller newspaper was the more
+[00:35:30] stable its subscription base
+[00:35:32] was the internet reverses these
+[00:35:35] traditional
+[00:35:36] patterns the smaller an online outlet is
+[00:35:39] the more in general it's going to vary
+[00:35:41] on a over time
+[00:35:44] newspapers know how to go small that may
+[00:35:47] be tough for them that may be painful
+[00:35:49] what they don't know how to do is how to
+[00:35:51] survive in an environment
+[00:35:53] where their revenue could change on a
+[00:35:55] yearly basis
+[00:35:56] anywhere from fifty percent growth to
+[00:35:59] fifty percent decline
+[00:36:01] right that's very difficult to how how
+[00:36:03] do you manage how do you staff an
+[00:36:04] organization
+[00:36:05] facing that level of volatility uh in
+[00:36:08] revenue
+[00:36:11] so with that i will conclude thank you
+[00:36:13] very much
+[00:36:26] thank you very much matthew i think that
+[00:36:28] was a really
+[00:36:29] really exciting um paper um
+[00:36:33] a spanish journalist noted recently that
+[00:36:36] we all have to be
+[00:36:37] economists now that we all have to
+[00:36:39] re-train as economists just to read the
+[00:36:41] news
+[00:36:42] um in the current financial climate um
+[00:36:44] and
+[00:36:45] i think thank you showing very well that
+[00:36:47] now we have to be economists to
+[00:36:49] understand the internet and internet
+[00:36:52] behaviour as well
+[00:36:54] um so we will be killing two birds with
+[00:36:56] one stone
+[00:36:58] um i think actually
+[00:37:02] that any of us who are involved in sort
+[00:37:04] of researching and trying to understand
+[00:37:06] life on the internet um you can see a
+[00:37:09] lot of value in drawing parallels with
+[00:37:12] um with with stock markets
+[00:37:16] and internet traffic um just because of
+[00:37:18] the kind of capacity and
+[00:37:20] different the internet to
+[00:37:23] inject competition where there wasn't
+[00:37:26] competition before i mean i mostly look
+[00:37:28] at
+[00:37:29] look at government governmental
+[00:37:31] organizations political organizations
+[00:37:33] and the extent to which these
+[00:37:36] organizations have had to become used to
+[00:37:38] the idea that it's not automatic that
+[00:37:40] people are going to go to government for
+[00:37:41] example to find something else
+[00:37:43] um to get information to get advice
+[00:37:45] anything like that government
+[00:37:46] organizations they use the idea that
+[00:37:48] people
+[00:37:49] bring look at the phone number after the
+[00:37:50] dictionary and come along and the idea
+[00:37:52] that they
+[00:37:53] can get information from whole ranges of
+[00:37:56] different sources
+[00:37:56] and do um is is a challenging idea for
+[00:38:00] governmental organizations
+[00:38:01] it's also obviously a fantastically
+[00:38:03] challenging um
+[00:38:04] notion for newspapers as you pointed out
+[00:38:07] i mean
+[00:38:08] the fact that they are no longer
+[00:38:10] institutionalized
+[00:38:11] um in the sense that you don't buy this
+[00:38:14] paper because
+[00:38:15] it looks like this table because um
+[00:38:19] um you've always fought into an apparent
+[00:38:21] supporters
+[00:38:22] um that idea is eroded and
+[00:38:25] also perhaps the way the people kind of
+[00:38:28] spend their public intention
+[00:38:30] in this market for public attention the
+[00:38:32] way people spend it has also changed in
+[00:38:34] much
+[00:38:35] sort of smaller chunks i mean if you buy
+[00:38:37] a newspaper then you're spending a big
+[00:38:38] chunk of your attention all at once
+[00:38:40] you're
+[00:38:40] you're appearing on the grass for
+[00:38:42] circulation figures
+[00:38:44] um it's all done at once whereas in fact
+[00:38:46] you know there are so many diverse ways
+[00:38:48] for people to spend
+[00:38:49] their attention in much smaller bits um
+[00:38:52] you know maybe
+[00:38:53] looking at the same newspaper that they
+[00:38:54] always looked at online but then
+[00:38:56] sort of skating off into the new york
+[00:38:58] times practices
+[00:39:00] what the headlines are or any other
+[00:39:03] area of interest so i can see a lot of
+[00:39:06] value in that and i thought it was very
+[00:39:09] interesting your conclusion we kind of
+[00:39:11] expect all that to lead
+[00:39:13] to volatility and yet you would you were
+[00:39:16] finding
+[00:39:17] um stability um or at least in
+[00:39:21] in some parts of the spectrum um
+[00:39:24] another thing that i thought was really
+[00:39:26] good about
+[00:39:27] about this is um the fact that
+[00:39:31] uh matthew's got user data and he's not
+[00:39:33] afraid to use it
+[00:39:34] i mean i think we will we'll we'll tend
+[00:39:37] to think or at least
+[00:39:38] i always thought before i try started
+[00:39:42] looking at um and specializing um in in
+[00:39:45] life on the internet that
+[00:39:46] this was such a fantastic opportunity
+[00:39:48] it's a vast amounts of transactional
+[00:39:50] data about the way people behave and the
+[00:39:52] kind we've never had before
+[00:39:54] um and it is of course it does generate
+[00:39:57] huge amounts of transactional data
+[00:39:59] and um google have got huge amounts of
+[00:40:02] transactional data and quite a lot of
+[00:40:03] color companies have
+[00:40:05] as well but we as academic researchers
+[00:40:07] quite often
+[00:40:08] haven't got any more data than we had
+[00:40:10] before and in some ways
+[00:40:12] um in some ways perhaps we've even got
+[00:40:15] less data than we had before i mean if i
+[00:40:17] think particularly of over time data
+[00:40:19] also you've got overtime data here
+[00:40:21] that's another thing that we we don't
+[00:40:23] tend to have because we
+[00:40:24] tend by the time we thought that it
+[00:40:26] would be a good idea to have a look at
+[00:40:28] that five years ago it's too late to
+[00:40:29] look at that five years ago
+[00:40:31] whereas uh with newspaper
+[00:40:35] what once some newspaper data became
+[00:40:37] electronic it actually was possible to
+[00:40:39] look in
+[00:40:40] in quite detailed ways that track um
+[00:40:43] media attention over time
+[00:40:44] for example um heat wise data isn't
+[00:40:47] perfect
+[00:40:48] and i'm sure i think would be very
+[00:40:52] explaining why it isn't perfect but the
+[00:40:54] point is um
+[00:40:56] we look into the general trends and
+[00:40:58] patterns and
+[00:41:00] and models here and it doesn't have to
+[00:41:02] be
+[00:41:03] perfect and it's data and
+[00:41:06] we we should be using it so i think
+[00:41:09] matthew's really
+[00:41:10] um to be congratulated for that i
+[00:41:13] suppose
+[00:41:13] i just kind of think about two key
+[00:41:17] questions i mean one can you
+[00:41:20] you said we would be looking to predict
+[00:41:22] this market
+[00:41:23] dangerously say that social scientists
+[00:41:25] would never
+[00:41:26] say that certainly political scientists
+[00:41:28] would never ever say anything like that
+[00:41:31] um but um can we really predict that
+[00:41:34] this
+[00:41:34] this market any better than we can
+[00:41:37] predict
+[00:41:37] stock markets i mean um your assertion
+[00:41:41] that we could
+[00:41:42] predict the stock market perhaps
+[00:41:44] particularly at this particular moment
+[00:41:51] um but i mean i suppose it's a really
+[00:41:54] interesting question is
+[00:41:55] you know if there was to be a big crash
+[00:41:56] can we visualize a big crash could there
+[00:41:58] be a big crash around the corner
+[00:42:00] um just
+[00:42:14] also in terms of prediction what about
+[00:42:18] new players
+[00:42:19] i mean that's something that we tend to
+[00:42:21] think about the internet
+[00:42:22] these massive new players come flooding
+[00:42:24] in um
+[00:42:26] from nothing to billions of users um
+[00:42:29] and i wasn't quite seeing that reflected
+[00:42:32] in
+[00:42:33] in in the patterns here and i thought it
+[00:42:34] would be interesting to
+[00:42:36] think about that i mean i i suppose in a
+[00:42:39] way
+[00:42:40] um it's basically it must be difficult
+[00:42:43] for the hip-wise data to
+[00:42:44] to to capture this it's talking about
+[00:42:46] market share
+[00:42:47] but you know sometimes it's difficult to
+[00:42:49] know what mark market
+[00:42:50] new players were in i mean youtube for
+[00:42:53] example
+[00:42:54] flickr um second life you know these
+[00:42:57] sites which
+[00:42:58] which show us that um in fact
+[00:43:01] people had much more time than we
+[00:43:04] thought they had i mean
+[00:43:07] our second live huge quantities of time
+[00:43:09] you know on gaming sites on
+[00:43:11] facebook huge sort of trashes of
+[00:43:13] people's days that we didn't know
+[00:43:16] um which in a way is you know might
+[00:43:18] expect it to make it
+[00:43:20] far less predictable and i didn't i
+[00:43:21] didn't see for example youtube
+[00:43:23] appearing i'm sure in your
+[00:43:38] everything
