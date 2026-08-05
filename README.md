@@ -172,11 +172,15 @@ Configure via `api/.env` (copy `api/.env.example`): `PORT`, `ARCHIVE_PATH`
 production**; when it's unset the API runs unauthenticated. The engine side then
 gets `ARCHIVE_API_URL` + the same `ARCHIVE_API_TOKEN`.
 
-Two things to know operationally: the search index is built **at startup**, so
-after content changes restart or `POST /v1/reindex`; and conversations filed by
-the engine land in `inbox/conversations/` as **drafts for curator review** —
-they are not published pages (the deploy workflow strips `inbox/` and `api/`
-from the site). See `AGENTS.md` §5 "Review the inbox".
+Two things to know operationally: the search index is built **at startup**, and
+the daily fetch workflows above change content every morning — so a deployment
+needs a `git pull` + `POST /v1/reindex` on a cron or its search goes stale
+(`api/README.md` → "Keeping content fresh" has the schedule and one caveat: a
+deploy script must never `git clean` this checkout, since unreviewed drafts live
+in it untracked). And conversations filed by the engine land in
+`inbox/conversations/` as **drafts for curator review** — they are not published
+pages (the deploy workflow strips `inbox/` and `api/` from the site). See
+`AGENTS.md` §5 "Review the inbox".
 
 ## Status
 

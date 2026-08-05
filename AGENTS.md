@@ -136,6 +136,12 @@ archive-wiki/
   re-scrape of the TagTeam/Buzz source. `merge_youtube_into_archive.py` is the
   one script that writes `archive.json`, and only appends lightweight `yt_`
   entries (description text, not the transcript) — see §5 for why.
+- **[API]** files under `inbox/` are written by `api/` (`POST /v1/conversations`)
+  and are **drafts, not wiki pages**: unreviewed, excluded from the published
+  site (the deploy workflow strips `inbox/` and `api/`), and never linked from
+  synthesis pages. A curator promotes or discards them — see §5's "Review the
+  inbox". Like `synthesize_wiki.py`, the API is kept in its lane in code, not
+  by convention: `inbox/conversations/` is the only path it ever writes.
 
 > **Note on the metadata-only constraint (§1):** it holds for the TagTeam
 > corpus. `collection/` is the exception — it intentionally carries full
