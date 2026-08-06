@@ -40,11 +40,17 @@ jobs:
         with:
           node-version: "22"
 
+      - name: Configure GitHub Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
       - name: Install Quartz dependencies
         working-directory: quartz
         run: npm ci
 
       - name: Assemble content
+        env:
+          PAGES_BASE_URL: ${{ steps.pages.outputs.base_url }}
         run: |
           rm -rf quartz/content
           mkdir -p quartz/content
@@ -59,8 +65,11 @@ jobs:
           if [ -f wiki/.quartz/custom.scss ]; then
             cp wiki/.quartz/custom.scss quartz/quartz/styles/custom.scss
           fi
-          # point Quartz at the GitHub Pages project URL
-          sed -i 's|baseUrl: ".*"|baseUrl: "szgrune.github.io/bkc-archive-wiki"|' quartz/quartz.config.ts
+          # Configure Quartz for whichever owner/repository is running this workflow.
+          # configure-pages also preserves a custom Pages domain if one is added later.
+          PAGES_BASE_URL="${PAGES_BASE_URL#https://}"
+          PAGES_BASE_URL="${PAGES_BASE_URL%/}"
+          sed -i "s|baseUrl: \".*\"|baseUrl: \"$PAGES_BASE_URL\"|" quartz/quartz.config.ts
           # set the home/title-bar text (top-left link) — Quartz's default is "Quartz 4"
           sed -i 's/pageTitle: "Quartz 4"/pageTitle: "BKC Archive Wiki"/' quartz/quartz.config.ts
           # Bound the expanded ("global") graph depth. The default (depth: -1)

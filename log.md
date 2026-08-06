@@ -240,3 +240,12 @@ busiest research years, just invisible to the Buzz/TagTeam feeds).
 Updated index.md scope line, all three lists (Topics/People/Timeline), and every touched
 page's `item_count`. Appended this entry and marked all 374 `pub_` ids processed in
 `raw/.synthesis-state.json`.
+
+## [2026-08-06] build | repair GitHub Pages deployment across repository owners
+
+Updated the Pages workflow to run GitHub's configuration action and derive Quartz's
+`baseUrl` from the active repository's Pages URL instead of hard-coding the personal
+`szgrune` hostname. Switched the `szgrune/bkc-archive-wiki` Pages source from legacy
+branch publishing to GitHub Actions. The same portable workflow is shared with the
+BKC-owned repository; an organization admin must enable Pages there because ordinary
+write access cannot change that repository setting.
