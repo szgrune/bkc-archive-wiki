@@ -65,20 +65,12 @@ jobs:
           if [ -f wiki/.quartz/custom.scss ]; then
             cp wiki/.quartz/custom.scss quartz/quartz/styles/custom.scss
           fi
-          # Configure Quartz for whichever owner/repository is running this workflow.
-          # configure-pages also preserves a custom Pages domain if one is added later.
-          PAGES_BASE_URL="${PAGES_BASE_URL#https://}"
-          PAGES_BASE_URL="${PAGES_BASE_URL%/}"
-          sed -i "s|baseUrl: \".*\"|baseUrl: \"$PAGES_BASE_URL\"|" quartz/quartz.config.ts
-          # set the home/title-bar text (top-left link) — Quartz's default is "Quartz 4"
-          sed -i 's/pageTitle: "Quartz 4"/pageTitle: "BKC Archive Wiki"/' quartz/quartz.config.ts
-          # Bound the expanded ("global") graph depth. The default (depth: -1)
-          # renders EVERY page (~6.9k nodes, most of them unlinked item stubs),
-          # which hangs the browser so the expanded graph never loads. A finite
-          # depth does a bounded BFS from the current page — fast, and it omits the
-          # thousands of orphan item nodes, leaving the meaningful linked cluster.
-          # (The mini/local graph is unaffected; it already uses depth: 1.)
-          sed -i 's/Component.Graph(),/Component.Graph({ globalGraph: { depth: 3 } }),/' quartz/quartz.layout.ts
+          # Apply the same title and graph settings used by the local preview.
+          # A one-hop expanded graph is deliberate: at depth 3 the home page reaches
+          # nearly the entire 8k-page archive and stalls the browser before rendering.
+          node wiki/scripts/configure_quartz.mjs quartz \
+            --base-url "$PAGES_BASE_URL" \
+            --graph-depth 1
 
       - name: Build site
         working-directory: quartz

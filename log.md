@@ -249,3 +249,11 @@ Updated the Pages workflow to run GitHub's configuration action and derive Quart
 branch publishing to GitHub Actions. The same portable workflow is shared with the
 BKC-owned repository; an organization admin must enable Pages there because ordinary
 write access cannot change that repository setting.
+
+## [2026-08-07] build | add local Pages preview and bound the expanded graph
+
+Added `scripts/serve_site.sh` for a one-command local preview using the same pinned
+Quartz release and configuration helper as GitHub Pages. Reduced the expanded graph
+from three hops to one and removed non-topical feed-tag nodes from that view: from the
+home page, three hops selected 8,336 of 8,451 pages and stalled the browser before its
+canvas could render, while one hop keeps the meaningful hub cluster to 111 nodes.

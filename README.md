@@ -23,6 +23,21 @@ Open this folder (`archive-wiki/`) as an **Obsidian vault**. Then:
 - **Graph view** shows the shape: topic/person/org pages are hubs; items are leaves.
 - **Timeline** (`timeline/`) reads the archive year by year.
 
+## Local website preview
+
+Run the same pinned Quartz release and site overrides used by GitHub Pages:
+
+```bash
+bash scripts/serve_site.sh
+```
+
+Then open <http://localhost:8080>. The first run clones Quartz v4.5.2 and installs
+its npm dependencies into the ignored `.quartz-local/` cache; later runs reuse it.
+Set a different port with `BKC_SITE_PORT=4173 bash scripts/serve_site.sh`. Stop the
+server with `Ctrl-C` and rerun the command after editing wiki content. The local
+preview skips per-page social-card image generation to keep test builds quick; page
+content, navigation, backlinks, and graph behavior match the Pages build.
+
 ## How it's maintained
 
 Two layers, clear ownership (see [`AGENTS.md`](AGENTS.md) for the full spec):

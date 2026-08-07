@@ -284,6 +284,19 @@ Counts, digests and tag tables are always computed corpus-wide; only stub pages 
 gated by `--year`. Idempotent — re-run any time; it cleans the year folder(s) it
 rewrites so renamed/removed items don't leave orphans.
 
+### Preview the GitHub Pages site locally
+```bash
+bash scripts/serve_site.sh
+```
+This clones the workflow's pinned Quartz release into the ignored `.quartz-local/`
+cache, applies the same site title and graph configuration as the Pages workflow,
+assembles publishable content, and serves it at `http://localhost:8080`. Override the
+port with `BKC_SITE_PORT`. The local preview alone disables `CustomOgImages` so a test
+build does not spend minutes generating thousands of social cards. The expanded graph
+is intentionally limited to one hop and omits feed-tag nodes: three hops from `index`
+reaches nearly the entire corpus, while the feed tags are workflow channels rather
+than topical structure (§1).
+
 ### Fetch YouTube transcripts — two mechanisms, same `collection/` layout
 Both write one metadata entry per video to `collection/json/youtube.json`
 (shaped like an `archive.json` item, plus `youtube` + `transcript` blocks) and
