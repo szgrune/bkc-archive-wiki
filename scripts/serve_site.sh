@@ -5,7 +5,7 @@ BKC_SITE_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 BKC_QUARTZ_REF="v4.5.2"
 BKC_QUARTZ_PATH="${BKC_QUARTZ_CACHE:-$BKC_SITE_ROOT/.quartz-local}"
 BKC_SITE_PORT_VALUE="${BKC_SITE_PORT:-8080}"
-BKC_NPM_CACHE_PATH="${BKC_NPM_CACHE_DIR:-$BKC_QUARTZ_PATH/.npm-cache}"
+BKC_NPM_CACHE_PATH="${BKC_NPM_CACHE_DIR:-${BKC_QUARTZ_PATH}.npm-cache}"
 
 if [[ ! "$BKC_SITE_PORT_VALUE" =~ ^[0-9]+$ ]] || (( BKC_SITE_PORT_VALUE < 1 || BKC_SITE_PORT_VALUE > 65535 )); then
   echo "BKC_SITE_PORT must be an integer from 1 to 65535" >&2
@@ -64,5 +64,4 @@ node "$BKC_SITE_ROOT/scripts/configure_quartz.mjs" "$BKC_QUARTZ_PATH" \
 
 echo "Serving BKC Archive Wiki at http://localhost:$BKC_SITE_PORT_VALUE"
 cd "$BKC_QUARTZ_PATH"
-exec env npm_config_cache="$BKC_NPM_CACHE_PATH" \
-  npx --no-install quartz build --serve --port "$BKC_SITE_PORT_VALUE"
+exec node ./quartz/bootstrap-cli.mjs build --serve --port "$BKC_SITE_PORT_VALUE"
