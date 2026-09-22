@@ -1,0 +1,1634 @@
+[00:00:10] uh we've got a great crew of folks from
+[00:00:13] The Meta lab here as well as spread
+[00:00:15] around the room we're going to be
+[00:00:16] sharing their work with us today Jeffrey
+[00:00:19] schnapp uh who's one of them is the one
+[00:00:21] of the faculty directors of the Berkman
+[00:00:22] Center also the faculty director of the
+[00:00:24] metal lab on and on faculty here at
+[00:00:26] Harvard University Matthew battles is
+[00:00:28] the associate director of The Meta lab
+[00:00:30] uh Pablo barria is one of the
+[00:00:32] technologists helping with the project
+[00:00:33] and Caitlin Christian lamb is also the
+[00:00:35] project manager of this great project
+[00:00:37] around the curarium which these folks
+[00:00:38] are going to tell you lots more about so
+[00:00:39] welcome guys thanks summer thanks Amor
+[00:00:42] so so I'll start off with a little bit
+[00:00:45] of background about about the context in
+[00:00:47] which this project emerged um and then
+[00:00:50] I'll hand it off to to Jeffrey uh to
+[00:00:53] talk about the the kind of Ambitions of
+[00:00:55] the project and and Jeffrey and Pablo
+[00:00:56] will talk about
+[00:00:58] um the the design and and the ways in
+[00:01:01] which we're trying to articulate that
+[00:01:02] ambition through the the platform that
+[00:01:04] we're developing
+[00:01:05] um but first I'd like to invite you all
+[00:01:08] um to visit metal Labs facility in
+[00:01:10] Lawrence Italy
+[00:01:13] I'd like to do that but I can't
+[00:01:16] this is the villa itati which is also
+[00:01:19] the Harvard Center for Italian
+[00:01:21] Renaissance studies it was uh it's a
+[00:01:23] bill of uh in Florence
+[00:01:25] um those things are true uh it was the
+[00:01:27] home of Bernard Berenson um now Berenson
+[00:01:29] is best known here in Boston for having
+[00:01:32] served as the kind of guide to
+[00:01:35] collecting art for Isabella Stewart
+[00:01:37] Gardner and helped Isabella Stewart
+[00:01:40] Gardner build her collection that today
+[00:01:42] is the uh the Gardner Museum but he was
+[00:01:45] of course also a pioneering art
+[00:01:48] historian in his own right lived a very
+[00:01:50] long life and collected a a wonderful
+[00:01:54] collection of art of his own also a
+[00:01:56] master a fantastic Library as is often
+[00:01:59] the case around here when he passed away
+[00:02:01] he left all of this to Harvard and uh so
+[00:02:04] we are at least at some remove the
+[00:02:06] beneficiaries of of of uh of baronson's
+[00:02:09] largest among collections
+[00:02:12] um was a a large collection of
+[00:02:15] photographs
+[00:02:18] um that documented missing art uh it's
+[00:02:21] what Berenson referred to as his
+[00:02:23] collection of homeless paintings of the
+[00:02:25] Italian Renaissance
+[00:02:26] um and so these were photographs made of
+[00:02:28] works of art rather early in the history
+[00:02:32] of the use of Photography to document
+[00:02:33] art around the turn of the last century
+[00:02:36] um some 16 000 photographs
+[00:02:38] um that uh that baronson amassed of Arts
+[00:02:43] um that for which he didn't have a
+[00:02:45] location he didn't know where these
+[00:02:46] objects uh were
+[00:02:49] um somebody had photographed them and
+[00:02:50] then they'd gone missing now maybe they
+[00:02:52] had been given to somebody or loaned to
+[00:02:55] somebody or sold without a record being
+[00:02:57] kept of the sale maybe they'd been
+[00:02:58] stolen maybe
+[00:03:00] um they they'd fall in a foul of
+[00:03:02] conflict or or disaster he didn't know
+[00:03:06] and you know very interesting and kind
+[00:03:08] of early uh uh if you will Big Data
+[00:03:11] Venture
+[00:03:12] um Berenson a mastis collection
+[00:03:14] specifically with the object of finding
+[00:03:17] some of these Works
+[00:03:19] um so so they sat I mean these are glass
+[00:03:22] negatives they're very difficult objects
+[00:03:23] to work with 16 000 some of them
+[00:03:27] um until a few years ago uh the staff of
+[00:03:29] the village itati uh acquired funding
+[00:03:32] from the melon Foundation which sponsors
+[00:03:35] the processing of of unprocessed
+[00:03:38] collections in libraries and archives
+[00:03:41] um to digitize this collection and their
+[00:03:44] intention was to make this collection
+[00:03:45] open and available
+[00:03:47] for the use of researchers for use in
+[00:03:50] teaching and hopefully for finding some
+[00:03:51] of these artworks as well notably as
+[00:03:54] soon as they began to put these artworks
+[00:03:56] make these surrogates of these artworks
+[00:03:58] available
+[00:03:59] um they did begin to be found they began
+[00:04:01] to be found by one young man whose
+[00:04:03] fascinating story
+[00:04:05] um Chris Daly is his name and he's now a
+[00:04:08] a graduate student in our history and I
+[00:04:10] think Ohio State University is that
+[00:04:12] right
+[00:04:13] um and he's found some 120 of these
+[00:04:16] works is that right am I right about
+[00:04:18] that that's what he claims over 120.
+[00:04:21] um so Chris Daly is a bit of a savant
+[00:04:24] um it turns out he's got a kind of
+[00:04:26] photographic memory and inspired by
+[00:04:30] Berenson since age nine you've been
+[00:04:32] making lists of Renaissance artists and
+[00:04:34] their works and so this suited him very
+[00:04:36] well but we sort of thought
+[00:04:39] um you know how could we kind of
+[00:04:40] platformize that how could we make that
+[00:04:42] kind of activity available to more
+[00:04:43] people and and also explore the other
+[00:04:46] kinds of things that could be done with
+[00:04:48] this kind of collection and just to
+[00:04:49] indicate some of the stories that can be
+[00:04:50] told out of this collection which I
+[00:04:52] should say consists mostly of kind of
+[00:04:54] secondary Works kind of minor Works um
+[00:04:56] but does wonderful work of kind of
+[00:04:59] filling out a picture of um the
+[00:05:01] production of Arts in the Italian
+[00:05:02] Renaissance tells you things about
+[00:05:05] materials about
+[00:05:07] techniques about associations among
+[00:05:10] artists so there's a lot of data to to
+[00:05:12] draw from this collection so for
+[00:05:14] instance
+[00:05:15] um
+[00:05:16] am I on the right one so yeah here's a
+[00:05:18] here's a painting um which Berenson went
+[00:05:21] and visited
+[00:05:23] um a a dealer to to view this painting
+[00:05:26] because the dealer thought it might be a
+[00:05:28] painting by Andrea Montagna
+[00:05:31] um who was a well-known artist of the
+[00:05:33] Italian Renaissance son-in-law of um uh
+[00:05:37] uh Bellini
+[00:05:40] um and Berenson told the dealer
+[00:05:43] Well it can't be a Montana because
+[00:05:45] Montana didn't paint Saints like that
+[00:05:47] the Saints don't look like Montana but
+[00:05:48] if the Saints weren't there I would
+[00:05:50] think it's a Montagna so as we find
+[00:05:53] um from an annotation made by barenson
+[00:05:55] uh on the back of this Photograph he
+[00:05:58] says seen by BB at zakayans uh who when
+[00:06:01] Bibi told him that the Madonna if she
+[00:06:04] was alone could Pastor Montagna painted
+[00:06:07] out the two Saints and uh
+[00:06:10] and so Barrington managed to get a
+[00:06:13] photograph of the painting before and
+[00:06:14] after of course doing art history on the
+[00:06:17] internet we can um
+[00:06:21] um
+[00:06:22] so that's that's it we're done now
+[00:06:25] now these 16 500 some odd images are now
+[00:06:31] available through via which is Harvard's
+[00:06:34] visual information access platform a
+[00:06:36] Search tool for
+[00:06:38] um uh for visual resources in the
+[00:06:40] libraries at Harvard anybody here helped
+[00:06:42] develop via
+[00:06:45] we want to make sure that that we're
+[00:06:49] right yeah
+[00:06:51] yeah and I mean it's it's you know it's
+[00:06:53] a system that's that's been with us for
+[00:06:54] a long time
+[00:06:56] um it's it's very useful for
+[00:06:59] um uh you know for finding and
+[00:07:01] discovering visual resources in uh in
+[00:07:04] Harvard collections there are things
+[00:07:06] that we'd like to be able to do with it
+[00:07:08] um and this is just the the record
+[00:07:09] pieces of the record
+[00:07:11] um uh uh of this of that uh
+[00:07:14] non-monthania painting
+[00:07:16] um there are things that we'd like to be
+[00:07:17] able to do with it that we can't it's
+[00:07:18] very difficult to get images out of the
+[00:07:20] uh um you can make collections
+[00:07:23] um in Via portfolios but it's it's
+[00:07:25] difficult I've found it difficult to
+[00:07:27] sort of share those over time and keep
+[00:07:29] keep track of them and particularly to
+[00:07:31] be able to do things like annotate these
+[00:07:33] objects annotate these records share
+[00:07:35] them with others insets build
+[00:07:38] um build Collections and and curate
+[00:07:40] those collections with additional media
+[00:07:43] with with documentary material uh with
+[00:07:46] annotations that might include GIS data
+[00:07:49] or uh video or sound these are all
+[00:07:53] things that we feel like we'd like to do
+[00:07:56] um with these collections so we started
+[00:07:57] to think about
+[00:07:59] um uh kind of Precedence uh for the
+[00:08:02] kinds of the hybrid work that we want to
+[00:08:04] do and there are wonderful projects out
+[00:08:07] there you know one that I've been
+[00:08:08] excited about for a while is ancient
+[00:08:10] lives which is a project uh a citizen
+[00:08:13] science project
+[00:08:14] um devoted to the humanities
+[00:08:16] um it's it's a project of a group called
+[00:08:18] xuniverse and they have uh run a number
+[00:08:20] of projects using astronomical data you
+[00:08:22] may be familiar with them you can you
+[00:08:25] can join xuniverse and look at a a
+[00:08:27] photographic image of like galaxies and
+[00:08:30] annotate where the galaxies are or
+[00:08:32] craters on the moon you can say how big
+[00:08:34] the craters on the moon are well they
+[00:08:35] they um and then they they amass all
+[00:08:38] that data and they can do science using
+[00:08:40] those data well they've tried to adapt
+[00:08:43] this to the humanities as well with this
+[00:08:44] project which looks at an enormous Trove
+[00:08:46] of um of ancient Greek papiri from
+[00:08:50] oxyrinkus which is a town in the upper
+[00:08:52] Nile Valley in Egypt for more than a
+[00:08:56] century Oxford University press has been
+[00:08:59] um publishing scholarly transcriptions
+[00:09:01] of these this enormous kind of midden of
+[00:09:04] of Greek appearing from oxyrinkus
+[00:09:07] they're down to the last several
+[00:09:09] thousand which are fragmentary and torn
+[00:09:11] torn and in very bad shape and so with
+[00:09:13] the help of Xenoverse they've sort of
+[00:09:15] crowdsourced this process so you can
+[00:09:16] actually
+[00:09:18] um you can actually transcribe um
+[00:09:21] ancient Greek papiri without knowing any
+[00:09:22] ancient Greek I always find myself
+[00:09:24] saying that like people want to do that
+[00:09:26] but it tells you something about where
+[00:09:28] I'm coming from but I think it's pretty
+[00:09:30] cool I mean you've got this wonderful
+[00:09:32] little interface that you can indicate
+[00:09:33] uh what the characters are and they find
+[00:09:35] that it takes about 20 people on a given
+[00:09:39] fragment to come up with a usable
+[00:09:41] transcription
+[00:09:43] um
+[00:09:44] so you know there's something about that
+[00:09:46] that's very appealing there's not there
+[00:09:48] are a lot of things you can't do with
+[00:09:49] that though I mean you can't teach with
+[00:09:51] it I mean you could direct your students
+[00:09:52] to it they could use it but there aren't
+[00:09:54] data available for finding out what
+[00:09:56] they're doing with it how they're using
+[00:09:57] it and and letting them leave these
+[00:09:59] media into projects of their own
+[00:10:01] projects like history pin
+[00:10:03] um or maybe better examples of that kind
+[00:10:05] of crowd uh curatorial
+[00:10:08] um platform for integrating media uh
+[00:10:12] mapping information
+[00:10:14] um into stories about the Arts and
+[00:10:17] Humanities
+[00:10:18] um so somewhere on that Continuum is
+[00:10:20] where I think we'd like curarium to fall
+[00:10:23] curarium is our
+[00:10:25] attempt to build a platform for doing
+[00:10:28] the kinds of things we want to do in the
+[00:10:30] first instance with Bernard berenson's
+[00:10:33] homeless paintings collection but um as
+[00:10:35] Jeffrey and Pablo will discuss we hope
+[00:10:37] with many other Collections and among
+[00:10:39] those collections as well so
+[00:10:42] um that's what curium splash page looks
+[00:10:43] like second with that I'll turn it over
+[00:10:45] to Jeffrey yeah so um I think as Matthew
+[00:10:48] detailed really nicely you know we
+[00:10:50] started with this concrete problem which
+[00:10:52] we think is a problem that's uh
+[00:10:54] translatable into the kinds of issues
+[00:10:56] that many different kinds of collections
+[00:10:58] whether there are collections of
+[00:10:59] documents or collections of objects or
+[00:11:01] maybe even Sound Collections uh uh Rays
+[00:11:05] um and you know one of the morals of
+[00:11:07] that story is that to Simply digitize a
+[00:11:10] collection doesn't really do anything
+[00:11:12] fundamental with respect to how usable a
+[00:11:15] collection is whether there exists a
+[00:11:18] user Community whether people actually
+[00:11:19] know that it exists
+[00:11:22] um and so kararium is really an attempt
+[00:11:24] to create a platform that is built with
+[00:11:28] the idea of allowing communities uh that
+[00:11:33] are of
+[00:11:35] a great variety of characters from
+[00:11:38] communities that are associated with
+[00:11:39] educational institutions to collecting
+[00:11:42] institutions to members of of the
+[00:11:44] general public who like our friend Chris
+[00:11:46] Daly may just have a particular
+[00:11:48] fascination with a category of objects
+[00:11:50] for reasons of local history interests
+[00:11:52] for reasons of personal collecting
+[00:11:54] habits whatever this this motivation may
+[00:11:57] be what we thought was really missing
+[00:11:59] was a place where institutions that are
+[00:12:03] building uh digital collections could
+[00:12:06] animate those collections by allowing
+[00:12:09] them to be used in an environment where
+[00:12:11] you can do a multiplicity of things with
+[00:12:13] those collections I think we're very
+[00:12:14] good at us at assembling collections but
+[00:12:17] we're not so good generally at making
+[00:12:19] those collections matter and this is a
+[00:12:22] particular problem with certain
+[00:12:23] categories of collections as I probably
+[00:12:25] don't need to tell anybody who's in the
+[00:12:27] museum community in the in this room or
+[00:12:29] in the Library community for that matter
+[00:12:32] um there are certain categories of
+[00:12:35] objects that have significant cultural
+[00:12:37] or historical value but because the
+[00:12:40] objects that make them up are not of
+[00:12:42] sufficient value as individual objects
+[00:12:45] the universe where there will be funding
+[00:12:47] to process those collections using
+[00:12:49] traditional approaches uh is probably uh
+[00:12:52] unlikely to ever come about take for
+[00:12:55] example the American memory project uh
+[00:12:58] at the Smithsonian we we have this
+[00:13:00] tremendous uh resource which is in a
+[00:13:03] sense the photographic History of the
+[00:13:05] United States I don't know the total
+[00:13:06] number of photographic objects that make
+[00:13:08] up that collection but I think it's in
+[00:13:09] the millions in any case and most of
+[00:13:12] those objects are objects that we we
+[00:13:13] have a little bit of data about
+[00:13:15] sometimes location data sometimes uh
+[00:13:18] information about the photographer or
+[00:13:21] the circumstance under which those
+[00:13:23] photographs were produced like there's a
+[00:13:24] huge collection of WPA era photographs
+[00:13:27] uh maybe sometimes dating information
+[00:13:30] and that's basically it and there is no
+[00:13:34] Universe where a group of professional
+[00:13:37] archivists will ever be able to process
+[00:13:39] a collection like this first of all
+[00:13:40] because the kind of expertise that would
+[00:13:42] be required to actually identify this
+[00:13:44] these millions of objects is unlikely to
+[00:13:47] be uh in the minds or in the hands of a
+[00:13:49] small group to begin with uh most most
+[00:13:52] of that knowledge is is distributed in a
+[00:13:54] multiplicity of communities uh and uh
+[00:13:57] much of it concerns local history
+[00:13:59] landscape uh uh City plans uh aspects of
+[00:14:03] the material culture of different
+[00:14:05] regions so
+[00:14:07] um you know the lever of Congress the
+[00:14:10] Smithsonian have undertaken a couple of
+[00:14:11] experiments with essentially
+[00:14:13] crowdsourcing some of the processing
+[00:14:15] tasks that um are connected to those
+[00:14:18] photographic resources and I think that
+[00:14:21] was one of the many Inspirations Matthew
+[00:14:22] just mentioned a couple that brought us
+[00:14:24] to trying to think about how to build a
+[00:14:26] platform around the Berenson collection
+[00:14:27] in the first instance but that would
+[00:14:29] more broadly serve the interests of
+[00:14:31] collecting
+[00:14:33] uh institutions
+[00:14:35] um but in a way that would allow people
+[00:14:38] to do things with Collections and by
+[00:14:40] doing things I really as I tried to hint
+[00:14:42] with respect to the different user
+[00:14:44] populations we're interested in I really
+[00:14:46] mean things of the broadest uh sort one
+[00:14:49] of the areas we're very interested in is
+[00:14:51] creating an experience not just that
+[00:14:53] allows you to work with individual
+[00:14:54] objects to collect them construct
+[00:14:56] narratives of uh about them add metadata
+[00:14:59] to them process them in a sense
+[00:15:01] contribute in other words to their
+[00:15:03] usefulness their significance add
+[00:15:06] meaning to them but also to work with
+[00:15:08] collections as Aggregates because one of
+[00:15:10] the things you cannot do in Via is see
+[00:15:12] what you're looking at as part of a
+[00:15:14] whole you are you can gain access to an
+[00:15:17] individual object if you know what
+[00:15:18] you're looking for if you have the
+[00:15:20] proper search criteria but what you
+[00:15:22] don't see is the relationship between
+[00:15:23] that individual object and the whole
+[00:15:25] family of objects that it belongs to not
+[00:15:27] to mention the relationship between that
+[00:15:30] family of objects and other families of
+[00:15:32] objects those as families we call
+[00:15:34] collections so kararium is is really an
+[00:15:38] attempt to make collections visible and
+[00:15:42] usable in a way both as Aggregates at
+[00:15:45] the kind of macro level and also at the
+[00:15:47] micro level to allow people to zoom
+[00:15:51] between those micro and macro levels and
+[00:15:53] to tell stories essentially those
+[00:15:56] stories are assumed the form of what
+[00:15:58] we're calling spotlights basically and
+[00:16:01] um with Pablo we'll sort of walk you
+[00:16:03] through the sort of wireframes of the
+[00:16:05] site where this this project should be
+[00:16:07] in a kind of beta phase within a month
+[00:16:10] or so we're fairly close we've built the
+[00:16:11] back end we're still working on the
+[00:16:13] front end designs right now but what
+[00:16:15] it's meant to do as as you will see
+[00:16:18] through this sequence of slides is to
+[00:16:20] allow that sort of motion between the
+[00:16:22] macro and the micro level to allow for
+[00:16:25] the production of shareable content
+[00:16:28] publishable content you might say uh but
+[00:16:31] uh that that sort of of production
+[00:16:33] pipeline is specifically designed to
+[00:16:36] allow also for this to be a teaching
+[00:16:39] environment and a research environment
+[00:16:40] to allow for instance for curators who
+[00:16:43] might be designing a show an exhibition
+[00:16:45] to use carrierium to essentially what we
+[00:16:48] do now do typically with little xeroxes
+[00:16:50] I mean at least that's what I do when
+[00:16:52] I'm a guest curator little xeroxes and
+[00:16:54] and like like foam board models of a
+[00:16:57] space like put you know pinning stuff
+[00:16:59] around a space trying to imagine how to
+[00:17:01] sequence a series of of objects uh the
+[00:17:04] kind of imagine the ways in space that
+[00:17:06] you tell the story we want kararium to
+[00:17:08] be able to accommodate that kind of use
+[00:17:09] to be able to accommodate the Chris
+[00:17:11] dailies of the world who are in an art
+[00:17:14] history classroom and who will be
+[00:17:16] engaged in the case of the berensen
+[00:17:17] archive with interpreting a corpus of
+[00:17:20] objects that have very little story to
+[00:17:22] them they are not the images you see in
+[00:17:25] a kind of canonical history of Italian
+[00:17:26] Renaissance artist Matthew alluded to
+[00:17:28] these are many of them are Studio
+[00:17:30] objects they have really funky complex
+[00:17:33] histories they were aside from the
+[00:17:36] Angels or Saints who may have been
+[00:17:38] erased or added or modified they often
+[00:17:41] tell very rich colorful textured stories
+[00:17:45] about the history of art that are not
+[00:17:46] the conventional stories so there's a
+[00:17:48] tremendous teaching opportunity there to
+[00:17:51] get away from certain models of
+[00:17:52] historiography that are that that only
+[00:17:55] tell stories in a sense about a very
+[00:17:56] small Corpus of objects of a very small
+[00:17:58] set of of themes if you like
+[00:18:01] but also to engage broader populations
+[00:18:04] who are interested in some aspect of a
+[00:18:06] collection whether it's a collection of
+[00:18:08] Italian Renaissance art objects or it's
+[00:18:10] a collection of photographs of the
+[00:18:13] American landscape to tell their own
+[00:18:16] kinds of stories whether those are
+[00:18:17] stories of local history or that have to
+[00:18:20] do with the changes in the environment
+[00:18:23] or the shape of a city so those are the
+[00:18:28] sort of overarching Ambitions and I
+[00:18:30] don't know Pablo if you want to just
+[00:18:31] walk people's through the the the
+[00:18:34] implementation as we're imagining it
+[00:18:36] right now and one of the reasons we're
+[00:18:37] here I just want to underscore is we're
+[00:18:40] still in the process of building the
+[00:18:41] front end of this so we're we not only
+[00:18:44] welcome uh but you know critical and
+[00:18:46] constructive suggestions but uh also
+[00:18:49] your thoughts because uh in over the
+[00:18:51] next month or so we're going to be
+[00:18:52] building what we're sketching out for
+[00:18:55] you here today
+[00:18:57] so well as
+[00:19:00] Jeffrey was saying this is this overall
+[00:19:03] system called curarium has like it's
+[00:19:05] composed of a series of steps both in
+[00:19:08] going from the general collection to the
+[00:19:10] particular object but also how we're
+[00:19:11] getting the collections into this
+[00:19:14] repository so we're starting with two
+[00:19:16] processes where we're calling uh
+[00:19:18] ingestion which is basically
+[00:19:20] we are taking records that are already
+[00:19:22] houses somewhere and what is called the
+[00:19:24] configuration which basically we're
+[00:19:27] going to be taking records which are all
+[00:19:29] coming from very different sources and
+[00:19:31] they have all their sort of different
+[00:19:32] idiosyncrasies and we kind of want to
+[00:19:35] make them uh all interoperable in a way
+[00:19:38] and
+[00:19:39] see them in this coming platform so one
+[00:19:41] thing we have to take care of is sort of
+[00:19:42] like how you mine the data from
+[00:19:45] different different record sets you sort
+[00:19:48] of the next slide Services scheme of
+[00:19:49] that so you where we're working now is
+[00:19:52] records in Json so if I get too
+[00:19:54] technical with this but in Json format
+[00:19:57] and we're sort of have a system by which
+[00:20:00] we sort of identify where in that
+[00:20:02] original structure the specific piece of
+[00:20:04] information that we want is and we sort
+[00:20:06] of say that configuration and then we
+[00:20:07] proceed to ingest the records
+[00:20:09] we save the records as they're coming in
+[00:20:12] the original format and we sort of breed
+[00:20:13] them on the Fly and that's how we sort
+[00:20:15] of curate him it's working right now so
+[00:20:18] the first part is to sort of like what
+[00:20:20] happened before the user comes to the
+[00:20:22] the site sort of a content provider this
+[00:20:25] it wants to share a collection with
+[00:20:26] curario and he goes and he ingests his
+[00:20:29] collection into terrarium so
+[00:20:32] we host the collection in terrarium and
+[00:20:34] then what you get when you as a user you
+[00:20:37] go to PRM is this repository of
+[00:20:39] different collections
+[00:20:41] um
+[00:20:42] it's good uh and then from that so you
+[00:20:46] move into an in the an individual
+[00:20:48] collection
+[00:20:49] and
+[00:20:51] this is when things sort of like this is
+[00:20:54] when you start to interact with the
+[00:20:55] collection as a whole
+[00:20:56] and the way we're thinking this right
+[00:20:57] now is you would you would see first a
+[00:21:00] very descriptive page of the collection
+[00:21:02] and in parallel to that uh
+[00:21:05] instead of you would see
+[00:21:07] um
+[00:21:08] sorry
+[00:21:09] I'm gonna rehearse this
+[00:21:12] uh so one of the things we sort of uh
+[00:21:16] gave a lot of thought of that is how do
+[00:21:17] you re how you represent the collection
+[00:21:19] as a whole like how do you see the
+[00:21:21] collection of the whole turns out like
+[00:21:22] when you have 11 000 records 11 000
+[00:21:25] thumbnails it's not really useful and
+[00:21:27] not really readable so you start by
+[00:21:29] seeing statistics about the collection
+[00:21:31] how many different taggable fields you
+[00:21:34] have how many different types sets of
+[00:21:36] data and then after that you sort of
+[00:21:39] start progressively going into the
+[00:21:41] collection through this data into the uh
+[00:21:43] the records themselves so the way we're
+[00:21:46] envisioning The Narrative right now is
+[00:21:48] you would go from having just a general
+[00:21:50] statistics of the collection itself
+[00:21:53] then for instance the homeless paintings
+[00:21:56] has a topics field where you have saints
+[00:22:00] women's Saints
+[00:22:02] headgear one staffs Bibles was
+[00:22:06] and those are in in total it's 2 000 tax
+[00:22:10] so like just to figure out navigate
+[00:22:13] through that cloud huge cloud of data
+[00:22:15] what you want to
+[00:22:17] get out of it what what is of interest
+[00:22:20] to you you sort of need a an interface
+[00:22:22] that lets you navigate that first before
+[00:22:24] you're going actually into the
+[00:22:25] collection so we sort of mentioned this
+[00:22:27] first goes through query construction of
+[00:22:31] like you first go through a process of
+[00:22:34] sorting out this data and then you
+[00:22:36] progressively go into the data itself
+[00:22:37] you go forward a little bit maybe you
+[00:22:40] reconfigure the collection that's one of
+[00:22:42] the affordances we might keep
+[00:22:44] because we're saving these records that
+[00:22:46] are in sort of in their own original
+[00:22:49] format we might actually reconfigure the
+[00:22:53] collection to suit any specific like
+[00:22:55] research that's being conducted in it
+[00:22:57] and then you would go through an
+[00:22:59] iterative process of just like
+[00:23:02] searching the collection you would get a
+[00:23:04] subset of records and then you would
+[00:23:06] search of it again and again and again
+[00:23:07] until you get like what you're really
+[00:23:09] interested in
+[00:23:12] um maybe just go yeah so this is one
+[00:23:15] thing where we're interested maybe is
+[00:23:17] that you could generate different kinds
+[00:23:19] of data visualization Force graphs three
+[00:23:22] maps that help you visualize the
+[00:23:24] collection as a whole and eventually you
+[00:23:26] will get to the record level which is
+[00:23:30] where you sort of annotated things and
+[00:23:32] that's where the user also augments the
+[00:23:34] record
+[00:23:35] in a way
+[00:23:37] um and yeah it's also important that
+[00:23:41] spotlights as Jeffrey was mentioning
+[00:23:43] them it's for how we're envisioning this
+[00:23:46] sort of
+[00:23:49] authoring tool where you could not only
+[00:23:51] see this record but sort of compose
+[00:23:53] different sorts of
+[00:23:55] pieces with them be them very simple
+[00:23:57] slideshows or more academic papers or
+[00:24:00] just the sort of have a canvas where you
+[00:24:03] can draw around them share them
+[00:24:05] share some notes can you just leave that
+[00:24:07] on just for a second and so one of the
+[00:24:10] points I just want to underscore that's
+[00:24:11] implicit in what Pablo was saying is
+[00:24:14] you'll notice that the aggregate
+[00:24:15] visualizations of collections can be
+[00:24:18] used at the production sort of the
+[00:24:20] editing platform level so the ideas is
+[00:24:24] in other words to augment the range of
+[00:24:26] possibilities for the kinds of ways the
+[00:24:28] kinds of stories the kinds of exercises
+[00:24:30] that can be carried out within the
+[00:24:32] platform so that the micro level and the
+[00:24:34] macro level can be closely intertwined
+[00:24:36] it isn't just that we go through the
+[00:24:39] macro representation of collections to
+[00:24:42] get to individual objects it's kind of a
+[00:24:45] toggleable relationship and we think
+[00:24:48] that's a really important affordance of
+[00:24:51] working with uh in a kind of digital
+[00:24:52] platform with collections that really
+[00:24:55] adds value and transforms the basic
+[00:24:57] conditions of sort of knowledge sharing
+[00:25:00] and production so this is essential to
+[00:25:02] to what we're trying to do here
+[00:25:06] well then finally there's a series of uh
+[00:25:09] for instances to annotate records and to
+[00:25:11] augment them by users maybe you identify
+[00:25:15] individual representation when all these
+[00:25:17] different tags are or you sort of add a
+[00:25:21] specific piece of content that's like a
+[00:25:23] write-up that's specific to that record
+[00:25:24] or you bring information from the
+[00:25:27] outside as a Wikipedia link or something
+[00:25:29] like that
+[00:25:31] um and so those are all the components
+[00:25:32] of this system right now so like that
+[00:25:36] we've identified for the system as we're
+[00:25:39] envisioning it to work
+[00:25:40] uh and now we this is sort of like a
+[00:25:44] more uh front-end sort of walkthrough of
+[00:25:48] how we're sort of wireframing right now
+[00:25:50] so you would as a user you would go to
+[00:25:52] PRM you would see this this
+[00:25:55] um presentation page and you would
+[00:25:57] immediately have like feature content as
+[00:25:59] a convention
+[00:26:01] green is a spotlight and blue is a
+[00:26:03] collection uh so
+[00:26:06] The Collection which is just like you
+[00:26:08] could you could navigate these different
+[00:26:09] collections maybe represent them sort of
+[00:26:11] based on how important they are right
+[00:26:13] now how popular they are or how many
+[00:26:15] records They have
+[00:26:16] or you could navigate through different
+[00:26:18] spotlights uh which would be basically
+[00:26:21] content that users have generated and
+[00:26:23] made available to the public
+[00:26:24] and eventually you would see an
+[00:26:26] individual Spotlight and be able to read
+[00:26:28] this article and learn more about like a
+[00:26:30] specific theme within the collection
+[00:26:33] and then well this is again going
+[00:26:35] through what
+[00:26:36] you would if you go into a specific
+[00:26:38] collection for instance homeless
+[00:26:40] paintings of the Italian Renaissance you
+[00:26:42] would see
+[00:26:42] a lot of content about the collection so
+[00:26:45] to thematize what the what what the
+[00:26:46] importance of the collection is and
+[00:26:48] those would take the the form of the
+[00:26:50] very content that we're generating
+[00:26:52] through the spotlight so there's like an
+[00:26:54] interaction there or you could move
+[00:26:55] through these other visualization which
+[00:26:58] is like the data visualization
+[00:27:01] um sort of see a menu of what are the
+[00:27:05] fields available to you to browse
+[00:27:07] through let's say the subject which is
+[00:27:09] subjects depictive the topics location
+[00:27:11] title
+[00:27:13] etc etc get a glimpse of the original
+[00:27:15] record in the original format and from
+[00:27:18] then sort of moving to more interesting
+[00:27:19] visualizations this is uh this is like a
+[00:27:23] list of you Omega yeah yeah it's like a
+[00:27:25] list of the topics this is a partial
+[00:27:27] list of all the topics you can browse
+[00:27:28] through and sing the next one is
+[00:27:30] actually a an actual screenshot of this
+[00:27:33] is a this is a trima visualization
+[00:27:35] showing
+[00:27:37] um all the different subjects
+[00:27:38] represented so if you see all the way to
+[00:27:40] the right there's like a big blue box
+[00:27:41] that's basically 5 000 pictures
+[00:27:44] representing Jesus uh versus I don't
+[00:27:47] know Dan Bartholomew which is around
+[00:27:49] there somewhere and as you can see at
+[00:27:52] this point the the whole interface would
+[00:27:55] start working more as an application not
+[00:27:58] so much as a browsing like
+[00:28:00] Facebook like a composting tool so you
+[00:28:02] can add what you're seeing sort of save
+[00:28:05] it in your private collections have it
+[00:28:07] to your private library of sorts if you
+[00:28:09] keep going so you would then refine your
+[00:28:12] selection of Records
+[00:28:14] until you get like a size of a
+[00:28:16] collection then you would go to the
+[00:28:17] record itself which again you will need
+[00:28:20] a series of
+[00:28:21] interface to navigate say for instance
+[00:28:23] the different surrogates of that regular
+[00:28:25] are made available that you can see in
+[00:28:27] the lower
+[00:28:27] lower left or the original record or
+[00:28:31] important information about it and then
+[00:28:32] you again annotated somehow and
+[00:28:37] expanded without some information and so
+[00:28:40] on and so on and at this level we're
+[00:28:42] designing into the platform a mechanism
+[00:28:44] for user based contributions in the
+[00:28:47] forms of annotations and tagging to be
+[00:28:50] promoted to the standard tagging data
+[00:28:53] for objects so the idea is to have some
+[00:28:55] kind of filtration mechanism so it isn't
+[00:28:57] all sort of user added uh content that
+[00:29:00] becomes part of the core record but we
+[00:29:02] do very much see this as an opportunity
+[00:29:04] to process collections that are
+[00:29:06] otherwise either unprocessable or
+[00:29:08] unlikely to be processed by adding value
+[00:29:11] to the to the basic metadata
+[00:29:16] we're going to identify like small
+[00:29:17] mistakes so we will identified a few
+[00:29:20] so this is sort of showing the other
+[00:29:24] um the flip side of that visualization
+[00:29:26] you will get like your own personal uh
+[00:29:29] sort of Library where you can work and
+[00:29:31] then go into we would provide authoring
+[00:29:33] tools so you could get the next I don't
+[00:29:36] know right kind of like blog authoring
+[00:29:38] but using this library of
+[00:29:41] of Records front terrarium I think if
+[00:29:43] you go two more yes
+[00:29:45] this is sort of like the it would be
+[00:29:47] like the generous scheme of how we're
+[00:29:49] planning it right now so you would have
+[00:29:52] an area where there's like the most more
+[00:29:54] public phase and an area where you would
+[00:29:57] sort of start researching into this
+[00:29:59] collection and then you sort of your
+[00:30:00] personal library of objects with which
+[00:30:02] you're working on that you can make
+[00:30:04] available to the public or not
+[00:30:08] and just just to underscore the
+[00:30:10] distinction there seemed to us important
+[00:30:12] for purposes of making sure that this
+[00:30:14] was a platform friendly for people who
+[00:30:16] are teaching or who are doing their own
+[00:30:18] research so you know there might be
+[00:30:20] moments where you want to expose uh some
+[00:30:23] of the work that you're doing
+[00:30:25] um but to to leave the user communities
+[00:30:27] in control in other words of the degrees
+[00:30:30] of visibility of the work that's being
+[00:30:32] carried on within the platform
+[00:30:34] um so uh the spotlighting process even
+[00:30:38] that has controls over it that allows
+[00:30:40] people to use the spotlight as an
+[00:30:42] assignment like a classroom assignment
+[00:30:43] or a group assignment but to promote
+[00:30:46] that into the public area at a mature
+[00:30:49] phase of the development of that work
+[00:30:52] so I think you know what's up next
+[00:30:54] um involves
+[00:30:55] um some events and and workshops to to
+[00:30:58] work with different cohorts of people
+[00:31:00] um domain experts
+[00:31:02] um you know collections managers
+[00:31:04] technologists in collections contexts
+[00:31:07] um to discuss different to discuss these
+[00:31:10] affordances to refine them
+[00:31:12] um to discuss applications of this
+[00:31:14] platform uh there's a course that's
+[00:31:16] planned where you know we hope to to
+[00:31:18] sort of work through and experiment with
+[00:31:20] these affordances in the teaching
+[00:31:22] context
+[00:31:23] um and we're discussing
+[00:31:26] um the the application of this platform
+[00:31:28] to other specific collections right now
+[00:31:30] and that's going to be an ongoing
+[00:31:32] process of of looking for collections to
+[00:31:34] bring into association with each other
+[00:31:36] um through this platform
+[00:31:38] um and you know finally I think we're
+[00:31:40] we're interested to to know what what
+[00:31:43] you make of this and what and what kind
+[00:31:44] of um associations and questions it
+[00:31:47] stirs in you as well I think we're
+[00:31:49] particularly interested here in in
+[00:31:51] knowing you know what you know how you
+[00:31:53] think this kind of Engagement with the
+[00:31:56] collection
+[00:31:58] um lands in in in network contexts uh
+[00:32:02] when we're dealing with with open
+[00:32:04] resources
+[00:32:05] um across institutions
+[00:32:07] um with with very with you know very
+[00:32:10] different kinds of user communities
+[00:32:12] um how do we bring these things into
+[00:32:14] fruitful and productive association with
+[00:32:16] each other
+[00:32:17] um and I think at that point we can take
+[00:32:20] take questions
+[00:32:24] David
+[00:32:25] so I'm gonna ask the most boring
+[00:32:27] question get it out of the way this
+[00:32:29] looks fantastic that wasn't a question
+[00:32:31] we're not bored at all yet
+[00:32:36] um
+[00:32:36] what are your plans for making the
+[00:32:39] collections the
+[00:32:40] um the enhancements uh and the
+[00:32:43] collection itself is an object really
+[00:32:44] interesting metadata making that
+[00:32:46] interoperable will there be an API are
+[00:32:48] you going to support whatever standard
+[00:32:49] ways there are of representing
+[00:32:50] Collections and the sort of second part
+[00:32:53] which is this looks like it might be a
+[00:32:55] really good link data application the
+[00:32:58] sort of data that you're collecting is
+[00:32:59] going to be rich and lots of new
+[00:33:01] associations can be made so it sort of
+[00:33:03] calls out for LinkedIn are you looking
+[00:33:04] at that for a back end
+[00:33:06] the Harvard actually really could use
+[00:33:08] seriously more work and uh so this might
+[00:33:12] be a really great application for it I
+[00:33:14] mean I think that you know in the first
+[00:33:15] instance
+[00:33:16] um you know this is this is born as a
+[00:33:18] project that is making use of
+[00:33:21] um data that collections are are making
+[00:33:23] available to us through their own apis
+[00:33:26] so we're we're sort of playing with the
+[00:33:28] question of one once that once those
+[00:33:30] data are available what can we do with
+[00:33:32] it
+[00:33:33] um so the the data that we're ingesting
+[00:33:35] is Json data that's that's either
+[00:33:37] somebody is is producing for us or
+[00:33:40] ultimately uh will be available through
+[00:33:42] apis now
+[00:33:44] um you know the the broader question of
+[00:33:46] of the extent to which we're able to
+[00:33:47] share the data that we gather
+[00:33:50] um I think that's a question that we
+[00:33:51] need to explore and and and you know
+[00:33:54] explore with the kind of prejudice that
+[00:33:57] we want this data to be open we want we
+[00:34:00] want an API
+[00:34:01] um because ultimately you know some of
+[00:34:03] the some of the use cases that we're
+[00:34:05] discussing here involve
+[00:34:07] um changes to those data um that that
+[00:34:09] this this this this platform will will
+[00:34:11] grow data and those data would be would
+[00:34:14] be definitely worth sharing them
+[00:34:17] together and says this is an interesting
+[00:34:19] collection and here's here's a story a
+[00:34:21] spotlight behind it that's really useful
+[00:34:24] Rich data yeah wonderful to be able to
+[00:34:25] get that back into the library ecosystem
+[00:34:27] yeah yeah we totally agree and I mean
+[00:34:31] this has been a kind of
+[00:34:33] strategic challenge for us to try to
+[00:34:35] decide do we for instance want to host
+[00:34:37] uh collections or do we just want to
+[00:34:40] link to uh collections that are hosted
+[00:34:42] elsewhere and that of course is very
+[00:34:44] much connected to the question larger
+[00:34:46] question you're you're asking yeah yeah
+[00:34:48] so I think we you know that's we we need
+[00:34:51] we need to talk yeah
+[00:35:05] yeah even if you don't host any of the
+[00:35:08] data that you've ingested you can still
+[00:35:10] make this stuff available through an API
+[00:35:12] that you're creating and in general I
+[00:35:15] think it's very
+[00:35:16] um uh attractive to take this really
+[00:35:18] easy way out of using the data that you
+[00:35:21] have uh internally you might want to
+[00:35:23] consider taking a leave from Jeff Bezos
+[00:35:26] at Amazon if you really want your apis
+[00:35:28] to be good apis you could write your own
+[00:35:31] tools to not rely on having their data
+[00:35:34] but
+[00:35:34] use your create apis to the data that is
+[00:35:37] being collected on your system and
+[00:35:40] access your data through those apis
+[00:35:42] which will sort of guarantee that
+[00:35:44] everybody else can do so as well yeah I
+[00:35:47] think that's a great suggestion yeah
+[00:35:48] actually yeah yeah
+[00:35:55] The Source from a month ago and license
+[00:35:58] isn't in there as a field of tracking IP
+[00:36:00] of these things and that becomes a very
+[00:36:02] big issue to address early on in
+[00:36:04] building a platform that can be reusable
+[00:36:06] virtually the question I want to ask was
+[00:36:07] more
+[00:36:08] to what extent do you think the platform
+[00:36:11] is the more important part of the
+[00:36:13] community building is the more important
+[00:36:14] part because things like Galaxy zoo and
+[00:36:16] others do a lot of community booting
+[00:36:18] they give people incentives people
+[00:36:20] mysteriously do want to transcribe
+[00:36:22] ancient Greeks even though they can't
+[00:36:23] read it partly because they're part of a
+[00:36:25] community that's doing that and I wonder
+[00:36:27] what you've thought about the incentive
+[00:36:28] structures that get people to curate on
+[00:36:31] this platform rather than where they
+[00:36:33] will be doing it so I've searched for um
+[00:36:34] Renaissance on Pinterest and there's
+[00:36:36] some amazing boards where people are
+[00:36:37] already curating in their own spaces
+[00:36:39] what gets them to in a way that gives
+[00:36:41] you the structured data you want yeah
+[00:36:43] and I think that the community building
+[00:36:44] is an important a hugely important piece
+[00:36:46] to us uh and I think we're going to
+[00:36:47] spend a lot of time and attention on
+[00:36:49] that question you know some of the
+[00:36:51] events that we're planning for the next
+[00:36:53] few months as we're still
+[00:36:55] um cobbling this together are certainly
+[00:36:58] um you know have as their kind of cheap
+[00:37:00] digital Autumn building community and
+[00:37:02] engaging with people animals and
+[00:37:03] learning what it is that people want to
+[00:37:05] do with this kind of resource and and
+[00:37:08] um and changing course reflective of of
+[00:37:11] what of what we learn from uh from folks
+[00:37:14] but I think we also
+[00:37:16] um you know need to do some broader
+[00:37:17] research about how those folks on
+[00:37:20] Pinterest get engaged in this kind of
+[00:37:22] platform as well
+[00:37:23] um uh so it's it's it's enormously
+[00:37:26] important yes yeah I mean that's been um
+[00:37:28] one of the the key focal points even in
+[00:37:31] the process of um of you know sort of
+[00:37:34] architecting the platform itself
+[00:37:37] um we're that we've been thinking quite
+[00:37:39] a bit one of the reasons that the
+[00:37:40] spotlight as classroom was important to
+[00:37:42] us is we think that collections-based
+[00:37:44] teaching is one of those domains where
+[00:37:47] for instance mooc based models might
+[00:37:50] actually have some rich possibilities
+[00:37:52] that are pretty much unexamined or
+[00:37:55] Barely Used barely topped up to this
+[00:37:57] point uh that's one opportunity but uh
+[00:38:00] also more broadly
+[00:38:03] um the kinds of collections that we're
+[00:38:05] likely to feature like the homeless
+[00:38:06] paintings collections which are not of
+[00:38:08] canonical objects those are you know
+[00:38:10] those are what you what are featured
+[00:38:11] mostly on the Pinterest boards you know
+[00:38:13] uh objects that are in museum
+[00:38:14] collections that are featured that are
+[00:38:16] that and you know there's a lot at stake
+[00:38:19] in that of like expanding the the sort
+[00:38:22] of scope of the kind of conversation
+[00:38:24] that happens around areas of cultural
+[00:38:26] history and social history
+[00:38:28] um and and so
+[00:38:31] um that is a huge uh concern for us and
+[00:38:34] so we we have been essentially just
+[00:38:36] beginning at this point because we're
+[00:38:37] we're just about to sort of open up the
+[00:38:40] door and let people in and to play
+[00:38:41] around with the platform uh trying to
+[00:38:44] get especially younger art historians
+[00:38:46] who are teaching courses like canonical
+[00:38:47] courses of Italian Renaissance art
+[00:38:49] history other kinds of historians who
+[00:38:52] are interested in using these corporate
+[00:38:53] tell stories that have nothing to do
+[00:38:55] with art history they might have to do
+[00:38:56] with the history of materials or
+[00:38:57] interior design Circa 1400 or you know
+[00:39:01] there's a a lot of stories
+[00:39:03] or the history of photography uh I think
+[00:39:06] Matthew alluded to this this collection
+[00:39:07] is really interesting it's Berenson had
+[00:39:09] this idea which at the time was a a
+[00:39:12] relatively avant-garde idea that
+[00:39:13] photography was somehow an important
+[00:39:15] medium for the discipline of the study
+[00:39:17] of uh the history of Art and this
+[00:39:20] collection includes uh it is a a kind of
+[00:39:24] uh pretty much uninterrupted slice of
+[00:39:27] the history of studio photography
+[00:39:30] practice in the representation of
+[00:39:32] two-dimensional artworks going back to
+[00:39:34] Glass you know basically glass slides
+[00:39:37] including formats that are very rarely
+[00:39:39] found in other words obviously
+[00:39:41] specialized cameras that were devised to
+[00:39:43] represent these very large objects in
+[00:39:45] some cases I mean so there's just so
+[00:39:47] many different stories there and to so
+[00:39:50] this is a big challenge for us but we we
+[00:39:52] think that there's some real reasons to
+[00:39:54] believe that there's a real area of
+[00:39:56] opportunity especially around education
+[00:39:57] uh in the in the humanities for by
+[00:40:01] opening up this space for collection
+[00:40:02] space teaching here
+[00:40:05] so the the concept of the spotlight I
+[00:40:07] think is really powerful
+[00:40:09] um both on the classroom level and then
+[00:40:10] on the visual level and I wonder to what
+[00:40:13] extent that could be used to tell the
+[00:40:15] story of the individual object so for
+[00:40:16] instance an object might have been might
+[00:40:19] have been used in say 200 different
+[00:40:22] spotlights in different ways and when
+[00:40:24] you dig into a particular object to
+[00:40:27] understand how it's been used by whom
+[00:40:29] and for what reason might tell a
+[00:40:31] different kind of story and and as I see
+[00:40:35] it I mean I see the spotlight as the
+[00:40:36] that's that's what you make in this
+[00:40:38] whether you're a teacher or a student
+[00:40:40] yeah and so to have that power to make
+[00:40:43] one of these things and then to
+[00:40:46] um to connect it to other people who
+[00:40:47] have made similar things and then
+[00:40:49] ultimately to be able to export it which
+[00:40:50] I think is connected to some of what
+[00:40:52] other people were saying yeah but I just
+[00:40:53] wonder to what extent when you get to
+[00:40:55] that level can you then sort of move out
+[00:40:57] again to tell the history of
+[00:40:59] interconnection of spotlights
+[00:41:02] it's it's a great question I mean I
+[00:41:03] think that
+[00:41:04] um and I think that it thinking about it
+[00:41:07] also entails thinking about some of
+[00:41:08] these questions that others have asked
+[00:41:10] about the accessibility of the the data
+[00:41:12] that are associated with that activity
+[00:41:14] and and these are crucial
+[00:41:16] um questions for us to face and I think
+[00:41:19] some of the um the richness of that
+[00:41:22] Prospect
+[00:41:23] um is perhaps addressed to a certain
+[00:41:27] extent by expectations we have for
+[00:41:29] managing
+[00:41:30] um spotlights in the context when we
+[00:41:32] were thinking in primarily in in the
+[00:41:35] context of classroom in teaching
+[00:41:37] classroom or or or
+[00:41:39] um Network teaching
+[00:41:41] um and thinking about the ways in which
+[00:41:43] as an educator you might want to capture
+[00:41:46] and reflect on the um the kind of
+[00:41:49] authorial impulses or the curatorial
+[00:41:51] impulses um of your of your students um
+[00:41:54] and those are affordances that were that
+[00:41:57] we're building in on the back end which
+[00:41:59] probably need to to be exposed probably
+[00:42:02] need to be thought about
+[00:42:03] um and tuned for the kind of richness
+[00:42:06] that your your question indicates
+[00:42:12] yes
+[00:42:14] extent are you
+[00:42:18] are you thinking differently than the
+[00:42:20] basic Digital Library
+[00:42:22] or are you thinking of this as
+[00:42:25] essentially a digital library
+[00:42:27] and all of those you know all the all
+[00:42:30] the you know
+[00:42:32] history of digital library you know
+[00:42:35] information retrieval and navigation and
+[00:42:37] you know the standard approaches and so
+[00:42:39] on yeah
+[00:42:41] well I think you know there's probably a
+[00:42:42] kind of textual technical question a
+[00:42:45] technical technical side to that
+[00:42:47] question excuse me and uh and and a
+[00:42:50] broader kind of institutional or or
+[00:42:52] pedagogical or or design question really
+[00:42:55] and on the on the design side I think
+[00:42:58] what's what's crucial about this
+[00:42:59] approach is the
+[00:43:02] um provision for all of these kinds of
+[00:43:05] activities in the platform for using the
+[00:43:09] the
+[00:43:10] um the objects that are organized by
+[00:43:13] this platform
+[00:43:14] um associating them with each other uh
+[00:43:17] annotating them
+[00:43:18] um and and developing a a platform that
+[00:43:21] not only allows one to do those things
+[00:43:23] as a user of it but also
+[00:43:25] um allows for reflection on that on that
+[00:43:28] activity
+[00:43:29] um and captures that activity
+[00:43:31] um I think you know typically we you
+[00:43:33] know we have wonderful access through
+[00:43:36] through many digital platforms to
+[00:43:38] resources and that's something that's
+[00:43:39] continuing to to grow all the time
+[00:43:42] our ability as users as technologists as
+[00:43:47] as as Scholars to um to glean
+[00:43:50] information about how people use that
+[00:43:52] material is something that we'd really
+[00:43:54] like to address with this platform and
+[00:43:56] to allow this kind of authoring to kind
+[00:43:58] of bring to to bring some of the
+[00:44:00] affordances of um you know a Content
+[00:44:02] management system or a blogging tool
+[00:44:04] into an integrated integrated with the
+[00:44:08] The Collection management side of this
+[00:44:10] so instead of getting a a list of search
+[00:44:15] results which you might be able to
+[00:44:17] export to a commercial product like
+[00:44:19] endnote or something like that we want
+[00:44:21] in the platform ways to to do new things
+[00:44:25] to do novel things with these objects
+[00:44:28] um to share those novel
+[00:44:30] um collocations of objects with an
+[00:44:33] audience
+[00:44:34] um and and and to capture that activity
+[00:44:37] so that others can learn from it as well
+[00:44:39] and if I could add
+[00:44:41] um one some point that maybe we didn't
+[00:44:44] specify uh at length is that The
+[00:44:48] annotation process includes bringing
+[00:44:50] objects in from outside of the platform
+[00:44:53] environment so uh the link is I mean
+[00:44:55] this comes back to the point that was
+[00:44:57] being brought up or in the earlier
+[00:44:58] conversation I mean our expectation this
+[00:45:00] is not just about working inside it's
+[00:45:02] also a kind of porous platform that
+[00:45:05] allows people to work outside and to see
+[00:45:07] other kinds of Collections and resources
+[00:45:09] and construct stories meaning if
+[00:45:13] meanings if you like out of those
+[00:45:14] relation sets of relations uh
+[00:45:17] um and yeah and I would just underscore
+[00:45:19] what Matthew was just saying about you
+[00:45:21] know this is a kind of user-centered
+[00:45:22] environment even the aggregate views of
+[00:45:25] collections are are completely tunable
+[00:45:27] we have a very flat data structure which
+[00:45:29] means that some of those visualizations
+[00:45:31] like tree diagrams and others are going
+[00:45:33] to work really well with the way the
+[00:45:35] data is structured in certain
+[00:45:36] Collections and in other cases they're
+[00:45:37] not going to work at all so you can go
+[00:45:39] in there and tweak the term so if you
+[00:45:42] are interested in the history of the use
+[00:45:43] of I don't know you know zinc oxide in
+[00:45:48] pigments you can look at the map of a
+[00:45:52] collection that's not something you can
+[00:45:53] query in other words we're not using a
+[00:45:55] kind of traditional Digital Library data
+[00:45:58] structure which has very clear
+[00:46:00] hierarchies
+[00:46:02] in terms of the way you discover a
+[00:46:05] record but rather a much more flexible
+[00:46:07] structure that is much more user
+[00:46:09] centered and that user-centered
+[00:46:13] uh
+[00:46:14] Focus carries over then to the
+[00:46:16] production of interpretations meaning
+[00:46:18] annotations and so forth so I mean we
+[00:46:20] see that as a different undertaking even
+[00:46:23] though it's complementary certainly to
+[00:46:25] features of a traditional Digital
+[00:46:26] Library yeah okay
+[00:46:31] at what extent the users can also
+[00:46:34] suggest changes to the data model
+[00:46:35] because I've been working for a while
+[00:46:37] with europeana and you know one of the
+[00:46:39] problems that you know they have a very
+[00:46:41] rigid data model so they can't really
+[00:46:43] describe you know for example new kinds
+[00:46:45] of artworks yeah so I think yeah just
+[00:46:47] wondering if we have this flexibility
+[00:46:49] here but it seems yeah and I mean given
+[00:46:52] the fact that the metadata uh is the the
+[00:46:56] idea is to create this sort of model
+[00:46:58] that where there's a a significant user
+[00:47:00] contribution to the metadata with some
+[00:47:04] kind of control mechanism at the same
+[00:47:05] time to try to find a proper balance uh
+[00:47:09] we should make all of the tools for
+[00:47:11] looking at aggregate collections also
+[00:47:14] flexible in ways that are not part of
+[00:47:16] the sort of conventional Digital Library
+[00:47:17] model yeah exactly it becomes it becomes
+[00:47:20] challenging the more heterogeneous the
+[00:47:21] the collections we're interacting with
+[00:47:23] exactly yeah yeah and that's a challenge
+[00:47:26] we
+[00:47:27] you know working with seventeen thousand
+[00:47:29] black and white photographs
+[00:47:31] of rectos and versos you know
+[00:47:34] it's a pretty small scale so like the
+[00:47:36] next step for us is going to be testing
+[00:47:38] out some of our uh what we built on
+[00:47:42] larger collections we've been talking
+[00:47:44] about maybe working with the fog to try
+[00:47:46] try out sections of their collection to
+[00:47:49] sort of scale up and see what happens
+[00:47:50] with a level of complexity that's
+[00:47:51] introduced with by a much more
+[00:47:53] heterogeneous collections but I think
+[00:47:55] the tunability of this should allow
+[00:47:58] maybe it will require a certain amount
+[00:47:59] of expertise in terms of usage users but
+[00:48:03] should allow you to go beyond what
+[00:48:04] that's what we hope whatever impasses
+[00:48:07] are created by the differences between
+[00:48:09] collections you know but you know
+[00:48:12] looking down the road some years I I'm
+[00:48:15] guessing or you tell me what you see
+[00:48:18] down the road it feels to me like it's
+[00:48:20] almost certainly going to be a
+[00:48:21] bifurcated Universe of knowledge we've
+[00:48:24] got the traditional architecture of
+[00:48:26] knowledge and and people have entered
+[00:48:28] into this universe and used it to
+[00:48:29] annotate into Spotlight and then on the
+[00:48:32] other side you've got sort of the
+[00:48:34] amateur curator who's whose work is
+[00:48:37] largely episodic and and
+[00:48:40] um and disorganized in that sense unless
+[00:48:42] there is some curator of curators who
+[00:48:45] helps create an architecture of
+[00:48:47] knowledge and organize this stuff or is
+[00:48:49] that on on is that unduly pessimistic
+[00:48:53] yeah I don't know it's a good question
+[00:48:55] you know I think I think some of these
+[00:48:57] some of the some of the technically
+[00:48:59] oriented questions early in the
+[00:49:01] discussion
+[00:49:02] um Point ways towards answering that
+[00:49:05] insofar as
+[00:49:07] um you know if we can build systems
+[00:49:09] through link data
+[00:49:11] um uh and and the access to those data
+[00:49:15] that allow allow us to develop platforms
+[00:49:18] that are self-organizing to a certain
+[00:49:21] extent or tunably self-organizing that
+[00:49:22] allows to interact with that algorithmic
+[00:49:25] organization
+[00:49:26] um then you know we begin to have a kind
+[00:49:28] of hybrid space where we're neither it's
+[00:49:31] neither Harmony nor chaos um but
+[00:49:33] something in between the two
+[00:49:35] um uh and you know
+[00:49:38] um you know there are there are
+[00:49:39] wonderful initiatives I mean you know
+[00:49:41] Wikimedia does monuments is and it's
+[00:49:44] incredible kind of
+[00:49:46] um uh crowd curatorial initiative
+[00:49:50] um that's not only
+[00:49:52] um you know going out I mean this is
+[00:49:54] encouraging people to document
+[00:49:56] um Heritage
+[00:49:58] um sites in their own in their own
+[00:50:00] neighbor in their own neighborhoods in
+[00:50:01] their own cities
+[00:50:02] um share those three Wicked media and
+[00:50:05] and you know that makes it possible not
+[00:50:07] only for people to feel like they're
+[00:50:08] part of a broader curatorial Enterprise
+[00:50:10] but it also allows us because of the of
+[00:50:13] the nature of Wikimedia to do the kind
+[00:50:17] of algorithmic curatorial work that
+[00:50:20] um that these new tools are making
+[00:50:21] possible so it may not be all one thing
+[00:50:24] or all the other but but a kind of you
+[00:50:26] know fruitful and and and disorienting
+[00:50:28] at the same time hybrid of those so
+[00:50:31] they're authoring two tools here for the
+[00:50:33] for the curator's curator for the the
+[00:50:35] Medicare yes well that's true yeah yeah
+[00:50:37] that's built into the architecture of
+[00:50:38] our platform there is uh so the the kind
+[00:50:41] of At You Know Chief admin uh at the top
+[00:50:44] of the pyramid has under them uh
+[00:50:46] functions admin functions vis-a-vis
+[00:50:48] specific collections because we're
+[00:50:50] imagining that
+[00:50:52] you know institutions that are you know
+[00:50:54] collecting institutions uh uh will want
+[00:50:58] to have some kind of sort of custodial
+[00:51:01] control essentially and they may want to
+[00:51:04] set specific parameters for the use of
+[00:51:06] collections there may be copyright
+[00:51:08] issues there may be a whole set of other
+[00:51:10] issues that have to do with wanting to
+[00:51:12] um create certain modes of access or
+[00:51:14] restrict others so yeah yeah so I've got
+[00:51:17] I've got Tim and then Peter over here
+[00:51:19] um
+[00:51:20] is there anything this won't do
+[00:51:22] and that's actually like look at other
+[00:51:25] things you guys have thought about that
+[00:51:27] you think is clearly out of scope for
+[00:51:28] this project yeah in terms of this is
+[00:51:31] what it is and this is what it is not
+[00:51:32] right well we're not gonna provide any
+[00:51:35] tools for making animated gifs
+[00:51:39] right
+[00:51:41] you indeed
+[00:51:45] um yeah I think well I think in terms of
+[00:51:47] the content creation platform it's going
+[00:51:49] to be a fairly rudimentary one I mean
+[00:51:52] we're expecting people we want to
+[00:51:54] allow for the content that's produced
+[00:51:56] inside it to be exportable so if people
+[00:51:58] want to do you know much more complex uh
+[00:52:01] sorts of things with uh that they have
+[00:52:04] begun inside the platform that will be
+[00:52:06] designed into it but we don't want to
+[00:52:08] become a kind of high-level production
+[00:52:10] platform for doing really cool
+[00:52:12] slideshows you know with all kinds of
+[00:52:15] special effects I mean it's it's meant
+[00:52:17] to be a pretty much
+[00:52:18] a kind of get down to business platform
+[00:52:21] that will allow you to move stuff around
+[00:52:24] build little collections annotate them
+[00:52:26] do things with them and then if you need
+[00:52:28] something more advanced than that you're
+[00:52:30] going to do that outside the platform so
+[00:52:32] that would definitely be in the not
+[00:52:33] category
+[00:52:35] um I think the the area that
+[00:52:38] where we on the contrary we probably
+[00:52:40] want to invest a lot of energy is this
+[00:52:42] this notion of making visualizations of
+[00:52:45] collections as Aggregates a really
+[00:52:47] powerful transformative tool and adding
+[00:52:50] togglobal capabilities that would match
+[00:52:54] the complexity and the heterogeneity of
+[00:52:56] collections uh is going to be a real
+[00:52:58] challenge there but I think that's where
+[00:52:59] we add value so it's not so much the
+[00:53:02] level of like the cool things you can do
+[00:53:03] annotating an object I mean there again
+[00:53:06] I think it's going to be pretty you know
+[00:53:08] playing vanilla
+[00:53:10] um
+[00:53:10] I don't know dude yeah yeah I think
+[00:53:12] that's yeah I think that's true I mean I
+[00:53:13] think you know with respect to the kinds
+[00:53:15] of material
+[00:53:16] um there's there that that that the
+[00:53:19] platform can address like media types
+[00:53:21] we've certainly you know in conversation
+[00:53:23] talked about
+[00:53:25] um a wide a spectrum of media that we
+[00:53:28] really have to leave aside not largely
+[00:53:31] because it's not technically feasible to
+[00:53:33] deal with say audio there are wonderful
+[00:53:35] libraries for annotating audio that are
+[00:53:37] available right now but the design
+[00:53:39] challenge of integrating some of those
+[00:53:41] media with the media that we're dealing
+[00:53:43] with right now
+[00:53:44] we'll need to mature to get to some of
+[00:53:47] those other media yeah Peter
+[00:53:52] uh image search I thought of it at first
+[00:53:55] with your lost
+[00:53:57] painting project but to be able to be
+[00:54:01] able to search against shared shelf or
+[00:54:03] the frick art reference library or
+[00:54:04] european and see if these things are
+[00:54:06] showing up but even in a broader sense
+[00:54:08] to see where these things are being used
+[00:54:10] and the stories that are being created
+[00:54:13] around them so I don't know if you've
+[00:54:15] thought about incorporating you know the
+[00:54:18] the tonight or the Google image search
+[00:54:20] or something like that into uh your
+[00:54:23] database right right as a way of linking
+[00:54:26] out yeah the rest of the network well I
+[00:54:28] think it's a terrific suggestion it's
+[00:54:30] something we haven't really actively
+[00:54:32] thought about at this point
+[00:54:33] um but but I think it would definitely
+[00:54:35] you know there's something we could
+[00:54:37] definitely look into
+[00:54:38] um uh Chris Daly are kind of super
+[00:54:41] curator out in the world that uses
+[00:54:43] Google image search a great deal so
+[00:54:45] acknowledging that those affordances can
+[00:54:47] be brought to bear on this kind of
+[00:54:48] material is it is it it's it's crucial
+[00:54:50] and it's it's really worth thinking
+[00:54:52] about for sure definitely I think we
+[00:54:54] have time for another question maybe Sam
+[00:54:58] one follow-up on on your commando of
+[00:55:00] meta curation uh custodianship is not
+[00:55:03] the same as medication no so people who
+[00:55:05] own the collection might want to do
+[00:55:07] something but many curators might be
+[00:55:08] Chris Chris could become a great
+[00:55:09] manicurer that's true people don't care
+[00:55:11] about some sub genre yeah
+[00:55:16] um
+[00:55:18] I was coming back to someone's comment
+[00:55:19] about what about the people who are
+[00:55:21] curating things on Pinterest and so I
+[00:55:23] was just checking to see how much our
+[00:55:25] curation there was on Pinterest uh it's
+[00:55:27] awesome so I'm I think reflecting on
+[00:55:31] what you showed it looks like a lot of
+[00:55:32] your work is going into a technical
+[00:55:34] framework for a front end and a back end
+[00:55:37] but most of what you hope people will do
+[00:55:40] is build a class experience or build a
+[00:55:43] collection and Spotlight experience and
+[00:55:45] I wonder how much you're thinking about
+[00:55:46] whether that makes sense in the long
+[00:55:49] term or even in the short term where
+[00:55:51] you're trying to build a user base
+[00:55:52] versus trying to do the same thing on
+[00:55:55] top of an API or something like
+[00:55:57] where you say okay we're not going to
+[00:55:58] have structured data we don't have all
+[00:56:00] these neat things but then we also don't
+[00:56:01] have to deal with ingestion people are
+[00:56:03] already wasting time duplicating effort
+[00:56:05] but they're re-uploading to Pinterest
+[00:56:07] thousands of times
+[00:56:08] um there are 10 000 people who care
+[00:56:10] about Earth we're there right now
+[00:56:12] what if you tried to build Spotlight
+[00:56:14] tools that just use that
+[00:56:17] I think it's a great idea and some of
+[00:56:19] the other projects that we're working on
+[00:56:20] right now
+[00:56:22] um
+[00:56:22] that are
+[00:56:25] um focused on a kind of set of a suite
+[00:56:27] of Spotlight tools as it were some some
+[00:56:29] uh editorial tools for
+[00:56:33] um operating in a in an environment of
+[00:56:36] open media associating those media with
+[00:56:37] each other and making New Media out of
+[00:56:39] them
+[00:56:40] um will definitely
+[00:56:42] um have as their objective that
+[00:56:44] um that kind of use case
+[00:56:46] um building a a tool there's a another
+[00:56:49] project that we're working on the Japan
+[00:56:52] disaster archive which is also you know
+[00:56:55] starts as a kind of bespoke
+[00:56:57] sub-collection of of media that exists
+[00:56:59] elsewhere
+[00:57:01] um and
+[00:57:02] um the affordances that are are being
+[00:57:04] developed right now in conjunction with
+[00:57:06] a class are to allow students in that
+[00:57:09] class and and others a wide population
+[00:57:11] of others um uh varying communities of
+[00:57:14] others to to make things out of those
+[00:57:16] media and those are specifically working
+[00:57:18] with with extant media that are
+[00:57:21] available through apis
+[00:57:22] um and I think you know bringing those
+[00:57:24] uh projects into association with this
+[00:57:27] is is really kind of a matter of time
+[00:57:30] um uh this this emerges out of a contact
+[00:57:33] contact with a really specific
+[00:57:35] collection a collection that doesn't
+[00:57:36] have an API
+[00:57:38] um and and finding ways to bring that to
+[00:57:40] a wider
+[00:57:41] um user base are you know kind of core
+[00:57:44] to to to the project whether ultimately
+[00:57:47] you know we we provide the tools for
+[00:57:51] um obsolescing this this uh
+[00:57:54] um or participate in providing the tools
+[00:57:56] for obsolescing this platform I suppose
+[00:57:57] remains to be seen
+[00:58:02] one more one more yeah go ahead oh this
+[00:58:04] is actually sort of an answer to this
+[00:58:05] question about sort of the Pinterest
+[00:58:07] model and not worrying so much about the
+[00:58:09] structuring of the data I think you sort
+[00:58:10] of answered your own question by
+[00:58:11] pointing out that thousands of people
+[00:58:13] are re-uploading uh the same art over
+[00:58:16] and over again that's a tremendous
+[00:58:19] amount of wasted energy that could be
+[00:58:20] put to other use the reason it's
+[00:58:22] happening I think in part is because of
+[00:58:24] the non-availability of some standard uh
+[00:58:27] data about what's being uploaded if you
+[00:58:29] could start with what somebody has
+[00:58:30] already uploaded and yeah spend your
+[00:58:33] energy adding to that instead of having
+[00:58:34] to redo the first time you'd be much
+[00:58:37] better off and so I I think that the
+[00:58:38] structuring of the data is very
+[00:58:40] important in order to support that I
+[00:58:42] mean I upload stuff to my own storage
+[00:58:44] again and again
+[00:58:49] I think we probably could as a community
+[00:58:51] right
+[00:58:54] isn't it well
+[00:58:56] unless there are any questions remaining
+[00:58:58] we can certainly take this up yeah
+[00:59:01] about standard data and
+[00:59:05] um varieties of vocabulary as well as
+[00:59:09] language
+[00:59:13] let that somebody else worry about that
+[00:59:17] well this is these are hugely important
+[00:59:19] questions in these in in these projects
+[00:59:22] that that involve the ingestion of you
+[00:59:25] know heterogeneous data for many from
+[00:59:27] many places the dpla has really been
+[00:59:29] fighting this you know European as well
+[00:59:33] um at least at this at this juncture the
+[00:59:37] way in which we're managing these data
+[00:59:39] kind of
+[00:59:40] um I think you know studiously avoids
+[00:59:43] those questions
+[00:59:45] um and and you know we're experimenting
+[00:59:47] with ways of bringing these data
+[00:59:49] together
+[00:59:50] um that this is very kind of very poor
+[00:59:53] way to put this but that allow people to
+[00:59:55] maybe try and do some of that work for
+[00:59:57] themselves
+[00:59:59] um and I mean I should note that it's
+[01:00:01] already a problem with our collection of
+[01:00:04] departure which is was after all a
+[01:00:06] collection of Italian Renaissance uh
+[01:00:08] homeless Italian Renaissance objects
+[01:00:10] where the tags I mean one of the first
+[01:00:13] things we started seeing when we started
+[01:00:15] playing with it with the data sets is or
+[01:00:17] all these artifacts of uh you know sort
+[01:00:19] of descriptive redundancy and uh between
+[01:00:21] Italian and English between you know
+[01:00:25] um and uh we're hoping to design the
+[01:00:28] platform so that as Matthew was hitting
+[01:00:30] that you know the communities of users
+[01:00:33] have an ability to contribute to um
+[01:00:36] attacking some of those problems um so
+[01:00:38] that may apply also to the issue of
+[01:00:40] languages we're kind of interested I
+[01:00:42] just jump in yeah you know kind of you
+[01:00:44] know this scholarly work we do is often
+[01:00:46] about those artifacts and what they tell
+[01:00:49] us about the ways in which people have
+[01:00:51] understood and experienced and
+[01:00:52] interacted with these as cultural
+[01:00:54] objects over time and so
+[01:00:57] um you know developing tools that allow
+[01:00:58] us to see that allow us to expose the
+[01:01:01] problems and sort of confront those
+[01:01:03] problems
+[01:01:04] um are kind of interesting to us in and
+[01:01:06] of themselves yeah they tell stories
+[01:01:08] about institutions about their
+[01:01:10] collecting practices about how certain
+[01:01:12] kinds of taxonomical principles create
+[01:01:14] these interesting contradictions and so
+[01:01:17] we're not just interested in solving
+[01:01:20] those contradictions but actually
+[01:01:21] analyzing them as themselves a sort of
+[01:01:24] cultural artifact if you like a
+[01:01:26] storyline in its own right
+[01:01:29] um but that isn't to say that we don't
+[01:01:31] want the metadata to work better so
+[01:01:36] so we have a bit of ambivalence around
+[01:01:38] that question
+[01:01:41] well we can certainly um you know
+[01:01:43] continue to converse informally but um
+[01:01:46] it's very helpful support
+[01:01:53] thank you
