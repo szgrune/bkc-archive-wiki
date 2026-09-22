@@ -232,9 +232,12 @@ for (const y of years) {
       rel,
       `---\ntype: year\ntitle: ${y}\nitem_count: ${n}\n---\n` +
         `# ${y}\n\n` +
+        `[[items/${y}|${n} Item${n === 1 ? "" : "s"}]]\n\n` +
         `${n} items. Navigational landing page — thematic synthesis pending.\n\n` +
         `## Navigate\n` +
-        `All ${y} sources: \`items/${y}/\` · scanning surface: \`raw/digest/${y}.md\` · ` +
+        // inline-code label, not plain text: Quartz's prettyLinks transform runs
+        // path.basename() over a plain-text link label and would show just the year
+        `All ${y} sources: [\`items/${y}/\`](items/${y}) · scanning surface: \`raw/digest/${y}.md\` · ` +
         `counts: [[_counts|Timeline counts]]\n`
     );
   }
